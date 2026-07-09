@@ -3,8 +3,6 @@ title: CLI entry point for Yves
 description: Set up a CLI entry point for Yves. Learn to configure commands and streamline Yves processes for improved backend performance and development efficiency.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/cli-entry-point-for-yves
-originalArticleId: ee61cd14-4336-4e09-b880-c3475f44f3b9
 redirect_from:
   - /docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html
 related:
@@ -23,6 +21,13 @@ related:
   - title: Yves routes
     link: docs/dg/dev/backend-development/yves/yves-routes.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Spryker provides CLI entry points to run console commands for certain use cases. To provide this feature, we use [Symfony's Console component](https://symfony.com/doc/current/components/console.html)
 

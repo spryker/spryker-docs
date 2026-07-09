@@ -3,8 +3,6 @@ title: Request for Quote
 description: Learn about Spryker request for quote feature for your B2B shops and how it can enhance your offerings to your customers.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/quotation-process-feature-overview
-originalArticleId: 2fc8c00f-628b-485d-b00b-61bbb0b32973
 redirect_from:
   - /docs/rfq-reference-information-shop-guide
   - /docs/en/rfq-reference-information-shop-guide
@@ -14,6 +12,13 @@ redirect_from:
   - /docs/pbc/all/request-for-quote/request-for-quote.html
   - /docs/pbc/all/request-for-quote/202204.0/request-for-quote.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 | DEFINITION | DESCRIPTION |
 | --- | --- |

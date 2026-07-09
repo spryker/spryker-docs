@@ -3,8 +3,6 @@ title: Integrating the Direct Debit payment method for Computop
 description: Integrate direct debit payment through Computop into the Spryker-based shop.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/computop-direct-debit
-originalArticleId: 4fc82f9b-f9fb-4608-9f1c-59f42cf54619
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-direct-debit-payment-method-for-computop.html
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-direct-debit-payment-method-for-computop.html
@@ -32,6 +30,13 @@ related:
   - title: Integrating the Paydirekt payment method for Computop
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-paydirekt-payment-method-for-computop.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
  Example State Machine:
 

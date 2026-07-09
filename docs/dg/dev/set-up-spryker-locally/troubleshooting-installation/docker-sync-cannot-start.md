@@ -3,8 +3,6 @@ title: docker-sync cannot start
 description: Learn how to troubleshoot and resolve the error docker-sync cannot start with your Spryker local environment.
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/docker-sync-cannot-start
-originalArticleId: 74080b05-1634-4e0b-8a58-a4f80cfe9bd1
 redirect_from:
   - /docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/docker-sync-cannot-start.html
   - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-docker-installation/docker-sync-cannot-start.html
@@ -24,6 +22,13 @@ related:
   - title: Vendor folder synchronization error
     link: docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/vendor-folder-synchronization-error.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 When running `docker-sync clean`, you might get two errors as described below.
 

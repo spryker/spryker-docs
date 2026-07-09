@@ -3,8 +3,6 @@ title: "HowTo: Configure product reviews"
 description: Learn how to configure product reveiws in your Spryker based project using the Ratings and Reviews feature.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-product-review-feature-configuration
-originalArticleId: ea370505-baab-48a6-8dc1-879739dd816a
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-configure-the-product-reviews.html
   - /docs/pbc/all/ratings-reviews/202204.0/tutorials-and-howtos/howto-configure-product-reviews.html
@@ -12,6 +10,13 @@ related:
   - title: Product Rating and Reviews feature overview
     link: docs/pbc/all/ratings-reviews/latest/ratings-and-reviews.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Configure the maximum rating
 

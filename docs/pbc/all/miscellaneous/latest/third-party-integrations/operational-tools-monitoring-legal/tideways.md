@@ -3,11 +3,16 @@ title: Tideways
 description: Track and analyze errors and background processed by integrating Tideways intot he Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/tideways
-originalArticleId: e42c9f43-b61c-4427-ad2a-3389aae909b6
 redirect_from:
   - /docs/scos/user/technology-partners/202200.0/operational-tools-monitoring-legal-etc/tideways.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Partner Information
 

@@ -3,12 +3,17 @@ title: "Payone: Manual integration"
 description: Provide full-service payment service and payment transaction services by integrating BS Payone into your Spryker-based shop.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/payone-v1-1
-originalArticleId: ffd53037-46a0-410e-941c-eb9cd4c3ff22
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/bs-payone/bs-payone.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payone/manual-integration/payone-manual-integration.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Partner Information
 

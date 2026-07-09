@@ -3,8 +3,6 @@ title: Upgrade the CmsStorage module
 description: Learn how to upgrade to a newer version of the Spryker storage module from an older one in your Spryker Project.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-cmsstorage
-originalArticleId: abc4e5f2-4f3c-488d-a713-aa722bea4358
 redirect_from:
   - /2021080/docs/mg-cmsstorage
   - /2021080/docs/en/mg-cmsstorage
@@ -30,5 +28,12 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/install-and-upgrade/upgrade-modules/upgrade-the-cmsstorage-module.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsstorage-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-cmsstorage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cmsstorage-module.md -->

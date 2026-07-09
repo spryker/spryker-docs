@@ -4,6 +4,7 @@ description: To migrate to SCCOS, one of the steps, is implementing security and
 template: howto-guide-template
 redirect_from:
 - /docs/scos/dev/migration-concepts/migrate-to-sccos/step-9-implement-security-and-performance-guidelines.html
+last_updated: Jan 26, 2024
 ---
 
 After you have [adapted the file system-based features](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-adapt-the-filesystem-based-features.html), we highly recommend checking and eventually implementing the recommendations outlined in the [Security guidelines](/docs/dg/dev/guidelines/security-guidelines.html).

@@ -3,8 +3,6 @@ title: Upgrade the ShoppingListPage module
 description: Use the guide to learn how to update the ShoppingListPage module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-shopping-list-page
-originalArticleId: a886c309-d91c-40a8-86dc-0b5516d7726d
 redirect_from:
   - /2021080/docs/mg-shopping-list-page
   - /2021080/docs/en/mg-shopping-list-page
@@ -37,5 +35,12 @@ related:
   - title: Multiple and Shared Shopping Lists overview
     link: docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-shoppinglistpage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-shoppinglistpage-module.md -->

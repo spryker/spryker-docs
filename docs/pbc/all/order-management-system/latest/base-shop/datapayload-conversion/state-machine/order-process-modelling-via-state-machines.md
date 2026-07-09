@@ -3,8 +3,6 @@ title: Order process modelling via state machines
 description: State Machines help you define, execute and visualize predefined and automated processes.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/order-process-modelling-state-machines
-originalArticleId: 6beb29fc-d94c-4c76-8ad0-e0d71bbb21ff
 redirect_from:
   - /2021080/docs/order-process-modelling-state-machines
   - /2021080/docs/en/order-process-modelling-state-machines
@@ -34,6 +32,13 @@ related:
   - title: Create an Order Management System - Spryker Commerce OS
     link: docs/scos/dev/back-end-development/data-manipulation/create-an-order-management-system-spryker-commerce-os.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 State machines help you define, execute and visualize predefined and automated processes. It can model events that involve performing a predetermined sequence of actions—for example, in the order process.
 

@@ -3,8 +3,6 @@ title: Upgrade the Transfer module
 description: Use the guide to learn how to update the Transfer module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-transfer
-originalArticleId: 49dc6ee6-a3da-465f-96e7-281db0d4575a
 redirect_from:
   - /2021080/docs/mg-transfer
   - /2021080/docs/en/mg-transfer
@@ -31,5 +29,12 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-transfer.html
   - /docs/scos/dev/module-migration-guides/migration-guide-transfer.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-transfer-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-transfer-module.md -->

@@ -3,8 +3,6 @@ title: Generate login tokens
 description: Learn how to generate login tokens for your Spryker Store and how to retrieve the customer from the tokens.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/howto-generate-a-token-for-login
-originalArticleId: d8eb9816-18d8-4da0-b856-1d3989a07932
 redirect_from:
   - /2021080/docs/howto-generate-a-token-for-login
   - /2021080/docs/en/howto-generate-a-token-for-login
@@ -16,6 +14,13 @@ related:
   - title: Customer Login by Token overview
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/customer-login-by-token-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The [Customer Login by Token](/docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/customer-login-by-token-overview.html) feature lets B2B users log in to a Spryker Shop using a token.
 

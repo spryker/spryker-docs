@@ -5,8 +5,7 @@ last_updated: Apr 1, 2024
 template: howto-guide-template
 redirect_from:
 - /docs/scos/dev/technical-enhancement-integration-guides/integrating-symfony-6.html
-originalLink: https://documentation.spryker.com/2021080/docs/symfony-6-integration
-originalArticleId: d5e96c3b-3ed6-49ed-982c-aa641e09b559
+
 ---
 
 Spryker primarily supports Symfony 6.4 that was released in December 2022. Backward compatibility remains for all three major Symfony versions, but support for Symfony 4 was partially dropped in October 2022.

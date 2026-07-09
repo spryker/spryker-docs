@@ -3,8 +3,6 @@ title: Implement prepayment in shared layer
 description: Integrate prepayment into Spryker's shared layer with this guide. Discover best practices for seamless payment implementation across your ecommerce platform.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-prepayment-shared
-originalArticleId: 2c67a631-daed-4aeb-871b-6a797a8452bb
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-shared-layer.html
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-shared-layer.html
@@ -20,6 +18,13 @@ related:
   - title: Test the Prepayment implementation
     link: docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This tutorial shows how to identify the new payment type through some unique constants. Those constants are going to be defined under the Shared namespace because both Yves and Zed need them.
 

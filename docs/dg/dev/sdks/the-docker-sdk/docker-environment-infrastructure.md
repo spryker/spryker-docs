@@ -3,8 +3,6 @@ title: Docker environment infrastructure
 description: Learn all about the infrastructure of Spryker in a Docker environment for your Spryker baed projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/docker-environment-infrastructure
-originalArticleId: e94dd005-cda2-48f8-a224-dea6d6e5ea46
 redirect_from:
   - /docs/scos/dev/the-docker-sdk/202311.0/docker-environment-infrastructure.html
   - /docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html
@@ -34,6 +32,13 @@ related:
   - title: Running tests with the Docker SDK
     link: docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the infrastructure of Spryker in Docker environment.
 

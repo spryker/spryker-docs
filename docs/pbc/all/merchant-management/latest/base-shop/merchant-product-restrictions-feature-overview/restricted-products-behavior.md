@@ -8,6 +8,13 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202204.0/merchant-product-restrictions-feature-walkthrough/restricted-products-behavior.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 <div class="width-100">
 
 On this page, you can find commonly encountered cases of product restrictions behavior.

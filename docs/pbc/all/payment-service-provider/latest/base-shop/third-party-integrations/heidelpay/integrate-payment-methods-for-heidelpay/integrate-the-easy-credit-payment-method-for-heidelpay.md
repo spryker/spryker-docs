@@ -3,8 +3,6 @@ title: Integrating the Easy Credit payment method for Heidelpay
 description: Integrate easy credit payment through Heidelpay into the Spryker-based shop.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-easy-credit
-originalArticleId: 83746ef1-fe16-4a17-bd70-98519e4418fa
 redirect_from:
   - /2021080/docs/heidelpay-easy-credit
   - /2021080/docs/en/heidelpay-easy-credit
@@ -34,6 +32,13 @@ related:
   - title: Integrating the Invoice Secured B2C payment method for Heidelpay
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-invoice-secured-b2c-payment-method-for-heidelpay.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Setup
 

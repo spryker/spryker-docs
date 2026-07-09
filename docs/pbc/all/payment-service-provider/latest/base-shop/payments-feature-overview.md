@@ -3,8 +3,6 @@ title: Payments feature overview
 description: Orders can be paid with none, one or multiple payment methods that can be selected during checkout. Offer multiple payment methods for a single order.
 last_updated: Jul 23, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/payments-feature-overview
-originalArticleId: db728134-17d6-4023-8d7a-55177ee5af44
 redirect_from:
   - /docs/scos/user/features/202108.0/payments-feature-overview.html
   - /docs/scos/user/features/202200.0/payments-feature-overview.html
@@ -13,6 +11,13 @@ redirect_from:
   - /docs/pbc/all/payment-service-provider/202311.0/payments-feature-overview.html
   - /docs/scos/user/features/202204.0/payments-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The *Payments* feature lets your customers pay for orders with none (for example, a [gift card](/docs/pbc/all/gift-cards/latest/gift-cards.html)), one, or multiple payment methods during the checkout process. Most orders are paid with a single payment method, but in some cases, it may be useful to allow multiple payment methods. For example, the customer may want to use two credit cards or a gift card in addition to a traditional payment method.
 

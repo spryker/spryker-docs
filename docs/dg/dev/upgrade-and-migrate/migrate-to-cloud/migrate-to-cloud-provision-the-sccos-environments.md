@@ -4,6 +4,7 @@ description: To migrate the SCCOS, you need to provision the Spryker SCCOS envir
 template: howto-guide-template
 redirect_from:
 - /docs/scos/dev/migration-concepts/migrate-to-sccos/step-4-provision-the-sccos-environments.html
+last_updated: Jan 26, 2024
 ---
 
 After you have [migrated non-standard services](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-migrate-non-standard-services.html) and your application is up and running in the local environment, you can deploy it on remote servers.

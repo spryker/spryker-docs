@@ -3,8 +3,6 @@ title: Email invoices using BCC
 description: This document provides detailed instructions on emailing invoices using BCC.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/howto-emailing-invoices-using-bcc
-originalArticleId: 5fdd0927-fb7a-43b7-9feb-caa171a3c51a
 redirect_from:
   - /2021080/docs/howto-emailing-invoices-using-bcc
   - /2021080/docs/en/howto-emailing-invoices-using-bcc
@@ -18,6 +16,13 @@ related:
   - title: Invoice Generation overview
     link: docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/invoice-generation-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Every time you generate an [invoice for your customer's orders](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/order-management-feature-overview/invoice-generation-overview.html), it's sent to the customer's email address. If you also need a copy of the invoice, you can include yourself or your employees to BCC recipients of the emails with the invoices. Since the copy is hidden, when customers receive the email, they do not see other recipients' email addresses.
 

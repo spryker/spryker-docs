@@ -3,8 +3,6 @@ title: Implement Direct Debit payment
 description: This set of documents will guide you through the implementation of the Direct Debit payment method without integrating with a third-party payment service provider.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-implement-dd
-originalArticleId: c3e9b05a-7256-425f-9418-df4486c8461f
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-payment.html
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementing-direct-debit-payment.html
@@ -20,6 +18,13 @@ related:
   - title: Test your Direct Debit implementation
     link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/test-your-direct-debit-implementation.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This set of documents guides you through the implementation of the Direct Debit payment method without integrating with a third-party payment service provider.
 

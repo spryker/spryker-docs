@@ -3,8 +3,6 @@ title: Customer Registration overview
 description: Get customers registered on to your store with the Spryker Customer Registration Feature, learn the different methods to register customers to your store.
 last_updated: Jul 15, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/customer-registration-overview
-originalArticleId: b13eea5d-0524-4858-a94a-c993b12606ea
 redirect_from:
   - /2021080/docs/customer-registration-overview
   - /2021080/docs/en/customer-registration-overview
@@ -13,6 +11,13 @@ redirect_from:
   - /docs/scos/user/features/202311.0/customer-account-management-feature-overview/customer-registration-overview.html
   - /docs/scos/user/features/202204.0/customer-account-management-feature-overview/customer-registration-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 In Spryker, customer registration is done by double opt-in. A double opt-in occurs when a user signs up, and an email with a registration confirmation link is sent to them. After they click the verification link, their account is activated, and they can start using the online store as registered customers.
 

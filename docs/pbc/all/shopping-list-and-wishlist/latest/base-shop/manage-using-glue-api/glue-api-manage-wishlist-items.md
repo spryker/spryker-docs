@@ -16,6 +16,13 @@ related:
     link: docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/wishlist-feature-overview.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 This endpoint allows you to add and remove items from wishlists.
 
 ## Installation

@@ -3,8 +3,6 @@ title: Atomic frontend
 description: Learn the basic principles of Spryker UI implementation and how to perform the tasks required to design Spryker UI.
 last_updated: Aug 31, 2022
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/atomic-front-end-general-overview
-originalArticleId: 98f5fe06-2e55-4271-a793-928272216dd5
 redirect_from:
   - /docs/scos/dev/front-end-development/202404.0/yves/atomic-frontend/atomic-front-end-general-overview.html
   - /docs/atomic-frontend

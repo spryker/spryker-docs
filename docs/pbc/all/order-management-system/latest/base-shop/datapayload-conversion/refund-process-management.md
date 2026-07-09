@@ -3,8 +3,6 @@ title: Refund process management
 description: The document describes the methods used to calculate the refund, as well as ways of using and extending the Refund module.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/refund-process-management
-originalArticleId: d86ae613-8789-4f31-badb-b758769de71e
 redirect_from:
   - /2021080/docs/refund-process-management
   - /2021080/docs/en/refund-process-management
@@ -23,6 +21,13 @@ related:
   - title: Upgrade the Refund module
     link: docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-refund-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% info_block infoBox %}
 

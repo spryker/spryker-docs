@@ -3,6 +3,7 @@ title: Non-functional requirement templates
 description: Define key system expectations using Spryker's non-functional requirement templates. Focus on performance, scalability, and security to align development goals effectively.
 template: concept-topic-template
 redirect_from:
+last_updated: May 14, 2025
 ---
 
 This section contains the templates for non-functional project requirements. The templates serve as a starting point for creating non-functional requirements for your project, so make sure to adjust them to your project's needs. Defining and following these guidelines may be necessary to fulfill project Service Level Agreements, with each guideline explicitly outlining the responsible team. Alignment with all involved teams is essential for ensuring a functioning concept.

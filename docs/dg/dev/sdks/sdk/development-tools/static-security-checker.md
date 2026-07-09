@@ -3,8 +3,6 @@ title: Static Security Checker
 description: The static Security Checker allows you to detect vulnerability issues in the composer.lock file
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/static-security-checker
-originalArticleId: 7568f516-91a0-4c37-b9d5-d46300035c03
 redirect_from:
   - /docs/sdk/dev/development-tools/static-security-checker.html
   - /docs/scos/dev/sdk/201811.0/development-tools/static-security-checker.html
@@ -35,6 +33,13 @@ related:
   - title: Tooling config file
     link: docs/dg/dev/sdks/sdk/development-tools/tooling-configuration-file.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The Spryker static Security Checker allows you to detect packages with security vulnerabilities. It is based on the [Local PHP Security Checker](https://github.com/fabpot/local-php-security-checker).
 

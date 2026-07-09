@@ -3,8 +3,6 @@ title: Install the Product Rating and Reviews feature
 description: The guide walks you through the process of installing the Product Reviews feature in your project.
 last_updated: Aug 1, 2023
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/product-rating-reviews-feature-integration
-originalArticleId: a5fd5363-2839-406e-a29e-ba175b46592a
 redirect_from:
   - /2021080/docs/product-rating-reviews-feature-integration
   - /2021080/docs/en/product-rating-reviews-feature-integration

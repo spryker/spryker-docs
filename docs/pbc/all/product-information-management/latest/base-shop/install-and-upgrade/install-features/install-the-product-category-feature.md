@@ -3,8 +3,6 @@ title: Product + Category feature integration
 description: Learn how to install the product + category feature in to your Spryker Cloud Commerce OS project.
 last_updated: Feb 20, 2023
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/product-category-feature-integration
-originalArticleId: 9362908d-1cd0-4db9-91c1-fe11df43060c
 redirect_from:
   - /2021080/docs/product-category-feature-integration
   - /2021080/docs/en/product-category-feature-integration

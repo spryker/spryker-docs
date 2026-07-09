@@ -3,12 +3,17 @@ title: Implement prepayment
 description: Implement prepayment methods in Spryker with this comprehensive guide. Streamline payment processing and enhance your ecommerce backend with tailored solutions.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-implement-prepayment
-originalArticleId: bf4dd938-9a69-4f00-ba90-6f2136934e88
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment.html
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the steps that you need to consider to implement the prepayment method without integrating with a third-party payment service provider.
 

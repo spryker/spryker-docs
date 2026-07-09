@@ -3,8 +3,6 @@ title: Integrating the installment payment method for Payolution
 description: Integrate installment payment through Payolution into the Spryker-based shop.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/payolution-installment
-originalArticleId: 8859c087-cad6-43e0-8365-caf51c3423cf
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/payolution/integrating-the-installment-payment-method-for-payolution.html
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/payolution/integrating-the-installment-payment-method-for-payolution.html
@@ -22,6 +20,13 @@ related:
   - title: Integrating the invoice paymnet method for Payolution
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/integrate-the-invoice-payment-method-for-payolution.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Installment Scenarios
 

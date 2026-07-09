@@ -3,8 +3,6 @@ title: Extend the database schema
 description: Expand Spryker's database schema with ease. Follow step-by-step guidance on schema files, database migration, and compatibility for your custom needs.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/t-extend-db-schema
-originalArticleId: 724041dd-a274-4835-8ef1-085fb4c686f9
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html
@@ -12,6 +10,13 @@ related:
   - title: Create, use, and extend the transfer objects
     link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document shows how to extend the database schema.
 

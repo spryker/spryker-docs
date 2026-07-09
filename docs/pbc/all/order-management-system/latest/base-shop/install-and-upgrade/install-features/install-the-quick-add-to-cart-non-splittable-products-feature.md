@@ -8,4 +8,11 @@ redirect_from:
 
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 {% include pbc/all/install-features/latest/install-the-quick-add-to-cart-non-splittable-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-quick-add-to-cart-non-splittable-products-feature.md -->

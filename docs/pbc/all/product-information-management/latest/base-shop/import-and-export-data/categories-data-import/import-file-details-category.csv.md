@@ -3,8 +3,6 @@ title: "Import file details: category.csv"
 description: Learn how to configure categories using the Category csv file in your Spryker Cloud Commerce OS Project.
 last_updated: Jun 16, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/file-details-categorycsv
-originalArticleId: 2113cd52-83fb-4c24-9534-6208c370b55a
 redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/catalog-setup/categories/file-details-category.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/catalog-setup/categories/file-details-category.csv.html
@@ -17,6 +15,13 @@ related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the `category.csv` file to configure [categories](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/category-management-feature-overview.html) in your Spryker shop.
 

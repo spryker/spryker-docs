@@ -3,8 +3,6 @@ title: Install the Multi-store Products feature
 description: The guide describes the process of installing the Multi-Store Products into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/product-store-relation-feature-integration
-originalArticleId: 625314d9-d6db-4e00-aa39-9dfc8b820332
 redirect_from:
   - /2021080/docs/product-store-relation-feature-integration
   - /2021080/docs/en/product-store-relation-feature-integration
@@ -23,5 +21,12 @@ related:
   - title: Upgrade the ProductManagement module
     link: docs/scos/dev/module-migration-guides/migration-guide-productmanagement.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/install-features/latest/install-the-multi-store-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-multi-store-products-feature.md -->

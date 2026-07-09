@@ -3,8 +3,6 @@ title: Using the Support Hub
 description: How to navigate Spryker's Support Hub on the Spryker Portal to create, track, and manage support ticket efficiently for seamless issue resolution
 last_updated: Apr 3, 2026
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/how-to-use-the-support-portal
-originalArticleId: b215730b-98ee-4661-8281-c45104e51044
 redirect_from:
 - /docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html
 related:

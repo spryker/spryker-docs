@@ -3,8 +3,6 @@ title: Install Docker prerequisites on MacOS
 description: Perform the steps described in the guide before you can start working with Spryker in Docker on MacOS.
 last_updated: Oct 21, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/installing-docker-prerequisites-on-macos
-originalArticleId: 5794d7a0-7b64-4847-a32f-2c84f3c54c9b
 redirect_from:
   - /docs/scos/dev/installation/spryker-in-docker/docker-installation-prerequisites/docker-installation-prerequisites-macos.html
   - /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html  
@@ -18,6 +16,13 @@ related:
   - title: Install Docker prerequisites on Windows with WSL2
     link: docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the prerequisites for installing Spryker on MacOS.
 

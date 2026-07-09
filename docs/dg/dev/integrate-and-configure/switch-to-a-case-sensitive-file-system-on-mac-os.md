@@ -3,11 +3,16 @@ title: Switch to a case-sensitive file system on Mac OS
 description: Use the guide to change the case-sensitive file system on Mac OS within your Spryker based projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-case-sensitive-file-system-mac
-originalArticleId: e2843984-3d25-4bef-b0d3-d7eb764591bd
 redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-case-sensitive-file-system-on-mac-os.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 By default, Mac OS uses a case-insensitive file system to support compatibility with applications (for example, Photoshop) provided for the operating system. The file system itself is capable of working in a case-sensitive mode. There are three options on how to change case sensitivity:
 1. Repartition the entire hard drive with case sensitivity turned on.

@@ -7,6 +7,13 @@ redirect_from:
   - /docs/marketplace/dev/feature-walkthroughs/202311.0/marketplace-merchant-feature-walkthrough.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 The *Marketplace Merchant* feature lets you create, read, and update merchants in the Marketplace.
 
 ## Module dependency graph

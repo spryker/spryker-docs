@@ -3,8 +3,6 @@ title: "Glue API: Retrieve orders"
 description: Learn how you can retrieve all orders of a customer or a particular order via Glue API within your Order Management System.
 last_updated: Jul 13, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-orders
-originalArticleId: 5774ec3a-945c-46f1-a51c-475e6e1d9df9
 redirect_from:
   - /docs/scos/dev/glue-api-guides/latest/retrieving-orders.html
   - /docs/scos/dev/glue-api-guides/202204.0/retrieving-orders.html
@@ -14,6 +12,13 @@ related:
   - title: Order Management feature overview
     link: docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/order-management-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This endpoint allows retrieving customer's orders.
 

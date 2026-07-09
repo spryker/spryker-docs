@@ -4,6 +4,7 @@ description: Spryker DevQA Assistant GPT tool for QA checklists, dependencies & 
 template: concept-topic-template
 redirect_from:
   - /docs/dg/dev/ai-assistants/spryker-devqa-assistant-gpt
+last_updated: Dec 04, 2025
 ---
 
 {% info_block warningBox %}

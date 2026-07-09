@@ -3,13 +3,18 @@ title: Miscellaneous guides
 description: Use this section to perform tasks related to Spryker Glue Rest API and Spryker features
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/how-tos
-originalArticleId: e48d2c32-082b-4183-8d99-4e4b74c207b3
 redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/howtos/about-howtos.html
 - /docs/scos/dev/tutorials-and-howtos/tutorials-and-howtos.html
 
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Miscellaneous guides are a collection of guides that don't fit under any specific category. Documents in this section:
 

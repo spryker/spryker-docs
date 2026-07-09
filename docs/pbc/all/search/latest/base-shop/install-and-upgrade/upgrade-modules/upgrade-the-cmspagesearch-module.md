@@ -3,8 +3,6 @@ title: Upgrade the CmsPageSearch module
 description: learn how to upgrade to a newer version of the CMS Page Search module within your Spryker based projects.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-cmspagesearch
-originalArticleId: c549427a-a784-47d9-938d-984b9b52fc23
 redirect_from:
   - /2021080/docs/mg-cmspagesearch
   - /2021080/docs/en/mg-cmspagesearch
@@ -28,5 +26,12 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmspagesearch.html
   - /module_migration_guides/mg-cmspagesearch.htm
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-cmspagesearch-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cmspagesearch-module.md -->

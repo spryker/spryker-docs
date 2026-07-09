@@ -5,6 +5,13 @@ description: Everything you need to know about the Spryker Marketplace Merchant 
 template: concept-topic-template
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 
 The *Marketplace Merchant Commissions* feature enables marketplace owners to monetize their services by calculating a fee on sales made through their platform. This feature allows for flexible commission structures, such as fixed fees, percentage-based fees, or a combination of both. Commissions can apply differently across various categories, products, or sellers. For example, you might want to collect a smaller commission from merchants that sell products in categories with smaller selling volumes.
 

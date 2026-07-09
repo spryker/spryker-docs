@@ -3,8 +3,6 @@ title: "Tutorial: Integrate any search engine into a project"
 description: Learn how to integrate any external search engine instead of the default Elasticsearch.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/tutorial-integrating-any-search-engine
-originalArticleId: 1e7707ed-2b13-41d8-bdb8-c6013ac4587b
 redirect_from:
   - /2021080/docs/tutorial-integrating-any-search-engine
   - /2021080/docs/en/tutorial-integrating-any-search-engine
@@ -15,6 +13,13 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-integrating-any-search-engine-into-a-project.html
   - /docs/pbc/all/search/202311.0/tutorials-and-howtos/tutorial-integrate-any-search-engine-into-a-project.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 In a Spryker-based project, you can use any external search provider instead of the default Elasticsearch. This tutorial shows how to replace the default Elasticsearch with any other search engine.
 

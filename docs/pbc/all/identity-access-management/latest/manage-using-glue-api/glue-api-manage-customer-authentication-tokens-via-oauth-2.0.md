@@ -3,8 +3,6 @@ title: "Glue API: Manage customer authentication tokens via OAuth 2.0"
 description: This endpoint allows authenticating as a customer and refreshing customer authentication tokens via OAuth 2.0.
 last_updated: June 9, 2026
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-authentication-tokens-via-oauth-20
-originalArticleId: 4fe6c88f-3879-4f9f-bb91-c6a867d120fa
 redirect_from:
 - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-manage-customer-authentication-tokens-via-oauth-2.0.html
 related:

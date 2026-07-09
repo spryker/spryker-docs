@@ -13,6 +13,13 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/tutorials-and-howtos/define-positions-for-category-cms-blocks.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 
 Usually, you don't want to change Twig templates for each block assignment, but still be able to manage blocks in the Back Office. In this case, you can use predefined positions.
 

@@ -3,8 +3,6 @@ title: "Import file details: product_abstract_store.csv"
 description: Learn how to configure product abstract store information using the product abstract store csv file for your Spryker project.
 last_updated: Jun 16, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-abstract-storecsv
-originalArticleId: 289b16ad-bb98-40cb-80c6-cfdef692687f
 redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/catalog-setup/products/file-details-product-abstract-store.csv.html
   - /docs/pbc/all/product-information-management/202311.0/import-and-export-data/products-data-import/file-details-product-abstract-store.csv.html
@@ -14,6 +12,13 @@ related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the `product_abstract_store.csv` file to configure Product Abstract Store information in your Spryker Demo Shop.
 

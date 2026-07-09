@@ -3,8 +3,6 @@ title: Email as a CMS block overview
 description: An overview guide that explains the Spryker Cloud Commerce OS Emails as CMS block and how to create emails through this functionality.
 last_updated: Mar 25, 2024
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/email-as-a-cms-block-overview
-originalArticleId: a986b331-c2dd-4a91-be52-fabd837fd493
 redirect_from:
   - /2021080/docs/email-as-a-cms-block-overview
   - /2021080/docs/en/email-as-a-cms-block-overview

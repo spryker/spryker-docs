@@ -3,8 +3,6 @@ title: Spryker Core feature overview
 description: Learn all about the basis of all the functionality in Spryker with the Spryker Core features overview.
 last_updated: Jul 2, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/spryker-core
-originalArticleId: 422423d0-beff-4da2-9ab7-4940262da733
 redirect_from:
   - /2021080/docs/spryker-core
   - /2021080/docs/en/spryker-core
@@ -18,6 +16,13 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202204.0/spryker-core-feature-walkthrough/spryker-core-feature-walkthrough.html
   - /docs/scos/user/features/202204.0/spryker-core-feature-overview/spryker-core-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The Spryker Core feature is the very basis of all the functionality in Spryker.
 

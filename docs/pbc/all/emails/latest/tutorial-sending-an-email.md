@@ -3,8 +3,6 @@ title: "Tutorial: Sending an email"
 description: The tutorial provides code samples on how to process customer registration information in Zed to register the customer and send a confirmation email.
 last_updated: Sep 27, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/sending-an-email
-originalArticleId: cdce91fc-fc1b-40f5-9442-b88f5036c86c
 redirect_from:
   - /2021080/docs/sending-an-email
   - /2021080/docs/en/sending-an-email
@@ -15,6 +13,13 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-sending-an-email
   - /docs/pbc/all/emails/202204.0/tutorial-sending-an-email.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The following example represents a real-world scenario: `CustomerRegistration`.
 

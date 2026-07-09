@@ -3,8 +3,6 @@ title: Reclamations feature overview
 description: With the reclamations in place, you can do three things- create a new connected order, return money paid for the order, or close the reclamation.
 last_updated: Aug 3, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/reclamations-feature-overview
-originalArticleId: 9b753eb0-0fd3-476f-8f2d-da9687683900
 redirect_from:
   - /2021080/docs/reclamations-feature-overview
   - /2021080/docs/en/reclamations-feature-overview
@@ -13,6 +11,13 @@ redirect_from:
   - /docs/scos/user/features/202311.0/reclamations-feature-overview.html
   - /docs/scos/user/features/202204.0/reclamations-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Handling order claims are the reality of doing business for most ecommerce sites. A customer might have bought an item and then discovered that it does not fit, or they might have stumbled upon another item and want to order it instead of the order already placed, or an item is faulty, or additional parts are needed.
 

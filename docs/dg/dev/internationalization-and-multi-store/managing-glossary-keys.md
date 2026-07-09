@@ -3,11 +3,16 @@ title: "Managing glossary keys"
 description: Glossary keys present two layers of persistence. This topic covers the usage of the functionality for managing the glossary keys.
 last_updated: Aug 10, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/tutorial-managing-glossary-keys
-originalArticleId: 761b1f67-31a5-425e-b897-a622eb230a23
 redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-managing-glossary-keys.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Glossary keys present two layers of persistence:
 

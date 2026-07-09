@@ -3,8 +3,6 @@ title: "Semantic versioning: major vs. minor vs. patch release"
 description: Spryker releases update as major, minor, patch release or a bugfix. Learn more about them in this document.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/major-minor-patch-release
-originalArticleId: 5ec4d624-685a-4332-bb21-6228cb63ca74
 redirect_from:
   - /docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html
 related:
@@ -15,6 +13,13 @@ related:
   - title: "Declaration of module APIs: Public and private"
     link: docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The Spryker Commerce OS versioning of modules relies on the [semantic versioning](https://semver.org/) approach, which implies a clear set of rules and requirements that dictate how version numbers are assigned and incremented. This document describes how we release modules and version them depending on the release type.
 

@@ -3,8 +3,6 @@ title: Frontend performance guidelines
 description: Learn how you can optimize your Spryker Frontend performance and some general guidelines for your Spryker based projects.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/front-end-performance-guidelines
-originalArticleId: 1fbe7f78-9c86-4d16-8537-8de11f742f1c
 redirect_from:
   - /docs/scos/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
   - /docs/scos/dev/guidelines/front-end-performance-guidelines.html
@@ -17,6 +15,13 @@ related:
   - title: CDN and traffic management integration
     link: docs/dg/dev/guidelines/performance-guidelines/cdn-and-traffic-management-integration.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes general and Spryker-specific frontend performance guidelines.
 

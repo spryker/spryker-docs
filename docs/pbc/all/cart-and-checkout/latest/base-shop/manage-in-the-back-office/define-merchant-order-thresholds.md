@@ -3,8 +3,6 @@ title: Define merchant order thresholds
 description: Learn how to define thresholds for merchant relationships in the Back Office.
 last_updated: May 31, 2022
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-merchant-order-thresholds
-originalArticleId: ae8c2d52-29d3-4315-b8c7-0cdffdb7ba2a
 redirect_from:
   - /2021080/docs/managing-merchant-order-thresholds
   - /2021080/docs/en/managing-merchant-order-thresholds

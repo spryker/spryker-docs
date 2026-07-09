@@ -3,8 +3,6 @@ title: RatePay state machine commands and conditions
 description: This article includes the state machine commands and conditions provided by Ratepay.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/ratepay-state-machine
-originalArticleId: 25cb68aa-9d2c-42d2-8ae3-bd8f3ea572f3
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/ratepay/ratepay-state-machine-commands-and-conditions.html
@@ -27,6 +25,13 @@ related:
   - title: Integrating the Direct Debit payment method for RatePay
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-direct-debit-payment-method-for-ratepay.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 
 

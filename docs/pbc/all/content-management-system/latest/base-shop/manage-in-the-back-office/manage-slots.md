@@ -3,8 +3,6 @@ title: Manage slots
 description: Learn more about CMS Slots with these guides, helping you to manage slots that are implemented in to pages right within the Spryker Back Office
 last_updated: Jun 18, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-slots
-originalArticleId: 06d8bf64-4aee-4959-abae-f3fb849ccaa0
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202001.0/content/slots/slots.html
   - /docs/scos/user/back-office-user-guides/202108.0/content/slots/managing-slots.html
@@ -14,6 +12,13 @@ related:
   - title: Templates & Slots feature overview
     link: docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/templates-and-slots-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This topic describes how to manage slots.
 

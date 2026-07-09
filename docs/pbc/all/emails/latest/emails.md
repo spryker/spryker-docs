@@ -3,8 +3,6 @@ title: Emails
 description: Manage Newsletters and email notifications with the Spryker Email module within your Spryker projects.
 last_updated: Jul 22, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/mailing-notifications-feature-overview
-originalArticleId: 12c026d5-7e62-4361-9f6c-02423aae791c
 redirect_from:
   - /2021080/docs/mailing-notifications-feature-overview
   - /2021080/docs/en/mailing-notifications-feature-overview
@@ -14,6 +12,13 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202200.0/mailing-and-notifications-feature-walkthrough.html
   - /docs/pbc/all/emails/202204.0/emails.html  
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The *Emails* capability lets you manage newsletters and notifications.
 

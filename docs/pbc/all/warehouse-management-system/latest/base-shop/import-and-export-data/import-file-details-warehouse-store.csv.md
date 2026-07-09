@@ -3,8 +3,6 @@ title: "Import file details: warehouse_store.csv"
 description: learn how to configure warehouse store data in your Spryker based project using the warehouse store csv file.
 last_updated: Jun 16, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/file-details-warehouse-storecsv
-originalArticleId: f6e5e526-d776-465d-a2d0-518d11ca5b5b
 redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html
   - /docs/pbc/all/warehouse-management-system/202311.0/base-shop/import-data/file-details-warehouse-store.csv.html
@@ -14,6 +12,13 @@ related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the `warehouse_store.csv` file to configure the relation between [Warehouse](/docs/pbc/all/warehouse-management-system/latest/base-shop/inventory-management-feature-overview.html) and Store in your Spryker Demo Shop.
 

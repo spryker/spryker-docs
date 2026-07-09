@@ -5,4 +5,11 @@ description: Learn how to integrate the Spryker Marketplace wishlist + Product O
 template: feature-integration-guide-template
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 {% include pbc/all/install-glue-api/latest/marketplace/install-the-marketplace-product-offer-wishlist-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202311.0/marketplace/install-the-marketplace-product-offer-wishlist-glue-api.md -->

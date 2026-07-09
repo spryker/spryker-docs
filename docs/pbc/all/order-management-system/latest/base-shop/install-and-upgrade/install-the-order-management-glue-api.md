@@ -2,8 +2,6 @@
 title: Install the Order Management Glue API
 last_updated: Jul 27, 2021
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/glue-api-order-management-feature-integration
-originalArticleId: ad1c861b-392a-48e1-858e-f22b0adf7851
 redirect_from:
   - /2021080/docs/glue-api-order-management-feature-integration
   - /2021080/docs/en/glue-api-order-management-feature-integration
@@ -26,5 +24,12 @@ related:
   - title: Check out purchases
     link: docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/install-features/latest/install-glue-api/install-the-order-management-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-order-management-glue-api.md -->

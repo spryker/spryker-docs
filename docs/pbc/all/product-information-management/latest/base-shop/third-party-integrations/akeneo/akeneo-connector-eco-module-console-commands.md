@@ -3,8 +3,6 @@ title: "Akeneo Connector (Eco module): Console commands"
 description: This guide provides the console commands for the Akeneo connect eco module for your Spryker based project.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/akeneo-console-commands
-originalArticleId: a332d6b7-14fa-4d8b-849b-f503d3de13ac
 redirect_from:
   - /2021080/docs/akeneo-console-commands
   - /2021080/docs/en/akeneo-console-commands
@@ -14,6 +12,13 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202311.0/base-shop/third-party-integrations/akeneo/akeneo-console-commands.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/third-party-integrations/akeneo/akeneo-connector-eco-module-console-commands.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The following console commands are available in your project after successful [installation](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo-eco-module.html) of the Akeneo Connector Eco module. Run them one by one.
 

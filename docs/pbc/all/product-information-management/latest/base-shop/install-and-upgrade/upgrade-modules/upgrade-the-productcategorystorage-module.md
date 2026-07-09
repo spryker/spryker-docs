@@ -3,8 +3,6 @@ title: Upgrade the ProductCategoryStorage module
 description: Learn how to upgrade from an older version to a newer one of the product category storage module within your Spryker based project.
 last_updated: Jun 23, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-productcategorystorage
-originalArticleId: c3c6404f-d1ac-45d4-873d-2975b7ac5e36
 redirect_from:
   - /docs/migration-guide-productcategorystorage
   - /docs/en/migration-guide-productcategorystorage
@@ -13,5 +11,12 @@ redirect_from:
   - /upcoming-release/docs/migration-guide-productcategorystorage
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productcategorystorage-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-productcategorystorage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productcategorystorage-module.md -->

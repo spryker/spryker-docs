@@ -3,8 +3,6 @@ title: Decimal Stock migration concept
 description: The article provides instructions on how to install Decimal Stock on all modules affected in bulk and then individually.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/decimal-stock-concept
-originalArticleId: da336e52-e8e8-4849-9be3-e208cd42e273
 redirect_from:
   - /docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/decimal-stock-migration-concept.html
@@ -20,6 +18,13 @@ related:
   - title: Silex Replacement migration concept
     link: docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The feature supports decimal inventory in terms of stock and availability, amount of reserved products, as well as amount values of a packaging unit.
 

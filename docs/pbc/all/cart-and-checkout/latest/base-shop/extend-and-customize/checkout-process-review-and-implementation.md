@@ -3,8 +3,6 @@ title: Checkout process review and implementation
 description: This document provides an overview of the checkout process and how it's implemented in Spryker.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/checkout-process-review-and-implementation
-originalArticleId: 884e9981-3300-483c-b178-ff0370d89179
 redirect_from:
   - /2021080/docs/checkout-process-review-and-implementation
   - /2021080/docs/en/checkout-process-review-and-implementation
@@ -26,6 +24,13 @@ related:
   - title: Checkout steps
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Checkout process
 

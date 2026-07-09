@@ -3,8 +3,6 @@ title: Code style guide
 description: We follow the PSR-2 standards. To achieve a styled codebase, we integrated the well known PHP-CS Fixer and PHPCodeSniffer.
 last_updated: Aug 10, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/code-style-guide
-originalArticleId: 973d3bf2-1dd0-4219-8f2c-faa86944bb95
 redirect_from:
   - /docs/scos/dev/guidelines/coding-guidelines/code-style-guide.html
 related:
@@ -15,6 +13,13 @@ related:
   - title: Secure Coding Practices
     link: docs/dg/dev/guidelines/coding-guidelines/secure-coding-practices.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 We at Spryker follow the PSR-2 standards<!-- ](http://www.php-fig.org/psr/psr-2/) check if it works before restoring --> as the coding style guide. To achieve a styled codebase, we integrated the well known [PHP-CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) and [PHPCodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
 

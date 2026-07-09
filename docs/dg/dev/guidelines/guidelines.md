@@ -4,6 +4,7 @@ description: A set of guidelines for developers to use whilst working on Spryker
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/guidelines/guidelines.html
+last_updated: Jun 10, 2026
 ---
 
 This section contains a collection of useful guidelines for developing on the Spryker Commerce OS:  

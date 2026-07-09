@@ -3,8 +3,6 @@ title: "Glue API: Impersonate customers as an agent assist"
 description: As an agent assist, authenticate as a customer and impersonate them using the GLUE API within your Spryker Projects.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/impersonating-customers-as-an-agent-assist
-originalArticleId: 603fa249-5eab-42d0-93c3-3c09f75da9d0
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-agent-assists/impersonating-customers-as-an-agent-assist.html
   - /docs/pbc/all/user-management/202204.0/base-shop/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html
@@ -18,6 +16,13 @@ related:
   - title: Search by customers as an agent assist
     link: docs/pbc/all/user-management/latest/base-shop/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Impersonating a customer allows an [agent assist](/docs/pbc/all/user-management/latest/base-shop/agent-assist-feature-overview.html) to perform actions on their behalf. To impersonate a customer, they receive their Glue API authentication token. Using the token, agent assists perform any action available to the customer.
 

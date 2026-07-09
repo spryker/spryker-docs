@@ -3,8 +3,6 @@ title: Search widget for concrete products overview
 description: Search widget adds lets users easily search and add concrete products directly from shopping cart/list pages.
 last_updated: Jul 5, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/search-widget-for-concrete-products-overview
-originalArticleId: f3839683-f449-4000-b5cc-616d01453120
 redirect_from:
   - /2021080/docs/search-widget-for-concrete-products-overview
   - /2021080/docs/en/search-widget-for-concrete-products-overview
@@ -15,6 +13,13 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-feature-overview/search-widget-for-concrete-products-overview.html
 
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 With the search widget, the customer doesn't need to go to the product details page to add items. Search widget adds a search box to a Shopping cart, Shopping List, and Quick Order Page allowing the users to easily search and add concrete products directly from shopping cart/list pages. The widget includes the search field for concrete products and the quantity field. A shopper can search for products by SKU or concrete Product name. What the customers only have to do is to start typing the Name or the product SKU and the appropriate suggestions will appear in the drop-down. The suggested options let shoppers complete the search quickly.
 

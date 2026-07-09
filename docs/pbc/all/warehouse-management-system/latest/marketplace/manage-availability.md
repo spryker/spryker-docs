@@ -5,6 +5,13 @@ description: This document contains reference information for working with the A
 template: back-office-user-guide-template
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 This document includes the information you need to know when working with the **Availability** section in Back Office.
 
 ---

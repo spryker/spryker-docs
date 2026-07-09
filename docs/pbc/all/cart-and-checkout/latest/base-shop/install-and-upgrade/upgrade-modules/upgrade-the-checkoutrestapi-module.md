@@ -3,8 +3,6 @@ title: Upgrade the CheckoutRestApi module
 description: Use the guide to upgrade to a new version of the Spryker Checkout rest API module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-checkoutrestapi
-originalArticleId: 0a30ad48-d4c1-4d82-8958-980065e9358b
 redirect_from:
   - /2021080/docs/mg-checkoutrestapi
   - /2021080/docs/en/mg-checkoutrestapi
@@ -27,5 +25,12 @@ related:
   - title: Upgrade the Payment module
     link: docs/pbc/all/payment-service-provider/latest/base-shop/install-and-upgrade/upgrade-the-payment-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-checkoutrestapi-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-checkoutrestapi-module.md -->

@@ -3,8 +3,6 @@ title: Installing Heidelpay
 description: This article contains installation information for the Heidelpay module into the Spryker Legacy Demoshop.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-installation
-originalArticleId: b3bc4292-2daf-4054-b987-2adcf53414a8
 redirect_from:
   - /2021080/docs/heidelpay-installation
   - /2021080/docs/en/heidelpay-installation
@@ -34,6 +32,13 @@ related:
   - title: Integrating the Easy Credit payment method for Heidelpay
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-easy-credit-payment-method-for-heidelpay.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To install Heidelpay, if necessary, add  the Heidelpay repo to your repositories in composer.json:
 

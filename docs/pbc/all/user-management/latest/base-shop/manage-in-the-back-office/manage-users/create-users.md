@@ -3,8 +3,6 @@ title: Create users
 description: Learn how you can create new users directly in the back office of your Spryker Cloud Commerce OS Shop.
 last_updated: Aug 2, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-users
-originalArticleId: 835c1e16-904a-4ed9-82c8-50244c7b0ff2
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/users/managing-users/activating-and-deactivating-users.html
   - /docs/scos/user/back-office-user-guides/202311.0/users/managing-users/creating-users.html
@@ -19,6 +17,13 @@ related:
   - title: User and Rights Management
     link: docs/pbc/all/user-management/latest/base-shop/user-and-rights-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to create users in the Back Office.
 

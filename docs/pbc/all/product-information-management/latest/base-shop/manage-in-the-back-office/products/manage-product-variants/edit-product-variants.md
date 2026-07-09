@@ -3,8 +3,6 @@ title: Editing product variants
 description: The guide describes how to update and edit product variants direct in the Spryker Cloud Commerce OS Back Office.
 last_updated: Jul 7, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/editing-a-product-variant
-originalArticleId: b9119173-d733-4ffa-b93d-1f19d88a364c
 redirect_from:
   - /2021080/docs/editing-a-product-variant
   - /2021080/docs/en/editing-a-product-variant
@@ -23,6 +21,13 @@ related:
   - title: Product feature overview
     link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This article describes how to update the product variant added during the abstract product setup.
 The described procedure is also valid for an existing product variant.

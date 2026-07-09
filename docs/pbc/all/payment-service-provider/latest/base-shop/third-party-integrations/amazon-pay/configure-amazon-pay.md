@@ -3,8 +3,6 @@ title: Configuring Amazon Pay
 description: Configure and integrate Amazon Pay into the Spryker Commerce OS by following the instructions from this article.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/amazon-pay-configuration-scos
-originalArticleId: d1f60f40-489d-4942-aba1-6439efcdbc47
 redirect_from:
   - /2021080/docs/amazon-pay-configuration-scos
   - /2021080/docs/en/amazon-pay-configuration-scos
@@ -26,6 +24,13 @@ related:
   - title: Obtaining an Amazon Order Reference and information about shipping addresses
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/amazon-pay/obtain-an-amazon-order-reference-and-information-about-shipping-addresses.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% info_block errorBox %}
 

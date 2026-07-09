@@ -3,8 +3,6 @@ title: Define filter preferences
 description: Learn how to create category filters and define preferences in the Back Office
 last_updated: Aug 2, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-filter-preferences
-originalArticleId: a12072b2-b53e-4cf6-8ef1-f94c08cdc6ef
 redirect_from:
   - /2021080/docs/managing-filter-preferences
   - /2021080/docs/en/managing-filter-preferences
@@ -17,6 +15,13 @@ related:
   - title: Standard filters overview
     link: docs/pbc/all/search/latest/base-shop/search-feature-overview/standard-filters-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to create filters and define preferences for them in the Back Office.
 

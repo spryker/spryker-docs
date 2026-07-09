@@ -3,8 +3,6 @@ title: E-Spirit
 description: Help your Spryker project engage customers and increase revenue with personalized, content-rich digital experiences anytime, anywhere by integrating E-Spirit.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/e-spirit
-originalArticleId: 487dfa6d-a059-4660-956c-bbce54f4f85b
 redirect_from:
   - /2021080/docs/e-spirit
   - /2021080/docs/en/e-spirit
@@ -14,6 +12,13 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/third-party-integrations/e-spirit.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/third-party-integrations/e-spirit.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Partner Information
 

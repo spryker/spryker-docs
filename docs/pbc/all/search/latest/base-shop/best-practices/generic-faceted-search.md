@@ -3,8 +3,6 @@ title: Generic faceted search
 description: Faceted search (sometimes also called faceted navigation) allows users to navigate through a web site by applying filters for categories, attributes, and price ranges.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/generic-faceted-search
-originalArticleId: d83f0692-7e96-413a-8da3-2ddb2a59a21c
 redirect_from:
   - /2021080/docs/generic-faceted-search
   - /2021080/docs/en/generic-faceted-search
@@ -46,6 +44,13 @@ related:
   - title: Usage-driven schema and document structure
     link: docs/pbc/all/search/latest/base-shop/best-practices/usage-driven-schema-and-document-structure.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Faceted search—sometimes also called faceted navigation—lets users navigate through a website by applying filters for categories, attributes, and price ranges. Probably, it's the most basic feature of a search, and users expect this to work. Unfortunately, we observed that this is also one of the features that developers struggle with the most.
 

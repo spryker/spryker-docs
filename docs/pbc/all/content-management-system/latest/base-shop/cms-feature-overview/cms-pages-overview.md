@@ -3,8 +3,6 @@ title: CMS Pages overview
 description: An overview guide on the Spryker Cloud Commerce OS CMS pages functionality.
 last_updated: Jul 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/cms-pages-overview
-originalArticleId: 8b0f95c3-e1b8-42e9-8d5c-d05ea8a84e4d
 redirect_from:
   - /2021080/docs/cms-pages-overview
   - /2021080/docs/en/cms-pages-overview
@@ -14,6 +12,13 @@ redirect_from:
   - /docs/scos/user/features/202311.0/cms-feature-overview/cms-pages-overview.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/cms-feature-overview/cms-pages-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 A *CMS page* is an HTML page that you can create and edit in the Back Office using the WYSIWYG editor. The **About Us**, **Impressum**, **Terms**, **Contacts**, and **Conditions** pages are examples of CMS pages that you can create.
 

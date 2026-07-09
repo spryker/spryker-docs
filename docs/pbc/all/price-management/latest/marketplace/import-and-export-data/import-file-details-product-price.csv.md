@@ -14,6 +14,13 @@ related:
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 This document contains content of the **product_price.csv** file to configure [prices](/docs/pbc/all/price-management/latest/base-shop/prices-feature-overview/prices-feature-overview.html) of the products/services in your Spryker Demo Shop.
 
 ## Dependencies

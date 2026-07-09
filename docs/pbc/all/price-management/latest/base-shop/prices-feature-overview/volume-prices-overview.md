@@ -3,8 +3,6 @@ title: Volume Prices overview
 description: Volume pricing helps the merchants to gain the commitment of the customers. Providing volume discounts results in increasing the placement of large orders.
 last_updated: Jul 9, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/volume-prices-overview
-originalArticleId: f02ffa98-7d76-4d7d-8dbb-b96f46754627
 redirect_from:
   - /2021080/docs/volume-prices-overview
   - /2021080/docs/en/volume-prices-overview
@@ -14,6 +12,13 @@ redirect_from:
   - /docs/pbc/all/price-management/prices-feature-overview/volume-prices-overview.html
   - /docs/pbc/all/price-management/202204.0/base-shop/prices-feature-overview/volume-prices-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 In highly competitive markets, the business tactic is made compelling by issuing drastic discounts when buying products in large quantities or volumes.
 

@@ -3,8 +3,6 @@ title: A facade implementation
 description: Implement a facade in Business Layer to streamline interactions between modules. This guide explains best practices for creating a centralized API for module communication.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/implementing-facade
-originalArticleId: 7a2cbc0a-f4d6-422a-8481-b385e6bfaf4d
 redirect_from:
   - /docs/scos/dev/back-end-development/zed/business-layer/facade/a-facade-implementation.html
 related:
@@ -38,9 +36,11 @@ class GlossaryFacade extends AbstractFacade
      */
     public function deleteKey($keyName)
     {
-        $keyManager = $this->getFactory()->createKeyManager();
-        return $keyManager->deleteKey($keyName);
-    {% raw %}}}{% endraw %}
+        return $this->getFactory()
+            ->createKeyManager()
+            ->deleteKey($keyName);
+    }
+}
 ```
 
 When you look at the `deleteKey()` method, observe the following:
@@ -71,8 +71,9 @@ class GlossaryFacade extends AbstractFacade
      */
     public function saveTranslation(CmsGlossaryTransfer $translationTransfer)
     {
-        $translationManager = $this->getFactory()->createTranslationManager();
-        return $translationManager->saveTranslation($translationTransfer);
+        return $this->getFactory()
+            ->createTranslationManager()
+            ->saveTranslation($translationTransfer);
     }
 }
 ```
@@ -81,18 +82,3 @@ class GlossaryFacade extends AbstractFacade
 
 The idea of the `Business` layer is to present a facade to all clients and hide the internal details. This is the main requirement for future updates, and it keeps the bundles decoupled. So when you look at a module from another module, you only see the facade.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Zed/Business+Layer/How+to+Implement+a+Facade/facade-as-internal-api.png)
-
-## Related Spryks
-
-You might use the following definitions to generate related code:
-
-- Add Zed Business facade.
-- Add Zed Business facade interface.
-- Add Zed Business facade interface method.
-- Add Zed Business facade method.
-- Add Zed Business facade method test.
-- Add Zed Business facade test.
-- Add Zed Business factory.
-- Add Zed Business factory method.
-
-For details, see the [Spryk](/docs/dg/dev/sdks/sdk/spryks/spryks.html) documentation.

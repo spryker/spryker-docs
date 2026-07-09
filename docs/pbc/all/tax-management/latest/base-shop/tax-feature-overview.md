@@ -3,8 +3,6 @@ title: Tax feature overview
 description: With the Tax Management capability you can define taxes for the items you sell.
 last_updated: Jun 25, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/tax-feature-overview
-originalArticleId: 2ca980d2-d08b-4511-b26c-4cafa8624283
 redirect_from:
   - /2021080/docs/tax-feature-overview
   - /2021080/docs/en/tax-feature-overview
@@ -23,6 +21,13 @@ redirect_from:
   - /docs/pbc/all/tax-management/tax-management.html
   - /docs/pbc/all/tax-management/202311.0/base-shop/spryker-tax/tax-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The *Tax* feature lets you define taxes for the items you sell. The feature is represented by two entities: tax rates and tax sets.
 

@@ -3,8 +3,6 @@ title: Password Management overview
 description: Learn how to manage passwords within the Spryker Back office with this overview guide.
 last_updated: Jul 15, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/password-management-overview
-originalArticleId: 5319cfcb-db06-4238-9f68-c473289b1297
 redirect_from:
   - /2021080/docs/password-management-overview
   - /2021080/docs/en/password-management-overview
@@ -14,6 +12,13 @@ redirect_from:
   - /docs/scos/user/features/202311.0/customer-account-management-feature-overview/password-management-overview.html
   - /docs/scos/user/features/202204.0/customer-account-management-feature-overview/password-management-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 *Password Management* lets Spryker admins manage customer account passwords. It also lets B2B and B2C Shoppers manage their own account passwords.
 

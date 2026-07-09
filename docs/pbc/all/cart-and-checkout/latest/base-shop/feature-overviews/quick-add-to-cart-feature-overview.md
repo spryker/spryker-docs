@@ -3,8 +3,6 @@ title: Quick Add to Cart feature overview
 description: On the Quick Add to Cart form in the web-shop, a customer can enter product SKU and Quantity and proceed by adding it to cart or by creating an order right away.
 last_updated: Aug 19, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/quick-add-to-cart-feature-overview
-originalArticleId: 9608a908-5dc9-49dc-bcc4-a24066c0bf76
 redirect_from:
   - /docs/scos/user/features/202200.0/quick-add-to-cart-feature-overview.html
   - /docs/scos/user/features/202311.0/quick-add-to-cart-feature-overview.html
@@ -12,6 +10,13 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/quick-add-to-cart-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/quick-add-to-cart-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Regular buyers, and especially B2B wholesale customers, often know what exactly they want to order from the shop by product SKU and product name. The *Quick Add to Cart* feature lets your customers find and buy products in just a few clicks. Instead of going to each product page individually, they can go to the **Quick Add to Cart** page, accessible directly from the header, and quickly order items by typing the product's SKU and its quantity in respective fields. At the same time, if some specific [quantity restrictions](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/non-splittable-products-feature-overview.html) apply to products, they will also be taken into account when ordering through the **Quick Add to Cart** page. The **Quick Add to Cart** form can also be used to add items to [shopping lists](/docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html). Also, if a customer has a list of products to be ordered, for example in a CSV file or other, the ordering process becomes even faster. The customer can bulk add SKUs and put quantities next to them in a single field. With this being done, the customer either adds the items to the cart or proceeds directly to checkout.
 

@@ -2,8 +2,6 @@
 title: Overriding components
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/t-override-component
-originalArticleId: 9a8dbfcd-e0ef-4ff2-b435-5a66f638a503
 redirect_from:
   - /docs/scos/dev/front-end-development/202404.0/yves/atomic-frontend/managing-the-components/overriding-a-component.html
   - /docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/overriding-a-component.html
@@ -15,6 +13,13 @@ related:
   - title: Extending a Component
     link: docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/extending-components.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 If the implementation of any of the components shipped with Spryker Frontend does not suite your needs, you can override it with a component of your own. The following article shows how to override a molecule called **simple-carousel**. By default, the component is used, for example, to display product suggestions at the bottom of the page.
 

@@ -7,6 +7,13 @@ redirect_from:
 - /docs/pbc/all/user-management/202204.0/user-management.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 The *User Management* capability lets you create and manage Back Office users and their permissions.
 
 The default Back Office user has permissions to create user accounts and manage their permissions. For instructions, see [Create users](/docs/pbc/all/user-management/latest/base-shop/manage-in-the-back-office/manage-users/create-users.html).

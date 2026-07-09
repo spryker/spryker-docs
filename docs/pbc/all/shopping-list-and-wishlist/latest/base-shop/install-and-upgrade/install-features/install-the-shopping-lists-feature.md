@@ -3,8 +3,6 @@ title: Install the Shopping Lists feature
 description: Learn how to install the Spryker Shopping List feature in to your Spryker Cloud Commerce OS Project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/shopping-lists-feature-integration
-originalArticleId: 58263f9f-e8b2-48f1-9564-caad27602169
 redirect_from:
   - /2021080/docs/shopping-lists-feature-integration
   - /2021080/docs/en/shopping-lists-feature-integration
@@ -26,5 +24,12 @@ related:
   - title: Shopping List Notes overview
     link: docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/shopping-lists-feature-overview/shopping-list-notes-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/install-features/latest/install-the-shopping-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/latest/install-the-shopping-lists-feature.md -->

@@ -3,8 +3,6 @@ title: "Glue API: Retrieve protected resources"
 description: The article describes how to retrieve a list of resources protected from unauthorized access.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-protected-resources
-originalArticleId: 549c4614-f8b4-4fa5-9609-c92b6cbc0e89
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202005.0/getting-the-list-of-protected-resources.html
   - /docs/scos/dev/glue-api-guides/202311.0/retrieving-protected-resources.html
@@ -17,6 +15,13 @@ related:
   - title: Searching by company users
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Since shop owners can define which resources are protected, the list is different in each shop. That's why, before sending any requests, you might need to check which resources are protected and [authenticate](/docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html).
 

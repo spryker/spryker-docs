@@ -3,8 +3,6 @@ title: Add delivery methods
 description: Learn how to add delivery methods in Spryker Cloud Commerce OS Back Office, streamlining shipping options and improving the customer experience in your e-commerce platform.
 last_updated: June 2, 2022
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/creating-and-managing-shipment-methods
-originalArticleId: 66d6acae-6c36-404a-b6fb-0dbd9d71d193
 redirect_from:
   - /2021080/docs/creating-and-managing-shipment-methods
   - /2021080/docs/en/creating-and-managing-shipment-methods

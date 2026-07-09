@@ -3,8 +3,6 @@ title: Multi-step checkout overview
 description: The checkout is based on a flexible step engine and can be adjusted to any use case.
 last_updated: Jun 23, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/multi-step-checkout
-originalArticleId: 05845681-637c-46cd-84f7-d548a089d2a6
 redirect_from:
   - /docs/scos/user/features/201811.0/checkout-feature-overview/multi-step-checkout-overview.html
   - /docs/scos/user/features/202200.0/checkout-feature-overview/multi-step-checkout-overview.html
@@ -14,6 +12,13 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/checkout-feature-overview/multi-step-checkout-overview.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/checkout-feature-overview/multi-step-checkout-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The checkout workflow is a fully customizable multi-step process. The standard steps include customer registration and login, shipping and billing address, shipment method and costs, payment method, checkout overview, and checkout success.
 

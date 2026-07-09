@@ -3,11 +3,16 @@ title: Upgrade and migrate
 description: The section provides instructions on how to install features in your project- Split Delivery, Silex Replacement, CRUD Scheduled Prices,  and Decimal Stock.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/about-migration-concepts
-originalArticleId: d93af391-04fe-41c0-89dc-65dfff2c4da7
 redirect_from:
 - /docs/scos/dev/migration-concepts/migration-concepts.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This section explains how to handle migration when a new feature requires an extensive migration effort for modules, or some technical solution used in Spryker needs to be replaced with a new one.
 

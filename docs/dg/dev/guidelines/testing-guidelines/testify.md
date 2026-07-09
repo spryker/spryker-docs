@@ -3,8 +3,6 @@ title: Testify
 description: On top of Codeception, Spryker built the Testify module, which provides many useful helpers
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/testify
-originalArticleId: e764c9cf-03b9-4766-8ea0-188db29a6b2d
 redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/testify.html
   - /docs/scos/dev/guidelines/testing/testify.html
@@ -32,6 +30,13 @@ related:
   - title: Testing console commands
     link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 On top of [Codeception](https://codeception.com), Spryker offers some classes to make your test life easier. In the Spryker [Testify](https://github.com/spryker/testify) module, you can find many useful  helpers.
 

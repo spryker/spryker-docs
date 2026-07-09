@@ -3,8 +3,6 @@ title: Glue API - Customer Account Management feature integration
 description: Learn how ot install and configure the Spryker Company Customer Account management GLUE API in to your Spryker projects.
 last_updated: Jul 13, 2021
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/glue-api-customer-account-management-feature-integration
-originalArticleId: fa53308d-8078-477d-9297-7597d51afbcf
 redirect_from:
   - /2021080/docs/glue-api-customer-account-management-feature-integration
   - /2021080/docs/en/glue-api-customer-account-management-feature-integration
@@ -29,6 +27,13 @@ related:
   - title: Managing customers
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/glue-api-manage-customers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 
 {% include pbc/all/install-features/latest/install-glue-api/install-the-customer-account-management-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-customer-account-management-glue-api.md -->

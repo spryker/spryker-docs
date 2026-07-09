@@ -3,8 +3,6 @@ title: Create tax sets
 description: Learn how you can create tax sets directly in the back office of your Spryker Cloud Commerce OS project.
 last_updated: May 31, 2022
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-tax-sets
-originalArticleId: b8a16bed-2e8b-4a25-b092-d41004fe0119
 redirect_from:
   - /2021080/docs/managing-tax-sets
   - /2021080/docs/en/managing-tax-sets

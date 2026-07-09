@@ -3,8 +3,6 @@ title: Yves multi-themes
 description: Manage multiple themes for Yves by extending them.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/yves-multi-themes
-originalArticleId: c892648b-6bdb-499c-af5a-eefa10fbb45d
 redirect_from:
   - /docs/scos/dev/front-end-development/202404.0/yves/yves-multi-themes.html
   - /docs/scos/dev/front-end-development/yves/yves-multi-themes.html
@@ -12,6 +10,13 @@ related:
   - title: Multi-theme
     link: docs/dg/dev/frontend-development/latest/yves/multi-theme.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to use and extend themes on the project level.
 

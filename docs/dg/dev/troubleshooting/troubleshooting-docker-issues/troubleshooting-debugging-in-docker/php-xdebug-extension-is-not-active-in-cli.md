@@ -3,8 +3,6 @@ title: PHP `xdebug` extension is not active in CLI
 description: Learn how to fix the issue when PHP `xdebug` extension is not active in CLI
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/php-xdebug-extension-is-not-active-in-cli
-originalArticleId: 5fe9a7c8-6e68-4024-952b-ae353d41bce0
 redirect_from:
 - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-debugging-in-docker/php-xdebug-extension-is-not-active-in-cli.html
 related:
@@ -13,6 +11,13 @@ related:
   - title: Xdebug does not work
     link: docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-debugging-in-docker/xdebug-does-not-work.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Description
 

@@ -6,6 +6,7 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-%3Cspan%20class=
   - /docs/scos/dev/back-end-development/data-manipulation/data-manipulation.html
 
+last_updated: May 14, 2025
 ---
 
 This section contains a collection of documents describing how data manipulation works in the Spryker SCOS:

@@ -3,8 +3,6 @@ title: Company Account feature overview
 description: The Company Account page gives a clear overview of business' structure, hierarchy, shipping, billing addresses, and other users in the Business Unit.
 last_updated: Jul 30, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/company-account
-originalArticleId: 8009f001-a9dd-426b-916a-b3b8a5e4acc7
 video: true
 redirect_from:
   - /2021080/docs/company-account
@@ -18,6 +16,13 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202204.0/company-account-feature-walkthrough/company-account-feature-walkthrough.html
   - /docs/scos/user/features/202204.0/company-account-feature-overview/company-account-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 A B2B business model implies bilateral commercial relations between businesses, so a company is the top figure of every B2B marketplace. Each company has a specific organizational structure with its divisions (units) and employee roles. At some point or another, a B2B business owner would need separate accounts for employees to constrain or extend rights in regards to products, orders, and confidential information.
 

@@ -3,8 +3,6 @@ title: Upgrade the ContentBannerGui module
 description: Learn how to upgrade to a newer version of the Spryker content banner GUI module from an older one in your Spryker Project.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-contentbannergui-201907
-originalArticleId: f6c315ec-d784-4771-8039-3756cd61e078
 redirect_from:
   - /2021080/docs/mg-contentbannergui-201907
   - /2021080/docs/en/mg-contentbannergui-201907
@@ -27,5 +25,12 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/install-and-upgrade/upgrade-modules/upgrade-the-contentbannergui-module.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-contentbannergui-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-contentbannergui-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-contentbannergui-module.md -->

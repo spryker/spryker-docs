@@ -3,8 +3,6 @@ title: Payolution request flow
 description: This article describes the request flow for Payolution for both invoice and installment payment.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/payolution-workflow
-originalArticleId: 5b1cfc2a-7960-4d1c-96e5-1243473d3d50
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/payolution/payolution-request-flow.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payolution/payolution-request-flow.html
@@ -21,6 +19,13 @@ related:
   - title: Payolution - Performing Requests
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/payolution-performing-requests.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Both [invoice](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/integrate-the-invoice-payment-method-for-payolution.html) and [installment](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/integrate-the-installment-payment-method-for-payolution.html) payment methods utilize the same request flow. It basically consists of the following requests:
 - Calculation (for instalment only): to calculate the instalment amounts, dues, and durations.

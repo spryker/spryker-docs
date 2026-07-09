@@ -3,8 +3,6 @@ title: Define the maximum size of content fields
 description: Use the guide to customize the content field size in the CMS module for your Spryker Projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/howto-define-the-maxiumum-size-of-content-fields
-originalArticleId: 42fb6510-84dc-425f-902d-e5fd7436cd3a
 redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/tutorials-and-howtos/howto-define-the-maxiumum-size-of-content-fields.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/tutorials-and-howtos/howto-define-the-maximum-size-of-content-fields.html
@@ -13,6 +11,13 @@ related:
   - title: CMS
     link: docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 By default, the CMS module doesn't specify the content field's size. For MySQL and MariaDB, it's transferred to TEXT (65535 bytes), and for PostgreSQL, it's transferred to TEXT (unlimited length).
 

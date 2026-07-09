@@ -3,8 +3,6 @@ title: Install the Prices feature
 description: The guide walks you through the process of installing the Volume Prices feature in your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/prices-feature-integration
-originalArticleId: df5285b4-dd81-4f58-bc71-e2734c59892c
 redirect_from:
   - /2021080/docs/prices-feature-integration
   - /2021080/docs/en/prices-feature-integration
@@ -26,5 +24,12 @@ related:
   - title: Install the Merchant Product Restrictions feature
     link: docs/pbc/all/merchant-management/latest/base-shop/install-and-upgrade/install-the-merchant-product-restrictions-feature.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/install-features/latest/install-the-prices-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-prices-feature.md -->

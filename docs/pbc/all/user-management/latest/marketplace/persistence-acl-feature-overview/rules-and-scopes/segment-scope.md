@@ -5,6 +5,13 @@ description: The segment rules let you grant permissions to subset of an entity 
 template: concept-topic-template
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 The segment rules let you grant permissions to subset of an entity collection.
 Segment entities are connected through a plain many-to-many tables, this allows minimizing performance impact.
 

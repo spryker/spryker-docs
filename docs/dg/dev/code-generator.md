@@ -3,8 +3,6 @@ title: Code Generator
 description: The code Generator module can generate Yves, Zed, Client Service and shared application code for your Spryker based project.
 last_updated: Nov 18, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v1/docs/code-generator
-originalArticleId: 67355fa9-f508-4c41-90a3-3e4d982b2923
 redirect_from:
   - /docs/scos/dev/sdk/201811.0/code-generator.html
   - /docs/scos/dev/sdk/201903.0/code-generator.html
@@ -24,6 +22,13 @@ related:
   - title: Twig and TwigExtension
     link: docs/dg/dev/integrate-and-configure/twig-and-twigextension.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The CodeGenerator module can generate your project code.
 

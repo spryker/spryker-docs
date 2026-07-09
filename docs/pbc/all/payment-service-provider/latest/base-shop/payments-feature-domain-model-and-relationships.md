@@ -11,6 +11,13 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202204.0/payments-feature-walkthrough.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 The *Payments* feature lets customers pay for orders with none, one, or multiple payment methods during the checkout process.
 
 The following schema illustrates relations between the *Payment*, *PaymentGui*, and *PaymentDataImport* modules:

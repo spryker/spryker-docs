@@ -3,8 +3,6 @@ title: Adyen
 description: Integrate Adyen into the Spryker Commerce OS to accept e-commerce, mobile, and point-of-sale payments.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/adyen
-originalArticleId: 0d0cbb43-1cdd-47b8-86a1-a963cef8a788
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/adyen.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/adyen/adyen.html
@@ -18,6 +16,13 @@ related:
   - title: Enabling filtering of payment methods for Ayden
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/enable-filtering-of-payment-methods-for-adyen.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Partner Information
 

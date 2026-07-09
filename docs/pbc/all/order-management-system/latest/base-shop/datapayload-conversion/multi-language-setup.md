@@ -3,8 +3,6 @@ title: Multi-language setup
 description: This document explains multi-language setup details and things to consider when setting up multi-locales in your Spryker projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/multi-language-setup
-originalArticleId: cf160490-ae8e-45c1-80a6-bcd667498ae0
 redirect_from:
   - /2021080/docs/multi-language-setup
   - /2021080/docs/en/multi-language-setup
@@ -18,6 +16,13 @@ redirect_from:
   - /v4/docs/en/multi-language-setup
   - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 All textual elements can be created in various languages to support content creation for multiple language setups—for example, for your international stores.
 - Customers can switch locales in the shop.

@@ -3,8 +3,6 @@ title: Event
 description: Learn how to implement event-driven architecture in Spryker's backend, enabling efficient data manipulation and event handling for your ecommerce platform.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/event
-originalArticleId: 3652cdfc-3b74-45bf-b9cf-307307bc9481
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/event/event.html
 related:
@@ -15,6 +13,13 @@ related:
   - title: Listen to events
     link: docs/scos/dev/back-end-development/data-manipulation/event/listen-to-events.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The `Event` module implements an [observer pattern](https://en.wikipedia.org/wiki/Observer_pattern), where you can add hooks (events) to your code and allow other modules to listen and react to those events.
 

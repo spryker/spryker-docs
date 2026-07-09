@@ -3,8 +3,6 @@ title: Integrate environment configuration enhancement
 description: Learn how to replace the environment name settings with explicit configuration.
 last_updated: Feb 19, 2026
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/environment-configuration-enhancement
-originalArticleId: af8fcee2-4a53-4e77-9749-0e171bf899f3
 redirect_from:
   - /docs/scos/dev/technical-enhancement-integration-guides/integrating-environment-configuration-enhancement.html
   - /docs/scos/dev/technical-enhancements/environment-configuration-enhancement.html

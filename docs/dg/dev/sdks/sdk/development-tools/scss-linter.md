@@ -3,8 +3,6 @@ title: SCSS linter
 description: Learn about the SCSS linter tool that allows you to find and fix mistakes in the code style.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/scss-linter
-originalArticleId: 62b2d90c-52f4-4307-b93f-78776f7408aa
 redirect_from:
   - /docs/sdk/dev/development-tools/scss-linter.html
   - /docs/scos/dev/sdk/201811.0/development-tools/scss-linter.html
@@ -35,6 +33,13 @@ related:
   - title: Tooling config file
     link: docs/dg/dev/sdks/sdk/development-tools/tooling-configuration-file.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 *SCSS linter* allows you to find and fix code style mistakes. It helps a team follow the same standards and make code more readable.
 

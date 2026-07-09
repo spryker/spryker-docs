@@ -3,8 +3,6 @@ title: Install in Development mode on Windows
 description: Learn how to install and configure Spryker in Development mode on Windows in a local environment.
 last_updated: Feb 19, 2026
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/installing-in-development-mode-on-windows
-originalArticleId: 14368b32-4d9e-4451-9a46-ecab32966d88
 redirect_from:
   - /docs/scos/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-windows.html
   - /docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-windows.html

@@ -3,8 +3,6 @@ title: Query objects - creation and usage
 description: Query objects provide an object-oriented API for writing database queries which are used in query containers.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/query-objects
-originalArticleId: b8357f84-9f29-4386-ad69-01888d697556
 redirect_from:
   - /docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html
 related:
@@ -21,6 +19,13 @@ related:
   - title: Repository
     link: docs/dg/dev/backend-development/zed/persistence-layer/repository.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Query objects provide an object-oriented API for writing database queries which are used in [query containers](/docs/dg/dev/backend-development/zed/persistence-layer/query-container/query-container.html).
 

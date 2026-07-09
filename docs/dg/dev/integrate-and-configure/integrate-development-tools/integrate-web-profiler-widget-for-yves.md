@@ -3,8 +3,6 @@ title: Integrate Web Profiler Widget for Yves
 description: This guide describes how to integrate and use the Web Profiler Widget available in Yves for development purposes.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/web-profiler-widget
-originalArticleId: 3a38050f-46db-446a-a4ff-80129759a861
 redirect_from:
   - /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-widget-for-yves.html
   - /docs/scos/dev/migration-and-integration/202108.0/development-tools/web-profiler-widget
@@ -24,6 +22,13 @@ related:
   - title: Integrating Web Profiler for Zed
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The *Web Profiler Widget* provides a toolbar for debugging and for informational purposes. The toolbar is located at the bottom of a loaded page.
 

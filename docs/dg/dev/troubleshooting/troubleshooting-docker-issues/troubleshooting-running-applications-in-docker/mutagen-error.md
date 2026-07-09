@@ -3,11 +3,16 @@ title: Mutagen error
 description: Learn how to fix the Mutagen error when running applications in docker with your Spryker projects.
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mutagen-error
-originalArticleId: b1896a64-b124-48a9-9fc5-33c950a620ad
 redirect_from:
 - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-running-applications-in-docker/mutagen-error.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Description
 

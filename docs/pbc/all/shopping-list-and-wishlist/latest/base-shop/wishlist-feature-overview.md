@@ -3,8 +3,6 @@ title: Wishlist feature overview
 description: Help your customers track and save items for later purchase through multiple Wish Lists, which are connected to the customer' accounts.
 last_updated: Aug 2, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/wishlist-feature-overview
-originalArticleId: 6af20838-1a7d-4112-9f8b-802995363403
 redirect_from:
   - /docs/scos/user/features/202108.0/wishlist-feature-overview.html
   - /docs/scos/user/features/202200.0/wishlist-feature-overview.html
@@ -13,6 +11,13 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/wishlist-feature-walkthrough.html
   - /docs/pbc/all/shopping-list-and-wishlist/202204.0/base-shop/wishlist-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 With the *Wishlist* feature, you can help your customers track and save items for later purchase through multiple wishlists, which are connected to the customers' accounts.
 

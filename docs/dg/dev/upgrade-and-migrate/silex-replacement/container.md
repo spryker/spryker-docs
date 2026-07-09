@@ -3,8 +3,6 @@ title: Container
 description: The article contains information on how to use Container, to check if services are added, removed or extended. Troubleshooting information is included too
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/container
-originalArticleId: 4829662a-2b70-425c-8044-ae291d77c208
 redirect_from:
 - /docs/scos/dev/migration-concepts/silex-replacement/container.html
 related:
@@ -13,6 +11,13 @@ related:
   - title: Application
     link: docs/scos/dev/migration-concepts/silex-replacement/application.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 A *container* is a class which holds one or more object collections or definitions. The Spryker container implements the [PSR-11 interface](https://www.php-fig.org/psr/psr-11/) check if it works before restoring.
 

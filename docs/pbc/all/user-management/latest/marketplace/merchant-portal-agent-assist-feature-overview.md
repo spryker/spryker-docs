@@ -1,7 +1,7 @@
 ---
 title: Merchant Portal Agent Assist feature overview
 description: An agent in Merchant Portal helps merchants to perform activities in the Merchant Portal
-last_updated: Jan 14 2024
+last_updated: Jan 14, 2024
 template: concept-topic-template
 ---
 

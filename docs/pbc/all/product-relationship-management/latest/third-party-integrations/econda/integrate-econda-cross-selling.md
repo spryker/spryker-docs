@@ -3,14 +3,19 @@ title: Integrating Econda cross-selling
 description: Learn how to integrate Econda cross-selling in to your Spryker Cloud Commerce OS based projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/econda-cross-sell
-originalArticleId: 66c188de-e8fa-4643-872c-98dc97d37c27
 redirect_from:
   - /docs/scos/user/technology-partners/202204.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda-cross-sell.html
   - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda-cross-selling.html
   - /docs/scos/dev/technology-partner-guides/202311.0/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda-cross-selling.html
   - /docs/scos/dev/technology-partner-guides/202204.0/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda-cross-selling.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Cross sell is highly customizable and it depends on your setup. Refer to [Econda offical documentation](https://support.econda.de/display/CSDE/Control+Panel).
 

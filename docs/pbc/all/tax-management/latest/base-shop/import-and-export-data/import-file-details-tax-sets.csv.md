@@ -3,8 +3,6 @@ title: "Import file details: tax_sets.csv"
 description: Learn how to import tax sets information using the tax sets csv file within you Spryker based project for the tax management feature.
 last_updated: Jun 23, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/file-details-taxcsv
-originalArticleId: c9d15906-3b02-44fd-9bde-eb6883f5f320
 redirect_from:
   - /docs/scos/dev/data-import/201907.0/data-import-categories/commerce-setup/file-details-tax.csv.html
   - /docs/scos/dev/data-import/202311.0/data-import-categories/commerce-setup/file-details-tax.csv.html
@@ -16,6 +14,13 @@ redirect_from:
   - /docs/pbc/all/tax-management/202311.0/spryker-tax/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html
   - /docs/pbc/all/tax-management/202204.0/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the `tax.csv` file to configure the [tax](/docs/pbc/all/tax-management/latest/base-shop/tax-feature-overview.html) information in your Spryker Demo Shop.
 

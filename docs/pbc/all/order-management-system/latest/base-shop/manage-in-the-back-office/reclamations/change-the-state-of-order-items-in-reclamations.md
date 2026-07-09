@@ -15,6 +15,13 @@ related:
     link: docs/pbc/all/order-management-system/latest/base-shop/reclamations-feature-overview.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 This document describes how to change the state of order items in reclamations. Each reclamation is linked to the order it was created from. When you change the state of an order in a reclamation, you change it in the linked order.
 
 ## Prerequisites

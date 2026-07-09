@@ -3,8 +3,6 @@ title: RatePay
 description: Offer intelligent payment solutions for handling most popular paylater models like invoice and installments on the internet for the DACH region by integrating RatePay into the Spryker-based shop.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/ratepay
-originalArticleId: 76f600d9-1b7f-4a0a-81e6-4c2dc466063c
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/ratepay.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/ratepay/ratepay.html
@@ -28,6 +26,13 @@ related:
   - title: RatePay - State Machine Commands and Conditions
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/ratepay-state-machine-commands-and-conditions.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Partner Information
 

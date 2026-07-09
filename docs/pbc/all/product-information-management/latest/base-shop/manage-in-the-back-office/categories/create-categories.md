@@ -3,8 +3,6 @@ title: Create categories
 description: Learn how to create categories so you can organize products in the Spryker Cloud Commerce OS Back Office.
 last_updated: June 15, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/creating-categories
-originalArticleId: b0f46c55-2786-4ab2-acee-594502fff3e1
 redirect_from:
   - /2021080/docs/creating-categories
   - /2021080/docs/en/creating-categories
@@ -20,6 +18,13 @@ related:
   - title: Category Management feature overview
     link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/category-management-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To create a category in the Back Office, follow the steps below.
 

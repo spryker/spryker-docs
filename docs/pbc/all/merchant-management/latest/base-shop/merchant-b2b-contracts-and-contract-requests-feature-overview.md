@@ -9,6 +9,13 @@ redirect_from:
   - /docs/scos/user/features/202204.0/merchant-b2b-contracts-feature-overview.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 In a B2B business model, the partnership is usually based on contracts, or relations, between buyers and merchants. Both features Merchant B2B Contracts and Merchant B2B Contract Requests allow for the creation and management of such relation and relation requests. Based on merchant relations, you can define buyer-specific [prices](/docs/pbc/all/price-management/latest/base-shop/merchant-custom-prices-feature-overview.html), [products](/docs/pbc/all/merchant-management/latest/base-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html), and [merchant order thresholds](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/checkout-feature-overview/order-thresholds-overview.html#merchant-order-thresholds).
 In the context of merchant relations in a Shop, there are two key actors: the merchant and the buyer:
 - A merchant is a seller usually represented by a company that owns the platform.

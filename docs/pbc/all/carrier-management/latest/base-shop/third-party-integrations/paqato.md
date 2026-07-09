@@ -3,12 +3,17 @@ title: Paqato
 description: Offer customer communication and shipping analysis by integrating Paqato into the Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/paqato
-originalArticleId: a08912d4-c05c-498a-867b-b4e1d04bd30f
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/shipment/paqato.html
   - /docs/pbc/all/carrier-management/202204.0/base-shop/third-party-integrations/paqato.html  
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Partner Information
 

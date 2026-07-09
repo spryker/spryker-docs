@@ -3,14 +3,19 @@ title: Implementing Twig extensions
 description: Create custom Twig extensions to enhance frontend templates. Learn to implement, register, and utilize Twig functions for a flexible ecommerce experience.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/t-twig-extensions
-originalArticleId: 4a503169-a26b-4a37-bb44-f20b34a81c4e
 redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-twig-extensions.html
 related:
   - title: "Tutorial: How the define Twig tag is working"
     link: docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-how-the-define-twig-tag-is-working.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document shows how to implement a Twig extension. As an example, let's build a filter which can be used for displaying prices.
 

@@ -3,8 +3,6 @@ title: Upgrade the OrdersRestApi module
 description: Use the guide to upgrade to a newer version of the Spryker Cloud Commerce OS Orders Rest API from an older version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-ordersrestapi
-originalArticleId: 03c5442b-1b7e-4ae7-93cc-09424333732c
 redirect_from:
   - /2021080/docs/mg-ordersrestapi
   - /2021080/docs/en/mg-ordersrestapi
@@ -26,5 +24,12 @@ redirect_from:
   - /docs/pbc/all/order-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-ordersrestapi-module.html
   - /docs/pbc/all/order-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-ordersrestapi-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-ordersrestapi-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-ordersrestapi-module.md -->

@@ -3,8 +3,6 @@ title: Implement event trigger publisher plugins
 description: Implement event-trigger publisher plugins in Spryker to automate data publishing. Enhance backend functionality with this comprehensive guide on event handling.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/howto-implement-event-trigger-publisher-plugins
-originalArticleId: 217a59d0-03ed-4b5b-9be2-01ed9878c9eb
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-event-trigger-publisher-plugins.html
@@ -28,6 +26,13 @@ related:
   - title: Synchronization behavior - enabling multiple mappings
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To [publish or republish](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-re-synchronization-and-re-generation.html#data-re-generation) the model data manually for all or a particular resource, you need to implement an event trigger publisher plugin.
 

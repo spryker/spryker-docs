@@ -3,8 +3,6 @@ title: Create company unit addresses
 description: Learn how to create and manage company unit addresses in the Spryker Cloud Commerce OS Back Office.
 last_updated: Aug 10, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-company-unit-addresses
-originalArticleId: b3bbc8db-3448-4aa1-8d93-eb435113d36c
 redirect_from:
   - /2021080/docs/managing-company-unit-addresses
   - /2021080/docs/en/managing-company-unit-addresses
@@ -18,6 +16,13 @@ related:
   - title: Business Units overview
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/business-units-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to create company unit addresses in the Back Office.
 

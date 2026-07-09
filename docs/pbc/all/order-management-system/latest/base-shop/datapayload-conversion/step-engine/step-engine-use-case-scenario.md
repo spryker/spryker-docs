@@ -3,8 +3,6 @@ title: "Step engine: Use case scenario"
 description: In this document, you have an example of the checkout process configuration.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/step-engine-use-case-scenario
-originalArticleId: 53312978-30d8-435c-84a4-d6a26fabfc90
 redirect_from:
   - /2021080/docs/step-engine-use-case-scenario
   - /2021080/docs/en/step-engine-use-case-scenario
@@ -29,6 +27,13 @@ related:
   - title: "Step engine: Use case scenario"
     link: docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/step-engine/step-engine-create-breadcrumb-navigation.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The following example represents the checkout process configuration, containing two steps: an entry step and a success step.
 

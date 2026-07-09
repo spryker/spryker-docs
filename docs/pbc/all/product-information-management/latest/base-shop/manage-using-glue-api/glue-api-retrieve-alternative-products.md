@@ -3,8 +3,6 @@ title: "Glue API: Retrieve alternative products"
 description: Learn how to find alternatives for discontinued products with Spryker Cloud Commerce OS Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-alternative-products
-originalArticleId: b910a3a3-e499-4047-bb32-b96e00b94bcb
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/retrieving-alternative-products.html
   - /docs/pbc/all/product-information-management/202311.0/manage-using-glue-api/glue-api-retrieve-alternative-products.html
@@ -15,6 +13,13 @@ related:
   - title: Alternative Products feature overview
     link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/alternative-products-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The *Alternative Products* feature allows customers to find a substitute for a product that runs out of stock or is no longer available for other reasons. The feature is particularly useful when a certain product becomes discontinued. In this case, customers usually look for an up-to-date generation of the same product, and suggesting possible alternatives is crucial. For more details, see [Alternative Products](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/alternative-products-feature-overview.html) and [Discontinued Products](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/discontinued-products-overview.html).
 

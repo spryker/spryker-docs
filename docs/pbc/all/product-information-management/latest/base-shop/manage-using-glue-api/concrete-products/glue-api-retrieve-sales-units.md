@@ -3,8 +3,6 @@ title: "Glue API: Retrieve sales units"
 description: Learn how to retrieve sales units of concrete products using the Spryker Cloud Commerce OS GLUE API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-sales-units
-originalArticleId: 4150363f-4c47-4e7c-b7e6-d1430ce864ba
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/concrete-products/retrieving-sales-units.html
   - /docs/pbc/all/product-information-management/202311.0/manage-using-glue-api/concrete-products/glue-api-retrieve-sales-units.html
@@ -21,6 +19,13 @@ related:
   - title: Measurement units feature overview
     link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/measurement-units-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This endpoint allows retrieving sales units of concrete products.
 

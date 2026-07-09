@@ -3,8 +3,6 @@ title: "Custom Order Reference: module relations"
 description: Learn about the module relations for the Custom order reference within the Spryker Order Management System.
 last_updated: Jun 16, 2021
 template: feature-walkthrough-template
-originalLink: https://documentation.spryker.com/2021080/docs/custom-order-reference-module-relations
-originalArticleId: 4edd02ad-f7db-4db0-b231-a6fbad0c100b
 redirect_from:
   - /2021080/docs/custom-order-reference-module-relations
   - /2021080/docs/en/custom-order-reference-module-relations
@@ -13,6 +11,13 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/order-management-feature-walkthrough/custom-order-reference-module-relations.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/order-management-feature-walkthrough/custom-order-reference-module-relations.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The module relations for the [Custom Order Reference](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/custom-order-reference-overview.html) feature can be represented like this:
 

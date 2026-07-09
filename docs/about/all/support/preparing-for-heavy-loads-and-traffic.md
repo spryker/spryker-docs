@@ -3,11 +3,16 @@ title: Preparing for heavy loads and traffic
 description: Guidance and tips on how to prepare your shop for higher traffic volume during busy trading seasons.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/special-prepare-for-a-busy-season
-originalArticleId: 03eeeab9-d5fd-4b18-80f9-5a1dd3fcf33e
 redirect_from:
 - /docs/scos/user/intro-to-spryker/support/special-prepare-for-a-busy-season.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document helps you prepare for a traditionally very busy season of the year: Black Friday, Cyber Monday, and the Holiday Season but it helps you whenever you expect your shop to receive record-breaking traffic. In this document, you can find recommendations written for business decision-makers, hosting providers, and Spryker developers. So feel free to forward our recommendations to your colleagues.
 

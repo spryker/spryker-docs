@@ -3,8 +3,6 @@ title: Integrate separate endpoint bootstraps
 description: Learn how to enable and integrate sperate endpoint bootstraps into your Spryker based project.
 last_updated: Feb 8, 2022
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/separating-different-endpoint-bootstraps
-originalArticleId: 9f42f274-0278-4632-8a9f-0279c3ed4675
 redirect_from:
   - /docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html
   - /docs/scos/dev/technical-enhancements/separating-different-endpoint-bootstraps.html

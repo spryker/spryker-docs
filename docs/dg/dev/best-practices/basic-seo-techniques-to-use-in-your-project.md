@@ -3,11 +3,16 @@ title: Basic SEO techniques to use in your project
 description: Learn how you can effectively use headings and mircodata to improve SEO for your project
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/basic-seo-techniques-to-use-in-your-project
-originalArticleId: 56e34beb-79e3-44b0-a7b9-06489c78e9ac
 redirect_from:
   - /docs/scos/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Search Engine Optimization or SEO is the process of improving a site to increase its visibility for relevant searches. The better visibility a page has in search results, the more likely you are to garner attention and attract prospective and existing customers to your business.
 

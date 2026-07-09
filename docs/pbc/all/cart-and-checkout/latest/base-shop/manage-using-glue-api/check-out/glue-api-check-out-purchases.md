@@ -3,8 +3,6 @@ title: "Glue API: Check out purchases"
 description: Learn how to check out a purchase using the Spryker Glue API with a list of attributes and their values.
 last_updated: June 9, 2026
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/checking-out-purchases
-originalArticleId: 6da60ad5-47a7-4554-a7e7-d662af2295dd
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202009.0/checking-out/checking-out-purchases.html
   - /docs/scos/dev/glue-api-guides/202311.0/checking-out/checking-out-purchases.html

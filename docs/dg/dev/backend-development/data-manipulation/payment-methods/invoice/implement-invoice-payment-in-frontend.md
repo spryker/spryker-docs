@@ -3,8 +3,6 @@ title: Implement invoice payment in frontend
 description: Implement an invoice payment method in Spryker storefronts with step-by-step guidance. Learn backend integration for seamless ecommerce payment solutions.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-invoice-payment-fe
-originalArticleId: 7fc7d2be-406d-4aef-abb0-4a38f25f8d97
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-frontend.html
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-front-end.html
@@ -20,6 +18,13 @@ related:
   - title: Test the invoice payment implementation
     link: docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/test-the-invoice-payment-implementation.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Create a form
 

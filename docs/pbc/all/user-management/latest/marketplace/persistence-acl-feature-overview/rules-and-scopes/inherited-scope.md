@@ -5,6 +5,13 @@ description: Inherited scope rules apply when you need to grant access to an ent
 template: concept-topic-template
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 Inherited scope rules apply when you need to grant access to an entity (child) that inherits from another entity (parent). Here are a few examples of inheritance:
 
 - MerchantProductAbstracts → Merchants (through `MerchantProductAbstract.fk_merchant`)

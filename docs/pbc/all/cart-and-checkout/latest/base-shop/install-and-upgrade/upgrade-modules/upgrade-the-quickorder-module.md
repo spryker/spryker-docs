@@ -3,8 +3,6 @@ title: Migration guide - QuickOrder
 description: Use the guide and learn how to migrate and upgrade the Spryker QuickOrder module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-quick-order
-originalArticleId: 96f6b931-8148-4cd6-ac56-e51271fd04f7
 redirect_from:
   - /2021080/docs/mg-quick-order
   - /2021080/docs/en/mg-quick-order
@@ -32,5 +30,12 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/migration-guide-quickorder.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-quickorder-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-quickorder-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-quickorder-module.md -->

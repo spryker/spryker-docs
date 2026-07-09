@@ -3,8 +3,6 @@ title: Discontinuing products
 description: Use the guide to make the product variant discontinued directly in the Spryker Cloud Commerce OS Back Office.
 last_updated: Aug 11, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/discontinuing-products
-originalArticleId: 9233e3f7-8568-4c3a-b8c2-3cd930ddb840
 redirect_from:
   - /2021080/docs/discontinuing-products
   - /2021080/docs/en/discontinuing-products
@@ -19,6 +17,13 @@ related:
   - title: Discontinued products overview
     link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/discontinued-products-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This article describes what steps you need to follow to discontinue the product.
 

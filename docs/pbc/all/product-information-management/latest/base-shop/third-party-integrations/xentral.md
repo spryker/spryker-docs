@@ -3,8 +3,6 @@ title: Xentral
 description: Provide customers with ERP / CRM software that is configured according to individual requirements by integrating Xentral to the Spryker-based project.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/xentral
-originalArticleId: 93da3b17-8b61-4638-82b0-f9fa1c051635
 redirect_from:
   - /2021080/docs/xentral
   - /2021080/docs/en/xentral
@@ -14,6 +12,13 @@ redirect_from:
   - /docs/scos/user/technology-partners/202311.0/product-information-pimerp/xentral.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/third-party-integrations/xentral.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Partner Information
 

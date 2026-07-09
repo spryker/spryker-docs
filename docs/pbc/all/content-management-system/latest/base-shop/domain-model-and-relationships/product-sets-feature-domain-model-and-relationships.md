@@ -8,6 +8,13 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/domain-model-and-relationships/product-sets-feature-domain-model-and-relationships.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 The Product Sets feature consists of the following modules:
 
 | MODULE | DESCRIPTION |

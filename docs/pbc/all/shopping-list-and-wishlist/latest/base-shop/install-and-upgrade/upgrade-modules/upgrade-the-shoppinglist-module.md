@@ -3,8 +3,6 @@ title: Upgrade the ShoppingList module
 description: Learn how to upgrade to a newer version of the Spryker Shopping List Module within your Spryker Cloud Commerce OS projects.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-shopping-list
-originalArticleId: f172344d-4048-4ed1-b041-6bb68889ffcc
 redirect_from:
   - /2021080/docs/mg-shopping-list
   - /2021080/docs/en/mg-shopping-list
@@ -34,5 +32,12 @@ redirect_from:
   - /docs/pbc/all/shopping-list-and-wishlist/202311.0/base-shop/install-and-upgrade/upgrade-the-shoppinglist-module.html
   - /docs/pbc/all/shopping-list-and-wishlist/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shoppinglist-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-shoppinglist-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-shoppinglist-module.md -->

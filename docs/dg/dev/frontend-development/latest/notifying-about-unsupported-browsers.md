@@ -2,11 +2,16 @@
 title: Notifying about unsupported browsers
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/howto-notify-about-unsupported-browsers
-originalArticleId: 96206081-8c2e-4086-80d6-94c8e5877ef4
 redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/howtos/howto-notify-about-unsupported-browsers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To notify users about an unsupported browser, you can download and implement the [the-unsupported-browser-popup-component](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-notify-about-unsupported-browsers.md/unsupported-browser-popup.zip) component.
 

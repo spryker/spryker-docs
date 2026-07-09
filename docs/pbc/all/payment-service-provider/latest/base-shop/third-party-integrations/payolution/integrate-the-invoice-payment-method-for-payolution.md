@@ -3,8 +3,6 @@ title: Integrating the invoice payment method for Payolution
 description: Learn how to integrate invoice payment through Payolution into the Spryker-based shop.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/payolution-invoice
-originalArticleId: 77f3e81c-18a1-46e0-b4f6-492681bf66da
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html
@@ -22,6 +20,13 @@ related:
   - title: Integrating the installment payment method for Payolution
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/integrate-the-installment-payment-method-for-payolution.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Workflow Scenarios
 

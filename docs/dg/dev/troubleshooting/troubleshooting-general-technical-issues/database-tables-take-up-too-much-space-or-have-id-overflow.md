@@ -3,8 +3,6 @@ title: Database tables take up too much space or have ID overflow
 description: Learn how you can Configure transition logs to be removed automatically within your Spryker projects.
 last_updated: Jun 4, 2025
 template: troubleshooting-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/database-tables-take-up-too-much-space-or-have-id-overflow
-originalArticleId: 5c025e16-bfc2-4dcf-ba35-137044daa486
 redirect_from:
 - /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/the-spy-oms-transition-log-table-takes-up-too-much-space.html
 - /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/the-spy-oms-transition-log-table-takes-up-too-much-space.html

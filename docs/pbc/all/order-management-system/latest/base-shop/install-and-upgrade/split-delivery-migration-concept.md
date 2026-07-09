@@ -3,8 +3,6 @@ title: Split delivery migration concept
 description: The article provides instructions on how to install Split Delivery on all modules affected in bulk and then individually.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/split-delivery-concept
-originalArticleId: 6b5f2740-8a4a-405b-bf72-2849ce60c2a8
 redirect_from:
   - /2021080/docs/split-delivery-concept
   - /2021080/docs/en/split-delivery-concept
@@ -28,6 +26,13 @@ related:
   - title: Silex Replacement migration concept
     link: docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## General information
 

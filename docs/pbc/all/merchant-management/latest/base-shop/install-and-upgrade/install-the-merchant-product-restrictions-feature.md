@@ -3,8 +3,6 @@ title: Install the Merchant Product Restrictions feature
 description: Merchant Product Restrictions allows setting access to particular products. This guide describes the process of integrating the feature into a project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/merchant-product-restrictions-feature-integration
-originalArticleId: e9b57fe0-4e95-4757-b9bd-5a7850138616
 redirect_from:
   - /2021080/docs/merchant-product-restrictions-feature-integration
   - /2021080/docs/en/merchant-product-restrictions-feature-integration
@@ -25,5 +23,12 @@ related:
   - title: Install the Product Images + Configurable Bundle feature
     link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-images-configurable-bundle-feature.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/install-features/latest/install-the-merchant-product-restrictions-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-merchant-product-restrictions-feature.md -->

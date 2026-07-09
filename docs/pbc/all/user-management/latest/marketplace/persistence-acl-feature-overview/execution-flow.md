@@ -5,6 +5,13 @@ description: Performing model actions and selecting and applying rules for a que
 template: concept-topic-template
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 ## Query processing flow
 
 Performing model actions and selecting and applying rules for a query share some similarities, but they have some differences as well. A user with insufficient permissions during query execution will be forced to run a query that results in an empty collection when the system executes the query.

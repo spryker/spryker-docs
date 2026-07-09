@@ -10,6 +10,13 @@ related:
     link: docs/pbc/all/return-management/latest/marketplace/marketplace-return-management-feature-overview.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 **My Returns** lets you manage the returns as follows:
 
 - Create a return for the customer.

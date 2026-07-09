@@ -3,11 +3,16 @@ title: Replace module dependencies
 description: Learn how to replace module dependencies in Spryker for flexible backend customization. Optimize data interactions and tailor modules to fit your needs.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-replace-bundle-dependencies
-originalArticleId: d8499e40-0c83-409c-9c17-1a453d245934
 redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-spryker-module-dependencies.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to identify module dependencies and replace a dependent module with another one.
 

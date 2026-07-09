@@ -3,8 +3,6 @@ title: Prices feature overview
 description: In the document, you can find the price definition, its types, and how the price is inherited and calculated.
 last_updated: Mar 16, 2023
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/prices-overview
-originalArticleId: 003e8985-3230-4498-838b-234a10f1a810
 redirect_from:
   - /docs/scos/user/features/202200.0/prices-feature-overview/prices-feature-overview.html
   - /docs/scos/user/features/202311.0/prices-feature-overview/prices-feature-overview.html  

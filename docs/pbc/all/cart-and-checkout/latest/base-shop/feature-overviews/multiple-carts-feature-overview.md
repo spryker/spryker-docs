@@ -3,14 +3,19 @@ title: Multiple Carts feature overview
 description: Shopping Cart is where the record of the items a buyer has picked up from the online store is kept. Select products, review them and add more with ease.
 last_updated: Jul 23, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/multiple-carts-feature-overview
-originalArticleId: d5aad6be-5c2c-4e27-806e-7091a6db3d0d
 redirect_from:
   - /docs/scos/user/features/202311.0/multiple-carts-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/multiple-carts-feature-walkthrough.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/multiple-carts-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/multiple-carts-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Sometimes customers need more than one shopping cart, such as one for daily purchases and another one for monthly expenses. The *Multiple Carts* feature lets you create and manage multiple shopping carts in one customer account.
 

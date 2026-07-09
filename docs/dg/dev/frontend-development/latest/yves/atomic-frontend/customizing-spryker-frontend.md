@@ -3,8 +3,6 @@ title: Customizing Spryker frontend
 description: This guide reviews customizing Spryker UI on each of these levels.
 last_updated: Aug 31, 2022
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/customizing-spryker-front-end
-originalArticleId: 55fa7cff-928c-4fb4-ad8e-3acb63774bc3
 redirect_from:
   - /docs/scos/dev/front-end-development/202404.0/yves/atomic-frontend/customizing-spryker-front-end.html
   - /docs/scos/dev/front-end-development/yves/atomic-frontend/customizing-spryker-front-end.html

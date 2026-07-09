@@ -3,8 +3,6 @@ title: CMS pages in search results overview
 description: The CMS Pages in Search Results feature lets you search not only for products but for CMS pages content as well.
 last_updated: Jul 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/cms-pages-in-search-results-overview
-originalArticleId: 0509e00d-9839-4136-81dd-10ff197cda0d
 redirect_from:
   - /2021080/docs/cms-pages-in-search-results-overview
   - /2021080/docs/en/cms-pages-in-search-results-overview
@@ -17,6 +15,13 @@ redirect_from:
   - /docs/scos/user/features/202311.0/cms-feature-overview/cms-pages-in-search-results-overview.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/cms-feature-overview/cms-pages-in-search-results-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Most often, shop visitors search for products; however, they also might need other information, like terms and conditions, legal information, or contacts, which are contained on [CMS pages](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-pages-overview.html).
 

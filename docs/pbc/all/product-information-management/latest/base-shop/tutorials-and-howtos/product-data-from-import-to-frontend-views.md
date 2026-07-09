@@ -3,12 +3,17 @@ title: "Product data: From import to frontend views"
 description: learn about the import of product data in to your Spryker based project databases and how to show it on the frontend.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-product-data-import-frontend
-originalArticleId: 7f644291-3453-4725-a3a3-5a37c38fc567
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-product-data-from-import-to-frontend-view.html
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-product-data-from-import-to-front-end-view.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the product data follow from importing it to the SQL database to showing it in the frontend view.
 

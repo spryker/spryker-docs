@@ -3,8 +3,6 @@ title: CrefoPay payment methods
 description: CrefoPay supports key payment methods across different regions, channels, and verticals.- bill, cash on delivery, credit card, direct debit, Paypal, cash in advance, sofort payment
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/crefopay-provided-payment-methods
-originalArticleId: a5a58535-f49a-42aa-8c26-e6987beb21bc
 redirect_from:
   - /2021080/docs/crefopay-provided-payment-methods
   - /2021080/docs/en/crefopay-provided-payment-methods
@@ -30,6 +28,13 @@ related:
   - title: CrefoPay notifications
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/crefopay-notifications.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 CrefoPay supports key payment methods across different regions, channels, and verticals. This article gives overview of these payment methods.
 

@@ -3,8 +3,6 @@ title: Create merchants
 description: Learn how you can create new merchants in the Spryker Cloud Commerce OS Back Office for your Spryker B2B project.
 last_updated: Sep 1, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-merchants
-originalArticleId: e35ca668-b297-45bb-86ab-2fb4e519abfe
 redirect_from:
   - /2021080/docs/managing-merchants
   - /2021080/docs/en/managing-merchants
@@ -19,6 +17,13 @@ related:
   - title: Merchants and Merchant Relations feature overview
     link: docs/pbc/all/merchant-management/latest/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to create merchants in the Back Office.
 

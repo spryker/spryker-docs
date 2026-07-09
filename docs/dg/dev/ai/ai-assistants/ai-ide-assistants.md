@@ -5,6 +5,7 @@ template: concept-topic-template
 redirect_from: 
   - /docs/dg/dev/ai-coding-assistants
   - /docs/dg/dev/ai-assistants/ai-ide-assistants
+last_updated: Apr 01, 2026
 ---
 
 This document describes the AI IDE Assistants you can use when developing your Spryker projects. You will read about recommended AI IDE Assistants, how to set up and use them.

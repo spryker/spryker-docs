@@ -3,8 +3,6 @@ title: Repository
 description: It's possible to use a Repository class in your persistence layer. The repository implements the repository pattern, which means you have a clear separation between business and persistence layers.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/repository
-originalArticleId: 11453043-a810-40f9-84c1-774ed4dba854
 redirect_from:
   - /docs/scos/dev/back-end-development/zed/persistence-layer/repository.html
 related:
@@ -21,6 +19,13 @@ related:
   - title: Query objects - creation and usage
     link: docs/dg/dev/backend-development/zed/persistence-layer/query-objects-creation-and-usage.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Since Kernel version 3.2 it's possible to use a Repository class in your persistence layer. The repository implements the [repository pattern](https://martinfowler.com/eaaCatalog/repository.html), which means you have a clear separation between business and persistence layers. Propel entities are not allowed outside the persistence layer. We are using transfer objects instead. This separation enables switching to different database systems or ORMs, you could even use NOSQL to store your data.
 

@@ -3,8 +3,6 @@ title: "Glue API: Retrieve measurement units"
 description: Retrieve details about measurement units and learn what else you can do with the resource.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-measurement-units
-originalArticleId: 21b908ed-07a9-44fa-b3a8-614401d4deab
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/retrieving-measurement-units.html
   - /docs/pbc/all/product-information-management/202311.0/manage-using-glue-api/glue-api-retrieve-measurement-units.html
@@ -13,6 +11,13 @@ related:
   - title: Measurement Units feature overview
     link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/measurement-units-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The Measurement Units API together with the [Measurement Units](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/measurement-units-feature-overview.html) feature allows selling products in any measurement units configured in your shop.
 

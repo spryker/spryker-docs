@@ -3,8 +3,6 @@ title: Upgrade the Translator module
 description: Learn how you can upgrade the translator module of the Silex Migration within your Spryker based projects.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-translator
-originalArticleId: 2b81331f-01f6-4f5e-aa80-5cc439e688b9
 redirect_from:
   - /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-translator-module.html
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-translator.html
@@ -12,5 +10,12 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-translator.html
   - /docs/scos/dev/module-migration-guides/migration-guide-translator.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-translator-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-translator-module.md -->

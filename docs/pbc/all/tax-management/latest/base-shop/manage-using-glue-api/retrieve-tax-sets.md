@@ -3,8 +3,6 @@ title: Retrieve tax sets
 description: Learn how you can retrieve Spryker Tax sets using GLUE API within your Spryker based projects.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-tax-sets
-originalArticleId: 9b8f60f0-3815-4d5b-94df-64deb0771117
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/abstract-products/retrieving-tax-sets.html
   - /docs/pbc/all/tax-management/202311.0/manage-via-glue-api/retrieve-tax-sets.html
@@ -20,6 +18,13 @@ related:
   - title: Retrieving image sets of abstract products
     link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This endpoint allows retrieving detailed information about tax sets of abstract products.
 

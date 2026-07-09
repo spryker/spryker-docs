@@ -3,8 +3,6 @@ title: Implement synchronization plugins
 description: Implement synchronization plugins in Spryker to streamline data consistency across systems. Follow this guide for seamless backend data synchronization.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/implementing-synchronization-plugins
-originalArticleId: e825266c-5435-4a02-adc7-3ef6cd60cb3f
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-synchronization-plugins.html
@@ -28,6 +26,13 @@ related:
   - title: Synchronization behavior - enabling multiple mappings
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Sometimes it's needed to manually [synchronize or re-syncrhonize](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-re-synchronization-and-re-generation.html#data-re-generation) the published model data with the key-value store (Redis or Valkey) or Elasticsearch. To do that, you need to implement a synchronization plugin.
 

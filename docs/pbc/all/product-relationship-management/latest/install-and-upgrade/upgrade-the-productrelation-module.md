@@ -3,8 +3,6 @@ title: Upgrade the ProductRelation module
 description: Use the guide to learn how to update the ProductRelation module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-productrelation
-originalArticleId: 7e947ff1-adde-438d-8814-d1b41072f63f
 redirect_from:
   - /2021080/docs/migration-guide-productrelation
   - /2021080/docs/en/migration-guide-productrelation
@@ -30,5 +28,12 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productrelation.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productrelation.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-productrelation-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productrelation-module.md -->

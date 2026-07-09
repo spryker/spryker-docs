@@ -3,8 +3,6 @@ title: Technology stack
 description: This document provides a general overview of the technologies used while developing Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/technology-stack
-originalArticleId: 336a8382-fffd-426f-b752-df2ad2a3820a
 redirect_from:
   - /docs/scos/dev/architecture/technology-stack.html
 related:
@@ -19,6 +17,13 @@ related:
   - title: Code buckets
     link: docs/dg/dev/architecture/code-buckets.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Spryker is an e-commerce Commerce OS developed in PHP, that promotes SOLID principles and clean code. Its purpose is to facilitate rapid development in building a customized solution for an e-commerce business.
 

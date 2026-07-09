@@ -3,8 +3,6 @@ title: Create company users
 description: Learn how to create and manage company users in the Spryker Cloud Commerce OS Back Office.
 last_updated: Jul 6, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-company-users
-originalArticleId: ff15efb5-30c1-4b0e-b56d-596d90d40123
 redirect_from:
   - /2021080/docs/managing-company-users
   - /2021080/docs/en/managing-company-users
@@ -24,6 +22,13 @@ related:
   - title: Company user roles and permissions overview
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to create company users in the Back Office.
 

@@ -3,8 +3,6 @@ title: Silex replacement
 description: The article contains information on the Silex replacement, backward compatibility, steps to be taken, changes in the old procedure and the new procedure.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/silex-replacement
-originalArticleId: 4ec167a5-a956-4a57-b940-d679b1a210aa
 redirect_from:
 - /docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
 related:
@@ -13,6 +11,13 @@ related:
   - title: Container
     link: docs/scos/dev/migration-concepts/silex-replacement/container.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Originally, *Silex* was used to integrate Symfony Components with Spryker using *Service Providers*. Also, there were other Service Providers added by Spryker and customer projects to bootstrap the application. Such providers implemented Symfony components and other entities by adding them to the *Pimple container*. Since Silex project is abandoned and the Pimple version is outdated, we replace them with a Spryker solution.
 

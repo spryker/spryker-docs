@@ -3,8 +3,6 @@ title: Integrate invoice payment into checkout
 description: This document provides information on how to integrate the invoice payment into the checkout.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-invoice-payment-checkout
-originalArticleId: bd5f3fce-d72c-45f2-9609-d6894b1c082c
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrate-invoice-payment-into-checkout.html
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrating-invoice-payment-into-checkout.html
@@ -20,6 +18,13 @@ related:
   - title: Test the invoice payment implementation
     link: docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/test-the-invoice-payment-implementation.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to integrate invoice payment into the checkout.
 

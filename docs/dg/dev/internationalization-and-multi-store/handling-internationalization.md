@@ -2,11 +2,16 @@
 title: "Handling internationalization"
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/t-internationalization
-originalArticleId: ab5fb80c-57d6-44a7-a85f-41034cb5c3be
 redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-internationalization.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 In international business, it's important to fine-tune a shop's behavior according to the country. Functionality that needs to be configured:
 

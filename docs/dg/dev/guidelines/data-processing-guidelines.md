@@ -3,8 +3,6 @@ title: Data Processing Guidelines
 description: The article describes the most important concepts and best practices that should be used during data processing.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/data-processing-guidelines
-originalArticleId: 5db3896c-3085-4056-870c-2c28cd0fe62b
 redirect_from:
   - /docs/scos/dev/guidelines/data-processing-guidelines.html
 related:
@@ -17,6 +15,13 @@ related:
   - title: Data importer speed optimization
     link: docs/dg/dev/data-import/latest/data-import-optimization-guidelines.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 One of the most important questions addressed during project development is "How to bring data in my project?". Spryker provides the required infrastructure to address performance and consistency when dealing with project data.
 

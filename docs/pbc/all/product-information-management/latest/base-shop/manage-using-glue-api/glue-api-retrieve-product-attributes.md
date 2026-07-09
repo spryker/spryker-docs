@@ -3,8 +3,6 @@ title: "Glue API: Retrieve product attributes"
 description: The article explains how you can retrieve product attributes via the Spryker Cloud Commerce OS GLUE API
 last_updated: Jun 22, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-product-attributes
-originalArticleId: 11708dbe-4c10-47db-8e40-d5cf23a8c3eb
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/retrieving-product-attributes.html
   - /docs/pbc/all/product-information-management/202311.0/manage-using-glue-api/glue-api-retrieve-product-attributes.html
@@ -13,6 +11,13 @@ related:
   - title: Configurable Bundle feature overview
     link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The Product Management Attributes API allows you to retrieve all predefined [product attributes](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) available in your shop system.
 

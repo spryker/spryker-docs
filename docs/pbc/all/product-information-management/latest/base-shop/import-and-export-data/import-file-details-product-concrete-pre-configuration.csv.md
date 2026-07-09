@@ -3,8 +3,6 @@ title: "Import file details: product_concrete_pre_configuration.csv"
 description: Learn how you can import data for configurable products using the product concrete pre configuration csv file within your Spryker Cloud Commerce OS project.
 last_updated: Jun 25, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-concrete-pre-configurationcsv
-originalArticleId: 81e75f7f-b1bd-4707-870a-dbea4a001273
 redirect_from:
   - /docs/scos/dev/data-import/202200.0/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html
   - /docs/scos/dev/data-import/202311.0/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html
@@ -14,6 +12,13 @@ related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the `product_concrete_pre_configuration.csv` file to configure [configurable product](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/configurable-product-feature-overview/configurable-product-feature-overview.html) information in your Spryker shop.
 

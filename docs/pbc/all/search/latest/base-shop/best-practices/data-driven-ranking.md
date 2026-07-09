@@ -3,8 +3,6 @@ title: Data-driven ranking
 description: A common solution to sort the query returns is to manually assign ranks to products.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/data-driven-ranking
-originalArticleId: e0923c0d-7905-4117-aa51-ed4b33d97723
 redirect_from:
   - /2021080/docs/data-driven-ranking
   - /2021080/docs/en/data-driven-ranking
@@ -46,6 +44,13 @@ related:
     link: docs/pbc/all/search/latest/base-shop/best-practices/usage-driven-schema-and-document-structure.html
 
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 When a query returns hundreds or thousands of results, the most relevant to the user products must be at the top of the search result page. Getting this right leads to a higher conversion probability and increases customer happiness. Implementing proper data-driven ranking, however, is usually very tricky because there might be large numbers of heuristics, which define what a good search result for a certain query is.
 

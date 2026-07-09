@@ -3,8 +3,6 @@ title: "Glue API: Retrieve company roles"
 description: Learn how to retrieve company roles that are configured within your store via the Spryker Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-company-roles
-originalArticleId: 91e7d4fb-7088-4249-bb24-c146c3a63ea4
 redirect_from:
   - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/retrieving-company-roles.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/retrieving-company-roles.html
@@ -30,6 +28,13 @@ related:
   - title: Authenticating as a customer
     link: docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 In corporate environments, where users act as company representatives rather than private buyers, companies can leverage [Company Roles](/docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview.html) to distribute scopes and permissions among [Company Users](/docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/company-accounts-overview.html). This endpoint allows retrieving information about the company roles.
 

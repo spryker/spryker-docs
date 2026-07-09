@@ -3,8 +3,6 @@ title: Product Relations feature overview
 description: Product Relations is a feature that allows grouping products by attributes for easier navigation and accessibility.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/product-relations-feature-overview
-originalArticleId: e3195022-f1fb-492c-9b99-3da32dab77c3
 redirect_from:
   - /2021080/docs/product-relations-feature-overview
   - /2021080/docs/en/product-relations-feature-overview
@@ -17,6 +15,13 @@ redirect_from:
   - /docs/scos/user/features/202200.0/product-relations-feature-overview.html
   - /docs/scos/user/features/202204.0/product-relations-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The *Product Relations* feature lets product catalog managers create logical relations between products based on their actual properties. Product relations are displayed on the Storefront to achieve multiple purposes:
 - Promote products in cart.

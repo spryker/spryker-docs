@@ -3,8 +3,6 @@ title: GDPR compliance guidelines
 description: A helpful guide on making your Spryker project compliant with the General Data Protection Regulation (GDPR).
 last_updated: March 1, 2024
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/guidelines-for-new-gdpr-rules
-originalArticleId: 256c82f9-5bae-4788-ab23-1ed7398edb1a
 redirect_from:
 - /docs/scos/user/intro-to-spryker/support/guidelines-for-new-gdpr-rules.html
 ---

@@ -3,8 +3,6 @@ title: Product feature overview
 description: Detailed overview of the Spryker Product feature allowing you to create products and characteristics of producs in Spryker Cloud Commerce OS
 last_updated: Jul 9, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/products-overview
-originalArticleId: d12e5fdb-b74a-4d9b-91d9-866f330b46df
 redirect_from:
   - /docs/scos/user/features/202108.0/product-feature-overview/product-feature-overview.html
   - /docs/scos/user/features/202200.0/product-feature-overview/product-feature-overview.html
@@ -15,6 +13,13 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html
   - /docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/concrete-sku-product-filter-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The *Product* feature lets you create products, and manage their characteristics and settings.
 

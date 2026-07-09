@@ -3,8 +3,6 @@ title: Get the list of console commands and available options
 description: Discover how to list console commands and view available options in Spryker's backend. Master key commands for efficient ecommerce platform management.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/getting-the-list-of-console-commands-and-available-options
-originalArticleId: e075ad9a-b328-43d4-bde1-e6d0f6e5f0bc
 redirect_from:
   - /docs/scos/dev/back-end-development/console-commands/get-the-list-of-console-commands-and-available-options.html
   - /docs/scos/dev/back-end-development/console-commands/getting-the-list-of-console-commands-and-available-options.html
@@ -14,6 +12,13 @@ related:
   - title: Implement a new console command
     link: docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The command-line console tool lets you execute a great variety of commands, such as managing the Spryker Commerce OS installer to run the OS in any environment.
 

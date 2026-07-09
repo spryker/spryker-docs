@@ -3,8 +3,6 @@ title: Database overview
 description: Overview of the persistence layer. Learn about schema design, entity management, and efficient data handling in Zed backend development.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/database-overview
-originalArticleId: bf0ed96e-17b1-46a7-b3e5-21919e46cf6b
 redirect_from:
   - /docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html
 related:
@@ -21,6 +19,13 @@ related:
   - title: Repository
     link: docs/dg/dev/backend-development/zed/persistence-layer/repository.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 
 ## ORM Directory

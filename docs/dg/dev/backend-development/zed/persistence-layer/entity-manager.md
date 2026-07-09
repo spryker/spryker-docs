@@ -3,8 +3,6 @@ title: Entity manager
 description: It is possible to create an entity manager class in your persistence layer. It will be responsible for saving, updating and deleting data. Using the class, you can separate data from persistence details (Propel).
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/entity-manager
-originalArticleId: 87716913-526e-429c-82e4-1fe32fc10d7b
 redirect_from:
   - /docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html
 related:
@@ -21,6 +19,13 @@ related:
   - title: Repository
     link: docs/dg/dev/backend-development/zed/persistence-layer/repository.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 From Kernel version 3.2, you can create an entity manager class in your `Persistence` layer. It is responsible for saving, updating, and deleting data. Using the class, you can separate data from persistence details (Propel).
 

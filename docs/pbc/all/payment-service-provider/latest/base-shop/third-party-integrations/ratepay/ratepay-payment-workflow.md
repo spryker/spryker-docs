@@ -3,8 +3,6 @@ title: RatePay payment workflow
 description: This article describes the request workflow that uses Ratepay for Invoice, Prepayment and Direct Debit methods.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/ratepay-payment-workflow
-originalArticleId: 9e0777dc-e660-4a9c-b2e0-0b8cf7adabb2
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/ratepay/ratepay-payment-workflow.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/ratepay/ratepay-payment-workflow.html
@@ -27,6 +25,13 @@ related:
   - title: Integrating the Direct Debit payment method for RatePay
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-direct-debit-payment-method-for-ratepay.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Invoice, Prepayment and Direct Debit methods have the same request flow.
 The payment workflow consists of the following requests:

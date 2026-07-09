@@ -3,8 +3,6 @@ title: Upgrade the Navigation module
 description: A guide on how to upgrade to a newer version of the Spryker Navigation module from an older version in your Spryker projects.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-navigation
-originalArticleId: 735f2654-395b-4da6-9b9d-fa878924105a
 redirect_from:
   - /2021080/docs/mg-navigation
   - /2021080/docs/en/mg-navigation
@@ -35,5 +33,12 @@ related:
   - title: Upgrade the NavigationGui
     link: docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-navigationgui-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-navigation-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-navigation-module.md -->

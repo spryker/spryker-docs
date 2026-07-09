@@ -1,7 +1,7 @@
 ---
 title: "Oryx: Providing component definitions"
 description: Components are registered in an Oryx application by a definition file
-last_updated: Sept 19, 2023
+last_updated: Sep 19, 2023
 template: concept-topic-template
 redirect_from:
 - /docs/scos/dev/front-end-development/202404.0/oryx/building-components/oryx-providing-component-definitions.html

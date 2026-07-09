@@ -3,8 +3,6 @@ title: Retrieve concrete product availability
 description: Learn how to retrieve availability of concrete products using Spryker GLUE API within your Spryker based projects.
 last_updated: Jul 12, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-concrete-product-availability
-originalArticleId: 0c67acf3-3c48-484e-8a9a-3889189c7f56
 redirect_from:
   - /docs/scos/dev/glue-api-guides/201811.0/managing-products/concrete-products/retrieving-concrete-product-availability.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-products/concrete-products/retrieving-concrete-product-availability.html
@@ -23,6 +21,13 @@ related:
   - title: Retrieving sales units
     link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-sales-units.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This endpoint allows retrieving availability of concrete products.
 

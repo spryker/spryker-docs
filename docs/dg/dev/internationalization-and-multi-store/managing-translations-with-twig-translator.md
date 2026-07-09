@@ -2,9 +2,15 @@
 title: Managing translations with Twig translator
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/t-using-translations
-originalArticleId: ff253743-a10f-4866-8047-a6c8357a88a7
+
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The data stored in the key-value storage can be used for multiple purposes:
 

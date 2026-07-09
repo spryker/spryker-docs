@@ -3,8 +3,6 @@ title: Upgrade the CmsBlockCategoryConnector module
 description: Use the guide to update versions to the newer ones of the Spryker CMS Block Category Connector  module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-cms-block-category-connector-console
-originalArticleId: 206dfcc3-f900-49de-a41c-1623892ee55b
 redirect_from:
   - /2021080/docs/mg-cms-block-category-connector-console
   - /2021080/docs/en/mg-cms-block-category-connector-console
@@ -36,4 +34,11 @@ related:
   - title: Upgrade the CmsBlockCategoryConnector
     link: docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockcategoryconnector-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 {% include pbc/all/upgrade-modules/upgrade-the-cmsblockcategoryconnector-migration-console-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cmsblockcategoryconnector-migration-console-module.md -->

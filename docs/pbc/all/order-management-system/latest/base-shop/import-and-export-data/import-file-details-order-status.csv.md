@@ -3,8 +3,6 @@ title: "Import file details: order-status.csv"
 description: Import the data to to configure the update of the regular order status information
 last_updated: Jun 22, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/file-details-order-statuscsv
-originalArticleId: 9dcde9fc-7757-4a62-997c-a53def8250d1
 redirect_from:
   - /2021080/docs/file-details-order-statuscsv
   - /2021080/docs/en/file-details-order-statuscsv
@@ -17,6 +15,13 @@ related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the `order-status.csv` file to configure the update of the regular order status information in your Spryker shop.
 

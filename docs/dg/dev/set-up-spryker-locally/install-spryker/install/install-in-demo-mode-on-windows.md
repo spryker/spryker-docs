@@ -3,8 +3,6 @@ title: Install in Demo mode on Windows
 description: Learn how you can install and configure Spryker in Demo mode on Windows in a local environment.
 last_updated: Feb 19, 2026
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/installing-in-demo-mode-on-windows
-originalArticleId: 57e6858b-6419-47b3-9d61-8b1d6213e4aa
 redirect_from:
   - /docs/scos/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-windows.html
   - /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-windows.html

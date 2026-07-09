@@ -3,13 +3,18 @@ title: Import and export Price Management data
 description: Learn how data import works and different ways of importing price management data in to your Spryker project.
 last_updated: Jun 16, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/pricing
-originalArticleId: c6b46b26-89ca-4a40-b927-e36fc14266e9
 redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/catalog-setup/pricing/pricing.html
   - /docs/pbc/all/price-management/202311.0/base-shop/import-and-export-data/import-of-prices.html
   - /docs/pbc/all/price-management/202204.0/base-shop/import-and-export-data/import-and-export-price-management-data.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To learn how data import works and about different ways of importing data, see [Data import](/docs/dg/dev/data-import/latest/data-import.html). This section describes the data import files that are used to import data related to the Price Management PBC:
 

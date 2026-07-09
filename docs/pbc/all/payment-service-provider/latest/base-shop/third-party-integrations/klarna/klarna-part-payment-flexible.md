@@ -3,8 +3,6 @@ title: Klarna - Part Payment Flexible
 description: In this article, you will find part payment flexible scenarios for the payment process with Klarna.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/klarna-part-payment-flexible
-originalArticleId: 78f05644-f9b7-4f56-9fc2-19f5d8d2a66e
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/klarna/klarna-part-payment-flexible.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/klarna/klarna-part-payment-flexible.html
@@ -19,6 +17,13 @@ related:
   - title: Klarna state machine commands and conditions
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/klarna/klarna-state-machine-commands-and-conditions.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Payment Workflow Scenarios
 

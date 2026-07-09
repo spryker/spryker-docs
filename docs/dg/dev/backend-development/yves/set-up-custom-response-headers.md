@@ -3,11 +3,16 @@ title: Set up custom response headers
 description: This HowTo shows how to set up custom response headers to play the full-screen video.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/howto-set-up-custom-response-headers-on-project-level
-originalArticleId: afaca4e2-bbaa-4766-b786-dc0490233c69
 redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-custom-response-headers-on-project-level.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document shows how to create customer response headers. As an example, we use a header that allows playing full-screen videos in Chrome.
 

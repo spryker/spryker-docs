@@ -3,8 +3,6 @@ title: Persistent Cart Sharing feature overview
 description: With the feature, company users can generate the URL to share the cart with different levels of access.
 last_updated: Jul 28, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/persistent-cart-sharing-feature-overview
-originalArticleId: a80f4aab-aec5-4e7f-ad69-e5112178f27d
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/persistent-cart-sharing-feature-walkthrough/persistent-cart-sharing-feature-walkthrough.html
   - /docs/scos/user/features/202311.0/persistent-cart-sharing-feature-overview.html
@@ -12,6 +10,13 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/persistent-cart-sharing-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/persistent-cart-sharing-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The *Persistent Cart Sharing* feature lets company users generate the URL to share the cart with different access levels. To generate the link, you need to be logged in to a company account.
 

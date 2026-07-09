@@ -3,8 +3,6 @@ title: Manage product reviews in the Back Office
 description: Learn how to read, approve, and reject product reviews in the Spryker Cloud Commerce OS Back Office.
 last_updated: June 25, 2022
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-product-reviews
-originalArticleId: e3dff161-c044-4811-8c15-e9513d64ff9a
 redirect_from:
   - /2021080/docs/managing-product-reviews
   - /2021080/docs/en/managing-product-reviews

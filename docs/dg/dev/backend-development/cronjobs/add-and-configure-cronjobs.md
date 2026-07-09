@@ -3,8 +3,6 @@ title: Add and configure cronjobs
 last_updated: Jun 16, 2021
 description: Learn how to add and configure cronjobs in Spryker's backend for automating tasks. Optimize your ecommerce platform's operations with effective cronjob management.
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/adding-and-configuring-cronjob
-originalArticleId: 6af304f1-b8ba-417b-874e-878e5d9a5730
 redirect_from:
   - /docs/scos/dev/back-end-development/cronjobs/adding-and-configuring-cronjobs.html
   - /docs/scos/dev/back-end-development/cronjobs/add-and-configure-cronjobs.html
@@ -18,6 +16,13 @@ related:
   - title: Cronjob scheduling
     link: docs/scos/dev/sdk/cronjob-scheduling.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document shows how to add and configure cronjobs in Jenkins.
 

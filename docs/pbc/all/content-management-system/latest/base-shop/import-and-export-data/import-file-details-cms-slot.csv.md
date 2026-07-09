@@ -3,8 +3,6 @@ title: "Import file details: cms_slot.csv"
 description: Learn about the Spryker cms slot csv file to configure cms slot information in your Spryker shop.
 last_updated: Jun 16, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-slotcsv
-originalArticleId: 724be566-e4d4-4037-b242-a933fb78a42e
 redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-cms-slot.csv.html
   - /docs/scos/dev/data-import/202311.0/data-import-categories/content-management/file-details-cms-slot.csv.html  
@@ -15,6 +13,13 @@ related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the `cms_slot.csv` file to configure [CMS Slot](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/templates-and-slots-overview.html) information in your Spryker Demo Shop.
 

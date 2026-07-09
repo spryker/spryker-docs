@@ -3,8 +3,6 @@ title: "Personalization: dynamic pricing"
 description: This document describes how to personalize your Spryker based shop with dynamic pricing.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/personalization-dymanic-pricing
-originalArticleId: 9c018e4a-9a82-49fd-9e46-d6d02332185b
 redirect_from:
   - /2021080/docs/personalization-dymanic-pricing
   - /2021080/docs/en/personalization-dymanic-pricing
@@ -44,6 +42,13 @@ related:
   - title: Usage-driven schema and document structure
     link: docs/pbc/all/search/latest/base-shop/best-practices/usage-driven-schema-and-document-structure.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Especially in businesses with a B2B focus, customers expect to get discounts after they have been using the service/website for a longer period of time. The search infrastructure should be able to handle such use cases, and customers should be able to see their own discounted prices while browsing the catalog. Luckily, Elasticsearch lets you extend basic filtering, aggregation, and fetching functionalities with scripts that are executed within the document context and can be used instead of fixed document values.
 

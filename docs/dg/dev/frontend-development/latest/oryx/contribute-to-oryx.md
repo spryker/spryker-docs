@@ -2,6 +2,7 @@
 title: Contribute to Oryx
 description: Learn how you can contribute to the development of Oryx
 template: howto-guide-template
+last_updated: Jul 01, 2025
 ---
 
 This document describes how you can contribute to the development of the Oryx frontend framework. It provides details on setting up a development environment, understanding our contribution process, and guidelines for submitting your contributions.

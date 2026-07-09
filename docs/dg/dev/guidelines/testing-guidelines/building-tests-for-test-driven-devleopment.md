@@ -3,11 +3,16 @@ title: Building tests for test-driven development
 description: Use the tutorial to understand how testing concepts work with Spryker by using the test-driven development approach.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/t-testing-tdd-scos
-originalArticleId: 1bc316e9-d1d2-4514-af9e-7459a9c97fa0
 redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-testing-and-tdd-spryker-commerce-os.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document helps you understand the main concepts of testing with Spryker and see how simple it's to build tests. You will use the *test-driven development (TDD)* approach.
 

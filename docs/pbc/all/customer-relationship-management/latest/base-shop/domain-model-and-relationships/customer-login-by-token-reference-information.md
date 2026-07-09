@@ -3,7 +3,6 @@ title: "Customer Login by Token: reference information"
 description: Learn about the Customer login by token within Spryker, using the base64url format for the tokens and how tokens are structured.
 template: feature-walkthrough-template
 last_updated: Nov 17, 2023
-originalLink: https://documentation.spryker.com/2021080/docs/customer-login-by-token-overview
 redirect_from:
 - /docs/scos/dev/feature-walkthroughs/202200.0/company-account-feature-walkthrough/customer-login-by-token-reference-information.html
 - /docs/scos/dev/feature-walkthroughs/202311.0/company-account-feature-walkthrough/customer-login-by-token-reference-information.html

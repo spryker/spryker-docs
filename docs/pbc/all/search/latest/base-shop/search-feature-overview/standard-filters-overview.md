@@ -3,8 +3,6 @@ title: Standard filters overview
 description: Learn about the Standard filters that helps customers to narrow down products they are looking for in your Spryker Cloud Commerce OS Shop.
 last_updated: Jul 8, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/standard-filters-overview
-originalArticleId: 0b675c4c-6163-4402-82a5-8a9198260fda
 redirect_from:
   - /docs/scos/user/features/201811.0/search-feature-overview/standard-filters-overview.html
   - /docs/pbc/all/search/202311.0/search-feature-overview/search-feature-overview/standard-filters-overview.html
@@ -12,6 +10,13 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/search-feature-walkthrough.html
   - /docs/scos/user/features/202204.0/search-feature-overview/standard-filters-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Ecommerce solutions usually offer a huge product catalog to display products and their variations. To help buyers find the products they are looking for in the catalog, we have the *Standard Filters* feature.
 

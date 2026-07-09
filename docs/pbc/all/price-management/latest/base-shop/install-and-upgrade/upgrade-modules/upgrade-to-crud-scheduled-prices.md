@@ -3,8 +3,6 @@ title: Upgrade to CRUD Scheduled Prices
 description: The article provides instructions on how to install CRUD Scheduled Prices on all modules affected in bulk and them individually.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/updating-a-spryker-based-project
-originalArticleId: 864ebca6-3170-4057-9a6b-df4affad73a7
 redirect_from:
   - /2021080/docs/updating-a-spryker-based-project
   - /2021080/docs/en/updating-a-spryker-based-project
@@ -30,6 +28,13 @@ related:
   - title: Silex Replacement migration concept
     link: docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## General information
 

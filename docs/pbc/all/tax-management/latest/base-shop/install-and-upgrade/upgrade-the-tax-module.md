@@ -3,8 +3,6 @@ title: Upgrade the Tax module
 description: Learn to upgrade to a newer version of the tax module within your Spryker Tax management feature.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-tax
-originalArticleId: 05ed776e-6fbb-49ce-ba7f-4fc0b4404e20
 redirect_from:
   - /2021080/docs/mg-tax
   - /2021080/docs/en/mg-tax
@@ -36,5 +34,12 @@ redirect_from:
   - /docs/pbc/all/tax-management/202311.0/base-shop/spryker-tax/install-and-upgrade/upgrade-the-tax-module.html
   - /docs/pbc/all/tax-management/202204.0/base-shop/install-and-upgrade/upgrade-the-tax-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-tax-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-tax-module.md -->

@@ -3,8 +3,6 @@ title: "Import file details: product_attribute_key.csv"
 description: Learn how to configure Product Attribute information using the product attribute key csv file for your Spryker project.
 last_updated: Jul 7, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-attribute-keycsv
-originalArticleId: 141aa68e-c752-4021-b6cb-df6fa4803d72
 redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/catalog-setup/products/file-details-product-attribute-key.csv.html
   - /docs/pbc/all/product-information-management/202311.0/import-and-export-data/products-data-import/file-details-product-attribute-key.csv.html  
@@ -14,6 +12,13 @@ related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the `product_attribute_key.csv` file to configure [Product Attribute](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html) information on your Spryker Demo Shop.
 

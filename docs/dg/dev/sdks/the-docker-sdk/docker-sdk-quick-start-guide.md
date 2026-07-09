@@ -3,8 +3,6 @@ title: Docker SDK quick start guide
 description: Get up and running quickly with this Quick start guide for Docker SDK for your Spryker projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/docker-sdk-quick-start-guide
-originalArticleId: fc087f0f-e526-4519-a015-01022ac5d1f7
 redirect_from:
 - /docs/scos/dev/the-docker-sdk/202311.0/docker-sdk-quick-start-guide.html
 - /docs/scos/dev/the-docker-sdk/202204.0/docker-sdk-quick-start-guide.html
@@ -32,6 +30,13 @@ related:
     link: docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/configure-debugging.html
 
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how you can quickly set up a local environment with the Docker SDK.
 

@@ -3,8 +3,6 @@ title: Install the Product Images + Configurable Bundle feature
 description: This guide provides step-by-step instruction on integrating the Product Images + Configurable Bundle feature into the Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/product-images-configurable-bundle-feature-integration
-originalArticleId: 9a304208-8d29-4a63-9b72-3b6ced637048
 redirect_from:
   - /2021080/docs/product-images-configurable-bundle-feature-integration
   - /2021080/docs/en/product-images-configurable-bundle-feature-integration
@@ -24,5 +22,12 @@ related:
   - title: Install the Merchant Product Restrictions feature
     link: docs/pbc/all/merchant-management/latest/base-shop/install-and-upgrade/install-the-merchant-product-restrictions-feature.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/install-features/latest/install-the-product-images-configurable-bundle-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-images-configurable-bundle-feature.md -->

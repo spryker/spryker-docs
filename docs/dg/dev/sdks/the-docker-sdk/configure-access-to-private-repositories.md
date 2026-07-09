@@ -3,8 +3,6 @@ title: Configure access to private repositories
 description: Learn how to configure your local environment to access private repositories for your Spryker project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/configuring-access-to-private-repositories
-originalArticleId: 6d136e03-869c-4adf-b8d3-0ea69c2589e0
 redirect_from:
   - /docs/scos/dev/the-docker-sdk/202311.0/configuring-access-to-private-repositories.html
   - /docs/scos/dev/the-docker-sdk/202204.0/configuring-access-to-private-repositories.html
@@ -33,6 +31,13 @@ related:
   - title: Running tests with the Docker SDK
     link: docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to configure an environment to allow the Docker SDK access private repositories.
 

@@ -3,8 +3,6 @@ title: Edit configurable bundle templates
 description: Learn how to edit and manage configurable bundle templates directly in the Spryker Cloud Commerce OS Back Office.
 last_updated: Jul 30, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-configurable-bundle-templates
-originalArticleId: e3c4fbce-bd28-416d-9dd0-bca412689483
 redirect_from:
   - /2021080/docs/managing-configurable-bundle-templates
   - /2021080/docs/en/managing-configurable-bundle-templates
@@ -20,6 +18,13 @@ related:
   - title: Configurable Bundle feature overview
     link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/configurable-bundle-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This article describes how to edit configurable bundle templates in the Back Office.
 

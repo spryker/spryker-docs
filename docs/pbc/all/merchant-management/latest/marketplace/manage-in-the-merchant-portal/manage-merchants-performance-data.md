@@ -5,6 +5,13 @@ description: This document describes what information you can check in Dashboard
 template: back-office-user-guide-template
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 This document describes what information you can check in the dashboard of the Merchant Portal.
 
 *Dashboard* is a hub for merchants' important business and performance data. It lets merchants monitor their own store inside the Marketplace by having a snapshot view of the most crucial information.

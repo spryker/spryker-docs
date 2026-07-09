@@ -3,8 +3,6 @@ title: "Import file details: cms_block_store.csv"
 description: Understand the Spryker cms block store csv file to configure CMS Block Store information for your Spryker Shop.
 last_updated: Jun 16, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-block-storecsv
-originalArticleId: eb3af5d2-ec2b-4452-8a11-d392431ab8d2
 redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-cms-block-store.csv.html
   - /docs/scos/dev/data-import/202311.0/data-import-categories/content-management/file-details-cms-block-store.csv.html
@@ -15,6 +13,13 @@ related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the `cms_block_store.csv` file to configure CMS Block Store information on your Spryker Demo Shop.
 

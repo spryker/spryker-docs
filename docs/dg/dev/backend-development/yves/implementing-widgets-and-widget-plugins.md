@@ -3,11 +3,16 @@ title: Implementing widgets and widget plugins
 description: Depending on your version of spryker/kernel module, learn how to implement widgets or widget plugins.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/t-widgets-widget-plugins
-originalArticleId: 54143dda-1c71-4bb0-b78f-5bf9d56584c1
 redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This tutorial provides instructions on how to implement widgets and widget plugins into [Modular Frontend](/docs/dg/dev/backend-development/yves/modular-frontend.html).
 

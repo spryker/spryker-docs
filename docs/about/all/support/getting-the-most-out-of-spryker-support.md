@@ -3,8 +3,6 @@ title: Getting the most out of Spryker Support
 description: Find help and guidance on how to get the most out of Spryker Support, including tips on issue reporting, contacting support, and maximizing resources.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/how-to-get-the-most-out-of-spryker-support
-originalArticleId: 3ab286da-5f06-4035-bc52-0b0237ed410f
 redirect_from:
 - /docs/scos/user/intro-to-spryker/support/getting-the-most-out-of-spryker-support.html
 related:
@@ -13,6 +11,13 @@ related:
   - title: How to use the Support Portal
     link: docs/about/all/support/using-the-support-portal.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 
 [Spryker Support Portal](https://support.spryker.com/s/) is the main portal for interacting with Spryker support. In the portal, you can have 3 (Standard Access) or 10 (Premier Access) licenses. To get access to the support portal [fill out the Portal Access Request

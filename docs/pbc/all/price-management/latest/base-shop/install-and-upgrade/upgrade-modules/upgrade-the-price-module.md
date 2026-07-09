@@ -3,8 +3,6 @@ title: Upgrade the Price module
 description: Use the guide to migrate to a newer version of the Price module within your Spryker based projects.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-price
-originalArticleId: 4eac80da-4f57-47ff-97bc-5cf79ce5f087
 redirect_from:
   - /2021080/docs/mg-price
   - /2021080/docs/en/mg-price
@@ -35,5 +33,12 @@ related:
   - title: Upgrade the MultiCurrency
     link: docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-multi-currency.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-price-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-price-module.md -->

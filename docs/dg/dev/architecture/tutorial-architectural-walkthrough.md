@@ -3,8 +3,6 @@ title: "Tutorial: Architectural walkthrough"
 description: The tutorial describes Spryker architecture and explains on the example of how its components work together to provide the result in the shop application.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/tutorial-architecture-walkthrough-scos
-originalArticleId: 8a582525-be21-49b8-9b48-ca3420302cab
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-architectural-walkthrough-spryker-commerce-os.html
   - /tutorials/introduction/tutorial-architecture-walkthrough-scos.htm
@@ -16,6 +14,13 @@ related:
   - title: Modules and layers
     link: docs/dg/dev/architecture/modules-and-application-layers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% info_block infoBox %}
 

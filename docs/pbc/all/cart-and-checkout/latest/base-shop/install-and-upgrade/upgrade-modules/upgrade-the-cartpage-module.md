@@ -3,8 +3,6 @@ title: Upgrade the CartPage module
 description: Use the guide to update versions to the newer ones of the CartPage module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-cart-page
-originalArticleId: 41a50114-b4ba-4e84-a62d-940a2a44ecc0
 redirect_from:
   - /2021080/docs/mg-cart-page
   - /2021080/docs/en/mg-cart-page
@@ -34,4 +32,11 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202311.0/install-and-upgrade/upgrade-modules/upgrade-the-cartpage-module.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cartpage-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 {% include pbc/all/upgrade-modules/upgrade-the-cartpage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cartpage-module.md -->

@@ -3,8 +3,6 @@ title: Measurement Units feature overview
 description: The Measurement Units feature lets you sell products by any unit of measure defined by a shop administrator.
 last_updated: Aug 13, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/measurement-units-feature-overview
-originalArticleId: c997afab-ce1d-4a05-a627-b6511d74ec86
 redirect_from:
   - /2021080/docs/measurement-units-feature-overview
   - /2021080/docs/en/measurement-units-feature-overview
@@ -15,6 +13,13 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202311.0/feature-overviews/measurement-units-feature-overview.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/measurement-units-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The *Measurement Units* feature lets you sell products by any unit of measure defined by the shop administrator. For example, apples can be offered in "Item" or "Kilogram", cables can be offered in "Centimeter", "Meter" or "Feet". To support alternate units of measure, there must be a base unit value relative to which all the internal conversions and calculations will be made. Such value is referred to as a base unit. The base unit is assigned to abstract products, and by default, it's "item"; however, it can be changed to any other unit.
 

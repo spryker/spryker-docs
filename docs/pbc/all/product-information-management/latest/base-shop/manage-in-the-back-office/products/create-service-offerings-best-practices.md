@@ -3,8 +3,6 @@ title: "Creating service offerings: best practices"
 description: Create additional services to offer with your products, follow these best practices for your Spryker based project.
 last_updated: Jun 16, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/creating-service-offerings
-originalArticleId: 00ff9f5b-e3c9-4225-9bca-9ffbe912670d
 redirect_from:
   - /2021080/docs/creating-service-offerings
   - /2021080/docs/en/creating-service-offerings
@@ -13,6 +11,13 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/catalog/products/creating-service-offerings-best-practices.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/products/create-service-offerings-best-practices.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This article describes how you can create products that can or have to include service assistance.
 Imagine the scenarios:

@@ -3,8 +3,6 @@ title: Usage-driven schema and document structure
 description: Both the schema and the query generator should not need to know that there is such a thing as as the weight of a hammer.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/usage-driven-schema-structure
-originalArticleId: 1931ede8-c28d-4c12-b196-7990d672920f
 redirect_from:
   - /2021080/docs/usage-driven-schema-structure
   - /2021080/docs/en/usage-driven-schema-structure
@@ -44,6 +42,13 @@ related:
   - title: Personalization - dynamic pricing
     link: docs/pbc/all/search/latest/base-shop/best-practices/personalization-dynamic-pricing.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Both the schema and the query generator should not need to know that there is such a thing as the weight of a hammer. We will argue for a document structure and schema design that is not built around the original data but around the usage of attributes in search operations.
 

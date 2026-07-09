@@ -3,8 +3,6 @@ title: Disable split delivery on the Storefront
 description: Use the guide to learn how to disable Split Delivery during checkout in your project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-disable-split-delivery-in-yves-interface
-originalArticleId: 1e1999de-4213-4495-9ac8-da9a49eb04df
 redirect_from:
   - /2021080/docs/ht-disable-split-delivery-in-yves-interface
   - /2021080/docs/en/ht-disable-split-delivery-in-yves-interface
@@ -22,6 +20,13 @@ related:
   - title: Split Delivery overview
     link: docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/split-delivery-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Sometimes payment service providers do not support multiple shipments for the same order, which contradicts the essence of the [Split Delivery feature](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/split-delivery-overview.html). In this case, you can disable the Split Delivery feature in the Checkout process; however, it will still work in the Back Office.
 

@@ -4,6 +4,7 @@ description: List of AI assistance provided by Spryker to enhance daily workflow
 template: concept-topic-template
 redirect_from: 
   - /docs/dg/dev/ai-assistants/ai-assistants
+last_updated: Jan 09, 2026
 ---
 
 {% info_block warningBox %}

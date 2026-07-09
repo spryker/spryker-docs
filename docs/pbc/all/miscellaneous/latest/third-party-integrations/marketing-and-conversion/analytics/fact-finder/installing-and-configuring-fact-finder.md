@@ -3,8 +3,6 @@ title: Installing and configuring FACT-Finder
 description: This article provides details on the installation and configuration of the FACT-Finder module.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/fact-finder-installation-and-configuration
-originalArticleId: 5d9650ca-e38b-4c41-ade5-e767e9878a73
 redirect_from:
   - /2021080/docs/fact-finder-installation-and-configuration
   - /2021080/docs/en/fact-finder-installation-and-configuration
@@ -33,6 +31,13 @@ related:
   - title: Using FACT-Finder search suggestions
     link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search-suggestions.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Installation
 

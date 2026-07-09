@@ -3,7 +3,6 @@ title: Preparation for going live
 description: Prepare your Spryker Cloud Commerce OS environment for a successful launch with essential pre-live checks, testing, and configuration steps to ensure smooth deployment.
 last_updated: Jun 27, 2025
 template: howto-guide-template
-originalLink: https://cloud.spryker.com/docs/preparation-for-going-live
 redirect_from:
   - /docs/preparation-for-going-live
   - /docs/en/preparation-for-going-live

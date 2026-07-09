@@ -3,8 +3,6 @@ title: Create email CMS blocks
 description: Learn how to create and implement CMS blocks for email in the Spryker Cloud Commerce OS Back Office.
 last_updated: Jun 17, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-content-of-emails-via-cms-blocks
-originalArticleId: 082e03b7-4dce-4b06-b839-06e2e26a557b
 redirect_from:
   - /2021080/docs/managing-content-of-emails-via-cms-blocks
   - /2021080/docs/en/managing-content-of-emails-via-cms-blocks
@@ -16,6 +14,13 @@ related:
   - title: Email as a CMS block
     link: docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 You can manage the content of emails you send to customers by editing [email templates via CMS Blocks](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html).
 

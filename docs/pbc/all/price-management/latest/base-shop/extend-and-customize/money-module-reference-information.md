@@ -10,6 +10,13 @@ redirect_from:
   - /docs/pbc/all/price-management/202204.0/base-shop/extend-and-customize/money-module-reference-information.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 {% info_block infoBox "Money" %}
 
 Handling monetary values can be a problem and is often quite hard. The Money bundle makes it easier to work with monetary values.

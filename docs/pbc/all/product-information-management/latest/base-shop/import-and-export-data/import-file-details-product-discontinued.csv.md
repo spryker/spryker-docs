@@ -3,8 +3,6 @@ title: "Import file details: product_discontinued.csv"
 description:  Learn how you can import data for discountinued products using the product discontinued csv file within your Spryker Cloud Commerce OS project.
 last_updated: Jun 16, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-discontinuedcsv
-originalArticleId: 3b2c40f5-ad6d-4ff5-9b65-b058e1ff9419
 redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-discontinued.csv.html
   - /docs/pbc/all/product-information-management/202311.0/base-shop/import-and-export-data/file-details-product-discontinued.csv.html
@@ -13,6 +11,13 @@ related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the `product_discontinued.csv` file to configure [Discontinued Product](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/discontinued-products-overview.html) information in your Spryker Demo Shop.
 

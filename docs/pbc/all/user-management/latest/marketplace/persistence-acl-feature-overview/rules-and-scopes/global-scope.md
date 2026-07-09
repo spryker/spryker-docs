@@ -5,6 +5,13 @@ description: Global scope rules apply to an entire collection of entities (for e
 template: concept-topic-template
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 Global scope rules apply to an entire collection of entities (for example, Users, Orders).
 
 As long as the user has the corresponding global rule with permissions, the Persistence ACL will not restrict the user from performing their actions. Accordingly, if the current user has the appropriate permission on a global scope rule, the database query will remain unchanged.

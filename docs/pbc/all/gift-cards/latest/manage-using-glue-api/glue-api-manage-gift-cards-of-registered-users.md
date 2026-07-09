@@ -3,8 +3,6 @@ title: "Glue API: Manage gift cards of registered users"
 description: Retrieve details about gift cards of the registered users, and learn what else you can do with the resource.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-gift-cards-of-registered-users
-originalArticleId: 8f557adb-ea3b-498c-872e-b2177d6202ed
 redirect_from:
   - /docs/scos/dev/glue-api-guides/201811.0/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html
@@ -14,6 +12,13 @@ redirect_from:
   - /docs/pbc/all/gift-cards/202311.0/manage-using-glue-api/manage-gift-cards-of-registered-users.html
   - /docs/pbc/all/gift-cards/202204.0/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 [Gift Card](/docs/pbc/all/gift-cards/latest/gift-cards.html) is an alternative payment method. It is purchased as a default product in the Spryker Commerce OS and is redeemed as a voucher code during the checkout. When you have a gift card code, this code can be applied to a shopping cart, and the money value of the applied gift card is deducted from the total sum of the cart items.
 

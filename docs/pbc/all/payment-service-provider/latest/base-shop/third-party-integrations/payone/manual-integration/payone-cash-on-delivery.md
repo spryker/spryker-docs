@@ -3,12 +3,17 @@ title: PayOne - Cash on Delivery
 description: Integrate  Cash on Delivery payment through Payone into the Spryker-based shop.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/payone-cash-on-delivery
-originalArticleId: e68a44fe-8cfe-4199-a3d0-537c04107688
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/bs-payone/scos-integration/payone-cash-on-delivery.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payone/manual-integration/payone-cash-on-delivery.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Frontend Integration: Extending Checkout Page
 

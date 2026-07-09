@@ -3,8 +3,6 @@ title: "Glue API: Retrieve business unit addresses"
 description: Learn how to retrieve business unit addresses configured in your store via the Spryker Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-business-unit-addresses
-originalArticleId: 9fd20b19-8917-4c1d-b1e6-b9eef0e4390f
 redirect_from:
   - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/retrieving-business-unit-addresses.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-b2b-account/retrieving-business-unit-addresses.html
@@ -29,6 +27,13 @@ related:
   - title: Authenticating as a customer
     link: docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This endpoint allows retrieving business unit addresses.
 

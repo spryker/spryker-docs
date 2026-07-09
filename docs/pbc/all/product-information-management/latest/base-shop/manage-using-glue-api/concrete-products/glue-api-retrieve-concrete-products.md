@@ -3,8 +3,6 @@ title: "Glue API: Retrieving concrete products"
 description: Retrieve general information about concrete products using the Spryker Cloud Commerce OS GLUE API.
 last_updated: Jun 21, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-concrete-products
-originalArticleId: 4f36b42a-e2a2-46a1-be84-ae9f3b2a1a25
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/concrete-products/retrieving-concrete-products.html
   - /docs/pbc/all/product-information-management/202311.0/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
@@ -21,6 +19,13 @@ related:
   - title: Product Options feature overview
     link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-options-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This endpoint allows retrieving general information about concrete products.
 

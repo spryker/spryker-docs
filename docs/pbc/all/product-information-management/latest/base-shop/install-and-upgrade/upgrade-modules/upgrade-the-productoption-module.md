@@ -3,8 +3,6 @@ title: Upgrade the ProductOption module
 description: Use the guide to learn how to update the ProductOption module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-product-option
-originalArticleId: ed0c6dbc-b739-4b12-b42d-54f89d6643c3
 redirect_from:
   - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-productoption.html
   - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-productoption.html
@@ -19,5 +17,12 @@ related:
   - title: Upgrade the ProductOptionCartConnector module
     link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoptioncartconnector-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-productoption-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productoption-module.md -->

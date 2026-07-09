@@ -4,6 +4,7 @@ description: Self-Service Portal (SSP) is a centralized B2B platform that stream
 template: concept-topic-template
 redirect_from:
   - /docs/pbc/all/self-service-portal/202505.0/self-service-portal
+last_updated: Jul 30, 2025
 ---
 
 B2B Self-Service Portal (SSP) is a platform designed to enhance operational efficiency, transparency, and customer satisfaction. With features like Assets, Inquiries, Services, Files, and Dashboard, SSP centralizes business interactions, making it easier to manage after-sales activities.

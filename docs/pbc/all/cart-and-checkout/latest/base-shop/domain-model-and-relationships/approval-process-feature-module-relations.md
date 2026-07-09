@@ -13,6 +13,13 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/domain-model-and-relationships/approval-process-feature-module-relations.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 
 The following schema illustrates module relations in the Approval Process feature:
 

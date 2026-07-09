@@ -3,8 +3,6 @@ title: Using test helpers
 description: Learn about the test helpers, how you can enable them, use, and create your own.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/test-helpers
-originalArticleId: 2704ed21-1ff3-4646-8d0b-67b8a1094a04
 redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
   - /docs/scos/dev/guidelines/testing/test-helpers.html
@@ -33,6 +31,13 @@ related:
   - title: Testing console commands
     link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 [Codeception](https://codeception.com) provides so-called modules, which are *helpers* used for building your tests. These helpers allow you to hook into the lifecycle of tests and get handy methods available wherever the helper is enabled. Codeception and Spryker provide a lot of ready to use helpers. Checkout [Available Test Helpers](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html) for information on some of them.
 

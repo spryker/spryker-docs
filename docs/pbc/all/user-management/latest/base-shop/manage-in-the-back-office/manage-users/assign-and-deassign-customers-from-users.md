@@ -15,6 +15,13 @@ related:
     link: docs/pbc/all/user-management/latest/base-shop/manage-in-the-back-office/manage-users/delete-users.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 This document describes how to assign customers to users, so that users can [preview CMS pages](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/pages/preview-cms-pages.html) as the customers that are assigned to them. This is especially relevant for B2B scenarios. For example, users can see company specific prices and product lists.
 
 {% info_block warningBox "Assigning a customer to multiple users" %}

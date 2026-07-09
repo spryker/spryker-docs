@@ -3,11 +3,16 @@ title: Coding Best Practices
 description: In this article we outline a few common PHP coding problems and the recommended solutions.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/coding-best-practices
-originalArticleId: 5df9f9bf-c445-4d56-af59-a95757696009
 redirect_from:
   - /docs/scos/dev/best-practices/coding-best-practices.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document outlines a few common PHP coding problems and the recommended solutions.
 

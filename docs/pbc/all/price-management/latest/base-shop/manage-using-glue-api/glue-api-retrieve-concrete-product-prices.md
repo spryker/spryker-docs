@@ -3,8 +3,6 @@ title: "Glue API: Retrieve concrete product prices"
 description: Retrieve details information about prices of concrete products using the Spryker GLUE API within your Spryker Projects.
 last_updated: Jun 21, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-concrete-product-prices
-originalArticleId: 7192572b-0b8e-4bbb-a579-570eecffc1e2
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/concrete-products/retrieving-concrete-product-prices.html
   - /docs/pbc/all/price-management/manage-using-glue-api/retrieve-concrete-product-prices.html
@@ -20,6 +18,13 @@ related:
   - title: Retrieving sales units
     link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-sales-units.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This endpoint allows retrieving prices of concrete products.
 

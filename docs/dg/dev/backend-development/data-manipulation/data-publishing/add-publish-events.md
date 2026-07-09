@@ -3,8 +3,6 @@ title: Add publish events
 description: Add custom publish events in Spryker to automate data updates efficiently. Learn best practices for backend data manipulation in Spryker.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/adding-publish-events
-originalArticleId: 6254b4c6-f147-4463-bc61-e9b3f7bf7e28
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/adding-publish-events.html
@@ -28,6 +26,13 @@ related:
   - title: Synchronization behavior - enabling multiple mappings
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 [Publish and Synchronize](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html) are event-driven. Data is published only after a registered event is triggered. Follow these steps to register the events for them:
 

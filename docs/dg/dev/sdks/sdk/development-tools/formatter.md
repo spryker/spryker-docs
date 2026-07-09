@@ -3,8 +3,6 @@ title: Formatter
 description: Learn about the Formatter tool that allows you to find and fix mistakes in the code style.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/formatter
-originalArticleId: 4a978f53-1a56-4f70-8b91-870e0ac94ab3
 redirect_from:
   - /docs/sdk/dev/development-tools/formatter.html
   - /docs/scos/dev/sdk/201811.0/development-tools/formatter.html
@@ -35,6 +33,13 @@ related:
   - title: Tooling config file
     link: docs/dg/dev/sdks/sdk/development-tools/tooling-configuration-file.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 *Formatter* allows you to find and fix code style mistakes and keep your code more readable.
 

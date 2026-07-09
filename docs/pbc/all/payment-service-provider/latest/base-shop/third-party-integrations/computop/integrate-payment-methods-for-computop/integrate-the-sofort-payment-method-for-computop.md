@@ -3,8 +3,6 @@ title: Integrating the Sofort payment method for Computop
 description: Learn how to integrate Sofort payment through Computop into the Spryker Cloud Commerce OS shop.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/computop-sofort
-originalArticleId: 0d22997c-4a0c-4a8d-8031-e705869d05b8
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202001.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html
   - /docs/scos/dev/technology-partner-guides/202005.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html
@@ -34,6 +32,13 @@ related:
   - title: Integrating the CRIF payment method for Computop
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-crif-payment-method-for-computop.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Example State Machine:
 ![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Computop/computop-sofort-flow-example.png)

@@ -8,5 +8,12 @@ redirect_from:
   - /docs/pbc/all/request-for-quote/202204.0/quotation-process-module-relations.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 On this page, you can find the module relations for the [Quotation Process](/docs/pbc/all/request-for-quote/latest/request-for-quote.html) feature.
 ![RFQ modules diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Quotation+process+and+RFQ/Quotation+Process+%26+RFQ+Feature+Overview/request-for-quote-module-diagram.png)

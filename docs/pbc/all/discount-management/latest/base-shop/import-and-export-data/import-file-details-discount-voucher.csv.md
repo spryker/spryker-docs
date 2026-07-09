@@ -3,8 +3,6 @@ title: "Import file details: discount_voucher.csv"
 description: Learn how to configure discount voucher information in your Spyker projects by importing data using the discount voucher csv file.
 last_updated: Jun 16, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/file-details-discount-vouchercsv
-originalArticleId: 741ea0dd-d3ad-40d0-98b3-6e16889b6794
 redirect_from:
   - /2021080/docs/file-details-discount-vouchercsv
   - /2021080/docs/en/file-details-discount-vouchercsv
@@ -21,6 +19,13 @@ related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the `discount_voucher.csv` file to configure Discount Voucher information in your Spryker Demo Shop.
 

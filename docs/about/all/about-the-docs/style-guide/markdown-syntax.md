@@ -1,7 +1,7 @@
 ---
 title: Markdown syntax
 description: Learn the markdown syntax and how to create markdown elements in your writing.
-last_updated: 18 Jul, 2022
+last_updated: Jul 18, 2022
 template: howto-guide-template
 redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html

@@ -3,8 +3,6 @@ title: "Glue API: Manage company user authentication tokens"
 description: Learn how to manage company user authentication tokens via the Spryker Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-company-user-authentication-tokens
-originalArticleId: 93de3785-709e-48d2-a1f5-d5edf0e4bc93
 redirect_from:
   - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/managing-company-user-authentication-tokens.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/managing-company-user-authentication-tokens.html
@@ -27,6 +25,13 @@ related:
   - title: Retrieving business unit addresses
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-business-unit-addresses.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This endpoint allows refreshing a company user access token or revoking a refresh token.
 

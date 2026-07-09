@@ -3,8 +3,6 @@ title: "Glue API: Retrieve abstract product list content items"
 description: Abstract Product List API provides resources to retrieve data on abstract products included in the Abstract Product List content item for all or specific locale
 last_updated: Jun 22, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retireving-abstract-product-list-content-items
-originalArticleId: 2fcfc554-7617-455e-bb22-ead08bb774b9
 redirect_from:
   - /docs/scos/dev/glue-api-guides/201811.0/retrieving-content-items/retrieving-abstract-product-list-content-items.html
   - /docs/scos/dev/glue-api-guides/202311.0/retrieving-content-items/retrieving-abstract-product-list-content-items.html
@@ -15,6 +13,13 @@ related:
   - title: Content Items feature overview
     link: docs/pbc/all/content-management-system/latest/base-shop/content-items-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This endpoint allows retrieving information about abstract product list content items.
 

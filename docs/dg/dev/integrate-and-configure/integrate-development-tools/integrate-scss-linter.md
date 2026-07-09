@@ -3,8 +3,6 @@ title: Integrate SCSS linter
 description: Learn how to enable and integrate the SCSS linter and its dependencies for your Spryker based project
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/scss-linter-integration-guide
-originalArticleId: 45333d65-56d9-4b44-855a-e26ce42a1e4a
 redirect_from:
   - /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-scss-linter.html
   - /docs/scos/dev/migration-and-integration/202108.0/development-tools/scss-linter-integration-guide.html
@@ -18,6 +16,13 @@ related:
   - title: Integrating Web Profiler Widget for Yves
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Follow the steps below to integrate the [SCSS linter](/docs/dg/dev/sdks/sdk/development-tools/scss-linter.html) into your project.
 

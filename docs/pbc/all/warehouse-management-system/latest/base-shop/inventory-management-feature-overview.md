@@ -3,8 +3,6 @@ title: Inventory Management feature overview
 description: Learn how you can manage warehouse, stock, and availability with the Inventory Management feature
 last_updated: Jul 22, 2021
 template: concept-topic-template
-originalLink: /docs/pbc/all/warehouse-management-system/latest/base-shop/inventory-management-feature-overview.html-feature-overview
-originalArticleId: 6aaacd72-1ca1-4406-8614-0cacf94459d4
 redirect_from:
   - /2021080/docs/inventory-management-feature-overview
   - /2021080/docs/en/inventory-management-feature-overview
@@ -15,6 +13,13 @@ redirect_from:
   - /docs/pbc/all/warehouse-management-system/inventory-management-feature-overview.html  
   - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/inventory-management-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The *Inventory Management* feature refers to warehousing and managing your store's stock. In this context, a *warehouse* is a physical place where your products are stored, and *stock* is the number of products available in the warehouse. See [Warehouse management](#warehouse-management) and [Stock management](#stock-management) for details about how to manage them.
 Stock does not always reflect the real availability of products, as not all the items available in stock are available for sale. For example, if items are *reserved*, that is, there are pending orders with these items, they can not be ordered, even though physically, they are still in stock. The value that reflects the difference between the current quantity of products in stock and the quantity of these products in the pending orders, is referred to as the *availability* of products. The availability is calculated per store. For details about managing availability, see [Availability management](#availability-management).

@@ -3,14 +3,19 @@ title: Router Yves
 description: The article provides instructions on how to install the extension module along with the router and integrate it then in Yves.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/router-yves
-originalArticleId: d8b857cc-0e43-4be9-891a-a57afdbe1d2b
 redirect_from:
 - /docs/scos/dev/migration-concepts/silex-replacement/router/router-yves.html
 related:
   - title: Router Zed
     link: docs/scos/dev/migration-concepts/silex-replacement/router/router-zed.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The Router is responsible for matching a request to a route and generating URLs based on a route name. The Spryker's Route module is based on the Symfony's Routing component. For more information on it, check out the [documentation](https://symfony.com/doc/current/routing.html).
 

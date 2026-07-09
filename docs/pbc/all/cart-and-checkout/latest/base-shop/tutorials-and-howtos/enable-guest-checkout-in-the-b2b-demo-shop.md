@@ -3,8 +3,6 @@ title: Enable guest checkout in the B2B Demo Shop
 description: Learn how to enable guest checkout in Spryker Cloud Commerce OS B2B Demo Shop.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/howto-enable-guest-checkout-in-b2b-demo-shop
-originalArticleId: 669e5e5c-f26a-484c-ab68-4588c701aa99
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-enable-guest-checkout-in-b2b-demo-shop.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/tutorials-and-howtos/howto-enable-guest-checkout-in-b2b-demo-shop.html
@@ -12,6 +10,13 @@ related:
   - title: Checkout steps
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 As B2B environments usually implement complex business logic, in the [B2B Demo Shop](/docs/about/all/b2b-suite.html), guest users cannot check out by default. However, in some cases, you may need guest checkout to be enabled.
 

@@ -3,13 +3,18 @@ title: Product Information Management data import
 description: Learn how to import data and the different ways to import data for Product Information Management within your Spryker project.
 last_updated: Jun 16, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/catalog-setup
-originalArticleId: 16830216-0c33-4009-86e0-f9995eef7eed
 redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/catalog-setup/catalog-setup.html
   - /docs/pbc/all/product-information-management/202311.0/base-shop/import-and-export-data/import-product-catalog-data.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/product-information-management-data-import.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To learn how data import works and about different ways of importing data, see [Data import](/docs/dg/dev/data-import/latest/data-import.html). This section describes the data import files that are used to import data related to the Product Information Management PBC:
 

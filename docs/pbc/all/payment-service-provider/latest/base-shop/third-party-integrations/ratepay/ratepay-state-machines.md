@@ -9,6 +9,13 @@ redirect_from:
 - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/ratepay/ratepay-state-machines.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 We use state machines for handling and managing orders and payments. To integrate RatePAY payments, a state machine for RatePAY should be created.
 
 A basic and fully functional state machine for each payment method is already built:

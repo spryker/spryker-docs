@@ -3,12 +3,17 @@ title: Adding and using external libraries in Yves
 description: This article describes how to add external libraries in Yves.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/adding-using-external-libraries-yves
-originalArticleId: 12d72e9e-2c7c-467f-9aaf-2d96a34d9b42
 redirect_from:
   - /docs/scos/dev/front-end-development/202404.0/yves/adding-and-using-external-libraries-in-yves.html
   - /docs/scos/dev/front-end-development/yves/adding-and-using-external-libraries-in-yves.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to use external libraries in Yves with and without npm.
 

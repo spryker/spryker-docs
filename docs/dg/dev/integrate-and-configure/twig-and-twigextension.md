@@ -3,8 +3,6 @@ title: Twig and TwigExtension
 description: Learn how to install and configure the Twig and TwigExtension modules for Zed and Yves on the core and project levels.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/twig-and-twig-extension
-originalArticleId: 9ac44605-593b-46dd-9500-2525f99643cf
 redirect_from:
   - /docs/scos/dev/legacy-demoshop/201811.0/twig-templates/overview-twig.html
   - /docs/scos/dev/sdk/201811.0/twig-and-twigextension.html
@@ -24,6 +22,13 @@ related:
   - title: Development virtual machine, docker containers & console
     link: docs/dg/dev/sdks/the-docker-sdk/docker-environment-infrastructure.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Twig
 

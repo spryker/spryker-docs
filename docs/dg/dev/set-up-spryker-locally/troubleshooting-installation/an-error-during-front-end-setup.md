@@ -3,8 +3,6 @@ title: An error during front end setup
 description: Learn how to troubleshoot and resolve an error during front end setup with your Spryker local environment.
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/an-error-during-front-end-setup
-originalArticleId: 4bce6fdf-0686-44a7-8608-ae5f292cfdba
 redirect_from:
   - /docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/an-error-during-front-end-setup.html
   - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-docker-installation/an-error-during-front-end-setup.html
@@ -24,6 +22,13 @@ related:
   - title: Vendor folder synchronization error
     link: docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/vendor-folder-synchronization-error.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Description
 

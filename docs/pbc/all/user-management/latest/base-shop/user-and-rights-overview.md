@@ -3,8 +3,6 @@ title: Users and rights overview
 last_updated: Aug 20, 2021
 description: User and rights management is a general term that describes the security functionality for controlling user access to perform various roles throughout the system
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/docs/user-and-rights-overview
-originalArticleId: 4006b24f-fd0a-480a-9589-d2b822fdbde3
 redirect_from:
 - /2021080/docs/user-and-rights-overview
 - /2021080/docs/en/user-and-rights-overview
@@ -14,6 +12,13 @@ redirect_from:
 - /docs/scos/dev/feature-walkthroughs/202200.0/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html
 - /docs/pbc/all/user-management/202204.0/base-shop/user-and-rights-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 User and rights management is implemented in the following three bundles:
 

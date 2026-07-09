@@ -3,8 +3,6 @@ title: Upgrade the Wishlist module
 description: Use the guide to learn how to update the Wishlist module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-wishlist
-originalArticleId: c0987ced-479c-4eba-ae1d-9cfbf76ce0fb
 redirect_from:
   - /2021080/docs/mg-wishlist
   - /2021080/docs/en/mg-wishlist
@@ -39,5 +37,12 @@ related:
   - title: Upgrade the Price
     link: docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-wishlist-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-wishlist-module.md -->

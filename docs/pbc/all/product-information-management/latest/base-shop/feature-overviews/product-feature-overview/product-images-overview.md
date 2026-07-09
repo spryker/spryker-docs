@@ -3,8 +3,6 @@ title: Product Images overview
 description: Group several images into sets and link them to products. One product can have several named and localized sets of images.
 last_updated: Jul 7, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/product-images-overview
-originalArticleId: 04873187-c654-4119-a80e-e8b607521c79
 redirect_from:
   - /2021080/docs/product-images-overview
   - /2021080/docs/en/product-images-overview
@@ -15,6 +13,13 @@ redirect_from:
   - /docs/scos/user/features/202311.0/product-feature-overview/product-images-overview.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-feature-overview/product-images-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 *Product Images* make your shop more appealing and give your customers a better idea of what they are buying. The feature lets you group several images into sets and link them to products. One product can have several named and localized sets of images, for example, to present standard or seasonal highlights.
 

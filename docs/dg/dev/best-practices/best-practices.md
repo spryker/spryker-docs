@@ -5,6 +5,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/best-practices/
   - /docs/scos/dev/best-practices/best-practices.html
+last_updated: May 14, 2025
 ---
 
 This section contains the following best practices guidelines and recommendations for developing on Spryker Commerce OS:  

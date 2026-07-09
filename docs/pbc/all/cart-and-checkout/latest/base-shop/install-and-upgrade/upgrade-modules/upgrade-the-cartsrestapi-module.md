@@ -3,8 +3,6 @@ title: Upgrade the CartsRestApi module
 description: A guide to help you upgrade the Spryker cart rest API module from older versions to a newer one.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/cartsrestapi-migration-guide
-originalArticleId: 68309196-b653-46f1-8d15-41ca70c19b9e
 redirect_from:
   - /2021080/docs/cartsrestapi-migration-guide
   - /2021080/docs/en/cartsrestapi-migration-guide
@@ -34,5 +32,12 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202311.0/install-and-upgrade/upgrade-modules/upgrade-the-cartsrestapi-module.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cartsrestapi-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-cartsrestapi-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-cartsrestapi-module.md -->

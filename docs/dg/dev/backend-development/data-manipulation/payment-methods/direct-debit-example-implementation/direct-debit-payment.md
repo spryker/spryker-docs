@@ -4,6 +4,7 @@ description: Discover how to implement Direct Debit payments in Spryker, offerin
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/direct-debit-payment.html
+last_updated: May 14, 2025
 ---
 
 This section explains how to implement direct debit payment in Spryker SCOS by completing the following processes:

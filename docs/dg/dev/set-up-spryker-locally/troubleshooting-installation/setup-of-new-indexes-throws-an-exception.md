@@ -3,8 +3,6 @@ title: Setup of new indexes throws an exception
 description: Learn how to troubleshoot and resolve when setup of new indexes throws an exception within your Spryker local environment.
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/setup-of-new-indexes-throws-an-exception
-originalArticleId: bd5c483b-b968-46ce-9995-a293a74a8269
 redirect_from:
   - /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/setup-of-new-indexes-throws-an-exception.html
   - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-docker-installation/setup-of-new-indexes-throws-an-exception.html
@@ -25,6 +23,13 @@ related:
   - title: Vendor folder synchronization error
     link: docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/vendor-folder-synchronization-error.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Description
 

@@ -3,8 +3,6 @@ title: View reclamations
 description: Learn how you can view reclamations that are within the Spryker Cloud Commerce OS Back Office
 last_updated: Jun 23, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-reclamations
-originalArticleId: 20fab61a-f966-4fe9-9702-c04e1f77ccb1
 redirect_from:
   - /2021080/docs/managing-reclamations
   - /2021080/docs/en/managing-reclamations
@@ -21,6 +19,13 @@ related:
   - title: Reclamations Feature Overview
     link: docs/pbc/all/order-management-system/latest/base-shop/reclamations-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to view [order reclamations](/docs/pbc/all/order-management-system/latest/base-shop/reclamations-feature-overview.html) in the Back Office.
 

@@ -3,8 +3,6 @@ title: Business models
 description: Implement and customize business models to handle data like products, orders, and payments. This guide helps you structure models to maintain efficient backend operations.
 last_updated: Sep 27, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/business-models
-originalArticleId: 951be56f-357e-46ac-895c-5171bbc5dc63
 redirect_from:
   - /docs/scos/dev/back-end-development/zed/business-layer/business-models.html
 related:
@@ -13,6 +11,13 @@ related:
   - title: Custom exceptions
     link: docs/dg/dev/backend-development/zed/business-layer/custom-exceptions.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 *Business models* are classes where you program the *business logic* of your system. Business logic includes all kinds of algorithms (for example, cart calculation), storage procedures (for example, checkout save workflow), and interactions with external providers (for example, payment).
 

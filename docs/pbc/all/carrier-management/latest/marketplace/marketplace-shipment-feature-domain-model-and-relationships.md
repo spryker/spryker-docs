@@ -5,6 +5,13 @@ description: The Marketplace Shipment feature provides the connection between Me
 template: feature-walkthrough-template
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 The *Marketplace Shipment* feature provides the connection between Merchant and Shipment, and works together with [marketplace orders](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html) to split order items into several shipments based on the merchants from which they were bought.
 
 ## Module dependency graph

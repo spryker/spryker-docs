@@ -3,8 +3,6 @@ title: Integrating the Prepayment payment method for RatePay
 description: Learn how to integrate prepayment method through Ratepay into the Spryker-based project.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/ratepay-prepayment
-originalArticleId: a4c45f04-f178-4d8f-aee3-79cc0a24106d
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-prepayment-payment-method-for-ratepay.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-prepayment-payment-method-for-ratepay.html
@@ -29,6 +27,13 @@ related:
   - title: Integrating the Direct Debit payment method for RatePay
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-direct-debit-payment-method-for-ratepay.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Payment Flow Scenarios
 

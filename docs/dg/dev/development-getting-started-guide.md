@@ -3,8 +3,6 @@ title: Development getting started guide
 description: This is a step-by-step checklist that you can follow through all the stages of working with Spryker.
 last_updated: Feb 20, 2026
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/dev-getting-started
-originalArticleId: 79b50d48-6f09-45b0-9e4a-f372e274d462
 redirect_from:
   - /docs/scos/dev/module-migration-guides/about-migration-guides.html
   - /docs/pbc/all/punchout/202307.0/punchout-catalogs-overview.html

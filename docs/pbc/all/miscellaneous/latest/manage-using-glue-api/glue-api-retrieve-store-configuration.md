@@ -3,14 +3,19 @@ title: "Glue API: Retrieve store configuration"
 description: This article explains how to retrieve the store configuration including currencies, countries, locales, and time zones.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-store-configuration
-originalArticleId: 555482d7-5661-42bc-86c7-382a702172ab
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/retrieving-store-configuration.html
   - /docs/scos/dev/glue-api-guides/202212.0/retrieving-store-configuration.html
   - /docs/scos/dev/glue-api-guides/202204.0/retrieving-store-configuration.html
   - /docs/pbc/all/miscellaneous/202311.0/glue-api-retrieve-store-configuration.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Depending on your project needs, you can set up a single store that serves all your business needs or have multiple stores designed for different applications or available in different countries. Regardless of how many stores you have, a store contains such generic configuration as the currencies that can be used in transactions, countries where a store is available, supported languages, and the time zone of the store.
 

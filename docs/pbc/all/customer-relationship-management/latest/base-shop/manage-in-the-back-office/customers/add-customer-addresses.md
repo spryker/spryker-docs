@@ -3,8 +3,6 @@ title: Add customer addresses
 description: Learn how to add a new address to your customers in the Spryker Cloud Commerce OS Back Office
 last_updated: Jul 6, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-addresses
-originalArticleId: f4e8cd51-98cc-44d9-83aa-293f510d75a5
 redirect_from:
   - /2021080/docs/managing-customer-addresses
   - /2021080/docs/en/managing-customer-addresses
@@ -18,6 +16,13 @@ related:
   - title: Customer Account Management feature overview
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This topic describes how to add customer addresses in the Back Office.
 

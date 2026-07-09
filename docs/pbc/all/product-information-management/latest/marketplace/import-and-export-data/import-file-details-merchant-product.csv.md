@@ -12,6 +12,13 @@ related:
     link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 This document describes the `merchant_product.csv` file to configure [marketplace product](/docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html) information in your Spryker shop.
 
 ## Import file dependencies

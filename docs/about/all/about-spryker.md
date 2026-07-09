@@ -3,8 +3,6 @@ title: About Spryker
 description: Learn about Spryker's modular architecture, designed for flexible, scalable e-commerce solutions. This page covers its layered structure, customizable modules, and how it supports agile updates, reduced dependencies, and cost-efficient management for B2B, B2C, and marketplaces.
 last_updated: Sep 9, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/about-spryker
-originalArticleId: 0798f4ee-6a6b-46ed-baa8-e7e885700585
 redirect_from:
   - /docs/scos/user/intro-to-spryker/intro-to-spryker.html
   - /docs/scos/user/intro-to-spryker/whats-new/roadmap.html

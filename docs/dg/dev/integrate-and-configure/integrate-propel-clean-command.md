@@ -3,12 +3,17 @@ title: Integrate Propel clean command
 description: Learn how to enable and integrate the Propel clean command into your Spryker based project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/propel-clean-command
-originalArticleId: 6fd10cbd-243f-488a-8ad8-43b7f973e561
 redirect_from:
   - /docs/scos/dev/technical-enhancement-integration-guides/integrating-propel-clean-command.html
   - /docs/scos/dev/technical-enhancements/propel-clean-command.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The `propel:database:drop` command is used to clean a database of all the tables, indexes, counters and so on. The command invokes the `drop` process to delete and re-create the database from scratch.
 

@@ -3,8 +3,6 @@ title: Facade use cases
 description: Explore use cases for facades in the Business Layer. Learn how to centralize logic and streamline module communication for efficient and maintainable backend development.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/using-facade
-originalArticleId: 1a113ccd-7bdf-467b-84e0-d47b9a03d0cd
 redirect_from:
   - /docs/scos/dev/back-end-development/zed/business-layer/facade/facade-use-cases.html
   - /docs/scos/dev/back-end-development/zed/business-layer/facade/using-a-facade.html
@@ -16,6 +14,13 @@ related:
   - title: Design by Contract (DBC) - Facade
     link: docs/dg/dev/backend-development/zed/business-layer/facade/design-by-contract-dbc-facade.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the use cases of a facade.
 

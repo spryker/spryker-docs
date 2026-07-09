@@ -3,8 +3,6 @@ title: Configure a mount mode
 description: Learn about supported mount modes and how to configure one depending of your operating system for your Spryker Project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/configuring-a-mount-mode
-originalArticleId: fe2dc3e8-cd52-46d9-a77a-ee55d58fb07c
 redirect_from:
   - /docs/scos/dev/the-docker-sdk/202311.0/configuring-a-mount-mode.html
   - /docs/scos/dev/the-docker-sdk/202204.0/configuring-a-mount-mode.html
@@ -35,6 +33,13 @@ related:
   - title: Running tests with the Docker SDK
     link: docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to configure a mount mode.
 

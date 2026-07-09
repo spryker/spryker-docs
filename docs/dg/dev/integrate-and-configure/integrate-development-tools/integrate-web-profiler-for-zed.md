@@ -3,8 +3,6 @@ title: Integrate Web Profiler for Zed
 description: This guide describes how to integrate and use the Web Profiler toolbar available in Zed for development purposes.
 last_updated: Feb 24, 2026
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/web-profiler
-originalArticleId: 9f24bafe-1bae-49f7-bd22-505a61629807
 redirect_from:
   - /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-for-zed.html
   - /docs/scos/dev/migration-and-integration/202108.0/development-tools/web-profiler.html

@@ -3,12 +3,17 @@ title: Troubleshooting general technical issues
 description: Troubleshoot general technical issues you might encounter when running your Spryker-based project
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/troubleshooting-general-technical-issues
-originalArticleId: b625da8e-d503-4450-90d2-ff1297d3a809
 redirect_from:
   - /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-general-technical-issues.html
   - /docs/general-troubleshooting
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This section helps you troubleshoot general technical issues you might encounter when running your Spryker-based project.
 

@@ -3,8 +3,6 @@ title: "Import file details: discount.csv"
 description: Learn how to configure discount information in your Spyker projects by importing data using the discount csv file.
 last_updated: Jun 16, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/file-details-discountcsv
-originalArticleId: c8bfc425-7004-4064-8e37-ad8708f07183
 redirect_from:
   - /2021080/docs/file-details-discountcsv
   - /2021080/docs/en/file-details-discountcsv
@@ -21,6 +19,13 @@ related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the `discount.csv` file to configure [Discount](/docs/pbc/all/discount-management/latest/base-shop/promotions-discounts-feature-overview.html) information in your Spryker Demo Shop.
 

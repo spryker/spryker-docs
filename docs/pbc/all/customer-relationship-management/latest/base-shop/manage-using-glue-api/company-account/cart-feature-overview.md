@@ -2,8 +2,6 @@
 title: Cart feature overview
 last_updated: Jul 20, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/cart
-originalArticleId: eb211809-3be4-4b8a-bf28-a2c79140b11c
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202005.0/cart-feature-walkthrough/cart-functionality.html
   - /docs/scos/user/features/202009.0/cart-feature-overview/cart-feature-overview.html
@@ -13,6 +11,13 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/cart-feature-overview/cart-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/cart-feature-overview/cart-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The *Cart* feature lets your customers add products to their cart by selecting the preferred quantity of a product. Inside the cart, customers can change the number of items, switch between different variants of the product, add notes, apply vouchers, and remove items.
 

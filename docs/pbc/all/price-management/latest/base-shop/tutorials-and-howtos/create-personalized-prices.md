@@ -2,13 +2,18 @@
 title: Create personalized prices
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-create-personalized-prices
-originalArticleId: f196671d-6261-40e4-b405-0f0eda110b7b
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-personalized-prices.html
   - /docs/pbc/all/price-management/202311.0/base-shop/tutorials-and-howtos/howto-create-personalized-prices.html
   - /docs/pbc/all/price-management/202204.0/base-shop/tutorials-and-howtos/howto-create-personalized-prices.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the steps to consider when implementing personalized prices for customer groups.
 

@@ -3,8 +3,6 @@ title: Installing and configuring Afterpay
 description: Learn how to install and configure AfterPay into Spryker Cloud Commerce OS projects
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/afterpay-installation-and-configuration
-originalArticleId: 487c14bc-6f1e-4d86-abaa-3bbf5891e55c
 redirect_from:
   - /2021080/docs/afterpay-installation-and-configuration
   - /2021080/docs/en/afterpay-installation-and-configuration
@@ -18,6 +16,13 @@ related:
   - title: Afterpay
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/afterpay/afterpay.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% info_block errorBox %}
 

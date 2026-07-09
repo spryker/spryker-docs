@@ -2,8 +2,6 @@
 title: Using components
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/t-use-component
-originalArticleId: cb6a7b9c-c64d-480f-a4e9-0d122e56594e
 redirect_from:
   - /docs/scos/dev/front-end-development/202404.0/yves/atomic-frontend/managing-the-components/using-a-component.html
   - /docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/using-a-component.html
@@ -15,6 +13,13 @@ related:
   - title: Overriding a component
     link: docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/overriding-components.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To use a component, in Spryker Shop, you need to add it to a layout template (Twig file). Components can be added to other components (except atoms), views, page templates, and widgets. There are two possible strategies for this purpose: **include** and **embed**. In the following document, we shall review both of them.
 

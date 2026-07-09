@@ -3,8 +3,6 @@ title: Demo data was imported incorrectly
 description: Learn how to troubleshoot and resolve the error Demo data was importer incorrectly with your Spryker local environment.
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/demo-data-was-imported-incorrectly
-originalArticleId: 49e90c4b-9c36-4d31-af99-c48dc9d0b412
 redirect_from:
   - /docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/demo-data-was-imported-incorrectly.html
   - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-docker-installation/demo-data-was-imported-incorrectly.html
@@ -24,6 +22,13 @@ related:
   - title: Vendor folder synchronization error
     link: docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/vendor-folder-synchronization-error.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Description
 

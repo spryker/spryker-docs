@@ -3,8 +3,6 @@ title: Upgrade the Sales module
 description: Use the guide to learn how to update the Sales module to a newer version for your Spryker Cloud Commerce OS project.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-sales
-originalArticleId: 9cf868be-faa9-44e7-890f-a6911748bcc8
 redirect_from:
   - /2021080/docs/mg-sales
   - /2021080/docs/en/mg-sales
@@ -34,6 +32,13 @@ redirect_from:
   - /docs/pbc/all/order-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-sales-module.html
   - /docs/pbc/all/order-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-sales-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-sales-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-sales-module.md -->

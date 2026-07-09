@@ -3,14 +3,19 @@ title: nc command tells that the port is opened
 description: Learn how to fix the issue when nc command tells that the port is opened when troubleshooting your Spryker project.
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/nc-command-tells-that-the-port-is-opened
-originalArticleId: 4a169ffc-dd56-4026-b17f-44981617e0fe
 redirect_from:
 - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-debugging-in-docker/nc-command-tells-that-the-port-is-opened.html
 related:
   - title: nc command does not give any output
     link: docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-debugging-in-docker/nc-command-does-not-give-any-output.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Description
 

@@ -3,14 +3,19 @@ title: Quick Order from the Catalog Page overview
 description: The Quick Order from the Catalog Page feature lets buyers add products with one product variant to cart directly from the Category page.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/quick-order-from-the-catalog-page-overview
-originalArticleId: a931a32d-1f7d-4177-b99c-1146e26b885e
 redirect_from:
   - /docs/scos/user/features/202311.0/cart-feature-overview/quick-order-from-the-catalog-page-overview.html
   - /docs/pbc/all/cart-and-checkout/202311.0/cart-feature-overview/quick-order-from-the-catalog-page-overview.html  
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/cart-feature-overview/quick-order-from-the-catalog-page-overview.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/cart-feature-overview/quick-order-from-the-catalog-page-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Buyers can add simple products with one product variant to the cart directly from the Category page by clicking the **Add to cart** icon on the product card.
 

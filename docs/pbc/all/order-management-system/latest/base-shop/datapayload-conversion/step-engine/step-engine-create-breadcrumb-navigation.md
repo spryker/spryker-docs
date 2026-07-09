@@ -3,8 +3,6 @@ title: "Step engine: Create breadcrumb navigation"
 description: This document shows how to step up breadcrumb navigation for a step collection
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/step-engine-breadcrumb
-originalArticleId: d3fefd59-8373-4c05-9e3e-6a5aa2678d08
 redirect_from:
   - /2021080/docs/step-engine-breadcrumb
   - /2021080/docs/en/step-engine-breadcrumb
@@ -29,6 +27,13 @@ related:
   - title: "Step engine: Workflow overview"
     link: docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/step-engine/step-engine-workflow-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document shows how to step up breadcrumb navigation for a step collection.
 

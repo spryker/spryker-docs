@@ -3,8 +3,6 @@ title: Define search preferences
 description: Learn how to define search preferences directly in the Back Office of your Spryker based projects.
 last_updated: Aug 4, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-search-preferences
-originalArticleId: 921675b3-7c4c-4791-ada6-637004a78c59
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202108.0/merchandising/search-preferences/define-search-preferences.html
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/search-and-filters/managing-search-preferences.html
@@ -21,6 +19,13 @@ related:
   - title: Search feature overview
     link: docs/pbc/all/search/latest/base-shop/search-feature-overview/search-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This topic describes how to add product attributes to search and define search preferences.
 

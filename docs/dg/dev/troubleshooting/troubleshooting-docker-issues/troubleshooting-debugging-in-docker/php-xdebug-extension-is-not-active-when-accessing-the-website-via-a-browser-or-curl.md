@@ -3,8 +3,6 @@ title: PHP `xdebug` extension is not active when accessing the website via a bro
 description: Learn how to fix an issue when PHP `xdebug` extension is not active when accessing the website via a browser or curl
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/php-xdebug-extension-is-not-active-when-accessing-the-website-via-a-browser-or-curl
-originalArticleId: eb4a91fe-ab09-4e6f-a591-f942dea005f5
 redirect_from:
 - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-debugging-in-docker/php-xdebug-extension-is-not-active-when-accessing-the-website-via-a-browser-or-curl.html
 related:
@@ -13,6 +11,13 @@ related:
   - title: Xdebug does not work
     link: docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-debugging-in-docker/xdebug-does-not-work.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Description
 

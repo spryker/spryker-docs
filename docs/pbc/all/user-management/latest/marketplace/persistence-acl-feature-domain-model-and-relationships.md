@@ -5,6 +5,13 @@ description: Learn the Technical details about the Persistence ACL feature in yo
 template: concept-topic-template
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 The following module dependency graph and table list the main modules of the Persistence ACL feature and their interaction.
 
 ![Module dependency graph](https://confluence-connect.gliffy.net/embed/image/b15ac7bf-e35f-4298-90da-b7d0c8227be9.png?utm_medium=live&utm_source=custom)

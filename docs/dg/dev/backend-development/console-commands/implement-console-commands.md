@@ -3,8 +3,6 @@ title: Implement console commands
 description: This document describes how you can implement a new console command.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/console-commands
-originalArticleId: d43d3867-747d-4323-978a-57b61082bef8
 redirect_from:
   - /docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html
   - /docs/scos/dev/back-end-development/console-commands/implement-a-new-console-command.html
@@ -16,6 +14,13 @@ related:
   - title: Get the list of console commands and available options
     link: docs/scos/dev/back-end-development/console-commands/get-the-list-of-console-commands-and-available-options.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how you can implement a new console command. However, before implementing your commands, we recommend doing the following:
 

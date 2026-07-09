@@ -3,8 +3,6 @@ title: Braintree - Request workflow
 description: This article describes the request flow for the Braintree module in the Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/braintree-workflow
-originalArticleId: 9cfdb1b2-c552-40f0-9856-f39230b79e90
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/braintree/braintree-request-workflow.html
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/braintree/braintree-request-workflow.html
@@ -18,6 +16,13 @@ related:
   - title: Braintree - Performing Requests
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/braintree/braintree-performing-requests.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Both credit card and PayPal utilize the same request flow in:
 

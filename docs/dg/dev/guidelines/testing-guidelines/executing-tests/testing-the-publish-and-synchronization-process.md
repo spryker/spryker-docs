@@ -3,8 +3,6 @@ title: Testing the Publish and Synchronization process
 description: Learn how to test the publish and synchronization process with this helpful guide for your Spryker based projects.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/publish-and-synchronization-testing
-originalArticleId: 5691dcf2-a612-4cf9-bdff-8609f299ffec
 redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-the-publish-and-synchronization-process.html
   - /docs/scos/dev/guidelines/testing/publish-and-synchronization-testing.html
@@ -33,6 +31,13 @@ related:
   - title: Testing console commands
     link: docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Publish & Synchronize (P&S) is an asynchronous process of changing data available to customers by pushing the data into storage, for example, Redis, and making it searchable, for example, with Elasticsearch. Because of its asynchronous nature, it's not easy to test the full process while developing.
 

@@ -3,8 +3,6 @@ title: Dependency injection
 description: Spryker's dependency injection is based on the Symfony Dependency Injection component. It lets you inject dependencies via service configuration and autowiring.
 last_updated: Nov 5, 2025
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/dependency-injection
-originalArticleId: 8c24a5f6-f45a-4ff5-838f-b25712309bd0
 related:
   - title: How to upgrade to Symfony Dependency Injection
     link: docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html

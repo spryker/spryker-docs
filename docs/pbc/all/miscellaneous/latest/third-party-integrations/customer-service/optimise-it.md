@@ -3,11 +3,16 @@ title: optimise-it
 description: Integrate a custom-tailored chat solution - Optimise it, which can include integrations of messengers, chatbots, video-chat and more in to your Spryker project.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/optimise-it
-originalArticleId: 06bc548f-802c-42e2-926c-be4fdec1e622
 redirect_from:
   - /docs/scos/user/technology-partners/202200.0/customer-service/optimise-it.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Partner Information
 

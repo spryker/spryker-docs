@@ -3,8 +3,6 @@ title: "Glue API: Manage customer addresses"
 description: Learn how by using the Spryker Glue API you can Create, retrieve and delete customer addresses within your Spryker Project.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-addresses-via-glue-api
-originalArticleId: 83f855ab-83ed-4a69-a087-196f88c0007b
 redirect_from:
   - /docs/scos/dev/glue-api-guides/201811.0/managing-customers/managing-customer-addresses.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-customers/managing-customer-addresses.html
@@ -40,6 +38,13 @@ related:
   - title: Retrieving customer orders
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This endpoints allows retrieving and edit customer addresses.
 

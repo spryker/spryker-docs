@@ -3,8 +3,6 @@ title: Edit content items
 description: The guide provides steps on how to update content items in the Back Office.
 last_updated: Jul 9, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/editing-content-items
-originalArticleId: 3b56fb8f-8503-472a-8601-b69c876c04b1
 redirect_from:
   - /2021080/docs/editing-content-items
   - /2021080/docs/en/editing-content-items
@@ -15,6 +13,13 @@ related:
   - title: Content Items feature overview
     link: docs/pbc/all/content-management-system/latest/base-shop/content-items-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This topic describes how to edit content items in the Back Office.
 

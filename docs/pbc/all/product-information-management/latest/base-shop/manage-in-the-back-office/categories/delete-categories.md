@@ -7,6 +7,13 @@ redirect_from:
 - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/categories/delete-categories.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 To delete a category in the Back Office, follow the steps:
 
 1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Categories**.

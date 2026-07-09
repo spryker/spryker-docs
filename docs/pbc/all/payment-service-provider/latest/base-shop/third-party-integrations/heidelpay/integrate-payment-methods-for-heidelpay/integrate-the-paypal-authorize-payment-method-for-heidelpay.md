@@ -3,8 +3,6 @@ title: Integrating the Paypal Authorize payment method for Heidelpay
 description: Integrate Paypal Authorize payment through Heidelpay into the Spryker-based shop.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-authorize
-originalArticleId: 0f062977-b318-41b1-bd9e-b14ffedf2bc6
 redirect_from:
   - /2021080/docs/heidelpay-authorize
   - /2021080/docs/en/heidelpay-authorize
@@ -34,6 +32,13 @@ related:
   - title: Integrating the Split-payment Marketplace payment method for Heidelpay
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-split-payment-marketplace-payment-method-for-heidelpay.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Setup
 

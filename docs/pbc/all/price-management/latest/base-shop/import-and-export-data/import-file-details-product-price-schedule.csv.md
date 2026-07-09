@@ -3,8 +3,6 @@ title: "Import file details: product_price_schedule.csv"
 description: Learn how to import product price schedule data in to your Spryker project using the product price schedule csv file.
 last_updated: Jun 16, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-price-schedulecsv
-originalArticleId: 0662559b-6487-4d88-855e-3b605fc326c1
 redirect_from:
   - /docs/scos/dev/data-import/201907.0/data-import-categories/catalog-setup/pricing/file-details-product-price-schedule.csv.html
   - /docs/scos/dev/tutorials/201907.0/howtos/feature-howtos/howto-import-scheduled-prices.html
@@ -16,6 +14,13 @@ related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This article contains content of the `product_price_schedule.csv` file to configure [Product Price Schedule](/docs/pbc/all/price-management/latest/base-shop/scheduled-prices-feature-overview.html) information in your Spryker Demo Shop.
 

@@ -3,8 +3,6 @@ title: Import Discount Management data
 description: Learn which files are used to import data realted to Discount Management module within your Spryker Cloud Commerce OS project.
 last_updated: Jun 16, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/discounts
-originalArticleId: 02e8504e-1e84-4049-8c94-4f3be874ad16
 redirect_from:
   - /2021080/docs/discounts
   - /2021080/docs/en/discounts
@@ -15,6 +13,13 @@ redirect_from:
   - /docs/pbc/all/discount-management/202311.0/base-shop/import-and-export-data/discount-import.html
   - /docs/pbc/all/discount-management/202204.0/base-shop/import-and-export-data/import-discount-management-data.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To learn how data import works and about different ways of importing data, see [Data import](/docs/dg/dev/data-import/latest/data-import.html). This section describes the data import files that are used to import data related to the Discount Management PBC:
 

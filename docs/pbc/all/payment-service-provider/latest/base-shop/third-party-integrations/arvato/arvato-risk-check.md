@@ -3,8 +3,6 @@ title: Arvato - Risk Check
 description: Arvato Risk Check evaluates the probability of payment default for the customer orders.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/arvato-risk-check
-originalArticleId: 41dea1fe-a5d6-4641-b29a-7dc2091129fe
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/arvato/arvato-risk-check.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/arvato/arvato-risk-check.html
@@ -15,6 +13,13 @@ related:
   - title: Arvato
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/arvato/arvato.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Accounted for by external credit agency data and internal existing customer- and order-details the `RiskCheck` evaluates the probability of payment default for the customer orders.
 

@@ -3,8 +3,6 @@ title: "Build a return management process: Best practices"
 description: Choose a suitable return management process for your project and some best practices on building a Return management process for your Spryker based projects.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/building-a-return-management-process-best-practices
-originalArticleId: 4082625a-ef83-4e10-b517-716042ef8282
 redirect_from:
   - /2021080/docs/building-a-return-management-process-best-practices
   - /2021080/docs/en/building-a-return-management-process-best-practices
@@ -13,6 +11,13 @@ redirect_from:
   - /docs/pbc/all/return-management/202311.0/build-a-return-management-process-best-practices.html
   - /docs/pbc/all/return-management/202204.0/base-shop/build-a-return-management-process-best-practices.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Before you can start accepting returns from Buyers, you need to build the returns management strategy that suits your business the best. This document contains scenarios that can help you choose the most suitable returns workflow and implement it using the Spryker [Return Management](/docs/pbc/all/return-management/latest/marketplace/marketplace-return-management-feature-overview.html) functionality.
 

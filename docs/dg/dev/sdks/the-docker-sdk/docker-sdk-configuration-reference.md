@@ -3,8 +3,6 @@ title: Docker SDK configuration reference
 description: A guide with instructions for the most common configuration cases of the Docker SDK for Spryker based projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/docker-sdk-configuration-reference
-originalArticleId: 624e91c2-a207-41b4-957f-98de2a96f90b
 redirect_from:
   - /docs/scos/dev/the-docker-sdk/202311.0/docker-sdk-configuration-reference.html
   - /docs/scos/dev/the-docker-sdk/202204.0/docker-sdk-configuration-reference.html
@@ -33,6 +31,13 @@ related:
   - title: Running tests with the Docker SDK
     link: docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document is a quick reference for the most common configuration options of the Docker SDK.
 

@@ -3,8 +3,6 @@ title: "Import file details: product_relation.csv"
 description: Learn how to configure product relation information using the product relation CSV file in your Spryker project.
 last_updated: Jun 16, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-relationcsv
-originalArticleId: ce1a13ce-5d62-4e75-9af5-912210f3a8f0
 redirect_from:
   - /docs/pbc/all/product-relationship-management/202311.0/file-details-product-relation.csv.html
   - /docs/scos/dev/data-import/202204.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-relation.csv.html
@@ -12,6 +10,13 @@ related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the `product_relation.csv` file to configure [Product Relation](/docs/pbc/all/product-relationship-management/latest/product-relationship-management.html) information in your Spryker Demo Shop.
 

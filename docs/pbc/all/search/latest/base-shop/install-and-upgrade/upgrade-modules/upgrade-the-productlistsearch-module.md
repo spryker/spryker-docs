@@ -3,8 +3,6 @@ title: Upgrade the ProductListSearch module
 description: Use the guide to learn how to update the ProductListSearch module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-product-list-search
-originalArticleId: 0d7bbb99-551f-4225-bbaf-c3c35c40bfba
 redirect_from:
   - /2021080/docs/mg-product-list-search
   - /2021080/docs/en/mg-product-list-search
@@ -33,5 +31,12 @@ redirect_from:
   - /module_migration_guides/mg-product-list-search.htm
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlistsearch-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-productlistsearch-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productlistsearch-module.md -->

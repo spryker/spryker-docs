@@ -3,8 +3,6 @@ title: Secure coding practices for external packages
 description: Coding practices for developing your app to ensure its security with external packages for your Spryker based projects.
 last_updated: Feb 02, 2024
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/secure-coding-practices
-originalArticleId: 8c51239e-377e-427a-9d1f-4d15c355fa3c
 redirect_from:
 related:
   - title: Code Architecture Guide

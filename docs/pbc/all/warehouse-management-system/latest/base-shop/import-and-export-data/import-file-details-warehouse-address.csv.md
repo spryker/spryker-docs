@@ -3,8 +3,6 @@ title: "Import file details: warehouse_address.csv"
 description: learn how to configure warehouse address data in your Spryker based project using the warehouse address csv file.
 last_updated: Oct 4, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/file-details-warehouse-addresscsv
-originalArticleId: 330a69e6-3c7b-4aef-8b61-b70309dcc856
 redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html
   - /docs/pbc/all/warehouse-management-system/202311.0/base-shop/import-data/file-details-warehouse-address.csv.html
@@ -14,6 +12,13 @@ related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the `warehouse_address.csv` file to configure [warehouse address information](/docs/pbc/all/warehouse-management-system/latest/base-shop/inventory-management-feature-overview.html#defining-a-warehouse-address) in your Spryker shop.
 

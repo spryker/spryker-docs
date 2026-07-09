@@ -3,11 +3,16 @@ title: Using database transactions
 description: Use the guide to understand how to handle database transactions within your Spryker based projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/t-database-transactions
-originalArticleId: a9cf7e3b-bf1d-4e27-9614-478a6dcc5204
 redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-database-transaction-handling.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% info_block warningBox %}
 

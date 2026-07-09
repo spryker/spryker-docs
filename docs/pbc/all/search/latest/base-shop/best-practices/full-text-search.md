@@ -3,8 +3,6 @@ title: Full-text search
 description: Full-text search is a feature where a user enters arbitrary text into a search field and then gets documents that are relevant for that query.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/full-text-search
-originalArticleId: 3ce85307-d667-4326-817e-6caf21925d53
 redirect_from:
   - /2021080/docs/full-text-search
   - /2021080/docs/en/full-text-search
@@ -45,6 +43,13 @@ related:
   - title: Usage-driven schema and document structure
     link: docs/pbc/all/search/latest/base-shop/best-practices/usage-driven-schema-and-document-structure.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 *Full-text search* is a feature where a user enters arbitrary text into a search field and then gets documents relevant to that query. It is normally combined with faceted navigation. In the following example, a user searches for "hammer" and then further filters for hammer weights of 2000 grams and prices between 10€ and 50€:
 

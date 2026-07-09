@@ -3,8 +3,6 @@ title: Upgrade the Product module
 description: Learn how to upgrade from an older version to a newer one of the product module within your Spryker based project.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-product
-originalArticleId: 8558602e-6af8-40d2-8ae1-e15fe59ed6e4
 redirect_from:
   - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-product.html
   - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-product.html
@@ -21,5 +19,12 @@ related:
   - title: Upgrade the ProductManagement module
     link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productmanagement-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-product-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-product-module.md -->

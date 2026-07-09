@@ -3,8 +3,6 @@ title: Assign and deassign products from categories
 description: Learn how to assign and deassign products from categories in the Back Office.
 last_updated: June 15, 2022
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/assigning-products-to-categories
-originalArticleId: 4c14098e-c5c1-4f63-9957-202bca4a638a
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202108.0/catalog/category/assigning-products-to-categories.html
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/category/assigning-products-to-categories.html

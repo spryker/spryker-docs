@@ -3,8 +3,6 @@ title: Choosing a Docker SDK version
 description: Learn how to choose a versioning approach and configure a particular version of Docker SDK for your project.
 last_updated: May 15, 2026
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/choosing-a-docker-sdk-version
-originalArticleId: 18a333a7-2d89-455f-885a-92d24594fb31
 redirect_from:
   - /docs/scos/dev/the-docker-sdk/202311.0/choosing-a-docker-sdk-version.html
   - /docs/scos/dev/the-docker-sdk/202204.0/choosing-a-docker-sdk-version.html

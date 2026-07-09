@@ -3,11 +3,16 @@ title: Support case escalations
 description: Learn Spryker's process for handling escalated support cases, ensuring urgent issues are addressed by the right team to meet critical business needs.
 last_updated: Oct 25, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/case-escalation
-originalArticleId: 42b43d4c-fb40-4663-a210-1bdea01b4b22
 redirect_from:
 - /docs/scos/user/intro-to-spryker/support/escalations.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 An escalation is a situation that usually involves a partner or customer having an urgent or especially important problem that cannot immediately be solved to the satisfaction of everyone involved, and the problem is escalated to senior leadership or other departments in an effort to resolve the problem.
 

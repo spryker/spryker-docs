@@ -3,11 +3,16 @@ title: Upgrade search initialization
 description: Search initialization upgrade introduces two separate commands for the build and data initialization processes.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/search-initialization-improvement
-originalArticleId: 2b3938fa-d016-429f-b317-2951e909eca4
 redirect_from:
   - /docs/scos/dev/technical-enhancements/search-initialization-improvement.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Previously, the `vendor/bin/console setup:search` command invoked the `build` and `data initialization` processes. Running both processes simultaneously in a read-only file system results into the `build` process failing as the codebase is already baked into images. That's why the command has has been split into two commands for each of the processes which allows running them separately. You can find the commands below:
 

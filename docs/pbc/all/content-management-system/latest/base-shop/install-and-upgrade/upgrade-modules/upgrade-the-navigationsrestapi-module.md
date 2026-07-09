@@ -3,8 +3,6 @@ title: Upgrade the NavigationsRestApi module
 description: A guide on how to upgrade to a newer version of the Spryker Navigation Rest API module from an older version in your Spryker projects.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-navigationsrestapi
-originalArticleId: 7038210a-5f64-4293-9900-311f002dc5c7
 redirect_from:
   - /2021080/docs/migration-guide-navigationsrestapi
   - /2021080/docs/en/migration-guide-navigationsrestapi
@@ -29,5 +27,12 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/install-and-upgrade/upgrade-modules/upgrade-the-navigationsrestapi-module.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-navigationsrestapi-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-navigationsrestapi-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-navigationsrestapi-module.md -->

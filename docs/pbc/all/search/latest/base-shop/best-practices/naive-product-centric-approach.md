@@ -3,8 +3,6 @@ title: Naive product-centric approach
 description: Finding products on ecommerce website can be tricky, even when you know exactly what you are looking for.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/naive-product-centric-approach
-originalArticleId: 6deab3d9-ab71-44b4-a5cb-04759206e12b
 redirect_from:
   - /2021080/docs/naive-product-centric-approach
   - /2021080/docs/en/naive-product-centric-approach
@@ -45,6 +43,13 @@ related:
   - title: Usage-driven schema and document structure
     link: docs/pbc/all/search/latest/base-shop/best-practices/usage-driven-schema-and-document-structure.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Finding products on ecommerce website can be tricky, even when you know exactly what you are looking for. This document assumes a customer wants to buy a hammer that weighs 2kg. A product that would meet his needs might be this "Fäustel" by Fortis:
 ![Product-centric approach](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Naive+Product+Centric+Approach/product-detail.png)

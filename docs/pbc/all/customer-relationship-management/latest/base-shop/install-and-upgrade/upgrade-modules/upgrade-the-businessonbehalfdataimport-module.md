@@ -3,8 +3,6 @@ title: Migration guide - BusinessOnBehalfDataImport
 description: Use the guide to update versions to the newer ones of the Business on Behalf Data Import module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-business-on-behalf-data-import
-originalArticleId: 0013bcfa-469e-40c9-9beb-87838ad1519d
 redirect_from:
   - /2021080/docs/mg-business-on-behalf-data-import
   - /2021080/docs/en/mg-business-on-behalf-data-import
@@ -34,5 +32,12 @@ redirect_from:
    - /docs/pbc/all/customer-relationship-management/202204.0/install-and-upgrade/upgrade-modules/upgrade-the-businessonbehalfdataimport-module.html
 
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-businessonbehalfdataimport-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-businessonbehalfdataimport-module.md -->

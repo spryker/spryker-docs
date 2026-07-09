@@ -4,6 +4,7 @@ description: Spryker E2E Assistant early access tool for Cypress testing with GP
 template: concept-topic-template
 redirect_from: 
   - /docs/dg/dev/ai-assistants/spryker-cypress-e2e-assistant-gpt
+last_updated: Feb 10, 2026
 ---
 
 {% info_block warningBox %}

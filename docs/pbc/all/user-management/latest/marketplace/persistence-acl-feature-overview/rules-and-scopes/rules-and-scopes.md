@@ -5,6 +5,13 @@ description: The rule, in contrast to the configuration, is tied to the user (an
 template: concept-topic-template
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 The functionality of this feature is based on such fundamental concepts as Rule and Configuration.
 It is important to understand that the rule, in contrast to the configuration, is tied to the user (and his role) and determines the user's rights towards the entity.
 

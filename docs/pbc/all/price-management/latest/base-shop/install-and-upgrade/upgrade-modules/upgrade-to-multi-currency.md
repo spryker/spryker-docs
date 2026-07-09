@@ -3,8 +3,6 @@ title: Upgrade to multi-currency
 description: Learn how to upgrade and migrate your project to multi-currency to a newer version within your Spryker project.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-multi-currency
-originalArticleId: 95dd322c-44ae-476b-8587-7773565cafc2
 redirect_from:
   - /2021080/docs/mg-multi-currency
   - /2021080/docs/en/mg-multi-currency
@@ -43,6 +41,13 @@ related:
   - title: Upgrade the Shipment
     link: docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipment-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This article provides a whole overview of what needs to be done to have the multi-currency feature running in your Spryker shop. The multi-currency feature affects many Spryker modules so we split it into smaller parts. Here you will find the information that will help get you started with the multi-currency feature.
 There is a chance that you already have the multi-currency enabled in some of the modules. In the list below you will find versions of the modules from when it has first been implemented as well as a link to an appropriate migration guide.

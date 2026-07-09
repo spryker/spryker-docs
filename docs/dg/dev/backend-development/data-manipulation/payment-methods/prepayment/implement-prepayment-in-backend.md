@@ -3,8 +3,6 @@ title: Implement prepayment in backend
 description: Set up prepayment methods in Spryker with backend integration guidance. Learn to implement secure payment processes and enhance your ecommerce platform.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-prepayment-be
-originalArticleId: 2ee681bb-c2b1-4a78-93c7-2c6914fc6c64
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-backend.html
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-back-end.html
@@ -20,6 +18,13 @@ related:
   - title: Test the Prepayment implementation
     link: docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To integrate the prepayment method into the checkout, you need to provide implementations for these two plugins:
 

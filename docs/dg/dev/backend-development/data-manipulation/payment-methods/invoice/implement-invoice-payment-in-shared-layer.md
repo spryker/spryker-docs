@@ -3,8 +3,6 @@ title: Implement invoice payment in shared layer
 description: Integrate invoice payment into Spryker's shared layer with detailed steps. Enhance backend capabilities for seamless ecommerce payment integration.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-invoice-payment-fe-be-shared
-originalArticleId: ddb4c3f0-4ea8-4cda-82a2-0ffd4fecac99
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-shared-layer.html
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-shared-layer.html
@@ -20,6 +18,13 @@ related:
   - title: Test the invoice payment implementation
     link: docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/test-the-invoice-payment-implementation.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This tutorial helps you identify the new payment type through some unique constants. Those constants are going to be defined in the `Shared` namespace, since they're needed both by Yves and Zed.
 

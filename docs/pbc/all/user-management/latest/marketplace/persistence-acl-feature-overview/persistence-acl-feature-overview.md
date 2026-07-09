@@ -7,6 +7,13 @@ redirect_from:
   - /docs/marketplace/dev/feature-walkthroughs/202212.0/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 With the Persistence ACL feature, you can manage authorization at the database entity level, or even within a set of entities or segments. This feature enables a flexible system of inheritance of rights, simplifying the configuration of access.
 
 Persistence ACL runs in the Persistence layer, as its name suggests.

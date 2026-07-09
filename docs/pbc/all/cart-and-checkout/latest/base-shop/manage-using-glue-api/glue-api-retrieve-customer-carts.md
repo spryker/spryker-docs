@@ -3,8 +3,6 @@ title: "Glue API: Retrieve customer carts"
 description: Learn how to retrieve customer's carts via the Spryker Glue API with different requests for different cart actions.
 last_updated: Jul 20, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-customer-carts
-originalArticleId: a09a087b-5fca-483c-a2c2-f8441681b43e
 redirect_from:
   - /docs/scos/dev/glue-api-guides/201907.0/managing-customers/retrieving-customer-carts.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-customers/retrieving-customer-carts.html
@@ -34,6 +32,13 @@ related:
   - title: Retrieving customer orders
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This endpoint allows retrieving a customer's carts.
 

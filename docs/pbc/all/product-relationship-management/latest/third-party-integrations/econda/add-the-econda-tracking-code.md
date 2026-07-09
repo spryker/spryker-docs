@@ -3,8 +3,6 @@ title: Adding the Econda tracking code
 description: Add the Econda tracking code into Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/econda-tracking
-originalArticleId: ba36652b-9c03-415e-ad71-0d862a751642
 redirect_from:
   - /2021080/docs/econda-tracking
   - /2021080/docs/en/econda-tracking
@@ -15,6 +13,13 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/marketing-and-conversion/personalization-and-cross-selling/econda/adding-the-econda-tracking-code.html
   - /docs/scos/dev/technology-partner-guides/202204.0/marketing-and-conversion/personalization-and-cross-selling/econda/adding-the-econda-tracking-code.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Now that we have integrated Econda to the website we can start adding the tracking code.
 

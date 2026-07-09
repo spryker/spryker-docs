@@ -3,8 +3,6 @@ title: Architecture Sniffer
 description: Use Architecture Sniffer to ensure the quality of Spryker architecture for both core and project
 last_updated: Nov 11, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/architecture-sniffer
-originalArticleId: 33ab1b5b-fce7-4439-8722-87e5ecd9f3c5
 redirect_from:
   - /docs/sdk/dev/development-tools/architecture-sniffer.html
   - /docs/scos/dev/sdk/201811.0/development-tools/architecture-sniffer.html
@@ -36,6 +34,13 @@ related:
   - title: Tooling config file
     link: docs/dg/dev/sdks/sdk/development-tools/tooling-configuration-file.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 We use our [Architecture Sniffer Tool](https://github.com/spryker/architecture-sniffer) to ensure the quality of Spryker architecture for both core and project.
 

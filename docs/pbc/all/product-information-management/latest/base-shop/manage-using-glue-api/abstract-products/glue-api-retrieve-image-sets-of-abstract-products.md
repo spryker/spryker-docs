@@ -3,8 +3,6 @@ title: "Glue API: Retrieving image sets of abstract products"
 description: Retrieve image sets of abstract products using the Spryker Cloud Commerce OS GLUE API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-image-sets-of-abstract-products
-originalArticleId: 823ef04b-e614-4022-a30f-6e2130d280d8
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html
   - /docs/pbc/all/product-information-management/202311.0/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html
@@ -19,6 +17,13 @@ related:
   - title: Product image management
     link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-images-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This endpoint allows retrieving image sets of abstract products.
 

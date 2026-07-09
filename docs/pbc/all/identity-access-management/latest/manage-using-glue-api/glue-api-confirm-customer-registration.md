@@ -3,8 +3,6 @@ title: "Glue API: Confirm customer registration"
 description: Learn how to confirm the customer registration via the Spryker GLUE API within your Spryker projects.
 last_updated: Jun 21, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/confirming-customer-registration
-originalArticleId: ce75d090-7be3-4d28-98a2-4ea49eb0d00c
 redirect_from:
   - /docs/scos/dev/glue-api-guides/201811.0/managing-customers/confirming-customer-registration.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-customers/confirming-customer-registration.html
@@ -31,6 +29,13 @@ related:
   - title: Retrieving customer orders
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 After a customer has been created (to create a customer, see [Customers](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/glue-api-manage-customers.html)), the registration must be confirmed. This endpoint allows you to do that by sending a confirmation code received by email.
 

@@ -3,8 +3,6 @@ title: CrefoPay—Enabling B2B payments
 description: Learn how to enable the CrefoPay B2B payments for your Spryker Cloud Commerce OS.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/crefopay-business-to-business-model
-originalArticleId: 14cda40b-6339-44f2-971c-b4282dcf02c8
 redirect_from:
   - /2021080/docs/crefopay-business-to-business-model
   - /2021080/docs/en/crefopay-business-to-business-model
@@ -30,6 +28,13 @@ related:
   - title: CrefoPay notifications
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/crefopay-notifications.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 CrefoPay module enables B2B strategy in payments.
 

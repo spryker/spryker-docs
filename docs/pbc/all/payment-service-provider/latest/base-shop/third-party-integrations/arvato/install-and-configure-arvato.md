@@ -3,8 +3,6 @@ title: Installing and configuring Arvato
 description: Provide complete and comprehensive risk management for the eCommerce/mail-order industry, contributing to a high level of modularization and automation.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/arvato-installation-configuration
-originalArticleId: 01e4a638-f2ea-4974-8f55-ee85d8745298
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/arvato/installing-and-configuring-arvato.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/arvato/install-and-configure-arvato.html
@@ -16,6 +14,13 @@ related:
   - title: Arvato
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/arvato/arvato.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% info_block errorBox %}
 

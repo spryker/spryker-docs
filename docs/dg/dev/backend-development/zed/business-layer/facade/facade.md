@@ -3,8 +3,6 @@ title: Facade
 description: The facade acts as an internal API. The main responsibility of the facade is to hide the internal implementation.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/facade
-originalArticleId: 4bd6f125-5262-400e-8552-91d1406d5054
 redirect_from:
   - /docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
 related:
@@ -15,6 +13,13 @@ related:
   - title: Design by Contract (DBC) - Facade
     link: docs/dg/dev/backend-development/zed/business-layer/facade/design-by-contract-dbc-facade.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 A *facade* acts as an internal API. The main responsibility of the facade is to hide the internal implementation.
 

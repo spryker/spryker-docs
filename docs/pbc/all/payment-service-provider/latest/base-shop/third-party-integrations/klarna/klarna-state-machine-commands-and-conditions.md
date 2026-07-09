@@ -3,8 +3,6 @@ title: Klarna state machine commands and conditions
 description: This article includes the state machine commands and conditions provided by Klarna.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/klarna-state-machine-commands-and-conditions
-originalArticleId: 38a8ca62-b931-49c9-8764-fbfa47add05b
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/klarna/klarna-state-machine-commands-and-conditions.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/klarna/klarna-state-machine-commands-and-conditions.html
@@ -19,6 +17,13 @@ related:
   - title: Klarna payment workflow
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/klarna/klarna-payment-workflow.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Commands
 

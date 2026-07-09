@@ -3,8 +3,6 @@ title: Database schema definition
 description: With Propel, a database schema is defined in an XML file. Each module carries it s own part of the big schema that is collected and merged.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/database-schema-definition
-originalArticleId: 49d1d709-2b32-486f-888f-484f0ad72319
 redirect_from:
   - /docs/scos/dev/back-end-development/zed/persistence-layer/database-schema-definition.html
 related:
@@ -21,6 +19,13 @@ related:
   - title: Repository
     link: docs/dg/dev/backend-development/zed/persistence-layer/repository.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 With Propel, a [database schema](http://propelorm.org/documentation/reference/schema.html) is defined in an XML file. Each module has its own part of the big schema that is collected and merged.
 This document describes the database schema file and how to use it in your project.

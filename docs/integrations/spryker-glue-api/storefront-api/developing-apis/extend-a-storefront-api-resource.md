@@ -3,8 +3,6 @@ title: Extend a Storefront API resource
 description: This tutorial shows how to extend Storefront API resources
 last_updated: Sep 18, 2025
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/extending-a-rest-request-resource
-originalArticleId: 765f9daa-fe09-4e7b-9344-17dd4e65a952
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202404.0/glue-api-tutorials/extend-a-rest-api-resource.html
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/extending-a-rest-api-resource.html

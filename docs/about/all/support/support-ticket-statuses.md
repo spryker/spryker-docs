@@ -3,11 +3,16 @@ title: Support ticket statuses
 description: Discover Spryker's support ticket statuses to track your issues effectively, from reporting through resolution, with clear updates at each stage.
 last_updated: Oct 8, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/understanding-ticket-status
-originalArticleId: ca538168-f995-48b4-8caf-d295647d2701
 redirect_from:
 - /docs/scos/user/intro-to-spryker/support/understanding-ticket-status.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 When you report an issue, and we discover an underlying problem with Spryker, we create a Jira Bug Ticket. Then, this ticket is handed over to our development department, and our colleagues evaluate how to address the problem best and resolve it. After the issue is resolved, it's then released to our repositories.
 

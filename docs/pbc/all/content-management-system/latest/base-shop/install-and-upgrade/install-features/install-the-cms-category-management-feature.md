@@ -3,8 +3,6 @@ title: Install the CMS + Category Management feature
 description: Learn how to install the CMS + Category Management feature in Spryker Cloud Commerce OS to your Spryker projects.
 last_updated: Jun 23, 2021
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/cms-category-management-feature-integration
-originalArticleId: 7fda2277-78fa-4351-8b4e-547cf6803fd6
 redirect_from:
   - /2021080/docs/cms-category-management-feature-integration
   - /2021080/docs/en/cms-category-management-feature-integration
@@ -19,4 +17,11 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/install-features/install-the-cms-category-management-feature.html
 
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 {% include pbc/all/install-features/latest/install-the-cms-category-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-cms-category-management-feature.md -->

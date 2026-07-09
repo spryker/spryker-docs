@@ -3,8 +3,6 @@ title: Configuring Heidelpay
 description: This article contains information on configuring the Heidelpay module for the Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-configuration-scos
-originalArticleId: f14d7560-eea6-4f96-8ced-cb8fcdda46c1
 redirect_from:
   - /2021080/docs/heidelpay-configuration-scos
   - /2021080/docs/en/heidelpay-configuration-scos
@@ -34,6 +32,13 @@ related:
   - title: Integrating the Easy Credit payment method for Heidelpay
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-easy-credit-payment-method-for-heidelpay.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Base settings are located in `config/Shared/config_default.php`
 

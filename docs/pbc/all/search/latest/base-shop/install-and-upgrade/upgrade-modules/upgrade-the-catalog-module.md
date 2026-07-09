@@ -3,8 +3,6 @@ title: Upgrade the Catalog module
 description: Use the guide to migrate to a newer version of the Catalog module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-catalog
-originalArticleId: 34b60455-3e4a-4310-917c-73b64be173a0
 redirect_from:
   - /2021080/docs/mg-catalog
   - /2021080/docs/en/mg-catalog
@@ -35,4 +33,11 @@ related:
   - title: Upgrade the Category module
     link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-category-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 {% include pbc/all/upgrade-modules/upgrade-the-catalog-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-catalog-module.md -->

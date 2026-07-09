@@ -3,8 +3,6 @@ title: Create user groups
 description: Learn how you can create new user groups directly in the back office of Spryker Cloud Commerce OS.
 last_updated: Aug 2, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-groups
-originalArticleId: 0fd86087-7869-43f7-b15a-997daa5800ca
 redirect_from:
   - /2021080/docs/managing-groups
   - /2021080/docs/en/managing-groups
@@ -18,6 +16,13 @@ related:
   - title: Customer Groups overview
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/customer-account-management-feature-overview/customer-groups-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to create user groups.
 

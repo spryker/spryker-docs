@@ -3,8 +3,6 @@ title: Change the state of order items
 description: Learn how to change the state of an order items in the Spryker Cloud Commerce OS Back Office.
 last_updated: Aug 10, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-orders
-originalArticleId: 6d125a8a-63ca-4ddc-bb74-1526aa1fe44b
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/sales/orders/managing-orders.html
   - /docs/scos/user/back-office-user-guides/202311.0/sales/orders/changing-the-state-of-order-items.html
@@ -13,6 +11,13 @@ related:
   - title: Order Management feature overview
     link: docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/order-management-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This article describes how to change the state of order items.
 

@@ -3,8 +3,6 @@ title: Facet filter overview and configuration
 description: Learn how to configure Facet filters allowing customers to quickly locate products within your Spryker shop.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/t-working-filter-facets
-originalArticleId: ec19f80a-9fad-4f44-8d60-8957e2665e0e
 redirect_from:
   - /2021080/docs/t-working-filter-facets
   - /2021080/docs/en/t-working-filter-facets
@@ -36,6 +34,13 @@ related:
   - title: Expand search data
     link: docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/expand-search-data.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 A search engine facilitates better navigation, allowing customers to quickly locate desired products.
 

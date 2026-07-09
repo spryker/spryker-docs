@@ -3,14 +3,19 @@ title: Order Management feature overview
 description: Efficiently keep track of the order processing and ensure quick fulfillment. With the Spryker Order Management feature.
 last_updated: Jul 7, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/order-management
-originalArticleId: f9fbd2cd-af2f-4850-a07a-1cb4d8934171
 redirect_from:
   - /docs/scos/user/features/202108.0/order-management-feature-overview/order-management-feature-overview.html
   - /docs/scos/user/features/202200.0/order-management-feature-overview/order-management-feature-overview.html
   - /docs/scos/user/features/202311.0/order-management-feature-overview/order-management-feature-overview.html
   - /docs/scos/user/features/202204.0/order-management-feature-overview/order-management-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Bringing flexible shipping options to your online business may have a key impact on the purchasing decisions of your customers. The *Order Management* feature is a collection of functionalities that let your customers place orders easily and let you manage the orders effectively.
 

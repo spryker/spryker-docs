@@ -3,8 +3,6 @@ title: "State machine cookbook: build a state machine"
 description: This tutorial helps you model a state machine using Spryker to manage your sale orders.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/state-machine-cookbook-2
-originalArticleId: fd0561bd-b4a9-45b4-80aa-a4b9911eb86e
 redirect_from:
   - /2021080/docs/state-machine-cookbook-2
   - /2021080/docs/en/state-machine-cookbook-2
@@ -25,6 +23,13 @@ redirect_from:
   - /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-2-building-a-state-machine.html
   - /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-build-a-state-machine.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% info_block infoBox %}
 

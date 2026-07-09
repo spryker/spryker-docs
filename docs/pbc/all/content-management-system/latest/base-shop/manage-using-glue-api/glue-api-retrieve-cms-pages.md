@@ -3,8 +3,6 @@ title: "Glue API: Retrieve CMS pages"
 description: Learn how you can retrieve details on Spryker CMS pages via the Spryker Glue API.
 last_updated: Jun 18, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-cms-pages
-originalArticleId: 790ea5b1-23b6-4db1-8878-1de75bc438dd
 redirect_from:
   - /docs/scos/dev/glue-api-guides/201811.0/retrieving-cms-pages.html
   - /docs/scos/dev/glue-api-guides/202005.0/retrieving-cms-pages.html
@@ -18,6 +16,13 @@ related:
   - title: Install the CMS Glue API
     link: docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-cms-glue-api.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 [CMS pages](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-pages-overview.html) are meant for creating customized content for your online shop. The CMS Pages API allows you to retrieve details on CMS pages, including information on Abstract Product List and Banner content items available for each of them.
 

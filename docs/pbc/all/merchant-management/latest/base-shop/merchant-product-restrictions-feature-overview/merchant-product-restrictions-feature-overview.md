@@ -3,8 +3,6 @@ title: Merchant Product Restrictions feature overview
 description: Merchant Product Restrictions lets merchants define the products that are available to each of their B2B customers.
 last_updated: Jul 22, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/merchant-product-restrictions-feature-overview
-originalArticleId: 9d02b7ac-0e20-47bf-8f5b-656279a8278d
 redirect_from:
   - /2021080/docs/merchant-product-restrictions-feature-overview
   - /2021080/docs/en/merchant-product-restrictions-feature-overview
@@ -13,6 +11,13 @@ redirect_from:
   - /docs/scos/user/features/202311.0/merchant-product-restrictions-feature-overview.html
   - /docs/scos/user/features/202204.0/merchant-product-restrictions-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The *Product Restrictions* feature lets merchants define the products that are available to each of their B2B customers.
 

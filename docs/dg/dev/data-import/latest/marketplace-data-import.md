@@ -9,6 +9,13 @@ redirect_from:
 
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 The Marketplace setup category contains data required to set up the Marketplace environment.
 
 The following table provides details about Marketplace setup data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.

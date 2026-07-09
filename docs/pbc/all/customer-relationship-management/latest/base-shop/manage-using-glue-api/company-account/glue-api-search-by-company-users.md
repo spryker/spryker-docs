@@ -3,8 +3,6 @@ title: "Glue API: Search by company users"
 description: Learn how to search by company users that are configured within your store via the Spryker Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/searching-by-company-users
-originalArticleId: a0cc11ce-40e9-4fcf-8cd5-eddd23b02363
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-b2b-account/searching-by-company-users.html
   - /docs/scos/dev/glue-api-guides/202204.0/managing-b2b-account/searching-by-company-users.html
@@ -34,6 +32,13 @@ related:
   - title: Password Management overview
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This endpoint allows [authenticated customers](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-customer.html#authenticate-as-a-customer) to search by the company users available to them. Usually, authenticated customers search for a company user which they want to authenticate as.
 

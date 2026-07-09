@@ -3,8 +3,6 @@ title: Integrate Direct Debit into checkout
 description: This document provides instructions on how to integrate the Direct Debit payment form and handler into Checkout.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/dd-checkout-implementation
-originalArticleId: 5a6dc963-80e4-4aca-b307-7752adbbc8e6
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/integrate-direct-debit-into-checkout.html
 related:
@@ -19,6 +17,13 @@ related:
   - title: Test your Direct Debit implementation
     link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/testing-your-direct-debit-implementation.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document shows how to integrate the Direct Debit payment form and handler into Checkout.
 

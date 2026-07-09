@@ -3,8 +3,6 @@ title: Integrating the Split-payment Marketplace payment method for Heidelpay
 description: Integrate Split payment Marketplace through Heidelpay into the Spryker-based shop.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-split-payment-marketplace
-originalArticleId: e418b364-ca18-4947-9dd0-a100378dd90a
 redirect_from:
   - /2021080/docs/heidelpay-split-payment-marketplace
   - /2021080/docs/en/heidelpay-split-payment-marketplace
@@ -34,6 +32,13 @@ related:
   - title: Integrating the Easy Credit payment method for Heidelpay
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-easy-credit-payment-method-for-heidelpay.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Setup
 

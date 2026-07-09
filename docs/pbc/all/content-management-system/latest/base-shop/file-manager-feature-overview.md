@@ -3,8 +3,6 @@ title: File Manager feature overview
 description: Reduce your bounce rate and create an enhanced shopping experience by providing impactful visuals while maintaining fast response times.
 last_updated: Sep 2, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/media-management
-originalArticleId: 55cbe64d-f656-4d8d-a3d5-c32998acb947
 redirect_from:
   - /docs/scos/user/features/202001.0/file-manager-feature-overview/file-uploader.html
   - /docs/scos/user/features/202200.0/file-manager-feature-overview/file-manager-feature-overview.html
@@ -15,6 +13,13 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/file-manager-feature-overview.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/file-manager-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The *File Manager* feature lets you upload and manage your assets (media files) effectively. You can do the following:
 - Upload and delete files in bulk.

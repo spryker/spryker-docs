@@ -3,8 +3,6 @@ title: "Import file details: mime_type.csv"
 description: Learn about the Spryker mime type csv file used to configure the Mime type information in to your Spryker Shop.
 last_updated: Jun 16, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/file-details-mime-typecsv
-originalArticleId: cec9c3b6-fb1c-4d60-829c-cf37d9d54404
 redirect_from:
   - /docs/scos/dev/data-import/202204.0/data-import-categories/miscellaneous/file-details-mime-type.csv.html  
   - /docs/pbc/all/content-management-system/202311.0/import-and-export-data/file-details-mime-type.csv.html
@@ -14,6 +12,13 @@ related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the `mime_type.csv` file used to configure MIME Type information in your Spryker Demo Shop. For more information about MIME types, see [Reference information: MIME TYPE](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/add-and-edit-mime-types)
 

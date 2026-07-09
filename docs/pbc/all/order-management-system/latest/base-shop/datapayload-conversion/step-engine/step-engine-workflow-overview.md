@@ -3,8 +3,6 @@ title: "Step engine: Workflow overview"
 description: This document provides an overview of the Spryker step engine feature within the Spryker Order Management System Module.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/step-engine-workflow
-originalArticleId: 5709d2f5-13f8-4c94-bbc2-a24f998cfb9f
 redirect_from:
   - /2021080/docs/step-engine-workflow
   - /2021080/docs/en/step-engine-workflow
@@ -39,6 +37,13 @@ related:
   - title: "Step engine: Use case scenario"
     link: docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/step-engine/step-engine-create-breadcrumb-navigation.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To define a multi-step process using the StepEngine feature, you need to implement the following interfaces:
 

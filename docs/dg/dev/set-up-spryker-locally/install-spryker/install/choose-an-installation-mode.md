@@ -3,8 +3,6 @@ title: Choose an installation mode
 description: Learn about choosing between the Development or Demo installation mode when setting up your Spryker Shop in a Local environment.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/choosing-an-installation-mode
-originalArticleId: f463210d-1b1c-432f-b0f1-53ada2a017e5
 redirect_from:
   - /docs/scos/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html
   - /docs/scos/dev/installation/spryker-in-docker/installation-guides/modes-overview.html
@@ -13,6 +11,13 @@ related:
   - title: Database access credentials
     link: docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 
 You can install Spryker in Development and Demo modes.

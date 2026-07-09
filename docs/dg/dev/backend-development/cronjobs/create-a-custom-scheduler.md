@@ -3,8 +3,6 @@ title: Create a custom scheduler
 description: Learn how to create a custom scheduler in Spryker's backend to automate tasks. Enhance your ecommerce platform's efficiency with tailored scheduling solutions.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-create-a-new-custom-scheduler
-originalArticleId: 782c6672-6cf9-4295-9bb5-d6c5fe98891d
 redirect_from:
   - /docs/scos/dev/back-end-development/cronjobs/creating-a-custom-scheduler.html
   - /docs/scos/dev/back-end-development/cronjobs/create-a-custom-scheduler.html
@@ -18,6 +16,13 @@ related:
   - title: Cronjob scheduling
     link: docs/scos/dev/sdk/cronjob-scheduling.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To create a new custom scheduler, follow these steps:
 

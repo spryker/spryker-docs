@@ -7,6 +7,13 @@ redirect_from:
   - /docs/marketplace/dev/feature-walkthroughs/202204.0/marketplace-product-offer-feature-walkthrough/rendering-product-offers-on-the-storefront.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 This document explains how to render merchant product offers on the Storefront.
 
 ## Prerequisites

@@ -3,8 +3,6 @@ title: Integrate custom location for static assets
 description: Learn how you can enable and integrate custom location for static assets within your Spryker based project.
 last_updated: Feb 19, 2026
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/custom-location-for-static-assets
-originalArticleId: d3bcba9d-bfc6-41e7-9440-b0909d7263ae
 redirect_from:
   - /docs/scos/dev/technical-enhancement-integration-guides/integrating-custom-location-for-static-assets.html
   - /docs/scos/dev/technical-enhancements/custom-location-for-static-assets.html

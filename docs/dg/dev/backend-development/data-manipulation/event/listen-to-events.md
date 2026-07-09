@@ -3,8 +3,6 @@ title: Listen to events
 descritpion: Learn how to listen to and handle backend events in Spryker, improving your eCommerce platform's data manipulation and event management.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/event-listen
-originalArticleId: 484a93ea-5e3c-4079-b682-6d2c7196b4b7
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/event/listen-to-events.html
   - /docs/scos/dev/back-end-development/data-manipulation/event/listening-to-events.html
@@ -16,6 +14,13 @@ related:
   - title: Configure event queues
     link: docs/scos/dev/back-end-development/data-manipulation/event/configure-event-queues.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 There are two ways to listen to events: using direct listeners or subscribers. The difference between these two is that a subscriber allows the module providing the subscriber to wire up the handlers in the module that owns it without touching the `EventDependencyProvider` exception's initial subscriber initialization. It is best to use a subscriber from the beginning, as this simplifies future listener registration. When you need to listen to specific listener, use `\Pyz\Zed\Event\EventDependencyProvider::getEventListenerCollection`.
 

@@ -3,8 +3,6 @@ title: Spryker Core Back Office feature overview
 description: The document provides general information about the actions you can perform in Spryker Back Office.
 last_updated: May 7, 2026
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/the-back-office-overview
-originalArticleId: 33ffb1b7-d9b5-457a-90a1-170e36479d5b
 redirect_from:
   - /2021080/docs/the-back-office-overview
   - /2021080/docs/en/the-back-office-overview

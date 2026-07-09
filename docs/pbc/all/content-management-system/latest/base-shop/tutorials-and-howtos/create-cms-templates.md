@@ -3,8 +3,6 @@ title: Create CMS templates
 description: Use the guide to create a template for a CMS page, CMS Block, Content Item Widget.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-create-cms-templates
-originalArticleId: 6f52ee42-6c1a-4d0b-865b-3512b7f4b9aa
 redirect_from:
   - /docs/scos/dev/tutorials/201811.0/howtos/feature-howtos/cms/howto-create-cms-templates.html
   - /docs/scos/dev/tutorials/201903.0/howtos/feature-howtos/cms/howto-create-cms-templates.html
@@ -20,6 +18,13 @@ related:
   - title: CMS Blocks overview
     link: docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-blocks-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to create CMS templates for Yves.
 

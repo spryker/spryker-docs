@@ -3,8 +3,6 @@ title: Code Sniffer
 description: With the Code Sniffer tool, you can keep your code clean, find issues, and fix them automatically.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/code-sniffer
-originalArticleId: 5fd3244a-f387-4188-a8d0-076eb8afe1f1
 redirect_from:
   - /docs/sdk/dev/development-tools/code-sniffer.html
   - /docs/scos/dev/sdk/201811.0/development-tools/code-sniffer.html
@@ -35,6 +33,13 @@ related:
   - title: Tooling config file
     link: docs/dg/dev/sdks/sdk/development-tools/tooling-configuration-file.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To correspond to [PSR-2](http://www.php-fig.org/psr/psr-2/) and additional standards, we integrated the well known [PHPCodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
 

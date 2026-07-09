@@ -8,6 +8,13 @@ redirect_from:
   - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/extend-and-customize/manage-stocks-in-a-multi-store-environment-best-practices.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 In a multi-store environment, you can manage relationships between warehouses, stores, and databases in several ways. This article contains scenarios that can help you choose the most suitable warehouse management workflow and implement it using the [Inventory Management](/docs/pbc/all/warehouse-management-system/latest/base-shop/inventory-management-feature-overview.html) feature.
 
 ## Scenario 1: Separate warehouses and databases

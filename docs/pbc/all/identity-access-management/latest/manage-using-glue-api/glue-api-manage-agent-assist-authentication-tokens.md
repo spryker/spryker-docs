@@ -3,8 +3,6 @@ title: "Glue API: Managing agent assist authentication tokens"
 description: Learn how to refresh an agent assist token and revoke an agent assist refresh token using the Spryker GLUE API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-agent-assist-authentication-tokens
-originalArticleId: a3ef0b2b-9ad0-4970-9f9f-bf5f2d975c65
 redirect_from:
 - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-manage-agent-assist-authentication-tokens.html
 related:
@@ -17,6 +15,13 @@ related:
   - title: Search by customers as an agent assist
     link: docs/pbc/all/user-management/latest/base-shop/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This endpoint allows to refresh an agent assist access token or revoke a refresh token.
 

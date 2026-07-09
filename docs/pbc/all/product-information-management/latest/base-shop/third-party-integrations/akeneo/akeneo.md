@@ -3,8 +3,6 @@ title: Akeneo
 description: Provide product information management solutions through the existing IT environment by integrating Akeneo into the Spryker-based shop.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/akeneo
-originalArticleId: 830eeacd-b5db-4591-b554-4fff82b82566
 redirect_from:
   - /2021080/docs/akeneo
   - /2021080/docs/en/akeneo
@@ -18,6 +16,13 @@ related:
   - title: Installing and configuring Akeneo Connector (Eco module)
     link: docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo-eco-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Partner Information
 

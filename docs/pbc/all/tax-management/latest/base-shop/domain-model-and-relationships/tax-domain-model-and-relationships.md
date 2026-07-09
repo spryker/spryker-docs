@@ -12,6 +12,13 @@ redirect_from:
   - /docs/pbc/all/tax-management/202204.0/base-shop/domain-model-and-relationships/tax-domain-model-and-relationships.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 
 The following schemas illustrates relations between modules when Avalara is integrated into different entities:
 

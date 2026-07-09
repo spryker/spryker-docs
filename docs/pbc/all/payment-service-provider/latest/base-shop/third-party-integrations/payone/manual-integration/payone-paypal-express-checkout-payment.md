@@ -3,12 +3,17 @@ title: PayOne - PayPal Express Checkout payment
 description: Integrate PayPal Express Checkout payment through Payone into the Spryker-based shop.
 last_updated: Jun 29, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/payone-paypal-express-checkout-scos
-originalArticleId: 77d504fd-b731-4eb8-86a0-5435630900f8
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/bs-payone/scos-integration/payone-paypal-express-checkout-payment.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payone/manual-integration/payone-paypal-express-checkout-payment.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The payment using PayPal requires a redirect to the PayPal website. When customers are redirected to PayPal's website, they have to authorize and after that either cancel or validate the transaction.
 

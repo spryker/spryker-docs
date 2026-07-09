@@ -3,8 +3,6 @@ title: Integrating the Credit Card Secure payment method for Heidelpay
 description: Integrate Credit Card payment through Heidelpay into the Spryker-based shop.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-credit-card
-originalArticleId: bf62ed07-45dc-48b7-8a11-7cc6fdeb3e16
 redirect_from:
   - /2021080/docs/heidelpay-credit-card
   - /2021080/docs/en/heidelpay-credit-card
@@ -34,6 +32,13 @@ related:
   - title: Integrating the Easy Credit payment method for Heidelpay
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-easy-credit-payment-method-for-heidelpay.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Setup
 

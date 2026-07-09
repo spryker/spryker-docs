@@ -3,8 +3,6 @@ title: Reorder feature overview
 description: The Reorder feature simplifies the order placement process for your customers- it lets them reorder their previous orders in just one click.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/reorder-feature-overview
-originalArticleId: ad6a726f-9327-4502-8670-d8e25e9c7340
 redirect_from:
   - /2021080/docs/reorder-feature-overview
   - /2021080/docs/en/reorder-feature-overview
@@ -17,6 +15,13 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202204.0/reorder-feature-walkthrough.html
   - /docs/scos/user/features/202204.0/reorder-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 One of the biggest factors that influences customer loyalty and persuades them to repeatedly buy from your shop is shopping convenience. Reorder feature simplifies the order placement process for your customers: it lets them reorder their previous orders in just one click. All the customers need to do is go to the **Order History** page in their *Customer Account* and reorder either the entire order or individual items from it.
 

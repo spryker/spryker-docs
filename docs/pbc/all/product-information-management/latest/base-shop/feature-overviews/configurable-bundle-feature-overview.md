@@ -3,8 +3,6 @@ title: Configurable Bundle feature overview
 description: A configurable bundle is a product bundle, that a customer can configure in the Storefront on the go by choosing the suggested concrete products.
 last_updated: Jul 21, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/configurable-bundle-feature-overview
-originalArticleId: 292959d4-d71c-4c5d-846f-9685bcf04834
 redirect_from:
   - /2021080/docs/configurable-bundle-feature-overview
   - /2021080/docs/en/configurable-bundle-feature-overview
@@ -14,6 +12,13 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202311.0/feature-overviews/configurable-bundle-feature-overview.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/configurable-bundle-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 A *configurable bundle* is a [product bundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-bundles-feature-overview.html) for which a Storefront User selects products on the Storefront.
 For example, when buying a kitchen set, a customer selects pieces of furniture, like drawers, cupboards, or cabinets, from suggested options.

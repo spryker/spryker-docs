@@ -3,8 +3,6 @@ title: Product and code releases
 description: An introduction to the Spryker product and atomic code releases and how Spryker releases new updates and features.
 last_updated: Mar 4, 2024
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/spryker-release-process
-originalArticleId: 3195aac4-0b8e-43a7-b540-0222f567c9fc
 redirect_from:
 - /docs/scos/user/intro-to-spryker/releases/releases.html
 - /docs/scos/user/intro-to-spryker/releases/releases-archive.html

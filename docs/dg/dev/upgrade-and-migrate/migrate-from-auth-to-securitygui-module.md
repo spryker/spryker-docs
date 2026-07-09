@@ -3,8 +3,6 @@ title: Migrate from Auth to SecurityGui module
 description: Learn how to migrate from the Auth module to the Security GUI Module within your Spryker based projects.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-auth-module-to-securitygui-module
-originalArticleId: 3c77ca14-9017-4a29-8576-aea8a0bd3294
 redirect_from:
   - /docs/scos/dev/migration-concepts/migrate-from-auth-to-securitygui-module.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-auth-module-to-securitygui-module.html
@@ -12,6 +10,13 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/migration-guide-auth-module-to-securitygui-module.html
 
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 
 We gave up the `Auth` module in favor of using `Symfony Security`. `Symfony Security` allows more flexible customization of the authorization system. More detailed information can be found in the [official documentation](https://symfony.com/doc/current/security.html).

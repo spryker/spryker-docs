@@ -3,8 +3,6 @@ title: Code buckets
 description: Code buckets let projects define, implement, and execute different business logics based on different HTTP or console requests.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/code-buckets
-originalArticleId: 8c24a5f6-f45a-4ff5-838f-b25712309bd0
 redirect_from:
   - /docs/scos/dev/architecture/code-buckets.html
 related:
@@ -17,6 +15,13 @@ related:
   - title: Modules and layers
     link: docs/dg/dev/architecture/modules-and-application-layers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 
 *Code buckets* define multiple slices of source code that can be executed in runtime. This lets projects define, implement, and execute different business logics based on different HTTP or console requests.

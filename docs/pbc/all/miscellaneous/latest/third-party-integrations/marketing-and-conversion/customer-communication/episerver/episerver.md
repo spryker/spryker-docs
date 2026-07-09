@@ -3,8 +3,6 @@ title: Episerver
 description: Create a standout experience for customers that unifies digital content, commerce, and marketing in one platform, including omnichannel solutions for smart personalization and intelligent campaigns by integrating Episerver into Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/episerver
-originalArticleId: cbbe8552-c38a-478d-bcda-cd6b393e895b
 redirect_from:
   - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/customer-communication/episerver.html
 related:
@@ -17,6 +15,13 @@ related:
   - title: Episerver - Order referenced commands
     link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Partner Information
 

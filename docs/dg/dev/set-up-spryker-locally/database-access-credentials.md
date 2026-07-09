@@ -3,11 +3,16 @@ title: Database access credentials
 description: Learn how to find Database access credentials for MariaDB, MySQL, and PostgreSQL for your Local Spryker Environments.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/database-access-credentials
-originalArticleId: 1e227c7f-f4f2-4c7e-b5c4-5ed1d9174ec7
 redirect_from:
 - /docs/scos/dev/set-up-spryker-locally/database-access-credentials.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 In this document, you can find credentials for accessing your database. By default, you can access a database only in [Development mode](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html#development-mode).
 

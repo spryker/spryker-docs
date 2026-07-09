@@ -3,8 +3,6 @@ title: Create forms
 description: Spryker uses Symfony forms; this tutorial will help you get started on working with forms.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/t-working-forms
-originalArticleId: 8dba4520-ed55-4904-a84f-bc46c7ac3cfd
 redirect_from:
   - /docs/scos/dev/back-end-development/forms/create-forms.html
   - docs/scos/dev/back-end-development/forms/creating-forms.html
@@ -12,6 +10,13 @@ related:
   - title: Forms
     link: docs/dg/dev/backend-development/forms/forms.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Spryker uses Symfony forms; this tutorial helps you get started on working with forms and shows how to build a simple newsletter subscription form that contains a field for entering the email address and a submit button.
 

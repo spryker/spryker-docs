@@ -3,11 +3,16 @@ title: "Implementing graceful shutdown"
 description: Implement a graceful shutdown for your project to make sure the uncompleted processes are not stopped by signals like SIGTERM.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/howto-handle-graceful-shutdown
-originalArticleId: d4a9a278-36a6-490b-8333-c4fdfa5e4e1b
 redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-graceful-shutdown.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 When a running process is stopped by, for example, signals like `SIGTERM` and `SIGINT`, the process is stopped right away, no matter if it's completed or not. Sometimes, such behavior is not acceptable—for example, in the case of half imported data set.
 

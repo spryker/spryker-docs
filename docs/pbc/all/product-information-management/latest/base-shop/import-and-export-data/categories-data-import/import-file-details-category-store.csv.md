@@ -3,8 +3,6 @@ title: "Import file details: category_store.csv"
 description: Learn the description of the category_store.csv file to configure assignments of categories in your Spryker shop | Spryker
 last_updated: Jul 1, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/file-details-category-storecsv
-originalArticleId: 65ea104d-3682-4f3c-999f-8abc8d45fb72
 redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/catalog-setup/categories/file-details-category-store.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/catalog-setup/categories/file-details-category-store.csv.html
@@ -17,6 +15,13 @@ related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the `category_store.csv` file to configure assignments of categories in your Spryker shop.
 

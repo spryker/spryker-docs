@@ -3,8 +3,6 @@ title: "Best practices: Add content to the Storefront pages using templates and 
 description: Templates with slots allows managing all the Storefront content in the Back Office.
 last_updated: Jul 9, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/adding-content-to-storefront-pages-using-templates-slots-best-practices
-originalArticleId: 48b5c164-eb28-4c1a-b33c-66d613203bfa
 redirect_from:
   - /2021080/docs/adding-content-to-storefront-pages-using-templates-slots-best-practices
   - /2021080/docs/en/adding-content-to-storefront-pages-using-templates-slots-best-practices
@@ -19,6 +17,13 @@ related:
   - title: Templates & Slots feature overview
     link: docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/templates-and-slots-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This topic describes how to add content to Storefront pages using templates with slots. To start working with templates with slots, go to **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
 

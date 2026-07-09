@@ -3,8 +3,6 @@ title: Create product options
 description: Learn how to create product options directly in the Spryker Cloud Commerce OS Back Office.
 last_updated: June 25, 2022
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/creating-a-product-option
-originalArticleId: 64e7486e-5904-4cc8-b336-c57dd13f9e14
 redirect_from:
   - /2021080/docs/creating-a-product-option
   - /2021080/docs/en/creating-a-product-option

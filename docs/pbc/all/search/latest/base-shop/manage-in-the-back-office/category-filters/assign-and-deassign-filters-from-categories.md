@@ -3,8 +3,6 @@ title: Assign and deassign filters from categories
 description: Learn how to assign and deassign filters from categories in the Back Office
 last_updated: Jun 16, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-category-filters
-originalArticleId: abf8a3db-7cb2-4220-8d26-995c270b0ff9
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/search-and-filters/managing-category-filters.html
   - /docs/pbc/all/search/202311.0/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html
@@ -15,6 +13,13 @@ related:
   - title: Category filters overview
     link: docs/pbc/all/search/latest/base-shop/search-feature-overview/category-filters-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This topic describes how to assign and deassign filters from categories in the Back Office.
 

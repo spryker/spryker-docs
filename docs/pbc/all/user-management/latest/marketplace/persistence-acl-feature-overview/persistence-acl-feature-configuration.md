@@ -4,6 +4,13 @@ last_updated: Nov 05, 2021
 description: Learn how to configure the Persistence ACL feature in to your Spryker based marketplace shop.
 template: concept-topic-template
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 This document describes how you can configure the [Persistence ACL feature](/docs/pbc/all/user-management/latest/marketplace/persistence-acl-feature-overview/persistence-acl-feature-overview.html).
 
 The Persistence ACL functionality is based on the Propel behavior. You can enable the feature in two different ways:

@@ -3,8 +3,6 @@ title: State machine console commands
 description: This document presents the console commands for state machine that you can use to help manage the Spryker State Machine within your Spryker Projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/state-machine-cronjob
-originalArticleId: 0a565727-43ef-4484-ae01-a0384a70e4d6
 redirect_from:
   - /2021080/docs/state-machine-cronjob
   - /2021080/docs/en/state-machine-cronjob
@@ -35,6 +33,13 @@ related:
   - title: Multi process run console
     link: docs/dg/dev/backend-development/cronjobs/multi-process-run-console.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 There are three console commands dedicated for the state machine:
 

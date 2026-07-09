@@ -3,8 +3,6 @@ title: Arvato
 description: Evaluate the profitability of your customer relationships through early identification of credit and fraud risks by integrating the Arvato module into the Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/arvato
-originalArticleId: baf8a048-9b5c-4c45-aaab-c3093f42bc36
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/arvato.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/arvato/arvato.html
@@ -12,6 +10,13 @@ related:
   - title: Arvato - Store Order 2.0
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/arvato/arvato-store-order.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Partner Information
 

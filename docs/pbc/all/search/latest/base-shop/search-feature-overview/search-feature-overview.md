@@ -3,8 +3,6 @@ title: Search feature overview
 description: Learn everything you need to know about the Spryker Search Feature with this helpful overview.
 last_updated: Jul 6, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/search-summary
-originalArticleId: 1e96b0d0-262f-4ab0-bc56-8c75b127ee08
 redirect_from:
   - /docs/scos/user/features/202005.0/search-feature-overview/search-preferences.html
   - /docs/scos/user/features/202009.0/search-feature-overview/search-feature-overview.html
@@ -16,6 +14,13 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202204.0/search-feature-walkthrough.html
   - /docs/scos/user/features/202204.0/search-feature-overview/search-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Spryker is shipped with Elasticsearch as the default search solution. Elasticsearch provides all the basic search functionalities. You can extend or customize it to fit your needs.
 

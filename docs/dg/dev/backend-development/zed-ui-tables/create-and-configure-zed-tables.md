@@ -3,8 +3,6 @@ title: Create and configure Zed tables
 description: Learn how to create and configure Zed tables. This guide details steps for building custom tables, defining data sources, and enhancing backend user interfaces.
 last_updated: Jan 02, 2023
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/creating-and-configuring-zed-tables
-originalArticleId: e8fc8c5a-88fa-41f8-8d2b-de028e7c4165
 redirect_from:
   - /docs/scos/dev/back-end-development/zed-ui-tables/create-and-configure-zed-tables.html
   - /docs/scos/dev/back-end-development/zed-ui-tables/creating-and-configuring-zed-tables.html

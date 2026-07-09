@@ -3,8 +3,6 @@ title: Yves routes
 description: Define and manage Yves routes in Spryker. Learn how to create, configure, and optimize routing for efficient request handling in your ecommerce platform.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/t-yves-routes
-originalArticleId: 163c596a-1229-4345-b524-e404420531aa
 redirect_from:
   - /docs/scos/dev/back-end-development/yves/yves-routes.html
 related:
@@ -23,6 +21,13 @@ related:
   - title: Yves bootstrapping
     link: docs/dg/dev/backend-development/yves/yves-bootstrapping.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Whenever you need to create a new controller, you need to define a path where it's available. To do that, register your controllers for a specific path (or in other words, create a new route definition) in a route.
 

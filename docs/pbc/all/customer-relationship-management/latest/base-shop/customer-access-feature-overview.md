@@ -3,8 +3,6 @@ title: Customer Access feature overview
 description: The Customer Access feature lets you decide whether certain information is visible to logged out users or not
 last_updated: Aug 13, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/customer-access-feature-overview
-originalArticleId: 06776bb5-8993-4d13-af9b-d1a1e9d317fe
 redirect_from:
   - /2021080/docs/customer-access-feature-overview
   - /2021080/docs/en/customer-access-feature-overview
@@ -16,6 +14,13 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202204.0/customer-access-feature-walkthrough.html
   - /docs/scos/user/features/202204.0/customer-access-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 *Customer Access* lets store administrators define whether certain information is visible to logged-out users.
 

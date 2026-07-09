@@ -3,8 +3,6 @@ title: Security guidelines
 description: Learn about the data security guidelines that you need to follow on an application level for your Spryker based projects.
 last_updated: Sep 15, 2023
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/making-your-spryker-shop-secure
-originalArticleId: 892e11f7-ef46-47ed-aba2-7efc2ea83c60
 redirect_from:
   - /docs/scos/dev/guidelines/security-guidelines.html
   - /docs/scos/dev/guidelines/making-your-spryker-shop-secure.html

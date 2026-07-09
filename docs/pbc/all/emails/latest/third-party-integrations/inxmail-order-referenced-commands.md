@@ -8,6 +8,13 @@ redirect_from:
     - /docs/scos/dev/technology-partner-guides/202204.0/marketing-and-conversion/customer-communication/inxmail/inxmail-order-referenced-commands.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 Inxmail module has four different commands:
 
 - `\SprykerEco\Zed\Inxmail\Communication\Plugin\Oms\Command\InxmailNewOrderPlugin`

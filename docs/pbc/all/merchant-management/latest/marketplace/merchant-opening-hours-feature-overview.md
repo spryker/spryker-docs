@@ -7,6 +7,13 @@ redirect_from:
 - /docs/marketplace/user/features/202311.0/merchant-opening-hours-feature-overview.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 To provide maximum selling activity, merchants can provide their working schedule, by defining the opening hours on weekdays, holidays and exceptional cases.
 
 A merchant has the following:

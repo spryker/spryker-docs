@@ -3,8 +3,6 @@ title: Vendor folder synchronization error
 description: Learn how you can troubleshoot and resolve the Vendor Folder Synchronization Error within your Spryker local environment.
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/vendor-folder-synchronization-error
-originalArticleId: 375db95b-7144-4fb0-ac97-2ebec018f9d2
 redirect_from:
   - /docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/vendor-folder-synchronization-error.html
   - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-docker-installation/vendor-folder-synchronization-error.html
@@ -24,6 +22,13 @@ related:
   - title: Setup of new indexes throws an exception
     link: docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/setup-of-new-indexes-throws-an-exception.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 You get an error similar to `vendor/bin/console: not found`.
 

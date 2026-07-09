@@ -3,8 +3,6 @@ title: Install the Content Items Glue API
 description: The guide walks you through the process of installing and configuring the Content Items feature in the project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/glue-api-content-items-api-feature-integration
-originalArticleId: 87cf9b21-06f9-4766-8645-bc62c4d64296
 redirect_from:
   - /2021080/docs/glue-api-content-items-api-feature-integration
   - /2021080/docs/en/glue-api-content-items-api-feature-integration
@@ -21,5 +19,12 @@ related:
   - title: "Glue API: Retrieve banner content items"
     link: docs/pbc/all/content-management-system/latest/base-shop/manage-using-glue-api/glue-api-retrieve-banner-content-items.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/install-features/latest/install-glue-api/install-the-content-items-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-content-items-glue-api.md -->

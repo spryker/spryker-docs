@@ -3,8 +3,6 @@ title: Configure debugging
 description: Learn how you can configure debugging in Docker for your Local environment Spryker based projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/configuring-debugging-in-docker
-originalArticleId: e7a98e11-2344-4aa5-b86f-112d95874218
 redirect_from:
   - /docs/scos/dev/the-docker-sdk/202311.0/configuring-debugging-in-docker.html
   - /docs/scos/dev/the-docker-sdk/202204.0/configuring-debugging-in-docker.html
@@ -30,6 +28,13 @@ related:
   - title: Running tests with the Docker SDK
     link: docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to configure debugging in a local environment.
 

@@ -3,8 +3,6 @@ title: AB Tasty
 description: Integrate AB Tasty into Spryker Commerce OS - a complete tool for website and conversion rate optimization, personalization and A/B and MVT testing.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/ab-tasty
-originalArticleId: eaac5623-d807-4057-ae96-50765c872696
 redirect_from:
   - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/ab-testing-and-performance/ab-tasty.html
 ---

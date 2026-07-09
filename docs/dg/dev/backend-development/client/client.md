@@ -3,8 +3,6 @@ title: Client
 description: This document provides general information about the client part of the Yves applications layer and describes how to use it.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/client
-originalArticleId: a959a1bf-affd-4959-8ed9-811583b5562f
 redirect_from:
   - /docs/scos/dev/back-end-development/client/client.html
 related:
@@ -13,6 +11,13 @@ related:
   - title: Use and configuring key-value storage (Redis or Valkey)
     link: docs/scos/dev/back-end-development/client/use-and-configure-redis-as-a-key-value-storage.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document provides general information about the client part of the Yves applications layer and describes how to use it.
 

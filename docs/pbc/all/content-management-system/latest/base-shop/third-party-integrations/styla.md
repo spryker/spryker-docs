@@ -3,8 +3,6 @@ title: Styla
 description: Design content and make it shoppable and inspiring customers to buy more by integrating  Styla into Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/styla
-originalArticleId: ffc0974c-d2e9-4a03-a4a3-093d72a647a1
 redirect_from:
   - /2021080/docs/styla
   - /2021080/docs/en/styla
@@ -14,6 +12,13 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/third-party-integrations/styla.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/third-party-integrations/styla.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Partner Information
 

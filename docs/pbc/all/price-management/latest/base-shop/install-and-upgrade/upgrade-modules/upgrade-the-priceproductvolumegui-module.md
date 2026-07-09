@@ -3,8 +3,6 @@ title: Upgrade the PriceProductVolumeGui module
 description: Use the guide to learn how to update the PriceProductVolumeGui module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-price-product-volume-gui
-originalArticleId: 372010cd-81da-405b-a927-cb3a3052bb9c
 redirect_from:
   - /2021080/docs/mg-price-product-volume-gui
   - /2021080/docs/en/mg-price-product-volume-gui
@@ -33,5 +31,12 @@ redirect_from:
   - /module_migration_guides/mg-price-product-volume-gui.htm
   - /docs/pbc/all/price-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductvolumegui-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-priceproductvolumegui-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-priceproductvolumegui-module.md -->

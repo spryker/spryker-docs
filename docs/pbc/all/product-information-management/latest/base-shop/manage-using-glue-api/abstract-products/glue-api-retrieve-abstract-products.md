@@ -3,8 +3,6 @@ title: "Glue API: Retrieve abstract products"
 description: Retrieve general information about abstract products and related resources.
 last_updated: Jun 21, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-abstract-products
-originalArticleId: 6ba1a21c-bbbe-4442-b7ce-81e921924b26
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/managing-products/abstract-products/retrieving-abstract-products.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/abstract-products/retrieving-abstract-products.html
@@ -22,6 +20,13 @@ related:
   - title: Product feature overview
     link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This endpoint allows retrieving general information about abstract products.
 

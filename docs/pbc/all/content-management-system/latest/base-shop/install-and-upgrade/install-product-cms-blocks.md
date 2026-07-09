@@ -3,8 +3,6 @@ title: Install product CMS blocks
 description: Learn how to install Spryker Cloud Commerce OS product CMS blocks into a Spryker project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/enabling-the-product-cms-block
-originalArticleId: 2fd5636b-9196-4a11-8191-4a97dc7a4406
 redirect_from:
   - /2021080/docs/enabling-the-product-cms-block
   - /2021080/docs/en/enabling-the-product-cms-block
@@ -15,6 +13,13 @@ redirect_from:
   - /docs/scos/dev/technical-enhancement-integration-guides/integrate-product-cms-blocks.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/install-product-cms-blocks.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Product blocks are CMS blocks that are embedded in the product template and rendered on product details pages of selected products.
 

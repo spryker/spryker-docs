@@ -3,8 +3,6 @@ title: Search types overview
 description: Learn about the default search type options that come out of the box of Spryker Cloud Commerce OS.
 last_updated: Jul 8, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/search-types-overview
-originalArticleId: 39ea357f-d75f-47e9-ac77-0c4073b7d0ad
 redirect_from:
   - /2021080/docs/search-types-overview
   - /2021080/docs/en/search-types-overview
@@ -13,6 +11,13 @@ redirect_from:
   - /docs/pbc/all/search/202311.0/search-feature-overview/search-feature-overview/search-types-overview.html
   - /docs/scos/user/features/202204.0/search-feature-overview/search-types-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the default search types shipped with the *Search* feature.
 

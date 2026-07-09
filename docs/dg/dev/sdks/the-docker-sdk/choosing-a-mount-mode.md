@@ -3,8 +3,6 @@ title: Choosing a mount mode
 description: Learn about supported mount modes and how to choose one depending of your operating system for your Spryker Project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/choosing-a-mount-mode
-originalArticleId: b5accb12-910a-4958-b39f-3c4d21d96b95
 redirect_from:
   - /docs/scos/dev/the-docker-sdk/202311.0/choosing-a-mount-mode.html
   - /docs/scos/dev/the-docker-sdk/202204.0/choosing-a-mount-mode.html
@@ -33,6 +31,13 @@ related:
   - title: Running tests with the Docker SDK
     link: docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes mount modes and how you can choose one.
 

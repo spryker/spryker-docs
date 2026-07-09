@@ -3,8 +3,6 @@ title: Cronjobs
 description: Explore how to manage and configure cronjobs in Spryker's backend to automate tasks, ensuring smooth operation of your ecommerce platform with scheduled jobs.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/cronjob-scheduling-guide
-originalArticleId: 2027e1e4-d579-4ec6-aa6e-aff40955d76c
 redirect_from:
   - /docs/scos/dev/sdk/cronjob-scheduling.html
   - /docs/scos/dev/back-end-development/cronjobs/cronjobs.html
@@ -18,6 +16,13 @@ related:
   - title: Cronjob scheduling
     link: docs/scos/dev/sdk/cronjob-scheduling.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Spryker applications demand performing repetitive background operations called *jobs*. Such operations are necessary for synchronizing denormalized data into the search engine or key-value store. For Spryker applications to operate properly, we recommend running predefined jobs.
 

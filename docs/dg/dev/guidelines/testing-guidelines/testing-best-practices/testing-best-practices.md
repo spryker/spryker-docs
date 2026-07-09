@@ -5,6 +5,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/testing-best-practices.html
 
+last_updated: Dec 17, 2024
 ---
 
 This section provides an overview of best practices for tests and includes the following topics:

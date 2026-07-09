@@ -13,6 +13,13 @@ redirect_from:
 - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/afterpay/integrating-afterpay.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 To integrate AfterPay, do the following:
 
 In `src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php`, add a new plugin to `getCheckoutOrderSavers()`:

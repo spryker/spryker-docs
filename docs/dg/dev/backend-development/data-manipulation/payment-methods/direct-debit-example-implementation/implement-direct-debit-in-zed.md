@@ -3,8 +3,6 @@ title: Implement Direct Debit in Zed
 description: Learn how to implement Direct Debit in Zed for Spryker, enabling smooth payment processing and system integration for your eCommerce platform.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/dd-be-implementation
-originalArticleId: 1476be7c-4a01-4e23-8fec-c17c807e9dda
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-zed.html
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-zed.html
@@ -20,6 +18,13 @@ related:
   - title: Test your Direct Debit implementation
     link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/test-your-direct-debit-implementation.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document provides shows how to implement the Direct Debit payment method and integrate it into Checkout, State Machine, and OMS on the backend side.
 

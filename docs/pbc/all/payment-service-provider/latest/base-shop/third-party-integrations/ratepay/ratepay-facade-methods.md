@@ -3,8 +3,6 @@ title: RatePay facade methods
 description: Explore the Ratepay facade methods in Spryker Cloud Commerce OS to manage payment integrations, enhance transaction capabilities, and streamline workflows.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/ratepay-facade
-originalArticleId: eabf3483-95ab-4ced-91e5-4dd2dd2211db
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/ratepay/ratepay-facade-methods.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/ratepay/ratepay-facade-methods.html
@@ -27,6 +25,13 @@ related:
   - title: RatePay - State Machine Commands and Conditions
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/ratepay-state-machine-commands-and-conditions.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 | FACADE METHOD | PARAMETER | RETURN | DESCRIPTION |
 | --- | --- | --- | --- |

@@ -3,8 +3,6 @@ title: Install and configure Akeneo Connector (Eco module)
 description: This article provides installation and configuration details for the Akeneo Connector Eco module in the Spryker-based project.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/akeneo-installation-configuration
-originalArticleId: 6a718976-7056-4705-938d-8bb11243e918
 redirect_from:
   - /2021080/docs/akeneo-installation-configuration
   - /2021080/docs/en/akeneo-installation-configuration
@@ -20,6 +18,13 @@ related:
   - title: Akeneo
     link: docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/akeneo/akeneo.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Installation
 

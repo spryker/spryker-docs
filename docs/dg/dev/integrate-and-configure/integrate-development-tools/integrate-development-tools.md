@@ -4,6 +4,7 @@ description: Learn from these guides for integrating technical enhancement tools
 template: concept-topic-template
 redirect_from:
 - /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-development-tools.html
+last_updated: Dec 06, 2025
 ---
 
 This section contains a collection of integration guides for development tools:

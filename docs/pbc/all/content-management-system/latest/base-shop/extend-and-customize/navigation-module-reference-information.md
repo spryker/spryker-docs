@@ -8,6 +8,13 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/extend-and-customize/navigation-module-reference-information.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 ## Overview
 
 The `Navigation` module manages multiple navigation menus that can be displayed on the frontend (Yves). Every navigation section can contain its own nested structure of navigation nodes. Navigation nodes have types that help define what kind of link they represent.

@@ -3,8 +3,6 @@ title: Using FACT-Finder search
 description: FACT-Finder suggests error-tolerant on-site search. FACT-Finder delivers relevant results even when spelling errors and typos occur.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/search-factfinder-search
-originalArticleId: 4d1987e5-ae5c-4884-84ae-d5bc2eaa99a6
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202108.0/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search.html
   - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search.html
@@ -28,6 +26,13 @@ related:
   - title: Using FACT-Finder search suggestions
     link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search-suggestions.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Prerequisites
 

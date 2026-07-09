@@ -3,6 +3,7 @@ title: Migration SDK
 description: Learn how the open-source Migration SDK helps you plan and execute manual Spryker upgrades when the Spryker Code Upgrader cannot be used.
 keywords: Upgrade, MigrationSDK.
 template: howto-guide-template
+last_updated: Nov 18, 2025
 ---
 
 The **Migration SDK** is an open-source, community-developed tool that assists you in planning and executing manual upgrades of Spryker projects.  

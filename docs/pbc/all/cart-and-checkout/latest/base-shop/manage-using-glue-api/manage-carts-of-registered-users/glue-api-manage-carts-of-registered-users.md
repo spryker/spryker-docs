@@ -3,8 +3,6 @@ title: "Glue API: Manage carts of registered users"
 description: Retrieve details about the carts of the registered users and learn what else you can do with the resource.
 last_updated: Jun 22, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-carts-of-registered-users
-originalArticleId: ac357bc6-db9b-43a5-a65a-ef55259cd379
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
   - /docs/scos/dev/glue-api-guides/202204.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
@@ -18,6 +16,13 @@ related:
   - title: Retrieving customer carts
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This endpoint allows managing carts by creating, retrieving, and deleting them.
 

@@ -3,8 +3,6 @@ title: Create a visibility condition for CMS Blocks
 description: Visibility condition is a tool used to define particular pages in which the content of CMS block is displayed.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/howto-create-a-visibility-condition-for-cms-blocks
-originalArticleId: 0e3aef82-ebd1-4c7a-bb05-d0bf5cd54bd7
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html
   - /docs/pbc/all/content-management-system/202311.0/tutorials-and-howtos/howto-create-a-visibility-condition-for-cms-blocks.html
@@ -16,6 +14,13 @@ related:
   - title: Managing slots
     link: docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/manage-slots.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 *Visibility Condition* is a [Templates & Slots](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/templates-and-slots-overview.html) feature functionality that lets you define when a CMS block is displayed on a page. The [Spryker CMS Blocks content provider](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/templates-and-slots-overview.html#spryker-cms-blocks) for slots has the following [visibility conditions](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) by default:
 

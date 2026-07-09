@@ -3,8 +3,6 @@ title: Create product relations
 description: Learn how to create product relations in the Spryker Cloud Commerce OS Back Office.
 last_updated: Jul 30, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/creating-product-relations
-originalArticleId: 3e17c514-3483-4419-8e1d-d9ae1ecbd97c
 redirect_from:
   - /2021080/docs/creating-product-relations
   - /2021080/docs/en/creating-product-relations
@@ -19,6 +17,13 @@ related:
   - title: Product Relations feature overview
     link: docs/pbc/all/product-relationship-management/latest/product-relationship-management.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to create product relations in the Back Office.
 

@@ -3,14 +3,19 @@ title: Configure database connections
 description: Learn how you can configure a single or multiple database connections within your Spryker based project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-setup-database-connections
-originalArticleId: 0ee28aca-3f03-4747-a037-9ac5e6b13c8a
 redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-database-connections.html
 related:
   - title: Database access credentials
     link: docs/dg/dev/set-up-spryker-locally/database-access-credentials.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Spryker provides flexible database connection configuration.
 

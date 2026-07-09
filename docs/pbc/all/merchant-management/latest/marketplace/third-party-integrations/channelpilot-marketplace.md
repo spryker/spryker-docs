@@ -3,12 +3,17 @@ title: ChannelPilot Marketplace
 description: Provide merchants with the means manage and control performance, channels, and products by integrating Channelpilot into the Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/channelpilot
-originalArticleId: 74542238-4686-4f7c-ab7e-6c38acc89e7d
 redirect_from:
   - /docs/scos/user/technology-partners/202200.0/marketplace-integrations/channelpilot-marketplace.html
   - /docs/scos/user/technology-partners/202311.0/marketplace-integrations/channelpilot-marketplace.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Partner Information
 

@@ -1,10 +1,8 @@
 ---
 title: Install the Gift Cards feature
 description: Learn how to install the Spryker Gift Card feature within your Spryker Cloud Commerce OS project.
-last_updated: Feb 17 2023
+last_updated: Feb 17, 2023
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/gift-cards-feature-integration
-originalArticleId: 88dbe1af-1473-45f0-9f49-864c9d153f52
 redirect_from:
   - /2021080/docs/gift-cards-feature-integration
   - /2021080/docs/en/gift-cards-feature-integration

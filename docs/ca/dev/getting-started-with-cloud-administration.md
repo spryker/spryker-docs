@@ -3,8 +3,6 @@ title: Getting started with cloud administration
 description: Get started with Spryker Cloud Commerce OS setup, covering environment configurations, AWS access, and deploying with continuous integration for optimized cloud management.
 template: howto-guide-template
 last_updated: Oct 17, 2023
-originalLink: https://cloud.spryker.com/docs/getting-started-with-spryker-cloud-commerce-os
-originalArticleId: 04c7a319-4c90-4fd7-a112-982569e48c70
 redirect_from:
   - /docs/getting-started-with-spryker-cloud-commerce-os
   - /docs/en/getting-started-with-spryker-cloud-commerce-os

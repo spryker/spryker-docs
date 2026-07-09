@@ -3,11 +3,16 @@ title: Project-level and core-level fixes
 description: Understand Spryker's approach to project-level and core-level fixes, addressing urgent issues quickly while ensuring quality through core fixes for long-term stability.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/understanding-project-and-core-level-fixes
-originalArticleId: cbc63cb1-4eb5-4d96-903a-b0eade141458
 redirect_from:
 - /docs/scos/user/intro-to-spryker/support/understanding-project-and-core-level-fixes.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document explains the differences between project and core level fixes to problems and bugs.
 

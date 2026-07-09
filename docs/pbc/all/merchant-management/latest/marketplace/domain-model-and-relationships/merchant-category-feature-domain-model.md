@@ -7,6 +7,13 @@ redirect_from:
   - /docs/marketplace/dev/feature-walkthroughs/202311.0/merchant-category-feature-walkthrough.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 The *Merchant Category* feature allows splitting merchants into various categories in order to extend business logic of the project.
 
 ## Module dependency graph

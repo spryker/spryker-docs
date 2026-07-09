@@ -3,8 +3,6 @@ title: Integrating Episerver
 description: Learn how you can Integrate Spryker Partner Episerver in a Spryker Cloud Commerce OS Project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/episerver-integration-into-project
-originalArticleId: 8852bd2c-599e-4f4b-9342-2cac18579da0
 redirect_from:
   - /2021080/docs/episerver-integration-into-project
   - /2021080/docs/en/episerver-integration-into-project
@@ -21,6 +19,13 @@ related:
   - title: Episerver - API Requests
     link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver-api.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This article provides step-by-step instructions on integrating the Episerver module into your project.
 

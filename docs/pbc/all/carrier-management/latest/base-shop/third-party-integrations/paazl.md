@@ -3,8 +3,6 @@ title: Paazl
 description: Connect e-commerce brands and retailers to a wide range of global, national and inner-city delivery carriers by integrating Paazl intot he Spryker-based shop.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/paazl
-originalArticleId: 5ec47548-a41e-499a-b14a-c351b6bb6816
 redirect_from:
   - /2021080/docs/paazl
   - /2021080/docs/en/paazl
@@ -15,6 +13,13 @@ redirect_from:
   - /docs/scos/user/technology-partners/202311.0/shipment/paazl.html
   - /docs/pbc/all/carrier-management/202204.0/base-shop/third-party-integrations/paazl.html  
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Partner Information
 

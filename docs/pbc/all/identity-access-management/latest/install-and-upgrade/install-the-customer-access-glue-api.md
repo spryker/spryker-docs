@@ -3,8 +3,6 @@ title: Install the Customer Access Glue API
 description: Learn how to implement and install the Customer Access Glue API feature in your Spryker project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/glue-api-customer-access-feature-integration
-originalArticleId: ec9bfc81-8019-4d55-b885-d63c9cc6a961
 redirect_from:
   - /2021080/docs/glue-api-customer-access-feature-integration
   - /2021080/docs/en/glue-api-customer-access-feature-integration
@@ -17,5 +15,12 @@ related:
   - title: Authenticating as a customer
     link: docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/install-features/latest/install-glue-api/install-the-customer-access-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-customer-access-glue-api.md -->

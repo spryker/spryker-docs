@@ -3,8 +3,6 @@ title: Order thresholds overview
 description: Spryker Cloud Commerce OS Order threshold feature lets you configure minimum and maximum values for the orders that your customers place.
 last_updated: Jul 19, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/order-thresholds
-originalArticleId: b6d4ac1a-fd06-420a-a4bf-9db638e20447
 redirect_from:
   - /docs/scos/user/features/202311.0/checkout-feature-overview/order-thresholds-overview.html
   - /docs/pbc/all/cart-and-checkout/checkout-feature-overview/order-thresholds-overview.html
@@ -12,6 +10,13 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/checkout-feature-overview/order-thresholds-overview.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/checkout-feature-overview/order-thresholds-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 *Order thresholds* let you control the values of the orders that your customers place. You can define a maximum or minimum monetary value for customers to reach to place an order. Apart from just disallowing a customer to place an order if a threshold condition is not fulfilled, you can request them to pay different types of fees.
 

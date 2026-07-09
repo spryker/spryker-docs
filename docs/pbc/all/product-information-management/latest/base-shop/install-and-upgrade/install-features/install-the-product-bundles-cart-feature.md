@@ -3,8 +3,6 @@ title: Install the Product Bundles + Cart feature
 description: This guide provides step-by-step instructions on integrating Spryker Product Bundles + Cart feature into your Spryker based project.
 last_updated: Jun 27, 2024
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/product-bundles-cart-feature-integration
-originalArticleId: f069a875-5736-4134-a2c9-34a54b2dfdd0
 redirect_from:
   - /2021080/docs/product-bundles-cart-feature-integration
   - /2021080/docs/en/product-bundles-cart-feature-integration

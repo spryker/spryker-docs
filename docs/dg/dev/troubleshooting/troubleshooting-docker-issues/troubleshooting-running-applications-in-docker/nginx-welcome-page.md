@@ -3,12 +3,17 @@ title: Nginx welcome page
 description: Learn how to fix the issue when you get Nginx welcome page upon opening an application in browser
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/nginx-welcome-page
-originalArticleId: 27e0d295-8262-41c9-affb-f2339556ef1c
 redirect_from:
 - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-running-applications-in-docker/nginx-welcome-page.html
 
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 You get the Nginx welcome page by opening an application in the browser.
 

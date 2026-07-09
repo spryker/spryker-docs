@@ -3,8 +3,6 @@ title: Create and restore database backups
 description: Learn to create and restore database backups in Spryker Cloud, with steps for manual snapshots, automated backups, and data restoration for production environments.
 last_updated: July 28, 2022
 template: howto-guide-template
-originalLink: https://cloud.spryker.com/docs/creating-and-restoring-database-backups
-originalArticleId: e2174fdf-a9f6-4fd9-80ee-4d9e46f6d72d
 redirect_from:
   - /docs/creating-and-restoring-database-backups
   - /docs/en/creating-and-restoring-database-backups

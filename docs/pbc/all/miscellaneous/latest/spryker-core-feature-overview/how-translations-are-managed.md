@@ -8,6 +8,13 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202204.0/spryker-core-feature-walkthrough/how-translations-are-managed.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 The key concept for rendering web pages with translated content very fast and with limited resource usage is using a key-value storage.
 
 Yves has no connection to Zed's SQL database and it fetches all dynamic data from a key-value store (Redis or Valkey) and a search engine(Elasticsearch). This data contains translations but also product information, product categories, URL mappings, stock information, image paths.

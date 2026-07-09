@@ -3,11 +3,16 @@ title: Configuration management
 description: Several files let you add the needed configuration for the exact use case you want.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/configuration-management
-originalArticleId: d0060038-0140-4763-824e-aaa264ac39fe
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/configuration-management.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 A configuration file is a set of key-value pairs, properties, and methods that define how to manage and configure the settings. Spryker config is represented as a set of the files located in the `/project/config/` folder of your project.
 

@@ -3,8 +3,6 @@ title: Billie
 description: Provide various payment options from Billie and how they can enhance your Spryker Cloud Commerce OS Project.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/billie
-originalArticleId: 5274b1b6-4f70-425b-99a9-d8a266193110
 redirect_from:
   - /2021080/docs/billie
   - /2021080/docs/en/billie
@@ -13,6 +11,13 @@ redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/billie.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/billie.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Partner Information
 

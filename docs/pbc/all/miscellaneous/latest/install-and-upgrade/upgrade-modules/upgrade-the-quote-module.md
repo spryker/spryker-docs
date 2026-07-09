@@ -3,8 +3,6 @@ title: Upgrade the Quote module
 description: Use the guide to learn how to update the Quote module to a newer version within your Spryker Projects.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-quote
-originalArticleId: 96af3e13-db91-4f99-88f9-e6bc46dd41e4
 redirect_from:
   - /2021080/docs/mg-quote
   - /2021080/docs/en/mg-quote
@@ -35,5 +33,12 @@ related:
   - title: Upgrade the Cart module
     link: docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cart-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-quote-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-quote-module.md -->

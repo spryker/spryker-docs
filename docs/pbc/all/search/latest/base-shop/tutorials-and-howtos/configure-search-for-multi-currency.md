@@ -3,8 +3,6 @@ title: Configure search for multi-currency
 description: This document describes how to configure search for multi-currency within your Spryker based shop.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/search-multi-currency
-originalArticleId: bd8aa34b-bd53-4d64-8292-cfa026880e00
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-for-multi-currency.html
@@ -25,6 +23,13 @@ related:
   - title: Facet filter overview and configuration
     link: docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/facet-filter-overview-and-configuration.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 If you don't have the multi-currency feature in your project and want to migrate, you have to follow certain steps to migrate your system. First, [migrate Price](/docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html) and [modules related to multi-currency](/docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/configure-search-for-multi-currency.html) before proceeding with the search for multi-currency.
 

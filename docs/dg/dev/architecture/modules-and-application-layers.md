@@ -3,8 +3,6 @@ title: Modules and application layers
 description: Learn about the layers in the Spryker Commerce OS and how they are related with each other.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/modules-and-layers
-originalArticleId: 2c4ec7d1-3056-4dc2-bc82-8865dfbc49de
 redirect_from:
   - /docs/scos/dev/architecture/modules-and-application-layers.html
 related:
@@ -17,6 +15,13 @@ related:
   - title: Code buckets
     link: docs/dg/dev/architecture/code-buckets.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 At Spryker, we use modular programming and packaging principles for organizing functionalities into independent software packages – modules.
 To establish a common infrastructure across all modules and to assist configurability, flexibility, agility, and modularity, the modules are divided into application layers according to the Spryker's application design concept. Each application layer is further divided into layers following the layered architecture pattern.

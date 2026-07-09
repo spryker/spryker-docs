@@ -3,8 +3,6 @@ title: Upgrade the SalesSplit module
 description: Use the guide to learn how to update a newer version of the SalesSplit module for your Spryker Cloud Commerce OS project.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-sales-split
-originalArticleId: 69221dd7-e110-4c2f-9dee-d8d8e1abac8f
 redirect_from:
   - /2021080/docs/mg-sales-split
   - /2021080/docs/en/mg-sales-split
@@ -35,5 +33,12 @@ redirect_from:
   - /docs/pbc/all/order-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-salessplit-module.html
   - /docs/pbc/all/order-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-salessplit-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-salessplit-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-salessplit-module.md -->

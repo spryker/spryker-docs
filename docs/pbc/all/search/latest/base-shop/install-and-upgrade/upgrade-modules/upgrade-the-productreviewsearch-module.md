@@ -3,8 +3,6 @@ title: Upgrade the ProductReviewSearch module
 description: Learn how to upgrade to a newer version of the Product Review Search module within your Spryker based projects.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-productreviewsearch
-originalArticleId: b8c887b4-96de-4269-b503-eb8b11980671
 redirect_from:
   - /2021080/docs/migration-guide-productreviewsearch
   - /2021080/docs/en/migration-guide-productreviewsearch
@@ -20,5 +18,12 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/migration-guide-productreviewsearch.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productreviewsearch-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-productreviewsearch-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productreviewsearch-module.md -->

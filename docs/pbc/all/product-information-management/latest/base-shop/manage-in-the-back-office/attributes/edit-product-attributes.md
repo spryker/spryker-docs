@@ -3,8 +3,6 @@ title: Edit product attributes
 description: Learn how to edit product attributes in the Spryker Cloud Commerce OS Back Office.
 last_updated: June 2, 2022
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-attributes
-originalArticleId: 98bec018-82ee-4960-aed5-fc13ad8429d5
 redirect_from:
   - /2021080/docs/managing-attributes
   - /2021080/docs/en/managing-attributes

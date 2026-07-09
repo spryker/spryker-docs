@@ -10,6 +10,13 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/extend-and-customize/cart-module-reference-information.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 The `Cart` module consists of several components in Yves and Zed. The Yves components create the cart requests and persist the cart into the session. The Zed components persist the data into the database and expand the items with data obtained from plugins.
 
 Cart operations are invoked in `CartClient`, which contains methods for all common operations (add, update, remove).

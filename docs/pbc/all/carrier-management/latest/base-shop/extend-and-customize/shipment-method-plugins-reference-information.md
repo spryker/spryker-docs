@@ -3,8 +3,6 @@ title: "Shipment method plugins: reference information"
 description: This topic provides an overview of the Availability, Price Calculation, and Delivery Time plugins.
 last_updated: Aug 20, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/docs/reference-information-shipment-method-plugins
-originalArticleId: c164d2cc-dc77-415c-a1a7-8a2071f19492
 redirect_from:
   - 2021080/docs/reference-information-shipment-method-plugins
   - 2021080/docs/en/reference-information-shipment-method-plugins
@@ -18,6 +16,13 @@ related:
   - title: Shipment feature overview
     link: docs/pbc/all/carrier-management/latest/base-shop/shipment-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The main concerns regarding shipping services are:
 

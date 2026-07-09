@@ -3,8 +3,6 @@ title: Configure services
 description: Learn how to set up and configure services that come out of the box of your Spryker shop.
 last_updated: March 6, 2026
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/configuring-services
-originalArticleId: 5b51acd3-1f5c-477d-995a-d821e88fd5f8
 redirect_from:
   - /docs/scos/dev/the-docker-sdk/202005.0/services.html
   - /docs/scos/dev/the-docker-sdk/201811.0/configuring-services.html

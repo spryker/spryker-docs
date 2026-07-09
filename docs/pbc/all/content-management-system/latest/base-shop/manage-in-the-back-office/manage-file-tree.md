@@ -3,8 +3,6 @@ title: Manage file tree
 description: Use the procedures to create or delete a file directory, upload media files, change the order for file directories in the Back Office.
 last_updated: Jul 9, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-file-tree
-originalArticleId: b9ec164d-4687-4d68-ab77-5e98b284dd1b
 redirect_from:
   - /2021080/docs/managing-file-tree
   - /2021080/docs/en/managing-file-tree
@@ -22,6 +20,13 @@ related:
   - title: File Manager feature overview
     link: docs/pbc/all/content-management-system/latest/base-shop/file-manager-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 ---
 
 This article describes how to manage the file tree. The file tree lets a Back Office user create folders (directories) under *File Directories Tree* and organize them in a hierarchical system by dragging and dropping.

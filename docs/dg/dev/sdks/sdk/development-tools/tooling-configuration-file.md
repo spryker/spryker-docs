@@ -3,8 +3,6 @@ title: Tooling configuration file
 description: This document provides information about a tooling config file that contains settings for supported tools and directives.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.tooling-config-fileer.com/2021080/docs/tooling-config-file
-originalArticleId: 535d6b07-76d8-47f1-a4d1-5b404439109e
 redirect_from:
   - /docs/sdk/dev/development-tools/tooling-config-file.html
   - /docs/scos/dev/sdk/201811.0/development-tools/tooling-config-file.html
@@ -35,6 +33,13 @@ related:
   - title: Static Security Checker
     link: docs/dg/dev/sdks/sdk/development-tools/static-security-checker.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 In order to make the tool configuring more convenient, we introduced the `.tooling.yml` file. It contains a variety of settings for different tools in one place, helping you to keep the number of files on the root level as small as possible. The `.tooling.yml` file should also be in `.gitattributes` to be ignored for tagging:
 

@@ -3,8 +3,6 @@ title: Integrating Adyen
 description: Learn how to integrate the Adyen module into the Spryker Cloud Commerce OS.
 last_updated: Nov 10, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/adyen-integration
-originalArticleId: 4b3bafa7-ec4b-40d7-b6aa-2f21bcf35c14
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/adyen/integrating-adyen.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/adyen/integrate-adyen.html
@@ -17,6 +15,13 @@ related:
   - title: Integrating Adyen payment methods
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% info_block errorBox %}
 

@@ -3,8 +3,6 @@ title: "Inject dependencies within factories: Container globals"
 description: ContainerGlobals lets you inject dependencies available inside your factories.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/container-globals
-originalArticleId: 10d83649-13dc-43f2-833d-be3c6882069f
 redirect_from:
   - /docs/scos/dev/back-end-development/factory/inject-dependencies-within-factories-container-globals.html
   - /docs/scos/dev/back-end-development/factory/injecting-dependencies-within-factories-container-globals.html
@@ -12,6 +10,13 @@ related:
   - title: Factory
     link: docs/dg/dev/backend-development/factory/factory.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The `ContainerInterface` provides a way to make dependencies globally available. Every dependency added to `ContainerInterface`, that is, marked as `isGlobal`, is available by using `getProvidedDependency()` in your factory.
 

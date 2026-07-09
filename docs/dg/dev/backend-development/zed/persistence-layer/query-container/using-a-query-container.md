@@ -3,8 +3,6 @@ title: Using a query container
 description: The query container of the current unterminated query is available via $this->getQueryContainer() in the factory of the communication and the Business layer and can be injected into any model.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/using-a-query-container
-originalArticleId: e5763c41-e709-4734-b47b-d1123cf4255a
 redirect_from:
   - /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/using-a-query-container.html
 related:
@@ -13,6 +11,13 @@ related:
   - title: Implement a query container
     link: docs/dg/dev/backend-development/zed/persistence-layer/query-container/implement-a-query-container.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% info_block infoBox "When to use query containers" %}
 

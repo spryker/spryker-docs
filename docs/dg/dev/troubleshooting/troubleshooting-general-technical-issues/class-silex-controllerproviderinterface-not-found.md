@@ -3,12 +3,17 @@ title: Class Silex/ControllerProviderInterface not found
 description: Learn how to fix the issue when class Silex/ControllerProviderInterface is not found
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/class-silexcontrollerproviderinterface-not-found
-originalArticleId: 1ed7e7c7-6975-4cdc-855c-3f5e8006a555
 redirect_from:
   - /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/class-silex-controllerproviderinterface-not-found.html
   - /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/fail-whale-on-the-front-end.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Description
 

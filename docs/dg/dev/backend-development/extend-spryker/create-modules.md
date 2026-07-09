@@ -4,14 +4,19 @@ description: Learn how to create custom modules in Spryker with this step-by-ste
 last_updated: Jun 16, 2021
 template: howto-guide-template
 keywords: Module, Spryker module, custom module
-originalLink: https://documentation.spryker.com/2021080/docs/t-add-new-bundle
-originalArticleId: c6eb6a48-4626-41ae-add8-a425bce184f5
 redirect_from:
   - /docs/scos/dev/back-end-development/extend-spryker/create-modules.html
   - /docs/scos/dev/back-end-development/extend-spryker/adding-a-new-module.html
   - /docs/scos/dev/back-end-development/extend-spryker/project-modules/adding-a-new-module.html
   - /docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/add-a-new-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% info_block infoBox %}
 

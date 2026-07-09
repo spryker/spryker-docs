@@ -3,8 +3,6 @@ title: "Tutorial: Boost cart-based search"
 description: The tutorial provides a step-by-step solution on how you can arrange your products in the cart by a color attribute.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/boosting-cart-based-search
-originalArticleId: 7f335803-4f1b-4711-97b7-d32c7bcd57bb
 redirect_from:
   - /2021080/docs/boosting-cart-based-search
   - /2021080/docs/en/boosting-cart-based-search
@@ -26,6 +24,13 @@ related:
   - title: Search feature overview
     link: docs/pbc/all/search/latest/base-shop/search-feature-overview/search-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This tutorial describes how you can improve the cart-based search in your project.
 

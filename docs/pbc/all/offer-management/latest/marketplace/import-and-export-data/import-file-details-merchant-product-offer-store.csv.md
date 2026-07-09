@@ -14,6 +14,13 @@ related:
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 This document describes the `merchant_product_offer_store.csv` file to configure [merchant product offer stores](/docs/pbc/all/offer-management/{{site.version}}/marketplace/marketplace-product-offer-feature-overview.html#product-offer-stores) in your Spryker shop.
 
 

@@ -3,8 +3,6 @@ title: Modular Frontend
 description: This document provides information on Pages and Widgets, the Pages module and how the Pages module can be extended. Examples will help you to understand the concept better.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/modular-frontend
-originalArticleId: c54da464-5501-4aac-8d98-daf20fda63e9
 redirect_from:
   - /docs/scos/dev/back-end-development/yves/modular-frontend.html
 related:
@@ -23,6 +21,13 @@ related:
   - title: Yves routes
     link: docs/dg/dev/backend-development/yves/yves-routes.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document provides information on [Pages](/docs/dg/dev/backend-development/yves/modular-frontend.html#pages) and [Widgets](/docs/dg/dev/backend-development/yves/modular-frontend.html#widgets), the Pages module and how the Pages module can be extended. Real-life examples included into the document will help you to understand the concept better.
 

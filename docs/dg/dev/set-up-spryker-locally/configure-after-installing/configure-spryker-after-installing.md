@@ -3,8 +3,6 @@ title: Configure Spryker after installing
 description: Learn with these instructions to Configure Spryker Local environments after installing it with Docker
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/post-installation-steps-and-additional-info
-originalArticleId: 4c5b7267-f2d3-4d94-bb26-76dcb69befe1
 redirect_from:
   - /docs/scos/dev/set-up-spryker-locally/configure-after-installing/configure-spryker-after-installing.html
   - /docs/scos/dev/set-up-spryker-locally/post-installation-steps-and-additional-info.html
@@ -17,6 +15,13 @@ related:
   - title: Set up a self-signed SSL certificate
     link: docs/dg/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to configure Spryker after installing it.
 

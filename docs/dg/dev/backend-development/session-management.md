@@ -3,11 +3,16 @@ title: Session management
 description: Manage user sessions effectively in. Learn how to configure session handling for performance and security, ensuring a seamless user experience.
 last_updated: Oct 4, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/session-management-201903
-originalArticleId: 53d2c060-c45d-45a8-8d00-d0f1b10c7dbb
 redirect_from:
   - /docs/scos/dev/back-end-development/session-management.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 In Spryker Commerce OS, session behavior is supported by `User`, `Customer`, and `CustomerPage` modules.
 

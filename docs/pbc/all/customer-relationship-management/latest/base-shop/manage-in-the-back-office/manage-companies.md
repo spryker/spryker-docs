@@ -3,8 +3,6 @@ title: Manage companies
 description: Use the procedures to create and edit companies, approve and activate/deactivate a company, and/or deny a company in the Back Office.
 last_updated: Aug 10, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-companies
-originalArticleId: 5e075d70-a08b-4995-ad61-25bfc5a2e68b
 redirect_from:
   - /2021080/docs/managing-companies
   - /2021080/docs/en/managing-companies
@@ -18,6 +16,13 @@ related:
   - title: Company user roles and permissions overview
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to manage companies.
 

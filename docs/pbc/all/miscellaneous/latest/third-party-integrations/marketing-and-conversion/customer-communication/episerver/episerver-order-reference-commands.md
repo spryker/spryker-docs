@@ -3,8 +3,6 @@ title: Episerver order reference commands
 description: Learn about the order reference commands for Episerver in Spryker.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/episerver-order-referenced-commands
-originalArticleId: e7a03c79-0815-4b92-963d-37675be9561a
 redirect_from:
   - /2021080/docs/episerver-order-referenced-commands
   - /2021080/docs/en/episerver-order-referenced-commands
@@ -21,6 +19,13 @@ related:
   - title: Episerver - API Requests
     link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver-api.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The Episerver module has four different commands:
 

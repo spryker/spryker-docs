@@ -15,6 +15,13 @@ related:
     link: docs/pbc/all/user-management/latest/base-shop/manage-in-the-back-office/manage-users/edit-users.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 
 To delete a user, do the following:
 1. Go to **Users&nbsp;<span aria-label="and then">></span> Users**.

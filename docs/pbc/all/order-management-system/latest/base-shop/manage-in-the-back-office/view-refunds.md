@@ -3,8 +3,6 @@ title: View refunds
 description: Learn how to view refunds of orders in the Spryker Back Office for your Spryker projects.
 last_updated: Aug 10, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/viewing-refunds
-originalArticleId: 36f1525b-6f90-41be-b0bf-75d368e91b8c
 redirect_from:
   - /2021080/docs/viewing-refunds
   - /2021080/docs/en/viewing-refunds
@@ -17,6 +15,13 @@ related:
   - title: Refunds feature overview
     link: docs/pbc/all/order-management-system/latest/base-shop/refunds-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to view refunds in the Back Office.
 

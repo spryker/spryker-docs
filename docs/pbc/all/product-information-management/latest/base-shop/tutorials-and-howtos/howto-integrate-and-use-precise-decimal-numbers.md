@@ -3,8 +3,6 @@ title: "HowTo: Integrate and use precise decimal numbers"
 description: Use the guide to install and work with precise decimal numbers in arithmetic, casting, rounding, comparing operations. Learn how they work with transfer objects
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-integrate-and-use-precise-decimal-numbers
-originalArticleId: 05e89c8e-a944-46ff-b202-760c7c4d5f87
 redirect_from:
   - /2021080/docs/ht-integrate-and-use-precise-decimal-numbers
   - /2021080/docs/en/ht-integrate-and-use-precise-decimal-numbers
@@ -21,6 +19,13 @@ related:
   - title: Decimal Stock migration concept
     link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/decimal-stock-migration-concept.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The document shows how to install and work with precise decimal objects.
 

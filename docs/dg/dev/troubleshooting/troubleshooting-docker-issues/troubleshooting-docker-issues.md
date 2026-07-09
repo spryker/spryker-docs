@@ -3,13 +3,18 @@ title: Troubleshooting Docker issues
 description: Troubleshoot issues you might encounter when you have your Spryker-based project in Docker.
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/troubleshooting-spryker-in-docker-issues
-originalArticleId: 86164c2a-2a65-4c15-a36e-3f37d4e8c001
 redirect_from:
   - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-docker-issues.html
   - /docs/spryker-in-docker-troubleshooting
   - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-spryker-in-docker-issues.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This section includes guidance for problems related to issues you might encounter with your Spryker-based project in the Docker environment.  
 

@@ -9,6 +9,13 @@ redirect_from:
   - /docs/pbc/all/tax-management/202204.0/base-shop/third-party-integrations/avalara.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 ![Avalara-hero](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/Avalara/avalara-hero.png)
 
 *Avalara AvaTax* is a cloud-based software that provides the latest sales and tax calculations to your shopping cart or invoicing system at the point of purchase, while accounting for the following:

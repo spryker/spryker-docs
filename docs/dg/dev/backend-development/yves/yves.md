@@ -3,8 +3,6 @@ title: Yves overview
 description: Explore Yves, a frontend application for delivering customer-facing features. Learn how Yves manages requests, renders pages, and integrates with backend services.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/yves-overview
-originalArticleId: 473f3418-acda-43ac-b9d2-70bfdb0bf048
 redirect_from:
   - /docs/scos/dev/back-end-development/yves/yves.html
 related:
@@ -25,6 +23,13 @@ related:
   - title: Yves routes
     link: docs/dg/dev/backend-development/yves/yves-routes.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Yves is one of the application layers of the Spryker Commerce OS, providing the frontend functionality.
 

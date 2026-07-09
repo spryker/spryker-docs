@@ -3,11 +3,16 @@ title: Live Chat Service
 description: Learn about improving service and helping customers with Spryker Partner Live Chat a perfect combination for your Spryker projects.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/live-chat-service
-originalArticleId: c8b0f94f-7551-4dfc-9b6e-f7d45d6f55bc
 redirect_from:
   - /docs/scos/user/technology-partners/202200.0/customer-service/live-chat-service.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Partner Information
 

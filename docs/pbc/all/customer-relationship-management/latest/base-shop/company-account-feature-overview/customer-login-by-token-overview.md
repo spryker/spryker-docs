@@ -3,8 +3,6 @@ title: Customer Login by Token overview
 description: With the feature in place, B2B customers can log in to Spryker shop using a token. In the article, you can find a description of the token structure.
 last_updated: Aug 2, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/customer-login-by-token-overview
-originalArticleId: 0bcb6d05-e12f-4cee-8daf-553edff0a43d
 redirect_from:
   - /2021080/docs/customer-login-by-token-overview
   - /2021080/docs/en/customer-login-by-token-overview
@@ -13,6 +11,13 @@ redirect_from:
   - /docs/scos/user/features/202311.0/company-account-feature-overview/customer-login-by-token-overview.html
   - /docs/scos/user/features/202204.0/company-account-feature-overview/customer-login-by-token-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 *Customer Login* by Token feature lets B2B users log in to Spryker Shop using a token.
 

@@ -3,8 +3,6 @@ title: Replacing a default data importer with a queue data importer
 description: This tutorial is a quick step-by-step guide on how to replace a default data importer with a queue data importer.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/tutorial-replacing-a-default-data-importer-with-the-queue-data-importer
-originalArticleId: fab80f36-95c1-480d-a5c2-1ad5488587e8
 redirect_from:
   - /docs/scos/dev/data-import/202404.0/tutorial-replace-a-default-data-importer-with-the-queue-data-importer.html
   - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-replacing-a-default-data-importer-with-the-queue-data-importer.html
@@ -12,6 +10,13 @@ related:
   - title: Importing data with the queue data importer
     link: docs/dg/dev/data-import/latest/importing-data-with-the-queue-data-importer.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This tutorial is a quick step-by-step guide on how to replace a default data importer with a [queue data importer](/docs/dg/dev/data-import/latest/importing-data-with-the-queue-data-importer.html).
 Specifically, the `ProductAbstract` data importer is replaced here.

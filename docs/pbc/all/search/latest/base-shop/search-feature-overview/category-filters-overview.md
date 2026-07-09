@@ -3,8 +3,6 @@ title: Category filters overview
 description: You can add, rearrange and define filters for any given parameter in the category tree, such as price or brand.
 last_updated: Jul 8, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/category-filters-overview
-originalArticleId: 086380e2-881f-48f1-b23a-88c4380b66c8
 redirect_from:
   - /2021080/docs/category-filters-overview
   - /2021080/docs/en/category-filters-overview
@@ -13,6 +11,13 @@ redirect_from:
   - /docs/pbc/all/search/202311.0/search-feature-overview/search-feature-overview/category-filters-overview.html
   - /docs/scos/user/features/202204.0/search-feature-overview/category-filters-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To help your customers locate items in your shop more easily, you can add customizable *category filters* to the catalog pages or simply fall back to the standard category filters. You can add, rearrange and define filters for any given parameter in the category tree, such as price or brand.
 

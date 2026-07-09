@@ -3,14 +3,19 @@ title: Router Zed
 description: The article provides instructions on how to install and configure Router in Zed.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/router-zed
-originalArticleId: b38df44e-6ee0-446c-8fbc-fc4616ac85d5
 redirect_from:
 - /docs/scos/dev/migration-concepts/silex-replacement/router/router-zed.html
 related:
   - title: Router Yves
     link: docs/scos/dev/migration-concepts/silex-replacement/router/router-yves.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The Router is responsible for matching a request to a route and generating URLs based on a route name. The Spryker's Route module is based on the Symfony's Routing component; for more information on it, check out the [documentation](https://symfony.com/doc/current/routing.html).
 

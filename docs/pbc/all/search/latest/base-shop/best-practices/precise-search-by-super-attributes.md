@@ -3,8 +3,6 @@ title: Precise search by super attributes
 description: This document describes how to create precise search by using super attributes in your Spryker based shop.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/precise-search-by-super-attributes
-originalArticleId: 0af5d38e-725f-44a1-9bfd-dd9f85cdf29b
 redirect_from:
   - /2021080/docs/precise-search-by-super-attributes
   - /2021080/docs/en/precise-search-by-super-attributes
@@ -36,6 +34,13 @@ related:
   - title: Usage-driven schema and document structure
     link: docs/pbc/all/search/latest/base-shop/best-practices/usage-driven-schema-and-document-structure.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Task to achieve
 

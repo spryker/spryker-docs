@@ -3,8 +3,6 @@ title: Manage returns
 description: Learn how to efficiently manage customer product returns by direclty using the Back Office in your Spryker based projects.
 last_updated: Jun 23, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-returns
-originalArticleId: 52e17a39-524b-49a9-8add-40103a721653
 redirect_from:
   - /2021080/docs/managing-returns
   - /2021080/docs/en/managing-returns
@@ -22,6 +20,13 @@ related:
   - title: Return Management feature overview
     link: docs/pbc/all/return-management/latest/return-management.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to manage returns in the Back Office. To learn how Back Office user create returns, see [Creating returns](/docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/create-returns.html). To learn how customers create returns, see [Return Management on the Storefront](/docs/pbc/all/return-management/latest/base-shop/return-management-feature-overview.html#return-management-on-the-storefront).
 

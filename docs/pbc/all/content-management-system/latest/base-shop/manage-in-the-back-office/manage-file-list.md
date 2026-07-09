@@ -3,8 +3,6 @@ title: Manage file list
 description: Use the procedures to view, edit, and delete files from the system in the Back Office.
 last_updated: Jul 9, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-file-list
-originalArticleId: b5a71151-eac1-4dd9-84e5-28ce7beb346a
 redirect_from:
   - /2021080/docs/managing-file-list
   - /2021080/docs/en/managing-file-list
@@ -22,6 +20,13 @@ related:
   - title: File Manager feature overview
     link: docs/pbc/all/content-management-system/latest/base-shop/file-manager-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The *File List* section is a way to quickly review all the files from the file tree.
 

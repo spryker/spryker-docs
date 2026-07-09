@@ -4,8 +4,6 @@ description: The Spryk code generator is a tool developed to ease the process of
 last_updated: Jan 23, 2023
 template: concept-topic-template
 keywords: AddModule
-originalLink: https://documentation.spryker.com/2021080/docs/spryk
-originalArticleId: 75d7b12b-6bf1-4ace-a09d-37033947d5e5
 redirect_from:
   - /docs/sdk/dev/spryks/spryks.html
   - /docs/scos/dev/sdk/201811.0/development-tools/spryk-code-generator.html

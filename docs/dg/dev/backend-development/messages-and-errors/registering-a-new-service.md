@@ -3,11 +3,16 @@ title: Registering a new service
 description: Service is a Spryker application layer shared by the Client application layer, the Zed application layer, and Yves application layer.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/service
-originalArticleId: 7040af02-8b60-4880-b7c9-bca5bfa06342
 redirect_from:
   - /docs/scos/dev/back-end-development/messages-and-errors/registering-a-new-service.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The Service Application represents Spryker's multi-purpose library. A service can be used in all other applications, like Yves or Zed. A service can contain only reusable lightweight stateless business logic with no reliance on database or storage connections. All required data should be provided as an input. Usage is focused on level details (infrastructure layer)—for example, encoding, text processing, and sanitization. There are a few `Util` existing bundles providing services: UtilText and UtilEncoding.
 

@@ -66,8 +66,14 @@ jobs:
           TODAY=$(LC_ALL=C date '+%b %-d, %Y')
           while IFS= read -r file; do
             [ -z "$file" ] && continue
-            echo "Bumping last_updated -> $TODAY in $file"
-            sed -i -E "s/^last_updated:.*/last_updated: ${TODAY}/" "$file"
+            echo "Rewriting last_updated -> $TODAY in $file"
+            # Rewrite only the FIRST last_updated (the front-matter field) and delete any
+            # further last_updated lines, so a stale, malformed, or duplicated field all
+            # converge to a single canonical value.
+            awk -v today="$TODAY" '
+              /^last_updated:/ { if (!seen++) { print "last_updated: " today }; next }
+              { print }
+            ' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
           done < <(sort -u "$STALE_LIST_FILE")
 
       - name: Commit and push date bumps

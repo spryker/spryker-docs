@@ -3,8 +3,6 @@ title: Upgrade the ShipmentDiscountConnector module
 description: Use the guide to learn how to update the ShipmentDiscountConnector module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-shipment-discount-connector
-originalArticleId: 6f3f796a-c580-4935-ba29-0b9076b09027
 redirect_from:
   - /2021080/docs/mg-shipment-discount-connector
   - /2021080/docs/en/mg-shipment-discount-connector
@@ -35,5 +33,12 @@ redirect_from:
   - /docs/pbc/all/carrier-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipmentdiscountconnector-module.html
 
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-shipmentdiscountconnector-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-shipmentdiscountconnector-module.md -->

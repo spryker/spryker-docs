@@ -3,8 +3,6 @@ title: Integrate CMS block widgets
 description: Learn how you can enable and integrate Content Management System (CMS) block widgets in a Spryker based project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/enabling-cms-block-widget
-originalArticleId: 1bf3e3d4-f5ff-46ea-b383-361278770f88
 redirect_from:
   - /docs/scos/dev/technical-enhancement-integration-guides/integrating-cms-block-widgets.html
   - /docs/scos/dev/technical-enhancements/enabling-cms-block-widget.html
@@ -12,6 +10,13 @@ related:
   - title: CMS block
     link: docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-blocks-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to enable CMS block widget in a Spryker project.
 

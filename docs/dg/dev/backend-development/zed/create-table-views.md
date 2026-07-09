@@ -3,11 +3,16 @@ title: Create table views
 description: Learn to create and configure table views in Zed. This guide covers steps for defining custom table data and optimizing the user interface for efficient data management.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/t-create-table-view
-originalArticleId: 0cecd405-174d-49d0-a321-6b705b22bef2
 redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-creating-a-table-view.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 
 This tutorial explains how to retrieve data from the database and render it in a table.

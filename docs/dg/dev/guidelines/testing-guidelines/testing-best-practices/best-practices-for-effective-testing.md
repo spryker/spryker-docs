@@ -3,8 +3,6 @@ title: Best practices for effective testing
 description: The article describes how to write and organize your tests efficiently for your Spryker based projects.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/testing-best-practices
-originalArticleId: 3bee0606-3660-4935-b990-33cc4adb6d0a
 redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/best-practices-for-effective-testing.html
   - /docs/scos/dev/guidelines/testing/testing-best-practices.html
@@ -33,6 +31,13 @@ related:
   - title: Testing console commands
     link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 As a rule of thumb, [tests](/docs/dg/dev/guidelines/testing-guidelines/test-framework.html) should be as follows:
 

@@ -3,8 +3,6 @@ title: Setting up tests
 description: Learn how to set up an efficient organization for your tests for your Spryker based projects.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/setting-up-tests
-originalArticleId: c8894db9-1871-41a4-a1fc-2c57d8de84c2
 redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
   - /docs/scos/dev/guidelines/testing/setting-up-tests.html
@@ -32,6 +30,13 @@ related:
   - title: Testing console commands
     link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To get all the things working, you need to prepare a proper organization for your tests. For this, you, first of all, have the root `codeception.yml` file . Its main responsibility is to include other `codeception.yml` files that contain the suite configuration. See [Configuration](/docs/dg/dev/guidelines/testing-guidelines/test-framework.html#configuration) for details.
 

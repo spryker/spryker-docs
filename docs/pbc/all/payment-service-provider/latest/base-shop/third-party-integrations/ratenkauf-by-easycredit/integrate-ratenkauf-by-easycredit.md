@@ -3,8 +3,6 @@ title: Integrating ratenkauf by easyCredit
 description: This article provides step-by-step instruction on how to integrate ratenkauf by easyCredit payment into your project.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/ratenkauf-integration-into-project
-originalArticleId: 8fa76fed-cfb3-4524-a570-79fa5d1e4859
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/ratenkauf-by-easycredit/integrating-ratenkauf-by-easycredit.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/ratenkauf-by-easycredit/integrate-ratenkauf-by-easycredit.html
@@ -15,6 +13,13 @@ related:
   - title: Installing and configuring ratenkauf by easyCredit
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratenkauf-by-easycredit/install-and-configure-ratenkauf-by-easycredit.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% info_block errorBox %}
 

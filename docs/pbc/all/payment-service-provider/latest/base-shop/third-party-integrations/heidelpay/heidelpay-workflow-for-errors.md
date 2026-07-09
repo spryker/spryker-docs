@@ -3,8 +3,6 @@ title: Heidelpay workflow for errors
 description: This article describes the procedure for handling errors in Heidelpay within your Spryker Cloud Commerce OS Project.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-error-workflow
-originalArticleId: 0330a859-8c49-422b-8ad6-700adf488be6
 redirect_from:
   - /2021080/docs/heidelpay-error-workflow
   - /2021080/docs/en/heidelpay-error-workflow
@@ -35,6 +33,13 @@ related:
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-invoice-secured-b2c-payment-method-for-heidelpay.html
 
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 From the user's perspective, there is almost no difference between successful and unsuccessful order flow.
 

@@ -3,8 +3,6 @@ title: Extend a core module that is used by another module
 description: This document describes how to extend a core module that is used by another core module.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-extend-inuse-core
-originalArticleId: f157e550-cbc1-4224-9eb9-c48ea2a884a3
 redirect_from:
   - /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html
   - /docs/scos/dev/back-end-development/extend-spryker/extending-a-core-module-that-is-used-by-another.html
@@ -16,6 +14,13 @@ related:
   - title: Extend the Spryker Core functionality
     link: docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-the-spryker-core-functionality.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to extend a core module that is used by another core module.
 

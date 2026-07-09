@@ -3,8 +3,6 @@ title: Catalog feature overview
 description: The Spryker Catalog feature lets you build, organize and manage your products within your Spryker Cloud Commerce OS project.
 last_updated: Jul 21, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/catalog
-originalArticleId: c9c0a388-619c-464f-ac15-ee3c4bb13b36
 redirect_from:
   - /docs/scos/user/features/202108.0/catalog-feature-overview.html
   - /docs/scos/user/features/202311.0/catalog-feature-overview.html
@@ -14,6 +12,13 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/catalog-feature-overview.html
   - /docs/scos/dev/feature-integration-guides/201903.0/cms-catalog-feature-integration.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Catalogs are used to clearly build and organize your products to meet your and your customer's demands, primarily to make sure everyone can quickly find what they are looking for.
 

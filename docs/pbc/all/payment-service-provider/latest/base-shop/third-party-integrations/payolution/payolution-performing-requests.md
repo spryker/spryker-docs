@@ -3,8 +3,6 @@ title: Payolution - Performing Requests
 description: This article includes the state machine commands and conditions provided by Payolution.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/payolution-requests
-originalArticleId: d33f6bca-5f93-4761-ba90-2aeb9a5baa56
 redirect_from:
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payolution/payolution-performing-requests.html
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/payolution/payolution-performing-requests.html
@@ -20,6 +18,13 @@ related:
   - title: Installing and configuring Payolution
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/install-and-configure-payolution.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To perform the needed requests, you can easily use the implemented state machine commands and conditions. This article gives a summary of them. You can also use the facade methods directly, which, however, are invoked by the state machine.
 

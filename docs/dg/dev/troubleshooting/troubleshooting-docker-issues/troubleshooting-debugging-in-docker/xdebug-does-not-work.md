@@ -3,11 +3,16 @@ title: Xdebug does not work
 description: Learn how to fix the issue with a non-working Xdebug when troubleshooting your Spryker project.
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/xdebug-does-not-work
-originalArticleId: 8169faa4-1c53-4812-bbba-6e34c72cb77c
 redirect_from:
 - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-debugging-in-docker/xdebug-does-not-work.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Description
 

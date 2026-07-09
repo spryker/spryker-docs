@@ -4,7 +4,6 @@ description: This document describes how to export data from a Spryker shop to a
   system for your third-party integrations.
 last_updated: February 27, 2026
 template: concept-topic-template
-originalArticleId: 0a32b993-f10c-4f6c-20db-247a62cd22e7
 related:
   - title: Orders data export
     link: docs/integrations/custom-building-integrations/data-exchange/data-export/orders-data-export.html

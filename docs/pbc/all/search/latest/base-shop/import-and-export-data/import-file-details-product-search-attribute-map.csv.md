@@ -3,8 +3,6 @@ title: "Import file details: product_search_attribute_map.csv"
 description: Learn how to confgiure product searh attribute map in your Spryker shop using the product search attribute map csv file.
 last_updated: Jun 16, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-search-attribute-mapcsv
-originalArticleId: 4f555e2a-157b-414e-89e5-07499e88c090
 redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-search-attribute-map.csv.html
   - /docs/pbc/all/search/202311.0/import-and-export-data/file-details-product-search-attribute-map.csv.html
@@ -16,6 +14,13 @@ related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the `product_search_attribute_map.csv` file to configure Product Search Attribute Map information in your Spryker Demo Shop.
 

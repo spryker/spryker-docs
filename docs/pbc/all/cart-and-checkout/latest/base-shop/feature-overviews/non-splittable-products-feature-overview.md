@@ -3,7 +3,6 @@ title: Non-splittable Products feature overview
 description: The document describes the concept of product quantity restrictions-  its types and how they can be imported
 last_updated: Aug 2, 2021
 template: concept-topic-template
-originalArticleId: 7db585a7-80d6-4584-a662-e00d42f27cf4
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/201907.0/non-splittable-products-feature-walkthrough.html  
   - /docs/scos/dev/feature-walkthroughs/202311.0/non-splittable-products-feature-walkthrough.html
@@ -11,6 +10,13 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/non-splittable-products-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/non-splittable-products-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 
 Sometimes shop owners want their customers to buy less or more of specific products. For example, when selling to bulk buyers at wholesale prices or when running promotional campaigns and creating special offers, you might want not to allow buying less than a certain quantity. Also, for some products, it might be more convenient to sell particular quantities that are, for example, multiples of a specific number. For example, you don't sell less than three meters of a cable and don't want customers to buy cables with a length that is not a multiple of three.

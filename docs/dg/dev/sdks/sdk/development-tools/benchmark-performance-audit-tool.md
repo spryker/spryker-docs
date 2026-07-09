@@ -3,8 +3,6 @@ title: "Benchmark: Performance audit tool"
 description: The Benchmark tool allows you to assess an application's performance by how long it takes to load a page and how much memory the it consumes during requests.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/performance-audit-tool-benchmark
-originalArticleId: fb9fef09-646f-4a32-b158-6f544bc45f4e
 redirect_from:
   - /docs/sdk/dev/development-tools/performance-audit-tool-benchmark.html
   - /docs/scos/dev/sdk/201811.0/development-tools/performance-audit-tool-benchmark.html
@@ -16,6 +14,13 @@ redirect_from:
   - /docs/scos/dev/sdk/202108.0/development-tools/performance-audit-tool-benchmark.html
   - /docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The Benchmark tool allows you to profile requests to an application and see how long it takes to load a page and how much memory the application uses during these requests. This tool is based on [PHPBench](https://github.com/phpbench/phpbench) and is used inside Spryker.
 

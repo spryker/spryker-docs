@@ -3,8 +3,6 @@ title: Create shipments
 description: Learn how to create shipments for orders using the Spryker Cloud Commerce OS Back Office.
 last_updated: Jun 23, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-order-shipments
-originalArticleId: 417c59db-8d1a-469b-bbef-858d312a1450
 redirect_from:
   - /2021080/docs/managing-order-shipments
   - /2021080/docs/en/managing-order-shipments
@@ -19,6 +17,13 @@ related:
   - title: Shipment feature overview
     link: docs/pbc/all/carrier-management/latest/base-shop/shipment-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to create shipments for orders in the Back Office.
 

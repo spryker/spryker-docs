@@ -7,6 +7,13 @@ redirect_from:
   - /docs/marketplace/dev/feature-walkthroughs/202311.0/marketplace-merchant-portal-product-management-feature-walkthrough.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 The *Marketplace Merchant Portal Product Management* feature lets merchants manage products and their category, attributes, prices, tax sets, SEO settings, variants, stock and validity dates in the Merchant Portal.
 
 ## Related Developer documents

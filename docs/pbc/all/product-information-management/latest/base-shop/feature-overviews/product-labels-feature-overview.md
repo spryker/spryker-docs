@@ -3,8 +3,6 @@ title: Product Labels feature overview
 description: Learn about the Product Label feature in Spryker Cloud Commerce OS allowing to highlight products with information labels
 last_updated: Jul 26, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/product-labels-feature-overview
-originalArticleId: 06d2dfdf-7ad0-41dc-98b7-5521b0c5879f
 redirect_from:
   - /2021080/docs/product-labels-feature-overview
   - /2021080/docs/en/product-labels-feature-overview
@@ -18,6 +16,13 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202311.0/feature-overviews/product-labels-feature-overview.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-labels-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The *Product Label* feature lets product catalog managers highlight the needed products by adding a special type of information—product labels.
 

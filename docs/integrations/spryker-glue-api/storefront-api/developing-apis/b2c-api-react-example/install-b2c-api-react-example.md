@@ -3,8 +3,6 @@ title: Install B2C API React example
 description: This document describes how to install B2C API Demo Shop to experience the use of Spryker Storefront API.
 last_updated: Sep 18, 2025
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/b2c-api-react-example-installation
-originalArticleId: 6d6a1bec-4ae4-4f93-b406-2d0d24bd8988
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202404.0/glue-api-tutorials/b2c-api-react-example/install-b2c-api-react-example.html
   - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/b2c-api-react-example/b2c-api-react-example-installation.html

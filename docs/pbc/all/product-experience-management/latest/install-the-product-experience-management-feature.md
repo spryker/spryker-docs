@@ -1,7 +1,7 @@
 ---
 title: Install the Product Experience Management feature
 description: Learn how to install the Product Experience Management feature into your Spryker project.
-last_updated: Apr 08 2026
+last_updated: Apr 08, 2026
 template: feature-integration-guide-template
 ---
 

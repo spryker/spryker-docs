@@ -3,7 +3,6 @@ title: "Glue API: Create customers"
 description: Learn how you can create new customers within your Spryker store using the Spryker GLUE API.
 last_updated: June 9, 2026
 template: glue-api-storefront-guide-template
-originalArticleId: 246e73d7-562f-414f-bbc0-d102ef54ff5c
 redirect_from:
 - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-create-customers.html
 related:

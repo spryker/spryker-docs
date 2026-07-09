@@ -13,6 +13,13 @@ related:
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 This document describes the `merchant_profile.csv` file to configure [merchant profile](/docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-profile) information in your Spryker shop.
 
 

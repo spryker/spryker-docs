@@ -3,8 +3,6 @@ title: Manage products
 description: Use this guide to view product details, activate or update product attributes in the Back Office.
 last_updated: Aug 10, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-products
-originalArticleId: 9b2e066a-b1db-4a74-93ba-82d399ee18f8
 redirect_from:
   - /2021080/docs/managing-products
   - /2021080/docs/en/managing-products
@@ -20,6 +18,13 @@ related:
   - title: Product feature overview
     link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This article describes how to manage abstract and concrete products.
 

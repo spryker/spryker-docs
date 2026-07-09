@@ -3,7 +3,6 @@ title: Tisax Certification
 description: Learn about Spryker's Tisax certification and capabilities enabling Tisax in automotive.
 last_updated: Jun 10, 2025
 template: concept-topic-template
-originalArticleId: 0798f4ee-6a6b-46ed-baa8-g3e885700585
 
 ---
 

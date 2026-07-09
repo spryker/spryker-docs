@@ -3,8 +3,6 @@ title: Create abstract products and product bundles
 description: Learn how to create abstract products and product bundles in the Back Office.
 last_updated: June 27, 2022
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/creating-abstract-products-and-product-bundles
-originalArticleId: 41920cd2-8fea-4194-9ed3-bf19c1791649
 redirect_from:
   - /2021080/docs/creating-abstract-products-and-product-bundles
   - /2021080/docs/en/creating-abstract-products-and-product-bundles

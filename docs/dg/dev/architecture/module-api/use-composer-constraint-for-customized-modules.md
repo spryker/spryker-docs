@@ -3,8 +3,6 @@ title: Use Composer constraint for customized modules
 description: To avoid BC breaking changes and keep project updates safe and predictable, a project should use ~ (tilde) composer constraint instead of ^ (caret) for the customized modules.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/using-composer-constraint
-originalArticleId: d7c068b1-d7bf-4404-96c5-0f568f061874
 redirect_from:
   - /docs/scos/dev/architecture/module-api/using-composer-constraint-for-customized-modules.html
 related:
@@ -15,6 +13,13 @@ related:
   - title: "Declaration of module APIs: Public and private"
     link: docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Spryker OS is modular and follows the rules of semantic versioning. Every *backward compatibility* (BC) breaking change of module [API](/docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html) is considered a major release. However, what happens to non-API? Spryker can change non-API functionalities in minor and patch releases. This way Spryker provides new features for different business verticals.
 

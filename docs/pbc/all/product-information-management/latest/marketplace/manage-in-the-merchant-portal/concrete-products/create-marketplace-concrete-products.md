@@ -8,6 +8,13 @@ related:
     link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 This document describes how to create marketplace concrete products for existing abstract product. You can also create concrete products when [creating abstract products](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-products.html).
 
 To create a concrete product, follow the steps:

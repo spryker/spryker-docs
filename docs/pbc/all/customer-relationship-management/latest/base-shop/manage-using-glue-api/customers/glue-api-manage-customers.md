@@ -3,8 +3,6 @@ title: "Glue API: Manage customers"
 description: Learn how by using the Spryker Glue API you can manage customers within your Spryker Project.
 last_updated: June 9, 2026
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-customers-via-glue-api
-originalArticleId: 246e73d7-562f-414f-bbc0-d102ef54ff5c
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/customer/customer-customer-access-customer-groups/managing-customers.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/managing-customers.html

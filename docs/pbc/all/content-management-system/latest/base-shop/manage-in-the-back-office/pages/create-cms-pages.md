@@ -3,8 +3,6 @@ title: Create CMS pages
 description: The guide provides a procedure to create a CMS page, make it searchable per store in the Back Office.
 last_updated: Jun 17, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/creating-a-cms-page
-originalArticleId: 5746d7b7-637d-4602-898d-a83ab9da0498
 redirect_from:
   - /2021080/docs/creating-a-cms-page
   - /2021080/docs/en/creating-a-cms-page
@@ -18,6 +16,13 @@ related:
   - title: CMS Page overview
     link: docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-pages-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 A CMS page is an independent page of your shop, such as Terms and Conditions, About Us, or Contact Us.
 

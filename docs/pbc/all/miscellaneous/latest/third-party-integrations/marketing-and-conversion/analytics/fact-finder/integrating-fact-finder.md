@@ -3,8 +3,6 @@ title: Integrating FACT-Finder
 description: This article provides details on how to integrate Fact Finder modules into the Spryker project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/fact-finder-integration-into-project
-originalArticleId: 1bd158d4-9fd7-4a62-9665-577d5347a754
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/201907.0/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html
   - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html
@@ -30,6 +28,13 @@ related:
   - title: Using FACT-Finder search suggestions
     link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search-suggestions.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Prerequisites
 

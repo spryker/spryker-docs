@@ -5,6 +5,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/tuning-up-performance/202204.0/performance-guidelines.html
   - /docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html
+last_updated: Jun 01, 2026
 ---
 
 These performance guidelines originate from Spryker's years of experience across all kinds of projects, environments, and setups. They cover topics that are often missed at the project level, leading to poor performance or other related issues. The guidelines help you analyze and optimize performance of your website from different perspectives:

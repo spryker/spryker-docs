@@ -3,8 +3,6 @@ title: Edit discounts
 description: Use these procedures to view and update discounts, activate/deactivate discounts, and add voucher codes in the Back Office.
 last_updated: Jul 12, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-discounts
-originalArticleId: 6d463da9-6259-4ad5-8c28-46081f008600
 redirect_from:
   - /2021080/docs/managing-discounts
   - /2021080/docs/en/managing-discounts
@@ -14,6 +12,13 @@ redirect_from:
   - /docs/pbc/all/discount-management/202311.0/manage-in-the-back-office/edit-discounts.html
   - /docs/pbc/all/discount-management/202204.0/base-shop/manage-in-the-back-office/edit-discounts.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to edit discounts in the Back Office.
 

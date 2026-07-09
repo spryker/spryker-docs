@@ -3,8 +3,6 @@ title: View product labels
 description: The Managing Product Labels section describes the procedures you can use to view, edit, activate and/or deactivate product labels in the Back Office.
 last_updated: Jul 30, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-product-labels
-originalArticleId: 98118a18-5268-42d0-91f0-7b86da390d67
 redirect_from:
   - /2021080/docs/managing-product-labels
   - /2021080/docs/en/managing-product-labels
@@ -20,6 +18,13 @@ related:
   - title: Product Labels feature overview
     link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-labels-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To view a product label, do the following:
 

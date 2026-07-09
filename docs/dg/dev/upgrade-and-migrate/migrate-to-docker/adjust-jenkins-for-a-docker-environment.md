@@ -3,8 +3,6 @@ title: Adjust Jenkins for a Docker environment
 description: Learn how you can adjust Jenkins with these DevOPS guidelines for running Spryker projects in Docker.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/additional-devops-guidelines
-originalArticleId: 9ffe0d4c-9910-46c8-97f2-e3b51c5a1e82
 redirect_from:
   - /docs/scos/dev/migration-concepts/migrate-to-docker/adjust-jenkins-for-a-docker-environment.html
 related:
@@ -13,6 +11,13 @@ related:
   - title: Set up a self-signed SSL certificate
     link: docs/scos/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 
 Follow the steps to adjust the Jenkins scheduler to docker like environments:

@@ -3,8 +3,6 @@ title: Float stock for products migration concept
 description: Learn how to migrate all effected modules when changing from an int to a float with your stock quantity fields in your Spryker Project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/float-stock-for-products
-originalArticleId: 741857cb-b4b4-4132-afbf-1aa5171cf35d
 redirect_from:
   - /2021080/docs/float-stock-for-products
   - /2021080/docs/en/float-stock-for-products
@@ -36,6 +34,13 @@ related:
   - title: Silex Replacement migration concept
     link: docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 We have changed the type of stock and quantity fields from int to float. With this change, we allow to manage fractions of items in the system.
 

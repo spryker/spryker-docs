@@ -3,8 +3,6 @@ title: Docker daemon is not running
 description: Learn how to troubleshoot and resolve the error docker daemon is not running with your Spryker local environment.
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/docker-daemon-is-not-running
-originalArticleId: 3e6be679-774f-46f8-8287-39256d5ebe6f
 redirect_from:
   - /docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/docker-daemon-is-not-running.html
   - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html
@@ -24,6 +22,13 @@ related:
   - title: Vendor folder synchronization error
     link: docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/vendor-folder-synchronization-error.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Description
 

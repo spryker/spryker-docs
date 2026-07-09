@@ -3,8 +3,6 @@ title: Magnolia
 description: Connect content and Spryker Cloud Commerce OS by integrating Magnolia CMS in to your Spryker projects .
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/magnolia-cms
-originalArticleId: 78c3fa55-94b6-483a-aa34-ff04a39e5505
 redirect_from:
   - /2021080/docs/magnolia-cms
   - /2021080/docs/en/magnolia-cms
@@ -14,6 +12,13 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/third-party-integrations/magnolia.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/third-party-integrations/magnolia.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Partner Information
 

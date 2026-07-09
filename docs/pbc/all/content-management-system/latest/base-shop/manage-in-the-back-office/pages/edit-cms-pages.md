@@ -3,8 +3,6 @@ title: Edit CMS pages
 description: The guide provides instructions on how to update page layout, SEO data and page content in the Back Office.
 last_updated: Jun 18, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/editing-cms-pages
-originalArticleId: a0f086e5-f744-4a25-8e3d-fa8d065a34ba
 redirect_from:
   - /2021080/docs/editing-cms-pages
   - /2021080/docs/en/editing-cms-pages
@@ -19,6 +17,13 @@ related:
   - title: View CMS pages and history
     link: docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/pages/view-cms-pages-and-history.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The topic describes how to edit CMS pages in the Back Office.
 

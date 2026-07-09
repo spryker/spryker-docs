@@ -3,8 +3,6 @@ title: Install and configure Adyen
 description: Install and configure Adyen module to work in your Spryker Cloud Commerce OS store.
 last_updated: Oct 13, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/adyen-configuration
-originalArticleId: 2966816e-71e5-4460-8366-ce775e0712a9
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/adyen/installing-and-configuring-adyen.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/adyen/install-and-configure-adyen.html
@@ -17,6 +15,13 @@ related:
   - title: Integrating Adyen payment methods
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This topic describes how to install and configure the Adyen module to integrate Adyen into your project.
 

@@ -3,8 +3,6 @@ title: "Glue API: Retrieving category nodes"
 description: Retrieve information about category nodes within your Spryker Cloud Commerce OS Project using the Spryker GLUE API
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-category-nodes
-originalArticleId: 1e544fa3-90d1-449f-8d32-54a18f9b2631
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/retrieving-categories/retrieving-category-nodes.html
   - /docs/pbc/all/product-information-management/202311.0/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html
@@ -15,6 +13,13 @@ related:
   - title: Category Management feature overview
     link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/category-management-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This endpoint allows retrieving category nodes.
 

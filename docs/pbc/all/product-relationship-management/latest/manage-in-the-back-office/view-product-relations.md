@@ -3,8 +3,6 @@ title: View product relations
 description: Learn how to view product relations in the Spryker Cloud Commerce OS Back Office.
 last_updated: Jul 30, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-product-relations
-originalArticleId: c5cd0d87-e1ea-41b5-8022-1b913c92acea
 redirect_from:
   - /2021080/docs/managing-product-relations
   - /2021080/docs/en/managing-product-relations
@@ -20,6 +18,13 @@ related:
   - title: Product Relations feature overview
     link: docs/pbc/all/product-relationship-management/latest/product-relationship-management.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 
 

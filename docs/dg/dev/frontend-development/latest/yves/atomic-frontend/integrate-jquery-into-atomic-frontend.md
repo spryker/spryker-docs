@@ -2,8 +2,6 @@
 title: Integrate JQuery into Atomic Frontend
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/t-integrate-jquery
-originalArticleId: 8cd14f0a-a0e9-4036-b90b-a1ac4e5f3560
 redirect_from:
   - /docs/scos/dev/front-end-development/202404.0/yves/atomic-frontend/integrating-jquery-into-atomic-frontend.html
   - /docs/scos/dev/front-end-development/yves/atomic-frontend/integrating-jquery-into-atomic-frontend.html
@@ -15,6 +13,13 @@ related:
   - title: Integrating React into Atomic Frontend
     link: docs/dg/dev/frontend-development/latest/yves/atomic-frontend/integrate-react-into-atomic-frontend.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This guide aims to illustrate how to use *JQuery* and any *JQuery* plugin inside Spryker components.
 

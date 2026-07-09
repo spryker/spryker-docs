@@ -3,8 +3,6 @@ title: "Import file details: content_banner.csv"
 description: Learn about the Spryker CMS content banner csv file to configure CMS content banner information in your Spryker shop.
 last_updated: Jun 16, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/file-details-content-bannercsv
-originalArticleId: 4420043c-15fe-4485-8a7d-00d326d27d0f
 redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-content-banner.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/content-management/file-details-content-banner.csv.html
@@ -17,6 +15,13 @@ related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the `content_banner.csv` file to configure [Content Banner](/docs/pbc/all/content-management-system/latest/base-shop/content-items-feature-overview.html) information in your Spryker Demo Shop.
 

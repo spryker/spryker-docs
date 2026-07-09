@@ -3,8 +3,6 @@ title: Invoice Generation overview
 description: This document provides the details about Invoice Generation provided by Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/invoice-generation-overview
-originalArticleId: 34bc81a9-6809-4998-8ccb-956963c063a0
 redirect_from:
   - /2021080/docs/invoice-generation-overview
   - /2021080/docs/en/invoice-generation-overview
@@ -13,6 +11,13 @@ redirect_from:
   - /docs/scos/user/features/202311.0/order-management-feature-overview/invoice-generation-overview.html
   - /docs/scos/user/features/202204.0/order-management-feature-overview/invoice-generation-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Invoices can be generated and sent to customer's email every time they place an order in the shop.
 

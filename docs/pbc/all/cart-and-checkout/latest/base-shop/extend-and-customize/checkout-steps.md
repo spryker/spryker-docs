@@ -3,8 +3,6 @@ title: Checkout steps
 description: This topic provides information about all checkout steps available for the customers.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/checkout-steps
-originalArticleId: aaea28ee-4c66-4e4d-8a2f-e74a6ead5e6b
 redirect_from:
   - /2021080/docs/checkout-steps
   - /2021080/docs/en/checkout-steps
@@ -28,6 +26,13 @@ related:
   - title: Checkout process review and implementation
     link: docs/pbc/all/cart-and-checkout/latest/base-shop/extend-and-customize/checkout-process-review-and-implementation.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The checkout process consists of the following steps:
 

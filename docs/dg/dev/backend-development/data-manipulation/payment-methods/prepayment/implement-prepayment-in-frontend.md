@@ -3,8 +3,6 @@ title: Implement prepayment in frontend
 description: This document describes how to implement the prepayment method in frontend.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-prepayment-fe
-originalArticleId: 54c8c994-968d-4a53-aab8-8642ef56ac57
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-front-end.html
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-frontend.html
@@ -20,6 +18,13 @@ related:
   - title: Test the Prepayment implementation
     link: docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Create the form
 

@@ -2,12 +2,17 @@
 title: Setting up shop data
 last_updated: Jun 16, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/importing-demo-shop-data
-originalArticleId: a1968540-004c-4768-ba59-aee8ff73e8a7
 redirect_from:
   - /docs/scos/dev/data-import/202404.0/demo-shop-data-import/importing-demo-shop-data.html
   - /docs/scos/dev/data-import/202204.0/demo-shop-data-import/importing-demo-shop-data.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To import data into a shop, you need to do the following:
 

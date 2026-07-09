@@ -3,8 +3,6 @@ title: "Glue API: Retrieve cart permission groups"
 description: Learn how to retrieve cart permission groups using the Spryker Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-cart-permission-groups
-originalArticleId: 0cb5d28a-634a-425a-916e-5f1a18885f98
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202005.0/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html
@@ -17,6 +15,13 @@ related:
   - title: Managing shared company user carts
     link: docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-manage-shared-company-user-carts.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Company users can share their carts with others so that multiple representatives of the same company can work together on the same order. In addition to that, users can choose what type of access they want to grant to different users. This endpoint allows retrieving cart permission groups of a company.
 

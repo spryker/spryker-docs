@@ -3,8 +3,6 @@ title: "Import file details: navigation_node.csv"
 description: Learn about the Spryker navigation node csv file used to configure the navigation node information in to your Spryker Shop.
 last_updated: Jun 16, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/file-details-navigation-nodecsv
-originalArticleId: a3ec2a04-ce34-4501-8ce4-da2240bfc583
 redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/navigation-setup/file-details-navigation-node.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/navigation-setup/file-details-navigation-node.csv.html
@@ -17,6 +15,13 @@ related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the `navigation_node.csv` file to configure [Navigation Node](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/navigation/create-navigation-nodes.html#reference-information-navigation-node-types) information in your Spryker Demo Shop.
 

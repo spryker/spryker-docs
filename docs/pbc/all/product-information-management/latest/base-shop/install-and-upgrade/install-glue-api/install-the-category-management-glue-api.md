@@ -3,8 +3,6 @@ title: Install the Category Management Glue API
 description: This guide will navigate you through the process of installing and configuring the Category API feature in Spryker OS.
 last_updated: Jun 23, 2021
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/glue-api-category-management-feature-integration
-originalArticleId: 47dff867-f90a-455e-aba8-1f4914e1f25d
 redirect_from:
   - /2021080/docs/glue-api-category-management-feature-integration
   - /2021080/docs/en/glue-api-category-management-feature-integration
@@ -21,4 +19,11 @@ related:
   - title: Retrieving category nodes
     link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 {% include pbc/all/install-features/latest/install-glue-api/install-the-category-management-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-category-management-glue-api.md -->

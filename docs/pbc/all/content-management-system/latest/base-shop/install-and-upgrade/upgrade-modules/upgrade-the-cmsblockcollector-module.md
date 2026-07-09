@@ -3,8 +3,6 @@ title: Upgrade the CmsBlockCollector module
 description: Use the guide to update versions to the newer ones of the CMS Block Collector module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-cms-block-collector
-originalArticleId: 3e039058-48d7-4a5c-bae4-2afa9c5cc0d6
 redirect_from:
   - /2021080/docs/mg-cms-block-collector
   - /2021080/docs/en/mg-cms-block-collector
@@ -32,4 +30,11 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockcollector-module.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockcollector-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 {% include pbc/all/upgrade-modules/upgrade-the-cms-block-collector-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cms-block-collector-module.md -->

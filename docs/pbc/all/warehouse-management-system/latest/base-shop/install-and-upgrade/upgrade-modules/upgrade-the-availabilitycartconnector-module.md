@@ -3,8 +3,6 @@ title: Upgrade the AvailabilityCartConnector module
 description: Use the guide to migrate to a new version of the AvailabilityCartConnector module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-availability-cart-connector
-originalArticleId: c7378d46-9fbb-446a-8e24-d0c0e13ce381
 redirect_from:
   - /2021080/docs/mg-availability-cart-connector
   - /2021080/docs/en/mg-availability-cart-connector
@@ -33,5 +31,12 @@ redirect_from:
   - /module_migration_guides/mg-availability-cart-connector.htm
   - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilitycartconnector-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-availabilitycartconnector-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-availabilitycartconnector-module.md -->

@@ -3,8 +3,6 @@ title: Handling Internal Server messages
 description: This document describes how to configure the behavior when an internal server error occurs.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/internal-server-error-handling
-originalArticleId: 768a7105-7a19-4067-837e-238177413911
 redirect_from:
   - /docs/scos/dev/back-end-development/messages-and-errors/handling-internal-server-messages.html
 related:
@@ -13,6 +11,13 @@ related:
   - title: Showing messages in Zed
     link: docs/dg/dev/backend-development/messages-and-errors/show-messages-in-the-back-office.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The document describes how to configure the behavior when an internal server error occurs. Whether you need to show the details of the error or render a static page for an internal error, this is done through configuration.
 

@@ -3,8 +3,6 @@ title: "Glue API: Retrieve configurable bundle templates"
 description: Retrieve configurable bundle templates configured within Spryker Cloud Commerce OS via Glue API
 last_updated: Jul 19, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-configurable-bundle-templates
-originalArticleId: 7d42fcee-0edb-4f80-826c-988162b30119
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/retrieving-configurable-bundle-templates.html  
   - /docs/pbc/all/product-information-management/202311.0/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html
@@ -13,6 +11,13 @@ related:
   - title: Configurable Bundle feature overview
     link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/configurable-bundle-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This endpoint allows retrieving information about the configurable bundle templates and their slots.
 

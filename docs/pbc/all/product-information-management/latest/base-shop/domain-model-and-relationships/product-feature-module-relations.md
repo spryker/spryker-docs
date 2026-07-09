@@ -8,6 +8,13 @@ redirect_from:
 - /docs/pbc/all/product-information-management/202204.0/base-shop/domain-model-and-relationships/product-feature-module-relations.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 The following diagram shows the relations between abstract products and product variants on the Storefront:
 
 <div class="width-100">

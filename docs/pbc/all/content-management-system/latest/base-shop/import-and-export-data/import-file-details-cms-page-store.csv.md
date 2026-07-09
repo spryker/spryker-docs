@@ -3,8 +3,6 @@ title: "Import file details: cms_page_store.csv"
 description: Learn about the Spryker cms page store csv file to configure CMS Page Store information for your Spryker Shop.
 last_updated: Jun 16, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-page-storecsv
-originalArticleId: e8f80649-24da-450a-a696-c3b9f02a52eb
 redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/content-management/file-details-cms-page-store.csv.html
   - /docs/pbc/all/content-management-system/202311.0/import-and-export-data/file-details-cms-page-store.csv.html
@@ -14,6 +12,13 @@ related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the `cms_page_store.csv` file to configure CMS Page Store information in your Spryker Demo Shop.
 

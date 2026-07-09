@@ -3,12 +3,17 @@ title: "Tutorial: Calculator plugin"
 description: Use the guide to create and register a calculator plugin to the calculator plugin stack.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/t-calculator-plugin
-originalArticleId: d0f57a1d-9914-4a39-9cff-1796c26a27cb
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-calculator-plugin.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/tutorials-and-howtos/tutorial-calculator-plugin.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 <!-- used to be: http://spryker.github.io/tutorials/zed/calculator-plugin/
 -->

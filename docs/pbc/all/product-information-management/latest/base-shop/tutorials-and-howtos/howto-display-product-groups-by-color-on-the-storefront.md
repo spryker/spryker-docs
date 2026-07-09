@@ -3,12 +3,17 @@ title: "Display product groups by color on the Storefront"
 description: Procedure to display a product group by colour on the Spryker Storefront for your Spryker Cloud Commerce OS project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/howto-display-product-groups-by-color-on-the-storefront
-originalArticleId: e963b2f2-a4bf-4c04-8ffc-ecb3610032e0
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-product-groups-by-color-on-the-storefront.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/tutorials-and-howtos/howto-display-product-groups-by-color-on-the-storefront.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To enhance the visual shopping experience of your customers, you can use product groups. A product group is a group of products logically united by an attribute. You can create product groups, but there is no way to display them on the Storefront by default. This guide shows how to display a product group on the Storefront using the color attribute as an example. The behavior to be configured is described in [Product Groups feature overview](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-groups-feature-overview.html).
 

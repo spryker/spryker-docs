@@ -3,8 +3,6 @@ title: Integrating the Installment payment method for RatePay
 description: Integrate installment payment through Ratepay into the Spryker-based shop.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/ratepay-installment
-originalArticleId: 3fe65872-d5b3-4c95-8757-6ae7ee0b2d87
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-installment-payment-method-for-ratepay.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-installment-payment-method-for-ratepay
@@ -29,6 +27,13 @@ related:
   - title: Integrating the Direct Debit payment method for RatePay
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-direct-debit-payment-method-for-ratepay.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The shop must implement the Calculation Request operation to calculate an example installment plan and show it to the customer. Some input parameters for the calculation are passed from the shop–for example, the shopping basket total. Others are stored in the merchant's RatePAY profile held by the Gateway–for example, the allowed interest rate range. The merchant's profile parameters can be retrieved by the Configuration Request operation.
 

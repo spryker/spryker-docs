@@ -3,8 +3,6 @@ title: Setting up a custom domain name with Route 53
 description: Set up a custom domain name with Route 53 for your Spryker application, including DNS configuration and deployment in production or staging environments.
 template: howto-guide-template
 last_updated: Oct 6, 2023
-originalLink: https://cloud.spryker.com/docs/setting-up-a-custom-domain-name-with-route-53
-originalArticleId: 6a422776-6e65-48ae-8133-759954b13537
 redirect_from:
   - /docs/setting-up-a-custom-domain-name-with-route-53
   - /docs/en/setting-up-a-custom-domain-name-with-route-53

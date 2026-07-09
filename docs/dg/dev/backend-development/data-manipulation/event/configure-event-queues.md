@@ -3,8 +3,6 @@ title: Configure event queues
 description: Configure event queues in Spryker to manage asynchronous tasks effectively. Optimize backend performance by organizing event-driven workflows with ease.
 last_updated: May 15, 2026
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/event-configure-q
-originalArticleId: c4cf6639-48cd-4fb3-a595-09764433f7af
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/event/configure-event-queues.html
   - /docs/scos/dev/back-end-development/data-manipulation/event/configuring-an-events-queue.html

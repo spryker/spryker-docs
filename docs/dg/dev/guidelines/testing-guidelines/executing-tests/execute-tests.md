@@ -3,8 +3,6 @@ title: Execute tests
 description: Learn what commands you can use to execute your tests. You can run all tests or specific ones within your Spryker Based Projects.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/executing-tests
-originalArticleId: 640291c8-48bc-4684-8725-0c16b79c2589
 redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/executing-tests/execute-tests.html
   - /docs/scos/dev/guidelines/testing/executing-tests.html
@@ -32,6 +30,13 @@ related:
   - title: Testing console commands
     link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 There are many ways to execute the [tests](/docs/dg/dev/guidelines/testing-guidelines/test-framework.html). You can do a full run of all tests, or you can narrow it down to only execute a specific test method.
 

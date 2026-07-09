@@ -3,8 +3,6 @@ title: Test framework
 description: Spryker uses Codeception framework for running tests. Learn how to configure and use it in your project.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/test-framework
-originalArticleId: e48e759c-0e27-4cfa-82f7-e34f82b2b6ad
 redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/test-framework.html
   - /docs/scos/dev/guidelines/testing/test-framework.html
@@ -32,6 +30,13 @@ related:
   - title: Testing console commands
     link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To easily test every aspect of Spryker and the code you write, Spryker uses the [Codeception testing framework](https://codeception.com/) and [PHPUnit](https://phpunit.de/).
 

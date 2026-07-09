@@ -3,11 +3,16 @@ title: Trustpilot
 description: Integrate Trustpilot a place to share and discover reviews of businesses, and give companies the tools to turn feedback into business results
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/trustpilot
-originalArticleId: d26d9e19-afe5-4838-91bc-c3fe1894443e
 redirect_from:
   - /docs/scos/user/technology-partners/202212.0/customer-retention-and-loyalty/trustpilot.html  
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Partner Information
 

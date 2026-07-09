@@ -12,6 +12,13 @@ redirect_from:
   - /docs/pbc/all/tax-management/202204.0/base-shop/extend-and-customize/tax-module-reference-information.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 
 The Tax module is responsible for handling tax rates that can apply for products, product options, or shipment.
 

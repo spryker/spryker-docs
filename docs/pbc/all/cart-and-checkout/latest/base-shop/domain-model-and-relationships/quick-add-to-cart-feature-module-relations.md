@@ -10,6 +10,13 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/domain-model-and-relationships/quick-add-to-cart-feature-module-relations.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 <div class="width-100">
 
 ![quick-add-to-cart-2-modules.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/quick-add-to-cart-2-modules.png)

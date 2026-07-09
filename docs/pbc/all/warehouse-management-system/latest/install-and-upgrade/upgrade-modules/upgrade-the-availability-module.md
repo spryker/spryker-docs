@@ -3,8 +3,6 @@ title: Upgrade the Availability module
 description: Use the guide to upgrade or migrate to the new version of the Availability module in your Spryker based project.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-availability
-originalArticleId: 53009fca-6f6b-4583-8946-eb521e6f8235
 redirect_from:
   - /2021080/docs/mg-availability
   - /2021080/docs/en/mg-availability
@@ -33,5 +31,12 @@ redirect_from:
   - /module_migration_guides/mg-availability.htm
   - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-availability-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-availability-module.md -->

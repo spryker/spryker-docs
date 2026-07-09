@@ -3,8 +3,6 @@ title: Frontend assets building and loading
 description: Spryker assets are split into critical and non-critical CSS chunks
 last_updated: Aug 31, 2022
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/frontend-assets-building-and-loading
-originalArticleId: d9f739fa-6b6a-45d7-8d3e-4ba793809910
 redirect_from:
   - /docs/scos/dev/front-end-development/202404.0/yves/frontend-assets-building-and-loading.html
   - /docs/scos/dev/front-end-development/yves/frontend-assets-building-and-loading.html

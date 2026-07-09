@@ -3,8 +3,6 @@ title: Code coverage
 description: Learn how to generate the code coverage report in HTML for your testing capabilities in your Spryker Development
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/code-coverage
-originalArticleId: 630a5773-8205-4f00-a6ee-d1876e76d975
 redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/code-coverage.html
   - /docs/scos/dev/guidelines/testing/code-coverage.html
@@ -32,6 +30,13 @@ related:
   - title: Testing console commands
     link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To be aware of what you are testing, you should know the code coverage. To get the code coverage report generated, make sure Xdebug is enabled and run your tests with an additional flag:
 

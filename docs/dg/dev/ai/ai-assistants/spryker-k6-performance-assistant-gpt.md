@@ -4,6 +4,7 @@ description: Spryker K6 Performance Assistant – Early Access Program Guide & F
 template: concept-topic-template
 redirect_from:
   - /docs/dg/dev/ai-assistants/spryker-k6-performance-assistant-gpt
+last_updated: Dec 04, 2025
 ---
 
 {% info_block warningBox %}

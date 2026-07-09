@@ -3,8 +3,6 @@ title: "Glue API: Retrieve abstract product prices"
 description: Retrieve details information about prices of abstract products using the Spryker GLUE API within your Spryker Projects.
 last_updated: Jun 21, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-abstract-product-prices
-originalArticleId: 903570fe-6ca4-4165-b0d3-6764e0262308
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
   - /docs/pbc/all/price-management/202311.0/base-shop/manage-using-glue-api/retrieve-abstract-product-prices.html
@@ -19,6 +17,13 @@ related:
   - title: Retrieving tax sets
     link: docs/pbc/all/tax-management/latest/base-shop/manage-using-glue-api/retrieve-tax-sets.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This endpoint allows retrieving detailed information about the prices of abstract products.
 

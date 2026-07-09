@@ -8,6 +8,13 @@ redirect_from:
     - /docs/scos/dev/technology-partner-guides/202204.0/marketing-and-conversion/customer-communication/inxmail/inxmail-api-requests.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 This document contains API requests for Inxmail.
 
 `\SprykerEco\Zed\Inxmail\Business\Api\Adapter\EventAdapter` which extend `\SprykerEco\Zed\Inxmail\Business\Api\Adapter\AbstractAdapter` contains all needed data for sending data to Inxmail for events.

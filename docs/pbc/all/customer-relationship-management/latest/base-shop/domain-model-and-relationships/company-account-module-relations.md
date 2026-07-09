@@ -3,8 +3,6 @@ title: "Company account: module relations"
 description: Explore the module relations of the Sprker Cloud Commerce OS Company Account features for your Spryker Projects.
 last_updated: Jun 16, 2021
 template: feature-walkthrough-template
-originalLink: https://documentation.spryker.com/v7/docs/company-account-module-relations
-originalArticleId: c01aaea9-5602-4cb9-9d99-04d42aa2aa8a
 redirect_from:
   - /v7/docs/company-account-module-relations
   - /v7/docs/en/company-account-module-relations
@@ -12,6 +10,13 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/company-account-feature-walkthrough/company-account-module-relations.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/company-account-feature-walkthrough/company-account-module-relations.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The schema below illustrates relations between company, business unit, company unit address, and company user (customer).
 

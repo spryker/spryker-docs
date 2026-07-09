@@ -3,8 +3,6 @@ title: Product Options feature overview
 description: The document describes the creation process of product options and how it's managed in the Back Office
 last_updated: Jul 26, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/product-options-feature-overview
-originalArticleId: bb06c0c0-3cdb-46de-bf29-37606bd1646b
 redirect_from:
   - /docs/scos/user/features/202200.0/product-options-feature-overview.html
   - /docs/scos/user/features/202108.0/product-options-feature-overview.html
@@ -14,6 +12,13 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202311.0/feature-overviews/product-options-feature-overview.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-options-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The *Product Options* feature lets a Back Office user create and assign product options to abstract products. Product options are product additions that a customer can select on the product detail page before adding the product to the cart. For example, the product options can be gift wrappings for products, insurance, or warranty. Product options do not have stock but an SKU linked to product abstracts. Thus, you cannot purchase them without buying a corresponding product.
 

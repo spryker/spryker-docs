@@ -3,11 +3,16 @@ title: Forcing HTTPS
 description: Learn with this guide to configure HTTPs and HTTP for your pages within your Spryker project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-force-https
-originalArticleId: ba400e70-5a29-4899-996a-08f3f9bdd793
 redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/howtos/howto-force-https.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This guide shows how you can force to use HTTPS on your pages.
 

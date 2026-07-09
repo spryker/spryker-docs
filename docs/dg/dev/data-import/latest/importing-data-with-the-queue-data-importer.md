@@ -3,8 +3,6 @@ title: Importing data with the queue data importer
 description: This article describes the process of importing data with the Queue Data Importer.
 last_updated: Jun 16, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/importing-data-with-queue-data-importer
-originalArticleId: c20bef51-1460-4459-b45e-c13b92798a19
 redirect_from:
   - /docs/scos/dev/data-import/202404.0/importing-data-with-the-queue-data-importer.html
   - /docs/scos/dev/data-import/202204.0/importing-data-with-the-queue-data-importer.html
@@ -12,6 +10,13 @@ related:
   - title: Queue Data Import feature integration
     link: docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-queue-data-import-feature.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Queue data import allows you to import data via message queues. It increases data import performance by using performance-related abilities and properties of message queues, like:
 

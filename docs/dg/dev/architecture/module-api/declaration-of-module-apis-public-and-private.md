@@ -2,8 +2,6 @@
 title: "Declaration of module APIs: Public and private"
 description: Learn how to define and manage public and private APIs for Spryker modules to ensure efficient integration and security in your ecommerce platform.
 last_updated: Sep 27, 2021
-originalLink: https://documentation.spryker.com/2021080/docs/definition-api
-originalArticleId: d86471b1-719e-4ab5-b5eb-b5e915f0a837
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/architecture/module-api/definition-of-module-api.html
@@ -16,6 +14,13 @@ related:
   - title: Using ~ Composer constraint for customized modules
     link: docs/dg/dev/architecture/module-api/use-composer-constraint-for-customized-modules.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 According to [Semantic Versioning](http://semver.org/), we release a major version of a module when there are backward compatibility (BC) breaking changes in the Public API. This document declares what public and private APIs are.
 

@@ -3,14 +3,19 @@ title: Storefront Agent Assist feature overview
 description: An agent helps customers to perform activities in the online store and provides support by carrying out actions on customer's behalf in the web-shop
 last_updated: Jul 20, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/agent-assist-overview
-originalArticleId: b5a82fe5-ecba-45ef-aa6b-1a7487fdf94c
 redirect_from:
   - /docs/scos/user/features/202108.0/agent-assist-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/agent-assist-feature-walkthrough.html
   - /docs/scos/user/features/202204.0/agent-assist-feature-overview.html
   - /docs/pbc/all/user-management/202204.0/base-shop/agent-assist-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 An *agent* is a person with unrivaled product knowledge who can help customers perform different activities in the Storefront. For example, a customer might call an agent and ask them to help choose the right product or assist with the buying process or even perform some actions in the Storefront on their behalf. Say, a customer wants to add items to a shopping list or create a company but cannot do it for some reason. This is when the agent steps in and provides practical support acting on the customer's behalf.
 

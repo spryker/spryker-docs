@@ -2,6 +2,7 @@
 title: Upgrade to Angular 20
 description: Learn how you can upgrade to Version 20 of Angular for your Spryker project for bug fixes, optimized performance and tooling.
 template: module-migration-guide-template
+last_updated: Jan 30, 2026
 ---
 
 This document explains how you can upgrade Angular to version 20 in your Spryker project.

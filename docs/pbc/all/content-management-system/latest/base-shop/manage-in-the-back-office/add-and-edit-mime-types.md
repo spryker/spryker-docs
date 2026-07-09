@@ -3,8 +3,6 @@ title: Add and edit MIME types
 description: Learn how to add and edit MIME types in the Spryker Back Office for different file extensions that can be used in your Spryker projects.
 last_updated: Aug 10, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-mime-type-settings
-originalArticleId: 21caa74e-d4c1-4ba6-9cf7-1cd60f7368e8
 redirect_from:
   - /2021080/docs/managing-mime-type-settings
   - /2021080/docs/en/managing-mime-type-settings
@@ -23,6 +21,13 @@ related:
   - title: File Manager feature overview
     link: docs/pbc/all/content-management-system/latest/base-shop/file-manager-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to define what files types can be uploaded to a shop.
 

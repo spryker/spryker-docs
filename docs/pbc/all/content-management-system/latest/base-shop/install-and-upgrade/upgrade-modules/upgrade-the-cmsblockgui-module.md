@@ -3,8 +3,6 @@ title: Upgrade the CmsBlockGui module
 description: Use the guide to update versions to the newer ones of the CMS Block GUI module.
 last_updated: Jul 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-cms-block-gui
-originalArticleId: dd872c42-639a-4362-96bc-8b921a2b6ad6
 redirect_from:
   - /2021080/docs/mg-cms-block-gui
   - /2021080/docs/en/mg-cms-block-gui
@@ -37,4 +35,11 @@ related:
   - title: Upgrade the CMS Block Collector
     link: docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockcollector-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 {% include pbc/all/upgrade-modules/upgrade-the-cmsblockgui-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cmsblockgui-module.md -->

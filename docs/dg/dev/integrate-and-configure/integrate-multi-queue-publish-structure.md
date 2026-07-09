@@ -3,12 +3,17 @@ title: Integrate multi-queue publish structure
 description: Learn how to integrate the Multi-queue publish structure to improve debugging and slow events in your Spryker based projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/multiple-publish-queue-structure
-originalArticleId: 52874a77-9a3a-425d-8bc5-2abac8bc9beb
 redirect_from:
   - /docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html
   - /docs/scos/dev/technical-enhancements/multiple-publish-queue-structure.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To improve debugging of failures and slow events in Spryker, we introduced a new publish queue structure. In the new structure, the single event queue is replaced by multiple publish queues. You can can find a detailed comparison of the structures in the table below.
 

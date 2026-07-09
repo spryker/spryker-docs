@@ -3,8 +3,6 @@ title: "Import file details: product_management_attribute.csv"
 description: Learn how to configure product attribute information using the product management attribute csv file for your Spryker project.
 last_updated: Jun 16, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-management-attributecsv
-originalArticleId: f812b029-e27e-43e7-a6a0-a6db56be3a30
 redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html
   - /docs/pbc/all/product-information-management/202311.0/import-and-export-data/products-data-import/file-details-product-management-attribute.csv.html
@@ -14,6 +12,13 @@ related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the `product_management_attribute.csv` file to configure [product attribute](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) information in your Spryker Demo Shop.
 

@@ -3,8 +3,6 @@ title: Gift Cards
 description: This document describes the general concepts of gift cards, how to purchase and redeem them, as well as various use case scenarios.
 last_updated: Aug 2, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/gift-cards-feature-overview
-originalArticleId: 942e081b-6312-483d-bc93-761af98f1f44
 redirect_from:
   - /docs/scos/user/features/202009.0/gift-cards-feature-overview.html
   - /docs/scos/user/features/202200.0/gift-cards-feature-overview.html
@@ -12,6 +10,13 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/gift-cards-feature-walkthrough.html
   - /docs/pbc/all/gift-cards/202204.0/gift-cards.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The *Gift Cards* capability lets you create a special product type with a chosen value amount. The purchase of a gift card generates an individual code that can then be used as a payment method during checkout.
 

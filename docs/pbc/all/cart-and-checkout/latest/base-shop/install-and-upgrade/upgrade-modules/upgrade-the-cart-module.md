@@ -3,8 +3,6 @@ title: Upgrade the Cart module
 description: Use this guide to help you upgrade the Spryker cart module from older versions to a newer one.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-cart
-originalArticleId: be41d310-b875-4753-b5f5-a01b8ae6b3f8
 redirect_from:
   - /2021080/docs/mg-cart
   - /2021080/docs/en/mg-cart
@@ -35,5 +33,12 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202311.0/install-and-upgrade/upgrade-modules/upgrade-the-cart-module.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cart-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-cart-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cart-module.md -->

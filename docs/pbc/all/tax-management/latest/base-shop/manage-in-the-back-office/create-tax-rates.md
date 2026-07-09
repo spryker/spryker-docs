@@ -3,8 +3,6 @@ title: Create tax rates
 description: Learn how you can create tax rates directly in the back office of your Spryker Cloud Commerce OS project.
 last_updated: May 31, 2022
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-tax-rates
-originalArticleId: 7991b03c-1e31-442d-89fd-e85e4e387360
 redirect_from:
   - /2021080/docs/managing-tax-rates
   - /2021080/docs/en/managing-tax-rates

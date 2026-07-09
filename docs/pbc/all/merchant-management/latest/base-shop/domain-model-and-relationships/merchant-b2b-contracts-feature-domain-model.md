@@ -8,6 +8,13 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202204.0/merchant-b2b-contracts-feature-walkthrough.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 The *Merchant B2B Contracts* feature lets you set up contracts between a merchant and B2B customer.
 
 

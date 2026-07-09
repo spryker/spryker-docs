@@ -3,8 +3,6 @@ title: Interact with third party payment providers using Glue API
 description: This document shows how to interact with third party payment providers through Glue API
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/t-interacting-with-third-party-payment-providers-via-glue-api
-originalArticleId: c9d486b4-ac75-46f5-917e-f3935043f018
 redirect_from:
   - /docs/scos/dev/tutorials/201907.0/advanced/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html
   - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html
@@ -12,6 +10,13 @@ redirect_from:
   - /docs/pbc/all/payment-service-provider/202311.0/interact-with-third-party-payment-providers-using-glue-api.html
   - /docs/scos/dev/glue-api-guides/202204.0/glue-api-tutorials/interact-with-third-party-payment-providers-using-glue-api.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This tutorial shows how to invoke third parties in the API payment process.
 

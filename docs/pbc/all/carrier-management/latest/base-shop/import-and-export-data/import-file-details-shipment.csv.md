@@ -3,8 +3,6 @@ title: "Import file details: shipment.csv"
 description: Learn how to import shipment data using the shipment.csv file in Spryker, facilitating smooth integration of shipping information for efficient carrier management.
 last_updated: Jun 23, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/file-details-shipmentcsv
-originalArticleId: 213aeaa8-3dd8-43da-870a-5f1174b640e2
 redirect_from:
   - /docs/scos/dev/data-import/201903.0/data-import-categories/commerce-setup/file-details-shipment.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/commerce-setup/file-details-shipment.csv.html
@@ -17,6 +15,13 @@ related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the `shipment.csv` file to configure the [shipment](/docs/pbc/all/carrier-management/latest/base-shop/shipment-feature-overview.html) information in your Spryker Demo Shop.
 

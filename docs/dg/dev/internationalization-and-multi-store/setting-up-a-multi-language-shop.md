@@ -3,13 +3,18 @@ title: Setting up a multi-language shop
 description: This document exmplains multi-language setup details
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/multi-language-setup
-originalArticleId: cf160490-ae8e-45c1-80a6-bcd667498ae0
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/how-to-make-a-multi-language-setup.html
   - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html
   - /docs/pbc/all/order-management-system/202311.0/base-shop/datapayload-conversion/multi-language-setup.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 All textual elements can be created in various languages to support content creation for multiple language setups—for example, for your international stores.
 - Customers can switch locales in the shop.

@@ -3,8 +3,6 @@ title: "Import file details: cms_block_category_position.csv"
 description: Understand the Spryker cms block category position csv file to configure CMS Block Category Position information in your Spryker Shop.
 last_updated: Jun 16, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-block-category-postioncsv
-originalArticleId: 22c4245e-5056-4bb9-9d77-e932a74c63b9
 redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/content-management/file-details-cms-block-category-postion.csv.html
   - /docs/pbc/all/content-management-system/202311.0/import-and-export-data/file-details-cms-block-category-postion.csv.html
@@ -14,6 +12,13 @@ related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the `cms_block_category_position.csv` file to configure CMS Block Category Position information in your Spryker Demo Shop.
 

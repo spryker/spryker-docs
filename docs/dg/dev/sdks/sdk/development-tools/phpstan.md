@@ -3,8 +3,6 @@ title: PHPStan
 description: Learn how to install and use PHPStan, a static code analyzer within your Spryker SDK projects.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/phpstan
-originalArticleId: 91b7f7ec-2097-422c-9a63-4cc7076216e5
 redirect_from:
   - /docs/sdk/dev/development-tools/phpstan.html
   - /docs/scos/dev/sdk/201811.0/development-tools/phpstan.html
@@ -33,6 +31,13 @@ related:
   - title: Tooling config file
     link: docs/dg/dev/sdks/sdk/development-tools/tooling-configuration-file.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 [PHPStan](https://github.com/phpstan/phpstan) is a static code analyzer that introspects the code without running it and catches various classes of bugs prior to unit testing.
 

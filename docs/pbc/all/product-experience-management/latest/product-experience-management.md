@@ -1,7 +1,7 @@
 ---
 title: Product Experience Management
 description: Import and export product data through a backoffice UI using CSV files with schema-driven column mapping.
-last_updated: Apr 08 2026
+last_updated: Apr 08, 2026
 template: concept-topic-template
 ---
 

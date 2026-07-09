@@ -3,8 +3,6 @@ title: Upgrade the QuoteRequestAgent module
 description: Learn how to upgrade to a newer version of the Quote Request Agent module in your Spryker based projects.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-quoterequestagent
-originalArticleId: 0cad813f-35c3-4e52-8421-b7b97b989479
 redirect_from:
   - /2021080/docs/mg-quoterequestagent
   - /2021080/docs/en/mg-quoterequestagent
@@ -26,5 +24,12 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/migration-guide-quoterequestagent.html
   - /docs/pbc/all/request-for-quote/202204.0/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagent-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-quoterequestagent-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-quoterequestagent-module.md -->

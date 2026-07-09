@@ -3,7 +3,6 @@ title: Certificates and Compliance
 description: Learn about Spryker's certification and compliances.
 last_updated: Jun 10, 2025
 template: concept-topic-template
-originalArticleId: 0798f4ee-6a6b-46ed-bba9-g3e885700585
 
 ---
 

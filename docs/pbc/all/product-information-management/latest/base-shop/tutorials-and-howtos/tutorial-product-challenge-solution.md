@@ -2,8 +2,6 @@
 title: "Tutorial: Product challenge solution"
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/t-product-challenge-solution
-originalArticleId: c41461a3-c784-43f0-ba0e-d38ed2cfa5e1
 redirect_from:
   - /2021080/docs/t-product-challenge-solution
   - /2021080/docs/en/t-product-challenge-solution
@@ -24,6 +22,13 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-product-challenge-solution.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/tutorials-and-howtos/tutorial-product-challenge-solution.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 <!-- used to be: http://spryker.github.io/onboarding/product-solution/ -->
 

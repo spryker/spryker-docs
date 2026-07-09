@@ -3,8 +3,6 @@ title: Storefront API security and authentication
 description: This article describes the authorization mechanism used in Spryker, the modules that provide it, as well as user scopes, database tables, and extension points.
 last_updated: Sep 18, 2025
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/security-and-authentication
-originalArticleId: f37cbced-75fa-4ea4-aad6-7afdeea109a4
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202404.0/old-glue-infrastructure/glue-api-security-and-authentication.html
   - /docs/scos/dev/glue-api-guides/202200.0/security-and-authentication.html

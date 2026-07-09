@@ -3,8 +3,6 @@ title: Extend the core
 description: There are three ways to extend classes from the core—replacement class, inheritance object, and composition.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/core-extension
-originalArticleId: 8baa3c78-9795-426b-9df2-576290b2acb4
 redirect_from:
   - /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html
   - /docs/scos/dev/back-end-development/extend-spryker/extending-the-core.html
@@ -15,6 +13,13 @@ related:
   - title: Extend a core module that is used by another
     link: docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 We offer several ways like plugins to hook into the core's behavior and extend this without modifications. But sometimes this is not enough, so you need to replace a method that is deep in the core.
 

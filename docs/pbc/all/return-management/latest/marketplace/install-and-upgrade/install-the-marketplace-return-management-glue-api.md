@@ -10,4 +10,11 @@ related:
     link: docs/pbc/all/return-management/latest/marketplace/marketplace-return-management-feature-overview.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 {% include pbc/all/install-glue-api/latest/marketplace/install-the-marketplace-return-management-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202311.0/marketplace/install-the-marketplace-return-management-glue-api.md -->

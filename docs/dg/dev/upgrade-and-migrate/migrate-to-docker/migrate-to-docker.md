@@ -3,11 +3,16 @@ title: Migrate to Docker
 description: Learn how to convert an existing non-docker based project into a docker based one.
 last_updated: Oct 21, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/integrating-the-docker-sdk-into-existing-projects
-originalArticleId: 8b072734-58f9-4bcf-8545-676e9f37db7b
 redirect_from:
   - /docs/scos/dev/migration-concepts/migrate-to-docker/migrate-to-docker.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This page describes how you can migrate a non-Docker based project into a Docker based one. If you want to install Spryker from scratch, see [Set up](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html).
 

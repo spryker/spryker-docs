@@ -3,8 +3,6 @@ title: Install the Configurable Bundle feature
 description: This guide provides step-by-step instruction on installing the basic functionality for the Configurable Bundle feature in Spryker.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/configurable-bundle-feature-integration
-originalArticleId: 4bac6982-459a-4d2f-b34e-e47e4929a158
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/configurable-bundle-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/configurable-bundle-feature-integration.html
@@ -29,5 +27,12 @@ related:
   - title: Install the Product Images + Configurable Bundle feature
     link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-images-configurable-bundle-feature.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/install-features/latest/install-the-configurable-bundle-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/latest/install-the-configurable-bundle-feature.md -->

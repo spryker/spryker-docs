@@ -2,8 +2,6 @@
 title: "HowTo: Manage a big number of categories"
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-manage-a-big-number-of-categories
-originalArticleId: 54f92b50-1aa0-44db-8a7c-b3eb4dbaa99c
 redirect_from:
   - /2021080/docs/ht-manage-a-big-number-of-categories
   - /2021080/docs/en/ht-manage-a-big-number-of-categories
@@ -22,6 +20,13 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-manage-a-big-number-of-categories.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/tutorials-and-howtos/howto-manage-a-big-number-of-categories.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Overview
 

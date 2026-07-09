@@ -3,8 +3,6 @@ title: Using FACT-Finder recommendation engine
 description: The FACT-Finder recommendation engine analyzes product and category relationships. Creating recommendation widget, to be displayed on your store.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/search-factfinder-recommendation
-originalArticleId: e3d079b4-2197-4009-a2f9-df27739a4b7f
 redirect_from:
   - /2021080/docs/search-factfinder-recommendation
   - /2021080/docs/en/search-factfinder-recommendation
@@ -35,6 +33,13 @@ related:
   - title: Installing and configuring FACT-Finder web components
     link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder-web-components.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Prerequisites
 

@@ -3,8 +3,6 @@ title: Get an overview of the used plugins
 description: Discover how to review and analyze the plugins used in your Spryker project. This guide provides insights into managing plugins for optimal backend performance.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/plugin-overview
-originalArticleId: b0e9b971-1bd5-433c-973f-e989820adeb4
 redirect_from:
   - /docs/scos/dev/back-end-development/plugins/get-an-overview-of-the-used-plugins.html
   - /docs/scos/dev/back-end-development/plugins/getting-an-overview-of-the-used-plugins.html
@@ -12,6 +10,13 @@ related:
   - title: Plugins
     link: docs/dg/dev/backend-development/plugins/plugins.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To use a new feature projects most likely need to add some plugins to their `*DependencyProvider`. Currently, it's not easy for projects to integrate a new feature because of the difficulties in identifying to which *`DependencyProvider` plugin A* of *module B* can be added to bring *functionality X*.
 

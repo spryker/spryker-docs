@@ -3,8 +3,6 @@ title: Install the CMS + Product Lists + Catalog feature
 description: Learn how to install the CMS + Product lists + Catalog feature in to your Spryker projects.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/cms-page-search-product-lists-catalog-feature-integration
-originalArticleId: c395ad85-27ce-44f2-a18f-69fce0d46ba6
 redirect_from:
   - /2021080/docs/cms-page-search-product-lists-catalog-feature-integration
   - /2021080/docs/en/cms-page-search-product-lists-catalog-feature-integration
@@ -20,5 +18,12 @@ related:
   - title: CMS page
     link: docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-pages-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/install-features/latest/install-the-cms-product-lists-catalog-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-cms-product-lists-catalog-feature.md -->

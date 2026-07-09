@@ -3,9 +3,15 @@ title: Contentserv
 description: Learn about Sprykers third party integration Contentserv and how the integration can enhance your Spryker project.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/contentserv-1
-originalArticleId: 6c3cc495-d781-4bc1-bfda-31b00febf221
+
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ---
 

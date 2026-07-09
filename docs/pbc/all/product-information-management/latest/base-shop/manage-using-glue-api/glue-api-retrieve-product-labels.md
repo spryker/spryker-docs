@@ -3,8 +3,6 @@ title: "Glue API: Retrieve product labels"
 description: Learn how to retrieve product labels configured in Spryker Cloud Commerce OS by using the Spryker Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-product-labels
-originalArticleId: 70d36a7a-e701-427d-ae2a-e78ebde56ebe
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/retrieving-product-labels.html
   - /docs/pbc/all/product-information-management/202311.0/manage-using-glue-api/glue-api-retrieve-product-labels.html
@@ -15,6 +13,13 @@ related:
   - title: Product Labels feature overview
     link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-labels-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 [Product labels](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-labels-feature-overview.html) are used to draw your customers' attention to some specific products. Each of them has a name, a priority, and a validity period. The Product Labels API provides endpoints for getting labels via the REST HTTP requests.
 

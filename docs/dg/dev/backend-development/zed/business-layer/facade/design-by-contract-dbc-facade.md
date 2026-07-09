@@ -3,8 +3,6 @@ title: Design by Contract (DBC) - Facade
 description: A contract is a formal and precise specification of a method (or other components) in a facade.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/zed-facade-design-by-contract
-originalArticleId: 08727647-3f73-47be-ab06-5f698712aaf5
 redirect_from:
   - /docs/scos/dev/back-end-development/zed/business-layer/facade/design-by-contract-dbc-facade.html
 related:
@@ -15,6 +13,13 @@ related:
   - title: Facade use cases
     link: docs/dg/dev/backend-development/zed/business-layer/facade/facade-use-cases.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Every method in a facade contains an implicit promise. So a client expects that the behavior does not change in a minor update. Basically, there are two types of possible changes:
 - Changes in the method's signature—for example, when the name of the method or the order of the parameters changes.

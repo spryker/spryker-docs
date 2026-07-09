@@ -3,11 +3,16 @@ title: Factory
 description: All modules are shipped with a dedicated factory for each layer. The responsibility of the factory is to create new instances of the classes from the same layer and module.
 last_updated: Jul 28, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/factory
-originalArticleId: 08d03a8a-184b-46a0-87ff-8594976ab795
 redirect_from:
   - /docs/scos/dev/back-end-development/factory/factory.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 All modules are shipped with a dedicated factory for each layer. The responsibility of the factory is to create new instances of the classes from the same layer and module.
 

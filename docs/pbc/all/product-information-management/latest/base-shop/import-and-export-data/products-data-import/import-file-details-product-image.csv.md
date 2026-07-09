@@ -3,8 +3,6 @@ title: "Import file details: product_image.csv"
 description: Learn how to configure product image information using the product image csv file for your Spryker project.
 last_updated: Jun 16, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-imagecsv
-originalArticleId: 7c155fe3-3def-4963-89fa-bf3b98b61fbb
 redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/catalog-setup/products/file-details-product-image.csv.html
   - /docs/pbc/all/product-information-management/202311.0/import-and-export-data/products-data-import/file-details-product-image.csv.html  
@@ -14,6 +12,13 @@ related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the `product_image.csv` file to configure [Product Image](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-images-overview.html) information on your Spryker Demo Shop.
 

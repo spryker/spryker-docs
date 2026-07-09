@@ -4,8 +4,6 @@ description: Learn about REST request validation format and how to validate requ
   in Glue API.
 last_updated: July 7, 2025
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/validating-rest-request-format
-originalArticleId: 0e9175dc-05b2-4d72-9493-aac6220e27bd
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202404.0/glue-api-tutorials/validate-rest-request-format.html
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/validating-rest-request-format.html

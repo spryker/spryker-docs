@@ -3,8 +3,6 @@ title: Yves bootstrapping
 description: Yves and Zed are both built upon the Silex micro-framework. So most concepts about modern web frameworks apply here as well.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/t-yves-bootstrap
-originalArticleId: cc0ab207-b4ba-4537-96af-079e1524bd2b
 redirect_from:
   - /docs/scos/dev/back-end-development/yves/yves-bootstrapping.html
 related:
@@ -23,6 +21,13 @@ related:
   - title: Yves routes
     link: docs/dg/dev/backend-development/yves/yves-routes.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Yves and Zed are both built upon the [Symfony components](https://symfony.com/components). So most concepts about modern web frameworks are applied here as well.
 

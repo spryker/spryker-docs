@@ -3,8 +3,6 @@ title: Configure a search query
 description: This document explains how to configure a search query for your Spryker based shop.
 last_updated: Jul 29, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/configuring-search-query
-originalArticleId: a769773d-0ce1-4c0c-86e9-02755c0f9999
 redirect_from:
   - /2021080/docs/configuring-search-query
   - /2021080/docs/en/configuring-search-query
@@ -47,6 +45,13 @@ related:
   - title: Facet filter overview and configuration
     link: docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/facet-filter-overview-and-configuration.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Once you have all the necessary data in Elasticsearch, you can display it on Yves.
 

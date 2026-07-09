@@ -3,8 +3,6 @@ title: Install the Merchant feature
 description: Learn how to integrate the Spryker Cloud Commerce OS Merchant feature into a Spryker B2B project.
 last_updated: Jul 24, 2024
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/merchant-feature-integration
-originalArticleId: 7b98e6df-b4e5-4aa7-9471-9bbed2344433
 redirect_from:
   - /2021080/docs/merchant-feature-integration
   - /2021080/docs/en/merchant-feature-integration

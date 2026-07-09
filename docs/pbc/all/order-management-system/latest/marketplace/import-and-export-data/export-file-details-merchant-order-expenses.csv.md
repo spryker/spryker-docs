@@ -8,6 +8,13 @@ related:
     link: docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 These are the header fields included in the `merchant_order_expenses.csv` file.
 
 | DEFAULT SEQUENCE | CSV COLUMN HEADER NAME | REQUIRED | TYPE | OTHER REQUIREMENTS / COMMENTS | DESCRIPTION |

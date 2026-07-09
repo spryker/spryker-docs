@@ -3,8 +3,6 @@ title: Upgrade the Merchant module
 description: This guide contains instructions on migrating the Merchant module provided by Spryker to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-merchant
-originalArticleId: dc3800f6-33d3-44ca-8480-2cda8320f724
 redirect_from:
   - /2021080/docs/migration-guide-merchant
   - /2021080/docs/en/migration-guide-merchant
@@ -31,5 +29,12 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-merchant.html
   - /docs/scos/dev/module-migration-guides/migration-guide-merchant.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-merchant-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-merchant-module.md -->

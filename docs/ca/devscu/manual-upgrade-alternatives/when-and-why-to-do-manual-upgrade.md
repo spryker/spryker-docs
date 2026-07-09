@@ -2,6 +2,7 @@
 title: When and why to use manual upgrade
 description: Learn when to use manual upgrade instead of the Spryker Code Upgrader and how to streamline the process with the Migration SDK.
 template: howto-guide-template
+last_updated: Nov 14, 2025
 ---
 
 The **Spryker Code Upgrader** is the primary and recommended tool for upgrading Spryker projects. It automates most upgrade steps, helping you keep your project aligned with the latest Spryker releases.  

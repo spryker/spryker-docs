@@ -3,8 +3,6 @@ title: Install Spryker
 description: Spryker provides an easy way to bootstrap applications and prepare development and production environments for running Spryker OS in Docker.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/installing-spryker-with-docker
-originalArticleId: 41fb5887-0351-4678-8e21-9c37ce898925
 redirect_from:
   - /docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/installing-spryker-with-development-virtual-machine.html
   - /docs/scos/dev/set-up-spryker-locally/installing-spryker-without-docker.html
@@ -23,6 +21,13 @@ related:
   - title: Install Docker prerequisites on Windows with WSL2
     link: docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This section is a comprehensive introduction to running Spryker locally.
 

@@ -3,11 +3,16 @@ title: MacOS and Windows - file synchronization issues in Development mode
 description: Learn how to deal with file synchronization issues in Development mode on MacOS and Windows.
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/macos-and-windows-file-synchronization-issues-in-development-mode
-originalArticleId: 1c53083e-003e-4fda-b23e-3d926adcd08b
 redirect_from:
 - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-running-applications-in-docker/macos-and-windows-file-synchronization-issues-in-development-mode.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 A project has file synchronization issues in Development mode.
 

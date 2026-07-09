@@ -6,6 +6,13 @@ description: Buyers can add notes to carts of their orders.
 template: concept-topic-template
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 The following diagram illustrates the dependencies between the modules for the *Marketplace Cart* feature.
 
 ![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/f2665938-a482-4b43-b37a-48e8ed682b5d.png?utm_medium=live&utm_source=custom)

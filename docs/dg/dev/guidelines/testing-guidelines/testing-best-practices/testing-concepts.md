@@ -3,8 +3,6 @@ title: Testing concepts
 description: Testing your project is one of the best ways to ensure that your software functions as it's supposed to. The role of testing is to find bugs during the early stages of development to minimize risks.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/testing-concepts
-originalArticleId: 4690680b-9b8f-4a7f-805c-1c8da2755279
 redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/testing-concepts.html
   - /docs/scos/dev/guidelines/testing-concepts.html
@@ -34,6 +32,13 @@ related:
     link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
 
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Testing your project is one of the best ways to ensure that your software functions as it's supposed to. The role of testing is to find bugs during the early stages of development to minimize risks. QA is the process of assuring quality, not just verifying you will not get an error on some page.
 

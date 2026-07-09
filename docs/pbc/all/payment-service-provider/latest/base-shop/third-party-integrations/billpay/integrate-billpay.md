@@ -3,8 +3,6 @@ title: Integrating Billpay
 description: Learn how you can integrate billpay in to your Spryker Cloud Commerce OS project.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/billpay-integration
-originalArticleId: 3d4bf922-652c-45c7-b130-951015ff3b65
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/billpay/integrating-billpay.html
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/billpay/integrating-billpay.html
@@ -14,6 +12,13 @@ related:
   - title: Billpay
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/billpay/billpay.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Billpay offers multiple payment methods (Invoice, Direct Debit, PayLater, Instalment). Availability of payment methods differs from country to country. Contact Billpay directly or visit the [Billpay website](https://www.billpay.de/en/)e  for details.
 

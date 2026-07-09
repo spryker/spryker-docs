@@ -3,8 +3,6 @@ title: Edit abstract products and product bundles
 description: Learn how to edit abstract products and product bundles in the Back Office.
 last_updated: June 27, 2022
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/editing-abstract-products
-originalArticleId: 7fe58b05-5718-4851-8f90-4167d1df999d
 redirect_from:
   - /2021080/docs/editing-abstract-products
   - /2021080/docs/en/editing-abstract-products

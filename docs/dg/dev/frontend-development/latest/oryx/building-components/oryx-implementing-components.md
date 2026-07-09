@@ -1,7 +1,7 @@
 ---
 title: "Oryx: Implementing components"
 description: Learn how to create an Oryx component
-last_updated: Sept 20, 2023
+last_updated: Sep 20, 2023
 template: concept-topic-template
 redirect_from:
 - /docs/scos/dev/front-end-development/202404.0/oryx/building-components/oryx-implementing-components.html

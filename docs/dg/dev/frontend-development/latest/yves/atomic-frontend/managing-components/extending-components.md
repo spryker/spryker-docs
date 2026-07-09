@@ -2,8 +2,6 @@
 title: Extending components
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/t-extend-component
-originalArticleId: b51d63f2-d18b-4383-8e17-dd87379c1271
 redirect_from:
   - /docs/scos/dev/front-end-development/202404.0/yves/atomic-frontend/managing-the-components/extending-a-component.html
   - /docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/extending-a-component.html
@@ -15,6 +13,13 @@ related:
   - title: Overriding a Component
     link: docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/overriding-components.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 With the idea of [atomic design](/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/atomic-frontend.html) implemented in Spryker Frontend, you have the possibility to develop each functional element of user interface in a self-contained, isolated container called a component. The frontend design allows you not only to [create components](/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/creating-components.html) on your own, but also [replace](/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/extending-components.html) any of them with a component that suits your needs better. But what if you do not want to replace a component? You can create a new component on the basis of an existing one. In this case, you will be able to use both the new component and the source one at the same time.
 

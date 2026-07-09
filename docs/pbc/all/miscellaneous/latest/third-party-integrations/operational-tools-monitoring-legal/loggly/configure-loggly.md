@@ -7,6 +7,13 @@ redirect_from:
     - /docs/scos/dev/technology-partner-guides/202204.0/operational-tools-monitoring-legal-etc/loggly/configuring-loggly.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 
 To configure Loggly, do the following.
 

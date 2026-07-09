@@ -3,8 +3,6 @@ title: Show messages in the Back Office
 description: Learn how to implement tailored notifications for improved user experience and efficient system communication in the Back Office.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/flash-messenger
-originalArticleId: b70d9c91-abd3-41bb-b2b8-533009604e02
 redirect_from:
   - /docs/scos/dev/back-end-development/messages-and-errors/showing-messages-in-zed.html
 related:
@@ -13,6 +11,13 @@ related:
   - title: Handling Internal Server messages
     link: docs/dg/dev/backend-development/messages-and-errors/handling-internal-server-messages.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to show a message in the Back Office.
 

@@ -3,13 +3,18 @@ title: Install the Product Tax Sets Glue API
 description: This guide will guide you through the process of installing and configuring the Product Tax Sets API feature in your project.
 last_updated: Nov 22, 2019
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/v2/docs/product-tax-sets-api-feature-integration-201903
-originalArticleId: abdf52c7-aadd-4d9e-84fa-1f7bd1790ed5
 redirect_from:
   - /docs/pbc/all/tax-management/202311.0/install-and-upgrade/integrate-the-product-tax-sets-glue-api.html
   - /docs/pbc/all/tax-management/202311.0/base-shop/install-and-upgrade/install-the-product-tax-sets-glue-api.html
   - /docs/pbc/all/tax-management/202311.0/base-shop/spryker-tax/install-and-upgrade/install-the-product-tax-sets-glue-api.html
   - /docs/pbc/all/tax-management/202204.0/base-shop/install-and-upgrade/install-the-product-tax-sets-glue-api.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/install-features/latest/install-glue-api/install-the-product-tax-sets-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-product-tax-sets-glue-api.md -->

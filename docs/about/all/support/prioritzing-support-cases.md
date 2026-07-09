@@ -3,13 +3,18 @@ title: Prioritizing support cases
 description: Learn how Spryker prioritizes support cases based on business impact and urgency to ensure timely assistance and effective solutions for critical issues.
 last_updated: Sep 6, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/docs/scos/user/intro-to-spryker/support/understanding-ticket-status.html
-originalArticleId: af927b8c-2fc0-46ab-a54d-4ae83d18ca89
 redirect_from:
   - /docs/scos/user/intro-to-spryker/support/understanding-ticket-status.html
   - /docs/scos/user/intro-to-spryker/support/case-escalation.html
   - /docs/scos/user/intro-to-spryker/support/business-impact-and-case-priorities.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 
 While we are trying to solve cases on time, we need to triage and prioritize cases on a daily basis. When you create a case, you can indicate how urgent it's for you by choosing the correct case type and business impact and provide adequate info to help us assess how important your case is in relation to other cases that are in our backlog. At the end of the day, how high or low a case is prioritized by the support team is a function of the following:

@@ -3,8 +3,6 @@ title: Standard Filters Backend and Frontend Technical Details
 description: This document provides information about technical details for the frontend and backend development for the standard filters.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/standard-filters-backend-and-frontend-technical-details
-originalArticleId: 91e05caf-ad96-4592-b8c8-7652b1f2ca4f
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/standard-filters-backend-and-frontend-technical-details.html
 related:
@@ -13,6 +11,13 @@ related:
   - title: Managing Category Filters
     link: docs/pbc/all/search/latest/base-shop/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Backend technical details
 

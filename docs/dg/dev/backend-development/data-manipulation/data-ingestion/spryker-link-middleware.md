@@ -3,12 +3,17 @@ title: Spryker LINK Middleware
 description: Spryker LINK Middleware is a constructor that allows you to set up a linear data processing flow, also referred to as pipeline, for import/export of data from some system to shop, or from shop to some system.
 last_updated: Oct 13, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/spryker-middleware
-originalArticleId: b7dfbdc2-5647-4314-9bb3-5302f378ce2b
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/spryker-link-middleware.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/spryker-middleware.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% info_block warningBox "Warning" %}
 

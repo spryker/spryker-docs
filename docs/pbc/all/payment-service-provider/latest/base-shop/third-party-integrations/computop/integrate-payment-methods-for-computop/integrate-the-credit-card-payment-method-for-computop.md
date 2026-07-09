@@ -3,8 +3,6 @@ title: Integrating the Credit Card payment method for Computop
 description: Integrate  Credit Card payment through Computop into the Spryker-based shop.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/computop-credit-card
-originalArticleId: 682d66ae-585b-4de5-bfad-3ab51281697f
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-credit-card-payment-method-for-computop.html
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-credit-card-payment-method-for-computop.html
@@ -35,6 +33,13 @@ related:
   - title: Computop - OMS plugins
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/computop-oms-plugins.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Example State Machine:
 

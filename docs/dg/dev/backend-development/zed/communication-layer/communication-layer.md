@@ -3,8 +3,6 @@ title: About Communication layer
 description: Zed's communication layer is the entry point to the system. Here are executed all of the external requests from users, the Yves-application and all command-line calls. The purpose of this layer is to retrieve the data, delegate to the business layer and to handover it to the presentation layer.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/zed-controllers-actions
-originalArticleId: 32268e14-8a03-4576-a7fc-5290bb073767
 redirect_from:
   - /docs/scos/dev/back-end-development/zed/communication-layer/communication-layer.html
 related:
@@ -15,6 +13,13 @@ related:
   - title: About the Persistence layer
     link: docs/dg/dev/backend-development/zed/persistence-layer/persistence-layer.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Zed's `Communication` layer is the entry point to the system. Here are executed all of the external requests from users, the Yves application, and all command-line calls. The purpose of this layer is to retrieve the data, delegate it to the `Business` layer, and hand it over to the `Presentation` layer.
 

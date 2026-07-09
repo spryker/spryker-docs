@@ -3,8 +3,6 @@ title: RatePay Core module structure diagram
 description: This article includes module schema with the class structure and flow for RatePay.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/ratepay-structure-diag
-originalArticleId: dfe4133a-18c0-447b-b932-14d3ff410480
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
   - /docs/scos/user/technology-partners/202204.0/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
@@ -29,6 +27,13 @@ related:
   - title: Integrating the Direct Debit payment method for RatePay
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-direct-debit-payment-method-for-ratepay.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The RatePay core module uses the following class structure and flow.
 

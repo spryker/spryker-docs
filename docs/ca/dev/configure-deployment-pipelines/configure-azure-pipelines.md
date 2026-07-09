@@ -3,8 +3,6 @@ title: Configure Azure Pipelines
 description: Set up Azure Pipelines for CI/CD in Spryker Cloud Commerce OS, with steps for YAML configuration, testing, and connecting to an AWS repository.
 template: howto-guide-template
 last_updated: Nov 21, 2024
-originalLink: https://cloud.spryker.com/docs/configuring-azure-pipelines
-originalArticleId: df3448d4-34a8-43a8-bc58-f37ea8b6cd8d
 redirect_from:
   - /docs/configuring-azure-pipelines
   - /docs/en/configuring-azure-pipelines

@@ -3,8 +3,6 @@ title: Setting up a custom domain name
 description: Set up a custom domain name in Spryker, with options for configuring domains using Route 53 or third-party DNS providers for staging and production
 template: howto-guide-template
 last_updated: Oct 6, 2023
-originalLink: https://cloud.spryker.com/docs/setting-up-a-custom-domain-name
-originalArticleId: fbf9cb02-2a68-45bd-a404-258011585225
 redirect_from:
   - /docs/setting-up-a-custom-domain-name
   - /docs/en/setting-up-a-custom-domain-name

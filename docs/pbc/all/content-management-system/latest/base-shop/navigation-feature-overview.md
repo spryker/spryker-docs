@@ -3,8 +3,6 @@ title: Navigation feature overview
 description: Build and manage an intuitive navigation for your customers to find products within your Spryker shop.
 last_updated: Jul 23, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/navigation-feature-overview
-originalArticleId: 6d0a1210-9c3e-44b2-b6c9-aa0cf7780cba
 redirect_from:
   - /docs/scos/user/features/202005.0/navigation-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/201907.0/navigation-feature-walkthrough/navigation-module.html
@@ -15,6 +13,13 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/navigation-feature-overview.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/navigation-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The *Navigation* feature lets product catalog managers create intuitive navigation elements and display them on the Storefront. Product catalog managers can create different types of navigation for different places of the shop. For example, they can add a fully-fledged navigation tree for main website navigation, several simple navigation lists for the footer, and any number of custom navigation elements for CMS pages.
 

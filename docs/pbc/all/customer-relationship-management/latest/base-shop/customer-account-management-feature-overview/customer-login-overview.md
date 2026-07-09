@@ -3,8 +3,6 @@ title: Customer Login overview
 description: Learn more about the Spryker Customer Login with this overview guide and learn how creating a strong password policy can enhance your security.
 last_updated: May 7, 2026
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/customer-login-overview
-originalArticleId: 7641234a-88aa-4031-85e1-c67aa38eb030
 redirect_from:
   - /2021080/docs/customer-login-overview
   - /2021080/docs/en/customer-login-overview

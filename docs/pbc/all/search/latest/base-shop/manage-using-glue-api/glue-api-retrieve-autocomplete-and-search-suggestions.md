@@ -3,8 +3,6 @@ title: "Glue API: Retrieve autocomplete and search suggestions"
 description: This article provides information on which endpoints to use to get search and auto-completion suggestions for your products, categories, and CMS fields.
 last_updated: Jul 20, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-autocomplete-and-search-suggestions
-originalArticleId: 31e2cfd0-e6e5-46ee-96a9-93ae816d6761
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/retrieving-autocomplete-and-search-suggestions.html
   - /docs/pbc/all/search/202311.0/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html
@@ -13,6 +11,13 @@ related:
   - title: Searching the product catalog
     link: docs/pbc/all/search/latest/base-shop/manage-using-glue-api/glue-api-search-the-product-catalog.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 In addition to [catalog search](/docs/pbc/all/search/latest/base-shop/manage-using-glue-api/glue-api-search-the-product-catalog.html), Glue API allows you to retrieve autocomplete suggestions for products, categories, and CMS pages. The feature allows developers to predict search strings and provide customers with available options.
 

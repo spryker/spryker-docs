@@ -3,8 +3,6 @@ title: Upgrade the Refund module
 description: Use the guide to learn how to update the Refund module to a newer version.
 last_updated: Aug 2, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-refund
-originalArticleId: 30c8c793-2247-4074-8e0e-9418ee1b0ba5
 redirect_from:
   - /2021080/docs/mg-refund
   - /2021080/docs/en/mg-refund
@@ -34,5 +32,12 @@ redirect_from:
   - /docs/pbc/all/order-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-refund-module.html
   - /docs/pbc/all/order-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-refund-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-refund-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-refund-module.md -->

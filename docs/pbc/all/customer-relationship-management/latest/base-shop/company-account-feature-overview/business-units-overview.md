@@ -3,8 +3,6 @@ title: Business Units overview
 description: Once a company administrator has created a company, and it has been activated and approved, they can start building the organizational structure.
 last_updated: Jul 19, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/business-units-overview
-originalArticleId: 7b1313e3-9240-4a26-a9ef-b00a8eb20fad
 redirect_from:
   - /2021080/docs/business-units-overview
   - /2021080/docs/en/business-units-overview
@@ -14,6 +12,13 @@ redirect_from:
   - /docs/scos/user/features/202311.0/company-account-feature-overview/business-units-overview.html
   - /docs/scos/user/features/202204.0/company-account-feature-overview/business-units-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Once a company administrator has created a company that has been activated and approved in the Back Office, they can start building their company's organizational structure in the **My Company** section of the webshop.
 

@@ -3,8 +3,6 @@ title: Manage customer access
 description: Learn how to manage customer access in the Spryker Back Office and configure their permissions for use and access of the storefront.
 last_updated: May 10, 2022
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-access
-originalArticleId: c74c94ad-1095-4299-8675-7128bf96d855
 redirect_from:
   - /2021080/docs/managing-customer-access
   - /2021080/docs/en/managing-customer-access

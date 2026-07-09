@@ -3,8 +3,6 @@ title: Check availability of products
 description: Learn how to check availability of products directly in the Back Office of your Spryker based project.
 last_updated: June 3, 2022
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-products-availability
-originalArticleId: a694b2d4-3f66-40fd-8539-d8b455c2da8f
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202108.0/catalog/availability/managing-products-availability.html
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/availability/managing-products-availability.html

@@ -3,8 +3,6 @@ title: Queue
 description: The document explains the Spryker Queue System- its work, benefits and configuration
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/queue
-originalArticleId: c9916ed4-acec-43d0-8a68-0e9805ce8c15
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/queue/queue.html
 related:
@@ -12,6 +10,13 @@ related:
     link: docs/dg/dev/backend-development/data-manipulation/queue/queue-pool.html
 
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Concepts
 

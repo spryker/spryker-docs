@@ -2,11 +2,16 @@
 title: Baqend
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/baqend
-originalArticleId: dc885480-133d-423b-b566-e11bfcfe0c39
 redirect_from:
   - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/ab-testing-and-performance/baqend.html  
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ---
 

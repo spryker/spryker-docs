@@ -3,8 +3,6 @@ title: CMS feature overview
 description: The Spryker Commerce OS offers a feature-rich content management system that allows providing the right content at the right place at the right time.
 last_updated: Jul 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/cms
-originalArticleId: 31b0fc46-5030-47e2-95fb-b002e42c8e7d
 redirect_from:
   - /docs/scos/user/features/202108.0/cms-feature-overview/cms-feature-overview.html
   - /docs/scos/user/features/202200.0/cms-feature-overview/cms-feature-overview.html
@@ -14,6 +12,13 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/base-shop/tutorials-and-howtos/tutorial-cms.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/cms-feature-overview/cms-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The *CMS* feature is lets you create and manage the content of custom pages that are not part of the product catalog.
 

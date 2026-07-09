@@ -3,8 +3,6 @@ title: On-site search
 description: Providing users with a proper on-site search user experience is often one of the major technical challenges in building ecommerce websites.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/search-design-patterns
-originalArticleId: a6003c30-f01e-4baa-a0f1-64fb55ce5217
 redirect_from:
   - /2021080/docs/search-design-patterns
   - /2021080/docs/en/search-design-patterns
@@ -45,6 +43,13 @@ related:
   - title: Usage-driven schema and document structure
     link: docs/pbc/all/search/latest/base-shop/best-practices/usage-driven-schema-and-document-structure.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Search design patterns for ecommerce: schema Structure, data-driven ranking and more
 

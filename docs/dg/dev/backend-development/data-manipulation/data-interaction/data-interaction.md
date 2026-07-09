@@ -4,6 +4,7 @@ description: Spryker's data interaction tools offer efficient backend data handl
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/data-interaction.html
+last_updated: May 14, 2025
 ---
 
 This section contains a collection of articles describing how data interaction happens in the Spryker SCOS. Topics include:

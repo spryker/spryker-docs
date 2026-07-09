@@ -3,11 +3,16 @@ title: PHPStan memory issues
 description: Learn how to troubleshoot and resolve PHPStan memory issues that you may come across in your Spryker based projects.
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/phpstan-memory-issues
-originalArticleId: c234b12e-5260-4f86-97b4-44c7ef5c8dbf
 redirect_from:
 - /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/phpstan-memory-issues.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Cause
 

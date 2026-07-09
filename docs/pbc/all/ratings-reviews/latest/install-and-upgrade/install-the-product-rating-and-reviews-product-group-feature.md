@@ -7,4 +7,11 @@ redirect_from:
 - /docs/pbc/all/ratings-reviews/202204.0/install-and-upgrade/install-the-product-rating-and-reviews-product-group-feature.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 {% include pbc/all/install-features/latest/install-the-product-group-product-rating-and-reviews-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-group-product-rating-and-reviews-feature.md -->

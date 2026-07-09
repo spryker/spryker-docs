@@ -3,8 +3,6 @@ title: Order Cancellation overview
 description: Sometimes customers need to cancel their order, learn all about the Spryker Order Cancellation feature allowing orders to be canceled within a timed period.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/order-cancellation-overview
-originalArticleId: 454fec27-cd49-4939-ba51-4a6b9c80468b
 redirect_from:
   - /2021080/docs/order-cancellation-overview
   - /2021080/docs/en/order-cancellation-overview
@@ -12,6 +10,13 @@ redirect_from:
   - /docs/en/order-cancellation-overview
   - /docs/scos/user/features/202204.0/order-management-feature-overview/order-cancellation-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Order cancellation makes the shopping experience of B2B and B2C shoppers more flexible by allowing them to cancel their orders within a defined time period. Also, it optimizes the workflow of sales and customer service by allowing them to cancel orders on customers' behalf in the Back Office.
 

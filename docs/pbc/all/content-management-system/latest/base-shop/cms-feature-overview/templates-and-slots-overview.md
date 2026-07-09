@@ -3,8 +3,6 @@ title: Templates and Slots overview
 description: Templates with slots is a powerful way to manage the content of your shop.
 last_updated: Jul 22, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/templates-and-slots-overview
-originalArticleId: d9a2e5ab-33c9-4d63-ac38-8b86c0a17f97
 redirect_from:
   - /2021080/docs/templates-and-slots-overview
   - /2021080/docs/en/templates-and-slots-overview
@@ -13,6 +11,13 @@ redirect_from:
   - /docs/scos/user/features/202311.0/cms-feature-overview/templates-and-slots-overview.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/cms-feature-overview/templates-and-slots-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 *Templates and Slots* lets content managers effectively and coherently interact with content using a dedicated template in Spryker—a template with slots. In the Back Office, a content manager has access to all the Storefront pages and can easily embed content into them. The embedded content is rendered by the [Slot Widget](#slot-widget).
 

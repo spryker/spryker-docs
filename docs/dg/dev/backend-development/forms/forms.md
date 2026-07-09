@@ -3,14 +3,19 @@ title: Forms
 description: The document describes how to integrate and configure the Forms and Validator components of Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/form-and-validator
-originalArticleId: 67d7349f-f667-4371-a0f4-e4632ff42567
 redirect_from:
   - /docs/scos/dev/back-end-development/forms/forms.html
 related:
   - title: Creating forms
     link: docs/dg/dev/backend-development/forms/create-forms.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Spryker uses **Symfony Forms** as the default form engine and **Symfony Validator** for form validation. In combination with Symfony components, we also use an additional **Validator** Service.
 

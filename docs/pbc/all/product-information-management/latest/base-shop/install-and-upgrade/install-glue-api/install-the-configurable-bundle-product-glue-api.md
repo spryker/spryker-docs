@@ -3,8 +3,6 @@ title: Install the Configurable Bundle + Product Glue API
 description: Learn how to integrate the Glue API - Configurable Bundle + Product feature into a Spryker project.
 last_updated: Jun 18, 2021
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/glue-api-configurable-bundle-product-feature-integration
-originalArticleId: 6afcf67c-cdf1-43c8-8881-c87650dba091
 redirect_from:
   - /2021080/docs/glue-api-configurable-bundle-product-feature-integration
   - /2021080/docs/en/glue-api-configurable-bundle-product-feature-integration
@@ -16,5 +14,12 @@ related:
   - title: Install the Configurable Bundle Glue API
     link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-glue-api.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/install-features/latest/install-glue-api/install-the-configurable-bundle-product-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-configurable-bundle-product-glue-api.md -->

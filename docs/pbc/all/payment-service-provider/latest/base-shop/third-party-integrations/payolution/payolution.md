@@ -3,8 +3,6 @@ title: Payolution
 description: Provide invoice, installment, monthly invoice, and direct debit solutions by integrating Payolution into the Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/payolution
-originalArticleId: 4d4f59ce-7e96-42af-a61d-c23df33d1205
 redirect_from:
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payolution/payolution.html
 related:
@@ -21,6 +19,13 @@ related:
   - title: Integrating the invoice paymnet method for Payolution
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/integrate-the-invoice-payment-method-for-payolution.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Partner Information
 

@@ -3,8 +3,6 @@ title: Import Content Management System data
 description: Learn about the data import files that are used to import data related to the Content Management System in Spryker Cloud Commerce OS.
 last_updated: Jun 16, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/content-management
-originalArticleId: 07c058ac-4c85-4746-83f2-ae4115aca6f6
 redirect_from:
   - /2021080/docs/content-management
   - /2021080/docs/en/content-management
@@ -16,6 +14,13 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/import-and-export-data/import-content-management-system-data.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/import-and-export-data/import-content-management-system-data.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To learn how data import works and about different ways of importing data, see [Data import](/docs/dg/dev/data-import/latest/data-import.html). This section describes the data import files that are used to import data related to the Content Management System PBC.
 

@@ -7,6 +7,13 @@ redirect_from:
   - /docs/marketplace/user/features/202311.0/merchant-category-feature-overview.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 As the Marketplace environment presupposes having a lot of sellers—merchants, classification and categorization of merchants arise at some point. For this purpose, the Merchant Category entity exists. By defining merchant categories for merchants, you add flexibility to the working process and let customers implement different business logic on your project.
 For shoppers, it's convenient to find the necessary and relevant merchants and their products according to certain merchant categories.
 

@@ -2,8 +2,6 @@
 title: Upgrade the CatalogSearchRestApi module
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/catalogsearchrestapi-migration-guide
-originalArticleId: ba726860-285f-40b4-bfc4-4f7ca8c41ea3
 redirect_from:
   - /2021080/docs/catalogsearchrestapi-migration-guide
   - /2021080/docs/en/catalogsearchrestapi-migration-guide
@@ -31,5 +29,12 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/glue-api/catalogsearchrestapi-migration-guide.html
   - /module_migration_guides/about-migration/glue_api/catalogsearchrestapi-migration-guide.htm
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-catalogsearchrestapi-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-catalogsearchrestapi-module.md -->

@@ -3,8 +3,6 @@ title: Product Bundles feature overview
 description: With the Product Bundles feature you can freely tie individual items together and sell them as a package in your Spryker project
 last_updated: Jul 26, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/product-bundles-feature-overview
-originalArticleId: b0ed4278-e037-4644-a602-ae16f40a4d9c
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202200.0/product-bundles-feature-walkthrough.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/product-bundles-feature-walkthrough.html
@@ -13,6 +11,13 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-bundles-feature-overview.html
   - /docs/pbc/all/product-information-management/202505.0/base-shop/feature-overviews/product-bundles-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 With the *Product Bundles* feature you can tie individual items together and sell them as a package. As opposed to a set, in which products are loosely grouped, the items in a bundle are always sold together. You can choose to create a special bundle price to make the purchase more attractive. Since each bundle's product is still handled like an individual item in the Order Management Process, bundle availability is always calculated and displayed based on the item with the smallest available stock to avoid overselling.
 

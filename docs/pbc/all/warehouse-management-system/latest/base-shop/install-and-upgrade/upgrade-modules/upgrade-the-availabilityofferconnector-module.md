@@ -3,8 +3,6 @@ title: Upgrade the AvailabilityOfferConnector module
 description: Use the guide to migrate to a new version of the AvailabilityOfferConnector module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-availability-offer-connector
-originalArticleId: c60e70ad-a7d9-4bc7-a318-c1b173302b36
 redirect_from:
   - /2021080/docs/mg-availability-offer-connector
   - /2021080/docs/en/mg-availability-offer-connector
@@ -33,5 +31,12 @@ redirect_from:
   - /module_migration_guides/mg-availability-offer-connector.htm
   - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilityofferconnector-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-availabilityofferconnector-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-availabilityofferconnector-module.md -->

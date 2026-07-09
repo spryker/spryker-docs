@@ -3,8 +3,6 @@ title: Debug listeners
 description: Learn how to debug listeners in Spryker to ensure smooth data publishing. Follow best practices for troubleshooting backend events and improving performance.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-debug-listeners
-originalArticleId: 283a1100-8a5f-4c6d-8cdd-a8a093aea5a6
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/debug-listeners.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/debugging-listeners.html
@@ -28,6 +26,13 @@ related:
   - title: Synchronization behavior - enabling multiple mappings
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 
 The document provides information on the `event:trigger:listener` command. The command debugs an event message with a specific listener mapped to it.

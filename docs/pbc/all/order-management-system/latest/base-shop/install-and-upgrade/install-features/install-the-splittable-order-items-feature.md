@@ -3,8 +3,6 @@ title: Install the Splittable Order Items feature
 description: Learn with Order Management system how to Integrate the Splittable Order Items feature into your Spryker project.
 last_updated: Jun 20, 2022
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/v3/docs/splittable-order-items-integration
-originalArticleId: ea499c83-900d-4788-bcaf-c7981220b441
 redirect_from:
   - /v3/docs/splittable-order-items-integration
   - /v3/docs/en/splittable-order-items-integration

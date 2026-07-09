@@ -3,8 +3,6 @@ title: "Glue API: Manage product reviews"
 description: Learn how to manage product reviews via the Glue API for your Spryker Cloud Commerce OS Project.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-product-ratings-and-reviews
-originalArticleId: e712d25f-b084-4fac-ac5f-cbb46e0947cb
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/managing-product-ratings-and-reviews.html  
   - /docs/pbc/all/ratings-reviews/202311.0/manage-using-glue-api/manage-product-reviews-using-glue-api.html
@@ -13,6 +11,13 @@ related:
   - title: Product Rating and Reviews feature overview
     link: docs/pbc/all/ratings-reviews/latest/ratings-and-reviews.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 [Ratings and reviews](/docs/pbc/all/ratings-reviews/latest/ratings-and-reviews.html) allow customers to share their opinions and experiences about purchases. This enables customers to take meaningful decisions about purchases and increases their trust with the shop.
 

@@ -3,8 +3,6 @@ title: "Export file details: orders.csv"
 description: The document explains the format of the orders.csv, order-items.csv, order-expenses.csv export files for Spryker Order Management System
 last_updated: Jun 16, 2021
 template: data-export-template
-originalLink: https://documentation.spryker.com/2021080/docs/data-export-orders-csv-files-format
-originalArticleId: 90c9187a-73af-4fb5-92fd-914ed471f74e
 redirect_from:
   - /docs/pbc/all/order-management-system/202311.0/base-shop/import-and-export-data/export-file-details-orders.csv.html
 related:
@@ -13,6 +11,13 @@ related:
   - title: Install the Sales Data Export feature
     link: docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 
 {% include integrations/export-file-details-orders.csv-body.md %}

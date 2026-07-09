@@ -3,8 +3,6 @@ title: "Import file details: payment_method.csv"
 description: Learn how to configure Payment Method information using the payment method csv file in your Spryker Cloud Commerce Os Project.
 last_updated: Jun 16, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/file-details-payment-methodcsv
-originalArticleId: 77b583a2-c11e-433a-8883-4fa5a4fb2815
 redirect_from:
   - /2021080/docs/file-details-payment-methodcsv
   - /2021080/docs/en/file-details-payment-methodcsv
@@ -19,6 +17,13 @@ related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the `payment_method.csv` file to configure the [Payment Method](/docs/pbc/all/payment-service-provider/latest/base-shop/payments-feature-overview.html) information in your Spryker Demo Shop.
 

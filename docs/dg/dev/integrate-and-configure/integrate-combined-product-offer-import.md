@@ -10,6 +10,13 @@ redirect_from:
   - /docs/scos/dev/technical-enhancement-integration-guides/install-combined-product-offer-import.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 This document describes how to install Combined Product Offer Import.
 
 ## Prerequisites

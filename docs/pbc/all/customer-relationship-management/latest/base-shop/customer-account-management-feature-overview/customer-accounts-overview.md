@@ -3,14 +3,19 @@ title: Customer Accounts overview
 description: Learn more about the Spryker Customer Accounts with this overview guide, explaining what Customer accounts are and how you can use them for your business.
 last_updated: Aug 13, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/customer-accounts-overview
-originalArticleId: 94150bcb-e1c5-4290-b661-71af9fc3cbb3
 redirect_from:
   - /docs/order-history-reference-information
   - /docs/en/order-history-reference-information
   - /docs/scos/user/features/202311.0/customer-account-management-feature-overview/customer-accounts-overview.html
   - /docs/scos/user/features/202204.0/customer-account-management-feature-overview/customer-accounts-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 A *customer account* contains the following customer information about the Storefront:
 

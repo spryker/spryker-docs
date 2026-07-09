@@ -3,8 +3,6 @@ title: Connecting the Docker SDK
 description: Set up and connect Spryker's Docker SDK to align your local and cloud environments, with guidance for configuration and deployment
 last_updated: Apr 03, 2022
 template: howto-guide-template
-originalLink: https://cloud.spryker.com/docs/connecting-docker-sdk
-originalArticleId: a4fe702d-b469-4224-a329-aba9f6c2c027
 redirect_from:
   - /docs/connecting-docker-sdk
   - /docs/en/connecting-docker-sdk

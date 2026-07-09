@@ -3,8 +3,6 @@ title: Install the Product + Cart feature
 description: The guide walks you through the process of installing the Product and Cart features in your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/product-cart-feature-integration
-originalArticleId: 5314b756-dcd4-467b-9777-114744b9d44f
 redirect_from:
   - /2021080/docs/product-cart-feature-integration
   - /2021080/docs/en/product-cart-feature-integration
@@ -20,5 +18,12 @@ related:
   - title: Product image management
     link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-images-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/install-features/latest/install-the-product-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-cart-feature.md -->

@@ -3,8 +3,6 @@ title: "HowTo: Create and register a MailTypeBuilderPlugin"
 description: Use this guide to create and register the  MailTypeBuilderPlugin in the Mail module.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-mail-create-mailtype-plugin
-originalArticleId: ba04380c-00b9-4815-9023-839c99a31497
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin
   - /2021080/docs/ht-mail-create-mailtype-plugin
@@ -25,6 +23,13 @@ redirect_from:
   - /v1/docs/en/ht-make-product-shown-on-frontend-by-url
   - /docs/pbc/all/emails/202204.0/howto-create-and-register-a-mail-type-builder-plugin.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 `MailTypeBuilderPlugin` is used to build the entire `MailTransfer` through an easy-to-use interface. Create the `MailTypeBuilderPlugin` within the `Mail` module, which sends out the emails, and implement `MailTypeBuilderPluginInterface`.
 Then, in the `build()` method, set up your email.

@@ -3,8 +3,6 @@ title: "Glue API: Retrieve navigation trees"
 description: The topic demonstrates how to retrieve navigation trees with the help of API endpoints.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-navigation-trees
-originalArticleId: 6dba4315-b7d0-485e-880e-b7d4ff125a3a
 redirect_from:
   - /docs/scos/dev/glue-api-guides/201811.0/retrieving-navigation-trees.html
   - /docs/scos/dev/glue-api-guides/202311.0/retrieving-navigation-trees.html
@@ -17,6 +15,13 @@ related:
   - title: Retrieving category trees
     link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The Navigation <!-- add link to feature overview later --> feature enables back-end developers to create navigation elements for Storefront. The navigation elements help shop users to navigate the shop and locate the necessary products and other content. Navigation elements can be linked to CMS pages, categories, as well as internal and external links.
 

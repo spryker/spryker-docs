@@ -3,13 +3,18 @@ title: Flysystem
 description: The Flysystem module integrates Spryker with the thephpleague flysystem vendor package
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/flysystem
-originalArticleId: b68c1798-4db1-4a2b-87bf-b54d4052a741
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-enable-sftp-for-flysystem.html
 
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The Flysystem module integrates Spryker with the [thephpleague/flysystem](https://github.com/thephpleague/flysystem) vendor package.
 

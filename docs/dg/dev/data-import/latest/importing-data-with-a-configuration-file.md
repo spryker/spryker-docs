@@ -3,12 +3,17 @@ title: Importing data with a configuration file
 description: Learn how to run import in bulk using a .yml configuration file
 last_updated: Jun 16, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/importing-data-with-configuration-file
-originalArticleId: 6b17897b-a145-443e-a0ff-162ad92138a9
 redirect_from:
   - /docs/scos/dev/data-import/202404.0/importing-data-with-a-configuration-file.html
   - /docs/scos/dev/data-import/202204.0/importing-data-with-a-configuration-file.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To quickly populate your shop system with data such as product information, customers, categories, etc., you can import it from the .csv files. To import your data, you can use [console commands](/docs/dg/dev/data-import/latest/importing-data-with-a-configuration-file.html#console-commands-to-run-import) to either run an individual data importer or import multiple data in bulk.
 {% info_block infoBox "Info" %}

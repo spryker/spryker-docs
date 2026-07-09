@@ -3,8 +3,6 @@ title: Install category CMS blocks
 description: Learn how to install Spryker category CMS blocks into a Spryker project and show them on Category Pages.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/enabling-the-category-cms-block
-originalArticleId: ee92c90c-e72e-415e-ab58-19089024d1b5
 redirect_from:
   - /docs/scos/dev/technical-enhancements/enabling-the-category-cms-block.html
   - /docs/scos/dev/technical-enhancements/enabling-the-category-cms-blocks.html
@@ -15,6 +13,13 @@ related:
   - title: Upgrade the CmsBlock module
     link: docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 A category block is a CMS block that can be embedded into a category template.
 

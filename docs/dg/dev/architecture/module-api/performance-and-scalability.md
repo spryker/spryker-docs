@@ -3,8 +3,6 @@ title: Performance and scalability
 description: Scalability, as an integral part of the core architecture, is achieved by separating the frontend (Yves) and backend (Zed) applications.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/performance-scalability
-originalArticleId: bb8130db-dd39-4a30-9de1-7fdc13781bc8
 redirect_from:
   - /docs/scos/dev/architecture/module-api/performance-and-scalability.html
   - /docs/scos/dev/setup/scalability.html
@@ -16,6 +14,13 @@ related:
   - title: "Declaration of module APIs: Public and private"
     link: docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Spryker Commerce OS was built to enable the development of high-performance e-commerce applications that can support an extremely high number of unique visitors. However, no application can be both light and heavy at the same time.
 

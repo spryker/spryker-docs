@@ -3,8 +3,6 @@ title: Create user roles
 description: Learn how you can create new user roles directly in the back office of Spryker Cloud Commerce OS.
 last_updated: Aug 2, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-roles
-originalArticleId: 646ae8f6-32b9-440d-8cdf-c720d046de25
 redirect_from:
   - /2021080/docs/managing-roles
   - /2021080/docs/en/managing-roles
@@ -17,6 +15,13 @@ related:
   - title: Editing user roles
     link: docs/pbc/all/user-management/latest/base-shop/manage-in-the-back-office/manage-user-roles/edit-user-roles.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to create user roles in the Back Office.
 

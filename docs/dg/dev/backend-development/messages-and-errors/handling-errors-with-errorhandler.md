@@ -3,8 +3,6 @@ title: Handling errors with ErrorHandler
 description: The ErrorHandler handles notices, warnings and other types of minor issues usually not thrown as exceptions as strict as more serious errors.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/error-handler
-originalArticleId: 6b2b8617-7839-4220-aa59-51bf3d5bbd7d
 redirect_from:
   - /docs/scos/dev/back-end-development/messages-and-errors/handling-errors-with-errorhandler.html
 related:
@@ -13,6 +11,13 @@ related:
   - title: Showing messages in Zed
     link: docs/dg/dev/backend-development/messages-and-errors/show-messages-in-the-back-office.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The Spryker Commerce OS uses a dedicated error handling mechanism to collect detailed information on errors. Normally, notices, warnings, and other types of minor issues are not thrown as exceptions, but ErrorHandler converts them into meaningful exceptions. These exceptions pose an early warning system for isolating minor issues in code that are usually overlooked.
 

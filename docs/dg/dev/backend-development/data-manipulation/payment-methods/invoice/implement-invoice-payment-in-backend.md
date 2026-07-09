@@ -3,8 +3,6 @@ title: Implement invoice payment in backend
 description: This document describes how to implement invoice payment in the backend.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-invoice-payment-be
-originalArticleId: 871036bd-f7d0-42bd-ad66-22673456387e
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-backend.html
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-back-end.html
@@ -20,6 +18,13 @@ related:
   - title: Test the invoice payment implementation
     link: docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/test-the-invoice-payment-implementation.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Checkout plugins
 

@@ -3,8 +3,6 @@ title: Application
 description: Spryker Application and its Application Plugins will be used to add global services. All Application Plugins are added with corresponding Dependency Providers.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/application
-originalArticleId: e202f0ed-1278-473c-bfd1-1258f1195920
 redirect_from:
 - /docs/scos/dev/migration-concepts/silex-replacement/application.html
 related:
@@ -13,6 +11,13 @@ related:
   - title: Container
     link: docs/scos/dev/migration-concepts/silex-replacement/container.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Previously, we had used Silex service providers to implement Symfony components and bootstrap the application. Since Silex had been abandoned, we refactored it out.
 

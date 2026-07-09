@@ -3,8 +3,6 @@ title: Configuring GitLab pipelines
 description: Learn how to configure GitLab Pipelines for continuous integration and delivery in Spryker Cloud Commerce OS
 template: howto-guide-template
 last_updated: Dec 4, 2023
-originalLink: https://cloud.spryker.com/docs/configuring-gitlab-pipelines
-originalArticleId: ed39b199-299a-4ad0-87c0-b259c5c171f0
 redirect_from:
   - /docs/configuring-gitlab-pipelines
   - /docs/en/configuring-gitlab-pipelines

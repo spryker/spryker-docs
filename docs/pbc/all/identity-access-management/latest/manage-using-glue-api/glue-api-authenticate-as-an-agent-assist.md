@@ -3,8 +3,6 @@ title: "Glue API: Authenticate as an agent assist"
 description: Learn how to authenticate as an agent assist on the Storefront using the Spryker GLUE API.
 last_updated: Jun 22, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/authenticating-as-an-agent-assist
-originalArticleId: 33952f89-fed4-4e33-95f4-79e969752e9d
 redirect_from:
 - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html
 related:
@@ -17,6 +15,13 @@ related:
   - title: Search by customers as an agent assist
     link: docs/pbc/all/user-management/latest/base-shop/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Log into the Storefront as an [agent assist](/docs/pbc/all/user-management/latest/base-shop/agent-assist-feature-overview.html) to help customers by performing actions on their behalf. After you've logged in, you can search by customers and impersonate them to perform any action available to them.
 

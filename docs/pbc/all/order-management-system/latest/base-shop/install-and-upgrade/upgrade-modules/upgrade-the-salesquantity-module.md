@@ -3,8 +3,6 @@ title: Upgrade the SalesQuantity module
 description: Use the guide to learn how to update to a newer version of the SalesQuantity module for your Spryker Cloud Commerce OS project.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-sales-quantity
-originalArticleId: f62cc4d4-f994-4e3a-8924-6788236a1640
 redirect_from:
   - /2021080/docs/mg-sales-quantity
   - /2021080/docs/en/mg-sales-quantity
@@ -35,5 +33,12 @@ redirect_from:
   - /docs/pbc/all/order-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-salesquantity-module.html
   - /docs/pbc/all/order-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-salesquantity-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-salesquantity-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-salesquantity-module.md -->

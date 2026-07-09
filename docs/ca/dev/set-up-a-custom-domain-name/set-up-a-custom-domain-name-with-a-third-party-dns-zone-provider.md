@@ -3,8 +3,6 @@ title: Setting up a custom domain name with a third-party DNS zone provider
 description: Set up a custom domain name with a third-party DNS provider on Spryker, following detailed steps for load balancer configuration and domain management.
 template: howto-guide-template
 last_updated: Oct 6, 2023
-originalLink: https://cloud.spryker.com/docs/setting-up-a-custom-domain-name-with-a-third-party-dns-zone-provider
-originalArticleId: a0bdd6d7-2603-4bb6-8ab9-0899a6b2041f
 redirect_from:
   - /docs/setting-up-a-custom-domain-name-with-a-third-party-dns-zone-provider
   - /docs/en/setting-up-a-custom-domain-name-with-a-third-party-dns-zone-provider

@@ -3,8 +3,6 @@ title: "Glue API: Manage guest cart items"
 description: Retrieve details about guest cart items and learn what else you can do with the resource.
 last_updated: Jun 29, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-guest-cart-items
-originalArticleId: 55c07d5d-006b-4f81-99b1-92c6a8124688
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-carts/guest-carts/managing-guest-cart-items.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html
@@ -15,6 +13,13 @@ related:
   - title: Managing gift cards of guest users
     link: docs/pbc/all/gift-cards/latest/manage-using-glue-api/glue-api-manage-gift-cards-of-guest-users.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This endpoint allows you to manage guest cart items.
 

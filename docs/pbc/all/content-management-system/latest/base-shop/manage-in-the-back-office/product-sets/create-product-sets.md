@@ -3,8 +3,6 @@ title: Create product sets
 description: Learn how to create and manage product sets in the Speryker Cloud Commerce OS Back Office
 last_updated: Jul 30, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/creating-product-sets
-originalArticleId: 20263bb8-2952-4db2-bde6-1a17a8e76017
 redirect_from:
   - /2021080/docs/creating-product-sets
   - /2021080/docs/en/creating-product-sets
@@ -25,6 +23,13 @@ related:
   - title: Product Sets feature overview
     link: docs/pbc/all/content-management-system/latest/base-shop/product-sets-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to create product sets in the Back Office.
 

@@ -2,8 +2,6 @@
 title: Contentserv
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/contentserv
-originalArticleId: e9b4492b-7760-4f80-a314-64a41684c5dc
 redirect_from:
   - /2021080/docs/contentserv
   - /2021080/docs/en/contentserv
@@ -13,6 +11,13 @@ redirect_from:
   - /docs/scos/user/technology-partners/202311.0/product-information-pimerp/contentserv.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/third-party-integrations/contentserv.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Copyright and Disclaimer
 

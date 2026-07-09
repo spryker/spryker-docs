@@ -3,8 +3,6 @@ title: Install the Product Options Glue API
 description: This guide provides step-by-step instruction on integrating Product Options API Feature into the Spryker based project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/glue-api-product-options-feature-integration
-originalArticleId: 6cf952d4-7195-40ec-8366-3f1d3153b34e
 redirect_from:
   - /2021080/docs/glue-api-product-options-feature-integration
   - /2021080/docs/en/glue-api-product-options-feature-integration
@@ -22,5 +20,12 @@ related:
   - title: "Glue API: Retrieve concrete products"
     link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/install-features/latest/install-glue-api/install-the-product-options-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-product-options-glue-api.md -->

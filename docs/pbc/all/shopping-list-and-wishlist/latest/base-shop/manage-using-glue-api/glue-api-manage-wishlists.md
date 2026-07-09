@@ -3,8 +3,6 @@ title: "Glue API: Manage wishlists"
 description: Learn how to manage , create, update and delete Spryker wishlist via the Glue API in your Spryker Cloud Commerce OS Projects.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-wishlists
-originalArticleId: b4729aa0-f527-4fd0-bf46-6d8e62b3013e
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/managing-wishlists/managing-wishlists.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-wishlists/managing-wishlists.html  
@@ -19,6 +17,13 @@ related:
     link: docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/wishlist-feature-overview.html
 
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The Wishlists API allows creating list and deleting [wishlists](/docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/wishlist-feature-overview.html), as well as managing the items inside them.
 

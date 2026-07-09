@@ -3,12 +3,17 @@ title: Integrate PayOne
 description: Integrate Payone into the Spryker Commerce OS by following the instructions from this article.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/payone-integration-with-project-scos
-originalArticleId: a86017aa-d5ce-44cf-b568-6cda73261766
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/bs-payone/scos-integration/payone-integration-into-the-scos-project.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payone/manual-integration/integrate-payone.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% info_block errorBox %}
 

@@ -4,6 +4,7 @@ description: Spryker Engineer GPT boosts Spryker devs with AI code, best practic
 template: concept-topic-template
 redirect_from:
   - /docs/dg/dev/ai-assistants/spryker-engineer-gpt
+last_updated: Dec 04, 2025
 ---
 
 {% info_block warningBox %}

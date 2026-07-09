@@ -3,8 +3,6 @@ title: Add shipment methods
 description: Use the guide to add a new shipment method with the currency and price specified without integrating the method with shipment providers.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-add-new-shipment-method-2
-originalArticleId: 8237cdec-4f7a-4361-94b6-8ef7c04e80f5
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-add-a-new-shipment-method-2.0.html
   - /docs/pbc/all/carrier-management/202204.0/base-shop/tutorials-and-howtos/howto-add-a-new-shipment-method-2.0.html
@@ -12,6 +10,13 @@ related:
   - title: "Reference information: Shipment method plugins"
     link: docs/pbc/all/carrier-management/latest/base-shop/extend-and-customize/shipment-method-plugins-reference-information.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document shows how to add a new shipment method without integrating it with the shipment provider system.
 

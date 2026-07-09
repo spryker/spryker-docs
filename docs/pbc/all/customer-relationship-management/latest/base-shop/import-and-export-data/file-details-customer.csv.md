@@ -3,8 +3,6 @@ title: "File details: customer.csv"
 description: Learn how to use the customer csv file in your Spryker Cloud Commerce OS store to configure customer information.
 last_updated: Jun 16, 2021
 template: data-import-template
-originalLink: https://documentation.spryker.com/2021080/docs/file-details-customercsv
-originalArticleId: 08356679-8b76-4d14-b756-fb39a77d3da7
 redirect_from:
   - /2021080/docs/file-details-customercsv
   - /2021080/docs/en/file-details-customercsv
@@ -20,6 +18,13 @@ related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the `customer.csv` file to configure [Customer](/docs/pbc/all/customer-relationship-management/latest/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html) information in your Spryker Demo Shop.
 

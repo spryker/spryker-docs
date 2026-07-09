@@ -3,8 +3,6 @@ title: Transfer data between Yves and Zed
 description: This document shows how to set up communication between Yves and Zed.
 last_updated: Jun 19, 2026
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/t-transfer-data-yves-zed
-originalArticleId: 92fb4df1-548a-44eb-aa4a-8ee1d8e70376
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/transfer-data-between-yves-and-zed.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/transfering-data-between-yves-and-zed.html

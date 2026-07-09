@@ -3,8 +3,6 @@ title: Using FACT-Finder tracking
 description: Tracking information lets the FACT-Finder Search tool automatically learn from the user behavior.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/search-factfinder-tracking
-originalArticleId: c84875c9-9cd3-40b6-a74f-8ea4abffe195
 redirect_from:
   - /2021080/docs/search-factfinder-tracking
   - /2021080/docs/en/search-factfinder-tracking
@@ -33,6 +31,13 @@ related:
   - title: Using FACT-Finder search suggestions
     link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search-suggestions.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Prerequisites
 

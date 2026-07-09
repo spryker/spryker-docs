@@ -3,11 +3,16 @@ title: Composer version 2 compatibility issues
 description: Learn how to troubleshoot and solve Composer version 2 compatibility issues within your Spryker based projects.
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/composer-version-2-compatibility-issues
-originalArticleId: b110284a-a19f-4c7b-a8fd-769b3dff6ed2
 redirect_from:
 - /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/composer-version-2-compatibility-issues.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 After running `composer update spryker/{module_name}`, you get an error similar to the following:
 

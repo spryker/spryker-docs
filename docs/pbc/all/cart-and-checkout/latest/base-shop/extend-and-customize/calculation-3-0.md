@@ -8,6 +8,13 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/extend-and-customize/calculation-3-0.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 Spryker uses the `Calculation` module to calculate the cart totals that are displayed in the cart, during checkout, and when the order is placed.
 
 The `Calculation` module extensively uses plugins to inject calculation algorithms.

@@ -3,8 +3,6 @@ title: Disabling address updates from the backend application for RatePay
 description: Disable address updates from the backend application for RatePay in your Spryker projects.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/ratepay-disable-address-updates
-originalArticleId: a9f1412a-e53b-4ff3-b0af-a79370c3db2e
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/ratepay/disabling-address-updates-from-the-backend-application-for-ratepay.html
   - /docs/scos/user/technology-partners/202204.0/payment-partners/ratepay/ratepay-how-to-disable-address-updates-from-the-backend-application.html
@@ -27,6 +25,13 @@ related:
   - title: RatePay - State Machine Commands and Conditions
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/ratepay-state-machine-commands-and-conditions.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To disable updates on addresses from the backend application, follow the steps described below:
 

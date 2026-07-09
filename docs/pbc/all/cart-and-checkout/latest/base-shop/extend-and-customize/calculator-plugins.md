@@ -9,6 +9,13 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/extend-and-customize/calculator-plugins.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 Calculator plugins are registered in the `CalculationDependencyProvider::getQuoteCalculatorPluginStack()` for `QuoteTransfer` and `CalculationDependencyProvider::getOrderCalculatorPluginStack()`. In later versions of the Calculation module 4.00 and above, plugins are registered in `CalculationDependencyProvider::getQuoteCalculatorPluginStack()` for OrderTransfer.
 
 This method can be extended on the project level and the plugin stack can be updated with your own plugins.

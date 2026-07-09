@@ -1,7 +1,7 @@
 ---
 title: "Oryx: Component types"
 description: Oryx components compared to Atomic Design
-last_updated: Sept 23, 2023
+last_updated: Sep 23, 2023
 template: concept-topic-template
 redirect_from:
 - /docs/scos/dev/front-end-development/202404.0/oryx/building-components/oryx-component-types.html

@@ -3,13 +3,18 @@ title: Hydrate payment methods for an order
 description: This doc describes how to use PaymentDependencyProvider::PAYMENT_HYDRATION_PLUGINS and how to add other payment methods into the order.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-hydrate-payment-methods-for-order
-originalArticleId: 4e35e87f-d4a5-4a06-8cf5-d830eec89b5d
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-hydrate-payment-methods-for-an-order.html
   - /docs/pbc/all/payment-service-provider/202311.0/hydrate-payment-methods-for-an-order.html
   - /docs/pbc/all/payment-service-provider/202311.0/hydrate-payment-methods-for-an-order.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% info_block warningBox "Warning" %}
 

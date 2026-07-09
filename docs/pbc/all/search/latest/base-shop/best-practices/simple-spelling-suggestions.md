@@ -3,8 +3,6 @@ title: Simple spelling suggestions
 description: Spelling suggestions provide the users with alternative search terms when the search query does not return any results
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/simple-spelling-suggestions
-originalArticleId: 336cc842-ecf5-4403-8979-21a973ce0e70
 redirect_from:
   - /2021080/docs/simple-spelling-suggestions
   - /2021080/docs/en/simple-spelling-suggestions
@@ -44,6 +42,13 @@ related:
   - title: Usage-driven schema and document structure
     link: docs/pbc/all/search/latest/base-shop/best-practices/usage-driven-schema-and-document-structure.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Spelling suggestions provide the users with alternative search terms when the search query does not return any results:
 

@@ -3,8 +3,6 @@ title: Console commands
 description: The list of console commands contains the command names together with a short description of what the command does.
 last_updated: Aug 31, 2022
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/console
-originalArticleId: d4062a3e-5dac-4905-afc7-105978e27432
 redirect_from:
   - /docs/scos/dev/back-end-development/console-commands/console-commands.html
   - /docs/scos/dev/back-end-development/202108.0/console-commandsconsole-commands-in-spryker.html

@@ -3,12 +3,17 @@ title: "Tutorial: Different stores, different logic - landing pages"
 description: The tutorial describes how you can extend the functionality to set up different home pages per specific stores.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/t-different-stores-different-logic-landing-pages
-originalArticleId: d40e7b5d-eb47-4ab4-a51d-2e14b18dc22b
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-different-stores-different-logic-landing-pages-spryker-commerce-os.html
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-different-sores-different-logic-landing-pages-spryker-commerce-os.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% info_block infoBox %}
 

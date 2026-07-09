@@ -3,8 +3,6 @@ title: Edit product lists
 description: Learn how to edit product lists directly in the Spryker Cloud Commerce OS Back Office.
 last_updated: June 22, 2022
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-product-lists
-originalArticleId: 18628b05-d26f-469a-a201-d74c1a235cf8
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202108.0/catalog/product-lists/managing-product-lists.html
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/product-lists/managing-product-lists.html

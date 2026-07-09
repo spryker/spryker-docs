@@ -4,11 +4,16 @@ description: Learn the secure steps for sharing secrets or credentials with the 
 last_updated: Jun 16, 2021
 template: concept-topic-template
 keywords: username password credentials
-originalLink: https://documentation.spryker.com/2021080/docs/how-to-share-secrets-with-the-spryker-support-team
-originalArticleId: a52e18a4-1aee-4f08-a132-82940f1f207e
 redirect_from:
 - /docs/scos/user/intro-to-spryker/support/share-secrets-with-the-spryker-support-team.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document explains how to securely share secrets and credentials with the [Spryker Support Team](/docs/about/all/support/getting-support.html). We recommend avoiding sharing secrets whenever possible. If you have to share them, do it only as described in this document.
 

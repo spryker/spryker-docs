@@ -3,8 +3,6 @@ title: Entity
 description: In Spryker, an entity represents one entry from a table in the database. Entities are an implementation of the Active record design pattern, so their usage is very simple.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/entity
-originalArticleId: 768b00eb-1182-4cf3-8c6c-1fbfb294a3b2
 redirect_from:
   - /docs/scos/dev/back-end-development/zed/persistence-layer/entity.html
 related:
@@ -21,6 +19,13 @@ related:
   - title: Repository
     link: docs/dg/dev/backend-development/zed/persistence-layer/repository.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 In Spryker, an entity represents one entry from a table in the database. Entities are an implementation of the [Active record design pattern](https://en.wikipedia.org/wiki/Active_record_pattern), so their usage is very simple. For more details, see [Propel's Active Record Reference](http://propelorm.org/documentation/reference/active-record.html).
 

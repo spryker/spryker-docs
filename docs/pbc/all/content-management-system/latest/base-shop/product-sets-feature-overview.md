@@ -3,8 +3,6 @@ title: Product Sets feature overview
 description: An overview of the Spryker product sets feature, allowing you to create a set of products to showcase to your customers.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/product-sets-feature-overview
-originalArticleId: 7bc42ccb-f76c-400f-9372-251104ce0b77
 redirect_from:
   - /docs/scos/user/features/202108.0/product-sets-feature-overview.html
   - /docs/scos/user/features/202200.0/product-sets-feature-overview.html
@@ -12,6 +10,13 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/product-sets-feature-overview.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/product-sets-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The *Product Sets* feature lets you create and sell collections of products. For example, you can create a stationary workspace set, a set of clothing or accessories, or furniture for a specific room. The "Shop-the-Look" function is a common example of a product set, where you can build a collection of items based on relations or recommendations.
 

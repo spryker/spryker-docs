@@ -3,8 +3,6 @@ title: Shipment feature overview
 description: With the Carrier Management capability, you can create and manage carrier companies and their shipment methods for every individual store.
 last_updated: July 07, 2022
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/shipment-feature-overview
-originalArticleId: 9090caf1-5dfb-4b5a-ac10-13f268edab9f
 redirect_from:
   - /docs/scos/user/features/202311.0/shipment-feature-overview.html  
   - /docs/scos/dev/feature-walkthroughs/202311.0/shipment-feature-walkthrough/shipment-feature-walkthrough.html

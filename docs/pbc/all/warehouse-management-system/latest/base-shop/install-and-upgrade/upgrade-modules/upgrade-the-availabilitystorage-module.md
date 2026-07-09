@@ -3,8 +3,6 @@ title: Upgrade the AvailabilityStorage module
 description: Use the guide to migrate to a new version of the AvailabilityStorage module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-availabilitystorage
-originalArticleId: ed8f56c7-a35d-48f2-ba2a-edfe2151e67e
 redirect_from:
   - /2021080/docs/mg-availabilitystorage
   - /2021080/docs/en/mg-availabilitystorage
@@ -23,5 +21,12 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/migration-guide-availabilitystorage.html
   - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilitystorage-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-availabilitystorage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-availabilitystorage-module.md -->

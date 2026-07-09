@@ -3,8 +3,6 @@ title: Upgrade the MultiCartPage module
 description: A guide to help migrate and upgrade to a newer version of the Spryker MultiCartPage module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-multi-cart-page
-originalArticleId: 82abaa33-532e-4ea8-8041-da541f61ad23
 redirect_from:
   - /2021080/docs/mg-multi-cart-page
   - /2021080/docs/en/mg-multi-cart-page
@@ -36,5 +34,12 @@ related:
   - title: Multiple Carts per User Feature Overview
     link: docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/multiple-carts-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-multicartpage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-multicartpage-module.md -->

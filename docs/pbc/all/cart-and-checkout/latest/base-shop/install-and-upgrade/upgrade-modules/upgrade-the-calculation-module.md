@@ -3,8 +3,6 @@ title: Upgrade the Calculation module
 description: Use the guide to update versions to the newer ones of the Calculation module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-calculation
-originalArticleId: a8b72f36-be06-4e41-9aee-139194663b53
 redirect_from:
   - /2021080/docs/mg-calculation
   - /2021080/docs/en/mg-calculation
@@ -32,5 +30,12 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/migration-guide-calculation.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-calculation-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-calculation-module.md -->

@@ -3,14 +3,19 @@ title: B2C Suite
 description: The Spryker B2C Suite is a showcase that demonstrates ready-to-use B2C-specific Spryker features in a live implementation.
 last_updated: Aug 26, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/b2c-suite
-originalArticleId: 6d82adcb-2778-4f70-9c44-4463851a1d38
 redirect_from:
 - /docs/scos/user/intro-to-spryker/b2c-suite.html
 related:
   - title: B2B Suite
     link: docs/about/all/b2b-suite.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. Of course, every B2С project has its own set of features that meet its business needs and B2B features can be used as well, but the most common features for B2C commerce are as follows.
 

@@ -5,8 +5,6 @@ description: This page provides an exhaustive reference for the Storefront API e
   and data formats.
 last_updated: Aug 20, 2025
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/rest-api-reference
-originalArticleId: 4f1c673e-8917-40ed-a88e-8710a00aec8a
 redirect_from:
   - /docs/integrations/api-references/spryker-storefront-api/storefront-api-b2c-demo-shop-reference.html
   - /docs/integrations/api-references/spryker-rest-api/storefront-api-b2c-demo-shop-reference.html

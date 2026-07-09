@@ -3,14 +3,19 @@ title: Add additional countries to checkout
 description: Learn how to add additional countries to the checkout process in Spryker Cloud Commerce OS.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/howto-add-additional-countries-to-spryker-checkout
-originalArticleId: b9645f6e-965d-4f56-ad9e-2e24a879261d
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-add-additional-countries-to-spryker-checkout.html
   - /docs/pbc/all/cart-and-checkout/tutorials-and-howtos/howto-add-additional-countries-to-spryker-checkout.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/tutorials-and-howtos/howto-add-additional-countries-to-spryker-checkout.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/tutorials-and-howtos/add-additional-countries-to-checkout.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document explains how to add additional shipping countries selected by customers upon checkout.
 
@@ -20,10 +25,7 @@ To open up store to customers of more than the predefined counties, you must adj
 
 ## Prerequisites
 
-Ensure that you have an up-to-date installation of any of the following instances:
-- Spryker B2C Shop
-- Spryker B2B Shop
-- Spryker Suite
+Ensure that you have an up-to-date installation of any of the Spryker B2B Demo Marketplace.
 
 ## Add countries to checkout
 
@@ -41,8 +43,8 @@ To add additional countries to the checkout, follow the steps:
 
 **data/import/glossary.csv**
 
-```json
-ountries.iso.AU,Australia,en_US
+```csv
+countries.iso.AU,Australia,en_US
 countries.iso.AT,Austria,en_US
 countries.iso.AT,Österreich,de_DE
 countries.iso.DE,Germany,en_US
@@ -59,7 +61,7 @@ countries.iso.GB,United Kingdom,en_US
 countries.iso.GB,Großbritannien,de_DE
 ```
 
-{% info_block infoBox "Note "%}
+{% info_block infoBox "Note" %}
 
 We recommend defining additional tax rules when creating additional countries.
 

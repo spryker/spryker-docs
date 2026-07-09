@@ -3,8 +3,6 @@ title: "Glue API: Manage discounts via Glue API"
 description: Learn how you can manage discounts via the Spryker Glue API in your Spryker projects.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-promotional-items
-originalArticleId: d086d38c-dd6b-4419-a299-589c73a97f24
 redirect_from:
   - /docs/scos/dev/glue-api-guides/201811.0/retrieving-promotional-items.html
   - /docs/scos/dev/glue-api-guides/201903.0/retrieving-promotional-items.html
@@ -17,6 +15,13 @@ related:
   - title: Promotions and Discounts feature overview
     link: docs/pbc/all/discount-management/latest/base-shop/promotions-discounts-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The [Promotions](/docs/pbc/all/discount-management/latest/base-shop/promotions-discounts-feature-overview.html) functionality lets sellers provide a promotional item that the customers can add to their carts at a discounted price or even for free. To be eligible for promotions, the purchase must fulfill certain discount conditions—for example, the purchase amount exceeding a certain threshold.
 

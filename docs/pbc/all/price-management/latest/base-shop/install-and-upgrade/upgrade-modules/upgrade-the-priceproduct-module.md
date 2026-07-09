@@ -3,8 +3,6 @@ title: Upgrade the PriceProduct module
 description: Use the guide to migrate to a newer version of the PriceProduct module within your Spryker based projects.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-priceproduct
-originalArticleId: 40887521-7ada-48da-b160-7c9152e6a0a8
 redirect_from:
   - /2021080/docs/mg-priceproduct
   - /2021080/docs/en/mg-priceproduct
@@ -32,5 +30,12 @@ redirect_from:
   - /module_migration_guides/mg-priceproduct.htm
   - /docs/pbc/all/price-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproduct-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-priceproduct-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-priceproduct-module.md -->

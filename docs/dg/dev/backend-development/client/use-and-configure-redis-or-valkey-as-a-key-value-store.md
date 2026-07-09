@@ -3,8 +3,6 @@ title: Use and configure Redis or Valkey as a key-value store
 description: This document describes how key-value storage (Redis or Valkey) is used within Spryker; the current functionality can be extended according to your needs.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/redis-as-kv
-originalArticleId: 79b15e84-6f65-43c2-9a87-94fac129ad5a
 redirect_from:
   - /docs/scos/dev/back-end-development/client/use-and-configure-redis-as-a-key-value-storage.html
   - /docs/scos/dev/back-end-development/client/using-and-configuring-redis-as-a-key-value-storage.html
@@ -15,6 +13,13 @@ related:
   - title: Implement a client
     link: docs/scos/dev/back-end-development/client/implement-a-client.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how key-value storage (Redis or Valkey) is used within Spryker. The current functionality can be extended according to your needs.
 

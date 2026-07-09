@@ -2,13 +2,18 @@
 title: Custom Twig functions for Zed
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/custom-twig-functions-for-zed
-originalArticleId: 573c0374-a901-44e1-8996-348f40292e5c
 redirect_from:
   - /docs/scos/dev/front-end-development/202404.0/zed/custom-twig-functions-for-zed.html
   - /docs/scos/dev/front-end-development/zed/custom-twig-functions-for-zed.html
 
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To improve developer experience, [Twig](https://twig.symfony.com/) functionality is extended with custom Twig functions. All the Twig extension implementations are located in the `Gui` module and can be found in `Pyz\Zed\Twig\TwigDependencyProvider`.
 

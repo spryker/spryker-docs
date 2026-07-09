@@ -3,8 +3,6 @@ title: Manage scheduled prices
 description: learn how you can manage scheduled prices that are configured in your Spryker project within the Spryker back office.
 last_updated: Sep 10, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-scheduled-prices
-originalArticleId: 27e7b867-18f5-4872-9e28-a6da730af458
 redirect_from:
   - /2021080/docs/managing-scheduled-prices
   - /2021080/docs/en/managing-scheduled-prices
@@ -18,6 +16,13 @@ related:
   - title: Creating scheduled prices
     link: docs/pbc/all/price-management/latest/base-shop/manage-in-the-back-office/create-scheduled-prices.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 
 ## Prerequisites

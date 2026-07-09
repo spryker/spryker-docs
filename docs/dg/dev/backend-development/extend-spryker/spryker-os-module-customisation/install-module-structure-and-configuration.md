@@ -3,8 +3,6 @@ title: Install module structure and configuration
 description: Starting from version 1.0.0 the Install package has become a regular Spryker module that can be extended on the project level
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/install-module-structure-and-configuration
-originalArticleId: b3785d03-b408-47db-bf84-5c89dfdcbd11
 redirect_from:
   - /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/install-module-structure-and-configuration.html
   - /docs/scos/dev/set-up-spryker-locally/install-module-structure-and-configuration.html
@@ -12,6 +10,13 @@ related:
   - title: Manage dependencies with Composer
     link: docs/dg/dev/set-up-spryker-locally/manage-dependencies-with-composer.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Starting from [version 1.0.0 the Install package](https://github.com/spryker/install/releases/tag/1.0.0) has become a regular Spryker module, not a standalone tool as it used to be before version 1.0.0. This means that the Install module can be extended on the project level in the same way as any other module.
 

@@ -10,6 +10,13 @@ related:
       link: docs/pbc/all/return-management/latest/marketplace/marketplace-return-management-feature-overview.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 After a [marketplace return](/docs/pbc/all/return-management/latest/marketplace/marketplace-return-management-feature-overview.html) has been created by a Back Office user or by a [shop user](/docs/pbc/all/return-management/latest/marketplace/marketplace-return-management-feature-overview.html#marketplace-return-management-on-the-storefront), it appears on the **Sales&nbsp;<span aria-label="and then">></span> Returns** page. On this page, you can manage the returns as follows:
 - Set the return states.
 - Print the return slip.

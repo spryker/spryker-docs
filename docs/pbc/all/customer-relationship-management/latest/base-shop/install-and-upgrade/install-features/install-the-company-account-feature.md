@@ -3,8 +3,6 @@ title: Install the Company account feature
 description: Learn how to install Business on Behalf, Company Account Storage, and Company Account OAuth functionality into your Spryker project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/company-account-feature-integration
-originalArticleId: f29e0e4a-c1f6-4812-ae43-a771909cb715
 redirect_from:
   - /2021080/docs/company-account-feature-integration
   - /2021080/docs/en/company-account-feature-integration
@@ -19,5 +17,12 @@ related:
   - title: Install the Company Account + Order Management feature
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-company-account-order-management-feature.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/install-features/latest/install-the-company-account-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-company-account-feature.md -->

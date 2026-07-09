@@ -2,6 +2,7 @@
 title: Finilizing upgrades
 description: Ensure a smooth upgrade process in Spryker by verifying module files, testing functionality, updating dependencies, and finalizing major upgrades with essential steps.
 template: howto-guide-template
+last_updated: Nov 19, 2024
 ---
 
 This document describes how to make sure everything works correctly after upgrading a module. The instructions are applicable for manual upgrades and automatic upgrades provided by Spryker Code Upgrader.

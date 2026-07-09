@@ -3,8 +3,6 @@ title: Install the Category Management feature
 description: Learn how you can install the category management feature in to your Spryker Cloud Commerce OS Project.
 last_updated: Jun 29, 2021
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/category-management-feature-integration
-originalArticleId: fc4add5d-25e3-4c5c-b171-98726a915e66
 redirect_from:
   - /2021080/docs/category-management-feature-integration
   - /2021080/docs/en/category-management-feature-integration
@@ -20,5 +18,12 @@ related:
   - title: Install the Category Management Glue API
     link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-category-management-glue-api.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/install-features/latest/install-the-category-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-category-management-feature.md -->

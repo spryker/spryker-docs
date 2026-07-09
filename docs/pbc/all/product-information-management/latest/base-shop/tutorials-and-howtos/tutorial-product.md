@@ -3,8 +3,6 @@ title: "Tutorial: Product"
 description: Learn how to add information to products regarding country of manufacturer to display on product details page with your Spryker project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/t-product-challenge
-originalArticleId: a6596169-fd8f-4b34-b365-e258cd29026e
 redirect_from:
   - /2021080/docs/t-product-challenge
   - /2021080/docs/en/t-product-challenge
@@ -32,6 +30,13 @@ related:
   - title: Using translations
     link: docs/dg/dev/internationalization-and-multi-store/managing-translations-with-twig-translator.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 <!-- used to be: http://spryker.github.io/onboarding/product/ -->
 

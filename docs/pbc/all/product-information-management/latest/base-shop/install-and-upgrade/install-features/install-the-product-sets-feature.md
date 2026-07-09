@@ -3,8 +3,6 @@ title: Product Sets feature integration
 description: Learn how to integrate the Spryker Product sets feature into a Spryker Cloud Commerce OS project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/product-sets-feature-integration
-originalArticleId: a480ad38-c6b1-4a93-a893-d40605432cb7
 redirect_from:
   - /2021080/docs/product-sets-feature-integration
   - /2021080/docs/en/product-sets-feature-integration
@@ -20,5 +18,12 @@ related:
   - title: Product Sets feature overview
     link: docs/pbc/all/content-management-system/latest/base-shop/product-sets-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/install-features/latest/install-the-product-sets-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-sets-feature.md -->

@@ -3,14 +3,19 @@ title: Product Attributes overview
 description: Learn about product attributes and their purpose for your products in your Spryker Cloud Commerce OS shop.
 last_updated: Jul 7, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/product-attributes-overview
-originalArticleId: 7421d5b0-37d2-4902-a531-ac67a2424fb7
 redirect_from:
   - /docs/scos/user/features/202001.0/product-feature-overview/product-attributes-overview.html
   - /docs/scos/user/features/202200.0/product-feature-overview/product-attributes-overview.html
   - /docs/scos/user/features/202311.0/product-feature-overview/product-attributes-overview.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 A *product attribute* is a characteristic of a product that consists of a name and value. For example, in the attribute `color = white`, `color` is the attribute name, and `white` is the attribute value.
 

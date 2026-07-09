@@ -3,8 +3,6 @@ title: Product Groups feature overview
 description: Product Groups feature lets product catalog managers group products by attributes.
 last_updated: Jul 26, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/product-groups-feature-overview
-originalArticleId: 7daa66de-975d-443b-935e-3819c2163c51
 redirect_from:
   - /2021080/docs/product-groups-feature-overview
   - /2021080/docs/en/product-groups-feature-overview
@@ -18,6 +16,13 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202311.0/feature-overviews/product-groups-feature-overview.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-groups-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 The *Product Groups* feature lets product catalog managers group products by attributes, like color or size. A typical use case is combining the same product in different colors into a product group (not to be confused with [product variant](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html)). The feature changes the way shop users interact with products by improving accessibility and navigation.
 

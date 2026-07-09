@@ -3,8 +3,6 @@ title: Create configurable bundle templates
 description: Learn how to create configurable bundle templates directly in the Spryker Cloud Commerce OS Back Office.
 last_updated: Jul 30, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/creating-configurable-bundle-templates
-originalArticleId: f37b931d-e630-4db3-9ffb-b5e3fb100cad
 redirect_from:
   - /2021080/docs/creating-configurable-bundle-templates
   - /2021080/docs/en/creating-configurable-bundle-templates
@@ -20,6 +18,13 @@ related:
   - title: Configurable Bundle feature overview
     link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/configurable-bundle-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To create a configurable bundle template, follow the steps:
 

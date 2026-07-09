@@ -3,14 +3,19 @@ title: Installing and configuring Computop
 description: Learn how you can install and configure Spryker Computop in to your Spryker Cloud Commerce OS Project.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/computop-installation-and-configuration
-originalArticleId: 7d6fd0b4-0e5e-41ac-9788-0361d3252a58
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/computop/installing-and-configuring-computop.html
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/computop/installing-and-configuring-computop.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/computop/install-and-configure-computop.html
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/computop/installing-and-configuring-computop.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This topic describes how to integrate Computop into a Spryker project by installing and configuring the Computop module.
 

@@ -3,8 +3,6 @@ title: Configuration of price modes and types
 description: The article describes the net and gross prices management and how you can configure them for you Spryker Cloud Commerce OS Store.
 last_updated: Sep 30, 2024
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/net-gross-prices-management
-originalArticleId: 9240561a-379b-4a9e-a6c4-05bdf2dfa264
 redirect_from:
   - /2021080/docs/net-gross-prices-management
   - /2021080/docs/en/net-gross-prices-management

@@ -3,8 +3,6 @@ title: B2C API React example
 description: B2C API React example is a single-page web application that demonstrates the use of Spryker Storefront API in B2C scenarios.
 last_updated: Sep 18, 2025
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/b2c-api-react-example
-originalArticleId: 094f9906-b82e-49aa-9af5-27199c5d2c01
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202404.0/glue-api-tutorials/b2c-api-react-example/b2c-api-react-example.html
   - /docs/scos/dev/glue-api-guides/202204.0/glue-api-tutorials/b2c-api-react-example/b2c-api-react-example.html

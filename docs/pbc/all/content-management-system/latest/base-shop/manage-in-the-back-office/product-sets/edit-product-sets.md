@@ -3,8 +3,6 @@ title: Edit product sets
 description: Learn how to edit product sets that are configured within the Spryker Cloud Commerce OS Back Office.
 last_updated: Jul 30, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-product-sets
-originalArticleId: eaa91090-6e3e-4af1-bc98-f9bae069939a
 redirect_from:
   - /2021080/docs/managing-product-sets
   - /2021080/docs/en/managing-product-sets
@@ -25,6 +23,13 @@ related:
   - title: Product Sets feature overview
     link: docs/pbc/all/content-management-system/latest/base-shop/product-sets-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes how to edit product sets in the Back Office.
 

@@ -3,8 +3,6 @@ title: Implement invoice payment
 description: This document describes the steps to consider implementing the invoice payment method without integrating with a third-party payment service provider.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-implement-invoice-payment
-originalArticleId: 405e39cb-b21e-48a5-9e15-4376d8f196b4
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment.html
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment.html
@@ -20,6 +18,13 @@ related:
   - title: Test the invoice payment implementation
     link: docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/test-the-invoice-payment-implementation.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes the steps to consider implementing the invoice payment method without integrating with a third-party payment service provider.
 

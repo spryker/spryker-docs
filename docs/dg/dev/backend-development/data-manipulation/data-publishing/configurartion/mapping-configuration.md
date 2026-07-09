@@ -3,8 +3,6 @@ title: Mapping configuration
 description: Use mappings to get data of any resource without specifying the resource's ID
 last_updated: Sep 18, 2025
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/synchronization-behavior-enabling-multiple-mappings
-originalArticleId: 2a708a7b-40a0-43ec-bcbd-939b8453aee7
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
 related:

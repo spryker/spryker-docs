@@ -3,8 +3,6 @@ title: Add events
 description: Add custom events in Spryker to enhance backend functionality. Follow this guide to integrate and manage events efficiently in your development workflow.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/event-adding
-originalArticleId: 9136cc31-4264-4a7e-b7d8-2f1c966afa51
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/event/add-events.html
   - /docs/scos/dev/back-end-development/data-manipulation/event/adding-events.html
@@ -16,6 +14,13 @@ related:
   - title: Listening to events
     link: docs/scos/dev/back-end-development/data-manipulation/event/listening-to-events.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 When adding an event, make sure you first decide what kind of events you want to trigger in your code. You define events in a class by declaring their literal string values, such as `ModuleName.subject.action`. An event's value uniquely identifies an event. All listeners attached to an event are executed when a module triggers an event.
 

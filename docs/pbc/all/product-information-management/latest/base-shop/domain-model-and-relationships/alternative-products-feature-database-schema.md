@@ -8,6 +8,13 @@ redirect_from:
 - /docs/pbc/all/product-information-management/202204.0/base-shop/domain-model-and-relationships/alternative-products-feature-database-schema.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 
 The following schema illustrates relations between alternative products:
 

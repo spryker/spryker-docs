@@ -3,8 +3,6 @@ title: "Glue API: Retrieve companies"
 description: Learn how to retrieve company information that is configured in your store via the Spryker Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-companies
-originalArticleId: 238c375f-b541-445c-ad9c-ab1b4afb036f
 redirect_from:
   - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/retrieving-companies.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/retrieving-companies.html
@@ -30,6 +28,13 @@ related:
   - title: Company Accounts overview
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/company-accounts-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This endpoint allows retrieving information about companies.
 

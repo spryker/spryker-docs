@@ -3,8 +3,6 @@ title: Integrate the Shopping Lists Glue API
 description: Learn how to integrate the Spryker Shopping Lists GLUE API in to your Spryker Cloud Commerce OS Projects.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/glue-api-shopping-lists-feature-integration
-originalArticleId: 36dac1bc-e05e-4a7e-85fa-af59e77fa7ee
 redirect_from:
   - /2021080/docs/glue-api-shopping-lists-feature-integration
   - /2021080/docs/en/glue-api-shopping-lists-feature-integration
@@ -24,5 +22,12 @@ related:
   - title: Managing shopping list items
     link: docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/manage-using-glue-api/glue-api-manage-shopping-list-items.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/install-features/latest/install-glue-api/install-the-shopping-lists-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-shopping-lists-glue-api.md -->

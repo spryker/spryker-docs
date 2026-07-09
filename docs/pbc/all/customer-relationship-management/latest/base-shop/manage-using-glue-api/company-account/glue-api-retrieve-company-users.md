@@ -3,8 +3,6 @@ title: "Glue API: Retrieve company users"
 description: Learn how to retrieve company users that are configured within your store via the Spryker Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-company-users
-originalArticleId: 4c9db88b-8496-4989-aff3-d0a676bf1a94
 redirect_from:
   - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/retrieving-company-users.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/retrieving-company-users.html
@@ -28,6 +26,13 @@ related:
   - title: Company Accounts overview
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/company-accounts-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This endpoint allows retrieving information about company users.
 

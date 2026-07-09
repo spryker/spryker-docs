@@ -3,8 +3,6 @@ title: Klarna
 description: Make paying as simple, safe and above all, smooth as possible by integrating the Klarna payment into the Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/klarna
-originalArticleId: 19d4dba2-c122-4a37-8170-e8ad49b71821
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/klarna.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/klarna/klarna.html
@@ -18,6 +16,13 @@ related:
   - title: Klarna state machine commands and conditions
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/klarna/klarna-state-machine-commands-and-conditions.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 ## Partner Information
 

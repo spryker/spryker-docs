@@ -1,6 +1,6 @@
 ---
 title: Install the Marketplace Merchant Portal Data Import feature
-last_updated: Jul, 2025
+last_updated: Jul 29, 2025
 description: This document describes the process how to integrate the the Marketplace Merchant Portal Data Import feature into a Spryker Marketplace based project.
 template: feature-integration-guide-template
 ---

@@ -3,8 +3,6 @@ title: Install the Customer Account Management + Agent Assist feature
 description: Integrate the Customer Account Management + Agent Assist feature into your project.
 last_updated: Nov 21, 2022
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/customer-account-management-agent-assist-feature-integration
-originalArticleId: ac6402fe-4140-479f-a08a-76c03b263afa
 redirect_from:
   - /2021080/docs/customer-account-management-agent-assist-feature-integration
   - /2021080/docs/en/customer-account-management-agent-assist-feature-integration

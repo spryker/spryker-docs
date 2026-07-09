@@ -11,6 +11,13 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/extend-and-customize/cms-extension-points-reference-information.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 The `CMS` module provides an extension point for post activation and deactivation of CMS pages. The plugin interface set for this extension point is as follows:
 
 ```php

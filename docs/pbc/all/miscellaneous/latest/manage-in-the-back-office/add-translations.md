@@ -3,8 +3,6 @@ title: Add translations
 description: Learn how to add new translations in the Spryker Cloud Commerce OS Back Office to your Spryker projects.
 last_updated: June 3, 2022
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-glossary
-originalArticleId: a485b9af-b90b-4847-904c-3f87891de5c9
 redirect_from:
   - /2021080/docs/managing-glossary
   - /2021080/docs/en/managing-glossary

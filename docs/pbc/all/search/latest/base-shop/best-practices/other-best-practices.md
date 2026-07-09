@@ -3,8 +3,6 @@ title: Other best practices
 description: This article provides a list of some additional and potentially useful principles regarding the setup of on-site search experience.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/other-best-practices
-originalArticleId: 964c3ef2-57fe-4b57-a0bb-45a5cf6527fd
 redirect_from:
   - /2021080/docs/other-best-practices
   - /2021080/docs/en/other-best-practices
@@ -45,6 +43,13 @@ related:
   - title: Usage-driven schema and document structure
     link: docs/pbc/all/search/latest/base-shop/best-practices/usage-driven-schema-and-document-structure.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Finally, we want to provide you with a list of some additional and potentially useful principles regarding the setup of an on-site search experience.
 

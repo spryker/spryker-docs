@@ -3,8 +3,6 @@ title: "Glue API: Retrieve business units"
 description: Learn how to retrieve business units that are configured in your store via the Spryker Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-business-units
-originalArticleId: 4926546b-9757-4f24-91b1-05202d352c73
 redirect_from:
   - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/retrieving-business-units.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-b2b-account/retrieving-business-units.html
@@ -32,6 +30,13 @@ related:
   - title: Company Accounts overview
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/company-accounts-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 In the B2B world, users represent their companies rather than act on their own behalf. Such users, called [Company Accounts](/docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/company-accounts-overview.html), are organized in business units depending on their job role and the scope of their activity. The endpoints allows retrieving business unit information.
 

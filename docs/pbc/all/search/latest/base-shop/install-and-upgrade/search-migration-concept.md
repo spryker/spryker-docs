@@ -3,8 +3,6 @@ title: Search migration concept
 description: Learn about upgrading to a new Elasticsearch version or learn how to migrate to a different search provider within your Spryker based projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/search-migration-concept
-originalArticleId: 9338954f-a18a-4214-8566-5100e8462ca7
 redirect_from:
   - /2021080/docs/search-migration-concept
   - /2021080/docs/en/search-migration-concept
@@ -18,6 +16,13 @@ redirect_from:
   - /v4/docs/en/search-migration-concept
   - /docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Previously, out of the box, Spryker provided support only for Elasticsearch 5 as the search provider. It was impossible to use major versions of Elasticsearch later because of the breaking changes introduced in its version 6 - primarily because of the removal of mapping types. From the very beginning, Spryker's search setup included one index per store, which was logically divided into several mapping types to support different types of resources. Besides, there was no easy way to substitute Elasticsearch with alternative search providers.
 

@@ -3,8 +3,6 @@ title: Upgrade the StepEngine module
 description: Use the guide to learn how to update the Step Engine module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-step-engine
-originalArticleId: 8c50ee23-1c7b-42ea-a4a2-e1e8ed34e68e
 redirect_from:
   - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-step-engine.html
   - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-step-engine.html
@@ -16,5 +14,12 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/migration-guide-step-engine.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-stepengine-module.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-step-engine-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-step-engine-module.md -->

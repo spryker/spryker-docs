@@ -3,14 +3,19 @@ title: Refunds feature overview
 description: Refunds can be handled automatically in the Admin Interface, once the order has been delivered. All refunds can be listed per order or as a full overview.
 last_updated: Sep 2, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/refunds-feature-overview
-originalArticleId: c997df28-f136-4dac-b2c0-c411170fa22b
 redirect_from:
   - /docs/scos/user/features/202108.0/refunds-feature-overview.html
   - /docs/scos/user/features/202200.0/refunds-feature-overview.html
   - /docs/scos/user/features/202311.0/refunds-feature-overview.html
   - /docs/scos/user/features/202204.0/refunds-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Refunds can be handled automatically in the Back Office once the order has been delivered. Your customers can return the entire order or parts thereof by means of the order splitting mechanism. Every order contains information about the total possible refund value and how much has already been refunded.
 

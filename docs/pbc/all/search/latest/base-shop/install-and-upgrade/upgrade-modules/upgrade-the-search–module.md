@@ -3,8 +3,6 @@ title: Upgrade the Search module
 description: Use the guide to learn how to update the Search module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-search
-originalArticleId: 2af7d4ac-4e84-42ff-aba5-95dae82c6856
 redirect_from:
   - /2021080/docs/mg-search
   - /2021080/docs/en/mg-search
@@ -31,5 +29,12 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-search.html
   - /docs/scos/dev/module-migration-guides/migration-guide-search.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-search-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-search-module.md -->

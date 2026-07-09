@@ -3,8 +3,6 @@ title: "Glue API: Manage discount vouchers in carts of registered users"
 description: Learn how to manage discount vouchers in carts of registered users via Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-discount-vouchers-in-carts-of-registered-users
-originalArticleId: fdd347a8-d5ae-4799-87f5-b4030c57cdec
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-carts/carts-of-registered-users/managing-discount-vouchers-in-carts-of-registered-users.html
   - /docs/pbc/all/discount-management/202311.0/manage-via-glue-api/manage-discount-vouchers-in-carts-of-registered-users.html
@@ -16,6 +14,13 @@ related:
   - title: Manage items in carts of registered users
     link: docs/pbc/all/cart-and-checkout/latest/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This endpoint allows managing discount vouchers in carts of registered users.
 

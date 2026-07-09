@@ -3,8 +3,6 @@ title: Split Delivery overview
 description: The feature lets you deliver order items to different shipping addresses and on different days, with different shipment methods.
 last_updated: Aug 18, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/split-delivery-overview
-originalArticleId: 0d0d041f-19c0-44e7-968e-30fd35ae62dd
 redirect_from:
   - /2021080/docs/split-delivery-overview
   - /2021080/docs/en/split-delivery-overview
@@ -13,6 +11,13 @@ redirect_from:
   - /docs/scos/user/features/202311.0/order-management-feature-overview/split-delivery-overview.html
   - /docs/scos/user/features/202204.0/order-management-feature-overview/split-delivery-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 *Split Delivery* enables the same order as *shipments* to multiple delivery addresses, or on different dates, or with different shipment methods. A *shipment* is a set of two or more products combined by the same delivery address.
 

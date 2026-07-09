@@ -3,8 +3,6 @@ title: Discontinued products overview
 description: Discontinued products are shown during a certain period of time after the manufacturer or a distributor announces that the product is no longer produced.
 last_updated: Jul 9, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/discontinued-product-overview
-originalArticleId: 25617203-917b-417c-b7a9-4f418fa14e35
 redirect_from:
   - /2021080/docs/discontinued-product-overview
   - /2021080/docs/en/discontinued-product-overview
@@ -15,6 +13,13 @@ redirect_from:
   - /docs/scos/user/features/202311.0/product-feature-overview/discontinued-products-overview.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-feature-overview/discontinued-products-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 If a concrete product runs out of stock, it's tagged as out of stock and cannot be added to cart:
 

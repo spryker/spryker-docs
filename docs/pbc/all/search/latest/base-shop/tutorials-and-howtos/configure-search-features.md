@@ -3,8 +3,6 @@ title: Configure search features
 description: This document shows how to configure faceted navigation, filters, pagination, and sorting, so all the important search features that are provided by the Search module.
 last_updated: Jul 29, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/configuring-the-search-features
-originalArticleId: 82a42db7-678d-405c-bc14-44685b7a8099
 redirect_from:
   - /2021080/docs/configuring-the-search-features
   - /2021080/docs/en/configuring-the-search-features
@@ -37,6 +35,13 @@ related:
   - title: Facet filter overview and configuration
     link: docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/facet-filter-overview-and-configuration.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document explains how to configure faceted navigation, filters, pagination, and sorting, so all the important search features that are provided by the `Search` module.
 

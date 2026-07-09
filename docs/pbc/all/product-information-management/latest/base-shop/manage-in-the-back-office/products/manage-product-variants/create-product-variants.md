@@ -3,8 +3,6 @@ title: Creating product variants
 description: Use the guide to configure a product variant, set a price and validity period, make it searchable on the website, and more
 last_updated: Jul 30, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/creating-a-product-variant
-originalArticleId: cb558d64-c3df-4acf-a149-3eac51f413c2
 redirect_from:
   - /2021080/docs/creating-a-product-variant
   - /2021080/docs/en/creating-a-product-variant
@@ -22,6 +20,13 @@ related:
   - title: Product feature overview
     link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This topic describes how to add a product variant for an abstract product.
 

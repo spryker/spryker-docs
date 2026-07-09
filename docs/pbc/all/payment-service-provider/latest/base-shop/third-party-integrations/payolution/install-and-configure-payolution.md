@@ -3,8 +3,6 @@ title: Installing and configuring Payolution
 description: This article contains information on configuring the Payolution module for the Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/payolution-configuration
-originalArticleId: 85e8b401-18c3-4cb3-8616-cd73c9c7817e
 redirect_from:
   - /2021080/docs/payolution-configuration
   - /2021080/docs/en/payolution-configuration
@@ -26,6 +24,13 @@ related:
   - title: Integrating the invoice paymnet method for Payolution
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/integrate-the-invoice-payment-method-for-payolution.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To integrate Payolution into your project, first you need to install and configure the Payolution module. This topic describes how to do that.
 

@@ -3,8 +3,6 @@ title: "Glue API: Retrieve related products"
 description: The article demonstrates how to find alternatives for discontinued products with the help of Glue API endpoints.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-related-products
-originalArticleId: db6deab2-f115-4802-a989-c594cebc6120
 related:
   - title: Retrieving alternative products
     link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/glue-api-retrieve-alternative-products.html
@@ -13,6 +11,13 @@ related:
 redirect_from:
 - /docs/scos/dev/glue-api-guides/202204.0/retrieve-related-products.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Using the [Product Relations](/docs/pbc/all/product-relationship-management/latest/product-relationship-management.html) feature, sellers can define a list of comparable or additional items for each product. You can display such items, also called related products, in search and in the cart together with the products selected by customers.
 

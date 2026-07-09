@@ -8,6 +8,13 @@ redirect_from:
 - /docs/scos/dev/updating-spryker/preventing-update-issues.html
 ---
 
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
+
 This document contains common issues related to updates and provides solutions for fixing them. If an issue is not on the list, and you need help, [contact us](#get-help-with-an-update).
 
 ## You see Spryker Code Sniffer updates

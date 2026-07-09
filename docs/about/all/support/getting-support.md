@@ -3,8 +3,6 @@ title: Getting support
 description: This article explains how to request through Spryker support for bugs, issues with the product, security and where to post your general questions.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/getting-support
-originalArticleId: db44af78-45b9-497b-a5b7-2474f1d1460b
 redirect_from:
   - /docs/scos/user/intro-to-spryker/support/getting-support.html
   - /docs/scos/user/intro-to-spryker/support/handling-new-feature-requests.html
@@ -19,6 +17,13 @@ related:
     link: docs/about/all/support/getting-the-most-out-of-spryker-support.html
 
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 If you need technical help for issues that can't be resolved with the help of the docs, you can always count on our support team. If your case is not an emergency, take the time to learn [How Spryker Support works](/docs/about/all/support/how-spryker-support-works.html) and [how to get the most out of Spryker Support](/docs/about/all/support/getting-the-most-out-of-spryker-support.html). Both documents give valuable insights into the inner workings of Spryker Support and let you help us to provide an excellent support experience for you.
 

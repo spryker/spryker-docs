@@ -3,8 +3,6 @@ title: Export Econda data
 description: Learn how you can Export Econda data via CSV files for your Spryker Cloud Commerce OS projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/econda-export-csvs
-originalArticleId: 1ef86182-5c8d-42fd-bee1-bdc4f68c46c0
 redirect_from:
   - /2021080/docs/econda-export-csvs
   - /2021080/docs/en/econda-export-csvs
@@ -15,6 +13,13 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/marketing-and-conversion/personalization-and-cross-selling/econda/exporting-econda-data.html
   - /docs/scos/dev/technology-partner-guides/202204.0/marketing-and-conversion/personalization-and-cross-selling/econda/exporting-econda-data.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 To implement Econda plugin you should be familiar with the concept of [extending Spryker](/docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another-module.html) and [plugins](/docs/dg/dev/backend-development/plugins/plugins.html).
 

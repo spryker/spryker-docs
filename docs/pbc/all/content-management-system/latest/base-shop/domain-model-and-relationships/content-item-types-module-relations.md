@@ -3,8 +3,6 @@ title: "Content item types: module relations"
 description: Learn about all the content item types and module relations used for them within the Spryker Cloud Commerce OS CMS Module.
 last_updated: Jun 16, 2021
 template: feature-walkthrough-template
-originalLink: https://documentation.spryker.com/2021080/docs/content-item-types-module-relations
-originalArticleId: dc32fefa-b80c-4924-8ee3-1da9be159722
 redirect_from:
   - /2021080/docs/content-item-types-module-relations
   - /2021080/docs/en/content-item-types-module-relations
@@ -13,6 +11,13 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202204.0/content-items-feature-walkthrough/content-item-types-module-relations.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/domain-model-and-relationships/content-item-types-module-relations.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 This document describes each content item type and the modules relations used for them.
 

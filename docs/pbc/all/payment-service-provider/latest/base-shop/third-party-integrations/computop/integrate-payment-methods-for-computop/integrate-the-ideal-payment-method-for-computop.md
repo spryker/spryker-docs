@@ -3,8 +3,6 @@ title: Integrating the iDeal payment method for Computop
 description: Learn how to integrate iDeal payment through Computop into your Spryker Cloud Commerce OS shop.
 last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/computop-ideal
-originalArticleId: f5f1e562-7dc9-4b19-a7a4-471f1822c869
 redirect_from:
   - /2021080/docs/computop-ideal
   - /2021080/docs/en/computop-ideal
@@ -32,6 +30,13 @@ related:
   - title: Integrating the Paydirekt payment method for Computop
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-paydirekt-payment-method-for-computop.html
 ---
+
+{% info_block warningBox "This page is at least 4 years old and thus might contain outdated information." %}
+
+Please raise a support request if you suspect that it requires an update.
+
+{% endinfo_block %}
+
 
 Example State Machine:
 

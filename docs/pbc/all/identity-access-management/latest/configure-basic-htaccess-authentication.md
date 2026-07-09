@@ -1,7 +1,7 @@
 ---
 title: Configure basic .htaccess authentication
 description: Learn how to configure basic htaccess authentication for the Storefront and the Back Office.
-last_updated: Jun 16, 2021
+last_updated: Jun 16, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-configure-basic-htaccess-authentication
 originalArticleId: 092354ac-2368-4906-a4a7-33e93229bd2c
@@ -13,7 +13,9 @@ This document describes how to configure basic `.htaccess` authentication for th
 
 {% info_block errorBox "Important" %}
 
-You can't protect Glue endpoints with basic AUTH, and we do not recommend using the basic AUTH for production environments. Instead of the basic AUTH, consider other options, like IP allowlisting.
+You can't protect Glue endpoints with basic AUTH, since it uses the same header **Authentication** as the Bearer token.
+
+We do not recommend using the basic AUTH for production environments. Instead of the basic AUTH, consider other options, like IP allowlisting.
 
 {% endinfo_block %}
 

@@ -1,7 +1,7 @@
 ---
 title: Install the Buy Box feature
 description: Learn how to install the Buy Box feature that displays multiple merchant offers with selection and sorting
-last_updated: February 13, 2026
+last_updated: July 7, 2026
 template: feature-integration-guide-template
 related:
   - title: Buy Box feature overview
@@ -94,6 +94,7 @@ Make sure the following changes have been applied to the transfer objects:
 | BuyBoxProduct | class | Created | src/Generated/Shared/Transfer/BuyBoxProductTransfer |
 | ProductOfferStorageCriteria | class | Created | src/Generated/Shared/Transfer/ProductOfferStorageCriteriaTransfer |
 | ProductView | class | Extended | src/Generated/Shared/Transfer/ProductViewTransfer |
+| ProductConfigurationInstance | class | Created | src/Generated/Shared/Transfer/ProductConfigurationInstanceTransfer |
 | MerchantStorageCriteria | class | Created | src/Generated/Shared/Transfer/MerchantStorageCriteriaTransfer |
 | PriceProductFilter | class | Extended | src/Generated/Shared/Transfer/PriceProductFilterTransfer |
 | MerchantStorage | class | Extended | src/Generated/Shared/Transfer/MerchantStorageTransfer |
@@ -131,6 +132,46 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 {% info_block warningBox "Verification" %}
 
 Make sure that `BuyBoxWidget` is registered by checking that the buy box appears on product detail pages in marketplace mode with multiple merchant offers.
+
+{% endinfo_block %}
+
+### Set up render condition plugins
+
+Optionally, register render condition plugins to control whether the Buy Box is rendered for a given product:
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+|--------|---------------|---------------|-----------|
+| ConfigurableProductBuyBoxRenderConditionPlugin | Prevents the Buy Box from being rendered for configurable products. | None | SprykerFeature\Yves\BuyBox\Plugin\BuyBox |
+
+**src/Pyz/Yves/BuyBox/BuyBoxDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\BuyBox;
+
+use SprykerFeature\Yves\BuyBox\BuyBoxDependencyProvider as SprykerBuyBoxDependencyProvider;
+use SprykerFeature\Yves\BuyBox\Plugin\BuyBox\ConfigurableProductBuyBoxRenderConditionPlugin;
+
+class BuyBoxDependencyProvider extends SprykerBuyBoxDependencyProvider
+{
+    /**
+     * @return array<\SprykerFeature\Yves\BuyBox\Dependency\Plugin\BuyBoxRenderConditionPluginInterface>
+     */
+    protected function getBuyBoxRenderConditionPlugins(): array
+    {
+        return [
+            new ConfigurableProductBuyBoxRenderConditionPlugin(),
+        ];
+    }
+}
+```
+
+To add a custom render condition, implement `SprykerFeature\Yves\BuyBox\Dependency\Plugin\BuyBoxRenderConditionPluginInterface` and register the plugin in `getBuyBoxRenderConditionPlugins()`. The Buy Box is rendered only when all registered plugins return `true`.
+
+{% info_block warningBox "Verification" %}
+
+Make sure that `ConfigurableProductBuyBoxRenderConditionPlugin` is registered by opening the product detail page of a configurable product and checking that the Buy Box is not displayed.
 
 {% endinfo_block %}
 

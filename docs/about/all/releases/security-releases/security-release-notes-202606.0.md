@@ -1,7 +1,7 @@
 ---
 title: Security release notes 202606.0
 description: Security updates released for version 202606.0
-last_updated: Jun 10, 2026
+last_updated: Jul 9, 2026
 template: concept-topic-template
 publish_date: "2026-06-08"
 redirect_from:
@@ -179,19 +179,19 @@ Several Back Office JavaScript modules passed untrusted, unsanitized data direct
 
 ### Affected modules
 
-- `spryker/cms`: < 7.20.2
-- `spryker/cms-slot-block-gui`: < 1.6.2
-- `spryker/company-role-gui`: < 1.11.2
-- `spryker/content-gui`: < 3.1.2
-- `spryker/file-manager-gui`: < 3.1.2
-- `spryker/gui`: < 5.3.2
+- `spryker/cms`: < 7.20.1
+- `spryker/cms-slot-block-gui`: < 1.6.1
+- `spryker/company-role-gui`: < 1.11.1
+- `spryker/content-gui`: < 3.1.1
+- `spryker/file-manager-gui`: < 3.1.1
+- `spryker/gui`: < 5.3.1
 
 ### Fix the vulnerability
 
 Update the affected packages:
 
 ```bash
-composer update spryker/cms:"^7.20.2" spryker/cms-slot-block-gui:"^1.6.2" spryker/company-role-gui:"^1.11.2" spryker/content-gui:"^3.1.2" spryker/file-manager-gui:"^3.1.2" spryker/gui:"^5.3.2"
+composer update spryker/cms:"^7.20.1" spryker/cms-slot-block-gui:"^1.6.1" spryker/company-role-gui:"^1.11.1" spryker/content-gui:"^3.1.1" spryker/file-manager-gui:"^3.1.1" spryker/gui:"^5.3.1"
 composer show spryker/cms spryker/cms-slot-block-gui spryker/company-role-gui spryker/content-gui spryker/file-manager-gui spryker/gui # Verify the versions
 ```
 
@@ -213,6 +213,90 @@ $(container).html(untrustedData);
 
 // After
 $(container).html(DOMPurify.sanitize(untrustedData));
+```
+
+### Update frontend dependencies
+
+Spryker frontend modules do not define their own npm dependencies. Their assets are built with the packages defined in the project-level `package.json`, so the fixed modules rely on the npm package versions installed in your project.
+
+The updated frontend assets use newer Sass functionality. If your project uses an older `sass` version, the frontend build fails with an error similar to the following:
+
+```text
+SassError: @use rules must be written before any other rules.
+     |
+2154 | @use 'sass:map';
+     | ^^^^^^^^^^^^^^^
+```
+
+To avoid the build error, update the `sass` package in `devDependencies` to version 1.97.0 or higher:
+
+```bash
+npm install --save-dev sass@~1.97.0
+```
+
+We also recommend aligning the rest of the frontend dependencies in your project's `package.json` with the following versions. The list does not include Merchant Portal (Angular) packages.
+
+<details>
+  <summary>Recommended frontend dependency versions</summary>
+
+```json
+{
+    "dependencies": {
+        "dompurify": "~3.2.0"
+    },
+    "devDependencies": {
+        "@babel/plugin-transform-class-properties": "~7.25.9",
+        "@babel/plugin-transform-runtime": "~7.28.5",
+        "@babel/preset-env": "~7.28.5",
+        "@babel/preset-typescript": "~7.28.5",
+        "@eslint/js": "^9.39.2",
+        "@jsdevtools/file-path-filter": "~3.0.2",
+        "@prettier/plugin-xml": "~3.4.2",
+        "@spryker/frontend-config.eslint": "~0.1.0",
+        "@spryker/frontend-config.stylelint": "~0.0.6",
+        "@spryker/oryx-for-zed": "~3.6.1",
+        "@types/node": "~25.0.3",
+        "@types/webpack": "~5.28.5",
+        "@typescript-eslint/eslint-plugin": "~8.50.0",
+        "@typescript-eslint/parser": "~8.50.0",
+        "autoprefixer": "~10.4.23",
+        "babel-loader": "~10.0.0",
+        "commander": "~4.0.1",
+        "compression-webpack-plugin": "~11.1.0",
+        "copy-webpack-plugin": "~13.0.1",
+        "css-loader": "~7.1.2",
+        "css-minimizer-webpack-plugin": "~7.0.4",
+        "eslint": "~9.39.2",
+        "fast-glob": "~3.3.3",
+        "mini-css-extract-plugin": "~2.9.4",
+        "npm-run-all": "~4.1.5",
+        "postcss": "~8.5.6",
+        "postcss-loader": "~8.2.0",
+        "prettier": "~3.7.4",
+        "rimraf": "~6.1.2",
+        "sass": "~1.97.0",
+        "sass-loader": "~16.0.6",
+        "stylelint": "~16.26.1",
+        "stylelint-config-standard-less": "~3.0.1",
+        "stylelint-config-standard-scss": "~16.0.0",
+        "terser-webpack-plugin": "~5.3.16",
+        "ts-node": "~10.9.2",
+        "tslib": "~2.8.1",
+        "typescript": "~5.9.3",
+        "typescript-eslint": "^8.51.0",
+        "webpack": "~5.103.0",
+        "webpack-merge": "~6.0.1"
+    }
+}
+```
+
+</details>
+
+After updating the dependencies, reinstall the packages and rebuild the frontend:
+
+```bash
+npm install
+console frontend:yves:build
 ```
 
 ## Vulnerability in symfony third-party dependency
@@ -237,3 +321,137 @@ Update the affected Symfony packages:
 composer update symfony/security-http:"^6.4.41" symfony/monolog-bridge:"^6.4.40" symfony/mailer:"^6.4.40" symfony/runtime:"^6.4.40" symfony/routing:"^6.4.41" symfony/mime:"^6.4.41" symfony/string:"^7.4.13"
 composer show symfony/security-http symfony/monolog-bridge symfony/mailer symfony/runtime symfony/routing symfony/mime symfony/string # Verify the versions
 ```
+
+## Component styling regression after the Sass update
+
+Updating the `sass` package to 1.97.0, as described in [Update frontend dependencies](#update-frontend-dependencies), can change the visual presentation of components that you extend on the project level. Modifier styles that worked before the update stop taking effect, and the affected elements fall back to their base appearance.
+
+### Root cause
+
+Dart Sass 1.92.0 fully enforces the [mixed declarations](https://sass-lang.com/documentation/breaking-changes/mixed-decls/) breaking change, which was deprecated in 1.77.7. Declarations that appear after a nested rule are no longer hoisted above it. They now stay in source order.
+
+Spryker's Yves component extension pattern relies on mixins and `@content` to inject project-level styles into base components. For more details, see [Extending components](/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/extending-components.html). With the new Sass behavior, base declarations that you inject through `@content` are emitted *after* the modifier selectors that base mixins generate. Because a base class, such as `.button`, and its modifier, such as `.button--<modifier>`, have equal specificity, the rule that appears later in the compiled CSS wins. When the base rule is emitted last, it overrides the modifier, and the modifier effect is lost.
+
+For example, `.spacing-y` can be emitted after `.spacing-y--bigger` and override it.
+
+### Fix the regression
+
+Add a PostCSS plugin that restores the pre-1.92 hoisting during the build. The plugin reorders the compiled CSS so that a base class rule is emitted before the modifier and element rules derived from it, exactly as Sass behaved before 1.92. It does not change your SCSS source or downgrade Sass.
+
+1. Create the plugin file:
+
+**frontend/libs/postcss-hoist-mixed-declarations.js**
+
+```js
+const BOUNDARY = new Set(['-', '_', ':', '.', '[', ' ', '>', '+', '~', '(']);
+
+const isPlainClass = (selector) => /^\.[A-Za-z0-9_-]+$/.test(selector);
+
+const isDerivedFrom = (selector, base) =>
+    selector.split(',').every((rawPart) => {
+        const part = rawPart.trim();
+
+        if (part === base) {
+            return true;
+        }
+
+        if (!part.startsWith(base)) {
+            return false;
+        }
+
+        return BOUNDARY.has(part[base.length]);
+    });
+
+const hoistRule = (node) => {
+    const base = node.selector.trim();
+    let earliestBaseRule = null;
+    let runStart = null;
+    let sawDerived = false;
+
+    let prev = node.prev();
+
+    while (prev && prev.type === 'rule') {
+        const prevSelector = prev.selector.trim();
+
+        if (prevSelector === base) {
+            earliestBaseRule = prev;
+            runStart = prev;
+        } else if (isDerivedFrom(prevSelector, base)) {
+            sawDerived = true;
+            runStart = prev;
+        } else {
+            break;
+        }
+
+        prev = prev.prev();
+    }
+
+    if (earliestBaseRule) {
+        node.each((child) => earliestBaseRule.append(child.clone()));
+        node.remove();
+
+        return;
+    }
+
+    if (sawDerived && runStart) {
+        node.remove();
+        runStart.before(node);
+    }
+};
+
+const processContainer = (container) => {
+    if (!container.nodes) {
+        return;
+    }
+
+    let node = container.first;
+
+    while (node) {
+        const next = node.next();
+
+        if (node.type === 'rule' && isPlainClass(node.selector.trim())) {
+            hoistRule(node);
+        }
+
+        node = next;
+    }
+};
+
+const plugin = () => ({
+    postcssPlugin: 'postcss-hoist-mixed-declarations',
+    OnceExit(root) {
+        processContainer(root);
+
+        root.walkAtRules((atRule) => {
+            if (atRule.nodes) {
+                processContainer(atRule);
+            }
+        });
+    },
+});
+
+plugin.postcss = true;
+
+module.exports = plugin;
+```
+
+2. Register the plugin in your PostCSS configuration, before `autoprefixer`:
+
+**frontend/configs/development.js**
+
+```js
+postcssOptions: {
+    plugins: [
+        require('../libs/postcss-hoist-mixed-declarations'),
+        require('autoprefixer'),
+    ],
+},
+```
+
+3. Rebuild the frontend:
+
+```bash
+console frontend:yves:build
+```
+
+4. Inspect the compiled CSS and confirm that each base class, such as `.button`, is emitted before its derived modifier and element rules, such as `.button--<modifier>`.

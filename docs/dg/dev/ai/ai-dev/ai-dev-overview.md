@@ -1,7 +1,7 @@
 ---
 title: AI Dev SDK Overview
 description: Integrate AI development tools and MCP server into your Spryker application
-last_updated: Jun 9, 2026
+last_updated: Jun 22, 2026
 label: early-access
 keywords: ai, development, mcp, model context protocol, ai-dev, tools, extension
 template: howto-guide-template
@@ -97,9 +97,13 @@ If you use Docker sync, the `/.git*` entry in `.dockersyncignore` also excludes 
 
 **Usage**: Run this command once when setting up AI tooling for a project.
 
+## Skills and agents
+
+The AI Dev SDK delivers a set of Spryker-aware skills and agents — workflows and specialist sub-agents that the AI tool invokes on demand. `ai-dev:setup` writes them into the tool-specific directories shown above; the Claude Code plugin installs the same set through the marketplace. See [AI Dev SDK Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html) for the full list and what each one does, and [AI Dev SDK Customization Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html) for a walkthrough of the end-to-end customization flow these pieces compose.
+
 ## Claude Code plugin
 
-The AI Dev SDK ships a Claude Code plugin — `spryker-ai-dev-sdk` — through the `spryker-plugins-official` marketplace. The plugin bundles Spryker-aware skills and the `spryker-code-reviewer` subagent. See [Claude Code Plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html) for installation instructions and a full list of capabilities.
+The AI Dev SDK ships a Claude Code plugin — `spryker-ai-dev-sdk` — through the `spryker-plugins-official` marketplace. See [Claude Code Plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html) for installation instructions.
 
 ## Extension points
 

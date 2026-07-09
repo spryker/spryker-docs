@@ -29,6 +29,12 @@ Once a module is migrated, its endpoint wiring is the API Platform resource sche
 
 {% endinfo_block %}
 
+{% info_block warningBox "One client-visible behavior change: the Accept header" %}
+
+Backward compatibility has one exception. Legacy Glue REST accepted requests that omitted the `Accept` header (or sent `*/*`) and answered with `application/vnd.api+json`. API Platform's content negotiation does not, so such clients can receive `406 Not Acceptable` or a response in a different format. `spryker/api-platform` **1.15.0+** restores the legacy fallback. See [Requests without an Accept header](/docs/dg/dev/architecture/api-platform/troubleshooting.html#requests-without-an-accept-header-are-rejected-or-return-the-wrong-format) in troubleshooting.
+
+{% endinfo_block %}
+
 ## Prerequisites
 
 Before starting the migration, confirm:

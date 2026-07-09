@@ -19,6 +19,8 @@ entries:
             url: /docs/pbc/all/ai-commerce/latest/smart-pim.html
           - title: Smart CMS Content Assistant
             url: /docs/pbc/all/ai-commerce/latest/smart-cms-content-assistant.html
+          - title: Commerce MCP Server
+            url: /docs/pbc/all/ai-commerce/latest/commerce-mcp-server.html
 
       - title: Yves
         nested:
@@ -2306,6 +2308,19 @@ entries:
                       - title: Install the Order Management + Service Points feature
                         url: /docs/pbc/all/order-management-system/unified-commerce/install-and-upgrade/install-the-order-management-service-points-feature.html
 
+      - title: Order Experience Management
+        nested:
+          - title: Base shop
+            nested:
+              - title: Recurring Orders feature overview
+                url: /docs/pbc/all/order-experience-management/latest/base-shop/feature-overviews/recurring-orders-feature-overview.html
+              - title: Install and upgrade
+                nested:
+                  - title: Install features
+                    nested:
+                      - title: Recurring Orders
+                        url: /docs/pbc/all/order-experience-management/latest/base-shop/install-and-upgrade/install-features/install-the-recurring-orders-feature.html
+
       - title: Payment Service Provider
         url: /docs/pbc/all/payment-service-provider/payment-service-provider.html
         nested:
@@ -3355,6 +3370,8 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-manage-a-big-number-of-categories.html
                   - title: Render configurable bundle templates on the Storefront
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html
+                  - title: Create a product configurator
+                    url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-create-a-product-configurator.html
                   - title: Split products by stores
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/split-products-by-stores.html
                   - title: "Product data: From import to frontend views"

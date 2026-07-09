@@ -20,7 +20,28 @@ Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| ProductOfferPackagingUnitOmsReservationAggregationPlugin | Aggregates reservations for product offers packaging unit. |  | Spryker\Zed\ProductOfferPackagingUnit\Communication\Plugin\Oms |
+| ProductOfferReservationAggregationQueryCriteriaExpanderPlugin | Scopes the OMS reservation aggregation query to the product offer carried by the reservation request. No-op when `productOfferReference` is empty. |  | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |
+| ProductPackagingUnitReservationAggregationQueryCriteriaExpanderPlugin | Makes the OMS reservation aggregation packaging-unit-aware: for items sold as a packaging unit, the underlying product `amount` is aggregated instead of the wrapping `quantity`. |  | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Oms |
+
+{% info_block infoBox "Deprecated plugin" %}
+
+`ProductOfferPackagingUnitOmsReservationAggregationPlugin` (registered via `getOmsReservationAggregationPlugins()`) is deprecated. Its behavior is now covered by combining the product offer and packaging unit query criteria expander plugins — their criteria are composed into a single reservation aggregation query, so no dedicated offer-plus-packaging-unit plugin is needed. Keeping it registered causes the legacy aggregation flow to be used instead of the composed reservation aggregation query.
+
+{% endinfo_block %}
+
+If you are migrating an existing project, deintegrate the deprecated plugin: remove `ProductOfferPackagingUnitOmsReservationAggregationPlugin` from the `getOmsReservationAggregationPlugins()` stack in `src/Pyz/Zed/Oms/OmsDependencyProvider.php` and delete its `use` statement. If the stack becomes empty, return an empty array:
+
+```php
+    /**
+     * @return array<\Spryker\Zed\OmsExtension\Dependency\Plugin\OmsReservationAggregationPluginInterface>
+     */
+    protected function getOmsReservationAggregationPlugins(): array
+    {
+        return [];
+    }
+```
+
+Then register the new plugins:
 
 **src/Pyz/Zed/Oms/OmsDependencyProvider.php**
 
@@ -30,17 +51,19 @@ Activate the following plugins:
 namespace Pyz\Zed\Oms;
 
 use Spryker\Zed\Oms\OmsDependencyProvider as SprykerOmsDependencyProvider;
-use Spryker\Zed\ProductOfferPackagingUnit\Communication\Plugin\Oms\ProductOfferPackagingUnitOmsReservationAggregationPlugin;
+use Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms\ProductOfferReservationAggregationQueryCriteriaExpanderPlugin;
+use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Oms\ProductPackagingUnitReservationAggregationQueryCriteriaExpanderPlugin;
 
 class OmsDependencyProvider extends SprykerOmsDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\OmsExtension\Dependency\Plugin\OmsReservationAggregationPluginInterface>
+     * @return array<\Spryker\Zed\OmsExtension\Dependency\Plugin\OmsReservationAggregationQueryCriteriaExpanderPluginInterface>
      */
-    protected function getOmsReservationAggregationPlugins(): array
+    protected function getOmsReservationAggregationQueryCriteriaExpanderPlugins(): array
     {
         return [
-            new ProductOfferPackagingUnitOmsReservationAggregationPlugin(),
+            new ProductOfferReservationAggregationQueryCriteriaExpanderPlugin(),
+            new ProductPackagingUnitReservationAggregationQueryCriteriaExpanderPlugin(),
         ];
     }
 }

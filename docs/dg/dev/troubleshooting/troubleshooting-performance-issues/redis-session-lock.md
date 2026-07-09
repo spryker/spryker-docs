@@ -2,7 +2,7 @@
 title: Redis session lock
 description: Understand and resolve Redis session lock issues in Spryker applications.
 template: troubleshooting-guide-template
-last_updated: May 29, 2026
+last_updated: Jun 9, 2026
 redirect_from:
   - /docs/dg/dev/guidelines/performance-guidelines/session-locks.html
   - /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/session-locking-issues.html
@@ -249,6 +249,96 @@ class SessionRedisConfig extends \Spryker\Yves\SessionRedis\SessionRedisConfig
     }
 }
 ```
+
+#### Inclusion-based session locking
+
+The exclusion-based approach described above locks all requests by default and relies on you to enumerate the URLs that are safe to bypass. This introduces two structural problems:
+
+- **Dynamic URL blind spot**: Product detail pages, category pages, and other CMS-driven URLs are generated dynamically and cannot be enumerated in advance. A regex-based exclusion list cannot realistically cover the full range of these paths. For example, session lock exceptions have been observed on paths such as `/en/product-dynamic-url` — all product pages that do not require session locking.
+- **Maintenance burden**: The exclusion list grows over time, must be maintained per project, and any missing entry causes silent performance degradation.
+
+Starting with `spryker/session-redis ^1.13.0`, you can invert this logic: lock nothing by default and explicitly define a curated set of session-critical endpoints to protect. This approach scales better with dynamic URLs and reduces the risk of silent regressions.
+
+To set up inclusion-based session locking:
+
+1. Upgrade `spryker/session-redis` to the required version:
+
+```bash
+composer require spryker/session-redis:"^1.13.0" --update-with-dependencies
+```
+
+2. Register the inclusion condition plugins in `src/Pyz/Yves/SessionRedis/SessionRedisDependencyProvider.php`:
+
+```php
+namespace Pyz\Yves\SessionRedis;
+
+use Spryker\Yves\SessionRedis\Plugin\SessionRedisLockingExclusion\BotSessionRedisLockingExclusionConditionPlugin;
+use Spryker\Yves\SessionRedis\Plugin\SessionRedisLockingExclusion\UrlSessionRedisLockingInclusionConditionPlugin;
+
+class SessionRedisDependencyProvider extends SprykerSessionRedisDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Yves\SessionRedisExtension\Dependency\Plugin\SessionRedisLockingExclusionConditionPluginInterface>
+     */
+    protected function getSessionRedisLockingExclusionConditionPlugins(): array
+    {
+        return [
+            new UrlSessionRedisLockingInclusionConditionPlugin(),
+            new BotSessionRedisLockingExclusionConditionPlugin(),
+        ];
+    }
+}
+```
+
+3. Configure which URL patterns require session locking in `src/Pyz/Yves/SessionRedis/SessionRedisConfig.php`:
+
+```php
+namespace Pyz\Yves\SessionRedis;
+
+class SessionRedisConfig extends \Spryker\Yves\SessionRedis\SessionRedisConfig
+{
+    /**
+     * @return list<string>
+     */
+    public function getSessionRedisLockingIncludedUrlPatterns(): array
+    {
+        return [
+            // Cart — the cart page itself and all sub-actions (sync + async); (\/|$) ensures /de/cart without trailing slash is also matched
+            '/^.*\/cart(\/|$)/',
+            // Voucher / promotion codes applied to the cart
+            '/^.*\/cart-code\/code(|-async)\/(add|remove|clear)/',
+            // Cart item and quote notes
+            '/^.*\/cart-note\//',
+            '/^.*\/order-custom-reference\//',
+            // Multi-cart management (create, rename, delete, clear, duplicate, set-default)
+            '/^.*\/multi-cart\/(create|update|delete|clear|duplicate|set-default)/',
+            '/^.*\/multi-cart-async\/clear\//',
+            // Re-order — rebuilds the cart from a past order
+            '/^.*\/cart-reorder\//',
+            // Shared cart — share and dismiss actions write to the session
+            '/^.*\/shared-cart\/(share|dismiss)/',
+            // Checkout — entire funnel is session-stateful (address, shipment, payment, place-order)
+            '/^.*\/checkout/',
+            // Customer authentication — creates or destroys the session
+            '/^.*\/(login|logout|register)($|\/)/',
+            // Multi-factor authentication
+            '/^.*\/multi-factor-auth\//',
+            // Store switch — triggered via ?_store= query parameter on any URL
+            '/[?&]_store=/',
+            // Currency switch — writes selected currency to the session
+            '/^.*\/currency\/switch/',
+            // Price mode switch — writes selected price mode to the session
+            '/^.*\/price\/mode-switch/',
+            // Customer account — all routes under /customer/
+            '/^.*\/customer\//',
+            // Company account — all routes under /company/
+            '/^.*\/company\//',
+        ];
+    }
+}
+```
+
+The example above covers all session-critical endpoints available out of the box in a standard Spryker installation. If your project has additional endpoints that write to the session — such as custom cart actions or third-party checkout flows — add their URL patterns to this list.
 
 #### Disable session locking
 

@@ -1,11 +1,13 @@
 ---
 title: Smart CMS Content Assistant
 description: An AI-powered panel in the Back Office CMS Page and CMS Block glossary editors that generates and refines placeholder content per locale through a conversational interface.
-last_updated: Jun 08, 2026
+last_updated: Jun 15, 2026
 template: concept-topic-template
 ---
 
 Smart CMS Content Assistant is an AI-powered panel embedded in the Back Office CMS Page and CMS Block glossary editors. Back Office users can ask the AI to generate or refine the title and body content for each placeholder and locale, using the full entity context — including the page name, template, URL slug, SEO metadata, and assigned stores.
+
+![Smart CMS Content Assistant](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-commerce/smart-cms.png)
 
 ## Capabilities
 

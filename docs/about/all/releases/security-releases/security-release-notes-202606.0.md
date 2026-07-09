@@ -1,7 +1,7 @@
 ---
 title: Security release notes 202606.0
 description: Security updates released for version 202606.0
-last_updated: Jul 7, 2026
+last_updated: Jul 9, 2026
 template: concept-topic-template
 publish_date: "2026-06-08"
 redirect_from:
@@ -321,3 +321,137 @@ Update the affected Symfony packages:
 composer update symfony/security-http:"^6.4.41" symfony/monolog-bridge:"^6.4.40" symfony/mailer:"^6.4.40" symfony/runtime:"^6.4.40" symfony/routing:"^6.4.41" symfony/mime:"^6.4.41" symfony/string:"^7.4.13"
 composer show symfony/security-http symfony/monolog-bridge symfony/mailer symfony/runtime symfony/routing symfony/mime symfony/string # Verify the versions
 ```
+
+## Component styling regression after the Sass update
+
+Updating the `sass` package to 1.97.0, as described in [Update frontend dependencies](#update-frontend-dependencies), can change the visual presentation of components that you extend on the project level. Modifier styles that worked before the update stop taking effect, and the affected elements fall back to their base appearance.
+
+### Root cause
+
+Dart Sass 1.92.0 fully enforces the [mixed declarations](https://sass-lang.com/documentation/breaking-changes/mixed-decls/) breaking change, which was deprecated in 1.77.7. Declarations that appear after a nested rule are no longer hoisted above it. They now stay in source order.
+
+Spryker's Yves component extension pattern relies on mixins and `@content` to inject project-level styles into base components. For more details, see [Extending components](/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/extending-components.html). With the new Sass behavior, base declarations that you inject through `@content` are emitted *after* the modifier selectors that base mixins generate. Because a base class, such as `.button`, and its modifier, such as `.button--<modifier>`, have equal specificity, the rule that appears later in the compiled CSS wins. When the base rule is emitted last, it overrides the modifier, and the modifier effect is lost.
+
+For example, `.spacing-y` can be emitted after `.spacing-y--bigger` and override it.
+
+### Fix the regression
+
+Add a PostCSS plugin that restores the pre-1.92 hoisting during the build. The plugin reorders the compiled CSS so that a base class rule is emitted before the modifier and element rules derived from it, exactly as Sass behaved before 1.92. It does not change your SCSS source or downgrade Sass.
+
+1. Create the plugin file:
+
+**frontend/libs/postcss-hoist-mixed-declarations.js**
+
+```js
+const BOUNDARY = new Set(['-', '_', ':', '.', '[', ' ', '>', '+', '~', '(']);
+
+const isPlainClass = (selector) => /^\.[A-Za-z0-9_-]+$/.test(selector);
+
+const isDerivedFrom = (selector, base) =>
+    selector.split(',').every((rawPart) => {
+        const part = rawPart.trim();
+
+        if (part === base) {
+            return true;
+        }
+
+        if (!part.startsWith(base)) {
+            return false;
+        }
+
+        return BOUNDARY.has(part[base.length]);
+    });
+
+const hoistRule = (node) => {
+    const base = node.selector.trim();
+    let earliestBaseRule = null;
+    let runStart = null;
+    let sawDerived = false;
+
+    let prev = node.prev();
+
+    while (prev && prev.type === 'rule') {
+        const prevSelector = prev.selector.trim();
+
+        if (prevSelector === base) {
+            earliestBaseRule = prev;
+            runStart = prev;
+        } else if (isDerivedFrom(prevSelector, base)) {
+            sawDerived = true;
+            runStart = prev;
+        } else {
+            break;
+        }
+
+        prev = prev.prev();
+    }
+
+    if (earliestBaseRule) {
+        node.each((child) => earliestBaseRule.append(child.clone()));
+        node.remove();
+
+        return;
+    }
+
+    if (sawDerived && runStart) {
+        node.remove();
+        runStart.before(node);
+    }
+};
+
+const processContainer = (container) => {
+    if (!container.nodes) {
+        return;
+    }
+
+    let node = container.first;
+
+    while (node) {
+        const next = node.next();
+
+        if (node.type === 'rule' && isPlainClass(node.selector.trim())) {
+            hoistRule(node);
+        }
+
+        node = next;
+    }
+};
+
+const plugin = () => ({
+    postcssPlugin: 'postcss-hoist-mixed-declarations',
+    OnceExit(root) {
+        processContainer(root);
+
+        root.walkAtRules((atRule) => {
+            if (atRule.nodes) {
+                processContainer(atRule);
+            }
+        });
+    },
+});
+
+plugin.postcss = true;
+
+module.exports = plugin;
+```
+
+2. Register the plugin in your PostCSS configuration, before `autoprefixer`:
+
+**frontend/configs/development.js**
+
+```js
+postcssOptions: {
+    plugins: [
+        require('../libs/postcss-hoist-mixed-declarations'),
+        require('autoprefixer'),
+    ],
+},
+```
+
+3. Rebuild the frontend:
+
+```bash
+console frontend:yves:build
+```
+
+4. Inspect the compiled CSS and confirm that each base class, such as `.button`, is emitted before its derived modifier and element rules, such as `.button--<modifier>`.

@@ -2,8 +2,14 @@
 title: SSO Security Options
 description: Single sign on offers an extended list of options for securing the access
 template: howto-guide-template
-last_updated: Apr 28, 2026
+last_updated: Jul 10, 2026
 ---
+
+{% info_block infoBox %}
+
+This feature is part of a gradual rollout and will be available to everyone eventually. We will notify your team once your project is onboarded.
+
+{% endinfo_block %}
 
 ## Security benefits of the SSO access
 

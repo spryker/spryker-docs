@@ -2,7 +2,7 @@
 title: SSO Access
 description: Single sign on access to all Spryker Cloud services with a single SSO user
 template: howto-guide-template
-last_updated: Jun 10, 2026
+last_updated: Jul 10, 2026
 ---
 
 {% info_block infoBox %}

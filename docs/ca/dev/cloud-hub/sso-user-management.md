@@ -1,6 +1,6 @@
 ---
 title: User management (SSO)
-last_updated: Jun 10, 2026
+last_updated: Jul 10, 2026
 description: Manage SSO users in CloudHub to control infrastructure access, configure VPN access, AWS access, and VPN access for your Spryker environments.
 template: concept-topic-template
 ---

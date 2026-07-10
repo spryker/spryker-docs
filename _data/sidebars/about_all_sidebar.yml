@@ -7,6 +7,8 @@ entries:
     - title: Releases
       url: /docs/about/all/releases/product-and-code-releases.html
       nested:
+      - title: Release notes 202606.0
+        url: /docs/about/all/releases/release-notes-202606.0.html
       - title: Release notes 202604.0
         url: /docs/about/all/releases/release-notes-202604.0.html
       - title: Release notes 202602.0
@@ -75,6 +77,8 @@ entries:
           nested:
           - title: Release notes for spryker-php 20260626
             url: /docs/about/all/releases/image-releases/spryker-php/release-notes-spryker-php-20260626.html
+          - title: Release notes for spryker-php 20260625
+            url: /docs/about/all/releases/image-releases/spryker-php/release-notes-spryker-php-20260625.html
           - title: Release notes for spryker-php 20260608
             url: /docs/about/all/releases/image-releases/spryker-php/release-notes-spryker-php-20260608.html
           - title: Release notes for spryker-php 20260206

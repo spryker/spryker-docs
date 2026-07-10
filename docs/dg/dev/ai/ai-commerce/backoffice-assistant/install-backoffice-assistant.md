@@ -86,7 +86,7 @@ Using a dedicated AI model configuration per agent is recommended because each n
 
 ### 4) Set up behavior
 
-Register the following plugins to integrate the Back Office Assistant agents:
+Register the following plugins to integrate the Back Office Assistant agents. To add a new agent instead of, or in addition to, the built-in ones, see [Add a custom Back Office Assistant agent](/docs/dg/dev/ai/ai-commerce/backoffice-assistant/add-custom-backoffice-assistant-agent.html).
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |--------|---------------|---------------|-----------|

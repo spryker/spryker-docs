@@ -1,7 +1,7 @@
 ---
 title: Search by Image
 description: Technical overview of the Search by Image feature — architecture, AiFoundation integration, configuration options, and plugin structure.
-last_updated: Apr 10, 2026
+last_updated: Jul 08, 2026
 template: concept-topic-template
 ---
 
@@ -37,6 +37,16 @@ The following options can be configured at the project level in `AiCommerceConfi
 | `getSearchByImageMaxFileSizeInBytes()` | Defined in `AiCommerceConfig` | Maximum upload file size in bytes. |
 | `getSearchByImageAiConfigurationName()` | `null` | Named AI model configuration identifier used to look up the provider config from `AiFoundation`. When `null`, the default configuration is used. |
 | `getSearchByImageRedirectType()` | `search_results` | Controls the redirect target after a successful image search. Controlled via the Back Office. |
+
+## System prompt
+
+The prompt used to identify the main product in an uploaded image and return a search term is managed in the Back Office under **AI Commerce > Search by Image > System Prompts**. The default prompt is defined in `ai_commerce.configuration.yml` and can be customized per environment through the configuration UI or a project configuration file, without a code change.
+
+| CONFIGURATION KEY | DESCRIPTION |
+|--------------------|-------------|
+| `AiCommerceConstants::CONFIGURATION_KEY_SEARCH_BY_IMAGE_PROMPT` | Prompt used to identify the main product in an uploaded image and return a relevant search term. |
+
+If the overridden prompt is blank or contains only whitespace, Search by Image falls back to the default prompt instead of sending an empty value to the AI provider.
 
 ## Install
 

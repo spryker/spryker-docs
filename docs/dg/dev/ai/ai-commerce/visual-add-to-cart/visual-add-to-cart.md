@@ -1,7 +1,7 @@
 ---
 title: Visual Add to Cart
 description: Technical overview of the Visual Add to Cart feature — architecture, AiFoundation integration, configuration options, and plugin structure.
-last_updated: Mar 31, 2026
+last_updated: Jul 08, 2026
 template: concept-topic-template
 ---
 
@@ -37,6 +37,16 @@ The following options can be configured at the project level in `AiCommerceConfi
 | `getQuickOrderImageToCartMaxProducts()` | `20` | Maximum number of products recognized per image. |
 | `getQuickOrderImageToCartTextSimilarityThresholdPercent()` | `30` | Minimum word-overlap percentage required to consider a catalog match valid. |
 | `getQuickOrderImageToCartAiConfigurationName()` | `null` | Named AI model configuration identifier used to look up the provider config from `AiFoundation`. When `null`, the default configuration is used. |
+
+## System prompt
+
+The prompt used to recognize products from an uploaded image on the Quick Order page is managed in the Back Office under **AI Commerce > Quick Order > System Prompts**. The default prompt is defined in `ai_commerce.configuration.yml` and can be customized per environment through the configuration UI or a project configuration file, without a code change.
+
+| CONFIGURATION KEY | DESCRIPTION |
+|--------------------|-------------|
+| `AiCommerceConstants::CONFIGURATION_KEY_QUICK_ORDER_IMAGE_RECOGNITION_PROMPT` | Prompt used to recognize products and quantities from an uploaded image. Keeps the `%s` placeholder for the current store locale. |
+
+If the overridden prompt is blank or contains only whitespace, Visual Add to Cart falls back to the default prompt instead of sending an empty value to the AI provider.
 
 ## Install
 

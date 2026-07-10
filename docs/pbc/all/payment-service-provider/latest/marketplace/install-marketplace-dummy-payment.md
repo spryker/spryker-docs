@@ -1,6 +1,6 @@
 ---
 title: Install Marketplace Dummy Payment
-last_updated: Feb 19, 2026
+last_updated: July 10, 2026
 description: This document describes the process how to integrate the Marketplace Dummy Payment into a Spryker project.
 template: feature-integration-guide-template
 redirect_from:
@@ -290,3 +290,25 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 Add a merchant product to a shopping cart, go to checkout and make sure that Dummy Payment Invoice payment method is available.
 
 {% endinfo_block %}
+
+### 3) Optional: Configure the date of birth field
+
+By default, the Marketplace Invoice payment sub form renders a date of birth field with its validation. To hide the field and skip its validation, override `DummyMarketplacePaymentConfig::isDateOfBirthEnabled()` in your project to return `false`:
+
+**src/Pyz/Yves/DummyMarketplacePayment/DummyMarketplacePaymentConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\DummyMarketplacePayment;
+
+use Spryker\Yves\DummyMarketplacePayment\DummyMarketplacePaymentConfig as SprykerDummyMarketplacePaymentConfig;
+
+class DummyMarketplacePaymentConfig extends SprykerDummyMarketplacePaymentConfig
+{
+    public function isDateOfBirthEnabled(): bool
+    {
+        return false;
+    }
+}
+```

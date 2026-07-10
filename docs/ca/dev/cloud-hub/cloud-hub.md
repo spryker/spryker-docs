@@ -1,7 +1,7 @@
 ---
 title: CloudHub
 
-last_updated: Jun 10, 2026
+last_updated: Jul 10, 2026
 
 description: CloudHub is a centralized self-service portal for managing Spryker infrastructure, including user access, S3 storage, and maintenance notifications.
 template: concept-topic-template

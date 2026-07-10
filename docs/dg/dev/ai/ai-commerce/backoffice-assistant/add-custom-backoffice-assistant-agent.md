@@ -1,7 +1,7 @@
 ---
 title: Add a custom Back Office Assistant agent
 description: Learn how to implement and register a custom agent and toolset for the Back Office Assistant feature, including a dedicated AI configuration and SSE streaming.
-last_updated: Jul 09, 2026
+last_updated: Jul 10, 2026
 template: concept-topic-template
 ---
 
@@ -139,21 +139,12 @@ Each tool referenced in `getTools()` implements `ToolPluginInterface` from `Spry
 
 ## 3) Register the plugins
 
-Register the agent plugin in `AiCommerceDependencyProvider::getBackofficeAssistantAgentPlugins()`, alongside the built-in agents:
+Add the agent plugin to the array returned by `AiCommerceDependencyProvider::getBackofficeAssistantAgentPlugins()`, alongside the already-registered built-in agents described in [Install Back Office Assistant](/docs/dg/dev/ai/ai-commerce/backoffice-assistant/install-backoffice-assistant.html#4-set-up-behavior):
 
 **src/Pyz/Zed/AiCommerce/AiCommerceDependencyProvider.php**
 
 ```php
-<?php
-
-namespace Pyz\Zed\AiCommerce;
-
 use Pyz\Zed\AiCommerce\Communication\Plugin\Agent\CustomerManagementAgentPlugin;
-use SprykerFeature\Zed\AiCommerce\AiCommerceDependencyProvider as SprykerFeatureAiCommerceDependencyProvider;
-use SprykerFeature\Zed\AiCommerce\Communication\Plugin\Agent\DiscountManagementAgentPlugin;
-use SprykerFeature\Zed\AiCommerce\Communication\Plugin\Agent\FormFillAgentPlugin;
-use SprykerFeature\Zed\AiCommerce\Communication\Plugin\Agent\GeneralAgentPlugin;
-use SprykerFeature\Zed\AiCommerce\Communication\Plugin\Agent\OrderManagementAgentPlugin;
 
 class AiCommerceDependencyProvider extends SprykerFeatureAiCommerceDependencyProvider
 {
@@ -163,32 +154,19 @@ class AiCommerceDependencyProvider extends SprykerFeatureAiCommerceDependencyPro
     protected function getBackofficeAssistantAgentPlugins(): array
     {
         return [
-            new GeneralAgentPlugin(),
-            new OrderManagementAgentPlugin(),
-            new DiscountManagementAgentPlugin(),
-            new FormFillAgentPlugin(),
+            // ... existing agent plugins
             new CustomerManagementAgentPlugin(),
         ];
     }
 }
 ```
 
-Register the toolset plugin in `AiFoundationDependencyProvider::getAiToolSetPlugins()`:
+Add the toolset plugin to the array returned by `AiFoundationDependencyProvider::getAiToolSetPlugins()`:
 
 **src/Pyz/Zed/AiFoundation/AiFoundationDependencyProvider.php**
 
 ```php
-<?php
-
-namespace Pyz\Zed\AiFoundation;
-
 use Pyz\Zed\AiCommerce\Communication\Plugin\AiFoundation\CustomerManagementToolSetPlugin;
-use Spryker\Zed\AiFoundation\AiFoundationDependencyProvider as SprykerAiFoundationDependencyProvider;
-use SprykerFeature\Zed\AiCommerce\Communication\Plugin\AiFoundation\DiscountManagementToolSetPlugin;
-use SprykerFeature\Zed\AiCommerce\Communication\Plugin\AiFoundation\FormFillToolSetPlugin;
-use SprykerFeature\Zed\AiCommerce\Communication\Plugin\AiFoundation\NavigationToolSetPlugin;
-use SprykerFeature\Zed\AiCommerce\Communication\Plugin\AiFoundation\OrderDetailsToolSetPlugin;
-use SprykerFeature\Zed\AiCommerce\Communication\Plugin\AiFoundation\OrderManagementToolSetPlugin;
 
 class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvider
 {
@@ -198,11 +176,7 @@ class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvid
     protected function getAiToolSetPlugins(): array
     {
         return [
-            new NavigationToolSetPlugin(),
-            new OrderManagementToolSetPlugin(),
-            new OrderDetailsToolSetPlugin(),
-            new DiscountManagementToolSetPlugin(),
-            new FormFillToolSetPlugin(),
+            // ... existing toolset plugins
             new CustomerManagementToolSetPlugin(),
         ];
     }

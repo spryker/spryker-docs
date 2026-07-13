@@ -892,6 +892,8 @@ entries:
       url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform.html
     - title: API Platform migration overview
       url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform-overview.html
+    - title: Upgrade API Platform resources to typed nested objects
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-api-platform-typed-nested-objects.html
     - title: Migrate from Auth to SecurityGui module
       url: /docs/dg/dev/upgrade-and-migrate/migrate-from-auth-to-securitygui-module.html
     - title: Migrating from Twig v1 to Twig v3

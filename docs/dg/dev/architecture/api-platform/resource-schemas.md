@@ -1,7 +1,7 @@
 ---
 title: Resource Schemas
 description: Understanding API Platform resource schema definitions in Spryker.
-last_updated: Jun 26, 2026
+last_updated: Jul 13, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -343,7 +343,7 @@ to a real class whose shape is enforced by PHP's type system.
 ### Why use it
 
 - **Type safety in PHP.** The parent property is typed to the generated class (for example,
-  `?CartsTotalsStorefrontResource`) instead of `array`, so providers and processors get IDE
+  `?CartsTotalsStorefrontObject`) instead of `array`, so providers and processors get IDE
   autocompletion and the language enforces the field set.
 - **Precise OpenAPI schema.** Each sub-field carries its own `type`, `description`, and `example`,
   so the OpenAPI document and Swagger UI render the object as a named component schema instead of
@@ -395,19 +395,21 @@ For a `Carts` resource with the `totals` property above, the generator:
 1. Types the property on the resource class:
 
    ```php
-   public ?CartsTotalsStorefrontResource $totals = null;
+   public ?CartsTotalsStorefrontObject $totals = null;
    ```
 
-2. Writes a companion class next to the resource in the `Generated\Api\{ApiType}\` namespace. The
-   class is `final`, carries **no** `#[ApiResource]` attribute — it is an embedded value object,
-   not a routed resource — and exposes the typed sub-fields plus their accessors:
+2. Writes a companion class in the `Generated\Api\{ApiType}\{ResourceName}\` namespace (a
+   sub-namespace named after the owning resource, alongside the resource class in
+   `Generated\Api\{ApiType}\`). The class is `final`, carries **no** `#[ApiResource]` attribute —
+   it is an embedded value object, not a routed resource — and exposes the typed sub-fields plus
+   their accessors:
 
    ```php
-   namespace Generated\Api\Storefront;
+   namespace Generated\Api\Storefront\Carts;
 
    use ApiPlatform\Metadata\ApiProperty;
 
-   final class CartsTotalsStorefrontResource
+   final class CartsTotalsStorefrontObject
    {
        #[ApiProperty(description: 'Items × prices before any discount/tax.', openapiContext: ['example' => 16058])]
        public ?int $subtotal = null;
@@ -422,10 +424,12 @@ For a `Carts` resource with the `totals` property above, the generator:
    }
    ```
 
-The companion class name is `{ResourceName}{PropertyPath}{ApiType}Resource` — the resource's
-normalized name, the capitalized property path, the API type, and the `Resource` suffix. So
-`Carts` + `totals` on the storefront API becomes `CartsTotalsStorefrontResource`; a checkout
-`billingAddress` becomes `CheckoutBillingAddressStorefrontResource`.
+The companion class name is `{ResourceName}{PropertyPath}{ApiType}Object` — the resource's
+normalized name, the capitalized property path, the API type, and the `Object` suffix (contrast
+the routed resource class itself, which keeps the `Resource` suffix). It lives in the
+`Generated\Api\{ApiType}\{ResourceName}` sub-namespace. So `Carts` + `totals` on the storefront API
+becomes `Generated\Api\Storefront\Carts\CartsTotalsStorefrontObject`; a checkout `billingAddress`
+becomes `Generated\Api\Storefront\Checkout\CheckoutBillingAddressStorefrontObject`.
 
 {% info_block infoBox "Imports in companion classes" %}
 
@@ -454,17 +458,18 @@ totals:
                     openapiContext: { example: 1457 }
 ```
 
-on the storefront `Carts` resource generates a `CartsTotalsStorefrontResource` class with
-`public ?CartsTotalsTaxStorefrontResource $tax = null;`, plus a separate
-`CartsTotalsTaxStorefrontResource` class with `public ?int $amount = null;`. A deeper path simply
-keeps concatenating — an agent quote-request resource's `shownVersion.cartTotals` object becomes
-`AgentQuoteRequestsShownVersionCartTotalsStorefrontResource`.
+on the storefront `Carts` resource generates a `CartsTotalsStorefrontObject` class with
+`public ?CartsTotalsTaxStorefrontObject $tax = null;`, plus a separate
+`CartsTotalsTaxStorefrontObject` class with `public ?int $amount = null;` (both in the
+`Generated\Api\Storefront\Carts` namespace). A deeper path simply keeps concatenating — an agent
+quote-request resource's `shownVersion.cartTotals` object becomes
+`AgentQuoteRequestsShownVersionCartTotalsStorefrontObject`.
 
 ### Object collections
 
 A `type: array` property whose `items:` are themselves a typed object (`type: object` with nested
 `properties:`) generates a value-object class for the element type. The class is named after the
-**pluralized** field segment — `{ResourceName}{PluralField}{ApiType}Resource` — and the parent
+**pluralized** field segment — `{ResourceName}{PluralField}{ApiType}Object` — and the parent
 property stays a PHP `array` carrying a `@var array<…>` docblock so the serializer denormalizes
 each element into the generated class:
 
@@ -479,9 +484,9 @@ customer:
             email:     { type: string }
 ```
 
-On the storefront `Carts` resource this generates `CartsCustomersStorefrontResource` (the field
+On the storefront `Carts` resource this generates `CartsCustomersStorefrontObject` (the field
 `customer` pluralized to `Customers`) as the element type, and types the property as
-`array<\Generated\Api\Storefront\CartsCustomersStorefrontResource>`.
+`array<\Generated\Api\Storefront\Carts\CartsCustomersStorefrontObject>`.
 
 ### Per-resource validation lifting
 
@@ -558,9 +563,43 @@ resource:
 ```
 
 The merged `calculations` object carries **both** `discountTotal` and `productOptionTotal`, and a
-single `CartItemsCalculationsStorefrontResource` value object is generated for it. This deep merge —
+single `CartItemsCalculationsStorefrontObject` value object is generated for it. This deep merge —
 not a shared class — is how identically-named objects accumulate fields across modules while each
 resource keeps its own independent request/response shape.
+
+#### Conflicting shapes fail generation
+
+Deep merge only applies when the contributors agree on the shape. When one contributor declares a
+property as a typed object (`type: object` with `properties`) or an object collection (`type: array`
+with `items.properties`) and another declares the **same** property as something structurally
+different — a `map`, a scalar, a plain array, or an object without `properties` — a silent
+last-wins merge would drop either the typed value object or the plain field. Instead, generation
+**fails with an error** that names the property and both contributing source files:
+
+```text
+Conflicting shapes for property "calculations": .../DiscountsRestApi/.../cart-items.resource.yml
+declares it as a typed object (`type: object` with `properties`), but
+.../project/.../cart-items.resource.yml declares it as `type: map`. ...
+```
+
+This applies both within a layer and across layers (project overrides feature overrides core). The
+usual cause is a project fragment that still declares a property as `type: map`/`array` while a core
+module has since promoted it to a typed object — convert the project fragment to the typed form.
+Same-shape overrides (object + object, collection + collection) still deep-merge, and attribute-only
+overrides (an override that sets, for example, `writable: false` without re-declaring `type`) merge
+as before.
+
+If you deliberately intend to re-shape an inherited property — for example, collapse a core typed
+object back into a `map`, or replace it wholesale rather than extend it — set `replace: true` on the
+overriding declaration. It takes your declaration wholesale (the inherited one is discarded),
+suppresses the conflict guard, and is stripped from the generated output:
+
+```yaml
+# project cart-items.resource.yml — deliberately override the core shape
+calculations:
+    type: map
+    replace: true
+```
 
 ## Project-defined canonical nested objects
 
@@ -716,7 +755,7 @@ activates and:
 {% info_block infoBox "Shared class versus per-resource class" %}
 
 Without `objectName`, each `type: object` property generates its own per-resource value-object
-class (for example, `CheckoutBillingAddressStorefrontResource`). With `objectName: Address`, all
+class (for example, `CheckoutBillingAddressStorefrontObject`). With `objectName: Address`, all
 matching properties across all resources instead share the single `Generated\Api\Storefront\Address`
 class. Use a canonical object when several resources genuinely share one shape and you want them to
 stay in lockstep; keep the inline form when each resource's shape is independent.

@@ -35,6 +35,8 @@ entries:
             url: /docs/ca/dev/cloud-hub/storage-management.html
           - title: Maintenance
             url: /docs/ca/dev/cloud-hub/maintenance.html
+          - title: Service links
+            url: /docs/ca/dev/cloud-hub/service-links.html
 
       - title: Connecting the Docker SDK
         url: /docs/ca/dev/connecting-the-docker-sdk.html

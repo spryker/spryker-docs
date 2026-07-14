@@ -1,6 +1,7 @@
 ---
 title: Set up data export to S3
 description: How to set up Configurable Data Exporter to export your Spryker data in a secure way to S3 buckets for analytics use.
+keywords: data export to BI,own BI
 template: concept-topic-template
 last_updated: July 10, 2025
 ---

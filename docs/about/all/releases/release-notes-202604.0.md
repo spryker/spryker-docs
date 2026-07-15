@@ -402,7 +402,7 @@ Spryker introduced native PunchOut Gateway capabilities for cXML and OCI to redu
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
-    <source src="s3://spryker/docs/About/Releases/release-notes-202604/Spryker-b2b-Punchout-User-Flow.mp4" type="video/mp4">
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/Spryker-b2b-Punchout-User-Flow.mp4" type="video/mp4">
   </video>
 </figure>
 

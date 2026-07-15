@@ -1,7 +1,7 @@
 ---
 title: Release notes 202604.0
 description: Release notes for Spryker Cloud Commerce OS version 202602.0
-last_updated: Apr 29, 2026
+last_updated: Jul 15, 2026
 template: concept-topic-template
 ---
 
@@ -399,6 +399,12 @@ Spryker introduced native PunchOut Gateway capabilities for cXML and OCI to redu
 
 **Documentation:**
 - [PunchOut Gateway](/docs/pbc/all/punchout-gateway/punchout-gateway)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="s3://spryker/docs/About/Releases/release-notes-202604/Spryker-b2b-Punchout-User-Flow.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ### New Stripe Integration {% include badge.html type="improvement" %}
 

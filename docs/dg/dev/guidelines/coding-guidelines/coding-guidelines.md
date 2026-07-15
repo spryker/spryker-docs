@@ -1,7 +1,7 @@
 ---
 title: Coding guidelines
 description: This document lists everything you need to know about coding guidelines that are used at Spryker for your Spryker based projects.
-last_updated: Apr 21, 2026
+last_updated: Jul 15, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/guidelines/coding-guidelines/coding-guidelines.html

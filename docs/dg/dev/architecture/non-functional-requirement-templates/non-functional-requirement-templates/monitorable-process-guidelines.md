@@ -1,7 +1,7 @@
 ---
 title: Monitorable process guidelines
 description: Guidelines for log generation and metric generation to enable Operations Teams to track and correlate issues in operated and deployed applications.
-last_updated: Apr 21, 2026
+last_updated: Jul 15, 2026
 template: concept-topic-template
 related:
   - title: NFR guidelines

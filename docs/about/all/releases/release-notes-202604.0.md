@@ -400,6 +400,12 @@ Spryker introduced native PunchOut Gateway capabilities for cXML and OCI to redu
 **Documentation:**
 - [PunchOut Gateway](/docs/pbc/all/punchout-gateway/punchout-gateway)
 
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="s3://spryker/docs/About/Releases/release-notes-202604/Spryker-b2b-Punchout-User-Flow.mp4" type="video/mp4">
+  </video>
+</figure>
+
 ### New Stripe Integration {% include badge.html type="improvement" %}
 
 Spryker introduced a new Stripe integration that replaces the legacy ACP-based app with a more extensible Spryker-native implementation. The release also adds a dedicated configuration page in the Back Office for managing Stripe settings. This gives customers and partners more control over Stripe-based payment flows and reduces dependency on legacy integration boundaries.

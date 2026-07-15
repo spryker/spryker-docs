@@ -2,7 +2,7 @@
 title: Data export to S3 - database structure reference
 description: Reference guide for identifying which database tables to include when configuring data exports to S3.
 template: concept-topic-template
-last_updated: March 18, 2026
+last_updated: June 16, 2026
 ---
 
 When requesting a data export to S3, you need to specify which database tables to include.

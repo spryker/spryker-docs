@@ -116,6 +116,12 @@ PunchOut support in the Back Office makes PunchOut integrations easier to config
 - Makes implementations more repeatable and faster across projects
 - Simplifies setup and maintenance for customers and implementation partners
 
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+      <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202606/Spryker+b2b+Punchout+Backoffice.mp4" type="video/mp4">
+  </video>
+</figure>
+
 **Documentation:**
 - [PunchOut Gateway](/docs/pbc/all/punchout-gateway/punchout-gateway.html)
 

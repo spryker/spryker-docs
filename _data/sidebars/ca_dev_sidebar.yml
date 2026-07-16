@@ -11,8 +11,8 @@ entries:
       - title: Access
         url: /docs/ca/dev/access/access.html
         nested:
-          - title: Access AWS Management Console
-            url: /docs/ca/dev/access/access-the-aws-management-console.html
+          - title: Connecting to AWS Console and CLI with an IAM user
+            url: /docs/ca/dev/access/connecting-to-aws-console-and-cli-with-an-iam-user.html
           - title: Locate service credentials
             url: /docs/ca/dev/access/locate-service-credentials.html
           - title: Connect to services via SSH
@@ -84,8 +84,6 @@ entries:
         nested:
           - title: Check ECR image scan results
             url: /docs/ca/dev/security/check-ecr-image-scan-results.html
-          - title: Generate access keys
-            url: /docs/ca/dev/security/generate-access-keys.html
           - title: Penetration testing
             url: /docs/ca/dev/security/penetration-testing.html
           - title: Set up multi-factor authentication

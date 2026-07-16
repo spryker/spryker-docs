@@ -71,7 +71,7 @@ Replace `{YOUR_ACCESS_KEY_ID}` and `{YOUR_SECRET_ACCESS_KEY}` with the values fr
 
 ## Step 4: Find your MFA device ARN
 
-Run the following command to retrieve your MFA device serial number:
+To retrieve your MFA device serial number, use the AWS CLI:
 
 ```bash
 aws iam list-mfa-devices
@@ -79,7 +79,7 @@ aws iam list-mfa-devices
 
 The output contains a `SerialNumber` field with a value in the following format:
 
-```
+```text
 arn:aws:iam::{ACCOUNT_ID}:mfa/{DEVICE_NAME}
 ```
 
@@ -87,7 +87,7 @@ Note this value — you need it in the next step.
 
 ## Step 5: Generate temporary session credentials
 
-Run the following command, replacing the placeholders with your values:
+Use one of the following options, replacing the placeholders with your values:
 
 **Option A: Step by step**
 

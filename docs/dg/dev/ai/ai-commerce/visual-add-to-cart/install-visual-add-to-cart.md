@@ -170,7 +170,105 @@ class AiCommerceConfig extends SprykerFeatureAiCommerceConfig
 
 To offer AWS Bedrock and Anthropic as selectable providers for Visual Add to Cart, see [Configure multiple AI providers](/docs/dg/dev/ai/ai-commerce/configure-multiple-ai-providers.html).
 
-### 4) Enable the feature
+### 4) Sync configuration
+
+Define the AI configuration and model settings for Visual Add to Cart in `data/configuration/ai_commerce.configuration.yml`. These settings back the `configuration::` references registered in `config/Shared/config_ai.php`, so they must exist before syncing:
+
+**data/configuration/ai_commerce.configuration.yml**
+
+```yaml
+features:
+    - key: ai_commerce
+      tabs:
+          - key: quick_order
+            enabled: true
+            groups:
+                - key: ai_vendor
+                  name: AI Vendor
+                  description: AI configuration and vendor model used for the Quick Order Image-to-Cart feature. Only the model field matching the selected AI Configuration is shown.
+                  enabled: true
+                  order: 1
+                  scopes:
+                      - global
+                  settings:
+                      - key: ai_configuration
+                        name: AI Configuration
+                        description: AI configuration used for the Quick Order Image-to-Cart feature.
+                        type: radio
+                        default_value: 'AI_COMMERCE:AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_OPENAI'
+                        enabled: true
+                        secret: false
+                        storefront: false
+                        order: 1
+                        scopes:
+                            - global
+                        options:
+                            - value: 'AI_COMMERCE:AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_OPENAI'
+                              label: OpenAI
+                            - value: 'AI_COMMERCE:AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_AWS'
+                              label: AWS Bedrock
+                            - value: 'AI_COMMERCE:AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_ANTHROPIC'
+                              label: Anthropic
+                      - key: openai_model
+                        name: OpenAI Model
+                        description: The OpenAI model used for the Quick Order Image-to-Cart AI configuration. Model must support image input and structured output.
+                        type: string
+                        default_value: 'gpt-4o-mini'
+                        enabled: true
+                        secret: false
+                        storefront: false
+                        order: 2
+                        scopes:
+                            - global
+                        dependencies:
+                            - when:
+                                  any:
+                                      - setting: ai_commerce:quick_order:ai_vendor:ai_configuration
+                                        operator: equals
+                                        value: 'AI_COMMERCE:AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_OPENAI'
+                      - key: aws_model
+                        name: AWS Bedrock Model
+                        description: The AWS Bedrock model identifier used for the Quick Order Image-to-Cart AI configuration. Model must support image input and structured output.
+                        type: string
+                        default_value: 'eu.anthropic.claude-haiku-4-5-20251001-v1:0'
+                        enabled: true
+                        secret: false
+                        storefront: false
+                        order: 3
+                        scopes:
+                            - global
+                        dependencies:
+                            - when:
+                                  any:
+                                      - setting: ai_commerce:quick_order:ai_vendor:ai_configuration
+                                        operator: equals
+                                        value: 'AI_COMMERCE:AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_AWS'
+                      - key: anthropic_model
+                        name: Anthropic Model
+                        description: The Anthropic model used for the Quick Order Image-to-Cart AI configuration. Model must support image input and structured output.
+                        type: string
+                        default_value: 'claude-haiku-4-5'
+                        enabled: true
+                        secret: false
+                        storefront: false
+                        order: 4
+                        scopes:
+                            - global
+                        dependencies:
+                            - when:
+                                  any:
+                                      - setting: ai_commerce:quick_order:ai_vendor:ai_configuration
+                                        operator: equals
+                                        value: 'AI_COMMERCE:AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_ANTHROPIC'
+```
+
+Sync the configuration to the database:
+
+```bash
+console configuration:sync
+```
+
+### 5) Enable the feature
 
 Enable the feature in the Back Office:
 

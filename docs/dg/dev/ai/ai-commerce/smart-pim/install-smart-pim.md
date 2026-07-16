@@ -323,6 +323,99 @@ In the Back Office, open a product create or edit page. Make sure the Smart PIM 
 
 ### 7) Sync configuration and build frontend assets
 
+Define the AI configuration and model settings for Smart PIM in `data/configuration/ai_commerce.configuration.yml`. These settings back the `configuration::` references registered in `config/Shared/config_ai.php`, so they must exist before syncing:
+
+**data/configuration/ai_commerce.configuration.yml**
+
+```yaml
+features:
+    - key: ai_commerce
+      tabs:
+          - key: smart_pim
+            name: Smart PIM
+            description: Smart PIM AI configuration shared across category suggestion, translation, image alt text, and content improver features.
+            enabled: true
+            order: 3
+            groups:
+                - key: ai_vendor
+                  name: AI Vendor
+                  description: AI configuration and vendor model used for all Smart PIM features (category suggestion, translation, image alt text, content improver). Only the model field matching the selected AI Configuration is shown.
+                  enabled: true
+                  order: 1
+                  scopes:
+                      - global
+                  settings:
+                      - key: ai_configuration
+                        name: AI Configuration
+                        description: AI configuration used for all Smart PIM features (category suggestion, translation, image alt text, content improver).
+                        type: radio
+                        default_value: 'AI_COMMERCE:AI_CONFIGURATION_SMART_PIM_OPENAI'
+                        enabled: true
+                        secret: false
+                        storefront: false
+                        order: 1
+                        scopes:
+                            - global
+                        options:
+                            - value: 'AI_COMMERCE:AI_CONFIGURATION_SMART_PIM_OPENAI'
+                              label: OpenAI
+                            - value: 'AI_COMMERCE:AI_CONFIGURATION_SMART_PIM_AWS'
+                              label: AWS Bedrock
+                            - value: 'AI_COMMERCE:AI_CONFIGURATION_SMART_PIM_ANTHROPIC'
+                              label: Anthropic
+                      - key: openai_model
+                        name: OpenAI Model
+                        description: The OpenAI model used for the Smart PIM AI configuration. Model must support image input and structured output.
+                        type: string
+                        default_value: 'gpt-4o-mini'
+                        enabled: true
+                        secret: false
+                        storefront: false
+                        order: 2
+                        scopes:
+                            - global
+                        dependencies:
+                            - when:
+                                  any:
+                                      - setting: ai_commerce:smart_pim:ai_vendor:ai_configuration
+                                        operator: equals
+                                        value: 'AI_COMMERCE:AI_CONFIGURATION_SMART_PIM_OPENAI'
+                      - key: aws_model
+                        name: AWS Bedrock Model
+                        description: The AWS Bedrock model identifier used for the Smart PIM AI configuration. Model must support image input and structured output.
+                        type: string
+                        default_value: 'eu.anthropic.claude-haiku-4-5-20251001-v1:0'
+                        enabled: true
+                        secret: false
+                        storefront: false
+                        order: 3
+                        scopes:
+                            - global
+                        dependencies:
+                            - when:
+                                  any:
+                                      - setting: ai_commerce:smart_pim:ai_vendor:ai_configuration
+                                        operator: equals
+                                        value: 'AI_COMMERCE:AI_CONFIGURATION_SMART_PIM_AWS'
+                      - key: anthropic_model
+                        name: Anthropic Model
+                        description: The Anthropic model used for the Smart PIM AI configuration. Model must support image input and structured output.
+                        type: string
+                        default_value: 'claude-haiku-4-5'
+                        enabled: true
+                        secret: false
+                        storefront: false
+                        order: 4
+                        scopes:
+                            - global
+                        dependencies:
+                            - when:
+                                  any:
+                                      - setting: ai_commerce:smart_pim:ai_vendor:ai_configuration
+                                        operator: equals
+                                        value: 'AI_COMMERCE:AI_CONFIGURATION_SMART_PIM_ANTHROPIC'
+```
+
 Sync the AI Commerce configuration to the database and build frontend assets:
 
 ```bash

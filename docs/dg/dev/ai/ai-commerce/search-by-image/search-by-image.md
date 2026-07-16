@@ -1,7 +1,7 @@
 ---
 title: Search by Image
 description: Technical overview of the Search by Image feature — architecture, AiFoundation integration, configuration options, and plugin structure.
-last_updated: Jul 08, 2026
+last_updated: Jul 16, 2026
 template: concept-topic-template
 ---
 
@@ -33,10 +33,10 @@ The following options can be configured at the project level in `AiCommerceConfi
 | CONFIGURATION | DEFAULT | DESCRIPTION |
 |---------------|---------|-------------|
 | `isSearchByImageEnabled()` | `false` | Enables or disables the feature. Controlled via the Back Office. |
-| `getSearchByImageSupportedMimeTypes()` | `image/jpeg`, `image/png`, `image/webp`, `image/gif` | Allowed upload MIME types. |
-| `getSearchByImageMaxFileSizeInBytes()` | Defined in `AiCommerceConfig` | Maximum upload file size in bytes. |
+| `getAllowedImageMimeTypes()` | `image/jpeg`, `image/png`, `image/webp`, `image/gif` | Allowed upload MIME types. |
+| `getMaxImageSizeBytes()` | `5242880` (5 MB) | Maximum upload file size in bytes. |
 | `getSearchByImageAiConfigurationName()` | `null` | Named AI model configuration identifier used to look up the provider config from `AiFoundation`. When `null`, the default configuration is used. |
-| `getSearchByImageRedirectType()` | `search_results` | Controls the redirect target after a successful image search. Controlled via the Back Office. |
+| `getRedirectType()` | `search_results` | Controls the redirect target after a successful image search. Controlled via the Back Office. |
 
 ## System prompt
 

@@ -1,7 +1,7 @@
 ---
 title: Visual Add to Cart
 description: Technical overview of the Visual Add to Cart feature — architecture, AiFoundation integration, configuration options, and plugin structure.
-last_updated: Jul 08, 2026
+last_updated: Jul 16, 2026
 template: concept-topic-template
 ---
 
@@ -32,7 +32,7 @@ The following options can be configured at the project level in `AiCommerceConfi
 | CONFIGURATION | DEFAULT | DESCRIPTION |
 |---------------|---------|-------------|
 | `isQuickOrderImageToCartEnabled()` | `false` | Enables or disables the feature. |
-| `getQuickOrderImageToCartSupportedMimeTypes()` | `image/jpeg`, `image/png` | Allowed upload MIME types. |
+| `getQuickOrderImageToCartSupportedMimeTypes()` | `image/jpeg`, `image/jpg`, `image/png` | Allowed upload MIME types. |
 | `getQuickOrderImageToCartMaxFileSizeInBytes()` | `10485760` (10 MB) | Maximum upload file size. |
 | `getQuickOrderImageToCartMaxProducts()` | `20` | Maximum number of products recognized per image. |
 | `getQuickOrderImageToCartTextSimilarityThresholdPercent()` | `30` | Minimum word-overlap percentage required to consider a catalog match valid. |

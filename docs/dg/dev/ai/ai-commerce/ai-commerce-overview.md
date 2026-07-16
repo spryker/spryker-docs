@@ -1,7 +1,7 @@
 ---
 title: AI Commerce overview
 description: Technical overview of the AI Commerce SprykerFeature package — architecture, AiFoundation integration, and available features.
-last_updated: Jun 08, 2026
+last_updated: Jul 16, 2026
 template: concept-topic-template
 ---
 
@@ -9,7 +9,7 @@ AI Commerce is a `SprykerFeature` package (`spryker-feature/ai-commerce`) that p
 
 ## Package structure
 
-The `spryker-feature/ai-commerce` package follows the standard Spryker module structure and ships modules for both Yves and the Shared layer. Each AI feature within the package is self-contained — it registers its own plugins, configuration, and translations.
+The `spryker-feature/ai-commerce` package follows the standard Spryker module structure and ships modules across the Zed, Yves, Client, and Shared layers. Each AI feature within the package is self-contained — it registers its own plugins, configuration, and translations.
 
 ## AiFoundation integration
 

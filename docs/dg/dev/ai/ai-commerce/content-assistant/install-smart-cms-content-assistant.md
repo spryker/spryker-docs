@@ -1,7 +1,7 @@
 ---
 title: Install Smart CMS Content Assistant
 description: Learn how to install the Smart CMS Content Assistant feature that provides an AI-powered panel in the Back Office CMS Page and CMS Block glossary editors.
-last_updated: Jun 08, 2026
+last_updated: Jul 16, 2026
 template: feature-integration-guide-template
 ---
 
@@ -44,6 +44,16 @@ use SprykerFeature\Shared\AiCommerce\AiCommerceConstants as SprykerFeatureAiComm
 
 interface AiCommerceConstants extends SprykerFeatureAiCommerceConstants
 {
+    public const string CONFIGURATION_KEY_OPENAI_API_TOKEN = 'ai_vendor:openai:general:api_token';
+    public const string CONFIGURATION_KEY_AWS_API_TOKEN = 'ai_vendor:aws:general:api_token';
+    public const string CONFIGURATION_KEY_AWS_REGION = 'ai_vendor:aws:general:region';
+    public const string CONFIGURATION_KEY_ANTHROPIC_API_TOKEN = 'ai_vendor:anthropic:general:api_token';
+
+    public const string CONFIGURATION_KEY_SMART_CMS_AI_CONFIGURATION = 'ai_commerce:smart_cms:ai_vendor:ai_configuration';
+    public const string CONFIGURATION_KEY_SMART_CMS_OPENAI_MODEL = 'ai_commerce:smart_cms:ai_vendor:openai_model';
+    public const string CONFIGURATION_KEY_SMART_CMS_AWS_MODEL = 'ai_commerce:smart_cms:ai_vendor:aws_model';
+    public const string CONFIGURATION_KEY_SMART_CMS_ANTHROPIC_MODEL = 'ai_commerce:smart_cms:ai_vendor:anthropic_model';
+
     public const string AI_CONFIGURATION_SMART_CMS_OPENAI = 'AI_COMMERCE:AI_CONFIGURATION_SMART_CMS_OPENAI';
     public const string AI_CONFIGURATION_SMART_CMS_AWS = 'AI_COMMERCE:AI_CONFIGURATION_SMART_CMS_AWS';
     public const string AI_CONFIGURATION_SMART_CMS_ANTHROPIC = 'AI_COMMERCE:AI_CONFIGURATION_SMART_CMS_ANTHROPIC';
@@ -65,31 +75,31 @@ use Spryker\Shared\AiFoundation\AiFoundationConstants;
 $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_SMART_CMS_OPENAI] = [
     'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
     'provider_config' => [
-        'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
-        'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_OPENAI_MODEL,
+        'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
+        'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_OPENAI_MODEL,
     ],
-    'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_SYSTEM_PROMPT,
+    'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_SYSTEM_PROMPT,
 ];
 
 $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_SMART_CMS_AWS] = [
     'provider_name' => AiFoundationConstants::PROVIDER_BEDROCK,
     'provider_config' => [
-        'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_AWS_MODEL,
+        'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_AWS_MODEL,
         'bedrockRuntimeClient' => [
-            'region' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_AWS_REGION,
-            'token' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_AWS_API_TOKEN,
+            'region' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_AWS_REGION,
+            'token' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_AWS_API_TOKEN,
         ],
     ],
-    'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_SYSTEM_PROMPT,
+    'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_SYSTEM_PROMPT,
 ];
 
 $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_SMART_CMS_ANTHROPIC] = [
     'provider_name' => AiFoundationConstants::PROVIDER_ANTHROPIC,
     'provider_config' => [
-        'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_ANTHROPIC_API_TOKEN,
-        'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_ANTHROPIC_MODEL,
+        'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_ANTHROPIC_API_TOKEN,
+        'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_ANTHROPIC_MODEL,
     ],
-    'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_SYSTEM_PROMPT,
+    'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_SYSTEM_PROMPT,
 ];
 ```
 
@@ -118,15 +128,14 @@ declare(strict_types = 1);
 namespace Pyz\Zed\AiCommerce;
 
 use Pyz\Shared\AiCommerce\AiCommerceConstants;
-use SprykerFeature\Zed\AiCommerce\AiCommerceConfig as SprykerAiCommerceConfig;
-use SprykerFeature\Shared\AiCommerce\AiCommerceConstants as SprykerFeatureAiCommerceConstants;
+use SprykerFeature\Zed\AiCommerce\AiCommerceConfig as SprykerFeatureAiCommerceConfig;
 
-class AiCommerceConfig extends SprykerAiCommerceConfig
+class AiCommerceConfig extends SprykerFeatureAiCommerceConfig
 {
     public function getSmartCmsAiConfigurationName(): string
     {
         return (string)$this->getModuleConfig(
-            SprykerFeatureAiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_AI_CONFIGURATION,
+            AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_AI_CONFIGURATION,
             AiCommerceConstants::AI_CONFIGURATION_SMART_CMS_OPENAI,
         );
     }

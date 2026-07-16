@@ -1,7 +1,7 @@
 ---
 title: Install Smart PIM
 description: Learn how to install the Smart PIM feature that provides AI-powered content improvement, image alt text generation, category suggestions, and translation on Back Office product pages.
-last_updated: Apr 27, 2026
+last_updated: Jul 16, 2026
 template: feature-integration-guide-template
 ---
 
@@ -39,7 +39,7 @@ console propel:install
 
 ### 2) Add configuration constants
 
-Add the project-level constants interface to map configuration keys used by the Back Office Configuration UI:
+Add the project-level constants interface to define the Smart PIM configuration name and the Back Office setting keys:
 
 **src/Pyz/Shared/AiCommerce/AiCommerceConstants.php**
 
@@ -54,7 +54,11 @@ use SprykerFeature\Shared\AiCommerce\AiCommerceConstants as SprykerFeatureAiComm
 
 interface AiCommerceConstants extends SprykerFeatureAiCommerceConstants
 {
-    public const string AI_CONFIGURATION_SMART_PIM = 'AI_COMMERCE:AI_CONFIGURATION_SMART_PIM';
+    public const string CONFIGURATION_KEY_OPENAI_API_TOKEN = 'ai_vendor:openai:general:api_token';
+    public const string CONFIGURATION_KEY_SMART_PIM_AI_CONFIGURATION = 'ai_commerce:smart_pim:ai_vendor:ai_configuration';
+    public const string CONFIGURATION_KEY_SMART_PIM_OPENAI_MODEL = 'ai_commerce:smart_pim:ai_vendor:openai_model';
+
+    public const string AI_CONFIGURATION_SMART_PIM_OPENAI = 'AI_COMMERCE:AI_CONFIGURATION_SMART_PIM_OPENAI';
 }
 ```
 
@@ -70,20 +74,24 @@ Add the Smart PIM named AI configuration entry to `config/Shared/config_ai.php`.
 use Pyz\Shared\AiCommerce\AiCommerceConstants;
 use Spryker\Shared\AiFoundation\AiFoundationConstants;
 
-$openAiConfiguration = [
-    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI, // or any other provider name
+$config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_SMART_PIM_OPENAI] = [
+    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
     'provider_config' => [
-        'key' => 'open-ai-api-token', // or any other configuration key
-        'model' => 'gpt-4o',
+        'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
+        'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_PIM_OPENAI_MODEL,
     ],
 ];
-
-$config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_SMART_PIM] = $openAiConfiguration;
 ```
+
+{% info_block infoBox "Multiple AI providers" %}
+
+The example above registers an OpenAI configuration. To offer AWS Bedrock and Anthropic as selectable providers for Smart PIM, see [Configure multiple AI providers](/docs/dg/dev/ai/ai-commerce/configure-multiple-ai-providers.html).
+
+{% endinfo_block %}
 
 ### 4) Configure Smart PIM
 
-Override `AiCommerceConfig` in the Zed layer to route all Smart PIM capabilities to the `AI_CONFIGURATION_SMART_PIM` named configuration:
+Override `AiCommerceConfig` in the Zed layer to route all Smart PIM capabilities to the Smart PIM named configuration. Each capability reads the vendor selected in the Back Office and returns the matching configuration name, defaulting to the OpenAI configuration:
 
 **src/Pyz/Zed/AiCommerce/AiCommerceConfig.php**
 
@@ -95,28 +103,36 @@ declare(strict_types = 1);
 namespace Pyz\Zed\AiCommerce;
 
 use Pyz\Shared\AiCommerce\AiCommerceConstants;
-use SprykerFeature\Zed\AiCommerce\AiCommerceConfig as SprykerAiCommerceConfig;
+use SprykerFeature\Zed\AiCommerce\AiCommerceConfig as SprykerFeatureAiCommerceConfig;
 
-class AiCommerceConfig extends SprykerAiCommerceConfig
+class AiCommerceConfig extends SprykerFeatureAiCommerceConfig
 {
     public function getContentImproverAiConfigurationName(): ?string
     {
-        return AiCommerceConstants::AI_CONFIGURATION_SMART_PIM;
+        return $this->getSmartPimAiConfigurationName();
     }
 
     public function getImageAltTextAiConfigurationName(): ?string
     {
-        return AiCommerceConstants::AI_CONFIGURATION_SMART_PIM;
+        return $this->getSmartPimAiConfigurationName();
     }
 
     public function getCategorySuggestionAiConfigurationName(): ?string
     {
-        return AiCommerceConstants::AI_CONFIGURATION_SMART_PIM;
+        return $this->getSmartPimAiConfigurationName();
     }
 
     public function getTranslationAiConfigurationName(): ?string
     {
-        return AiCommerceConstants::AI_CONFIGURATION_SMART_PIM;
+        return $this->getSmartPimAiConfigurationName();
+    }
+
+    protected function getSmartPimAiConfigurationName(): ?string
+    {
+        return $this->getModuleConfig(
+            AiCommerceConstants::CONFIGURATION_KEY_SMART_PIM_AI_CONFIGURATION,
+            AiCommerceConstants::AI_CONFIGURATION_SMART_PIM_OPENAI,
+        );
     }
 }
 ```
@@ -139,6 +155,7 @@ Register the category lifecycle plugins in `ProductDependencyProvider`:
 
 namespace Pyz\Zed\Product;
 
+use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Product\ProductDependencyProvider as SprykerProductDependencyProvider;
 use Spryker\Zed\ProductCategory\Communication\Plugin\Product\ProductCategoryProductAbstractAfterUpdatePlugin;
 use Spryker\Zed\ProductCategory\Communication\Plugin\Product\ProductCategoryProductAbstractPostCreatePlugin;

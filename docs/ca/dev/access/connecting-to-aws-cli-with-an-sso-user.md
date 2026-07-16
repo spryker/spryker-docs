@@ -155,4 +155,4 @@ Chrome on macOS may not work for all users. If you experience issues, use `webki
 ## Next steps
 
 - [SSO Access](/docs/ca/dev/access/sso-access.html)
-- [Access AWS Management Console](/docs/ca/dev/access/access-the-aws-management-console.html)
+- [Connecting to AWS Console and CLI with an IAM user](/docs/ca/dev/access/connecting-to-aws-console-and-cli-with-an-iam-user.html)

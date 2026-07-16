@@ -3,6 +3,13 @@ title: Connecting to AWS Console and CLI with an IAM user
 description: Learn how to access the AWS Management Console and set up AWS CLI access with MFA as an IAM user.
 template: howto-guide-template
 last_updated: Jul 16, 2026
+redirect_from:
+  - /docs/accessing-aws-management-console
+  - /docs/en/accessing-aws-management-console
+  - /docs/cloud/dev/spryker-cloud-commerce-os/access/accessing-aws-management-console.html
+  - /docs/generating-access-keys
+  - /docs/en/generating-access-keys
+  - /docs/cloud/dev/spryker-cloud-commerce-os/security/generating-access-keys.html
 ---
 
 This document describes how to access the AWS Management Console and configure AWS CLI access as an IAM user with Multi-Factor Authentication (MFA) enforced.
@@ -34,7 +41,7 @@ You are now signed in to the AWS Management Console.
 
 Access keys are the long-term static credentials used to configure AWS CLI. Generate them once and store them securely.
 
-{% info_block infoBox %}
+{% info_block infoBox "Access key scope" %}
 
 - You can only generate an access key for your own account.
 - Access keys are intended for local development and personal AWS CLI access only. Do not use them for automations.

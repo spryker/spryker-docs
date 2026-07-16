@@ -28,15 +28,15 @@ The Yves-side widget `ImageSearchAiWidget` renders the camera icon and the image
 
 ## Configuration
 
-The following options can be configured at the project level in `AiCommerceConfig`:
+The following options can be configured at the project level. The upload and redirect options are defined in the Yves `AiCommerceConfig`, and the AI model configuration is defined in the Client `AiCommerceConfig`:
 
-| CONFIGURATION | DEFAULT | DESCRIPTION |
-|---------------|---------|-------------|
-| `isSearchByImageEnabled()` | `false` | Enables or disables the feature. Controlled via the Back Office. |
-| `getAllowedImageMimeTypes()` | `image/jpeg`, `image/png`, `image/webp`, `image/gif` | Allowed upload MIME types. |
-| `getMaxImageSizeBytes()` | `5242880` (5 MB) | Maximum upload file size in bytes. |
-| `getSearchByImageAiConfigurationName()` | `null` | Named AI model configuration identifier used to look up the provider config from `AiFoundation`. When `null`, the default configuration is used. |
-| `getRedirectType()` | `search_results` | Controls the redirect target after a successful image search. Controlled via the Back Office. |
+| CONFIGURATION | LAYER | DEFAULT | DESCRIPTION |
+|---------------|-------|---------|-------------|
+| `isSearchByImageEnabled()` | Yves | `false` | Enables or disables the feature. Controlled via the Back Office. |
+| `getAllowedImageMimeTypes()` | Yves | `image/jpeg`, `image/png`, `image/webp`, `image/gif` | Allowed upload MIME types. |
+| `getMaxImageSizeBytes()` | Yves | `5242880` (5 MB) | Maximum upload file size in bytes. |
+| `getRedirectType()` | Yves | `search_results` | Controls the redirect target after a successful image search. Controlled via the Back Office. |
+| `getSearchByImageAiConfigurationName()` | Client | `null` | Named AI model configuration identifier used to look up the provider config from `AiFoundation`. When `null`, the default configuration is used. |
 
 ## System prompt
 

@@ -2,7 +2,7 @@
 title: Getting started with cloud administration
 description: Get started with Spryker Cloud Commerce OS setup, covering environment configurations, AWS access, and deploying with continuous integration for optimized cloud management.
 template: howto-guide-template
-last_updated: Oct 17, 2023
+last_updated: Jul 16, 2026
 originalLink: https://cloud.spryker.com/docs/getting-started-with-spryker-cloud-commerce-os
 originalArticleId: 04c7a319-4c90-4fd7-a112-982569e48c70
 redirect_from:
@@ -35,7 +35,7 @@ After the initial setup, the following is configured and available:
 
 You can access your cloud environments via the following means:
 
-- IAM account: provides access to the AWS Management Console. For instructions, see [Access AWS Management Console](/docs/ca/dev/access/access-the-aws-management-console.html).
+- IAM account: provides access to the AWS Management Console and AWS CLI. For instructions, see [Connecting to AWS Console and CLI with an IAM user](/docs/ca/dev/access/connecting-to-aws-console-and-cli-with-an-iam-user.html).
 - SSH: provides access to internal services via [bastion host](https://docs.aws.amazon.com/managedservices/latest/userguide/using-bastions.html). For instructions, see [Connect to services via SSH](/docs/ca/dev/access/connect-to-services-via-ssh.html).
 - VPN: provides access to internal services via [bastion host](https://docs.aws.amazon.com/managedservices/latest/userguide/using-bastions.html). You receive these access details during the onboarding.
 - SFTP: provides access to the SFTP folder mounted inside the Jenkins container. You receive these access details during the onboarding.

@@ -1,7 +1,7 @@
 ---
 title: Add a custom Back Office Assistant agent
 description: Learn how to implement and register a custom agent and toolset for the Back Office Assistant feature, including a dedicated AI configuration and SSE streaming.
-last_updated: Jul 16, 2026
+last_updated: Jul 17, 2026
 template: concept-topic-template
 ---
 
@@ -245,7 +245,7 @@ class AiCommerceConfig extends SprykerFeatureAiCommerceConfig
 }
 ```
 
-`getBackofficeAssistantAiConfigurationName()` and the `AI_CONFIGURATION_BACKOFFICE_ASSISTANT_*` constants are defined in your project's `Pyz\Zed\AiCommerce\AiCommerceConfig` and `Pyz\Shared\AiCommerce\AiCommerceConstants` when you install the Back Office Assistant. Reuse them instead of adding a separate vendor switch for the new agent.
+`getBackofficeAssistantAiConfigurationName()` and the `AI_CONFIGURATION_BACKOFFICE_ASSISTANT_*` constants are defined in your project's `Pyz\Zed\AiCommerce\AiCommerceConfig` and `Pyz\Shared\AiCommerce\AiCommerceConstants` when you install the Back Office Assistant, as described in [Install Back Office Assistant](/docs/dg/dev/ai/ai-commerce/backoffice-assistant/install-backoffice-assistant.html#3-configure-ai-models-for-back-office-assistant). Reuse them instead of adding a separate vendor switch for the new agent.
 
 ### 4.3) Add the configuration entries
 

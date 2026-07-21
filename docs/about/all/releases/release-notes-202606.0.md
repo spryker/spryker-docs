@@ -381,7 +381,7 @@ We fixed issues affecting customer authentication and session behavior in edge c
 **Key capabilities:**
 - Prevents unintended API authentication behavior related to `spy_customer.registered = NULL`
 - Improves error handling for invalid JWT tokens in warehouse token requests
-- Avoids false-positive WAF blocking caused by `../` sequences in password hashes.
+- Avoids false-positive WAF blocking caused by specific patterns that are not malicious.
 
 **Business benefits:**
 - Improves trust in authentication flows

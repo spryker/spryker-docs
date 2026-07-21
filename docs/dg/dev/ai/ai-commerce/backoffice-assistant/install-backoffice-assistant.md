@@ -1,7 +1,7 @@
 ---
 title: Install Back Office Assistant
 description: Learn how to install the Back Office Assistant feature that provides an AI-powered chat widget in the Spryker Back Office.
-last_updated: Apr 13, 2026
+last_updated: Jul 16, 2026
 template: feature-integration-guide-template
 ---
 
@@ -34,55 +34,154 @@ console propel:install
 
 ### 3) Configure AI models for Back Office Assistant
 
-The Back Office Assistant uses a dedicated named AI configuration for each agent. Add these configuration entries to `config/Shared/config_ai.php`:
+The Back Office Assistant uses a dedicated named AI configuration for the intent router and each agent. Each configuration is identified by a constant defined at the project level and registered in `config/Shared/config_ai.php`.
+
+Using a dedicated AI model configuration per agent is recommended because each named configuration is tracked separately in the AiFoundation audit log. This lets you isolate and review all AI calls made by each agent independently from other AI features in your project.
+
+First, define the configuration name constants and the Back Office setting keys at the project level:
+
+**src/Pyz/Shared/AiCommerce/AiCommerceConstants.php**
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Shared\AiCommerce;
+
+use SprykerFeature\Shared\AiCommerce\AiCommerceConstants as SprykerFeatureAiCommerceConstants;
+
+interface AiCommerceConstants extends SprykerFeatureAiCommerceConstants
+{
+    public const string CONFIGURATION_KEY_OPENAI_API_TOKEN = 'ai_vendor:openai:general:api_token';
+    public const string CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL = 'ai_commerce:backoffice_assistant:ai_vendor:openai_model';
+
+    public const string AI_CONFIGURATION_INTENT_ROUTER_OPENAI = 'AI_COMMERCE:AI_CONFIGURATION_INTENT_ROUTER_OPENAI';
+    public const string AI_CONFIGURATION_GENERAL_AGENT_OPENAI = 'AI_COMMERCE:AI_CONFIGURATION_GENERAL_AGENT_OPENAI';
+    public const string AI_CONFIGURATION_ORDER_MANAGEMENT_OPENAI = 'AI_COMMERCE:AI_CONFIGURATION_ORDER_MANAGEMENT_OPENAI';
+    public const string AI_CONFIGURATION_DISCOUNT_MANAGEMENT_OPENAI = 'AI_COMMERCE:AI_CONFIGURATION_DISCOUNT_MANAGEMENT_OPENAI';
+    public const string AI_CONFIGURATION_FORM_FILL_OPENAI = 'AI_COMMERCE:AI_CONFIGURATION_FORM_FILL_OPENAI';
+}
+```
+
+Then register the configuration entries in `config/Shared/config_ai.php`. The API token and model are resolved at runtime from the Back Office Configuration UI using the `CONFIGURATION_REFERENCE_PREFIX`:
 
 `config/Shared/config_ai.php`
 
 ```php
 <?php
 
+use Pyz\Shared\AiCommerce\AiCommerceConstants;
 use Spryker\Shared\AiFoundation\AiFoundationConstants;
-use SprykerFeature\Shared\AiCommerce\AiCommerceConstants;
 
-$openAiConfiguration = [
+$config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_INTENT_ROUTER_OPENAI] = [
     'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
     'provider_config' => [
-        'key' => getenv('OPEN_AI_API_TOKEN') ?: '',
-        'model' => 'gpt-4o-mini', // fastest non-reasoning model
+        'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
+        'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL,
     ],
 ];
 
-$config[AiFoundationConstants::AI_CONFIGURATIONS] = [
-    AiFoundationConstants::AI_CONFIGURATION_DEFAULT => $openAiConfiguration,
-    AiCommerceConstants::AI_CONFIGURATION_INTENT_ROUTER => $openAiConfiguration,
-    AiCommerceConstants::AI_CONFIGURATION_GENERAL_PURPOSE => array_merge($openAiConfiguration, [
-        'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_GENERAL_PURPOSE_SYSTEM_PROMPT,
-        'provider_config' => array_merge($openAiConfiguration['provider_config'], [
-            'model' => 'gpt-4.1', // fast non-reasoning model
-        ]),
-    ]),
-    AiCommerceConstants::AI_CONFIGURATION_ORDER_MANAGEMENT => array_merge($openAiConfiguration, [
-        'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_ORDER_MANAGEMENT_SYSTEM_PROMPT,
-        'provider_config' => array_merge($openAiConfiguration['provider_config'], [
-            'model' => 'gpt-4.1', // fast non-reasoning model
-        ]),
-    ]),
-    AiCommerceConstants::AI_CONFIGURATION_DISCOUNT_MANAGEMENT => array_merge($openAiConfiguration, [
-        'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_DISCOUNT_MANAGEMENT_SYSTEM_PROMPT,
-        'provider_config' => array_merge($openAiConfiguration['provider_config'], [
-            'model' => 'gpt-4.1', // fast non-reasoning model
-        ]),
-    ]),
-    AiCommerceConstants::AI_CONFIGURATION_FORM_FILL => array_merge($openAiConfiguration, [
-        'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_FORM_FILL_SYSTEM_PROMPT,
-        'provider_config' => array_merge($openAiConfiguration['provider_config'], [
-            'model' => 'gpt-4.1', // fast non-reasoning model
-        ]),
-    ]),
+$config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_GENERAL_AGENT_OPENAI] = [
+    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+    'provider_config' => [
+        'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
+        'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL,
+    ],
+    'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_GENERAL_PURPOSE_SYSTEM_PROMPT,
+];
+
+$config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_ORDER_MANAGEMENT_OPENAI] = [
+    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+    'provider_config' => [
+        'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
+        'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL,
+    ],
+    'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_ORDER_MANAGEMENT_SYSTEM_PROMPT,
+];
+
+$config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_DISCOUNT_MANAGEMENT_OPENAI] = [
+    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+    'provider_config' => [
+        'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
+        'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL,
+    ],
+    'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_DISCOUNT_MANAGEMENT_SYSTEM_PROMPT,
+];
+
+$config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_FORM_FILL_OPENAI] = [
+    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+    'provider_config' => [
+        'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
+        'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL,
+    ],
+    'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_FORM_FILL_SYSTEM_PROMPT,
 ];
 ```
 
-Using a dedicated AI model configuration per agent is recommended because each named configuration is tracked separately in the AiFoundation audit log. This lets you isolate and review all AI calls made by each agent independently from other AI features in your project.
+{% info_block infoBox "Multiple AI providers" %}
+
+The example above registers OpenAI configurations. To offer AWS Bedrock and Anthropic as selectable providers for each agent, see [Configure multiple AI providers](/docs/dg/dev/ai/ai-commerce/configure-multiple-ai-providers.html).
+
+{% endinfo_block %}
+
+Finally, point the intent router and each agent at its AI configuration by overriding the corresponding method in `src/Pyz/Zed/AiCommerce/AiCommerceConfig.php`. Each method reads the vendor selected in the Back Office and returns the matching configuration name, defaulting to the OpenAI configuration:
+
+**src/Pyz/Zed/AiCommerce/AiCommerceConfig.php**
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Zed\AiCommerce;
+
+use Pyz\Shared\AiCommerce\AiCommerceConstants;
+use SprykerFeature\Zed\AiCommerce\AiCommerceConfig as SprykerFeatureAiCommerceConfig;
+
+class AiCommerceConfig extends SprykerFeatureAiCommerceConfig
+{
+    /**
+     * @return string|null
+     */
+    public function getIntentRouterAiConfigurationName(): ?string
+    {
+        return AiCommerceConstants::AI_CONFIGURATION_INTENT_ROUTER_OPENAI;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getGeneralAgentAiConfigurationName(): ?string
+    {
+        return AiCommerceConstants::AI_CONFIGURATION_GENERAL_AGENT_OPENAI;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getOrderManagementAgentAiConfigurationName(): ?string
+    {
+        return AiCommerceConstants::AI_CONFIGURATION_ORDER_MANAGEMENT_OPENAI;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getDiscountManagementAgentAiConfigurationName(): ?string
+    {
+        return AiCommerceConstants::AI_CONFIGURATION_DISCOUNT_MANAGEMENT_OPENAI;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getFormFillAgentAiConfigurationName(): ?string
+    {
+        return AiCommerceConstants::AI_CONFIGURATION_FORM_FILL_OPENAI;
+    }
+}
+```
 
 ### 4) Set up behavior
 
@@ -254,6 +353,96 @@ In the Back Office, make sure the chat widget icon is visible in the Back Office
 {% endinfo_block %}
 
 ### 5) Sync configuration
+
+Define the AI configuration and model settings for the Back Office Assistant in `data/configuration/ai_commerce.configuration.yml`. These settings back the `configuration::` references registered in `config/Shared/config_ai.php`, so they must exist before syncing:
+
+**data/configuration/ai_commerce.configuration.yml**
+
+```yaml
+features:
+    - key: ai_commerce
+      tabs:
+          - key: backoffice_assistant
+            enabled: true
+            groups:
+                - key: ai_vendor
+                  name: AI Vendor
+                  description: AI configuration and vendor model used for the Backoffice Assistant. Only the model field matching the selected AI Configuration is shown.
+                  enabled: true
+                  order: 1
+                  scopes:
+                      - global
+                  settings:
+                      - key: ai_configuration
+                        name: AI Configuration
+                        description: AI configuration used for all Backoffice Assistant agents.
+                        type: radio
+                        default_value: 'AI_COMMERCE:AI_CONFIGURATION_BACKOFFICE_ASSISTANT_OPENAI'
+                        enabled: true
+                        secret: false
+                        storefront: false
+                        order: 1
+                        scopes:
+                            - global
+                        options:
+                            - value: 'AI_COMMERCE:AI_CONFIGURATION_BACKOFFICE_ASSISTANT_OPENAI'
+                              label: OpenAI
+                            - value: 'AI_COMMERCE:AI_CONFIGURATION_BACKOFFICE_ASSISTANT_AWS'
+                              label: AWS Bedrock
+                            - value: 'AI_COMMERCE:AI_CONFIGURATION_BACKOFFICE_ASSISTANT_ANTHROPIC'
+                              label: Anthropic
+                      - key: openai_model
+                        name: OpenAI Model
+                        description: The OpenAI model used for the Backoffice Assistant AI configuration. Model must support image input and structured output.
+                        type: string
+                        default_value: 'gpt-4.1'
+                        enabled: true
+                        secret: false
+                        storefront: false
+                        order: 2
+                        scopes:
+                            - global
+                        dependencies:
+                            - when:
+                                  any:
+                                      - setting: ai_commerce:backoffice_assistant:ai_vendor:ai_configuration
+                                        operator: equals
+                                        value: 'AI_COMMERCE:AI_CONFIGURATION_BACKOFFICE_ASSISTANT_OPENAI'
+                      - key: aws_model
+                        name: AWS Bedrock Model
+                        description: The AWS Bedrock model identifier used for the Backoffice Assistant AI configuration. Model must support image input and structured output.
+                        type: string
+                        default_value: 'eu.anthropic.claude-sonnet-4-5-20250929-v1:0'
+                        enabled: true
+                        secret: false
+                        storefront: false
+                        order: 3
+                        scopes:
+                            - global
+                        dependencies:
+                            - when:
+                                  any:
+                                      - setting: ai_commerce:backoffice_assistant:ai_vendor:ai_configuration
+                                        operator: equals
+                                        value: 'AI_COMMERCE:AI_CONFIGURATION_BACKOFFICE_ASSISTANT_AWS'
+                      - key: anthropic_model
+                        name: Anthropic Model
+                        description: The Anthropic model used for the Backoffice Assistant AI configuration. Model must support image input and structured output.
+                        type: string
+                        default_value: 'claude-sonnet-4-5'
+                        enabled: true
+                        secret: false
+                        storefront: false
+                        order: 4
+                        scopes:
+                            - global
+                        dependencies:
+                            - when:
+                                  any:
+                                      - setting: ai_commerce:backoffice_assistant:ai_vendor:ai_configuration
+                                        operator: equals
+                                        value: 'AI_COMMERCE:AI_CONFIGURATION_BACKOFFICE_ASSISTANT_ANTHROPIC'
+```
 
 Sync the Back Office Assistant configuration to the database:
 

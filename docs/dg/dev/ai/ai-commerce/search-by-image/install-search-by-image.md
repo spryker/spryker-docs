@@ -1,7 +1,7 @@
 ---
 title: Install Search by Image
 description: Learn how to install the Search by Image feature that lets customers upload a photo to search for products using AI-powered image analysis.
-last_updated: Apr 13, 2026
+last_updated: Jul 16, 2026
 template: feature-integration-guide-template
 ---
 
@@ -162,40 +162,160 @@ Using a dedicated AI configuration for Search by Image is recommended because ea
 
 To use a dedicated AI model configuration for Search by Image instead of the default one, follow these steps:
 
-1. In `config/Shared/config_ai.php`, add a named configuration entry using `AiCommerceConstants::SEARCH_BY_IMAGE_CONFIGURATION_NAME` as the key:
+1. Define the Search by Image configuration name and Back Office setting keys at the project level:
 
-```php
-$config[\Spryker\Shared\AiFoundation\AiFoundationConstants::AI_CONFIGURATIONS][\SprykerFeature\Shared\AiCommerce\AiCommerceConstants::SEARCH_BY_IMAGE_CONFIGURATION_NAME] = [
-    'provider_name' => \Spryker\Shared\AiFoundation\AiFoundationConstants::PROVIDER_OPENAI,
-    'provider_config' => [
-        'key' => getenv('OPEN_AI_API_TOKEN') ?: '',
-        'model' => 'gpt-4o',
-    ],
-];
-```
-
-2. Return the configuration name from `AiCommerceConfig`:
-
-**src/Pyz/Yves/AiCommerce/AiCommerceConfig.php**
+**src/Pyz/Shared/AiCommerce/AiCommerceConstants.php**
 
 ```php
 <?php
 
-namespace Pyz\Yves\AiCommerce;
+declare(strict_types = 1);
 
-use SprykerFeature\Shared\AiCommerce\AiCommerceConstants;
-use SprykerFeature\Yves\AiCommerce\AiCommerceConfig as SprykerAiCommerceConfig;
+namespace Pyz\Shared\AiCommerce;
 
-class AiCommerceConfig extends SprykerAiCommerceConfig
+use SprykerFeature\Shared\AiCommerce\AiCommerceConstants as SprykerFeatureAiCommerceConstants;
+
+interface AiCommerceConstants extends SprykerFeatureAiCommerceConstants
+{
+    public const string CONFIGURATION_KEY_OPENAI_API_TOKEN = 'ai_vendor:openai:general:api_token';
+    public const string CONFIGURATION_KEY_SEARCH_BY_IMAGE_AI_CONFIGURATION = 'ai_commerce:search_by_image:ai_vendor:ai_configuration';
+    public const string CONFIGURATION_KEY_SEARCH_BY_IMAGE_OPENAI_MODEL = 'ai_commerce:search_by_image:ai_vendor:openai_model';
+
+    public const string AI_CONFIGURATION_SEARCH_BY_IMAGE_OPENAI = 'AI_COMMERCE:AI_CONFIGURATION_SEARCH_BY_IMAGE_OPENAI';
+}
+```
+
+2. In `config/Shared/config_ai.php`, register a named configuration entry keyed by the `AI_CONFIGURATION_SEARCH_BY_IMAGE_OPENAI` constant:
+
+```php
+$config[\Spryker\Shared\AiFoundation\AiFoundationConstants::AI_CONFIGURATIONS][\Pyz\Shared\AiCommerce\AiCommerceConstants::AI_CONFIGURATION_SEARCH_BY_IMAGE_OPENAI] = [
+    'provider_name' => \Spryker\Shared\AiFoundation\AiFoundationConstants::PROVIDER_OPENAI,
+    'provider_config' => [
+        'key' => \Spryker\Shared\AiFoundation\AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \Pyz\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
+        'model' => \Spryker\Shared\AiFoundation\AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \Pyz\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_SEARCH_BY_IMAGE_OPENAI_MODEL,
+    ],
+];
+```
+
+3. Return the configuration name from `AiCommerceConfig`. Search by Image reads this value from the Client-layer configuration, so override it in the Client `AiCommerceConfig`. The method reads the vendor selected in the Back Office and returns the matching configuration name, defaulting to the OpenAI configuration:
+
+**src/Pyz/Client/AiCommerce/AiCommerceConfig.php**
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Client\AiCommerce;
+
+use Pyz\Shared\AiCommerce\AiCommerceConstants;
+use SprykerFeature\Client\AiCommerce\AiCommerceConfig as SprykerFeatureAiCommerceConfig;
+
+class AiCommerceConfig extends SprykerFeatureAiCommerceConfig
 {
     public function getSearchByImageAiConfigurationName(): ?string
     {
-        return AiCommerceConstants::SEARCH_BY_IMAGE_CONFIGURATION_NAME;
+        return $this->getModuleConfig(
+            AiCommerceConstants::CONFIGURATION_KEY_SEARCH_BY_IMAGE_AI_CONFIGURATION,
+            AiCommerceConstants::AI_CONFIGURATION_SEARCH_BY_IMAGE_OPENAI,
+        );
     }
 }
 ```
 
+To offer AWS Bedrock and Anthropic as selectable providers for Search by Image, see [Configure multiple AI providers](/docs/dg/dev/ai/ai-commerce/configure-multiple-ai-providers.html).
+
 ### 5) Sync configuration
+
+Define the AI configuration and model settings for Search by Image in `data/configuration/ai_commerce.configuration.yml`. These settings back the `configuration::` references registered in `config/Shared/config_ai.php`, so they must exist before syncing:
+
+**data/configuration/ai_commerce.configuration.yml**
+
+```yaml
+features:
+    - key: ai_commerce
+      tabs:
+          - key: search_by_image
+            enabled: true
+            groups:
+                - key: ai_vendor
+                  name: AI Vendor
+                  description: AI configuration and vendor model used for the Search by Image feature. Only the model field matching the selected AI Configuration is shown.
+                  enabled: true
+                  order: 1
+                  scopes:
+                      - global
+                  settings:
+                      - key: ai_configuration
+                        name: AI Configuration
+                        description: AI configuration used for the Search by Image feature.
+                        type: radio
+                        default_value: 'AI_COMMERCE:AI_CONFIGURATION_SEARCH_BY_IMAGE_OPENAI'
+                        enabled: true
+                        secret: false
+                        storefront: false
+                        order: 1
+                        scopes:
+                            - global
+                        options:
+                            - value: 'AI_COMMERCE:AI_CONFIGURATION_SEARCH_BY_IMAGE_OPENAI'
+                              label: OpenAI
+                            - value: 'AI_COMMERCE:AI_CONFIGURATION_SEARCH_BY_IMAGE_AWS'
+                              label: AWS Bedrock
+                            - value: 'AI_COMMERCE:AI_CONFIGURATION_SEARCH_BY_IMAGE_ANTHROPIC'
+                              label: Anthropic
+                      - key: openai_model
+                        name: OpenAI Model
+                        description: The OpenAI model used for the Search by Image AI configuration. Model must support image input and structured output.
+                        type: string
+                        default_value: 'gpt-4o-mini'
+                        enabled: true
+                        secret: false
+                        storefront: false
+                        order: 2
+                        scopes:
+                            - global
+                        dependencies:
+                            - when:
+                                  any:
+                                      - setting: ai_commerce:search_by_image:ai_vendor:ai_configuration
+                                        operator: equals
+                                        value: 'AI_COMMERCE:AI_CONFIGURATION_SEARCH_BY_IMAGE_OPENAI'
+                      - key: aws_model
+                        name: AWS Bedrock Model
+                        description: The AWS Bedrock model identifier used for the Search by Image AI configuration. Model must support image input and structured output.
+                        type: string
+                        default_value: 'eu.anthropic.claude-haiku-4-5-20251001-v1:0'
+                        enabled: true
+                        secret: false
+                        storefront: false
+                        order: 3
+                        scopes:
+                            - global
+                        dependencies:
+                            - when:
+                                  any:
+                                      - setting: ai_commerce:search_by_image:ai_vendor:ai_configuration
+                                        operator: equals
+                                        value: 'AI_COMMERCE:AI_CONFIGURATION_SEARCH_BY_IMAGE_AWS'
+                      - key: anthropic_model
+                        name: Anthropic Model
+                        description: The Anthropic model used for the Search by Image AI configuration. Model must support image input and structured output.
+                        type: string
+                        default_value: 'claude-haiku-4-5'
+                        enabled: true
+                        secret: false
+                        storefront: false
+                        order: 4
+                        scopes:
+                            - global
+                        dependencies:
+                            - when:
+                                  any:
+                                      - setting: ai_commerce:search_by_image:ai_vendor:ai_configuration
+                                        operator: equals
+                                        value: 'AI_COMMERCE:AI_CONFIGURATION_SEARCH_BY_IMAGE_ANTHROPIC'
+```
 
 Sync the Search by Image configuration to the database:
 

@@ -1,7 +1,7 @@
 ---
 title: Install Smart CMS Content Assistant
 description: Learn how to install the Smart CMS Content Assistant feature that provides an AI-powered panel in the Back Office CMS Page and CMS Block glossary editors.
-last_updated: Jun 08, 2026
+last_updated: Jul 16, 2026
 template: feature-integration-guide-template
 ---
 
@@ -44,6 +44,16 @@ use SprykerFeature\Shared\AiCommerce\AiCommerceConstants as SprykerFeatureAiComm
 
 interface AiCommerceConstants extends SprykerFeatureAiCommerceConstants
 {
+    public const string CONFIGURATION_KEY_OPENAI_API_TOKEN = 'ai_vendor:openai:general:api_token';
+    public const string CONFIGURATION_KEY_AWS_API_TOKEN = 'ai_vendor:aws:general:api_token';
+    public const string CONFIGURATION_KEY_AWS_REGION = 'ai_vendor:aws:general:region';
+    public const string CONFIGURATION_KEY_ANTHROPIC_API_TOKEN = 'ai_vendor:anthropic:general:api_token';
+
+    public const string CONFIGURATION_KEY_SMART_CMS_AI_CONFIGURATION = 'ai_commerce:smart_cms:ai_vendor:ai_configuration';
+    public const string CONFIGURATION_KEY_SMART_CMS_OPENAI_MODEL = 'ai_commerce:smart_cms:ai_vendor:openai_model';
+    public const string CONFIGURATION_KEY_SMART_CMS_AWS_MODEL = 'ai_commerce:smart_cms:ai_vendor:aws_model';
+    public const string CONFIGURATION_KEY_SMART_CMS_ANTHROPIC_MODEL = 'ai_commerce:smart_cms:ai_vendor:anthropic_model';
+
     public const string AI_CONFIGURATION_SMART_CMS_OPENAI = 'AI_COMMERCE:AI_CONFIGURATION_SMART_CMS_OPENAI';
     public const string AI_CONFIGURATION_SMART_CMS_AWS = 'AI_COMMERCE:AI_CONFIGURATION_SMART_CMS_AWS';
     public const string AI_CONFIGURATION_SMART_CMS_ANTHROPIC = 'AI_COMMERCE:AI_CONFIGURATION_SMART_CMS_ANTHROPIC';
@@ -65,31 +75,31 @@ use Spryker\Shared\AiFoundation\AiFoundationConstants;
 $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_SMART_CMS_OPENAI] = [
     'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
     'provider_config' => [
-        'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
-        'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_OPENAI_MODEL,
+        'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
+        'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_OPENAI_MODEL,
     ],
-    'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_SYSTEM_PROMPT,
+    'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_SYSTEM_PROMPT,
 ];
 
 $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_SMART_CMS_AWS] = [
     'provider_name' => AiFoundationConstants::PROVIDER_BEDROCK,
     'provider_config' => [
-        'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_AWS_MODEL,
+        'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_AWS_MODEL,
         'bedrockRuntimeClient' => [
-            'region' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_AWS_REGION,
-            'token' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_AWS_API_TOKEN,
+            'region' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_AWS_REGION,
+            'token' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_AWS_API_TOKEN,
         ],
     ],
-    'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_SYSTEM_PROMPT,
+    'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_SYSTEM_PROMPT,
 ];
 
 $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_SMART_CMS_ANTHROPIC] = [
     'provider_name' => AiFoundationConstants::PROVIDER_ANTHROPIC,
     'provider_config' => [
-        'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_ANTHROPIC_API_TOKEN,
-        'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_ANTHROPIC_MODEL,
+        'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_ANTHROPIC_API_TOKEN,
+        'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_ANTHROPIC_MODEL,
     ],
-    'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_SYSTEM_PROMPT,
+    'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_SYSTEM_PROMPT,
 ];
 ```
 
@@ -118,15 +128,14 @@ declare(strict_types = 1);
 namespace Pyz\Zed\AiCommerce;
 
 use Pyz\Shared\AiCommerce\AiCommerceConstants;
-use SprykerFeature\Zed\AiCommerce\AiCommerceConfig as SprykerAiCommerceConfig;
-use SprykerFeature\Shared\AiCommerce\AiCommerceConstants as SprykerFeatureAiCommerceConstants;
+use SprykerFeature\Zed\AiCommerce\AiCommerceConfig as SprykerFeatureAiCommerceConfig;
 
-class AiCommerceConfig extends SprykerAiCommerceConfig
+class AiCommerceConfig extends SprykerFeatureAiCommerceConfig
 {
     public function getSmartCmsAiConfigurationName(): string
     {
         return (string)$this->getModuleConfig(
-            SprykerFeatureAiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_AI_CONFIGURATION,
+            AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_AI_CONFIGURATION,
             AiCommerceConstants::AI_CONFIGURATION_SMART_CMS_OPENAI,
         );
     }
@@ -345,6 +354,96 @@ In the Back Office, open a CMS Page or CMS Block glossary editor. Make sure the 
 {% endinfo_block %}
 
 ### 7) Sync configuration and build frontend assets
+
+Define the AI configuration and model settings for Smart CMS in `data/configuration/ai_commerce.configuration.yml`. These settings back the `configuration::` references registered in `config/Shared/config_ai.php`, so they must exist before syncing:
+
+**data/configuration/ai_commerce.configuration.yml**
+
+```yaml
+features:
+    - key: ai_commerce
+      tabs:
+          - key: smart_cms
+            enabled: true
+            groups:
+                - key: ai_vendor
+                  name: AI Vendor
+                  description: AI configuration and vendor model used for the Smart CMS feature. Only the model field matching the selected AI Configuration is shown.
+                  enabled: true
+                  order: 1
+                  scopes:
+                      - global
+                  settings:
+                      - key: ai_configuration
+                        name: AI Configuration
+                        description: AI configuration used for the Smart CMS feature.
+                        type: radio
+                        default_value: 'AI_COMMERCE:AI_CONFIGURATION_SMART_CMS_OPENAI'
+                        enabled: true
+                        secret: false
+                        storefront: false
+                        order: 1
+                        scopes:
+                            - global
+                        options:
+                            - value: 'AI_COMMERCE:AI_CONFIGURATION_SMART_CMS_OPENAI'
+                              label: OpenAI
+                            - value: 'AI_COMMERCE:AI_CONFIGURATION_SMART_CMS_AWS'
+                              label: AWS Bedrock
+                            - value: 'AI_COMMERCE:AI_CONFIGURATION_SMART_CMS_ANTHROPIC'
+                              label: Anthropic
+                      - key: openai_model
+                        name: OpenAI Model
+                        description: The OpenAI model used for the Smart CMS AI configuration. Model must support image input and structured output.
+                        type: string
+                        default_value: 'gpt-4.1'
+                        enabled: true
+                        secret: false
+                        storefront: false
+                        order: 2
+                        scopes:
+                            - global
+                        dependencies:
+                            - when:
+                                  any:
+                                      - setting: ai_commerce:smart_cms:ai_vendor:ai_configuration
+                                        operator: equals
+                                        value: 'AI_COMMERCE:AI_CONFIGURATION_SMART_CMS_OPENAI'
+                      - key: aws_model
+                        name: AWS Bedrock Model
+                        description: The AWS Bedrock model identifier used for the Smart CMS AI configuration. Model must support image input and structured output.
+                        type: string
+                        default_value: 'eu.anthropic.claude-sonnet-4-5-20250929-v1:0'
+                        enabled: true
+                        secret: false
+                        storefront: false
+                        order: 3
+                        scopes:
+                            - global
+                        dependencies:
+                            - when:
+                                  any:
+                                      - setting: ai_commerce:smart_cms:ai_vendor:ai_configuration
+                                        operator: equals
+                                        value: 'AI_COMMERCE:AI_CONFIGURATION_SMART_CMS_AWS'
+                      - key: anthropic_model
+                        name: Anthropic Model
+                        description: The Anthropic model used for the Smart CMS AI configuration. Model must support image input and structured output.
+                        type: string
+                        default_value: 'claude-sonnet-4-5'
+                        enabled: true
+                        secret: false
+                        storefront: false
+                        order: 4
+                        scopes:
+                            - global
+                        dependencies:
+                            - when:
+                                  any:
+                                      - setting: ai_commerce:smart_cms:ai_vendor:ai_configuration
+                                        operator: equals
+                                        value: 'AI_COMMERCE:AI_CONFIGURATION_SMART_CMS_ANTHROPIC'
+```
 
 ```bash
 console configuration:sync

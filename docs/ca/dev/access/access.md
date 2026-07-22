@@ -1,6 +1,6 @@
 ---
 title: Access
-last_updated: Jul 16, 2026
+last_updated: Jul 22, 2026
 description: Describes how to access AWS Management Console, locate credentials for Spryker Cloud Commerce OS services, and connect to services
 template: concept-topic-template
 redirect_from:
@@ -15,3 +15,4 @@ This section describes how to access AWS Management Console as an Identity and A
 - [Connecting to AWS CLI with an SSO user](/docs/ca/dev/access/connecting-to-aws-cli-with-an-sso-user.html)
 - [Locating service credentials](/docs/ca/dev/access/locate-service-credentials.html)
 - [Connecting to services via SSH](/docs/ca/dev/access/connect-to-services-via-ssh.html)
+- [AWS permissions](/docs/ca/dev/access/aws-permissions.html)

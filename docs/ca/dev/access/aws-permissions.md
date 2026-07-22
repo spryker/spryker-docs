@@ -14,7 +14,7 @@ The following permissions apply to all users regardless of whether they access t
 | Databases (RDS) | View, restore, reboot, and manage RDS database instances; create and delete snapshots; modify parameter groups; view Performance Insights metrics. |
 | Containers (ECS, ECR) | View ECS clusters, services, and tasks; list and describe ECR container images. Read-only. |
 | Storage (S3) | Read and write to project asset buckets and CSV upload bucket; list all buckets. |
-| Parameter Store (SSM) | Read and write configuration and secret parameters within Environment Variable Management guardails; manage application deployment version parameters. |
+| Parameter Store (SSM) | Read and write configuration and secret parameters within [Environment Variable Management](/docs/ca/dev/add-variables-in-the-parameter-store.html) guardrails; manage application deployment version parameters. |
 | CloudFront | View CloudFront distributions; create cache invalidations; view WAF rules and ACM certificates. |
 | Email (SES) | Full access to Simple Email Service. |
 | DNS (Route 53) | Read-only access to hosted zones and domain names. |

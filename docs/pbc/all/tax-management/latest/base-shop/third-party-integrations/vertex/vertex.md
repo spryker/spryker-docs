@@ -1,11 +1,13 @@
 ---
 title: Vertex
 description: Spryker's third party Vertex technology partner, and how tax calculations can enhance your Spryker based project.
-last_updated: Mar 5, 2026
+last_updated: Jul 22, 2026
 template: concept-topic-template
 related:
   - title: Integrate Vertex
     link: docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html
+  - title: Configure Vertex in the Back Office
+    link: docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/configure-vertex-in-the-back-office.html
 redirect_from:
   - /docs/pbc/all/tax-management/202311.0/vertex/vertex.html
   - /docs/pbc/all/tax-management/202311.0/base-shop/vertex/vertex.html
@@ -27,7 +29,7 @@ For more information about how Vertex calculates taxes, see the [Vertex O Series
 
 The Spryker Vertex module offers the following features that are worth considering when comparing it to the default Spryker [Tax Management capability](/docs/pbc/all/tax-management/latest/tax-management.html):
 
-- *Configure Vertex in Spryker*: Add your Vertex configurations, including your company code, in `config/Shared/config_default.php` to connect your Spryker project to Vertex.
+- *Configure Vertex in Spryker*: Add your Vertex configurations, including your company code, in `config/Shared/config_default.php` to connect your Spryker project to Vertex. Alternatively, you can manage every Vertex setting from the Back Office, per global or store scope, and choose the tax provider with the **Taxes** > **Tax Provider** switch. For details, see [Configure Vertex in the Back Office](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/configure-vertex-in-the-back-office.html).
 - *Tax determination and calculation*: View tax estimates during checkout and calculated taxes before generating an invoice. This feature works across all regions, including countries where taxes are included in the price.
 - *Discounts Support*: The Vertex module uses both the discount and the amount paid by the customer, sending this information to Vertex for tax calculation and estimation.
 - *Manage tax exemptions*: Configure your project to exclude tax-exempt customers using the Vertex module.

@@ -4292,6 +4292,8 @@ entries:
                       - title: Integrate Vertex
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html
                         nested:
+                          - title: Configure Vertex in the Back Office
+                            url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/configure-vertex-in-the-back-office.html
                           - title: Configure Vertex-specific metadata
                             url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/configure-vertex-specific-metadata.html
                           - title: Integrate Vertex Validator

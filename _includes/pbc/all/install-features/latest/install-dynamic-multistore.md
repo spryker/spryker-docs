@@ -416,7 +416,7 @@ if (getenv('SPRYKER_CURRENT_REGION')) {
 }
 ```
 
-For an example of an updated file, see [jenkins.php in the Spryker Suite repository](https://github.com/spryker-shop/suite/blob/master/config/Zed/cronjobs/jenkins.php).
+For an example of an updated file, see [jenkins.php](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/config/Zed/cronjobs/jenkins.php).
 
 {% info_block warningBox "Verification" %}
 

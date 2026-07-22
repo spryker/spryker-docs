@@ -1,7 +1,7 @@
 ---
 title: AI Dev SDK Skills and Agents
 description: Reference of the skills and agents shipped with the AI Dev SDK
-last_updated: Jun 22, 2026
+last_updated: Jul 22, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, windsurf, copilot, skills, agents, subagents, spryker
 template: concept-topic-template
@@ -55,6 +55,7 @@ Skills are delivered through `ai-dev:setup` (all supported AI tools) or the Clau
 | `yves-atomic-frontend` | Create atomic design components for the Yves storefront | Components match the project's atomic conventions |
 | `product-requirement-document` | Turn a feature idea into a research-grounded product requirement document before any code is written | Spec-before-code; assigns a real Spryker actor to every story; cuts ambiguity before implementation |
 | [`spryker-customization`](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html) | Walk a product requirement document or set of acceptance criteria through to a committed branch | One workflow drives the full build; quality bar (PoC or MVP) chosen up-front; delegates focused work to the agents below; never auto-commits |
+| `spryker-bugfix` | Drive a bug from an optional tracker ticket or a plain description through to a committed, validated, QA-accepted fix | Orchestrates reproduce, root-cause, minimal fix, functional test, static validation, review, QA, and final verification; a shared attempt budget loops back on any failed gate; Autonomous mode adds a pushed Draft PR with a remote-CI watch loop |
 | `spryker-refresher` | Run the right post-change console and composer commands after edits | Owns the file-to-command mapping (codegen, caches, frontend builds, class-resolver); no missed cache rebuilds |
 | `spryker-qa-coverage` | Turn acceptance criteria into a four-bucket test plan executed against the live app | Coverage goes beyond literal ACs — happy / negative / authorization / corner cases; reports pass/fail with real evidence |
 | `spryker-docs-research` | Look up the right answer in official Spryker documentation | Grounds AI work in documented behavior rather than the model's memory; falls back gracefully when MCP tools are unavailable |

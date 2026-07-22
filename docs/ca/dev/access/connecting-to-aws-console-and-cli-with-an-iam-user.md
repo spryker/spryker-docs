@@ -177,3 +177,4 @@ aws ec2 describe-instances
 
 - [Connecting the Docker SDK](/docs/ca/dev/connecting-the-docker-sdk.html)
 - [Connecting to AWS CLI with an SSO user](/docs/ca/dev/access/connecting-to-aws-cli-with-an-sso-user.html)
+- [AWS permissions](/docs/ca/dev/access/aws-permissions.html)

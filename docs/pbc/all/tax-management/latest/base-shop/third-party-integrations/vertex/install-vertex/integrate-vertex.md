@@ -1,7 +1,7 @@
 ---
 title: Integrate Vertex
 description: Find out how you can integrate Vertex into your Spryker shop
-last_updated: Jul 22, 2026
+last_updated: Jul 23, 2026
 template: howto-guide-template
 related:
   - title: Vertex

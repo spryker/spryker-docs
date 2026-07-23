@@ -115,3 +115,4 @@ Such users **cannot** be created or managed via CloudHub User Management (SSO) p
 - [User Management SSO](/docs/ca/dev/cloud-hub/sso-user-management.html)
 - [SSO Security Options](/docs/ca/dev/access/sso-security-options.html)
 - [Connecting to AWS CLI with an SSO user](/docs/ca/dev/access/connecting-to-aws-cli-with-an-sso-user.html)
+- [AWS permissions](/docs/ca/dev/access/aws-permissions.html)

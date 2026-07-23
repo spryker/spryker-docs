@@ -123,7 +123,7 @@ Selecting **vertex** requires a complete Vertex configuration for that scope. Th
 The active configuration source depends on the flag `Spryker\Shared\Vertex\VertexConfig::isConfigurationModuleUsed()` or its project-level value:
 
 - **Flag off (default):** getters read the legacy `VERTEX:*` environment values from `config/Shared/config_default.php`.
-- **Flag on:** getters resolve values per scope `store` from the `spryker/configuration`. Environment values from `config/Shared/config_default.php` is ingored.
+- **Flag on:** getters resolve values per scope `store` from the `spryker/configuration`. Environment values from `config/Shared/config_default.php` is ignored.
 
 ## Save-time validation
 
@@ -133,12 +133,6 @@ When you save a configuration, the following changes are blocked to prevent leav
 2. **Breaking an active configuration:** you cannot clear or remove a credential that would leave Vertex incomplete while Vertex is the selected provider for that scope. This applies to both edits and deletions.
 3. **Cross-scope breakage:** a change to the **global** scope that would break any **store** that has Vertex selected and inherits the global values is blocked. The error names the affected store.
 4. **Invalid URLs:** the Security URI, Transaction calls URI, and Taxamo API URL must be valid URLs, even when Vertex is not the selected provider.
-
-{% info_block infoBox "Validation messages" %}
-
-Validation error messages currently render in English. The translated strings are staged in the glossary but are not yet applied at runtime.
-
-{% endinfo_block %}
 
 ## Next steps
 

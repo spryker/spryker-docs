@@ -101,7 +101,23 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-## 4. Use translations
+## 4. Make sure that the tax ID validator is enabled.
+
+```php
+namespace Pyz\Zed\Vertex;
+
+use SprykerEco\Zed\Vertex\VertexConfig as SprykerEcoVertexConfig;
+
+class VertexConfig extends SprykerEcoVertexConfig
+{
+    public function isTaxIdValidatorEnabled(): bool
+    {
+        return true;
+    }
+}
+```
+
+## 5. Use translations
 
 To use translations, send requests with the `Accept-Language` header. For example, to use German translations, include the `Accept-Language: de` header.
 

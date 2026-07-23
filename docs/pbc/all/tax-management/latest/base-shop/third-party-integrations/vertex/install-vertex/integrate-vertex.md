@@ -42,6 +42,13 @@ composer require spryker-eco/vertex
 
 ## 2. Configure the module
 
+{% info_block infoBox "Manage settings in the Back Office" %}
+
+Instead of environment variables, you can manage every Vertex setting from BackOffice **Configuration**, per global or store scope, and choose the tax provider with a **Taxes** > **Tax Provider** switch. This is opt-in and backward compatible. For details, see [Configure Vertex in the Back Office](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/configure-vertex-in-the-back-office.html).
+If you decide so, skip this section.
+
+{% endinfo_block %}
+
 Add the following configuration to `config/Shared/config_default.php`:
 
 ```php
@@ -59,12 +66,6 @@ $config[VertexConstants::TAXAMO_TOKEN] = getenv('TAXAMO_TOKEN');
 // Optional: Vendor Code
 $config[VertexConstants::VENDOR_CODE] = '';
 ```
-
-{% info_block infoBox "Manage settings in the Back Office" %}
-
-Instead of environment variables, you can manage every Vertex setting from **Back Office** > **Configuration**, per global or store scope, and choose the tax provider with a **Taxes** > **Tax Provider** switch. This is opt-in and backward compatible. For details, see [Configure Vertex in the Back Office](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/configure-vertex-in-the-back-office.html).
-
-{% endinfo_block %}
 
 ### Required configuration constants
 
@@ -87,6 +88,10 @@ Instead of environment variables, you can manage every Vertex setting from **Bac
 
 ## 3. Override feature flags
 
+{% info_block warningBox %}
+If you decided to use Backoffice Configuration, skip this section.
+{% endinfo_block %}
+
 The `isTaxIdValidatorEnabled`, `isTaxAssistEnabled`, and `isInvoicingEnabled` methods default to `false` and are not driven by constants. To enable them, override `src/Pyz/Zed/Vertex/VertexConfig.php`:
 
 ```php
@@ -101,12 +106,12 @@ class VertexConfig extends SprykerEcoVertexConfig
         return true;
     }
 
-    public function isTaxAssistEnabled(): bool
+    public function isTaxAssistEnabled(array $configurationScopeTransfers = []): bool
     {
         return true;
     }
 
-    public function isInvoicingEnabled(): bool
+    public function isInvoicingEnabled(array $configurationScopeTransfers = []): bool
     {
         return true;
     }
@@ -468,6 +473,5 @@ The refund functionality will only work if the OMS event is called `refund`.
 
 ## Next steps
 
-- [Configure Vertex in the Back Office](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/configure-vertex-in-the-back-office.html)
 - [Configure Vertex-specific metadata](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/configure-vertex-specific-metadata.html)
 - [Migrate from the ACP Vertex app](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/migrate-from-acp-to-vertex.html)

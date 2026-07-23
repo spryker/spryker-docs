@@ -1,7 +1,7 @@
 ---
 title: Configure Vertex in the Back Office
 description: Learn how to manage Vertex settings and choose the tax provider from Back Office Configuration instead of environment variables.
-last_updated: Jul 22, 2026
+last_updated: Jul 23, 2026
 template: howto-guide-template
 related:
   - title: Integrate Vertex
@@ -10,7 +10,7 @@ related:
     link: docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/vertex.html
 ---
 
-This document describes how to manage Vertex settings from BackOffice **Configuration** and how to select the tax provider per scope `store`.
+This document describes how to manage Vertex settings from **Back Office** > **Configuration** and how to select the tax provider per scope `store`.
 
 With this feature enabled, operators manage every Vertex setting from the Back Office, per **global** or **store** scope, instead of environment variables. A new **Taxes** > **Tax Provider** switch chooses between the built-in Spryker tax calculation and Vertex. Save-time validation prevents leaving the integration in a broken state.
 
@@ -22,6 +22,7 @@ This feature is opt-in and backward compatible. Until you [enable it](#1-enable-
 
 ## Prerequisites
 
+- Use `spryker-eco/vertex` version `1.5.0` or later.
 - [Integrate Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html) into your Spryker shop.
 - Install the Configuration Management feature. The Vertex module depends on `spryker/configuration-extension`, but it does not require the `spryker/configuration` module that provides the Back Office UI and stores the values. If the Configuration Management feature is not installed yet, install it first. For details, see [Install the Configuration Management feature](/docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html).
 
@@ -45,7 +46,7 @@ class VertexConfig extends SprykerEcoVertexConfig
 }
 ```
 
-When the flag is `true`, `SprykerEco\Zed\Vertex\VertexConfig` reads values using (getModuleConfig)[/docs/dg/dev/backend-development/configuration-management#reading-configuration-values] instead of from the `config/Shared/config_default.php` constants.
+When the flag is `true`, `SprykerEco\Zed\Vertex\VertexConfig` reads values using [getModuleConfig](/docs/dg/dev/backend-development/configuration-management.html#reading-configuration-values) instead of from the `config/Shared/config_default.php` constants.
 
 ## 2. Register the pre-save validation plugin
 

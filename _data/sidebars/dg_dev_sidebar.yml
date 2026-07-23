@@ -968,6 +968,9 @@ entries:
         - title: Upgrade to Angular 20
           url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-20.html
 
+    - title: Migrate SASS to v1.97.0. Move Yves FE Builder to the ShopUi module
+      url: /docs/dg/dev/upgrade-and-migrate/sass-migration-and-yves-fe-builder-move-to-the-demo-shop.html
+
     - title: Upgrade to Webpack v5
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-webpack-v5.html
     - title: Upgrade to Stylelint 16 and css-loader 6

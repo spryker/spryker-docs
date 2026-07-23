@@ -12,7 +12,7 @@ related:
 
 This document describes how to manage Vertex settings from **Back Office** > **Configuration** and how to select the tax provider per scope `store`.
 
-With this feature enabled, operators manage every Vertex setting from the Back Office, per **global** or **store** scope, instead of environment variables. A new **Taxes** > **Tax Provider** switch chooses between the built-in Spryker tax calculation and Vertex. Save-time validation prevents leaving the integration in a broken state.
+With this feature enabled, operators manage every Vertex setting from the Back Office, per **global** or **store** scope, instead of environment variables. A new **Configuration** > **Taxes** > **Tax Provider** switch chooses between the built-in Spryker tax calculation and Vertex. Save-time validation prevents leaving the integration in a broken state.
 
 {% info_block infoBox "Backward compatible" %}
 

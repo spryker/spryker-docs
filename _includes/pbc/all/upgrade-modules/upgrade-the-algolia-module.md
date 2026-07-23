@@ -7,7 +7,7 @@ Version 2.0.0 of the `spryker-eco/algolia` module introduces configurable sortin
 ### Update the module
 
 ```bash
-composer require spryker-eco/algolia:"^2.0.0"
+composer require -w spryker-eco/algolia:"^2.0.0"
 ```
 
 ### Configure product sorting replicas

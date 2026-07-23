@@ -44,7 +44,7 @@ composer require spryker-eco/vertex
 
 {% info_block infoBox "Manage settings in the Back Office" %}
 
-Instead of environment variables, you can manage every Vertex setting from BackOffice **Configuration**, per global or store scope, and choose the tax provider with a **Taxes** > **Tax Provider** switch. This is opt-in and backward compatible. For details, see [Configure Vertex in the Back Office](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/configure-vertex-in-the-back-office.html).
+Instead of environment variables, you can manage every Vertex setting from the Back Office **Configuration**, per global or store scope, and choose the tax provider with a **Taxes** > **Tax Provider** switch. This is opt-in and backward compatible. For details, see [Configure Vertex in the Back Office](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/configure-vertex-in-the-back-office.html).
 If you decide so, skip this section.
 
 {% endinfo_block %}
@@ -89,7 +89,7 @@ $config[VertexConstants::VENDOR_CODE] = '';
 ## 3. Override feature flags
 
 {% info_block warningBox %}
-If you decided to use Backoffice Configuration, skip this section.
+If you decided to use the Back Office Configuration, skip this section.
 {% endinfo_block %}
 
 The `isTaxIdValidatorEnabled`, `isTaxAssistEnabled`, and `isInvoicingEnabled` methods default to `false` and are not driven by constants. To enable them, override `src/Pyz/Zed/Vertex/VertexConfig.php`:

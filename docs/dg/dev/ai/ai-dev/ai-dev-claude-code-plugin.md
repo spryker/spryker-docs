@@ -1,7 +1,7 @@
 ---
 title: Claude Code Plugin
 description: Install and use the Spryker AI Dev SDK plugin for Claude Code to get Spryker-aware skills, code review, and project setup directly in your AI coding assistant.
-last_updated: Jun 22, 2026
+last_updated: Jul 22, 2026
 label: early-access
 keywords: ai, claude, claude code, plugin, marketplace, skills, spryker, ai-dev, code review
 template: howto-guide-template
@@ -105,6 +105,7 @@ The plugin bundles the following Spryker-aware skills. Invoke them in Claude Cod
 | Yves Atomic Frontend | `/spryker-ai-dev-sdk:yves-atomic-frontend` | Helps create atomic design components for the Yves frontend |
 | Product Requirement Document | `/spryker-ai-dev-sdk:product-requirement-document` | Drafts a research-grounded product requirement document for a Spryker feature before implementation |
 | Spryker Customization | `/spryker-ai-dev-sdk:spryker-customization` | Orchestrates the end-to-end build of a customization from product requirement document to committed branch |
+| Spryker Bugfix | `/spryker-ai-dev-sdk:spryker-bugfix` | Orchestrates the end-to-end bug fix from a ticket or description to a committed, validated, QA-accepted branch (Autonomous mode adds a pushed Draft PR with a CI watch loop) |
 | Spryker Refresher | `/spryker-ai-dev-sdk:spryker-refresher` | Runs the right post-change console and composer commands after edits |
 | Spryker QA Coverage | `/spryker-ai-dev-sdk:spryker-qa-coverage` | Turns acceptance criteria into a four-bucket test plan and executes it against the running app |
 | Spryker Docs Research | `/spryker-ai-dev-sdk:spryker-docs-research` | Looks up grounded answers in the official Spryker documentation |

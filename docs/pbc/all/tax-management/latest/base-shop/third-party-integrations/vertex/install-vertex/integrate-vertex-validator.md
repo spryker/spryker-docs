@@ -1,7 +1,7 @@
 ---
 title: Integrate Vertex Validator
 description: Find out how you can integrate the Vertex Validator into your Spryker shop
-last_updated: Mar 5, 2026
+last_updated: Jul 23, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-taxamo.html
@@ -101,7 +101,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-## 4. Make sure that the tax ID validator is enabled.
+## 4. Make sure that the tax ID validator is enabled
 
 ```php
 namespace Pyz\Zed\Vertex;

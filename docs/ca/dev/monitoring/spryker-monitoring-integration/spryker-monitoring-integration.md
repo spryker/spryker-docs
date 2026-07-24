@@ -88,7 +88,8 @@ This section describes how to request and set up Spryker Monitoring Integration 
 ### Prerequisites
 
 - Contact your Customer Success Manager to get the tool
-- Integrate an OpenTelemetry-compatible APM tool from the list of [supported vendors](https://opentelemetry.io/ecosystem/vendors/)
+- Integrate an OpenTelemetry-compatible APM tool from our supported tools, We currenlty support Dynatrace and Datadog
+
 
 
 ### Activate Spryker Monitoring Integration

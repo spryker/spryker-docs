@@ -55,6 +55,8 @@ Make sure the following packages are now listed in `composer.lock`:
 
 **config/Shared/config_default.php**
 
+To enable an IAM role configuration, use `IamAws3v3FilesystemBuilderPlugin`:
+
 ```php
 use Spryker\Shared\FileSystem\FileSystemConstants;
 use SprykerFeature\Shared\SelfServicePortal\SelfServicePortalConstants;
@@ -91,7 +93,7 @@ In cloud environments, set the following environment variables:
 
 {% endinfo_block %}
 
-Alternatively, to authenticate with explicit access keys instead of an IAM role, use `Aws3v3FilesystemBuilderPlugin`:
+Alternatively, to authenticate with explicit access keys, use `Aws3v3FilesystemBuilderPlugin`:
 
 ```php
 use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\Aws3v3FilesystemBuilderPlugin;

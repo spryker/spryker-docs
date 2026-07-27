@@ -43,7 +43,7 @@ We use our [Architecture Sniffer Tool](https://github.com/spryker/architecture-s
 | Ruleset | Use it for | Path |
 | --- | --- | --- |
 | Core | Spryker core, ecosystem, and module development | `vendor/spryker/architecture-sniffer/src/ruleset.xml` |
-| Project | Application (project) development | `vendor/spryker/architecture-sniffer/src/Project/ruleset.xml` |
+| Project | Project development and customisations | `vendor/spryker/architecture-sniffer/src/Project/ruleset.xml` |
 
 In both rulesets, lower priorities include the higher ones: a run with `--minimumpriority=3` also reports violations of priority `1` and `2`.
 

@@ -67,14 +67,14 @@ vendor/bin/console transfer:validate
 **Code style checks**
 
 ```bash
-# PHP code style (PHPMD)
+# PHP code style
 vendor/bin/console code:sniff:style
 
-# Architecture sniffer (Spryker conventions), using the project ruleset
-vendor/bin/phpmd src/ text phpmd.xml --minimumpriority=3
+# Spryker Architecture sniffer, using the project ruleset
+vendor/bin/phpmd src/ text phpmd.xml --minimumpriority=4
 ```
 
-The Architecture Sniffer ships a core ruleset and a project ruleset. For projects, use only the project ruleset through a project-level `phpmd.xml` file. For setup and customization instructions, see [Architecture Sniffer](/docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html).
+The Architecture Sniffer ships a core ruleset and a project ruleset. For projects, use only the **project ruleset** through a project-level `phpmd.xml` file. For setup and customization instructions, see [Architecture Sniffer](/docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html).
 
 **Static analysis**
 
@@ -103,17 +103,6 @@ npm run formatter
 npm run mp:lint
 npm run mp:stylelint
 npm run mp:test
-```
-
-### Extending CI with Architecture Sniffer
-
-The [Architecture Sniffer](/docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html) enforces Spryker architectural standards and detects violations. For projects, use the project ruleset through a project-level `phpmd.xml` file.
-
-Add the following step to your GitHub Actions workflow file (`.github/workflows/ci.yml`):
-
-```yaml
-- name: Architecture Sniffer
-  run: vendor/bin/phpmd src/ text phpmd.xml --minimumpriority=3
 ```
 
 ## Automated testing

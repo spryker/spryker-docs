@@ -218,7 +218,110 @@ Some rules expose tunable properties, such as `ignoreclasspattern`, which skips 
 </rule>
 ```
 
-For a complete example, see [phpmd.xml](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/phpmd.xml) in the B2B Demo Marketplace.
+### Complete example
+
+The following example is the [phpmd.xml](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/phpmd.xml) file of the B2B Demo Marketplace. It combines all of the preceding customizations, with the rule-level ones commented out for reference.
+
+**phpmd.xml**
+
+```xml
+<?xml version="1.0"?>
+<ruleset name="Spryker Project"
+         xmlns="http://pmd.sf.net/ruleset/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0
+                     http://pmd.sf.net/ruleset_xml_schema.xsd"
+         xsi:noNamespaceSchemaLocation="
+                     http://pmd.sf.net/ruleset_xml_schema.xsd">
+    <description>
+        Asserting clean code architecture with Spryker project.
+    </description>
+
+    <!-- ============================================================= -->
+    <!-- File / path exclusions (filters WHICH files are analyzed).    -->
+    <!-- Note: this is different from <exclude name="..."/> below,     -->
+    <!-- which removes a RULE. exclude-pattern filters PATHS.          -->
+    <!-- ============================================================= -->
+    <exclude-pattern>Persistence/Propel</exclude-pattern>
+    <exclude-pattern>Presentation</exclude-pattern>
+    <exclude-pattern>tests/_data</exclude-pattern>
+    <exclude-pattern>tests/_output</exclude-pattern>
+    <exclude-pattern>tests/_support</exclude-pattern>
+
+    <exclude-pattern>*/Orm/*</exclude-pattern>
+    <exclude-pattern>*/Generated/*</exclude-pattern>
+    <exclude-pattern>*/SprykerConfig/*</exclude-pattern>
+
+    <!-- Exclude DataImport and all *DataImport* modules (current and future) -->
+    <exclude-pattern>*DataImport*</exclude-pattern>
+
+    <!-- Exclude specific Example modules -->
+    <exclude-pattern>*/ClickAndCollectExample/*</exclude-pattern>
+    <exclude-pattern>*/ClickAndCollectPageExample/*</exclude-pattern>
+    <exclude-pattern>*/ExampleChart/*</exclude-pattern>
+    <exclude-pattern>*/ExampleProductSalePage/*</exclude-pattern>
+    <exclude-pattern>*/ExampleStateMachine/*</exclude-pattern>
+    <exclude-pattern>*/WaterTreatmentConfiguratorPageExample/*</exclude-pattern>
+
+    <!-- ============================================================= -->
+    <!-- Import the vendor project ruleset (single aggregate file).     -->
+    <!-- Pulls in PhpMd + Client/Service/Shared/Yves/Zed/Glue/Common    -->
+    <!-- project-level rules. These are the project-level (relaxed +    -->
+    <!-- project-specific) rules, not the strict core-framework ones.   -->
+    <!--                                                               -->
+    <!-- To EXCLUDE rules, add <exclude name="..."/> children to THIS   -->
+    <!-- block (see customization 1 below). To OVERRIDE a rule's        -->
+    <!-- priority or properties, exclude it here and re-add it below    -->
+    <!-- (customizations 2 and 3).                                      -->
+    <!-- ============================================================= -->
+    <rule ref="vendor/spryker/architecture-sniffer/src/Project/ruleset.xml">
+
+        <!-- 1) EXCLUDE a rule (drop it entirely). The <exclude> MUST live
+             inside this aggregate <rule ref> block — a separate <rule ref>
+             below is silently ignored, because PHPMD keeps the first copy
+             of a rule it imports by name.
+        <exclude name="FacadeSingleFactoryCallRule" />
+        <exclude name="FacadeNoLogicRule" />
+        -->
+
+        <!-- To OVERRIDE (not drop) a rule, also exclude it here so the
+             re-added copy below wins, e.g.:
+        <exclude name="FacadeRule" />
+        <exclude name="OrmNewEntityNotInCommunicationRule" />
+        -->
+
+    </rule>
+
+    <!-- ============================================================= -->
+    <!-- CUSTOMIZATIONS (priority / property overrides)               -->
+    <!-- Each override re-adds a SINGLE rule with the same name that    -->
+    <!-- was <exclude>d in the aggregate block above. Without the       -->
+    <!-- matching <exclude> above, the override below has no effect.    -->
+    <!-- ============================================================= -->
+
+    <!-- 2) CHANGE SEVERITY (priority) of a rule.
+         Requires <exclude name="FacadeRule"/> in the aggregate block above.
+         Lower priority number = more severe (1 = highest).
+
+    <rule ref="vendor/spryker/architecture-sniffer/src/Project/Zed/ruleset.xml/FacadeRule">
+        <priority>3</priority>
+    </rule>
+    -->
+
+    <!-- 3) PASS A PARAMETER (property) to a rule.
+         Requires <exclude name="OrmNewEntityNotInCommunicationRule"/> above.
+         Some project rules expose tunable properties (e.g.
+         `ignoreclasspattern` to skip classes matching a regex).
+
+    <rule ref="vendor/spryker/architecture-sniffer/src/Project/Zed/ruleset.xml/OrmNewEntityNotInCommunicationRule">
+        <properties>
+            <property name="ignoreclasspattern" value="#\\SomeModule\\#" />
+        </properties>
+    </rule>
+    -->
+
+</ruleset>
+```
 
 ### Violation baseline
 

@@ -87,20 +87,12 @@ Validates that your code follows Spryker's architectural patterns and convention
 
 **Architecture Sniffer project ruleset - Project-specific validation**
 
-Extends the core ruleset with project-level rules and best practices:
+Extends the ruleset with project-level rules and best practices:
 
 - Project-specific architectural patterns
 - Custom business logic validation
 - Integration pattern compliance
 - Upgradability checks
-
-[Architecture Sniffer documentation](/docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html)
-
-{% info_block infoBox %}
-
-The separate `spryker/project-architecture-sniffer` package is [deprecated](/docs/dg/dev/sdks/sdk/development-tools/project-architecture-sniffer.html) in favor of the project ruleset.
-
-{% endinfo_block %}
 
 **Evaluator - Upgradability and compatibility checks**
 

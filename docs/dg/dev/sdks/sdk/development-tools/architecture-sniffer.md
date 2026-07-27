@@ -58,13 +58,13 @@ The project ruleset requires version `0.6.0` or later.
 
 Use the project ruleset for application development. It bundles adapted PHPMD rules, Spryker architecture rules, and project-only rules.
 
-#### Include the project ruleset in PhpStorm
+### Include the project ruleset in PhpStorm
 
 1. In PhpStorm, go to **Editor&nbsp;→&nbsp;Inspections&nbsp;→&nbsp;PHP&nbsp;→&nbsp;PHP Mess Detector validation** and add a custom ruleset named `Architecture Sniffer` that points to `phpmd.xml` or `vendor/spryker/architecture-sniffer/src/Project/ruleset.xml`.
 2. Go to **Framework & Languages&nbsp;→&nbsp;PHP&nbsp;→&nbsp;Mess Detector** and set the path to your phpmd binary: `vendor/bin/phpmd`.
 3. Select **Validate** to confirm that the setup works.
 
-#### Project priority levels
+### Project priority levels
 
 - `1`: Critical
 - `2`: Major
@@ -77,7 +77,7 @@ We recommend the following minimum priority based on project maturity:
 - `3`: for all new projects
 - `4`: for a current AI-assisted development flow
 
-#### Set up the project ruleset
+### Set up the project ruleset
 
 The project ruleset is meant to be tuned per project, so do not run the vendor file directly. Instead, create a thin `phpmd.xml` file in your project root—the conventional default file name of PHPMD. This file references the vendor project ruleset, and you layer your customizations on top of it:
 
@@ -101,7 +101,7 @@ The project ruleset is meant to be tuned per project, so do not run the vendor f
 
 Commit `phpmd.xml` to version control so that all developers and the CI pipeline use the same configuration.
 
-#### Run the project ruleset
+### Run the project ruleset
 
 Run phpmd against your project-level `phpmd.xml`:
 
@@ -111,7 +111,7 @@ vendor/bin/phpmd src/ text phpmd.xml --minimumpriority=4
 
 Supported report formats are `json`, `text`, and `html`. For all command options, see [Command line options](https://phpmd.org/documentation/index.html).
 
-#### Adjust the project ruleset
+### Adjust the project ruleset
 
 Customize `phpmd.xml` to exclude modules, drop rules, change priorities, or set rule properties without touching the vendor package.
 
@@ -170,7 +170,7 @@ Some rules expose tunable properties, such as `ignoreclasspattern`, which skips 
 </rule>
 ```
 
-#### Complete example
+### Complete example
 
 The following example is the [phpmd.xml](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/phpmd.xml) file of the B2B Demo Marketplace. It combines all of the preceding customizations, with the rule-level ones commented out for reference.
 
@@ -274,7 +274,7 @@ The following example is the [phpmd.xml](https://github.com/spryker-shop/b2b-dem
 </ruleset>
 ```
 
-#### Violation baseline
+### Violation baseline
 
 When you adopt the project ruleset on an existing project, the sniffer may reveal violations introduced in the past.
 
@@ -300,7 +300,7 @@ We recommend generating a baseline during the initialization phase of your proje
 
 {% endinfo_block %}
 
-#### Debug rules
+### Debug rules
 
 To step through rule code, enable Xdebug for phpmd:
 

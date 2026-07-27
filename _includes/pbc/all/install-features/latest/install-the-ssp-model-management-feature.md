@@ -56,14 +56,13 @@ Add the following configuration to `config/Shared/config_default.php`:
 ```php
 <?php
 
-use Spryker\Service\FlysystemLocalFileSystem\Plugin\Flysystem\LocalFilesystemBuilderPlugin;
 use Spryker\Shared\FileSystem\FileSystemConstants;
-use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\Aws3v3FilesystemBuilderPlugin;
+use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\IamAws3v3FilesystemBuilderPlugin;
 use SprykerFeature\Shared\SelfServicePortal\SelfServicePortalConstants;
 
 $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
      'ssp-model-image' => [
-        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
+        'sprykerAdapterClass' => IamAws3v3FilesystemBuilderPlugin::class,
         'key' => getenv('SPRYKER_S3_SSP_MODELS_KEY') ?: '',
         'secret' => getenv('SPRYKER_S3_SSP_MODELS_SECRET') ?: '',
         'bucket' => getenv('SPRYKER_S3_SSP_MODELS_BUCKET') ?: '',

@@ -133,7 +133,7 @@ Add the three media filesystem entries inside the existing `$config[FileSystemCo
 $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
     // ... existing entries ...
     'backoffice-media' => [
-        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
+        'sprykerAdapterClass' => IamAws3v3FilesystemBuilderPlugin::class,
         'key' => getenv('SPRYKER_S3_PUBLIC_ASSETS_KEY') ?: '',
         'bucket' => getenv('SPRYKER_S3_PUBLIC_ASSETS_BUCKET') ?: '',
         'secret' => getenv('SPRYKER_S3_PUBLIC_ASSETS_SECRET') ?: '',
@@ -143,7 +143,7 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
         'region' => getenv('AWS_REGION'),
     ],
     'storefront-media' => [
-        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
+        'sprykerAdapterClass' => IamAws3v3FilesystemBuilderPlugin::class,
         'key' => getenv('SPRYKER_S3_PUBLIC_ASSETS_KEY') ?: '',
         'bucket' => getenv('SPRYKER_S3_PUBLIC_ASSETS_BUCKET') ?: '',
         'secret' => getenv('SPRYKER_S3_PUBLIC_ASSETS_SECRET') ?: '',
@@ -153,7 +153,7 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
         'region' => getenv('AWS_REGION'),
     ],
     'merchant-portal-media' => [
-        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
+        'sprykerAdapterClass' => IamAws3v3FilesystemBuilderPlugin::class,
         'key' => getenv('SPRYKER_S3_PUBLIC_ASSETS_KEY') ?: '',
         'bucket' => getenv('SPRYKER_S3_PUBLIC_ASSETS_BUCKET') ?: '',
         'secret' => getenv('SPRYKER_S3_PUBLIC_ASSETS_SECRET') ?: '',

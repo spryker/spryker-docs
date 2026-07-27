@@ -129,7 +129,7 @@ We recommend the following minimum priority based on project maturity:
 
 - `1` and `2`: for all projects, including those with legacy code
 - `3`: for all new projects
-- `4`: for a modern AI-assisted development flow
+- `4`: for the current AI-assisted development flow
 
 #### Set up the project ruleset
 

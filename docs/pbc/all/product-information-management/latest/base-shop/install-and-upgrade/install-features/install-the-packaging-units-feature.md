@@ -1,7 +1,7 @@
 ---
 title: Install the Packaging Units feature
 description: Learn how to integrate the Packaging Units feature into a Spryker Cloud Commerce OS project.
-last_updated: Apr 14, 2023
+last_updated: July 9, 2026
 template: feature-integration-guide-template
 redirect_from: 
 - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html

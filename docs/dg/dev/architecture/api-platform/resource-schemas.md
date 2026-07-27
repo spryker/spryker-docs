@@ -1,7 +1,7 @@
 ---
 title: Resource Schemas
 description: Understanding API Platform resource schema definitions in Spryker.
-last_updated: Jun 3, 2026
+last_updated: Jul 13, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -257,17 +257,21 @@ resource:
 | `number` | `float` | `3.14` | Decimal numbers |
 | `boolean` | `bool` | `true` | True/false values |
 | `array` | `array` | `["a", "b"]` | Lists of values |
-| `object` | `object` | `{"key": "value"}` | Strictly typed nested objects |
+| `object` | `object` | `{"key": "value"}` | Strictly typed nested objects — generates a typed companion class. See [Typed nested objects](#typed-nested-objects). A project can also share one shape across resources with a [canonical nested object](#project-defined-canonical-nested-objects). |
 | `map` | `array` | `{"key": "value"}` | Free-shape associative payloads documented via `openapiContext`. Stored as PHP `array` and rendered as `type: object` in the OpenAPI specification. |
 | `mixed` | `mixed` | any | Use only when the payload genuinely has no fixed shape and cannot be described via `openapiContext`. |
 
 Use `map` when the payload is a structured JSON object whose schema you want to describe via
 `openapiContext` rather than a strongly typed PHP class. This is the recommended type whenever a
-request or response body is a JSON object with a known shape but no dedicated DTO class — it
+request or response body is a JSON object with a known shape but no dedicated class — it
 keeps the property typed as a simple `array` in PHP while still producing rich OpenAPI metadata
 and a working "Try Out" body in Swagger UI. See
 [Documenting nested properties for OpenAPI and Swagger UI](#documenting-nested-properties-for-openapi-and-swagger-ui)
 for the full pattern.
+
+When you do want a strongly typed class for the payload — so PHP enforces the field set and the
+OpenAPI document publishes a named component schema — use `type: object` with nested
+`properties:` instead. See [Typed nested objects](#typed-nested-objects).
 
 ### Property attributes
 
@@ -322,6 +326,475 @@ isActive:
   type: boolean
   default: true     # Defaults to true if not provided
 ```
+
+## Typed nested objects
+
+A property declared as `type: object` with its own nested `properties:` block generates a
+dedicated, strongly typed companion class — not an untyped array. The generator emits one PHP
+class per nested object, types the parent property to that class, and publishes a full
+field-by-field schema in the OpenAPI document. The serializer hydrates the nested object from the
+same JSON payload, so the response on the wire is identical to the array-based form it replaces.
+
+This is the strongly typed counterpart to the `map` pattern described in
+[Documenting nested properties for OpenAPI and Swagger UI](#documenting-nested-properties-for-openapi-and-swagger-ui):
+`map` documents a nested object while keeping it a plain PHP `array`; `type: object` promotes it
+to a real class whose shape is enforced by PHP's type system.
+
+### Why use it
+
+- **Type safety in PHP.** The parent property is typed to the generated class (for example,
+  `?CartsTotalsStorefrontObject`) instead of `array`, so providers and processors get IDE
+  autocompletion and the language enforces the field set.
+- **Precise OpenAPI schema.** Each sub-field carries its own `type`, `description`, and `example`,
+  so the OpenAPI document and Swagger UI render the object as a named component schema instead of
+  an opaque `object`.
+- **No runtime contract change.** Because the serializer denormalizes the typed object from the
+  same keys, migrating a property from `array`/`map` to `type: object` leaves the JSON response
+  unchanged — only the generated PHP and the published schema improve.
+
+### When to use which type
+
+| Use | When |
+|-----|------|
+| `type: object` (with `properties`) | The payload has a **stable, known shape** you want enforced as a PHP class — for example, cart and order `totals`, or a quote-request `customer`. |
+| `type: map` (with `openapiContext`) | The shape is known and worth documenting, but you do **not** want a dedicated PHP class — for example, payloads aggregated from several transfer objects, or PSP-specific responses. See [Documenting nested properties for OpenAPI and Swagger UI](#documenting-nested-properties-for-openapi-and-swagger-ui). |
+| `type: mixed` | The payload genuinely has **no fixed shape** and cannot be described via `openapiContext`. |
+
+### How to declare it
+
+Give the property `type: object` and nest its fields under `properties:`. Sub-fields accept the
+same attributes as top-level properties (`type`, `description`, `openapiContext`, `nullable`,
+`serializedName`, `serializedPath`):
+
+```yaml
+totals:
+    type: object
+    readable: true
+    writable: false
+    required: false
+    description: 'Calculated cart totals in cents.'
+    properties:
+        subtotal:
+            type: integer
+            description: 'Items × prices before any discount/tax.'
+            openapiContext: { example: 16058 }
+        grandTotal:
+            type: integer
+            description: 'What the customer pays.'
+            openapiContext: { example: 14601 }
+        priceToPay:
+            type: integer
+            description: 'Grand total adjusted for any pre-paid amount (e.g. gift cards).'
+            openapiContext: { example: 14601 }
+```
+
+### Generated output
+
+For a `Carts` resource with the `totals` property above, the generator:
+
+1. Types the property on the resource class:
+
+   ```php
+   public ?CartsTotalsStorefrontObject $totals = null;
+   ```
+
+2. Writes a companion class in the `Generated\Api\{ApiType}\{ResourceName}\` namespace (a
+   sub-namespace named after the owning resource, alongside the resource class in
+   `Generated\Api\{ApiType}\`). The class is `final`, carries **no** `#[ApiResource]` attribute —
+   it is an embedded value object, not a routed resource — and exposes the typed sub-fields plus
+   their accessors:
+
+   ```php
+   namespace Generated\Api\Storefront\Carts;
+
+   use ApiPlatform\Metadata\ApiProperty;
+
+   final class CartsTotalsStorefrontObject
+   {
+       #[ApiProperty(description: 'Items × prices before any discount/tax.', openapiContext: ['example' => 16058])]
+       public ?int $subtotal = null;
+
+       #[ApiProperty(description: 'What the customer pays.', openapiContext: ['example' => 14601])]
+       public ?int $grandTotal = null;
+
+       #[ApiProperty(description: 'Grand total adjusted for any pre-paid amount (e.g. gift cards).', openapiContext: ['example' => 14601])]
+       public ?int $priceToPay = null;
+
+       // Getters, setters, toArray(), fromArray() …
+   }
+   ```
+
+The companion class name is `{ResourceName}{PropertyPath}{ApiType}Object` — the resource's
+normalized name, the capitalized property path, the API type, and the `Object` suffix (contrast
+the routed resource class itself, which keeps the `Resource` suffix). It lives in the
+`Generated\Api\{ApiType}\{ResourceName}` sub-namespace. So `Carts` + `totals` on the storefront API
+becomes `Generated\Api\Storefront\Carts\CartsTotalsStorefrontObject`; a checkout `billingAddress`
+becomes `Generated\Api\Storefront\Checkout\CheckoutBillingAddressStorefrontObject`.
+
+{% info_block infoBox "Imports in companion classes" %}
+
+Companion classes import only the attributes they actually use (`ApiProperty`, `SerializedName`,
+`SerializedPath`). An attribute referenced without its `use` statement would resolve to a
+non-existent class in the `Generated` namespace and break attribute reflection at runtime, so the
+generator never emits an unused import.
+
+{% endinfo_block %}
+
+### Nested objects within objects
+
+Objects can nest to any depth. Each level generates its own class, named by concatenating the
+property path onto the resource name. For example:
+
+```yaml
+totals:
+    type: object
+    properties:
+        tax:
+            type: object
+            properties:
+                amount:
+                    type: integer
+                    description: 'Tax amount in cents.'
+                    openapiContext: { example: 1457 }
+```
+
+on the storefront `Carts` resource generates a `CartsTotalsStorefrontObject` class with
+`public ?CartsTotalsTaxStorefrontObject $tax = null;`, plus a separate
+`CartsTotalsTaxStorefrontObject` class with `public ?int $amount = null;` (both in the
+`Generated\Api\Storefront\Carts` namespace). A deeper path simply keeps concatenating — an agent
+quote-request resource's `shownVersion.cartTotals` object becomes
+`AgentQuoteRequestsShownVersionCartTotalsStorefrontObject`.
+
+### Object collections
+
+A `type: array` property whose `items:` are themselves a typed object (`type: object` with nested
+`properties:`) generates a value-object class for the element type. The class is named after the
+**pluralized** field segment — `{ResourceName}{PluralField}{ApiType}Object` — and the parent
+property stays a PHP `array` carrying a `@var array<…>` docblock so the serializer denormalizes
+each element into the generated class:
+
+```yaml
+# carts.resource.yml — a list of typed customer objects
+customer:
+    type: array
+    items:
+        type: object
+        properties:
+            firstName: { type: string }
+            email:     { type: string }
+```
+
+On the storefront `Carts` resource this generates `CartsCustomersStorefrontObject` (the field
+`customer` pluralized to `Customers`) as the element type, and types the property as
+`array<\Generated\Api\Storefront\Carts\CartsCustomersStorefrontObject>`.
+
+### Per-resource validation lifting
+
+Each typed nested object gets its **own** value-object class, so validation you authored the
+array-shaped way — an `Assert\Collection` on the object property in the resource's
+`{resource-name}.validation.yml` — would reject the denormalized object value with a 422
+(`This value should be of type array`). The generator resolves this automatically: for a writable
+object property it **lifts** the `Collection.fields` constraints off the property and onto the
+matching fields of that resource's value object, and emits a plain `#[Assert\Valid]` cascade
+(carrying the operation groups) on the property instead of the `Collection`.
+
+You keep authoring validation exactly as before — write the `Collection` against the object
+property:
+
+```yaml
+# checkout-data.validation.yml
+post:
+    customer:
+        - Optional:
+              constraints:
+                  - Collection:
+                        allowExtraFields: true
+                        fields:
+                            email:
+                                - NotBlank: { message: 'Email is invalid.' }
+                                - Email:    { message: 'Email is invalid.' }
+```
+
+The lifted constraints are re-grouped through the resource's own operation groups (so this
+`checkout-data` `customer.email` rule stays in the `checkout-data:create` group) and attached to
+the value object's `email` field; the `customer` property itself carries only `#[Assert\Valid]`.
+Each resource's value object is validated independently — there is **no** cross-resource union,
+because every resource has its own value-object class. A property whose object is not writable, or
+a plain list property that is not a typed object collection, keeps its array-shaped `Collection` —
+only writable typed-object properties are lifted.
+
+#### `allowMissingFields`
+
+A `Collection` with `allowMissingFields: true` (for example, a checkout `billingAddress` referenced
+only by id) tolerates absent keys. On a value object an absent field denormalizes to `null`, so the
+generator relaxes presence constraints when lifting: each `NotBlank` gains `allowNull: true` and
+each `NotNull` is dropped — an absent field passes, a present-but-empty one still fails.
+
+### Cross-module field contribution
+
+Because each resource owns its value-object class, a nested object's fields can still be
+contributed from several modules — this is how you keep the dependency direction correct, with
+each field declared in its owning module. Multiple modules ship a same-named `*.resource.yml`
+fragment for the same resource, and the schema merger **deep-merges nested object `properties`**
+(and `items.properties` for collections) rather than letting a later fragment's nested block
+replace an earlier one.
+
+For example, both `DiscountsRestApi` and `ProductOptionsRestApi` add fields to the cart-items
+`calculations` object:
+
+```yaml
+# DiscountsRestApi — cart-items.resource.yml
+resource:
+    name: CartItems
+    properties:
+        calculations:
+            type: object
+            properties:
+                discountTotal: { type: integer }
+
+# ProductOptionsRestApi — cart-items.resource.yml
+resource:
+    name: CartItems
+    properties:
+        calculations:
+            type: object
+            properties:
+                productOptionTotal: { type: integer }
+```
+
+The merged `calculations` object carries **both** `discountTotal` and `productOptionTotal`, and a
+single `CartItemsCalculationsStorefrontObject` value object is generated for it. This deep merge —
+not a shared class — is how identically-named objects accumulate fields across modules while each
+resource keeps its own independent request/response shape.
+
+#### Conflicting shapes fail generation
+
+Deep merge only applies when the contributors agree on the shape. When one contributor declares a
+property as a typed object (`type: object` with `properties`) or an object collection (`type: array`
+with `items.properties`) and another declares the **same** property as something structurally
+different — a `map`, a scalar, a plain array, or an object without `properties` — a silent
+last-wins merge would drop either the typed value object or the plain field. Instead, generation
+**fails with an error** that names the property and both contributing source files:
+
+```text
+Conflicting shapes for property "calculations": .../DiscountsRestApi/.../cart-items.resource.yml
+declares it as a typed object (`type: object` with `properties`), but
+.../project/.../cart-items.resource.yml declares it as `type: map`. ...
+```
+
+This applies both within a layer and across layers (project overrides feature overrides core). The
+usual cause is a project fragment that still declares a property as `type: map`/`array` while a core
+module has since promoted it to a typed object — convert the project fragment to the typed form.
+Same-shape overrides (object + object, collection + collection) still deep-merge, and attribute-only
+overrides (an override that sets, for example, `writable: false` without re-declaring `type`) merge
+as before.
+
+If you deliberately intend to re-shape an inherited property — for example, collapse a core typed
+object back into a `map`, or replace it wholesale rather than extend it — set `replace: true` on the
+overriding declaration. It takes your declaration wholesale (the inherited one is discarded),
+suppresses the conflict guard, and is stripped from the generated output:
+
+```yaml
+# project cart-items.resource.yml — deliberately override the core shape
+calculations:
+    type: map
+    replace: true
+```
+
+## Project-defined canonical nested objects
+
+[Typed nested objects](#typed-nested-objects) generate one value-object class **per resource
+property**: a `billingAddress` on the checkout resource and a `shippingAddress` on the order
+resource each get their own independent class, even when both describe the same real-world shape.
+That keeps each resource self-contained, but it also means the same address shape is authored and
+maintained in several places.
+
+A **canonical nested object** lets a project define that shared shape **once** and have it flow
+into every resource property that opts in. All the opting-in properties then collapse onto a single
+generated class — `Generated\Api\{ApiType}\{Object}` (for example, `Generated\Api\Storefront\Address`) —
+instead of a per-resource companion class.
+
+This is a pure project opt-in. With no canonical object files present, generation is byte-for-byte
+identical to the default per-resource behavior described above — nothing changes until a project
+adds its first `*.object.yml`.
+
+### File location and naming
+
+Canonical objects live in a **dedicated, reserved subdirectory literally named `objects/`** inside the per-`apiType` resource directory. The directory name is always `objects` — it is never named after a resource or module. This is distinct from resource definition files, which live directly in the `apiType` directory:
+
+```text
+resources/api/storefront/
+├── checkout.resource.yml          # a resource definition
+├── checkout.validation.yml        # its validation
+└── objects/                       # reserved dir — canonical objects only
+    ├── address.object.yml
+    └── address.object.validation.yml
+```
+
+Only `*.object.yml` and `*.object.validation.yml` files belong in `objects/`. Resource files (`*.resource.yml`) are placed directly in the per-`apiType` directory, never inside `objects/`.
+
+The `<dashed-name>.<kind>.yml` naming pattern is the same for both file types — only the kind word differs. `address.object.yml` is the canonical-object analog of `checkout.resource.yml`, and `address.object.validation.yml` is the analog of `checkout.validation.yml`. The `object` versus `resource` word identifies the artifact kind, not a different naming scheme.
+
+Full path patterns:
+
+```text
+resources/api/<apiType>/objects/<dashed-name>.object.yml
+resources/api/<apiType>/objects/<dashed-name>.object.validation.yml   # optional, see Validation
+```
+
+For example, on the storefront API:
+
+```text
+src/Pyz/resources/api/storefront/objects/address.object.yml
+src/Pyz/resources/api/storefront/objects/address.object.validation.yml
+```
+
+The file name uses a dashed (kebab-case) object name, while `object.name` **inside** the file is
+CamelCase. The CamelCase `object.name` is the contract: it must exactly match the `objectName:`
+join tag declared on the resource properties that want this shape (see [The `objectName` join
+tag](#the-objectname-join-tag)).
+
+### Central directory
+
+A project may keep canonical object files in one central location instead of (or in addition to) the per-module `objects/` directories. Both locations are scanned simultaneously.
+
+Configure the central directory via the Symfony bundle config node `spryker_api_platform.canonical_object_search_directories`, keyed by API type. Relative paths resolve against the project root; `%kernel.project_dir%` is also supported:
+
+```yaml
+# config/packages/spryker_api_platform.yaml
+spryker_api_platform:
+    canonical_object_search_directories:
+        storefront:
+            - '%kernel.project_dir%/config/api/objects/storefront'
+```
+
+The same `*.object.yml` / `*.object.validation.yml` naming rules apply. Files in a central directory are always treated as the **project** layer, so they participate in the standard `project > feature > core` merge precedence.
+
+Defining the same `objectName` more than once within the same layer — for example, one module file and one central-directory file both at project layer — is a fail-loud error: generation aborts with an `ApiSchemaGenerationException` naming both source files. The same name across different layers is fine — that is the normal override.
+
+### File format
+
+The file contains a single top-level `object:` key:
+
+```yaml
+# address.object.yml
+object:
+    name: Address                                   # CamelCase; matches `objectName: Address` on resource properties
+    properties:
+        salutation: { type: string, description: 'Address salutation.', example: 'Mr' }
+        firstName:  { type: string, description: 'First name.', example: 'Jane' }
+        lastName:   { type: string, description: 'Last name.', example: 'Doe' }
+        address1:   { type: string, description: 'Street name.', example: 'Julie-Wolfthorn-Straße' }
+        zipCode:    { type: string, description: 'ZIP / postal code.', example: '10115' }
+        city:       { type: string, description: 'City.', example: 'Berlin' }
+```
+
+| Key | Type | Required | Description |
+|-----|------|----------|-------------|
+| `object.name` | string | Yes | CamelCase object name. Matched against `objectName:` join tag on every resource property that references this object. |
+| `object.properties` | map | Yes | Field definitions. Each field uses the **same syntax as a resource property** — `type`, `description`, `validation`, `example`, and so on. |
+| `object.extends` | string | No | CamelCase name of another canonical object whose resolved fields are inherited first. See [Composition](#composition-with-extends-and-omit). |
+| `object.omit` | string[] | No | Names of inherited fields to drop from the `extends` base before this object's own properties are applied. |
+
+### Composition with `extends` and `omit`
+
+An object can inherit another canonical object's fields with `extends`, then trim and extend them.
+This avoids re-declaring a shared shape when one variant is a near-copy of another — for example, a
+read-only address snapshot derived from a writable address:
+
+```yaml
+# address-snapshot.object.yml
+object:
+    name: AddressSnapshot
+    extends: Address                                # inherit all Address fields first
+    omit: [id, idCompanyBusinessUnitAddress]        # drop the write-only identifiers
+    properties:
+        country: { type: string, description: 'Country name.', example: 'Germany' }   # add a read-only field
+```
+
+Fields resolve in this order, with later steps winning:
+
+1. The fields inherited from `extends`.
+2. Any field named in `omit` is removed.
+3. This object's own `properties` are applied — a field redeclared here overrides the inherited one.
+
+An `extends` cycle (for example, two objects that extend each other) is rejected at generation time
+with an `ApiSchemaGenerationException`.
+
+### The `objectName` join tag
+
+A resource property opts into a canonical object by declaring `type: object` together with an
+`objectName:` tag whose value equals the canonical `object.name`:
+
+```yaml
+# checkout.resource.yml
+properties:
+    billingAddress:
+        type: object
+        objectName: Address       # joins this property to the canonical Address object
+        readable: false
+        writable: true
+        properties:
+            zipCode: { type: string }
+```
+
+The `objectName` tag is dormant on its own: if no `address.object.yml` exists, the property's
+inline `properties:` block is generated exactly as a normal [typed nested
+object](#typed-nested-objects). When a canonical file for `Address` **is** present, the tag
+activates and:
+
+- The property's inline `properties:` are **replaced** by the canonical object's resolved shape.
+- The mount attributes — `readable`, `writable`, `required`, `nullable` — stay on the referencing
+  property. They describe how this property is mounted on this resource and are **not** owned by
+  the canonical object, so the same canonical shape can be writable on one resource and read-only
+  on another.
+- A single shared `Generated\Api\{ApiType}\{Object}` class is emitted for the canonical object. No
+  per-property companion class is generated for that property; every property tagged with the same
+  `objectName` is typed to the one shared class.
+
+{% info_block infoBox "Shared class versus per-resource class" %}
+
+Without `objectName`, each `type: object` property generates its own per-resource value-object
+class (for example, `CheckoutBillingAddressStorefrontObject`). With `objectName: Address`, all
+matching properties across all resources instead share the single `Generated\Api\Storefront\Address`
+class. Use a canonical object when several resources genuinely share one shape and you want them to
+stay in lockstep; keep the inline form when each resource's shape is independent.
+
+{% endinfo_block %}
+
+### Validation
+
+Field-level validation for a canonical object is authored in a parallel
+`<dashed-name>.object.validation.yml` file, using the same format as a resource
+[validation schema](/docs/dg/dev/architecture/api-platform/validation-schemas.html):
+
+```yaml
+# address.object.validation.yml
+zipCode:
+    - NotBlank: { message: 'ZIP code is required.' }
+firstName:
+    - NotBlank: { message: 'First name is required.' }
+```
+
+These constraints are lifted onto the generated canonical class. Every resource property that
+references the object through `objectName` then carries an `Assert\Valid` cascade to that class, so
+the canonical field rules are enforced wherever the object is used — you author the object's
+validation once, in one place.
+
+### Layer precedence
+
+Canonical objects follow the same layer rules as resource schemas. The layer is detected from the
+file path — a `/Pyz/` path is a project file, a `/SprykerFeature/` path is a feature file, and
+anything else is core. Same-named objects merge by `object.name` with the precedence:
+
+```text
+project > feature > core
+```
+
+Because the merge is by `objectName`, a project can add a single field to a feature-layer canonical
+object without redefining the whole object. Core ships no canonical object files today; the
+mechanism is available to the project, feature, and core layers, and in practice projects are the
+primary users.
 
 ## Documenting nested properties for OpenAPI and Swagger UI
 

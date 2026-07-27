@@ -1,7 +1,7 @@
 ---
 title: Smart PIM
 description: Technical overview of the Smart PIM feature — architecture, AiFoundation integration, plugin structure, and configuration options.
-last_updated: Apr 27, 2026
+last_updated: Jul 08, 2026
 template: concept-topic-template
 ---
 
@@ -25,6 +25,20 @@ Category suggestion requires the `ProductCategoryAbstractFormExpanderPlugin` to 
 | Image alt text | `getImageAltTextAiConfigurationName()` | Generates descriptive alt text for product images. |
 | Category suggestion | `getCategorySuggestionAiConfigurationName()` | Suggests relevant product categories based on product content. |
 | Translation | `getTranslationAiConfigurationName()` | Translates product content into configured store languages. |
+
+## System prompts
+
+Each Smart PIM capability uses its own prompt template, managed in the Back Office under **AI Commerce > Smart PIM > System Prompts**. The default prompts are defined in `ai_commerce.configuration.yml` and can be customized per environment through the configuration UI or a project configuration file, without a code change.
+
+| CAPABILITY | CONFIGURATION KEY | DESCRIPTION |
+|------------|--------------------|-------------|
+| Content improvement | `AiCommerceConstants::CONFIGURATION_KEY_SMART_PIM_CONTENT_IMPROVER_PROMPT` | Prompt used to improve product content. Keeps the `%s` placeholder for the text to improve. |
+| Translation | `AiCommerceConstants::CONFIGURATION_KEY_SMART_PIM_TRANSLATION_PROMPT` | Prompt used to translate product content. Keeps the `%s` placeholders for the text, source locale, and target locale. |
+| Translation collection | `AiCommerceConstants::CONFIGURATION_KEY_SMART_PIM_TRANSLATION_COLLECTION_PROMPT` | Prompt used to translate product content into a collection of locales in a single request. Keeps the `%s` placeholders for the text, source locale, and target locales. |
+| Category suggestion | `AiCommerceConstants::CONFIGURATION_KEY_SMART_PIM_CATEGORY_SUGGESTION_PROMPT` | Prompt used to suggest product categories. Keeps the `%s` placeholders for the product name, description, and existing categories. |
+| Image alt text | `AiCommerceConstants::CONFIGURATION_KEY_SMART_PIM_IMAGE_ALT_TEXT_PROMPT` | Prompt used to generate alt text for a product image. Keeps the `%s` placeholder for the locale. |
+
+If an overridden prompt is blank or contains only whitespace, Smart PIM falls back to the default prompt instead of sending an empty value to the AI provider.
 
 ## Install
 

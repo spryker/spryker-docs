@@ -1,7 +1,7 @@
 ---
 title: Install Search Statistics
 description: Learn how to install and configure the Search Statistics feature in a Spryker project.
-last_updated: May 7, 2026
+last_updated: Jul 7, 2026
 template: howto-guide-template
 ---
 
@@ -23,6 +23,24 @@ Install the required features:
 ```bash
 composer require spryker-eco/google-analytics:"^1.0.0" --update-with-dependencies
 ```
+
+{% info_block infoBox "Info" %}
+
+If your project uses [spryker/php](https://hub.docker.com/r/spryker/php) Docker image from before September 2025, you may need to update it.
+
+Check whether the required PHP module is installed:
+
+```bash
+docker/sdk cli php -m | grep protobuf
+```
+
+If the command returns no output, refresh the image by running:
+
+```bash
+docker/sdk boot your_deploy_file.yml && docker/sdk up
+```
+
+{% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 

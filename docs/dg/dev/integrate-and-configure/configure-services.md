@@ -561,7 +561,7 @@ If you update the name of an application, [contact support](/docs/about/all/supp
 docker:
     newrelic:
         license: {new_relic_license}
-	distributed tracing:
+	distributed-tracing:
             enabled: true
 ```
 

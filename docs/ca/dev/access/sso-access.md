@@ -2,8 +2,14 @@
 title: SSO Access
 description: Single sign on access to all Spryker Cloud services with a single SSO user
 template: howto-guide-template
-last_updated: Apr 28, 2026
+last_updated: Jul 10, 2026
 ---
+
+{% info_block infoBox %}
+
+This feature is part of a gradual rollout and will be available to everyone eventually. We will notify your team once your project is onboarded.
+
+{% endinfo_block %}
 
 ## What is SSO
 
@@ -109,3 +115,4 @@ Such users **cannot** be created or managed via CloudHub User Management (SSO) p
 - [User Management SSO](/docs/ca/dev/cloud-hub/sso-user-management.html)
 - [SSO Security Options](/docs/ca/dev/access/sso-security-options.html)
 - [Connecting to AWS CLI with an SSO user](/docs/ca/dev/access/connecting-to-aws-cli-with-an-sso-user.html)
+- [AWS permissions](/docs/ca/dev/access/aws-permissions.html)

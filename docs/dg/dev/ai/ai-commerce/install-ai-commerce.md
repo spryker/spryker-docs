@@ -1,7 +1,7 @@
 ---
 title: Install AI Commerce
 description: Learn how to install the AI Commerce package, which is the base for AI-powered storefront features like Visual Add to Cart.
-last_updated: Apr 25, 2026
+last_updated: Jul 16, 2026
 template: feature-integration-guide-template
 ---
 
@@ -69,6 +69,18 @@ features:
 ```
 
 Set `enabled: true` only for the features you want to activate. You can omit tabs you do not want to enable.
+
+{% info_block infoBox "AI model configuration" %}
+
+This file enables the feature tabs only. Each feature also requires an `ai_vendor` configuration group that defines its AI configuration and model settings. Add these settings as described in the feature's own installation guide before syncing:
+
+- [Install Back Office Assistant](/docs/dg/dev/ai/ai-commerce/backoffice-assistant/install-backoffice-assistant.html)
+- [Install Smart PIM](/docs/dg/dev/ai/ai-commerce/smart-pim/install-smart-pim.html)
+- [Install Smart CMS Content Assistant](/docs/dg/dev/ai/ai-commerce/content-assistant/install-smart-cms-content-assistant.html)
+- [Install Search by Image](/docs/dg/dev/ai/ai-commerce/search-by-image/install-search-by-image.html)
+- [Install Visual Add to Cart](/docs/dg/dev/ai/ai-commerce/visual-add-to-cart/install-visual-add-to-cart.html)
+
+{% endinfo_block %}
 
 After creating the file, sync the configuration to the database:
 

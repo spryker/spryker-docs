@@ -1,7 +1,7 @@
 ---
 title: Search Statistics
 description: Use Search Statistics in the Spryker Back Office to analyze search behavior and identify zero-result searches powered by Google Analytics 4.
-last_updated: May 21, 2026
+last_updated: July 10, 2026
 template: concept-topic-template
 related:
   - title: Install Search Statistics
@@ -61,6 +61,7 @@ The **Top 10 Frequent Searches** widget shows the most popular search terms. Use
 To view all frequent searches beyond the top 10, click **View All**. The detail page shows a full list with the following columns:
 
 | COLUMN        | DESCRIPTION                                                       |
+| ------------- | ----------------------------------------------------------------- |
 | Search Term   | The query customers entered.                                      |
 | Store         | The store in which the search term was searched.                  |
 | Locale        | The locale in which the search term was searched.                 |
@@ -86,6 +87,7 @@ The **Top 10 Zero-Result Searches** widget shows the most frequently searched te
 To view all zero-result searches, click **View All**. The detail page shows a full list with the following columns:
 
 | COLUMN | DESCRIPTION |
+| --- | --- |
 | Search Term | The query that returned no results. |
 | Store | The store in which the search term was searched. |
 | Locale | The locale in which the search term was searched. |

@@ -42,7 +42,23 @@
 
     {% include google_analytics.html %}
 
-    <script src="https://context7.com/widget.js" data-library="/spryker/spryker-docs" data-color="#1ebea0" data-position="bottom-right" data-placeholder="Ask about Spryker..."></script>
+    <script>
+        (function () {
+            var hostname = window.location.hostname;
+            var allowedHosts = ['docs.spryker.com', 'localhost', '0.0.0.0'];
+            var isAllowed = allowedHosts.indexOf(hostname) !== -1 || hostname.endsWith('.netlify.app');
+            if (!isAllowed) {
+                return;
+            }
+            var script = document.createElement('script');
+            script.src = 'https://context7.com/widget.js';
+            script.setAttribute('data-library', '/spryker/spryker-docs');
+            script.setAttribute('data-color', '#1ebea0');
+            script.setAttribute('data-position', 'bottom-right');
+            script.setAttribute('data-placeholder', 'Ask about Spryker...');
+            document.body.appendChild(script);
+        })();
+    </script>
 </div>
 </body>
 </html>

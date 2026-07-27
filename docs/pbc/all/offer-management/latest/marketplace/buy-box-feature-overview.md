@@ -1,7 +1,7 @@
 ---
 title: Buy Box feature overview
 description: The Buy Box feature displays multiple merchant offers on product pages, letting customers compare and select which merchant to purchase from.
-last_updated: February 12, 2026
+last_updated: July 7, 2026
 template: concept-topic-template
 related:
   - title: Install the Buy Box feature
@@ -60,11 +60,18 @@ For details about availability display, see [Product Availability Display featur
 
 ## Configuration
 
-You can configure the Buy Box feature at the code level. The following configuration option is available:
+You can configure the Buy Box feature at the code level. The following configuration options are available:
 
 - Sorting strategy: by price or by stock availability
+- Render conditions: plugins that determine whether the Buy Box is rendered for a given product
 
 For configuration details, see [Install the Buy Box feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-buy-box-feature.html).
+
+### Render conditions
+
+The Buy Box supports render condition plugins that determine whether it is displayed for a given product. When any registered condition is not satisfied, the Buy Box is not rendered for the product.
+
+For example, you can register `ConfigurableProductBuyBoxRenderConditionPlugin` to prevent the Buy Box from being rendered for configurable products. For details, see [Install the Buy Box feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-buy-box-feature.html).
 
 ## Use cases
 

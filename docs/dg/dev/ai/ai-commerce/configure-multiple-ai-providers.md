@@ -1,7 +1,7 @@
 ---
 title: Configure multiple AI providers for AI Commerce
 description: Learn how to configure OpenAI, AWS Bedrock, and Anthropic providers independently for each AI Commerce feature.
-last_updated: Jun 15, 2026
+last_updated: Jul 16, 2026
 template: howto-guide-template
 ---
 
@@ -302,9 +302,9 @@ The following table maps each feature to its configuration constants and the Bac
 
 | FEATURE | ACTIVE PROVIDER SETTING KEY | OPENAI CONFIG CONSTANT | AWS CONFIG CONSTANT | ANTHROPIC CONFIG CONSTANT |
 |---------|-----------------------------|------------------------|---------------------|---------------------------|
-| Smart PIM | `ai_commerce:smart_pim:general:ai_configuration` | `AI_CONFIGURATION_SMART_PIM_OPENAI` | `AI_CONFIGURATION_SMART_PIM_AWS` | `AI_CONFIGURATION_SMART_PIM_ANTHROPIC` |
-| Quick Order Image-to-Cart | `ai_commerce:quick_order:general:ai_configuration` | `AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_OPENAI` | `AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_AWS` | `AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_ANTHROPIC` |
-| Search by Image | `ai_commerce:search_by_image:general:ai_configuration` | `AI_CONFIGURATION_SEARCH_BY_IMAGE_OPENAI` | `AI_CONFIGURATION_SEARCH_BY_IMAGE_AWS` | `AI_CONFIGURATION_SEARCH_BY_IMAGE_ANTHROPIC` |
-| Back Office Assistant | `ai_commerce:backoffice_assistant:general:ai_configuration` | `AI_CONFIGURATION_INTENT_ROUTER_OPENAI` (and `_GENERAL_AGENT_OPENAI`, `_ORDER_MANAGEMENT_OPENAI`, `_DISCOUNT_MANAGEMENT_OPENAI`, `_FORM_FILL_OPENAI`) | `AI_CONFIGURATION_INTENT_ROUTER_AWS` (and `_AWS` variants) | `AI_CONFIGURATION_INTENT_ROUTER_ANTHROPIC` (and `_ANTHROPIC` variants) |
+| Smart PIM | `ai_commerce:smart_pim:ai_vendor:ai_configuration` | `AI_CONFIGURATION_SMART_PIM_OPENAI` | `AI_CONFIGURATION_SMART_PIM_AWS` | `AI_CONFIGURATION_SMART_PIM_ANTHROPIC` |
+| Quick Order Image-to-Cart | `ai_commerce:quick_order:ai_vendor:ai_configuration` | `AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_OPENAI` | `AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_AWS` | `AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_ANTHROPIC` |
+| Search by Image | `ai_commerce:search_by_image:ai_vendor:ai_configuration` | `AI_CONFIGURATION_SEARCH_BY_IMAGE_OPENAI` | `AI_CONFIGURATION_SEARCH_BY_IMAGE_AWS` | `AI_CONFIGURATION_SEARCH_BY_IMAGE_ANTHROPIC` |
+| Back Office Assistant | `ai_commerce:backoffice_assistant:ai_vendor:ai_configuration` | `AI_CONFIGURATION_INTENT_ROUTER_OPENAI` (and `_GENERAL_AGENT_OPENAI`, `_ORDER_MANAGEMENT_OPENAI`, `_DISCOUNT_MANAGEMENT_OPENAI`, `_FORM_FILL_OPENAI`) | `AI_CONFIGURATION_INTENT_ROUTER_AWS` (and `_AWS` variants) | `AI_CONFIGURATION_INTENT_ROUTER_ANTHROPIC` (and `_ANTHROPIC` variants) |
 
-All constants are in `SprykerFeature\Shared\AiCommerce\AiCommerceConstants`.
+All constants are in your project's `Pyz\Shared\AiCommerce\AiCommerceConstants`.

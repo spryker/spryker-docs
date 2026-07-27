@@ -2,7 +2,7 @@
 title: Install the Basic Shop Theme feature
 description: Learn how to integrate the Basic Shop Theme feature to configure logos, colors, and custom CSS from the Back Office without code changes.
 template: howto-guide-template
-last_updated: Apr 1, 2026
+last_updated: Jul 27, 2026
 related:
   - title: Basic Shop Theme feature overview
     link: /docs/pbc/all/back-office/latest/base-shop/basic-shop-theme-feature-overview.html
@@ -164,6 +164,12 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
     ],
 ];
 ```
+
+{% info_block infoBox "Credentials" %}
+
+These filesystems use `IamAws3v3FilesystemBuilderPlugin`, which resolves AWS credentials through the IAM role attached to the runtime instead of explicit access keys. The `key` and `secret` entries are ignored by this plugin. For details on when to use this plugin and its configuration options, see [AWS S3 filesystem builder plugins](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html#aws-s3-filesystem-builder-plugins).
+
+{% endinfo_block %}
 
 #### 4.2) Add local filesystem fallback for development
 

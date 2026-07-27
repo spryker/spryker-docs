@@ -52,6 +52,8 @@ Configure the filesystem storage for import and export files. The feature requir
 
 **config/Shared/config_default.php**
 
+To enable an IAM role configuration, use `IamAws3v3FilesystemBuilderPlugin`:
+
 ```php
 use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\IamAws3v3FilesystemBuilderPlugin;
 use Spryker\Shared\FileSystem\FileSystemConstants;
@@ -79,7 +81,7 @@ These filesystems use `IamAws3v3FilesystemBuilderPlugin`, which resolves AWS cre
 
 {% endinfo_block %}
 
-Alternatively, to authenticate with explicit access keys instead of an IAM role, use `Aws3v3FilesystemBuilderPlugin`:
+Alternatively, to authenticate with explicit access keys, use `Aws3v3FilesystemBuilderPlugin`:
 
 ```php
 use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\Aws3v3FilesystemBuilderPlugin;

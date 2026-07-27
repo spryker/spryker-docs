@@ -127,7 +127,7 @@ Add the three media filesystem services to `config/Shared/config_default.php`. I
 
 **config/Shared/config_default.php**
 
-Add the three media filesystem entries inside the existing `$config[FileSystemConstants::FILESYSTEM_SERVICE]` array:
+Add the three media filesystem entries inside the existing `$config[FileSystemConstants::FILESYSTEM_SERVICE]` array. To enable an IAM role configuration, use `IamAws3v3FilesystemBuilderPlugin`:
 
 ```php
 $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
@@ -158,7 +158,7 @@ These filesystems use `IamAws3v3FilesystemBuilderPlugin`, which resolves AWS cre
 
 {% endinfo_block %}
 
-Alternatively, to authenticate with explicit access keys instead of an IAM role, use `Aws3v3FilesystemBuilderPlugin`:
+Alternatively, to authenticate with explicit access keys, use `Aws3v3FilesystemBuilderPlugin`:
 
 ```php
 $config[FileSystemConstants::FILESYSTEM_SERVICE] = [

@@ -83,7 +83,7 @@ Validates that the code follows Spryker's project architectural patterns and con
 - Custom business logic validation
 - Integration pattern compliance
 
-[Architecture Sniffer documentation](/docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html#project-development)
+[Architecture Sniffer documentation](/docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html)
 
 **Evaluator - Upgradability and compatibility checks**
 

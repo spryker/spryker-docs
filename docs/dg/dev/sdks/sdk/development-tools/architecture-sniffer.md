@@ -43,7 +43,7 @@ We use our [Architecture Sniffer Tool](https://github.com/spryker/architecture-s
 | Ruleset | Use it for | Path |
 | --- | --- | --- |
 | Core | Spryker core, ecosystem, and module development | `vendor/spryker/architecture-sniffer/src/ruleset.xml` |
-| Project | Project development and customisations | `vendor/spryker/architecture-sniffer/src/Project/ruleset.xml` |
+| Project | Application (project) development | `vendor/spryker/architecture-sniffer/src/Project/ruleset.xml` |
 
 In both rulesets, lower priorities include the higher ones: a run with `--minimumpriority=3` also reports violations of priority `1` and `2`.
 
@@ -56,7 +56,6 @@ composer require --dev spryker/architecture-sniffer:"^0.6.0"
 ```
 
 The project ruleset requires version `0.6.0` or later.
-Make sure that the environment, where sniffer is executed, is installing development composer packages.
 
 ## Running the tool
 
@@ -129,7 +128,7 @@ We recommend the following minimum priority based on project maturity:
 
 - `1` and `2`: for all projects, including those with legacy code
 - `3`: for all new projects
-- `4`: for the current AI-assisted development flow
+- `4`: for a modern AI-assisted development flow
 
 #### Set up the project ruleset
 

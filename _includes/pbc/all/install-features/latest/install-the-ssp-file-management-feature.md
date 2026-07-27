@@ -58,13 +58,9 @@ use SprykerFeature\Shared\SelfServicePortal\SelfServicePortalConstants;
 $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
     'ssp-files' => [
         'sprykerAdapterClass' => IamAws3v3FilesystemBuilderPlugin::class,
-        'key' => getenv('SPRYKER_S3_SSP_FILES_KEY') ?: '',
-        'secret' => getenv('SPRYKER_S3_SSP_FILES_SECRET') ?: '',
         'bucket' => getenv('SPRYKER_S3_SSP_FILES_BUCKET') ?: '',
         'region' => getenv('AWS_REGION') ?: '',
-        'version' => 'latest',
-        'root' => '/files',
-        'path' => '',
+        'path' => '/files',
     ],
 ];
 
@@ -73,6 +69,25 @@ $config[SelfServicePortalConstants::STORAGE_NAME] = 'ssp-files';
 $config[KernelConstants::CORE_NAMESPACES] = [
     ...
     'SprykerFeature',
+];
+```
+
+Alternatively, to authenticate with explicit access keys instead of an IAM role, use `Aws3v3FilesystemBuilderPlugin`:
+
+```php
+use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\Aws3v3FilesystemBuilderPlugin;
+
+$config[FileSystemConstants::FILESYSTEM_SERVICE] = [
+    'ssp-files' => [
+        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
+        'key' => getenv('SPRYKER_S3_SSP_FILES_KEY') ?: '',
+        'secret' => getenv('SPRYKER_S3_SSP_FILES_SECRET') ?: '',
+        'bucket' => getenv('SPRYKER_S3_SSP_FILES_BUCKET') ?: '',
+        'region' => getenv('AWS_REGION') ?: '',
+        'version' => 'latest',
+        'root' => '/files',
+        'path' => '',
+    ],
 ];
 ```
 

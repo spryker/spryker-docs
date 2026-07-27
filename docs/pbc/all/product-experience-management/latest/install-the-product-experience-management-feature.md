@@ -60,32 +60,53 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
     // ... existing entries ...
     'product-experience-management-imports' => [
         'sprykerAdapterClass' => IamAws3v3FilesystemBuilderPlugin::class,
-        'key' => getenv('SPRYKER_S3_PEM_IMPORT_KEY') ?: '',
         'bucket' => getenv('SPRYKER_S3_PEM_IMPORT_BUCKET') ?: '',
-        'secret' => getenv('SPRYKER_S3_PEM_IMPORT_SECRET') ?: '',
-        'root' => '/',
-        'path' => '/',
-        'version' => 'latest',
-        'region' => $awsRegion,
+        'region' => getenv('AWS_REGION') ?: '',
+        'path' => 'pem-imports/',
     ],
     'product-experience-management-exports' => [
         'sprykerAdapterClass' => IamAws3v3FilesystemBuilderPlugin::class,
-        'key' => getenv('SPRYKER_S3_PEM_EXPORT_KEY') ?: '',
         'bucket' => getenv('SPRYKER_S3_PEM_EXPORT_BUCKET') ?: '',
-        'secret' => getenv('SPRYKER_S3_PEM_EXPORT_SECRET') ?: '',
-        'root' => '/',
-        'path' => '/',
-        'version' => 'latest',
-        'region' => $awsRegion,
+        'region' => getenv('AWS_REGION') ?: '',
+        'path' => 'pem-exports/',
     ],
 ];
 ```
 
 {% info_block infoBox "Credentials" %}
 
-These filesystems use `IamAws3v3FilesystemBuilderPlugin`, which resolves AWS credentials through the IAM role attached to the runtime instead of explicit access keys. The `key` and `secret` entries are ignored by this plugin. For details on when to use this plugin and its configuration options, see [AWS S3 filesystem builder plugins](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html#aws-s3-filesystem-builder-plugins).
+These filesystems use `IamAws3v3FilesystemBuilderPlugin`, which resolves AWS credentials through the IAM role attached to the runtime, so no `key` or `secret` is required. For details on when to use this plugin and its configuration options, see [AWS S3 filesystem builder plugins](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html#aws-s3-filesystem-builder-plugins).
 
 {% endinfo_block %}
+
+Alternatively, to authenticate with explicit access keys instead of an IAM role, use `Aws3v3FilesystemBuilderPlugin`:
+
+```php
+use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\Aws3v3FilesystemBuilderPlugin;
+use Spryker\Shared\FileSystem\FileSystemConstants;
+
+$config[FileSystemConstants::FILESYSTEM_SERVICE] = [
+    // ... existing entries ...
+    'product-experience-management-imports' => [
+        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
+        'key' => getenv('SPRYKER_S3_PEM_IMPORT_KEY') ?: '',
+        'secret' => getenv('SPRYKER_S3_PEM_IMPORT_SECRET') ?: '',
+        'bucket' => getenv('SPRYKER_S3_PEM_IMPORT_BUCKET') ?: '',
+        'region' => getenv('AWS_REGION') ?: '',
+        'root' => '/',
+        'path' => 'pem-imports/',
+    ],
+    'product-experience-management-exports' => [
+        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
+        'key' => getenv('SPRYKER_S3_PEM_EXPORT_KEY') ?: '',
+        'secret' => getenv('SPRYKER_S3_PEM_EXPORT_SECRET') ?: '',
+        'bucket' => getenv('SPRYKER_S3_PEM_EXPORT_BUCKET') ?: '',
+        'region' => getenv('AWS_REGION') ?: '',
+        'root' => '/',
+        'path' => 'pem-exports/',
+    ],
+];
+```
 
 #### Development (local filesystem)
 

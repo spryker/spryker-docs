@@ -63,13 +63,9 @@ use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\IamAws3v3Filesyst
 $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
     'ssp-asset-image' => [
         'sprykerAdapterClass' => IamAws3v3FilesystemBuilderPlugin::class,
-        'key' => getenv('SPRYKER_S3_SSP_ASSETS_KEY') ?: '',
-        'secret' => getenv('SPRYKER_S3_SSP_ASSETS_SECRET') ?: '',
         'bucket' => getenv('SPRYKER_S3_SSP_ASSETS_BUCKET') ?: '',
         'region' => getenv('AWS_REGION') ?: '',
-        'version' => 'latest',
-        'root' => '/ssp-asset-image',
-        'path' => '',
+        'path' => '/ssp-asset-image',
     ],
 ];
 
@@ -94,6 +90,25 @@ In cloud environments, set the following environment variables:
 - `SPRYKER_SSP_DEFAULT_FILE_MAX_SIZE` - Maximum file size for SSP asset uploads (defaults to `10M` if not set)
 
 {% endinfo_block %}
+
+Alternatively, to authenticate with explicit access keys instead of an IAM role, use `Aws3v3FilesystemBuilderPlugin`:
+
+```php
+use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\Aws3v3FilesystemBuilderPlugin;
+
+$config[FileSystemConstants::FILESYSTEM_SERVICE] = [
+    'ssp-asset-image' => [
+        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
+        'key' => getenv('SPRYKER_S3_SSP_ASSETS_KEY') ?: '',
+        'secret' => getenv('SPRYKER_S3_SSP_ASSETS_SECRET') ?: '',
+        'bucket' => getenv('SPRYKER_S3_SSP_ASSETS_BUCKET') ?: '',
+        'region' => getenv('AWS_REGION') ?: '',
+        'version' => 'latest',
+        'root' => '/ssp-asset-image',
+        'path' => '',
+    ],
+];
+```
 
 **src/Pyz/Zed/SelfServicePortal/SelfServicePortalConfig.php**
 

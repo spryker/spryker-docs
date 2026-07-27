@@ -474,8 +474,8 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
     'backoffice-media' => [
         'sprykerAdapterClass' => IamAws3v3FilesystemBuilderPlugin::class,
         'bucket' => getenv('SPRYKER_S3_PUBLIC_ASSETS_BUCKET') ?: '',
+        'region' => getenv('AWS_REGION') ?: '',
         'path' => '/backoffice-media',
-        'region' => getenv('AWS_REGION'),
     ],
 ];
 ```
@@ -499,6 +499,31 @@ protected function getFilesystemBuilderPluginCollection(): array
 #### Local development
 
 For local development, set the `endpoint` option to point at an S3-compatible service such as MinIO or LocalStack. Alternatively, use `LocalFilesystemBuilderPlugin` when no bucket is configured.
+
+### Aws3v3FilesystemBuilderPlugin
+
+Use `Aws3v3FilesystemBuilderPlugin` when the environment provisions explicit access keys instead of an IAM role. The plugin reads `key` and `secret` from the adapter config and passes them to the S3 client as static credentials.
+
+#### Configuration example
+
+**config/Shared/config_default.php**
+
+```php
+use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\Aws3v3FilesystemBuilderPlugin;
+use Spryker\Shared\FileSystem\FileSystemConstants;
+
+$config[FileSystemConstants::FILESYSTEM_SERVICE] = [
+    // ... existing entries ...
+    'backoffice-media' => [
+        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
+        'key' => getenv('SPRYKER_S3_PUBLIC_ASSETS_KEY') ?: '',
+        'secret' => getenv('SPRYKER_S3_PUBLIC_ASSETS_SECRET') ?: '',
+        'bucket' => getenv('SPRYKER_S3_PUBLIC_ASSETS_BUCKET') ?: '',
+        'region' => getenv('AWS_REGION') ?: '',
+        'path' => '/backoffice-media',
+    ],
+];
+```
 
 ## Flysystem plugins
 

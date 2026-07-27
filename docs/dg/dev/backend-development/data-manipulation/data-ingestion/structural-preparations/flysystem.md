@@ -1,7 +1,7 @@
 ---
 title: Flysystem
 description: The Flysystem module integrates Spryker with the thephpleague flysystem vendor package
-last_updated: Jun 16, 2021
+last_updated: Jul 27, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/flysystem
 originalArticleId: b68c1798-4db1-4a2b-87bf-b54d4052a741
@@ -423,6 +423,82 @@ abstract class AbstractFilesystemBuilder implements FilesystemBuilderInterface
 
 }
 ```
+
+## AWS S3 filesystem builder plugins
+
+The `FlysystemAws3v3FileSystem` module provides two builder plugins for Amazon S3. Both return a `\League\Flysystem\Filesystem` backed by the AWS S3 v3 adapter; they differ only in how AWS credentials are resolved.
+
+| | `Aws3v3FilesystemBuilderPlugin` | `IamAws3v3FilesystemBuilderPlugin` |
+| --- | --- | --- |
+| Credentials | Explicit `key` and `secret` from the adapter config | Resolved automatically by the AWS SDK default credential provider chain |
+| Required adapter config | `key`, `secret`, `bucket`, `region`, `path` | `bucket`, `region` |
+| `key` / `secret` | Used | Ignored |
+| `endpoint` | Always passed to the S3 client | Passed only when non-empty |
+| Recommended for | Environments where explicit access keys are provisioned | Spryker-managed (PaaS) environments with an IAM role attached to the workload |
+
+Both plugins can be registered side by side. The `sprykerAdapterClass` value of each filesystem entry decides which plugin builds that filesystem, so different filesystems can use different credential strategies at the same time. Switching an existing filesystem from one plugin to the other is not a breaking change, and nothing is migrated automatically.
+
+### IamAws3v3FilesystemBuilderPlugin
+
+Use `IamAws3v3FilesystemBuilderPlugin` when the runtime—an ECS task or EC2 instance—carries an IAM role that grants access to the target bucket. The plugin does not pass a `credentials` entry to the S3 client, so the AWS SDK falls back to its default credential provider chain: environment variables (`AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`), the shared credentials and config files, ECS container credentials, and finally EC2 instance metadata (IMDS).
+
+This is the recommended option for Spryker-managed (PaaS) environments, where storing long-lived `key` and `secret` pairs in the container is undesirable. It is used, for example, for the public-media buckets that store Back Office, Storefront, and Merchant Portal media, and for the Product Experience Management import and export filesystems.
+
+#### Adapter configuration reference
+
+| PROPERTY | REQUIRED | DESCRIPTION |
+| --- | --- | --- |
+| `bucket` | Yes | Target S3 bucket. A missing value throws `NoBucketException`. |
+| `region` | Yes | AWS region of the bucket. |
+| `path` | No | Path prefix inside the bucket. Defaults to an empty string. |
+| `endpoint` | No | Custom endpoint for S3-compatible storage such as MinIO or LocalStack. Applied only when non-empty. |
+| `isStreamReads` | No | Whether reads are streamed. Defaults to `false`. |
+| `key`, `secret` | Ignored | Not read by this plugin. Credentials come from the IAM role or the AWS SDK credential chain. |
+
+{% info_block infoBox "Credentials in configuration" %}
+
+Because `IamAws3v3FilesystemBuilderPlugin` ignores `key` and `secret`, you do not need to set them for filesystems that use this plugin. If they are present, they have no effect.
+
+{% endinfo_block %}
+
+#### Configuration example
+
+**config/Shared/config_default.php**
+
+```php
+use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\IamAws3v3FilesystemBuilderPlugin;
+use Spryker\Shared\FileSystem\FileSystemConstants;
+
+$config[FileSystemConstants::FILESYSTEM_SERVICE] = [
+    // ... existing entries ...
+    'backoffice-media' => [
+        'sprykerAdapterClass' => IamAws3v3FilesystemBuilderPlugin::class,
+        'bucket' => getenv('SPRYKER_S3_PUBLIC_ASSETS_BUCKET') ?: '',
+        'path' => '/backoffice-media',
+        'region' => getenv('AWS_REGION'),
+    ],
+];
+```
+
+#### Registration
+
+Register the plugin in `\Pyz\Service\Flysystem\FlysystemDependencyProvider::getFilesystemBuilderPluginCollection()` next to the other builder plugins:
+
+```php
+protected function getFilesystemBuilderPluginCollection(): array
+{
+    return [
+        new FtpFilesystemBuilderPlugin(),
+        new LocalFilesystemBuilderPlugin(),
+        new Aws3v3FilesystemBuilderPlugin(),
+        new IamAws3v3FilesystemBuilderPlugin(),
+    ];
+}
+```
+
+#### Local development
+
+For local development, set the `endpoint` option to point at an S3-compatible service such as MinIO or LocalStack. Alternatively, use `LocalFilesystemBuilderPlugin` when no bucket is configured.
 
 ## Flysystem plugins
 

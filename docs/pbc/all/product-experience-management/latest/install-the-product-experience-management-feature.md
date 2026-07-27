@@ -81,6 +81,12 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
 ];
 ```
 
+{% info_block infoBox "Credentials" %}
+
+These filesystems use `IamAws3v3FilesystemBuilderPlugin`, which resolves AWS credentials through the IAM role attached to the runtime instead of explicit access keys. The `key` and `secret` entries are ignored by this plugin. For details on when to use this plugin and its configuration options, see [AWS S3 filesystem builder plugins](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html#aws-s3-filesystem-builder-plugins).
+
+{% endinfo_block %}
+
 #### Development (local filesystem)
 
 **config/Shared/config_default-docker.dev.php**

@@ -1,7 +1,7 @@
 ---
 title: Development tools
 description: Complete suite of development tools provided by Spryker for debugging, profiling, code quality assurance, and AI-assisted development.
-last_updated: December 15, 2025
+last_updated: Jul 27, 2026
 template: concept-topic-template
 keywords: development tools, debugging, profiling, code quality, static analysis, xdebug, web profiler, phpstan, architecture sniffer, ai assistant
 ---
@@ -85,16 +85,22 @@ Validates that your code follows Spryker's architectural patterns and convention
 
 [Architecture Sniffer documentation](/docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html)
 
-**Project Architecture Sniffer - Project-specific validation**
+**Architecture Sniffer project ruleset - Project-specific validation**
 
-Extends Architecture Sniffer with project-level rules and best practices:
+Extends the core ruleset with project-level rules and best practices:
 
 - Project-specific architectural patterns
 - Custom business logic validation
 - Integration pattern compliance
 - Upgradability checks
 
-[Project Architecture Sniffer documentation](/docs/dg/dev/sdks/sdk/development-tools/project-architecture-sniffer.html)
+[Architecture Sniffer documentation](/docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html)
+
+{% info_block infoBox %}
+
+The separate `spryker/project-architecture-sniffer` package is [deprecated](/docs/dg/dev/sdks/sdk/development-tools/project-architecture-sniffer.html) in favor of the project ruleset.
+
+{% endinfo_block %}
 
 **Evaluator - Upgradability and compatibility checks**
 

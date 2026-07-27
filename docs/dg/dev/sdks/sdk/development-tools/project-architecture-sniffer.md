@@ -1,9 +1,17 @@
 ---
 title: Project Architecture Sniffer
-description: Use Project Architecture Sniffer to ensure the architecture quality for project
-last_updated: Jan 21, 2025
+description: Project Architecture Sniffer is deprecated. Use the project ruleset of Architecture Sniffer instead.
+last_updated: Jul 27, 2026
 template: concept-topic-template
 ---
+
+{% info_block warningBox "Deprecated" %}
+
+The `spryker/project-architecture-sniffer` package is deprecated. Its rules have moved to the project ruleset of the [`spryker/architecture-sniffer`](https://github.com/spryker/architecture-sniffer) package.
+
+To migrate, replace the deprecated package with `spryker/architecture-sniffer` version `0.6.0` or later, and run the project ruleset through a project-level `phpmd.xml` file. For instructions, see [Architecture Sniffer](/docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html).
+
+{% endinfo_block %}
 
 [Project Architecture Sniffer](https://github.com/spryker/project-architecture-sniffer) leverages the capabilities of [PHP Mess Detector](https://phpmd.org) to maintain and enforce architectural standards in Spryker projects.
 

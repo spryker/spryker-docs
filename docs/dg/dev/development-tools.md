@@ -74,25 +74,16 @@ Ensures consistent code formatting and adherence to coding standards:
 
 [Code Sniffer documentation](/docs/dg/dev/sdks/sdk/development-tools/code-sniffer.html)
 
-**Architecture Sniffer - Spryker architecture validation**
-
-Validates that your code follows Spryker's architectural patterns and conventions:
-
-- Layer separation enforcement (Yves, Zed, Client, Service)
-- Module dependency validation
-- Plugin architecture compliance
-- Facade pattern adherence
-
-[Architecture Sniffer documentation](/docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html)
-
 **Architecture Sniffer project ruleset - Project-specific validation**
 
-Extends the ruleset with project-level rules and best practices:
+Validates that the code follows Spryker's project architectural patterns and conventions:
 
+- Layer separation enforcement
 - Project-specific architectural patterns
 - Custom business logic validation
 - Integration pattern compliance
-- Upgradability checks
+
+[Architecture Sniffer documentation](/docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html#project-development)
 
 **Evaluator - Upgradability and compatibility checks**
 

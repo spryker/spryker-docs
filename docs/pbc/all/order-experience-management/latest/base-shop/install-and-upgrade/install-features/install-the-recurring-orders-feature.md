@@ -1,19 +1,13 @@
 ---
 title: Install the Recurring Orders feature
 description: Learn how to install the Recurring Orders feature into your Spryker project.
-last_updated: Jun 30, 2026
+last_updated: Jul 27, 2026
 template: feature-integration-guide-template
 label: early-access
 related:
   - title: Recurring Orders feature overview
     link: docs/pbc/all/order-experience-management/latest/base-shop/feature-overviews/recurring-orders-feature-overview.html
 ---
-
-{% info_block warningBox "Early Access" %}
-
-This feature is in Early Access. We'd love for you to try it out and share feedback as we work toward general availability.
-
-{% endinfo_block %}
 
 This document describes how to install the Recurring Orders feature.
 
@@ -30,6 +24,13 @@ To start feature integration, review and install the necessary features:
 | Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Company Account | {{page.release_tag}} | [Install the Company Account feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html) |
 | Checkout | {{page.release_tag}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
+| Purchasing Control | {{page.release_tag}} | [Install the Purchasing Control feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-purchasing-control-feature.html) |
+
+{% info_block infoBox "Purchasing Control" %}
+
+The Purchasing Control feature is optional. Install it if you want buyers to assign a cost center and budget to a recurring order. Without it, the cost center and budget fields are not rendered on the recurring order forms.
+
+{% endinfo_block %}
 
 ### 1) Install the required modules
 
@@ -53,8 +54,15 @@ composer update \
   spryker-feature/purchasing-control:"^1.1.1" \
   spryker-shop/checkout-page:"^3.42.0" \
   spryker-shop/customer-page:"^2.80.0" \
+  spryker-shop/product-search-widget:"^1.13.0" \
   --with-dependencies
 ```
+
+{% endinfo_block %}
+
+{% info_block infoBox "Product search widget" %}
+
+`spryker-shop/product-search-widget` provides `ProductConcreteSearchWidget` and the `products-list` molecule that the **Review Required** page reuses in its add-product search bar. Install it even if your project does not use product search elsewhere.
 
 {% endinfo_block %}
 
@@ -76,6 +84,7 @@ Make sure the following changes have been applied in the database:
 | spy_recurring_schedule | table | created |
 | spy_recurring_schedule_item | table | created |
 | spy_recurring_schedule_history | table | created |
+| spy_recurring_schedule_forecast | table | created |
 
 Make sure the following changes have been applied in transfer objects:
 
@@ -88,16 +97,26 @@ Make sure the following changes have been applied in transfer objects:
 | RecurringScheduleCollectionRequest | class | created | src/Generated/Shared/Transfer/RecurringScheduleCollectionRequestTransfer.php |
 | RecurringScheduleCollectionResponse | class | created | src/Generated/Shared/Transfer/RecurringScheduleCollectionResponseTransfer.php |
 | RecurringScheduleItem | class | created | src/Generated/Shared/Transfer/RecurringScheduleItemTransfer.php |
+| RecurringScheduleItemAddition | class | created | src/Generated/Shared/Transfer/RecurringScheduleItemAdditionTransfer.php |
 | RecurringScheduleHistory | class | created | src/Generated/Shared/Transfer/RecurringScheduleHistoryTransfer.php |
 | RecurringScheduleValidationResult | class | created | src/Generated/Shared/Transfer/RecurringScheduleValidationResultTransfer.php |
 | RecurringScheduleItemReview | class | created | src/Generated/Shared/Transfer/RecurringScheduleItemReviewTransfer.php |
+| RecurringScheduleSubstituteOption | class | created | src/Generated/Shared/Transfer/RecurringScheduleSubstituteOptionTransfer.php |
 | RecurringScheduleReviewResponse | class | created | src/Generated/Shared/Transfer/RecurringScheduleReviewResponseTransfer.php |
 | RecurringScheduleEventRequest | class | created | src/Generated/Shared/Transfer/RecurringScheduleEventRequestTransfer.php |
 | RecurringScheduleEventResponse | class | created | src/Generated/Shared/Transfer/RecurringScheduleEventResponseTransfer.php |
+| RecurringScheduleStatusCount | class | created | src/Generated/Shared/Transfer/RecurringScheduleStatusCountTransfer.php |
 | RecurringScheduleStatusCountCollection | class | created | src/Generated/Shared/Transfer/RecurringScheduleStatusCountCollectionTransfer.php |
+| RecurringScheduleForecast | class | created | src/Generated/Shared/Transfer/RecurringScheduleForecastTransfer.php |
+| RecurringScheduleForecastCollection | class | created | src/Generated/Shared/Transfer/RecurringScheduleForecastCollectionTransfer.php |
+| RecurringScheduleForecastSnapshot | class | created | src/Generated/Shared/Transfer/RecurringScheduleForecastSnapshotTransfer.php |
+| RecurringScheduleTableFilter | class | created | src/Generated/Shared/Transfer/RecurringScheduleTableFilterTransfer.php |
+| RecurringScheduleDueData | class | created | src/Generated/Shared/Transfer/RecurringScheduleDueDataTransfer.php |
+| RecurringScheduleError | class | created | src/Generated/Shared/Transfer/RecurringScheduleErrorTransfer.php |
 | RecurringOrderSettings | class | created | src/Generated/Shared/Transfer/RecurringOrderSettingsTransfer.php |
 | RecurringOrderQuoteUpdateRequest | class | created | src/Generated/Shared/Transfer/RecurringOrderQuoteUpdateRequestTransfer.php |
 | RecurringOrderQuoteUpdateResponse | class | created | src/Generated/Shared/Transfer/RecurringOrderQuoteUpdateResponseTransfer.php |
+| RecurringOrderReloadResult | class | created | src/Generated/Shared/Transfer/RecurringOrderReloadResultTransfer.php |
 | Quote.recurringOrderSettings | property | created | src/Generated/Shared/Transfer/QuoteTransfer.php |
 
 {% endinfo_block %}
@@ -184,7 +203,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 
 {% endinfo_block %}
 
-#### Set up the Subscription dependency provider
+#### Set up cadence type and schedule validator plugins
 
 Register the built-in cadence type and schedule validator plugins:
 
@@ -195,7 +214,7 @@ Register the built-in cadence type and schedule validator plugins:
 | MonthlyCadenceTypePlugin | Calculates the next trigger date on the same day of the following month. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence |
 | EveryNWeeksCadenceTypePlugin | Calculates the next trigger date every N weeks. Requires `cadenceValue` to be set on the schedule. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence |
 | PriceScheduleValidatorPlugin | Detects price increases on recurring schedule items compared to their stored reference prices before order placement. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\ScheduleValidator |
-| CheckoutPlaceabilityScheduleValidatorPlugin | Simulates a checkout to detect availability or product approval issues on recurring schedule items before order placement. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\ScheduleValidator |
+| CheckoutPlaceabilityScheduleValidatorPlugin | Simulates a checkout to detect availability, discontinuation, or product approval issues on recurring schedule items before order placement. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\ScheduleValidator |
 
 **src/Pyz/Zed/OrderExperienceManagement/OrderExperienceManagementDependencyProvider.php**
 
@@ -282,6 +301,19 @@ class StateMachineDependencyProvider extends SprykerStateMachineDependencyProvid
 Copy the state machine process XML from the module into your project. The example file is located at `src/SprykerFeature/OrderExperienceManagement/config/Zed/StateMachine/RecurringOrder/RecurringOrderStateMachine.xml` in the module. Add it to your project at the following path:
 
 **config/Zed/StateMachine/RecurringOrder/RecurringOrderStateMachine.xml**
+
+The handler plugin registers the following commands and conditions, so you do not need to register them individually. Reference them by name if you extend the process XML:
+
+| TYPE | NAME | SPECIFICATION |
+| --- | --- | --- |
+| Condition | RecurringOrders/IsScheduleDue | Checks whether the schedule has entered its notification window. |
+| Condition | RecurringOrders/IsPlacementDue | Checks whether the trigger date has been reached. |
+| Condition | RecurringOrders/IsScheduleValid | Runs the registered schedule validator plugins and reports whether the schedule can be placed. |
+| Condition | RecurringOrders/IsOrderPlaced | Checks whether the sales order has been created successfully. |
+| Command | RecurringOrders/NotifyBuyer | Sends the pre-trigger notification email. |
+| Command | RecurringOrders/PlaceOrder | Places the order from the stored quote data. |
+| Command | RecurringOrders/CompletePlacement | Writes the placement result to the schedule history. |
+| Command | RecurringOrders/AdvanceSchedule | Calculates and stores the next trigger date using the registered cadence type plugin. |
 
 {% info_block warningBox "Verification" %}
 
@@ -408,54 +440,14 @@ Assign `SeeBusinessUnitOrdersPermissionPlugin` to a role. Make sure users with t
 
 {% endinfo_block %}
 
-#### Set up cron jobs
+#### Set up console commands
 
-The recurring orders state machine relies on a cron job to evaluate condition transitions. Register the job in your Jenkins configuration:
+Register the following console commands:
 
-**config/Zed/cronjobs/jenkins.php**
-
-```php
-/* RecurringOrder StateMachine */
-$jobs[] = [
-    'name' => 'recurring-order-check-conditions',
-    'command' => '$PHP_BIN vendor/bin/console state-machine:check-condition RecurringOrder',
-    'schedule' => '* * * * *',
-    'enable' => true,
-];
-```
-
-{% info_block infoBox "Scheduling recommendation" %}
-
-To have recurring orders placed before the business day starts, set trigger dates to an early morning time (for example, 01:00) and configure `DEFAULT_NOTIFICATION_WINDOW_HOURS` to `18` (for example) or more. With an 18-hour window, the pre-trigger notification is sent the previous afternoon (after 12:00), allowing the buyer to review or skip before the order is placed overnight.
-
-{% endinfo_block %}
-
-If your project uses Symfony Scheduler instead of Jenkins, register the equivalent job in your scheduler config:
-
-**src/Pyz/Zed/SymfonyScheduler/SymfonySchedulerConfig.php**
-
-```php
-'recurring-orders-check-condition' => [
-    'command' => '$PHP_BIN vendor/bin/console state-machine:check-condition RecurringOrder',
-    'schedule' => '* * * * *',
-],
-'recurring-orders-clear-locks' => [
-    'command' => '$PHP_BIN vendor/bin/console state-machine:clear-locks',
-    'schedule' => '0 6 * * *',
-],
-```
-
-{% info_block warningBox "Verification" %}
-
-Activate a recurring schedule. Make sure the state machine condition check job runs and the schedule transitions from `draft` to `active` within one minute.
-
-{% endinfo_block %}
-
-#### Optional: Register the trigger console command
-
-`RecurringOrderTriggerConsole` lets you manually trigger order placement for a specific recurring schedule from the CLI. It runs the same placement logic as the state machine `PlaceOrderCommand`, which makes it useful for development, debugging, and one-off operational tasks.
-
-To enable it, register the command in your console dependency provider:
+| COMMAND | CONSOLE CLASS | SPECIFICATION | NAMESPACE |
+| --- | --- | --- | --- |
+| `recurring-orders:forecast:refresh` | RecurringOrderForecastRefreshConsole | Recalculates the monthly recurring volume forecast and stores it as a snapshot in `spy_recurring_schedule_forecast`. The Back Office **Recurring Order Schedules** page reads the stored snapshot instead of recalculating on each request. | SprykerFeature\Zed\OrderExperienceManagement\Communication\Console |
+| `recurring-orders:trigger-placement` | RecurringOrderTriggerConsole | Manually triggers order placement for a specific recurring schedule. Optional—intended for development and debugging. | SprykerFeature\Zed\OrderExperienceManagement\Communication\Console |
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
@@ -465,6 +457,8 @@ To enable it, register the command in your console dependency provider:
 namespace Pyz\Zed\Console;
 
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
+use Spryker\Zed\Kernel\Container;
+use SprykerFeature\Zed\OrderExperienceManagement\Communication\Console\RecurringOrderForecastRefreshConsole;
 use SprykerFeature\Zed\OrderExperienceManagement\Communication\Console\RecurringOrderTriggerConsole;
 
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
@@ -478,13 +472,14 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     {
         return [
             // ...
+            new RecurringOrderForecastRefreshConsole(), #RecurringOrdersFeature
             new RecurringOrderTriggerConsole(), #RecurringOrdersFeature
         ];
     }
 }
 ```
 
-Usage:
+`RecurringOrderTriggerConsole` runs the same placement logic as the state machine `PlaceOrder` command, which makes it useful for development, debugging, and one-off operational tasks:
 
 ```bash
 # Trigger placement by numeric ID
@@ -501,7 +496,98 @@ The `--validate` flag runs all registered `ScheduleValidatorPlugin` implementati
 
 {% info_block warningBox "Development use only" %}
 
-This command is intended for development and debugging. Do not use it in production automated pipelines — the state machine cron job is the intended trigger for production order placement.
+`recurring-orders:trigger-placement` is intended for development and debugging. Do not use it in production automated pipelines—the state machine cron job is the intended trigger for production order placement.
+
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
+Run `console recurring-orders:forecast:refresh`. Make sure the command completes successfully and a row with `forecast_key` set to `monthly` is created in `spy_recurring_schedule_forecast`.
+
+{% endinfo_block %}
+
+#### Set up cron jobs
+
+The recurring orders state machine relies on a cron job to evaluate condition transitions, and the Back Office forecast relies on a cron job to refresh its snapshot. Register the jobs in your Jenkins configuration:
+
+**config/Zed/cronjobs/jenkins.php**
+
+```php
+/* RecurringOrder StateMachine */
+$jobs[] = [
+    'name' => 'recurring-order-check-conditions',
+    'command' => '$PHP_BIN vendor/bin/console state-machine:check-condition RecurringOrder',
+    'schedule' => '* * * * *',
+    'enable' => true,
+];
+
+/* RecurringOrder forecast */
+$jobs[] = [
+    'name' => 'recurring-order-forecast-refresh',
+    'command' => '$PHP_BIN vendor/bin/console recurring-orders:forecast:refresh',
+    'schedule' => '0 * * * *',
+    'enable' => true,
+];
+```
+
+{% info_block infoBox "Scheduling recommendation" %}
+
+To have recurring orders placed before the business day starts, set trigger dates to an early morning time (for example, 01:00) and configure the schedule grace period to `18` hours or more. With an 18-hour window, the pre-trigger notification is sent the previous afternoon (after 12:00), allowing the buyer to review or skip before the order is placed overnight.
+
+{% endinfo_block %}
+
+If your project uses Symfony Scheduler instead of Jenkins, register the equivalent jobs in your scheduler config:
+
+**src/Pyz/Zed/SymfonyScheduler/SymfonySchedulerConfig.php**
+
+```php
+'recurring-orders-check-condition' => [
+    'command' => '$PHP_BIN vendor/bin/console state-machine:check-condition RecurringOrder',
+    'schedule' => '* * * * *',
+],
+'recurring-orders-clear-locks' => [
+    'command' => '$PHP_BIN vendor/bin/console state-machine:clear-locks',
+    'schedule' => '0 6 * * *',
+],
+'recurring-orders-forecast-refresh' => [
+    'command' => '$PHP_BIN vendor/bin/console recurring-orders:forecast:refresh',
+    'schedule' => '0 * * * *',
+],
+```
+
+{% info_block warningBox "Verification" %}
+
+1. Activate a recurring schedule. Make sure the state machine condition check job runs and the schedule transitions from `draft` to `active` within one minute.
+2. Make sure the forecast refresh job runs hourly and updates `calculated_at` in `spy_recurring_schedule_forecast`.
+
+{% endinfo_block %}
+
+#### Set up the Back Office navigation
+
+To make the recurring order schedules list available in the Back Office, add the navigation entry to your project navigation:
+
+**config/Zed/navigation.xml**
+
+```xml
+<recurring-order-schedules>
+    <label>Recurring Order Schedules</label>
+    <title>Recurring Order Schedules</title>
+    <bundle>order-experience-management</bundle>
+    <controller>recurring-schedule</controller>
+    <action>index</action>
+    <visible>1</visible>
+</recurring-order-schedules>
+```
+
+Rebuild the navigation cache:
+
+```bash
+console navigation:build-cache
+```
+
+{% info_block warningBox "Verification" %}
+
+In the Back Office, go to **Sales > Recurring Order Schedules**. Make sure the list of recurring order schedules is displayed with the status and cadence filters and the monthly forecast summary. Open a schedule and make sure the detail view renders the schedule items, the customer, and a link to the source order.
 
 {% endinfo_block %}
 
@@ -515,7 +601,7 @@ This step is only required if your project uses the [Product Bundles feature](/d
 
 Override the allowed fields to copy so that shipment information is preserved when recurring orders re-create bundle items:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| CONFIGURATION METHOD | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | `getAllowedBundleItemFieldsToCopy()` | Returns the list of `ItemTransfer` fields copied from bundle items when they are duplicated during order re-creation. Adding `ItemTransfer::SHIPMENT` ensures the shipment is preserved on each recurring order placement. | None | Pyz\Zed\ProductBundle |
 
@@ -602,7 +688,7 @@ class OrderExperienceManagementConfig extends SprykerOrderExperienceManagementCo
      * Specification:
      * - Returns the review reason groups whose items are treated as non-purchasable.
      * - Items in these groups block order placement and must be removed before the order can proceed.
-     * - Default: [REVIEW_REASON_GROUP_UNAVAILABLE].
+     * - Default: [REVIEW_REASON_GROUP_UNAVAILABLE, REVIEW_REASON_GROUP_OUT_OF_STOCK].
      * - Override to add REVIEW_REASON_GROUP_DISCONTINUED if discontinued items should also block placement.
      *
      * @api
@@ -613,17 +699,60 @@ class OrderExperienceManagementConfig extends SprykerOrderExperienceManagementCo
     {
         return [
             SharedOrderExperienceManagementConfig::REVIEW_REASON_GROUP_UNAVAILABLE,
+            SharedOrderExperienceManagementConfig::REVIEW_REASON_GROUP_OUT_OF_STOCK,
             SharedOrderExperienceManagementConfig::REVIEW_REASON_GROUP_DISCONTINUED,
         ];
+    }
+
+    /**
+     * Specification:
+     * - Returns the relative date modifier used as the forecast's next-execution lower bound.
+     * - Use FORECAST_NEXT_TRIGGER_DATE_FROM_MONTH_START to count every schedule due within the current month.
+     *
+     * @api
+     */
+    public function getForecastNextTriggerDateFrom(): string
+    {
+        return static::FORECAST_NEXT_TRIGGER_DATE_FROM_MONTH_START;
     }
 }
 ```
 
 | CONFIGURATION METHOD | DEFAULT | DESCRIPTION |
 | --- | --- | --- |
-| `getDefaultNotificationWindowHours()` | `48` | Number of hours before the trigger date when the pre-trigger notification is sent. |
+| `getDefaultNotificationWindowHours()` | `48` | Number of hours before the trigger date when the pre-trigger notification is sent. Per-schedule overrides stored in `spy_recurring_schedule.notification_window_hours` take precedence. |
 | `getReviewReasonGroupMap()` | See `OrderExperienceManagementConfig` | Maps review reason groups to checkout error types. Extend to map project-specific error types to the appropriate review group. |
-| `getNonPurchasableReviewReasonGroups()` | `[REVIEW_REASON_GROUP_UNAVAILABLE]` | Review reason groups whose items block order placement and must be removed before the order can proceed. Override to also block on `REVIEW_REASON_GROUP_DISCONTINUED`. |
+| `getNonPurchasableReviewReasonGroups()` | `[REVIEW_REASON_GROUP_UNAVAILABLE, REVIEW_REASON_GROUP_OUT_OF_STOCK]` | Review reason groups whose items block order placement and must be removed before the order can proceed. Override to also block on `REVIEW_REASON_GROUP_DISCONTINUED`. |
+| `getDefaultReviewReasonGroup()` | `REVIEW_REASON_GROUP_UNAVAILABLE` | Fallback review reason group used when a checkout error type does not match any known group. |
+| `getForecastNextTriggerDateFrom()` | `FORECAST_NEXT_TRIGGER_DATE_FROM_TODAY` | Lower bound of the Back Office monthly forecast. Switch to `FORECAST_NEXT_TRIGGER_DATE_FROM_MONTH_START` to count every schedule due within the current month, including past dates. |
+| `getForecastNextTriggerDateTo()` | `FORECAST_NEXT_TRIGGER_DATE_TO_MONTH_END` | Upper bound of the Back Office monthly forecast. |
+| `getMonthlyForecastKey()` | `monthly` | Key under which the forecast snapshot is stored in `spy_recurring_schedule_forecast`. |
+| `getBackOfficeFilterStatuses()` | Active, Paused, Review required, Cancelled, Failed | Statuses selectable in the Back Office **Recurring Order Schedules** filter. |
+| `getBackOfficeFilterCadenceTypes()` | Weekly, Bi-weekly, Monthly, Every N weeks | Cadence types selectable in the Back Office **Recurring Order Schedules** filter. Extend it when you register a custom cadence type plugin. |
+| `getSmStateNameToStatusMap()` | See `OrderExperienceManagementConfig` | Maps each state machine state name to the public schedule status it represents. Extend it when you add states to the process XML. |
+| `getSupportedAddedItemShipmentTypeKeys()` | `[delivery, on_site_service]` | Shipment type keys accepted for products added on the **Review Required** page, in preference order. |
+| `getStateMachineName()` | `RecurringOrder` | Name of the state machine. Must match the directory name under `config/Zed/StateMachine`. |
+| `getProcessName()` | `RecurringOrderStateMachine` | Name of the state machine process definition file, without the `.xml` extension. |
+| `getInitialState()` | `draft` | Initial state assigned to a newly created schedule. |
+| `getBaseUrlYves()` | `SprykerConstants::BASE_URL_YVES` | Base storefront URL used to build the links included in notification emails. |
+| `getRecurringOrderDetailUrlPath()` | `/recurring-orders` | Storefront path used to build the schedule detail link in notification emails. Update it if you change the route patterns. |
+| `getRecurringOrderReviewUrlPath()` | `/recurring-orders/%s/review-required` | Storefront path used to build the review link in notification emails. Update it if you change the route patterns. |
+
+### 6) Import Back Office translations
+
+The module ships Back Office translations at `src/SprykerFeature/OrderExperienceManagement/data/translation/Zed/{locale}.csv`. These cover the **Recurring Order Schedules** page, the table filters, and the Back Office configuration labels.
+
+Rebuild the translation cache:
+
+```bash
+console translator:generate-cache
+```
+
+{% info_block warningBox "Verification" %}
+
+In the Back Office, open **Sales > Recurring Order Schedules**. Make sure the column headers, filter labels, and status badges are translated instead of showing raw glossary keys.
+
+{% endinfo_block %}
 
 ## Install feature frontend
 
@@ -635,7 +764,7 @@ Register the following route provider plugin:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| RecurringOrderRouteProviderPlugin | Adds storefront routes for the recurring order list, detail, create, clear, pause, resume, skip, cancel, confirm, review, and approve-review actions. | None | SprykerFeature\Yves\OrderExperienceManagement\Plugin\Router |
+| RecurringOrderRouteProviderPlugin | Adds the storefront routes for the recurring order list, detail, edit, review, product search, product offer selection, shipment method, and schedule action pages. | None | SprykerFeature\Yves\OrderExperienceManagement\Plugin\Router |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
@@ -673,11 +802,26 @@ vendor/bin/console router:cache:warm-up:backend-gateway
 {% info_block warningBox "Verification" %}
 
 Make sure the following storefront routes are accessible:
-- `/recurring-orders` — recurring order list page.
-- `/recurring-orders/{uuid}` — recurring order detail page.
-- `/recurring-orders/{uuid}/review-required` — review required page.
-- POST `/recurring-order/save` — saves recurring order settings on the quote.
-- POST `/recurring-order/clear` — removes recurring order settings from the quote.
+
+| ROUTE NAME | PATTERN | PURPOSE |
+| --- | --- | --- |
+| recurring-orders | `/recurring-orders` | Recurring order list page. |
+| recurring-orders/detail | `/recurring-orders/{uuid}` | Recurring order detail page. |
+| recurring-orders/review-required | `/recurring-orders/{uuid}/review-required` | Review required page. |
+| recurring-order/edit | `/recurring-order/{uuid}/edit` | Recurring schedule edit form. |
+| recurring-order/form | `/recurring-order-form` | Recurring order setup form rendered at checkout. |
+| recurring-order/save | `/recurring-order/save` | Saves recurring order settings on the quote. |
+| recurring-order/clear | `/recurring-order/clear` | Removes recurring order settings from the quote. |
+| recurring-order/pause | `/recurring-order/{uuid}/pause` | Pauses a schedule. |
+| recurring-order/resume | `/recurring-order/{uuid}/resume` | Resumes a paused schedule. |
+| recurring-order/skip | `/recurring-order/{uuid}/skip` | Skips the next placement. |
+| recurring-order/cancel | `/recurring-order/{uuid}/cancel` | Cancels a schedule. |
+| recurring-order/confirm | `/recurring-order/{uuid}/confirm` | Confirms a reviewed schedule. |
+| recurring-order/retry | `/recurring-order/{uuid}/retry` | Retries a failed placement. |
+| recurring-orders/shipment-methods | `/recurring-orders/{uuid}/shipment-methods` | Returns the shipment methods available for an added item. |
+| recurring-orders/product-price | `/recurring-orders/{uuid}/product-price` | Returns the current price of an added item. |
+| recurring-orders/product-concrete-search | `/recurring-orders/{uuid}/product-concrete-search` | Backs the add-product search bar on the review page. |
+| recurring-order/product-offer-select | `/recurring-order/product-offer-select` | Renders the merchant offer selector for an added item. |
 
 {% endinfo_block %}
 
@@ -688,8 +832,9 @@ Register the following global widgets:
 | WIDGET | DESCRIPTION | NAMESPACE |
 | --- | --- | --- |
 | RecurringOrderSelectorWidget | Renders the recurring order setup form at checkout. Visible only when the quote is eligible for a recurring order (invoice payment, not locked, not from RFQ, not guest). | SprykerFeature\Yves\OrderExperienceManagement\Widget |
-| RecurringOrderMenuItemWidget | Renders the Recurring Orders navigation menu item in the storefront company menu. | SprykerFeature\Yves\OrderExperienceManagement\Widget |
-| CostCenterDetailWidget | Displays the selected cost center and budget on the cart page. Takes a `QuoteTransfer` as input. Requires the [Purchasing Control feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-purchasing-control-feature.html). | SprykerFeature\Yves\PurchasingControl\Widget |
+| RecurringOrderMenuItemWidget | Renders the **Recurring Orders** navigation menu item in the storefront customer account menu. | SprykerFeature\Yves\OrderExperienceManagement\Widget |
+| ProductConcreteSearchWidget | Backs the add-product search bar on the **Review Required** page. Also provides the `products-list` molecule the search results view reuses. | SprykerShop\Yves\ProductSearchWidget\Widget |
+| CostCenterDetailWidget | Displays the selected cost center and budget on the cart page and in the recurring order detail sidebar. Takes a `QuoteTransfer` as input. Requires the [Purchasing Control feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-purchasing-control-feature.html). | SprykerFeature\Yves\PurchasingControl\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -698,9 +843,10 @@ Register the following global widgets:
 
 namespace Pyz\Yves\ShopApplication;
 
-use SprykerFeature\Yves\PurchasingControl\Widget\CostCenterDetailWidget;
 use SprykerFeature\Yves\OrderExperienceManagement\Widget\RecurringOrderMenuItemWidget;
 use SprykerFeature\Yves\OrderExperienceManagement\Widget\RecurringOrderSelectorWidget;
+use SprykerFeature\Yves\PurchasingControl\Widget\CostCenterDetailWidget;
+use SprykerShop\Yves\ProductSearchWidget\Widget\ProductConcreteSearchWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
@@ -714,15 +860,85 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
             // ...
             RecurringOrderSelectorWidget::class, #RecurringOrdersFeature
             RecurringOrderMenuItemWidget::class, #RecurringOrdersFeature
+            ProductConcreteSearchWidget::class, #RecurringOrdersFeature
             CostCenterDetailWidget::class, #RecurringOrdersFeature
         ];
     }
 }
 ```
 
-### 3) Add the recurring order selector to the checkout summary page
+{% info_block warningBox "Verification" %}
 
-The `RecurringOrderSelectorWidget` is not rendered automatically — it must be explicitly called from the checkout summary template. Add it after any cost center or voucher sections, before the order form.
+1. On the checkout summary page with an invoice-based payment method, make sure the recurring order selector is displayed.
+2. In the customer account, make sure the **Recurring Orders** menu item is displayed.
+3. On the **Review Required** page, open the add-product search bar and make sure product suggestions are returned.
+4. On the cart page, make sure the selected cost center and budget names are displayed.
+
+{% endinfo_block %}
+
+### 3) Set up form expander plugins
+
+{% info_block infoBox "Purchasing Control feature" %}
+
+This step is only required if your project uses the [Purchasing Control feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-purchasing-control-feature.html).
+
+{% endinfo_block %}
+
+Register the following form expander plugins to let buyers select a cost center and budget when they approve a review or edit a recurring schedule:
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+| CostCenterRecurringOrderApproveFormExpanderPlugin | Adds cost center and budget dropdowns to the review approve form and validates the selected pair server-side. | Purchasing Control feature | SprykerFeature\Yves\PurchasingControl\Plugin\OrderExperienceManagement |
+| CostCenterRecurringScheduleEditFormExpanderPlugin | Adds cost center and budget dropdowns to the recurring schedule edit form and validates the selected pair server-side. | Purchasing Control feature | SprykerFeature\Yves\PurchasingControl\Plugin\OrderExperienceManagement |
+
+**src/Pyz/Yves/OrderExperienceManagement/OrderExperienceManagementDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\OrderExperienceManagement;
+
+use SprykerFeature\Yves\OrderExperienceManagement\OrderExperienceManagementDependencyProvider as SprykerOrderExperienceManagementDependencyProvider;
+use SprykerFeature\Yves\PurchasingControl\Plugin\OrderExperienceManagement\CostCenterRecurringOrderApproveFormExpanderPlugin;
+use SprykerFeature\Yves\PurchasingControl\Plugin\OrderExperienceManagement\CostCenterRecurringScheduleEditFormExpanderPlugin;
+
+class OrderExperienceManagementDependencyProvider extends SprykerOrderExperienceManagementDependencyProvider
+{
+    /**
+     * @return array<\SprykerFeature\Yves\OrderExperienceManagement\Dependency\Plugin\RecurringOrderApproveFormExpanderPluginInterface>
+     */
+    protected function getRecurringOrderApproveFormExpanderPlugins(): array
+    {
+        return [
+            new CostCenterRecurringOrderApproveFormExpanderPlugin(), #RecurringOrdersFeature
+        ];
+    }
+
+    /**
+     * @return array<\SprykerFeature\Yves\OrderExperienceManagement\Dependency\Plugin\RecurringScheduleEditFormExpanderPluginInterface>
+     */
+    protected function getRecurringScheduleEditFormExpanderPlugins(): array
+    {
+        return [
+            new CostCenterRecurringScheduleEditFormExpanderPlugin(), #RecurringOrdersFeature
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+1. Open the **Review Required** page for a schedule and make sure the **Cost Center** and **Budget** dropdowns are displayed on the approve form.
+2. Open the recurring schedule edit form and make sure the same dropdowns are displayed.
+3. Submit the form with a budget that does not belong to the selected cost center. Make sure the form is rejected with a validation error.
+
+{% endinfo_block %}
+
+### 4) Add the recurring order selector to the checkout summary page
+
+`spryker-shop/checkout-page` calls `RecurringOrderSelectorWidget` from its checkout summary template, so no change is required if your project uses the module template as is.
+
+If your project overrides the checkout summary template, call the widget explicitly. Add it after any cost center or voucher sections, before the order form.
 
 **src/Pyz/Yves/CheckoutPage/Theme/default/views/summary/summary.twig**
 
@@ -736,65 +952,107 @@ On the checkout summary page with an invoice-based payment method, make sure the
 
 {% endinfo_block %}
 
-{% info_block warningBox "Verification" %}
+### 5) Add the menu item to the customer navigation sidebar
 
-- On the cart page, make sure the selected cost center and budget names are displayed.
+`spryker-shop/customer-page` calls `RecurringOrderMenuItemWidget` from the `customer-navigation` molecule, so no change is required if your project uses the module template as is.
 
-{% endinfo_block %}
+If your project overrides the `customer-navigation` molecule, call the widget from the same position—directly after the **Order History** item. The widget renders an `<li>` element and must be placed inside a `<ul>` context.
 
-### 4) Add the menu item to the customer navigation sidebar
-
-To make the **Recurring Orders** menu item appear in the customer account sidebar, add a plain data entry to the `data.items` array in your project's customer navigation sidebar template. Place it after the Order History item.
-
-**src/Pyz/Yves/CustomerPage/Theme/default/components/molecules/navigation-sidebar/navigation-sidebar.twig**
+**src/Pyz/Yves/CustomerPage/Theme/default/components/molecules/customer-navigation/customer-navigation.twig**
 
 ```twig
 {% raw %}
-{% define data = {
-    items: [
-        {# ... existing items ... #}
-        {
-            name: 'order',
-            url: path('customer/order'),
-            label: 'customer.account.order_history' | trans,
-            icon: 'history',
-        },
-        {
-            name: 'recurring-orders',
-            url: path('recurring-orders'),
-            label: 'recurring_orders.menu_item' | trans,
-            icon: 'calendar',
-        },
-        {# ... remaining items ... #}
-    ]
-} %}
+{% widget 'RecurringOrderMenuItemWidget' args [data.activePage] only %}{% endwidget %}
 {% endraw %}
 ```
 
-{% info_block warningBox "Verification" %}
+{% info_block infoBox "Alternative: plain menu item" %}
 
-In the storefront customer account, make sure the **Recurring Orders** menu item appears directly below **Order History** in the left sidebar navigation and links to `/recurring-orders`.
-
-{% endinfo_block %}
-
-{% info_block infoBox "Alternative: widget-based menu item" %}
-
-If your project's navigation sidebar template doesn't use a plain `data.items` array — for example, it's built from a custom navigation plugin or uses a different template structure — you can render the menu item via `RecurringOrderMenuItemWidget` instead. Make sure the widget is registered in `ShopApplicationDependencyProvider` (see [Set up widgets](#2-set-up-widgets)), then call it from the `postContent` block of your sidebar template:
+If your sidebar template is built from a plain `data.items` array instead of widget calls, add the entry directly. Place it after the Order History item:
 
 ```twig
 {% raw %}
-{% block postContent %}
-    {# ... existing widget calls ... #}
-    {% widget 'RecurringOrderMenuItemWidget' args [data.activePage] only %}{% endwidget %}
-{% endblock %}
+{
+    name: 'recurring-orders',
+    url: path('recurring-orders'),
+    label: 'recurring_orders.menu_item' | trans,
+    icon: 'calendar',
+},
 {% endraw %}
 ```
 
-The widget renders an `<li>` element and must be placed inside a `<ul>` context.
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
+In the storefront customer account, make sure the **Recurring Orders** menu item is displayed directly below **Order History** in the left sidebar navigation and links to `/recurring-orders`.
 
 {% endinfo_block %}
 
-### 5) Build the frontend
+### 6) Configure the storefront behavior
+
+Override the following configuration methods in your project (if needed) to adjust the storefront behavior:
+
+**src/Pyz/Yves/OrderExperienceManagement/OrderExperienceManagementConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\OrderExperienceManagement;
+
+use SprykerFeature\Yves\OrderExperienceManagement\OrderExperienceManagementConfig as SprykerOrderExperienceManagementConfig;
+
+class OrderExperienceManagementConfig extends SprykerOrderExperienceManagementConfig
+{
+    /**
+     * Specification:
+     * - Returns the maximum number of company business units loaded into the review scope dropdown.
+     * - Projects with more business units should raise this value or switch to an async autocomplete widget.
+     *
+     * @api
+     */
+    public function getBusinessUnitChoicesLimit(): int
+    {
+        return 250;
+    }
+
+    /**
+     * Specification:
+     * - Returns the number of recurring schedules shown per page on the list page.
+     *
+     * @api
+     */
+    public function getRecurringScheduleListItemsPerPage(): int
+    {
+        return 20;
+    }
+}
+```
+
+| CONFIGURATION METHOD | DEFAULT | DESCRIPTION |
+| --- | --- | --- |
+| `getSupportedCadenceTypes()` | Weekly, bi-weekly, monthly, every N weeks | Cadence types offered in the storefront recurring order forms, as `[glossary key => cadence value]`. Extend it when you register a custom cadence type plugin. |
+| `getCadenceTypeEveryNWeeks()` | `every_n_weeks` | Cadence type that requires an additional numeric interval. |
+| `getInvoicePaymentMethodKeys()` | `[invoice, purchaseOnAccount, dummyMarketplacePaymentInvoice]` | Payment method keys that qualify as invoice-based. Only quotes with a matching payment method can generate a recurring schedule. Override this in the shared config to apply it in Yves and Zed at once. |
+| `getBusinessUnitChoicesLimit()` | `100` | Maximum number of company business units loaded into the review scope dropdown. |
+| `getRecurringScheduleListItemsPerPage()` | `10` | Number of recurring schedules shown per page on the list page. |
+| `getRecurringScheduleHistoryItemsPerPage()` | `10` | Number of execution history entries shown per page on the detail page. |
+| `getSupportedAddedItemShipmentTypeKeys()` | `[delivery, on_site_service]` | Shipment type keys supported for products added on the **Review Required** page. |
+| `getSubstitutableReviewReasons()` | `[discontinued, unavailable]` | Review reason groups for which a **Choose a substitute** action is offered. |
+| `isUnavailableProductsExcludedFromAddProductSearch()` | `true` | When enabled, concrete products and merchant offers without availability are hidden from the add-product search bar and the offer selector. |
+| `getStatusBadgeClassMap()`, `getStatusIconMap()`, `getHistoryEventTypeBadgeClassMap()`, `getReviewReasonLabelMap()`, `getReviewReasonBadgeMap()`, `getItemFlagLabelMap()`, `getItemFlagBadgeMap()` | See `OrderExperienceManagementConfig` | Presentation maps for statuses, history events, review reasons, and item flags. Extend them when you introduce custom statuses or review reasons. |
+| `getErrorBannerStatuses()`, `getAttentionBannerStatuses()` | See `OrderExperienceManagementConfig` | Statuses that render the error banner and the attention banner on the list and detail pages. |
+| `getRecurringScheduleStatusChoices()`, `getReviewScopeChoices()` | See `OrderExperienceManagementConfig` | Choices offered in the storefront status filter and the review scope selector. |
+
+{% info_block infoBox "Overriding storefront molecules" %}
+
+The module ships its storefront UI as molecules under `src/SprykerFeature/OrderExperienceManagement/src/SprykerFeature/Yves/OrderExperienceManagement/Theme/default/components/molecules`. To adjust the markup, override the molecule in your project at the same relative path under `src/Pyz/Yves/OrderExperienceManagement/Theme/default/components/molecules`. The most commonly customized molecules are `recurring-order-selector`, `recurring-order-list`, `schedule-detail`, `schedule-detail-sidebar`, `schedule-review`, `recurring-order-edit-form`, and `review-add-product-picker`.
+
+The `schedule-detail-sidebar`, `schedule-review`, and `recurring-order-edit-form` molecules embed the `cost-center-detail` and `recurring-order-cost-center-budget` molecules from the `PurchasingControl` module. If your project does not use the Purchasing Control feature, these embeds resolve to nothing and the surrounding markup remains valid.
+
+{% endinfo_block %}
+
+### 7) Build the frontend
 
 After making changes to Twig templates and registering new widgets, rebuild the Yves frontend assets:
 
@@ -808,7 +1066,7 @@ Reload the checkout summary page and make sure the recurring order selector rend
 
 {% endinfo_block %}
 
-### 7) Import glossary data
+### 8) Import glossary data
 
 The full list of glossary keys is provided in the module at `src/SprykerFeature/OrderExperienceManagement/data/import/glossary.csv`. Copy the contents of that file and add them to **data/import/common/common/glossary.csv**.
 
@@ -824,7 +1082,7 @@ Make sure that, in the database, the configured data has been added to the `spy_
 
 {% endinfo_block %}
 
-### 8) Configure the Back Office settings
+### 9) Configure the Back Office settings
 
 Sync the recurring orders configuration settings to the database to make them editable in the Back Office:
 
@@ -840,8 +1098,10 @@ In the Back Office, go to **Configuration > Recurring Orders > General > Schedul
 
 {% info_block infoBox "Configurable settings" %}
 
-| SETTING | DEFAULT | DESCRIPTION |
-| --- | --- | --- |
-| Schedule Grace Period | `48` | Number of hours before the trigger date when the pre-trigger notification email is sent to the buyer. Per-schedule overrides stored in `spy_recurring_schedule.notification_window_hours` take precedence over this global value. |
+| SETTING | KEY | DEFAULT | CONSTRAINTS | DESCRIPTION |
+| --- | --- | --- | --- | --- |
+| Schedule Grace Period | `grace_period_hours` | `48` | Required, between 1 and 720 | Number of hours before the trigger date when the pre-trigger notification email is sent to the buyer. Per-schedule overrides stored in `spy_recurring_schedule.notification_window_hours` take precedence over this global value. |
+
+The setting is defined at `src/SprykerFeature/OrderExperienceManagement/resources/configuration/recurring_orders.configuration.yml` and applies globally—it has no per-store scope.
 
 {% endinfo_block %}

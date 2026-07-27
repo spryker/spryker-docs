@@ -66,15 +66,15 @@ Make sure the following packages are now listed in `composer.lock`:
 
 use Spryker\Shared\FileSystem\FileSystemConstants;
 use SprykerFeature\Shared\SelfServicePortal\SelfServicePortalConstants;
-use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\Aws3v3FilesystemBuilderPlugin;
+use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\IamAws3v3FilesystemBuilderPlugin;
 
 $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
      'ssp-inquiry' => [
-        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
-        'key' => getenv('SPRYKER_S3_SSP_CLAIM_KEY') ?: '',
-        'secret' => getenv('SPRYKER_S3_SSP_CLAIM_SECRET') ?: '',
-        'bucket' => getenv('SPRYKER_S3_SSP_CLAIM_BUCKET') ?: '',
-        'region' => getenv('AWS_REGION') ?: '',
+        'sprykerAdapterClass' => IamAws3v3FilesystemBuilderPlugin::class,
+        'key' => getenv('SPRYKER_S3_SSP_INQUIRIES_KEY') ?: '',
+        'secret' => getenv('SPRYKER_S3_SSP_INQUIRIES_SECRET') ?: '',
+        'bucket' => getenv('SPRYKER_S3_SSP_INQUIRIES_BUCKET') ?: '',
+        'region' => $awsRegion,
         'version' => 'latest',
         'root' => '/ssp-inquiry',
         'path' => '',

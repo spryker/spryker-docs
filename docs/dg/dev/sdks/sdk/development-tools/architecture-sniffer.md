@@ -56,6 +56,7 @@ composer require --dev spryker/architecture-sniffer:"^0.6.0"
 ```
 
 The project ruleset requires version `0.6.0` or later.
+Make sure that the environment, where sniffer is executed, is installing development composer packages.
 
 ## Running the tool
 

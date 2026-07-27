@@ -1,6 +1,6 @@
 ---
 title: Architecture Sniffer
-description: Use Architecture Sniffer to ensure the quality of Spryker architecture for both core and project
+description: Use Architecture Sniffer to ensure the quality of Spryker project architecture
 last_updated: Jul 27, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/architecture-sniffer
@@ -38,14 +38,11 @@ related:
     link: docs/dg/dev/sdks/sdk/development-tools/tooling-configuration-file.html
 ---
 
-We use our [Architecture Sniffer Tool](https://github.com/spryker/architecture-sniffer) to ensure the quality of Spryker architecture for both core and project. The tool builds on [PHP Mess Detector](https://phpmd.org) and ships two independent rulesets:
+We use our [Architecture Sniffer Tool](https://github.com/spryker/architecture-sniffer) to ensure the quality of Spryker project architecture. The tool builds on [PHP Mess Detector](https://phpmd.org) and ships the project ruleset:
 
 | Ruleset | Use it for | Path |
 | --- | --- | --- |
-| Core | Spryker core, ecosystem, and module development | `vendor/spryker/architecture-sniffer/src/ruleset.xml` |
 | Project | Application (project) development | `vendor/spryker/architecture-sniffer/src/Project/ruleset.xml` |
-
-In both rulesets, lower priorities include the higher ones: a run with `--minimumpriority=3` also reports violations of priority `1` and `2`.
 
 ## Install Architecture Sniffer
 
@@ -59,63 +56,13 @@ The project ruleset requires version `0.6.0` or later.
 
 ## Running the tool
 
-Run the ruleset that matches what you are working on: the core ruleset for core, ecosystem, and module development, or the project ruleset for application development.
+Use the project ruleset for application development. It bundles adapted PHPMD rules, Spryker architecture rules, and project-only rules.
 
-### Core development
+#### Include the project ruleset in PhpStorm
 
-Use the core ruleset for Spryker core, ecosystem, and module development.
-
-#### Core priority levels
-
-- `1`: API and critical
-- `2`: Non-critical (nice to have)
-- `3`: Experimental—the inspected code needs further fixing
-
-We recommend a minimum priority of `2` for local and CI checks.
-
-#### Run the core ruleset
-
-The sniffer can find a lot of violations and reports them:
-
-```bash
-vendor/bin/console code:sniff:architecture
-
-# Sniff a specific subfolder of your project with verbose output
-vendor/bin/console code:sniff:architecture src/Pyz/Zed -v
-
-# Sniff a specific module
-vendor/bin/console code:sniff:architecture -m Customer
-```
-
-{% info_block infoBox "Tip" %}
-
-You can use `c:s:a` as a shortcut.
-
-{% endinfo_block %}
-
-Additional options:
-
-- `-p`: Priority [1 (highest), 2 (medium), 3 (experimental)]. Defaults to `2`.
-- `-s`: Strict—also reports nodes with a `@SuppressWarnings` annotation.
-- `-d`: Dry run—only outputs the command to be run.
-
-To get help about all available options, run `--help` or `-h`.
-
-You can also run the core ruleset directly:
-
-```bash
-vendor/bin/phpmd src/Pyz/ text vendor/spryker/architecture-sniffer/src/ruleset.xml --minimumpriority=2
-```
-
-#### Include the core ruleset in PhpStorm
-
-1. In PhpStorm, go to **Editor&nbsp;→&nbsp;Inspections&nbsp;→&nbsp;PHP&nbsp;→&nbsp;PHP Mess Detector validation** and add a custom ruleset named `Architecture Sniffer` that points to `vendor/spryker/architecture-sniffer/src/ruleset.xml`.
+1. In PhpStorm, go to **Editor&nbsp;→&nbsp;Inspections&nbsp;→&nbsp;PHP&nbsp;→&nbsp;PHP Mess Detector validation** and add a custom ruleset named `Architecture Sniffer` that points to `vendor/spryker/architecture-sniffer/src/Project/ruleset.xml`.
 2. Go to **Framework & Languages&nbsp;→&nbsp;PHP&nbsp;→&nbsp;Mess Detector** and set the path to your phpmd binary: `vendor/bin/phpmd`.
 3. Select **Validate** to confirm that the setup works.
-
-### Project development
-
-Use the project ruleset for application development. It bundles adapted PHPMD rules, Spryker architecture rules, and project-only rules.
 
 #### Project priority levels
 
@@ -126,9 +73,9 @@ Use the project ruleset for application development. It bundles adapted PHPMD ru
 
 We recommend the following minimum priority based on project maturity:
 
-- `1` and `2`: for all projects, including those with legacy code
+- `2`: for all projects, including those with legacy code
 - `3`: for all new projects
-- `4`: for a modern AI-assisted development flow
+- `4`: for a current AI-assisted development flow
 
 #### Set up the project ruleset
 
@@ -271,8 +218,7 @@ The following example is the [phpmd.xml](https://github.com/spryker-shop/b2b-dem
     <!-- ============================================================= -->
     <!-- Import the vendor project ruleset (single aggregate file).     -->
     <!-- Pulls in PhpMd + Client/Service/Shared/Yves/Zed/Glue/Common    -->
-    <!-- project-level rules. These are the project-level (relaxed +    -->
-    <!-- project-specific) rules, not the strict core-framework ones.   -->
+    <!-- project-level rules (relaxed + project-specific).              -->
     <!--                                                               -->
     <!-- To EXCLUDE rules, add <exclude name="..."/> children to THIS   -->
     <!-- block (see customization 1 below). To OVERRIDE a rule's        -->

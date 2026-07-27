@@ -131,45 +131,66 @@ Add the three media filesystem entries inside the existing `$config[FileSystemCo
 
 ```php
 $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
-    // ... existing entries ...
     'backoffice-media' => [
         'sprykerAdapterClass' => IamAws3v3FilesystemBuilderPlugin::class,
-        'key' => getenv('SPRYKER_S3_PUBLIC_ASSETS_KEY') ?: '',
         'bucket' => getenv('SPRYKER_S3_PUBLIC_ASSETS_BUCKET') ?: '',
-        'secret' => getenv('SPRYKER_S3_PUBLIC_ASSETS_SECRET') ?: '',
-        'root' => '/backoffice-media',
-        'path' => '/',
-        'version' => 'latest',
-        'region' => getenv('AWS_REGION'),
+        'region' => getenv('AWS_REGION') ?: '',
+        'path' => '/backoffice-media',
     ],
     'storefront-media' => [
         'sprykerAdapterClass' => IamAws3v3FilesystemBuilderPlugin::class,
-        'key' => getenv('SPRYKER_S3_PUBLIC_ASSETS_KEY') ?: '',
         'bucket' => getenv('SPRYKER_S3_PUBLIC_ASSETS_BUCKET') ?: '',
-        'secret' => getenv('SPRYKER_S3_PUBLIC_ASSETS_SECRET') ?: '',
-        'root' => '/storefront-media',
-        'path' => '',
-        'version' => 'latest',
-        'region' => getenv('AWS_REGION'),
+        'region' => getenv('AWS_REGION') ?: '',
+        'path' => '/storefront-media',
     ],
     'merchant-portal-media' => [
         'sprykerAdapterClass' => IamAws3v3FilesystemBuilderPlugin::class,
-        'key' => getenv('SPRYKER_S3_PUBLIC_ASSETS_KEY') ?: '',
         'bucket' => getenv('SPRYKER_S3_PUBLIC_ASSETS_BUCKET') ?: '',
-        'secret' => getenv('SPRYKER_S3_PUBLIC_ASSETS_SECRET') ?: '',
-        'root' => '/merchant-portal-media',
-        'path' => '',
-        'version' => 'latest',
-        'region' => getenv('AWS_REGION'),
+        'region' => getenv('AWS_REGION') ?: '',
+        'path' => '/merchant-portal-media',
     ],
 ];
 ```
 
 {% info_block infoBox "Credentials" %}
 
-These filesystems use `IamAws3v3FilesystemBuilderPlugin`, which resolves AWS credentials through the IAM role attached to the runtime instead of explicit access keys. The `key` and `secret` entries are ignored by this plugin. For details on when to use this plugin and its configuration options, see [AWS S3 filesystem builder plugins](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html#aws-s3-filesystem-builder-plugins).
+These filesystems use `IamAws3v3FilesystemBuilderPlugin`, which resolves AWS credentials through the IAM role attached to the runtime, so no `key` or `secret` is required. For details on when to use this plugin and its configuration options, see [AWS S3 filesystem builder plugins](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html#aws-s3-filesystem-builder-plugins).
 
 {% endinfo_block %}
+
+Alternatively, to authenticate with explicit access keys instead of an IAM role, use `Aws3v3FilesystemBuilderPlugin`:
+
+```php
+$config[FileSystemConstants::FILESYSTEM_SERVICE] = [
+    'backoffice-media' => [
+        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
+        'key' => getenv('SPRYKER_S3_PUBLIC_ASSETS_KEY') ?: '',
+        'secret' => getenv('SPRYKER_S3_PUBLIC_ASSETS_SECRET') ?: '',
+        'bucket' => getenv('SPRYKER_S3_PUBLIC_ASSETS_BUCKET') ?: '',
+        'region' => getenv('AWS_REGION') ?: '',
+        'root' => '/backoffice-media',
+        'path' => '/',
+    ],
+    'storefront-media' => [
+        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
+        'key' => getenv('SPRYKER_S3_PUBLIC_ASSETS_KEY') ?: '',
+        'secret' => getenv('SPRYKER_S3_PUBLIC_ASSETS_SECRET') ?: '',
+        'bucket' => getenv('SPRYKER_S3_PUBLIC_ASSETS_BUCKET') ?: '',
+        'region' => getenv('AWS_REGION') ?: '',
+        'root' => '/storefront-media',
+        'path' => '',
+    ],
+    'merchant-portal-media' => [
+        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
+        'key' => getenv('SPRYKER_S3_PUBLIC_ASSETS_KEY') ?: '',
+        'secret' => getenv('SPRYKER_S3_PUBLIC_ASSETS_SECRET') ?: '',
+        'bucket' => getenv('SPRYKER_S3_PUBLIC_ASSETS_BUCKET') ?: '',
+        'region' => getenv('AWS_REGION') ?: '',
+        'root' => '/merchant-portal-media',
+        'path' => '',
+    ],
+];
+```
 
 #### 4.2) Add local filesystem fallback for development
 

@@ -71,13 +71,9 @@ use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\IamAws3v3Filesyst
 $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
      'ssp-inquiry' => [
         'sprykerAdapterClass' => IamAws3v3FilesystemBuilderPlugin::class,
-        'key' => getenv('SPRYKER_S3_SSP_INQUIRIES_KEY') ?: '',
-        'secret' => getenv('SPRYKER_S3_SSP_INQUIRIES_SECRET') ?: '',
         'bucket' => getenv('SPRYKER_S3_SSP_INQUIRIES_BUCKET') ?: '',
-        'region' => $awsRegion,
-        'version' => 'latest',
-        'root' => '/ssp-inquiry',
-        'path' => '',
+        'region' => getenv('AWS_REGION') ?: '',
+        'path' => '/ssp-inquiry',
     ],
 ];
 
@@ -96,14 +92,33 @@ $config[KernelConstants::CORE_NAMESPACES] = [
 
 In cloud environments, set the following environment variables:
 
-- `SPRYKER_S3_SSP_CLAIM_KEY` - AWS S3 access key for SSP inquiry file storage
-- `SPRYKER_S3_SSP_CLAIM_SECRET` - AWS S3 secret key for SSP inquiry file storage
-- `SPRYKER_S3_SSP_CLAIM_BUCKET` - AWS S3 bucket name for SSP inquiry file storage
+- `SPRYKER_S3_SSP_INQUIRIES_KEY` - AWS S3 access key for SSP inquiry file storage
+- `SPRYKER_S3_SSP_INQUIRIES_SECRET` - AWS S3 secret key for SSP inquiry file storage
+- `SPRYKER_S3_SSP_INQUIRIES_BUCKET` - AWS S3 bucket name for SSP inquiry file storage
 - `AWS_REGION` - AWS region
 - `SPRYKER_DEFAULT_TOTAL_FILE_MAX_SIZE` - Maximum total size for all files uploaded with a single inquiry (defaults to `100M` if not set)
 - `SPRYKER_DEFAULT_FILE_MAX_SIZE` - Maximum size for a single file uploaded with an inquiry (defaults to `20M` if not set)
 
 {% endinfo_block %}
+
+Alternatively, to authenticate with explicit access keys instead of an IAM role, use `Aws3v3FilesystemBuilderPlugin`:
+
+```php
+use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\Aws3v3FilesystemBuilderPlugin;
+
+$config[FileSystemConstants::FILESYSTEM_SERVICE] = [
+    'ssp-inquiry' => [
+        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
+        'key' => getenv('SPRYKER_S3_SSP_INQUIRIES_KEY') ?: '',
+        'secret' => getenv('SPRYKER_S3_SSP_INQUIRIES_SECRET') ?: '',
+        'bucket' => getenv('SPRYKER_S3_SSP_INQUIRIES_BUCKET') ?: '',
+        'region' => getenv('AWS_REGION') ?: '',
+        'version' => 'latest',
+        'root' => '/ssp-inquiry',
+        'path' => '',
+    ],
+];
+```
 
 <details>
   <summary>src/Pyz/Shared/SelfServicePortal/SelfServicePortalConfig.php</summary>

@@ -60,7 +60,7 @@ Use the project ruleset for application development. It bundles adapted PHPMD ru
 
 #### Include the project ruleset in PhpStorm
 
-1. In PhpStorm, go to **Editor&nbsp;→&nbsp;Inspections&nbsp;→&nbsp;PHP&nbsp;→&nbsp;PHP Mess Detector validation** and add a custom ruleset named `Architecture Sniffer` that points to `vendor/spryker/architecture-sniffer/src/Project/ruleset.xml`.
+1. In PhpStorm, go to **Editor&nbsp;→&nbsp;Inspections&nbsp;→&nbsp;PHP&nbsp;→&nbsp;PHP Mess Detector validation** and add a custom ruleset named `Architecture Sniffer` that points to `phpmd.xml` or `vendor/spryker/architecture-sniffer/src/Project/ruleset.xml`.
 2. Go to **Framework & Languages&nbsp;→&nbsp;PHP&nbsp;→&nbsp;Mess Detector** and set the path to your phpmd binary: `vendor/bin/phpmd`.
 3. Select **Validate** to confirm that the setup works.
 

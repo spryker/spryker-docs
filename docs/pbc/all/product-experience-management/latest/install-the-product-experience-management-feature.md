@@ -53,32 +53,30 @@ Configure the filesystem storage for import and export files. The feature requir
 **config/Shared/config_default.php**
 
 ```php
-use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\Aws3v3FilesystemBuilderPlugin;
+use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\IamAws3v3FilesystemBuilderPlugin;
 use Spryker\Shared\FileSystem\FileSystemConstants;
 
 $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
     // ... existing entries ...
     'product-experience-management-imports' => [
-        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
+        'sprykerAdapterClass' => IamAws3v3FilesystemBuilderPlugin::class,
         'key' => getenv('SPRYKER_S3_PEM_IMPORT_KEY') ?: '',
         'bucket' => getenv('SPRYKER_S3_PEM_IMPORT_BUCKET') ?: '',
         'secret' => getenv('SPRYKER_S3_PEM_IMPORT_SECRET') ?: '',
         'root' => '/',
-        'path' => 'pem-imports/',
-        'region' => getenv('SPRYKER_S3_PEM_IMPORT_REGION') ?: '',
-        'version' => getenv('SPRYKER_S3_PEM_IMPORT_VERSION') ?: 'latest',
-        'endpoint' => getenv('SPRYKER_S3_PEM_IMPORT_ENDPOINT') ?: null,
+        'path' => '/',
+        'version' => 'latest',
+        'region' => $awsRegion,
     ],
     'product-experience-management-exports' => [
-        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
+        'sprykerAdapterClass' => IamAws3v3FilesystemBuilderPlugin::class,
         'key' => getenv('SPRYKER_S3_PEM_EXPORT_KEY') ?: '',
         'bucket' => getenv('SPRYKER_S3_PEM_EXPORT_BUCKET') ?: '',
         'secret' => getenv('SPRYKER_S3_PEM_EXPORT_SECRET') ?: '',
         'root' => '/',
-        'path' => 'pem-exports/',
-        'region' => getenv('SPRYKER_S3_PEM_EXPORT_REGION') ?: '',
-        'version' => getenv('SPRYKER_S3_PEM_EXPORT_VERSION') ?: 'latest',
-        'endpoint' => getenv('SPRYKER_S3_PEM_EXPORT_ENDPOINT') ?: null,
+        'path' => '/',
+        'version' => 'latest',
+        'region' => $awsRegion,
     ],
 ];
 ```

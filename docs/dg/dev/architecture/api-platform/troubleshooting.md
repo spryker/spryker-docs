@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting API Platform
 description: Common issues and solutions when working with API Platform in Spryker.
-last_updated: May 18, 2026
+last_updated: Jul 28, 2026
 template: troubleshooting-guide-template
 related:
   - title: API Platform

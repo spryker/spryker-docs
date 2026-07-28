@@ -1,7 +1,7 @@
 ---
 title: How to integrate API Platform
 description: This document describes how to integrate API Platform into your Spryker application.
-last_updated: Jun 29, 2026
+last_updated: Jul 28, 2026
 template: howto-guide-template
 ---
 

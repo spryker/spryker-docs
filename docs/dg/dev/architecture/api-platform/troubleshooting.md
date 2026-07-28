@@ -397,15 +397,16 @@ references class "CustomerFacadeInterface" but no such service exists.
 
 **Solution:**
 
-1. Enable Symfony cache:
+1. Verify that Opcache is enabled (`opcache.enable: 1`). Without it, PHP recompiles the whole application on every request, which adds a flat overhead of seconds to every endpoint regardless of the amount of data. See [Opcache activation](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html#opcache-activation).
+2. Enable Symfony cache:
 
    ```bash
    docker/sdk cli glue  cache:warmup
    ```
 
-2. Use pagination for collections
-3. Optimize database queries in Provider
-4. Use API Platform's built-in caching features
+3. Use pagination for collections
+4. Optimize database queries in Provider
+5. Use API Platform's built-in caching features
 
 ## Development tips
 

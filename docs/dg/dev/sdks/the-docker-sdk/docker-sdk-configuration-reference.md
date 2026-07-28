@@ -50,9 +50,17 @@ image:
         ini:
             "opcache.revalidate_freq": 0
             "opcache.enable_cli": 0
-            "opcache.enable": 0
+            "opcache.enable": 1
             ...
 ```
+
+{% info_block warningBox "Never disable Opcache on deployed environments" %}
+
+With `opcache.enable: 0`, PHP recompiles the entire application code on every request. On a Symfony and API Platform based stack this adds a flat multi-second overhead to every request.
+
+For the full configuration reference, see [Opcache activation](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html#opcache-activation).
+
+{% endinfo_block %}
 
 ## Defining a memory limit
 

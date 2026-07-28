@@ -454,6 +454,10 @@ For detailed information, see [Sparse Fieldsets](/docs/dg/dev/architecture/api-p
 
 ## Performance
 
+### Opcache
+
+API Platform loads a significantly larger class graph per request than the legacy Glue stack—the Symfony kernel, serializer, validator, security components, and the generated resource classes. Opcache must be enabled on all deployed environments; without it, every request recompiles this class graph, adding a flat overhead of seconds per request. For configuration details, see [Opcache activation](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html#opcache-activation).
+
 ### Cache warming
 
 API Platform deployment requires two sequential steps, not alternatives:

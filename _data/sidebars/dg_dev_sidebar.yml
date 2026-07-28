@@ -32,8 +32,6 @@ entries:
                 url: /docs/dg/dev/sdks/sdk/development-tools/code-sniffer.html
               - title: Architecture Sniffer
                 url: /docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html
-              - title: Project Architecture Sniffer
-                url: /docs/dg/dev/sdks/sdk/development-tools/project-architecture-sniffer.html
               - title: Evaluator
                 url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
           - title: AI tools
@@ -1206,8 +1204,6 @@ entries:
         nested:
         - title: Architecture Sniffer
           url: /docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html
-        - title: Project Architecture Sniffer
-          url: /docs/dg/dev/sdks/sdk/development-tools/project-architecture-sniffer.html
         - title: Code Sniffer
           url: /docs/dg/dev/sdks/sdk/development-tools/code-sniffer.html
         - title: Performance audit tool- Benchmark

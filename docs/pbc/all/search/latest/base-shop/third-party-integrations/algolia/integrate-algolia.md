@@ -2,7 +2,7 @@
 title: Integrate Algolia
 description: Learn how to integrate Algolia Search into your Spryker-based projects.
 template: howto-guide-template
-last_updated: Apr 13, 2026
+last_updated: Jul 22, 2026
 redirect_from:
   - /docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/configure-algolia.html
   - /docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/disconnect-algolia.html
@@ -15,7 +15,7 @@ This document explains how to integrate [Algolia](/docs/pbc/all/search/latest/ba
 Install the required module:
 
 ```bash
-composer require -W spryker-eco/algolia
+composer require -W spryker-eco/algolia:"^2.0.0"
 ```
 
 ## Configure Algolia credentials
@@ -380,6 +380,78 @@ If you are using [Back Office configuration](#option-b-back-office-configuration
 - Go to **Configuration > Catalog > Search** and set the search provider to Algolia to enable product search.
 - Go to **Configuration > CMS > Search** and set the search provider to Algolia to enable CMS page search.
 
+### 12. Configure sorting replicas
+
+Sorting in Algolia uses replica indices. Each sortable attribute gets ascending and descending replicas created automatically during data export. By default, no sorting replicas are configured. To enable sorting, create or update `src/Pyz/Zed/Algolia/AlgoliaConfig.php`:
+
+```php
+<?php
+
+namespace Pyz\Zed\Algolia;
+
+use SprykerEco\Zed\Algolia\AlgoliaConfig as SprykerEcoAlgoliaConfig;
+
+class AlgoliaConfig extends SprykerEcoAlgoliaConfig
+{
+    /**
+     * @return array<string>
+     */
+    public function getProductSortingAttributes(): array
+    {
+        return [
+            'rating',
+            'abstract_name',
+            'prices.eur.gross',
+            'prices.eur.net',
+        ];
+    }
+
+    /**
+     * @return array<string>
+     */
+    public function getCmsPageSortingAttributes(): array
+    {
+        return ['name'];
+    }
+
+    /**
+     * @return array<array<string>>
+     */
+    public function getSuggestionGenerateAttributes(): array
+    {
+        return [
+            ['category'],
+            ['attributes.brand'],
+        ];
+    }
+}
+```
+
+If a sort parameter name used by the storefront differs from the Algolia attribute name used in the replica index, configure the mapping in `src/Pyz/Client/Algolia/AlgoliaConfig.php`:
+
+```php
+<?php
+
+namespace Pyz\Client\Algolia;
+
+use SprykerEco\Client\Algolia\AlgoliaConfig as SprykerEcoAlgoliaConfig;
+
+class AlgoliaConfig extends SprykerEcoAlgoliaConfig
+{
+    /**
+     * @return array<string, string>
+     */
+    public function getProductSortingParamToAttributeMapping(): array
+    {
+        return [
+            'name' => 'abstract_name',
+        ];
+    }
+}
+```
+
+In this example, when a customer sorts by `name` on the storefront, the system resolves it to the `abstract_name` replica index in Algolia.
+
 ## Real-time synchronization
 
 ### Product publisher plugins
@@ -507,6 +579,15 @@ Cron jobs complement the real-time publisher plugins. The publisher plugins hand
 **Search:**
 - `isSearchInFrontendEnabledForProducts()`: enables product search in the frontend.
 - `isSearchInFrontendEnabledForCmsPages()`: enables CMS page search in the frontend.
+
+**Sorting (Zed layer — `src/Pyz/Zed/Algolia/AlgoliaConfig.php`):**
+- `getProductSortingAttributes()`: list of Algolia attribute names for product sorting replicas.
+- `getCmsPageSortingAttributes()`: list of attribute names for CMS page sorting replicas.
+- `getSuggestionGenerateAttributes()`: facet attribute groups for Query Suggestions generation.
+
+**Sort parameter mapping (Client layer — `src/Pyz/Client/Algolia/AlgoliaConfig.php`):**
+- `getProductSortingParamToAttributeMapping()`: maps storefront sort parameter names to Algolia replica attribute names for products.
+- `getCmsPageSortingParamToAttributeMapping()`: maps storefront sort parameter names to Algolia replica attribute names for CMS pages.
 
 **Insights, analytics, and personalization:**
 - `getIsPersonalizationEnabled()`: enables or disables Algolia Personalization. This feature requires a premium Algolia plan.

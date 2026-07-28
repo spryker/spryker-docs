@@ -1,7 +1,7 @@
 ---
 title: Customer Account Management feature overview
 description: Let your customers create an account to save their contact details, addresses, order history and preferences, such as language and shipping options.
-last_updated: Jul 15, 2021
+last_updated: May 7, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-account-management
 originalArticleId: 88f6dffa-517a-4a00-ac9f-4041ba9b9841
@@ -54,3 +54,4 @@ Also, it lets you manage customer access, request a password change, or change i
 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |  | [Managing customer authentication tokens via OAuth 2.0](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-manage-customer-authentication-tokens-via-oauth-2.0.html) |  |  |
 | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |  | [Managing customer passwords](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-manage-customer-passwords.html) |  |  |
 |  |  | [Managing customers](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/glue-api-manage-customers.html) |  |  |
+| [Install Federated Authentication via OAuth2/OIDC](/docs/pbc/all/oauth/latest/install-and-upgrade/install-federated-authentication.html) |  |  |  | [Federated Authentication via OAuth2/OIDC](/docs/pbc/all/oauth/latest/federated-authentication.html) |

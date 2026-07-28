@@ -9,3 +9,11 @@ layout: default
         <a href="/" class="error-section__button button button--red">Go to Home page</a>
     </div>
 </div>
+<script>
+dataLayer.push({
+  event: "error_404",
+  page_path: window.location.pathname,
+  page_location: window.location.href,
+  page_referrer: document.referrer
+});
+</script>

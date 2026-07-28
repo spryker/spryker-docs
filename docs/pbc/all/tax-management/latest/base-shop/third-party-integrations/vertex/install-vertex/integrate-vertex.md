@@ -1,7 +1,7 @@
 ---
 title: Integrate Vertex
 description: Find out how you can integrate Vertex into your Spryker shop
-last_updated: Mar 25, 2026
+last_updated: Jul 23, 2026
 template: howto-guide-template
 related:
   - title: Vertex
@@ -42,6 +42,13 @@ composer require spryker-eco/vertex
 
 ## 2. Configure the module
 
+{% info_block infoBox "Manage settings in the Back Office" %}
+
+Instead of environment variables, you can manage every Vertex setting from the Back Office **Configuration**, per global or store scope, and choose the tax provider with a **Taxes** > **Tax Provider** switch. This is opt-in and backward compatible. For details, see [Configure Vertex in the Back Office](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/configure-vertex-in-the-back-office.html).
+If you decide so, skip this section.
+
+{% endinfo_block %}
+
 Add the following configuration to `config/Shared/config_default.php`:
 
 ```php
@@ -81,6 +88,10 @@ $config[VertexConstants::VENDOR_CODE] = '';
 
 ## 3. Override feature flags
 
+{% info_block warningBox %}
+If you decided to use the Back Office Configuration, skip this section.
+{% endinfo_block %}
+
 The `isTaxIdValidatorEnabled`, `isTaxAssistEnabled`, and `isInvoicingEnabled` methods default to `false` and are not driven by constants. To enable them, override `src/Pyz/Zed/Vertex/VertexConfig.php`:
 
 ```php
@@ -95,12 +106,12 @@ class VertexConfig extends SprykerEcoVertexConfig
         return true;
     }
 
-    public function isTaxAssistEnabled(): bool
+    public function isTaxAssistEnabled(array $configurationScopeTransfers = []): bool
     {
         return true;
     }
 
-    public function isInvoicingEnabled(): bool
+    public function isInvoicingEnabled(array $configurationScopeTransfers = []): bool
     {
         return true;
     }

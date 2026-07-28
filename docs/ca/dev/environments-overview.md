@@ -49,4 +49,4 @@ Before you deploy to PROD, make sure the changes were deployed and tested in you
 
 ## Next step
 
-[Accessing AWS Management Console](/docs/ca/dev/access/access-the-aws-management-console.html)
+[Connecting to AWS Console and CLI with an IAM user](/docs/ca/dev/access/connecting-to-aws-console-and-cli-with-an-iam-user.html)

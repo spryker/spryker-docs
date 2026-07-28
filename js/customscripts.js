@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function () {
     let pageOffset = 0;
 
     initCopyText();
@@ -6,6 +6,8 @@ $( document ).ready(function() {
     initSetPageOffset();
 
     initResponsiveTable();
+
+    initToc();
 
     initAnchors();
 
@@ -22,8 +24,6 @@ $( document ).ready(function() {
     initHomeSearchPosition();
 
     initPopup();
-
-    initToc();
 
     initVertionDropdown();
 
@@ -54,11 +54,11 @@ function initHubspotForm() {
         formId: formContainer.data('formId'),
         submitButtonClass: 'button button--red hubspot-form__submit',
         target: '#' + formContainer.attr('id'),
-        onFormReady: function() {},
-        onFormSubmitted: function(){
+        onFormReady: function () { },
+        onFormSubmitted: function () {
             hubspotPopup.open();
 
-            setTimeout(function(){
+            setTimeout(function () {
                 hubspotPopup.close();
             }, 5000);
         },
@@ -66,12 +66,20 @@ function initHubspotForm() {
 }
 
 function initAnchors() {
-    anchors.add('.post-content h2:not([data-toc-skip]),.post-content h3:not([data-toc-skip]),.post-content h4:not([data-toc-skip]),.post-content h5:not([data-toc-skip])');
+    let headingSelector = '.post-content h2:not([data-toc-skip]),.post-content h3:not([data-toc-skip]),.post-content h4:not([data-toc-skip]),.post-content h5:not([data-toc-skip])';
+
+    if (window.Toc && window.Toc.helpers) {
+        $(headingSelector).each(function (i, el) {
+            window.Toc.helpers.generateAnchor(el);
+        });
+    }
+
+    anchors.add(headingSelector);
 
     let anchorLinks = $('.anchorjs-link'),
         $window = $(window);
 
-    anchorLinks.on('click', function(e){
+    anchorLinks.on('click', function (e) {
         e.preventDefault();
         $window.scrollTop($(e.target).offset().top - pageOffset + 1);
     });
@@ -119,19 +127,19 @@ function initPageScrolling() {
 }
 
 function initLightbox() {
-    $('.post-content img').each(function(i, item){
+    $('.post-content img').each(function (i, item) {
         let image = $(this);
 
         if (image.is('.inline-img img')) {
-             return;
+            return;
         }
 
         image.wrap('<a href="' + image.attr('src') + '" data-lightbox="content-lightbox"></a>');
     });
 
     lightbox.option({
-      'resizeDuration': 300,
-      'wrapAround': false
+        'resizeDuration': 300,
+        'wrapAround': false
     });
 
     let closeButton = $('.lightbox .lb-close');
@@ -211,11 +219,11 @@ function initPopup() {
         close: '.toc__popup-close, .toc__popup-overlay',
         overlay: '.toc__popup-overlay',
         anchorLinks: 'nav-link',
-        showPopup: function() {
+        showPopup: function () {
             $('body').addClass('toc-active');
         },
-        hidePopup: function() {
-            setTimeout(function(){
+        hidePopup: function () {
+            setTimeout(function () {
                 $('body').removeClass('toc-active scroll-down');
             }, 100);
         },
@@ -313,9 +321,9 @@ $.fn.popup = function (options) {
     let popupFunc = function () {
         if (links) {
             popup.on('click', function (e) {
-                if ( e.target.classList.contains(links) && window.innerWidth < 1280 && !menuIsAnimated) {
+                if (e.target.classList.contains(links) && window.innerWidth < 1280 && !menuIsAnimated) {
                     menuIsAnimated = !menuIsAnimated;
-                    setTimeout(function(){
+                    setTimeout(function () {
                         menuIsAnimated = !menuIsAnimated;
                         toggleMenu();
                     }, 500);
@@ -335,12 +343,12 @@ $.fn.popup = function (options) {
         });
     };
 
-    this.close = function() {
+    this.close = function () {
         menuIsOpened = true;
         toggleMenu();
     }
 
-    this.open = function() {
+    this.open = function () {
         toggleMenu();
     }
 
@@ -366,7 +374,7 @@ function initHomeSearchPosition() {
         if (isScrolled && pageOffsetTop < searchOffsetTop) {
             opener.removeClass('under-search');
             isScrolled = !isScrolled;
-        } else if (!isScrolled && pageOffsetTop > searchOffsetTop ) {
+        } else if (!isScrolled && pageOffsetTop > searchOffsetTop) {
             opener.addClass('under-search');
             isScrolled = !isScrolled;
         }
@@ -387,23 +395,23 @@ function initSearchPopup() {
 
     // mobile-overflow
 
-    opener.on('click', function(e){
+    opener.on('click', function (e) {
         e.preventDefault();
         body.addClass('tablet-overflow');
-        popup.fadeIn(300, function(){
+        popup.fadeIn(300, function () {
             input.focus();
         });
     });
 
-    close.on('click', function(e){
+    close.on('click', function (e) {
         e.preventDefault();
         body.removeClass('tablet-overflow');
 
         popup.fadeOut(300);
     });
 
-    input.on('blur', function(e){
-       drop.hide();
+    input.on('blur', function (e) {
+        drop.hide();
     });
 }
 
@@ -465,8 +473,8 @@ function initDropdown() {
         let $el = $(this);
         let $parent = $el.offsetParent('.dropdown-menu');
 
-        if ( !$el.next().hasClass('show') ) {
-          $el.parents('.dropdown-menu').first().find('.show').removeClass('show');
+        if (!$el.next().hasClass('show')) {
+            $el.parents('.dropdown-menu').first().find('.show').removeClass('show');
         }
 
         let $subMenu = $el.next('.dropdown-menu');
@@ -477,7 +485,7 @@ function initDropdown() {
         return false;
     });
 
-    mainNav.on('hide.bs.dropdown', function ( e ) {
+    mainNav.on('hide.bs.dropdown', function (e) {
         dropdown.removeClass('show');
         subMenu.removeClass('show');
     });
@@ -506,7 +514,7 @@ function initResponsiveTable() {
             });
         });
 
-        switcher.on('click', function(e) {
+        switcher.on('click', function (e) {
             wrapper.toggleClass('expanded');
 
             if (isExpanded) {
@@ -540,9 +548,9 @@ function initCopyText() {
             blockHeader = jQuery('<div class="code-header"></div>');
 
         copyButton.bind('click', {
-                container: codeContainer,
-                btn: copyButton,
-            }, copyText);
+            container: codeContainer,
+            btn: copyButton,
+        }, copyText);
 
         blockHeader.append(copyButton);
         blockHeader.insertBefore(block);
@@ -653,7 +661,7 @@ function initToc() {
 
                 // Regex for finding the non-safe URL characters (many need escaping): & +$,:;=?@"#{}|^~[`%!'<>]./()*\ (newlines, tabs, backspace, & vertical tabs)
                 var nonsafeChars =
-                        /[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\\n\t\b\v]/g,
+                    /[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\\n\t\b\v]/g,
                     urlText;
 
                 // Note: we trim hyphens after truncating because truncating can cause dangling hyphens.
@@ -662,23 +670,33 @@ function initToc() {
                     .trim() // "⚡⚡ Don't forget: URL fragments should be i18n-friendly, hyphenated, short, and clean."
                     .replace(/\'/gi, '') // "⚡⚡ Dont forget: URL fragments should be i18n-friendly, hyphenated, short, and clean."
                     .replace(nonsafeChars, '-') // "⚡⚡-Dont-forget--URL-fragments-should-be-i18n-friendly--hyphenated--short--and-clean-"
-                    .replace(/-{2,}/g, '-') // "⚡⚡-Dont-forget-URL-fragments-should-be-i18n-friendly-hyphenated-short-and-clean-"
-                    .substring(0, 64) // "⚡⚡-Dont-forget-URL-fragments-should-be-i18n-friendly-hyphenated-"
-                    .replace(/^-+|-+$/gm, '') // "⚡⚡-Dont-forget-URL-fragments-should-be-i18n-friendly-hyphenated"
-                    .toLowerCase(); // "⚡⚡-dont-forget-url-fragments-should-be-i18n-friendly-hyphenated"
+                    .replace(/-{2,}/g, '-')
+                    .substring(0, 40)
+                    .replace(/^-+|-+$/gm, '')
+                    .toLowerCase();
+
+                while (urlText.length > 20) {
+                    var lastDash = urlText.lastIndexOf('-');
+                    if (lastDash < 20) {
+                        break;
+                    }
+                    urlText = urlText.substring(0, lastDash);
+                }
 
                 return urlText || el.tagName.toLowerCase();
             },
 
             generateUniqueId: function (el) {
+                var maxLength = 40;
                 var anchorBase = this.generateUniqueIdBase(el);
                 for (var i = 0; ; i++) {
-                    var anchor = anchorBase;
-                    if (i > 0) {
-                        // add suffix
-                        anchor += '-' + i;
+                    var anchor;
+                    if (i === 0) {
+                        anchor = anchorBase;
+                    } else {
+                        var suffix = '-' + i;
+                        anchor = anchorBase.substring(0, maxLength - suffix.length).replace(/-+$/, '') + suffix;
                     }
-                    // check if ID already exists
                     if (!document.getElementById(anchor)) {
                         return anchor;
                     }
@@ -686,13 +704,20 @@ function initToc() {
             },
 
             generateAnchor: function (el) {
-                if (el.id) {
+                if (el.id && el.id.length <= 40) {
                     return el.id;
-                } else {
-                    var anchor = this.generateUniqueId(el);
-                    el.id = anchor;
-                    return anchor;
                 }
+                if (el.id) {
+                    var oldId = el.id;
+                    el.removeAttribute('id');
+                    var fallback = document.createElement('span');
+                    fallback.id = oldId;
+                    fallback.className = 'anchor-fallback';
+                    el.insertBefore(fallback, el.firstChild);
+                }
+                var anchor = this.generateUniqueId(el);
+                el.id = anchor;
+                return anchor;
             },
 
             createNavList: function () {
@@ -728,6 +753,7 @@ function initToc() {
             generateNavItem: function (headingEl, navLevel) {
                 var anchor = this.generateAnchor(headingEl);
                 var $heading = $(headingEl);
+                $heading = $heading.clone().children().remove().end();
                 var text = $heading.data('toc-text') || $heading.text();
                 return this.generateNavEl(anchor, text, navLevel);
             },

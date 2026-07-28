@@ -81,36 +81,21 @@ $config[KernelConstants::CORE_NAMESPACES] = [
 ];
 ```
 
+{% info_block warningBox "IAM authentication required" %}
+
+These buckets authenticate through the IAM role attached to the workload. Access keys (`key` and `secret`) are not supported. If your project was set up from older documentation using access keys, migrate to this configuration. For more details, see [AWS S3 filesystem builder plugins](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html#aws-s3-filesystem-builder-plugins).
+
+{% endinfo_block %}
+
 {% info_block infoBox "Cloud environment variables" %}
 
 In cloud environments, set the following environment variables:
 
-- `SPRYKER_S3_SSP_ASSETS_KEY` - AWS S3 access key for SSP assets storage
-- `SPRYKER_S3_SSP_ASSETS_SECRET` - AWS S3 secret key for SSP assets storage
 - `SPRYKER_S3_SSP_ASSETS_BUCKET` - AWS S3 bucket name for SSP assets storage
 - `AWS_REGION` - AWS region
 - `SPRYKER_SSP_DEFAULT_FILE_MAX_SIZE` - Maximum file size for SSP asset uploads (defaults to `10M` if not set)
 
 {% endinfo_block %}
-
-Alternatively, to authenticate with explicit access keys, use `Aws3v3FilesystemBuilderPlugin`:
-
-```php
-use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\Aws3v3FilesystemBuilderPlugin;
-
-$config[FileSystemConstants::FILESYSTEM_SERVICE] = [
-    'ssp-asset-image' => [
-        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
-        'key' => getenv('SPRYKER_S3_SSP_ASSETS_KEY') ?: '',
-        'secret' => getenv('SPRYKER_S3_SSP_ASSETS_SECRET') ?: '',
-        'bucket' => getenv('SPRYKER_S3_SSP_ASSETS_BUCKET') ?: '',
-        'region' => getenv('AWS_REGION') ?: '',
-        'version' => 'latest',
-        'root' => '/ssp-asset-image',
-        'path' => '',
-    ],
-];
-```
 
 **src/Pyz/Zed/SelfServicePortal/SelfServicePortalConfig.php**
 

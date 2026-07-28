@@ -82,31 +82,16 @@ $config[SelfServicePortalConstants::SSP_MODEL_IMAGE_STORAGE_NAME] = 'ssp-model-i
 
 In cloud environments, set the following environment variables:
 
-- `SPRYKER_S3_SSP_MODELS_KEY` - AWS S3 access key for SSP model file storage
-- `SPRYKER_S3_SSP_MODELS_SECRET` - AWS S3 secret key for SSP model file storage
 - `SPRYKER_S3_SSP_MODELS_BUCKET` - AWS S3 bucket name for SSP model file storage
 - `AWS_REGION` - AWS region
 
 {% endinfo_block %}
 
-Alternatively, to authenticate with explicit access keys, use `Aws3v3FilesystemBuilderPlugin`:
+{% info_block warningBox "IAM authentication required" %}
 
-```php
-use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\Aws3v3FilesystemBuilderPlugin;
+These buckets authenticate through the IAM role attached to the workload. Access keys (`key` and `secret`) are not supported. If your project was set up from older documentation using access keys, migrate to this configuration. For more details, see [AWS S3 filesystem builder plugins](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html#aws-s3-filesystem-builder-plugins).
 
-$config[FileSystemConstants::FILESYSTEM_SERVICE] = [
-    'ssp-model-image' => [
-        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
-        'key' => getenv('SPRYKER_S3_SSP_MODELS_KEY') ?: '',
-        'secret' => getenv('SPRYKER_S3_SSP_MODELS_SECRET') ?: '',
-        'bucket' => getenv('SPRYKER_S3_SSP_MODELS_BUCKET') ?: '',
-        'region' => getenv('AWS_REGION') ?: '',
-        'version' => 'latest',
-        'root' => '/ssp-model-image',
-        'path' => '',
-    ],
-];
-```
+{% endinfo_block %}
 
 ## Configure synchronization queues
 

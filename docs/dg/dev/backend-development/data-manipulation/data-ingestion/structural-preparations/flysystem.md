@@ -434,9 +434,15 @@ The `FlysystemAws3v3FileSystem` module provides two builder plugins for Amazon S
 | Required adapter config | `key`, `secret`, `bucket`, `region`, `path` | `bucket`, `region` |
 | `key` / `secret` | Used | Ignored |
 | `endpoint` | Always passed to the S3 client | Passed only when non-empty |
-| Recommended for | Environments where explicit access keys are provisioned | Spryker-managed (PaaS) environments with an IAM role attached to the workload |
+| Recommended for | Buckets provisioned with explicit access keys, such as the legacy `csv-import` bucket | Spryker-managed asset, import/export, and self-service buckets, where it is required |
 
 Both plugins can be registered side by side. The `sprykerAdapterClass` value of each filesystem entry decides which plugin builds that filesystem, so different filesystems can use different credential strategies at the same time. Switching an existing filesystem from one plugin to the other is not a breaking change, and nothing is migrated automatically.
+
+{% info_block warningBox "IAM-only buckets" %}
+
+On Spryker-managed environments, the asset, import/export, and self-service buckets authenticate exclusively through the IAM role attached to the workload. Access keys are not supported for these buckets, so they must use `IamAws3v3FilesystemBuilderPlugin`. Use `Aws3v3FilesystemBuilderPlugin` only for buckets that are provisioned with explicit access keys, such as the legacy `csv-import` bucket.
+
+{% endinfo_block %}
 
 ### IamAws3v3FilesystemBuilderPlugin
 
@@ -502,7 +508,7 @@ For local development, set the `endpoint` option to point at an S3-compatible se
 
 ### Aws3v3FilesystemBuilderPlugin
 
-Use `Aws3v3FilesystemBuilderPlugin` when the environment provisions explicit access keys instead of an IAM role. The plugin reads `key` and `secret` from the adapter config and passes them to the S3 client as static credentials.
+Use `Aws3v3FilesystemBuilderPlugin` for buckets provisioned with explicit access keys, such as the legacy `csv-import` bucket. The plugin reads `key` and `secret` from the adapter config and passes them to the S3 client as static credentials. Do not use it for the Spryker-managed asset, import/export, and self-service buckets, which require `IamAws3v3FilesystemBuilderPlugin`.
 
 #### Configuration example
 

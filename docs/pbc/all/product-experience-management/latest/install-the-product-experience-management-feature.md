@@ -75,40 +75,11 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
 ];
 ```
 
-{% info_block infoBox "Credentials" %}
+{% info_block warningBox "IAM authentication required" %}
 
-These filesystems use `IamAws3v3FilesystemBuilderPlugin`, which resolves AWS credentials through the IAM role attached to the runtime, so no `key` or `secret` is required. For details on when to use this plugin and its configuration options, see [AWS S3 filesystem builder plugins](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html#aws-s3-filesystem-builder-plugins).
+These filesystems authenticate through the IAM role attached to the workload, which resolves AWS credentials automatically. Access keys (`key` and `secret`) are not supported. If your project was set up from older documentation using access keys, migrate to this configuration. For more details, see [AWS S3 filesystem builder plugins](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html#aws-s3-filesystem-builder-plugins).
 
 {% endinfo_block %}
-
-Alternatively, to authenticate with explicit access keys, use `Aws3v3FilesystemBuilderPlugin`:
-
-```php
-use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\Aws3v3FilesystemBuilderPlugin;
-use Spryker\Shared\FileSystem\FileSystemConstants;
-
-$config[FileSystemConstants::FILESYSTEM_SERVICE] = [
-    // ... existing entries ...
-    'product-experience-management-imports' => [
-        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
-        'key' => getenv('SPRYKER_S3_PEM_IMPORT_KEY') ?: '',
-        'secret' => getenv('SPRYKER_S3_PEM_IMPORT_SECRET') ?: '',
-        'bucket' => getenv('SPRYKER_S3_PEM_IMPORT_BUCKET') ?: '',
-        'region' => getenv('AWS_REGION') ?: '',
-        'root' => '/',
-        'path' => 'pem-imports/',
-    ],
-    'product-experience-management-exports' => [
-        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
-        'key' => getenv('SPRYKER_S3_PEM_EXPORT_KEY') ?: '',
-        'secret' => getenv('SPRYKER_S3_PEM_EXPORT_SECRET') ?: '',
-        'bucket' => getenv('SPRYKER_S3_PEM_EXPORT_BUCKET') ?: '',
-        'region' => getenv('AWS_REGION') ?: '',
-        'root' => '/',
-        'path' => 'pem-exports/',
-    ],
-];
-```
 
 #### Development (local filesystem)
 

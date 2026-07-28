@@ -1,7 +1,7 @@
 ---
 title: Install the Recurring Orders feature
 description: Learn how to install the Recurring Orders feature into your Spryker project.
-last_updated: Jul 27, 2026
+last_updated: Jul 28, 2026
 template: feature-integration-guide-template
 related:
   - title: Recurring Orders feature overview
@@ -445,7 +445,7 @@ Register the following console commands:
 
 | COMMAND | CONSOLE CLASS | SPECIFICATION | NAMESPACE |
 | --- | --- | --- | --- |
-| `recurring-orders:forecast:refresh` | RecurringOrderForecastRefreshConsole | Recalculates the monthly recurring volume forecast and stores it as a snapshot in `spy_recurring_schedule_forecast`. The Back Office **Recurring Order Schedules** page reads the stored snapshot instead of recalculating on each request. | SprykerFeature\Zed\OrderExperienceManagement\Communication\Console |
+| `recurring-orders:forecast:refresh` | RecurringOrderForecastRefreshConsole | Recalculates the monthly recurring volume forecast—orders already placed plus schedules still due—and stores it as a snapshot in `spy_recurring_schedule_forecast`. The Back Office **Recurring Order Schedules** page reads the stored snapshot instead of recalculating on each request. | SprykerFeature\Zed\OrderExperienceManagement\Communication\Console |
 | `recurring-orders:trigger-placement` | RecurringOrderTriggerConsole | Manually triggers order placement for a specific recurring schedule. Optional—intended for development and debugging. | SprykerFeature\Zed\OrderExperienceManagement\Communication\Console |
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
@@ -586,7 +586,7 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-In the Back Office, go to **Sales > Recurring Order Schedules**. Make sure the list of recurring order schedules is displayed with the status and cadence filters and the monthly forecast summary. Open a schedule and make sure the detail view renders the schedule items, the customer, and a link to the source order.
+In the Back Office, go to **Sales > Recurring Order Schedules**. Make sure the list of recurring order schedules is displayed with the status and cadence filters, and that the **Total Committed Recurring Volume** widget shows the already-placed and still-planned breakdown. Open a schedule and make sure the detail view renders the schedule items with their merchant and configurable bundle names, the customer, and a link to the source order.
 
 {% endinfo_block %}
 
@@ -705,14 +705,15 @@ class OrderExperienceManagementConfig extends SprykerOrderExperienceManagementCo
 
     /**
      * Specification:
-     * - Returns the relative date modifier used as the forecast's next-execution lower bound.
-     * - Use FORECAST_NEXT_TRIGGER_DATE_FROM_MONTH_START to count every schedule due within the current month.
+     * - Returns the relative date modifier used as the forecast period's lower bound.
+     * - The bound applies to both forecast inputs: schedules still due to run and orders already placed.
+     * - Use FORECAST_PERIOD_FROM_TODAY to cover only the remainder of the current month.
      *
      * @api
      */
-    public function getForecastNextTriggerDateFrom(): string
+    public function getForecastPeriodFrom(): string
     {
-        return static::FORECAST_NEXT_TRIGGER_DATE_FROM_MONTH_START;
+        return static::FORECAST_PERIOD_FROM_TODAY;
     }
 }
 ```
@@ -723,8 +724,8 @@ class OrderExperienceManagementConfig extends SprykerOrderExperienceManagementCo
 | `getReviewReasonGroupMap()` | See `OrderExperienceManagementConfig` | Maps review reason groups to checkout error types. Extend to map project-specific error types to the appropriate review group. |
 | `getNonPurchasableReviewReasonGroups()` | `[REVIEW_REASON_GROUP_UNAVAILABLE, REVIEW_REASON_GROUP_OUT_OF_STOCK]` | Review reason groups whose items block order placement and must be removed before the order can proceed. Override to also block on `REVIEW_REASON_GROUP_DISCONTINUED`. |
 | `getDefaultReviewReasonGroup()` | `REVIEW_REASON_GROUP_UNAVAILABLE` | Fallback review reason group used when a checkout error type does not match any known group. |
-| `getForecastNextTriggerDateFrom()` | `FORECAST_NEXT_TRIGGER_DATE_FROM_TODAY` | Lower bound of the Back Office monthly forecast. Switch to `FORECAST_NEXT_TRIGGER_DATE_FROM_MONTH_START` to count every schedule due within the current month, including past dates. |
-| `getForecastNextTriggerDateTo()` | `FORECAST_NEXT_TRIGGER_DATE_TO_MONTH_END` | Upper bound of the Back Office monthly forecast. |
+| `getForecastPeriodFrom()` | `FORECAST_PERIOD_FROM_MONTH_START` | Lower bound of the Back Office forecast period. Applies to both forecast inputs: schedules still due to run and orders already placed. Switch to `FORECAST_PERIOD_FROM_TODAY` to cover only the remainder of the current month. |
+| `getForecastPeriodTo()` | `FORECAST_PERIOD_TO_MONTH_END` | Upper bound of the Back Office forecast period. Applies to both forecast inputs. |
 | `getMonthlyForecastKey()` | `monthly` | Key under which the forecast snapshot is stored in `spy_recurring_schedule_forecast`. |
 | `getBackOfficeFilterStatuses()` | Active, Paused, Review required, Cancelled, Failed | Statuses selectable in the Back Office **Recurring Order Schedules** filter. |
 | `getBackOfficeFilterCadenceTypes()` | Weekly, Bi-weekly, Monthly, Every N weeks | Cadence types selectable in the Back Office **Recurring Order Schedules** filter. Extend it when you register a custom cadence type plugin. |

@@ -1,7 +1,7 @@
 ---
 title: Recurring Orders feature overview
 description: Learn how the Recurring Orders feature lets B2B buyers automate repeat purchases on a configurable schedule.
-last_updated: Jul 27, 2026
+last_updated: Jul 28, 2026
 template: concept-topic-template
 ---
 
@@ -23,17 +23,23 @@ The *Recurring Orders* feature lets B2B buyers set up automated repeat purchases
 | Review scope | Determines whether a change made on the **Review Required** page applies to every future order (*standing*) or only to the order being placed (*occurrence*). |
 | One-time item | An item that applies to a single execution only. Items added or increased with the *Just this order* scope are flagged as one-time and are not carried into the next execution. |
 | Cycle total | The estimated total of one execution of the schedule, calculated from the stored quote snapshot. |
-| Committed recurring volume | The aggregated estimated total of all active schedules due in the current month, shown in the Back Office. |
+| Committed recurring volume | The recurring order volume of the current month, shown in the Back Office. Combines the orders that schedules have already placed with the executions still planned for the rest of the period. |
 
 ## Setting up a recurring order
 
-At checkout, an eligible buyer can enable the recurring order setup widget. The buyer selects a cadence (for example, weekly or monthly) and optionally sets a schedule name, a start date, and an interval value for the *every N weeks* cadence.
+At checkout, an eligible buyer can enable the recurring order setup widget. The buyer selects a cadence (for example, weekly or monthly), a start date, and optionally a schedule name and an interval value for the *every N weeks* cadence.
 
 When the order is placed, the system:
 
 1. Saves a serialized snapshot of the quote—including products, quantities, prices, shipment method, and payment method.
-2. Creates a recurring schedule record in `spy_recurring_schedule` with the first trigger date calculated from the cadence.
+2. Creates a recurring schedule record in `spy_recurring_schedule` with the first trigger date resolved from the start date and the cadence.
 3. Registers the schedule with the `RecurringOrder` state machine in the `draft` state and immediately activates it.
+
+The checkout order itself is placed as usual and is not counted as a recurring execution. The start date determines when the first *recurring* order is placed:
+
+- If the buyer picks a future date, the first recurring order is placed on that date, and later orders repeat from it at the selected cadence.
+- If the start date is today or is not set, the first recurring order is placed one cadence interval later.
+- A start date in the past is rejected.
 
 A recurring schedule is **only available** for quotes that meet all of the following conditions:
 
@@ -198,13 +204,24 @@ The following filters are available:
 
 ### Total Committed Recurring Volume
 
-Above the list, the **Total Committed Recurring Volume** widget shows the aggregated estimated total of the active schedules due in the current month, together with the number of schedules it covers. The figure is global—it is not affected by the list filters.
+Above the list, the **Total Committed Recurring Volume** widget shows the recurring order volume of the current month. The total combines two inputs, and the widget shows both the combined figure and the split between them:
+
+| INPUT | DESCRIPTION |
+| --- | --- |
+| Already placed | The sum of the totals of the orders that recurring schedules have already placed within the period, together with the number of those orders. |
+| Still planned | The sum of the estimated totals of the active schedules still due to run within the period. Each schedule is weighted by how often it runs in the period, so a weekly schedule contributes several executions, not one. |
+
+Below the figures, a run-rate line summarizes the split—for example, how many orders have already been placed and how many active schedules are still due. When neither input returns anything, the widget reports that there is no recurring order activity for the month.
+
+Totals are grouped by currency, so a multi-currency shop gets one figure per currency. The widget is global—it is not affected by the list filters.
+
+By default, the period covers the whole current calendar month. Projects can narrow it to the remainder of the month instead; the bounds apply to both inputs at once, so the already-placed and still-planned figures always describe the same period.
 
 The forecast is not recalculated on each page load. A scheduled job recalculates it and stores it as a snapshot in `spy_recurring_schedule_forecast`, and the Back Office reads the stored snapshot. Because of that, the displayed value reflects the last refresh rather than the current second.
 
 ### Schedule detail view
 
-Opening a schedule shows its configuration, the buyer and company it belongs to, the schedule items with their quantities and merchant names, and a link to the source sales order the schedule was created from.
+Opening a schedule shows its configuration, the buyer and company it belongs to, the schedule items with their quantities and merchant names, and a link to the source sales order the schedule was created from. Items that belong to a configurable bundle also show the bundle name.
 
 ## B2B visibility and permissions
 

@@ -1,7 +1,7 @@
 ---
 title: Security release notes 202306.0
 description: Security release notes for the Spryker Product release 202306.0
-last_updated: Jul 11, 2023
+last_updated: Jul 28, 2026
 template: concept-topic-template
 redirect_from:
     - /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202306.0/security-release-notes-202306.0.html
@@ -581,7 +581,7 @@ composer update spryker/event-dispatcher spryker/glue-backend-api-application sp
 
 13. Overwrite `Pyz\Glue\GlueBackendApiApplication\GlueBackendApiApplicationConfig::getSecurityHeaders()` and `Pyz\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationConfig::getSecurityHeaders()` to set Cache-Control security header:
 
-```bash
+```php
 /**
  * @return array<string, string>
  */
@@ -594,23 +594,31 @@ public function getSecurityHeaders(): array
 }
 ```
 
-14. Adjust `config/Shared/config_default.php` to add cache control configuration. To see the list of available directives, check `Spryker\Yves\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin`.
+14. Optional: adjust `config/Shared/config_default.php` to add cache control configuration. To see the list of available directives, check `Spryker\Yves\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin`.
 
-```bash
+{% info_block warningBox "Never enable public caching globally" %}
+
+These values are applied to *every* response of the application—the plugin cannot exempt individual pages. Setting `'public' => true` with `'max-age'` makes the cart, checkout, and customer account pages cacheable, so browsers serve a stale cart and a CDN can serve one customer's cart to another customer.
+
+If you skip this step, the applications keep the Symfony default `Cache-Control: no-cache, private`, which is safe.
+
+{% endinfo_block %}
+
+```php
 use Spryker\Shared\Http\HttpConstants;
 
 $config[HttpConstants::YVES_HTTP_CACHE_CONTROL_CONFIG] = [
-   'public' => true,
-   'max-age' => 3600,
+   'private' => true,
+   'no-cache' => true,
 ];
 
 $config[HttpConstants::ZED_HTTP_CACHE_CONTROL_CONFIG] = [
-   'public' => true,
-   'max-age' => 3600,
+   'private' => true,
+   'no-cache' => true,
 ];
 
 $config[HttpConstants::GLUE_HTTP_CACHE_CONTROL_CONFIG] = [
-   'public' => true,
-   'max-age' => 3600,
+   'private' => true,
+   'no-cache' => true,
 ];
 ```

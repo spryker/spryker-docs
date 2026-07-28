@@ -1,7 +1,7 @@
 ---
 title: Security guidelines
 description: Learn about the data security guidelines that you need to follow on an application level for your Spryker based projects.
-last_updated: Sep 15, 2023
+last_updated: Jul 28, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/making-your-spryker-shop-secure
 originalArticleId: 892e11f7-ef46-47ed-aba2-7efc2ea83c60
@@ -158,25 +158,27 @@ Content-Security-Policy: frame-ancestors 'self'
 
 #### Cache-Control header
 
-You can enable custom Cache-Control header for the Storefront, Back Office, and Glue using the following plugins:
+You can set a custom `Cache-Control` header for the Storefront, Back Office, and Glue using the following plugins:
 
 - `Spryker\Zed\Http\Communication\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin`:
   - Add the plugin into an application specific method for Zed using `\Pyz\Zed\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
-  - Plugin configuration:
-    - `Spryker\Shared\Http\HttpConstants::ZED_HTTP_CACHE_CONTROL_ENABLED`  
-    - `Spryker\Shared\Http\HttpConstants::ZED_HTTP_CACHE_CONTROL_CONFIG`
+  - Plugin configuration: `Spryker\Shared\Http\HttpConstants::ZED_HTTP_CACHE_CONTROL_CONFIG`
 
 - `Spryker\Yves\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin`:
   - Add the plugin into an application specific method for Yves using `\Pyz\Yves\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
-  - Plugin configuration:
-    - `Spryker\Shared\Http\HttpConstants::YVES_HTTP_CACHE_CONTROL_ENABLED`
-    - `Spryker\Shared\Http\HttpConstants::YVES_HTTP_CACHE_CONTROL_CONFIG`
+  - Plugin configuration: `Spryker\Shared\Http\HttpConstants::YVES_HTTP_CACHE_CONTROL_CONFIG`
 
 - `Spryker\Glue\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin`
   - Add the plugin into an application specific method for Glue using `\Pyz\Glue\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
-  - Plugin configuration:
-  - `Spryker\Shared\Http\HttpConstants::GLUE_HTTP_CACHE_CONTROL_ENABLED`
-  - `Spryker\Shared\Http\HttpConstants::GLUE_HTTP_CACHE_CONTROL_CONFIG`
+  - Plugin configuration: `Spryker\Shared\Http\HttpConstants::GLUE_HTTP_CACHE_CONTROL_CONFIG`
+
+{% info_block warningBox "Never enable public caching globally" %}
+
+These values are applied to *every* response of the application—the plugins cannot exempt individual pages. Setting `'public' => true` with `'max-age'` makes the cart, checkout, and customer account pages cacheable, so browsers serve a stale cart and a CDN can serve one customer's cart to another customer.
+
+If you do not configure these keys, the applications keep the Symfony default `Cache-Control: no-cache, private`, which is safe.
+
+{% endinfo_block %}
 
 
 ## Session security and hijacking

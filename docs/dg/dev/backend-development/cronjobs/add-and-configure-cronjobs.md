@@ -44,8 +44,6 @@ $jobs[] = [
 
 To import this configuration to Jenkins, run `vendor/bin/console scheduler:setup`. In a production environment, this is part of the default Normal deployment process.
 
-After this, you can open Jenkins on port `10007` and watch your scripts running: [http://zed.mysprykershop.com:10007](http://zed.mysprykershop.com:10007/) (the URL works for a standard VM; you may use a different hostname).
-
 {% info_block errorBox %}
 
 When you remove jobs from `config/Zed/cronjobs/jenkins.php`, the application cannot detect the removal, so the removed jobs stay in Jenkins in their last state.

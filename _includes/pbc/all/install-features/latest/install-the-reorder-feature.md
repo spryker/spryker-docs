@@ -22,7 +22,7 @@ Install the required features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/reorder: "{{page.release_tag}}" --update-with-dependencies
+composer require spryker-feature/reorder: "{{page.release_tag}}" spryker/sales-shipment-type:"^1.2.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

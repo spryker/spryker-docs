@@ -1,7 +1,7 @@
 ---
 title: How to integrate API Platform
 description: This document describes how to integrate API Platform into your Spryker application.
-last_updated: Jun 29, 2026
+last_updated: Jul 28, 2026
 template: howto-guide-template
 ---
 
@@ -205,6 +205,10 @@ To verify your integration:
    Depending on the environment of the application (development or production), the documentation interface may be enabled or disabled by default. Currently, it is only enabled in development (docker.dev) environments.
    
    You can enable/disable this interface by configuring the settings in your `api_platform.php` configuration files.
+
+3. **Check Opcache on deployed environments:**
+
+   Make sure `opcache.enable: 1` is set for all deployed environments. API Platform loads a large class graph per request, so running it without Opcache adds a flat overhead of seconds to every request. See [Opcache activation](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html#opcache-activation).
 
 ## Next steps
 

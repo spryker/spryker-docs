@@ -28,7 +28,7 @@ Install the required features:
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/shipment:"{{page.release_tag}}" spryker/sales-shipment-type:"^1.2.0" --update-with-dependencies
+composer require spryker-feature/shipment:"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1430,7 +1430,7 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
 | PLUGIN                              | SPECIFICATION                                      | PREREQUISITES | NAMESPACE                                                                                     |
 |-------------------------------------|----------------------------------------------------|---------------|-----------------------------------------------------------------------------------------------|
 | ShipmentOrderItemExpanderPlugin     | Expands the sales order items with shipment.       |               | Spryker\Zed\Shipment\Communication\Plugin\Sales\ShipmentOrderItemExpanderPlugin               |
-| ShipmentTypeOrderItemExpanderPlugin | Expands the sales order items with shipment type.  |               | Spryker\Zed\SalesShipmentType\Communication\Plugin\Sales\ShipmentTypeOrderItemExpanderPlugin  |
+| ShipmentTypeOrderItemExpanderPlugin | Expands the sales order items with shipment type.  |`spryker/sales-shipment-type:"^1.2.0"` or higher is installed | Spryker\Zed\SalesShipmentType\Communication\Plugin\Sales\ShipmentTypeOrderItemExpanderPlugin  |
 
 
 **src/Pyz/Zed/Sales/SalesDependencyProvider.php**

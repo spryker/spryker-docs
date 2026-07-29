@@ -1,7 +1,7 @@
 ---
 title: Integrate Symfony Scheduler
 description: Learn how to integrate and configure Symfony Scheduler module in a Spryker project.
-last_updated: February 10, 2026
+last_updated: July 29, 2026
 template: howto-guide-template
 ---
 
@@ -69,6 +69,7 @@ class SymfonySchedulerConfig extends SprykerSymfonySchedulerConfigAlias
             'clear-oms-locks' => [
                 'command' => '$PHP_BIN vendor/bin/console oms:clear-locks',
                 'schedule' => '0 6 * * *',
+                'priority' => 100,
             ],
         ];
 
@@ -81,6 +82,7 @@ The job name is an unique key of job definition and it will be used as a transpo
 The `command` is the console command that you want to execute.
 The `schedule` is the cron expression that defines when the job should be executed. You can also use aliases like `@hourly`, `@daily`, etc.
 The `no_lock` option is optional and it defines whether the job should be executed without acquiring a lock. This can be useful for jobs that are safe to run in parallel.
+The `priority` option is optional and defines the consumption order of the job's transport by the worker. The higher the number, the earlier the job is polled. When omitted, priority defaults to `0`.
 In addition you can also provide a `store` or a `region`, which works in the same way as originally in `jenkins.php`
 
 ### Configure via new plugin
@@ -149,6 +151,127 @@ class SymfonySchedulerDependencyProvider extends SprykerSymfonySchedulerDependen
 }
 ```
 
+## Register the scheduler transports with Symfony Messenger
+
+Scheduled jobs are executed through the Symfony Messenger worker, so the scheduler ships a set of plugins that register its transports, message-to-handler mapping, transport factory, and the Back Office control plugins with the Symfony Messenger module. Wire them in the Symfony Messenger dependency provider.
+
+**src/Pyz/Client/SymfonyMessenger/SymfonyMessengerDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Client\SymfonyMessenger;
+
+use Spryker\Client\SymfonyMessenger\SymfonyMessengerDependencyProvider as SprykerSymfonyMessengerDependencyProvider;
+use Spryker\Zed\SymfonyScheduler\Communication\Plugin\SymfonyMessenger\CompiledCronTransportGroupAwarePlugin;
+use Spryker\Zed\SymfonyScheduler\Communication\Plugin\SymfonyMessenger\DisabledSchedulerJobTransportGuardPlugin;
+use Spryker\Zed\SymfonyScheduler\Communication\Plugin\SymfonyMessenger\SchedulerAvailableTransportConfigProviderPlugin;
+use Spryker\Zed\SymfonyScheduler\Communication\Plugin\SymfonyMessenger\SchedulerMessageMappingProviderPlugin;
+use Spryker\Zed\SymfonyScheduler\Communication\Plugin\SymfonyMessenger\SchedulerTransportFactoryProviderPlugin;
+
+class SymfonyMessengerDependencyProvider extends SprykerSymfonyMessengerDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Shared\SymfonyMessengerExtension\Dependency\Plugin\TransportFactoryProviderPluginInterface>
+     */
+    protected function getTransportFactoryProviderPlugins(): array
+    {
+        return [
+            new SchedulerTransportFactoryProviderPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Shared\SymfonyMessengerExtension\Dependency\Plugin\AvailableTransportConfigProviderPluginInterface>
+     */
+    protected function getAvailableTransportConfigProviderPlugins(): array
+    {
+        return [
+            new SchedulerAvailableTransportConfigProviderPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Shared\SymfonyMessengerExtension\Dependency\Plugin\MessageMappingProviderPluginInterface>
+     */
+    protected function getMessageMappingProviderPlugins(): array
+    {
+        return [
+            new SchedulerMessageMappingProviderPlugin(),
+        ];
+    }
+
+    protected function getGroupAwareTransportsPlugins(): array
+    {
+        return [
+            new CompiledCronTransportGroupAwarePlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Shared\SymfonyMessengerExtension\Dependency\Plugin\TransportConsumeGuardPluginInterface>
+     */
+    protected function getTransportConsumeGuardPlugins(): array
+    {
+        return [
+            new DisabledSchedulerJobTransportGuardPlugin(),
+        ];
+    }
+}
+```
+
+- `SchedulerAvailableTransportConfigProviderPlugin` registers one Messenger transport per scheduled job, together with the job's `priority`. It supersedes the deprecated `SchedulerAvailableTransportProviderPlugin`.
+- `DisabledSchedulerJobTransportGuardPlugin` lets the worker skip the transport of a job that has been disabled from the Back Office. See [Pause a transport at runtime](/docs/dg/dev/integrate-and-configure/integrate-symfony-messenger.html).
+- `SchedulerTransportFactoryProviderPlugin`, `SchedulerMessageMappingProviderPlugin`, and `CompiledCronTransportGroupAwarePlugin` provide the scheduler transport factory, the message-to-handler mapping, and the transport grouping respectively.
+
+## Configure the job status storage
+
+The Back Office scheduler page and the enable/disable and run-now controls persist their state (job statuses, disabled markers, and run requests) in a dedicated Redis connection, separate from the storage key-value store. Configure this connection in `config/Shared/config_default.php`:
+
+**config/Shared/config_default.php**
+
+```php
+<?php
+
+use Spryker\Shared\SymfonyScheduler\SymfonySchedulerConstants;
+
+// >>> SYMFONY SCHEDULER
+
+$config[SymfonySchedulerConstants::SYMFONY_SCHEDULER_REDIS_PERSISTENT_CONNECTION] = true;
+$config[SymfonySchedulerConstants::SYMFONY_SCHEDULER_REDIS_SCHEME] = getenv('SPRYKER_KEY_VALUE_STORE_PROTOCOL') ?: 'tcp';
+$config[SymfonySchedulerConstants::SYMFONY_SCHEDULER_REDIS_HOST] = getenv('SPRYKER_KEY_VALUE_STORE_HOST');
+$config[SymfonySchedulerConstants::SYMFONY_SCHEDULER_REDIS_PORT] = getenv('SPRYKER_KEY_VALUE_STORE_PORT');
+$config[SymfonySchedulerConstants::SYMFONY_SCHEDULER_REDIS_USER] = getenv('SPRYKER_KEY_VALUE_USERNAME');
+$config[SymfonySchedulerConstants::SYMFONY_SCHEDULER_REDIS_PASSWORD] = getenv('SPRYKER_KEY_VALUE_PASSWORD');
+$config[SymfonySchedulerConstants::SYMFONY_SCHEDULER_REDIS_DATABASE] = $keyValueRegionNamespaces[$namespaceKey]['namespace'] ?? getenv('SPRYKER_KEY_VALUE_STORE_NAMESPACE') ?: 1;
+$config[SymfonySchedulerConstants::SYMFONY_SCHEDULER_REDIS_DATA_SOURCE_NAMES] = json_decode(getenv('SPRYKER_KEY_VALUE_STORE_SOURCE_NAMES') ?: '[]', true) ?: [];
+$config[SymfonySchedulerConstants::SYMFONY_SCHEDULER_REDIS_CONNECTION_OPTIONS] = json_decode(getenv('SPRYKER_KEY_VALUE_STORE_CONNECTION_OPTIONS') ?: '[]', true) ?: [];
+```
+
+The following `SymfonySchedulerConstants` keys are available:
+
+| CONSTANT                                         | DESCRIPTION                                                             |
+|--------------------------------------------------|-------------------------------------------------------------------------|
+| `SYMFONY_SCHEDULER_REDIS_SCHEME`                 | Connection scheme/protocol, for example `tcp` or `redis`.               |
+| `SYMFONY_SCHEDULER_REDIS_HOST`                   | Redis host.                                                             |
+| `SYMFONY_SCHEDULER_REDIS_PORT`                   | Redis port.                                                             |
+| `SYMFONY_SCHEDULER_REDIS_DATABASE`               | Redis database index.                                                   |
+| `SYMFONY_SCHEDULER_REDIS_USER`                   | Username for Redis ACL authentication.                                  |
+| `SYMFONY_SCHEDULER_REDIS_PASSWORD`               | Password.                                                               |
+| `SYMFONY_SCHEDULER_REDIS_PERSISTENT_CONNECTION`  | Whether to use a persistent connection.                                 |
+| `SYMFONY_SCHEDULER_REDIS_DATA_SOURCE_NAMES`      | Array of DSN strings for a cluster/replication setup.                   |
+| `SYMFONY_SCHEDULER_REDIS_CONNECTION_OPTIONS`     | Array of connection options passed to the Redis client.                 |
+
+The storage key prefixes and their time-to-live are defined in `\Spryker\Zed\SymfonyScheduler\SymfonySchedulerConfig` and can be overridden at the project level:
+
+| METHOD                              | DEFAULT                    | DESCRIPTION                                                                         |
+|-------------------------------------|----------------------------|-------------------------------------------------------------------------------------|
+| `getJobStatusStorageKeyPrefix()`    | `scheduler:job:status:`    | Prefix for per-job status records.                                                  |
+| `getJobStatusTtl()`                 | `86400` (24 h)             | TTL of a status record; stale entries from a crashed worker auto-expire.            |
+| `getJobDisabledStorageKeyPrefix()`  | `scheduler:job:disabled:`  | Prefix for the disabled marker. A job is disabled while its marker key exists (no TTL). |
+| `getJobRunRequestStorageKeyPrefix()`| `scheduler:job:run:`       | Prefix for the on-demand run-request marker.                                        |
+| `getJobRunRequestTtl()`             | `300` (5 min)              | TTL of a run request; a request that is never consumed auto-expires.                |
+
 ## Run the Scheduler
 
 To run a scheduler you need to run the SymfonyMessenger consumer with the transport name that is configured for the job.
@@ -157,63 +280,46 @@ To run a scheduler you need to run the SymfonyMessenger consumer with the transp
 vendor/bin/console symfonymessenger:consume queue-worker-start report-generation
 ```
 
+The scheduler transport is safe to consume in parallel — each scheduled job is guarded by the Lock facade in the cron jobs builder, so the same schedule is never executed by more than one worker at the same time. You can therefore add the `--parallel` (`-p`) option to spread the load across several worker processes:
+
+```shell
+vendor/bin/console symfonymessenger:consume compiled-cron-scheduler --parallel=4
+```
+
+## Monitor and control scheduled jobs in the Back Office
+
+The module adds a **Scheduler** page in the Back Office under **Maintenance > Scheduler**. It lists every scheduled job in a live table (refreshed every 5 seconds) with the following columns: Name, Command, Schedule, Priority, Status, Started, Finished, Duration, and Actions.
+
+The **Status** reflects the latest recorded execution state of each job:
+
+| STATUS   | MEANING                                                                       |
+|----------|-------------------------------------------------------------------------------|
+| Waiting  | The job is registered and awaiting its next run.                              |
+| Running  | The job is currently being executed by a worker.                              |
+| Success  | The last execution finished successfully.                                     |
+| Error    | The last execution failed; the captured output is available on the job's detail page. |
+| Disabled | The job is disabled and will not be consumed until it is enabled again.       |
+
+Statuses are recorded by the `CommandHandler` while a job runs and are stored in the dedicated Redis connection (see [Configure the job status storage](#configure-the-job-status-storage)). `Disabled` is derived from the disabled marker and is never persisted as a status record.
+
+Each row provides the following actions:
+
+- **View** — opens a detail page with the job's name, command, status, start/finish timestamps, and error message (if any).
+- **Enable / Disable** — toggles the job. Disabling writes a marker to Redis; the `DisabledSchedulerJobTransportGuardPlugin` then makes the worker skip that job's transport, so the job is no longer executed until it is enabled again. Enabling removes the marker.
+- **Run now** — requests an immediate, one-off execution ahead of the cron schedule. A run-request marker is written to Redis; the scheduler's run-request-aware trigger consumes it on the next worker poll and fires the job exactly once. The action is unavailable while a job is disabled or already running.
+
+{% info_block infoBox "Requires the job status storage" %}
+
+The Back Office page and the enable/disable and run-now controls require the dedicated Redis connection to be configured. If the connection is unavailable, the controls fail open — a job is treated as enabled and no forced run is scheduled — so a Redis outage never pauses every job.
+
+{% endinfo_block %}
+
 ## How it works
 
-```mermaid
-flowchart TD
-    Start([symfonymessenger:consume alias])
-    
-    subgraph Messenger[Symfony Messenger]
-        BuildWorker[Build Worker, list of transports, message→handler mapping and run worker]
-        RunWorker[Run Worker]
-        IterateTransports[Iterate transport names one by one]
-        GetMessage[Get a message from the transport]
-        RunGenerator[Run a message generator]
-    end
-    
-    subgraph Scheduler[Symfony Scheduler]
-        CheckMessage[Check for message associated with transport\nuntil nothing is to process]
-        IsUpToRunning{Is message up to running?}
-        DoesLockExist{Does lock exist?}
-        CreateLock[Create lock]
-        YieldMessage[Yield the message]
-        ReleaseLock[Release lock]
-    end
-    
-    subgraph Spryker[Spryker code]
-        GetGenerated[Get generated message]
-        CheckHandlers[Check for handlers for message]
-        RunHandler[Run a CommandHandler and wait for its execution]
-        Subprocess[[Subprocess is running]]
-    end
+The Back Office controls add two decision points to this flow:
 
-    Start --> BuildWorker
-    BuildWorker --> RunWorker
-    RunWorker --> IterateTransports
-    IterateTransports --> GetMessage
-    GetMessage --> RunGenerator
-    RunGenerator --> CheckMessage
-
-    CheckMessage --> IsUpToRunning
-    IsUpToRunning -->|+| DoesLockExist
-    IsUpToRunning -->|no| CheckMessage
-
-    DoesLockExist -->|+| CreateLock
-    DoesLockExist -->|yes| CheckMessage
-
-    CreateLock --> YieldMessage
-    YieldMessage --> GetGenerated
-
-    GetGenerated --> CheckHandlers
-    CheckHandlers --> RunHandler
-    RunHandler <--> Subprocess
-
-    RunHandler --> ReleaseLock
-    ReleaseLock --> CheckMessage
-
-    %% also model the transport-iteration loop
-    CheckMessage --> IterateTransports
-```
+- Before iterating a transport, the worker asks every transport consume-guard plugin whether the transport may be consumed. `DisabledSchedulerJobTransportGuardPlugin` returns `false` for a disabled job, so its transport is skipped for that iteration.
+- When a **Run now** request exists for a job, the run-request-aware trigger returns the current time as the next run date, pre-empting the cron schedule so the message is yielded immediately. The request marker is consumed atomically, guaranteeing exactly one extra run.
 
 ## Running consumer as a background process
 
@@ -248,6 +354,7 @@ if (getenv('SPRYKER_CURRENT_REGION')) {
 
 As you see we defined 2 jobs, one for consuming the queue worker messages and another one for consuming the rest of the jobs. 
 Queue worker process runs at least a minute so consumer will try to re-schedule the job every minute and this will leave rest of the jobs waiting. Because of that queue worker have its own consumer process. The rest of the jobs can be consumed by another consumer process that will be running in parallel.
+To scale a single consumer across multiple worker processes instead of defining additional Jenkins jobs, add the `--parallel=N` option to the command (see [Run the Scheduler](#run-the-scheduler)).
 {% info_block warningBox "Important" %}
 Jenkins by default has 2 executors so both of those jobs will be running in parallel. It's not possible to use this setup with 1 executor as the second job will never start because the first one will be running all the time.
 {% endinfo_block %}

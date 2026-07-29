@@ -1,7 +1,7 @@
 ---
 title: Integrate Symfony Messenger
 description: Learn how to integrate and configure Symfony Messenger module in a Spryker project.
-last_updated: Mar 17, 2026
+last_updated: Jul 29, 2026
 template: howto-guide-template
 ---
 
@@ -23,10 +23,10 @@ Symfony Messenger module working only with Dynamic Multistore mode, so make sure
 
 Check that the following modules have been installed:
 
-| MODULE                    | EXPECTED DIRECTORY               |
-|---------------------------|----------------------------------|
-| SymfonyMessenger          | vendor/spryker/symfony-messenger |
-| SymfonyMessengerExtension | vendor/spryker/symfony-extension |
+| MODULE                    | EXPECTED DIRECTORY                         |
+|---------------------------|--------------------------------------------|
+| SymfonyMessenger          | vendor/spryker/symfony-messenger           |
+| SymfonyMessengerExtension | vendor/spryker/symfony-messenger-extension |
 
 If so, skip this section. If not, install the missing modules before proceeding.
 
@@ -284,23 +284,34 @@ class SymfonyMessengerDependencyProvider extends SprykerSymfonyMessengerDependen
 
 2. Configure transports for messages
 
-Transport factories will be used in order to create transport instances that will handle messages. Transport names and their DSN are provided via implementation of `\Spryker\Shared\SymfonyMessengerExtension\Dependency\Plugin\AvailableTransportProviderPluginInterface`.
+Transport factories are used to create transport instances that handle messages. Each transport is described by a name, a DSN, and an optional priority. This configuration is provided via an implementation of `\Spryker\Shared\SymfonyMessengerExtension\Dependency\Plugin\AvailableTransportConfigProviderPluginInterface`, which returns a map of transport name to `MessengerTransportConfigTransfer`.
 
 ```php
 <?php
 
 namespace Pyz\Zed\FooBar\Communication\Plugin\SymfonyMessenger;
 
-class FooBarAsyncTransportProviderPlugin extends AbstractPlugin implements AvailableTransportProviderPluginInterface
+use Generated\Shared\Transfer\MessengerTransportConfigTransfer;
+use Spryker\Shared\SymfonyMessengerExtension\Dependency\Plugin\AvailableTransportConfigProviderPluginInterface;
+use Spryker\Zed\Kernel\Communication\AbstractPlugin;
+
+class FooBarAsyncTransportConfigProviderPlugin extends AbstractPlugin implements AvailableTransportConfigProviderPluginInterface
 {
-    public function getTransportDSNByTransportName(): array
+    /**
+     * @return array<string, \Generated\Shared\Transfer\MessengerTransportConfigTransfer>
+     */
+    public function getTransportConfigByTransportName(): array
     {
         return [
-            'foo_bar_async' => 'amqp://guest:guest@localhost:5672/eu_host',
+            'foo_bar_async' => (new MessengerTransportConfigTransfer())
+                ->setDsn('amqp://guest:guest@localhost:5672/eu_host')
+                ->setPriority(100),
         ];
     }
 }
 ```
+
+The `priority` defines the transport consumption order within a worker: the higher the number, the earlier the transport is polled. When omitted, priority defaults to `0`. Make sure the DSN uses a valid transport protocol (for example `amqp://` for AMQP, `redis://` for Redis, `schedule://` for the scheduler transport).
 
 Wire it in the dependency provider of Symfony Messenger module:
 
@@ -312,12 +323,12 @@ Wire it in the dependency provider of Symfony Messenger module:
 class SymfonyMessengerDependencyProvider extends SprykerSymfonyMessengerDependencyProvider
 {
     /**
-     * @return array<\Spryker\Shared\SymfonyMessengerExtension\Dependency\Plugin\AvailableTransportProviderPluginInterface>
+     * @return array<\Spryker\Shared\SymfonyMessengerExtension\Dependency\Plugin\AvailableTransportConfigProviderPluginInterface>
      */
-    protected function getAvailableTransportProviderPlugins(): array
+    protected function getAvailableTransportConfigProviderPlugins(): array
     {
         return [
-            new FooBarAsyncTransportProviderPlugin(),
+            new FooBarAsyncTransportConfigProviderPlugin(),
         ];
     }
 }
@@ -386,7 +397,7 @@ class FooBarMappingProviderPlugin extends AbstractPlugin implements MessageMappi
     public function getMessageToTransportMap(): array
     {
         return [
-            FooBarMessage::class => ['foo_bar_async'], //DSN provided in FooBarAsyncTransportProviderPlugin will be used to create a transport that will handle the message.
+            FooBarMessage::class => ['foo_bar_async'], //DSN provided in FooBarAsyncTransportConfigProviderPlugin will be used to create a transport that will handle the message.
         ];
     }
 }
@@ -455,6 +466,67 @@ By default, the worker will run indefinitely, but you can provide an option to s
 ```shell
 console symfonymessenger:consume foo_bar_async --time-limit=100
 ```
+
+### Consume transports in parallel
+
+By default a single worker process polls the given transports one after another. To process a heavy workload faster, use the `--parallel` (`-p`) option to run several competing consumers. When the value is greater than `1`, the command spawns that many child processes of itself, each consuming the same transports:
+
+```shell
+console symfonymessenger:consume foo_bar_async --parallel=4
+```
+
+Each child process is a full worker; the output of every worker is streamed back to the parent, prefixed with `[worker-N]`, and stopping the parent (SIGTERM/SIGINT) gracefully stops all children.
+
+{% info_block warningBox "When parallel consumption is safe" %}
+
+Parallel consumption is only safe for transports where competing consumers do not process the same message twice — for example, AMQP work queues. The scheduler transport is also safe to run in parallel: each scheduled job is guarded by the Lock facade in the cron jobs builder, so the same schedule is never executed by more than one worker at the same time.
+
+{% endinfo_block %}
+
+### Pause a transport at runtime
+
+Sometimes a transport must be temporarily skipped by the worker without stopping the whole consumer — for example, when a scheduled job is disabled from the Back Office. Implement `\Spryker\Shared\SymfonyMessengerExtension\Dependency\Plugin\TransportConsumeGuardPluginInterface` to veto consumption of a transport on a per-iteration basis. Before consuming from a transport, the worker calls every guard plugin; if any of them returns `false`, that transport is skipped in the current loop iteration.
+
+```php
+<?php
+
+namespace Pyz\Zed\FooBar\Communication\Plugin\SymfonyMessenger;
+
+use Spryker\Shared\SymfonyMessengerExtension\Dependency\Plugin\TransportConsumeGuardPluginInterface;
+use Spryker\Zed\Kernel\Communication\AbstractPlugin;
+
+class FooBarTransportConsumeGuardPlugin extends AbstractPlugin implements TransportConsumeGuardPluginInterface
+{
+    public function canConsumeTransport(string $transportName): bool
+    {
+        // Return false to skip consuming this transport in the current worker iteration.
+        return true;
+    }
+}
+```
+
+Wire it in the dependency provider of Symfony Messenger module:
+
+**src/Pyz/Client/SymfonyMessenger/SymfonyMessengerDependencyProvider.php**
+
+```php
+<?php
+
+class SymfonyMessengerDependencyProvider extends SprykerSymfonyMessengerDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Shared\SymfonyMessengerExtension\Dependency\Plugin\TransportConsumeGuardPluginInterface>
+     */
+    protected function getTransportConsumeGuardPlugins(): array
+    {
+        return [
+            new FooBarTransportConsumeGuardPlugin(),
+        ];
+    }
+}
+```
+
+The Symfony Scheduler module ships `\Spryker\Zed\SymfonyScheduler\Communication\Plugin\SymfonyMessenger\DisabledSchedulerJobTransportGuardPlugin`, which uses this extension point to pause the transport of a scheduled job that has been disabled from the Back Office. See [Integrate Symfony Scheduler](/docs/dg/dev/integrate-and-configure/integrate-symfony-scheduler.html).
 
 ## Additional information
 

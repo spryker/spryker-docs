@@ -1,7 +1,7 @@
 ---
 title: "Import file details: product.csv"
 description: Learn which columns and values the Product Experience Management CSV schema supports for importing and exporting product data.
-last_updated: Jul 22 2026
+last_updated: Jul 29 2026
 template: data-import-template
 related:
   - title: Product Experience Management feature overview
@@ -14,7 +14,7 @@ This document describes the columns supported by the built-in `products-csv-impo
 
 ## Row types
 
-A product, simple or family, is built from rows that share the same `Abstract SKU` value:
+A product, simple or family, is built from rows that share the same `Abstract SKU` value. Even a simple product, with a single concrete product, requires two rows: one abstract row and one concrete row.
 
 - **Abstract row**—one row where `Concrete SKU` is empty. It carries the abstract-level data: stores, categories, tax set, URL, and, for a simple product, attributes.
 - **Concrete row**—one row per concrete product, where `Concrete SKU` is set. It carries the concrete-level data: stock, shipment types, and, for a product family, the attributes that differentiate each concrete product from the others. Attributes set on the concrete row are merged with the attributes set on the abstract row, so shared attributes (for example, `brand`) only need to be set once, on the abstract row.
@@ -29,7 +29,7 @@ If `Concrete SKU` is set on the row that's meant to carry the abstract-level dat
 
 {% info_block infoBox "Placeholders" %}
 
-Columns that contain `{locale}`, `{store}`, `{currency}`, `{price_mode}`, `{warehouse}`, or `{sort_order}` are placeholders. When you download a template for an import job, these placeholders are expanded into one concrete column per actual locale, store, currency, price mode, warehouse, or image sort order configured in your project. For example, `Name ({locale})` expands into `Name (en_US)` and `Name (de_DE)` for a project with the `en_US` and `de_DE` locales.
+Columns that contain `{locale}`, `{store}`, `{currency}`, `{price_mode}`, `{warehouse}`, or `{sort_order}` are placeholders. When you download a template for an import job, these placeholders are expanded into one concrete column per actual locale, store, currency, price mode, warehouse, or image sort order configured in your project. For example, `Name ({locale})` expands into `Name (en_US)` and `Name (de_DE)` for a project with the `en_US` and `de_DE` locales. A column with more than one placeholder joins the expanded values with a hyphen, for example, `Price ({price_mode}-{store}-{currency}-Gross)` expands into `Price (Default-DE-EUR-Gross)`.
 
 {% endinfo_block %}
 
@@ -48,12 +48,12 @@ Columns that contain `{locale}`, `{store}`, `{currency}`, `{price_mode}`, `{ware
 | Tax Set Name | Required on the abstract row | String | Leave empty on concrete rows. | Name of the tax set applied to the product. |
 | URL ({locale}) | Required on the abstract row | String | Leave empty on concrete rows. | Localized URL of the abstract product. |
 | Attributes ({locale}) | Optional, abstract or concrete row | String | Semicolon-separated `key=value` pairs, for example `brand=HydraForce;sealmaterial=NBR`. Attributes on the abstract row and on a concrete row are merged for that concrete product. | Product attributes. Set attributes shared by all concrete products on the abstract row. For a product family, set the attributes that differentiate each concrete product, for example `poweroutput`, on the corresponding concrete row. |
-| Price ({price_mode}, {store}, {currency}, gross) | Optional, abstract and concrete rows | Decimal | Repeat the same value on every row unless concrete products in the family are priced individually. | Gross price for the given price mode, store, and currency. |
-| Price ({price_mode}, {store}, {currency}, net) | Optional, abstract and concrete rows | Decimal | Repeat the same value on every row unless concrete products in the family are priced individually. | Net price for the given price mode, store, and currency. |
+| Price ({price_mode}-{store}-{currency}-Gross) | Optional, abstract and concrete rows | Decimal | Repeat the same value on every row unless concrete products in the family are priced individually. | Gross price for the given price mode, store, and currency. |
+| Price ({price_mode}-{store}-{currency}-Net) | Optional, abstract and concrete rows | Decimal | Repeat the same value on every row unless concrete products in the family are priced individually. | Net price for the given price mode, store, and currency. |
 | Stock ({warehouse}) | Required on concrete rows | String | Numeric quantity or `NOOS`. Leave empty on the abstract row. | Stock quantity of the concrete product in the given warehouse. Use `NOOS` to mark the concrete product as Never Out Of Stock. |
 | Shipment Types | Optional, concrete row only | String | Semicolon-separated shipment type keys. One of `delivery` (physical products) or `in-center-service`. Leave empty on the abstract row. | Shipment types available for the concrete product. |
-| Image Small ({locale}, {sort_order}) | Optional, abstract and concrete rows | String | Repeat the same value on every row for the same product. | URL of a small product image for the given locale and sort order. |
-| Image Large ({locale}, {sort_order}) | Optional, abstract and concrete rows | String | Repeat the same value on every row for the same product. | URL of a large product image for the given locale and sort order. |
+| Image Small ({locale}-{sort_order}) | Optional, abstract and concrete rows | String | Repeat the same value on every row for the same product. | URL of a small product image for the given locale and sort order. |
+| Image Large ({locale}-{sort_order}) | Optional, abstract and concrete rows | String | Repeat the same value on every row for the same product. | URL of a large product image for the given locale and sort order. |
 
 {% info_block warningBox "A product without Shipment Types is not purchasable" %}
 

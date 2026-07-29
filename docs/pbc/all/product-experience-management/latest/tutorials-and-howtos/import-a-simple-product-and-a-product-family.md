@@ -1,7 +1,7 @@
 ---
 title: Import a simple product and a product family
 description: Learn how to use the Product Experience Management CSV import to create a simple product with one concrete product, and a product family with multiple concrete products.
-last_updated: Jul 22 2026
+last_updated: Jul 29 2026
 template: howto-guide-template
 related:
   - title: Product Experience Management feature overview
@@ -41,7 +41,7 @@ Both examples use the same import job.
 
 The following CSV file creates one abstract product, `VALVE-H300`, with a single concrete product, `Valve-H300-001`. The first row is the abstract row, where `Concrete SKU` is empty. The second row is the concrete row:
 
-| Abstract SKU | Concrete SKU | Product Status | Name (en_US) | Description (en_US) | Attributes (en_US) | Stores | Categories | Tax Set Name | URL (en_US) | Price (DEFAULT, DE, EUR, gross) | Stock (Berlin) |
+| Abstract SKU | Concrete SKU | Product Status | Name (en_US) | Description (en_US) | Attributes (en_US) | Stores | Categories | Tax Set Name | URL (en_US) | Price (Default-DE-EUR-Gross) | Stock (Berlin) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | VALVE-H300 | | approved | Hydraulic Valve H300 | Industrial hydraulic directional control valve for high-pressure fluid power systems, rated for continuous operation up to 350 bar. | brand=HydraForce;maxpressure=350 bar | DE | valves_fittings | Standard Tax | /hydraulic-valve-h300 | 1890.00 | |
 | VALVE-H300 | Valve-H300-001 | Active | Hydraulic Valve H300 | Industrial hydraulic directional control valve for high-pressure fluid power systems, rated for continuous operation up to 350 bar. | | | | | | 1890.00 | NOOS |
@@ -75,7 +75,7 @@ The **Upload CSV** page also lets you download an empty CSV template under **Ste
 
 The following CSV file creates one abstract product, `VALVE-H800`, with three concrete products that share the same name, category, and `brand` attribute, but differ by the `poweroutput` attribute, by price, and by stock. The first row is the abstract row. Each of the following rows is a concrete row:
 
-| Abstract SKU | Concrete SKU | Product Status | Name (en_US) | Description (en_US) | Attributes (en_US) | Stores | Categories | Tax Set Name | URL (en_US) | Price (DEFAULT, DE, EUR, gross) | Stock (Berlin) |
+| Abstract SKU | Concrete SKU | Product Status | Name (en_US) | Description (en_US) | Attributes (en_US) | Stores | Categories | Tax Set Name | URL (en_US) | Price (Default-DE-EUR-Gross) | Stock (Berlin) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | VALVE-H800 | | approved | Hydraulic Valve H800 | Industrial hydraulic directional control valve for high-pressure fluid power systems. Available in 40 kW, 60 kW, and 80 kW power variants. | brand=HydraForce | DE | valves_fittings | Standard Tax | /hydraulic-valve-h800 | 1890.00 | |
 | VALVE-H800 | Valve-H800-001 | Active | Hydraulic Valve H800 40 kW | Industrial hydraulic directional control valve for high-pressure fluid power systems. This variant delivers an output power of 40 kW. | poweroutput=40 kW | | | | | 1890.00 | 12 |

@@ -651,7 +651,7 @@ docker/sdk boot deploy.dev.yml && docker/sdk up
 
 ### Configure New Relic application logging
 
-New Relic application logging, also known as *logs in context*, lets the New Relic PHP agent collect logging metrics and forward application log records directly to New Relic. Because the agent adds linking metadata to every forwarded record, you can move between a log line, the transaction that produced it, and the related error or trace without switching tools.
+New Relic application logging, also known as *logs in context*, lets the New Relic PHP agent collect logging metrics and forward application log records directly to New Relic. Because the agent adds correlation metadata to every forwarded record, you can switch between a log line, the transaction that produced it, and the related error or trace without switching tools.
 
 Spryker applications write logs with [Monolog](https://github.com/Seldaek/monolog), which the New Relic PHP agent instruments automatically. You do not need to add a log handler or change application code.
 

@@ -1,7 +1,7 @@
 ---
 title: Frontend builder for Yves v2
 description: Learn about the TypeScript-based frontend builder v2 that ships with the ShopUi module and builds Yves assets for all namespaces and themes.
-last_updated: Jul 29, 2026
+last_updated: Jul 30, 2026
 template: howto-guide-template
 related:
   - title: Frontend builder for Yves (deprecated)
@@ -21,7 +21,7 @@ Starting from `spryker-shop/shop-ui` version 2.0.0, the builder is part of the S
 |  | Builder v1 (legacy) | Builder v2 |
 | --- | --- | --- |
 | Build tooling in your project | ~1,400 lines across 17 files, owned and migrated by hand | 0 files—ships and updates with the ShopUi module |
-| Repeated development build* | ~17.6 s | ~7.5 s (persistent filesystem cache, **2.3× faster**) |
+| Repeated development build | no build cache—every build recompiles everything | persistent filesystem cache—recompiles only the changed files |
 | Seeing a CSS change in the browser | rebuild + manual page reload | applied in place within ~1 s, **no page reload** |
 | Seeing a Twig change in the browser | manual page reload | automatic reload, scroll and form state preserved |
 | Registering a custom namespace | edit 3 arrays in `frontend/settings.js` | 1 entry in `frontend/yves.settings.mts` |
@@ -30,8 +30,6 @@ Starting from `spryker-shop/shop-ui` version 2.0.0, the builder is part of the S
 | Sources scanned for component styles | 3 of 5 (no eco, no project) | all 5 |
 | Extending core component base styles | copy the component or fight the cascade | 71 base hooks across 62 ShopUi components |
 | Builder language | JavaScript (CommonJS) | TypeScript (native ESM), 0 transpilation steps |
-
-\* Measured on the Spryker Suite demo shop: first (cold) build versus the following build with a warm cache.
 
 ## What's new
 
@@ -47,7 +45,7 @@ The builder is written in TypeScript (`.mts` files) and executed directly by Nod
 
 Two changes speed up day-to-day builds:
 
-- **Persistent filesystem cache**: webpack's cache survives between builds. On the Spryker Suite demo shop, a repeated development build drops from ~17.6 s to ~7.5 s—about 2.3× faster. The cache is invalidated automatically when the Sass injection context changes, so it never serves stale styles.
+- **Persistent filesystem cache**: webpack's cache survives between builds, so a repeated development build recompiles only what changed instead of starting from scratch. The cache is invalidated automatically when the Sass injection context changes, so it never serves stale styles.
 - **Native Sass compiler**: styles are compiled by `sass-embedded`, the native Dart Sass compiler, which is significantly faster than the pure-JavaScript `sass` package the v1 builder used.
 
 ### Live reload in watch mode
@@ -63,10 +61,7 @@ The live reload client is only injected in watch mode; production and one-shot d
 
 ### Automatic source layout detection, zero config
 
-The builder detects where Spryker modules live by probing the project tree:
-
-- **Project layout**: modules installed by composer under `vendor/spryker-shop`, `vendor/spryker`, `vendor/spryker-eco`, and `vendor/spryker-feature`; project code in `src/Pyz/Yves`.
-- **Monorepo layout**: modules in `src/SprykerShop`, `src/Spryker`, and `src/SprykerFeature` (used for Spryker suite development).
+The builder detects where Spryker modules live by probing the project tree: modules installed by composer under `vendor/spryker-shop`, `vendor/spryker`, `vendor/spryker-eco`, and `vendor/spryker-feature`, and project code in `src/Pyz/Yves`.
 
 A standard project needs no path configuration at all—the v1 builder's 286-line `frontend/settings.js` is replaced by a single optional override file. If the layout can't be detected, the build fails with an error that explains what was probed and what to do next.
 

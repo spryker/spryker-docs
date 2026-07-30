@@ -53,6 +53,8 @@ entries:
           url: /docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-marketplace-b2b-demo-shop-reference.html
         - title: Storefront Marketplace B2C API reference
           url: /docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-marketplace-b2c-demo-shop-reference.html
+        - title: Reference information - GlueApplication errors
+          url: /docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html
       - title: Using APIs
         nested:
         - title: Adding products to cart
@@ -179,6 +181,8 @@ entries:
             url: /docs/integrations/custom-building-integrations/data-exchange/data-export/export-file-details-orders.csv.html
           - title: 'Export file details: order-items.csv'
             url: /docs/integrations/custom-building-integrations/data-exchange/data-export/export-file-details-order-items.csv.html
+        - title: Simplified Data Export
+          url: /docs/integrations/custom-building-integrations/data-exchange/data-export/simplified-data-export-feature.html
       - title: Data import from S3 bucket
         url: /docs/integrations/custom-building-integrations/data-exchange/data-import-from-s3-bucket.html
       - title: Integrating with Middleware
@@ -195,5 +199,7 @@ entries:
       url: /docs/pbc/all/punchout-gateway/punchout-gateway.html
     - title: Using PSP Integration Template
       url: /docs/integrations/custom-building-integrations/psp-integration-template.html
+    - title: Endpoint security
+      url: /docs/integrations/custom-building-integrations/endpoint-security.html
   - title: Community contributions
     url: /docs/integrations/community-contributions.html

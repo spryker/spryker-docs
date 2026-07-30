@@ -2,8 +2,9 @@
 title: Install the Checkout Glue API
 description: Learn how to install the Spryker Checkout Glue API for Spryker Cloud Commerce OS Order Management System for your Spryker project
 template: feature-integration-guide-template
-last_updated: Nov 21, 2023
+last_updated: July 30, 2026
 redirect_from:
+  - /docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-the-checkout-glue-api.html
   - /docs/pbc/all/order-management-system/202311.0/base-shop/install-and-update/install-glue-api/install-the-checkout-glue-api.html
 related:
   - title: Install the Checkout feature

@@ -1,11 +1,12 @@
 ---
 title: Install the Availability Notification Glue API
 description: Learn how to integrate the Glue API - Availability Notification feature into your Spryker based project
-last_updated: Jun 18, 2021
+last_updated: July 30, 2026
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-availability-notification-feature-integration
 originalArticleId: d9bc0dfd-658f-412c-a127-d967b568de67
 redirect_from:
+  - /docs/pbc/all/warehouse-management-system/latest/install-and-upgrade/install-features/install-the-availability-notification-glue-api.html
   - /2021080/docs/glue-api-availability-notification-feature-integration
   - /2021080/docs/en/glue-api-availability-notification-feature-integration
   - /docs/glue-api-availability-notification-feature-integration

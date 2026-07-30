@@ -1,7 +1,7 @@
 ---
 title: Backend API
 description: Backend API is designed for administrative operations and system-to-system communication with direct access to Zed Facades.
-last_updated: July 9, 2025
+last_updated: July 30, 2026
 template: default
 layout: custom_new
 ---
@@ -16,7 +16,7 @@ Out of the box, Spryker Commerce OS provides API applications:
 
 With the current setup out of the box, we have a Backend API application that is meant to be an API application for our Back Office. This means that with this new application, infrastructure has direct access to Zed facades from Backend API resources. Also, out of the box, we have a separate `/token` resource specifically for Backend API that uses Back Office users' credentials to issue a token for a Backend API resource.
 
-For more details about the difference between SAPI and BAPI, see [Backend and storefront API module differences](/docs/integrations/spryker-glue-api/getting-started-with-apis/backend-and-storefront-api-differences.html).
+For more details about the difference between SAPI and BAPI, see [Comparison of Storefront and Backend APIs](/docs/integrations/spryker-glue-api/getting-started-with-apis/comparison-of-storefront-and-backend-apis.html).
 
 ![Backend API](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/glue-api-guides/202212.0/decoupled-glue-api/glue-backend-api.jpeg)
 

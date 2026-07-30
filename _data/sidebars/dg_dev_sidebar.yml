@@ -1322,6 +1322,10 @@ entries:
           url: /docs/dg/dev/architecture/api-platform/relationships.html
         - title: Enablement
           url: /docs/dg/dev/architecture/api-platform/enablement.html
+        - title: Configuration
+          url: /docs/dg/dev/architecture/api-platform/configuration.html
+        - title: Security
+          url: /docs/dg/dev/architecture/api-platform/security.html
         - title: Testing
           url: /docs/dg/dev/architecture/api-platform/testing.html
         - title: Troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: API Platform
 description: Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation and the integration of the API Platform Bundle.
-last_updated: Jun 29, 2026
+last_updated: Jul 28, 2026
 template: concept-topic-template
 related:
   - title: How to integrate API Platform
@@ -453,6 +453,10 @@ This returns only `name` and `locale` in the response attributes, reducing paylo
 For detailed information, see [Sparse Fieldsets](/docs/dg/dev/architecture/api-platform/sparse-fieldsets.html).
 
 ## Performance
+
+### Opcache
+
+API Platform loads a significantly larger class graph per request than the legacy Glue stack—the Symfony kernel, serializer, validator, security components, and the generated resource classes. Opcache must be enabled on all deployed environments; without it, every request recompiles this class graph, adding a flat overhead of seconds per request. For configuration details, see [Opcache activation](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html#opcache-activation).
 
 ### Cache warming
 

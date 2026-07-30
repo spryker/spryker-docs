@@ -156,6 +156,7 @@ Enable the following behaviors by registering the plugins:
 | ConfiguredBundleCartPostReorderPlugin                         | Displays a message if order items have a configured bundle property.                          |               | Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\CartReorder    |
 | ConfigurableBundleNoteCartReorderItemHydratorPlugin           | Maps configurable bundle notes from order items to reorder items.                             |               | Spryker\Zed\ConfigurableBundleNote\Communication\Plugin\CartReorder     |
 | ProductConfigurationCartReorderItemHydratorPlugin             | Maps product configuration from order items to reorder items.                                 |               | Spryker\Zed\SalesProductConfiguration\Communication\Plugin\CartReorder  |
+| ShipmentTypeReorderItemHydratorPlugin                         | Maps shipment types from order items to reorder items.                                        | `spryker/sales-shipment-type:"^1.2.0"` or higher is installed               | Spryker\Zed\SalesShipmentType\Communication\Plugin\CartReorder          |
 | CopyOrderCommentThreadCartPreReorderPlugin                    | Copies a comment thread from an order to a quote if it's provided.                              |               | Spryker\Zed\Comment\Communication\Plugin\CartReorder                    |
 | RemoveInactiveProductOffersCartReorderPreAddToCartPlugin      | Filters out inactive and non-approved product offer items from `CartChangeTransfer`.          |               | Spryker\Zed\ProductOffer\Communication\Plugin\CartReorder               |
 | RemoveInactiveProductOptionItemsCartReorderPreAddToCartPlugin | Filters out items with inactive product options from `CartChangeTransfer`.                    |               | Spryker\Zed\ProductOptionCartConnector\Communication\Plugin\CartReorder |
@@ -225,6 +226,7 @@ use Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\CartReorder\Configu
 use Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\CartReorder\ConfiguredBundleCartPostReorderPlugin;
 use Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\CartReorder\MergeConfigurableBundleItemsCartPreReorderPlugin;
 use Spryker\Zed\SalesProductConfiguration\Communication\Plugin\CartReorder\ProductConfigurationCartReorderItemHydratorPlugin;
+use Spryker\Zed\SalesShipmentType\Communication\Plugin\CartReorder\ShipmentTypeReorderItemHydratorPlugin;
 use Spryker\Zed\Store\Communication\Plugin\CartReorder\CurrentStoreCartReorderValidatorPlugin;
 
 class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
@@ -280,6 +282,7 @@ class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
             new ProductPackagingUnitCartReorderItemHydratorPlugin(),
             new CartNoteCartReorderItemHydratorPlugin(),
             new ProductOfferCartReorderItemHydratorPlugin(),
+            new ShipmentTypeReorderItemHydratorPlugin(),
             new MerchantProductCartReorderItemHydratorPlugin(),
             new MerchantProductOfferCartReorderItemHydratorPlugin(),
             new ProductConfigurationCartReorderItemHydratorPlugin(),

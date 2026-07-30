@@ -1,7 +1,7 @@
 ---
 title: Deploy file reference
 description: Use this reference to create a deploy file for building environment for Spryker in Docker.
-last_updated: Dec 13, 2022
+last_updated: July 30, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/deploy-file-reference-10
 originalArticleId: 9bba41b4-3fc7-4129-a2b7-8e98d32b5f20
@@ -751,13 +751,15 @@ Defines the [New Relic](/docs/dg/dev/integrate-and-configure/configure-services.
 * `docker: newrelic: enabled:`—defines if Newrelic is enabled. Possible values are `true` and `false`. This variable is optional with the default value of `true`.
 * `docker: newrelic: distributed-tracing: enabled`—defines if [New Relic distributed tracing](https://docs.newrelic.com/docs/agents/php-agent/features/distributed-tracing-php-agent/) is enabled. Possible values are `true` and `false`.
 * `docker: newrelic: distributed-tracing: exclude-newrelic-header`—defines if New Relic distributed tracing headers are enabled. Possible values are `true` and `false`. For information about the headers, see [How trace context is passed between applications](https://docs.newrelic.com/docs/distributed-tracing/concepts/how-new-relic-distributed-tracing-works/#headers).
-* `docker: newrelic: transaction-tracer: threshold`—defines the New Relic transaction tracer threshold. Accepts numeric values starting from `0`. For information about the threshold, see [Configure transaction traces](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/configure-transaction-traces/).
+* `docker: newrelic: distributed-tracing: transaction-tracer-threshold`—defines the New Relic transaction tracer threshold. Accepts numeric values starting from `0`. For information about the threshold, see [Configure transaction traces](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/configure-transaction-traces/).
 
 ```yaml
 docker:
     newrelic:
         license: eu01xxaa7460e1ea3abdfbbbd34e85c10cd0NRAL
 ```
+
+This section covers only a subset of the New Relic agent settings. To configure distributed tracing, transaction traces, or application logging in detail, define the corresponding environment variables in [image: environment:](#image-environment). For more details, see [Configure distributed tracing](/docs/dg/dev/integrate-and-configure/configure-services.html#configure-distributed-tracing) and [Configure New Relic application logging](/docs/dg/dev/integrate-and-configure/configure-services.html#configure-new-relic-application-logging).
 
 ***
 

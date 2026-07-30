@@ -1,6 +1,6 @@
 ---
 title: "Cart module: reference information"
-last_updated: Aug 12, 2021
+last_updated: Jul 8, 2026
 description: The extensive Cart module lets your customers add products to their cart by simply selecting the desired quantity.
 template: concept-topic-template
 redirect_from:
@@ -61,3 +61,27 @@ Currently, we ship a couple of default prechecks:
 | ProductExistsCartPreCheckPlugin | Checks that the passed products exist in the DB. This plugin is provided by the `ProductCartConnector` module. |
 | CartBundleAvailabilityPreCheckPlugin | Checks the availability of new cart items (products and product bundles). Provided by the `ProductBundle` module. |
 | CheckAvailabilityPlugin | Checks the availability of new cart items (only products). Provided by the `AvailabilityCartConnector` module. |
+
+## Cart reload
+
+The `Cart` module can reload the items in a quote, for example, to refresh prices and availability. A reload runs the same cart pre-check plugins as other cart operations.
+
+By default, if a cart pre-check fails during a reload, the operation stops, and the quote response contains the pre-check error messages together with the items in their state before the reload.
+
+To recalculate the quote and return up-to-date items even when a pre-check fails, enable `isCartReloadOnPreCheckFailureEnabled()` in `CartConfig` at the project level:
+
+```php
+namespace Pyz\Zed\Cart;
+
+use Spryker\Zed\Cart\CartConfig as SprykerCartConfig;
+
+class CartConfig extends SprykerCartConfig
+{
+    public function isCartReloadOnPreCheckFailureEnabled(): bool
+    {
+        return true;
+    }
+}
+```
+
+When this method returns `true`, the reload operation recalculates and reloads the quote even if a pre-check fails, so the returned items reflect the current state of the quote. The quote response still contains the pre-check error messages.

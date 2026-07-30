@@ -1,7 +1,7 @@
 ---
 title: CodeBucket Support in API Platform
 description: Learn how to create and use CodeBucket-specific API resources in Spryker.
-last_updated: Jan 8, 2026
+last_updated: May 19, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -115,12 +115,20 @@ final class StoresBackendResource
 Resource schemas follow the pattern: `{resource-name}.resource.yml`
 Validation schemas follow the pattern: `{resource-name}.validation.yml`
 
-CodeBuckets are specified inside the schema files, not in the filename.
+Each YAML file contains exactly one resource definition. To create a CodeBucket variant, place its schema in a **separate module directory** named after the variant (for example, `StoresApiEU`, `StoresApiAT`) and set the `codeBucket:` property inside the file. The filename stays the same across all variants — only the parent module directory and the `codeBucket:` value differ.
 
 ```MARKDOWN
-src/Pyz/Glue/Store/resources/api/backend/
-├── stores.resource.yml              # Resource schema (CodeBucket variants defined inside)
-└── stores.validation.yml            # Validation schema (CodeBucket variants defined inside)
+src/Pyz/Glue/StoresApi/resources/api/backend/           # Base variant module
+├── stores.resource.yml                                  # No codeBucket property
+└── stores.validation.yml
+
+src/Pyz/Glue/StoresApiEU/resources/api/backend/         # EU variant module
+├── stores.resource.yml                                  # codeBucket: EU
+└── stores.validation.yml                                # codeBucket: EU
+
+src/Pyz/Glue/StoresApiAT/resources/api/backend/         # AT variant module
+├── stores.resource.yml                                  # codeBucket: AT
+└── stores.validation.yml                                # codeBucket: AT
 ```
 
 ### Generated class naming pattern
@@ -150,16 +158,16 @@ The URL path is identical (`/stores`), but the Code Bucket in the domain determi
 
 **Step 1: Create base resource**
 
-`src/Pyz/Glue/Store/resources/api/backend/stores.resource.yml`
+`src/Pyz/Glue/StoresApi/resources/api/backend/stores.resource.yml`
 
 ```yaml
 resource:
   name: Stores
-  shortName: Store
+  shortName: stores
   description: "Store resource"
 
-  provider: "Pyz\\Glue\\Store\\Api\\Backend\\Provider\\StoreBackendProvider"
-  processor: "Pyz\\Glue\\Store\\Api\\Backend\\Processor\\StoreBackendProcessor"
+  provider: "Pyz\\Glue\\StoresApi\\Api\\Backend\\Provider\\StoreBackendProvider"
+  processor: "Pyz\\Glue\\StoresApi\\Api\\Backend\\Processor\\StoreBackendProcessor"
 
   operations:
     - type: Get
@@ -180,21 +188,22 @@ resource:
       description: "Store timezone"
 ```
 
-**Step 2: Define CodeBucket variant**
+**Step 2: Define the CodeBucket variant in a separate module**
 
-Within the same `stores.resource.yml` file, define the EU-specific variant by specifying the CodeBucket:
+Create a new module directory whose name carries the CodeBucket suffix (`StoresApiEU`) and place the variant's schema there. The filename stays `stores.resource.yml`; the `codeBucket:` property inside the file declares which variant it belongs to.
+
+`src/Pyz/Glue/StoresApiEU/resources/api/backend/stores.resource.yml`
 
 ```yaml
-# EU-specific store resource (defined in same file)
 resource:
   name: Stores
-  shortName: Store
+  shortName: stores
   description: "EU-specific store resource"
   codeBucket: EU
 
-  # Same provider and processor as base
-  provider: "Pyz\\Glue\\Store\\Api\\Backend\\Provider\\StoreBackendProvider"
-  processor: "Pyz\\Glue\\Store\\Api\\Backend\\Processor\\StoreBackendProcessor"
+  # Same provider and processor as the base resource
+  provider: "Pyz\\Glue\\StoresApi\\Api\\Backend\\Provider\\StoreBackendProvider"
+  processor: "Pyz\\Glue\\StoresApi\\Api\\Backend\\Processor\\StoreBackendProcessor"
 
   operations:
     - type: Get
@@ -232,11 +241,21 @@ resource:
       description: "VAT registration number"
 ```
 
-**Step 3: Create validation schemas**
+{% info_block infoBox "One resource per file" %}
 
-Within `src/Pyz/Glue/Store/resources/api/backend/stores.validation.yml`, define CodeBucket-specific validation:
+Each schema file must contain exactly one top-level `resource:` block. CodeBucket variants live in their own files in their own module directories — they cannot be stacked inside a single YAML document.
+
+{% endinfo_block %}
+
+**Step 3: Create the variant's validation schema**
+
+Place the matching validation file alongside the variant resource, in the same module directory. Set `codeBucket:` at the root so the parser pairs it with the EU resource variant.
+
+`src/Pyz/Glue/StoresApiEU/resources/api/backend/stores.validation.yml`
 
 ```yaml
+codeBucket: EU
+
 post:
   taxRate:
     - NotBlank
@@ -267,16 +286,16 @@ This generates:
 
 **Step 5: Implement Provider with CodeBucket awareness**
 
-`src/Pyz/Glue/Store/Api/Backend/Provider/StoreBackendProvider.php`
+`src/Pyz/Glue/StoresApi/Api/Backend/Provider/StoreBackendProvider.php`
 
 ```php
 <?php
 
-namespace Pyz\Glue\Store\Api\Backend\Provider;
+namespace Pyz\Glue\StoresApi\Api\Backend\Provider;
 
 use ApiPlatform\Metadata\Operation;
 use ApiPlatform\State\ProviderInterface;
-use Pyz\Glue\Store\Business\StoreFacadeInterface;
+use Pyz\Glue\StoresApi\Business\StoreFacadeInterface;
 
 class StoreBackendProvider implements ProviderInterface
 {
@@ -342,47 +361,88 @@ class StoreBackendProvider implements ProviderInterface
 
 ## Schema layering with CodeBuckets
 
-CodeBucket resources support multi-layer schema merging just like base resources.
+CodeBucket variants are a **project-level concept only** — they never exist in the core (vendor) or feature layers. Core and feature layers contribute properties to the **base** resource. The project-level CodeBucket variant then inherits from that already-merged base and adds its own properties on top.
 
-### Example: Multi-layer CodeBucket resource
+{% info_block infoBox "Where CodeBucket files live" %}
 
-**Core layer** (vendor):
+The `codeBucket:` property is only ever set in files under `src/Pyz/Glue/{Module}{CodeBucketName}/...`. A schema file in `vendor/spryker/...` or `src/SprykerFeature/...` must not declare a `codeBucket:` — those layers always describe the base resource.
+
+{% endinfo_block %}
+
+### Example: base resource built across layers + project-level EU variant
+
+The base `Stores` resource is assembled from the core, feature, and project layers in that precedence order. The EU variant lives only in the project layer, in its own variant module.
+
+**Core layer** (vendor) — base only, no `codeBucket`:
 
 ```yaml
 # vendor/spryker/store/resources/api/backend/stores.resource.yml
 resource:
   name: Stores
-  codeBucket: EU
+  shortName: stores
   properties:
-    taxRate:
-      type: number
+    name:
+      type: string
+    timezone:
+      type: string
 ```
 
-**Project layer**:
+**Feature layer** — base only, no `codeBucket`:
 
 ```yaml
-# src/Pyz/Glue/Store/resources/api/backend/stores.resource.yml
+# src/SprykerFeature/CRM/resources/api/backend/stores.resource.yml
+resource:
+  name: Stores
+  properties:
+    countries:
+      type: array
+```
+
+**Project base layer** — base only, no `codeBucket`:
+
+```yaml
+# src/Pyz/Glue/StoresApi/resources/api/backend/stores.resource.yml
+resource:
+  name: Stores
+  properties:
+    timezone:
+      required: true      # tighten the core definition
+```
+
+**Project CodeBucket variant** — only this file carries `codeBucket:`:
+
+```yaml
+# src/Pyz/Glue/StoresApiEU/resources/api/backend/stores.resource.yml
 resource:
   name: Stores
   codeBucket: EU
   properties:
     taxRate:
-      required: true  # Override core
+      type: number
+      required: true      # EU-specific addition
     companyVatId:
-      type: string    # Project-specific
+      type: string        # EU-specific addition
 ```
 
-**Merged result** (StoresEUBackendResource):
+**Merged result** (`StoresEUBackendResource`) — base properties inherited from the core → feature → project merge, EU-specific properties added on top:
 
 ```yaml
 resource:
   name: Stores
+  codeBucket: EU
   properties:
-    taxRate:
+    name:                 # from core
+      type: string
+    timezone:             # from core, tightened by project base
+      type: string
+      required: true
+    countries:            # from feature
+      type: array
+    taxRate:              # from project EU variant
       type: number
-      required: true      # From project
-    companyVatId:
-      type: string        # From project
+      required: true
+    companyVatId:         # from project EU variant
+      type: string
 ```
 
 ## Fallback behavior
@@ -546,7 +606,7 @@ The base resource should contain all common properties that work across all Code
 
 ```yaml
 # ✅ Good - Base is complete
-# stores.resource.yml (base variant)
+# src/Pyz/Glue/StoresApi/resources/api/backend/stores.resource.yml
 resource:
   name: Stores
   properties:
@@ -556,8 +616,11 @@ resource:
       type: string
     timezone:
       type: string
+```
 
-# stores.resource.yml (EU variant - defined in same file)
+```yaml
+# ✅ EU variant lives in its own module directory
+# src/Pyz/Glue/StoresApiEU/resources/api/backend/stores.resource.yml
 resource:
   name: Stores
   codeBucket: EU
@@ -596,8 +659,8 @@ Use the same Provider and Processor classes for base and CodeBucket variants whe
 ```yaml
 # Both use same implementation
 resource:
-  provider: "Pyz\\Glue\\Store\\Api\\Backend\\Provider\\StoreBackendProvider"
-  processor: "Pyz\\Glue\\Store\\Api\\Backend\\Processor\\StoreBackendProcessor"
+  provider: "Pyz\\Glue\\StoresApi\\Api\\Backend\\Provider\\StoreBackendProvider"
+  processor: "Pyz\\Glue\\StoresApi\\Api\\Backend\\Processor\\StoreBackendProcessor"
 ```
 
 Detect the resource type inside the Provider using the `CODE_BUCKET` constant:

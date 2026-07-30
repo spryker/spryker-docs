@@ -1,7 +1,7 @@
 ---
 title: Cart performance configuration
 description: This guideline explains how to configure the cart, basket, and checkout pages in Spryker-based projects.
-last_updated: Dec 12, 2025
+last_updated: Apr 27, 2026
 template: concept-topic-template
 related:
   - title: Frontend performance guidelines
@@ -240,3 +240,33 @@ protected function getQuoteUpdatePluginsForInsideCartOperations(): array
 ```
 
 Both methods expect plugins that implement the same interface, which allows you to separate them without additional adjustments.
+
+## Shopping list to cart performance configuration
+
+Adding all items from a shopping list with 100 or more items to the cart can be slow when the bulk add-to-cart optimization is disabled. This section describes how to enable it.
+
+## 1. Prerequisites
+
+```php
+composer require spryker/cart:"^7.17.0"
+```
+
+## 2. Configuration
+
+To enable bulk add-to-cart from shopping lists, override the `isAddToCartBulkEnabled()` method in `CartConfig` at the project level:
+
+```php
+namespace Pyz\Zed\Cart;
+
+use Spryker\Zed\Cart\CartConfig as SprykerCartConfig;
+
+class CartConfig extends SprykerCartConfig
+{
+    public function isAddToCartBulkEnabled(): bool
+    {
+        return true;
+    }
+}
+```
+
+When enabled, items from a shopping list are added to the cart in a single bulk operation instead of individual requests, which significantly reduces the time required for large shopping lists.

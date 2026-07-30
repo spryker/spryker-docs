@@ -2,12 +2,14 @@
 title: Merchant users overview
 description: This document contains concept information for The Merchant users feature in the Spryker Commerce OS.
 template: concept-topic-template
-last_updated: Jan 12, 2024
+last_updated: May 7, 2026
 redirect_from:
   - /docs/marketplace/user/features/202311.0/marketplace-merchant-feature-overview/merchant-users-overview.html
 related:
   - title: Managing merchant users
     link: docs/pbc/all/merchant-management/latest/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
+  - title: Federated Authentication via OAuth2/OIDC
+    link: docs/pbc/all/oauth/latest/federated-authentication.html
 ---
 
 The merchant concept presupposes having employees with access to the Merchant Portal that will perform various actions on behalf of the merchants. To enable that, the *merchant user* entity is introduced.

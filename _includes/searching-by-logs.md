@@ -12,4 +12,4 @@
 ![select log stream](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Working+with+logs/select-log-stream.png)
 
 5. In the *Log events* pane, filter events by entering a query in the search bar.
-  When browsing audit logs, you might want to filter by tile, like `audit`, or by a user, like `sonia@spryker.com`.
+  When browsing audit logs, you might want to filter by tile, like `audit`, or by a user, like `sonia@acme.com`.

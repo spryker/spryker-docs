@@ -1,7 +1,7 @@
 ---
 title: Configurable Product feature overview
 description: Learn about selling complex products with modular designs or services using the Spryker Configurable product feature.
-last_updated: Dec 27, 2022
+last_updated: Jun 16, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/scos/user/features/202108.0/configurable-product-feature-overview.html
@@ -25,7 +25,7 @@ The feature lets you sell complex products with modular designs or services. For
 
 A *configurable product* is a product that customers can customize based on the parameters provided in a [product configurator](#product-configurator).
 
-For example, if you are selling a workstation installation service, before purchasing it, customers can select a preferred date and time of installation.
+For example, if you are selling an industrial water treatment system, before purchasing it, customers can configure parameters such as the flow rate, filtration type, and tank material.
 
 ### Configuring a configurable product
 
@@ -61,7 +61,7 @@ In the orders, a Back Office user can see which products are configurable. They 
 
 A *product configurator* is a tool that lets customers customize the product parameters provided by the shop owner or product manufacturer.
 
-You can create a product configurator as a part of your shop or integrate a third-party one. The feature is shipped with an example product configurator. The example product configurator allows configuring the *Date* and *Preferred time of the day* parameters.
+You can create a product configurator as a part of your shop or integrate a third-party one. The feature is shipped with an example product configurator. The example product configurator allows configuring the parameters of an industrial water treatment system, such as *Flow Rate*, *Filtration Type*, *Tank Material*, *Control System*, *Inlet Connection*, and *Power Supply*.
 
 ![examplary-product-configurator](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/configurable-product-feature-overview/examplary-product-configurator.png)
 
@@ -81,7 +81,7 @@ There are two parameter types: configuration parameters and display parameters.
 
 *Display parameters* are used to display product configuration on the Storefront and in the Back Office.
 
-Display parameter values are usually converted from configuration parameter values to show data in a user-friendly format. For example, a product configurator passes the configuration parameter to a shop: `"time_of_the_day": 3`. Since, in the configurator, `3` stands for `afternoon`, the shop displays **Preferred time of the day: Afternoon**.
+Display parameter values are usually converted from configuration parameter values to show data in a user-friendly format. For example, a product configurator passes the configuration parameter to a shop: `"filtration": "reverse_osmosis"`. Since, in the configurator, `reverse_osmosis` stands for the human-readable option `Reverse Osmosis`, the shop displays **Filtration Type: Reverse Osmosis**.
 
 ![display-data-in-a-configurator](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/configurable-product-feature-overview/display-data-in-a-configurator.png)
 
@@ -115,7 +115,7 @@ If the configuration is not complete, on the *Product details* page, a customer 
 
 Even if all the parameter values are [preconfigured](#preconfigured-parameter-values), but the configuration is not complete, a customer has to open the configurator and save the configuration. They are not required to change the preconfigured values, though.
 
-![configuration-is-not-complete-message-with-preconfigured-parameters](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configuration-is-not-complete-message-with-pre-configured-parameters.png)
+![configuration-is-not-complete-message-with-preconfigured-parameters](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/configurable-product-feature-overview/configuration-is-not-complete-message-with-pre-configured-parameters.png)
 
 #### Request for Quote with a configurable product
 
@@ -148,7 +148,7 @@ Customers configure a product on the Storefront as follows:
 |INSTALLATION GUIDES | MIGRATION GUIDES | DATA IMPORT | REFERENCES |
 |---------|---------|---------|---------|
 | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)| [Upgrade the ProductConfiguration module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productconfiguration-module.html) | [File details product_concrete_pre_configuration.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-concrete-pre-configuration.csv.html)  | [Configuration process flow of Configurable Product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-product-feature-overview/configuration-process-flow-of-configurable-product.html) |
-| [Install the Product Configuration Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-configuration-glue-api.html) |[Upgrade the ProductConfigurationStorage module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productconfigurationstorage-module.html)   |  |  |
+| [Install the Product Configuration Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-configuration-glue-api.html) |[Upgrade the ProductConfigurationStorage module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productconfigurationstorage-module.html)   |  | [Create a product configurator](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/tutorials-and-howtos/howto-create-a-product-configurator.html) |
 |   | [Upgrade the ProductConfigurationsPriceProductVolumesRestApi module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productconfigurationspriceproductvolumesrestapi-module.html)  |  |  |
 |   | [Upgrade the ProductConfigurationsRestApi module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productconfigurationsrestapi-module.html)  |  |  |
 |   | [Upgrade the ProductConfigurationWidget module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productconfigurationwidget-module.html)  |  |  |

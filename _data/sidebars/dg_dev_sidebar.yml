@@ -32,8 +32,6 @@ entries:
                 url: /docs/dg/dev/sdks/sdk/development-tools/code-sniffer.html
               - title: Architecture Sniffer
                 url: /docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html
-              - title: Project Architecture Sniffer
-                url: /docs/dg/dev/sdks/sdk/development-tools/project-architecture-sniffer.html
               - title: Evaluator
                 url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
           - title: AI tools
@@ -66,6 +64,8 @@ entries:
             url: /docs/dg/dev/ai/ai-commerce/ai-commerce-overview.html
           - title: Install AI Commerce
             url: /docs/dg/dev/ai/ai-commerce/install-ai-commerce.html
+          - title: Configure multiple AI providers
+            url: /docs/dg/dev/ai/ai-commerce/configure-multiple-ai-providers.html
           - title: Visual Add to Cart
             url: /docs/dg/dev/ai/ai-commerce/visual-add-to-cart/visual-add-to-cart.html
             nested:
@@ -76,11 +76,25 @@ entries:
             nested:
               - title: Install Back Office Assistant
                 url: /docs/dg/dev/ai/ai-commerce/backoffice-assistant/install-backoffice-assistant.html
+              - title: Add a custom Back Office Assistant agent
+                url: /docs/dg/dev/ai/ai-commerce/backoffice-assistant/add-custom-backoffice-assistant-agent.html
           - title: Search by Image
             url: /docs/dg/dev/ai/ai-commerce/search-by-image/search-by-image.html
             nested:
               - title: Install Search by Image
                 url: /docs/dg/dev/ai/ai-commerce/search-by-image/install-search-by-image.html
+          - title: Smart PIM
+            url: /docs/dg/dev/ai/ai-commerce/smart-pim/smart-pim.html
+            nested:
+              - title: Install Smart PIM
+                url: /docs/dg/dev/ai/ai-commerce/smart-pim/install-smart-pim.html
+          - title: Smart CMS Content Assistant
+            url: /docs/dg/dev/ai/ai-commerce/content-assistant/smart-cms-content-assistant.html
+            nested:
+              - title: Install Smart CMS Content Assistant
+                url: /docs/dg/dev/ai/ai-commerce/content-assistant/install-smart-cms-content-assistant.html
+          - title: Commerce MCP Server
+            url: /docs/dg/dev/ai/ai-commerce/commerce-mcp-server/commerce-mcp-server.html
       - title: AI Dev SDK
         url: /docs/dg/dev/ai/ai-dev/ai-dev.html
         nested:
@@ -88,6 +102,12 @@ entries:
             url: /docs/dg/dev/ai/ai-dev/ai-dev-overview.html
           - title: AI Dev MCP Server
             url: /docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html
+          - title: Claude Code Plugin
+            url: /docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html
+          - title: AI Dev SDK Skills and Agents
+            url: /docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html
+          - title: AI Dev SDK Customization Workflow
+            url: /docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html
       - title: AI Assistants
         url: /docs/dg/dev/ai/ai-assistants/ai-assistants.html
         nested:
@@ -186,8 +206,6 @@ entries:
         url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/unable-to-bring-up-mutagen-compose-sidecar-service.html
       - title: Vendor folder synchronization error
         url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/vendor-folder-synchronization-error.html
-      - title: Session locking issues
-        url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/session-locking-issues.html
 
   - title: Backend development
     url: /docs/dg/dev/backend-development/back-end-development.html
@@ -567,6 +585,8 @@ entries:
         url: /docs/dg/dev/frontend-development/yves/multi-theme.html
       - title: Image optimization usage
         url: /docs/dg/dev/frontend-development/yves/implement-image-optimization.html
+      - title: Basic SEO techniques to use in your project
+        url: /docs/dg/dev/frontend-development/yves/basic-seo-techniques-to-use-in-your-project.html
 
     - title: Oryx
       url: /docs/dg/dev/frontend-development/oryx/oryx.html
@@ -862,6 +882,8 @@ entries:
       url: /docs/dg/dev/frontend-development/create-angular-modules.html
     - title: Define Twig tag
       url: /docs/dg/dev/frontend-development/define-twig-tag.html
+    - title: Design tokens
+      url: /docs/dg/dev/frontend-development/design-tokens.html
     - title: Notifying about unsupported browsers
       url: /docs/dg/dev/frontend-development/notifying-about-unsupported-browsers.html
 
@@ -876,6 +898,10 @@ entries:
       url: /docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html
     - title: How to migrate to API Platform
       url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform.html
+    - title: API Platform migration overview
+      url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform-overview.html
+    - title: Upgrade API Platform resources to typed nested objects
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-api-platform-typed-nested-objects.html
     - title: Migrate from Auth to SecurityGui module
       url: /docs/dg/dev/upgrade-and-migrate/migrate-from-auth-to-securitygui-module.html
     - title: Migrating from Twig v1 to Twig v3
@@ -1178,8 +1204,6 @@ entries:
         nested:
         - title: Architecture Sniffer
           url: /docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html
-        - title: Project Architecture Sniffer
-          url: /docs/dg/dev/sdks/sdk/development-tools/project-architecture-sniffer.html
         - title: Code Sniffer
           url: /docs/dg/dev/sdks/sdk/development-tools/code-sniffer.html
         - title: Performance audit tool- Benchmark
@@ -1304,8 +1328,14 @@ entries:
           url: /docs/dg/dev/architecture/api-platform/troubleshooting.html
         - title: Sparse fieldsets
           url: /docs/dg/dev/architecture/api-platform/sparse-fieldsets.html
+        - title: Serialization
+          url: /docs/dg/dev/architecture/api-platform/serialization.html
         - title: Native API Platform Resources
           url: /docs/dg/dev/architecture/api-platform/native-api-platform-resources.html
+        - title: IDE integration
+          url: /docs/dg/dev/architecture/api-platform/ide-integration.html
+        - title: Migration status - Glue API to API Platform
+          url: /docs/dg/dev/architecture/api-platform/migrate-to-api-platform-status.html
 
     - title: Code buckets
       url: /docs/dg/dev/architecture/code-buckets.html
@@ -1328,6 +1358,18 @@ entries:
 
     - title: "Tutorial: Architectural walkthrough"
       url: /docs/dg/dev/architecture/tutorial-architectural-walkthrough.html
+
+    - title: Non-functional requirement templates
+      url: /docs/dg/dev/architecture/non-functional-requirement-templates/non-functional-requirement-templates.html
+      nested:
+        - title: Operational and deployment guidelines
+          url: /docs/dg/dev/architecture/non-functional-requirement-templates/operational-and-deployment-guidelines.html
+        - title: Monitorable process guidelines
+          url: /docs/dg/dev/architecture/non-functional-requirement-templates/monitorable-process-guidelines.html
+        - title: Operatable feature guidelines
+          url: /docs/dg/dev/architecture/non-functional-requirement-templates/operatable-feature-guidelines.html
+        - title: Process documentation guidelines
+          url: /docs/dg/dev/architecture/non-functional-requirement-templates/process-documentation-guidelines.html
 
   - title: Data import
     url: /docs/dg/dev/data-import/data-import.html
@@ -1437,8 +1479,6 @@ entries:
         url: /docs/dg/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
       - title: Twig performance best practices
         url: /docs/dg/dev/guidelines/performance-guidelines/twig-performance-best-practices.html
-      - title: Session locks
-        url: /docs/dg/dev/guidelines/performance-guidelines/session-locks.html
       - title: Bot control
         url: /docs/dg/dev/guidelines/performance-guidelines/bot-control.html
       - title: Batch processing of Propel entities
@@ -1447,6 +1487,10 @@ entries:
         url: /docs/dg/dev/guidelines/performance-guidelines/database-performance-guidelines.html
       - title: Key-Value storage performance guidelines
         url: /docs/dg/dev/guidelines/performance-guidelines/key-value-storage-performance-guidelines.html
+      - title: KV storage deduplication
+        url: /docs/dg/dev/guidelines/performance-guidelines/kv-storage-deduplication.html
+      - title: Search index deduplication
+        url: /docs/dg/dev/guidelines/performance-guidelines/search-index-deduplication.html
       - title: External HTTP requests
         url: /docs/dg/dev/guidelines/performance-guidelines/external-http-requests.html
       - title: Search performance guidelines
@@ -1535,26 +1579,8 @@ entries:
       url: /docs/dg/dev/guidelines/module-configuration-convention.html
     - title: Security guidelines
       url: /docs/dg/dev/guidelines/security-guidelines.html
-
-  - title: Best practices
-    url: /docs/dg/dev/best-practices/best-practices.html
-    nested:
-    - title: Non-funcational requirement templates
-      url: /docs/dg/dev/best-practices/non-functional-requirement-templates/non-functional-requirement-templates.html
-      nested:
-        - title: Operational and deployment guidelines
-          url: /docs/dg/dev/best-practices/non-functional-requirement-templates/operational-and-deployment-guidelines.html
-        - title: Monitorable process Guidelines
-          url: /docs/dg/dev/best-practices/non-functional-requirement-templates/monitorable-process-guidelines.html
-        - title: Operatable feature guidelines
-          url: /docs/dg/dev/best-practices/non-functional-requirement-templates/operatable-feature-guidelines.html
-        - title: Process documentation guidelines
-          url: /docs/dg/dev/best-practices/non-functional-requirement-templates/process-documentation-guidelines.html
-
-    - title: Basic SEO techniques to use in your project
-      url: /docs/dg/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html
-    - title: Coding best practices
-      url: /docs/dg/dev/best-practices/coding-best-practices.html
+    - title: Serializer guidelines
+      url: /docs/dg/dev/guidelines/serializer-guidelines.html
 
   - title: Troubleshooting
     url: /docs/dg/dev/troubleshooting/troubleshooting.html

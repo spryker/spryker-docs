@@ -734,12 +734,15 @@ Make sure the following changes have been applied in transfer objects:
 | ShipmentTypeStorageConditionsTransfer   | class    | created | src/Generated/Shared/Transfer/ShipmentTypeStorageConditionsTransfer      |
 | ShipmentMethodCollectionTransfer        | class    | created | src/Generated/Shared/Transfer/ShipmentMethodCollectionTransfer           |
 | SalesShipmentTypeTransfer               | class    | created | src/Generated/Shared/Transfer/SalesShipmentTypeTransfer                  |
+| SalesShipmentTypeCriteriaTransfer       | class    | created | src/Generated/Shared/Transfer/SalesShipmentTypeCriteriaTransfer          |
+| SalesShipmentTypeConditionsTransfer     | class    | created | src/Generated/Shared/Transfer/SalesShipmentTypeConditionsTransfer        |
 | RestShipmentTypesAttributesTransfer     | class    | created | src/Generated/Shared/Transfer/RestShipmentTypesAttributesTransfer        |
 | SalesShipmentResourceCollection         | class    | created | src/Generated/Shared/Transfer/SalesShipmentResourceCollectionTransfer    |
 | SalesShipmentsBackendApiAttributes      | class    | created | src/Generated/Shared/Transfer/SalesShipmentsBackendApiAttributesTransfer |
 | RestErrorMessageTransfer                | class    | created | src/Generated/Shared/Transfer/RestErrorMessageTransfer                   |
 | ShipmentMethodTransfer.shipmentType     | property | created | src/Generated/Shared/Transfer/ShipmentMethodTransfer                     |
 | ShipmentTransfer.shipmentTypeUuid       | property | created | src/Generated/Shared/Transfer/ShipmentTransfer                           |
+| ShipmentTypeTransfer.idShipmentType     | property | created | src/Generated/Shared/Transfer/ShipmentTypeTransfer                       |
 | ItemTransfer.shipmentType               | property | created | src/Generated/Shared/Transfer/ItemTransfer                               |
 
 {% endinfo_block %}
@@ -937,9 +940,10 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 5. Set up synchronization plugins:
 
-| PLUGIN                                              | SPECIFICATION                                                            | PREREQUISITES | NAMESPACE                                                            |
-|-----------------------------------------------------|--------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
-| ShipmentTypeSynchronizationDataBulkRepositoryPlugin | Enables synchronizing the shipment type storage table's content into the key-value store (Redis or Valkey). |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Synchronization |
+| PLUGIN                                                  | SPECIFICATION                                                                                                                                                          | PREREQUISITES | NAMESPACE                                                            |
+|---------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
+| ShipmentTypeSynchronizationDataBulkRepositoryPlugin     | Enables synchronizing the shipment type storage table's content into the key-value store (Redis or Valkey).                                                            |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Synchronization |
+| ShipmentTypeListSynchronizationDataBulkRepositoryPlugin | Enables synchronizing the shipment type list storage table's content into the key-value store (Redis or Valkey). Fixes a performance issue on the checkout page. Required by `spryker/shipment-type-storage:1.2.0`. |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -948,6 +952,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 namespace Pyz\Zed\Synchronization;
 
+use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Synchronization\ShipmentTypeListSynchronizationDataBulkRepositoryPlugin;
 use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Synchronization\ShipmentTypeSynchronizationDataBulkRepositoryPlugin;
 use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSynchronizationDependencyProvider;
 
@@ -960,10 +965,23 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
     {
         return [
             new ShipmentTypeSynchronizationDataBulkRepositoryPlugin(),
+            new ShipmentTypeListSynchronizationDataBulkRepositoryPlugin(),
         ];
     }
 }
 ```
+
+<a id="shipment-type-storage-performance-fix"></a>
+
+{% info_block infoBox "Info" %}
+
+Starting from `spryker/shipment-type-storage:1.2.0`, `ShipmentTypeListSynchronizationDataBulkRepositoryPlugin` is required. After wiring in the plugin, trigger the publish events to populate the storage:
+
+```bash
+console publish:trigger-events -r shipment_type
+```
+
+{% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
@@ -1409,9 +1427,10 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
 
 3. Configure the sales order item shipment expander plugins:
 
-| PLUGIN                          | SPECIFICATION                                | PREREQUISITES | NAMESPACE                                                                       |
-|---------------------------------|----------------------------------------------|---------------|---------------------------------------------------------------------------------|
-| ShipmentOrderItemExpanderPlugin | Expands the sales order items with shipment. |               | Spryker\Zed\Shipment\Communication\Plugin\Sales\ShipmentOrderItemExpanderPlugin |
+| PLUGIN                              | SPECIFICATION                                      | PREREQUISITES | NAMESPACE                                                                                     |
+|-------------------------------------|----------------------------------------------------|---------------|-----------------------------------------------------------------------------------------------|
+| ShipmentOrderItemExpanderPlugin     | Expands the sales order items with shipment.       |               | Spryker\Zed\Shipment\Communication\Plugin\Sales\ShipmentOrderItemExpanderPlugin               |
+| ShipmentTypeOrderItemExpanderPlugin | Expands the sales order items with shipment type.  |`spryker/sales-shipment-type:"^1.2.0"` or higher is installed | Spryker\Zed\SalesShipmentType\Communication\Plugin\Sales\ShipmentTypeOrderItemExpanderPlugin  |
 
 
 **src/Pyz/Zed/Sales/SalesDependencyProvider.php**
@@ -1422,6 +1441,7 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
 namespace Pyz\Zed\Sales;
 
 use Spryker\Zed\Sales\SalesDependencyProvider as SprykerSalesDependencyProvider;
+use Spryker\Zed\SalesShipmentType\Communication\Plugin\Sales\ShipmentTypeOrderItemExpanderPlugin;
 use Spryker\Zed\Shipment\Communication\Plugin\Sales\ShipmentOrderItemExpanderPlugin;
 
 class SalesDependencyProvider extends SprykerSalesDependencyProvider
@@ -1434,6 +1454,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     {
         return [
             new ShipmentOrderItemExpanderPlugin(),
+            new ShipmentTypeOrderItemExpanderPlugin(),
         ];
     }
 }

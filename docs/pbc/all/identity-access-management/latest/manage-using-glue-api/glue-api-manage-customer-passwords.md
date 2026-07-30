@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Manage customer passwords"
 description: Learn how you can manage, change and reset customer passwords via the Spryker Glue API
-last_updated: Jun 16, 2021
+last_updated: June 9, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-passwords
 originalArticleId: 51bec82b-e9f6-4c92-a87d-4f609d8176e8
@@ -112,7 +112,7 @@ Request sample: request a password reset key
   "data": {
     "type": "customer-forgotten-password",
     "attributes": {
-        "email":"sonia@spryker.com"
+        "email":"sonia@acme.com"
     }
   }
 }

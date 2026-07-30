@@ -7,13 +7,16 @@ on:
   pull_request:
   workflow_dispatch:
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   jekyll_build:
     name: Build
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -27,7 +30,7 @@ jobs:
       - name: Pack artifacts
         run: tar -czf result.tar.gz _site
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: build-result
           path: result.tar.gz
@@ -37,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -54,7 +57,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -62,10 +65,12 @@ jobs:
           ruby-version: 3.2.2
           bundler-cache: true
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v6
+        with:
+          name: build-result
 
       - name: Unpack artifacts
-        run: tar -xf build-result/result.tar.gz
+        run: tar -xf result.tar.gz
 
       - run: bundle exec rake check_about
 
@@ -75,7 +80,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -83,10 +88,12 @@ jobs:
           ruby-version: 3.2.2
           bundler-cache: true
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v6
+        with:
+          name: build-result
 
       - name: Unpack artifacts
-        run: tar -xf build-result/result.tar.gz
+        run: tar -xf result.tar.gz
 
       - run: bundle exec rake check_ca
 
@@ -96,7 +103,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -104,10 +111,12 @@ jobs:
           ruby-version: 3.2.2
           bundler-cache: true
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v6
+        with:
+          name: build-result
 
       - name: Unpack artifacts
-        run: tar -xf build-result/result.tar.gz
+        run: tar -xf result.tar.gz
 
       - run: bundle exec rake check_pbc
 
@@ -117,7 +126,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -125,10 +134,12 @@ jobs:
           ruby-version: 3.2.2
           bundler-cache: true
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v6
+        with:
+          name: build-result
 
       - name: Unpack artifacts
-        run: tar -xf build-result/result.tar.gz
+        run: tar -xf result.tar.gz
 
       - run: bundle exec rake check_dg
 
@@ -138,7 +149,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -146,10 +157,12 @@ jobs:
           ruby-version: 3.2.2
           bundler-cache: true
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v6
+        with:
+          name: build-result
 
       - name: Unpack artifacts
-        run: tar -xf build-result/result.tar.gz
+        run: tar -xf result.tar.gz
 
       - run: bundle exec rake check_integrations
 

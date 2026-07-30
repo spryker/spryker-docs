@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting API Platform
 description: Common issues and solutions when working with API Platform in Spryker.
-last_updated: Mar 9, 2026
+last_updated: Jul 28, 2026
 template: troubleshooting-guide-template
 related:
   - title: API Platform
@@ -88,11 +88,11 @@ docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate --force
 
 # Error: Missing resource name
 ❌ resource:
-    shortName: Customer
+    shortName: customers
 
 ✅ resource:
     name: Customers
-    shortName: Customer
+    shortName: customers
 ```
 
 **Solution:**
@@ -271,6 +271,26 @@ The `assets:install` command must be run after integrating API Platform and when
    ✅ /customers
    ```
 
+### Requests without an `Accept` header are rejected or return the wrong format
+
+**Symptom:** A client request that omits the `Accept` header — or sends only `Accept: */*` — returns `406 Not Acceptable`, or a response in a format other than the legacy `application/vnd.api+json`. The legacy Glue REST API silently accepted the same request and answered with `application/vnd.api+json`.
+
+**Cause:** API Platform runs content negotiation that requires a satisfiable `Accept` header and does not assume the legacy Glue default. This is a behavioral difference from the legacy Glue REST stack.
+
+**Solution:**
+
+1. Upgrade `spryker/api-platform` to **1.15.0 or higher**. Its `AcceptHeaderFallbackSubscriber` restores the legacy behavior — a missing or `*/*` `Accept` header defaults to `application/vnd.api+json`:
+
+   ```bash
+   composer update spryker/api-platform --with-dependencies
+   ```
+
+2. If you cannot upgrade, send an explicit `Accept` header from the client:
+
+   ```bash
+   curl -H "Accept: application/vnd.api+json" https://glue-backend.mysprykershop.com/customers
+   ```
+
 ### Pagination not working
 
 **Symptom:** All results returned instead of paginated response.
@@ -377,15 +397,16 @@ references class "CustomerFacadeInterface" but no such service exists.
 
 **Solution:**
 
-1. Enable Symfony cache:
+1. Verify that Opcache is enabled (`opcache.enable: 1`). Without it, PHP recompiles the whole application on every request, which adds a flat overhead of seconds to every endpoint regardless of the amount of data. See [Opcache activation](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html#opcache-activation).
+2. Enable Symfony cache:
 
    ```bash
    docker/sdk cli glue  cache:warmup
    ```
 
-2. Use pagination for collections
-3. Optimize database queries in Provider
-4. Use API Platform's built-in caching features
+3. Use pagination for collections
+4. Optimize database queries in Provider
+5. Use API Platform's built-in caching features
 
 ## Development tips
 
@@ -450,7 +471,7 @@ If you encounter issues not covered here:
 3. **Validate environment:**
 
    ```bash
-   php -v  # Check PHP version (8.1+)
+   php -v  # Check PHP version (8.3+)
    composer show | grep api-platform
    docker/sdk cli glue  debug:container | grep -i api
    ```

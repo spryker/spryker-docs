@@ -1,7 +1,7 @@
 ---
 title: Configure event queues
 description: Configure event queues in Spryker to manage asynchronous tasks effectively. Optimize backend performance by organizing event-driven workflows with ease.
-last_updated: Feb 20, 2026
+last_updated: May 15, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/event-configure-q
 originalArticleId: c4cf6639-48cd-4fb3-a595-09764433f7af
@@ -190,6 +190,15 @@ class QueueConfig extends SprykerQueueConfig
 
 5. In `\Pyz\Zed\Queue\QueueDependencyProvider`, add a plugin (consumer) to process messages or events.
 
+{% info_block infoBox "Use EventQueueMessageProcessorPlugin" %}
+
+Since `spryker/event:^2.17.1`, use `EventQueueMessageProcessorPlugin` instead of `EventRetryQueueMessageProcessorPlugin` for the event retry queue. Both plugins define how the retry queue behaves when a message fails:
+
+- `EventQueueMessageProcessorPlugin` — processes failed messages directly in the retry queue. They are handled independently and do not re-enter the main queue.
+- `EventRetryQueueMessageProcessorPlugin` — routes failed messages back to the main queue (the queue without the `.retry` postfix). Under high load, this can slow down the processing of new messages in the main queue.
+
+{% endinfo_block %}
+
 ```php
 <?php
 namespace Pyz\Zed\Queue;
@@ -235,6 +244,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 $config[QueueConstants::QUEUE_SERVER_ID] = (gethostname()) ?: php_uname('n');
 $config[QueueConstants::QUEUE_WORKER_INTERVAL_MILLISECONDS] = 1000; // default 1000
 $config[QueueConstants::QUEUE_WORKER_MAX_THRESHOLD_SECONDS] = 60; // 1min
+$config[QueueConstants::QUEUE_WORKER_WAIT_LIMIT_ENABLED] = true; // Stop worker on exceeded execution time; waits up to QUEUE_WORKER_MAX_WAITING_SECONDS (default: 30s) for subprocesses
 
 $config[QueueConstants::QUEUE_ADAPTER_CONFIGURATION] = [
     EventConstants::EVENT_QUEUE => [

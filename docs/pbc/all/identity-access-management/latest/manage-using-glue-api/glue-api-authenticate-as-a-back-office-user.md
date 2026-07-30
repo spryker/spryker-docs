@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Authenticate as a Back Office user"
 description: Learn how to authenticate as a Back Office user using the Spryker Glue API for your Spryker users
-last_updated: Nov 13, 2023
+last_updated: June 9, 2026
 template: glue-api-storefront-guide-template
 ---
 
@@ -26,11 +26,11 @@ For detailed information on the modules that provide the API functionality and r
 
 <details><summary>Request sample: authenticate as a Back Office user</summary>
 
-| REQUEST BODY KEY | VALUE |
-|-|-|
-| grant_type | password |
-| username | sonia@spryker.com |
-| password | change123 |
+| REQUEST BODY KEY | VALUE             |
+|-|-------------------|
+| grant_type | password          |
+| username | admin@spryker.com |
+| password | change123         |
 
 </details>
 

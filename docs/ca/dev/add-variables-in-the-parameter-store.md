@@ -13,6 +13,7 @@ redirect_from:
   - /docs/en/managing-parameters-in-the-parameter-store
   - /docs/cloud/dev/spryker-cloud-commerce-os/managing-parameters-in-the-parameter-store.html
   - /docs/ca/dev/managing-parameters-in-the-parameter-store.html
+  - /docs/ca/dev/access/locate-service-credentials
 ---
 
 Variables, such as parameters and secrets, are used for multiple purposes, like storing mail server details or providing Composer authentication details to the build and deploy process securely.

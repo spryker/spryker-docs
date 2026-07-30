@@ -1240,6 +1240,8 @@ mail.giftCard.usage.subject,Thank you for using a Gift Card!,en_US
 mail.giftCard.usage.subject,Vielen Dank dass Sie ein Geschenkgutschein benutzt haben.,de_DE
 cart.code.enter-code,Gutscheincode/Geschenkgutscheincode eingeben,de_DE
 cart.code.enter-code,Enter voucher/gift card code,en_US
+cart_code_widget.error.too_many_requests,Too many voucher code attempts. Please try again later.,en_US
+cart_code_widget.error.too_many_requests,Zu viele Versuche mit Gutscheincodes. Bitte versuchen Sie es später erneut.,de_DE
 ```
 
 2. Apply glossary keys:
@@ -1330,5 +1332,44 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 {% info_block warningBox "Verification" %}
 
 Make sure the code widget is displayed on the **Cart** and **Summary** pages of the checkout process.
+
+{% endinfo_block %}
+
+### 6) Set up behavior
+
+Enable the following behaviors by registering the plugins:
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+| SecurityBlockerCartCodeEventDispatcherPlugin | Blocks an IP address after a configured number of failed voucher or gift card code submissions. | None | SprykerShop\Yves\CartCodeWidget\Plugin\EventDispatcher |
+
+**src/Pyz/Yves/EventDispatcher/EventDispatcherDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\EventDispatcher;
+
+use Spryker\Yves\EventDispatcher\EventDispatcherDependencyProvider as SprykerEventDispatcherDependencyProvider;
+use SprykerShop\Yves\CartCodeWidget\Plugin\EventDispatcher\SecurityBlockerCartCodeEventDispatcherPlugin;
+
+class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Shared\EventDispatcherExtension\Dependency\Plugin\EventDispatcherPluginInterface>
+     */
+    protected function getEventDispatcherPlugins(): array
+    {
+        return [
+            new SecurityBlockerCartCodeEventDispatcherPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+1. From the cart page, submit an invalid voucher or gift card code multiple times.
+2. After exceeding the configured number of attempts, make sure the request is blocked and the `cart_code_widget.error.too_many_requests` error message is displayed.
 
 {% endinfo_block %}

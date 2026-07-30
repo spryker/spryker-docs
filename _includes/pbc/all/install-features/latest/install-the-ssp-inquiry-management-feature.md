@@ -61,23 +61,21 @@ Make sure the following packages are now listed in `composer.lock`:
 
 **config/Shared/config_default.php**
 
+To enable an IAM role configuration, use `IamAws3v3FilesystemBuilderPlugin`:
+
 ```php
 <?php
 
 use Spryker\Shared\FileSystem\FileSystemConstants;
 use SprykerFeature\Shared\SelfServicePortal\SelfServicePortalConstants;
-use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\Aws3v3FilesystemBuilderPlugin;
+use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\IamAws3v3FilesystemBuilderPlugin;
 
 $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
      'ssp-inquiry' => [
-        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
-        'key' => getenv('SPRYKER_S3_SSP_CLAIM_KEY') ?: '',
-        'secret' => getenv('SPRYKER_S3_SSP_CLAIM_SECRET') ?: '',
-        'bucket' => getenv('SPRYKER_S3_SSP_CLAIM_BUCKET') ?: '',
+        'sprykerAdapterClass' => IamAws3v3FilesystemBuilderPlugin::class,
+        'bucket' => getenv('SPRYKER_S3_SSP_INQUIRIES_BUCKET') ?: '',
         'region' => getenv('AWS_REGION') ?: '',
-        'version' => 'latest',
-        'root' => '/ssp-inquiry',
-        'path' => '',
+        'path' => '/ssp-inquiry',
     ],
 ];
 
@@ -92,13 +90,17 @@ $config[KernelConstants::CORE_NAMESPACES] = [
 ];
 ```
 
+{% info_block warningBox "IAM authentication required" %}
+
+These buckets authenticate through the IAM role attached to the workload. Access keys (`key` and `secret`) are not supported. If your project was set up from older documentation using access keys, migrate to this configuration. For more details, see [AWS S3 filesystem builder plugins](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html#aws-s3-filesystem-builder-plugins).
+
+{% endinfo_block %}
+
 {% info_block infoBox "Cloud environment variables" %}
 
 In cloud environments, set the following environment variables:
 
-- `SPRYKER_S3_SSP_CLAIM_KEY` - AWS S3 access key for SSP inquiry file storage
-- `SPRYKER_S3_SSP_CLAIM_SECRET` - AWS S3 secret key for SSP inquiry file storage
-- `SPRYKER_S3_SSP_CLAIM_BUCKET` - AWS S3 bucket name for SSP inquiry file storage
+- `SPRYKER_S3_SSP_INQUIRIES_BUCKET` - AWS S3 bucket name for SSP inquiry file storage
 - `AWS_REGION` - AWS region
 - `SPRYKER_DEFAULT_TOTAL_FILE_MAX_SIZE` - Maximum total size for all files uploaded with a single inquiry (defaults to `100M` if not set)
 - `SPRYKER_DEFAULT_FILE_MAX_SIZE` - Maximum size for a single file uploaded with an inquiry (defaults to `20M` if not set)

@@ -1,9 +1,12 @@
 ---
 title: Guidelines
 description: A set of guidelines for developers to use whilst working on Spryker Cloud Commerce OS projects.
+last_updated: Jul 15, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/guidelines/guidelines.html
+  - /docs/scos/dev/best-practices/
+  - /docs/scos/dev/best-practices/best-practices.html
 ---
 
 This section contains a collection of useful guidelines for developing on the Spryker Commerce OS:  
@@ -16,3 +19,4 @@ This section contains a collection of useful guidelines for developing on the Sp
 - [Data processing guidelines](/docs/dg/dev/guidelines/data-processing-guidelines.html)
 - [Module configuration convention](/docs/dg/dev/guidelines/module-configuration-convention.html)
 - [Security guidelines](/docs/dg/dev/guidelines/security-guidelines.html)
+- [Serializer guidelines](/docs/dg/dev/guidelines/serializer-guidelines.html)

@@ -1,7 +1,7 @@
 ---
 title: API Platform Testing
 description: Learn how to write and run tests for your API Platform resources in Spryker.
-last_updated: Feb 25, 2026
+last_updated: May 18, 2026
 template: howto-guide-template
 related:
   - title: API Platform
@@ -56,7 +56,7 @@ The testing infrastructure provides specialized Codeception helpers to streamlin
 | Helper Class | Purpose |
 |--------------|---------|
 | `BootstrapHelper` | Configures application plugin providers for test environments via codeception.yml. Allows different test suites to use different factory implementations without hardcoding dependencies in test infrastructure. |
-| `ApiPlatformHelper` | Automatically cleans compiled Symfony test kernel cache after test suites complete. This ensures a clean state between test runs and prevents cache-related test failures. |
+| `ApiPlatformHelper` | Configures resource generation and cache lifecycle for the test kernel. Has two modes — `project` (default, preserves the compiled container for speed) and `core` (generates fresh resources per suite and cleans the container cache afterwards, used when testing the API Platform module itself). See [ApiPlatformHelper modes](#apiplatformhelper-modes). |
 | `ApiPlatformConfigBuilder` | Provides a fluent interface for building test-specific API Platform configurations. Useful for creating isolated test scenarios with custom settings. |
 | `ApiResourceGeneratorHelper` | Assists with testing resource generation functionality. Provides methods to generate test resources, validate generation output, and clean up generated files. |
 
@@ -145,9 +145,9 @@ The resources and the container are automatically generated right before the tes
 
 The test infrastructure handles resource lifecycle automatically:
 
-- **Generation**: Test-specific API resources are generated into `tests/_data/Api/{ApiType}/` before tests execute
-- **Cleanup**: The `ApiPlatformHelper` automatically cleans the compiled Symfony test kernel cache after test suites complete
-- **Isolation**: Each test suite gets a fresh cache state, preventing cross-test contamination
+- **Generation** (core mode only): Test-specific API resources are generated into `tests/_data/Api/{ApiType}/` before each suite executes. In project mode, the helper instead validates that the project-generated resources already exist on disk.
+- **Cleanup** (core mode only): The `ApiPlatformHelper` clears the compiled Symfony test kernel cache and the generated resources after the suite completes. Project mode deliberately skips this step so the compiled container can be reused across runs.
+- **Mode selection**: Choose the mode in `codeception.yml` — see [ApiPlatformHelper modes](#apiplatformhelper-modes) below for the trade-offs.
 
 This automation ensures that:
 - Tests always run against the latest schema definitions
@@ -854,6 +854,34 @@ settings:
 - **BootstrapHelper**: Provides application plugins for the test kernel. This is optional and can be omitted if your tests do not require application-level dependencies.
 - **suite_namespace**: Must match your test suite's PHP namespace
 - **actor**: The tester class name (for example, `BackendApiTester`, `StorefrontApiTester`)
+
+### ApiPlatformHelper modes
+
+`ApiPlatformHelper` runs in one of two modes, selected in the suite's `codeception.yml`:
+
+```yaml
+modules:
+    enabled:
+        - \SprykerTest\ApiPlatform\Helper\ApiPlatformHelper:
+            mode: 'project'      # default; or 'core' for module-level tests
+```
+
+| Mode | Use this when | Before suite | After suite |
+|---|---|---|---|
+| `project` (default) | Testing your own project's API resources end-to-end. | Validates that the project-generated resources in `src/Generated/Api/` exist. Skips generation. | Does nothing — the compiled container is preserved across runs for fast subsequent invocations. |
+| `core` | Testing the `ApiPlatform` module itself (or any module that ships its own schemas in isolation from a project). | Generates fresh resources into `tests/_data/Api/{ApiType}/`. Requires `apiType` to be set on the helper. | Removes the generated resources and clears the compiled test kernel cache so the next suite starts from a clean slate. |
+
+Use `project` mode for almost all real-world test suites — it is significantly faster because the compiled Symfony container is reused. Reach for `core` mode only when you intentionally want each suite to regenerate resources from scratch (typical when testing schema generation or a single module without a project around it).
+
+When using `core` mode, declare which API type the suite exercises so the helper knows what to generate:
+
+```yaml
+modules:
+    enabled:
+        - \SprykerTest\ApiPlatform\Helper\ApiPlatformHelper:
+            mode: 'core'
+            apiType: 'Storefront'   # or 'Backend'
+```
 
 ### Helper classes
 

@@ -1,7 +1,7 @@
 ---
 title: Manage availability notifications
 description: Manage product availability notifications for registered users with the Spryker Glue API for your Spryker based projects.
-last_updated: Jun 22, 2021
+last_updated: June 9, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-availability-notifications
 originalArticleId: 664b1f47-879b-43c4-8538-5f74397d6816
@@ -47,7 +47,7 @@ To subscribe to availability notifications for an out-of-stock product, send the
     "type": "availability-notifications",
     "attributes": {
       "sku": "130_24725761",
-      "email": "sonia@spryker.com"
+      "email": "sonia@acme.com"
     }
   }
 }
@@ -72,7 +72,7 @@ To subscribe to availability notifications for an out-of-stock product, send the
         "id": "70b47ccf1e1a2262f83fddabd19d4828",
         "attributes": {
             "localeName": "en_US",
-            "email": "sonia@spryker.com",
+            "email": "sonia@acme.com",
             "sku": "130_24725761"
         },
         "links": {

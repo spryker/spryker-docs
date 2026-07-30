@@ -2,7 +2,7 @@
 title: Marketplace Merchant Portal Core feature overview
 description: Marketplace MerchantPortal Core enables server configuration and the basic functionality of the Merchant Portal such as secure login.
 template: concept-topic-template
-last_updated: Jan 12, 2024
+last_updated: May 7, 2026
 redirect_from:
   - /docs/marketplace/dev/feature-walkthroughs/202403.0/marketplace-merchant-portal-core-feature-walkthrough/marketplace-merchant-portal-core-feature-walkthrough.html
   - /docs/pbc/all/merchant-management/202403.0/marketplace/marketplace-merchant-portal-core-feature-overview/marketplace-merchant-portal-core-feature-overview.md
@@ -74,6 +74,7 @@ To learn more about table design, see [Table design](/docs/dg/dev/frontend-devel
 |INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
 |---------|---------|---------|--------|
 | [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html)          |          | [File details: merchant_user.csv](/docs/pbc/all/merchant-management/latest/marketplace/import-and-export-data/import-file-details-merchant-user.csv.html)           | [GUI modules concept](/docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-portal-core-feature-overview/gui-modules.html) |
+| [Install Federated Authentication via OAuth2/OIDC](/docs/pbc/all/oauth/latest/install-and-upgrade/install-federated-authentication.html) |  |  | [Federated Authentication via OAuth2/OIDC](/docs/pbc/all/oauth/latest/federated-authentication.html) |
 |        |          |          | [How to create a new GUI module](/docs/pbc/all/merchant-management/latest/marketplace/tutorials-and-howtos/create-gui-modules.html)  |
 |        |          |          | [How to create a new Gui table](/docs/pbc/all/merchant-management/latest/marketplace/tutorials-and-howtos/create-gui-tables.html)  |
 |        |          |          | [How to extend an existing Gui table](/docs/pbc/all/merchant-management/latest/marketplace/tutorials-and-howtos/extend-gui-tables.html)  |

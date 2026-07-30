@@ -1,7 +1,7 @@
 ---
 title: Back Office Assistant
 description: Technical overview of the Back Office Assistant feature — architecture, agents, AiFoundation integration, and configuration options.
-last_updated: Mar 31, 2026
+last_updated: Jul 16, 2026
 template: concept-topic-template
 ---
 
@@ -28,7 +28,7 @@ Back Office Assistant ships with four built-in agents:
 | Discount Management | `DiscountManagementAgentPlugin` | Creates and updates discounts through the Back Office API. |
 | Form Fill | `FormFillAgentPlugin` | Fills Back Office forms using natural language instructions. |
 
-Agents are registered in `AiCommerceDependencyProvider::getBackofficeAssistantAgentPlugins()`.
+Agents are registered in `AiCommerceDependencyProvider::getBackofficeAssistantAgentPlugins()`. To implement and register a custom agent, see [Add a custom Back Office Assistant agent](/docs/dg/dev/ai/ai-commerce/backoffice-assistant/add-custom-backoffice-assistant-agent.html).
 
 ## Toolsets
 
@@ -55,15 +55,15 @@ Tool call progress is streamed to the browser in real time using Server-Sent Eve
 
 Each agent uses a dedicated named AI configuration entry in `AiFoundation`. This isolates model settings per agent and keeps audit log entries separate.
 
-The following configuration keys are used:
+The following `AiCommerceConfig` methods return the AI configuration name for the intent router and each agent. Each method returns `null` by default to use the `AiFoundation` default configuration, and you override it to return a named configuration entry:
 
-| CONSTANT | DESCRIPTION |
-|----------|-------------|
-| `AiCommerceConstants::AI_CONFIGURATION_INTENT_ROUTER` | Configuration for the intent routing model. |
-| `AiCommerceConstants::AI_CONFIGURATION_GENERAL_PURPOSE` | Configuration for the General Purpose agent. |
-| `AiCommerceConstants::AI_CONFIGURATION_ORDER_MANAGEMENT` | Configuration for the Order Management agent. |
-| `AiCommerceConstants::AI_CONFIGURATION_DISCOUNT_MANAGEMENT` | Configuration for the Discount Management agent. |
-| `AiCommerceConstants::AI_CONFIGURATION_FORM_FILL` | Configuration for the Form Fill agent. |
+| METHOD | DESCRIPTION |
+|--------|-------------|
+| `AiCommerceConfig::getIntentRouterAiConfigurationName()` | Configuration for the intent routing model. |
+| `AiCommerceConfig::getGeneralAgentAiConfigurationName()` | Configuration for the General Purpose agent. |
+| `AiCommerceConfig::getOrderManagementAgentAiConfigurationName()` | Configuration for the Order Management agent. |
+| `AiCommerceConfig::getDiscountManagementAgentAiConfigurationName()` | Configuration for the Discount Management agent. |
+| `AiCommerceConfig::getFormFillAgentAiConfigurationName()` | Configuration for the Form Fill agent. |
 
 ## System prompts
 

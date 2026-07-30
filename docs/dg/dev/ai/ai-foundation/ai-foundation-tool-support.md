@@ -1,18 +1,18 @@
 ---
 title: Use AI tools with the AiFoundation module
 description: Extend AI capabilities by providing custom tools that AI models can invoke during conversations
-last_updated: Mar 2, 2026
+last_updated: Apr 29, 2026
 keywords: foundation, ai, tools, function calling, tool sets, plugins, openai, anthropic, prompt, agent, audit, logging
 template: howto-guide-template
 related:
   - title: AiFoundation module Overview
-    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-module.html
+    link: docs/dg/dev/ai/ai-foundation/ai-foundation-module.html
   - title: Use structured responses with the AiFoundation module
-    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-transfer-response.html
+    link: docs/dg/dev/ai/ai-foundation/ai-foundation-transfer-response.html
   - title: AI workflow orchestration with state machines
-    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
+    link: docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
   - title: AI Interaction Audit Logs
-    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html
+    link: docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html
 ---
 
 This document describes how to create and use AI tools with the AiFoundation module to extend AI capabilities by providing custom functions that AI models can invoke during conversations.
@@ -449,6 +449,10 @@ if ($promptResponse->getIsSuccessful() === true) {
         $toolName = $toolInvocation->getName();
         $toolArguments = $toolInvocation->getArguments();
         $toolResult = $toolInvocation->getResult();
+
+        // content and reasoning are populated when the provider returns them alongside the tool call
+        $content = $toolInvocation->getContent();   // e.g. "I will search for that now."
+        $reasoning = $toolInvocation->getReasoning(); // chain-of-thought, when available
 
         // Log or process tool invocations
         $this->logger->info(sprintf(

@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Create customers"
 description: Learn how you can create new customers within your Spryker store using the Spryker GLUE API.
-last_updated: Nov 2, 2022
+last_updated: June 9, 2026
 template: glue-api-storefront-guide-template
 originalArticleId: 246e73d7-562f-414f-bbc0-d102ef54ff5c
 redirect_from:
@@ -51,7 +51,7 @@ Request sample: create a customer
         "salutation": "Mrs",
         "firstName":"Sonia",
         "lastName":"Wagner",
-        "email":"sonia@spryker.com",
+        "email":"sonia@acme.com",
 	"gender": "Female",
         "password":"change123",
         "confirmPassword":"change123",

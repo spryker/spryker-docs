@@ -26,6 +26,8 @@ Starting from `spryker-shop/shop-ui` version 2.0.0, the builder is part of the S
 | Seeing a Twig change in the browser | manual page reload | automatic reload, scroll and form state preserved |
 | Registering a custom namespace | edit 3 arrays in `frontend/settings.js` | 1 entry in `frontend/yves.settings.mts` |
 | Sass deprecation warnings | silenced (`quietDeps`) | 0 suppressed—core fixed at the source |
+| Asset discovery order | filesystem order—differs per machine and run | sorted, identical on every machine |
+| Sources scanned for component styles | 3 of 5 (no eco, no project) | all 5 |
 | Extending core component base styles | copy the component or fight the cascade | 71 base hooks across 62 ShopUi components |
 | Builder language | JavaScript (CommonJS) | TypeScript (native ESM), 0 transpilation steps |
 
@@ -85,6 +87,10 @@ The v1 builder silenced Sass deprecation warnings (`quietDeps`), which let real 
 ### Base hooks: 71 extension points in core components
 
 Every ShopUi component mixin now exposes an optional **base hook**—71 hooks across 62 core components. Defining a `shop-ui-<component>-base-hook` mixin at the project level injects your declarations into the base of the core component, before its element and modifier rules. This replaces the cascade-breaking pattern of appending base declarations through the mixin body, which Sass 1.92+ flags as the `mixed-decls` deprecation. For details and examples, see [Extending components](/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/extending-components.html#extend-base-styles-with-a-base-hook).
+
+### Deterministic asset order
+
+The v1 builder bundled component files in the order the filesystem happened to return them, so the same sources could produce a different CSS order on a colleague's machine or in CI. Builder v2 sorts discovery, scans component styles from all five sources instead of three, and gives the project level priority over feature modules. For the before-and-after examples, see [Discovery order and precedence](#discovery-order-and-precedence).
 
 ### Built-in design tokens step
 
@@ -173,6 +179,49 @@ The builder scans the following source directories (in a standard project layout
 Entry points are discovered per component (`components/atoms/*/index.ts`, `components/molecules/*/index.ts`, `components/organisms/*/index.ts`, `templates/*/index.ts`, `views/*/index.ts`) for the configured theme, with a fallback to the default theme.
 
 The project directory is scanned last and has the highest priority: a project-level component or mixin overrides a same-named one from any other source.
+
+### Discovery order and precedence
+
+The order in which the builder collects component files decides two things: which component wins when several sources provide the same one, and in which order their CSS lands in the bundle. Builder v2 changes that order in three ways.
+
+**1. The project level now wins over features.** The v1 builder scanned features after the project, so a feature module silently overrode a same-named project component:
+
+```text
+Builder v1 (entry points)     core → spryker core → eco → project → features
+                                                                    ^^^^^^^^ wins
+
+Builder v2 (all discovery)    core → spryker core → eco → features → project
+                                                                     ^^^^^^^ wins
+```
+
+If your project and a feature module both provide `molecules/product-price`, v1 bundled the feature module's version and v2 bundles yours. This matches the precedence customers expect from a project-level override.
+
+**2. Component styles are collected from every source.** In v1, the style scan that builds the shared Sass environment covered only three of the five sources—`eco` and `project` were missing from it, so mixins defined by eco or project components weren't available to other components:
+
+```text
+Builder v1 (component styles)   core → spryker core → features
+Builder v2 (component styles)   core → spryker core → eco → features → project
+```
+
+**3. Discovery is deterministic.** The v1 builder used the order in which the filesystem returned matches (`readdir` order), which differs between machines and even between runs on the same machine. Two developers could get a different CSS declaration order—and therefore a different winner among same-specificity rules—from identical sources. Builder v2 sorts every directory expansion and every file match lexicographically, so the same sources always produce the same bundle:
+
+```text
+Builder v1     .../molecules/product-card/product-card.scss      # order as returned
+               .../molecules/ajax-loader/ajax-loader.scss        # by the filesystem:
+               .../molecules/form/form.scss                      # machine-dependent
+
+Builder v2     .../molecules/ajax-loader/ajax-loader.scss        # lexicographic:
+               .../molecules/form/form.scss                      # identical on every
+               .../molecules/product-card/product-card.scss      # machine and run
+```
+
+Within a source, the tier order above still applies first; sorting only makes the order inside each tier stable.
+
+{% info_block infoBox "What this means for your styles" %}
+
+Relying on discovery order to win a same-specificity conflict was never reliable in v1 and is now explicit: either raise specificity, or use a [base hook](/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/extending-components.html#extend-base-styles-with-a-base-hook) to place your declarations in the component's base.
+
+{% endinfo_block %}
 
 ### Code buckets
 

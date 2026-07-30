@@ -1,7 +1,7 @@
 ---
 title: Frontend builder for Yves
 description: This article provides information about how to prepare assets (CSS, js, images, etc.) for different namespaces and their themes.
-last_updated: Jun 16, 2021
+last_updated: Jul 30, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/front-end-builder-for-yves
 originalArticleId: 53c433b1-ae5f-4887-9435-ac716c632347

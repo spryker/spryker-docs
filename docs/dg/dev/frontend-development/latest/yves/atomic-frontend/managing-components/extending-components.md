@@ -1,6 +1,6 @@
 ---
 title: Extending components
-last_updated: Jun 16, 2021
+last_updated: Jul 30, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-extend-component
 originalArticleId: b51d63f2-d18b-4383-8e17-dd87379c1271

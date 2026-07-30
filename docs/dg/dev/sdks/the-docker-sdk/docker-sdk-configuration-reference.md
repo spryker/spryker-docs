@@ -1,7 +1,7 @@
 ---
 title: Docker SDK configuration reference
 description: A guide with instructions for the most common configuration cases of the Docker SDK for Spryker based projects.
-last_updated: Jun 16, 2021
+last_updated: Jul 28, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/docker-sdk-configuration-reference
 originalArticleId: 624e91c2-a207-41b4-957f-98de2a96f90b
@@ -50,9 +50,17 @@ image:
         ini:
             "opcache.revalidate_freq": 0
             "opcache.enable_cli": 0
-            "opcache.enable": 0
+            "opcache.enable": 1
             ...
 ```
+
+{% info_block warningBox "Never disable Opcache on deployed environments" %}
+
+With `opcache.enable: 0`, PHP recompiles the entire application code on every request. On a Symfony and API Platform based stack this adds a flat multi-second overhead to every request.
+
+For the full configuration reference, see [Opcache activation](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html#opcache-activation).
+
+{% endinfo_block %}
 
 ## Defining a memory limit
 

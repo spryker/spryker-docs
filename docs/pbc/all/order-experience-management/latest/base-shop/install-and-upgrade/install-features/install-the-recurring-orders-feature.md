@@ -1,7 +1,7 @@
 ---
 title: Install the Recurring Orders feature
 description: Learn how to install the Recurring Orders feature into your Spryker project.
-last_updated: Jul 28, 2026
+last_updated: Jul 30, 2026
 template: feature-integration-guide-template
 related:
   - title: Recurring Orders feature overview
@@ -888,8 +888,8 @@ Register the following form expander plugins to let buyers select a cost center 
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| CostCenterRecurringOrderApproveFormExpanderPlugin | Adds cost center and budget dropdowns to the review approve form and validates the selected pair server-side. | Purchasing Control feature | SprykerFeature\Yves\PurchasingControl\Plugin\OrderExperienceManagement |
-| CostCenterRecurringScheduleEditFormExpanderPlugin | Adds cost center and budget dropdowns to the recurring schedule edit form and validates the selected pair server-side. | Purchasing Control feature | SprykerFeature\Yves\PurchasingControl\Plugin\OrderExperienceManagement |
+| CostCenterRecurringOrderApproveFormExpanderPlugin | Adds cost center and budget dropdowns to the review approve form and validates the selected pair server-side. Only active cost centers of the buyer's company business unit in the currency of the recurring order are offered. | Purchasing Control feature | SprykerFeature\Yves\PurchasingControl\Plugin\OrderExperienceManagement |
+| CostCenterRecurringScheduleEditFormExpanderPlugin | Adds cost center and budget dropdowns to the recurring schedule edit form and validates the selected pair server-side. Only active cost centers of the buyer's company business unit in the currency of the recurring order are offered. | Purchasing Control feature | SprykerFeature\Yves\PurchasingControl\Plugin\OrderExperienceManagement |
 
 **src/Pyz/Yves/OrderExperienceManagement/OrderExperienceManagementDependencyProvider.php**
 
@@ -926,11 +926,43 @@ class OrderExperienceManagementDependencyProvider extends SprykerOrderExperience
 }
 ```
 
+Both plugins offer only budgets whose enforcement rule is listed in `getRecurringOrderSelectableBudgetEnforcementRules()`. Budgets that require approval when the budget is exceeded are hidden, because a recurring order is placed unattended and cannot wait for an approval decision. To change which enforcement rules qualify, override the method in your project:
+
+**src/Pyz/Yves/PurchasingControl/PurchasingControlConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\PurchasingControl;
+
+use SprykerFeature\Shared\PurchasingControl\PurchasingControlConfig as SharedPurchasingControlConfig;
+use SprykerFeature\Yves\PurchasingControl\PurchasingControlConfig as SprykerPurchasingControlConfig;
+
+class PurchasingControlConfig extends SprykerPurchasingControlConfig
+{
+    /**
+     * @return array<string>
+     */
+    public function getRecurringOrderSelectableBudgetEnforcementRules(): array
+    {
+        return [
+            SharedPurchasingControlConfig::ENFORCEMENT_RULE_BLOCK,
+            SharedPurchasingControlConfig::ENFORCEMENT_RULE_WARN,
+        ];
+    }
+}
+```
+
+| CONFIGURATION METHOD | DEFAULT | DESCRIPTION |
+| --- | --- | --- |
+| `getRecurringOrderSelectableBudgetEnforcementRules()` | `[ENFORCEMENT_RULE_BLOCK, ENFORCEMENT_RULE_WARN]` | Budget enforcement rules that can be selected on the recurring order forms. Budgets bound to any other rule—`ENFORCEMENT_RULE_REQUIRE_APPROVAL` in particular—are hidden from the budget selector. |
+
 {% info_block warningBox "Verification" %}
 
 1. Open the **Review Required** page for a schedule and make sure the **Cost Center** and **Budget** dropdowns are displayed on the approve form.
 2. Open the recurring schedule edit form and make sure the same dropdowns are displayed.
 3. Submit the form with a budget that does not belong to the selected cost center. Make sure the form is rejected with a validation error.
+4. Set a budget's enforcement rule to **Require approval** in the Back Office. Make sure the budget is no longer offered in the recurring order budget selector.
 
 {% endinfo_block %}
 

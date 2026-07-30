@@ -1,7 +1,7 @@
 ---
 title: Recurring Orders feature overview
 description: Learn how the Recurring Orders feature lets B2B buyers automate repeat purchases on a configurable schedule.
-last_updated: Jul 28, 2026
+last_updated: Jul 30, 2026
 template: concept-topic-template
 ---
 
@@ -239,8 +239,23 @@ These permissions are registered as company role permissions and assigned in the
 With the [Purchasing Control feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/purchasing-control-feature-overview.html) installed, a recurring order carries a cost center and a budget:
 
 - The selected cost center and budget are displayed on the recurring order detail page.
-- The buyer can change them when editing the schedule and when approving a review.
-- Only cost centers and budgets that are still available are offered, and the selected budget must belong to the selected cost center.
+- The buyer can change them when editing the schedule and when approving a review. In both forms, selecting a cost center and a budget is mandatory.
+- Only active cost centers of the buyer's company business unit are offered, and only in the currency of the recurring order.
+- The selected budget must belong to the selected cost center. The form is rejected if it does not.
+
+### Budgets that require approval cannot be selected
+
+A recurring order is placed unattended by the state machine, so it cannot wait for a human approval decision at placement time. For that reason, budgets whose enforcement rule requires approval when the budget is exceeded are **not offered** in the recurring order budget selector.
+
+Only budgets bound to the following enforcement rules can be selected:
+
+| ENFORCEMENT RULE | BEHAVIOR WHEN THE BUDGET IS EXCEEDED | SELECTABLE FOR A RECURRING ORDER |
+| --- | --- | --- |
+| Block | Blocks order placement. | Yes |
+| Warn | Warns the buyer but allows order placement. | Yes |
+| Require approval | Sends the order into an approval workflow. | No |
+
+If a cost center has only approval-bound budgets, no budget choices are rendered for it. Buyers who need to assign such a cost center to a recurring order must first have a budget with the *block* or *warn* enforcement rule set up for it.
 
 Without the Purchasing Control feature, these fields are not rendered and recurring orders behave as described in the rest of this document.
 

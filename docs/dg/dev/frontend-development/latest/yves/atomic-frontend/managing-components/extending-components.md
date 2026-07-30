@@ -101,6 +101,92 @@ After defining the styles, let us make them visible to Webpack. Open the `index
 import './new-existing-component-side-drawer.scss';
 ```
 
+### Extend base styles with a base hook
+
+Starting from `spryker-shop/shop-ui` version 2.0.0 (which ships [frontend builder v2](/docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves-v2.html)), there is an additional way to customize a core component: **base hooks**. A base hook lets you add or override declarations in the *base* of a core component—everywhere the component is rendered—without copying the component to the project level.
+
+Base hooks are not limited to ShopUi: they are available in the components of most storefront modules. To get them, update the modules you customize to at least the following versions—except for `shop-ui`, these are regular minor updates:
+
+<details><summary>Module versions that provide base hooks</summary>
+
+| Module | Minimum version |
+| --- | --- |
+| `spryker-shop/shop-ui` | `^2.0.0` |
+| `spryker-shop/agent-widget` | `^1.4.0` |
+| `spryker-shop/cart-page` | `^3.60.0` |
+| `spryker-shop/catalog-page` | `^1.37.0` |
+| `spryker-shop/checkout-page` | `^3.43.0` |
+| `spryker-shop/cms-search-page` | `^1.6.0` |
+| `spryker-shop/comment-widget` | `^1.5.0` |
+| `spryker-shop/company-page` | `^2.37.0` |
+| `spryker-shop/company-user-agent-widget` | `^1.2.0` |
+| `spryker-shop/configurable-bundle-note-widget` | `^1.2.0` |
+| `spryker-shop/configurable-bundle-page` | `^1.5.0` |
+| `spryker-shop/configurable-bundle-widget` | `^1.10.0` |
+| `spryker-shop/customer-page` | `^2.83.0` |
+| `spryker-shop/file-manager-widget` | `^2.2.0` |
+| `spryker-shop/merchant-product-offer-widget` | `^2.9.0` |
+| `spryker-shop/merchant-relation-request-page` | `^1.3.0` |
+| `spryker-shop/payment-app-widget` | `^1.4.0` |
+| `spryker-shop/persistent-cart-share-widget` | `^1.4.0` |
+| `spryker-shop/price-product-volume-widget` | `^1.10.0` |
+| `spryker-shop/product-bundle-widget` | `^1.9.0` |
+| `spryker-shop/product-comparison-page` | `^1.1.0` |
+| `spryker-shop/product-detail-page` | `^3.32.0` |
+| `spryker-shop/product-group-widget` | `^1.13.0` |
+| `spryker-shop/product-label-widget` | `^1.7.0` |
+| `spryker-shop/product-offer-service-point-availability-widget` | `^1.3.0` |
+| `spryker-shop/product-option-widget` | `^1.6.0` |
+| `spryker-shop/product-packaging-unit-widget` | `^1.9.0` |
+| `spryker-shop/product-review-widget` | `^1.20.0` |
+| `spryker-shop/product-search-widget` | `^3.8.0` |
+| `spryker-shop/quick-order-page` | `^4.15.0` |
+| `spryker-shop/quote-request-agent-widget` | `^2.7.0` |
+| `spryker-shop/sales-configurable-bundle-widget` | `^1.7.0` |
+| `spryker-shop/service-point-widget` | `^1.8.0` |
+| `spryker-shop/shopping-list-page` | `^1.11.0` |
+| `spryker-shop/shopping-list-widget` | `^1.7.0` |
+| `spryker-shop/tabs-widget` | `^1.1.0` |
+| `spryker-shop/wishlist-widget` | `^1.4.0` |
+| `spryker-feature/ai-commerce` | `^0.8.0` |
+| `spryker-feature/order-experience-management` | `^0.2.0` |
+| `spryker-feature/self-service-portal` | `^20.10.0` |
+
+</details>
+
+Every ShopUi component mixin includes an optional hook mixin at the top of its base block, before any element and modifier rules:
+
+```css
+@mixin shop-ui-side-drawer($name: '.side-drawer') {
+    #{$name} {
+        @if meta.mixin-exists(shop-ui-side-drawer-base-hook) {
+            @include shop-ui-side-drawer-base-hook;
+        }
+        // ... element and modifier rules
+    }
+}
+```
+
+To use it, define a mixin named `shop-ui-<component>-base-hook` in a project-level component SCSS file:
+
+```css
+@mixin shop-ui-side-drawer-base-hook {
+    color: $setting-color-alt;
+}
+```
+
+The builder's mixin index picks the definition up automatically and wires it into the core component at compile time—no imports needed. The declarations are emitted inside the component's base selector, before its nested rules.
+
+{% info_block infoBox "Why base hooks exist" %}
+
+Base hooks fix a Sass cascade problem. Styles added through the component mixin's body (the `@content` block) are emitted *after* the component's nested rules, such as `&__overlay` or `&--show`. Since Sass 1.92, declarations that follow nested rules are no longer hoisted to the top of the parent rule (the `mixed-decls` deprecation): they stay in source order, which triggers deprecation warnings and can flip which rule wins at equal specificity—base declarations placed after a modifier would override the modifier.
+
+In `spryker-shop/shop-ui` 2.0.0, the core styles were fixed to emit base declarations before nested rules, and base hooks give project code a safe place to contribute base declarations in the correct position. Unlike the v1 builder, builder v2 doesn't silence Sass deprecation warnings, so any remaining `mixed-decls` cases in your project code are visible in the build output and should be fixed the same way.
+
+{% endinfo_block %}
+
+Use the base hook when you want to change the base styles of the original component itself. Use the mixin-include approach described above when you're building a new component based on an existing one.
+
 ## 4. Modify behavior
 
 Finally, let us define what the component does. Create the `new-existing-component-side-drawer.ts`file with the following content:

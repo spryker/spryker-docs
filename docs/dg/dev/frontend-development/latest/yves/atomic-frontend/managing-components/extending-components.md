@@ -105,52 +105,134 @@ import './new-existing-component-side-drawer.scss';
 
 Starting from `spryker-shop/shop-ui` version 2.0.0 (which ships [frontend builder v2](/docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves-v2.html)), there is an additional way to customize a core component: **base hooks**. A base hook lets you add or override declarations in the *base* of a core component—everywhere the component is rendered—without copying the component to the project level.
 
-Base hooks are not limited to ShopUi: they are available in the components of most storefront modules. To get them, update the modules you customize to at least the following versions—except for `shop-ui`, these are regular minor updates:
+Base hooks are not limited to ShopUi: the components of the other storefront modules expose them too. The modules were released together with the builder—`spryker-shop/shop-ui` as a major version, all the others as minor versions. Modules that ship component styles received the base hooks and the Sass `mixed-decls` fix; the remaining ones only update their ShopUi constraint.
 
-<details><summary>Module versions that provide base hooks</summary>
+Updating is optional: the builder compiles older module versions as is. Update the modules whose components you customize to at least the following versions:
+
+<details><summary>Module versions released with builder v2</summary>
 
 | Module | Minimum version |
 | --- | --- |
 | `spryker-shop/shop-ui` | `^2.0.0` |
+| `spryker/multi-factor-auth` | `^2.6.0` |
+| `spryker-feature/ai-commerce` | `^0.8.0` |
+| `spryker-feature/buy-box` | `^1.4.0` |
+| `spryker-feature/order-experience-management` | `^0.2.0` |
+| `spryker-feature/purchasing-control` | `^1.2.0` |
+| `spryker-feature/self-service-portal` | `^20.11.0` |
+| `spryker-shop/agent-page` | `^1.25.0` |
 | `spryker-shop/agent-widget` | `^1.4.0` |
+| `spryker-shop/availability-widget` | `^1.5.0` |
+| `spryker-shop/barcode-widget` | `^1.1.0` |
+| `spryker-shop/business-on-behalf-widget` | `^1.3.0` |
+| `spryker-shop/calculation-page` | `^1.4.0` |
+| `spryker-shop/cart-note-widget` | `^1.7.0` |
 | `spryker-shop/cart-page` | `^3.60.0` |
+| `spryker-shop/cart-reorder-page` | `^1.2.0` |
 | `spryker-shop/catalog-page` | `^1.37.0` |
+| `spryker-shop/category-image-storage-widget` | `^1.1.0` |
+| `spryker-shop/category-widget` | `^1.6.0` |
 | `spryker-shop/checkout-page` | `^3.43.0` |
+| `spryker-shop/checkout-widget` | `^1.5.0` |
+| `spryker-shop/click-and-collect-page-example` | `^0.4.0` |
+| `spryker-shop/cms-block-widget` | `^2.5.0` |
+| `spryker-shop/cms-page` | `^1.9.0` |
 | `spryker-shop/cms-search-page` | `^1.6.0` |
 | `spryker-shop/comment-widget` | `^1.5.0` |
 | `spryker-shop/company-page` | `^2.37.0` |
 | `spryker-shop/company-user-agent-widget` | `^1.2.0` |
+| `spryker-shop/company-user-invitation-page` | `^2.6.0` |
+| `spryker-shop/company-widget` | `^1.11.0` |
 | `spryker-shop/configurable-bundle-note-widget` | `^1.2.0` |
 | `spryker-shop/configurable-bundle-page` | `^1.5.0` |
 | `spryker-shop/configurable-bundle-widget` | `^1.10.0` |
+| `spryker-shop/content-navigation-widget` | `^1.7.0` |
+| `spryker-shop/content-product-widget` | `^1.5.0` |
+| `spryker-shop/currency-widget` | `^1.7.0` |
 | `spryker-shop/customer-page` | `^2.83.0` |
+| `spryker-shop/customer-reorder-widget` | `^6.18.0` |
+| `spryker-shop/date-time-configurator-page-example` | `^0.8.0` |
+| `spryker-shop/discount-promotion-widget` | `^3.8.0` |
+| `spryker-shop/discount-widget` | `^1.10.0` |
+| `spryker-shop/error-page` | `^1.12.0` |
 | `spryker-shop/file-manager-widget` | `^2.2.0` |
+| `spryker-shop/gift-card-widget` | `^1.3.0` |
+| `spryker-shop/home-page` | `^1.3.0` |
+| `spryker-shop/language-switcher-widget` | `^1.9.0` |
 | `spryker-shop/merchant-product-offer-widget` | `^2.9.0` |
+| `spryker-shop/merchant-product-widget` | `^1.8.0` |
+| `spryker-shop/merchant-profile-widget` | `^1.3.0` |
+| `spryker-shop/merchant-registration-request-page` | `^1.1.0` |
 | `spryker-shop/merchant-relation-request-page` | `^1.3.0` |
+| `spryker-shop/merchant-relation-request-widget` | `^1.1.0` |
+| `spryker-shop/merchant-relationship-page` | `^1.1.0` |
+| `spryker-shop/merchant-relationship-widget` | `^1.1.0` |
+| `spryker-shop/merchant-sales-return-widget` | `^1.2.0` |
+| `spryker-shop/merchant-search-widget` | `^1.1.0` |
+| `spryker-shop/merchant-switcher-widget` | `^0.9.0` |
+| `spryker-shop/merchant-widget` | `^1.6.0` |
+| `spryker-shop/money-widget` | `^1.8.0` |
+| `spryker-shop/multi-cart-page` | `^2.9.0` |
+| `spryker-shop/multi-cart-widget` | `^1.11.0` |
+| `spryker-shop/newsletter-page` | `^1.3.0` |
+| `spryker-shop/newsletter-widget` | `^1.9.0` |
+| `spryker-shop/order-cancel-widget` | `^1.2.0` |
+| `spryker-shop/order-custom-reference-widget` | `^1.2.0` |
 | `spryker-shop/payment-app-widget` | `^1.4.0` |
 | `spryker-shop/persistent-cart-share-widget` | `^1.4.0` |
 | `spryker-shop/price-product-volume-widget` | `^1.10.0` |
+| `spryker-shop/price-widget` | `^1.5.0` |
+| `spryker-shop/product-alternative-widget` | `^1.7.0` |
+| `spryker-shop/product-barcode-widget` | `^1.2.0` |
 | `spryker-shop/product-bundle-widget` | `^1.9.0` |
+| `spryker-shop/product-category-widget` | `^1.10.0` |
 | `spryker-shop/product-comparison-page` | `^1.1.0` |
-| `spryker-shop/product-detail-page` | `^3.32.0` |
+| `spryker-shop/product-comparison-widget` | `^1.1.0` |
+| `spryker-shop/product-configuration-cart-widget` | `^1.1.0` |
+| `spryker-shop/product-configuration-shopping-list-widget` | `^1.1.0` |
+| `spryker-shop/product-configuration-widget` | `^1.1.0` |
+| `spryker-shop/product-configuration-wishlist-widget` | `^1.1.0` |
+| `spryker-shop/product-detail-page` | `^3.33.0` |
 | `spryker-shop/product-group-widget` | `^1.13.0` |
+| `spryker-shop/product-image-widget` | `^1.1.0` |
 | `spryker-shop/product-label-widget` | `^1.7.0` |
+| `spryker-shop/product-measurement-unit-widget` | `^1.5.0` |
+| `spryker-shop/product-new-page` | `^1.5.0` |
 | `spryker-shop/product-offer-service-point-availability-widget` | `^1.3.0` |
 | `spryker-shop/product-option-widget` | `^1.6.0` |
 | `spryker-shop/product-packaging-unit-widget` | `^1.9.0` |
+| `spryker-shop/product-relation-widget` | `^1.5.0` |
+| `spryker-shop/product-replacement-for-widget` | `^1.8.0` |
 | `spryker-shop/product-review-widget` | `^1.20.0` |
 | `spryker-shop/product-search-widget` | `^3.8.0` |
+| `spryker-shop/product-set-detail-page` | `^1.12.0` |
+| `spryker-shop/product-set-list-page` | `^1.3.0` |
+| `spryker-shop/product-set-widget` | `^1.11.0` |
+| `spryker-shop/product-widget` | `^1.7.0` |
 | `spryker-shop/quick-order-page` | `^4.15.0` |
+| `spryker-shop/quote-approval-widget` | `^1.6.0` |
+| `spryker-shop/quote-request-agent-page` | `^3.6.0` |
 | `spryker-shop/quote-request-agent-widget` | `^2.7.0` |
+| `spryker-shop/quote-request-page` | `^3.7.0` |
+| `spryker-shop/quote-request-widget` | `^2.6.0` |
 | `spryker-shop/sales-configurable-bundle-widget` | `^1.7.0` |
+| `spryker-shop/sales-order-amendment-widget` | `^1.2.0` |
+| `spryker-shop/sales-order-threshold-widget` | `^1.2.0` |
+| `spryker-shop/sales-product-bundle-widget` | `^1.3.0` |
+| `spryker-shop/sales-product-configuration-widget` | `^1.2.0` |
+| `spryker-shop/sales-return-page` | `^1.12.0` |
+| `spryker-shop/sales-service-point-widget` | `^1.3.0` |
 | `spryker-shop/service-point-widget` | `^1.8.0` |
+| `spryker-shop/shared-cart-page` | `^2.6.0` |
+| `spryker-shop/shared-cart-widget` | `^1.8.0` |
+| `spryker-shop/shipment-type-widget` | `^1.6.0` |
+| `spryker-shop/shopping-list-note-widget` | `^1.2.0` |
 | `spryker-shop/shopping-list-page` | `^1.11.0` |
 | `spryker-shop/shopping-list-widget` | `^1.7.0` |
 | `spryker-shop/tabs-widget` | `^1.1.0` |
+| `spryker-shop/traceable-event-widget` | `^1.3.0` |
+| `spryker-shop/wishlist-page` | `^1.15.0` |
 | `spryker-shop/wishlist-widget` | `^1.4.0` |
-| `spryker-feature/ai-commerce` | `^0.8.0` |
-| `spryker-feature/order-experience-management` | `^0.2.0` |
-| `spryker-feature/self-service-portal` | `^20.10.0` |
 
 </details>
 

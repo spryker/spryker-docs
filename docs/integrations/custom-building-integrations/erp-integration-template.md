@@ -2,7 +2,7 @@
 title: Implementing ERP Integration
 description: Easy starting point for projects to connect to ERP systems.
 keywords: erp, integration, third party, guide, oms, webhook
-last_updated: Feb 20, 2026
+last_updated: Jul 30, 2026
 template: default
 ---
 
@@ -232,5 +232,5 @@ See example implementation here: `\Pyz\Zed\ErpIntegration\Communication\Plugin\O
 
 ### Providing a webhook for ERP system
 
-Implement a [BackendAPI resource](/docs/integrations/spryker-glue-api/backend-api/developing-apis/create-backend-resources) and call required Client method inside it.
+Implement a [BackendAPI resource](/docs/integrations/spryker-api/backend-api/developing-apis/create-backend-resources) and call required Client method inside it.
 By default, Spryker supports only JSON format.

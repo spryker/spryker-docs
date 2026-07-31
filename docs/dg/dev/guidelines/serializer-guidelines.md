@@ -1,13 +1,13 @@
 ---
 title: Serializer guidelines
 description: Guidelines for using the Spryker Serializer module to serialize, deserialize, normalize, and denormalize data.
-last_updated: Jun 10, 2026
+last_updated: Jul 30, 2026
 template: concept-topic-template
 related:
   - title: API Platform
-    link: docs/dg/dev/architecture/api-platform.html
+    link: docs/integrations/spryker-api/api-platform/api-platform.html
   - title: API Platform serialization
-    link: docs/dg/dev/architecture/api-platform/serialization.html
+    link: docs/integrations/spryker-api/api-platform/serialization.html
 ---
 
 The Serializer module provides a Spryker-native wrapper around the [Symfony Serializer component](https://symfony.com/doc/current/serializer.html). It exposes serialization operations through the Spryker Service layer and supports extension via plugins.
@@ -66,7 +66,7 @@ protected function getSerializerNormalizerPlugins(): array
 
 Custom normalizers are prepended before built-in normalizers, giving them higher priority.
 
-These plugins affect only the Serializer module's own serializer instance. They have no effect on API Platform's request and response serialization—for that, see [API Platform serialization](/docs/dg/dev/architecture/api-platform/serialization.html).
+These plugins affect only the Serializer module's own serializer instance. They have no effect on API Platform's request and response serialization—for that, see [API Platform serialization](/docs/integrations/spryker-api/api-platform/serialization.html).
 
 ## Built-in support
 

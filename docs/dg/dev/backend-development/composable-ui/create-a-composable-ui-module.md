@@ -2,12 +2,12 @@
 title: Create a Composable UI module
 description: Step-by-step guide to creating a new Composable UI feature module with YAML-driven Back Office UI.
 template: howto-guide-template
-last_updated: Feb 20, 2026
+last_updated: Jul 31, 2026
 related:
   - title: Composable UI overview
     link: docs/dg/dev/backend-development/composable-ui/composable-ui.html
-  - title: API Platform Enablement
-    link: docs/dg/dev/architecture/api-platform/enablement.html
+  - title: Implement an API Platform resource
+    link: docs/integrations/spryker-api/api-platform/enablement.html
   - title: Entity configuration reference
     link: docs/dg/dev/backend-development/composable-ui/entity-configuration-reference.html
   - title: Composable UI troubleshooting
@@ -26,7 +26,7 @@ This document describes how to create a new Composable UI feature module with YA
 
 Before creating a Composable UI module, ensure you have completed:
 - [Install Composable UI](/docs/dg/dev/backend-development/composable-ui/install-composable-ui.html)
-- [API Platform Enablement](/docs/dg/dev/architecture/api-platform/enablement.html) - Create API resources first
+- [Implement an API Platform resource](/docs/integrations/spryker-api/api-platform/enablement.html) - Create API resources first
 
 {% endinfo_block %}
 
@@ -382,7 +382,7 @@ Navigation structure:
 
 ## Step 4: Create API resources
 
-Create API resources for your entities following the [API Platform Enablement](/docs/dg/dev/architecture/api-platform/enablement.html) guide.
+Create API resources for your entities following the [Implement an API Platform resource](/docs/integrations/spryker-api/api-platform/enablement.html) guide.
 
 For Composable UI modules, place API resources in:
 
@@ -595,7 +595,7 @@ Create `UpdateYourEntityProcessor.php` and `DeleteYourEntityProcessor.php` follo
 
 In `resources/api/backend/your_entities.resource.yml`, specify which Processor handles each operation.
 
-For detailed API resource configuration options, see [API Platform Enablement](/docs/dg/dev/architecture/api-platform/enablement.html).
+For detailed API resource configuration options, see [Implement an API Platform resource](/docs/integrations/spryker-api/api-platform/enablement.html).
 
 ```yaml
 resource:
@@ -936,5 +936,5 @@ If you encounter issues while creating or working with your Composable UI module
 ## Next steps
 
 - [Entity configuration reference](/docs/dg/dev/backend-development/composable-ui/entity-configuration-reference.html) - Complete YAML configuration guide
-- [API Platform Enablement](/docs/dg/dev/architecture/api-platform/enablement.html) - Detailed API Platform resource configuration
+- [Implement an API Platform resource](/docs/integrations/spryker-api/api-platform/enablement.html) - Detailed API Platform resource configuration
 - [Composable UI best practices](/docs/dg/dev/backend-development/composable-ui/composable-ui-best-practices.html) - Implementation patterns

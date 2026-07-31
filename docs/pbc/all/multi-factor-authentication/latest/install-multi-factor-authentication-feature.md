@@ -2,7 +2,7 @@
 title: Install the Multi-Factor Authentication feature
 description: This document describes how to install the Multi-Factor Authentication (MFA) feature in your Spryker project.
 template: feature-integration-guide-template
-last_updated: Feb 19, 2026
+last_updated: Jul 30, 2026
 redirect_from:
   - /docs/pbc/all/multi-factor-authentication/202505.0/install-multi-factor-authentication-feature.html
 ---
@@ -19,7 +19,7 @@ This document describes how to install the [Multi-Factor Authentication (MFA) fe
 | Agent assist               | {{page.release_tag}} | [Install the Agent Assist feature](/docs/pbc/all/user-management/latest/base-shop/install-and-upgrade/install-the-agent-assist-feature.html)                                                                                          |
 | Glue Rest API              | {{page.release_tag}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)   |
 | Back Office dropdown navigation | {{page.release_tag}} | [Install Back Office dropdown navigation](/docs/pbc/all/back-office/latest/base-shop/install-and-upgrade/install-back-office-dropdown-navigation.html) |
-| Backend API Application | {{page.release_tag}} | [Integrate Backend API Application](/docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-backend-api.html) |
+| Backend API Application | {{page.release_tag}} | [Integrate Backend API Application](/docs/integrations/spryker-api/backend-api/integrate-backend-api/integrate-backend-api.html) |
 
 ## 1) Install the required modules
 
@@ -317,7 +317,7 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 
 Only resource routes are supported for MFA protection. Custom routes defined via `RouteProviderPlugins` can't be protected with MFA.
 
-For more information about Glue Backend API resources, see [Create backend resources](/docs/integrations/spryker-glue-api/backend-api/developing-apis/create-backend-resources.html).
+For more information about Glue Backend API resources, see [Create backend resources](/docs/integrations/spryker-api/backend-api/developing-apis/create-backend-resources.html).
 
 **src/Pyz/Glue/MultiFactorAuth/MultiFactorAuthConfig.php**
 

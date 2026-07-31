@@ -1,6 +1,6 @@
 This document describes how to create and configure the Data Exchange API endpoints.
 
-The Data Exchange API lets you create endpoints to interact with any database tables through API. In this example, we are creating the `/dynamic-data/countries` endpoint to interact with the `spy_country` and `spy_tax_rate` tables. When following the steps, adjust the data per your requirements.
+The Data Exchange API lets you create endpoints to interact with any database tables through API. In this example, we are creating the `/dynamic-entity/countries` endpoint to interact with the `spy_country` and `spy_tax_rate` tables. When following the steps, adjust the data per your requirements.
 
 ## Create and configure a Data Exchange API endpoint
 
@@ -114,7 +114,7 @@ and for `spy_tax_rate` table:
 
 {% info_block infoBox %}
 
-For configuration relations follow [Configure Dynamic Data installation](/docs/pbc/all/data-exchange/latest/install-and-upgrade/install-the-data-exchange-api.html#configure-dynamic-data-installation) .
+For configuration relations follow [Configure Dynamic Data installation](/docs/integrations/custom-building-integrations/data-exchange/install-and-upgrade-data-exchange-api/install-the-data-exchange-api.html#configure-dynamic-data-installation) .
 
 {% endinfo_block %}
 
@@ -139,15 +139,15 @@ For configuration relations follow [Configure Dynamic Data installation](/docs/p
 
 {% info_block infoBox %}
 
-* We recommend setting `isEditable` and `isCreatable` to `false` for fields that serve as identifiers or keys, ensuring their immutability and preserving the integrity of the data model.
+- We recommend setting `isEditable` and `isCreatable` to `false` for fields that serve as identifiers or keys, ensuring their immutability and preserving the integrity of the data model.
 
-* For the fields with numerable values, an integer data type is a non-decimal number between -2147483648 and 2147483647 in 32-bit systems and, in 64-bit systems, between -9223372036854775808 and 9223372036854775807. If you need or anticipate values outside of this range, you can set the value as a string type.
+- For the fields with numerable values, an integer data type is a non-decimal number between -2147483648 and 2147483647 in 32-bit systems and, in 64-bit systems, between -9223372036854775808 and 9223372036854775807. If you need or anticipate values outside of this range, you can set the value as a string type.
 
-* The Data Exchange API supports the following types for the configured fields:
-  * boolean
-  * integer
-  * string
-  * decimal
+- The Data Exchange API supports the following types for the configured fields:
+  - boolean
+  - integer
+  - string
+  - decimal
 
 {% endinfo_block %}
 
@@ -164,7 +164,7 @@ For configuration relations follow [Configure Dynamic Data installation](/docs/p
 
 {% info_block infoBox %}
 
-If you don't see the needed table, it may be [excluded from configuring](/docs/pbc/all/data-exchange/latest/install-and-upgrade/install-the-data-exchange-api.html#set-up-the-configuration).
+If you don't see the needed table, it may be [excluded from configuring](/docs/integrations/custom-building-integrations/data-exchange/install-and-upgrade-data-exchange-api/install-the-data-exchange-api.html#set-up-the-configuration).
 
 {% endinfo_block %}
 
@@ -183,7 +183,7 @@ This opens the **Data Exchange API Configuration** page with the endpoint displa
 {% info_block warningBox "Verification" %}
 
 If everything is set up correctly, you can follow [How to send request in Data Exchange API](/docs/pbc/all/data-exchange/latest/sending-requests-with-data-exchange-api.html) to discover how to request your API endpoint.
-Or if you're in the middle of the integration process for the Data Exchange API follow [Install the Data Exchange API](/docs/pbc/all/data-exchange/latest/install-and-upgrade/install-the-data-exchange-api.html) to proceed with it.
+Or if you're in the middle of the integration process for the Data Exchange API follow [Install the Data Exchange API](/docs/integrations/custom-building-integrations/data-exchange/install-and-upgrade-data-exchange-api/install-the-data-exchange-api.html) to proceed with it.
 
 {% endinfo_block %}
 

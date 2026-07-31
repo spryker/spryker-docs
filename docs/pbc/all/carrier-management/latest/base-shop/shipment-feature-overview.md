@@ -1,7 +1,7 @@
 ---
 title: Shipment feature overview
 description: With the Carrier Management capability, you can create and manage carrier companies and their shipment methods for every individual store.
-last_updated: July 07, 2022
+last_updated: July 30, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/shipment-feature-overview
 originalArticleId: 9090caf1-5dfb-4b5a-ac10-13f268edab9f
@@ -31,7 +31,7 @@ A *shipment type* is a way in which a customer receives an order after placing i
 
 Shipment types are used by service points. For more information about service points, see [Service Points feature overview](/docs/pbc/all/service-point-management/latest/unified-commerce/service-points-feature-overview.html).
 
-To add service types using Glue API, see [Backend API Marketplace B2C Demo Shop reference](/docs/integrations/spryker-glue-api/backend-api/api-references/backend-api-marketplace-b2c-demo-shop-reference.html).
+To add service types using Glue API, see [Backend API Marketplace B2C Demo Shop reference](/docs/integrations/spryker-api/backend-api/api-references/backend-api-marketplace-b2c-demo-shop-reference.html).
 
 To import shipment types, see [Import file details: shipment_type.csv](/docs/pbc/all/carrier-management/latest/base-shop/import-and-export-data/import-file-details-shipment-type.csv.html).
 

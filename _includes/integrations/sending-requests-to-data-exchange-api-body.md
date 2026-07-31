@@ -1,9 +1,9 @@
-This document describes how to interact with databases using the Data Exchange API. The Data Exchange API lets you configure endpoints to interact with any database tables. In this document, `/dynamic-data/countries` is used to interact with the `spy_country` and `spy_tax_rate` tables as an example.
+This document describes how to interact with databases using the Data Exchange API. The Data Exchange API lets you configure endpoints to interact with any database tables. In this document, `/dynamic-entity/countries` is used to interact with the `spy_country` and `spy_tax_rate` tables as an example.
 
 ## Prerequisites
 
-* [Install the Data Exchange API](/docs/pbc/all/data-exchange/latest/install-and-upgrade/install-the-data-exchange-api.html)
-* [Configure the Data Exchange API](/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/configure-data-exchange-api.html)
+- [Install the Data Exchange API](/docs/integrations/custom-building-integrations/data-exchange/install-and-upgrade-data-exchange-api/install-the-data-exchange-api.html)
+- [Configure the Data Exchange API](/docs/integrations/spryker-api/backend-api/data-exchange-api/configure-data-exchange-api.html)
 
 
 The Data Exchange API is a non-resource-based API, and routes all specified endpoints directly to a controller. By default, all routes within the Data Exchange API are protected to ensure data security. To access the API, you need to obtain an access token by sending the `POST /token/` request with the appropriate credentials:
@@ -515,7 +515,7 @@ The response should be `204 No Content`. If deletion is not allowed, `405 Method
 To delete a specific country, submit the following HTTP request:
 
 ```bash
-PUT /dynamic-entity/countries/1 HTTP/1.1
+DELETE /dynamic-entity/countries/1 HTTP/1.1
 Host: glue-backend.mysprykershop.com
 Content-Type: application/json
 Accept: application/json
@@ -736,4 +736,4 @@ Error codes for `GET`, `POST`, `PATCH` and `PUT` requests:
 | 1315 | Filter field `field` for table alias `alias` not found.                                                                                          | Make sure that the field you're sending for the filter exist in configuration. |
 | 1316 | The URL is invalid. `entity[index]` field `field` must have a URL data format.                                                                   | Make sure that the URL is passed in relative format and starts with a `/`. |
 | 1317 | Failed to delete the data for `entity[index]`. The entity has a child entity and can not be deleted. Child entity: `entity[index]`.              | Make sure that the entity you want to delete doesn't have child entities. Delete child entities before deleting this entity. |
-| 1318 | Method not allowed for the entity `alias`.                                                                                                       | Make sure that the entity that you want to delete is set as `isDeletable: true` in the configuration.       | | The method is not allowed. Check the configuration for this entity.                                                                                                                                                                                                                                                  |
+| 1318 | Method not allowed for the entity `alias`.                                                                                                       | The method is not allowed. Check the configuration for this entity—for example, an entity can be deleted only if it is set as `isDeletable: true` in the configuration.                                                                                                                                                                                                                                                  |

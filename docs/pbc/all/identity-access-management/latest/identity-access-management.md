@@ -1,7 +1,7 @@
 ---
 title: Identity Access Management
 description: Learn all about the Spryker Identity Access Management capability and how to create and manage accounts within your Spryker project.
-last_updated: June 1, 2026
+last_updated: July 30, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/scos/user/back-office-user-guides/201811.0/logging-in-to-the-back-office.html
@@ -86,7 +86,7 @@ Post-login redirect does not apply to agent users in Storefront and Merchant Por
 
 ## Glue API authentication
 
-For details about Glue API authentication, see [Glue API authentication and authorization](/docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html)
+For details about Glue API authentication, see [Glue API authentication and authorization](/docs/integrations/spryker-api/authenticating-and-authorization/authenticating-and-authorization.html)
 
 ## Current constraints
 
@@ -100,8 +100,8 @@ Each of the identity managers is an ECO module that must be developed separately
 
 |INSTALLATION GUIDES  | GLUE API GUIDES |
 | - | - |
-| [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-spryker-core-back-office-feature.html)  | [Authentication and authorization](/docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html) |
-| [Install Microsoft Azure Active Directory](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-microsoft-azure-active-directory.html)   | [Authentication and authorization](/docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html) |
+| [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-spryker-core-back-office-feature.html)  | [Authentication and authorization](/docs/integrations/spryker-api/authenticating-and-authorization/authenticating-and-authorization.html) |
+| [Install Microsoft Azure Active Directory](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-microsoft-azure-active-directory.html)   | [Authentication and authorization](/docs/integrations/spryker-api/authenticating-and-authorization/authenticating-and-authorization.html) |
 | [Install the Customer Access Glue API](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-customer-access-glue-api.html) | [Create customers](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-create-customers.html) |
 | [Integrate post-login redirect](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/integrate-post-login-redirect.html) | |
 | | [Federated Authentication via OAuth2/OIDC](/docs/pbc/all/oauth/latest/federated-authentication.html) |

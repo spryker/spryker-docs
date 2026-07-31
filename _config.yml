@@ -162,7 +162,6 @@ versioned_categories:
       - data-import
       - frontend-development
       - system-requirements
-      - glue-api
   pbc:
     all:
       - back-office

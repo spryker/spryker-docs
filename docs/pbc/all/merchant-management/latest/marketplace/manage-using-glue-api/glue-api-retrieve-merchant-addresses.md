@@ -2,7 +2,7 @@
 title: "Glue API: Retrieve merchant addresses"
 description: Learn how to retrieve merchant addresses in your Spryker marketplace project via the Spryker Glue API
 template: glue-api-storefront-guide-template
-last_updated: Nov 17, 2023
+last_updated: Jul 30, 2026
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202311.0/merchants/retrieving-merchant-addresses.html
 related:
@@ -108,4 +108,4 @@ Request sample: retrieve merchant addresses
 
 ## Possible errors
 
-For statuses, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+For statuses, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

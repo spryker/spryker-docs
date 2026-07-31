@@ -1,7 +1,7 @@
 ---
 title: Release notes 202604.0
 description: Release notes for Spryker Cloud Commerce OS version 202602.0
-last_updated: Jul 15, 2026
+last_updated: Jul 30, 2026
 template: concept-topic-template
 ---
 
@@ -317,8 +317,8 @@ Spryker made API Platform generally available as the foundation for modern API d
 - Accelerates delivery of integrations and future API capabilities
 
 **Documentation:**
-- [API Platform](/docs/dg/dev/architecture/api-platform.html)
-- [Migration Status of out-of-the-box API Endpoints](/docs/dg/dev/architecture/api-platform/migrate-to-api-platform-status.html)
+- [API Platform](/docs/integrations/spryker-api/api-platform/api-platform.html)
+- [Migration Status of out-of-the-box API Endpoints](/docs/integrations/spryker-api/migrate-from-glue-to-api-platform/migrate-to-api-platform-status.html)
 
 ### Algolia configuration in the Back Office {% include badge.html type="improvement" %}
 

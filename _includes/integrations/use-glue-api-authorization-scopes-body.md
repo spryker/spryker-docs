@@ -1,5 +1,11 @@
 This guide describes how to add scopes to the resource and custom route for the Backend API application.
 
+## Prerequisites
+
+Integrate the authorization scopes into your project. For details, see [Integrate the Authorization Scopes](/docs/integrations/spryker-api/backend-api/integrate-backend-api/integrate-the-authorization-scopes.html).
+
+## Add scopes
+
 Let's say you have a module named `ModuleBackendApi` with `GET` and `POST` methods, where you want to add scopes. To add scopes, follow these steps:
 
 1. Set up a resource for the Backend API application.

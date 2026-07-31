@@ -1,7 +1,7 @@
 ---
 title: Release notes 202602.0
 description: Release notes for Spryker Cloud Commerce OS version 202602.0
-last_updated: Apr 1, 2026
+last_updated: Jul 31, 2026
 template: concept-topic-template
 ---
 
@@ -240,10 +240,10 @@ This release enhances API Platform capabilities to improve your developer experi
 - Accelerate onboarding and increase developer productivity.
 
 **Documentation**
-- [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html)
-- [Code Buckets](/docs/dg/dev/architecture/api-platform/code-buckets.html)
-- [Relationships](/docs/dg/dev/architecture/api-platform/relationships.html)
-- [API Test Examples](/docs/dg/dev/architecture/api-platform/testing.html)
+- [Validation schemas](/docs/integrations/spryker-api/api-platform/validation-schemas.html)
+- [Code Buckets](/docs/integrations/spryker-api/api-platform/code-buckets.html)
+- [Resource relationships](/docs/integrations/spryker-api/api-platform/relationships.html)
+- [API Test Examples](/docs/integrations/spryker-api/api-platform/testing.html)
 
 ### OMS New Visual User Experience {% include badge.html type="improvement" %}
 

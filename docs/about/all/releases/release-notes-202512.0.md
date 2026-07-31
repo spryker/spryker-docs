@@ -1,7 +1,7 @@
 ---
 title: Release notes 202512.0
 description: Release notes for Spryker Cloud Commerce OS version 202512.0
-last_updated: Jun 23, 2026
+last_updated: Jul 30, 2026
 template: concept-topic-template
 ---
 
@@ -239,7 +239,7 @@ The **API Platform** integration allows you to define API resources declarativel
 - **Easier onboarding**: Simplify API development for new teams and partners by providing clear documentation and structured guidance.
 
 **Documentation:**
-- [API Platform](/docs/dg/dev/architecture/api-platform.html)
+- [API Platform](/docs/integrations/spryker-api/api-platform/api-platform.html)
 
 ### API tooling and integration documentation improvements {% include badge.html type="improvement" %}
 
@@ -265,8 +265,8 @@ To make API development and partner onboarding easier, the following improvement
 **Documentation:**
 - [Integrations Documentation Portal](/docs/integrations/integrate-with-spryker.html)
 - [Integrations Catalog](/docs/integrations/third-party-integrations.html)
-- [Interactive API Playground](/docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-marketplace-b2b-demo-shop-reference.html).
-- [API reference with data model descriptions](/docs/integrations/spryker-glue-api/backend-api/api-references/backend-api-marketplace-b2b-demo-shop-reference.html). Expand each resposne to learn more about each field.
+- [Interactive API Playground](/docs/integrations/spryker-api/storefront-api/api-references/storefront-api-marketplace-b2b-demo-shop-reference.html).
+- [API reference with data model descriptions](/docs/integrations/spryker-api/backend-api/api-references/backend-api-marketplace-b2b-demo-shop-reference.html). Expand each resposne to learn more about each field.
 - [Postman Collections](https://github.com/spryker-community/glue-postman-collections)
 
 ### Publish & Synchronize stability and scalability improvements {% include badge.html type="improvement" %}

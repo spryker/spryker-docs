@@ -10,7 +10,7 @@ Install the required features:
 
 | NAME              | VERSION          | INSTALLATION GUIDE |
 |-------------------|------------------|------------------|
-| Data Exchange API | {{page.release_tag}} | [Install the Data Exchange API](/docs/pbc/all/data-exchange/latest/install-and-upgrade/install-the-data-exchange-api.html) |
+| Data Exchange API | {{page.release_tag}} | [Install the Data Exchange API](/docs/integrations/custom-building-integrations/data-exchange/install-and-upgrade-data-exchange-api/install-the-data-exchange-api.html) |
 | Inventory Management  | {{page.release_tag}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
 
 ### 1) Set up behavior

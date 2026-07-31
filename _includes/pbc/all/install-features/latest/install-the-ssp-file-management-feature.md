@@ -451,7 +451,7 @@ The feature provides two data importers:
 
 ### Configure the import file system
 
-The file importer reads the file content from the `import-files` file system. Configure it to point to the directory the files referenced in the CSV `path` column are stored in:
+The file importer reads file content from the `import-files` file system. Configure it to point to the directory where the files referenced in the CSV `path` column are stored:
 
 **config/Shared/config_default.php**
 
@@ -501,7 +501,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Enable the behaviors by registering the console commands:
+Enable the data import commands by registering the following console commands:
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
@@ -536,7 +536,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 ### Add file demo data
 
-Place the files to import under the configured import file system, for example `data/import/common/common/files/`. Then prepare your data according to your requirements using our demo data:
+Place the files to import in the configured import file system, for example, `data/import/common/common/files/`. Then prepare the import data based on your requirements using the following demo data:
 
 **data/import/common/common/file.csv**
 
@@ -551,7 +551,7 @@ FILE-5,Safety Instructions.pdf,common/common/files/safety_instructions.pdf,appli
 
 | COLUMN         | REQUIRED | DATA TYPE | DATA EXAMPLE                          | DATA EXPLANATION                                                              |
 |----------------|----------|-----------|---------------------------------------|--------------------------------------------------------------------------------|
-| file_reference | ✓        | string    | FILE-1                                | Unique identifier of the file. Files with an existing reference are skipped.    |
+| file_reference | ✓        | string    | FILE-1                                | Unique identifier of the file. If a file with the same reference already exists, the importer skips it. |
 | file_name      | ✓        | string    | Print Pro 2100 User Manual.pdf        | The display name of the file.                                                   |
 | path           | ✓        | string    | common/common/files/user_manual.pdf   | Path to the file to import, relative to the `import-files` file system root.    |
 | mime_type      | ✓        | string    | application/pdf                       | MIME type of the file.                                                          |
@@ -607,13 +607,12 @@ console data:import:self-service-portal-file-attachment
 
 {% info_block warningBox "Verification" %}
 
-Verify the imported data in the Back Office:
+Verify that the data was imported successfully in the Back Office:
 
 1. Go to **Customer Portal** > **File Attachments**.
-   Make sure the imported files are displayed on the **File Attachments** page—for example, a file with the `FILE-1` reference.
+   Verify that the imported files appear on the **File Attachments** page. For example, verify that a file with the `FILE-1` reference is displayed.
 2. Next to an imported file, for example `FILE-1`, click **Attach**.
-   Make sure the **Linked Entities** pane displays the entities from the file attachment import—for example, for `FILE-1`, the `AST--1` asset and the `MDL--1` model.
-
+   Verify that the **Linked Entities** pane displays the entities imported from the file attachment CSV. For example, for `FILE-1`, verify that the `AST--1` asset and the `MDL--1` model are listed.
 {% endinfo_block %}
 
 ## Set up frontend templates

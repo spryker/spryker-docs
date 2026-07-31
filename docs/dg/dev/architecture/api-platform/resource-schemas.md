@@ -1,7 +1,7 @@
 ---
 title: Resource Schemas
 description: Understanding API Platform resource schema definitions in Spryker.
-last_updated: Jul 13, 2026
+last_updated: Jul 31, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -256,7 +256,7 @@ resource:
 | `integer` | `int` | `42` | Whole numbers |
 | `number` | `float` | `3.14` | Decimal numbers |
 | `boolean` | `bool` | `true` | True/false values |
-| `array` | `array` | `["a", "b"]` | Lists of values |
+| `array` | `array` | `["a", "b"]` | Lists of values. Add an `items` sibling to publish a typed element schema instead of an untyped array — see [Object collections](#object-collections) and [Typed collections in the published contract](/docs/dg/dev/architecture/api-platform/typed-collections.html). |
 | `object` | `object` | `{"key": "value"}` | Strictly typed nested objects — generates a typed companion class. See [Typed nested objects](#typed-nested-objects). A project can also share one shape across resources with a [canonical nested object](#project-defined-canonical-nested-objects). |
 | `map` | `array` | `{"key": "value"}` | Free-shape associative payloads documented via `openapiContext`. Stored as PHP `array` and rendered as `type: object` in the OpenAPI specification. |
 | `mixed` | `mixed` | any | Use only when the payload genuinely has no fixed shape and cannot be described via `openapiContext`. |
@@ -487,6 +487,19 @@ customer:
 On the storefront `Carts` resource this generates `CartsCustomersStorefrontObject` (the field
 `customer` pluralized to `Customers`) as the element type, and types the property as
 `array<\Generated\Api\Storefront\Carts\CartsCustomersStorefrontObject>`.
+
+In the published contract, the property becomes `"type": "array"` with an `items` reference to the
+generated element schema, which API Platform registers in the same document. Without an `items` block,
+the property publishes as a bare array with no element description.
+
+{% info_block warningBox "Typing an existing list is a backward-compatibility decision" %}
+
+Generated value objects copy only the fields you declare, so adding an `items` block to a list that is
+already part of a released response silently drops every payload key missing from `items.properties`.
+Check a real payload first — see
+[Typed collections in the published contract](/docs/dg/dev/architecture/api-platform/typed-collections.html).
+
+{% endinfo_block %}
 
 ### Per-resource validation lifting
 

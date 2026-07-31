@@ -1314,6 +1314,8 @@ entries:
       nested:
         - title: Resource Schemas
           url: /docs/dg/dev/architecture/api-platform/resource-schemas.html
+        - title: Typed collections in the published contract
+          url: /docs/dg/dev/architecture/api-platform/typed-collections.html
         - title: Validation Schemas
           url: /docs/dg/dev/architecture/api-platform/validation-schemas.html
         - title: CodeBucket Support

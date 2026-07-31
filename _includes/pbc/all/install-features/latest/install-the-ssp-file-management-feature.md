@@ -434,6 +434,188 @@ Verify permissions on Storefront:
 
 {% endinfo_block %}
 
+## Import file data
+
+The file data import requires the `SelfServicePortal` module version 20.11.0 or later:
+
+```bash
+composer require spryker-feature/self-service-portal:"^20.11.0" --update-with-dependencies
+```
+
+The feature provides two data importers:
+
+| IMPORT TYPE                          | SPECIFICATION                                                                                                          |
+|--------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| self-service-portal-file             | Imports files and uploads their content from the import file system into the file manager storage, creating file references. |
+| self-service-portal-file-attachment  | Attaches previously imported files to company business units, company users, assets, and models.                          |
+
+### Configure the import file system
+
+The file importer reads the file content from the `import-files` file system. Configure it to point to the directory the files referenced in the CSV `path` column are stored in:
+
+**config/Shared/config_default.php**
+
+```php
+<?php
+
+use Spryker\Service\FlysystemLocalFileSystem\Plugin\Flysystem\LocalFilesystemBuilderPlugin;
+use Spryker\Shared\FileSystem\FileSystemConstants;
+
+$config[FileSystemConstants::FILESYSTEM_SERVICE]['import-files'] = [
+    'sprykerAdapterClass' => LocalFilesystemBuilderPlugin::class,
+    'root' => APPLICATION_ROOT_DIR . '/data/import',
+    'path' => '/',
+];
+```
+
+### Register the data import plugins
+
+| PLUGIN                              | SPECIFICATION                                                                                | PREREQUISITES | NAMESPACE                                                       |
+|-------------------------------------|------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------|
+| SspFileDataImportPlugin             | Imports files with content from a CSV file into the file manager storage.                       |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\DataImport |
+| SspFileAttachmentDataImportPlugin   | Imports file attachments, linking files to business units, company users, assets, and models.   |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\DataImport |
+
+**src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\DataImport;
+
+use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
+use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\DataImport\SspFileAttachmentDataImportPlugin;
+use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\DataImport\SspFileDataImportPlugin;
+
+class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\DataImport\Dependency\Plugin\DataImportPluginInterface>
+     */
+    protected function getDataImporterPlugins(): array
+    {
+        return [
+            new SspFileDataImportPlugin(),
+            new SspFileAttachmentDataImportPlugin(),
+        ];
+    }
+}
+```
+
+Enable the behaviors by registering the console commands:
+
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Console;
+
+use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
+use Spryker\Zed\DataImport\Communication\Console\DataImportConsole;
+use Spryker\Zed\Kernel\Container;
+use SprykerFeature\Zed\SelfServicePortal\SelfServicePortalConfig;
+
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return list<\Symfony\Component\Console\Command\Command>
+     */
+    protected function getConsoleCommands(Container $container)
+    {
+        $commands = [
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . SelfServicePortalConfig::IMPORT_TYPE_FILE),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . SelfServicePortalConfig::IMPORT_TYPE_FILE_ATTACHMENT),
+        ];
+
+        return $commands;
+    }
+}
+```
+
+### Add file demo data
+
+Place the files to import under the configured import file system, for example `data/import/common/common/files/`. Then prepare your data according to your requirements using our demo data:
+
+**data/import/common/common/file.csv**
+
+```csv
+file_reference,file_name,path,mime_type,extension
+FILE-1,Print Pro 2100 User Manual.pdf,common/common/files/user_manual.pdf,application/pdf,pdf
+FILE-2,Warranty Terms.pdf,common/common/files/warranty_terms.pdf,application/pdf,pdf
+FILE-3,Maintenance Checklist.pdf,common/common/files/maintenance_checklist.pdf,application/pdf,pdf
+FILE-4,Asset Photo.png,common/common/files/asset_photo.png,image/png,png
+FILE-5,Safety Instructions.pdf,common/common/files/safety_instructions.pdf,application/pdf,pdf
+```
+
+| COLUMN         | REQUIRED | DATA TYPE | DATA EXAMPLE                          | DATA EXPLANATION                                                              |
+|----------------|----------|-----------|---------------------------------------|--------------------------------------------------------------------------------|
+| file_reference | ✓        | string    | FILE-1                                | Unique identifier of the file. Files with an existing reference are skipped.    |
+| file_name      | ✓        | string    | Print Pro 2100 User Manual.pdf        | The display name of the file.                                                   |
+| path           | ✓        | string    | common/common/files/user_manual.pdf   | Path to the file to import, relative to the `import-files` file system root.    |
+| mime_type      | ✓        | string    | application/pdf                       | MIME type of the file.                                                          |
+| extension      | ✓        | string    | pdf                                   | File extension.                                                                 |
+
+**data/import/common/common/file_attachment.csv**
+
+```csv
+file_reference,entity_type,entity_key
+FILE-1,ssp_asset,AST--1
+FILE-1,ssp_model,MDL--1
+FILE-2,company_business_unit,acme_corporation_HR
+FILE-3,ssp_asset,AST--2
+FILE-3,company_business_unit,acme_corporation_Zurich
+FILE-4,ssp_model,MDL--2
+FILE-5,company_user,Acme--8
+```
+
+| COLUMN         | REQUIRED | DATA TYPE | DATA EXAMPLE       | DATA EXPLANATION                                                                                             |
+|----------------|----------|-----------|---------------------|-----------------------------------------------------------------------------------------------------------------|
+| file_reference | ✓        | string    | FILE-1              | Reference of an imported file.                                                                                    |
+| entity_type    | ✓        | string    | ssp_asset           | Type of the entity to attach the file to: `company_business_unit`, `company_user`, `ssp_asset`, or `ssp_model`.   |
+| entity_key     | ✓        | string    | AST--1              | Key or reference of the target entity: business unit key, company user key, asset reference, or model reference.  |
+
+{% info_block infoBox "Import order" %}
+
+Import files before file attachments. The referenced entities—company business units, company users, assets, and models—must also be imported before file attachments.
+
+{% endinfo_block %}
+
+#### Extend the data import configuration
+
+**data/import/local/full_EU.yml**
+
+```yaml
+version: 0
+
+actions:
+    # ...
+    - data_entity: self-service-portal-file
+      source: data/import/common/common/file.csv
+    # ...
+    - data_entity: self-service-portal-file-attachment
+      source: data/import/common/common/file_attachment.csv
+```
+
+### Import the data
+
+```bash
+console data:import:self-service-portal-file
+console data:import:self-service-portal-file-attachment
+```
+
+{% info_block warningBox "Verification" %}
+
+Verify the imported data in the Back Office:
+
+1. Go to **Customer Portal** > **File Attachments**.
+   Make sure the imported files are displayed on the **File Attachments** page—for example, a file with the `FILE-1` reference.
+2. Next to an imported file, for example `FILE-1`, click **Attach**.
+   Make sure the **Linked Entities** pane displays the entities from the file attachment import—for example, for `FILE-1`, the `AST--1` asset and the `MDL--1` model.
+
+{% endinfo_block %}
+
 ## Set up frontend templates
 
 For information about setting up frontend templates, see [Set up SSP frontend templates](/docs/pbc/all/self-service-portal/latest/install/ssp-frontend-templates.html).

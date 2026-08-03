@@ -2855,6 +2855,10 @@ entries:
         nested:
           - title: Install the Product Experience Management feature
             url: /docs/pbc/all/product-experience-management/latest/install-the-product-experience-management-feature.html
+          - title: "Import file details: product.csv"
+            url: /docs/pbc/all/product-experience-management/latest/import-file-details-product.csv.html
+          - title: Import a simple product and a product family
+            url: /docs/pbc/all/product-experience-management/latest/tutorials-and-howtos/import-a-simple-product-and-a-product-family.html
 
       - title: Product Information Management
         url: /docs/pbc/all/product-information-management/product-information-management.html

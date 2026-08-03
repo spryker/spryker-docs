@@ -1,7 +1,7 @@
 ---
 title: Product Experience Management
 description: Import and export product data through a backoffice UI using CSV files with schema-driven column mapping.
-last_updated: Apr 08 2026
+last_updated: Jul 22 2026
 template: concept-topic-template
 ---
 
@@ -14,7 +14,7 @@ The following terms are used throughout the PEM feature:
 | TERM | DEFINITION |
 | --- | --- |
 | Import job | A reusable definition that specifies the product type (for example, *products-csv-import*) and the column schema used to map CSV headers to system properties. An import job is created once and referenced when uploading CSV files. |
-| Import job run | A single execution of an import job. Each run is linked to an uploaded CSV file and tracks processing status, row counts, and errors. Runs are processed asynchronously by the `import:job:run` console command. |
+| Import job run | A single execution of an import job. Each run is linked to an uploaded CSV file and tracks processing status, row counts, and errors. Runs are processed asynchronously by the `import:job:run` console command, which runs on a schedule so a Back Office user never has to trigger it manually. |
 | Import step | A unit of work in the import pipeline. Each step handles a specific data domain (for example, abstract product, concrete product, prices, images). Steps validate, transform, and persist rows in batches. |
 | Export step | The export counterpart of an import step. Each export step fetches data from the database and populates the corresponding columns in the exported CSV. |
 | Schema | A JSON-encoded column mapping definition stored on the import job. It maps human-readable CSV header names (for example, `Name ({locale})`) to system property names (for example, `name.{locale}`). Placeholders like `{locale}`, `{store}`, and `{sort_order}` are expanded at export time based on actual system data. |
@@ -26,7 +26,7 @@ The following terms are used throughout the PEM feature:
 
 1. A Back Office user creates an import job that defines the product type and column schema.
 2. The user uploads a CSV file against the import job, which creates an import job run with *pending* status.
-3. The `import:job:run` console command picks up the oldest pending run, marks it as *processing*, and reads the CSV file.
+3. The scheduled `import:job:run` console command picks up the oldest pending run, marks it as *processing*, and reads the CSV file.
 4. CSV headers are mapped to system property names using the job's schema. Each batch of rows passes through the configured import steps.
 5. Import steps validate, transform, and persist data. Per-row errors are recorded in the database.
 6. After processing, the run is marked as *done* or *failed* with final row counts.
@@ -76,3 +76,11 @@ The error display threshold is configurable in the module's `ProductExperienceMa
 | INSTALLATION GUIDES |
 | --- |
 | [Install the Product Experience Management feature](/docs/pbc/all/product-experience-management/latest/install-the-product-experience-management-feature.html) |
+
+| IMPORT AND EXPORT DATA |
+| --- |
+| [Import file details: product.csv](/docs/pbc/all/product-experience-management/latest/import-file-details-product.csv.html) |
+
+| TUTORIALS AND HOWTOS |
+| --- |
+| [Import a simple product and a product family](/docs/pbc/all/product-experience-management/latest/tutorials-and-howtos/import-a-simple-product-and-a-product-family.html) |

@@ -176,13 +176,13 @@ class ZedNavigationConfig extends AbstractBundleConfig
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\Merchant\Persistence" package="src.Orm.Zed.Merchant.Persistence">
 
-    <table name="spy_merchant">
-        <behavior name="event">
-            <parameter name="spy_merchant-name" column="name"/>
-            <parameter name="spy_merchant-is_active" column="is_active"/>
-        </behavior>
-        <behavior name="\Spryker\Zed\AclEntity\Persistence\Propel\Behavior\AclEntityBehavior"/>
-    </table>
+  <table name="spy_merchant">
+    <behavior name="event">
+      <parameter name="spy_merchant-name" column="name"/>
+      <parameter name="spy_merchant-is_active" column="is_active"/>
+    </behavior>
+    <behavior name="\Spryker\Zed\AclEntity\Persistence\Propel\Behavior\AclEntityBehavior"/>
+  </table>
 
 </database>
 ```
@@ -193,9 +193,9 @@ class ZedNavigationConfig extends AbstractBundleConfig
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\MerchantUser\Persistence" package="src.Orm.Zed.MerchantUser.Persistence">
 
-    <table name="spy_merchant_user">
-        <behavior name="\Spryker\Zed\AclEntity\Persistence\Propel\Behavior\AclEntityBehavior"/>
-    </table>
+  <table name="spy_merchant_user">
+    <behavior name="\Spryker\Zed\AclEntity\Persistence\Propel\Behavior\AclEntityBehavior"/>
+  </table>
 
 </database>
 ```
@@ -793,12 +793,12 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 ```yaml
 env:
-    NEW_RELIC_ENABLED: 0
+  NEW_RELIC_ENABLED: 0
 
 sections:
-    build:
-        router-cache-warmup-merchant-portal:
-            command: 'vendor/bin/console router:cache:warm-up:merchant-portal'
+  build:
+    router-cache-warmup-merchant-portal:
+      command: 'vendor/bin/console router:cache:warm-up:merchant-portal'
 ```
 
 ### 5) Set up transfer objects
@@ -1157,33 +1157,33 @@ $bootstrap
 ```html
 <!DOCTYPE html>
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>Spryker Merchant Portal - Maintenance</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
-        <link href="http://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet" type="text/css" />
-    </head>
-    <style>
-        body {
-            font-family: 'PT Mono', sans-serif;
-        }
-        #so-doc {
-            margin: 0 auto;
-            width: 960px;
-        }
-    </style>
-    <body>
-        <div id="so-doc">
-            <div>
+<head>
+  <title>Spryker Merchant Portal - Maintenance</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <link href="http://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet" type="text/css" />
+</head>
+<style>
+  body {
+    font-family: 'PT Mono', sans-serif;
+  }
+  #so-doc {
+    margin: 0 auto;
+    width: 960px;
+  }
+</style>
+<body>
+<div id="so-doc">
+  <div>
                 <pre>
                 PAGE UNDER CONSTRUCTION!
 
                 Come back in a few minutes...
                 </pre>
-            </div>
-        </div>
-    </body>
+  </div>
+</div>
+</body>
 </html>
 ```
 
@@ -1216,14 +1216,14 @@ import { DefaultMerchantPortalConfigModule, RootMerchantPortalModule } from '@mp
 import { DefaultTableConfigModule } from '@mp/gui-table';
 
 @NgModule({
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        HttpClientModule,
-        RootMerchantPortalModule,
-        DefaultMerchantPortalConfigModule,
-        DefaultTableConfigModule,
-    ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    RootMerchantPortalModule,
+    DefaultMerchantPortalConfigModule,
+    DefaultTableConfigModule,
+  ],
 })
 export class AppModule extends RootMerchantPortalModule {}
 ```
@@ -1232,7 +1232,7 @@ export class AppModule extends RootMerchantPortalModule {}
 
 ```ts
 export const environment = {
-    production: true,
+  production: true,
 };
 ```
 
@@ -1240,7 +1240,7 @@ export const environment = {
 
 ```ts
 export const environment = {
-    production: false,
+  production: false,
 };
 ```
 
@@ -1249,13 +1249,13 @@ export const environment = {
 ```html
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>ZedUi</title>
-        <base href="/" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </head>
-    <body></body>
+<head>
+  <meta charset="utf-8" />
+  <title>ZedUi</title>
+  <base href="/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body></body>
 </html>
 ```
 
@@ -1269,12 +1269,12 @@ import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
 if (environment.production) {
-    enableProdMode();
+  enableProdMode();
 }
 
 platformBrowserDynamic()
-    .bootstrapModule(AppModule)
-    .catch((error) => console.error(error));
+        .bootstrapModule(AppModule)
+        .catch((error) => console.error(error));
 ```
 
 **src/Pyz/Zed/ZedUi/Presentation/Components/polyfills.ts**
@@ -1340,16 +1340,16 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 ```yaml
 merchant-portal-build-frontend:
-    command: 'vendor/bin/console frontend:mp:build -e production'
-    timeout: 1600
+  command: 'vendor/bin/console frontend:mp:build -e production'
+  timeout: 1600
 ```
 
 - build-static-development:
 
 ```yaml
 merchant-portal-build-frontend:
-    command: 'vendor/bin/console frontend:mp:build'
-    timeout: 1600
+  command: 'vendor/bin/console frontend:mp:build'
+  timeout: 1600
 ```
 
 ### 7) Set up ACL behavior
@@ -1736,43 +1736,43 @@ To adjust environment infrastructure, take the following steps.
 ```yaml
 ...
 image:
-    ...
-    node:
-        version: 18
-        npm: 9
+  ...
+  node:
+    version: 18
+    npm: 9
 ...
 groups:
-    EU:
-        region: EU
-        applications:
-            merchant_portal_eu:
-                application: merchant-portal
-                endpoints:
-                    mp.de.spryker.local:
-                        entry-point: MerchantPortal
-                        store: DE
-                        primal: true
-                        services:
-                            session:
-                                namespace: 7
-                    mp.at.spryker.local:
-                        entry-point: MerchantPortal
-                        store: AT
-                        services:
-                            session:
-                                namespace: 8
-    US:
-        region: US
-        applications:
-            merchant_portal_us:
-                application: merchant-portal
-                endpoints:
-                    mp.us.spryker.local:
-                        entry-point: MerchantPortal
-                        store: US
-                        services:
-                            session:
-                                namespace: 9
+  EU:
+    region: EU
+    applications:
+      merchant_portal_eu:
+        application: merchant-portal
+        endpoints:
+          mp.de.spryker.local:
+            entry-point: MerchantPortal
+            store: DE
+            primal: true
+            services:
+              session:
+                namespace: 7
+          mp.at.spryker.local:
+            entry-point: MerchantPortal
+            store: AT
+            services:
+              session:
+                namespace: 8
+  US:
+    region: US
+    applications:
+      merchant_portal_us:
+        application: merchant-portal
+        endpoints:
+          mp.us.spryker.local:
+            entry-point: MerchantPortal
+            store: US
+            services:
+              session:
+                namespace: 9
 ```
 
 </details>
@@ -1931,21 +1931,21 @@ Make sure the `user-merchant-portal-gui` rule has been added to the `spy_acl_rul
 ```xml
 <?xml version="1.0"?>
 <config>
-    <my-account>
-        <label>My Account</label>
-        <title>My Account</title>
-        <bundle>user-merchant-portal-gui</bundle>
-        <controller>my-account</controller>
-        <action>index</action>
-    </my-account>
-    <logout>
-        <label>Logout</label>
-        <title>Logout</title>
-        <bundle>security-merchant-portal-gui</bundle>
-        <controller>logout</controller>
-        <action>index</action>
-        <type>danger</type>
-    </logout>
+  <my-account>
+    <label>My Account</label>
+    <title>My Account</title>
+    <bundle>user-merchant-portal-gui</bundle>
+    <controller>my-account</controller>
+    <action>index</action>
+  </my-account>
+  <logout>
+    <label>Logout</label>
+    <title>Logout</title>
+    <bundle>security-merchant-portal-gui</bundle>
+    <controller>logout</controller>
+    <action>index</action>
+    <type>danger</type>
+  </logout>
 </config>
 ```
 

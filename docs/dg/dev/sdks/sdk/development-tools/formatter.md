@@ -1,7 +1,7 @@
 ---
 title: Formatter
 description: Learn about the Formatter tool that allows you to find and fix mistakes in the code style.
-last_updated: Jun 16, 2021
+last_updated: Jul 3, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/formatter
 originalArticleId: 4a978f53-1a56-4f70-8b91-870e0ac94ab3
@@ -127,11 +127,5 @@ The command to run the Formatter is integrated into `.travis.yml`
 {% info_block warningBox "Important" %}
 
 If you commit without the pre-commit hooks, you should run the Formatter manually to avoid issues with Travis.
-
-{% endinfo_block %}
-
-{% info_block infoBox %}
-
-Pre-commit hooks weren't integrated into [B2B](https://github.com/spryker-shop/b2b-demo-shop) and [B2C](https://github.com/spryker-shop/b2c-demo-shop) demo shops, only in the [Shop Suite](https://github.com/spryker-shop/suite).
 
 {% endinfo_block %}

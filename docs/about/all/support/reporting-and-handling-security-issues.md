@@ -52,7 +52,7 @@ We process all reports as follows:
   - Inform customers via the security newsletter
   - After at least seven working days, publish the fix details in the docs
     Security releases are not mentioned in product release notes
-- For Spryker Demo Shops (`spryker-shop/suite`, `b2b-demo-shop`, `b2c-demo-shop`):
+- For Spryker Demo Shops (`b2b-demo-marketplace`, `b2b-demo-shop`, `b2c-demo-shop`):
   - Prepare a project-level code snippet
   - Verify the fix with the reporter
   - Inform customers via the security newsletter

@@ -5,6 +5,7 @@ last_updated: May 29, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/integrations/custom-building-integrations/punchout-development-plan.html
+  - /docs/pbc/all/punchout/202307.0/punchout-catalogs-overview.html
 ---
 
 The PunchOut Gateway module provides a basic implementation of OCI and cXML PunchOut flows for Spryker shops.

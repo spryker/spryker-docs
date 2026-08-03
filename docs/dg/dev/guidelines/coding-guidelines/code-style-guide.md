@@ -65,13 +65,7 @@ See the [code sniffer](https://github.com/spryker/code-sniffer) documentation fo
 
 ### Make the necessary project adjustments
 
-Make sure you change the composer package name of your application once you forked or copied the Demo Shop code. By default, the tool reads the name in the main `composer.json`:
-
-```json
- "name": "spryker-shop/suite",
-```
-
-Modify this in order to skip the MIT license checks.
+Make sure you change the composer package name of your application once you forked or copied the Demo Shop code. By default, the tool reads the name in the main `composer.json`. Modify this in order to skip the MIT license checks.
 
 The [code sniffer](https://github.com/spryker/code-sniffer) documentation shows how to extend and customize the sniffer rules in general for your project.
 

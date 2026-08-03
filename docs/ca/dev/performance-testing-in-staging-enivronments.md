@@ -1,7 +1,7 @@
 ---
 title: Performance testing in staging environments
 description: Learn how to efficiently conduct performance testing in Spryker Cloud Commerce OS staging environments, ensuring scalability and high-quality performance before production.
-last_updated: Sep 15, 2022
+last_updated: Jul 3, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/performance-testing.html
@@ -41,31 +41,27 @@ The purpose of this guide is to show you how to integrate Spryker's load testing
 
 For instructions on setting up a developer environment using one of the available Spryker shops, you can visit our [getting started guide](/docs/dg/dev/development-getting-started-guide.html) which shows you how to set up the Spryker Commerce OS.
 
-Some of the following options are available to choose from:
-- [B2B Demo Shop](/docs/about/all/b2b-suite.html): A boilerplate for B2B commerce projects.
-- [B2C Demo Shop](/docs/about/all/b2c-suite.html): A starting point for B2C implementations.
+[B2B Demo Marketplace](/docs/about/all/spryker-marketplace/spryker-marketplace.html) is a starting point for implementations.
 
-If you wish to start with a demo shop that has been pre-configured with the Spryker load testing module, you can use the [Spryker Suite Demo Shop](https://github.com/spryker-shop/suite).
+If you wish to start with a demo shop that has been pre-configured with the Spryker load testing module, you can use the [B2B Demo Marketplace](https://github.com/spryker-shop/b2b-demo-marketplace/).
 
-For this example, we will be using the B2C Demo Shop. While a demo shop is used in this example, this can be integrated into a pre-existing project. You will just need to integrate Gatling into your project and generate the necessary data from fixtures into your database.
+For this example, we will be using the B2B Demo Marketplace. While a demo shop is used in this example, this can be integrated into a pre-existing project. You will just need to integrate Gatling into your project and generate the necessary data from fixtures into your database.
 
-To begin, we will need to create a project folder and clone the B2C Demo Shop and the Docker SDK:
+To begin, we will need to create a project folder and clone the B2B Demo Marketplace and the Docker SDK:
 
 ```bash
-mkdir spryker-b2c && cd spryker-b2c
-git clone https://github.com/spryker-shop/b2c-demo-shop.git ./
+mkdir spryker-b2b-mp && cd spryker-b2b-mp
+git clone https://github.com/spryker-shop/b2b-demo-marketplace.git ./
 git clone git@github.com:spryker/docker-sdk.git docker
 ```
 
 #### Integrating Gatling
 
-With the B2C Demo Shop and Docker SDK cloned, you will need to make a few changes to integrate Gatling into your project. These changes include requiring the load testing tool with composer as well as updating the [Router module](/docs/dg/dev/upgrade-and-migrate/silex-replacement/router/router-yves.html) inside of Yves.
+With the B2B Demo Marketplace and Docker SDK cloned, you will need to make a few changes to integrate Gatling into your project. These changes include requiring the load testing tool with composer as well as updating the [Router module](/docs/dg/dev/upgrade-and-migrate/silex-replacement/router/router-yves.html) inside of Yves.
 
 {% info_block infoBox %}
 
 The required composer package as well as the changes to the Router module are needed on the project level. They are what help to run the appropriate tests and generate the data needed for the load test tool.
-
-It should be noted that the Spryker Suite already has these changes implemented in them and comes pre-configured for load testing. For either of the B2C or B2B Demo Shops, you will need to implement the below changes.
 
 {% endinfo_block %}
 
@@ -126,7 +122,7 @@ extensions:
 
 {% info_block infoBox %}
 
-This step is only needed for a new project, such as our B2C Demo Shop example. Otherwise, if you have a pre-existing project, once the above changes for integrating Gatling have been made, you merely need to re-build the application (such as with `docker/sdk up --build --assets --data`) to apply the changes.
+This step is only needed for a new project, such as our B2B Demo Marketplace example. Otherwise, if you have a pre-existing project, once the above changes for integrating Gatling have been made, you merely need to re-build the application (such as with `docker/sdk up --build --assets --data`) to apply the changes.
 
 {% endinfo_block %}
 
@@ -159,7 +155,7 @@ docker/sdk up --build --assets --data
 > - `--assets` - build assets
 > - `--data` - get new demo data
 
-You've set up your Spryker B2C Demo Shop and can now access your applications.
+You've set up your B2B Demo Marketplace and can now access your applications.
 
 #### Data preparation
 

@@ -1,7 +1,7 @@
 ---
 title: Display custom names for order item states on the Storefront
 description: Learn how you can change the state names in your Spryker Order State Machine to display a more customer friendly naming convention within your shop
-last_updated: Jun 16, 2021
+last_updated: Jul 6, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-display-custom-names-for-order-item-states-on-the-storefront
 originalArticleId: 1e420a56-ad89-4c61-8e20-7913396610ab
@@ -18,13 +18,13 @@ For the order items states on the Storefront, it's not always appropriate to dis
 
 To display custom order states on the Storefront, do the following:
 
-1. In your project, go to `/config/Zed/oms` and open the .XML file of the payment method or sub-process you want to change the order states on the Storefront for. For example, let's take the default Spryker [DummyPayment01.xml](https://github.com/spryker-shop/suite/blob/master/config/Zed/oms/DummyPayment01.xml).
+1. In your project, go to `/config/Zed/oms` and open the .XML file of the payment method or sub-process you want to change the order states on the Storefront for. For example, let's take the default Spryker [DummyPayment01.xml](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/config/Zed/oms/DummyPayment01.xml).
 2. Specify the `display` value of the necessary state, as you want it on the Storefront. In the following example, the `display` value of the `confirmed` OMS sate is set to `waiting for shipment`:
 
 **config/Zed/oms/DummyPayment01.xml**
 
 ```xml
-?xml version="1.0"?>
+<?xml version="1.0"?>
 <statemachine
         xmlns="spryker:oms-01"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"

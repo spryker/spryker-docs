@@ -1,7 +1,7 @@
 ---
 title: Import product data with a single file
 description: Learn how you can import data for products using just a single file within your Spryker Cloud Commerce OS project.
-last_updated: Jun 16, 2021
+last_updated: Jul 3, 2026
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/importing-product-data-with-a-single-file
 originalArticleId: 589f1dde-2516-4dc9-af6a-a9b171b6442e
@@ -44,7 +44,7 @@ The only exceptions are `abstract_sku` and `concrete_sku` headers that are not p
 
 Thus, the CSV file for the main product data import is a combination of data from separate product-related CSV files (except for a [few fields specific for just this file](#specific-fields)). Because of this, when importing corresponding data, the same [dependencies and mandatory fields](#mandatory-fields) as for the separate files, apply to the combined product data import file. For example, if you want to import product image data via the combined product data file (headers *productimage.imageset_name*, *productimage.externalurl_large*, etc.), you should mind the dependencies and mandatory fields as for [product_image.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-image.csv.html).
 
-By default, the import CSV file resides in data/import/common/{STORE}/. As, for example, the [combined_product_DE.csv](https://github.com/spryker-shop/suite/blob/master/data/import/common/DE/combined_product.csv) file in Spryker Master Suite.
+By default, the import CSV file resides in data/import/common/{STORE}/.
 
 <a name="mandatory-fields"></a>
 
@@ -125,7 +125,7 @@ actions:
 ...
 ```
 
-By default, the configuration YML file resides in `data/import/common`.  As, for example, the [combined_product_import_config_EU.yml](https://github.com/spryker-shop/suite/blob/master/data/import/common/combined_product_import_config_EU.yml) file in Spryker Master Suite.
+By default, the configuration YML file resides in `data/import/common`.
 
 ## Console commands for product data import
 

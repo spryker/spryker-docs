@@ -34,6 +34,25 @@ fi
 
 current_seconds=$(date +%s)
 
+# Map of renamed files in this diff range: "<new-path>\t<old-path>" per line. Without
+# rename detection (-M) a rename looks like a brand-new file, so its whole content is
+# counted as added and falsely trips the stale last_updated check. We keep the old path
+# so diffs can be taken rename-aware: a pure rename yields 0 changed lines (passes),
+# while a rename that also edits content still counts the genuine changed lines.
+rename_map=$(git diff --name-status -M "$BASE_SHA"..."$HEAD_SHA" -- | awk -F'\t' '$1 ~ /^R/ {print $3"\t"$2}')
+
+# Diff a file over the range, rename-aware: if the file is a rename target, include its
+# old path and -M so git emits the true (small) hunk instead of a whole-file addition.
+file_diff() {
+  local f="$1" old
+  old=$(printf '%s\n' "$rename_map" | awk -F'\t' -v f="$f" '$1==f{print $2}')
+  if [ -n "$old" ]; then
+    git diff -M "$BASE_SHA"..."$HEAD_SHA" -- "$old" "$f"
+  else
+    git diff "$BASE_SHA"..."$HEAD_SHA" -- "$f"
+  fi
+}
+
 for file in $changed_md_files; do
   if [ ! -f "$file" ]; then
     continue
@@ -45,8 +64,8 @@ for file in $changed_md_files; do
     continue
   fi
 
-  if git diff "$BASE_SHA"..."$HEAD_SHA" -- "$file" | grep -q "^\+last_updated:"; then
-    date_string=$( git diff "$BASE_SHA"..."$HEAD_SHA" -- "$file" | grep "^\+last_updated:" | head -1 | sed 's/\+last_updated: //')
+  if file_diff "$file" | grep -q "^\+last_updated:"; then
+    date_string=$( file_diff "$file" | grep "^\+last_updated:" | head -1 | sed 's/\+last_updated: //')
     date_seconds=$(date -d "$date_string" +%s)
 
     if [ $((current_seconds - date_seconds)) -lt $((lines_changed_day_limit * 86400)) ]; then
@@ -71,7 +90,20 @@ for file in $changed_md_files; do
     fi
   fi
 
-  lines_changed=$(git diff "$BASE_SHA"..."$HEAD_SHA" -- "$file" | sed '1,/@@/d' | grep -v "^-\s*$" | grep "^\+" | wc -l)
+  # Body-only change count: added lines inside the front-matter block (up to and
+  # including the second "---") must not count, so front-matter-only edits (tags,
+  # title, etc.) don't force a last_updated bump. Track new-file line numbers from
+  # each hunk header and count only added lines past the front matter.
+  fm_end=$(awk '/^---$/{c++; if(c==2){print NR; exit}}' "$file")
+  fm_end=${fm_end:-0}
+  lines_changed=$(file_diff "$file" | awk -v fm="$fm_end" '
+    /^@@/ { match($0, /\+[0-9]+/); ln = substr($0, RSTART+1, RLENGTH-1) + 0; next }
+    /^\+\+\+/ { next }
+    /^\+/ { if (ln > fm) count++; ln++; next }
+    /^-/  { next }
+    { ln++ }
+    END { print count+0 }
+  ')
 
   if [ "$lines_changed" -ge "$lines_changed_limit" ]; then
     echo "Modified file $file has $lines_changed changed lines, old and not updated last_updated: $date_string."

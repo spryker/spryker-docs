@@ -1,7 +1,7 @@
 ---
 title: Integrate SCSS linter
 description: Learn how to enable and integrate the SCSS linter and its dependencies for your Spryker based project
-last_updated: Jun 16, 2021
+last_updated: Jul 3, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/scss-linter-integration-guide
 originalArticleId: 45333d65-56d9-4b44-855a-e26ce42a1e4a
@@ -46,49 +46,17 @@ npm install commander@4.0.x --save-dev
 
 To update the scripts:
 
-1. Add the SCSS lint script to `/frontend/libs/stylelint.js`
+1. Add the SCSS lint script to `/frontend/libs/stylelint.mjs`
 
-```js
-const stylelint = require('stylelint');
-const { globalSettings } = require('../settings');
-const commandLineParser = require('commander');
-
-commandLineParser
-    .option('-f, --fix', 'execute stylelint in the fix mode.')
-    .option('-p, --file-path <path>', 'execute stylelint only for this file.')
-    .parse(process.argv);
-
-const isFixMode = !!commandLineParser.fix;
-const defaultFilePaths = [`${globalSettings.paths.project}/**/*.scss`];
-const filePaths = commandLineParser.filePath ? [commandLineParser.filePath] : defaultFilePaths;
-
-stylelint.lint({
-    configFile: `${globalSettings.context}/node_modules/@spryker/frontend-config.stylelint/.stylelintrc.json`,
-    files: filePaths,
-    syntax: "scss",
-    formatter: "string",
-    fix: isFixMode,
-}).then(function(data) {
-    if (data.errored) {
-        const messages = JSON.parse(JSON.stringify(data.output));
-        process.stdout.write(messages);
-        process.exit(1);
-    }
-}).catch(function(error) {
-    console.error(error.stack);
-    process.exit(1);
-});
-```
-
-See this example file: [stylelint.js](https://github.com/spryker-shop/suite/blob/master/frontend/libs/stylelint.js).
+See this example file: [stylelint.mjs](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/frontend/libs/stylelint.mjs).
 
 2. Adjust the `/package.json` scripts:
 
 ```json
 "scripts": {
     ....
-    "yves:stylelint": "node ./frontend/libs/stylelint",
-    "yves:stylelint:fix": "node ./frontend/libs/stylelint --fix"
+    "yves:stylelint": "node ./frontend/libs/stylelint.mjs",
+    "yves:stylelint:fix": "node ./frontend/libs/stylelint.mjs --fix"
 }
 ```
 

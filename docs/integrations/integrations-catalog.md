@@ -6,7 +6,6 @@ template: default
 layout: custom_new
 redirect_from:
   - /docs/integrations/third-party-integrations.html
-  - /docs/integrations/third-party-integrations-1.html
   - /docs/integrations/third-party-integrations-2.html
 ---
 

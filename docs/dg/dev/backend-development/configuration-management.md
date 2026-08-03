@@ -1,7 +1,7 @@
 ---
 title: Configuration Management feature
 description: Learn how to use the Configuration Management feature in a Spryker project.
-last_updated: Apr 27, 2026
+last_updated: Aug 3, 2026
 template: concept-topic-template
 related:
   - title: Install the Configuration Management feature
@@ -784,6 +784,7 @@ For setup instructions, see [Install the Configuration Management feature](/docs
 | `getModuleConfig()` always returns default | Setting `storefront: false` | Yves/Glue can only read storefront-enabled settings. Set `storefront: true` or use Zed Config. |
 | `getModuleConfig()` always returns default | Configuration module not installed | Expected behavior. Method gracefully falls back to `$default`. |
 | Value returns `null` despite being saved | Key mismatch | Compound key format is `feature:tab:group:setting`. Verify all four segments match the YAML schema. |
+| All values return `null` after a deployment, but the Back Office still displays them | Settings map missing in the deployed container | `data/configuration/settings-map.php` and `merged-schema.php` are excluded from the Git repository and the Docker image, so a fresh container has no settings map and every value resolves to `null` before decryption. The Back Office reads the stored row directly, which is why the UI and the runtime resolver disagree. Add `configuration:sync` to the cloud install recipes. See [Install the Configuration Management feature](/docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html). |
 | Secret value empty in Yves | Expected behavior | Secrets are never published to storage. Access only via Zed. |
 | Changes not visible after YAML edit | Schema not synced | Run `configuration:sync` after YAML changes. |
 | Store-specific value not applied | Missing scope context | Pass `ConfigurationScopeTransfer` in third argument or register request expander plugins. See [Adding Custom Scopes](/docs/dg/dev/backend-development/configuration-management/custom-scopes.html). |

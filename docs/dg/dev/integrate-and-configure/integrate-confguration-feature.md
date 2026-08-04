@@ -1,7 +1,7 @@
 ---
 title: Install the Configuration Management feature
 description: Learn how to integrate and configure Configuration Management feature in a Spryker project.
-last_updated: Apr 27, 2026
+last_updated: Aug 3, 2026
 template: howto-guide-template
 
 related:
@@ -654,7 +654,11 @@ actions:
 
 ### 7) Add install recipe commands
 
-Add the `configuration:sync` command to the install recipe so that the merged schema and settings map are generated during deployment.
+Add the `configuration:sync` command to the install recipes so that the merged schema and settings map are generated during deployment.
+
+The generated files are written to `data/configuration/` inside the container and are excluded from both the Git repository and the Docker image. A freshly deployed container therefore never has them until `configuration:sync` runs. Without these files, the settings map is empty and every configuration value resolves to `null` at runtime—even though the stored values remain intact in the `spy_configuration_value` table. Add the command to every recipe a deployment invokes, not only to the local build recipe.
+
+#### 7.1) Add the command to the local build recipe
 
 **config/install/docker.yml**
 
@@ -668,9 +672,41 @@ Add the command to the `build` section:
             command: 'vendor/bin/console configuration:sync'
 ```
 
+#### 7.2) Add the command to the cloud deployment recipes
+
+Add a `configuration` section to each recipe your deployment pipeline invokes. Place it after the database migration steps and before any `data:import` step: the imported configuration-value rows are validated against the settings map, and the import aborts when the map is missing.
+
+| RECIPE | DEPLOYMENT HOOK |
+| --- | --- |
+| config/install/production.yml | `SPRYKER_HOOK_INSTALL` |
+| config/install/destructive.yml | `SPRYKER_HOOK_DESTRUCTIVE_INSTALL` |
+| config/install/dynamic-store.yml | Dynamic Multistore deployments |
+
+Add the following section to each of the preceding recipes:
+
+```yaml
+    configuration:
+        configuration-sync:
+            command: 'vendor/bin/console configuration:sync -vvv --no-ansi'
+```
+
+If your project clones new environments from a deploy file template, such as `deploy.aws-env-template.yml`, add the section to the template as well so that new environments inherit it.
+
+{% info_block infoBox "pre-deploy recipes" %}
+
+Do not add `configuration:sync` to `config/install/pre-deploy.yml`. This recipe runs before the new code and the database migration are in place, so there is nothing to sync against yet.
+
+{% endinfo_block %}
+
+{% info_block infoBox "Idempotency" %}
+
+Running `configuration:sync` cannot overwrite values set by users. The command only writes the two generated cache files and never opens a database connection, so it is safe to run on every deployment.
+
+{% endinfo_block %}
+
 {% info_block warningBox "Verification" %}
 
-Run the install recipe and verify that the `configuration:sync` step executes without errors.
+Run each install recipe and verify that the `configuration:sync` step executes without errors.
 
 {% endinfo_block %}
 

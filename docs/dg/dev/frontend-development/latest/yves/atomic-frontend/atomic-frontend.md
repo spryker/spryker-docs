@@ -474,7 +474,7 @@ In your code, you can use keyword this to access the public API of the HTML elem
 import Component from 'ShopUi/models/component';
 
 export default class ComponentName extends Component {
-    protected readyCallback(): void {
+    protected init(): void {
         // TODO: your code here
     }
 }
@@ -488,7 +488,7 @@ import SideDrawer from 'ShopUi/components/organisms/side-drawer/side-drawer';
 
 // Export the extended class
 export default class ComponentName extends SideDrawer {
-    protected readyCallback(): void {
+    protected init(): void {
         // TODO: your code here
     }
 }

@@ -30,6 +30,7 @@ Starting from `spryker-shop/shop-ui` version 2.0.0, the builder is part of the S
 | Asset discovery order | filesystem order—differs per machine and run | sorted, identical on every machine |
 | Sources scanned for component styles | 3 of 5 (no eco, no project) | all 5 |
 | Extending core component base styles | copy the component or fight the cascade | 71 base hooks across 62 ShopUi components |
+| Component initialization hook | `init()`, or the deprecated `readyCallback()` | `init()` only—`readyCallback()` is removed |
 | Builder language | JavaScript (CommonJS) | TypeScript (native ESM), 0 transpilation steps |
 
 ## What's new
@@ -90,11 +91,100 @@ The v1 builder bundled component files in the order the filesystem happened to r
 
 ### Built-in design tokens step
 
-If the project provides a design tokens source file at `frontend/assets/global/<theme>/design-tokens/design-tokens.json`, the builder generates `design-tokens.css` and bundles it at the start of the critical CSS—no project-level build hook required. The `style-dictionary` package is an optional dependency: without it, a previously generated `design-tokens.css` is served as is. For details, see [Design tokens](/docs/dg/dev/frontend-development/latest/design-tokens.html).
+Design tokens support is built into the builder and is driven by artifact presence, not by configuration or a feature package version. When the project ships a tokens source file at `frontend/assets/global/<theme>/design-tokens/design-tokens.json`, the builder generates `design-tokens.css` into the project ShopUi styles directory (`src/Pyz/Yves/ShopUi/Theme/<theme>/styles/design-tokens.css`) and prepends it to the critical CSS entry, so token definitions precede every component style that consumes them—no project-level build hook required.
+
+The tokens source is a style-dictionary JSON; both DTCG (`$value`) and legacy (`value`) token notations are accepted:
+
+```json
+{
+    "Color": {
+        "grey": {
+            "25": { "$type": "color", "$value": "#fafafa" },
+            "50": { "$type": "color", "$value": "#f5f5f5" }
+        }
+    }
+}
+```
+
+The generated `design-tokens.css` exposes each token as a CSS custom property on `:root`—the top-level group is dropped from the name, the remaining path is joined with dashes, and plain numbers become `px` values (except font weights):
+
+```css
+:root {
+    --grey-25: #fafafa;
+    --grey-50: #f5f5f5;
+}
+```
+
+The `style-dictionary` package is an optional dependency, probed by presence: with the package installed, the CSS is regenerated on every build; without it, a previously generated (committed) `design-tokens.css` is served as is. If the tokens source exists but neither the package nor a committed CSS is available, the step is skipped with a warning. A project without the tokens source doesn't use design tokens, and the step is skipped silently. For details, see [Design tokens](/docs/dg/dev/frontend-development/latest/design-tokens.html).
 
 ### Legacy style rescue
 
 Component styles written against the v1 contract—files that emit CSS at the top level without being imported from a component entry point—are still compiled, with a warning that names the file and explains how to migrate it. Their CSS stays in the bundles until the affected modules are updated, so the upgrade doesn't silently drop styles.
+
+### Component initialization: `readyCallback()` is removed
+
+`Component.readyCallback()` no longer exists in `spryker-shop/shop-ui` 2.0.0. Components initialize in `init()`.
+
+In ShopUi 1.x the base class declared both methods: `readyCallback()` was abstract—so every component had to implement it—and marked deprecated, while the default `init()` implementation forwarded to it:
+
+```ts
+// ShopUi 1.x: vendor/spryker-shop/shop-ui/.../Theme/default/models/component.ts
+/**
+ * Same as mountCallback().
+ *
+ * @deprecated Use init() instead.
+ */
+protected abstract readyCallback(): void;
+
+protected init(): void {
+    this.readyCallback();
+}
+```
+
+In 2.0.0 the deprecated method is gone and `init()` is the only initialization hook. It's invoked by `mountCallback()`, which the application calls once the DOM is loaded and every other web component on the page is defined:
+
+```ts
+// ShopUi 2.0.0
+protected init(): void {}
+
+mountCallback(): void {
+    this.init();
+}
+```
+
+To migrate a component, rename `readyCallback()` to `init()`. In a component that extends another component, also change the `super.readyCallback()` call to `super.init()`:
+
+```ts
+// Before
+export default class ProductCounter extends Component {
+    protected readyCallback(): void {
+        this.counter = <HTMLElement>document.querySelector(`.${this.jsName}__counter`);
+    }
+}
+
+// After
+export default class ProductCounter extends Component {
+    protected init(): void {
+        this.counter = <HTMLElement>document.querySelector(`.${this.jsName}__counter`);
+    }
+}
+```
+
+`init()` is no longer abstract, so a component without initialization logic doesn't need to declare it at all. Keep overriding `init()` rather than `mountCallback()`: `mountCallback()` is the application's entry point into the component—the application calls it and then marks the component as mounted, which is what prevents a second initialization.
+
+{% info_block warningBox "A leftover readyCallback() fails silently" %}
+
+Nothing calls `readyCallback()` in 2.0.0, and an unused method on a subclass is valid TypeScript—so a component that still implements it compiles, ships, and simply never initializes, with no build error and no console warning. Component TypeScript is transpiled by `babel-loader` with `@babel/preset-typescript`, which doesn't type-check, so the build can't catch this for you either.
+
+Search your project before the first build after the upgrade:
+
+```bash
+grep -rn "readyCallback" src/Pyz
+```
+
+If you rename the method but leave a `super.readyCallback()` call in its body, the component throws `TypeError: ... readyCallback is not a function` when it mounts.
+
+{% endinfo_block %}
 
 ### Actionable error messages
 
@@ -159,6 +249,65 @@ All other settings are fixed and inherited from the packaged defaults.
 `frontend/yves.settings.mts` is executed by Node.js directly via type stripping, so it must use only erasable TypeScript syntax: type annotations are fine, but `enum`, `namespace`, and constructor parameter properties fail at runtime.
 
 {% endinfo_block %}
+
+## Overriding the core styles layer
+
+Besides components, a project can override the core ShopUi *styles layer*—the stylesheets under `Theme/default/styles/`—by placing same-path files into the project ShopUi module (`src/Pyz/Yves/ShopUi/Theme/default/styles/`).
+
+### The project `shared.scss` wrapper
+
+`styles/shared.scss` is the shared context (settings, helpers, shared mixins) that the builder injects into every compiled component. When the project ships its own `styles/shared.scss`, the builder canonically remaps **every** reference to the shared stylesheet to the project file—components, core styles, and the injection banner all receive the project version, and only the project wrapper itself resolves `ShopUi/styles/shared` to the core one. The wrapper is therefore the single place where the project extends and re-brands the core settings and helpers.
+
+Write the wrapper with the Sass module system. Project overrides of core `!default` settings go into the `with (...)` configuration of the core forward—this is what keeps core helpers reading the project values—and project-only partials are forwarded after it:
+
+```scss
+// src/Pyz/Yves/ShopUi/Theme/default/styles/shared.scss
+@use 'settings/color' as setting-color;
+
+@forward '~ShopUi/styles/shared' with (
+    $setting-color-main: setting-color.$setting-color-main,
+    $setting-color-alt: setting-color.$setting-color-alt
+);
+
+@forward 'settings/color' hide $setting-color-main, $setting-color-alt;
+@forward 'helpers/my-helper';
+```
+
+Names that exist on both levels must be configured through `with (...)` and hidden from the project partial's forward: forwarding two modules that define the same member is an error, and hiding the core member instead of configuring it would silently disconnect the project value from the core helpers that read it.
+
+Every forwarded partial declares its own `@use` dependencies—in a module, mixins resolve variables and helper mixins lexically, in the stylesheet that defines them:
+
+```scss
+// src/Pyz/Yves/ShopUi/Theme/default/styles/helpers/_my-helper.scss
+@use '../settings/color' as *;
+
+@mixin helper-my-helper {
+    color: $setting-color-main;
+}
+```
+
+{% info_block warningBox "A file with @use cannot be loaded with @import" %}
+
+Once the wrapper contains `@use` rules, external tooling can no longer pull it in with `@import`—reference it with `@use` instead. Partials that reference the shared context declare `@use 'shared' as *;` themselves; the builder injects the shared banner only into files that declare their own `@use` and do not already load a piece of the shared graph.
+
+{% endinfo_block %}
+
+### `basic.scss` and `util.scss`
+
+The global style roots are discovered per project with a core fallback: when `src/Pyz/Yves/ShopUi/Theme/default/styles/basic.scss` (or `util.scss`) exists, it replaces the core one as the bundle entry. In the module form, load the core root under a namespace and the project partials unqualified, then emit explicitly—project mixins override the same-named core ones, and untouched core mixins are included through the namespace:
+
+```scss
+// src/Pyz/Yves/ShopUi/Theme/default/styles/basic.scss
+@use '~ShopUi/styles/basic' as core;
+@use 'basics/reset' as *;
+@use 'basics/typography' as *;
+@use 'basics/grid' as *;
+
+@include basic-reset;
+@include basic-typography;
+@include basic-grid;
+@include core.basic-animation;
+```
 
 ## How the builder collects SCSS and JS files
 

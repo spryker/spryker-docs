@@ -530,11 +530,8 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 import SprykerEcoCrefopayCheckboxHelper from 'SprykerEcoCrefoPay/components/atoms/crefopay-checkbox-helper/crefopay-checkbox-helper';
 
 export default class CrefopayCheckboxHelper extends SprykerEcoCrefopayCheckboxHelper {
-
-    protected readyCallback(): void {}
-
     protected init(): void {
-        super.readyCallback();
+        super.init();
     }
 
     protected checkCheckbox(checkboxTrigger: EventTarget): void {

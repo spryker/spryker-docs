@@ -27,11 +27,39 @@ Frontend builder v2 is executed by Node.js directly as TypeScript, so it require
 
 ## 1) Update composer packages
 
-Update the ShopUi module to version 2.0.0 or later:
+ShopUi 2.0.0 is a new major version, and most Yves modules constrain ShopUi to `^1.x`, so they must be updated together with it. Each of them has a release that allows ShopUi 2—see [Storefront modules released with builder v2](#storefront-modules-released-with-builder-v2).
+
+1. Several feature packages constrain ShopUi and moved to semantic versioning. If your project requires them, update their constraints in `composer.json`:
+
+```json
+"spryker-feature/ai-commerce": "^0.7.8",
+"spryker-feature/buy-box": "^1.4.0",
+"spryker-feature/purchasing-control": "^1.2.0",
+"spryker-feature/self-service-portal": "^20.12.0",
+```
+
+{% info_block warningBox "spryker-feature/spryker-core" %}
+
+All `spryker-feature/spryker-core` releases up to and including 202606.0 constrain ShopUi to `^1.109.0`. ShopUi 2 support ships with the next `spryker-feature/spryker-core` release; this migration requires updating the package to that release.
+
+{% endinfo_block %}
+
+2. Require ShopUi 2 and update it together with all modules that depend on it:
 
 ```bash
-composer require spryker-shop/shop-ui:"^2.0.0" --update-with-dependencies
+composer require spryker-shop/shop-ui:"^2.0.0" --no-update
+composer update spryker-shop/shop-ui "spryker-shop/*" "spryker-feature/*" --with-dependencies
 ```
+
+Running `composer require spryker-shop/shop-ui:"^2.0.0"` on its own fails: the locked module versions constrain ShopUi to `^1.x`, and composer doesn't update packages that aren't listed in the update command. The wildcard arguments put every Spryker storefront and feature package into the update set, so composer can pick the releases that allow ShopUi 2.
+
+Packages that moved to semantic versioning are reported as downgrades—for example, `spryker-feature/purchasing-control (202606.0 => 1.2.0)`. This is expected: the semver releases continue the date-based release lines.
+
+{% info_block infoBox "The composer update and the builder switch can be shipped separately" %}
+
+ShopUi 2 keeps the `Theme/default` structure the legacy builder relies on (`styles/basic.scss`, `util.scss`, `app/`, `components/`), so after this step the project still builds with the legacy builder. You can ship the package update first and switch to builder v2 in a follow-up—the intermediate state builds and runs. Until the switch, expect a large number of Sass deprecation warnings coming from the updated module styles; builder v2 resolves them together with the new entry-point contract.
+
+{% endinfo_block %}
 
 ## 2) Update Node.js and npm versions
 
@@ -183,21 +211,90 @@ docker/sdk cli npm run yves
 - Assets are generated into `public/Yves/assets/<namespace>/<theme>/` as before.
 - The storefront renders with the expected styles.
 
-## Optional: update the storefront modules
+## Minimum changes to legacy project styles
 
-The storefront modules were released together with the builder—`spryker-shop/shop-ui` as a major version, all the others as minor versions. Modules that ship component styles received updated styles: base declarations are emitted before nested rules (the Sass `mixed-decls` fix), component styles follow the new entry-point contract, and component mixins expose [base hooks](/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/extending-components.html#extend-base-styles-with-a-base-hook). The remaining modules only update their ShopUi constraint.
+Migrating the project styles to the Sass module system is **not** part of this upgrade. Project component files keep working in the legacy form—the builder injects the shared context (settings, helpers, and cross-component mixins) into every component file at compile time, so they need no `@use` rules of their own. Files that emit CSS at the top level compile with a legacy style rescue warning and stay in the bundles.
 
-{% info_block infoBox "These updates are optional" %}
+One legacy pattern fails to compile and must be adjusted: a shared helper mixin that reads a variable defined in the consuming component file.
 
-Only `spryker-shop/shop-ui` is required for the builder—everything below is optional. The builder compiles older module versions as is, so nothing breaks if you skip this step. Updating the modules only:
+```scss
+// styles/helpers/_product-shared.scss
+@mixin product-shared() {
+    width: rem($image-size);
+}
+
+// components/molecules/my-product/my-product.scss
+$image-size: 76;
+
+@include product-shared();
+```
+
+The v1 builder prepended all styles into one global scope, so the mixin picked such a variable up dynamically at include time. Builder v2 loads the shared stylesheet as a Sass module, and a module mixin resolves variables lexically—in the stylesheet that defines the mixin—so the build fails with `Undefined variable` pointing at the mixin body.
+
+Pass the value as a mixin parameter with a default instead:
+
+```scss
+// styles/helpers/_product-shared.scss
+@mixin product-shared($image-size: 76) {
+    width: rem($image-size);
+}
+
+// components/molecules/my-product/my-product.scss
+@include product-shared();
+```
+
+Alternatively, move the variable declaration into the shared closure (for example, a `styles/settings/` partial), where the mixin body can see it.
+
+## Optional: remove the Sass `@import` deprecation warnings
+
+Most of the remaining deprecation warnings come from `@import` rules in the project `styles/` layer. The biggest source is the project `shared.scss` wrapper: it is loaded into every compiled component, so each of its `@import` lines warns once per compilation. To remove the warnings, we recommend migrating the project `styles/` layer from `@import` to the Sass module system—`@use` and `@forward`, supported since Dart Sass 1.23.0 (the `sass-embedded` version required by the builder includes it). Component files stay untouched: the builder injects the shared context into them, so only the `styles/` layer migrates.
+
+The format—the wrapper forwards the core shared stylesheet and the project partials:
+
+```scss
+// src/Pyz/Yves/ShopUi/Theme/default/styles/shared.scss
+@use 'settings/color' as setting-color;
+
+@forward '~ShopUi/styles/shared' with (
+    $setting-color-main: setting-color.$setting-color-main,
+    $setting-color-alt: setting-color.$setting-color-alt
+);
+
+@forward 'settings/color' hide $setting-color-main, $setting-color-alt;
+@forward 'helpers/my-helper';
+```
+
+```scss
+// src/Pyz/Yves/ShopUi/Theme/default/styles/helpers/_my-helper.scss
+@use '../settings/color' as *;
+
+@mixin helper-my-helper {
+    color: $setting-color-main;
+}
+```
+
+Two rules make the migration safe:
+
+- **Project overrides of core settings move into the `with (...)` configuration** of the core forward, and the same names are hidden from the project partial's forward. Forwarding two modules that define the same member is an error, and hiding the core member instead of configuring it would silently disconnect the project value from the core helpers that read it—the core `!default` settings exist exactly for this configuration.
+- **Every partial declares its own `@use` dependencies.** In a module, a mixin resolves variables and helper mixins lexically—in the stylesheet that defines it—so a partial that references settings or other helpers must load them itself.
+
+{% info_block warningBox "Tooling that loads the wrapper with @import" %}
+
+A stylesheet that contains `@use` cannot be loaded with `@import`. If any custom tooling (for example, a Storybook Sass pipeline) prepends `@import "<path to shared.scss>"`, change it to `@use "<path to shared.scss>" as *;` placed before any other injected rules.
+
+{% endinfo_block %}
+
+## Storefront modules released with builder v2
+
+The storefront modules were released together with the builder—`spryker-shop/shop-ui` as a major version, all the others as minor versions that allow ShopUi 2 in their constraints. The update command in [step 1](#1-update-composer-packages) picks them up automatically.
+
+Modules that ship component styles received updated styles: base declarations are emitted before nested rules (the Sass `mixed-decls` fix), component styles follow the new entry-point contract, and component mixins expose [base hooks](/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/extending-components.html#extend-base-styles-with-a-base-hook). Updating them:
 
 - removes the Sass `mixed-decls` deprecation warnings coming from the modules' styles;
 - removes the legacy style rescue warnings for components written against the old builder contract;
 - makes base hooks available in the modules' components.
 
-Update the modules whose components you customize first; the rest can follow with your normal module update cadence.
-
-{% endinfo_block %}
+The remaining modules only widen their ShopUi constraint.
 
 <details><summary>Module versions released with builder v2</summary>
 
@@ -205,11 +302,11 @@ Update the modules whose components you customize first; the rest can follow wit
 | --- | --- |
 | `spryker-shop/shop-ui` | `^2.0.0` |
 | `spryker/multi-factor-auth` | `^2.6.0` |
-| `spryker-feature/ai-commerce` | `^0.8.0` |
+| `spryker-feature/ai-commerce` | `^0.7.8` |
 | `spryker-feature/buy-box` | `^1.4.0` |
 | `spryker-feature/order-experience-management` | `^0.2.0` |
 | `spryker-feature/purchasing-control` | `^1.2.0` |
-| `spryker-feature/self-service-portal` | `^20.11.0` |
+| `spryker-feature/self-service-portal` | `^20.12.0` |
 | `spryker-shop/agent-page` | `^1.25.0` |
 | `spryker-shop/agent-widget` | `^1.4.0` |
 | `spryker-shop/availability-widget` | `^1.5.0` |

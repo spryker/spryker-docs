@@ -66,24 +66,26 @@ Now, let us customize the template of the source component. The original templa
 
 Apart from changing the icon, we are going to use different colors. This can be done via styles.
 
-First of all, we need to inherit the styles of the source component (*side-drawer*). It has a mixin called **shop-ui-side-drawer**. Since it's a core component shipped with Spryker Shop Suite, this mixin is shared. Therefore, it can be accessed everywhere in Shop UI. To inherit the styles, we need to include the mixin in the *SCSS* file of our new component. To render the block, elements and modifiers with the class name of the new component, we need to pass its class name to the mixin.
+First of all, we need to inherit the styles of the source component (*side-drawer*). It has a mixin called **shop-ui-side-drawer**. The builder resolves component mixins through its mixin index, so the mixin can be included in any component SCSS file without imports. To render the block, elements and modifiers with the class name of the new component, we need to pass its class name to the mixin.
 
-Let us create file `new-existing-component-side-drawer.scss`, include the original mixin of the *side-drawer* component, and pass the class name of the new component we are creating:
+Let us create file `style.scss`—the style entry point of the new component—include the original mixin of the *side-drawer* component, and pass the class name of the new component we are creating:
 
 ```css
-@include shop-ui-side-drawer('.new-existing-component-side-drawer') {
-
+@include helper-import(organism, new-existing-component-side-drawer) {
+    @include shop-ui-side-drawer('.new-existing-component-side-drawer');
 }
 ```
 
 We will change the main and overlay colors:
 
 ```css
-@include shop-ui-side-drawer('.new-existing-component-side-drawer') {
-    color: $setting-color-alt;
+@include helper-import(organism, new-existing-component-side-drawer) {
+    @include shop-ui-side-drawer('.new-existing-component-side-drawer') {
+        color: $setting-color-alt;
 
-    &__overlay {
-        background-color: $setting-color-main;
+        &__overlay {
+            background-color: $setting-color-main;
+        }
     }
 }
 ```
@@ -94,11 +96,11 @@ You can find settings for the respective colors in configuration files. They are
 
 {% endinfo_block %}
 
-After defining the styles, let us make them visible to Webpack. Open the `index.ts` file and add the following content:
+After defining the styles, let us load them from the component entry point. Open the `index.ts` file and add the following content:
 
 ```js
-// Import component style
-import './new-existing-component-side-drawer.scss';
+// Load the component styles
+import './style';
 ```
 
 ### Extend base styles with a base hook
@@ -115,11 +117,11 @@ Updating is optional: the builder compiles older module versions as is. Update t
 | --- | --- |
 | `spryker-shop/shop-ui` | `^2.0.0` |
 | `spryker/multi-factor-auth` | `^2.6.0` |
-| `spryker-feature/ai-commerce` | `^0.8.0` |
+| `spryker-feature/ai-commerce` | `^0.7.8` |
 | `spryker-feature/buy-box` | `^1.4.0` |
 | `spryker-feature/order-experience-management` | `^0.2.0` |
 | `spryker-feature/purchasing-control` | `^1.2.0` |
-| `spryker-feature/self-service-portal` | `^20.11.0` |
+| `spryker-feature/self-service-portal` | `^20.12.0` |
 | `spryker-shop/agent-page` | `^1.25.0` |
 | `spryker-shop/agent-widget` | `^1.4.0` |
 | `spryker-shop/availability-widget` | `^1.5.0` |
@@ -279,8 +281,8 @@ import SideDrawer from 'ShopUi/components/organisms/side-drawer/side-drawer';
 
 // export the extended class
 export default class NewSideDrawer extends SideDrawer {
-    protected readyCallback(): void {
-        super.readyCallback();
+    protected init(): void {
+        super.init();
 
         alert('New side drawer');
     }

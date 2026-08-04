@@ -25,7 +25,8 @@ First of all, you need to create a folder on the file system where all componen
 Open the `new-component-counter` folder and create the following files:
 
 - `index.ts` - Webpack entry point;
-- `new-component-counter.scss` - styles;
+- `new-component-counter.scss` - the component style mixin;
+- `style.scss` - the component style entry point;
 - `new-component-counter.ts` - Javascript code;
 - `new-component-counter.twig` - component template.
 
@@ -140,39 +141,55 @@ Finally, let us define the template. You can do this like you would normally do 
 
 Now, let us create visual styles used to display the component on a page. When creating styles, use [BEM methodology](https://en.bem.info/methodology/css/). To link the style to the new component, the class name must be the same as the component name, also in *Kebab Case*.
 
-Open file `new-component-counter.scss` file and add the following code:
+Component styles consist of two files: the component SCSS file defines a mixin with the component styles, and `style.scss` is the component style entry point that emits them. This split lets other components reuse the mixin without duplicating its CSS and keeps the emission under the builder's control.
+
+Open the `new-component-counter.scss` file and define the component mixin. The file must not output any CSS at the top level:
 
 ```css
-.new-component-counter {
-    &__name {
-        display: block;
-    }
+@mixin new-component-counter($name: '.new-component-counter') {
+    #{$name} {
+        &__name {
+            display: block;
+        }
 
-    &__description {
-        display: block;
-        color: $setting-color-dark;
-    }
+        &__description {
+            display: block;
+            color: $setting-color-dark;
+        }
 
-    &__counter {
-        color: $setting-color-alt;
-    }
+        &__counter {
+            color: $setting-color-alt;
+        }
 
-    &--big {
-        @include helper-font-size(big);
+        &--big {
+            @include helper-font-size(big);
+        }
+
+        @content;
     }
 }
 ```
 
 {% info_block infoBox %}
 
-As shown in the example, you can use global variables, functions and mixins in your styles, for example `$setting-color-alt` or `$setting-color-dark`. They can be found in the `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles` folder. For more details, see the [SASS Layer](/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/atomic-frontend.html#sass-layer) section in *Atomic Frontend*.
+As shown in the example, you can use global variables, functions and mixins in your styles, for example `$setting-color-alt` or `$setting-color-dark`—[frontend builder v2](/docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves-v2.html) injects the shared context (settings, helpers, and the mixins of other components) into every component file at compile time, so the file needs no imports of its own. The settings can be found in the `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles` folder. For more details, see the [SASS Layer](/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/atomic-frontend.html#sass-layer) section in *Atomic Frontend*.
 
 {% endinfo_block %}
 
-Also, the styles must be locatable by Webpack. For this purpose, we need to add them to the entry point of the component. Open the `index.ts` file and add the following line:
+Open the `style.scss` file and emit the component CSS by including the mixin:
 
 ```css
-import './new-component-counter.scss';
+@include helper-import(molecule, new-component-counter) {
+    @include new-component-counter;
+}
+```
+
+The `helper-import` wrapper keeps the component excludable: adding one of its keywords to the `$setting-import-blacklist` setting removes the component CSS from the bundles.
+
+Finally, the styles must be loaded from the component entry point—otherwise the builder does not include them in the bundles and reports the file through the legacy style compatibility path. Open the `index.ts` file and add the following line:
+
+```css
+import './style';
 ```
 
 ## 4. Implement behavior
@@ -204,7 +221,7 @@ export default class NewComponentCounter extends Component {
     protected counter: HTMLElement
     protected elements: HTMLElement[]
 
-    protected readyCallback(): void {
+    protected init(): void {
         this.counter = <HTMLElement>document.querySelector(`.${this.jsName}__counter`);
         this.elements = <HTMLElement[]>Array.from(document.querySelectorAll(this.elementSelector));
         this.count();
@@ -231,6 +248,9 @@ The call must include a Webpack magic comment that specifies which type of impor
 In twig, we used tag name `new-component-counter`. Let us bind it to the Javascript class we created and use 'lazy' import. To do this, open file `index.ts` again and attach the following code:
 
 ```js
+// Load the component styles
+import './style';
+
 // Import the 'register' function from the Shop Application
 import register from 'ShopUi/app/registry';
 

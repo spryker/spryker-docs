@@ -14,8 +14,6 @@ Install the required features:
 |Prices  | {{page.release_tag}} |
 | Agent Assist | {{page.release_tag}} |
 
-The `spryker/availability-cart-connector` module must be installed in version 7.9.0 or later—it provides the plugin that adds the availability data to the items of a locked cart. See [Set up item availability for locked carts](#set-up-item-availability-for-locked-carts).
-
 ### 1) Install the required modules
 
 Install the required modules using Composer:
@@ -404,11 +402,11 @@ Make sure that when you make lock reset for a cart, quote request associated wit
 
 #### Set up item availability for locked carts
 
-A quote request converted to a cart produces a locked quote. Locked quotes are excluded from cart operations, so their items do not receive availability data the way the items of a regular cart do. Register the following plugin to add the availability data to the items of a locked quote:
+When you convert a quote request to a cart, Spryker creates a locked quote. Because locked quotes are excluded from cart operations, their items do not receive availability data the same way that regular cart items do. Register the following plugin to add availability data to the items of a locked quote:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| AvailabilityLockedQuoteExpandBeforeCreatePlugin | Expands the items of a locked quote with `ItemTransfer.stockQuantity` and `ItemTransfer.isNeverOutOfStock` before the quote is saved. | `spryker/availability-cart-connector` 7.9.0 or later | Spryker\Zed\AvailabilityCartConnector\Communication\Plugin\Quote |
+| AvailabilityLockedQuoteExpandBeforeCreatePlugin | Adds `ItemTransfer.stockQuantity` and `ItemTransfer.isNeverOutOfStock` to the items of a locked quote before the quote is saved. | `spryker/availability-cart-connector` 7.9.0 or later | Spryker\Zed\AvailabilityCartConnector\Communication\Plugin\Quote |
 
 **Pyz\Zed\Quote\QuoteDependencyProvider.php**
 
@@ -437,15 +435,14 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 {% info_block warningBox "Verification" %}
 
 1. On the Storefront, convert a quote request with the `Ready` status to a cart.
-2. Go to the cart page.
-   Make sure the availability of the items is displayed, and that it is still displayed after you reload the page.
+3. Make sure the `spy_quote.quote_data` column of the created quote contains `stockQuantity` and `isNeverOutOfStock` for its items.
 3. Make sure the `spy_quote.quote_data` column of the created quote contains `stockQuantity` and `isNeverOutOfStock` for its items.
 
 {% endinfo_block %}
 
 {% info_block infoBox "Availability of a locked cart" %}
 
-The availability data is resolved once, when the locked quote is created, and is not updated afterwards—a locked cart is not recalculated. Availability is validated again during checkout, so an item that became unavailable in the meantime does not pass the order placement.
+Availability data is resolved only once, when the locked quote is created, and is not updated afterward because a locked cart is not recalculated. During checkout, Spryker validates availability again. If an item becomes unavailable in the meantime, the order cannot be placed.
 
 {% endinfo_block %}
 

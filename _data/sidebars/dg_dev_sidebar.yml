@@ -123,8 +123,6 @@ entries:
             url: /docs/dg/dev/ai/ai-assistants/spryker-k6-performance-assistant-gpt.html
           - title: Spryker DevQA Assistant GPT
             url: /docs/dg/dev/ai/ai-assistants/spryker-devqa-assistant-gpt.html
-          - title: Spryker Cypress E2E Assistant GPT
-            url: /docs/dg/dev/ai/ai-assistants/spryker-cypress-e2e-assistant-gpt.html
   - title: Set up locally
     url: /docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html
     nested:

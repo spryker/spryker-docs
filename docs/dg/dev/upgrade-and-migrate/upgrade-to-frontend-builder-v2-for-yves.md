@@ -136,8 +136,11 @@ The parameter overview previously provided by `yves:help` is now available via `
 
 ```json
 "sass": "x.x.x",
+"sass-resources-loader": "x.x.x",
 "terser-webpack-plugin": "x.x.x"
 ```
+
+Builder v2 uses only `babel-loader`, `css-loader`, `postcss-loader`, and `sass-loader`. The shared Sass context (settings, helpers, and cross-component mixins) is injected by the builder itself, so `sass-resources-loader` has no consumer left. Check for project-owned webpack configurations that still reference it before removing it.
 
 ## 4) Remove the legacy builder from the `frontend/` directory
 
@@ -192,12 +195,17 @@ The builder reads component path aliases from `tsconfig.yves.json` and requires 
 
 ## 7) Install and build
 
-1. Regenerate `package-lock.json` and install dependencies:
+1. Update `package-lock.json` and install dependencies:
 
 ```bash
-docker/sdk cli rm -rf node_modules package-lock.json
 docker/sdk cli npm install
 ```
+
+{% info_block warningBox "Don't delete package-lock.json" %}
+
+Let `npm install` update the lock file in place. Deleting it and resolving the tree from scratch drops any `overrides` that target a dependency inside a workspace—`vendor/spryker/*` and `vendor/spryker/*/assets/Zed` are npm workspaces in a Spryker project—because npm 10 doesn't apply overrides to those subtrees. Security pins added that way disappear silently and the vulnerable transitive versions come back.
+
+{% endinfo_block %}
 
 2. Build the Yves frontend:
 

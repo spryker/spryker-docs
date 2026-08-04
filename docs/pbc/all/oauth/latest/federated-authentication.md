@@ -2,7 +2,7 @@
 title: Federated Authentication via OAuth2/OIDC
 description: Learn how Spryker Federated Authentication lets your customers, back-office users, and merchant users log in through an external Identity Provider using OAuth2 and OpenID Connect.
 template: concept-topic-template
-last_updated: Apr 24, 2026
+last_updated: Aug 4, 2026
 ---
 
 If your enterprise customers, back-office operators, or merchant users already authenticate through a corporate Identity Provider — Keycloak, Azure AD, Okta, or any other OAuth2/OIDC-compatible system — this feature lets them bring that identity to Spryker. Instead of maintaining a separate set of credentials for every application, your users log in through the same IdP they already trust, and Spryker handles the rest.
@@ -149,6 +149,14 @@ The prefix part of the state is just a routing signal — Spryker uses it to ide
 The OAuth access token is used for one thing: fetching the user's claims from the IdP's userinfo endpoint. Once Spryker has those claims, the token is discarded. It is never written to the database, the session, or any log.
 
 The practical implication is that **your Spryker session is independent of the IdP token**. If a user's account is suspended in the IdP after they have already logged into Spryker, their active session continues until it expires according to Spryker's standard session configuration. Continuous session validation against the IdP — and federated logout — are coming in a later version.
+
+---
+
+## Multi-Factor Authentication
+
+Once your users authenticate through an IdP, you have to decide where Multi-Factor Authentication (MFA) lives — at the IdP, in Spryker's own [Multi-Factor Authentication](/docs/pbc/all/multi-factor-authentication/latest/multi-factor-authentication.html) feature, or both. Each option trades off security assurance against user experience, and setups that mix password and SSO login need extra care to avoid leaving password users without a second factor.
+
+For the decision guide, see [Multi-Factor Authentication with SSO](/docs/pbc/all/oauth/latest/multi-factor-authentication-with-sso.html).
 
 ---
 

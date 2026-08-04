@@ -2,13 +2,15 @@
 title: Multi-Factor Authentication
 description: Learn about Multi Factor Authentication (MFA) that you can use within your Spryker project.
 template: concept-topic-template
-last_updated: May 7, 2026
+last_updated: Aug 4, 2026
 keywords: mfa
 redirect_from:
   - /docs/pbc/all/multi-factor-authentication/202505.0/multi-factor-authentication.html
 related:
   - title: Federated Authentication via OAuth2/OIDC
     link: docs/pbc/all/oauth/latest/federated-authentication.html
+  - title: Multi-Factor Authentication with SSO
+    link: docs/pbc/all/oauth/latest/multi-factor-authentication-with-sso.html
 ---
 
 Multi-Factor Authentication (MFA) adds an extra layer of security for customers, Back Office users, agents, merchant, and merchant agent users by requiring multiple methods of authentication before allowing an action.

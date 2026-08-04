@@ -1,7 +1,8 @@
 ---
 title: Frontend builder for Yves v2
 description: Learn about the TypeScript-based frontend builder v2 that ships with the ShopUi module and builds Yves assets for all namespaces and themes.
-last_updated: Jul 30, 2026
+keywords: ShopUi, shop-ui, frontend builder, Yves, webpack, build, assets, live reload
+last_updated: Aug 4, 2026
 template: howto-guide-template
 related:
   - title: Frontend builder for Yves (deprecated)

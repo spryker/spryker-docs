@@ -1,7 +1,8 @@
 ---
 title: Upgrade to frontend builder v2 for Yves
 description: Learn how to upgrade your Spryker project from the legacy frontend builder in the frontend directory to the frontend builder v2 shipped with the ShopUi module.
-last_updated: Jul 29, 2026
+keywords: ShopUi, shop-ui, frontend builder, Yves, migration, upgrade, webpack, build
+last_updated: Aug 4, 2026
 template: concept-topic-template
 related:
   - title: Frontend builder for Yves v2

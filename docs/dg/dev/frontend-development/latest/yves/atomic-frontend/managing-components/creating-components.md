@@ -1,6 +1,6 @@
 ---
 title: Creating components
-last_updated: Jun 16, 2021
+last_updated: Aug 4, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-create-component
 originalArticleId: ab0fbc97-d449-45e6-8bab-d70d14183aaf

@@ -428,3 +428,7 @@ The remaining modules only widen their ShopUi constraint.
 - **Sass deprecation warnings are no longer silenced.** The v1 builder suppressed warnings from dependencies; builder v2 shows them and points at the real file. Fix them in your project code instead of suppressing—they become hard errors in future Sass versions. See the base hook mechanism in [Extending components](/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/extending-components.html#extend-base-styles-with-a-base-hook) for the recommended way to extend core component base styles without triggering the `mixed-decls` deprecation.
 - **Legacy style rescue.** Component SCSS files that emit CSS at the top level without being imported from a component entry point are still compiled, with a warning naming the file. Migrate such components by importing their styles from the component's `index.ts`.
 - **Live reload.** `npm run yves:watch` now includes live reload: CSS changes are applied without a page reload, and JavaScript and Twig changes trigger a full reload that preserves scroll position and form state. No extra setup is needed.
+
+## Example migration
+
+For a complete, real-world application of this guide, see the B2B Demo Marketplace migration pull request: [CC-37183 Move YVES builder into ShopUi](https://github.com/spryker-shop/b2b-demo-marketplace/pull/1282). It covers every step of this document—the composer update, `package.json` and Node.js changes, the legacy builder removal, and the minimum project style adjustments.

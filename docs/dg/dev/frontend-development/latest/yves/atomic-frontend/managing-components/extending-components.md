@@ -1,6 +1,6 @@
 ---
 title: Extending components
-last_updated: Jul 30, 2026
+last_updated: Aug 5, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-extend-component
 originalArticleId: b51d63f2-d18b-4383-8e17-dd87379c1271
@@ -68,25 +68,35 @@ Apart from changing the icon, we are going to use different colors. This can be 
 
 First of all, we need to inherit the styles of the source component (*side-drawer*). It has a mixin called **shop-ui-side-drawer**. The builder resolves component mixins through its mixin index, so the mixin can be included in any component SCSS file without imports. To render the block, elements and modifiers with the class name of the new component, we need to pass its class name to the mixin.
 
-Let us create file `style.scss`—the style entry point of the new component—include the original mixin of the *side-drawer* component, and pass the class name of the new component we are creating:
+The styles of the new component consist of two files: the component SCSS file defines the mixin of the new component, and `style.scss` is the style entry point that emits it. Let us create file `new-existing-component-side-drawer.scss`, include the original mixin of the *side-drawer* component, and pass the class name of the new component as the default value of the `$name` parameter:
 
 ```css
-@include helper-import(organism, new-existing-component-side-drawer) {
-    @include shop-ui-side-drawer('.new-existing-component-side-drawer');
+@mixin new-existing-component-side-drawer($name: '.new-existing-component-side-drawer') {
+    @include shop-ui-side-drawer($name);
 }
 ```
 
-We will change the main and overlay colors:
+We will change the main and overlay colors. The source mixin emits its `@content` block after its own nested rules, so pass the nested rules as content and add the base declarations in a separate rule:
 
 ```css
-@include helper-import(organism, new-existing-component-side-drawer) {
-    @include shop-ui-side-drawer('.new-existing-component-side-drawer') {
-        color: $setting-color-alt;
-
+@mixin new-existing-component-side-drawer($name: '.new-existing-component-side-drawer') {
+    @include shop-ui-side-drawer($name) {
         &__overlay {
             background-color: $setting-color-main;
         }
     }
+
+    #{$name} {
+        color: $setting-color-alt;
+    }
+}
+```
+
+Now let us create file `style.scss`—the style entry point of the new component—and emit the mixin from it. The entry point must not define styles of its own: it only includes the component mixin, wrapped in `helper-import` so that the component stays excludable through the `$setting-import-blacklist` setting:
+
+```css
+@include helper-import(organism, new-existing-component-side-drawer) {
+    @include new-existing-component-side-drawer;
 }
 ```
 

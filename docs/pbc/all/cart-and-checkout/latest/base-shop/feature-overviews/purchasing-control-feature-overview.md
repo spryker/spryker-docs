@@ -1,7 +1,7 @@
 ---
 title: Purchasing Control feature overview
 description: Learn how the Purchasing Control feature lets B2B companies control departmental spending, define budget enforcement rules, and integrate with the Approval Process.
-last_updated: May 22, 2026
+last_updated: Aug 5, 2026
 template: concept-topic-template
 ---
 
@@ -24,6 +24,10 @@ A *cost center* is an organizational unit within a company that incurs costs but
 - **Location-based:** Warehouse Berlin, Office London
 
 Every purchase a buyer makes is charged to a cost center so the company can track where money is being spent. In ERP systems such as SAP, Oracle, and Microsoft Dynamics, cost centers are a foundational accounting concept - orders flow into the ERP tagged with a cost center code, enabling financial reporting and cost allocation.
+
+### Deactivated cost centers and budgets
+
+A cost center or budget can be deactivated instead of deleted, which preserves the history of the orders already charged to it. Deactivated records are not offered in the cost center and budget selectors, and a deactivated cost center is no longer shown where the assignment of a cart or quote is displayed. If every cost center available to a buyer is deactivated, or if the selected cost center has no active budget left, no choices are rendered and the buyer cannot assign one until an active record is available again.
 
 ## Budgets
 

@@ -1,7 +1,7 @@
 ---
 title: Recurring Orders feature overview
 description: Learn how the Recurring Orders feature lets B2B buyers automate repeat purchases on a configurable schedule.
-last_updated: Jul 30, 2026
+last_updated: Aug 5, 2026
 template: concept-topic-template
 ---
 
@@ -74,7 +74,7 @@ The recurring schedule moves through states managed by the `RecurringOrder` stat
 | `order_placed` | The checkout has been initiated. The system waits for confirmation. |
 | `completing` | The order was successfully placed. The next trigger date is calculated and the schedule returns to `active`. |
 | `skipped` | The buyer skipped the current execution. The next trigger date is advanced by one full cadence interval. |
-| `review_required` | Validation detected an issue (price increase or product unavailability). The buyer must review before placement can proceed. |
+| `review_required` | Validation detected an issue (price increase or product unavailability). The buyer must review before placement can proceed. Confirming the review moves the schedule to `confirmed` when the trigger date has been reached, or back to `active` when it has not—in which case the confirmed changes are placed on the trigger date. |
 | `paused` | The buyer manually paused the schedule. No orders are placed until it is resumed. |
 | `failed` | The last order placement attempt failed. The buyer can retry, which moves the schedule to `review_required`. |
 | `cancelled` | The schedule has been permanently stopped. This is a terminal state. |
@@ -90,7 +90,7 @@ Buyers can perform the following manual actions from the recurring order detail 
 | Resume | `paused` | Reactivates the schedule. The buyer can set a new next trigger date or keep the existing one. |
 | Skip | `active`, `pre_trigger_notified`, `review_required` | Skips the next scheduled execution. The new trigger date is calculated by advancing the current trigger date by one cadence interval. If the current trigger date is already in the past due to processing lag, the recalculated date may also fall in the past and the schedule will process on the next cron run. |
 | Cancel | `active`, `paused`, `pre_trigger_notified`, `review_required`, `failed`, `draft` | Permanently cancels the schedule. This action cannot be undone. The `draft` state is transient and is normally activated synchronously at checkout; cancellation from `draft` is a safety fallback. |
-| Review | `review_required` | Opens the Review Required page where the buyer can accept price changes, adjust quantities, remove or substitute unavailable items, add products, and place the order. |
+| Review | `review_required` | Opens the Review Required page where the buyer can accept price changes, adjust quantities, remove or substitute unavailable items, add products, and place the order. If the trigger date has not been reached yet, confirming the review returns the schedule to `active` and the confirmed changes are placed on the trigger date. |
 | Retry | `failed` | Moves the schedule to `review_required` so the buyer can review and re-attempt placement. |
 
 ![Recurring order list with attention banner](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Recurring+Orders/RecurringOrders_4.png)
@@ -134,8 +134,27 @@ Items flagged as **unavailable** or **out of stock** are non-purchasable and mus
 | Accept a price change | Confirms the new unit price. The current and previous prices are shown side by side. |
 | Adjust the quantity | Increases or decreases the quantity of a flagged item. |
 | Remove an item | Excludes the item from the order. Removal can be undone before the buyer confirms. |
-| Choose a substitute | Replaces a discontinued or unavailable product with an alternative. Each option shows whether its price is the same as, lower than, or higher than the original. |
-| Add a product | Opens a search modal for adding a product to the order, with a quantity field, the resolved current price, and—in a marketplace setup—a merchant offer selector. |
+| Choose a substitute | Replaces a discontinued or substituted product with an alternative. Each option shows whether its price is the same as, lower than, or higher than the original. |
+| Add a product | Opens a search modal for adding a product to the order, with a quantity field, the resolved current price, a shipping address and shipment method selector, and—in a marketplace setup—a merchant offer selector. |
+
+### Adding products during review
+
+The add-product search bar returns concrete products the buyer can add to the order being placed. For each added product, the buyer selects a shipping address and a shipment method:
+
+- The shipping address choices are grouped by source: the addresses stored with the schedule itself, and the addresses of the buyer's company business unit. Duplicate addresses are offered once.
+- The shipment methods are resolved for the selected address and, in a marketplace setup, for the selected offer.
+
+The following products are not offered in the picker, and are also rejected if they reach the server through a crafted request:
+
+| PRODUCT | REASON |
+| --- | --- |
+| Products with no availability | No stock is available for the store. In a marketplace setup, merchant offers with no availability are also hidden from the offer selector. |
+| Products with no resolvable price or shipment method | The item could not be placed. |
+| Products sold in measurement units | The picker offers no sales unit selector, so a typed quantity would silently mean N times the store default sales unit instead of N base units. |
+| Products sold in packaging units | The picker offers no amount input, so the resolved item would carry no amount, stay unsplit, and reserve no stock for the lead product. |
+| Service products with an unsupported shipment type | Requires the [SSP Service Management feature](/docs/pbc/all/self-service-portal/latest/ssp-service-management-feature-overview.html). A service fulfilled on site or in a service center needs an appointment, which a recurring order places unattended and therefore cannot book. |
+
+Projects can add their own restrictions. See [Install the Recurring Orders feature](/docs/pbc/all/order-experience-management/latest/base-shop/install-and-upgrade/install-features/install-the-recurring-orders-feature.html) for the extension points.
 
 ### Review scope
 
@@ -152,7 +171,7 @@ The following guards apply while reviewing:
 
 - The schedule can only be reviewed in its own currency and price mode. If the buyer has switched either one, the review page asks them to switch back.
 - If prices change again between opening the review page and approving it, the buyer is asked to review the updated order before approving.
-- If every item is removed, the order cannot be placed—a schedule cannot be executed without items.
+- If every item is removed, the order cannot be placed—a schedule cannot be executed without items. The buyer can clear this block by adding at least one product before confirming.
 
 ![Review Required page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Recurring+Orders/RecurringOrders_5.png)
 
@@ -160,7 +179,7 @@ The following guards apply while reviewing:
 
 Recurring schedule items keep their merchant reference and product offer reference, so schedules created in a marketplace setup are re-placed against the same offers. When the buyer adds a product on the **Review Required** page and the product is sold by several merchants, an offer selector is displayed.
 
-Products added during review must be shippable with a delivery-like shipment type—by default `delivery` or `on_site_service`. The system resolves the available shipment methods for the added item and rejects products for which no shipment method, availability, or price can be resolved.
+Products added during review must be shippable with a delivery-like shipment type—by default `delivery` or `on-site-service`, in that preference order. When an offer or store exposes several supported types, the first one is used. The system resolves the available shipment methods for the added item and rejects products for which no shipment method, availability, or price can be resolved.
 
 ## Execution history
 
@@ -238,9 +257,9 @@ These permissions are registered as company role permissions and assigned in the
 
 With the [Purchasing Control feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/purchasing-control-feature-overview.html) installed, a recurring order carries a cost center and a budget:
 
-- The selected cost center and budget are displayed on the recurring order detail page.
+- The selected cost center and budget are displayed on the recurring order detail page, together with a budget usage summary: the total budget amount, the amount already used, the amount remaining, and a bar showing the used percentage.
 - The buyer can change them when editing the schedule and when approving a review. In both forms, selecting a cost center and a budget is mandatory.
-- Only active cost centers of the buyer's company business unit are offered, and only in the currency of the recurring order.
+- Only active cost centers of the buyer's company business unit are offered, and only in the currency of the recurring order. If the cost center assigned to a schedule is later deactivated, it is no longer displayed on the detail page and the buyer has to select an active one the next time they edit the schedule or approve a review.
 - The selected budget must belong to the selected cost center. The form is rejected if it does not.
 
 ### Budgets that require approval cannot be selected

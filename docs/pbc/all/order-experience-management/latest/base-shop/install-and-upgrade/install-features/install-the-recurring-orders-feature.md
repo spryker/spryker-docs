@@ -1,7 +1,7 @@
 ---
 title: Install the Recurring Orders feature
 description: Learn how to install the Recurring Orders feature into your Spryker project.
-last_updated: Jul 30, 2026
+last_updated: Aug 5, 2026
 template: feature-integration-guide-template
 related:
   - title: Recurring Orders feature overview
@@ -24,10 +24,14 @@ To start feature integration, review and install the necessary features:
 | Company Account | {{page.release_tag}} | [Install the Company Account feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html) |
 | Checkout | {{page.release_tag}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
 | Purchasing Control | {{page.release_tag}} | [Install the Purchasing Control feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-purchasing-control-feature.html) |
+| SSP Service Management | {{page.release_tag}} | [Install the SSP Service Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-service-management-feature.html) |
 
-{% info_block infoBox "Purchasing Control" %}
+{% info_block infoBox "Optional features" %}
 
-The Purchasing Control feature is optional. Install it if you want buyers to assign a cost center and budget to a recurring order. Without it, the cost center and budget fields are not rendered on the recurring order forms.
+Both Purchasing Control and SSP Service Management are optional:
+
+- Install Purchasing Control if you want buyers to assign a cost center and budget to a recurring order. Without it, the cost center and budget fields are not rendered on the recurring order forms.
+- Install SSP Service Management if your catalog contains service products. It restricts which service products buyers can add to a recurring schedule on the **Review Required** page. Without it, no service-specific restriction is applied.
 
 {% endinfo_block %}
 
@@ -40,28 +44,44 @@ composer require spryker-feature/order-experience-management:"^0.1.4" --update-w
 composer update \
   spryker/availability:"^9.32.0" \
   spryker/merchant:"^3.20.0" \
+  spryker/merchant-product:"^1.3.0" \
   spryker/merchant-product-option:"^1.4.0" \
+  spryker/merchant-storage:"^1.0.0" \
   spryker/merchant-switcher:"^0.6.8" \
+  spryker/product-alternative-storage:"^1.15.0" \
   spryker/product-approval:"^1.5.0" \
   spryker/product-bundle:"^7.28.0" \
   spryker/product-cart-connector:"^4.15.0" \
   spryker/product-configuration-cart:"^1.1.0" \
   spryker/product-discontinued:"^1.15.0" \
+  spryker/product-measurement-unit:"^5.0.0" \
   spryker/product-offer:"^1.18.0" \
+  spryker/product-offer-storage:"^1.0.0" \
   spryker/product-packaging-unit:"^4.14.0" \
+  spryker/product-packaging-unit-storage:"^5.5.0" \
   spryker/product-quantity:"^3.8.0" \
+  spryker/shipment-type-storage:"^1.0.0" \
   spryker-feature/purchasing-control:"^1.1.1" \
   spryker-shop/checkout-page:"^3.42.0" \
   spryker-shop/customer-page:"^2.80.0" \
+  spryker-shop/merchant-product-offer-widget:"^2.0.0" \
   spryker-shop/product-search-widget:"^1.13.0" \
   --with-dependencies
 ```
 
 {% endinfo_block %}
 
-{% info_block infoBox "Product search widget" %}
+{% info_block infoBox "Modules required by the add-product flow" %}
 
-`spryker-shop/product-search-widget` provides `ProductConcreteSearchWidget` and the `products-list` molecule that the **Review Required** page reuses in its add-product search bar. Install it even if your project does not use product search elsewhere.
+The **Review Required** page lets buyers add products to the order being placed. That flow pulls in the following modules, so install them even if your project does not use the corresponding functionality elsewhere:
+
+| MODULE | PURPOSE |
+| --- | --- |
+| `spryker-shop/product-search-widget` | Provides `ProductConcreteSearchWidget` and the `products-list` molecule that the add-product search bar reuses. |
+| `spryker-shop/merchant-product-offer-widget` | Backs the merchant offer selector rendered for an added product in a marketplace setup. |
+| `spryker/product-alternative-storage` | Provides the alternative products offered as substitutes for discontinued and substituted items. |
+| `spryker/shipment-type-storage` | Resolves the shipment types of an added product to decide whether a recurring order can serve it. |
+| `spryker/product-measurement-unit`, `spryker/product-packaging-unit-storage` | Detect products sold in measurement or packaging units so they can be excluded from the add-product picker. |
 
 {% endinfo_block %}
 
@@ -101,6 +121,7 @@ Make sure the following changes have been applied in transfer objects:
 | RecurringScheduleValidationResult | class | created | src/Generated/Shared/Transfer/RecurringScheduleValidationResultTransfer.php |
 | RecurringScheduleItemReview | class | created | src/Generated/Shared/Transfer/RecurringScheduleItemReviewTransfer.php |
 | RecurringScheduleSubstituteOption | class | created | src/Generated/Shared/Transfer/RecurringScheduleSubstituteOptionTransfer.php |
+| RecurringScheduleShippingAddressChoice | class | created | src/Generated/Shared/Transfer/RecurringScheduleShippingAddressChoiceTransfer.php |
 | RecurringScheduleReviewResponse | class | created | src/Generated/Shared/Transfer/RecurringScheduleReviewResponseTransfer.php |
 | RecurringScheduleEventRequest | class | created | src/Generated/Shared/Transfer/RecurringScheduleEventRequestTransfer.php |
 | RecurringScheduleEventResponse | class | created | src/Generated/Shared/Transfer/RecurringScheduleEventResponseTransfer.php |
@@ -261,6 +282,79 @@ class OrderExperienceManagementDependencyProvider extends SprykerOrderExperience
 {% info_block warningBox "Verification" %}
 
 Make sure all four cadence types (weekly, bi-weekly, monthly, every N weeks) are available when setting up a recurring order on the storefront.
+
+{% endinfo_block %}
+
+#### Set up added item validator plugins
+
+Added item validator plugins reject a product the buyer added on the **Review Required** page. They run after the item is resolved through the cart, so they see the resolved price, shipment, and any data the cart item expanders added. They also run after the module's own availability, price, and shipment checks, so they are only reached when those pass.
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+| ServiceProductAddedItemValidatorPlugin | Rejects a service item whose resolved shipment method is not one a recurring order can serve. A service fulfilled on site or in a service center needs an appointment, which a recurring order places unattended and therefore cannot book. | SSP Service Management feature | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\OrderExperienceManagement |
+
+**src/Pyz/Zed/OrderExperienceManagement/OrderExperienceManagementDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\OrderExperienceManagement;
+
+use SprykerFeature\Zed\OrderExperienceManagement\OrderExperienceManagementDependencyProvider as SprykerOrderExperienceManagementDependencyProvider;
+use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\OrderExperienceManagement\ServiceProductAddedItemValidatorPlugin;
+
+class OrderExperienceManagementDependencyProvider extends SprykerOrderExperienceManagementDependencyProvider
+{
+    /**
+     * @return array<\SprykerFeature\Zed\OrderExperienceManagement\Dependency\Plugin\AddedItemValidatorPluginInterface>
+     */
+    protected function getAddedItemValidatorPlugins(): array
+    {
+        return [
+            new ServiceProductAddedItemValidatorPlugin(), #RecurringOrdersFeature
+        ];
+    }
+}
+```
+
+`ServiceProductAddedItemValidatorPlugin` reads the accepted shipment type keys from `SelfServicePortalConfig`. The module default is an empty list, which accepts service products with any shipment type. Define the shipment types your project can serve unattended:
+
+**src/Pyz/Shared/SelfServicePortal/SelfServicePortalConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Shared\SelfServicePortal;
+
+use SprykerFeature\Shared\SelfServicePortal\SelfServicePortalConfig as SprykerSelfServicePortalConfig;
+
+class SelfServicePortalConfig extends SprykerSelfServicePortalConfig
+{
+    /**
+     * @return array<string>
+     */
+    public function getRecurringOrderServiceShipmentTypeKeys(): array
+    {
+        return [
+            self::SHIPMENT_TYPE_DELIVERY,
+        ];
+    }
+}
+```
+
+| CONFIGURATION METHOD | DEFAULT | DESCRIPTION |
+| --- | --- | --- |
+| `getRecurringOrderServiceShipmentTypeKeys()` | `[]` | Shipment type keys a service product must support to be part of a recurring order. An empty list accepts service products with any shipment type. Override it in the shared config to apply it in Yves and Zed at once. |
+
+{% info_block infoBox "Custom added item validators" %}
+
+To reject added products for a project-specific reason, implement `SprykerFeature\Zed\OrderExperienceManagement\Dependency\Plugin\AddedItemValidatorPluginInterface`. Return an `ErrorTransfer` carrying your own glossary key to reject the addition, or `null` to accept it. Pair it with an `AddedProductConcreteRestrictionPluginInterface` implementation in Yves so the product is hidden from the picker as well as rejected on approval.
+
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
+Open the **Review Required** page for a schedule and add a service product whose shipment type is not in `getRecurringOrderServiceShipmentTypeKeys()`. Make sure the approval is rejected with an error message naming the product SKU.
 
 {% endinfo_block %}
 
@@ -729,8 +823,13 @@ class OrderExperienceManagementConfig extends SprykerOrderExperienceManagementCo
 | `getMonthlyForecastKey()` | `monthly` | Key under which the forecast snapshot is stored in `spy_recurring_schedule_forecast`. |
 | `getBackOfficeFilterStatuses()` | Active, Paused, Review required, Cancelled, Failed | Statuses selectable in the Back Office **Recurring Order Schedules** filter. |
 | `getBackOfficeFilterCadenceTypes()` | Weekly, Bi-weekly, Monthly, Every N weeks | Cadence types selectable in the Back Office **Recurring Order Schedules** filter. Extend it when you register a custom cadence type plugin. |
-| `getSmStateNameToStatusMap()` | See `OrderExperienceManagementConfig` | Maps each state machine state name to the public schedule status it represents. Extend it when you add states to the process XML. |
-| `getSupportedAddedItemShipmentTypeKeys()` | `[delivery, on_site_service]` | Shipment type keys accepted for products added on the **Review Required** page, in preference order. |
+| `getSmStateNameToStatusMap()` | See `OrderExperienceManagementConfig` | Maps each state machine state name to the public schedule status it represents. State names that are not in the map resolve to no status. Extend it when you add states to the process XML. |
+| `getSupportedAddedItemShipmentTypeKeys()` | `[delivery, on-site-service]` | Shipment type keys accepted for products added on the **Review Required** page, in preference order. When an offer or store exposes several supported types, the first one is used. |
+| `getSubstitutableReviewReasons()` | `[discontinued, substituted]` | Review reason groups for which a substitute product can be offered on the **Review Required** page. |
+| `getPriceChangeReviewReasons()` | `[price_increased]` | Review reason groups counted as price changes in the **Review Required** summary. |
+| `getUnavailableReviewReasons()` | `[unavailable, out_of_stock]` | Review reason groups counted as unavailable items in the **Review Required** summary. |
+| `isMeasurementUnitProductAdditionRestricted()` | `true` | Defines whether products sold in measurement units can be added on the **Review Required** page. The picker offers no sales unit selector, so a typed quantity would silently mean N times the store default sales unit instead of N base units. |
+| `isPackagingUnitProductAdditionRestricted()` | `true` | Defines whether products sold in packaging units can be added on the **Review Required** page. The picker offers no amount input, so the resolved item would carry no amount, stay unsplit, and reserve no stock for the lead product. |
 | `getStateMachineName()` | `RecurringOrder` | Name of the state machine. Must match the directory name under `config/Zed/StateMachine`. |
 | `getProcessName()` | `RecurringOrderStateMachine` | Name of the state machine process definition file, without the `.xml` extension. |
 | `getInitialState()` | `draft` | Initial state assigned to a newly created schedule. |
@@ -834,7 +933,7 @@ Register the following global widgets:
 | RecurringOrderSelectorWidget | Renders the recurring order setup form at checkout. Visible only when the quote is eligible for a recurring order (invoice payment, not locked, not from RFQ, not guest). | SprykerFeature\Yves\OrderExperienceManagement\Widget |
 | RecurringOrderMenuItemWidget | Renders the **Recurring Orders** navigation menu item in the storefront customer account menu. | SprykerFeature\Yves\OrderExperienceManagement\Widget |
 | ProductConcreteSearchWidget | Backs the add-product search bar on the **Review Required** page. Also provides the `products-list` molecule the search results view reuses. | SprykerShop\Yves\ProductSearchWidget\Widget |
-| CostCenterDetailWidget | Displays the selected cost center and budget on the cart page and in the recurring order detail sidebar. Takes a `QuoteTransfer` as input. Requires the [Purchasing Control feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-purchasing-control-feature.html). | SprykerFeature\Yves\PurchasingControl\Widget |
+| CostCenterDetailWidget | Displays the selected cost center and budget in the recurring order detail sidebar, which is its only caller. Takes a `QuoteTransfer` and an optional flag that adds a budget usage summary. Only active cost centers are resolved, so a deactivated cost center makes the widget render nothing. Requires the [Purchasing Control feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-purchasing-control-feature.html). | SprykerFeature\Yves\PurchasingControl\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -872,24 +971,25 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 1. On the checkout summary page with an invoice-based payment method, make sure the recurring order selector is displayed.
 2. In the customer account, make sure the **Recurring Orders** menu item is displayed.
 3. On the **Review Required** page, open the add-product search bar and make sure product suggestions are returned.
-4. On the cart page, make sure the selected cost center and budget names are displayed.
+4. On the recurring order detail page, make sure the selected cost center and budget names are displayed in the sidebar.
 
 {% endinfo_block %}
 
-### 3) Set up form expander plugins
+### 3) Set up storefront plugins
 
-{% info_block infoBox "Purchasing Control feature" %}
+{% info_block infoBox "Optional features" %}
 
-This step is only required if your project uses the [Purchasing Control feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-purchasing-control-feature.html).
+Each plugin in this step comes from an optional feature. Register only the plugins whose feature your project uses.
 
 {% endinfo_block %}
 
-Register the following form expander plugins to let buyers select a cost center and budget when they approve a review or edit a recurring schedule:
+Register the following plugins to let buyers select a cost center and budget on the recurring order forms, and to restrict which products they can add on the **Review Required** page:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | CostCenterRecurringOrderApproveFormExpanderPlugin | Adds cost center and budget dropdowns to the review approve form and validates the selected pair server-side. Only active cost centers of the buyer's company business unit in the currency of the recurring order are offered. | Purchasing Control feature | SprykerFeature\Yves\PurchasingControl\Plugin\OrderExperienceManagement |
 | CostCenterRecurringScheduleEditFormExpanderPlugin | Adds cost center and budget dropdowns to the recurring schedule edit form and validates the selected pair server-side. Only active cost centers of the buyer's company business unit in the currency of the recurring order are offered. | Purchasing Control feature | SprykerFeature\Yves\PurchasingControl\Plugin\OrderExperienceManagement |
+| ServiceProductAddedProductConcreteRestrictionPlugin | Hides a service product from the add-product search bar and the offer selector when its shipment types do not include one a recurring order can serve. | SSP Service Management feature | SprykerFeature\Yves\SelfServicePortal\Plugin\OrderExperienceManagement |
 
 **src/Pyz/Yves/OrderExperienceManagement/OrderExperienceManagementDependencyProvider.php**
 
@@ -901,6 +1001,7 @@ namespace Pyz\Yves\OrderExperienceManagement;
 use SprykerFeature\Yves\OrderExperienceManagement\OrderExperienceManagementDependencyProvider as SprykerOrderExperienceManagementDependencyProvider;
 use SprykerFeature\Yves\PurchasingControl\Plugin\OrderExperienceManagement\CostCenterRecurringOrderApproveFormExpanderPlugin;
 use SprykerFeature\Yves\PurchasingControl\Plugin\OrderExperienceManagement\CostCenterRecurringScheduleEditFormExpanderPlugin;
+use SprykerFeature\Yves\SelfServicePortal\Plugin\OrderExperienceManagement\ServiceProductAddedProductConcreteRestrictionPlugin;
 
 class OrderExperienceManagementDependencyProvider extends SprykerOrderExperienceManagementDependencyProvider
 {
@@ -923,10 +1024,28 @@ class OrderExperienceManagementDependencyProvider extends SprykerOrderExperience
             new CostCenterRecurringScheduleEditFormExpanderPlugin(), #RecurringOrdersFeature
         ];
     }
+
+    /**
+     * @return array<\SprykerFeature\Yves\OrderExperienceManagement\Dependency\Plugin\AddedProductConcreteRestrictionPluginInterface>
+     */
+    protected function getAddedProductConcreteRestrictionPlugins(): array
+    {
+        return [
+            new ServiceProductAddedProductConcreteRestrictionPlugin(), #RecurringOrdersFeature
+        ];
+    }
 }
 ```
 
-Both plugins offer only budgets whose enforcement rule is listed in `getRecurringOrderSelectableBudgetEnforcementRules()`. Budgets that require approval when the budget is exceeded are hidden, because a recurring order is placed unattended and cannot wait for an approval decision. To change which enforcement rules qualify, override the method in your project:
+{% info_block infoBox "Custom product restrictions" %}
+
+To hide additional products from the add-product picker, implement `SprykerFeature\Yves\OrderExperienceManagement\Dependency\Plugin\AddedProductConcreteRestrictionPluginInterface`. The plugin receives a `ProductViewTransfer` resolved from product storage with all view expanders applied, so it can rely on the data your own module publishes there. Returning `true` removes the product from the search results and makes the offer selector return no choices for it.
+
+A storefront restriction only hides the product. To also reject a crafted request, register a matching `AddedItemValidatorPluginInterface` implementation in Zed—see [Set up added item validator plugins](#set-up-added-item-validator-plugins).
+
+{% endinfo_block %}
+
+Both cost center plugins offer only budgets whose enforcement rule is listed in `getRecurringOrderSelectableBudgetEnforcementRules()`. Budgets that require approval when the budget is exceeded are hidden, because a recurring order is placed unattended and cannot wait for an approval decision. To change which enforcement rules qualify, override the method in your project:
 
 **src/Pyz/Yves/PurchasingControl/PurchasingControlConfig.php**
 
@@ -963,6 +1082,7 @@ class PurchasingControlConfig extends SprykerPurchasingControlConfig
 2. Open the recurring schedule edit form and make sure the same dropdowns are displayed.
 3. Submit the form with a budget that does not belong to the selected cost center. Make sure the form is rejected with a validation error.
 4. Set a budget's enforcement rule to **Require approval** in the Back Office. Make sure the budget is no longer offered in the recurring order budget selector.
+5. On the **Review Required** page, search for a service product whose shipment type is not in `getRecurringOrderServiceShipmentTypeKeys()`. Make sure the product is not offered in the add-product search results.
 
 {% endinfo_block %}
 
@@ -1038,7 +1158,7 @@ class OrderExperienceManagementConfig extends SprykerOrderExperienceManagementCo
 {
     /**
      * Specification:
-     * - Returns the maximum number of company business units loaded into the review scope dropdown.
+     * - Returns the maximum number of company business units loaded into the recurring order search scope dropdown.
      * - Projects with more business units should raise this value or switch to an async autocomplete widget.
      *
      * @api
@@ -1066,21 +1186,26 @@ class OrderExperienceManagementConfig extends SprykerOrderExperienceManagementCo
 | `getSupportedCadenceTypes()` | Weekly, bi-weekly, monthly, every N weeks | Cadence types offered in the storefront recurring order forms, as `[glossary key => cadence value]`. Extend it when you register a custom cadence type plugin. |
 | `getCadenceTypeEveryNWeeks()` | `every_n_weeks` | Cadence type that requires an additional numeric interval. |
 | `getInvoicePaymentMethodKeys()` | `[invoice, purchaseOnAccount, dummyMarketplacePaymentInvoice]` | Payment method keys that qualify as invoice-based. Only quotes with a matching payment method can generate a recurring schedule. Override this in the shared config to apply it in Yves and Zed at once. |
-| `getBusinessUnitChoicesLimit()` | `100` | Maximum number of company business units loaded into the review scope dropdown. |
+| `getBusinessUnitChoicesLimit()` | `100` | Maximum number of company business units loaded into the recurring order search scope dropdown. Projects with more business units should raise this value or switch to an async autocomplete widget. |
 | `getRecurringScheduleListItemsPerPage()` | `10` | Number of recurring schedules shown per page on the list page. |
 | `getRecurringScheduleHistoryItemsPerPage()` | `10` | Number of execution history entries shown per page on the detail page. |
-| `getSupportedAddedItemShipmentTypeKeys()` | `[delivery, on_site_service]` | Shipment type keys supported for products added on the **Review Required** page. |
-| `getSubstitutableReviewReasons()` | `[discontinued, unavailable]` | Review reason groups for which a **Choose a substitute** action is offered. |
+| `getSupportedAddedItemShipmentTypeKeys()` | `[delivery, on-site-service]` | Shipment type keys supported for products added on the **Review Required** page. |
+| `getSubstitutableReviewReasons()` | `[discontinued, substituted]` | Review reason groups for which a **Choose a substitute** action is offered. |
+| `getPriceChangeReviewReasons()` | `[price_increased]` | Review reason groups whose lines are marked as price changes the buyer accepts by confirming the order. |
 | `isUnavailableProductsExcludedFromAddProductSearch()` | `true` | When enabled, concrete products and merchant offers without availability are hidden from the add-product search bar and the offer selector. |
+| `isMeasurementUnitProductAdditionRestricted()` | `true` | When enabled, products sold in measurement units are hidden from the add-product picker. Reads the value from the shared config. |
+| `isPackagingUnitProductAdditionRestricted()` | `true` | When enabled, products sold in packaging units are hidden from the add-product picker. Reads the value from the shared config. |
 | `getStatusBadgeClassMap()`, `getStatusIconMap()`, `getHistoryEventTypeBadgeClassMap()`, `getReviewReasonLabelMap()`, `getReviewReasonBadgeMap()`, `getItemFlagLabelMap()`, `getItemFlagBadgeMap()` | See `OrderExperienceManagementConfig` | Presentation maps for statuses, history events, review reasons, and item flags. Extend them when you introduce custom statuses or review reasons. |
 | `getErrorBannerStatuses()`, `getAttentionBannerStatuses()` | See `OrderExperienceManagementConfig` | Statuses that render the error banner and the attention banner on the list and detail pages. |
 | `getRecurringScheduleStatusChoices()`, `getReviewScopeChoices()` | See `OrderExperienceManagementConfig` | Choices offered in the storefront status filter and the review scope selector. |
 
 {% info_block infoBox "Overriding storefront molecules" %}
 
-The module ships its storefront UI as molecules under `src/SprykerFeature/OrderExperienceManagement/src/SprykerFeature/Yves/OrderExperienceManagement/Theme/default/components/molecules`. To adjust the markup, override the molecule in your project at the same relative path under `src/Pyz/Yves/OrderExperienceManagement/Theme/default/components/molecules`. The most commonly customized molecules are `recurring-order-selector`, `recurring-order-list`, `schedule-detail`, `schedule-detail-sidebar`, `schedule-review`, `recurring-order-edit-form`, and `review-add-product-picker`.
+The module ships its storefront UI as molecules under `src/SprykerFeature/OrderExperienceManagement/src/SprykerFeature/Yves/OrderExperienceManagement/Theme/default/components/molecules`. To adjust the markup, override the molecule in your project at the same relative path under `src/Pyz/Yves/OrderExperienceManagement/Theme/default/components/molecules`. The most commonly customized molecules are `recurring-order-selector`, `recurring-order-list`, `schedule-detail`, `schedule-detail-sidebar`, `schedule-review`, and `recurring-order-edit-form`.
 
-The `schedule-detail-sidebar`, `schedule-review`, and `recurring-order-edit-form` molecules embed the `cost-center-detail` and `recurring-order-cost-center-budget` molecules from the `PurchasingControl` module. If your project does not use the Purchasing Control feature, these embeds resolve to nothing and the surrounding markup remains valid.
+The **Review Required** page is composed of the `review-` molecules: `review-flagged-items`, `review-unchanged-items`, `review-quantity-control`, `review-substitute`, `review-add-product`, `review-add-product-picker`, `review-shipment-selection`, `review-scope-selector`, `review-change-summary`, `review-summary-banner`, `review-blocking-errors`, and `review-footer`.
+
+The `schedule-detail-sidebar`, `schedule-review`, and `recurring-order-edit-form` molecules embed the `cost-center-detail`, `recurring-order-cost-center-budget`, and `recurring-order-budget-summary` molecules from the `PurchasingControl` module. If your project does not use the Purchasing Control feature, these embeds resolve to nothing and the surrounding markup remains valid.
 
 {% endinfo_block %}
 

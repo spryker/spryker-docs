@@ -1,7 +1,7 @@
 ---
 title: Install the Purchasing Control feature
 description: Learn how to install the Purchasing Control feature into your Spryker project.
-last_updated: Jul 1, 2026
+last_updated: Aug 5, 2026
 template: feature-integration-guide-template
 related:
   - title: Purchasing Control feature overview
@@ -691,7 +691,7 @@ Register the following global widgets:
 | CostCenterMenuItemWidget | Renders the Purchasing Control navigation menu item in the storefront company menu. | SprykerFeature\Yves\PurchasingControl\Widget |
 | CostCenterBudgetFilterWidget | Renders the cost center and budget filter controls on the order history page. | SprykerFeature\Yves\PurchasingControl\Widget |
 | CostCenterOrderDetailWidget | Displays the assigned cost center and budget on the order detail page, taking an `OrderTransfer` as input. | SprykerFeature\Yves\PurchasingControl\Widget |
-| CostCenterDetailWidget | Displays the assigned cost center and budget on the cart or quote detail page, taking a `QuoteTransfer` as input. | SprykerFeature\Yves\PurchasingControl\Widget |
+| CostCenterDetailWidget | Displays the cost center and budget assigned to a quote, taking a `QuoteTransfer` as input and an optional flag that adds a budget usage summary. Renders only where a template calls it—see the note below. Only active cost centers are resolved, so a deactivated cost center makes the widget render nothing. | SprykerFeature\Yves\PurchasingControl\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -728,6 +728,24 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
+{% info_block infoBox "Where CostCenterDetailWidget is rendered" %}
+
+Unlike the other widgets in this table, no Purchasing Control template calls `CostCenterDetailWidget`. It renders only where another template calls it explicitly. In the demo shop, its single caller is the recurring order detail sidebar of the [Recurring Orders feature](/docs/pbc/all/order-experience-management/latest/base-shop/feature-overviews/recurring-orders-feature-overview.html). To display the assigned cost center and budget elsewhere—on the cart page or a quote detail page, for example—call the widget from that template:
+
+```twig
+{% raw %}{% widget 'CostCenterDetailWidget' args [data.quote] only %}{% endwidget %}{% endraw %}
+```
+
+Pass a second argument to add a budget usage summary—the total, used, and remaining amounts, plus a used-percentage bar—below the cost center and budget names:
+
+```twig
+{% raw %}{% widget 'CostCenterDetailWidget' args [data.quote, true] only %}{% endwidget %}{% endraw %}
+```
+
+The summary is rendered by the `recurring-order-budget-summary` molecule the module ships. It is omitted when the argument is `false` or not passed, and also when the quote carries no budget or no currency.
+
+{% endinfo_block %}
+
 {% info_block warningBox "Verification" %}
 
 - Make sure all six widgets are available in Twig templates.
@@ -735,6 +753,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 - On the checkout summary page, make sure the cost center and budget selector is displayed.
 - On the order detail page, make sure the assigned cost center and budget names are displayed.
 - On the order history page, make sure the cost center and budget filter controls are displayed.
+- Call `CostCenterDetailWidget` from a template with a quote that has a cost center assigned, and make sure the cost center and budget names are displayed. Deactivate that cost center and make sure the names are no longer displayed.
 
 {% endinfo_block %}
 

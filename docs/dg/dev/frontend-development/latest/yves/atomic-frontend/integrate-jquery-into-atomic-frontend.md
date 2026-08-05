@@ -1,6 +1,6 @@
 ---
 title: Integrate JQuery into Atomic Frontend
-last_updated: Jun 16, 2021
+last_updated: Aug 4, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-integrate-jquery
 originalArticleId: 8cd14f0a-a0e9-4036-b90b-a1ac4e5f3560
@@ -101,7 +101,7 @@ If you want to include the plugin as a local resource used only by certain speci
 
 The main integration step is to be implemented in `./src/Pyz/Yves/ShopUi/Theme/default/app.ts`. This file defines the entry point for the whole Atomic Frontend, therefore it needs to be updated in order to properly integrate with *JQuery*. The main reason is that JQuery needs some time to load itself in the DOM; every plugin or code that uses it must wait for `document.ready` event before doing anything.
 
-Same goes for this component: In order to safely have JQuery available in the component, you need to be sure that the `mountCallback` (or `readyCallback` which is deprecated now) is called after the `document.ready` event.
+Same goes for this component: In order to safely have JQuery available in the component, you need to be sure that the `mountCallback`.
 
 To do so, add one of the following code chunks to `./src/Pyz/Yves/ShopUi/Theme/default/app.ts`.
 
@@ -188,6 +188,6 @@ $('.any-target-selector').countdown('2100/01/01', function (event: any) {
 
 {% info_block errorBox %}
 
-Make sure that it's invoked inside/after `mountCallback (readyCallback` can be used as well, but it's now deprecated).
+Make sure that it's invoked inside/after `mountCallback`.
 
 {% endinfo_block %}

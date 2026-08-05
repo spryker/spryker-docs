@@ -1,7 +1,7 @@
 ---
 title: Configure direct synchronize
 description: 
-last_updated: Sep 18, 2025
+last_updated: August 5, 2026
 template: howto-guide-template
 ---
 
@@ -60,7 +60,34 @@ class SynchronizationBehaviorConfig extends SprykerSynchronizationBehaviorConfig
 
 This configuration enables direct sync for all entities with synchronization behavior.
 
-4. Optional: To disable direct sync for specific entities, add an additional parameter in the Propel schema:
+4. Recommended: Enable `QueueConfig::isReducedSyncQueueScanEnabled()` to reduce how often the queue worker scans the sync queue. Because direct synchronization writes events to in-memory storage instead of the sync queue, the sync queue stays mostly empty, so the worker does not need to scan it as frequently. This method requires the following package versions:
+
+- `spryker/queue` >= 1.29.0
+- `spryker/console` >= 4.19.0
+- `spryker/symfony-messenger` >= 1.8.1
+
+{% info_block warningBox "Enable only with direct sync" %}
+
+Enable `isReducedSyncQueueScanEnabled()` only when direct synchronization is enabled. With the traditional queue-based synchronization, the sync queue still receives events and must be scanned at the regular interval.
+
+{% endinfo_block %}
+
+**src/Pyz/Zed/Queue/QueueConfig.php**
+
+```php
+<?php
+namespace Pyz\Zed\Queue;
+use Spryker\Zed\Queue\QueueConfig as SprykerQueueConfig;
+class QueueConfig extends SprykerQueueConfig
+{
+    public function isReducedSyncQueueScanEnabled(): bool
+    {
+        return true;
+    }
+}
+```
+
+5. Optional: To disable direct sync for specific entities, add an additional parameter in the Propel schema:
 
 
 ```xml

@@ -1,7 +1,7 @@
 ---
 title: Optimizing Jenkins execution with the resource-aware queue worker
 description: Learn how to enable and configure the resource-aware queue worker for optimized, stable background job processing in Spryker.
-last_updated: May 15, 2026
+last_updated: August 5, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html
@@ -21,9 +21,19 @@ related:
     link: docs/dg/dev/guidelines/performance-guidelines/infrastructure-worker-configuration-guidelines.html
 ---
 
-Spryker ships a **resource-aware queue worker** (`ResourceAwareQueueWorker`) that replaces the default queue worker with a production-grade implementation focused on system stability and efficient resource utilization. It is available starting from the `202512.0` release.
+Spryker ships a **resource-aware queue worker** (`ResourceAwareQueueWorker`) that replaces the default queue worker with a production-grade implementation focused on system stability and efficient resource utilization. It is available starting from the `202512.0` release. Starting with this release, it is the recommended default queue worker, and it is enabled by default in the Spryker demo shops.
 
 This document explains the problem it solves, how to enable and configure it, how it works internally, and how to back-port the concept to older Spryker versions.
+
+{% info_block infoBox "Enabled by default in the demo shops" %}
+
+The resource-aware queue worker is enabled by default in the Spryker B2B Marketplace demo shop, where `Pyz\Zed\Queue\QueueConfig::isResourceAwareQueueWorkerEnabled()` returns `true`. The demo shop enables the worker on top of the following package versions:
+
+- `spryker/queue` 1.29.0
+- `spryker/console` 4.19.0
+- `spryker/symfony-messenger` 1.8.1
+
+{% endinfo_block %}
 
 ## Problem
 
@@ -140,6 +150,24 @@ $config[QueueConstants::RESOURCE_AWARE_QUEUE_WORKER_ENABLED] = (bool)getenv('RES
 ```
 
 You can also enable it per environment using the `RESOURCE_AWARE_QUEUE_WORKER_ENABLED` environment variable.
+
+Alternatively, you can enable the worker by overriding `isResourceAwareQueueWorkerEnabled()` in the project-level `Pyz\Zed\Queue\QueueConfig` to return `true`. This is the approach used in the Spryker demo shops:
+
+```php
+<?php
+
+namespace Pyz\Zed\Queue;
+
+use Spryker\Zed\Queue\QueueConfig as SprykerQueueConfig;
+
+class QueueConfig extends SprykerQueueConfig
+{
+    public function isResourceAwareQueueWorkerEnabled(): bool
+    {
+        return true;
+    }
+}
+```
 
 ### Step 3: Configure a single Jenkins job
 

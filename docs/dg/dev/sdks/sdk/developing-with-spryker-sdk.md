@@ -39,7 +39,7 @@ spryker-sdk --mode=docker sdk --install
 spryker-sdk <task|command>
 ```
 
-- To debug a task or a command, make sure the server name in IDE is `spryker-sdk` and run the following command:
+- To debug a task or a command, make sure the server name in IDE is `spryker-sdk`, then run:
 
 ```shell
 spryker-sdk --mode=debug {TASK | COMMAND}

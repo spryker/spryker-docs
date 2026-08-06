@@ -178,7 +178,7 @@ In the `Discount` module version 5, we have introduced multi-currency support fo
 - Sales table changed deprecated column type from decimal to int as discount amounts were already stored as integers.
 - `CalculatorInterface` renamed to `CalculatorTypeInterface`, concrete calculators Fixed and Percentage rename to `FixedType` and `PercentageType` accordingly.
 
-1. Run the following command:
+1. Update the dependencies:
 
 ```bash
 composer update spryker/discount spryker/currency spryker/store spryker/money spryker/calculation spryker/cart spryker/kernel.

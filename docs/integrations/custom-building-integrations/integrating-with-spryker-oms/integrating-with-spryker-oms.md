@@ -2,7 +2,7 @@
 title: Integrating with Spryker OMS
 description: Learn how to integrate Spryker OMS with third-party systems using event-driven
   and API-driven approaches to manage order lifecycles effectively.
-last_updated: July 9, 2025
+last_updated: Aug 6, 2026
 template: default
 
 ---
@@ -13,14 +13,14 @@ For third-party integrations, you can primarily use OMS for event-driven and API
 
 ## Event-driven integration (OMS as the source)
 
-- OMS can be used to publish events (for example Order.Paid, Order.Shipped) when an order transitions to a specific state.
-- Your 3rd party integration can then subscribe to these events (for example via a message queue like RabbitMQ) to trigger actions in an external system (for example update ERP, notify logistics partner, send customer email).
+- OMS can be used to publish events (for example `Order.Paid`, `Order.Shipped`) when an order transitions to a specific state.
+- Your third-party integration can then subscribe to these events (for example via a message queue like RabbitMQ) to trigger actions in an external system (for example update ERP, notify logistics partner, send customer email).
 
 ## API-driven integration (OMS as the target)
 
 - You can expose Glue API endpoints that trigger specific OMS commands or state transitions (for example set order status to shipped, initiate return).
 - This allows external systems (for example a Warehouse Management System, a Call Center application) to update the order status or trigger actions within Spryker's OMS.
-- You can also extend the OMS process with custom states and transitions specifically designed for your 3rd party's workflow.
+- You can also extend the OMS process with custom states and transitions specifically designed for your third party's workflow.
 
 ## Further reading
 

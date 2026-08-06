@@ -12,7 +12,7 @@ Keep in mind, if you use functionality from `SalesMerchantConnector`, you need t
 
 To replace the deprecated functionality, do the following:
 
-1. Install the `SalesOms`, `MerchantSalesOrder` modules by running the following command:
+1. Install the `SalesOms`, `MerchantSalesOrder` modules:
 
 ```bash
 composer require spryker/sales-oms spryker/merchant-sales-order
@@ -24,7 +24,7 @@ composer require spryker/sales-oms spryker/merchant-sales-order
 console transfer:generate
 ```
 
-3. Generate translator cache by running the following command to get the latest Zed translations:
+3. Generate the translator cache to get the latest Zed translations:
 
 ```bash
 console propel:install

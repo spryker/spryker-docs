@@ -1,6 +1,6 @@
 ---
 title: Extending components
-last_updated: Aug 5, 2026
+last_updated: Aug 6, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-extend-component
 originalArticleId: b51d63f2-d18b-4383-8e17-dd87379c1271
@@ -43,7 +43,7 @@ No, we need to specify a name for the new component. Also, the component impleme
 } {% raw %}%}{% endraw %}
 ```
 
-As you can see in the above code, the Twig of the new component extends the original side-drawer component.
+As you can see in the above code, the Twig of the new component extends the original side-drawer component. `atom()`, `molecule()`, and `organism()` accept the module of the extended component as an optional second argument. The side drawer comes from `ShopUi`, which is the default, so the argument is omitted here. Pass it when you extend a component from another module, for example `molecule('quick-order-form', 'QuickOrderPage')`. For more details, see [Custom Twig functions for Yves](/docs/dg/dev/frontend-development/latest/yves/custom-twig-functions-for-yves.html).
 
 Now, let us customize the template of the source component. The original template is defined in `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/components/organisms/side-drawer/side-drawer.twig`. The only change we are going to add is a different icon in the **close** block. To do this, add the following to `new-existing-component-side-drawer.twig`:
 

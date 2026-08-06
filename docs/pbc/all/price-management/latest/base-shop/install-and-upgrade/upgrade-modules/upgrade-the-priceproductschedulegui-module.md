@@ -1,7 +1,7 @@
 ---
 title: Upgrade the PriceProductScheduleGui module
 description: Use the guide to update the PriceProductScheduleGui module to a newer version.
-last_updated: Jun 16, 2021
+last_updated: Aug 6, 2026
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-price-product-schedule-gui
 originalArticleId: 859d0238-d7e4-4f94-ac71-7c1543547364
@@ -24,4 +24,18 @@ redirect_from:
   - /docs/pbc/all/price-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedulegui-module.html  
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-priceproductschedulegui-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-priceproductschedulegui-module.md -->
+## Upgrading from version 1.* to version 2.0.0
+
+*Estimated migration time: 5 minutes*
+
+1. Upgrade the `PriceProductScheduleGui` module to version 2.0.0:
+
+```bash
+composer require spryker/price-product-schedule-gui: "^2.0.0" --update-with-dependencies
+```
+
+2. Generate transfers:
+
+```bash
+console transfer:generate
+```

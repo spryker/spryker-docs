@@ -1,7 +1,7 @@
 ---
 title: Upgrade the QuoteRequestAgentWidget module
 description: Learn how to upgrade to a newer version of the Quote Request Agent widget module in your Spryker based projects.
-last_updated: Jun 16, 2021
+last_updated: Aug 6, 2026
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-quoterequestagentwidget
 originalArticleId: 0646a8b9-e816-40e8-95da-5ac1147f8ba8
@@ -27,4 +27,17 @@ redirect_from:
   - /docs/pbc/all/request-for-quote/202204.0/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagentwidget-module.html
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-quoterequestagentwidget-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-quoterequestagentwidget-module.md -->
+## Upgrading from version 1.x.x to version 2.x.x
+
+The only major change of `QuoteRequestAgentWidget` 2.x.x is the dependency update for `spryker/quote-request-agent:^2.0.0`.
+
+*Estimated migration time: ~1h*
+
+To migrate, do the following:
+
+1. Update `spryker/quote-request-agent` to version ^2.0.0 by following the steps from [Upgrade the QuoteRequestAgent module](/docs/pbc/all/request-for-quote/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagent-module.html).
+2. Update `spryker-shop/quote-request-agent-widget:^2.0.0`
+
+```bash
+composer require spryker-shop/quote-request-agent-widget: "^2.0.0" --update-with-dependencies
+```

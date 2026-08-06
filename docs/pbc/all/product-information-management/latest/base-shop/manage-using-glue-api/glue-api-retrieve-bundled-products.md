@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Retrieving bundled products"
 description: Learn how to retrieve bundled products that are configured with your Spryker Cloud Commerce OS project by using Glue API.
-last_updated: Jun 21, 2021
+last_updated: Aug 6, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-bundled-products
 originalArticleId: f77455d1-e0ca-470c-a6f6-15a060ea2647
@@ -790,7 +790,10 @@ To retrieve related abstract products, include both `concrete-products` and `abs
 
 </details>
 
-{% include pbc/all/glue-api-guides/latest/bundled-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/latest/bundled-products-response-attributes.md -->
+| RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
+| --- | --- | --- | --- |
+| bundled-products | sku | String | Unique identifier of the product in the bundle. |
+| bundled-products |quantity |Integer| Quantity of the product in the bundle.|
 
 
 {% include pbc/all/glue-api-guides/latest/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->

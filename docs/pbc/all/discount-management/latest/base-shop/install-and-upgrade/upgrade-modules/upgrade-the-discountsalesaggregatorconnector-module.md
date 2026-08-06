@@ -1,7 +1,7 @@
 ---
 title: Upgrade the DiscountSalesAggregatorConnector module
 description: Use the guide to migrate to a newer version of the DiscountSalesAggregatorConnector module.
-last_updated: Jun 16, 2021
+last_updated: Aug 6, 2026
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-discount-sales-aggregator-connector
 originalArticleId: 8ef66591-61d1-4f81-a6de-96b53b89c2e1
@@ -22,4 +22,6 @@ related:
     link: docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discount-module.html
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-discountsalesaggregatorconnector-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-discountsalesaggregatorconnector-module.md -->
+## Upgrading from version 2.* to version 3.*
+
+The tax plugins are using the version 3.* of the Tax module. You need to upgrade the [Tax](/docs/pbc/all/tax-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-tax-module.html) module.

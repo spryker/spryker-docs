@@ -2,7 +2,7 @@
 title: "Marketplace Product Offer Prices feature: Domain model and relationships"
 description: Learn about the dependencies between modules for the Marketplace product offer prices feature within your Spryker Marketplace project.
 template: concept-topic-template
-last_updated: Aug 6, 2026
+last_updated: Nov 21, 2023
 ---
 
 This document provides technical details about the Marketplace Product Offer Prices feature.

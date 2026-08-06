@@ -29,6 +29,65 @@ API Platform provides a comprehensive testing infrastructure built on top of:
 
 The testing infrastructure supports both Backend and Storefront API types with dedicated base classes and configuration.
 
+## Test tiers
+
+Tests split into two tiers by what they cover and what they cost. Put a test in the cheapest tier that can carry it.
+
+| Tier | Covers | Stack | Cost |
+|------|--------|-------|------|
+| **1 — logic** | Provider and processor mapping, error-to-status mapping | Shared kernel, no database, no HTTP | ~0.4 ms per test, after a one-time kernel boot per process |
+| **2 — integration** | Full CRUD, the real error surface, auth to 401/403, validation to 422, serialization and `?include=` compound documents | Booted kernel over SQLite, no containers | ~1 s per test |
+
+Neither tier needs DockerSDK. Tier 2 runs the real client and facade, and dispatches the Client-to-Zed RPC in process to the `GatewayController` with the JSON wire round-trip preserved, against a SQLite database. Only OAuth token introspection is stubbed.
+
+### Tier 1: logic
+
+Extend `StorefrontApiTestCase` (or `BackendApiTestCase`). Register the collaborators you want to control, take the subject from the helper, and call `provide()` or `process()` directly:
+
+```php
+$wishlistTransfer = $this->tester->haveWishlistTransfer();
+$this->tester->setService(
+    WishlistClientInterface::class,
+    $this->tester->createClientStub(WishlistClientInterface::class, [
+        'getWishlistByFilter' => $this->tester->haveSuccessfulWishlistResponseTransfer($wishlistTransfer),
+    ]),
+);
+$provider = $this->tester->getProvider(WishlistsStorefrontProvider::class);
+
+$result = $provider->provide(
+    $this->tester->getGetOperation(WishlistsStorefrontResource::class),
+    ['uuid' => $wishlistTransfer->getUuid()],
+    $this->tester->getAuthenticatedContext(),
+);
+```
+
+`getProvider()` and `getProcessor()` resolve the subject from the container, so the test exercises the real service wiring and only the collaborators it names are stubbed. Everything else is the real service.
+
+Two rules follow from that:
+
+- **Call `setService()` before the first `getProvider()`, `getProcessor()`, `getTestKernel()` or `createClient()` in a test method.** Mocks are bound when the kernel is taken for that method, so registering an id afterwards has no effect.
+- **A collaborator you want to control has to be registered.** There is no auto-doubling of unregistered constructor arguments.
+
+The kernel is shared across a suite's methods and the container is reset between them, so it is built once per Codeception process rather than per test. Enable that in the suite's `codeception.yml`:
+
+```yaml
+- \SprykerTest\ApiPlatform\Helper\ApiPlatformHelper:
+      mode: 'project'
+      apiType: 'Storefront'
+      bootOnce: true
+      reuseApplicationContainer: true
+```
+
+### Tier 2: integration
+
+Extend the same base class and drive real requests with `handleApiRequest()`, asserting on the response. Use this tier for anything that needs persisted data, the serialization envelope, or the real validation and auth surface.
+
+### Prerequisites
+
+Both tiers resolve services from the container, which needs Symfony's test container. `framework.test` is configured per application in `config/<Application>/packages/framework.php` and has to be on for the environment the lane runs in. Without it the suites fail with `Could not find service "test.service_container"`.
+
+The suites also need generated code that is not in version control — transfers, Propel models, entity transfers and the API resources. Generate it once per checkout and again after any schema change. The container is compiled on first use and then cached, which takes roughly 45 seconds; that cost recurs only when configuration or generated resources change.
+
 ## Test architecture
 
 ### Test class hierarchy
@@ -548,6 +607,12 @@ class CustomersStorefrontApiTest extends StorefrontApiTestCase
 ```
 
 ### Testing with service mocks
+
+Register mocks with `setService()` rather than setting them on the container yourself — it is the supported seam, and it binds the mock whichever tier the test runs in:
+
+```php
+$this->tester->setService(CustomerClientInterface::class, $customerClientStub);
+```
 
 ```php
 public function testGivenMultipleCustomersWhenRetrievingCollectionViaGetThenAllCustomersAreReturned(): void

@@ -1,8 +1,14 @@
-extends: substitution
-message: "Use 'the Back Office' instead of '%s'."
+extends: existence
+message: "Use 'the Back Office' instead of 'Backoffice'."
 level: error
 scope: paragraph
 ignorecase: true
-swap:
-  backoffice: backoffice
-  Backoffice: Backoffice
+# Matches "Backoffice" only as a standalone word. The surrounding delimiters are part of
+# the match because Go's RE2 has no lookarounds, and a plain \b is too loose: it still
+# fires inside hyphenated/dotted identifiers such as spryker-prod-backoffice,
+# vendor/spryker/security-blocker-backoffice, and backoffice.de.spryker.local, which are
+# literal names and must stay as they are. A trailing "." only counts as a sentence end
+# (followed by space or end of line), never as a hostname separator.
+nonword: true
+tokens:
+  - '(^|[^\w/-])backoffice(s)?([^\w./-]|\.\s|\.$|$)'

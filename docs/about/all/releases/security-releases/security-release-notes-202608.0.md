@@ -30,5 +30,9 @@ composer show spryker/testify # Verify the version
 Add or adjust the $config[TestifyConstants::IS_DATA_BUILDER_RULE_EVAL_ENABLED] line within the `config/Shared/config_default.php` file:
 
 ```bash
-$config[TestifyConstants::IS_DATA_BUILDER_RULE_EVAL_ENABLED] = false;
+use Spryker\Shared\Testify\TestifyConstants;
+
+if (class_exists(TestifyConstants::class)) {
+    $config[TestifyConstants::IS_DATA_BUILDER_RULE_EVAL_ENABLED] = false;
+}
 ```

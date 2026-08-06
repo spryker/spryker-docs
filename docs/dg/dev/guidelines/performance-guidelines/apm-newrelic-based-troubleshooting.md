@@ -1,7 +1,7 @@
 ---
 title: APM — New Relic based troubleshooting
 description: Learn how to use New Relic APM to troubleshoot performance issues in Spryker applications by reviewing metrics, analyzing traces, and identifying bottlenecks.
-last_updated: Feb 26, 2026
+last_updated: Aug 6, 2026
 template: concept-topic-template
 related:
   - title: Monitoring

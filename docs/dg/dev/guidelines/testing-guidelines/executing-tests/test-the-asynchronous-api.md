@@ -2,7 +2,7 @@
 title: Test the asynchronous API
 description: Learn how to test the asynchronous API with this helpful guide for your Spryker based projects.
 template: howto-guide-template
-last_updated: Oct 18, 2023
+last_updated: Aug 6, 2026
 redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-the-asynchronous-api.html
 related:

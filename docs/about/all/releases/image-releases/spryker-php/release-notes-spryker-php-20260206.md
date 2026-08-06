@@ -1,7 +1,7 @@
 ---
 title: Release notes for spryker-php image
 description: This document describes the changes that have been recently released.
-last_updated: February 04, 2026
+last_updated: Aug 6, 2026
 template: concept-topic-template
 publish_date: "2026-02-04"
 ---

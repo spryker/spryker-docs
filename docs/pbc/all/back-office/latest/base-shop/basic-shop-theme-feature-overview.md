@@ -2,7 +2,7 @@
 title: Basic Shop Theme feature overview
 description: Let Business Admins configure logos, theme colors, and custom CSS for the Storefront, Back Office, and Merchant Portal from the Back Office without code changes.
 template: concept-topic-template
-last_updated: Apr 1, 2026
+last_updated: Aug 6, 2026
 related:
   - title: Install the Basic Shop Theme feature
     link: /docs/dg/dev/integrate-and-configure/integrate-basic-shop-theme.html

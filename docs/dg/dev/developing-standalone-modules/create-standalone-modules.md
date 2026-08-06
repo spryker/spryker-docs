@@ -29,7 +29,7 @@ You can extend Spryker functionality from a module using one of the following op
 - [ProductTableDataBulkExpanderPluginInterface](https://github.com/spryker/product-management-extension/blob/master/src/Spryker/Zed/ProductManagementExtension/Dependency/Plugin/ProductTableDataBulkExpanderPluginInterface.php): to extend table content with the corresponding column
 
 2. Create a module.
-Spryker provides a development tool in the `spryker/development` module as a console command `\Spryker\Zed\Development\Communication\Console\ModuleCreateConsole`. When module is installed and command is enabled, run the following command:
+Spryker provides a development tool in the `spryker/development` module as a console command `\Spryker\Zed\Development\Communication\Console\ModuleCreateConsole`. When the module is installed and the command is enabled, create the module structure:
 
 ```shell
 vendor/bin/console dev:module:create your-company-name.product-category

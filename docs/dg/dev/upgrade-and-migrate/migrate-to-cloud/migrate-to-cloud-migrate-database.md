@@ -51,7 +51,7 @@ Optional: For the Spryker Cloud environment, we recommend using a Scheduler inst
   ![Scheduler Container example](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/migration-concepts/migrate-to-paas/scheduler-container-example.png)
 - Copy the AWS credentials from here:
   ![AWS S3 credentials](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/migration-concepts/migrate-to-paas/aws-s3-credentials.png)
-- Run the following command to copy the DB dump from S3 bucket to the Scheduler container:
+- Copy the DB dump from the S3 bucket to the Scheduler container:
 
 ```bash
 sudo su

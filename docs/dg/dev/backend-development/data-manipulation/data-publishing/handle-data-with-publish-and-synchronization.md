@@ -1254,7 +1254,7 @@ class HelloWorldStorageDependencyProvider extends AbstractDependencyProvider
 </transfers>
 ```
 
-6. Run the following command:
+6. Generate transfer objects:
 
 ```bash
     docker/sdk console transfer:generate

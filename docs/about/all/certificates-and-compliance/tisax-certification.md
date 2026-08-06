@@ -34,7 +34,7 @@ However, Spryker uses a TISAX-ready AWS foundation and provides capabilities tha
 |----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | Secure Hosting Infrastructure    | Spryker Cloud is hosted on AWS, which is [certified under TISAX](https://aws.amazon.com/de/compliance/tisax/) AL3 across relevant regions.                                       |
 | Environment Separation           | Supports fully isolated production, staging, testing, and preview environments to protect sensitive or prototype data.                |
-| Access Control and RBAC          | Role-Based Access Control (RBAC) is built into the Backoffice (Zed) and API authentication.                                           |
+| Access Control and RBAC          | Role-Based Access Control (RBAC) is built into the Back Office (Zed) and API authentication.                                          |
 | Secure APIs & Data Exchange      | API-first architecture with token-based authentication, encryption in transit (TLS), and fine-grained access scopes.                  |
 | Modular and Auditable Architecture | Code and features are modularized by business domain, simplifying the implementation of least-privilege and audit logging strategies. |
 | DevSecOps and CI/CD Compatibility | Supports integration with secure CI/CD practices, including secret management, audit logging, and code scanning tools.                |
@@ -56,7 +56,7 @@ However, Spryker uses a TISAX-ready AWS foundation and provides capabilities tha
    Ensure that any partner or internal development follows secure coding guidelines, includes code reviews, and avoids sensitive data in non-production environments.
 
 5. **Implement Logging & Monitoring**  
-   Extend Spryker's default logging to cover key user actions, especially in Backoffice, APIs, and data exports. Consider integrating a SIEM.
+   Extend Spryker's default logging to cover key user actions, especially in the Back Office, APIs, and data exports. Consider integrating a SIEM.
 
 6. **Document and Audit**  
    Maintain documentation on your technical setup, access controls, risk assessments, and processes to prepare for the TISAX audit.

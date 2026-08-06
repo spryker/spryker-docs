@@ -85,10 +85,10 @@ How New Relic groups incoming traces into Entities depends on the configuration 
 
 | NR Entity | Description |
 | --- | --- |
-| {project-name}-{env-name}-newrelic-app | Default Entity name coming from PHP's NR configuration, captures backend-gateway transactions, sometimes also Backoffice and CLI transactions. |
+| {project-name}-{env-name}-newrelic-app | Default Entity name coming from PHP's NR configuration, captures backend-gateway transactions, sometimes also Back Office and CLI transactions. |
 | YVES-{store-name} ({env-name}) | Yves |
 | GLUE-{store-name} ({env-name}) | Glue, for example GLUE-US (docker.production) |
-| ZED-{store-name} ({env-name}) | Zed / Backoffice |
+| ZED-{store-name} ({env-name}) | Zed / Back Office |
 | MERCHANT_PORTAL-{store-name} ({env_name}) | Merchant Portal |
 
 </div>

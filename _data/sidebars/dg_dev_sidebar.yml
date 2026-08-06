@@ -1529,6 +1529,37 @@ entries:
         url: /docs/dg/dev/guidelines/testing-guidelines/running-tests-with-robot-framework.html
       - title: E2E Testing with Cypress
         url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing.html
+        nested:
+          - title: What is E2E testing?
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/what-is-e2e-testing.html
+          - title: Identifying what to test
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/identifying-what-to-test.html
+          - title: Cypress boilerplate project structure
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/project-structure.html
+          - title: Getting started with the Cypress boilerplate
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/getting-started.html
+          - title: Cypress best practices
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/best-practices.html
+          - title: Cypress boilerplate naming conventions
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/naming-conventions.html
+          - title: Cypress test writing conventions
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/test-writing-conventions.html
+          - title: Configuration and environment variables
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/configuration-and-environment-variables.html
+          - title: Cypress boilerplate plugins and libraries
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/plugins-and-libraries.html
+          - title: ESLint and Prettier in the Cypress boilerplate
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/eslint-and-prettier.html
+          - title: HTML reporter
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/html-reporter.html
+          - title: Cypress commands vs scenarios
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/cypress-commands-vs-scenarios.html
+          - title: Validate API responses against a schema
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/how-to-validate-api-response-vs-schema.html
+          - title: Debugging Cypress tests
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/debugging-cypress-tests.html
+          - title: Integrating Cypress tests into CI
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/integrating-cypress-tests-into-ci.html
       - title: Test helpers
         url: /docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
         nested:

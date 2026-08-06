@@ -10,7 +10,7 @@ layout: custom_new
 
 Out of the box, Spryker Commerce OS provides API applications:
 - Storefront API that can be used for customer-facing integrations and headless commerce
-- Backend API that can be used to provide API access for the Backoffice functionality directly without any additional RPC calls
+- Backend API that can be used to provide API access for the Back Office functionality directly without any additional RPC calls
 
 ## Backend API Application
 

@@ -161,7 +161,7 @@ Since Spryker's core modules are not yet using the Symfony Dependency Injection 
 To compile the container, you have two options:
 
 - On every request to the application, the Kernel checks if a compiled container already exists. If not, or if the cache is outdated, it generates a new one. (perfect in dev mode)
-- Run the following command to build the cache. The application then immediately uses the freshly compiled container.
+- Build the cache. The application then immediately uses the freshly compiled container.
 
 ```bash
 console container:build

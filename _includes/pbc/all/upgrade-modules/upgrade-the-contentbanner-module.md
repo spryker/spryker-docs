@@ -29,7 +29,7 @@ To upgrade to the new version of the module, do the following:
 composer require spryker/content-banner:"^2.0.0" --update-with-dependencies
 ```
 
-3. Run the following command to re-generate transfer objects:
+3. Re-generate transfer objects:
 
 ```bash
 console transfer:generate

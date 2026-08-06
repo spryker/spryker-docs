@@ -74,7 +74,7 @@ Keep in mind, that the Products Lists feature with the `ProductListGui` module m
 
 To upgrade to the new version of the module, do the following:
 
-1. Update `ProductListGui` module version and its dependencies by running the following command:
+1. Update `ProductListGui` module version and its dependencies:
 
 ```bash
 composer require spryker/product-list-gui:"^2.0.0" --update-with-dependencies
@@ -86,7 +86,7 @@ composer require spryker/product-list-gui:"^2.0.0" --update-with-dependencies
 console transfer:generate
 ```
 
-3. Generate translator cache by running the following command to get the latest Zed translations:
+3. Generate the translator cache to get the latest Zed translations:
 
 ```bash
 console translator:generate-cache
@@ -154,7 +154,7 @@ class ProductListGuiDependencyProvider extends SprykerProductListGuiDependencyPr
 - `ProductListTopButtonsExpanderPluginInterface[]` plugins are responsible for adding the top button to the product list index page which leads to the domain entity page which uses the product list for its purpose.
 - `ProductListUsedByTableExpanderPluginInterface[]` plugins are responsible for expanding table at Used By tab at Product List Edit page. This table contains a list of domain entities that use exact product list.
 
-6. Run the following command to apply JS changes:
+6. Apply the JS changes:
 
 ```bash
 console frontend:zed:build

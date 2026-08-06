@@ -13,7 +13,7 @@ For third-party integrations, you can primarily use OMS for event-driven and API
 
 ## Event-driven integration (OMS as the source)
 
-- OMS can be used to publish events (for example Order.Paid, Order.Shipped) when an order transitions to a specific state.
+- OMS can be used to publish events (for example `Order.Paid`, `Order.Shipped`) when an order transitions to a specific state.
 - Your third-party integration can then subscribe to these events (for example via a message queue like RabbitMQ) to trigger actions in an external system (for example update ERP, notify logistics partner, send customer email).
 
 ## API-driven integration (OMS as the target)

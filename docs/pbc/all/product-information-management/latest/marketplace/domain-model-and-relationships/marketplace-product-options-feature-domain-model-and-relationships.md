@@ -21,7 +21,7 @@ The following diagram illustrates the dependencies between the modules for the *
 | [MerchantProductOptionGui](https://github.com/spryker/merchant-product-option-gui) | Provides Back Office UI for merchant product options management. |
 | [ProductOption](https://github.com/spryker/product-option) | Provides additional layer of optional items that can be sold with the actual product. |
 | [ProductOptionStorage](https://github.com/spryker/product-option-storage) | Provides publish and sync functionality for product options. |
-| [Shop.ProductOptionWidget](https://github.com/spryker-shop/product-option-widget) | Provides widgets for displaying product options. |
+| [ProductOptionWidget](https://github.com/spryker-shop/product-option-widget) | Provides widgets for displaying product options. |
 
 ## Domain model
 

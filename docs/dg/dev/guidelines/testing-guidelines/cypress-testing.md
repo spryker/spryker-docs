@@ -16,14 +16,7 @@ Cypress is an end-to-end testing framework that provides a modern approach to te
 
 ## Cypress boilerplate
 
-For comprehensive information on setting up and using Cypress with Spryker, refer to the topics described below. The Cypress-boilerplate tests are built into the Spryker B2B Marketplace demo shop.
-
-The boilerplate includes the following:
-
-- A pre-configured Cypress setup optimized for Spryker projects.
-- Example test cases and patterns.
-- Documentation and best practices.
-- Integration guides.
+For comprehensive information on setting up and using Cypress with Spryker, refer to the topics described below. The Cypress-boilerplate tests are built into the Spryker B2B Marketplace demo shop and located in the folder `tests/cypress-boilerplate`.
 
 The boilerplate does not include the following:
 

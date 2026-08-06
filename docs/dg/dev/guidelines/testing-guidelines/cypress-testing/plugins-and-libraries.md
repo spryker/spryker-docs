@@ -12,7 +12,7 @@ related:
     link: docs/dg/dev/guidelines/testing-guidelines/cypress-testing/eslint-and-prettier.html
 ---
 
-This document describes the plugins and libraries used in the cypress-boilerplate, as listed in `package.json`.
+This document describes the plugins and libraries used in the cypress-boilerplate, as listed in `tests/cypress-boilerplate/package.json`.
 
 ## devDependencies
 

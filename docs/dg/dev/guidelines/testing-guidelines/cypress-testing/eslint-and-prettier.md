@@ -1,7 +1,7 @@
 ---
 title: ESLint and Prettier in the Cypress boilerplate
 description: Learn how the Cypress boilerplate project uses ESLint and Prettier to enforce code quality and formatting.
-last_updated: Aug 4, 2026
+last_updated: Aug 6, 2026
 template: concept-topic-template
 related:
   - title: E2E Testing with Cypress
@@ -17,64 +17,104 @@ ESLint and Prettier help maintain code quality and consistency in the cypress-bo
 - **ESLint** is a static code analysis tool that identifies and fixes problems in code. It enforces coding standards and helps catch syntax errors, potential bugs, and other problematic patterns.
 - **Prettier** is an opinionated code formatter that ensures a consistent code style by automatically formatting your code. It supports multiple languages and integrates well with various editors and tools.
 
-Both tools are already integrated into the boilerplate.
+Both tools are already integrated into the boilerplate. The boilerplate keeps its own `package.json`, so ESLint, Prettier, and their plugins are installed inside the boilerplate directory and are independent of any linting the surrounding project performs.
 
 ## ESLint
 
 ### Configuration
 
-ESLint is configured through the `.eslintrc` file:
+ESLint uses the flat configuration format and is configured through `eslint.config.js`. There is no `.eslintrc` file, and ignore patterns live in the configuration itself rather than in an `.eslintignore` file.
 
-```json
-{
-  "root": true,
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:cypress/recommended",
-    "plugin:prettier/recommended"
-  ],
-  "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module",
-    "project": "./tsconfig.json"
+```js
+module.exports = [
+  {
+    ignores: ['node_modules', 'dist', '.envs'],
   },
-  "rules": {
-    "@typescript-eslint/no-inferrable-types": "error",
-    "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/no-explicit-any": "off"
-  }
-}
+
+  // TypeScript parser and plugin for .ts files
+  {
+    files: ['**/*.ts'],
+    languageOptions: {
+      parser: require('@typescript-eslint/parser'),
+      parserOptions: {
+        project: './tsconfig.json',
+        tsconfigRootDir: __dirname,
+        ecmaVersion: 2023,
+        sourceType: 'module',
+      },
+    },
+    plugins: {
+      '@typescript-eslint': require('@typescript-eslint/eslint-plugin'),
+    },
+    rules: {},
+  },
+
+  // Cypress plugin for the test files
+  {
+    files: ['cypress/**/*.{js,ts}'],
+    plugins: {
+      cypress: require('eslint-plugin-cypress'),
+    },
+    rules: {},
+  },
+
+  // Basic JS handling
+  {
+    files: ['**/*.js'],
+    languageOptions: {
+      ecmaVersion: 2023,
+      sourceType: 'module',
+    },
+    rules: {},
+  },
+]
 ```
 
-- `root`: indicates that this is the root configuration file.
-- `parser`: specifies `@typescript-eslint/parser` as the parser for TypeScript.
-- `plugins`: specifies the ESLint plugins to use.
-- `extends`: extends the configuration with recommended rule sets:
-  - `eslint:recommended`: recommended rules from ESLint.
-  - `plugin:@typescript-eslint/eslint-recommended`: disables ESLint rules already covered by TypeScript.
-  - `plugin:@typescript-eslint/recommended`: recommended rules from `@typescript-eslint`.
-  - `plugin:cypress/recommended`: recommended rules from the Cypress plugin.
-  - `plugin:prettier/recommended`: integrates Prettier with ESLint.
-- `parserOptions`: specifies the parser options, including the ECMAScript version, the source type, and the path to the TypeScript configuration file.
-- `rules`: specifies custom rules, for example, disabling `@typescript-eslint/explicit-function-return-type` and `@typescript-eslint/no-explicit-any`.
+The configuration is an array of blocks. Each block applies to the files matched by its `files` pattern:
 
-Use a `.eslintignore` file to exclude files and directories from ESLint analysis, for example:
+- `ignores`: paths ESLint never looks at.
+- `files`: the glob the block applies to.
+- `languageOptions.parser`: `@typescript-eslint/parser`, so TypeScript can be parsed.
+- `languageOptions.parserOptions.project`: points at `tsconfig.json`, which enables type-aware linting. A file that is not covered by `tsconfig.json` produces a parsing error rather than being skipped.
+- `plugins`: makes a plugin's rules available under a namespace, for example, `@typescript-eslint` or `cypress`.
+- `rules`: the rules that are actually enforced.
 
-```text
-node_modules
+### Enabling rules
+
+Flat configuration has no implicit `extends`: registering a plugin makes its rules available under a namespace, but does not turn any of them on. Rules are enforced only where they are listed in a `rules` block or brought in from a shared configuration.
+
+To enforce a recommended set, spread it into the exported array and add your own rules after it:
+
+```js
+const tseslint = require('typescript-eslint')
+const pluginCypress = require('eslint-plugin-cypress/flat')
+const eslintConfigPrettier = require('eslint-config-prettier')
+
+module.exports = [
+  ...tseslint.configs.recommended,
+  pluginCypress.configs.recommended,
+  eslintConfigPrettier,
+  {
+    rules: {
+      '@typescript-eslint/no-inferrable-types': 'error',
+      '@typescript-eslint/explicit-function-return-type': 'off',
+      '@typescript-eslint/no-explicit-any': 'off',
+    },
+  },
+]
 ```
+
+Order matters: later entries override earlier ones, so put `eslint-config-prettier` last to switch off formatting rules that would otherwise conflict with Prettier.
 
 ### Running ESLint
 
+Run from the boilerplate directory:
+
 ```bash
-eslint .
+npm run lint:check
 ```
 
-This checks your code for linting errors and displays them in the terminal.
+This runs `eslint .`, checks your code for linting errors, and displays them in the terminal.
 
 ### Automatically fixing ESLint errors
 
@@ -110,19 +150,22 @@ Prettier is configured through the `.prettierrc.json` file:
 - `arrowParens`: `always` always includes parentheses around arrow function parameters.
 - `endOfLine`: `auto` maintains existing line endings.
 
-Use a `.prettierignore` file to exclude files and directories from Prettier formatting, for example:
+Prettier resolves the nearest configuration file for each file it formats. Because this configuration sits inside the boilerplate directory, these rules apply to the boilerplate even when Prettier is invoked from a parent project that has its own, different configuration.
+
+The `.prettierignore` file excludes paths from formatting:
 
 ```text
 node_modules
+workflows
 ```
 
 ### Running Prettier
 
 ```bash
-prettier . --check
+npm run prettier:check
 ```
 
-This checks your code for style errors and displays them in the terminal.
+This runs `prettier . --check`, checks your code for style errors, and displays them in the terminal.
 
 ### Automatically fixing Prettier errors
 
@@ -132,7 +175,26 @@ prettier . --write
 
 This formats your code according to the rules in `.prettierrc.json`.
 
+## Running both checks
+
+```bash
+npm run code:check   # report ESLint and Prettier issues
+npm run code:fix     # fix both
+```
+
+{% info_block warningBox "Do not use code:check as a pass/fail gate" %}
+
+`code:check` is defined as `eslint . ; prettier . --check`. The `;` means the script exits with _Prettier's_ status, so a failing ESLint run is reported as success. Use it to view all issues at once, but gate on the two commands separately:
+
+```bash
+npm run lint:check && npm run prettier:check
+```
+
+This is why CI runs them as two separate steps.
+
+{% endinfo_block %}
+
 ## Resources
 
-- [ESLint configuration options](https://eslint.org/docs/latest/use/configure/)
+- [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files)
 - [Prettier configuration options](https://prettier.io/docs/en/options.html)

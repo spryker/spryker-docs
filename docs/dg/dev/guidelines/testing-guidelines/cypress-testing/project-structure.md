@@ -20,129 +20,66 @@ This document describes the directory structure of the cypress-boilerplate part 
 cypress-boilerplate/
 ├── .envs
 │   ├── .env.ci
-│   ├── .env.local
-│   ├── .env.production
-│   ├── .env.staging
-│   └── .env.testing
-├── .github
-│   ├── PULL_REQUEST_TEMPLATE.md
-│   └── workflows
-│       ├── ci.yml
-│       └── regression.yml
+│   └── .env.local
 ├── cypress
-│   ├── data
-│   │   ├── reports
-│   │   │   └── index.html
-│   │   └── screenshots
 │   ├── e2e
 │   │   ├── backoffice
 │   │   │   └── orders
-│   │   │       ├── backoffice-process-order-scenario.cy.ts
+│   │   │       ├── backoffice-process-order-using-scenario.cy.ts
 │   │   │       └── backoffice-process-order.cy.ts
 │   │   ├── glue
 │   │   │   ├── access-tokens
 │   │   │   │   └── glue-access-token.cy.ts
-│   │   │   └── checkout
-│   │   │       └── glue-checkout.cy.ts
+│   │   │   ├── checkout
+│   │   │   │   └── glue-checkout.cy.ts
+│   │   │   └── orders
+│   │   │       └── glue-orders.cy.ts
 │   │   ├── merchant-portal
 │   │   │   └── orders
 │   │   │       └── merchant-portal-process-merchant-order.cy.ts
 │   │   └── storefront
+│   │       ├── cart
+│   │       │   └── storefront-cart-smoke.cy.ts
 │   │       ├── checkout
 │   │       │   └── storefront-checkout.cy.ts
+│   │       ├── order
+│   │       │   └── storefront-order.cy.ts
 │   │       └── quick-order
 │   │           └── storefront-quick-order.cy.ts
 │   ├── fixtures
-│   │   ├── checkout-data.json
-│   │   ├── customer-data.json
-│   │   ├── product-data.json
-│   │   ├── quick-order-data.json
-│   │   └── user-data.json
+│   │   ├── backoffice/orders            (dynamic- + static- per spec)
+│   │   ├── glue/{access-tokens,checkout,orders}
+│   │   ├── merchant-portal/orders
+│   │   ├── shared
+│   │   │   └── checkout-data.json
+│   │   └── storefront/{cart,checkout,order,quick-order}
 │   └── support
 │       ├── api-helper
-│       │   ├── api-helper.ts
-│       │   └── general-responses
-│       │       └── error-response.ts
-│       ├── cy-commands
-│       │   ├── backoffice
-│       │   │   └── oms-transition-commands.ts
-│       │   ├── glue
-│       │   │   ├── addresses-commands.ts
-│       │   │   ├── carts-commands.ts
-│       │   │   └── checkout-commands.ts
-│       │   └── storefront
-│       │       ├── cart-commands.ts
-│       │       └── utility-commands.ts
+│       ├── cy-commands/{backoffice,dynamic-fixtures,glue,storefront}
+│       ├── fixture-helper
+│       │   └── fixture-helper.ts
+│       ├── glue-endpoints/{authentication,cart,checkout,order}
+│       ├── page-objects/{backoffice,merchant-portal,storefront}
+│       ├── scenarios/{backoffice,glue,storefront}
+│       ├── types
+│       │   ├── backoffice        index.ts, order-management.ts
+│       │   ├── glue              index.ts, access-tokens.ts, checkout.ts, orders.ts
+│       │   ├── merchant-portal   index.ts, order-management.ts
+│       │   ├── shared            customer, product, localized-attributes,
+│       │   │                     price-product, product-offer, user, index
+│       │   └── storefront        cart, checkout, order, quick-order (features)
+│       │                         budget, cost-center, merchant, shipment-method (types)
 │       ├── e2e.ts
-│       ├── glue-endpoints
-│       │   ├── authentication
-│       │   │   ├── access-tokens-response.ts
-│       │   │   └── access-tokens.ts
-│       │   ├── cart
-│       │   │   ├── carts-items.ts
-│       │   │   └── carts.ts
-│       │   ├── checkout
-│       │   │   └── checkout.ts
-│       │   └── glue-request.ts
-│       ├── index.d.ts
-│       ├── page-objects
-│       │   ├── abstract-page.ts
-│       │   ├── backoffice
-│       │   │   ├── login
-│       │   │   │   └── backoffice-login-page.ts
-│       │   │   └── order-management
-│       │   │       ├── backoffice-order-details-page.ts
-│       │   │       └── backoffice-order-list-page.ts
-│       │   ├── merchant-portal
-│       │   │   ├── login
-│       │   │   │   └── merchant-portal-login-page.ts
-│       │   │   └── order-management
-│       │   │       ├── merchant-portal-order-details-page.ts
-│       │   │       └── merchant-portal-order-list-page.ts
-│       │   └── storefront
-│       │       ├── cart
-│       │       │   ├── storefront-cart-flyout.ts
-│       │       │   ├── storefront-cart-page.ts
-│       │       │   └── storefront-create-cart-page.ts
-│       │       ├── checkout
-│       │       │   ├── storefront-checkout-address-page.ts
-│       │       │   ├── storefront-checkout-payment-page.ts
-│       │       │   ├── storefront-checkout-shipping-page.ts
-│       │       │   ├── storefront-checkout-success-page.ts
-│       │       │   └── storefront-checkout-summary-page.ts
-│       │       ├── login
-│       │       │   └── storefront-login-page.ts
-│       │       ├── product
-│       │       │   └── storefront-product-details-page.ts
-│       │       ├── quick-order
-│       │       │   └── storefront-quick-order-page.ts
-│       │       └── search
-│       │           ├── storefront-search-page.ts
-│       │           ├── storefront-search-results-page.ts
-│       │           └── storefront-search-suggestions-flyout.ts
-│       └── scenarios
-│           ├── backoffice
-│           │   └── oms-transition-scenarios.ts
-│           ├── glue
-│           │   ├── glue-addresses-scenarios.ts
-│           │   ├── glue-carts-scenarios.ts
-│           │   └── glue-checkout-scenarios.ts
-│           └── storefront
-│               ├── storefront-cart-scenarios.ts
-│               └── storefront-quick-order-scenarios.ts
-├── .env.dist
-├── .eslintignore
-├── .eslintrc
+│       └── index.d.ts
 ├── .gitignore
 ├── .prettierignore
 ├── .prettierrc.json
-├── composer.json
-├── cypress.config.ts
 ├── Dockerfile
 ├── LICENSE
-├── package-lock.json
-├── package.json
 ├── README.md
+├── cypress.config.ts
+├── eslint.config.js
+├── package.json
 └── tsconfig.json
 ```
 

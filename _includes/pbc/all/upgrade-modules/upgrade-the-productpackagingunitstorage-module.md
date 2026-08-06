@@ -57,7 +57,7 @@ console propel:install
 console transfer:generate
 ```
 
-5. Run the following command to republish all the packaging units to storage:
+5. Republish all the packaging units to storage:
 
 ```bash
 console event:trigger -r product_packaging_unit

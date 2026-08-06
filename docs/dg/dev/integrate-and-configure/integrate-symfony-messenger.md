@@ -217,7 +217,7 @@ class SymfonyMessengerConfig extends SprykerSymfonyMessengerConfig
 
 To verify that the Symfony Messenger Queue Adapter integration is working correctly:
 
-1. Save any entity in the backoffice that should be synced to the storefront or run an import.
+1. Save any entity in the Back Office that should be synced to the storefront or run an import.
 2. Check the RabbitMQ management interface to check if queues have messages and they are being processed.
 3. Check that messages are being processed successfully and there are no errors in the logs.
 

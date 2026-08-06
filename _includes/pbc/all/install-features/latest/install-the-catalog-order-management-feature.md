@@ -209,7 +209,7 @@ $jobs[] = [
 ];
 ```
 
-2. Optional: To apply the updated cron job configuration without redeploying, run the following command in CLI:
+2. Optional: Apply the updated cron job configuration without redeploying:
 
 ```shell
 vendor/bin/console scheduler:setup

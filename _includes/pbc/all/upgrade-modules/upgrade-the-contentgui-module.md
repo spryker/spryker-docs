@@ -24,13 +24,13 @@ To upgrade to the new version of the module, do the following:
 composer require spryker/content-gui:"^2.0.0" --update-with-dependencies
 ```
 
-3. Run the following command to re-generate transfer objects:
+3. Re-generate transfer objects:
 
 ```bash
 console transfer:generate
 ```
 
-4. Run the following command to re-build Zed UI:
+4. Re-build the Zed UI:
 
 ```bash
 console frontend:zed:build

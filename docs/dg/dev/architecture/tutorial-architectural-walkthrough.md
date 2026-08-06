@@ -298,7 +298,7 @@ To add a `HelloSpryker` transfer, follow these steps:
 </transfers>
 ```
 
-5. Run the following command:
+5. Generate transfer objects:
 
 ```bash
 console transfer:generate

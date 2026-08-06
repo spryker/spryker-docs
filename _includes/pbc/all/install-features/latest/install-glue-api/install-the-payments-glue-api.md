@@ -125,9 +125,9 @@ Make sure that the following changes have occurred:
 | PaymentProviderCollectionTransfer | class | created | src/Generated/Shared/Transfer/PaymentProviderCollectionTransfer.php |
 | RestCheckoutDataResponseAttributesTransfer | class | created | src/Generated/Shared/Transfer/RestCheckoutDataResponseAttributesTransfer.php |
 | RestPaymentMethodTransfer | class | created | src/Generated/Shared/Transfer/RestPaymentMethodTransfer.php |
-| RestPaymentTransfer.DummyPayment | property | created | src/Generated/Shared/Transfer/RestPaymentTransfer.php |
-| RestPaymentTransfer.DummyPaymentInvoice | property | created | src/Generated/Shared/Transfer/RestPaymentTransfer.php |
-| RestPaymentTransfer.DummyPaymentCreditCard | property | created | src/Generated/Shared/Transfer/RestPaymentTransfer.php |
+| `RestPaymentTransfer.DummyPayment` | property | created | src/Generated/Shared/Transfer/RestPaymentTransfer.php |
+| `RestPaymentTransfer.DummyPaymentInvoice` | property | created | src/Generated/Shared/Transfer/RestPaymentTransfer.php |
+| `RestPaymentTransfer.DummyPaymentCreditCard` | property | created | src/Generated/Shared/Transfer/RestPaymentTransfer.php |
 
 {% endinfo_block %}
 

@@ -2,7 +2,7 @@
 title: Basic Shop Theme feature overview
 description: Let Business Admins configure logos, theme colors, and custom CSS for the Storefront, Back Office, and Merchant Portal from the Back Office without code changes.
 template: concept-topic-template
-last_updated: Apr 1, 2026
+last_updated: Aug 6, 2026
 related:
   - title: Install the Basic Shop Theme feature
     link: /docs/dg/dev/integrate-and-configure/integrate-basic-shop-theme.html
@@ -45,9 +45,9 @@ All theme settings are managed under **Back Office > Configuration > Theme**.
 
 | Setting | Type | Default | Description |
 |---------|------|---------|-------------|
-| Backoffice Theme Color | Color picker | `#1ebea0` | Primary theme color for the Back Office interface. Exposed as the `--bo-main-color` CSS custom property. |
-| Backoffice Side Navigation Background | Color picker | `#23303c` | Side navigation and login background. Exposed as the `--bo-sidenav-color` CSS custom property. |
-| Backoffice Side Navigation Text Color | Color picker | `#e4e4e4` | Side navigation text color. Exposed as the `--bo-sidenav-text-color` CSS custom property. |
+| Back Office Theme Color | Color picker | `#1ebea0` | Primary theme color for the Back Office interface. Exposed as the `--bo-main-color` CSS custom property. |
+| Back Office Side Navigation Background | Color picker | `#23303c` | Side navigation and login background. Exposed as the `--bo-sidenav-color` CSS custom property. |
+| Back Office Side Navigation Text Color | Color picker | `#e4e4e4` | Side navigation text color. Exposed as the `--bo-sidenav-text-color` CSS custom property. |
 | Back Office Logo | File upload | (empty) | Logo displayed in the Back Office sidebar. Recommended size: 186×50 px. Supported formats: GIF, PNG, JPEG, BMP, WebP, SVG. |
 
 ### Merchant Portal

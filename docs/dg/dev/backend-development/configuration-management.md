@@ -219,10 +219,10 @@ features:
 | Property      | Type    | Required | Default | Constraints        | Description                                      |
 |---------------|---------|----------|---------|--------------------|--------------------------------------------------|
 | `key`         | string  | Yes      | --      | `^[a-z][a-z0-9_]*$` | Unique identifier. Part of compound setting key. |
-| `name`        | string  | Yes      | --      | 1-255 chars        | Display name in backoffice sidebar.              |
+| `name`        | string  | Yes      | --      | 1-255 chars        | Display name in the Back Office sidebar.         |
 | `description` | string  | No       | `null`  | max 1000 chars     | Feature description text. Shown as tooltip in sidebar. |
 | `order`       | integer | No       | `0`     | --                 | Sort order for rendering. Lower values first.    |
-| `enabled`     | boolean | No       | `true`  | --                 | When `false`, feature and all children are hidden from the backoffice, search results, and settings map. |
+| `enabled`     | boolean | No       | `true`  | --                 | When `false`, feature and all children are hidden from the Back Office, search results, and settings map. |
 | `status`      | string  | No       | `null`  | `beta`, `early_access` | Status badge displayed next to the feature name. Invalid values are silently ignored. |
 | `tabs`        | array   | Yes      | --      | min 1 item         | List of tab objects.                             |
 
@@ -245,11 +245,11 @@ tabs:
 | Property      | Type    | Required | Default | Constraints          | Description                                          |
 |---------------|---------|----------|---------|----------------------|------------------------------------------------------|
 | `key`         | string  | Yes      | --      | `^[a-z][a-z0-9_]*$` | Unique within feature. Part of compound setting key. |
-| `name`        | string  | Yes      | --      | 1-255 chars          | Tab label in backoffice.                             |
+| `name`        | string  | Yes      | --      | 1-255 chars          | Tab label in the Back Office.                        |
 | `icon`        | string  | No       | `null`  | max 100 chars        | Material Symbols icon name (for example `settings`, `cable`, `trending_up`). |
 | `description` | string  | No       | `null`  | max 1000 chars       | Tab description text. Shown as tooltip in sidebar.   |
 | `order`       | integer | No       | `0`     | --                   | Sort order for rendering. Lower values first.        |
-| `enabled`     | boolean | No       | `true`  | --                   | When `false`, tab and all children are hidden from the backoffice, search results, and settings map. |
+| `enabled`     | boolean | No       | `true`  | --                   | When `false`, tab and all children are hidden from the Back Office, search results, and settings map. |
 | `status`      | string  | No       | `null`  | `beta`, `early_access` | Status badge displayed next to the tab name.       |
 | `groups`      | array   | Yes      | --      | min 1 item           | List of group objects.                               |
 
@@ -272,11 +272,11 @@ groups:
 | Property      | Type     | Required | Default      | Constraints          | Description                                          |
 |---------------|----------|----------|--------------|----------------------|------------------------------------------------------|
 | `key`         | string   | Yes      | --           | `^[a-z][a-z0-9_]*$` | Unique within tab.                                   |
-| `name`        | string   | Yes      | --           | 1-255 chars          | Group heading in backoffice.                         |
+| `name`        | string   | Yes      | --           | 1-255 chars          | Group heading in the Back Office.                    |
 | `description` | string   | No       | `null`       | max 1000 chars       | Group description text.                              |
-| `scopes`      | string[] | Yes      | `['global']` | min 1 item           | Scopes where this group is displayed in backoffice. Setting scopes are constrained to their parent group scopes. |
+| `scopes`      | string[] | Yes      | `['global']` | min 1 item           | Scopes where this group is displayed in the Back Office. Setting scopes are constrained to their parent group scopes. |
 | `order`       | integer  | No       | `0`          | --                   | Sort order for rendering. Lower values first.        |
-| `enabled`     | boolean  | No       | `true`       | --                   | When `false`, group and all settings are hidden from the backoffice, search results, and settings map. |
+| `enabled`     | boolean  | No       | `true`       | --                   | When `false`, group and all settings are hidden from the Back Office, search results, and settings map. |
 | `status`      | string   | No       | `null`       | `beta`, `early_access` | Status badge displayed next to the group heading.  |
 | `settings`    | array    | Yes      | --           | min 1 item           | List of setting objects.                             |
 
@@ -313,18 +313,18 @@ settings:
 | Property        | Type      | Required | Default      | Constraints          | Description                                          |
 |-----------------|-----------|----------|--------------|----------------------|------------------------------------------------------|
 | `key`           | string    | Yes      | --           | `^[a-z][a-z0-9_]*$`  | Unique within group. Part of compound key.           |
-| `name`          | string    | Yes      | --           | 1-255 chars          | Input label in backoffice.                           |
+| `name`          | string    | Yes      | --           | 1-255 chars          | Input label in the Back Office.                      |
 | `description`   | string    | No       | `null`       | max 1000 chars       | Help text displayed below the input field.           |
 | `note`          | string    | No       | `null`       | max 1000 chars       | Additional note displayed below the description in italic. |
 | `placeholder`   | string    | No       | `null`       | max 255 chars        | Placeholder text inside the input field.             |
 | `help_text`     | string    | No       | `null`       | max 500 chars        | Extended help in tooltip or expandable area.         |
 | `template`      | string    | No       | `null`       | max 255 chars        | Custom Twig template. Overrides type-based widget.   |
-| `type`          | string    | Yes      | --           | See types table      | Value data type. Determines backoffice input widget. |
+| `type`          | string    | Yes      | --           | See types table      | Value data type. Determines the Back Office input widget. |
 | `default_value` | mixed     | No       | `null`       | Must match `type`    | Fallback when no value is saved at any scope.        |
 | `options`       | option[]  | No       | `[]`         | For select/multi/radio | Available choices. See [Options](#options).        |
 | `scopes`        | string[]  | No       | `['global']` | min 1 item           | Scopes where this setting can be configured. Constrained to parent group scopes. |
 | `order`         | integer   | No       | `0`          | --                   | Sort order for rendering. Lower values first.        |
-| `enabled`       | boolean   | No       | `true`       | --                   | When `false`, setting is hidden from the backoffice, search results, and settings map. |
+| `enabled`       | boolean   | No       | `true`       | --                   | When `false`, setting is hidden from the Back Office, search results, and settings map. |
 | `status`        | string    | No       | `null`       | `beta`, `early_access` | Status badge displayed next to the setting label.  |
 | `secret`        | boolean   | No       | `false`      | --                   | When `true`, value is encrypted in database. Never published to storage. |
 | `storefront`    | boolean   | No       | `false`      | --                   | When `true`, value is published to key-value storage for Yves/Glue. |
@@ -336,7 +336,7 @@ settings:
 
 #### Setting Types
 
-| Type          | Description                          | Backoffice Input | Requires `options` |
+| Type          | Description                          | Back Office Input | Requires `options` |
 |---------------|--------------------------------------|------------------|--------------------|
 | `string`      | Single-line text                     | Text input       | No                 |
 | `integer`     | Whole number                         | Number input     | No                 |
@@ -428,7 +428,7 @@ options:
 | Property      | Type   | Required | Constraints   | Description                              |
 |---------------|--------|----------|---------------|------------------------------------------|
 | `value`       | string | Yes      | min 1 char    | Internal value stored when selected.     |
-| `label`       | string | Yes      | 1-255 chars   | Display label shown in backoffice.       |
+| `label`       | string | Yes      | 1-255 chars   | Display label shown in the Back Office.  |
 | `description` | string | No       | max 500 chars | Additional explanation (for radio buttons). |
 
 #### Secret vs Storefront Behavior
@@ -631,7 +631,7 @@ Project schemas override core schemas at the setting level. Settings with the sa
 
 **Merged output:** `data/configuration/merged-schema.php`
 
-## Backoffice Management
+## Back Office Management
 
 Settings are managed at **The Back office > Configuration**. The page provides:
 

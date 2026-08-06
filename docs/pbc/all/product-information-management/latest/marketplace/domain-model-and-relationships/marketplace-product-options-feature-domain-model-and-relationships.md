@@ -2,7 +2,7 @@
 title: "Marketplace Product Options feature: Domain model and relationships"
 description: Marketplace Product Options lets merchants create their product option groups and values.
 template: feature-walkthrough-template
-last_updated: Nov 21, 2023
+last_updated: Aug 6, 2026
 ---
 
 The *Marketplace Product Options* feature lets merchants create their product option groups and values. Currently, you can [import product options](/docs/pbc/all/product-information-management/latest/marketplace/import-and-export-data/import-file-details-merchant-product-option-group.csv.html) where you specify the merchant reference.
@@ -18,10 +18,10 @@ The following diagram illustrates the dependencies between the modules for the *
 | [MerchantProductOption](https://github.com/spryker/merchant-product-option) | Provides merchant product option main business logic and persistence. |
 | [MerchantProductOptionDataImport](https://github.com/spryker/merchant-product-option-data-import) | Provides data import functionality for merchant product options. |
 | [MerchantProductOptionStorage](https://github.com/spryker/merchant-product-option-storage) | Provides publish and sync functionality for merchant product options. |
-| [MerchantProductOptionGui](https://github.com/spryker/merchant-product-option-gui) | Provides backoffice UI for merchant product options management. |
+| [MerchantProductOptionGui](https://github.com/spryker/merchant-product-option-gui) | Provides Back Office UI for merchant product options management. |
 | [ProductOption](https://github.com/spryker/product-option) | Provides additional layer of optional items that can be sold with the actual product. |
 | [ProductOptionStorage](https://github.com/spryker/product-option-storage) | Provides publish and sync functionality for product options. |
-| [Shop.ProductOptionWidget](https://github.com/spryker-shop/product-option-widget) | Provides widgets for displaying product options. |
+| [ProductOptionWidget](https://github.com/spryker-shop/product-option-widget) | Provides widgets for displaying product options. |
 
 ## Domain model
 

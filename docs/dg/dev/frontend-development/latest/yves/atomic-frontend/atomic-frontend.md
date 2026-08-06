@@ -1,7 +1,7 @@
 ---
 title: Atomic frontend
 description: Learn the basic principles of Spryker UI implementation and how to perform the tasks required to design Spryker UI.
-last_updated: Aug 31, 2022
+last_updated: Aug 4, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/atomic-front-end-general-overview
 originalArticleId: 98f5fe06-2e55-4271-a793-928272216dd5
@@ -474,7 +474,7 @@ In your code, you can use keyword this to access the public API of the HTML elem
 import Component from 'ShopUi/models/component';
 
 export default class ComponentName extends Component {
-    protected readyCallback(): void {
+    protected init(): void {
         // TODO: your code here
     }
 }
@@ -488,7 +488,7 @@ import SideDrawer from 'ShopUi/components/organisms/side-drawer/side-drawer';
 
 // Export the extended class
 export default class ComponentName extends SideDrawer {
-    protected readyCallback(): void {
+    protected init(): void {
         // TODO: your code here
     }
 }

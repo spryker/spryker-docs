@@ -1,7 +1,7 @@
 ---
 title: Recurring Orders feature overview
 description: Learn how the Recurring Orders feature lets B2B buyers automate repeat purchases on a configurable schedule.
-last_updated: Aug 5, 2026
+last_updated: Aug 6, 2026
 template: concept-topic-template
 ---
 
@@ -47,6 +47,8 @@ A recurring schedule is **only available** for quotes that meet all of the follo
 - The quote does not originate from a Request for Quote (RFQ).
 - The customer is not a guest.
 - The payment method is invoice-based (`invoice`, `purchaseOnAccount`, or a configured equivalent).
+
+Projects can add their own conditions, and features can contribute conditions of their own. With the Purchasing Control feature installed, a quote carrying a budget that requires approval is rejected—see [Budgets that require approval cannot be selected](#budgets-that-require-approval-cannot-be-selected).
 
 ## Cadence types
 
@@ -265,6 +267,8 @@ With the [Purchasing Control feature](/docs/pbc/all/cart-and-checkout/latest/bas
 ### Budgets that require approval cannot be selected
 
 A recurring order is placed unattended by the state machine, so it cannot wait for a human approval decision at placement time. For that reason, budgets whose enforcement rule requires approval when the budget is exceeded are **not offered** in the recurring order budget selector.
+
+The same rule is enforced at checkout. If a quote that is being set up as a recurring order carries a budget with the *require approval* enforcement rule, checkout is blocked and the buyer is asked to select another budget. This check applies regardless of the quote grand total and of the remaining budget amount—the budget does not have to be exceeded for the block to take effect. A regular, non-recurring checkout is not affected.
 
 Only budgets bound to the following enforcement rules can be selected:
 

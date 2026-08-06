@@ -1,7 +1,7 @@
 ---
 title: Install the Recurring Orders feature
 description: Learn how to install the Recurring Orders feature into your Spryker project.
-last_updated: Aug 5, 2026
+last_updated: Aug 6, 2026
 template: feature-integration-guide-template
 related:
   - title: Recurring Orders feature overview
@@ -170,7 +170,7 @@ Enable the following behaviors by registering the plugins.
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| RecurringOrderCheckoutPreConditionPlugin | Validates the quote is eligible for a recurring order before checkout proceeds. Checks that the quote is not locked, not from an RFQ, not a guest session, the payment method is invoice-based, and the cadence type is registered and valid. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Checkout |
+| RecurringOrderCheckoutPreConditionPlugin | Validates the quote is eligible for a recurring order before checkout proceeds. Checks that the quote is not locked, not from an RFQ, not a guest session, the payment method is invoice-based, and the cadence type is registered and valid. Also runs the registered recurring order checkout validator plugins. Does nothing when `recurringOrderSettings` is not set on the quote. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Checkout |
 | RecurringOrdersCheckoutPostSavePlugin | Creates a recurring schedule and registers it with the state machine after the order is successfully saved. Does nothing when `recurringOrderSettings` is not set on the quote. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Checkout |
 
 **src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php**
@@ -282,6 +282,52 @@ class OrderExperienceManagementDependencyProvider extends SprykerOrderExperience
 {% info_block warningBox "Verification" %}
 
 Make sure all four cadence types (weekly, bi-weekly, monthly, every N weeks) are available when setting up a recurring order on the storefront.
+
+{% endinfo_block %}
+
+#### Set up recurring order checkout validator plugins
+
+Recurring order checkout validator plugins reject a quote that must not be checked out as a recurring order. `RecurringOrderCheckoutPreConditionPlugin` runs them after its own eligibility checks, and only when `QuoteTransfer.recurringOrderSettings` is set—a regular checkout is never affected.
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+| BudgetApprovalRuleRecurringOrderCheckoutValidatorPlugin | Blocks checkout when the budget selected on the quote uses the `require_approval` enforcement rule. A recurring order places its follow-up orders unattended, so no approval can be granted for them upfront. Applies regardless of the quote grand total and the remaining budget amount. Passes when no budget is selected or the budget uses another enforcement rule. | Purchasing Control feature | SprykerFeature\Zed\PurchasingControl\Communication\Plugin\OrderExperienceManagement |
+
+**src/Pyz/Zed/OrderExperienceManagement/OrderExperienceManagementDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\OrderExperienceManagement;
+
+use SprykerFeature\Zed\OrderExperienceManagement\OrderExperienceManagementDependencyProvider as SprykerOrderExperienceManagementDependencyProvider;
+use SprykerFeature\Zed\PurchasingControl\Communication\Plugin\OrderExperienceManagement\BudgetApprovalRuleRecurringOrderCheckoutValidatorPlugin;
+
+class OrderExperienceManagementDependencyProvider extends SprykerOrderExperienceManagementDependencyProvider
+{
+    /**
+     * @return array<\SprykerFeature\Zed\OrderExperienceManagement\Dependency\Plugin\RecurringOrderCheckoutValidatorPluginInterface>
+     */
+    protected function getRecurringOrderCheckoutValidatorPlugins(): array
+    {
+        return [
+            new BudgetApprovalRuleRecurringOrderCheckoutValidatorPlugin(), #RecurringOrdersFeature
+        ];
+    }
+}
+```
+
+{% info_block infoBox "Custom checkout validators" %}
+
+To block a recurring order checkout for a project-specific reason, implement `SprykerFeature\Zed\OrderExperienceManagement\Dependency\Plugin\RecurringOrderCheckoutValidatorPluginInterface`. Return a `CheckoutErrorTransfer` whose `message` is your own glossary key—and whose `parameters` are set when the message is parameterized—to reject the quote, or `null` when your check passes.
+
+Use this extension point for rules that apply to the recurring order as a whole at checkout time. To reject an individual product a buyer adds later on the **Review Required** page, use [AddedItemValidatorPluginInterface](#set-up-added-item-validator-plugins) instead.
+
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
+Set a budget's enforcement rule to **Require approval** in the Back Office, assign it to a cart, and set up that cart as a recurring order at checkout. Make sure checkout is blocked with a message stating that the selected budget requires approval and cannot be used for a recurring order.
 
 {% endinfo_block %}
 

@@ -1,7 +1,7 @@
 ---
 title: Install the Purchasing Control feature
 description: Learn how to install the Purchasing Control feature into your Spryker project.
-last_updated: Aug 5, 2026
+last_updated: Aug 6, 2026
 template: feature-integration-guide-template
 related:
   - title: Purchasing Control feature overview
@@ -510,6 +510,52 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 - Make sure the orders table filter form includes cost center and budget multi-select fields.
 - Open an individual order. Make sure the cost center and budget names are displayed on the order detail page.
 - In the storefront, open **My Account > Orders**. Make sure the cost center and budget data appear on completed orders.
+
+{% endinfo_block %}
+
+#### Set up Recurring Orders plugins
+
+{% info_block infoBox "Recurring Orders feature" %}
+
+This step is only required if your project uses the [Recurring Orders feature](/docs/pbc/all/order-experience-management/latest/base-shop/feature-overviews/recurring-orders-feature-overview.html). The plugins belong to the Purchasing Control module but register in the `OrderExperienceManagement` dependency providers.
+
+{% endinfo_block %}
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+| BudgetApprovalRuleRecurringOrderCheckoutValidatorPlugin | Blocks checkout when a quote being set up as a recurring order carries a budget with the `require_approval` enforcement rule. Applies regardless of the quote grand total and the remaining budget amount. Passes when no budget is selected or the budget uses another enforcement rule. | Recurring Orders feature | SprykerFeature\Zed\PurchasingControl\Communication\Plugin\OrderExperienceManagement |
+| CostCenterRecurringOrderApproveFormExpanderPlugin | Adds cost center and budget dropdowns to the recurring order review approve form and validates the selected pair server-side. | Recurring Orders feature | SprykerFeature\Yves\PurchasingControl\Plugin\OrderExperienceManagement |
+| CostCenterRecurringScheduleEditFormExpanderPlugin | Adds cost center and budget dropdowns to the recurring schedule edit form and validates the selected pair server-side. | Recurring Orders feature | SprykerFeature\Yves\PurchasingControl\Plugin\OrderExperienceManagement |
+
+**src/Pyz/Zed/OrderExperienceManagement/OrderExperienceManagementDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\OrderExperienceManagement;
+
+use SprykerFeature\Zed\OrderExperienceManagement\OrderExperienceManagementDependencyProvider as SprykerOrderExperienceManagementDependencyProvider;
+use SprykerFeature\Zed\PurchasingControl\Communication\Plugin\OrderExperienceManagement\BudgetApprovalRuleRecurringOrderCheckoutValidatorPlugin;
+
+class OrderExperienceManagementDependencyProvider extends SprykerOrderExperienceManagementDependencyProvider
+{
+    /**
+     * @return array<\SprykerFeature\Zed\OrderExperienceManagement\Dependency\Plugin\RecurringOrderCheckoutValidatorPluginInterface>
+     */
+    protected function getRecurringOrderCheckoutValidatorPlugins(): array
+    {
+        return [
+            new BudgetApprovalRuleRecurringOrderCheckoutValidatorPlugin(), #PurchasingControlFeature
+        ];
+    }
+}
+```
+
+For the two Yves form expander plugins and the budget enforcement rules that can be selected on the recurring order forms, see [Install the Recurring Orders feature](/docs/pbc/all/order-experience-management/latest/base-shop/install-and-upgrade/install-features/install-the-recurring-orders-feature.html).
+
+{% info_block warningBox "Verification" %}
+
+Set a budget's enforcement rule to **Require approval**, assign it to a cart, and set up that cart as a recurring order at checkout. Make sure checkout is blocked with a message stating that the selected budget requires approval and cannot be used for a recurring order.
 
 {% endinfo_block %}
 

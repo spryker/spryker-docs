@@ -1,7 +1,7 @@
 ---
 title: Frontend builder for Yves
 description: This article provides information about how to prepare assets (CSS, js, images, etc.) for different namespaces and their themes.
-last_updated: Jun 16, 2021
+last_updated: Jul 30, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/front-end-builder-for-yves
 originalArticleId: 53c433b1-ae5f-4887-9435-ac716c632347
@@ -10,6 +10,15 @@ redirect_from:
   - /docs/scos/dev/front-end-development/frontend-builder-for-yves.html
   - /docs/scos/dev/front-end-development/yves/front-end-builder-for-yves.html
 ---
+
+{% info_block warningBox "Deprecation notice" %}
+
+This document describes the legacy frontend builder located in the project's `frontend/` directory. Starting from `spryker-shop/shop-ui` version 2.0.0, the builder ships as part of the ShopUi module, and the legacy `frontend/` builder is deprecated.
+
+- For the current builder, see [Frontend builder for Yves v2](/docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves-v2.html).
+- For upgrade instructions, see [Upgrade to frontend builder v2 for Yves](/docs/dg/dev/upgrade-and-migrate/upgrade-to-frontend-builder-v2-for-yves.html).
+
+{% endinfo_block %}
 
 This article provides information about how to prepare assets, like CSS, js or images, for different namespaces and their themes.
 

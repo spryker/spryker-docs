@@ -21,7 +21,7 @@ This guide aims to illustrate how to integrate React within Spryker Frontend.
 ## Setup
 
 1. Install *React*, *ReactDOM*, and relative types.
-        Add required dependencies to the project by running the following command from the root folder:
+        Add required dependencies to the project from the root folder:
 
     ```bash
     npm install react react-dom @types/react @types/react-dom --save

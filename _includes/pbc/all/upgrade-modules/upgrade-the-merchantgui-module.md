@@ -25,7 +25,7 @@ If your project code contains the MerchantProfile module, you need to remove reg
 
 To upgrade to the new version of the module, do the following:
 
-1. Update `MerchantGui` module version and its dependencies by running the following command:
+1. Update `MerchantGui` module version and its dependencies:
 
 ```bash
 composer require spryker/merchant-gui:"^3.0.0" --update-with-dependencies
@@ -37,7 +37,7 @@ composer require spryker/merchant-gui:"^3.0.0" --update-with-dependencies
 console transfer:generate
 ```
 
-3. Generate translator cache by running the following command to get the latest Zed translations:
+3. Generate the translator cache to get the latest Zed translations:
 
 ```bash
 console translator:generate-cache
@@ -67,7 +67,7 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
 }
 ```
 
-5. Generate translator cache by running the following command to get the latest Zed translations:
+5. Generate the translator cache to get the latest Zed translations:
 
 ```bash
 console translator:generate-cache
@@ -125,7 +125,7 @@ Keep in mind that the `MerchantGui` module makes sense only in connection with m
 
 To upgrade to the new version of the module, do the following:
 
-1. Update the `MerchantGui` module version and its dependencies by running the following command:
+1. Update the `MerchantGui` module version and its dependencies:
 
 ```bash
 composer require spryker/merchant-gui:"^2.0.0" --update-with-dependencies
@@ -143,7 +143,7 @@ Also, check the Migration Guide for the [Merchant](/docs/pbc/all/merchant-manage
 console transfer:generate
 ```
 
-3. Generate translator cache by running the following command to get the latest Zed translations:
+3. Generate the translator cache to get the latest Zed translations:
 
 ```bash
 console translator:generate-cache

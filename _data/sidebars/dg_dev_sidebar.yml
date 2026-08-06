@@ -577,6 +577,8 @@ entries:
         url: /docs/dg/dev/frontend-development/yves/adding-and-using-external-libraries-in-yves.html
       - title: Frontend builder for Yves
         url: /docs/dg/dev/frontend-development/yves/frontend-builder-for-yves.html
+      - title: Frontend builder for Yves v2
+        url: /docs/dg/dev/frontend-development/yves/frontend-builder-for-yves-v2.html
       - title: Custom twig functions for Yves
         url: /docs/dg/dev/frontend-development/yves/custom-twig-functions-for-yves.html
       - title: Multi-theme
@@ -964,6 +966,8 @@ entries:
         - title: Upgrade to Angular 20
           url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-20.html
 
+    - title: Upgrade to frontend builder v2 for Yves
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-frontend-builder-v2-for-yves.html
     - title: Upgrade to Webpack v5
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-webpack-v5.html
     - title: Upgrade to Stylelint 16 and css-loader 6

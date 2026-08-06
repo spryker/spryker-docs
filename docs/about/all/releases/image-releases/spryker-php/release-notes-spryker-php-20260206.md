@@ -1,7 +1,7 @@
 ---
 title: Release notes for spryker-php image
 description: This document describes the changes that have been recently released.
-last_updated: February 04, 2026
+last_updated: Aug 6, 2026
 template: concept-topic-template
 publish_date: "2026-02-04"
 ---
@@ -145,7 +145,7 @@ This section details security vulnerabilities that have been addressed in specif
 
 - **CVE-2025-68160**: Writing large, newline-free data into a BIO chain using the line-buffering filter where the next BIO performs short writes can trigger a heap-based out-of-bounds write.
 
-- **CVE-2025-61726**: The net/url package does not set a limit on the number of query parameters in a query. While the maximum size of query parameters in URLs is generally limited by the maximum request header size, the net/http.Request.ParseForm method can parse large URL-encoded forms. Parsing a large form containing many unique query parameters can cause excessive memory consumption.
+- **CVE-2025-61726**: The net/url package does not set a limit on the number of query parameters in a query. While the maximum size of query parameters in URLs is generally limited by the maximum request header size, the `net/http.Request.ParseForm` method can parse large URL-encoded forms. Parsing a large form containing many unique query parameters can cause excessive memory consumption.
 
 - **CVE-2025-69419**: Calling PKCS12_get_friendlyname() function on a maliciously crafted PKCS#12 file with a BMPString (UTF-16BE) friendly name containing non-ASCII BMP code point can trigger a one byte write before the allocated buffer.
 
@@ -207,7 +207,7 @@ This section details security vulnerabilities that have been addressed in specif
 
 - **CVE-2025-68160**: Writing large, newline-free data into a BIO chain using the line-buffering filter where the next BIO performs short writes can trigger a heap-based out-of-bounds write.
 
-- **CVE-2025-61726**: The net/url package does not set a limit on the number of query parameters in a query. While the maximum size of query parameters in URLs is generally limited by the maximum request header size, the net/http.Request.ParseForm method can parse large URL-encoded forms. Parsing a large form containing many unique query parameters can cause excessive memory consumption.
+- **CVE-2025-61726**: The net/url package does not set a limit on the number of query parameters in a query. While the maximum size of query parameters in URLs is generally limited by the maximum request header size, the `net/http.Request.ParseForm` method can parse large URL-encoded forms. Parsing a large form containing many unique query parameters can cause excessive memory consumption.
 
 - **CVE-2025-69419**: Calling PKCS12_get_friendlyname() function on a maliciously crafted PKCS#12 file with a BMPString (UTF-16BE) friendly name containing non-ASCII BMP code point can trigger a one byte write before the allocated buffer.
 
@@ -265,7 +265,7 @@ This section details security vulnerabilities that have been addressed in specif
 
 - **CVE-2026-15467**: Parsing CMS AuthEnvelopedData message with maliciously crafted AEAD parameters can trigger a stack buffer overflow.
 
-- **CVE-2025-61726**: The net/url package does not set a limit on the number of query parameters in a query. While the maximum size of query parameters in URLs is generally limited by the maximum request header size, the net/http.Request.ParseForm method can parse large URL-encoded forms. Parsing a large form containing many unique query parameters can cause excessive memory consumption.
+- **CVE-2025-61726**: The net/url package does not set a limit on the number of query parameters in a query. While the maximum size of query parameters in URLs is generally limited by the maximum request header size, the `net/http.Request.ParseForm` method can parse large URL-encoded forms. Parsing a large form containing many unique query parameters can cause excessive memory consumption.
 
 - **CVE-2025-61730**: During the TLS 1.3 handshake if multiple messages are sent in records that span encryption level boundaries (for instance the Client Hello and Encrypted Extensions messages), the subsequent messages may be processed before the encryption level changes. This can cause some minor information disclosure if a network-local attacker can inject messages during the handshake.
 
@@ -313,7 +313,7 @@ This section details security vulnerabilities that have been addressed in specif
 
 - **CVE-2026-15467**: Parsing CMS AuthEnvelopedData message with maliciously crafted AEAD parameters can trigger a stack buffer overflow.
 
-- **CVE-2025-61726**: The net/url package does not set a limit on the number of query parameters in a query. While the maximum size of query parameters in URLs is generally limited by the maximum request header size, the net/http.Request.ParseForm method can parse large URL-encoded forms. Parsing a large form containing many unique query parameters can cause excessive memory consumption.
+- **CVE-2025-61726**: The net/url package does not set a limit on the number of query parameters in a query. While the maximum size of query parameters in URLs is generally limited by the maximum request header size, the `net/http.Request.ParseForm` method can parse large URL-encoded forms. Parsing a large form containing many unique query parameters can cause excessive memory consumption.
 
 - **CVE-2025-61730**: During the TLS 1.3 handshake if multiple messages are sent in records that span encryption level boundaries (for instance the Client Hello and Encrypted Extensions messages), the subsequent messages may be processed before the encryption level changes. This can cause some minor information disclosure if a network-local attacker can inject messages during the handshake.
 
@@ -357,7 +357,7 @@ This section details security vulnerabilities that have been addressed in specif
 
 - **CVE-2026-15467**: Parsing CMS AuthEnvelopedData message with maliciously crafted AEAD parameters can trigger a stack buffer overflow.
 
-- **CVE-2025-61726**: The net/url package does not set a limit on the number of query parameters in a query. While the maximum size of query parameters in URLs is generally limited by the maximum request header size, the net/http.Request.ParseForm method can parse large URL-encoded forms. Parsing a large form containing many unique query parameters can cause excessive memory consumption.
+- **CVE-2025-61726**: The net/url package does not set a limit on the number of query parameters in a query. While the maximum size of query parameters in URLs is generally limited by the maximum request header size, the `net/http.Request.ParseForm` method can parse large URL-encoded forms. Parsing a large form containing many unique query parameters can cause excessive memory consumption.
 
 - **CVE-2025-61730**: During the TLS 1.3 handshake if multiple messages are sent in records that span encryption level boundaries (for instance the Client Hello and Encrypted Extensions messages), the subsequent messages may be processed before the encryption level changes. This can cause some minor information disclosure if a network-local attacker can inject messages during the handshake.
 

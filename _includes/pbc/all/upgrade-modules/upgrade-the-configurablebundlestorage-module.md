@@ -39,13 +39,13 @@ redis-cli --scan --pattern kv:configurable_bundle_template:'*' | xargs redis-cli
 console propel:install
 ```
 
-5. Run the following command to re-generate transfer objects:
+5. Re-generate transfer objects:
 
 ```bash
 console transfer:generate
 ```
 
-6. Run the following command to get all data about configurable bundle templates from the database and publish them to key-value storage (Redis or Valkey):
+6. Publish all data about configurable bundle templates from the database to key-value storage (Redis or Valkey):
 
 ```bash
 console event:trigger -r configurable_bundle_template

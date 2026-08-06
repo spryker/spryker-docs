@@ -1,6 +1,6 @@
 ---
 title: Overriding components
-last_updated: Jun 16, 2021
+last_updated: Aug 4, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-override-component
 originalArticleId: 9a8dbfcd-e0ef-4ff2-b435-5a66f638a503
@@ -127,21 +127,23 @@ As we are not going to change the component template, let us copy the whole of t
 
 ## 3. Define component styles
 
-The next thing to do is to provide the styles to use in the component. We need to use the mixin of the default component and add our style customization within the mixin. For this purpose, create file `simple-carousel.scss` in the project folder with the following content:
+The next thing to do is to provide the styles to use in the component. We need to use the mixin of the default component and add our style customization within the mixin. The builder resolves component mixins through its mixin index automatically, so the file needs no imports. Create file `style.scss` in the project folder with the following content:
 
 ```css
-@include shop-ui-simple-carousel {
-    color: $setting-color-alt;
+@include helper-import(molecule, simple-carousel) {
+    @include shop-ui-simple-carousel {
+        color: $setting-color-alt;
+    }
 }
 ```
 
-With the above code, we inherit all styles of the default component, and then override the arrow color with another one. The color is taken from global configuration. It can be found in the followig folder: `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles/settings`.
+With the above code, we inherit all styles of the default component, and then override the arrow color with another one. The color is taken from global configuration. It can be found in the following folder: `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles/settings`. The project-level `style.scss` replaces the style entry of the core component, so the component CSS is emitted once, with the customization applied.
 
-Now, we need to make the style visible for Webpack using the `index.ts` file:
+Now, we need to load the styles from the component entry point using the `index.ts` file:
 
 ```js
-// Import component style
-import './simple-carousel.scss';
+// Load the component styles
+import './style';
 ```
 
 ## 4. Change component behavior

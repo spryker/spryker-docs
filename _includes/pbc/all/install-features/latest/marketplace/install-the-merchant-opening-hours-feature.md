@@ -469,7 +469,7 @@ MER000005,SUNDAY,,
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | ----------- | ---------- | --------- | ------------ | ---------------- |
 | `merchant_reference` | &check; | string | MER000005 | Merchant identifier.  |
-| week_day_key | &check; | `string`  | MONDAY | Day of the week to assign opening hours to a merchant.It is an enum in database with the following values:MONDAYTUESDAYWEDNESDAYTHURSDAYFRIDAYSATURDAYSUNDAY. |
+| week_day_key | &check; | `string`  | MONDAY | Day of the week to assign opening hours to a merchant. It is an enum in the database with the following values: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY. |
 | `time_from`   |  | string | `8:00:00`  | Time start when the merchant is open on this week day. Empty means open ended. |
 | `time_to`  |   | string | `19:00:00`| Time end when the merchant is open on this week day. Empty means open ended. |
 

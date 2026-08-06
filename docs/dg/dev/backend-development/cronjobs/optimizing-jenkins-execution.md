@@ -1,7 +1,7 @@
 ---
 title: Optimizing Jenkins execution with the resource-aware queue worker
 description: Learn how to enable and configure the resource-aware queue worker for optimized, stable background job processing in Spryker.
-last_updated: August 5, 2026
+last_updated: August 6, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html
@@ -21,7 +21,7 @@ related:
     link: docs/dg/dev/guidelines/performance-guidelines/infrastructure-worker-configuration-guidelines.html
 ---
 
-Spryker ships a **resource-aware queue worker** (`ResourceAwareQueueWorker`) that replaces the default queue worker with a production-grade implementation focused on system stability and efficient resource utilization. It is available starting from the `202512.0` release. Starting with this release, it is the recommended default queue worker, and it is enabled by default in the Spryker demo shops.
+Spryker ships a **resource-aware queue worker** (`ResourceAwareQueueWorker`) that replaces the default queue worker with a production-grade implementation focused on system stability and efficient resource utilization. Starting with `spryker/queue` 1.29.0, it is the recommended default queue worker, and it is enabled by default in the Spryker demo shops.
 
 This document explains the problem it solves, how to enable and configure it, how it works internally, and how to back-port the concept to older Spryker versions.
 

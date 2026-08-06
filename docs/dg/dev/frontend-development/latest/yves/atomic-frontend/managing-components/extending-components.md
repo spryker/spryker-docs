@@ -261,7 +261,7 @@ Every ShopUi component mixin includes an optional hook mixin at the top of its b
 }
 ```
 
-To use it, define a mixin named `shop-ui-<component>-base-hook` in a project-level component SCSS file:
+To use it, define a mixin named `<component-mixin-name>-base-hook` in a project-level component SCSS file:
 
 ```css
 @mixin shop-ui-side-drawer-base-hook {

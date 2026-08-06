@@ -12,17 +12,17 @@ related:
     link: docs/dg/dev/guidelines/testing-guidelines/cypress-testing/cypress-commands-vs-scenarios.html
 ---
 
-Follow these best practices to write robust, maintainable, and efficient Cypress tests. For more information, refer to the [official Cypress best practices guide](https://docs.cypress.io/guides/references/best-practices).
+Follow these best practices to write robust, maintainable, and efficient Cypress tests. For more information, see [official Cypress best practices guide](https://docs.cypress.io/guides/references/best-practices).
 
 ## General recommendations
 
-1. Avoid chaining multiple commands in one line, because it makes debugging difficult.
+1. Avoid chaining multiple commands in a single statement, because it makes debugging difficult.
 2. Use Cypress commands, such as `cy.get()` and `cy.contains()`, effectively—they provide built-in retries.
 3. Use custom scenarios for repeated user flows, such as registration or checkout.
 4. Use custom commands for repeated sequences and abstract actions, such as `closeAllFlashMessages` or `runConsoleCommand`.
-5. Store test data in `cypress/fixtures` and load it using fixtures and data files.
+5. Store test data in \cypress/fixtures` and load it by using Cypress fixtures.`
 6. Avoid assigning Cypress commands to `const`, `let`, or `var`. Use aliases or closures instead, because Cypress commands are asynchronous.
-7. Test only what you control—avoid testing third-party services.
+7. Test only the functionality you control. Do not test third-party services.
 8. Use environment-specific configuration files to manage different environments.
 
 ## Organizing tests

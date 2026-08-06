@@ -32,35 +32,21 @@ The boilerplate does not include the following:
 
 ## Topics
 
-- [What is E2E testing?](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/what-is-e2e-testing.html)
-An introduction to end-to-end testing, covering how it works, its benefits, and common use cases.
-- [Identifying what to test](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/identifying-what-to-test.html)
-Guidance on identifying the most important aspects of your application to cover with E2E tests, and what to avoid.
-- [Cypress boilerplate project structure](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/project-structure.html)
-The layout of the project and the purpose of each directory and file.
-- [Getting started with the Cypress boilerplate](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/getting-started.html)
-Step-by-step instructions for setting up the Cypress boilerplate project on your local machine.
-- [Cypress best practices](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/best-practices.html)
-Recommended practices for writing effective and maintainable Cypress tests.
-- [Cypress boilerplate naming conventions](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/naming-conventions.html)
-Guidelines for naming files, folders, and other project elements to maintain consistency and clarity.
-- [Cypress test writing conventions](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/test-writing-conventions.html)
-What you must, must not, and should do when writing a test.
-- [Configuration and environment variables](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/configuration-and-environment-variables.html)
-How to configure the Cypress environment and manage environment variables.
-- [Cypress boilerplate plugins and libraries](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/plugins-and-libraries.html)
-An overview of the plugins and libraries used in the project, and their purposes.
-- [ESLint and Prettier in the Cypress boilerplate](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/eslint-and-prettier.html)
-How to set up and use ESLint and Prettier to ensure code quality and consistency.
-- [HTML reporter](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/html-reporter.html)
-How to set up and configure `cypress-mochawesome-reporter` to generate HTML reports of your test results.
-- [Cypress commands vs scenarios](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/cypress-commands-vs-scenarios.html)
-A comparison of Cypress commands and scenarios, with examples and best practices.
-- [Validate API responses against a schema](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/how-to-validate-api-response-vs-schema.html)
-How to add schema validation to your tests.
-- [Debugging Cypress tests](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/debugging-cypress-tests.html)
-How to debug, pause, and step through test execution, and inspect the inputs and outputs of test steps.
-- [Integrating Cypress tests into CI](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/integrating-cypress-tests-into-ci.html)
+- [What is E2E testing?](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/what-is-e2e-testing.html): An introduction to end-to-end testing, covering how it works, its benefits, and common use cases.
+- [Identifying what to test](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/identifying-what-to-test.html): Guidance on identifying the most important aspects of your application to cover with E2E tests, and what to avoid.
+- [Cypress boilerplate project structure](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/project-structure.html): The layout of the project and the purpose of each directory and file.
+- [Getting started with the Cypress boilerplate](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/getting-started.html): Step-by-step instructions for setting up the Cypress boilerplate project on your local machine.
+- [Cypress best practices](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/best-practices.html): Recommended practices for writing effective and maintainable Cypress tests.
+- [Cypress boilerplate naming conventions](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/naming-conventions.html): Guidelines for naming files, folders, and other project elements to maintain consistency and clarity.
+- [Cypress test writing conventions](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/test-writing-conventions.html): What you must, must not, and should do when writing a test.
+- [Configuration and environment variables](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/configuration-and-environment-variables.html): How to configure the Cypress environment and manage environment variables.
+- [Cypress boilerplate plugins and libraries](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/plugins-and-libraries.html): An overview of the plugins and libraries used in the project, and their purposes.
+- [ESLint and Prettier in the Cypress boilerplate](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/eslint-and-prettier.html): How to set up and use ESLint and Prettier to ensure code quality and consistency.
+- [HTML reporter](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/html-reporter.html): How to set up and configure `cypress-mochawesome-reporter` to generate HTML reports of your test results.
+- [Cypress commands vs scenarios](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/cypress-commands-vs-scenarios.html): A comparison of Cypress commands and scenarios, with examples and best practices.
+- [Validate API responses against a schema](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/how-to-validate-api-response-vs-schema.html): How to add schema validation to your tests.
+- [Debugging Cypress tests](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/debugging-cypress-tests.html): How to debug, pause, and step through test execution, and inspect the inputs and outputs of test steps.
+- [Integrating Cypress tests into CI](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/integrating-cypress-tests-into-ci.html):
 How to integrate Cypress tests into a continuous integration pipeline.
 
 ## Internal Cypress tests

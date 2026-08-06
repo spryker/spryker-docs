@@ -880,6 +880,8 @@ entries:
         - title: "Web components"
           url: /docs/dg/dev/frontend-development/marketplace/web-components.html
 
+    - title: B2B component library
+      url: /docs/dg/dev/frontend-development/component-library.html
     - title: Create Angular modules
       url: /docs/dg/dev/frontend-development/create-angular-modules.html
     - title: Define Twig tag

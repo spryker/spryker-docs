@@ -1,6 +1,6 @@
 ---
 title: Extending components
-last_updated: Jun 16, 2021
+last_updated: Aug 6, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-extend-component
 originalArticleId: b51d63f2-d18b-4383-8e17-dd87379c1271
@@ -43,7 +43,7 @@ No, we need to specify a name for the new component. Also, the component impleme
 } {% raw %}%}{% endraw %}
 ```
 
-As you can see in the above code, the Twig of the new component extends the original side-drawer component.
+As you can see in the above code, the Twig of the new component extends the original side-drawer component. `atom()`, `molecule()`, and `organism()` accept the module of the extended component as an optional second argument. The side drawer comes from `ShopUi`, which is the default, so the argument is omitted here. Pass it when you extend a component from another module, for example `molecule('quick-order-form', 'QuickOrderPage')`. For more details, see [Custom Twig functions for Yves](/docs/dg/dev/frontend-development/latest/yves/custom-twig-functions-for-yves.html).
 
 Now, let us customize the template of the source component. The original template is defined in `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/components/organisms/side-drawer/side-drawer.twig`. The only change we are going to add is a different icon in the **close** block. To do this, add the following to `new-existing-component-side-drawer.twig`:
 
@@ -66,25 +66,37 @@ Now, let us customize the template of the source component. The original templa
 
 Apart from changing the icon, we are going to use different colors. This can be done via styles.
 
-First of all, we need to inherit the styles of the source component (*side-drawer*). It has a mixin called **shop-ui-side-drawer**. Since it's a core component shipped with Spryker Shop Suite, this mixin is shared. Therefore, it can be accessed everywhere in Shop UI. To inherit the styles, we need to include the mixin in the *SCSS* file of our new component. To render the block, elements and modifiers with the class name of the new component, we need to pass its class name to the mixin.
+First of all, we need to inherit the styles of the source component (*side-drawer*). It has a mixin called **shop-ui-side-drawer**. The builder resolves component mixins through its mixin index, so the mixin can be included in any component SCSS file without imports. To render the block, elements and modifiers with the class name of the new component, we need to pass its class name to the mixin.
 
-Let us create file `new-existing-component-side-drawer.scss`, include the original mixin of the *side-drawer* component, and pass the class name of the new component we are creating:
+The styles of the new component consist of two files: the component SCSS file defines the mixin of the new component, and `style.scss` is the style entry point that emits it. Let us create file `new-existing-component-side-drawer.scss`, include the original mixin of the *side-drawer* component, and pass the class name of the new component as the default value of the `$name` parameter:
 
 ```css
-@include shop-ui-side-drawer('.new-existing-component-side-drawer') {
-
+@mixin new-existing-component-side-drawer($name: '.new-existing-component-side-drawer') {
+    @include shop-ui-side-drawer($name);
 }
 ```
 
-We will change the main and overlay colors:
+We will change the main and overlay colors. The source mixin emits its `@content` block after its own nested rules, so pass the nested rules as content and add the base declarations in a separate rule:
 
 ```css
-@include shop-ui-side-drawer('.new-existing-component-side-drawer') {
-    color: $setting-color-alt;
-
-    &__overlay {
-        background-color: $setting-color-main;
+@mixin new-existing-component-side-drawer($name: '.new-existing-component-side-drawer') {
+    @include shop-ui-side-drawer($name) {
+        &__overlay {
+            background-color: $setting-color-main;
+        }
     }
+
+    #{$name} {
+        color: $setting-color-alt;
+    }
+}
+```
+
+Now let us create file `style.scss`—the style entry point of the new component—and emit the mixin from it. The entry point must not define styles of its own: it only includes the component mixin, wrapped in `helper-import` so that the component stays excludable through the `$setting-import-blacklist` setting:
+
+```css
+@include helper-import(organism, new-existing-component-side-drawer) {
+    @include new-existing-component-side-drawer;
 }
 ```
 
@@ -94,12 +106,180 @@ You can find settings for the respective colors in configuration files. They are
 
 {% endinfo_block %}
 
-After defining the styles, let us make them visible to Webpack. Open the `index.ts` file and add the following content:
+After defining the styles, let us load them from the component entry point. Open the `index.ts` file and add the following content:
 
 ```js
-// Import component style
-import './new-existing-component-side-drawer.scss';
+// Load the component styles
+import './style';
 ```
+
+### Extend base styles with a base hook
+
+Starting from `spryker-shop/shop-ui` version 2.0.0 (which ships [frontend builder v2](/docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves-v2.html)), there is an additional way to customize a core component: **base hooks**. A base hook lets you add or override declarations in the *base* of a core component—everywhere the component is rendered—without copying the component to the project level.
+
+Base hooks are not limited to ShopUi: the components of the other storefront modules expose them too. The modules were released together with the builder—`spryker-shop/shop-ui` as a major version, all the others as minor versions. Modules that ship component styles received the base hooks and the Sass `mixed-decls` fix; the remaining ones only update their ShopUi constraint.
+
+Updating is optional: the builder compiles older module versions as is. Update the modules whose components you customize to at least the following versions:
+
+<details><summary>Module versions released with builder v2</summary>
+
+| Module | Minimum version |
+| --- | --- |
+| `spryker-shop/shop-ui` | `^2.0.0` |
+| `spryker/multi-factor-auth` | `^2.6.0` |
+| `spryker-feature/ai-commerce` | `^0.7.8` |
+| `spryker-feature/buy-box` | `^1.4.0` |
+| `spryker-feature/order-experience-management` | `^0.2.0` |
+| `spryker-feature/purchasing-control` | `^1.2.0` |
+| `spryker-feature/self-service-portal` | `^20.12.0` |
+| `spryker-shop/agent-page` | `^1.25.0` |
+| `spryker-shop/agent-widget` | `^1.4.0` |
+| `spryker-shop/availability-widget` | `^1.5.0` |
+| `spryker-shop/barcode-widget` | `^1.1.0` |
+| `spryker-shop/business-on-behalf-widget` | `^1.3.0` |
+| `spryker-shop/calculation-page` | `^1.4.0` |
+| `spryker-shop/cart-note-widget` | `^1.7.0` |
+| `spryker-shop/cart-page` | `^3.60.0` |
+| `spryker-shop/cart-reorder-page` | `^1.2.0` |
+| `spryker-shop/catalog-page` | `^1.37.0` |
+| `spryker-shop/category-image-storage-widget` | `^1.1.0` |
+| `spryker-shop/category-widget` | `^1.6.0` |
+| `spryker-shop/checkout-page` | `^3.43.0` |
+| `spryker-shop/checkout-widget` | `^1.5.0` |
+| `spryker-shop/click-and-collect-page-example` | `^0.4.0` |
+| `spryker-shop/cms-block-widget` | `^2.5.0` |
+| `spryker-shop/cms-page` | `^1.9.0` |
+| `spryker-shop/cms-search-page` | `^1.6.0` |
+| `spryker-shop/comment-widget` | `^1.5.0` |
+| `spryker-shop/company-page` | `^2.37.0` |
+| `spryker-shop/company-user-agent-widget` | `^1.2.0` |
+| `spryker-shop/company-user-invitation-page` | `^2.6.0` |
+| `spryker-shop/company-widget` | `^1.11.0` |
+| `spryker-shop/configurable-bundle-note-widget` | `^1.2.0` |
+| `spryker-shop/configurable-bundle-page` | `^1.5.0` |
+| `spryker-shop/configurable-bundle-widget` | `^1.10.0` |
+| `spryker-shop/content-navigation-widget` | `^1.7.0` |
+| `spryker-shop/content-product-widget` | `^1.5.0` |
+| `spryker-shop/currency-widget` | `^1.7.0` |
+| `spryker-shop/customer-page` | `^2.83.0` |
+| `spryker-shop/customer-reorder-widget` | `^6.18.0` |
+| `spryker-shop/date-time-configurator-page-example` | `^0.8.0` |
+| `spryker-shop/discount-promotion-widget` | `^3.8.0` |
+| `spryker-shop/discount-widget` | `^1.10.0` |
+| `spryker-shop/error-page` | `^1.12.0` |
+| `spryker-shop/file-manager-widget` | `^2.2.0` |
+| `spryker-shop/gift-card-widget` | `^1.3.0` |
+| `spryker-shop/home-page` | `^1.3.0` |
+| `spryker-shop/language-switcher-widget` | `^1.9.0` |
+| `spryker-shop/merchant-product-offer-widget` | `^2.9.0` |
+| `spryker-shop/merchant-product-widget` | `^1.8.0` |
+| `spryker-shop/merchant-profile-widget` | `^1.3.0` |
+| `spryker-shop/merchant-registration-request-page` | `^1.1.0` |
+| `spryker-shop/merchant-relation-request-page` | `^1.3.0` |
+| `spryker-shop/merchant-relation-request-widget` | `^1.1.0` |
+| `spryker-shop/merchant-relationship-page` | `^1.1.0` |
+| `spryker-shop/merchant-relationship-widget` | `^1.1.0` |
+| `spryker-shop/merchant-sales-return-widget` | `^1.2.0` |
+| `spryker-shop/merchant-search-widget` | `^1.1.0` |
+| `spryker-shop/merchant-switcher-widget` | `^0.9.0` |
+| `spryker-shop/merchant-widget` | `^1.6.0` |
+| `spryker-shop/money-widget` | `^1.8.0` |
+| `spryker-shop/multi-cart-page` | `^2.9.0` |
+| `spryker-shop/multi-cart-widget` | `^1.11.0` |
+| `spryker-shop/newsletter-page` | `^1.3.0` |
+| `spryker-shop/newsletter-widget` | `^1.9.0` |
+| `spryker-shop/order-cancel-widget` | `^1.2.0` |
+| `spryker-shop/order-custom-reference-widget` | `^1.2.0` |
+| `spryker-shop/payment-app-widget` | `^1.4.0` |
+| `spryker-shop/persistent-cart-share-widget` | `^1.4.0` |
+| `spryker-shop/price-product-volume-widget` | `^1.10.0` |
+| `spryker-shop/price-widget` | `^1.5.0` |
+| `spryker-shop/product-alternative-widget` | `^1.7.0` |
+| `spryker-shop/product-barcode-widget` | `^1.2.0` |
+| `spryker-shop/product-bundle-widget` | `^1.9.0` |
+| `spryker-shop/product-category-widget` | `^1.10.0` |
+| `spryker-shop/product-comparison-page` | `^1.1.0` |
+| `spryker-shop/product-comparison-widget` | `^1.1.0` |
+| `spryker-shop/product-configuration-cart-widget` | `^1.1.0` |
+| `spryker-shop/product-configuration-shopping-list-widget` | `^1.1.0` |
+| `spryker-shop/product-configuration-widget` | `^1.1.0` |
+| `spryker-shop/product-configuration-wishlist-widget` | `^1.1.0` |
+| `spryker-shop/product-detail-page` | `^3.33.0` |
+| `spryker-shop/product-group-widget` | `^1.13.0` |
+| `spryker-shop/product-image-widget` | `^1.1.0` |
+| `spryker-shop/product-label-widget` | `^1.7.0` |
+| `spryker-shop/product-measurement-unit-widget` | `^1.5.0` |
+| `spryker-shop/product-new-page` | `^1.5.0` |
+| `spryker-shop/product-offer-service-point-availability-widget` | `^1.3.0` |
+| `spryker-shop/product-option-widget` | `^1.6.0` |
+| `spryker-shop/product-packaging-unit-widget` | `^1.9.0` |
+| `spryker-shop/product-relation-widget` | `^1.5.0` |
+| `spryker-shop/product-replacement-for-widget` | `^1.8.0` |
+| `spryker-shop/product-review-widget` | `^1.20.0` |
+| `spryker-shop/product-search-widget` | `^3.8.0` |
+| `spryker-shop/product-set-detail-page` | `^1.12.0` |
+| `spryker-shop/product-set-list-page` | `^1.3.0` |
+| `spryker-shop/product-set-widget` | `^1.11.0` |
+| `spryker-shop/product-widget` | `^1.7.0` |
+| `spryker-shop/quick-order-page` | `^4.15.0` |
+| `spryker-shop/quote-approval-widget` | `^1.6.0` |
+| `spryker-shop/quote-request-agent-page` | `^3.6.0` |
+| `spryker-shop/quote-request-agent-widget` | `^2.7.0` |
+| `spryker-shop/quote-request-page` | `^3.7.0` |
+| `spryker-shop/quote-request-widget` | `^2.6.0` |
+| `spryker-shop/sales-configurable-bundle-widget` | `^1.7.0` |
+| `spryker-shop/sales-order-amendment-widget` | `^1.2.0` |
+| `spryker-shop/sales-order-threshold-widget` | `^1.2.0` |
+| `spryker-shop/sales-product-bundle-widget` | `^1.3.0` |
+| `spryker-shop/sales-product-configuration-widget` | `^1.2.0` |
+| `spryker-shop/sales-return-page` | `^1.12.0` |
+| `spryker-shop/sales-service-point-widget` | `^1.3.0` |
+| `spryker-shop/service-point-widget` | `^1.8.0` |
+| `spryker-shop/shared-cart-page` | `^2.6.0` |
+| `spryker-shop/shared-cart-widget` | `^1.8.0` |
+| `spryker-shop/shipment-type-widget` | `^1.6.0` |
+| `spryker-shop/shopping-list-note-widget` | `^1.2.0` |
+| `spryker-shop/shopping-list-page` | `^1.11.0` |
+| `spryker-shop/shopping-list-widget` | `^1.7.0` |
+| `spryker-shop/tabs-widget` | `^1.1.0` |
+| `spryker-shop/traceable-event-widget` | `^1.3.0` |
+| `spryker-shop/wishlist-page` | `^1.15.0` |
+| `spryker-shop/wishlist-widget` | `^1.4.0` |
+
+</details>
+
+Every ShopUi component mixin includes an optional hook mixin at the top of its base block, before any element and modifier rules:
+
+```css
+@mixin shop-ui-side-drawer($name: '.side-drawer') {
+    #{$name} {
+        @if meta.mixin-exists(shop-ui-side-drawer-base-hook) {
+            @include shop-ui-side-drawer-base-hook;
+        }
+        // ... element and modifier rules
+    }
+}
+```
+
+To use it, define a mixin named `<component-mixin-name>-base-hook` in a project-level component SCSS file:
+
+```css
+@mixin shop-ui-side-drawer-base-hook {
+    color: $setting-color-alt;
+}
+```
+
+The builder's mixin index picks the definition up automatically and wires it into the core component at compile time—no imports needed. The declarations are emitted inside the component's base selector, before its nested rules.
+
+{% info_block infoBox "Why base hooks exist" %}
+
+Base hooks fix a Sass cascade problem. Styles added through the component mixin's body (the `@content` block) are emitted *after* the component's nested rules, such as `&__overlay` or `&--show`. Since Sass 1.92, declarations that follow nested rules are no longer hoisted to the top of the parent rule (the `mixed-decls` deprecation): they stay in source order, which triggers deprecation warnings and can flip which rule wins at equal specificity—base declarations placed after a modifier would override the modifier.
+
+In `spryker-shop/shop-ui` 2.0.0, the core styles were fixed to emit base declarations before nested rules, and base hooks give project code a safe place to contribute base declarations in the correct position. Unlike the v1 builder, builder v2 doesn't silence Sass deprecation warnings, so any remaining `mixed-decls` cases in your project code are visible in the build output and should be fixed the same way.
+
+{% endinfo_block %}
+
+Use the base hook when you want to change the base styles of the original component itself. Use the mixin-include approach described above when you're building a new component based on an existing one.
 
 ## 4. Modify behavior
 
@@ -111,8 +291,8 @@ import SideDrawer from 'ShopUi/components/organisms/side-drawer/side-drawer';
 
 // export the extended class
 export default class NewSideDrawer extends SideDrawer {
-    protected readyCallback(): void {
-        super.readyCallback();
+    protected init(): void {
+        super.init();
 
         alert('New side drawer');
     }

@@ -22,7 +22,7 @@ To upgrade to the new version of the module, do the following:
 composer require spryker/content-banners-rest-api:"^2.0.0" --update-with-dependencies
 ```
 
-3. Run the following command to re-generate transfer objects:
+3. Re-generate transfer objects:
 
 ```php
 console transfer:generate

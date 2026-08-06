@@ -2,7 +2,7 @@
 title: Test the asynchronous API
 description: Learn how to test the asynchronous API with this helpful guide for your Spryker based projects.
 template: howto-guide-template
-last_updated: Oct 18, 2023
+last_updated: Aug 6, 2026
 redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-the-asynchronous-api.html
 related:
@@ -40,57 +40,57 @@ We use the *Hello World* example throughout this document. All code references t
 Make sure the following prerequisites are met:
 
 1. Spryker Testify version 3.50.0 or later is installed. The AsyncAPI SDK is required by this package, however, you don't need to install it manually.
-- To verify the installation status and version of Spryker Testify, run the following command:
+- Verify the installation status and version of Spryker Testify:
 
   ```bash
   composer info spryker/testify
   ```
 
-- To install Spryker Testify, run the following command:
+- Install Spryker Testify:
 
   ```bash
   composer require --dev "spryker/testify:^3.50.0"
   ```
 
-- To update Spryker Testify, run the following command:
+- Update Spryker Testify:
 
   ```bash
   composer update "spryker/testify:^3.50.0"
   ```
 
 2. Spryker Testify AsyncAPI version 0.1.1 or later is installed. The AsyncAPI SDK is required by this package, however, you don't need to install it manually.
-- To verify the installation status and version of Spryker Testify AsyncAPI, run the following command:
+- Verify the installation status and version of Spryker Testify AsyncAPI:
 
   ```bash
   composer info spryker/testify-async-api
   ```
 
-- To install Spryker Testify AsyncAPI, run the following command:
+- Install Spryker Testify AsyncAPI:
 
   ```bash
   composer require --dev "spryker/testify-async-api:^0.1.1"
   ```
 
-- To update Spryker Testify AsyncAPI  run the following command:
+- Update Spryker Testify AsyncAPI:
 
   ```bash
   composer update "spryker/testify-async-api:^0.1.1"
   ```
 
 3. Spryks version 0.5.2 or later is installed.
-- To verify the installation status and version of Spryks, run the following command:
+- Verify the installation status and version of Spryks:
 
   ``` bash
   composer info spryker-sdk/spryk
   ```
 
-- To install Spryks, run the following command:
+- Install Spryks:
 
   ```bash
   composer require --dev "spryker-sdk/spryk:^0.5.2"
   ```
 
-- To update Spryks, run the following command:
+- Update Spryks:
 
   ```bash
   composer update "spryker-sdk/spryk:^0.5.2"

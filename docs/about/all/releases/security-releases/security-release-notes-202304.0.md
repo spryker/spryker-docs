@@ -490,7 +490,7 @@ composer show spryker/util-sanitize-xss # Verify the version
    "jquery": "~3.6.3"
    ```
 
-   2. In the same directory, run the following command:
+   2. In the same directory, install the dependencies:
 
    ```bash
    npm install

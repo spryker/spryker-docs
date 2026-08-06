@@ -33,7 +33,7 @@ composer require spryker/content-storage:"^2.0.0" --update-with-dependencies
 console propel:install
 ```
 
-5. Run the following command to re-generate transfer objects:
+5. Re-generate transfer objects:
 
 ```bash
 console transfer:generate

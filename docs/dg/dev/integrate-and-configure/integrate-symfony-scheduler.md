@@ -1,7 +1,7 @@
 ---
 title: Integrate Symfony Scheduler
 description: Learn how to integrate and configure Symfony Scheduler module in a Spryker project.
-last_updated: July 29, 2026
+last_updated: August 6, 2026
 template: howto-guide-template
 ---
 
@@ -9,15 +9,31 @@ This document describes how to integrate and configure Symfony Scheduler module 
 
 ## Install
 
+{% info_block warningBox "Requirements" %}
+
+The Symfony Scheduler module requires:
+
+- PHP 8.3 or higher.
+- `symfony/scheduler` `^6.4`.
+- The `ext-pcntl` PHP extension, if you want parallel workers to shut their subprocesses down on a signal.
+
+{% endinfo_block %}
+
 {% info_block warningBox "Verification" %}
 
-Check if the following modules have been installed:
+Check if the following modules have been installed. Installing `spryker/symfony-scheduler` with Composer pulls the dependencies (`Lock`, `Redis`, `Gui`, `SymfonyMessengerExtension`) in automatically:
 
 | MODULE                    | EXPECTED DIRECTORY                         |
 |---------------------------|--------------------------------------------|
 | SymfonyMessenger          | vendor/spryker/symfony-messenger           |
+| SymfonyMessengerExtension | vendor/spryker/symfony-messenger-extension |
 | SymfonyScheduler          | vendor/spryker/symfony-scheduler           |
 | SymfonySchedulerExtension | vendor/spryker/symfony-scheduler-extension |
+| Lock                      | vendor/spryker/lock                        |
+| Redis                     | vendor/spryker/redis                       |
+| Gui                       | vendor/spryker/gui                         |
+
+The `Lock` module guards each scheduled job against concurrent execution, `Redis` backs the job status storage and the Back Office controls, and `Gui` provides the Back Office **Scheduler** page.
 
 If modules are present, proceed to the next step. If not, install the missing modules using Composer before proceeding.
 
@@ -39,15 +55,15 @@ With the current implementation you can add them in the module config or provide
 If you want to execute some console commands on a cron schedule, you can define them in the `getCronJobs` method of the `SymfonySchedulerConfig` class.
 This configuration will be then processed by the `CompiledCronTransportsHandlerProviderPlugin` and for each job a transport will be created in the Symfony Messenger module with the name of the job. The command will be executed by a handler that is also provided by the same plugin and it will execute the command in a subprocess.
 
-**src/Pyz/Zed/SymfonyScheduler/SymfonySchedulerConfig.php**
+**src/Pyz/Client/SymfonyScheduler/SymfonySchedulerConfig.php**
 
 ```php
 <?php
 
-namespace Pyz\Zed\SymfonyScheduler;
+namespace Pyz\Client\SymfonyScheduler;
 
+use Spryker\Client\SymfonyScheduler\SymfonySchedulerConfig as SprykerSymfonySchedulerConfigAlias;
 use Spryker\Shared\MessageBroker\MessageBrokerConstants;
-use Spryker\Zed\SymfonyScheduler\SymfonySchedulerConfig as SprykerSymfonySchedulerConfigAlias;
 
 class SymfonySchedulerConfig extends SprykerSymfonySchedulerConfigAlias
 {
@@ -81,7 +97,7 @@ class SymfonySchedulerConfig extends SprykerSymfonySchedulerConfigAlias
 The job name is an unique key of job definition and it will be used as a transport name in the Symfony Messenger module.
 The `command` is the console command that you want to execute.
 The `schedule` is the cron expression that defines when the job should be executed. You can also use aliases like `@hourly`, `@daily`, etc.
-The `no_lock` option is optional and it defines whether the job should be executed without acquiring a lock. This can be useful for jobs that are safe to run in parallel.
+The `no_lock` option is optional and defines whether the job runs without acquiring a lock. By default (`no_lock` omitted or `false`), the cron jobs builder guards each job's schedule with a lock created through the Lock client, so the same job is never executed by more than one worker at the same time — even when its transport is consumed by several parallel workers. When you set `no_lock` to `true`, no lock is acquired, so the same job can be executed by multiple parallel workers simultaneously. Only set it for jobs that are idempotent or otherwise safe to run concurrently.
 The `priority` option is optional and defines the consumption order of the job's transport by the worker. The higher the number, the earlier the job is polled. When omitted, priority defaults to `0`.
 In addition you can also provide a `store` or a `region`, which works in the same way as originally in `jenkins.php`
 
@@ -95,7 +111,7 @@ You don't need to map messages and handlers separately in the SymfonyMessenger m
 ```php
 <?php
 
-namespace Pyz\Zed\FooBar\Communication\Plugin\SymfonyScheduler;
+namespace Pyz\Client\FooBar\Plugin\SymfonyScheduler;
 
 use Symfony\Component\Scheduler\RecurringMessage;
 use Symfony\Component\Scheduler\Schedule;
@@ -126,15 +142,15 @@ class FooBarSchedulerHandlerProviderPlugin implements SchedulerHandlerProviderPl
 
 If you define your jobs with the first option (via config) or with separate plugin, you need to wire plugins in the Symfony Scheduler Dependency Provider by adding the following code:
 
-***src/Pyz/Zed/SymfonyScheduler/SymfonySchedulerDependencyProvider.php***
+***src/Pyz/Client/SymfonyScheduler/SymfonySchedulerDependencyProvider.php***
 
 ```php
 <?php
 
-namespace Pyz\Zed\SymfonyScheduler;
+namespace Pyz\Client\SymfonyScheduler;
 
-use Spryker\Zed\SymfonyScheduler\Communication\Plugin\SymfonyScheduler\CompiledCronTransportsHandlerProviderPlugin;
-use Spryker\Zed\SymfonyScheduler\SymfonySchedulerDependencyProvider as SprykerSymfonySchedulerDependencyProvider;
+use Spryker\Client\SymfonyScheduler\Plugin\SymfonyScheduler\CompiledCronTransportsHandlerProviderPlugin;
+use Spryker\Client\SymfonyScheduler\SymfonySchedulerDependencyProvider as SprykerSymfonySchedulerDependencyProvider;
 
 class SymfonySchedulerDependencyProvider extends SprykerSymfonySchedulerDependencyProvider
 {
@@ -163,11 +179,11 @@ Scheduled jobs are executed through the Symfony Messenger worker, so the schedul
 namespace Pyz\Client\SymfonyMessenger;
 
 use Spryker\Client\SymfonyMessenger\SymfonyMessengerDependencyProvider as SprykerSymfonyMessengerDependencyProvider;
-use Spryker\Zed\SymfonyScheduler\Communication\Plugin\SymfonyMessenger\CompiledCronTransportGroupAwarePlugin;
-use Spryker\Zed\SymfonyScheduler\Communication\Plugin\SymfonyMessenger\DisabledSchedulerJobTransportGuardPlugin;
-use Spryker\Zed\SymfonyScheduler\Communication\Plugin\SymfonyMessenger\SchedulerAvailableTransportConfigProviderPlugin;
-use Spryker\Zed\SymfonyScheduler\Communication\Plugin\SymfonyMessenger\SchedulerMessageMappingProviderPlugin;
-use Spryker\Zed\SymfonyScheduler\Communication\Plugin\SymfonyMessenger\SchedulerTransportFactoryProviderPlugin;
+use Spryker\Client\SymfonyScheduler\Plugin\SymfonyMessenger\CompiledCronTransportGroupAwarePlugin;
+use Spryker\Client\SymfonyScheduler\Plugin\SymfonyMessenger\DisabledSchedulerJobTransportGuardPlugin;
+use Spryker\Client\SymfonyScheduler\Plugin\SymfonyMessenger\SchedulerAvailableTransportConfigProviderPlugin;
+use Spryker\Client\SymfonyScheduler\Plugin\SymfonyMessenger\SchedulerMessageMappingProviderPlugin;
+use Spryker\Client\SymfonyScheduler\Plugin\SymfonyMessenger\SchedulerTransportFactoryProviderPlugin;
 
 class SymfonyMessengerDependencyProvider extends SprykerSymfonyMessengerDependencyProvider
 {
@@ -226,7 +242,7 @@ class SymfonyMessengerDependencyProvider extends SprykerSymfonyMessengerDependen
 
 ## Configure the job status storage
 
-The Back Office scheduler page and the enable/disable and run-now controls persist their state (job statuses, disabled markers, and run requests) in a dedicated Redis connection, separate from the storage key-value store. Configure this connection in `config/Shared/config_default.php`:
+The Back Office scheduler page and the enable/disable and run-now controls persist their state (job statuses, disabled markers, and run requests) in Redis, through a connection the module configures under its own `SymfonySchedulerConstants` keys. This is a separate connection *configuration*, not a separate Redis instance: by default it resolves to the same key-value store Redis (same host, port, and database) as the storage, and the scheduler's own key prefixes (`scheduler:job:*`) keep its entries distinct from storage keys. Configure the connection in `config/Shared/config_default.php`:
 
 **config/Shared/config_default.php**
 
@@ -262,7 +278,7 @@ The following `SymfonySchedulerConstants` keys are available:
 | `SYMFONY_SCHEDULER_REDIS_DATA_SOURCE_NAMES`      | Array of DSN strings for a cluster/replication setup.                   |
 | `SYMFONY_SCHEDULER_REDIS_CONNECTION_OPTIONS`     | Array of connection options passed to the Redis client.                 |
 
-The storage key prefixes and their time-to-live are defined in `\Spryker\Zed\SymfonyScheduler\SymfonySchedulerConfig` and can be overridden at the project level:
+The storage key prefixes and their time-to-live are defined in `\Spryker\Client\SymfonyScheduler\SymfonySchedulerConfig` and can be overridden at the project level:
 
 | METHOD                              | DEFAULT                    | DESCRIPTION                                                                         |
 |-------------------------------------|----------------------------|-------------------------------------------------------------------------------------|
@@ -280,11 +296,13 @@ To run a scheduler you need to run the SymfonyMessenger consumer with the transp
 vendor/bin/console symfonymessenger:consume queue-worker-start report-generation
 ```
 
-The scheduler transport is safe to consume in parallel — each scheduled job is guarded by the Lock facade in the cron jobs builder, so the same schedule is never executed by more than one worker at the same time. You can therefore add the `--parallel` (`-p`) option to spread the load across several worker processes:
+The scheduler transport is safe to consume in parallel — each scheduled job is guarded by a lock that the cron jobs builder creates through the Lock client, so the same schedule is never executed by more than one worker at the same time. You can therefore add the `--parallel` (`-p`) option to spread the load across several worker processes:
 
 ```shell
 vendor/bin/console symfonymessenger:consume compiled-cron-scheduler --parallel=4
 ```
+
+Jobs configured with `no_lock` set to `true` are the exception: they are not guarded by a lock, so parallel workers can execute such a job simultaneously. Use `no_lock` only for jobs that are safe to run concurrently (see [Configure via Module Config](#configure-via-module-config)).
 
 ## Monitor and control scheduled jobs in the Back Office
 
@@ -300,7 +318,7 @@ The **Status** reflects the latest recorded execution state of each job:
 | Error    | The last execution failed; the captured output is available on the job's detail page. |
 | Disabled | The job is disabled and will not be consumed until it is enabled again.       |
 
-Statuses are recorded by the `CommandHandler` while a job runs and are stored in the dedicated Redis connection (see [Configure the job status storage](#configure-the-job-status-storage)). `Disabled` is derived from the disabled marker and is never persisted as a status record.
+Statuses are recorded by the `CommandHandler` while a job runs and are stored through the scheduler's Redis connection configuration (see [Configure the job status storage](#configure-the-job-status-storage)). `Disabled` is derived from the disabled marker and is never persisted as a status record.
 
 Each row provides the following actions:
 
@@ -310,7 +328,7 @@ Each row provides the following actions:
 
 {% info_block infoBox "Requires the job status storage" %}
 
-The Back Office page and the enable/disable and run-now controls require the dedicated Redis connection to be configured. If the connection is unavailable, the controls fail open — a job is treated as enabled and no forced run is scheduled — so a Redis outage never pauses every job.
+The Back Office page and the enable/disable and run-now controls require the scheduler's Redis connection to be configured. If Redis is unavailable, the controls fail open — a job is treated as enabled and no forced run is scheduled — so a Redis outage never pauses every job.
 
 {% endinfo_block %}
 

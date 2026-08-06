@@ -1,7 +1,7 @@
 ---
 title: Integrate Symfony Messenger
 description: Learn how to integrate and configure Symfony Messenger module in a Spryker project.
-last_updated: Jul 29, 2026
+last_updated: August 6, 2026
 template: howto-guide-template
 ---
 
@@ -237,7 +237,7 @@ Example below will provide the `SchedulerTransportFactory` that allows to use Sy
 ```php
 <?php
 
-namespace Spryker\Zed\SymfonyScheduler\Communication\Plugin\SymfonyMessenger;
+namespace Spryker\Client\SymfonyScheduler\Plugin\SymfonyMessenger;
 
 class SchedulerTransportFactoryProviderPlugin extends AbstractPlugin implements TransportFactoryProviderPluginInterface
 {
@@ -479,7 +479,7 @@ Each child process is a full worker; the output of every worker is streamed back
 
 {% info_block warningBox "When parallel consumption is safe" %}
 
-Parallel consumption is only safe for transports where competing consumers do not process the same message twice — for example, AMQP work queues. The scheduler transport is also safe to run in parallel: each scheduled job is guarded by the Lock facade in the cron jobs builder, so the same schedule is never executed by more than one worker at the same time.
+Parallel consumption is only safe for transports where competing consumers do not process the same message twice — for example, AMQP work queues. The scheduler transport is also safe to run in parallel: each scheduled job is guarded by a lock that the cron jobs builder creates through the Lock client, so the same schedule is never executed by more than one worker at the same time. The exception is a job configured with `no_lock` set to `true`, which is not guarded and can therefore be executed by several parallel workers at once — only enable it for jobs that are safe to run concurrently.
 
 {% endinfo_block %}
 
@@ -526,7 +526,7 @@ class SymfonyMessengerDependencyProvider extends SprykerSymfonyMessengerDependen
 }
 ```
 
-The Symfony Scheduler module ships `\Spryker\Zed\SymfonyScheduler\Communication\Plugin\SymfonyMessenger\DisabledSchedulerJobTransportGuardPlugin`, which uses this extension point to pause the transport of a scheduled job that has been disabled from the Back Office. See [Integrate Symfony Scheduler](/docs/dg/dev/integrate-and-configure/integrate-symfony-scheduler.html).
+The Symfony Scheduler module ships `\Spryker\Client\SymfonyScheduler\Plugin\SymfonyMessenger\DisabledSchedulerJobTransportGuardPlugin`, which uses this extension point to pause the transport of a scheduled job that has been disabled from the Back Office. See [Integrate Symfony Scheduler](/docs/dg/dev/integrate-and-configure/integrate-symfony-scheduler.html).
 
 ## Additional information
 

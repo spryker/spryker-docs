@@ -20,7 +20,7 @@ Follow these best practices to write robust, maintainable, and efficient Cypress
 2. Use Cypress commands, such as `cy.get()` and `cy.contains()`, effectively—they provide built-in retries.
 3. Use custom scenarios for repeated user flows, such as registration or checkout.
 4. Use custom commands for repeated sequences and abstract actions, such as `closeAllFlashMessages` or `runConsoleCommand`.
-5. Store test data in \cypress/fixtures` and load it by using Cypress fixtures.`
+5. Store test data in \cypress/fixtures `and load it by using Cypress fixtures.`
 6. Avoid assigning Cypress commands to `const`, `let`, or `var`. Use aliases or closures instead, because Cypress commands are asynchronous.
 7. Test only the functionality you control. Do not test third-party services.
 8. Use environment-specific configuration files to manage different environments.

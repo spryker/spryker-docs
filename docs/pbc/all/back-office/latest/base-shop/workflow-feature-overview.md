@@ -10,9 +10,9 @@ related:
     link: docs/dg/dev/integrate-and-configure/integrate-workflow-feature.html
 ---
 
-The Workflow feature lets business users design and operate from the Back Office. A workflow describes how a subject—such as a company during onboarding—moves through a sequence of states as events occur, conditions are met, or timeouts elapse.
+The Workflow feature lets business users design and operate workflows from the Back Office. A workflow describes how a subject—such as a company during onboarding—moves through a sequence of states as events occur, conditions are met, or timeouts elapse.
 
-Unlike the classic state machines definition, which are defined in XML files and require a deployment to change, a workflow is authored, versioned, and activated entirely in the Back Office. This puts process design in the hands of the people who own the process.
+Unlike classic state machines, which are defined in XML files and require a deployment to change, a workflow is authored, versioned, and activated entirely in the Back Office. This puts process design in the hands of the people who own the process.
 
 ## Workflows
 

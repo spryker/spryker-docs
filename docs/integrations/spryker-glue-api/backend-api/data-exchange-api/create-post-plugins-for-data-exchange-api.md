@@ -2,7 +2,7 @@
 title: Create post plugins for Data Exchange API
 description: This document describes how to create custom post create/update plugin
   for the Data Exchange API.
-last_updated: Aug 6, 2026
+last_updated: Aug 7, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/pbc/all/data-exchange/latest/create-post-plugins-for-data-exchange-api.html
@@ -16,8 +16,8 @@ To set up events that are executed after data import, you need to create a class
 
 ## Prerequisites
 
-* [Install the Data Exchange API](/docs/pbc/all/data-exchange/latest/install-and-upgrade/install-the-data-exchange-api.html)
-* [Configure the Data Exchange API](/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/configure-data-exchange-api.html)
+- [Install the Data Exchange API](/docs/pbc/all/data-exchange/latest/install-and-upgrade/install-the-data-exchange-api.html)
+- [Configure the Data Exchange API](/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/configure-data-exchange-api.html)
 
 
 ## Create a post plugin to activate products
@@ -60,6 +60,7 @@ class CustomDynamicEntityPostCreatePlugin extends AbstractPlugin implements Dyna
 2. To register the plugin, add it to the `DynamicEntityDependencyProvider` in the module.
 
 **src/Pyz/Zed/DynamicEntity/DynamicEntityDependencyProvider.php**
+
 ```php
 <?php
 

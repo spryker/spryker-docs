@@ -1,7 +1,7 @@
 ---
 title: Set up an order management system
 description: This task-based document shows how to create a full order management process (OMS) using the Spryker state machine and then use it in your shop.
-last_updated: Aug 6, 2026
+last_updated: Aug 7, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-oms-and-state-machines-spryker-commerce-os
 originalArticleId: dc0c3c0d-c1af-4949-9645-762c67f03c8a
@@ -200,8 +200,8 @@ The skeleton of the order process is done now. Refresh the graph and check your 
 The order process usually needs PHP implementations for certain functionalities like calling a payment provider or checking if payment is authorized or not.
 To do so, Spryker introduces *Commands* and *Conditions*:
 
-* Commands are used for any implementation of any functionality used in the process.
-* Conditions are used to replace an if-then statement in your process.
+- Commands are used for any implementation of any functionality used in the process.
+- Conditions are used to replace an if-then statement in your process.
 
 They are both implemented in PHP and injected into the state machine skeleton.
 
@@ -461,9 +461,9 @@ Default commands and conditions:
 
 {% info_block infoBox %}
 
-* Commands and conditions can't be defined at runtime during tests. Instead, they must be specified in `codeception.yml`.
-* Test scenarios support only a single item.
-* Timeouts can't be tested.
+- Commands and conditions can't be defined at runtime during tests. Instead, they must be specified in `codeception.yml`.
+- Test scenarios support only a single item.
+- Timeouts can't be tested.
 
 {% endinfo_block %}
 

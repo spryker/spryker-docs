@@ -1,7 +1,7 @@
 ---
 title: Upgrade to PHP 8.1
 description: End of November 2022, Spryker will release a new version of its Demo Shops requiring PHP 8.1 as the minimum version.
-last_updated: November 22, 2022
+last_updated: Aug 7, 2026
 template: concept-topic-template
 redirect_from:
 - /docs/scos/user/intro-to-spryker/whats-new/php8-as-a-minimum-version-for-all-spryker-projects.html
@@ -11,7 +11,7 @@ redirect_from:
 {% info_block warningBox "Warning" %}
 
 As of September 2024, we no longer provide support for PHP 8.1 modules. To ensure continued compatibility, security, and access to new features,
-we highly recommend [upgrading to PHP 8.4](/docs/dg/dev/upgrade-and-migrate/upgrade-to-php-84.html).
+we highly recommend [upgrading to PHP 8.5](/docs/dg/dev/upgrade-and-migrate/upgrade-to-php-85.html).
 
 {% endinfo_block %}
 

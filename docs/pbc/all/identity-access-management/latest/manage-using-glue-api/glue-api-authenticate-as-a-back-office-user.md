@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Authenticate as a Back Office user"
 description: Learn how to authenticate as a Back Office user using the Spryker Glue API for your Spryker users
-last_updated: June 9, 2026
+last_updated: July 30, 2026
 template: glue-api-storefront-guide-template
 ---
 
@@ -71,4 +71,4 @@ For detailed information on the modules that provide the API functionality and r
 | unsupported_grant_type | The provided grant type is not supported. The grant type must be `password`. |
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

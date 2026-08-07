@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Manage shopping lists"
 description: Learn how to manage Spryker shopping list via the Glue API in your Spryker Cloud Commerce OS Projects.
-last_updated: Jun 16, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-shopping-lists
 originalArticleId: 23652c0f-92b4-45c1-9053-905389353411
@@ -860,4 +860,4 @@ If the shopping list is deleted successfully, the endpoint returns the `204 No C
 | 1503 | Specified shopping list is not found. |
 | 1506 | Shopping list with given name already exists. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

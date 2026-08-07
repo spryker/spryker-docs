@@ -880,6 +880,8 @@ entries:
         - title: "Web components"
           url: /docs/dg/dev/frontend-development/marketplace/web-components.html
 
+    - title: B2B component library
+      url: /docs/dg/dev/frontend-development/component-library.html
     - title: Create Angular modules
       url: /docs/dg/dev/frontend-development/create-angular-modules.html
     - title: Define Twig tag
@@ -894,16 +896,8 @@ entries:
     nested:
     - title: Upgrade to Symfony Dependency Injection
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html
-    - title: How to integrate API Platform
-      url: /docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
-    - title: How to integrate API Platform Security
-      url: /docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html
-    - title: How to migrate to API Platform
-      url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform.html
-    - title: API Platform migration overview
-      url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform-overview.html
-    - title: Upgrade API Platform resources to typed nested objects
-      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-api-platform-typed-nested-objects.html
+    - title: Migrate to API Platform
+      url: /docs/integrations/spryker-api/migrate-from-glue-to-api-platform/migrate-to-api-platform-overview.html
     - title: Migrate from Auth to SecurityGui module
       url: /docs/dg/dev/upgrade-and-migrate/migrate-from-auth-to-securitygui-module.html
     - title: Migrating from Twig v1 to Twig v3
@@ -1314,32 +1308,7 @@ entries:
       url: /docs/dg/dev/architecture/symfony-bundles.html
 
     - title: API Platform
-      url: /docs/dg/dev/architecture/api-platform.html
-      nested:
-        - title: Resource Schemas
-          url: /docs/dg/dev/architecture/api-platform/resource-schemas.html
-        - title: Validation Schemas
-          url: /docs/dg/dev/architecture/api-platform/validation-schemas.html
-        - title: CodeBucket Support
-          url: /docs/dg/dev/architecture/api-platform/code-buckets.html
-        - title: Relationship Support
-          url: /docs/dg/dev/architecture/api-platform/relationships.html
-        - title: Enablement
-          url: /docs/dg/dev/architecture/api-platform/enablement.html
-        - title: Testing
-          url: /docs/dg/dev/architecture/api-platform/testing.html
-        - title: Troubleshooting
-          url: /docs/dg/dev/architecture/api-platform/troubleshooting.html
-        - title: Sparse fieldsets
-          url: /docs/dg/dev/architecture/api-platform/sparse-fieldsets.html
-        - title: Serialization
-          url: /docs/dg/dev/architecture/api-platform/serialization.html
-        - title: Native API Platform Resources
-          url: /docs/dg/dev/architecture/api-platform/native-api-platform-resources.html
-        - title: IDE integration
-          url: /docs/dg/dev/architecture/api-platform/ide-integration.html
-        - title: Migration status - Glue API to API Platform
-          url: /docs/dg/dev/architecture/api-platform/migrate-to-api-platform-status.html
+      url: /docs/integrations/spryker-api/api-platform/api-platform.html
 
     - title: Code buckets
       url: /docs/dg/dev/architecture/code-buckets.html

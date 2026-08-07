@@ -81,6 +81,14 @@ layout: default
         {% endinfo_block %}
         {% endif %}
 
+        {% if page.template == "glue-api-storefront-guide-template" and page.url contains "/pbc/" %}
+        {% info_block infoBox %}
+
+        This page describes the API endpoint contract, which is the same regardless of the serving infrastructure. Storefront API endpoints are served by <a href="/docs/integrations/spryker-api/api-platform/api-platform.html">API Platform</a> (recommended) or the legacy Glue infrastructure; Backend API endpoints currently run on the Glue infrastructure.
+
+        {% endinfo_block %}
+        {% endif %}
+
         {{content}}
 
         {% if page.tags != null %}

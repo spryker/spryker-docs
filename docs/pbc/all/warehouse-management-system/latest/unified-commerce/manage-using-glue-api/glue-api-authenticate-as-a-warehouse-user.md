@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Authenticate as a warehouse user"
 description: Learn how to authenticate as a warehouse user using Glue API in your Spryker Unified Commerce projects.
-last_updated: Nov 13, 2023
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 ---
 
@@ -56,4 +56,4 @@ Request sample: `POST http://glue-backend.mysprykershop.com/warehouse-tokens`
 | --- | --- |
 | 001 | The provided access token is invalid. To get an access token, see [Authenticate as a Back Office user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html). |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

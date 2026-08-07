@@ -16,7 +16,7 @@ Spryker is a modular, cloud-native e-commerce platform built on modern architect
 - **Layered Architecture**: Separation of presentation, business, communication, and persistence layers for scalability and flexibility
 - **Cloud-Native Platform**: Fully managed PaaS with automated scaling, CI/CD pipelines, and 24/7 monitoring
 - **Multi-Model Support**: Built for B2B, B2C, Marketplace B2B, and Marketplace B2C business models
-- **API-First Design**: Glue API enables integration with any frontend or external system
+- **API-First Design**: Storefront API and Backend API enable integration with any frontend or external system
 - **Headless Commerce**: Separation of frontend and backend enables omnichannel experiences
 
 ## Who is this documentation for?
@@ -86,7 +86,7 @@ Documentation for integrating Spryker with third-party systems and services.
 - **Search & Analytics**: Search engines and analytics platforms
 - **ERP & PIM Systems**: Enterprise system integrations
 - **Custom Integrations**: Building custom integrations and connectors
-- **Glue API**: RESTful API for headless commerce and system integrations
+- **Spryker API**: Storefront API and Backend API for headless commerce and system integrations, running on API Platform (recommended for Storefront development) or the legacy Glue infrastructure
 
 ## Why use Spryker?
 
@@ -99,7 +99,7 @@ Documentation for integrating Spryker with third-party systems and services.
 
 ### For Developers
 - Modern PHP 8+ codebase with Symfony components
-- Comprehensive API (Glue API) for headless implementations
+- Comprehensive APIs (Storefront API and Backend API) for headless implementations
 - Extensive documentation and code examples
 - Independent module updates without breaking changes
 - Active developer community and open-source contributions
@@ -138,7 +138,7 @@ Documentation for integrating Spryker with third-party systems and services.
 ### Application Layers
 - **Presentation Layer** (Yves): Customer-facing storefront, mobile apps, voice skills
 - **Business Layer** (Zed): Business logic, product catalog, pricing, inventory
-- **Communication Layer** (Glue API): RESTful API, storefront-backend communication
+- **Communication Layer** (Storefront API and Backend API): RESTful APIs, storefront-backend communication
 - **Persistence Layer**: Database operations, Propel ORM, Redis/Elasticsearch
 
 ### Key Technologies
@@ -221,7 +221,10 @@ This documentation is open-source and accepts contributions via pull requests to
 - **Demo Shop**: Pre-configured shop with sample data for specific business models
 - **Zed**: Back Office application layer (administration interface)
 - **Yves**: Storefront application layer (customer-facing)
-- **Glue**: API application layer (RESTful endpoints)
+- **Storefront API**: API product for storefront and headless commerce clients
+- **Backend API**: API product for back office and system-to-system integrations
+- **API Platform**: Recommended API infrastructure for Storefront API development
+- **Glue**: Legacy API infrastructure and application layer (RESTful endpoints); the Backend API currently runs on Glue
 - **Merchant Portal**: Self-service interface for marketplace merchants
 - **ACP**: App Composition Platform - marketplace for pre-built integrations
 - **SCCOS**: Spryker Cloud Commerce OS - full product name
@@ -235,7 +238,7 @@ Multi-level company hierarchies, approval workflows, quote negotiations, contrac
 Merchant onboarding, merchant product management, offer management, split order processing, merchant settlement, commission management.
 
 ### Omnichannel Retail
-Headless commerce via Glue API, mobile apps, voice commerce, click-and-collect, ship-from-store, unified inventory.
+Headless commerce via Storefront API, mobile apps, voice commerce, click-and-collect, ship-from-store, unified inventory.
 
 ### International Expansion
 Multi-store management, multi-currency support, multi-language content, region-specific pricing, tax compliance, localized payment methods.

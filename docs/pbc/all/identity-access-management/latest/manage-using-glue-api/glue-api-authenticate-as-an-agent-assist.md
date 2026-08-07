@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Authenticate as an agent assist"
 description: Learn how to authenticate as an agent assist on the Storefront using the Spryker GLUE API.
-last_updated: Jun 22, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/authenticating-as-an-agent-assist
 originalArticleId: 33952f89-fed4-4e33-95f4-79e969752e9d
@@ -104,7 +104,7 @@ Note that depending on the Login feature configuration for your project, too man
 | --- | --- |
 |4101 | Failed to authenticate an agent. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
 
 ## Next steps
 

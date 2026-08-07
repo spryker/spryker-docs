@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Retrieve product reviews when retrieving concrete products"
 description: Retrieve product review information about concrete products using the Spryker GLUE API in your Spryker based project.
-last_updated: Sep 2, 2022
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 redirect_from:
   - /docs/pbc/all/ratings-reviews/202311.0/manage-using-glue-api/retrieve-product-reviews-when-retrieving-concrete-products.html
@@ -164,4 +164,4 @@ To retrieve general information about a concrete product, send the request:
 | 302 | Concrete product is not found. |
 | 312 | Concrete product is not specified.  |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

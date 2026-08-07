@@ -2,12 +2,12 @@
 title: How to integrate Composable UI
 description: Integrate Composable UI to enable YAML-driven Back Office interface with auto-generated CRUD operations.
 template: howto-guide-template
-last_updated: Feb 20, 2026
+last_updated: Jul 31, 2026
 related:
   - title: Composable UI overview
     link: docs/dg/dev/backend-development/composable-ui/composable-ui.html
-  - title: How to integrate API Platform
-    link: docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
+  - title: Integrate API Platform
+    link: docs/integrations/spryker-api/migrate-from-glue-to-api-platform/integrate-api-platform.html
   - title: Create a Composable UI module
     link: docs/dg/dev/backend-development/composable-ui/create-a-composable-ui-module.html
 ---
@@ -27,11 +27,11 @@ Ensure that your project meets the following prerequisites:
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| API Platform | {{site.version}} | [How to integrate API Platform](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html) |
+| API Platform | {{site.version}} | [Integrate API Platform](/docs/integrations/spryker-api/migrate-from-glue-to-api-platform/integrate-api-platform.html) |
 
 {% info_block warningBox "Required" %}
 
-API Platform integration is required before installing Composable UI. Complete the [How to integrate API Platform](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html) guide first.
+API Platform integration is required before installing Composable UI. Complete the [Integrate API Platform](/docs/integrations/spryker-api/migrate-from-glue-to-api-platform/integrate-api-platform.html) guide first.
 
 {% endinfo_block %}
 
@@ -355,6 +355,6 @@ You should see compiled JavaScript and CSS files.
 After integrating Composable UI, you can:
 
 - [Create a Composable UI module](/docs/dg/dev/backend-development/composable-ui/create-a-composable-ui-module.html) - Build your first feature module with navigation and ACL
-- [API Platform Enablement](/docs/dg/dev/architecture/api-platform/enablement.html) - Create API resources for your entities
+- [Implement an API Platform resource](/docs/integrations/spryker-api/api-platform/enablement.html) - Create API resources for your entities
 - [Entity configuration reference](/docs/dg/dev/backend-development/composable-ui/entity-configuration-reference.html) - Configure UI components
 - [Composable UI best practices](/docs/dg/dev/backend-development/composable-ui/composable-ui-best-practices.html) - Implementation patterns

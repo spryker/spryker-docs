@@ -2,12 +2,12 @@
 title: Back Office Composable UI Best Practices
 description: Best practices and guidelines for developing Composable UI modules in Spryker Back Office.
 template: howto-guide-template
-last_updated: Feb 20, 2026
+last_updated: Jul 31, 2026
 related:
   - title: Composable UI overview
     link: docs/dg/dev/backend-development/composable-ui/composable-ui.html
-  - title: API Platform Enablement
-    link: docs/dg/dev/architecture/api-platform/enablement.html
+  - title: Implement an API Platform resource
+    link: docs/integrations/spryker-api/api-platform/enablement.html
   - title: Create a Composable UI module
     link: docs/dg/dev/backend-development/composable-ui/create-a-composable-ui-module.html
 ---

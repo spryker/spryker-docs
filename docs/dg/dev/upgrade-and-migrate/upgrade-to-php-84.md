@@ -2,7 +2,7 @@
 title: 'Upgrade to PHP 8.4'
 description: Upgrade PHP to version 8.4 in your Docker environment and composer.json. Check code and dependencies for compatibility, update configurations, and test your application to ensure a smooth upgrade.
 template: concept-topic-template
-last_updated: Aug 22, 2025
+last_updated: Aug 7, 2026
 ---
 
 This document describes how to upgrade PHP to version 8.4. This upgrades the version in Docker environment and `composer.json`.

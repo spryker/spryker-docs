@@ -2,7 +2,7 @@
 title: 'Upgrade to PHP 8.3'
 description: Starting from Nov 2024, Demo Shops support PHP 8.3.
 template: concept-topic-template
-last_updated: Nov 1, 2024
+last_updated: Aug 7, 2026
 ---
 
 {% info_block warningBox "Warning" %}

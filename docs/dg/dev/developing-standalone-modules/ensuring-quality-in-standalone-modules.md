@@ -1,7 +1,7 @@
 ---
 title: Ensuring quality in standalone modules
 description: Learn how you can ensure quality in standalone modules and adhere to Spryker's code quality within your Spryker based projects.
-last_updated: Jun 7, 2024
+last_updated: Aug 7, 2026
 template: howto-guide-template
 ---
 

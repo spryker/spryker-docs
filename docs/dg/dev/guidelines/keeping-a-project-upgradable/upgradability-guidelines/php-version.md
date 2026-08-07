@@ -2,7 +2,7 @@
 title: PHP version
 description: Learn how to resolve issues that occur around the allowed and consistent PHP version being used in your Spryker based projects.
 template: howto-guide-template
-last_updated: Oct 24, 2023
+last_updated: Aug 7, 2026
 redirect_from:
   - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html
 ---

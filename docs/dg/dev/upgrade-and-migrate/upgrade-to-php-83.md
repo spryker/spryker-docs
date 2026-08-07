@@ -7,7 +7,7 @@ last_updated: Nov 1, 2024
 
 {% info_block warningBox "Warning" %}
 
-While PHP 8.3 is still supported, we strongly recommend upgrading to PHP 8.4 by the end of 2026 to ensure continued compatibility, security, and access to new features. See [upgrading to PHP 8.4](/docs/dg/dev/upgrade-and-migrate/upgrade-to-php-84.html) for details.
+PHP 8.3 is the minimum supported version, but its support will be dropped in July 2027. We strongly recommend upgrading to PHP 8.5 before that date to ensure continued compatibility, security, and access to new features. See [upgrading to PHP 8.5](/docs/dg/dev/upgrade-and-migrate/upgrade-to-php-85.html) for details.
 
 {% endinfo_block %}
 

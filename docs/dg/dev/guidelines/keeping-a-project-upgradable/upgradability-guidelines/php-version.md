@@ -31,7 +31,7 @@ The PHP version in your deploy files should correspond to the PHP version declar
   "description": "Spryker B2C Demo Shop",
   "license": "proprietary",
   "require": {
-    "php": ">=8.4",
+    "php": ">=8.5",
     ...
   }
 }
@@ -42,7 +42,7 @@ The PHP version in your deploy files should correspond to the PHP version declar
 ```yaml
 ...
 image:
-    tag: spryker/php:8.4
+    tag: spryker/php:8.5
     php:
         ini:
             "opcache.revalidate_freq": 0

@@ -7,7 +7,7 @@ redirect_from:
 last_updated: Dec 6, 2023
 ---
 
-After you have [Integrated the Docker SDK](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-integrate-the-docker-sdk.html),  [Upgrade to PHP 8.4](/docs/dg/dev/upgrade-and-migrate/upgrade-to-php-84.html).
+After you have [Integrated the Docker SDK](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-integrate-the-docker-sdk.html),  [Upgrade to PHP 8.5](/docs/dg/dev/upgrade-and-migrate/upgrade-to-php-85.html).
 
 ## Next step
 

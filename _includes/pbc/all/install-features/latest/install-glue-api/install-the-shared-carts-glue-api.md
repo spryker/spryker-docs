@@ -109,7 +109,7 @@ The result should be 0 records.
 
 - `CartPermissionGroupsResourceRoutePlugin` is a protected resource for the `GET` request.
 
-For more details, see the `configure` function in [Resource Routing](/docs/integrations/spryker-api/storefront-api/storefront-api.html).
+For more details, see the `configure` function in [Resource Routing](/docs/integrations/spryker-api/storefront-api/developing-apis/glue-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 

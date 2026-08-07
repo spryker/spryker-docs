@@ -98,7 +98,7 @@ Activate the following plugins:
 
 {% info_block infoBox %}
 
-`OrdersResourceRoutePlugin` GET verb is a protected resource. For more details, see the `configure` function [Resource routing](/docs/integrations/spryker-api/storefront-api/storefront-api.html).
+`OrdersResourceRoutePlugin` GET verb is a protected resource. For more details, see the `configure` function [Resource routing](/docs/integrations/spryker-api/storefront-api/developing-apis/glue-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 

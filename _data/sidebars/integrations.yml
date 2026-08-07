@@ -22,6 +22,8 @@ entries:
     - title: Storefront API
       url: /docs/integrations/spryker-api/storefront-api/storefront-api.html
       nested:
+      - title: Using the Storefront API
+        url: /docs/integrations/spryker-api/storefront-api/using-storefront-api.html
       - title: API references
         nested:
         - title: Storefront API B2B Demo Shop reference

@@ -1,9 +1,9 @@
 ---
 title: Claude Code Plugin
 description: Install and use the Spryker AI Dev SDK plugin for Claude Code to get Spryker-aware skills, code review, and project setup directly in your AI coding assistant.
-last_updated: Jul 22, 2026
+last_updated: Jul 28, 2026
 label: early-access
-keywords: ai, claude, claude code, plugin, marketplace, skills, spryker, ai-dev, code review
+keywords: ai, claude, claude code, plugin, marketplace, skills, spryker, ai-dev, code review, ci
 template: howto-guide-template
 ---
 
@@ -111,6 +111,7 @@ The plugin bundles the following Spryker-aware skills. Invoke them in Claude Cod
 | Spryker Docs Research | `/spryker-ai-dev-sdk:spryker-docs-research` | Looks up grounded answers in the official Spryker documentation |
 | Spryker Runtime | `/spryker-ai-dev-sdk:spryker-runtime` | Drives the running Spryker application — storefront, back office, console, HTTP |
 | AI Runtime Debugging | `/spryker-ai-dev-sdk:ai-runtime-debugging` | Adds tagged debug logs (and optional XDebug) for inspecting Spryker runtime state |
+| Project CI Generator | `/spryker-ai-dev-sdk:project-ci-generator` | Rebuilds an inherited product-style CI setup into a single, lean project CI pipeline, keeping only the jobs and support files the project needs |
 
 ### Subagents
 

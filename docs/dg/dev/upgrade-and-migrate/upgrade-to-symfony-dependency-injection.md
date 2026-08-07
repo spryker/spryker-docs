@@ -1,7 +1,7 @@
 ---
 title: How to upgrade to Symfony Dependency Injection
 description: This document describes how to upgrade your application to use Symfony's Dependency Injection component.
-last_updated: Feb 23, 2026
+last_updated: Jul 28, 2026
 template: howto-guide-template
 ---
 
@@ -120,7 +120,7 @@ To compile the container, you have two options:
 
 - On every request to the application, the Kernel checks if a compiled container already exists. If not, or if the cache is outdated, it generates a new one.
 - The container is also compiled on the first run of any console command.
-- Run the following command to build the cache. The application then immediately uses the freshly compiled container.
+- Build the cache. The application then immediately uses the freshly compiled container.
 
 When you need to compile the container in development mode you can run the command manually:
 
@@ -129,6 +129,8 @@ console container:build
 ```
 
 ## Next steps
+
+The compiled container and the Symfony stack are designed to run with Opcache enabled—make sure it is active on all deployed environments. See [Opcache activation](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html#opcache-activation).
 
 - [Dependency Injection](/docs/dg/dev/architecture/dependency-injection.html)
 - [Bundles](/docs/dg/dev/architecture/symfony-bundles.html)

@@ -1,7 +1,7 @@
 ---
 title: Install the Product Experience Management feature
 description: Learn how to install the Product Experience Management feature into your Spryker project.
-last_updated: Apr 08 2026
+last_updated: Jul 27 2026
 template: feature-integration-guide-template
 ---
 
@@ -52,36 +52,34 @@ Configure the filesystem storage for import and export files. The feature requir
 
 **config/Shared/config_default.php**
 
+To enable an IAM role configuration, use `IamAws3v3FilesystemBuilderPlugin`:
+
 ```php
-use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\Aws3v3FilesystemBuilderPlugin;
+use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\IamAws3v3FilesystemBuilderPlugin;
 use Spryker\Shared\FileSystem\FileSystemConstants;
 
 $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
     // ... existing entries ...
     'product-experience-management-imports' => [
-        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
-        'key' => getenv('SPRYKER_S3_PEM_IMPORT_KEY') ?: '',
+        'sprykerAdapterClass' => IamAws3v3FilesystemBuilderPlugin::class,
         'bucket' => getenv('SPRYKER_S3_PEM_IMPORT_BUCKET') ?: '',
-        'secret' => getenv('SPRYKER_S3_PEM_IMPORT_SECRET') ?: '',
-        'root' => '/',
+        'region' => getenv('AWS_REGION') ?: '',
         'path' => 'pem-imports/',
-        'region' => getenv('SPRYKER_S3_PEM_IMPORT_REGION') ?: '',
-        'version' => getenv('SPRYKER_S3_PEM_IMPORT_VERSION') ?: 'latest',
-        'endpoint' => getenv('SPRYKER_S3_PEM_IMPORT_ENDPOINT') ?: null,
     ],
     'product-experience-management-exports' => [
-        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
-        'key' => getenv('SPRYKER_S3_PEM_EXPORT_KEY') ?: '',
+        'sprykerAdapterClass' => IamAws3v3FilesystemBuilderPlugin::class,
         'bucket' => getenv('SPRYKER_S3_PEM_EXPORT_BUCKET') ?: '',
-        'secret' => getenv('SPRYKER_S3_PEM_EXPORT_SECRET') ?: '',
-        'root' => '/',
+        'region' => getenv('AWS_REGION') ?: '',
         'path' => 'pem-exports/',
-        'region' => getenv('SPRYKER_S3_PEM_EXPORT_REGION') ?: '',
-        'version' => getenv('SPRYKER_S3_PEM_EXPORT_VERSION') ?: 'latest',
-        'endpoint' => getenv('SPRYKER_S3_PEM_EXPORT_ENDPOINT') ?: null,
     ],
 ];
 ```
+
+{% info_block warningBox "IAM authentication required" %}
+
+These filesystems authenticate through the IAM role attached to the workload, which resolves AWS credentials automatically. Access keys (`key` and `secret`) are not supported. If your project was set up from older documentation using access keys, migrate to this configuration. For more details, see [AWS S3 filesystem builder plugins](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html#aws-s3-filesystem-builder-plugins).
+
+{% endinfo_block %}
 
 #### Development (local filesystem)
 

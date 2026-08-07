@@ -81,7 +81,7 @@ Fill in all empty merchant references before migration. After the migration, you
 </table>
 ```
 
-2. Update `Merchant` module version and its dependencies by running the following command:
+2. Update `Merchant` module version and its dependencies:
 
 ```bash
 composer require spryker/merchant:"^3.0.0" --update-with-dependencies
@@ -222,7 +222,7 @@ Keep in mind that the Merchant module makes sense only in connection with the [M
 
 To upgrade to the new version of the module, do the following:
 
-1. Update the `Merchant` module version and its dependencies by running the following command:
+1. Update the `Merchant` module version and its dependencies:
 
 ```bash
 composer require spryker/merchant:"^2.0.0" --update-with-dependencies
@@ -246,7 +246,7 @@ console propel:install
 console transfer:generate
 ```
 
-5. Generate translator cache by running the following command to get the latest Zed translations:
+5. Generate the translator cache to get the latest Zed translations:
 
 ```bash
 console translator:generate-cache

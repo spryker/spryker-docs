@@ -2,7 +2,7 @@
 title: Install the Basic Shop Theme feature
 description: Learn how to integrate the Basic Shop Theme feature to configure logos, colors, and custom CSS from the Back Office without code changes.
 template: howto-guide-template
-last_updated: Apr 1, 2026
+last_updated: Jul 27, 2026
 related:
   - title: Basic Shop Theme feature overview
     link: /docs/pbc/all/back-office/latest/base-shop/basic-shop-theme-feature-overview.html
@@ -127,43 +127,36 @@ Add the three media filesystem services to `config/Shared/config_default.php`. I
 
 **config/Shared/config_default.php**
 
-Add the three media filesystem entries inside the existing `$config[FileSystemConstants::FILESYSTEM_SERVICE]` array:
+Add the three media filesystem entries inside the existing `$config[FileSystemConstants::FILESYSTEM_SERVICE]` array. To enable an IAM role configuration, use `IamAws3v3FilesystemBuilderPlugin`:
 
 ```php
 $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
-    // ... existing entries ...
     'backoffice-media' => [
-        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
-        'key' => getenv('SPRYKER_S3_PUBLIC_ASSETS_KEY') ?: '',
+        'sprykerAdapterClass' => IamAws3v3FilesystemBuilderPlugin::class,
         'bucket' => getenv('SPRYKER_S3_PUBLIC_ASSETS_BUCKET') ?: '',
-        'secret' => getenv('SPRYKER_S3_PUBLIC_ASSETS_SECRET') ?: '',
-        'root' => '/backoffice-media',
-        'path' => '/',
-        'version' => 'latest',
-        'region' => getenv('AWS_REGION'),
+        'region' => getenv('AWS_REGION') ?: '',
+        'path' => '/backoffice-media',
     ],
     'storefront-media' => [
-        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
-        'key' => getenv('SPRYKER_S3_PUBLIC_ASSETS_KEY') ?: '',
+        'sprykerAdapterClass' => IamAws3v3FilesystemBuilderPlugin::class,
         'bucket' => getenv('SPRYKER_S3_PUBLIC_ASSETS_BUCKET') ?: '',
-        'secret' => getenv('SPRYKER_S3_PUBLIC_ASSETS_SECRET') ?: '',
-        'root' => '/storefront-media',
-        'path' => '',
-        'version' => 'latest',
-        'region' => getenv('AWS_REGION'),
+        'region' => getenv('AWS_REGION') ?: '',
+        'path' => '/storefront-media',
     ],
     'merchant-portal-media' => [
-        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
-        'key' => getenv('SPRYKER_S3_PUBLIC_ASSETS_KEY') ?: '',
+        'sprykerAdapterClass' => IamAws3v3FilesystemBuilderPlugin::class,
         'bucket' => getenv('SPRYKER_S3_PUBLIC_ASSETS_BUCKET') ?: '',
-        'secret' => getenv('SPRYKER_S3_PUBLIC_ASSETS_SECRET') ?: '',
-        'root' => '/merchant-portal-media',
-        'path' => '',
-        'version' => 'latest',
-        'region' => getenv('AWS_REGION'),
+        'region' => getenv('AWS_REGION') ?: '',
+        'path' => '/merchant-portal-media',
     ],
 ];
 ```
+
+{% info_block warningBox "IAM authentication required" %}
+
+These filesystems authenticate through the IAM role attached to the workload, which resolves AWS credentials automatically. Access keys (`key` and `secret`) are not supported. If your project was set up from older documentation using access keys, migrate to this configuration. For more details, see [AWS S3 filesystem builder plugins](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html#aws-s3-filesystem-builder-plugins).
+
+{% endinfo_block %}
 
 #### 4.2) Add local filesystem fallback for development
 

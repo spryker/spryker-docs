@@ -39,8 +39,8 @@ This section explains how to fill out a merchant commission import file. For mor
 | key                       | ✓        | mc1                                         | Unique identifier of the merchant commission. |
 | name                      | ✓        | Merchant Commission 1                       | Name of the merchant commission. Accepted length: 1 to 255 characters. Must be unique. |
 | description               |          |                                             | Description of the merchant commission. |
-| valid_from                | ✓        | 6/30/2029 0:00:00                           | Start date of the merchant commission validity in UTC. |
-| valid_to                  | ✓        | 8/30/2029 0:00:00                           | End date of the merchant commission validity in UTC. |
+| valid_from                | ✓        | 2029-06-30 00:00:00                         | Start date of the merchant commission validity in UTC. |
+| valid_to                  | ✓        | 2029-08-30 00:00:00                         | End date of the merchant commission validity in UTC. |
 | is_active                 | ✓        | 1                                           | Defines if the merchant commission is active (1) or inactive (0). |
 | amount                    |          | 5                                           | Commission in percentage. Accepts decimals—for example, `10.99` means 10.99%. If `calculator_type_plugin` is set to `fixed`, `amount` must be `0`. |
 | calculator_type_plugin    | ✓        | percentage                                  | Defines how commission is calculated. By default, accepts `percentage` and `fixed`. |

@@ -1,7 +1,7 @@
 ---
 title: AI Dev SDK Skills and Agents
 description: Reference of the skills and agents shipped with the AI Dev SDK
-last_updated: Jul 22, 2026
+last_updated: Jul 28, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, windsurf, copilot, skills, agents, subagents, spryker
 template: concept-topic-template
@@ -61,6 +61,7 @@ Skills are delivered through `ai-dev:setup` (all supported AI tools) or the Clau
 | `spryker-docs-research` | Look up the right answer in official Spryker documentation | Grounds AI work in documented behavior rather than the model's memory; falls back gracefully when MCP tools are unavailable |
 | `spryker-runtime` | Drive the running Spryker application — Yves, Back Office, Merchant Portal, console, HTTP | Real authenticated sessions; read-only DB / Redis / queue inspection; reusable building block for higher-level skills and agents |
 | `ai-runtime-debugging` | Inspect Spryker runtime state safely from an AI session | `[AI-DEBUG]` tagged-log pattern plus optional XDebug step-debug; built-in cleanup of debug instrumentation before commit |
+| `project-ci-generator` | Transform an inherited product-style CI setup into a single, lean project CI pipeline | Reads the CI that actually exists rather than applying a template; reuses the discovered commands verbatim so the result stays environment-correct; proposes a keep/drop plan for approval before deleting anything; ports the same jobs to GitLab or Bitbucket |
 
 ## Agents
 

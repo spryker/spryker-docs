@@ -97,7 +97,7 @@ regions:
     namespace: eu_search
 ```
 
-5. **Before first deployment**, create a support case and provide the deploy.ABC.yml file that contains the dynamic multistore setup. For example: "We have added the dynamic multistore setup to our deploy.ABC.yml and would like it to be activated."
+5. **Before first deployment**, create a support case and provide the `deploy.ABC.yml` file that contains the dynamic multistore setup. For example: "We have added the dynamic multistore setup to our `deploy.ABC.yml` and would like it to be activated."
 
 6. DMS changes the structure of RabbitMQ messages. When you're ready for the migration, wait for all the remaining messages in the queue to be processed. When the queue is empty, enable the maintenance mode.
 

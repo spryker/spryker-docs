@@ -58,8 +58,6 @@ export default class NameOfYourComponent extends Component {
 }
 ```
 
-Also, you can come across an old method `readyCallback()`, which is deprecated.
-
 If the library does not export anything, you can import a module for its side effects only:
 
 **name-of-your-component.ts**

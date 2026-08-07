@@ -1,7 +1,7 @@
 ---
 title: API Platform
 description: Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation and the integration of the API Platform Bundle.
-last_updated: Jul 28, 2026
+last_updated: Jul 31, 2026
 template: concept-topic-template
 related:
   - title: How to integrate API Platform
@@ -531,6 +531,7 @@ For detailed implementation guides:
 - [Security](/docs/dg/dev/architecture/api-platform/security.html) - Authentication and authorization
 - [API Platform Enablement](/docs/dg/dev/architecture/api-platform/enablement.html) - Creating your first resource
 - [Resource Schemas](/docs/dg/dev/architecture/api-platform/resource-schemas.html) - Resource Schemas
+- [Typed collections in the published contract](/docs/dg/dev/architecture/api-platform/typed-collections.html) - What object collections publish, and when to adopt them
 - [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html) - Validation Schemas
 - [Native API Platform Resources](/docs/dg/dev/architecture/api-platform/native-api-platform-resources.html) - Using native PHP attributes
 - [CodeBucket Support](/docs/dg/dev/architecture/api-platform/code-buckets.html) - Region-specific resources

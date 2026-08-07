@@ -1,7 +1,7 @@
 ---
 title: Upgrade API Platform resources to typed nested objects
 description: How to update your project to the typed nested object schema DSL, which modules must move together, and how to recognize a partial update.
-last_updated: Jul 31, 2026
+last_updated: Aug 7, 2026
 template: howto-guide-template
 related:
   - title: Resource schemas
@@ -16,7 +16,7 @@ This document describes how to upgrade a project to the typed nested objects upd
 
 After the upgrade, a `type: object` property with nested `properties:` generates a dedicated PHP value-object class (for example, `Generated\Api\Storefront\Carts\CartsTotalsStorefrontObject`) instead of an untyped array, and the OpenAPI document publishes a full field-by-field schema for it. The JSON on the wire stays the same for read endpoints; several write endpoints gain stricter, more precise validation. For the concept documentation, see [Resource schemas](/docs/integrations/spryker-api/api-platform/resource-schemas.html).
 
-{% info_block errorBox "Update all listed modules together" %}
+{% info_block warningBox "Update all listed modules together" %}
 
 The modules in this release reference each other's new behavior at runtime. To stop a project from updating only part of the set, `spryker/api-platform` and every consumer module now declare composer `conflict` constraints against the previous minors: composer refuses a partial update instead of installing a broken combination (see [Troubleshooting a partial update](#troubleshooting-a-partial-update) for what a bypassed conflict looks like). Update every listed module in one composer run.
 

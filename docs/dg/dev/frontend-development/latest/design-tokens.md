@@ -1,13 +1,13 @@
 ---
 title: Design tokens
-last_updated: April 22, 2026
+last_updated: August 6, 2026
 description: Learn how design tokens work in Spryker, where they are configured, and how they are compiled into CSS custom properties during the frontend build.
 template: concept-topic-template
 ---
 
 Design tokens are the single source of truth for visual constants — colors, typography, spacing, radii, shadows, and strokes. They are defined in a JSON file using the [Design Tokens Community Group (DTCG)](https://tr.designtokens.org/format/) format and compiled into CSS custom properties (`--*`) that are available globally on `:root`.
 
-For a visual overview of all available tokens and their values, see the [B2B Design Token Reference](https://design-system-xi-lac.vercel.app/).
+For a visual overview of all available tokens and their values, see the [B2B Design Token Reference](https://design-system-xi-lac.vercel.app/). To see the components that consume these tokens, see the [B2B component library](/docs/dg/dev/frontend-development/latest/component-library.html).
 
 ## How it works
 

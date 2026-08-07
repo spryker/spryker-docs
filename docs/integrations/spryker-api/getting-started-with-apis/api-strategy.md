@@ -1,7 +1,7 @@
 ---
 title: Spryker API Strategy
 description: What to build on, what changes, and how to choose the right Spryker API.
-last_updated: Jul 30, 2026
+last_updated: Aug 7, 2026
 template: default
 layout: custom_new
 redirect_from:
@@ -41,7 +41,7 @@ Spryker's APIs are described by three **independent** axes. They are easy to con
 | Data Exchange API | Backend API | API Platform integration |
 | Async Event API | Backend API | API Platform integration |
 
-Read the table across, not down: each API type belongs to one application and is built on one foundation, and those two facts are independent of each other. "Storefront API" names both an application and the type it hosts; "API Platform integration" is a foundation, not an endpoint you target. During the transition, an existing type can be served by either foundation. The foundation column reflects the strategic direction: today, the types hosted by the Backend API application are served on the Glue foundation. For the current per-module state, see [Migration status - Glue API to API Platform](/docs/integrations/spryker-api/migrate-from-glue-to-api-platform/migrate-to-api-platform-status.html).
+Read the table across, not down: each API type belongs to one application and is built on one foundation, and those two facts are independent of each other. "Storefront API" names both an application and the type it hosts; "API Platform integration" is a foundation, not an endpoint you target. During the transition, an existing type can be served by either foundation.
 
 {% info_block infoBox "Naming watch-out" %}
 

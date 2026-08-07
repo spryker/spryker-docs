@@ -23,7 +23,7 @@ The following details have been changed:
 
 To upgrade to the new version of the module, do the following:
 
-1. Run the following command to update the `ConfigurableBundle` module and its dependencies version:
+1. Update the `ConfigurableBundle` module and its dependencies version:
 
 ```bash
 composer require spryker/configurable-bundle:"^2.0.0" --update-with-dependencies
@@ -55,7 +55,7 @@ console propel:install
 console transfer:generate
 ```
 
-6. Generate translator cache by running the following command to get the latest Zed translations:
+6. Generate the translator cache to get the latest Zed translations:
 
 ```bash
 console translator:generate-cache
@@ -114,7 +114,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 }
 ```
 
-9. Run the following command to apply JS changes:
+9. Apply the JS changes:
 
 ```bash
 console frontend:zed:build

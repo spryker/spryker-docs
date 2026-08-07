@@ -1,7 +1,7 @@
 ---
 title: Endpoint security
 description: Learn about endpoint security features and best practices for securing integration endpoints in Spryker, including authentication, IP whitelisting, HTTPS enforcement, and monitoring.
-last_updated: Jul 31, 2026
+last_updated: Aug 7, 2026
 template: default
 redirect_from:
   - /docs/integrations/custom-building-integrations/endpoint-security.html
@@ -42,7 +42,7 @@ While not specific to Spryker, it is recommended (and often defaulted via infras
 
 ### Use token-based authentication
 
-Prefer OAuth2 or API keys with expiration and rotation over Basic Auth for better control and traceability. Spryker APIs support token-based schemes out of the box.
+Prefer OAuth2 or API keys with expiration and rotation over Basic Auth for better control, traceability and security. Spryker APIs support token-based schemes out of the box.
 
 <a class="fl_cont" href="/docs/integrations/spryker-api/authenticating-and-authorization/authenticating-and-authorization.html">
   <div class="fl_icon">

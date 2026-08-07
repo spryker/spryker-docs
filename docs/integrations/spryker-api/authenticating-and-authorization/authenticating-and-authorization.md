@@ -2,7 +2,7 @@
 title: Authentication and authorization
 description: Learn how to authenticate and authorize requests in the Spryker Storefront
   and Backend APIs using OAuth 2.0.
-last_updated: Jul 31, 2026
+last_updated: Aug 7, 2026
 template: default
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/authentication-and-authorization.html
@@ -18,7 +18,6 @@ redirect_from:
   - /docs/dg/dev/glue-api/latest/old-glue-infrastructure/glue-api-authentication-and-authorization
   - /docs/dg/dev/glue-api/latest/authentication-and-authorization.html
   - /docs/dg/dev/glue-api/latest/rest-api/glue-api-authentication-and-authorization.html
-
   - /docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html
 ---
 
@@ -84,15 +83,11 @@ Protected resources require authentication for interactions. To see which endpoi
 
 Storefront API:
 - [Storefront API B2B Demo Shop Reference](/docs/integrations/spryker-api/storefront-api/api-references/storefront-api-b2b-demo-shop-reference.html)
-- [Storefront API B2C Demo Shop Reference](/docs/integrations/spryker-api/storefront-api/api-references/storefront-api-b2c-demo-shop-reference.html)
 - [Storefront API Marketplace B2B Demo Shop Reference](/docs/integrations/spryker-api/storefront-api/api-references/storefront-api-marketplace-b2b-demo-shop-reference.html)
-- [Storefront API Marketplace B2C Demo Shop Reference](/docs/integrations/spryker-api/storefront-api/api-references/storefront-api-marketplace-b2c-demo-shop-reference.html)
 
 Backend API:
 - [Backend API B2B Demo Shop Reference](/docs/integrations/spryker-api/backend-api/api-references/backend-api-b2b-demo-shop-reference.html)
-- [Backend API B2C Demo Shop Reference](/docs/integrations/spryker-api/backend-api/api-references/backend-api-b2c-demo-shop-reference.html)
 - [Backend API Marketplace B2B Demo Shop Reference](/docs/integrations/spryker-api/backend-api/api-references/backend-api-marketplace-b2b-demo-shop-reference.html)
-- [Backend API Marketplace B2C Demo Shop Reference](/docs/integrations/spryker-api/backend-api/api-references/backend-api-marketplace-b2c-demo-shop-reference.html)
 
 ## In this section
 

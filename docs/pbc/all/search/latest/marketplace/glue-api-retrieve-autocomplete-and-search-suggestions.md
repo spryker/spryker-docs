@@ -1809,7 +1809,7 @@ To retrieve a search suggestion, send the request:
 | abstractProducts.images.externalUrlLarge | String | URL of the product's large image. |
 | categoryCollection | Array    | Categories that match the search query. Each item in the array is an *Object* representing a category. |
 | categoryCollection.name     | String   | Specifies the category name. |
-| categoryCollection.URL    | String   | Specifies the category URL.  |
+| categoryCollection.url    | String   | Specifies the category URL.  |
 | cmsPageCollection  | Array    | CMS pages that match the search query. Each item in the array is an *Object* representing a single page. |
 | cmsPageCollection.name       | String   | Specifies the page title. |
 | cmsPageCollection.url      | String   | Specifies the page URL.   |

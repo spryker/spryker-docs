@@ -1,7 +1,7 @@
 ---
 title: Storefront API
 description: Storefront API is designed for customer-facing applications and buyer journey touchpoints with REST API and JSON:API conventions.
-last_updated: Jul 31, 2026
+last_updated: Aug 7, 2026
 template: default
 layout: custom_new
 redirect_from:
@@ -196,7 +196,7 @@ The response structure follows the [JSON API](https://jsonapi.org/format/#docume
 
 To help you understand possible use cases, we provide a sample app as an exemplary implementation (which is not a starting point for development). It can coexist with a shop as a second touchpoint in the project. From a technological perspective, it's based on our customers' interests. The app is a single-page application based on the React JS library.
 
-It delivers a full customer experience from browsing the catalog to placing an order. The application helps you understand how you can use the predefined APIs to create a B2C user experience. As an example, the full power of Elasticsearch, which is already present in our [B2B](/docs/about/all/b2b-suite.html) and [B2C Demo Shops](/docs/about/all/b2c-suite.html), is leveraged through dedicated endpoints to deliver catalog search functionality with autocompletion, autosuggestion, facets, sorting, and pagination.
+It delivers a full customer experience from browsing the catalog to placing an order. The application helps you understand how you can use the predefined APIs to create a B2C user experience. As an example, the full power of Elasticsearch, which is already present in our [B2B Demo Shop](/docs/about/all/b2b-suite.html), is leveraged through dedicated endpoints to deliver catalog search functionality with autocompletion, autosuggestion, facets, sorting, and pagination.
 
 {% info_block infoBox %}
 
@@ -227,15 +227,13 @@ You can benefit from the APIs in these aspects:
 To start working with Storefront API:
 
 1. **Authentication**: Obtain customer authentication tokens. For details, see [Authenticating and authorization](/docs/integrations/spryker-api/authenticating-and-authorization/authenticating-and-authorization.html).
-2. **Explore endpoints**: Review available customer-facing API resources—for example, in the [Storefront API B2C Demo Shop Reference](/docs/integrations/spryker-api/storefront-api/api-references/storefront-api-b2c-demo-shop-reference.html).
+2. **Explore endpoints**: Review available customer-facing API resources—for example, in the [Storefront API B2B Demo Shop Reference](/docs/integrations/spryker-api/storefront-api/api-references/storefront-api-b2b-demo-shop-reference.html).
 3. **Implement requests**: Use REST API with [JSON:API](https://jsonapi.org/) conventions.
 4. **Handle responses**: Process API responses according to the JSON:API format. For details, see [Response structure](#response-structure).
 
 ## Further reading
 
 - [Storefront API B2B Demo Shop Reference](/docs/integrations/spryker-api/storefront-api/api-references/storefront-api-b2b-demo-shop-reference.html)
-- [Storefront API B2C Demo Shop Reference](/docs/integrations/spryker-api/storefront-api/api-references/storefront-api-b2c-demo-shop-reference.html)
 - [Storefront API Marketplace B2B Demo Shop Reference](/docs/integrations/spryker-api/storefront-api/api-references/storefront-api-marketplace-b2b-demo-shop-reference.html)
-- [Storefront API Marketplace B2C Demo Shop Reference](/docs/integrations/spryker-api/storefront-api/api-references/storefront-api-marketplace-b2c-demo-shop-reference.html)
 - [Authentication and Authorization](/docs/integrations/spryker-api/authenticating-and-authorization/authenticating-and-authorization.html)
 - [Glue infrastructure](/docs/integrations/spryker-api/storefront-api/developing-apis/glue-infrastructure.html)

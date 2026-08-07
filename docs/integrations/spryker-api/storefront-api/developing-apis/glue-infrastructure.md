@@ -1,7 +1,7 @@
 ---
 title: Glue infrastructure
 description: Architecture of the legacy Glue infrastructure of the Storefront API—request handling, resource routing, module structure, resource relationships, and versioning.
-last_updated: Jul 31, 2026
+last_updated: Aug 7, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202404.0/old-glue-infrastructure/glue-infrastructure.html
@@ -14,9 +14,9 @@ redirect_from:
   - /docs/integrations/spryker-api/storefront-api/developing-apis/storefront-infrastructure.html
 ---
 
-{% info_block infoBox "Legacy Glue implementation" %}
+{% info_block warningBox "Deprecation warning" %}
 
-This page describes the legacy Glue implementation of the Storefront API. For developing new endpoints, use [API Platform](/docs/integrations/spryker-api/api-platform/api-platform.html).
+The Glue implementation of the Storefront API described on this page is deprecated; [API Platform](/docs/integrations/spryker-api/api-platform/api-platform.html) is the recommended infrastructure for new development.
 
 {% endinfo_block %}
 

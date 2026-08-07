@@ -2,10 +2,10 @@
 title: Backend API request and response reference
 description: Reference for Backend API resource modules, request and response structures, HTTP status codes, and headers on the Glue infrastructure.
 template: default
-last_updated: Jul 30, 2026
+last_updated: Aug 7, 2026
 ---
 
-{% info_block infoBox "Glue-based Backend API" %}
+{% info_block warningBox "Deprecation warning" %}
 
 {% include integrations/backend-api-on-glue-status.md %}
 

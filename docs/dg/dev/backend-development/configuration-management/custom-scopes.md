@@ -28,7 +28,7 @@ Adding a custom scope requires changes in three areas:
 | Area                                     | What | Why |
 |------------------------------------------|------|-----|
 | Shared Config                            | Register scope in hierarchy | Value resolution knows the parent chain |
-| Zed Plugin                               | Provide scope identifiers | Backoffice scope switcher lists available identifiers |
+| Zed Plugin                               | Provide scope identifiers | Back Office scope switcher lists available identifiers |
 | Optional: Zed + Client Plugin | Expand read requests with scope context | `getModuleConfig()` calls automatically include scope |
 
 ## Step-by-Step Guide

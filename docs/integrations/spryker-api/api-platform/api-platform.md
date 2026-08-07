@@ -1,7 +1,7 @@
 ---
 title: API Platform
 description: Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation and the integration of the API Platform Bundle.
-last_updated: Jul 31, 2026
+last_updated: Aug 7, 2026
 template: concept-topic-template
 related:
   - title: Integrate API Platform
@@ -212,7 +212,7 @@ Spryker supports multiple API types for different use cases:
 
 ### Glue API 
 
-This API is configured to serve the JSON:API format by default, which can be configured per project. Projects migrating their APIs can provide new APIs as well as supporting the existing ones while migrating.
+This API is configured to serve the [JSON:API](https://jsonapi.org/format/) format by default; to change the supported formats, see [Configure supported formats](/docs/integrations/spryker-api/api-platform/configuration.html#configure-supported-formats). Projects migrating their APIs can provide new APIs as well as supporting the existing ones while migrating.
 
 - **API Type:** `storefront`
 - **Application:** Glue
@@ -221,7 +221,7 @@ This API is configured to serve the JSON:API format by default, which can be con
 
 ### GlueStorefront API 
 
-This API serves the JSON:API format by default; additional formats, such as JSON-LD, can be enabled per project.
+This API serves the [JSON:API](https://jsonapi.org/format/) format by default; additional formats, such as JSON-LD, can be enabled per project. For instructions, see [Configure supported formats](/docs/integrations/spryker-api/api-platform/configuration.html#configure-supported-formats).
 
 - **API Type:** `storefront`
 - **Application:** GlueStorefront

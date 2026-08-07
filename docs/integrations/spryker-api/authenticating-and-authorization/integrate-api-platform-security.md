@@ -1,7 +1,7 @@
 ---
 title: Integrate API Platform security
 description: This document describes how to set up authentication and authorization for API Platform in your Spryker application.
-last_updated: Jul 31, 2026
+last_updated: Aug 7, 2026
 template: howto-guide-template
 related:
   - title: Security
@@ -161,7 +161,7 @@ Use the same configuration as above.
 | `firewall('main')->lazy(true)` | The authenticator is only instantiated when a route requires authentication, reducing overhead for public endpoints. |
 | `firewall('main')->stateless(true)` | Disables session-based authentication. Every request must include its own Bearer token. |
 | `customAuthenticators([OauthAuthenticator::class])` | Registers the Spryker OAuth authenticator that validates Bearer tokens using the local OAuth infrastructure. |
-| `entryPoint(GlueAuthenticationEntryPoint::class)` | Returns the Glue-compatible `403` `Missing access token.` error when an unauthenticated request hits a protected resource. Without it, the response format does not match the legacy Glue behavior. |
+| `entryPoint(GlueAuthenticationEntryPoint::class)` | Returns the standard `403` `Missing access token.` error when an unauthenticated request hits a protected resource. |
 | `accessControl()->roles(['PUBLIC_ACCESS'])` | Grants public access to all paths by default. Individual resources opt in to authentication using `security` expressions. |
 
 ## 3. Add security expressions to resources
@@ -196,7 +196,7 @@ docker/sdk cli glue debug:container SecurityBundle
 
 ### Test authentication
 
-Send a request without a token to a protected resource — it should return `403 Forbidden` with the Glue-compatible `Missing access token.` error:
+Send a request without a token to a protected resource — it should return `403 Forbidden` with the `Missing access token.` error:
 
 ```bash
 curl -s https://glue-storefront.your-domain/customers/DE--1 | jq .

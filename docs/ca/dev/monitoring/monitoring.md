@@ -1,7 +1,7 @@
 ---
 title: Monitoring
 description:
-last_updated: Feb 25, 2025
+last_updated: July 30, 2026
 template: howto-guide-template
 ---
 
@@ -19,6 +19,8 @@ Integrate Spryker monitoring data into your preferred APM tool using OpenTelemet
 ### New Relic APM
 
 Use New Relic's powerful APM features to monitor and troubleshoot your applications. For more details, see [New Relic](/docs/dg/dev/integrate-and-configure/configure-services.html#new-relic).
+
+You can also forward application log records to New Relic and correlate them with transactions, errors, and traces. For more details, see [Configure New Relic application logging](/docs/dg/dev/integrate-and-configure/configure-services.html#configure-new-relic-application-logging).
 
 ## Logs with CloudWatch
 

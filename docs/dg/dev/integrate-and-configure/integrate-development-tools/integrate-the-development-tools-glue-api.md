@@ -1,7 +1,7 @@
 ---
 title: Integrate the Development Tools Glue API
 description: This guide explains how to integrate the Glue Development Tools feature into a Spryker project.
-last_updated: Jul 31, 2026
+last_updated: Aug 7, 2026
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-development-tools-feature-integration
 originalArticleId: 116f0a62-f6dc-4707-a2d1-d2c89a7c4a53
@@ -14,9 +14,9 @@ redirect_from:
 
 This document describes how to install the Glue: Development Tools feature.
 
-{% info_block infoBox "Glue infrastructure only" %}
+{% info_block warningBox "Deprecation warning" %}
 
-The Development Tools feature and the `DocumentationGeneratorRestApi` module apply to the legacy Glue infrastructure. Endpoints served by [API Platform](/docs/integrations/spryker-api/api-platform/api-platform.html) get interactive OpenAPI documentation out of the box and do not need this feature.
+The Development Tools feature and the `DocumentationGeneratorRestApi` module apply to the deprecated Glue infrastructure. Endpoints served by [API Platform](/docs/integrations/spryker-api/api-platform/api-platform.html) get interactive OpenAPI documentation out of the box and do not need this feature.
 
 {% endinfo_block %}
 

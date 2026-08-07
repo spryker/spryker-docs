@@ -1,7 +1,7 @@
 ---
 title: Backend API
 description: Backend API is designed for administrative operations and system-to-system communication with direct access to Zed Facades.
-last_updated: July 30, 2026
+last_updated: Aug 7, 2026
 template: default
 layout: custom_new
 redirect_from:
@@ -61,9 +61,7 @@ Key benefits:
 ## Further Reading
 
 - [Backend API B2B Demo Shop Reference](/docs/integrations/spryker-api/backend-api/api-references/backend-api-b2b-demo-shop-reference.html)
-- [Backend API B2C Demo Shop Reference](/docs/integrations/spryker-api/backend-api/api-references/backend-api-b2c-demo-shop-reference.html)
 - [Backend API Marketplace B2B Demo Shop Reference](/docs/integrations/spryker-api/backend-api/api-references/backend-api-marketplace-b2b-demo-shop-reference.html)
-- [Backend API Marketplace B2C Demo Shop Reference](/docs/integrations/spryker-api/backend-api/api-references/backend-api-marketplace-b2c-demo-shop-reference.html)
 - [Create Backend Resources](/docs/integrations/spryker-api/backend-api/developing-apis/create-backend-resources.html)
 - [Data Exchange API](/docs/integrations/spryker-api/backend-api/data-exchange-api/data-exchange-api.html)
 - [Authentication and Authorization](/docs/integrations/spryker-api/authenticating-and-authorization/authenticating-and-authorization.html)

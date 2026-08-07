@@ -1,7 +1,7 @@
 ---
 title: Extend a Storefront API resource
 description: This tutorial shows how to extend Storefront API resources
-last_updated: Jul 30, 2026
+last_updated: Aug 7, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/extending-a-rest-request-resource
 originalArticleId: 765f9daa-fe09-4e7b-9344-17dd4e65a952
@@ -26,7 +26,7 @@ Spryker Storefront API comes with a set of predefined APIs out of the box. You c
 
 {% info_block infoBox %}
 
-If you have a development virtual machine with the [B2C Demo Shop](/docs/about/all/about-spryker.html#demo-shops) installed, all the required components are available out of the box.
+If you have a development environment with the [B2B Demo Shop](/docs/about/all/b2b-suite.html) installed, all the required components are available out of the box.
 
 Assume that you modify the product storage data to match your product requirements—for example, you add the `manufacturerCountry` field to the product data not as an attribute but as another field in the database.
 

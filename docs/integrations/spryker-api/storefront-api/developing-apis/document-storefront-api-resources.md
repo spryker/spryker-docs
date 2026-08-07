@@ -1,7 +1,7 @@
 ---
 title: Document Storefront API resources
 description: This guide shows how to document Storefront API resources
-last_updated: Jul 31, 2026
+last_updated: Aug 7, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202404.0/glue-api-tutorials/document-glue-api-resources.html
@@ -22,9 +22,7 @@ The resulting document is a full description of your Storefront API following th
 
 Storefront API endpoints shipped by Spryker are covered by documentation by default. A snapshot of the latest state of Spryker Storefront API can be found in Spryker Documentation. For more information, see Storefront API references:
 - [Storefront API B2B Demo Shop Reference](/docs/integrations/spryker-api/storefront-api/api-references/storefront-api-b2b-demo-shop-reference.html)
-- [Storefront API B2C Demo Shop Reference](/docs/integrations/spryker-api/storefront-api/api-references/storefront-api-b2c-demo-shop-reference.html)
 - [Storefront API Marketplace B2B Demo Shop Reference](/docs/integrations/spryker-api/storefront-api/api-references/storefront-api-marketplace-b2b-demo-shop-reference.html)
-- [Storefront API Marketplace B2C Demo Shop Reference](/docs/integrations/spryker-api/storefront-api/api-references/storefront-api-marketplace-b2c-demo-shop-reference.html)
 
 {% endinfo_block %}
 

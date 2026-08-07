@@ -2,10 +2,10 @@
 title: Backend and Storefront API module differences
 description: Module-level implementation differences between Backend API and Storefront API modules on the Glue infrastructure.
 template: default
-last_updated: Jul 30, 2026
+last_updated: Aug 7, 2026
 ---
 
-{% info_block infoBox "Glue-based Backend API" %}
+{% info_block warningBox "Deprecation warning" %}
 
 {% include integrations/backend-api-on-glue-status.md %}
 

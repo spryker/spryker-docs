@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Retrieve abstract product prices"
 description: Retrieve details information about prices of abstract products using the Spryker GLUE API within your Spryker Projects.
-last_updated: Jun 21, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-abstract-product-prices
 originalArticleId: 903570fe-6ca4-4165-b0d3-6764e0262308
@@ -211,4 +211,4 @@ To retrieve prices of an abstract product, send the request:
 | 307 | Abstract product price is not found (for example, because of the wrong abstract product SKU. |
 | 311 | Abstract product SKU is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

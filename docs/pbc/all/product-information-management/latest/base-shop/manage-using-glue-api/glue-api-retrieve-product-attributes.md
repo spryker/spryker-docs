@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Retrieve product attributes"
 description: The article explains how you can retrieve product attributes via the Spryker Cloud Commerce OS GLUE API
-last_updated: Jun 22, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-product-attributes
 originalArticleId: 11708dbe-4c10-47db-8e40-d5cf23a8c3eb
@@ -233,4 +233,4 @@ Request sample: retrieve a product attribute
 | --- | --- |
 | 4201 | Attribute not found. |
 
-For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

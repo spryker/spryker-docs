@@ -2,7 +2,7 @@
 title: Marketplace Product Options feature overview
 description: The Marketplace Product Options feature lets merchants and Marketplace administrators create product option groups.
 template: concept-topic-template
-last_updated: Nov 21, 2023
+last_updated: Jul 30, 2026
 redirect_from:
   - /docs/marketplace/user/features/202311.0/marketplace-product-options-feature-overview.html
 related:
@@ -80,7 +80,7 @@ Currently, the feature has the following functional constraints which are going 
 - Product option values of a product option group can be only from one merchant.
 - Product options of a merchant can be used with all offers from all merchants.
 - There is no Back Office UI for approving or denying merchant product options.
-- [Storefront API](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/storefront-api.html) does not support merchant product option groups and values.
+- [Storefront API](/docs/integrations/spryker-api/storefront-api/storefront-api.html) does not support merchant product option groups and values.
 - Merchants can not create and manage product option groups and values in the Merchant Portal.
 
 ## Related Business User documents

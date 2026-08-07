@@ -11,144 +11,200 @@ entries:
   - title: Spryker APIs
     nested:
     - title: Getting started with APIs
-      url: /docs/integrations/spryker-glue-api/getting-started-with-apis/getting-started-with-apis.html
+      url: /docs/integrations/spryker-api/getting-started-with-apis/getting-started-with-apis.html
       nested:
       - title: Spryker API Strategy
-        url: /docs/integrations/spryker-glue-api/getting-started-with-apis/api-strategy.html
+        url: /docs/integrations/spryker-api/getting-started-with-apis/api-strategy.html
       - title: Spryker API roadmap and adoption
-        url: /docs/integrations/spryker-glue-api/getting-started-with-apis/api-roadmap-and-adoption.html
-      - title: Differences between Storefront and Backend APIs
-        url: /docs/integrations/spryker-glue-api/getting-started-with-apis/comparison-of-storefront-and-backend-apis.html
-    - title: Authenticating and authorization
-      url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html
-      nested:
-      - title: Create grant type parameters
-        url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/create-grant-type-parameters.html
-      - title: Configure cross-origin resource sharing for Glue API
-        url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/configure-cross-origin-resource-sharing-for-glue-api.html
-      - title: Integrate a CIAM Provider
-        url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/integrate-a-ciam-provider.html
-      - title: Backend API
-        nested:
-        - title: Use authentication servers with Backend API
-          url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/backend-api/use-authentication-servers-with-backend-api.html
-        - title: Create protected Backend API endpoints
-          url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/backend-api/create-protected-backend-api-endpoints.html
-        - title: Create Backend API authorization strategies
-          url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/backend-api/create-backend-api-authorization-strategies.html
-        - title: Use API Key authorization
-          url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/backend-api/use-api-key-authorization.html
-        - title: Use Backend API authorization scopes
-          url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/backend-api/use-backend-api-authorization-scopes.html
+        url: /docs/integrations/spryker-api/getting-started-with-apis/api-roadmap-and-adoption.html
+      - title: Comparison of Storefront and Backend APIs
+        url: /docs/integrations/spryker-api/getting-started-with-apis/comparison-of-storefront-and-backend-apis.html
     - title: Storefront API
-      url: /docs/integrations/spryker-glue-api/storefront-api/storefront-api.html
+      url: /docs/integrations/spryker-api/storefront-api/storefront-api.html
       nested:
+      - title: Using the Storefront API
+        url: /docs/integrations/spryker-api/storefront-api/using-storefront-api.html
       - title: API references
         nested:
-        - title: Storefront B2B API reference
-          url: /docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-b2b-demo-shop-reference.html
-        - title: Storefront  B2C API reference
-          url: /docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-b2c-demo-shop-reference.html
-        - title: Storefront Marketplace B2B API reference
-          url: /docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-marketplace-b2b-demo-shop-reference.html
-        - title: Storefront Marketplace B2C API reference
-          url: /docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-marketplace-b2c-demo-shop-reference.html
-      - title: Using APIs
+        - title: Storefront API B2B Demo Shop reference
+          url: /docs/integrations/spryker-api/storefront-api/api-references/storefront-api-b2b-demo-shop-reference.html
+        - title: Storefront API B2C Demo Shop reference
+          url: /docs/integrations/spryker-api/storefront-api/api-references/storefront-api-b2c-demo-shop-reference.html
+        - title: Storefront API Marketplace B2B Demo Shop reference
+          url: /docs/integrations/spryker-api/storefront-api/api-references/storefront-api-marketplace-b2b-demo-shop-reference.html
+        - title: Storefront API Marketplace B2C Demo Shop reference
+          url: /docs/integrations/spryker-api/storefront-api/api-references/storefront-api-marketplace-b2c-demo-shop-reference.html
+        - title: Reference information - GlueApplication errors
+          url: /docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html
+      - title: Use cases
         nested:
         - title: Adding products to cart
-          url: /docs/integrations/spryker-glue-api/storefront-api/adding-products-to-cart.html
+          url: /docs/integrations/spryker-api/storefront-api/adding-products-to-cart.html
         - title: Catalog search and filtering
-          url: /docs/integrations/spryker-glue-api/storefront-api/catalog-search-and-filtering.html
-      - title: Developing APIs
+          url: /docs/integrations/spryker-api/storefront-api/catalog-search-and-filtering.html
+      - title: Develop with API Platform
         nested:
-        - title: Storefront API security and authentication
-          url: /docs/integrations/spryker-glue-api/storefront-api/developing-apis/storefront-api-security-and-authentication.html
-        - title: Storefront API
-          url: /docs/integrations/spryker-glue-api/storefront-api/developing-apis/storefront-api.html
-        - title: Storefront API infrastructure
-          url: /docs/integrations/spryker-glue-api/storefront-api/developing-apis/storefront-infrastructure.html
+        - title: API Platform overview
+          url: /docs/integrations/spryker-api/api-platform/api-platform.html
+        - title: Implement an API Platform resource
+          url: /docs/integrations/spryker-api/api-platform/enablement.html
+        - title: Resource schemas
+          url: /docs/integrations/spryker-api/api-platform/resource-schemas.html
+        - title: Validation schemas
+          url: /docs/integrations/spryker-api/api-platform/validation-schemas.html
+        - title: Resource relationships
+          url: /docs/integrations/spryker-api/api-platform/relationships.html
+        - title: Serialization
+          url: /docs/integrations/spryker-api/api-platform/serialization.html
+        - title: Sparse fieldsets
+          url: /docs/integrations/spryker-api/api-platform/sparse-fieldsets.html
+        - title: Handle concurrent requests with entity tags
+          url: /docs/integrations/spryker-api/api-platform/entity-tags.html
+        - title: Configuration
+          url: /docs/integrations/spryker-api/api-platform/configuration.html
+        - title: CodeBucket support
+          url: /docs/integrations/spryker-api/api-platform/code-buckets.html
+        - title: Native API Platform resources
+          url: /docs/integrations/spryker-api/api-platform/native-api-platform-resources.html
+        - title: Test API Platform resources
+          url: /docs/integrations/spryker-api/api-platform/testing.html
+        - title: IDE integration
+          url: /docs/integrations/spryker-api/api-platform/ide-integration.html
+        - title: Troubleshooting
+          url: /docs/integrations/spryker-api/api-platform/troubleshooting.html
+      - title: Develop with Glue (legacy)
+        nested:
+        - title: Glue infrastructure
+          url: /docs/integrations/spryker-api/storefront-api/developing-apis/glue-infrastructure.html
         - title: Implement a REST API resource
-          url: /docs/integrations/spryker-glue-api/storefront-api/developing-apis/implement-a-rest-api-resource.html
-        - title: Configure the included section
-          url: /docs/integrations/spryker-glue-api/storefront-api/developing-apis/configure-the-included-section.html
+          url: /docs/integrations/spryker-api/storefront-api/developing-apis/implement-a-rest-api-resource.html
         - title: Validate REST request format
-          url: /docs/integrations/spryker-glue-api/storefront-api/developing-apis/validate-rest-request-format.html
-        - title: Implement versioning for REST API resources
-          url: /docs/integrations/spryker-glue-api/storefront-api/developing-apis/implement-versioning-for-rest-api-resources.html
-        - title: Document Storefront API resources
-          url: /docs/integrations/spryker-glue-api/storefront-api/developing-apis/document-storefront-api-resources.html
+          url: /docs/integrations/spryker-api/storefront-api/developing-apis/validate-rest-request-format.html
+        - title: Configure the included section
+          url: /docs/integrations/spryker-api/storefront-api/developing-apis/configure-the-included-section.html
         - title: Extend a Storefront API resource
-          url: /docs/integrations/spryker-glue-api/storefront-api/developing-apis/extend-a-storefront-api-resource.html
-        - title: Resolving search engine friendly URLs
-          url: /docs/integrations/spryker-glue-api/storefront-api/developing-apis/marketplace-glue-api-resolve-search-engine-friendly-urls.html
-        - title: Handling concurrent REST requests and caching with entity tags
-          url: /docs/integrations/spryker-glue-api/storefront-api/developing-apis/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
+          url: /docs/integrations/spryker-api/storefront-api/developing-apis/extend-a-storefront-api-resource.html
+        - title: Implement versioning for REST API resources
+          url: /docs/integrations/spryker-api/storefront-api/developing-apis/implement-versioning-for-rest-api-resources.html
+        - title: Document Storefront API resources
+          url: /docs/integrations/spryker-api/storefront-api/developing-apis/document-storefront-api-resources.html
+        - title: Handle concurrent requests with entity tags
+          url: /docs/integrations/spryker-api/storefront-api/developing-apis/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
+        - title: Resolve search engine friendly URLs
+          url: /docs/integrations/spryker-api/storefront-api/developing-apis/marketplace-glue-api-resolve-search-engine-friendly-urls.html
+        - title: Test Glue API
+          url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-glue-api.html
         - title: B2C API React example
-          url: /docs/integrations/spryker-glue-api/storefront-api/developing-apis/b2c-api-react-example/b2c-api-react-example.html
+          url: /docs/integrations/spryker-api/storefront-api/developing-apis/b2c-api-react-example/b2c-api-react-example.html
           nested:
           - title: Install B2C API React example
-            url: /docs/integrations/spryker-glue-api/storefront-api/developing-apis/b2c-api-react-example/install-b2c-api-react-example.html
+            url: /docs/integrations/spryker-api/storefront-api/developing-apis/b2c-api-react-example/install-b2c-api-react-example.html
     - title: Backend API
-      url: /docs/integrations/spryker-glue-api/backend-api/backend-api.html
+      url: /docs/integrations/spryker-api/backend-api/backend-api.html
       nested:
-      - title: Data Exchange API
-        url: /docs/integrations/spryker-glue-api/backend-api/data-exchange-api/data-exchange-api.html
-        nested:
-        - title: Configure Data Exchange API endpoints
-          url: /docs/integrations/spryker-glue-api/backend-api/data-exchange-api/configure-data-exchange-api.html
-        - title: Sending requests to Data Exchange API
-          url: /docs/integrations/spryker-glue-api/backend-api/data-exchange-api/sending-requests-to-data-exchange-api.html
-        - title: Create post plugins for Data Exchange API
-          url: /docs/integrations/spryker-glue-api/backend-api/data-exchange-api/create-post-plugins-for-data-exchange-api.html
-        - title: Batch processing and performance optimization with Data Exchange API
-          url: /docs/integrations/spryker-glue-api/backend-api/data-exchange-api/batch-processing-and-performance-optimization.html
-        - title: Data Exchange API limitations
-          url: /docs/integrations/spryker-glue-api/backend-api/data-exchange-api/data-exchange-api-limitations.html
       - title: API references
         nested:
         - title: Backend B2B API reference
-          url: /docs/integrations/spryker-glue-api/backend-api/api-references/backend-api-b2b-demo-shop-reference.html
+          url: /docs/integrations/spryker-api/backend-api/api-references/backend-api-b2b-demo-shop-reference.html
         - title: Backend B2C API reference
-          url: /docs/integrations/spryker-glue-api/backend-api/api-references/backend-api-b2c-demo-shop-reference.html
+          url: /docs/integrations/spryker-api/backend-api/api-references/backend-api-b2c-demo-shop-reference.html
         - title: Backend API Marketplace B2B Demo Shop reference
-          url: /docs/integrations/spryker-glue-api/backend-api/api-references/backend-api-marketplace-b2b-demo-shop-reference.html
+          url: /docs/integrations/spryker-api/backend-api/api-references/backend-api-marketplace-b2b-demo-shop-reference.html
         - title: Backend API Marketplace B2C Demo Shop reference
-          url: /docs/integrations/spryker-glue-api/backend-api/api-references/backend-api-marketplace-b2c-demo-shop-reference.html
-      - title: Developing APIs
+          url: /docs/integrations/spryker-api/backend-api/api-references/backend-api-marketplace-b2c-demo-shop-reference.html
+      - title: Data Exchange API
+        url: /docs/integrations/spryker-api/backend-api/data-exchange-api/data-exchange-api.html
         nested:
-        - title: Create API applications
-          url: /docs/integrations/spryker-glue-api/backend-api/developing-apis/create-api-applications.html
-        - title: Create Backend API resources with parent-child relationships
-          url: /docs/integrations/spryker-glue-api/backend-api/developing-apis/create-backend-api-resources-with-parent-child-relationships.html
-        - title: Create and change Glue API conventions
-          url: /docs/integrations/spryker-glue-api/backend-api/developing-apis/create-and-change-backend-api-conventions.html
-        - title: Create a backend resource
-          url: /docs/integrations/spryker-glue-api/backend-api/developing-apis/create-backend-resources.html
-        - title: Create JSON:API relationships
-          url: /docs/integrations/spryker-glue-api/backend-api/developing-apis/create-json-api-relationships.html
-        - title: Create routes
-          url: /docs/integrations/spryker-glue-api/backend-api/developing-apis/create-routes.html
-        - title: Use default Backend parameters
-          url: /docs/integrations/spryker-glue-api/backend-api/developing-apis/use-default-backend-parameters.html
-        - title: Document Backend API endpoints
-          url: /docs/integrations/spryker-glue-api/backend-api/developing-apis/document-backend-api-endpoints.html
-    - title: Integrate Backend API
-      nested:
-        - title: Integrate Backend API
-          url: /docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-backend-api.html
+        - title: Configure Data Exchange API endpoints
+          url: /docs/integrations/spryker-api/backend-api/data-exchange-api/configure-data-exchange-api.html
+        - title: Sending requests to Data Exchange API
+          url: /docs/integrations/spryker-api/backend-api/data-exchange-api/sending-requests-to-data-exchange-api.html
+        - title: Create post plugins for Data Exchange API
+          url: /docs/integrations/spryker-api/backend-api/data-exchange-api/create-post-plugins-for-data-exchange-api.html
+        - title: Batch processing and performance optimization with Data Exchange API
+          url: /docs/integrations/spryker-api/backend-api/data-exchange-api/batch-processing-and-performance-optimization.html
+        - title: Data Exchange API limitations
+          url: /docs/integrations/spryker-api/backend-api/data-exchange-api/data-exchange-api-limitations.html
+      - title: Integrate Backend API
+        url: /docs/integrations/spryker-api/backend-api/integrate-backend-api/integrate-backend-api.html
+        nested:
         - title: Integrate the authentication
-          url: /docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-the-authentication.html
+          url: /docs/integrations/spryker-api/backend-api/integrate-backend-api/integrate-the-authentication.html
         - title: Integrate the API Key authorization
-          url: /docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-api-key-authorization.html
+          url: /docs/integrations/spryker-api/backend-api/integrate-backend-api/integrate-api-key-authorization.html
         - title: Integrate the authorization scopes
-          url: /docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-the-authorization-scopes.html
+          url: /docs/integrations/spryker-api/backend-api/integrate-backend-api/integrate-the-authorization-scopes.html
         - title: Integrate the documentation generator
-          url: /docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-the-documentation-generator.html
+          url: /docs/integrations/spryker-api/backend-api/integrate-backend-api/integrate-the-documentation-generator.html
         - title: Integrate the protected endpoints authorization
-          url: /docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-the-protected-endpoints-authorization.html
-
+          url: /docs/integrations/spryker-api/backend-api/integrate-backend-api/integrate-the-protected-endpoints-authorization.html
+      - title: Develop Backend APIs
+        nested:
+        - title: Backend API request and response reference
+          url: /docs/integrations/spryker-api/backend-api/developing-apis/backend-api-request-and-response-reference.html
+        - title: Backend and Storefront API module differences
+          url: /docs/integrations/spryker-api/backend-api/developing-apis/backend-and-storefront-api-module-differences.html
+        - title: Create API applications
+          url: /docs/integrations/spryker-api/backend-api/developing-apis/create-api-applications.html
+        - title: Create Backend API resources with parent-child relationships
+          url: /docs/integrations/spryker-api/backend-api/developing-apis/create-backend-api-resources-with-parent-child-relationships.html
+        - title: Create and change Backend API conventions
+          url: /docs/integrations/spryker-api/backend-api/developing-apis/create-and-change-backend-api-conventions.html
+        - title: Create backend resources
+          url: /docs/integrations/spryker-api/backend-api/developing-apis/create-backend-resources.html
+        - title: Create JSON API relationships
+          url: /docs/integrations/spryker-api/backend-api/developing-apis/create-json-api-relationships.html
+        - title: Create routes
+          url: /docs/integrations/spryker-api/backend-api/developing-apis/create-routes.html
+        - title: Use default Backend parameters
+          url: /docs/integrations/spryker-api/backend-api/developing-apis/use-default-backend-parameters.html
+        - title: Document Backend API endpoints
+          url: /docs/integrations/spryker-api/backend-api/developing-apis/document-backend-api-endpoints.html
+    - title: Authentication and authorization
+      url: /docs/integrations/spryker-api/authenticating-and-authorization/authenticating-and-authorization.html
+      nested:
+      - title: Storefront API security and authentication (Glue)
+        url: /docs/integrations/spryker-api/authenticating-and-authorization/storefront-api-security-and-authentication.html
+      - title: Backend API (Glue)
+        nested:
+        - title: Use authentication servers with Backend API
+          url: /docs/integrations/spryker-api/authenticating-and-authorization/backend-api/use-authentication-servers-with-backend-api.html
+        - title: Create protected Backend API endpoints
+          url: /docs/integrations/spryker-api/authenticating-and-authorization/backend-api/create-protected-backend-api-endpoints.html
+        - title: Create Backend API authorization strategies
+          url: /docs/integrations/spryker-api/authenticating-and-authorization/backend-api/create-backend-api-authorization-strategies.html
+        - title: Use API key authorization
+          url: /docs/integrations/spryker-api/authenticating-and-authorization/backend-api/use-api-key-authorization.html
+        - title: Use Backend API authorization scopes
+          url: /docs/integrations/spryker-api/authenticating-and-authorization/backend-api/use-backend-api-authorization-scopes.html
+      - title: API Platform
+        nested:
+        - title: API Platform security
+          url: /docs/integrations/spryker-api/authenticating-and-authorization/security.html
+        - title: Integrate API Platform security
+          url: /docs/integrations/spryker-api/authenticating-and-authorization/integrate-api-platform-security.html
+      - title: Create grant type parameters
+        url: /docs/integrations/spryker-api/authenticating-and-authorization/create-grant-type-parameters.html
+      - title: Configure cross-origin resource sharing for Glue API
+        url: /docs/integrations/spryker-api/authenticating-and-authorization/configure-cross-origin-resource-sharing-for-glue-api.html
+      - title: Integrate a CIAM provider
+        url: /docs/integrations/spryker-api/authenticating-and-authorization/integrate-a-ciam-provider.html
+      - title: Endpoint security
+        url: /docs/integrations/spryker-api/authenticating-and-authorization/endpoint-security.html
+    - title: Migrate from Glue to API Platform
+      nested:
+      - title: API Platform migration overview
+        url: /docs/integrations/spryker-api/migrate-from-glue-to-api-platform/migrate-to-api-platform-overview.html
+      - title: Integrate API Platform
+        url: /docs/integrations/spryker-api/migrate-from-glue-to-api-platform/integrate-api-platform.html
+      - title: Migrate to API Platform
+        url: /docs/integrations/spryker-api/migrate-from-glue-to-api-platform/migrate-to-api-platform.html
+      - title: Migration status - Glue API to API Platform
+        url: /docs/integrations/spryker-api/migrate-from-glue-to-api-platform/migrate-to-api-platform-status.html
+      - title: Upgrade API Platform resources to typed nested objects
+        url: /docs/integrations/spryker-api/migrate-from-glue-to-api-platform/upgrade-to-api-platform-typed-nested-objects.html
     - title: Spryker API Errors and Troubleshooting
-      url: /docs/integrations/spryker-glue-api/spryker-api-errors-and-troubleshooting.html
+      url: /docs/integrations/spryker-api/spryker-api-errors-and-troubleshooting.html
   - title: Custom building integrations
     url: /docs/integrations/custom-building-integrations/custom-build-integrations-with-spryker.html
     nested:
@@ -179,6 +235,8 @@ entries:
             url: /docs/integrations/custom-building-integrations/data-exchange/data-export/export-file-details-orders.csv.html
           - title: 'Export file details: order-items.csv'
             url: /docs/integrations/custom-building-integrations/data-exchange/data-export/export-file-details-order-items.csv.html
+        - title: Simplified Data Export
+          url: /docs/integrations/custom-building-integrations/data-exchange/data-export/simplified-data-export-feature.html
       - title: Data import from S3 bucket
         url: /docs/integrations/custom-building-integrations/data-exchange/data-import-from-s3-bucket.html
       - title: Integrating with Middleware

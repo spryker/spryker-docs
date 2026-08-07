@@ -1,9 +1,10 @@
 ---
 title: Retrieve availability when retrieving abstract products
 description: Learn how to retrieve availability when retrieving abstract products using Glue API within your Spryker based projects.
-last_updated: Aug 22, 2022
+last_updated: July 30, 2026
 template: glue-api-storefront-guide-template
 redirect_from:
+- /docs/pbc/all/warehouse-management-system/latest/manage-using-glue-api/glue-api-retrieve-availability-when-retrieving-abstract-products.html
 - /docs/pbc/all/warehouse-management-system/202311.0/base-shop/manage-using-glue-api/retrieve-availability-when-retrieving-abstract-products.html
 - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-availability-when-retrieving-abstract-products.html
 ---

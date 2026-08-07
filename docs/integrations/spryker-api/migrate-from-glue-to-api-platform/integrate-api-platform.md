@@ -1,0 +1,223 @@
+---
+title: Integrate API Platform
+description: This document describes how to integrate API Platform into your Spryker application.
+last_updated: Jul 31, 2026
+template: howto-guide-template
+redirect_from:
+  - /docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
+---
+
+This document describes how to integrate API Platform into your Spryker application to enable schema-based API resource generation.
+
+If you're migrating an existing Spryker shop from the Glue REST stack, read the [API Platform migration overview](/docs/integrations/spryker-api/migrate-from-glue-to-api-platform/migrate-to-api-platform-overview.html) first. This integration guide is one step inside that larger flow.
+
+## Prerequisites
+
+Before integrating API Platform, ensure you have:
+
+- Upgraded to Symfony Dependency Injection as described in [How to upgrade to Symfony Dependency Injection](/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html)
+- PHP 8.3 or higher
+- Symfony 6.4 or higher components
+
+## 1. Install the required modules
+
+To integrate API Platform, install the following modules:
+
+```bash
+composer require spryker/api-platform:"^1.0.0" --update-with-dependencies
+```
+
+{% info_block infoBox "Target versions" %}
+
+For the list of currently migrated modules and their status, see the [Glue API to API Platform migration status page](/docs/integrations/spryker-api/migrate-from-glue-to-api-platform/migrate-to-api-platform-status.html). Update your `spryker/*-rest-api` modules to a version that ships the endpoints you migrate.
+
+{% endinfo_block %}
+
+## 2. Register bundles
+
+Register the required bundles in each application's bundle file — `config/Glue/bundles.php`, `config/GlueStorefront/bundles.php`, and `config/GlueBackend/bundles.php` are identical:
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+use ApiPlatform\Symfony\Bundle\ApiPlatformBundle;
+use Spryker\ApiPlatform\SprykerApiPlatformBundle;
+use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
+use Symfony\Bundle\SecurityBundle\SecurityBundle;
+use Symfony\Bundle\TwigBundle\TwigBundle;
+
+return [
+    FrameworkBundle::class => ['all' => true],
+    SecurityBundle::class => ['all' => true],
+    TwigBundle::class => ['all' => true],
+    ApiPlatformBundle::class => ['all' => true],
+    SprykerApiPlatformBundle::class => ['all' => true],
+];
+```
+
+{% info_block infoBox "SecurityBundle" %}
+
+The `SecurityBundle` enables authentication and authorization for API Platform resources using Bearer token (JWT) validation and security expressions. For detailed setup including firewall configuration, see [Integrate API Platform security](/docs/integrations/spryker-api/authenticating-and-authorization/integrate-api-platform-security.html).
+
+{% endinfo_block %}
+
+## 3. Configure API Platform
+
+Create a `spryker_api_platform.php` and an `api_platform.php` file in each application layer where you enable API Platform — `config/Glue/packages/`, `config/GlueStorefront/packages/`, and `config/GlueBackend/packages/`. At minimum, `spryker_api_platform.php` must set the application's `apiTypes()` — `['storefront']` for the Glue and GlueStorefront applications, `['backend']` for the GlueBackend application.
+
+For the full reference of both configuration files, every available setting, and links to the released demo-shop configurations, see [API Platform configuration](/docs/integrations/spryker-api/api-platform/configuration.html).
+
+## 4. Update Router Configuration
+
+Update the router dependency provider for each application where you want to enable API Platform routes.
+
+### For Glue application
+
+`src/Pyz/Glue/Router/RouterDependencyProvider.php`
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Glue\Router;
+
+use Spryker\Glue\Router\Plugin\Router\SymfonyFrameworkRouterPlugin;
+use Spryker\Glue\GlueApplication\Plugin\Rest\GlueRouterPlugin;
+use Spryker\Glue\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
+
+class RouterDependencyProvider extends SprykerRouterDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Glue\RouterExtension\Dependency\Plugin\RouterPluginInterface>
+     */
+    protected function getRouterPlugins(): array
+    {
+        return [
+            new GlueRouterPlugin(), // Existing Glue API router
+            new SymfonyFrameworkRouterPlugin(), // Add this for API Platform routes
+        ];
+    }
+}
+```
+
+{% info_block infoBox "Router order matters" %}
+
+The order of router plugins matters. The `SymfonyFrameworkRouterPlugin` must be added after existing router plugins to ensure the correct routing priority. The `GlueRouterPlugin` should remain the first in the list to handle existing and not yet migrated Glue API endpoints.
+
+When migrating existing Glue API endpoints to API Platform, you need to remove endpoints from the `GlueRouterPlugin` so that the `SymfonyFrameworkRouterPlugin` is used to resolve the route. To remove routes from the `GlueRouterPlugin` update the corresponding `GlueApplicationDependencyProvider`, `GlueBackendApiApplicationDependencyProvider`, or `GlueStorefrontApiApplicationDependencyProvider` and remove the resource route plugin for the route you currently migrate.
+
+{% endinfo_block %}
+
+## 5. Generate API resources
+
+After configuration, generate your API resources from the schema files:
+
+```bash
+# Generate resources for all configured API types
+docker/sdk cli glue api:generate
+```
+
+Target a specific application by prefixing with `GLUE_APPLICATION=GLUE_STOREFRONT` or `GLUE_APPLICATION=GLUE_BACKEND`. For the full set of generation and debug commands (single API type, `--dry-run`, `--validate-only`, schema inspection), see [Resource generation](/docs/integrations/spryker-api/api-platform/api-platform.html#resource-generation) in the architecture guide.
+
+The generated resources are created in `src/Generated/Api/{ApiType}/`.
+
+## 6. Install assets for the API Platform documentation interface
+
+Install the necessary assets for API Platform to function correctly:
+
+### For Glue application
+
+```bash
+docker/sdk cli glue assets:install public/Glue/assets --symlink
+```
+
+### For GlueStorefront
+
+```bash
+docker/sdk cli GLUE_APPLICATION=GLUE_STOREFRONT glue assets:install public/GlueStorefront/assets/ --symlink
+```
+
+### For GlueBackend
+
+```bash
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue assets:install public/GlueBackend/assets/ --symlink
+```
+
+{% info_block warningBox "Required step" %}
+
+The `assets:install` command is required to copy the necessary assets (CSS, JavaScript, images) for the API Platform documentation interface. Without this step, the API documentation UI will not display correctly.
+
+{% endinfo_block %}
+
+## 7. Clear caches
+
+After generation and asset installation, clear application caches:
+
+```bash
+# Clear all caches
+console cache:clear
+
+# Build Symfony container cache
+console container:build
+```
+
+## 8. Warm the API Platform router cache
+
+API Platform registers its operations as routes in the standard Symfony router. With debug disabled (production), the compiled router dump is written once and then frozen for the life of the container, so it **must** be built against the fully generated resource collection. After generating resources (step 5), warm the cache for each Glue application:
+
+```bash
+docker/sdk cli GLUE_APPLICATION=GLUE_STOREFRONT glue cache:warmup
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue cache:warmup
+```
+
+{% info_block warningBox "Required on AWS and any multi-container deployment" %}
+
+This step is mandatory in cloud (AWS ECS) and any split build/runtime topology. If the router dump is built before resources are generated—or never warmed in the runtime container—every API request returns HTTP 404 and the empty dump stays frozen for the life of the container.
+
+Use `cache:warmup` (or `cache:clear`), **not** `api:router:cache:warm-up`, which warms only the legacy Glue router and does not build the API Platform router dump.
+
+For the full explanation, multi-container guidance, and recovery steps, see [Cache warming](/docs/integrations/spryker-api/api-platform/api-platform.html#cache-warming) and [Multi-container and cloud deployments](/docs/integrations/spryker-api/api-platform/api-platform.html#multi-container-and-cloud-deployments) in the architecture guide.
+
+{% endinfo_block %}
+
+## Verification
+
+To verify your integration:
+
+1. **Debug available resources:**
+
+   ```bash
+   # List all API resources
+   docker/sdk cli glue  api:debug --list
+
+   # Inspect specific resource
+   docker/sdk cli glue  api:debug access-tokens --api-type=storefront
+   ```
+
+2. **Access API documentation:**
+   - Glue: `https://glue.your-domain/`
+   - GlueStorefront: `https://glue-storefront.your-domain/`
+   - GlueBackend: `https://glue-backend.your-domain/`
+
+   The interactive OpenAPI documentation interface will be displayed at the root URL of each application.
+
+   Depending on the environment of the application (development or production), the documentation interface may be enabled or disabled by default. Currently, it is only enabled in development (docker.dev) environments.
+   
+   You can enable/disable this interface by configuring the settings in your `api_platform.php` configuration files.
+
+3. **Check Opcache on deployed environments:**
+
+   Make sure `opcache.enable: 1` is set for all deployed environments. API Platform loads a large class graph per request, so running it without Opcache adds a flat overhead of seconds to every request. See [Opcache activation](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html#opcache-activation).
+
+## Next steps
+
+- [API Platform](/docs/integrations/spryker-api/api-platform/api-platform.html) - Overview and concepts
+- [Integrate API Platform security](/docs/integrations/spryker-api/authenticating-and-authorization/integrate-api-platform-security.html) - Authentication and authorization setup
+- [API Platform migration overview](/docs/integrations/spryker-api/migrate-from-glue-to-api-platform/migrate-to-api-platform-overview.html) - End-to-end migration walk-through
+- [Enablement](/docs/integrations/spryker-api/api-platform/enablement.html) - Create your first API resource
+- [Resource schemas](/docs/integrations/spryker-api/api-platform/resource-schemas.html) - Resource schemas
+- [Validation schemas](/docs/integrations/spryker-api/api-platform/validation-schemas.html) - Validation schemas
+- [Native API Platform resources](/docs/integrations/spryker-api/api-platform/native-api-platform-resources.html) - Using native PHP attributes

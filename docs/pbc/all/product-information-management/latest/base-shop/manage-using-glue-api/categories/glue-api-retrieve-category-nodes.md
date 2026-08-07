@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Retrieving category nodes"
 description: Retrieve information about category nodes within your Spryker Cloud Commerce OS Project using the Spryker GLUE API
-last_updated: Jun 16, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-category-nodes
 originalArticleId: 1e544fa3-90d1-449f-8d32-54a18f9b2631
@@ -132,4 +132,4 @@ Request sample: retrieve a category node
 | 701 | Node ID not specified or invalid. |
 | 703 | Node with the specified ID was not found. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

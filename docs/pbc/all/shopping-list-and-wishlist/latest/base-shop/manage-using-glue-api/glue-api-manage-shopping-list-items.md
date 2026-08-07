@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Manage shopping list items"
 description: Learn how to manage Spryker shopping list items via the Glue API in your Spryker Cloud Commerce OS Projects.
-last_updated: Jun 16, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-shopping-list-items
 originalArticleId: 9800fd79-ab57-4778-a68e-50b23236a3cc
@@ -647,4 +647,4 @@ If the item is removed successfully, the endpoint returns the `204 No Content` s
 | 1504 | Specified shopping list item is not found. |
 | 1508 | Concrete product is not found. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

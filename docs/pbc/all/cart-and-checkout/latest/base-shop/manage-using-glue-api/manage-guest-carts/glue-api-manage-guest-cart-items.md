@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Manage guest cart items"
 description: Retrieve details about guest cart items and learn what else you can do with the resource.
-last_updated: Jun 29, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-guest-cart-items
 originalArticleId: 55c07d5d-006b-4f81-99b1-92c6a8124688
@@ -3376,4 +3376,4 @@ If the item is deleted successfully, the endpoint returns the "204 No Content" s
 | 4006 | The configured bundle cannot be updated. |
 | 4007 | The configured bundle cannot be removed. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

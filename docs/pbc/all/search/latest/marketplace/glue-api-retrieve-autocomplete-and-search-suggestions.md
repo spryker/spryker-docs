@@ -2,7 +2,7 @@
 title: "Glue API: Retrieve autocomplete and search suggestions"
 description: This document provides information about which endpoints to use to get search and auto-completion suggestions for your products, categories, and CMS fields
 template: glue-api-storefront-guide-template
-last_updated: Nov 21, 2023
+last_updated: Jul 30, 2026
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202212.0/retrieving-autocomplete-and-search-suggestions.html
   - /docs/scos/dev/glue-api-guides/201811.0/retrieving-autocomplete-and-search-suggestions.html
@@ -1820,4 +1820,4 @@ Although CMS pages also expose the `url` parameter, resolving of CMS page SEF UR
 
 {% endinfo_block %}
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

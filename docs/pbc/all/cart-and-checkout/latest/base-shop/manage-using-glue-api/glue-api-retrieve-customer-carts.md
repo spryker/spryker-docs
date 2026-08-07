@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Retrieve customer carts"
 description: Learn how to retrieve customer's carts via the Spryker Glue API with different requests for different cart actions.
-last_updated: Jul 20, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-customer-carts
 originalArticleId: a09a087b-5fca-483c-a2c2-f8441681b43e
@@ -1627,4 +1627,4 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 | 402 | Customer with the specified ID was not found. |
 | 802 | Request is unauthorized. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

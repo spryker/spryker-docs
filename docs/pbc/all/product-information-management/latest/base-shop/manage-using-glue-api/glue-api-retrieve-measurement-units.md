@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Retrieve measurement units"
 description: Retrieve details about measurement units and learn what else you can do with the resource.
-last_updated: Jun 16, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-measurement-units
 originalArticleId: 21b908ed-07a9-44fa-b3a8-614401d4deab
@@ -79,4 +79,4 @@ You can use the measurement units resource as follows:
 | 3401 | No product measurement unit code was specified. |
 | 3402 | Product measurement unit with the specified code was not found. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

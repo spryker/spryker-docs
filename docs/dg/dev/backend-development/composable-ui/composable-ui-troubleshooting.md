@@ -9,7 +9,7 @@ related:
     link: docs/dg/dev/backend-development/composable-ui/entity-configuration-reference.html
   - title: Composable UI best practices
     link: docs/dg/dev/backend-development/composable-ui/composable-ui-best-practices.html
-last_updated: Feb 20, 2026
+last_updated: Jul 30, 2026
 ---
 
 {% info_block warningBox "Beta" %}
@@ -300,5 +300,5 @@ If your issue is not listed here:
 
 1. Check browser DevTools Console and Network tabs for errors
 2. Review [Entity configuration reference](/docs/dg/dev/backend-development/composable-ui/entity-configuration-reference.html) for correct YAML syntax
-3. Consult [API Platform troubleshooting](/docs/dg/dev/architecture/api-platform/troubleshooting.html) for API-specific issues
+3. Consult [API Platform troubleshooting](/docs/integrations/spryker-api/api-platform/troubleshooting.html) for API-specific issues
 4. Review [Composable UI best practices](/docs/dg/dev/backend-development/composable-ui/composable-ui-best-practices.html) for implementation patterns

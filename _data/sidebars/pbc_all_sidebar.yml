@@ -142,7 +142,7 @@ entries:
                   - title: Edit delivery methods
                     url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/edit-delivery-methods.html
 
-              - title: Manage using Glue API
+              - title: Manage via API
                 nested:
                   - title: Retrieve shipments and shipment methods when submitting checkout data
                     url: /docs/pbc/all/carrier-management/base-shop/manage-using-glue-api/glue-api-retrieve-shipments-and-shipment-methods-when-submitting-checkout-data.html
@@ -450,11 +450,11 @@ entries:
                   - title: Define merchant order thresholds
                     url: /docs/pbc/all/cart-and-checkout/base-shop/manage-in-the-back-office/define-merchant-order-thresholds.html
 
-              - title: Manage using Glue API
+              - title: Manage via Storefront API
                 nested:
                   - title: Check out
                     nested:
-                      - title: Glue API checkout workflow
+                      - title: Checkout workflow
                         url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/check-out/glue-api-checkout-workflow.html
                       - title: Submit checkout data
                         url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html
@@ -547,7 +547,7 @@ entries:
                       - title: Install the Cart + Marketplace Product Offer Glue API
                         url: /docs/pbc/all/cart-and-checkout/marketplace/install/install-glue-api/install-the-cart-marketplace-product-offer-glue-api.html
 
-              - title: Manage using Glue API
+              - title: Manage via Storefront API
                 nested:
                   - title: Carts of registered users
                     url: /docs/pbc/all/cart-and-checkout/marketplace/manage-using-glue-api/carts-of-registered-users/carts-of-registered-users.html
@@ -740,7 +740,7 @@ entries:
                   - title: product_set.csv
                     url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/import-file-details-product-set.csv.html
 
-              - title: Manage using Glue API
+              - title: Manage via Storefront API
                 nested:
                   - title: Retrieve abstract product list content items
                     url: /docs/pbc/all/content-management-system/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-list-content-items.html
@@ -893,7 +893,7 @@ entries:
 
           - title: Marketplace
             nested:
-              - title: "Glue API: Retrieve abstract products in abstract product lists"
+              - title: "Retrieve abstract products in abstract product lists"
                 url: /docs/pbc/all/content-management-system/marketplace/glue-api-retrieve-abstract-products-in-abstract-product-lists.html
 
       - title: Customer Relationship Management
@@ -1041,7 +1041,7 @@ entries:
                       - title: Edit
                         url: /docs/pbc/all/customer-relationship-management/base-shop/manage-in-the-back-office/company-users/edit-company-users.html
 
-              - title: Manage using Glue API
+              - title: Manage via Storefront API
                 nested:
                   - title: Company account
                     nested:
@@ -1066,7 +1066,7 @@ entries:
                       - title: Retrieve customer orders
                         url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
 
-                  - title: Manage customer access to Glue API resources
+                  - title: Manage customer access to Storefront API resources
                     url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/manage-customer-access-to-glue-api-resources.html
 
               - title: Generate login tokens
@@ -1100,15 +1100,6 @@ entries:
 
       - title: Data Exchange
         url: /docs/pbc/all/data-exchange/data-exchange.html
-        nested:
-          - title: Install and upgrade
-            nested:
-              - title: Data Exchange API
-                url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api.html
-              - title: Data Exchange API + Inventory Management feature
-                url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api-inventory-management-feature.html
-              - title: Data Exchange API + Category Management feature
-                url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html
 
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
@@ -1159,7 +1150,7 @@ entries:
                   - title: Export voucher codes
                     url: /docs/pbc/all/discount-management/base-shop/manage-in-the-back-office/export-voucher-codes.html
 
-              - title: Manage using Glue API
+              - title: Manage via Storefront API
                 url: /docs/pbc/all/discount-management/base-shop/manage-using-glue-api/glue-api-manage-discounts.html
                 nested:
                   - title: Add items with discounts to carts of registered users
@@ -1297,7 +1288,7 @@ entries:
               - title: File details- gift_card_concrete_configuration.csv
                 url: /docs/pbc/all/gift-cards/import-and-export-data/import-file-details-gift-card-concrete-configuration.csv.html
 
-          - title: Manage using Glue API
+          - title: Manage via Storefront API
             nested:
               - title: Manage gift cards of guest users
                 url: /docs/pbc/all/gift-cards/manage-using-glue-api/glue-api-manage-gift-cards-of-guest-users.html
@@ -1328,7 +1319,7 @@ entries:
               - title: Integrate post-login redirect
                 url: /docs/pbc/all/identity-access-management/install-and-upgrade/integrate-post-login-redirect.html
 
-          - title: Manage using Glue API
+          - title: Manage via API
             nested:
               - title: Create customers
                 url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-create-customers.html
@@ -1608,7 +1599,7 @@ entries:
                   - title: Manage merchant relations
                     url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-merchant-portal/manage-merchant-relations.html
 
-              - title: Manage using Glue API
+              - title: Manage via Storefront API
                 url: /docs/pbc/all/merchant-management/marketplace/manage-using-glue-api/manage-merchants-using-glue-api.html
                 nested:
                   - title: Retrieve merchants
@@ -1736,9 +1727,9 @@ entries:
               - title: Edit translations
                 url: /docs/pbc/all/miscellaneous/manage-in-the-back-office/edit-translations.html
 
-          - title: Manage using Glue API
+          - title: Manage via API
             nested:
-              - title: Retrieve store configuration using Glue API
+              - title: Retrieve store configuration via Storefront API
                 url: /docs/pbc/all/miscellaneous/manage-using-glue-api/glue-api-retrieve-store-configuration.html
               - title: Manage push notification providers
                 nested:
@@ -1884,7 +1875,7 @@ entries:
             url: /docs/pbc/all/multi-factor-authentication/install-multi-factor-authentication-merchant-portal-feature.html
           - title: Create MFA methods
             url: /docs/pbc/all/multi-factor-authentication/create-multi-factor-authentication-methods.html
-          - title: Manage using Glue API
+          - title: Manage via API
             url: /docs/pbc/all/multi-factor-authentication/manage-using-glue-api/manage-multi-factor-authentication-using-glue-api.html
             nested:
               - title: Retrieve MFA methods
@@ -1993,7 +1984,7 @@ entries:
                   - title: Import Product Offers
                     url: /docs/pbc/all/offer-management/marketplace/import-offers-ui.html
 
-              - title: Retrieve using Glue API
+              - title: Retrieve via Storefront API
                 url: /docs/pbc/all/offer-management/marketplace/glue-api-retrieve-product-offers.html
               - title: Render merchant product offers on the Storefront
                 url: /docs/pbc/all/offer-management/marketplace/render-merchant-product-offers-on-the-storefront.html
@@ -2043,7 +2034,7 @@ entries:
                 url: /docs/pbc/all/offer-management/unified-commerce/import-file-details-product-offer-service.csv.html
               - title: Create and edit product offers
                 url: /docs/pbc/all/offer-management/unified-commerce/unified-commerce-create-and-edit-product-offers.html
-              - title: Retrieve product offer service point availability using Glue API
+              - title: Retrieve product offer service point availability via Storefront API
                 url: /docs/pbc/all/offer-management/unified-commerce/glue-api-retrieve-product-offer-service-point-availability.html
 
       - title: Order Management System
@@ -2178,7 +2169,7 @@ entries:
                   - title: View the order matrix
                     url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/view-the-order-matrix.html
 
-              - title: "Glue API: Retrieve orders"
+              - title: Retrieve orders
                 url: /docs/pbc/all/order-management-system/base-shop/glue-api-retrieve-orders.html
               - title: Domain model and relationships
                 nested:
@@ -2290,7 +2281,7 @@ entries:
 
               - title: Manage merchant orders in the Merchant Portal
                 url: /docs/pbc/all/order-management-system/marketplace/manage-merchant-orders.html
-              - title: "Glue API: Retrieve Marketplace orders"
+              - title: Retrieve Marketplace orders
                 url: /docs/pbc/all/order-management-system/marketplace/glue-api-retrieve-marketplace-orders.html
               - title: Merchant OMS
                 url: /docs/pbc/all/order-management-system/marketplace/merchant-oms.html
@@ -2362,7 +2353,7 @@ entries:
                 url: /docs/pbc/all/payment-service-provider/base-shop/debug-payment-integrations-locally.html
               - title: Hydrate payment methods for an order
                 url: /docs/pbc/all/payment-service-provider/base-shop/hydrate-payment-methods-for-an-order.html
-              - title: Interact with third party payment providers using Glue API
+              - title: Interact with third party payment providers via Storefront API
                 url: /docs/pbc/all/payment-service-provider/base-shop/interact-with-third-party-payment-providers-using-glue-api.html
               - title: Payment method strategies
                 url: /docs/pbc/all/payment-service-provider/base-shop/payment-method-strategies.html
@@ -2772,7 +2763,7 @@ entries:
                   - title: Add volume prices to abstract products and product bundles
                     url: /docs/pbc/all/price-management/base-shop/manage-in-the-back-office/add-volume-prices-to-abstract-products-and-product-bundles.html
 
-              - title: Manage using Glue API
+              - title: Manage via Storefront API
                 nested:
                   - title: Retrieve abstract product prices
                     url: /docs/pbc/all/price-management/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html
@@ -2841,7 +2832,7 @@ entries:
                   - title: "File details: price-product-offer.csv"
                     url: /docs/pbc/all/price-management/marketplace/import-and-export-data/import-file-details-price-product-offer.csv.html
 
-              - title: Retrieve product offer prices using Glue API
+              - title: Retrieve product offer prices via Storefront API
                 url: /docs/pbc/all/price-management/marketplace/glue-api-retrieve-product-offer-prices.html
               - title: Domain model and relationships
                 nested:
@@ -3299,7 +3290,7 @@ entries:
                   - title: View product barcodes
                     url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/view-product-barcodes.html
 
-              - title: Manage using Glue API
+              - title: Manage via Storefront API
                 url: /docs/pbc/all/product-information-management/base-shop/manage-using-glue-api/glue-api-manage-products.html
                 nested:
                   - title: Abstract products
@@ -3522,7 +3513,7 @@ entries:
                       - title: Manage product options
                         url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-back-office/product-options/manage-product-options.html
 
-              - title: Manage using Glue API
+              - title: Manage via Storefront API
                 nested:
                   - title: Retrieve abstract products
                     url: /docs/pbc/all/product-information-management/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html
@@ -3573,7 +3564,7 @@ entries:
               - title: View product relations
                 url: /docs/pbc/all/product-relationship-management/manage-in-the-back-office/view-product-relations.html
 
-          - title: "Glue API: Retrieve related products"
+          - title: Retrieve related products
             url: /docs/pbc/all/product-relationship-management/glue-api-retrieve-related-products.html
           - title: Build your own product relation type
             url: /docs/pbc/all/product-relationship-management/build-your-own-product-relation-type.html
@@ -3638,7 +3629,7 @@ entries:
           - title: Manage product reviews
             url: /docs/pbc/all/ratings-reviews/manage-product-reviews-in-the-back-office.html
 
-          - title: Manage using Glue API
+          - title: Manage via Storefront API
             nested:
               - title: Manage product reviews
                 url: /docs/pbc/all/ratings-reviews/manage-using-glue-api/glue-api-manage-product-reviews.html
@@ -3718,7 +3709,7 @@ entries:
                   - title: Manage returns
                     url: /docs/pbc/all/return-management/base-shop/manage-in-the-back-office/manage-returns.html
 
-              - title: Manage using Glue API
+              - title: Manage via Storefront API
                 nested:
                   - title: Manage returns
                     url: /docs/pbc/all/return-management/base-shop/manage-using-glue-api/glue-api-manage-returns.html
@@ -3749,7 +3740,7 @@ entries:
                   - title: Marketplace returns
                     url: /docs/pbc/all/return-management/marketplace/manage-in-the-back-office/manage-marketplace-returns.html
 
-              - title: "Glue API: Manage marketplace returns"
+              - title: Manage marketplace returns
                 url: /docs/pbc/all/return-management/marketplace/glue-api-manage-marketplace-returns.html
               - title: "Domain model and relationships"
                 url: /docs/pbc/all/return-management/marketplace/marketplace-return-management-feature-domain-model-and-relationships.html
@@ -3839,7 +3830,7 @@ entries:
                       - title: Reorder category filters
                         url: /docs/pbc/all/search/base-shop/manage-in-the-back-office/category-filters/reorder-category-filters.html
 
-              - title: Manage using Glue API
+              - title: Manage via Storefront API
                 nested:
                   - title: Retrieve autocomplete and search suggestions
                     url: /docs/pbc/all/search/base-shop/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html
@@ -3928,9 +3919,9 @@ entries:
 
           - title: Marketplace
             nested:
-              - title: "Glue API: Search the product catalog"
+              - title: Search the product catalog
                 url: /docs/pbc/all/search/marketplace/glue-api-search-the-product-catalog.html
-              - title: "Glue API: Retrieve autocomplete and search suggestions"
+              - title: Retrieve autocomplete and search suggestions
                 url: /docs/pbc/all/search/marketplace/glue-api-retrieve-autocomplete-and-search-suggestions.html
 
 
@@ -4054,7 +4045,7 @@ entries:
                   - title: "Import file details: service.csv"
                     url: /docs/pbc/all/service-point-management/unified-commerce/import-and-export-data/import-file-details-service.csv.html
 
-              - title: Manage using Glue API
+              - title: Manage via API
                 nested:
                   - title: Manage service points
                     nested:
@@ -4158,7 +4149,7 @@ entries:
                       - title: Upgrade the Wishlist module
                         url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-wishlist-module.html
 
-              - title: Manage using Glue API
+              - title: Manage via Storefront API
                 nested:
                   - title: Shopping lists
                     url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/manage-using-glue-api/glue-api-manage-shopping-lists.html
@@ -4200,7 +4191,7 @@ entries:
                   - title: Import product offers as shopping list items
                     url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/import-file-details-product-offer-shopping-list.csv.html
 
-              - title: Manage using Glue API
+              - title: Manage via Storefront API
                 url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-lists-and-wishlists.html
                 nested:
                   - title: Manage marketplace shopping lists
@@ -4249,7 +4240,7 @@ entries:
                   - title: Edit tax sets
                     url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/edit-tax-sets.html
 
-              - title: Manage using Glue API
+              - title: Manage via Storefront API
                 nested:
                   - title: Retrieve tax sets
                     url: /docs/pbc/all/tax-management/base-shop/manage-using-glue-api/retrieve-tax-sets.html
@@ -4361,7 +4352,7 @@ entries:
                       - title: Delete
                         url: /docs/pbc/all/user-management/base-shop/manage-in-the-back-office/manage-users/delete-users.html
 
-              - title: Manage using Glue API
+              - title: Manage via Storefront API
                 nested:
                   - title: Search by customers as an agent assist
                     url: /docs/pbc/all/user-management/base-shop/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
@@ -4471,7 +4462,7 @@ entries:
                   - title: Edit stock of products and product bundles
                     url: /docs/pbc/all/warehouse-management-system/base-shop/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html
 
-              - title: Manage using Glue API
+              - title: Manage via Storefront API
                 nested:
                   - title: Retrieve abstract product availability
                     url: /docs/pbc/all/warehouse-management-system/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-availability.html
@@ -4520,7 +4511,7 @@ entries:
                   - title: Marketplace Inventory Management + Wishlist
                     url: /docs/pbc/all/warehouse-management-system/marketplace/install-glue-api/install-the-marketplace-inventory-management-wishlist-glue-api.html
 
-              - title: Retrieve product offer availability using Glue API
+              - title: Retrieve product offer availability via Storefront API
                 url: /docs/pbc/all/warehouse-management-system/marketplace/glue-api-retrieve-product-offer-availability.html
               - title: "Marketplace Inventory Management feature: Domain model"
                 url: /docs/pbc/all/warehouse-management-system/marketplace/marketplace-inventory-management-feature-domain-model.html
@@ -4556,7 +4547,7 @@ entries:
                 url: /docs/pbc/all/warehouse-management-system/unified-commerce/assign-and-deassign-warehouses-from-warehouse-users.html
               - title: "Fulfillment App: Fulfill orders"
                 url: /docs/pbc/all/warehouse-management-system/unified-commerce/fulfillment-app-fulfill-orders.html
-              - title: Manage using Glue API
+              - title: Manage via Backend API
                 nested:
                   - title: Authenticate as a warehouse user
                     url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html

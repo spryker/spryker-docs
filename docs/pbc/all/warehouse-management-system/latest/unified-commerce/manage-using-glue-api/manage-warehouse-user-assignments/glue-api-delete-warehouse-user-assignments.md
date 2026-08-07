@@ -2,7 +2,7 @@
 title: "Glue API: Delete warehouse user assignments"
 description: Learn how to activate and deactivate warehouse assignments using Glue API
 template: glue-api-storefront-guide-template
-last_updated: Dec 18, 2023
+last_updated: Jul 30, 2026
 ---
 
 A warehouse user can have multiple warehouses assigned to them. However, because a user can be physically present only in one warehouse, a single warehouse assignment can be active for them at a time. This endpoint lets you delete warehouse user assignments.
@@ -44,4 +44,4 @@ If the warehouse user assignment is deleted successfully, the endpoint returns t
 | --- | --- |
 | 5201 | The warehouse user assignment with the specified ID doesn't exist.  |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Retrieve related products"
 description: The article demonstrates how to find alternatives for discontinued products with the help of Glue API endpoints.
-last_updated: Jun 16, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-related-products
 originalArticleId: db6deab2-f115-4802-a989-c594cebc6120
@@ -1313,4 +1313,4 @@ To retrieve upselling products of a guest cart, send the request:
 | 301 | Abstract product is not found. |
 | 311 | Abstract product ID is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

@@ -1,6 +1,6 @@
 ---
 title: Install the Marketplace Order Management + Order Threshold feature
-last_updated: Dec 16, 2020
+last_updated: Aug 6, 2026
 description: This document describes the process how to integrate the Marketplace Order Management Feature + Order Threshold feature into a Spryker project.
 template: feature-integration-guide-template
 related:
@@ -8,4 +8,41 @@ related:
     link: docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
 ---
 
-{% include pbc/all/install-features/latest/marketplace/install-the-marketplace-order-management-order-threshold-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-order-management-order-threshold-feature.md -->
+This document describes how to install the Marketplace Order Management + Order Threshold feature.
+
+## Install feature core
+
+Follow the steps below to install the Marketplace Order Management Feature + Order Threshold feature core.
+
+### Prerequisites
+
+Install the required features:
+
+| NAME  | VERSION | INSTALLATION GUIDE |
+| -------------- | --------- | -------------|
+| Order Threshold | {{page.release_tag}} | [Install the Order Threshold feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
+| Marketplace Order Management | {{page.release_tag}} | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/latest/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
+
+### Install the required modules using Composer
+
+Install the required modules using Composer:
+
+```bash
+composer require spryker/merchant-sales-order-threshold-gui:"^0.1.0" --update-with-dependencies
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following modules have been installed:
+
+| MODULE | EXPECTED DIRECTORY |
+| ------------------ | -------------- |
+| MerchantSalesOrderThresholdGui | spryker/merchant-sales-order-threshold-gui |
+
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
+Make sure that merchant orders have correct threshold expenses shown in order-overview page in `http://zed.mysprykershop.com/merchant-sales-order-merchant-user-gui/detail?id-merchant-sales-order={% raw %}{{idMerchantSalesOrder}}{% endraw %}`
+
+{% endinfo_block %}

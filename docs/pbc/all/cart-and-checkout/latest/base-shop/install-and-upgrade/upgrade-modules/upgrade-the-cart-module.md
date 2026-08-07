@@ -1,7 +1,7 @@
 ---
 title: Upgrade the Cart module
 description: Use this guide to help you upgrade the Spryker cart module from older versions to a newer one.
-last_updated: Jun 16, 2021
+last_updated: Aug 6, 2026
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-cart
 originalArticleId: be41d310-b875-4753-b5f5-a01b8ae6b3f8
@@ -36,4 +36,20 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cart-module.html
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-cart-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cart-module.md -->
+## Upgrading from version 5.* to version 7.0.0
+
+{% info_block infoBox %}
+
+In order to dismantle the Horizontal Barrier and enable partial module updates on projects, Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. [Contact us](https://spryker.com/en/support/) if you have any questions.
+
+{% endinfo_block %}
+
+## Upgrading from version 4.* to version 5.*
+
+With the implementation of the quote storage strategies, the new version of the Cart module allows to use different behaviors for different strategies.
+Since `QuoteClient::getStorageStrategy` method is used now, the Quote module's version must be 2.0.0 or higher.
+`CartClientInterface::storeQuote` method is deprecated, remove it from your code and use `QuoteClientInterface::setQuote()` instead.
+`CartClientInterface::getZedStub` method is deprecated, remove it from your code and use `\Spryker\Client\ZedRequest\ZedRequestClient::addFlashMessagesFromLastZedRequest` to push stack of ZED request messages to flash messages.
+
+All logic from `CartClient` has been moved to `\Spryker\Client\Cart\Plugin\SessionQuoteStorageStrategyPlugin`.
+Make sure that all your local overwrites of those methods have been moved there.

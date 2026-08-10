@@ -184,7 +184,7 @@ npm run code:fix     # fix both
 
 {% info_block warningBox "Do not use code:check as a pass/fail gate" %}
 
-`code:check` is defined as `eslint . ; prettier . --check`. The `;` means the script exits with _Prettier's_ status, so a failing ESLint run is reported as success. Use it to view all issues at once, but gate on the two commands separately:
+`code:check` is defined as `eslint . ; prettier . --check`. The `;` means the script exits with `Prettier's` status, so a failing ESLint run is reported as success. Use it to view all issues at once, but gate on the two commands separately:
 
 ```bash
 npm run lint:check && npm run prettier:check

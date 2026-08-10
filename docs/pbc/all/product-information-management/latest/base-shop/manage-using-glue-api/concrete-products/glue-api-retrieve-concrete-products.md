@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Retrieving concrete products"
 description: Retrieve general information about concrete products using the Spryker Cloud Commerce OS GLUE API.
-last_updated: Jun 21, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-concrete-products
 originalArticleId: 4f36b42a-e2a2-46a1-be84-ae9f3b2a1a25
@@ -1661,4 +1661,4 @@ To retrieve general information about a concrete product, send the request:
 | 302 | Concrete product is not found. |
 | 312 | Concrete product is not specified.  |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

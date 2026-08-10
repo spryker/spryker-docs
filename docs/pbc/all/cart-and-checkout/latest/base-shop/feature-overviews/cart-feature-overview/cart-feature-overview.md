@@ -1,11 +1,12 @@
 ---
 title: Cart feature overview
 description: Explore the Cart feature in Spryker Cloud Commerce OS, offering robust cart management, multi-cart functionality, and customizable options.
-last_updated: Jul 20, 2021
+last_updated: July 30, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/cart
 originalArticleId: eb211809-3be4-4b8a-bf28-a2c79140b11c
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/cart-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202005.0/cart-feature-walkthrough/cart-functionality.html
   - /docs/scos/user/features/202009.0/cart-feature-overview/cart-feature-overview.html
   - /docs/scos/user/features/202311.0/cart-feature-overview/cart-feature-overview.html

@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Manage items in carts of registered users"
 description: Retrieve details about the items of the registered users' carts, and learn what else you can do with the resource.
-last_updated: Jun 29, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-items-in-carts-of-registered-users
 originalArticleId: 8dbe18a1-adef-48a8-9ea0-b496f13c5630
@@ -3289,4 +3289,4 @@ If the item is deleted successfully, the endpoint returns the "204 No Content" s
 | 4006 | The configured bundle cannot be updated. |
 | 4007 | The configured bundle cannot be removed. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

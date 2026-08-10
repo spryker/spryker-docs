@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Add items with discounts to guest carts"
 description: Learn how to add items with discounts to guest carts via the Spryker Glue API.
-last_updated: July 29, 2022
+last_updated: July 30, 2026
 template: glue-api-storefront-guide-template
 redirect_from:
   - /docs/pbc/all/discount-management/manage-via-glue-api/add-items-with-discounts-to-guest-carts.html
@@ -715,4 +715,4 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 | 119 | Price mode is incorrect. |
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

@@ -4,11 +4,11 @@ description: How object collections are published in the OpenAPI contract in API
 last_updated: Jul 31, 2026
 template: concept-topic-template
 related:
-  - title: Resource Schemas
+  - title: Resource schemas
     link: docs/integrations/spryker-api/api-platform/resource-schemas.html
-  - title: Relationships
+  - title: Resource relationships
     link: docs/integrations/spryker-api/api-platform/relationships.html
-  - title: Validation Schemas
+  - title: Validation schemas
     link: docs/integrations/spryker-api/api-platform/validation-schemas.html
   - title: Serialization
     link: docs/integrations/spryker-api/api-platform/serialization.html

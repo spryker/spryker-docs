@@ -1,7 +1,7 @@
 ---
 title: Release notes 202602.0
 description: Release notes for Spryker Cloud Commerce OS version 202602.0
-last_updated: Apr 1, 2026
+last_updated: Aug 6, 2026
 template: concept-topic-template
 ---
 
@@ -53,7 +53,7 @@ Introduces native, configurable product and merchant offer availability display 
 - [Product Availability Display feature overview](/docs/pbc/all/warehouse-management-system/latest/base-shop/product-availability-display-feature-overview)
 - [Buy Box feature overview](/docs/pbc/all/offer-management/latest/marketplace/buy-box-feature-overview)
 
-### Backoffice Configuration Framework {% include badge.html type="feature,early-access" %}
+### Back Office Configuration Framework {% include badge.html type="feature,early-access" %}
 
 Introduces a structured, extensible framework to expose business-relevant configuration directly in the Spryker Back Office without code changes or redeployments.
 
@@ -174,7 +174,7 @@ Adds foundational capabilities for advanced agent workflows and improves the Bac
 - Back Office Smart PIM: **AI assistance for product descriptions** directly within abstract and concrete product create and edit pages:
   - Actions to **Translate content** and **Improve content**
   - Review-before-apply workflow to avoid accidental overwrites
-- Backoffice Smart PIM: **Clear user feedback when AI is not configured or unavailable**:
+- Back Office Smart PIM: **Clear user feedback when AI is not configured or unavailable**:
   - Validates provider credentials before calling external AI services
   - Shows user-facing error messages instead of silent empty responses
   - Logs operator-friendly errors without exposing secrets
@@ -240,10 +240,10 @@ This release enhances API Platform capabilities to improve your developer experi
 - Accelerate onboarding and increase developer productivity.
 
 **Documentation**
-- [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html)
-- [Code Buckets](/docs/dg/dev/architecture/api-platform/code-buckets.html)
-- [Relationships](/docs/dg/dev/architecture/api-platform/relationships.html)
-- [API Test Examples](/docs/dg/dev/architecture/api-platform/testing.html)
+- [Validation schemas](/docs/integrations/spryker-api/api-platform/validation-schemas.html)
+- [Code Buckets](/docs/integrations/spryker-api/api-platform/code-buckets.html)
+- [Resource relationships](/docs/integrations/spryker-api/api-platform/relationships.html)
+- [API Test Examples](/docs/integrations/spryker-api/api-platform/testing.html)
 
 ### OMS New Visual User Experience {% include badge.html type="improvement" %}
 

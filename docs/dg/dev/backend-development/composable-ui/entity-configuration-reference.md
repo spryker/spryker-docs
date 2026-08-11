@@ -7,7 +7,7 @@ related:
     link: docs/dg/dev/backend-development/composable-ui/composable-ui.html
   - title: Create a Composable UI module
     link: docs/dg/dev/backend-development/composable-ui/create-a-composable-ui-module.html
-last_updated: Feb 20, 2026
+last_updated: Jul 31, 2026
 ---
 
 {% info_block warningBox "Beta" %}
@@ -854,4 +854,4 @@ columns:
 
 - [Create a Composable UI module](/docs/dg/dev/backend-development/composable-ui/create-a-composable-ui-module.html)
 - [Composable UI best practices](/docs/dg/dev/backend-development/composable-ui/composable-ui-best-practices.html)
-- [API Platform Enablement](/docs/dg/dev/architecture/api-platform/enablement.html)
+- [Implement an API Platform resource](/docs/integrations/spryker-api/api-platform/enablement.html)

@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Retrieve companies"
 description: Learn how to retrieve company information that is configured in your store via the Spryker Glue API.
-last_updated: Jun 16, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-companies
 originalArticleId: 238c375f-b541-445c-ad9c-ab1b4afb036f
@@ -104,7 +104,7 @@ To retrieve information about a company, send the request:
 | 1801 | Specified company is not found, or the current authenticated company user does not have access to it. |
 | 1803 | Current company account is not set. Select the current company user with `/company-user-access-tokens` to access the resource collection. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
 
 ## Next steps
 

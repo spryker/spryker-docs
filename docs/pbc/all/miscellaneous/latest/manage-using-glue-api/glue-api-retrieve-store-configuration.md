@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Retrieve store configuration"
 description: This article explains how to retrieve the store configuration including currencies, countries, locales, and time zones.
-last_updated: Jun 16, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-store-configuration
 originalArticleId: 555482d7-5661-42bc-86c7-382a702172ab
@@ -117,4 +117,4 @@ Request sample: retrieve stores
 | iso2Code | String | Iso 2 code for the region. |
 | name | String | Region name. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

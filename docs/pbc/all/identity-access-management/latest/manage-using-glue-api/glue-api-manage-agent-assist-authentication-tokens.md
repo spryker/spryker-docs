@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Managing agent assist authentication tokens"
 description: Learn how to refresh an agent assist token and revoke an agent assist refresh token using the Spryker GLUE API.
-last_updated: Jun 16, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-agent-assist-authentication-tokens
 originalArticleId: a3ef0b2b-9ad0-4970-9f9f-bf5f2d975c65
@@ -130,4 +130,4 @@ The tokens are marked as expired on the date and time of the request. You can co
 | 901 | The `refreshToken` attribute is not specified or empty. |
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Retrieve product offer service point availability"
 description: Learn how to retrieve product offer service point availability using Glue API for your Spryker Unified Commerce Project.
-last_updated: Nov 23, 2023
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 ---
 
@@ -141,4 +141,4 @@ Request sample: `POST https://glue.mysprykershop.com/product-offer-service-point
 
 ## Possible errors
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

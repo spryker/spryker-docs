@@ -1,7 +1,7 @@
 ---
 title: Release notes 202404.0
 description: Release notes for the Spryker Cloud Commerce OS version 202404.0
-last_updated: Feb 26, 2026
+last_updated: Jul 30, 2026
 template: concept-topic-template
 ---
 
@@ -161,7 +161,7 @@ In this release, we added the support of CRUD for combined entities allowing to 
 
 ### Technical prerequisites
 
-- [Data Exchange API integration](/docs/pbc/all/data-exchange/{{site.version}}/install-and-upgrade/install-the-data-exchange-api.html#prerequisites)
+- [Data Exchange API integration](/docs/integrations/custom-building-integrations/data-exchange/install-and-upgrade-data-exchange-api/install-the-data-exchange-api.html#prerequisites)
 - [Data Exchange API + Install the Inventory Management feature](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api/install-the-data-exchange-api-inventory-management-feature.html)
 
 

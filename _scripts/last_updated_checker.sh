@@ -71,7 +71,22 @@ for file in $changed_md_files; do
     fi
   fi
 
-  lines_changed=$(git diff "$BASE_SHA"..."$HEAD_SHA" -- "$file" | sed '1,/@@/d' | grep -v "^-\s*$" | grep "^\+" | wc -l)
+  # Only body changes count: front matter edits (title, template, last_updated itself)
+  # are not content changes, so they must not trigger a stale last_updated failure.
+  # Same delimiter logic as the front_matter extraction above: the header ends at the 2nd "---".
+  front_matter_end=$(awk 'BEGIN{found=0} /^---$/{found++; if(found==2){print NR; exit}}' "$file")
+  front_matter_end="${front_matter_end:-0}"
+
+  # Track new-file line numbers through the hunks so added lines inside the front matter
+  # can be dropped; "+++"/"---" diff headers are skipped explicitly.
+  lines_changed=$(git diff "$BASE_SHA"..."$HEAD_SHA" -- "$file" | awk -v skip="$front_matter_end" '
+    /^\+\+\+/ || /^---/ { next }
+    /^@@/ { split($0, hunk, /\+/); split(hunk[2], pos, /[, ]/); new_line = pos[1] + 0; next }
+    /^\+/ { if (new_line > skip) count++; new_line++; next }
+    /^-/ { next }
+    { new_line++ }
+    END { print count + 0 }
+  ')
 
   if [ "$lines_changed" -ge "$lines_changed_limit" ]; then
     echo "Modified file $file has $lines_changed changed lines, old and not updated last_updated: $date_string."

@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Update shipment types"
 description: Learn how to update shipment types using Glue API in Spryker Cloud Commerce OS, enabling flexibility and customization of your shipment types.
-last_updated: Nov 23, 2023
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 ---
 
@@ -82,4 +82,4 @@ Response sample:
 | 5501 | The shipment type with the specified ID doesn't exist. |
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

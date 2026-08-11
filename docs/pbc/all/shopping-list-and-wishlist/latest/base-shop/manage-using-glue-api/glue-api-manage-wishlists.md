@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Manage wishlists"
 description: Learn how to manage , create, update and delete Spryker wishlist via the Glue API in your Spryker Cloud Commerce OS Projects.
-last_updated: Jun 16, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-wishlists
 originalArticleId: b4729aa0-f527-4fd0-bf46-6d8e62b3013e
@@ -846,4 +846,4 @@ If the wishlist is deleted successfully, the endpoint returns the `204 No Conten
 | 210 | Enter the name using only letters, numbers, underscores, spaces or dashes.  |
 | 901 | `name` field is empty. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

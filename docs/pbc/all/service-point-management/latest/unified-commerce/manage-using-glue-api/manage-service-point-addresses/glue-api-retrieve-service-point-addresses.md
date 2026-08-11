@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Retrieve service point addresses"
 description: Learn how to retrieve service point addresses to your Unified Commerce shop using Spryker Glue API
-last_updated: Nov 23, 2023
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 ---
 
@@ -120,4 +120,4 @@ Response sample:
 | --- | --- |
 | 5403 | The service point with the specified ID doesn't exist. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Manage discount vouchers in guest carts"
 description: Learn how to manage discount vouchers in guest carts via the Spryker Glue API in your Spryker projects.
-last_updated: Jun 16, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-discount-vouchers-in-guest-carts
 originalArticleId: ba8ecd12-244b-4dc4-bf64-b52977347916
@@ -242,4 +242,4 @@ If the voucher is deleted successfully, the endpoints returns the `204 No Data` 
 | 3302 | Incorrect voucher code or the voucher cannot be applied.|
 | 3303| Cart code can't be removed. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

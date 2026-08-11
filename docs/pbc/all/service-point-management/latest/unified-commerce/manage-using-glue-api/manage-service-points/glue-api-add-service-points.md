@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Add service points"
 description: Learn how to add service points to your Unified Commerce shop using Spryker Glue API
-last_updated: Nov 23, 2023
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 ---
 
@@ -83,4 +83,4 @@ Response sample:
 | 5404 | A service point with the same key already exists. |
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

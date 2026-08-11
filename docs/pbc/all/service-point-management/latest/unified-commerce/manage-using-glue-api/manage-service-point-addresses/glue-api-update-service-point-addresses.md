@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Update service point addresses"
 description: Learn how to update service point addresses to your Unified Commerce shop using Spryker Glue API
-last_updated: Nov 23, 2023
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 ---
 
@@ -86,4 +86,4 @@ Response sample:
 | 5400 | The service point address with the specified ID doesn't exist. |
 | 5415 | Zip code value is length from 4 to 15 characters. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

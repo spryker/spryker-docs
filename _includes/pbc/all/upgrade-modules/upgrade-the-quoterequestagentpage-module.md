@@ -26,7 +26,7 @@ src/SprykerShop/Yves/QuoteRequestAgentPage/Theme/default/views/quote-request-det
 src/SprykerShop/Yves/QuoteRequestAgentPage/Theme/default/views/quote-request-edit/quote-request-edit.twig
 ```
 
-5. To generate transfers, run the following command:
+5. Generate transfers:
 
 ```bash
 vendor/bin/console transfer:generate

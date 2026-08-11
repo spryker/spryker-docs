@@ -400,6 +400,52 @@ Make sure that when you make lock reset for a cart, quote request associated wit
 
 {% endinfo_block %}
 
+#### Set up item availability for locked carts
+
+When you convert a quote request to a cart, Spryker creates a locked quote. Because locked quotes are excluded from cart operations, their items do not receive availability data the same way that regular cart items do. Register the following plugin to add availability data to the items of a locked quote:
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+| AvailabilityLockedQuoteExpandBeforeCreatePlugin | Adds `ItemTransfer.stockQuantity` and `ItemTransfer.isNeverOutOfStock` to the items of a locked quote before the quote is saved. | `spryker/availability-cart-connector` 7.9.0 or later | Spryker\Zed\AvailabilityCartConnector\Communication\Plugin\Quote |
+
+**Pyz\Zed\Quote\QuoteDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Quote;
+
+use Spryker\Zed\AvailabilityCartConnector\Communication\Plugin\Quote\AvailabilityLockedQuoteExpandBeforeCreatePlugin;
+use Spryker\Zed\Quote\QuoteDependencyProvider as SprykerQuoteDependencyProvider;
+
+class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteExpandBeforeCreatePluginInterface>
+     */
+    protected function getQuoteExpandBeforeCreatePlugins(): array
+    {
+        return [
+            new AvailabilityLockedQuoteExpandBeforeCreatePlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+1. On the Storefront, convert a quote request with the `Ready` status to a cart.
+3. Make sure the `spy_quote.quote_data` column of the created quote contains `stockQuantity` and `isNeverOutOfStock` for its items.
+3. Make sure the `spy_quote.quote_data` column of the created quote contains `stockQuantity` and `isNeverOutOfStock` for its items.
+
+{% endinfo_block %}
+
+{% info_block infoBox "Availability of a locked cart" %}
+
+Availability data is resolved only once, when the locked quote is created, and is not updated afterward because a locked cart is not recalculated. During checkout, Spryker validates availability again. If an item becomes unavailable in the meantime, the order cannot be placed.
+
+{% endinfo_block %}
+
 
 ## Install feature frontend
 

@@ -2,7 +2,7 @@
 title: Managing guest carts
 description: Retrieve details about guest carts and learn what else you can do with the resource in the Spryker Marketplace
 template: glue-api-storefront-guide-template
-last_updated: Nov 17, 2023
+last_updated: Jul 30, 2026
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/201811.0/guest-carts/managing-guest-carts.html
   - /docs/marketplace/dev/glue-api-guides/201903.0/guest-carts/managing-guest-carts.html
@@ -2152,4 +2152,4 @@ In a *single cart* environment, items from the guest cart have been added to t
 | 118 | Price mode is missing. |
 | 119 | Price mode is incorrect. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

@@ -95,7 +95,7 @@ console router:cache:warm-up
     }
 ```
 
-2. Add a new merchant to the `merchant.csv` data import file and run the following command:
+2. Add a new merchant to the `merchant.csv` data import file and import it:
 
 ```bash
 console data:import merchant

@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Retrieve discounts in customer carts"
 description: Learn how to retrieve cart rules, vouchers, and promotional items in customer carts via Glue API.
-last_updated: Jul 25, 2022
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 redirect_from:
   - /docs/pbc/all/discount-management/202311.0/manage-via-glue-api/retrieve-discounts-in-customer-carts.html
@@ -348,4 +348,4 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 | 402 | Customer with the specified ID was not found. |
 | 802 | Request is unauthorized. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

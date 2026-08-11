@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Retrieve product labels"
 description: Learn how to retrieve product labels configured in Spryker Cloud Commerce OS by using the Spryker Glue API.
-last_updated: Jun 16, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-product-labels
 originalArticleId: 70d36a7a-e701-427d-ae2a-e78ebde56ebe
@@ -87,4 +87,4 @@ Apart from using this dedicated endpoint, you can retrieve product lables as an 
 | 1201 | Label with the specified ID does not exist. |
 | 1202 | Product label ID is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+{% assign redirect_path = page.redirect.to | remove_first: site.url %}<!DOCTYPE html>
 <html lang="en-US">
   <meta charset="utf-8">
   <title>Redirecting&hellip;</title>
   <link rel="canonical" href="{{ page.redirect.to }}">
-  <script>location="{{ page.redirect.to }}"</script>
-  <meta http-equiv="refresh" content="0; url={{ page.redirect.to }}">
+  <script>location="{{ redirect_path }}"</script>
+  <meta http-equiv="refresh" content="0; url={{ redirect_path }}">
   <meta name="robots" content="noindex">
   <h1>Redirecting&hellip;</h1>
-  <a href="{{ page.redirect.to }}">Click here if you are not redirected.</a>
+  <a href="{{ redirect_path }}">Click here if you are not redirected.</a>
 </html>

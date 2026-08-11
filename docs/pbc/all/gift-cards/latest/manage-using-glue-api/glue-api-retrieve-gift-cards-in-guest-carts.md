@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Retrieve gift cards in guest carts"
 description: Learn how you can retrieve gift cards in guest carts by using the Spryker Glue Api.
-last_updated: Aug 12, 2022
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 redirect_from:
 - /docs/pbc/all/gift-cards/202311.0/manage-using-glue-api/retrieve-gift-cards-in-guest-carts.html
@@ -149,4 +149,4 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 | 104 | Cart uuid is missing. |
 | 109 | Anonymous customer unique id is empty. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

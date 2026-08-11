@@ -1,7 +1,7 @@
 ---
 title: Configure services
 description: Learn how to set up and configure services that come out of the box of your Spryker shop.
-last_updated: March 6, 2026
+last_updated: July 30, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/configuring-services
 originalArticleId: 5b51acd3-1f5c-477d-995a-d821e88fd5f8
@@ -561,7 +561,7 @@ If you update the name of an application, [contact support](/docs/about/all/supp
 docker:
     newrelic:
         license: {new_relic_license}
-	distributed-tracing:
+      	distributed-tracing:
             enabled: true
 ```
 
@@ -576,6 +576,176 @@ image:
             ...
             - newrelic
 ```
+
+### Configure distributed tracing
+
+Distributed tracing follows a single request across all the services it touches and reports each unit of work as a span. Together with transaction traces, which capture the internal breakdown of a single transaction, it shows you where request time is spent and which service or code path causes a slowdown.
+
+The New Relic PHP agent reads its distributed tracing configuration from environment variables, which the `spryker/php` image renders into `newrelic.ini`.
+
+#### Prerequisites
+
+- The `newrelic` PHP extension is enabled in `deploy.*.yml`, and New Relic is configured as described in [SCCOS: Configure New Relic](#sccos-configure-new-relic) or [Local: Configure New Relic](#local-configure-new-relic).
+- The `spryker/php` image includes the New Relic PHP agent 9.21.0 or later. For information about the agent version in your image, see [Release notes for spryker-php image](/docs/about/all/releases/image-releases/spryker-php/release-notes-spryker-php.html).
+
+#### Distributed tracing environment variables
+
+Distributed tracing and transaction traces are controlled with the following environment variables:
+
+| VARIABLE | DESCRIPTION | POSSIBLE VALUES | DEFAULT IN THE IMAGE |
+| --- | --- | --- | --- |
+| `NEWRELIC_DISTRIBUTED_TRACING_ENABLED` | Defines if distributed tracing is active. When disabled, requests are not linked across services and no trace context is propagated. | `1`, `0` | `0` |
+| `NEWRELIC_SPAN_EVENTS_ENABLED` | Defines if span events are reported. Distributed tracing requires span events, so keep this enabled whenever distributed tracing is enabled. | `1`, `0` | `0` |
+| `NEWRELIC_SPAN_EVENTS_MAX_SAMPLES_STORED` | Defines the maximum number of span events reported per harvest cycle. `0` applies the agent default of `2000`. | `0` to `10000` | Not set |
+| `NEWRELIC_TRANSACTION_TRACER_ENABLED` | Defines if the transaction tracer is active. The transaction tracer records detailed traces of individual transactions. | `1`, `0` | `0` |
+| `NEWRELIC_TRANSACTION_TRACER_THRESHOLD` | Defines the response time above which a transaction becomes eligible for tracing. `apdex_f` applies four times the apdex_t value of the application. A duration without a unit is interpreted as milliseconds. | `apdex_f`, or a duration such as `500`, `200ms`, or `1s250ms` | `0` |
+| `NEWRELIC_TRANSACTION_TRACER_STACK_TRACE_THRESHOLD` | Defines the duration above which the agent records a full PHP stack trace for a segment. A value without a unit is interpreted as milliseconds. | A duration such as `500` or `500ms` | Not set |
+| `NEWRELIC_TRANSACTION_TRACER_MAX_SEGMENTS_CLI` | Defines the maximum number of segments the agent records for CLI transactions, such as console commands and queue workers. Lower this value if long-running CLI processes consume too much memory. | A positive integer, for example, `100000` | Not set |
+| `NEWRELIC_DISTRIBUTED_TRACING_EXCLUDE_NEWRELIC_HEADER` | Defines if the proprietary `newrelic` header is excluded from outbound requests, so that only W3C Trace Context headers are sent. Set it to `1` when you trace across services that do not support the New Relic header. | `1`, `0` | `0` |
+
+{% info_block warningBox "Set every variable explicitly" %}
+
+The `spryker/php` image overrides several New Relic agent defaults, and variables marked as `Not set` render as empty values in `newrelic.ini`. Because of this, the defaults of the New Relic PHP agent do not necessarily apply to your environment. Set every variable you rely on explicitly instead of depending on a default.
+
+The `NEWRELIC_TRANSACTION_TRACER_THRESHOLD` default of `0` makes every transaction eligible for tracing. In production, set an explicit threshold, such as `apdex_f` or `500`, to limit the volume of transaction traces.
+
+{% endinfo_block %}
+
+#### Enable distributed tracing
+
+1. In `deploy.*.yml`, adjust the `image` section:
+
+```yaml
+image:
+    tag: spryker/php:8.4
+    php:
+        enabled-extensions:
+            - newrelic
+
+    environment:
+        NEWRELIC_DISTRIBUTED_TRACING_ENABLED: 1
+        NEWRELIC_SPAN_EVENTS_ENABLED: 1
+        NEWRELIC_SPAN_EVENTS_MAX_SAMPLES_STORED: 10000
+        NEWRELIC_TRANSACTION_TRACER_ENABLED: 1
+        NEWRELIC_TRANSACTION_TRACER_THRESHOLD: apdex_f
+        NEWRELIC_TRANSACTION_TRACER_STACK_TRACE_THRESHOLD: 500
+        NEWRELIC_TRANSACTION_TRACER_MAX_SEGMENTS_CLI: 100000
+        NEWRELIC_DISTRIBUTED_TRACING_EXCLUDE_NEWRELIC_HEADER: 0
+```
+
+Adjust the values to the ones that suit your environment based on the available options in the preceding table.
+
+2. Apply the changes:
+
+- Locally, rebuild the environment:
+
+```bash
+docker/sdk boot deploy.dev.yml && docker/sdk up
+```
+
+- In Spryker Cloud Commerce OS, push and deploy the changes using one of the following guides:
+  - [Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
+  - [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)
+
+3. Verify the setup. In New Relic, open your APM entity and check that the **Distributed tracing** page lists recent traces of your application.
+
+### Configure New Relic application logging
+
+New Relic application logging, also known as *logs in context*, lets the New Relic PHP agent collect logging metrics and forward application log records directly to New Relic. Because the agent adds correlation metadata to every forwarded record, you can switch between a log line, the transaction that produced it, and the related error or trace without switching tools.
+
+Spryker applications write logs with [Monolog](https://github.com/Seldaek/monolog), which the New Relic PHP agent instruments automatically. You do not need to add a log handler or change application code. The logs passed around Monolog, for example directly to stdout/stderr are not captured by the agent.
+
+{% info_block warningBox "Distributed tracing is required" %}
+
+Application logging relies on the trace and span identifiers that the agent generates for each request. You must enable distributed tracing for logs in context to work. Set `NEWRELIC_DISTRIBUTED_TRACING_ENABLED` and `NEWRELIC_SPAN_EVENTS_ENABLED` to `1` as described in [Configure distributed tracing](#configure-distributed-tracing). Without distributed tracing, forwarded log records cannot be correlated with transactions, errors, and traces.
+
+{% endinfo_block %}
+
+{% info_block infoBox %}
+
+Application logging is an addition to your existing logging setup, not a replacement for it. Log records are still written to your regular log destination. In Spryker Cloud Commerce OS, that destination is Amazon CloudWatch. For more details, see [Working with logs](/docs/ca/dev/monitoring/working-with-logs.html).
+
+{% endinfo_block %}
+
+#### Prerequisites
+
+- The `newrelic` PHP extension is enabled in `deploy.*.yml`, and New Relic is configured as described in [SCCOS: Configure New Relic](#sccos-configure-new-relic) or [Local: Configure New Relic](#local-configure-new-relic).
+- Distributed tracing is enabled as described in [Configure distributed tracing](#configure-distributed-tracing).
+- The `spryker/php` image includes the New Relic PHP agent 10.3.0 or later. For information about the agent version in your image, see [Release notes for spryker-php image](/docs/about/all/releases/image-releases/spryker-php/release-notes-spryker-php.html).
+
+#### Application logging environment variables
+
+Application logging is controlled with the following environment variables:
+
+| VARIABLE | DESCRIPTION | POSSIBLE VALUES | DEFAULT IN THE IMAGE |
+| --- | --- | --- | --- |
+| `NEWRELIC_APPLICATION_LOGGING_ENABLED` | Defines if the logs in context feature is active. When disabled, the other application logging variables have no effect. | `1`, `0` | Not set |
+| `NEWRELIC_APPLICATION_LOGGING_METRICS_ENABLED` | Defines if logging metrics, such as the number of log records per severity level, are collected and displayed on the APM summary page. | `1`, `0` | Not set |
+| `NEWRELIC_APPLICATION_LOGGING_FORWARDING_ENABLED` | Defines if log records are forwarded to New Relic together with linking metadata. | `1`, `0` | Not set |
+| `NEWRELIC_APPLICATION_LOGGING_FORWARDING_LOG_LEVEL` | Defines the lowest severity level to forward. The agent forwards records of the specified level and all higher severity levels. | `EMERGENCY`, `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, `DEBUG` | Not set |
+
+{% info_block warningBox "Data ingest volume" %}
+
+Log forwarding increases the amount of data ingested by New Relic, which can affect your New Relic costs. Lower severity levels, especially `INFO` and `DEBUG`, produce a significantly higher volume than `WARNING` and above. Start with `WARNING` and lower the level only for the period during which you need the additional detail.
+
+{% endinfo_block %}
+
+#### Enable application logging
+
+1. In `deploy.*.yml`, adjust the `image` section:
+
+```yaml
+image:
+    tag: spryker/php:8.4
+    php:
+        enabled-extensions:
+            - newrelic
+
+    environment:
+        NEWRELIC_DISTRIBUTED_TRACING_ENABLED: 1
+        NEWRELIC_SPAN_EVENTS_ENABLED: 1
+        NEWRELIC_SPAN_EVENTS_MAX_SAMPLES_STORED: 10000
+        NEWRELIC_TRANSACTION_TRACER_ENABLED: 1
+        NEWRELIC_APPLICATION_LOGGING_ENABLED: 1
+        NEWRELIC_APPLICATION_LOGGING_METRICS_ENABLED: 1
+        NEWRELIC_APPLICATION_LOGGING_FORWARDING_ENABLED: 1
+        NEWRELIC_APPLICATION_LOGGING_FORWARDING_LOG_LEVEL: WARNING
+```
+
+Adjust the values to the ones that suit your environment based on the available options in the preceding table.
+
+2. Apply the changes:
+
+- Locally, rebuild the environment:
+
+```bash
+docker/sdk boot deploy.dev.yml && docker/sdk up
+```
+
+- In Spryker Cloud Commerce OS, push and deploy the changes using one of the following guides:
+  - [Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
+  - [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)
+
+3. Verify the setup. In New Relic, open your APM entity and check the following:
+
+- The **Logs** tab contains recent log records from the application.
+- On the **Summary** page, the **Log** chart displays log record counts per severity level.
+
+#### Disable application logging
+
+To stop collecting and forwarding logs, set `NEWRELIC_APPLICATION_LOGGING_ENABLED` to `0` and deploy the change:
+
+```yaml
+image:
+    ...
+    environment:
+        ...
+        NEWRELIC_APPLICATION_LOGGING_ENABLED: 0
+```
+
+To keep logging metrics on the APM summary page but stop forwarding log records, keep `NEWRELIC_APPLICATION_LOGGING_ENABLED` set to `1` and set `NEWRELIC_APPLICATION_LOGGING_FORWARDING_ENABLED` to `0`.
+
+For more details about the underlying agent settings, see [PHP agent configuration](https://docs.newrelic.com/docs/apm/agents/php-agent/configuration/php-agent-configuration/) in the New Relic documentation.
 
 ### Configure YVES, ZED, and GLUE as separate APMs
 

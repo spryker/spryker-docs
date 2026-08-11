@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Delete push notification providers"
 description: Learn how to delete push notification providers using Spryker Glue API for your Spryker projects.
-last_updated: Dec 23, 2023
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 ---
 
@@ -47,4 +47,4 @@ If the push notification provider is deleted successfully, the endpoint returns 
 | --- | --- |
 |5001| The push notification provider with the specified ID doesn't exist. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

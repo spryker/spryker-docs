@@ -2,7 +2,7 @@
 title: Implementing ERP Integration
 description: Easy starting point for projects to connect to ERP systems.
 keywords: erp, integration, third party, guide, oms, webhook
-last_updated: Feb 20, 2026
+last_updated: Aug 6, 2026
 template: default
 ---
 
@@ -158,8 +158,8 @@ If your system doesn't require a POST call, change the method called on guzzleCl
 
 Create a copy of `src/Pyz/Client/ErpIntegration/Models/ExampleRequestMapper` and adjust:
 
-- `mapTransferToRequestString` - to map request transfer object onto the 3rd party service request format.
-- `mapResponseToResponseTransfer` - to map 3rd party service response format onto response transfer object.
+- `mapTransferToRequestString` - to map request transfer object onto the third-party service request format.
+- `mapResponseToResponseTransfer` - to map third-party service response format onto response transfer object.
 
 #### 4. Add a Client method
 
@@ -232,5 +232,5 @@ See example implementation here: `\Pyz\Zed\ErpIntegration\Communication\Plugin\O
 
 ### Providing a webhook for ERP system
 
-Implement a [BackendAPI resource](/docs/integrations/spryker-glue-api/backend-api/developing-apis/create-backend-resources) and call required Client method inside it.
+Implement a [BackendAPI resource](/docs/integrations/spryker-api/backend-api/developing-apis/create-backend-resources) and call required Client method inside it.
 By default, Spryker supports only JSON format.

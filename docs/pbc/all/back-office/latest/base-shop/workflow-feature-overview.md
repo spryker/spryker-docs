@@ -1,18 +1,24 @@
 ---
-title: Workflow feature overview
-description: The Workflow feature lets business users model, version, and run state machines directly from the Back Office, without a code deployment.
-last_updated: Aug 6, 2026
+title: Workflows feature overview
+description: The Workflows feature lets Back Office users build, version, and run state machines for any process, without a code deployment.
+last_updated: Aug 7, 2026
 template: concept-topic-template
 related:
-  - title: Workflow feature
+  - title: Workflows feature
     link: docs/dg/dev/backend-development/workflow.html
   - title: Install the Workflow feature
     link: docs/dg/dev/integrate-and-configure/integrate-workflow-feature.html
 ---
 
-The Workflow feature lets business users design and operate workflows from the Back Office. A workflow describes how a subject—such as a company during onboarding—moves through a sequence of states as events occur, conditions are met, or timeouts elapse.
+The Workflow feature lets Back Office users design and operate state machines directly from the Back Office. A workflow describes how a subject moves through a sequence of states as events occur, conditions are met, or timeouts elapse.
 
-Unlike classic state machines, which are defined in XML files and require a deployment to change, a workflow is authored, versioned, and activated entirely in the Back Office. This puts process design in the hands of the people who own the process.
+A subject can be anything — a company, a user, a product, or a custom entity. A workflow starts when its subject reaches a specific application event, defined in a trigger: for example a company being created, a user registering, or a merchant being updated. From then on, each subject runs through the workflow independently.
+
+Unlike classic state machines, which are defined in XML files and require a deployment to change, a workflow is created and adjusted by a Back Office user. This puts process design in the hands of the people who own the process.
+
+### An example
+
+Consider onboarding a new B2B company. When a company is created, a workflow starts and walks it through a series of states: *business verification*, then *contract agreement*, then *customer group assignment*, and finally *approved*. Some steps advance on their own once a condition is met (for example, the business has been verified); others wait for a Back Office user to confirm; and a step can time out if nothing happens. The whole process — its states, the order of the steps, and the rules between them — is defined and adjusted in the Back Office, not in code.
 
 ## Workflows
 
@@ -23,23 +29,29 @@ A *workflow* is a named process attached to a subject type. It stays stable over
 Each workflow can have many *versions*. A version captures a complete definition of the states and transitions at a point in time. Exactly one version is *active* at a time:
 
 - New subjects start on the active version.
-- Subjects that are already running stay on the version they started on, even after a newer version is activated.
+- Subjects that are already running stay on the version they started on, even after a newer version is activated, and finish on that version.
 
 This lets you evolve a process safely: publish a new version for future subjects while in-flight subjects finish on the rules they began with.
 
 ## Instances
 
-An *instance* is a single subject running through a workflow—for example one specific company being onboarded. Each instance is pinned to the version it started on and tracks its current state. You can inspect instances and their current state in the Back Office.
+An *instance* is a single subject running through a workflow — for example one specific company being onboarded. Each instance is pinned to the version it started on and tracks its current state. In the Back Office you can inspect instances, see their current state, and trigger any manual actions the workflow defines (for example, a step that a Back Office user must confirm before the workflow continues).
+
+{% info_block infoBox "Instance history retention" %}
+
+Each instance and its transition history are kept in the database. This MVP does not ship an automated cleanup or retention job, so plan for periodic housekeeping if you expect a high volume of instances.
+
+{% endinfo_block %}
 
 ## Transitions
 
 A workflow advances through three kinds of transitions:
 
-- **Event transitions**: triggered by an application event or a manual action.
+- **Event transitions**: triggered by an application event or a manual action in the Back Office.
 - **Condition transitions**: advance automatically once a business condition becomes true.
 - **Timeout transitions**: advance automatically after a defined period elapses.
 
-Condition and timeout transitions are evaluated by scheduled jobs, so a workflow can progress on its own without a user action.
+Condition and timeout transitions are advanced by scheduled jobs, so a workflow can progress on its own without a user action. These jobs are set up during installation.
 
 ## Triggers
 

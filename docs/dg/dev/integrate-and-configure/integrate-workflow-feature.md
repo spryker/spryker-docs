@@ -1,11 +1,11 @@
 ---
-title: Install the Workflow feature
-description: Learn how to integrate and configure the Workflow feature in a Spryker project.
-last_updated: Aug 6, 2026
+title: Install the Workflows feature
+description: Learn how to integrate and configure the Workflows feature in a Spryker project.
+last_updated: Aug 7, 2026
 template: howto-guide-template
 
 related:
-  - title: Workflow feature
+  - title: Workflows feature
     link: docs/dg/dev/backend-development/workflow.html
 ---
 
@@ -15,25 +15,34 @@ This document describes how to install the Workflow feature.
 
 Install the required modules:
 
-| NAME | VERSION |
-|------|---------|
-| Workflow | ^1.0 |
-| StateMachine | ^2.25.1 |
-| DataImport | ^1.27.1 |
-| Gui | ^5.3.2 |
-| Kernel | ^3.84.0 |
+| MODULE | VERSION |
+|--------|---------|
+| spryker/workflow | ^1.0.0 |
+| spryker/state-machine | ^2.26.0 |
+| spryker/data-import | ^1.27.1 |
+| spryker/gui | ^5.3.2 |
+| spryker/kernel | ^3.84.0 |
 
 ## Install feature core
 
 ### 1) Install the required modules
 
+Install the Workflow module and update its dependencies to the required versions:
+
 ```bash
-composer require spryker/workflow --update-with-dependencies
+composer require spryker/workflow:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
 
-Make sure the `Workflow` module is available in `vendor/spryker/workflow`.
+Make sure the following modules are available in `vendor/spryker/`:
+
+| MODULE |
+|--------|
+| spryker/workflow |
+| spryker/state-machine |
+| spryker/data-import |
+| spryker/gui |
 
 {% endinfo_block %}
 
@@ -86,7 +95,25 @@ In the Back Office, go to **Administration > Workflows** and make sure the page 
 
 {% endinfo_block %}
 
-### 4) Register command, condition, and trigger plugins
+### 4) Create a workflow in the Back Office
+
+Once the feature is installed, a Back Office user can author a workflow through the UI:
+
+1. Go to **Administration > Workflows** and create a process. Give it a name and a subject type (for example `Company`).
+2. Open the process's **Workflow Versions**, then **Create Version**: paste the definition XML (in the `state-machine-01` format) and set the initial state, which is the process's entry point. Save the version.
+3. **Activate** the version.
+4. Open the process's **Workflow Triggers**. The page lists the trigger events registered for the process's subject type ("Select events that start this workflow"). Select one or more and **Save Triggers**.
+5. **Activate** the process.
+
+The workflow is now live: whenever a selected trigger event fires for a subject of the configured type, a new instance starts on the active version.
+
+{% info_block infoBox "Provisioning instead of manual authoring" %}
+
+To ship a ready-made workflow with your project instead of creating it by hand, use the data import in the following steps. The two approaches are interchangeable — both produce the same process, versions, and triggers.
+
+{% endinfo_block %}
+
+### 5) Register command, condition, and trigger plugins
 
 Register your project's commands, conditions, and start triggers by extending the core `WorkflowDependencyProvider`.
 
@@ -133,9 +160,9 @@ class WorkflowDependencyProvider extends SprykerWorkflowDependencyProvider
 }
 ```
 
-Each command and condition plugin returns a `getName()` (the registry key referenced in the definition XML) and a `getSubjectType()`. A trigger plugin additionally returns the application `getEventName()` that starts a new instance.
+For the plugin interfaces and how the engine resolves them, see [Extending a workflow](/docs/dg/dev/backend-development/workflow.html#extending-a-workflow).
 
-### 5) Register the data importer
+### 6) Register the data importer
 
 Register the Workflow data import plugin so workflows can be provisioned from CSV.
 
@@ -155,9 +182,11 @@ protected function getDataImporterPlugins(): array
 }
 ```
 
-### 6) Provide the import data
+### 7) Provide the import data
 
-Store the definition XML in its own file and reference it from the CSV. Each CSV row is one workflow version, and the `definition` column holds a path to the XML file relative to the project root.
+The import uses two files: a definition XML file that describes the state machine (its states, transitions, and events, in the same `state-machine-01` format used by the OMS), and a CSV that provisions the workflow and points at that XML file. Storing the definition in its own file keeps the CSV readable and lets you edit the state machine like any other XML process.
+
+The `definition` column in the CSV holds the path to the XML file, relative to the project root.
 
 **data/import/common/common/workflow/company_onboarding.xml**
 
@@ -198,7 +227,7 @@ Run the importer directly to verify:
 docker/sdk cli console data:import workflow
 ```
 
-### 7) Add the importer to the install recipe
+### 8) Add the importer to the install recipe
 
 Register the workflow importer in the data import configuration so it runs during deployment. Add it to the region import config that the install recipes invoke through `data:import`.
 
@@ -219,9 +248,9 @@ Run the install recipe and make sure the workflow with its versions appears unde
 
 {% endinfo_block %}
 
-### 8) Schedule the condition and timeout jobs
+### 9) Schedule the condition and timeout jobs
 
-Condition and timeout transitions have no event, so they must be advanced by scheduled jobs, the same way OMS and state machine checks are scheduled. Add the following jobs to `config/Zed/cronjobs/jenkins.php`:
+Condition and timeout transitions have no event, so they must be advanced by two console commands: `workflow:check-condition` and `workflow:check-timeout`. These commands are **not** scheduled out of the box — register them as recurring jobs the same way the OMS and state machine checks are scheduled. Add the following jobs to `config/Zed/cronjobs/jenkins.php`:
 
 ```php
 $jobs[] = [

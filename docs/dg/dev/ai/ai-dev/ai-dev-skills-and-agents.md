@@ -1,7 +1,7 @@
 ---
 title: AI Dev SDK Skills and Agents
 description: Reference of the skills and agents shipped with the AI Dev SDK
-last_updated: Jul 28, 2026
+last_updated: Aug 11, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, windsurf, copilot, skills, agents, subagents, spryker
 template: concept-topic-template
@@ -43,25 +43,60 @@ If you want to invoke one explicitly:
 
 Skills are delivered through `ai-dev:setup` (all supported AI tools) or the Claude Code plugin.
 
+### Orchestrator skills
+
+These skills own a full workflow and delegate each stage to the specialist skills and agents below. Each has its own page.
+
 | Skill | Purpose | Benefits |
 |-------|---------|----------|
-| `ai-dev-setup` | Generate rules, an agents/context file, and skills for the project and the chosen AI tool | One command sets up consistent AI tooling for the whole team |
+| [`project-starter-wizard`](/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html) | Turn a fresh clone of a demoshop into the customer's project | One developer interview up front, then nine orchestrated steps to a verified running shop; a resumable state file survives interruptions |
+| [`spryker-customization`](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html) | Walk a product requirement document or set of acceptance criteria through to a committed branch | One workflow drives the full build; quality bar (PoC or MVP) chosen up-front; never auto-commits |
+| [`spryker-bugfix`](/docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html) | Drive a bug from an optional tracker ticket or a plain description through to a committed, validated, QA-accepted fix | Orchestrates reproduce, root cause, minimal fix, functional test, static validation, review, QA, and final verification; a shared attempt budget loops back on any failed gate; Autonomous mode adds a pushed draft PR with a remote CI watch loop |
+| [`spryker-upgrade`](/docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html) | Upgrade the project's modules and features to a newer Spryker release | Checks first whether the customizations are covered by tests at all, resolves the constraint blockers that stop a release-group bump, then detects the silent damage a heavily customized project would otherwise ship |
+
+### Project setup skills
+
+The `project-starter-wizard` runs these as its steps, and each also works standalone on an existing project.
+
+| Skill | Purpose | Benefits |
+|-------|---------|----------|
+| `project-ci-generator` | Transform an inherited product-style CI setup into a single, lean project CI pipeline | Reads the CI that actually exists rather than applying a template; proposes a keep/drop plan for approval before deleting anything; ports the same jobs to GitLab or Bitbucket |
+| `configure-codebase` | Register a custom namespace instead of `Pyz` and wire autoload, frontend build, and Codeception to resolve it | One pass covers every place the namespace must be declared, so the project builds, lints, and tests under its own name |
+| `brand-project` | Apply or change the project's brand identity — name, development domain, Docker namespace, palette, and logo | Repeatable any time, not only at project start; works pre- or post-boot |
+| `configure-services` | Change what infrastructure the project runs on, or build a new environment deploy file | Surgical edits to the keys it owns; neighboring deploy-file blocks stay untouched |
+| `define-stores` | Create or redefine a DMS project's stores and region before the first boot | Clears the hardcoded store and locale literals that otherwise abort the boot |
+| `project-data` | Populate, reshape, reduce, clean up, or remove the project's import data | One skill for every `data/import` change — adapt the demo shop to your stores, generate a catalog from images, or start with no demo data at all |
+| `spryker-import-tools` | Read, filter, edit, and validate data import CSV files and manifests | Reliable where shell tools corrupt multi-line quoted fields; static validation catches boot-aborting data in seconds |
+| `boot-and-verify` | Take a transformed project from "files written" to "verified running" | Per-store verification of storefront, Back Office, search, and queues; an independent verifier agent gives the verdict |
+| `curate-golive-data` | Make the data the project keeps production-safe before go-live | Resolves the go-live warnings the data and boot steps surface — placeholder tax rates, Spryker CDN imagery, demo accounts |
+| `translate-content` | Translate storefront content into a project locale | Strictly per-locale and opt-in; covers glossary as well as catalog, CMS, navigation, and labels |
+
+### Development skills
+
+| Skill | Purpose | Benefits |
+|-------|---------|----------|
+| `ai-dev-setup` | Generate rules, an agents/context file, and skills for the project and the chosen AI tool | One command sets up consistent AI tooling for the whole team; also refreshes the rules and context file from the latest upstream content |
 | `code-review` | Review staged or PR changes against Spryker coding standards | Catches Spryker-specific issues before they reach a pull request |
 | `propel-schema` | Create and modify Propel ORM schema files | Follows Spryker schema conventions automatically |
 | `data-import` | Create and modify data import CSV files and importers | Generates importers that fit Spryker's data-import path |
-| `codecept-functional` | Generate Codeception functional tests | Tests follow Spryker test patterns out of the box |
-| `static-validation` | Run and interpret static analysis tools (PHPStan, PHP CS Fixer) | Quick diagnosis of style and type issues without context-switching |
+| `static-validation` | Run static analysis over only the code that changed against a base branch — PHP and frontend | Validates the diff rather than the whole project; groups PHP by changed file or by whole changed module |
 | `payment-template` | Scaffold payment method integration | Follows Spryker payment module patterns end-to-end |
 | `yves-atomic-frontend` | Create atomic design components for the Yves storefront | Components match the project's atomic conventions |
 | `product-requirement-document` | Turn a feature idea into a research-grounded product requirement document before any code is written | Spec-before-code; assigns a real Spryker actor to every story; cuts ambiguity before implementation |
-| [`spryker-customization`](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html) | Walk a product requirement document or set of acceptance criteria through to a committed branch | One workflow drives the full build; quality bar (PoC or MVP) chosen up-front; delegates focused work to the agents below; never auto-commits |
-| `spryker-bugfix` | Drive a bug from an optional tracker ticket or a plain description through to a committed, validated, QA-accepted fix | Orchestrates reproduce, root-cause, minimal fix, functional test, static validation, review, QA, and final verification; a shared attempt budget loops back on any failed gate; Autonomous mode adds a pushed Draft PR with a remote-CI watch loop |
 | `spryker-refresher` | Run the right post-change console and composer commands after edits | Owns the file-to-command mapping (codegen, caches, frontend builds, class-resolver); no missed cache rebuilds |
-| `spryker-qa-coverage` | Turn acceptance criteria into a four-bucket test plan executed against the live app | Coverage goes beyond literal ACs — happy / negative / authorization / corner cases; reports pass/fail with real evidence |
 | `spryker-docs-research` | Look up the right answer in official Spryker documentation | Grounds AI work in documented behavior rather than the model's memory; falls back gracefully when MCP tools are unavailable |
-| `spryker-runtime` | Drive the running Spryker application — Yves, Back Office, Merchant Portal, console, HTTP | Real authenticated sessions; read-only DB / Redis / queue inspection; reusable building block for higher-level skills and agents |
+| `spryker-runtime` | Drive the running Spryker application — Yves, Back Office, Merchant Portal, console, HTTP | Real authenticated sessions; read-only DB, Redis, and queue inspection; reusable building block for higher-level skills and agents |
 | `ai-runtime-debugging` | Inspect Spryker runtime state safely from an AI session | `[AI-DEBUG]` tagged-log pattern plus optional XDebug step-debug; built-in cleanup of debug instrumentation before commit |
-| `project-ci-generator` | Transform an inherited product-style CI setup into a single, lean project CI pipeline | Reads the CI that actually exists rather than applying a template; reuses the discovered commands verbatim so the result stays environment-correct; proposes a keep/drop plan for approval before deleting anything; ports the same jobs to GitLab or Bitbucket |
+
+### Testing and performance skills
+
+| Skill | Purpose | Benefits |
+|-------|---------|----------|
+| `codecept-functional` | Generate Codeception functional tests | Tests follow Spryker test patterns out of the box |
+| `cypress-tests` | Create, run, review, and validate Cypress end-to-end tests | Day-to-day E2E work against your project's own suite — storefront, Back Office, Merchant Portal, and Glue API |
+| `cypress-migration` | Replace Spryker's demoshop test suites with a project-owned Cypress baseline | One-time migration; vendors in a proven reference implementation, wires up CI, and generates the companion `cypress-tests` skill for the project |
+| `spryker-qa-coverage` | Turn acceptance criteria into a four-bucket test plan executed against the live app | Coverage goes beyond literal acceptance criteria — happy, negative, authorization, and corner cases; reports pass/fail with real evidence |
+| [`spryker-profiler`](/docs/dg/dev/ai/ai-dev/ai-dev-profiler-workflow.html) | Read and configure the Spryker WebProfiler — every metric it recorded about a request | Real measurements instead of guesses; finds N+1 duplicates, Redis and search call counts, and the heaviest request; also fixes a profiler that shows no data |
 
 ## Agents
 
@@ -81,3 +116,8 @@ Agents are delivered through `ai-dev:setup` (every supported AI tool with an age
 - [AI Dev SDK Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html)
 - [AI Dev MCP Server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html)
 - [Claude Code Plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html)
+- [AI Dev SDK Project Starter Wizard](/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html)
+- [AI Dev SDK Customization Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html)
+- [AI Dev SDK Bugfix Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html)
+- [AI Dev SDK Upgrade Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html)
+- [AI Dev SDK Profiler Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-profiler-workflow.html)

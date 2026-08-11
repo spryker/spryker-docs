@@ -106,8 +106,16 @@ entries:
             url: /docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html
           - title: AI Dev SDK Skills and Agents
             url: /docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html
+          - title: AI Dev SDK Project Starter Wizard
+            url: /docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html
           - title: AI Dev SDK Customization Workflow
             url: /docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html
+          - title: AI Dev SDK Bugfix Workflow
+            url: /docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html
+          - title: AI Dev SDK Upgrade Workflow
+            url: /docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html
+          - title: AI Dev SDK Profiler Workflow
+            url: /docs/dg/dev/ai/ai-dev/ai-dev-profiler-workflow.html
       - title: AI Assistants
         url: /docs/dg/dev/ai/ai-assistants/ai-assistants.html
         nested:

@@ -1,9 +1,9 @@
 ---
 title: AI Dev SDK Customization Workflow
 description: Turn a feature idea into a working, reviewed Spryker feature on a committed branch — driven by the spryker-customization orchestrator
-last_updated: Jun 22, 2026
+last_updated: Aug 11, 2026
 label: early-access
-keywords: ai, ai-dev, claude, claude code, spryker-customization, workflow, prd, customization, automation
+keywords: ai, ai-dev, claude, claude code, spryker-customization, workflow, prd, customization, automation, cypress
 template: concept-topic-template
 ---
 
@@ -35,6 +35,7 @@ Each phase delegates to specific skills (pale yellow) and agents (deep amber) �
 - Per-criterion verification results with real evidence from the running app — what passed, what did not, why
 - A code-review report against the staged diff
 - Tests (when you pick the MVP bar)
+- Cypress end-to-end coverage for the feature (when you pick the MVP bar)
 - The commit waits for your approval; nothing is pushed
 
 If you wanted a product requirement document too, the skill can produce one — by delegating to `product-requirement-document` — as a reusable document under `resources/plan/PRD/` before the build starts.
@@ -48,6 +49,20 @@ You pick one of two bars at the start. The skill asks once and shapes the rest o
 **MVP** — production-grade output. The orchestrator uses Spryker's canonical extension chain (plugin stacks, factory expanders, dependency injection, project-layer transfer and schema XML), covers every configured locale, adds ACL where the feature touches the back office, and writes tests for non-trivial logic. Pick this for code you intend to ship.
 
 Both bars produce a visually integrated feature — new UI elements reuse the project's atomic design components, never raw HTML pasted onto a styled page.
+
+## Cypress end-to-end coverage
+
+Once every acceptance criterion is verified green and any visual sign-offs are done, the workflow runs a Cypress phase. It delegates to the `cypress-tests` skill, which decides what the feature needs against your project's existing suite:
+
+- **Fix** a spec the feature broke
+- **Improve** assertions that would have missed the change
+- **Add** a new spec for the feature
+
+The phase then runs the affected specs and the project's quality gate rather than the whole suite.
+
+The phase is on by default for the MVP bar and off for PoC, and you can switch it either way at the start. It runs only when the feature is visible on an end-to-end surface and your project has a Cypress suite. A skip is always reported with its reason, never silent.
+
+The phase deliberately runs last, after the self-correction loop has converged, so no spec is written against an implementation still in flux. If a spec goes red because the feature is wrong rather than the test, that is treated as a missed acceptance criterion and feeds back into the self-correction loop.
 
 ## Where you decide
 

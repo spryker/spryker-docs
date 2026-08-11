@@ -5,8 +5,8 @@ last_updated: Aug 7, 2026
 template: howto-guide-template
 
 related:
-  - title: Workflows feature
-    link: docs/dg/dev/backend-development/workflow.html
+  - title: Workflows feature overview
+    link: docs/pbc/all/back-office/latest/base-shop/workflow-feature-overview.html
 ---
 
 This document describes how to install the Workflow feature.
@@ -160,7 +160,7 @@ class WorkflowDependencyProvider extends SprykerWorkflowDependencyProvider
 }
 ```
 
-For the plugin interfaces and how the engine resolves them, see [Extending a workflow](/docs/dg/dev/backend-development/workflow.html#extending-a-workflow).
+For the plugin interfaces and how the engine resolves them, see [Extending a workflow](/docs/pbc/all/back-office/latest/base-shop/workflow-feature-overview.html#extending-a-workflow).
 
 ### 6) Register the data importer
 
@@ -207,7 +207,7 @@ The `definition` column in the CSV holds the path to the XML file, relative to t
 
 ```csv
 name,subject_type,description,initial_state,version,definition,trigger_events,is_active
-CompanyOnboarding,Company,B2B company onboarding demo workflow,created,1,data/import/common/common/workflow/company_onboarding.xml,"Entity.spy_company.create",1
+CompanyOnboarding,Company,B2B company onboarding demo workflow,created,1,data/import/common/common/workflow/company_onboarding.xml,"Entity.spy_company.create,Entity.spy_company.update",1
 ```
 
 | COLUMN | REQUIRED | DESCRIPTION |
@@ -217,8 +217,8 @@ CompanyOnboarding,Company,B2B company onboarding demo workflow,created,1,data/im
 | description | no | Human-readable description. |
 | initial_state | yes | The state a new instance starts in. |
 | version | yes | Version number. The importer upserts on `(name, version)`, so re-imports do not create duplicates. |
-| definition | yes | Path to the `state-machine-01` definition XML file, relative to the project root. |
-| trigger_events | no | Comma-separated start events. |
+| definition | yes | Path to the definition XML file, relative to the project root — for example `data/import/common/common/workflow/company_onboarding.xml`. |
+| trigger_events | no | The Publish & Synchronize event names custom type of triggers that start an instance, for example `Entity.spy_company.create`. To list several events, separate them with commas and wrap the whole cell in double quotes so the commas are not read as CSV column separators: `"Entity.spy_company.create,Entity.spy_company.update"`. |
 | is_active | no | `1` activates this version and its process. |
 
 Run the importer directly to verify:

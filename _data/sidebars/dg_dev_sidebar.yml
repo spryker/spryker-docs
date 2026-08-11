@@ -526,9 +526,6 @@ entries:
       - title: Adding Custom Scopes
         url: /docs/dg/dev/backend-development/configuration-management/custom-scopes.html
 
-    - title: Workflow
-      url: /docs/dg/dev/backend-development/workflow.html
-
   - title: Frontend development
     url: /docs/dg/dev/frontend-development/frontend-development.html
     nested:

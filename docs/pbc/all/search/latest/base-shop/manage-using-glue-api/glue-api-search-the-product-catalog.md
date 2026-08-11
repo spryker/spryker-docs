@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Search the product catalog"
 description: This article provides a bunch of sample requests to be used to achieve the implementation of search options and gives explanations of request values.
-last_updated: Dec 19, 2023
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/searching-the-product-catalog
 originalArticleId: d8d530bf-7cb2-473f-a7cb-0db96957700e
@@ -6715,4 +6715,4 @@ For other abstract product attributes, see [Retrieving abstract product prices](
 | 314    | Price mode is invalid.                                                                                                                                                             |
 | 503    | Invalid type (non-integer) of one of the request parameters:<ul><li>rating</li><li>rating.min</li><li>rating.max</li><li>page.limit</li><li>page.offset</li><li>category</li></ul> |
 
-For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

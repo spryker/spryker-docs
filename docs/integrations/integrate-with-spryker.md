@@ -1,7 +1,7 @@
 ---
 title: Integrate with Spryker
 description: API documentation for dynamic-entity-availability-abstracts.
-last_updated: March 16, 2026
+last_updated: July 30, 2026
 template: default
 layout: custom_new
 redirect_from:
@@ -49,7 +49,7 @@ At their core, integrations follow these design principles:
     <div class="cst_card_image"><img src="/images/integrations/int_api.png" alt="Icon for Spryker GLUE APIs"></div>
     <div class="cst_card_title">Spryker APIs</div>
     <div class="cst_card_desc">Spryker APIs—primarily the Glue API—provide a RESTful interface for interacting with the Spryker Commerce OS. They enable external systems, services, and frontend applications to communicate with Spryker in a structured, secure way.</div>
-    <a class="cst_card_button" href="spryker-glue-api/getting-started-with-apis/getting-started-with-apis"> Find out more </a>
+    <a class="cst_card_button" href="spryker-api/getting-started-with-apis/getting-started-with-apis"> Find out more </a>
   </div>
 
   <div class="cst_card">

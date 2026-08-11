@@ -1,6 +1,7 @@
 ---
 title: Spryker K6 Performance Assistant GPT
 description: Spryker K6 Performance Assistant – Early Access Program Guide & Feedback Portal
+last_updated: July 30, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/dg/dev/ai-assistants/spryker-k6-performance-assistant-gpt
@@ -23,7 +24,7 @@ Depending on the use case, load, and business model, Spryker shops can have diff
 
 Let's consider a use case involving a company called 'C&A' that sells clothes and accessories. They have an unstable load on their online shops - there is a considerable difference in number of orders between normal days and the sales days; they also provide limited-time offers using coupons which last only for a few hours at a time.
 
-They want their shop to stay functional during peak hours without overspending on environments in daily operation. They run their shop on Spryker Glue API and need it to stay responsive and fast, especially during high demand.
+They want their shop to stay functional during peak hours without overspending on environments in daily operation. They run their shop on the Spryker Storefront API and need it to stay responsive and fast, especially during high demand.
 
 'C&A' will benefit from using Spryker K6 Performance Assistant, which lets them tailor performance tests to simulate fluctuations in sales. This helps verify shop performance under different scenarios without requiring extensive training or external expertise. The tool offers a simple entry point for performance testing with minimal setup and no prior knowledge needed. As the team gains experience, they can expand the provided tests, making it an easy way to start testing from scratch and grow over time.
 

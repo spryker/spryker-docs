@@ -2,7 +2,7 @@
 title: Test Glue Backend API
 description: Learn how to test Glue Backend API end to end with this helpful guide for your Spryker based projects.
 template: howto-guide-template
-last_updated: Jan 9, 2024
+last_updated: Jul 30, 2026
 redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-glue-backend-api.html
 ---
@@ -30,7 +30,7 @@ This document describes how to set up and run Glue Backend API end-to-end (E2E) 
   composer update spryker/testify:"^3.52.0"
   ```
 
-2. To validate the response body against the OpenAPI schema, you need to generate the schema. For instructions, see [Document Storefront API Resources](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/document-storefront-api-resources.html).
+2. To validate the response body against the OpenAPI schema, you need to generate the schema. For instructions, see [Document Storefront API Resources](/docs/integrations/spryker-api/storefront-api/developing-apis/document-storefront-api-resources.html).
 
 
 ## Configure the project and set up test files

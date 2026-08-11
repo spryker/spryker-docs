@@ -123,8 +123,6 @@ entries:
             url: /docs/dg/dev/ai/ai-assistants/spryker-k6-performance-assistant-gpt.html
           - title: Spryker DevQA Assistant GPT
             url: /docs/dg/dev/ai/ai-assistants/spryker-devqa-assistant-gpt.html
-          - title: Spryker Cypress E2E Assistant GPT
-            url: /docs/dg/dev/ai/ai-assistants/spryker-cypress-e2e-assistant-gpt.html
   - title: Set up locally
     url: /docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html
     nested:
@@ -880,6 +878,8 @@ entries:
         - title: "Web components"
           url: /docs/dg/dev/frontend-development/marketplace/web-components.html
 
+    - title: B2B component library
+      url: /docs/dg/dev/frontend-development/component-library.html
     - title: Create Angular modules
       url: /docs/dg/dev/frontend-development/create-angular-modules.html
     - title: Define Twig tag
@@ -894,16 +894,8 @@ entries:
     nested:
     - title: Upgrade to Symfony Dependency Injection
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html
-    - title: How to integrate API Platform
-      url: /docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
-    - title: How to integrate API Platform Security
-      url: /docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html
-    - title: How to migrate to API Platform
-      url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform.html
-    - title: API Platform migration overview
-      url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform-overview.html
-    - title: Upgrade API Platform resources to typed nested objects
-      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-api-platform-typed-nested-objects.html
+    - title: Migrate to API Platform
+      url: /docs/integrations/spryker-api/migrate-from-glue-to-api-platform/migrate-to-api-platform-overview.html
     - title: Migrate from Auth to SecurityGui module
       url: /docs/dg/dev/upgrade-and-migrate/migrate-from-auth-to-securitygui-module.html
     - title: Migrating from Twig v1 to Twig v3
@@ -1316,32 +1308,7 @@ entries:
       url: /docs/dg/dev/architecture/symfony-bundles.html
 
     - title: API Platform
-      url: /docs/dg/dev/architecture/api-platform.html
-      nested:
-        - title: Resource Schemas
-          url: /docs/dg/dev/architecture/api-platform/resource-schemas.html
-        - title: Validation Schemas
-          url: /docs/dg/dev/architecture/api-platform/validation-schemas.html
-        - title: CodeBucket Support
-          url: /docs/dg/dev/architecture/api-platform/code-buckets.html
-        - title: Relationship Support
-          url: /docs/dg/dev/architecture/api-platform/relationships.html
-        - title: Enablement
-          url: /docs/dg/dev/architecture/api-platform/enablement.html
-        - title: Testing
-          url: /docs/dg/dev/architecture/api-platform/testing.html
-        - title: Troubleshooting
-          url: /docs/dg/dev/architecture/api-platform/troubleshooting.html
-        - title: Sparse fieldsets
-          url: /docs/dg/dev/architecture/api-platform/sparse-fieldsets.html
-        - title: Serialization
-          url: /docs/dg/dev/architecture/api-platform/serialization.html
-        - title: Native API Platform Resources
-          url: /docs/dg/dev/architecture/api-platform/native-api-platform-resources.html
-        - title: IDE integration
-          url: /docs/dg/dev/architecture/api-platform/ide-integration.html
-        - title: Migration status - Glue API to API Platform
-          url: /docs/dg/dev/architecture/api-platform/migrate-to-api-platform-status.html
+      url: /docs/integrations/spryker-api/api-platform/api-platform.html
 
     - title: Code buckets
       url: /docs/dg/dev/architecture/code-buckets.html
@@ -1537,6 +1504,37 @@ entries:
         url: /docs/dg/dev/guidelines/testing-guidelines/running-tests-with-robot-framework.html
       - title: E2E Testing with Cypress
         url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing.html
+        nested:
+          - title: What is E2E testing?
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/what-is-e2e-testing.html
+          - title: Identifying what to test
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/identifying-what-to-test.html
+          - title: Cypress boilerplate project structure
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/project-structure.html
+          - title: Getting started with the Cypress boilerplate
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/getting-started.html
+          - title: Cypress best practices
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/best-practices.html
+          - title: Cypress boilerplate naming conventions
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/naming-conventions.html
+          - title: Cypress test writing conventions
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/test-writing-conventions.html
+          - title: Configuration and environment variables
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/configuration-and-environment-variables.html
+          - title: Cypress boilerplate plugins and libraries
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/plugins-and-libraries.html
+          - title: ESLint and Prettier in the Cypress boilerplate
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/eslint-and-prettier.html
+          - title: HTML reporter
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/html-reporter.html
+          - title: Cypress commands vs scenarios
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/cypress-commands-vs-scenarios.html
+          - title: Validate API responses against a schema
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/how-to-validate-api-response-vs-schema.html
+          - title: Debugging Cypress tests
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/debugging-cypress-tests.html
+          - title: Integrating Cypress tests into CI
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/integrating-cypress-tests-into-ci.html
       - title: Test helpers
         url: /docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
         nested:

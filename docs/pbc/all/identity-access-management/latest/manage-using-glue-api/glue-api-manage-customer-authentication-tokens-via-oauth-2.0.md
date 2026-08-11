@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Manage customer authentication tokens via OAuth 2.0"
 description: This endpoint allows authenticating as a customer and refreshing customer authentication tokens via OAuth 2.0.
-last_updated: June 9, 2026
+last_updated: July 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-authentication-tokens-via-oauth-20
 originalArticleId: 4fe6c88f-3879-4f9f-bb91-c6a867d120fa
@@ -146,4 +146,4 @@ To refresh an authentication token, send the request:
 | invalid_request | The refresh token is invalid. |
 | invalid_grant | The provided authorization grant or refresh token is invalid, expired, or revoked. The provided authorization grant or refresh token does not match the redirection URI used in the authorization request, or was issued to another client. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

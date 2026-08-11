@@ -2,7 +2,7 @@
 title: "Glue API: Retrieve concrete products"
 description: Retrieve Concrete product data in your Spryker Marketplace project using the Spryker GLUE API.
 template: glue-api-storefront-guide-template
-last_updated: Dec 18, 2023
+last_updated: Jul 30, 2026
 redirect_from:
   - /docs/pbc/all/product-information-management/202311.0/marketplace/manage-using-glue-api/retrieve-concrete-products.html
 related:
@@ -1143,4 +1143,4 @@ For attributes of the other included resources, see the following:
 | --- | --- |
 | 302 | Concrete product is not found. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

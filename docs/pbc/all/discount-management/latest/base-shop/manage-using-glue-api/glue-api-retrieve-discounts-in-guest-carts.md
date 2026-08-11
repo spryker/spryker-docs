@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Retrieve discounts in guest carts"
 description: Learn how you can retrieve discounts in guest carts via the Spryker Glue API for your Spryker projects.
-last_updated: July 25, 2022
+last_updated: July 30, 2026
 template: glue-api-storefront-guide-template
 redirect_from:
   - /docs/pbc/all/discount-management/202311.0/manage-via-glue-api/retrieve-discounts-in-guest-carts.html
@@ -224,4 +224,4 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 | 104 | Cart uuid is missing. |
 | 109 | Anonymous customer unique ID is empty. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

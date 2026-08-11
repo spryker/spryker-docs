@@ -2,7 +2,7 @@
 title: "Glue API: Retrieve product offer availability"
 description: Learn how to retrieve Marketplace product offer availabilities via Glue API for your Spryker Marketplace projects.
 template: glue-api-storefront-guide-template
-last_updated: Nov 21, 2023
+last_updated: Jul 30, 2026
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202311.0/product-offers/retrieving-product-offer-availability.html
 related:
@@ -77,4 +77,4 @@ Response sample: retrieve availability of a product offer
 | 3701     | Product offer was not found. |
 | 3702     | Product offer ID is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

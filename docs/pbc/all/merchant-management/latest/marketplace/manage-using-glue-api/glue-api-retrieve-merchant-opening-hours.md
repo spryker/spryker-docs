@@ -2,7 +2,7 @@
 title: "Glue API: Retrieve merchant opening hours"
 description: Learn how to retrieve merchant opening hours in your Spryker marketplace project via the Spryker Glue API
 template: glue-api-storefront-guide-template
-last_updated: Nov 17, 2023
+last_updated: Jul 30, 2026
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202311.0/merchants/retrieving-merchant-opening-hours.html
 related:
@@ -208,4 +208,4 @@ Request sample: retrieve merchant opening hours
 
 ## Possible errors
 
-For statuses, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+For statuses, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

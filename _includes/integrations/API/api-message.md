@@ -7,4 +7,4 @@ Authentication:
 
 The token will be valid for 8 hours.
 
-Pay attention, that for some APIs the lock icon might not reflect the actual state when [Customer Access feature](https://docs.spryker.com/docs/pbc/all/customer-relationship-management/latest/base-shop/customer-access-feature-overview) is active. In case of receiving Access Denied, check the settings in the Backoffice or in [your code](https://docs.spryker.com/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/manage-customer-access-to-glue-api-resources).
+Pay attention, that for some APIs the lock icon might not reflect the actual state when [Customer Access feature](https://docs.spryker.com/docs/pbc/all/customer-relationship-management/latest/base-shop/customer-access-feature-overview) is active. In case of receiving Access Denied, check the settings in the Back Office or in [your code](https://docs.spryker.com/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/manage-customer-access-to-glue-api-resources).

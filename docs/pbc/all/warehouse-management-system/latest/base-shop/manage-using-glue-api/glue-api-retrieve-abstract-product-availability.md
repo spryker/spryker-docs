@@ -1,11 +1,12 @@
 ---
 title: Retrieve abstract product availability
 description: Learn how to retrieve information about availability of abstract products using Spryker GLUE API within your Spryker based projects.
-last_updated: Jul 12, 2021
+last_updated: July 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-abstract-product-availability
 originalArticleId: c712b4c5-0418-48a7-bb0a-bafd208dcf17
 redirect_from:
+  - /docs/pbc/all/warehouse-management-system/latest/manage-using-glue-api/glue-api-retrieve-abstract-product-availability.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/abstract-products/retrieving-abstract-product-availability.html  
   - /docs/pbc/all/warehouse-management-system/202311.0/base-shop/manage-using-glue-api/retrieve-abstract-product-availability.html
   - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-availability.html
@@ -78,4 +79,4 @@ Response sample: retrieve availability of an abstract product
 | 305 | Availability is not found. |
 | 311 | Abstract product SKU is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

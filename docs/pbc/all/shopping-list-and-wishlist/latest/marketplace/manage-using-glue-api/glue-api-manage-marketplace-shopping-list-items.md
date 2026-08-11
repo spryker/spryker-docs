@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Manage marketplace shopping list items"
 description: Learn how to manage Spryker Marketplace shopping list items via the Spryker Glue API.
-last_updated: May 20, 2022
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 related:
   - title: Managing shopping lists
@@ -581,4 +581,4 @@ If the item is removed successfully, the endpoint returns the `204 No Content` s
 | 1518 | Product is not equal to the current Store. |
 | 1519 | Product offer is not equal to the current Store. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

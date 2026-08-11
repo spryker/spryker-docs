@@ -21,6 +21,12 @@ Spryker records every web request automatically. That history is the cheapest so
 
 Invoke it when you ask why a page, endpoint, or Back Office screen is slow, want the heaviest request, suspect an N+1 query, need before-and-after evidence that a performance fix worked, or want to know what a request logged, threw, or which controller handled it. It also covers profiler setup — a missing toolbar, a collector showing no data, or enabling profiling for a specific application.
 
+## Workflow at a glance
+
+{% include diagrams/ai-dev/profiler-workflow.svg %}
+
+Reproduce the request before reading it — profiles accumulate for days, so an unchecked profile may be last week's. Read the counts rather than the milliseconds: local wall time swings widely for identical work.
+
 ## What it can tell you
 
 The I/O counters say how much work a request did:

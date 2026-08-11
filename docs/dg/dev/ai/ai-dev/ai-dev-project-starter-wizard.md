@@ -21,6 +21,12 @@ The wizard owns the conversation and the flow — it writes almost nothing itsel
 
 Invoke it at the very start of a new project: *"turn this demoshop into our project"*, *"start the project setup"*. It is also the resume entry point — if a previous run left a state file, invoking the skill again skips the interview and continues from the first unfinished step.
 
+## Workflow at a glance
+
+{% include diagrams/ai-dev/project-starter-wizard.svg %}
+
+The wizard asks everything once, then runs steps 1 to 7 before the first boot, because each one changes files the boot reads. Step 8 boots and verifies the result, delegating the verdict to the `spryker-verifier` agent.
+
 ## The interview
 
 The interview collects nine sections up front so the run needs no further configuration decisions:

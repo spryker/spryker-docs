@@ -1,0 +1,26 @@
+flowchart TD
+    A(["Bug: ticket or plain description"]) --> S0["Intake · mode, context, PR channel"]
+    S0 --> S2{"Branch safety gate<br/>clean tree, fresh base?"}
+    S2 -->|"dirty or stale"| STOP(["Stop and report"])
+
+    S2 -->|"ok"| S3["Reproduce the symptom"]
+    S3 --> S4["<b>Root cause</b> &nbsp;·&nbsp; <i>loop re-entry</i>"]
+    S4 --> S5["Fix + re-run reproduction"]
+    S5 --> S6["Functional tests · static validation"]
+
+    S6 --> G1{"Code review<br/>then QA coverage"}
+    G1 -->|"blocker or rejected"| BUD
+    G1 -->|"accepted"| CY["Cypress E2E &nbsp;·&nbsp; <i>conditional</i>"]
+    CY --> G3{"Final verification<br/>symptom gone?"}
+    G3 -->|"FAIL"| BUD
+
+    BUD{"attempt &gt; 3?"}
+    BUD -->|"yes"| STOP
+    BUD -.->|"no · re-investigate"| S4
+
+    G3 -->|"PASS"| C["Commit — always"]
+    C --> M{"Mode and PR channel"}
+    M -->|"Collaborative"| LOCAL(["Commit, then stop<br/>for your review"])
+    M -->|"Autonomous"| SHIP["Push + draft PR<br/>remote CI watch loop"]
+    SHIP --> REP(["Final report"])
+    SHIP -.->|"CI red in your code"| BUD

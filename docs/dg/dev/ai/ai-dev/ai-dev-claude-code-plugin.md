@@ -98,41 +98,41 @@ Four skills own a full workflow and delegate each stage to the others. Each has 
 
 ### Skills
 
-The plugin bundles the following Spryker-aware skills. Invoke them in Claude Code with the `/` prefix.
+The plugin bundles the following Spryker-aware skills. Invoke them in Claude Code with the `/` prefix. The **Reference** column links to each skill's README in the plugin repository, which documents its full flow and limits.
 
-| Skill | Command | Description |
-|-------|---------|-------------|
-| AI Dev Setup | `/spryker-ai-dev-sdk:ai-dev-setup` | Generates rules, a context file, and skills for your project and AI tool |
-| Project Starter Wizard | `/spryker-ai-dev-sdk:project-starter-wizard` | Turns a fresh clone of a Spryker demoshop into your project — one interview, then nine orchestrated setup steps to a verified running shop |
-| Project CI Generator | `/spryker-ai-dev-sdk:project-ci-generator` | Rebuilds an inherited product-style CI setup into a single, lean project CI pipeline, keeping only the jobs and support files the project needs |
-| Configure Codebase | `/spryker-ai-dev-sdk:configure-codebase` | Registers a custom namespace instead of `Pyz` and wires autoload, frontend build, and Codeception to resolve it |
-| Brand Project | `/spryker-ai-dev-sdk:brand-project` | Applies or changes the project's brand identity — name, development domain, Docker namespace, palette, and logo |
-| Configure Services | `/spryker-ai-dev-sdk:configure-services` | Changes which engines, development services, and applications a deploy file runs, or builds a new environment deploy file |
-| Define Stores | `/spryker-ai-dev-sdk:define-stores` | Creates or redefines a DMS project's stores and region before the first boot |
-| Project Data | `/spryker-ai-dev-sdk:project-data` | Populates, reshapes, reduces, cleans up, or removes the project's data import files |
-| Spryker Import Tools | `/spryker-ai-dev-sdk:spryker-import-tools` | Reads, filters, edits, and validates data import CSV files and manifests |
-| Boot and Verify | `/spryker-ai-dev-sdk:boot-and-verify` | Boots the project and verifies storefront, Back Office, search, and queues per store |
-| Curate Go-Live Data | `/spryker-ai-dev-sdk:curate-golive-data` | Makes the data the project keeps production-safe before go-live |
-| Translate Content | `/spryker-ai-dev-sdk:translate-content` | Translates storefront content — glossary, catalog, CMS, navigation, and labels — into a project locale |
-| Code Review | `/spryker-ai-dev-sdk:code-review` | Reviews staged or PR changes against Spryker coding standards |
-| Propel Schema | `/spryker-ai-dev-sdk:propel-schema` | Helps create and modify Propel ORM schema files following Spryker conventions |
-| Data Import | `/spryker-ai-dev-sdk:data-import` | Assists with creating and modifying data import CSV files and importers |
-| Codecept Functional | `/spryker-ai-dev-sdk:codecept-functional` | Generates Codeception functional tests following Spryker test patterns |
-| Cypress Tests | `/spryker-ai-dev-sdk:cypress-tests` | Creates, runs, reviews, and validates Cypress end-to-end tests for the storefront, Back Office, Merchant Portal, and Glue API |
-| Cypress Migration | `/spryker-ai-dev-sdk:cypress-migration` | Replaces Spryker's demoshop test suites with a project-owned Cypress baseline and wires it into CI |
-| Static Validation | `/spryker-ai-dev-sdk:static-validation` | Runs PHP and frontend static analysis over only the code that changed against a base branch |
-| Payment Template | `/spryker-ai-dev-sdk:payment-template` | Scaffolds payment method integration following Spryker payment module patterns |
-| Yves Atomic Frontend | `/spryker-ai-dev-sdk:yves-atomic-frontend` | Helps create atomic design components for the Yves frontend |
-| Product Requirement Document | `/spryker-ai-dev-sdk:product-requirement-document` | Drafts a research-grounded product requirement document for a Spryker feature before implementation |
-| Spryker Customization | `/spryker-ai-dev-sdk:spryker-customization` | Orchestrates the end-to-end build of a customization from product requirement document to committed branch |
-| Spryker Bugfix | `/spryker-ai-dev-sdk:spryker-bugfix` | Orchestrates the end-to-end bug fix from a ticket or description to a committed, validated, QA-accepted branch (Autonomous mode adds a pushed draft PR with a CI watch loop) |
-| Spryker Upgrade | `/spryker-ai-dev-sdk:spryker-upgrade` | Upgrades the project's modules and features to a newer release, resolving constraint blockers and detecting the silent damage a customized project would otherwise ship |
-| Spryker Refresher | `/spryker-ai-dev-sdk:spryker-refresher` | Runs the right post-change console and composer commands after edits |
-| Spryker QA Coverage | `/spryker-ai-dev-sdk:spryker-qa-coverage` | Turns acceptance criteria into a four-bucket test plan and executes it against the running app |
-| Spryker Profiler | `/spryker-ai-dev-sdk:spryker-profiler` | Reads and configures the Spryker WebProfiler — query counts, N+1 duplicates, Redis and search calls, logs, and exceptions per request |
-| Spryker Docs Research | `/spryker-ai-dev-sdk:spryker-docs-research` | Looks up grounded answers in the official Spryker documentation |
-| Spryker Runtime | `/spryker-ai-dev-sdk:spryker-runtime` | Drives the running Spryker application — storefront, Back Office, console, HTTP |
-| AI Runtime Debugging | `/spryker-ai-dev-sdk:ai-runtime-debugging` | Adds tagged debug logs (and optional XDebug) for inspecting Spryker runtime state |
+| Skill | Command | Description | Reference |
+|-------|---------|-------------|-----------|
+| AI Dev Setup | `/spryker-ai-dev-sdk:ai-dev-setup` | Generates rules, a context file, and skills for your project and AI tool | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/ai-dev-setup/README.md) |
+| Project Starter Wizard | `/spryker-ai-dev-sdk:project-starter-wizard` | Turns a fresh clone of a Spryker demoshop into your project — one interview, then nine orchestrated setup steps to a verified running shop | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/project-starter-wizard/README.md) |
+| Project CI Generator | `/spryker-ai-dev-sdk:project-ci-generator` | Rebuilds an inherited product-style CI setup into a single, lean project CI pipeline, keeping only the jobs and support files the project needs | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/project-ci-generator/README.md) |
+| Configure Codebase | `/spryker-ai-dev-sdk:configure-codebase` | Registers a custom namespace instead of `Pyz` and wires autoload, frontend build, and Codeception to resolve it | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/configure-codebase/README.md) |
+| Brand Project | `/spryker-ai-dev-sdk:brand-project` | Applies or changes the project's brand identity — name, development domain, Docker namespace, palette, and logo | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/brand-project/README.md) |
+| Configure Services | `/spryker-ai-dev-sdk:configure-services` | Changes which engines, development services, and applications a deploy file runs, or builds a new environment deploy file | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/configure-services/README.md) |
+| Define Stores | `/spryker-ai-dev-sdk:define-stores` | Creates or redefines a DMS project's stores and region before the first boot | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/define-stores/README.md) |
+| Project Data | `/spryker-ai-dev-sdk:project-data` | Populates, reshapes, reduces, cleans up, or removes the project's data import files | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/project-data/README.md) |
+| Spryker Import Tools | `/spryker-ai-dev-sdk:spryker-import-tools` | Reads, filters, edits, and validates data import CSV files and manifests | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/spryker-import-tools/README.md) |
+| Boot and Verify | `/spryker-ai-dev-sdk:boot-and-verify` | Boots the project and verifies storefront, Back Office, search, and queues per store | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/boot-and-verify/README.md) |
+| Curate Go-Live Data | `/spryker-ai-dev-sdk:curate-golive-data` | Makes the data the project keeps production-safe before go-live | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/curate-golive-data/README.md) |
+| Translate Content | `/spryker-ai-dev-sdk:translate-content` | Translates storefront content — glossary, catalog, CMS, navigation, and labels — into a project locale | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/translate-content/README.md) |
+| Code Review | `/spryker-ai-dev-sdk:code-review` | Reviews staged or PR changes against Spryker coding standards | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/code-review/README.md) |
+| Propel Schema | `/spryker-ai-dev-sdk:propel-schema` | Helps create and modify Propel ORM schema files following Spryker conventions | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/propel-schema/README.md) |
+| Data Import | `/spryker-ai-dev-sdk:data-import` | Assists with creating and modifying data import CSV files and importers | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/data-import/README.md) |
+| Codecept Functional | `/spryker-ai-dev-sdk:codecept-functional` | Generates Codeception functional tests following Spryker test patterns | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/codecept-functional/README.md) |
+| Cypress Tests | `/spryker-ai-dev-sdk:cypress-tests` | Creates, runs, reviews, and validates Cypress end-to-end tests for the storefront, Back Office, Merchant Portal, and Glue API | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/cypress-tests/README.md) |
+| Cypress Migration | `/spryker-ai-dev-sdk:cypress-migration` | Replaces Spryker's demoshop test suites with a project-owned Cypress baseline and wires it into CI | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/cypress-migration/README.md) |
+| Static Validation | `/spryker-ai-dev-sdk:static-validation` | Runs PHP and frontend static analysis over only the code that changed against a base branch | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/static-validation/README.md) |
+| Payment Template | `/spryker-ai-dev-sdk:payment-template` | Scaffolds payment method integration following Spryker payment module patterns | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/payment-template/README.md) |
+| Yves Atomic Frontend | `/spryker-ai-dev-sdk:yves-atomic-frontend` | Helps create atomic design components for the Yves frontend | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/yves-atomic-frontend/README.md) |
+| Product Requirement Document | `/spryker-ai-dev-sdk:product-requirement-document` | Drafts a research-grounded product requirement document for a Spryker feature before implementation | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/product-requirement-document/README.md) |
+| Spryker Customization | `/spryker-ai-dev-sdk:spryker-customization` | Orchestrates the end-to-end build of a customization from product requirement document to committed branch | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/spryker-customization/README.md) |
+| Spryker Bugfix | `/spryker-ai-dev-sdk:spryker-bugfix` | Orchestrates the end-to-end bug fix from a ticket or description to a committed, validated, QA-accepted branch (Autonomous mode adds a pushed draft PR with a CI watch loop) | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/spryker-bugfix/README.md) |
+| Spryker Upgrade | `/spryker-ai-dev-sdk:spryker-upgrade` | Upgrades the project's modules and features to a newer release, resolving constraint blockers and detecting the silent damage a customized project would otherwise ship | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/spryker-upgrade/README.md) |
+| Spryker Refresher | `/spryker-ai-dev-sdk:spryker-refresher` | Runs the right post-change console and composer commands after edits | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/spryker-refresher/README.md) |
+| Spryker QA Coverage | `/spryker-ai-dev-sdk:spryker-qa-coverage` | Turns acceptance criteria into a four-bucket test plan and executes it against the running app | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/spryker-qa-coverage/README.md) |
+| Spryker Profiler | `/spryker-ai-dev-sdk:spryker-profiler` | Reads and configures the Spryker WebProfiler — query counts, N+1 duplicates, Redis and search calls, logs, and exceptions per request | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/spryker-profiler/README.md) |
+| Spryker Docs Research | `/spryker-ai-dev-sdk:spryker-docs-research` | Looks up grounded answers in the official Spryker documentation | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/spryker-docs-research/README.md) |
+| Spryker Runtime | `/spryker-ai-dev-sdk:spryker-runtime` | Drives the running Spryker application — storefront, Back Office, console, HTTP | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/spryker-runtime/README.md) |
+| AI Runtime Debugging | `/spryker-ai-dev-sdk:ai-runtime-debugging` | Adds tagged debug logs (and optional XDebug) for inspecting Spryker runtime state | [README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/ai-runtime-debugging/README.md) |
 
 ### Subagents
 

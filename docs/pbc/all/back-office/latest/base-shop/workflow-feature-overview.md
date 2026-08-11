@@ -18,17 +18,11 @@ Unlike classic state machines, which are defined in XML files and require a depl
 
 Consider onboarding a new B2B company. When a company is created, a workflow starts and walks it through a series of states: *business verification*, then *contract agreement*, then *customer group assignment*, and finally *approved*. Some steps advance on their own once a condition is met (for example, the business has been verified); others wait for a Back Office user to confirm; and a step can time out if nothing happens. The whole process — its states, the order of the steps, and the rules between them — is defined and adjusted in the Back Office, not in code.
 
-{% info_block infoBox "Relationship to the Order Management System" %}
-
-The Workflows feature runs on the same engine as the Order Management System (OMS) but is not limited to orders. Use the OMS for the order lifecycle defined in your project's code; use a workflow for any other process you want to model and change from the Back Office. States, transitions, commands, conditions, timeouts, and history logging work the same way in both.
-
-{% endinfo_block %}
-
 ## How a workflow works
 
 The clearest way to understand the feature is to follow one small workflow from start to finish. The example below is a company-onboarding process: a new company moves from `created` to `approved`, passing a verification check and an automatic waiting step along the way.
 
-A workflow definition is an XML document in the `state-machine-01` format — the same format the OMS uses. It has three parts: `states`, `transitions`, and `events`:
+A workflow definition is an XML document in the `state-machine-01` format. It has three parts: `states`, `transitions`, and `events`:
 
 ```xml
 {% raw %}<statemachine xmlns="spryker:state-machine-01">
@@ -185,12 +179,6 @@ interface StateMachineProcessTriggerPluginInterface
     public function getDescription(): string;
 }
 ```
-
-{% info_block infoBox "Reusing OMS command and condition plugins" %}
-
-`WorkflowCommandPluginInterface` and `WorkflowConditionPluginInterface` extend the StateMachine (OMS) `CommandPluginInterface` and `ConditionPluginInterface`. The transition logic is identical — the workflow interfaces only add `getName()` and `getSubjectType()`. To reuse an existing OMS command or condition in a workflow, add those two methods to the plugin, or wrap it in a thin adapter that implements the workflow interface and delegates to the OMS one.
-
-{% endinfo_block %}
 
 ## Provisioning workflows on installation
 

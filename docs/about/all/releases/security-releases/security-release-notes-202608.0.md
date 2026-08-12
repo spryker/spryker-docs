@@ -45,7 +45,7 @@ Several third-party dependencies were updated to address publicly known vulnerab
 
 - `symfony/twig-bridge`: < 6.4.43
 - `nikic/php-parser` : < 5.8.0
-- `aws/aws-sdk-php` : < 3.390.3
+- `aws/aws-sdk-php` : < 3.389.3
 - `symfony/security-core` : < 6.4.43
 
 ### Fix the vulnerability

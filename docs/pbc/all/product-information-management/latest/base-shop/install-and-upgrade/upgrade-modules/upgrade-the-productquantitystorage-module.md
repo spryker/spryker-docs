@@ -1,7 +1,7 @@
 ---
 title: Upgrade the ProductQuantityStorage module
 description: Learn how to upgrade from an older version to a newer one of the product quantity storage module within your Spryker based project.
-last_updated: Jun 16, 2021
+last_updated: Aug 6, 2026
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-product-quantity-storage
 originalArticleId: 41d929cb-b16c-4552-9284-9fb89f1c478e
@@ -18,4 +18,10 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productrelationstorage-module.html
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-productquantitystorage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productquantitystorage-module.md -->
+## Upgrading from version 1.* to version 3.0.0
+
+{% info_block infoBox %}
+
+To dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. [Contact us](https://spryker.com/en/support/) if you have any questions.
+
+{% endinfo_block %}

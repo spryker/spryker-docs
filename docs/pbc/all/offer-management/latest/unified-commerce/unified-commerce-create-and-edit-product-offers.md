@@ -2,7 +2,7 @@
 title: "Unified Commerce: Create and edit product offers"
 description: Learn how to create and edit product offers for your Spryker Unified Commerce Project.
 template: back-office-user-guide-template
-last_updated: Jan 19, 2024
+last_updated: Aug 6, 2026
 ---
 
 This document describes how to create and edit product offers in the Merchant Portal.
@@ -71,7 +71,15 @@ This document describes how to create and edit product offers in the Merchant Po
 
 ## Reference information: Create and edit product offers
 
-{% include pbc/all/manage-in-the-merchant-portal/offer-management/reference-information-create-and-edit-product-offers.md %} <!-- To edit, see _includes/pbc/all/manage-in-the-merchant-portal/offer-management/reference-information-create-and-edit-product-offers.md -->
+| ATTRIBUTE     | DESCRIPTION |
+| ------------- |  ------------- |
+| Offer status | Defines if the offer is displayed on the Storefront. By default, the offer is active. |
+| Merchant SKU     | Unique identifier of product offer in the merchant's ERP.              |
+| Offer Reference  | Unique identifier of the product offer in the Marketplace. |
+| Stores           | Defines the stores where the product offer is available.      |
+| Quantity            | Defines the stock of the product offer.                     |
+| Price            | Prices of the product offer per store, currency, and volume quantity. Volume quantity defines the minimum product offer quantity to be added to cart for the price to apply. |
+| Validity Dates   | Defines the period during which the product offer is visible on the Storefront. |
 
 | ATTRIBUTE     | DESCRIPTION |
 | --- | --- |

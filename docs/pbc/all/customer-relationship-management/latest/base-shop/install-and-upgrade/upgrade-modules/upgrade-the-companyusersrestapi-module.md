@@ -1,7 +1,7 @@
 ---
 title: Upgrade the CompanyUsersRestApi module
 description: Learn how to upgrade to a newer version of Spryker Company User Rest API module from older ones in your Spryker project.
-last_updated: Jun 16, 2021
+last_updated: Aug 6, 2026
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/companyusersrestapi-migration-guide
 originalArticleId: e34e7c88-d2e4-4a05-bef5-f49da84d9420
@@ -28,4 +28,23 @@ redirect_from:
   - /docs/pbc/all/customer-relationship-management/202204.0/install-and-upgrade/upgrade-modules/upgrade-the-companyusersrestapi-module.html
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-companyusersrestapi-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-companyusersrestapi-module.md -->
+## Upgrading from version 1.3.0 to version 2.0.0
+
+In this version, the behavior of the `GET company-users` endpoint was changed. Now, it supports fetching of a single company user by uuid, a collection of company users available in a company, and a collection of Business-on-Behalf Company Users a user can impersonate as.
+Adjust your code to use new functionality:
+1. If you were using the `/company-users` endpoint to get available Business-on-Behalf Company Users, change it to `/company-users/mine`.
+
+1. Regenerate transfer objects:
+
+```php
+vendor/bin/console transfer:generate
+```
+
+3. Make sure that database schema is up to date:
+
+```php
+vendor/bin/console propel:install
+vendor/bin/console transfer:generate
+```
+
+*Estimated migration time: ~5 minutes*

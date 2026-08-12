@@ -1,7 +1,7 @@
 ---
 title: Upgrade the ProductOptionDiscountConnector module
 description: Use the guide to learn how to update the ProductOptionDiscountConnector module to a newer version.
-last_updated: Jun 16, 2021
+last_updated: Aug 6, 2026
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-product-option-discount-connector
 originalArticleId: ce16629c-abf0-4fd4-8c61-30384f35581a
@@ -25,4 +25,6 @@ related:
     link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabelgui-module.html
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-productoptiondiscountconnector-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productoptiondiscountconnector-module.md -->
+## Upgrading from version 2.* to version 3.*
+
+The tax plugins are using the version 3.* of the Tax module. Upgrade [Upgrade the Tax module](/docs/pbc/all/tax-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-tax-module.html).

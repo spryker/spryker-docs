@@ -1,7 +1,7 @@
 ---
 title: Upgrade the CartPage module
 description: Use the guide to update versions to the newer ones of the CartPage module.
-last_updated: Jun 16, 2021
+last_updated: Aug 6, 2026
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-cart-page
 originalArticleId: 41a50114-b4ba-4e84-a62d-940a2a44ecc0
@@ -34,4 +34,10 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202311.0/install-and-upgrade/upgrade-modules/upgrade-the-cartpage-module.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cartpage-module.html
 ---
-{% include pbc/all/upgrade-modules/upgrade-the-cartpage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cartpage-module.md -->
+## Upgrading from version 1.* to version 3.0.0
+
+{% info_block infoBox %}
+
+In order to dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. [Contact us](https://spryker.com/en/support/) if you have any questions.
+
+{% endinfo_block %}

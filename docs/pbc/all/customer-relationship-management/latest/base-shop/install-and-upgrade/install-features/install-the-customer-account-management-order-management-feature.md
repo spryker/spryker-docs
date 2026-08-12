@@ -1,7 +1,7 @@
 ---
 title: Install the Customer Account Management + Order Management feature
 description: This guide provides step-by-step instruction on integrating Customer Account Management + Order Management feature into the Spryker-based project.
-last_updated: Jun 16, 2021
+last_updated: Aug 6, 2026
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-account-management-order-management-feature-integration
 originalArticleId: 749599c0-c1ab-4553-88ad-ee055c344ab8
@@ -14,4 +14,89 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/customer-account-management-order-management-feature-integration.html
 ---
 
-{% include pbc/all/install-features/latest/install-the-customer-account-management-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-customer-account-management-order-management-feature.md -->
+## Install feature core
+
+### Prerequisites
+
+Install the required features:
+
+| NAME | VERSION |
+| --- | --- |
+| Customer Account Management | {{page.release_tag}} |
+| Order Management | {{page.release_tag}} |
+| Spryker Core | {{page.release_tag}} |
+
+### 1) Set up configuration
+
+To enable order search functionality, adjust config as shown below.
+
+**src/Pyz/Yves/CustomerPage/CustomerPageConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\CustomerPage;
+
+use SprykerShop\Yves\CustomerPage\CustomerPageConfig as SprykerCustomerPageConfig;
+
+class CustomerPageConfig extends SprykerCustomerPageConfig
+{
+    protected const IS_ORDER_HISTORY_SEARCH_ENABLED = true;
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure you see the order search form at the Order History page.
+
+{% endinfo_block %}
+
+
+### 2) Add Translations
+
+Append glossary according to your configuration:
+
+**src/data/import/glossary.csv**
+
+```yaml
+customer.order.number_of_items,No. of Items,en_US
+customer.order.number_of_items,Anzahl der Artikel,de_DE
+customer.order.reference,Reference,en_US
+customer.order.reference,Referenz,de_DE
+customer.order.email,Email,en_US
+customer.order.email,E-Mail-Adresse,de_DE
+customer.order_history.search_type.all,All,en_US
+customer.order_history.search_type.all,Alle,de_DE
+customer.order_history.search_type.orderReference,Order Reference,en_US
+customer.order_history.search_type.orderReference,Bestellnummer,de_DE
+customer.order_history.search_type.itemName,Product Name,en_US
+customer.order_history.search_type.itemName,Produktname,de_DE
+customer.order_history.search_type.itemSku,Product SKU,en_US
+customer.order_history.search_type.itemSku,Produkt-SKU,de_DE
+customer.order_history.search,Search,en_US
+customer.order_history.search,Suchen,de_DE
+customer.order_history.date_from,From,en_US
+customer.order_history.date_from,Von,de_DE
+customer.order_history.date_to,To,en_US
+customer.order_history.date_to,Bis,de_DE
+customer.order_history.apply,Apply,en_US
+customer.order_history.apply,Anwenden,de_DE
+customer.order_history.is_order_items_visible,Show products in search results,en_US
+customer.order_history.is_order_items_visible,Produkte in Suchergebnissen anzeigen,de_DE
+customer.order_history.active_filters,Active Filters:,en_US
+customer.order_history.active_filters,Aktive Filter:,de_DE
+customer.order_history.reset_all,Reset All,en_US
+customer.order_history.reset_all,Alles zurücksetzen,de_DE
+```
+
+Import data:
+
+```bash
+console data:import glossary
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that, in the database, the configured data are added to the `spy_glossary` table.
+
+{% endinfo_block %}

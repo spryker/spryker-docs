@@ -15,6 +15,7 @@ entries:
               - title: Set up XDebug profiling
                 url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/set-up-xdebug-profiling.html
           - title: WebProfiler
+            url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/web-profiler.html
             nested:
               - title: Web Profiler for Yves
                 url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
@@ -24,6 +25,8 @@ entries:
                 url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-backend-gateway.html
               - title: Web Profiler for Zed
                 url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
+              - title: AI Dev SDK Profiler Workflow
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-profiler-workflow.html
           - title: Code Quality Tools
             nested:
               - title: PHPStan

@@ -1,7 +1,7 @@
 ---
 title: Document Storefront API resources
 description: This guide shows how to document Storefront API resources
-last_updated: Sep 18, 2025
+last_updated: Aug 12, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202404.0/glue-api-tutorials/document-glue-api-resources.html
@@ -90,7 +90,7 @@ See the following definition example of a response transfer object:
     <property name="lastName" type="string" restResponseParameter="required" example="Bell" description="The customers last name."/>
     <property name="gender" type="string" restResponseParameter="yes" example="Male" description="The customers gender."/>
     <property name="dateOfBirth" type="string" restResponseParameter="yes"/>
-    <property name="email" type="string" restResponseParameter="required" example="thomas.bell@spryker.com" description="The customers email address which is also used as username."/>
+    <property name="email" type="string" restResponseParameter="required" example="thomas.bell@acme.com" description="The customers email address which is also used as username."/>
     <property name="password" type="string" restResponseParameter="no" description="The password for the customers account."/>
     <property name="confirmPassword" type="string" restResponseParameter="no" description="The repeated password for the customers account to confirm there is no typo."/>
     <property name="acceptedTerms" type="bool" restResponseParameter="required" example="1" description="Indicator if the customer accepted the terms and conditions; 1 = accepted, 0 = not accepted."/>

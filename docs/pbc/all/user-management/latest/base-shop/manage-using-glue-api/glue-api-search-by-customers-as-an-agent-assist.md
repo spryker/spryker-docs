@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Search by customers as an agent assist"
 description: As an agent assist, search by customers to find the customer reference you want to impersonate.
-last_updated: June 9, 2026
+last_updated: Aug 12, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/searching-by-customers-as-an-agent-assist
 originalArticleId: 7e16c84e-9baf-4c1b-bab3-bb2d1db0a7d9
@@ -73,7 +73,7 @@ To search by customers, send the request:
                 "customers": [
                     {
                         "customerReference": "DE--1",
-                        "email": "spencor.hopkin@spryker.com",
+                        "email": "spencor.hopkin@acme.com",
                         "firstName": "Spencor",
                         "lastName": "Hopkin"
                     },
@@ -253,7 +253,7 @@ To search by customers, send the request:
                 "customers": [
                     {
                         "customerReference": "DE--1",
-                        "email": "spencor.hopkin@spryker.com",
+                        "email": "spencor.hopkin@acme.com",
                         "firstName": "Spencor",
                         "lastName": "Hopkin"
                     }

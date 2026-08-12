@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Retrieve business units"
 description: Learn how to retrieve business units that are configured in your store via the Spryker Glue API.
-last_updated: Jun 16, 2021
+last_updated: Aug 12, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-business-units
 originalArticleId: 4926546b-9757-4f24-91b1-05202d352c73
@@ -80,7 +80,7 @@ To retrieve a business unit, send the request:
         "id": "b8a06475-73f5-575a-b1e9-1954de7a49ef",
         "attributes": {
             "name": "Hotel Tommy Berlin",
-            "email": "hotel.tommy@spryker.com",
+            "email": "hotel.tommy@acme.com",
             "phone": "+49 (30) 1234 56789",
             "externalUrl": "",
             "bic": "OSDD DE 81 005",
@@ -108,7 +108,7 @@ To retrieve a business unit, send the request:
             "id": "5a6032dc-fbce-5d0d-9d57-11ade1947bac",
             "attributes": {
                 "name": "Cleaning Mitte",
-                "email": "Cleaning.Mitte@spryker.com",
+                "email": "Cleaning.Mitte@acme.com",
                 "phone": "12345617",
                 "externalUrl": "",
                 "bic": "",

@@ -1,7 +1,7 @@
 ---
 title: API Platform Enablement
 description: Learn how to create and enable API Platform resources in your Spryker project.
-last_updated: May 20, 2026
+last_updated: Aug 12, 2026
 template: howto-guide-template
 related:
   - title: API Platform
@@ -71,7 +71,7 @@ resource:
             type: string
             description: "The email address of a user or contact."
             openapiContext:
-                example: "test@spryker.com"
+                example: "test@acme.com"
 
         firstName:
             type: string

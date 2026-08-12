@@ -36,3 +36,20 @@ if (class_exists(TestifyConstants::class)) {
     $config[TestifyConstants::IS_DATA_BUILDER_RULE_EVAL_ENABLED] = false;
 }
 ```
+
+## Vulnerabilities in third-party dependencies
+
+Several third-party dependencies were updated to address publicly known vulnerabilities present in earlier versions. The updated dependencies are listed below.
+
+### Affected packages
+
+- `symfony/twig-bridge`: < 6.4.43
+- `nikic/php-parser` : < 5.8.0
+- `aws/aws-sdk-php` : < 3.389.3
+- `symfony/security-core` : < 6.4.43
+
+### Fix the vulnerability
+
+```bash
+composer update symfony/twig-bridge nikic/php-parser aws/aws-sdk-php symfony/security-core
+```

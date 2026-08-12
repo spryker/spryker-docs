@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Manage gift cards of registered users"
 description: Retrieve details about gift cards of the guest users, and learn what else you can do with the resource.
-last_updated: Jun 16, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-gift-cards-of-guest-users
 originalArticleId: 59818732-fa5a-43df-acd9-3d4ea91ee1ac
@@ -190,4 +190,4 @@ If the item is deleted successfully, the endpoint will respond with a `204 No C
 | 3302| Cart code can't be added. |
 | 3303| Cart code can't be removed. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

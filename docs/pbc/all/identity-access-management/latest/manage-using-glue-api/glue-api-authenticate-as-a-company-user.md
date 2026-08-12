@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Authenticating as a company user"
 description: Learn how to authenticate as a Company user using the Spryker Glue API for your Spryker projects.
-last_updated: Jun 16, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/authenticating-as-a-company-user
 originalArticleId: 90ca8812-0b3c-473d-bcd7-b12805da2070
@@ -110,7 +110,7 @@ Request sample: authenticate as a company user
 | 002 | Authentication token is missing. |
 | 901 | The `idCompanyUser` attribute is not specified, invalid, or empty. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
 
 ## Next steps
 

@@ -1,7 +1,7 @@
 ---
 title: Release notes 202606.0
 description: Release notes for Spryker Cloud Commerce OS version 202606.0
-last_updated: July 7, 2026
+last_updated: July 30, 2026
 template: concept-topic-template
 ---
 
@@ -255,9 +255,9 @@ Spryker has modernized its internal GLUE REST API infrastructure by migrating it
 - Supports more consistent and predictable machine-to-machine integrations
 
 **Documentation:**
-- [API Strategy](/docs/integrations/spryker-glue-api/getting-started-with-apis/api-strategy.html)
-- [Spryker API roadmap and adoption](/docs/integrations/spryker-glue-api/getting-started-with-apis/api-roadmap-and-adoption#whats-on-the-roadmap.html)
-- [Storefront API B2B Demo Shop reference](/docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-b2b-demo-shop-reference.html)
+- [API Strategy](/docs/integrations/spryker-api/getting-started-with-apis/api-strategy.html)
+- [Spryker API roadmap and adoption](/docs/integrations/spryker-api/getting-started-with-apis/api-roadmap-and-adoption#whats-on-the-roadmap.html)
+- [Storefront API B2B Demo Shop reference](/docs/integrations/spryker-api/storefront-api/api-references/storefront-api-b2b-demo-shop-reference.html)
 
 ### Backend API added to the Spryker API Strategy {% include badge.html type="feature" %}
 
@@ -275,8 +275,8 @@ Spryker extended its API strategy to cover the Backend API, the application for 
 - Speeds up planning for ERP, PIM, OMS, and marketplace integrations with consistent guidance
 
 **Documentation:**
-- [Spryker API Strategy](/docs/integrations/spryker-glue-api/getting-started-with-apis/api-strategy.html)
-- [Spryker API roadmap and adoption](/docs/integrations/spryker-glue-api/getting-started-with-apis/api-roadmap-and-adoption.html)
+- [Spryker API Strategy](/docs/integrations/spryker-api/getting-started-with-apis/api-strategy.html)
+- [Spryker API roadmap and adoption](/docs/integrations/spryker-api/getting-started-with-apis/api-roadmap-and-adoption.html)
 
 ## Efficient and Flexible Cloud Foundation
 

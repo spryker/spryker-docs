@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Retrieve alternative products"
 description: Learn how to find alternatives for discontinued products with Spryker Cloud Commerce OS Glue API.
-last_updated: Jun 16, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-alternative-products
 originalArticleId: b910a3a3-e499-4047-bb32-b96e00b94bcb
@@ -382,4 +382,4 @@ To retrieve concrete alternative products, send the request:
 | 312 | Concrete product is ID not specified. |
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

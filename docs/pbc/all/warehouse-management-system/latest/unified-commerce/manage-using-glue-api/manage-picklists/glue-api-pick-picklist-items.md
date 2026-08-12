@@ -2,7 +2,7 @@
 title: "Glue API: Pick picklist items"
 description: Learn how to pick picklist items using Spryker Glue API in your Spryker Unified Commerce Store.
 template: glue-api-storefront-guide-template
-last_updated: Dec 7, 2023
+last_updated: Jul 30, 2026
 ---
 
 This endpoint lets you pick picklist items.
@@ -287,4 +287,4 @@ For detailed information about the modules that provide the API functionality an
 | 5303 | The picklist with the specified ID doesn't exist.  |
 | 5304 | The picklist item with the specified ID doesn't exist.  |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Retrieve service types"
 description: Learn how to retrieve service types to your Unified Commerce shop using Spryker Glue API
-last_updated: Nov 23, 2023
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 ---
 
@@ -125,4 +125,4 @@ Request sample: `https://glue-backend.mysprykershop.com/service-types/7a263a50-1
 | --- | --- |
 | 5418 | The service type with the specified ID doesn't exist. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

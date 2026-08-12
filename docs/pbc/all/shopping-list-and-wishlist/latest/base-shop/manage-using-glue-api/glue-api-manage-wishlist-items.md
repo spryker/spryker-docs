@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Manage wishlist items"
 description: Managing wishlist items via Glue API.
-last_updated: Nov 29, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-wishlists/managing-wishlist-items.html
@@ -406,4 +406,4 @@ If the item is removed successfully, the endpoint returns the `204 No Content` s
 | 207 | Cannot remove the item. |
 | 208 | An item with the provided SKU does not exist in the wishlist. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

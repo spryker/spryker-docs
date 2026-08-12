@@ -2,7 +2,7 @@
 title: "Glue API: Retrieve merchants"
 description: Learn how to retrieve merchants in your Spryker marketplace project via the Spryker Glue API
 template: glue-api-storefront-guide-template
-last_updated: Jan 12, 2024
+last_updated: Jul 30, 2026
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202311.0/merchants/retrieving-merchants.html
 related:
@@ -655,9 +655,9 @@ Retrieve merchant information as a relationship when sending the following reque
 - [Retrieve marketplace orders](/docs/pbc/all/order-management-system/latest/marketplace/glue-api-retrieve-marketplace-orders.html)
 
 Search by merchants in the product catalog. For details, see [Searching the product catalog](/docs/pbc/all/search/latest/marketplace/glue-api-search-the-product-catalog.html).
-Resolve a search engine friendly URL of a merchant page. For details, see [Resolving search engine friendly URLs](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/marketplace-glue-api-resolve-search-engine-friendly-urls.html).
+Resolve a search engine friendly URL of a merchant page. For details, see [Resolving search engine friendly URLs](/docs/integrations/spryker-api/storefront-api/developing-apis/marketplace-glue-api-resolve-search-engine-friendly-urls.html).
 
 
 ## Possible errors
 
-For statuses, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+For statuses, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

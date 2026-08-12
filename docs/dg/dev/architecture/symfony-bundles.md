@@ -1,15 +1,15 @@
 ---
 title: Symfony Bundles in Spryker
 description: This document describes how to use Symfony Bundles in your Spryker project.
-last_updated: Feb 26, 2026
+last_updated: Jul 31, 2026
 template: concept-topic-template
 related:
   - title: How to upgrade to Symfony Dependency Injection
     link: docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html
   - title: Dependency injection
     link: docs/dg/dev/architecture/dependency-injection.html
-  - title: How to integrate API Platform Security
-    link: docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html
+  - title: Integrate API Platform security
+    link: docs/integrations/spryker-api/authenticating-and-authorization/integrate-api-platform-security.html
 ---
 
 {% info_block warningBox "On your own risk" %}
@@ -56,7 +56,7 @@ return [
 ];
 ```
 
-For the complete setup including firewall configuration and security expressions, see [How to integrate API Platform Security](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html).
+For the complete setup including firewall configuration and security expressions, see [Integrate API Platform security](/docs/integrations/spryker-api/authenticating-and-authorization/integrate-api-platform-security.html).
 
 ## Configuring bundles and services
 

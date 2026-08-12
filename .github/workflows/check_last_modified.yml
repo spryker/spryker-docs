@@ -19,6 +19,11 @@ permissions:
 jobs:
   check-sidebar-links:
     runs-on: ubuntu-latest
+    # Opt-out escape hatch: add the "ignore-last-updated" label to a PR that
+    # intentionally keeps old dates (e.g. restoring dates a bulk edit bumped).
+    # Adding the label fires a `labeled` event, so the check re-runs and skips
+    # without needing a fresh push.
+    if: ${{ !contains(github.event.pull_request.labels.*.name, 'ignore-last-updated') }}
 
     steps:
       - name: Checkout code

@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Add items with discounts to carts of registered users"
 description: Learn how to add items with discounts to carts of registered users via Glue API.
-last_updated: July 29, 2022
+last_updated: July 30, 2026
 template: glue-api-storefront-guide-template
 redirect_from:
   - /docs/pbc/all/discount-management/202311.0/manage-via-glue-api/add-items-with-discounts-to-carts-of-registered-users.html
@@ -731,4 +731,4 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 | 118 | Price mode is missing. |
 | 119 | Price mode is incorrect. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

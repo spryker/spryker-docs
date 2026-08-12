@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Add shipment types"
 description: Learn how to add shipment types using Glue API in Spryker Cloud Commerce OS, enabling tailored shipping options for diverse business needs.
-last_updated: Nov 23, 2023
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 ---
 
@@ -82,4 +82,4 @@ Response sample:
 | 5502 | A shipment type with the same key already exists. |
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

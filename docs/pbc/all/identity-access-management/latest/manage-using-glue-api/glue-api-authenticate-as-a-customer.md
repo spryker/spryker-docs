@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Authenticate as a customer"
 description: Retrieve customer authentication tokens to send requests to protected resources.
-last_updated: June 9, 2026
+last_updated: July 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/authenticating-as-a-customer
 originalArticleId: 4d61554f-dce0-40a2-9091-2db810bcf9a2
@@ -32,7 +32,7 @@ related:
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
 ---
 
-This endpoint allows authenticating as a customer. As an authenticated customer, you can send requests to [protected resources](/docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html#protected-resources).
+This endpoint allows authenticating as a customer. As an authenticated customer, you can send requests to [protected resources](/docs/integrations/spryker-api/authenticating-and-authorization/authenticating-and-authorization.html#protected-resources).
 
 {% info_block warningBox %}
 
@@ -128,7 +128,7 @@ Note that depending on the Login feature configuration for your project, too man
 | 003 | Failed to log in the user. |
 | 901 | Unprocessable login data (incorrect email format; email or password is empty).|
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
 
 ## Next steps
 

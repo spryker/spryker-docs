@@ -1,9 +1,10 @@
 ---
 title: Install the Shipment Glue API
 description: Learn how to install the Spryker shipment Glue API for your Spryker Cloud Commerce OS project
-last_updated: Dec 14, 2022
+last_updated: July 30, 2026
 template: feature-integration-guide-template
 redirect_from:
+  - /docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-the-shipment-glue-api.html
   - /docs/pbc/all/order-management-system/202311.0/base-shop/install-and-update/install-glue-api/install-the-shipment-glue-api.html
 related:
   - title: Install the Shipment feature

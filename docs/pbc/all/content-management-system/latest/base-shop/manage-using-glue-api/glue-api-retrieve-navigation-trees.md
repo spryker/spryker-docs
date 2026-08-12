@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Retrieve navigation trees"
 description: The topic demonstrates how to retrieve navigation trees with the help of API endpoints.
-last_updated: Jun 16, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-navigation-trees
 originalArticleId: 6dba4315-b7d0-485e-880e-b7d4ff125a3a
@@ -18,7 +18,7 @@ related:
     link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html
 ---
 
-The Navigation <!-- add link to feature overview later --> feature enables back-end developers to create navigation elements for Storefront. The navigation elements help shop users to navigate the shop and locate the necessary products and other content. Navigation elements can be linked to CMS pages, categories, as well as internal and external links.
+The Navigation feature enables back-end developers to create navigation elements for Storefront. The navigation elements help shop users to navigate the shop and locate the necessary products and other content. Navigation elements can be linked to CMS pages, categories, as well as internal and external links.
 
 A navigation element with its child nodes forms a navigation tree. You can only retrieve the entire navigation tree but not a navigation element.
 
@@ -1123,4 +1123,4 @@ If a navigation tree has a category child node, include the `category-nodes` res
 | 1601 | Navigation is not found. |
 | 1602 | Navigation ID is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

@@ -1,7 +1,7 @@
 ---
 title: Driving the usage of standalone modules
 description: Learn how you can drive usage and support with problems within your Spryker based projects.
-last_updated: Jun 7, 2024
+last_updated: Jul 30, 2026
 template: howto-guide-template
 ---
 
@@ -9,7 +9,7 @@ To drive usage of your standalone modules, we recommend covering the following p
 
 ## Provide installation instructions
 
-Provide complete, accurate and up-to-date installation instructions in README. For an example of installation instructions, see [Install the Data Exchange API](/docs/pbc/all/data-exchange/{{site.version}}/install-and-upgrade/install-the-data-exchange-api.html).
+Provide complete, accurate and up-to-date installation instructions in README. For an example of installation instructions, see [Install the Data Exchange API](/docs/integrations/custom-building-integrations/data-exchange/install-and-upgrade-data-exchange-api/install-the-data-exchange-api.html).
 
 Make sure each section contains a verification step that clearly explains how to verify the changes are implemented correctly. After completing all the steps of an installation guide, for end users, the functionality should work as expected.
 

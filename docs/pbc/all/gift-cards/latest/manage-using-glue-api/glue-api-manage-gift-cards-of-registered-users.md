@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Manage gift cards of registered users"
 description: Retrieve details about gift cards of the registered users, and learn what else you can do with the resource.
-last_updated: Jun 16, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-gift-cards-of-registered-users
 originalArticleId: 8f557adb-ea3b-498c-872e-b2177d6202ed
@@ -61,7 +61,7 @@ To redeem the gift card code, send the request:
 
 {% info_block infoBox "Authentication" %}
 
-To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html).
+To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/integrations/spryker-api/authenticating-and-authorization/authenticating-and-authorization.html).
 
 {% endinfo_block %}
 
@@ -172,7 +172,7 @@ To remove the gift card code from the cart, send the request:
 
 {% info_block infoBox "Authentication" %}
 
-To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html).
+To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/integrations/spryker-api/authenticating-and-authorization/authenticating-and-authorization.html).
 
 {% endinfo_block %}
 
@@ -198,4 +198,4 @@ If the item is deleted successfully, the endpoint will respond with a `204 No Co
 | 3302 | Incorrect voucher code or the voucher cannot be applied. |
 | 3303| Cart code can't be removed. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

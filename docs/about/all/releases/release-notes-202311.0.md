@@ -1,7 +1,7 @@
 ---
 title: Release notes 202311.0
 description: Release notes for the Spryker SCOS release 202311.0
-last_updated: Feb 26, 2026
+last_updated: Jul 30, 2026
 template: concept-topic-template
 redirect_from:
 - /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202204.0/release-notes-202204.0.html
@@ -87,8 +87,8 @@ The key features of the Data Exchange API include the following:
 
 ### Technical prerequisites
 
-- [Install the Data Exchange API](/docs/pbc/all/data-exchange/latest/install-and-upgrade/install-the-data-exchange-api.html)
-[Install the Data Exchange API + Inventory Management feature](/docs/pbc/all/data-exchange/latest/install-and-upgrade/install-the-data-exchange-api-inventory-management-feature.html)
+- [Install the Data Exchange API](/docs/integrations/custom-building-integrations/data-exchange/install-and-upgrade-data-exchange-api/install-the-data-exchange-api.html)
+[Install the Data Exchange API + Inventory Management feature](/docs/integrations/custom-building-integrations/data-exchange/install-and-upgrade-data-exchange-api/install-the-data-exchange-api-inventory-management-feature.html)
 
 ## <span class="inline-img">![data](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/data.png)</span> Next Generation Middleware: Spryker Middleware powered by Alumio {% include badge.html type="feature" %}
 
@@ -107,7 +107,7 @@ Faster time-to-value shortening setup times for integrations
 
 ### Technical prerequisites
 
-To connect Spryker Middleware powered by Alumio with Spryker Cloud Commerce OS, you need to install or deploy the [Data Exchange API feature](/docs/pbc/all/data-exchange/latest/install-and-upgrade/install-the-data-exchange-api.html) in your environment.
+To connect Spryker Middleware powered by Alumio with Spryker Cloud Commerce OS, you need to install or deploy the [Data Exchange API feature](/docs/integrations/custom-building-integrations/data-exchange/install-and-upgrade-data-exchange-api/install-the-data-exchange-api.html) in your environment.
 
 
 ## <span class="inline-img">![data](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/data.png)</span> Akeneo PIM Integration App {% include badge.html type="feature" %}

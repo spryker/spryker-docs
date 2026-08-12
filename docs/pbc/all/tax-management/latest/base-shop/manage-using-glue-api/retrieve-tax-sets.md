@@ -1,7 +1,7 @@
 ---
 title: Retrieve tax sets
 description: Learn how you can retrieve Spryker Tax sets using GLUE API within your Spryker based projects.
-last_updated: Jun 16, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-tax-sets
 originalArticleId: 9b8f60f0-3815-4d5b-94df-64deb0771117
@@ -160,4 +160,4 @@ Request sample: retrieve tax sets
 | 310 | Could not get tax set, product abstract with provided id not found. |
 | 311 | Abstract product SKU is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

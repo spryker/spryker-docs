@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Manage customer authentication tokens"
 description: Learn how to manage, refresh and revoke customer authentication tokens via the Spryker Glue API.
-last_updated: Jun 21, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-authentication-tokens
 originalArticleId: a0374f0f-170f-446e-aadd-32dbe7c1526a
@@ -144,7 +144,7 @@ The tokens are marked as expired on the date and time of the request. You can co
 | --- | --- |
 | 004 | Failed to refresh the token. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
 
 ## Next steps
 

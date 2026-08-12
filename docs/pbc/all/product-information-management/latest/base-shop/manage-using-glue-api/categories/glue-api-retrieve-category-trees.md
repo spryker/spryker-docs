@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Retrieving category trees"
 description: Retrieve a full navigation tree with child category nodes using the Spryker Cloud Commerce OS GLUE API.
-last_updated: Jun 16, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-category-trees
 originalArticleId: 058b2860-6041-49c4-8d02-dd236447c329
@@ -174,7 +174,7 @@ Request sample: retrieve a category tree
 | order | Integer | Digits between 1 and 100, with 100 ranking the highest (on one level under the parent node) |
 | name | String | Name of category associated with the node |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
 
 ## Next steps
 

@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Retrieve concrete product prices"
 description: Retrieve details information about prices of concrete products using the Spryker GLUE API within your Spryker Projects.
-last_updated: Jun 21, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-concrete-product-prices
 originalArticleId: 7192572b-0b8e-4bbb-a579-570eecffc1e2
@@ -215,4 +215,4 @@ To retrieve prices of a concrete product, send the request:
 | 302 | Concrete product is not found. |
 | 404 | Request URL or type is wrong. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

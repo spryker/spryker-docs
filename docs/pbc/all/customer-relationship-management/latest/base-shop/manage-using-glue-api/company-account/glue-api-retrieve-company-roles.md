@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Retrieve company roles"
 description: Learn how to retrieve company roles that are configured within your store via the Spryker Glue API.
-last_updated: Jun 16, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-company-roles
 originalArticleId: 91e7d4fb-7088-4249-bb24-c146c3a63ea4
@@ -170,7 +170,7 @@ To retrieve a company role, send the request:
 | 2101 | Company role is not found. |
 | 2103 | Current company user is not set. Select the current company user with `/company-user-access-tokens` to access the resource collection. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
 
 ## Next steps
 

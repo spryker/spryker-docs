@@ -1,7 +1,7 @@
 ---
 title: WebProfiler
 description: Learn why the Spryker WebProfiler is essential for performance work and how to integrate it in Yves, Glue, Zed, and the Backend Gateway.
-last_updated: Aug 12, 2026
+last_updated: Aug 13, 2026
 template: concept-topic-template
 keywords: web profiler, webprofiler, performance, profiling, debugging, sql, n+1, symfony profiler
 related:

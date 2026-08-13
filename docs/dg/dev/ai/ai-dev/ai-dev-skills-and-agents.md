@@ -1,7 +1,7 @@
 ---
 title: AI Dev SDK Skills and Agents
 description: Reference of the skills and agents shipped with the AI Dev SDK
-last_updated: Aug 11, 2026
+last_updated: Aug 13, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, windsurf, copilot, skills, agents, subagents, spryker
 template: concept-topic-template
@@ -28,6 +28,25 @@ Both delivery paths read from the same source files — the plugin just packages
 - **Agents** are isolated sub-conversations the assistant delegates to. Use them when you want focused, single-purpose work done in its own context window (verify a behavior, diagnose a failure).
 
 You do not need to remember the names — the assistant picks the right skill or agent from your prompt. The tables below explain what each one does so you know what to expect.
+
+## Composable by design
+
+Each skill covers one stage of work and nothing more — research a feature, seed test data, run static validation, drive the running app, capture screenshots. Nothing is bundled into a single monolithic assistant, so you compose the stages into whatever long-running workflow your team actually runs.
+
+This is how the orchestrator skills themselves are built. `spryker-bugfix` does not reimplement testing or validation — it calls `codecept-functional`, `static-validation`, `code-review`, and `spryker-qa-coverage` in sequence, and delegates isolated work to the agents. Your own workflows compose the same building blocks the same way.
+
+**Start with the shipped workflows.** Four orchestrators cover the work most projects need on day one, so you get value before you write anything of your own:
+
+- [`project-starter-wizard`](/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html) — turn a fresh demoshop clone into your project
+- [`spryker-customization`](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html) — build a feature from a product requirement document to a committed branch
+- [`spryker-bugfix`](/docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html) — drive a bug to a validated, QA-accepted fix
+- [`spryker-upgrade`](/docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html) — upgrade a customized project to a newer Spryker release
+
+Alongside them, `product-requirement-document` turns a feature idea into a research-grounded spec, so you can go from idea to specification to implementation without leaving your assistant.
+
+**Then adapt them to your process.** These four are a baseline, not a prescription. Every team runs a different process — different review gates, different definition of done, different tracker. Because the stages are separate, you can reorder them, skip the ones you do not need, or drop your own stage in between. Ask for the workflow you want in your own words and the assistant assembles it from the installed skills.
+
+**Use the shipped skills as a template for your own.** Every skill is plain Markdown with frontmatter, and every one ships a README documenting its flow, design decisions, and limits — linked in the **Reference** column of the tables below. Read the skill closest to what you need, then write your own the same way: your team's release checklist, your onboarding walkthrough, your project-specific conventions. The result is AI-assisted development shaped by how your team works rather than by a fixed set of commands.
 
 ## How to invoke
 

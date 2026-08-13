@@ -1,7 +1,7 @@
 ---
 title: AI Dev SDK Project Starter Wizard
 description: Turn a fresh clone of a Spryker demoshop into a customer project — one developer interview, then nine orchestrated steps to a verified running shop
-last_updated: Aug 11, 2026
+last_updated: Aug 13, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, project-starter-wizard, project setup, onboarding, demoshop
 template: concept-topic-template

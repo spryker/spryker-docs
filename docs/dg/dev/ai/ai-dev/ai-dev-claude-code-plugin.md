@@ -1,7 +1,7 @@
 ---
 title: Claude Code Plugin
 description: Install and use the Spryker AI Dev SDK plugin for Claude Code to get Spryker-aware skills, code review, and project setup directly in your AI coding assistant.
-last_updated: Aug 11, 2026
+last_updated: Aug 13, 2026
 label: early-access
 keywords: ai, claude, claude code, plugin, marketplace, skills, spryker, ai-dev, code review, ci
 template: howto-guide-template
@@ -32,6 +32,7 @@ The `spryker-ai-dev-sdk` Claude Code plugin closes this gap. It gives Claude Cod
 - **Live project context.** The MCP server runs inside your Docker container and gives Claude Code real-time access to your transfer objects, module interfaces, and OMS configuration. The AI works with your actual project data, not guesses.
 - **Consistent code reviews.** The `spryker-code-reviewer` subagent checks your changes against Spryker's coding standards and architectural rules, catching issues before they reach a PR.
 - **Team-wide consistency.** Generated rules and context files are committed to your repository, so every developer on the team works with the same AI configuration.
+- **Workflows you compose yourself.** Each skill covers one stage of work, so you combine them into the long-running workflow your team actually runs. Four ready-made workflows — project setup, customization, bugfix, and upgrade — get you started on day one, and the skills themselves are a template for writing your own. See [Composable by design](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html#composable-by-design).
 
 The plugin is distributed through the `spryker-plugins-official` marketplace and installed directly inside Claude Code.
 

@@ -1,7 +1,7 @@
 ---
 title: AI Dev SDK Customization Workflow
 description: Turn a feature idea into a working, reviewed Spryker feature on a committed branch — driven by the spryker-customization orchestrator
-last_updated: Aug 11, 2026
+last_updated: Aug 13, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, spryker-customization, workflow, prd, customization, automation, cypress
 template: concept-topic-template

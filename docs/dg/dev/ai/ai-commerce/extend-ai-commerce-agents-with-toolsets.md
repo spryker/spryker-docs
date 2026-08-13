@@ -93,7 +93,7 @@ class GetProductToolPlugin extends AbstractPlugin implements ToolPluginInterface
     public function getParameters(): array
     {
         return [
-            new ToolParameter(static::PARAMETER_SKU, 'string', 'The SKU of the product to look up, for example "093_24495843".', true),
+            new ToolParameter(static::PARAMETER_SKU, 'string', 'The SKU of the product to look up, for example "001_25904006".', true),
         ];
     }
 
@@ -280,14 +280,8 @@ A system prompt is a guideline, not a security control. The model can be steered
 
 ## 7) Verify the toolset
 
-1. Clear the cache and run the setup:
-
-```bash
-console cache:empty-all
-```
-
-2. Trigger the feature you enabled the toolset for, with a request that requires the new tool.
-3. Check the AI interaction audit log to confirm the tool was called with the expected arguments. For details, see [AI Interaction Audit Logs](/docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html).
+1. Trigger the feature you enabled the toolset for, with a request that requires the new tool.
+2. Check the AI interaction audit log to confirm the tool was called with the expected arguments. For details, see [AI Interaction Audit Logs](/docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html).
 
 If the tool is never called, verify the following:
 

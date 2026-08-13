@@ -7,7 +7,7 @@ template: howto-guide-template
 
 AI Commerce agents can only act on data that a *tool* exposes to them. A tool is a PHP class the AI model calls with arguments and gets a result back. Tools are grouped into named *toolsets*, and each agent or feature declares which toolsets it uses.
 
-To let an agent work with data that no built-in tool covers—for example, your own entity—implement a tool, group it in a toolset, register the toolset, and add the toolset name to the feature that must use it.
+To let an agent work with data that no built-in tool covers — for example, your own entity — implement a tool, group it in a toolset, register the toolset, and add the toolset name to the feature that must use it.
 
 This document describes how to extend an existing agent or feature. To add a completely new agent, see [Add a custom Back Office Assistant agent](/docs/dg/dev/ai/ai-commerce/backoffice-assistant/add-custom-backoffice-assistant-agent.html).
 
@@ -31,7 +31,7 @@ Features expose their toolset names differently:
 
 A tool is executable code that the AI model decides when to call, based on a model-generated argument list. Treat every tool as an untrusted, publicly reachable entry point:
 
-- **Prefer read-only tools.** Only expose write, update, or delete operations when the use case genuinely requires them. A prompt injected through user-generated content—a product description, a customer note, an uploaded file—can make the model call any tool that is available to it.
+- **Prefer read-only tools.** Only expose write, update, or delete operations when the use case genuinely requires them. A prompt injected through user-generated content — a product description, a customer note, an uploaded file — can make the model call any tool that is available to it.
 - **Validate and constrain every argument.** The model can pass any value that fits the declared type. Validate arguments in `execute()` exactly as you would validate a request from the internet.
 - **Enforce permissions inside the tool.** Tool execution does not inherit the Back Office user's ACL rules. Check permissions explicitly in `execute()` for anything sensitive.
 - **Never return personal or secret data.** Everything a tool returns is sent to the AI provider and stored in the conversation history. Return only the fields the agent needs, and exclude credentials, tokens, and personal data.
@@ -130,7 +130,7 @@ The tool validates the SKU before use, returns only three fields, and converts a
 
 {% info_block warningBox "Warning" %}
 
-If you expose write operations—creating, updating, or deleting data—the model can trigger them without a human confirming the action. Restrict such tools to non-critical entities, validate every argument against an allowlist of permitted values, and check the acting user's permissions inside `execute()`.
+If you expose write operations — creating, updating, or deleting data — the model can trigger them without a human confirming the action. Restrict such tools to non-critical entities, validate every argument against an allowlist of permitted values, and check the acting user's permissions inside `execute()`.
 
 {% endinfo_block %}
 
@@ -266,7 +266,7 @@ Built-in agents add their toolset names in `executeAgent()`. To give an existing
 
 Tools alone do not guarantee the model uses them as intended. The system prompt sets the rules the model follows when it decides which tool to call, so review it whenever you add tools.
 
-`AiCommerceConfig` exposes the prompt templates for the Smart PIM features—translation, category suggestion, content improvement, and image alt text—through methods such as `getContentImproverPromptTemplate()`. Each reads a Configuration Management value and falls back to the built-in template when the value is empty. Override the corresponding method or set the configuration value to state which tool to use, when to use it, and what the model must never do with the returned data.
+`AiCommerceConfig` exposes the prompt templates for the Smart PIM features — translation, category suggestion, content improvement, and image alt text — through methods such as `getContentImproverPromptTemplate()`. Each reads a Configuration Management value and falls back to the built-in template when the value is empty. Override the corresponding method or set the configuration value to state which tool to use, when to use it, and what the model must never do with the returned data.
 
 Keep the placeholders of the original template. Removing a `%s` placeholder breaks the `sprintf()` call that builds the final prompt.
 

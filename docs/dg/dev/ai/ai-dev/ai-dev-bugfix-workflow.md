@@ -21,12 +21,6 @@ The skill is an orchestrator. It runs a fixed sequence of stages and delegates t
 
 Invoke it whenever you have a bug symptom and expect a delivered fix: *"fix this bug"*, *"fix ticket XY-1122"*, *"this is broken, reproduce and fix it"*. It is not the right skill for a single isolated step, a new feature, a refactor without a symptom, or an investigation-only request.
 
-## Workflow at a glance
-
-{% include diagrams/ai-dev/bugfix-workflow.svg %}
-
-Code review, QA, final verification, and remote CI are gates. A failure in any of them draws from one shared attempt counter and loops back to the root cause stage, then forward through the full chain again.
-
 ## Two ways in — the ticket is optional
 
 Bug context can come from either or both of:

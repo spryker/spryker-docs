@@ -21,12 +21,6 @@ The skill combines an orchestrated workflow with a set of deterministic detector
 
 Invoke it with *"upgrade the project"*, *"update to the latest release"*, or any request to bump `spryker-feature/*` or `spryker/*` packages.
 
-## Workflow at a glance
-
-{% include diagrams/ai-dev/upgrade-workflow.svg %}
-
-The upgrade starts by asking whether it can be verified at all, and only then touches Composer. Detection runs after the dependency tree resolves, because most damage is invisible until the new code is on disk.
-
 ## Why silent damage is the real problem
 
 Everything a Spryker project overrides fails quietly when core moves. A dead override still loads, a replaced plugin stack still boots, and a stale template still renders. Nothing errors — the customization simply stops taking effect.

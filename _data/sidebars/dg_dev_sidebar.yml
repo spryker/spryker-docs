@@ -67,6 +67,8 @@ entries:
             url: /docs/dg/dev/ai/ai-commerce/ai-commerce-overview.html
           - title: Install AI Commerce
             url: /docs/dg/dev/ai/ai-commerce/install-ai-commerce.html
+          - title: Extend AI Commerce agents with custom toolsets
+            url: /docs/dg/dev/ai/ai-commerce/extend-ai-commerce-agents-with-toolsets.html
           - title: Configure multiple AI providers
             url: /docs/dg/dev/ai/ai-commerce/configure-multiple-ai-providers.html
           - title: Visual Add to Cart
@@ -1153,6 +1155,8 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/integrate-symfony-scheduler.html
     - title: Configuration Management feature
       url: /docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html
+    - title: Workflow feature
+      url: /docs/dg/dev/integrate-and-configure/integrate-workflow-feature.html
     - title: Basic Shop Theme feature
       url: /docs/dg/dev/integrate-and-configure/integrate-basic-shop-theme.html
 

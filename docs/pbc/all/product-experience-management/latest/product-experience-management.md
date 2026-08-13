@@ -111,8 +111,6 @@ The values accepted in the *Product Status* column depend on the row type. Value
 
 *Product Status* is required in every row. If the value is empty or does not belong to the accepted values for the row type, the row is skipped and an error is reported. For example, `active` in an abstract product row and `approved` in a concrete product row both fail validation.
 
-You can override the accepted values on the project level in `ProductExperienceManagementConfig::getProductAbstractStatuses()` and `ProductExperienceManagementConfig::getProductConcreteStatuses()`.
-
 ### Error handling
 
 When an import job run encounters invalid data, the row is skipped and an error is recorded with the CSV row number and a descriptive message. After all rows are processed, the run detail page shows:

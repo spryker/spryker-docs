@@ -64,6 +64,8 @@ entries:
             url: /docs/dg/dev/ai/ai-commerce/ai-commerce-overview.html
           - title: Install AI Commerce
             url: /docs/dg/dev/ai/ai-commerce/install-ai-commerce.html
+          - title: Extend AI Commerce agents with custom toolsets
+            url: /docs/dg/dev/ai/ai-commerce/extend-ai-commerce-agents-with-toolsets.html
           - title: Configure multiple AI providers
             url: /docs/dg/dev/ai/ai-commerce/configure-multiple-ai-providers.html
           - title: Visual Add to Cart

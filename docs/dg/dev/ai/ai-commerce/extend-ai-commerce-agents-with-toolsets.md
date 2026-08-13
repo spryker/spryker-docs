@@ -134,31 +134,7 @@ If you expose write operations — creating, updating, or deleting data — the 
 
 {% endinfo_block %}
 
-## 2) Add a factory method for the tool
-
-Add a method that creates the tool to your project's communication factory:
-
-**src/Pyz/Zed/AiCommerce/Communication/AiCommerceCommunicationFactory.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\AiCommerce\Communication;
-
-use Pyz\Zed\AiCommerce\Communication\Plugin\AiFoundation\Tool\GetProductToolPlugin;
-use Spryker\Zed\AiFoundation\Dependency\Tools\ToolPluginInterface;
-use SprykerFeature\Zed\AiCommerce\Communication\AiCommerceCommunicationFactory as SprykerFeatureAiCommerceCommunicationFactory;
-
-class AiCommerceCommunicationFactory extends SprykerFeatureAiCommerceCommunicationFactory
-{
-    public function createGetProductToolPlugin(): ToolPluginInterface
-    {
-        return new GetProductToolPlugin();
-    }
-}
-```
-
-## 3) Implement the toolset plugin
+## 2) Implement the toolset plugin
 
 Group the tools in a toolset by implementing `ToolSetPluginInterface` from `Spryker\Zed\AiFoundation\Dependency\Tools`. Group tools that belong to the same domain, so an agent can enable them together:
 
@@ -169,12 +145,10 @@ Group the tools in a toolset by implementing `ToolSetPluginInterface` from `Spry
 
 namespace Pyz\Zed\AiCommerce\Communication\Plugin\AiFoundation;
 
+use Pyz\Zed\AiCommerce\Communication\Plugin\AiFoundation\Tool\GetProductToolPlugin;
 use Spryker\Zed\AiFoundation\Dependency\Tools\ToolSetPluginInterface;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 
-/**
- * @method \Pyz\Zed\AiCommerce\Communication\AiCommerceCommunicationFactory getFactory()
- */
 class ProductInfoToolSetPlugin extends AbstractPlugin implements ToolSetPluginInterface
 {
     protected const string TOOL_SET_PRODUCT_INFO = 'product_info_tools';
@@ -190,13 +164,13 @@ class ProductInfoToolSetPlugin extends AbstractPlugin implements ToolSetPluginIn
     public function getTools(): array
     {
         return [
-            $this->getFactory()->createGetProductToolPlugin(),
+            new GetProductToolPlugin(),
         ];
     }
 }
 ```
 
-## 4) Register the toolset plugin
+## 3) Register the toolset plugin
 
 Add the toolset plugin to the array returned by `AiFoundationDependencyProvider::getAiToolSetPlugins()`:
 
@@ -225,7 +199,7 @@ class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvid
 }
 ```
 
-## 5) Enable the toolset for a feature
+## 4) Enable the toolset for a feature
 
 Registering the plugin makes the toolset resolvable, but a feature only receives its tools once the toolset name is in the feature's list.
 
@@ -262,7 +236,7 @@ class AiCommerceConfig extends SprykerFeatureAiCommerceConfig
 
 Built-in agents add their toolset names in `executeAgent()`. To give an existing agent an additional toolset, extend that agent plugin in `Pyz`, add the extra name, and register your plugin instead of the built-in one in `AiCommerceDependencyProvider::getBackofficeAssistantAgentPlugins()`. For instructions on registering agent plugins, see [Add a custom Back Office Assistant agent](/docs/dg/dev/ai/ai-commerce/backoffice-assistant/add-custom-backoffice-assistant-agent.html).
 
-## 6) Adjust the system prompt
+## 5) Adjust the system prompt
 
 Tools alone do not guarantee the model uses them as intended. The system prompt sets the rules the model follows when it decides which tool to call, so review it whenever you add tools.
 
@@ -278,7 +252,7 @@ A system prompt is a guideline, not a security control. The model can be steered
 
 {% endinfo_block %}
 
-## 7) Verify the toolset
+## 6) Verify the toolset
 
 1. Trigger the feature you enabled the toolset for, with a request that requires the new tool.
 2. Check the AI interaction audit log to confirm the tool was called with the expected arguments. For details, see [AI Interaction Audit Logs](/docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html).

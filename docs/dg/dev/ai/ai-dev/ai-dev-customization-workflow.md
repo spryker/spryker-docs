@@ -1,7 +1,7 @@
 ---
 title: AI Dev SDK Customization Workflow
 description: Turn a feature idea into a working, reviewed Spryker feature on a committed branch — driven by the spryker-customization orchestrator
-last_updated: Aug 13, 2026
+last_updated: Aug 14, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, spryker-customization, workflow, prd, customization, automation, cypress
 template: concept-topic-template
@@ -13,6 +13,18 @@ The AiDev module is experimental and not stable. There is no backward compatibil
 
 {% endinfo_block %}
 
+## Availability
+
+The `spryker-customization` skill ships with the `spryker-ai-dev-sdk` Claude Code plugin. Version 0.6.4 of `spryker-sdk/ai-dev`, which ships plugin version 0.4.0, adds the conditional Cypress end-to-end phase described on this page.
+
+To update the package in your project:
+
+```bash
+composer require spryker-sdk/ai-dev:^0.6.4 --dev
+```
+
+To update the Claude Code plugin, run `/plugin` in Claude Code and update `spryker-ai-dev-sdk` from the `spryker-plugins-official` marketplace to version 0.4.0 or later. For installation instructions, see [Claude Code Plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html).
+
 ## What the skill does
 
 `spryker-customization` is the AI Dev SDK's orchestrator skill. It takes a feature idea and walks it to a working, committed branch in your Spryker project by delegating focused work to the SDK's other skills and agents.
@@ -23,7 +35,7 @@ You do not write code during the run. You make three decisions: what quality bar
 
 ## Workflow at a glance
 
-![AI Dev SDK customization workflow](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/customization-workflow.png)
+![AI Dev SDK customization workflow](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/customization.png)
 
 Each phase delegates to specific skills (pale yellow) and agents (deep amber) — for example, the `spryker-feature-expert` agent researches the relevant Spryker domain during planning, and the `spryker-verifier` agent drives the running storefront and back office to confirm the feature actually works.
 

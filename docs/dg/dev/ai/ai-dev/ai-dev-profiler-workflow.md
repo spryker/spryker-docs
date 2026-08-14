@@ -1,7 +1,7 @@
 ---
 title: AI Dev SDK Profiler Workflow
 description: Read the Spryker WebProfiler as hard performance numbers — driven by the spryker-profiler skill
-last_updated: Aug 13, 2026
+last_updated: Aug 14, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, spryker-profiler, performance, webprofiler, n+1, sql
 template: concept-topic-template
@@ -13,7 +13,21 @@ The AiDev module is experimental and not stable. There is no backward compatibil
 
 {% endinfo_block %}
 
+## Availability
+
+The `spryker-profiler` skill is available from `spryker-sdk/ai-dev` version 0.6.4, which ships version 0.4.0 of the `spryker-ai-dev-sdk` Claude Code plugin.
+
+To update the package in your project:
+
+```bash
+composer require spryker-sdk/ai-dev:^0.6.4 --dev
+```
+
+To update the Claude Code plugin, run `/plugin` in Claude Code and update `spryker-ai-dev-sdk` from the `spryker-plugins-official` marketplace to version 0.4.0 or later. For installation instructions, see [Claude Code Plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html).
+
 ## What the skill does
+
+![profiler](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/profiler.png)
 
 `spryker-profiler` turns the Spryker and Symfony WebProfiler into performance numbers you can act on, and explains how to switch profiling on when there is nothing to read.
 

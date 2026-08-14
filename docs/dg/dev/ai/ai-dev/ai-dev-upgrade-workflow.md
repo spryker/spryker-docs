@@ -1,7 +1,7 @@
 ---
 title: AI Dev SDK Upgrade Workflow
 description: Upgrade a heavily customized Spryker project to a newer release — driven by the spryker-upgrade skill and its deterministic damage detectors
-last_updated: Aug 13, 2026
+last_updated: Aug 14, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, spryker-upgrade, upgrade, migration, composer, release
 template: concept-topic-template
@@ -13,7 +13,21 @@ The AiDev module is experimental and not stable. There is no backward compatibil
 
 {% endinfo_block %}
 
+## Availability
+
+The `spryker-upgrade` skill is available from `spryker-sdk/ai-dev` version 0.6.4, which ships version 0.4.0 of the `spryker-ai-dev-sdk` Claude Code plugin.
+
+To update the package in your project:
+
+```bash
+composer require spryker-sdk/ai-dev:^0.6.4 --dev
+```
+
+To update the Claude Code plugin, run `/plugin` in Claude Code and update `spryker-ai-dev-sdk` from the `spryker-plugins-official` marketplace to version 0.4.0 or later. For installation instructions, see [Claude Code Plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html).
+
 ## What the skill does
+
+![upgrade](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/upgrade.png)
 
 `spryker-upgrade` upgrades your project's modules and features to a newer Spryker release. It is built for projects with heavy `src/Pyz` customization, where the dangerous part of an upgrade is not the code that stops compiling but the code that keeps running while doing nothing.
 

@@ -31,6 +31,8 @@ You do not need to remember the names — the assistant picks the right skill or
 
 ## Composable by design
 
+![composable-skills](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/skills.png)
+
 Each skill covers one stage of work and nothing more — research a feature, seed test data, run static validation, drive the running app, capture screenshots. Nothing is bundled into a single monolithic assistant, so you compose the stages into whatever long-running workflow your team actually runs.
 
 This is how the orchestrator skills themselves are built. `spryker-bugfix` does not reimplement testing or validation — it calls `codecept-functional`, `static-validation`, `code-review`, and `spryker-qa-coverage` in sequence, and delegates isolated work to the agents. Your own workflows compose the same building blocks the same way.

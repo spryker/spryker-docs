@@ -1,7 +1,7 @@
 ---
 title: AI Dev SDK Project Starter Wizard
 description: Turn a fresh clone of a Spryker demoshop into a customer project — one developer interview, then nine orchestrated steps to a verified running shop
-last_updated: Aug 13, 2026
+last_updated: Aug 14, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, project-starter-wizard, project setup, onboarding, demoshop
 template: concept-topic-template
@@ -13,7 +13,21 @@ The AiDev module is experimental and not stable. There is no backward compatibil
 
 {% endinfo_block %}
 
+## Availability
+
+The `project-starter-wizard` skill and the nine setup skills it orchestrates are available from `spryker-sdk/ai-dev` version 0.6.4, which ships version 0.4.0 of the `spryker-ai-dev-sdk` Claude Code plugin.
+
+To update the package in your project:
+
+```bash
+composer require spryker-sdk/ai-dev:^0.6.4 --dev
+```
+
+To update the Claude Code plugin, run `/plugin` in Claude Code and update `spryker-ai-dev-sdk` from the `spryker-plugins-official` marketplace to version 0.4.0 or later. For installation instructions, see [Claude Code Plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html).
+
 ## What the skill does
+
+![starter](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/setup.png)
 
 `project-starter-wizard` turns a fresh, un-booted clone of a Spryker B2B or B2B Marketplace demoshop into your customer project. It asks everything once in a developer interview, records your answers in a resumable state file, and then drives nine specialist skills in the one order that works.
 

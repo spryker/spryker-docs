@@ -1,7 +1,7 @@
 ---
 title: AI Dev SDK Bugfix Workflow
 description: Drive a bug from a ticket or a plain description to a committed, validated, QA-accepted fix — driven by the spryker-bugfix orchestrator
-last_updated: Aug 13, 2026
+last_updated: Aug 14, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, spryker-bugfix, bugfix, workflow, qa, automation
 template: concept-topic-template
@@ -13,7 +13,21 @@ The AiDev module is experimental and not stable. There is no backward compatibil
 
 {% endinfo_block %}
 
+## Availability
+
+The `spryker-bugfix` skill is available from `spryker-sdk/ai-dev` version 0.6.4, which ships version 0.4.0 of the `spryker-ai-dev-sdk` Claude Code plugin. Version 0.6.4 also adds the conditional Cypress end-to-end phase described on this page.
+
+To update the package in your project:
+
+```bash
+composer require spryker-sdk/ai-dev:^0.6.4 --dev
+```
+
+To update the Claude Code plugin, run `/plugin` in Claude Code and update `spryker-ai-dev-sdk` from the `spryker-plugins-official` marketplace to version 0.4.0 or later. For installation instructions, see [Claude Code Plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html).
+
 ## What the skill does
+
+![bugfix](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/bugfix.png)
 
 `spryker-bugfix` takes a bug and drives it to a committed, validated, QA-accepted fix on a `bugfix/*` branch. In Autonomous mode it goes all the way to a pushed draft pull request with a remote CI watch loop.
 

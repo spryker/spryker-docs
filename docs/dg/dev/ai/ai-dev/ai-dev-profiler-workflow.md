@@ -17,12 +17,6 @@ The AiDev module is experimental and not stable. There is no backward compatibil
 
 The `spryker-profiler` skill is available from `spryker-sdk/ai-dev` version 0.6.4, which ships version 0.4.0 of the `spryker-ai-dev-sdk` Claude Code plugin.
 
-To update the package in your project:
-
-```bash
-composer require spryker-sdk/ai-dev:^0.6.4 --dev
-```
-
 To update the Claude Code plugin, run `/plugin` in Claude Code and update `spryker-ai-dev-sdk` from the `spryker-plugins-official` marketplace to version 0.4.0 or later. For installation instructions, see [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html).
 
 ## What the skill does

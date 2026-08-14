@@ -1,7 +1,7 @@
 ---
 title: Headless express checkout payment flow for payment service providers
 description: Overview of the Headless payment flow with express-checkout payment methods
-last_updated: Aug 12, 2026
+last_updated: Now 08, 2024
 template: concept-topic-template
 related:
   - title: Asynchronous API for payment service providers
@@ -66,7 +66,7 @@ Here is an example request for the PayOne PayPal Express payment method used by 
       "salutation": "n/a",
       "firstName": "Spryker",
       "lastName": "Systems",
-      "email": "eco-test+1@acme.com",
+      "email": "eco-test+1@spryker.com",
       "phone": "7886914965",
       "company": null,
       "billingAddress": {

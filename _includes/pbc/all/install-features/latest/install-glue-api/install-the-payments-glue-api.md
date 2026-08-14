@@ -232,7 +232,7 @@ The response can be different depending on the payment method.
       "salutation": "n/a",
       "firstName": "Spryker",
       "lastName": "Systems",
-      "email": "eco-test+1@acme.com",
+      "email": "eco-test+1@spryker.com",
       "phone": "7886914965",
       "company": null,
       "billingAddress": {

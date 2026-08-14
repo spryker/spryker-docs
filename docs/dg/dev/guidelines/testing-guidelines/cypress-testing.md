@@ -1,7 +1,7 @@
 ---
 title: E2E Testing with Cypress
 description: Learn how to use Cypress for end-to-end testing in Spryker projects.
-last_updated: Aug 4, 2026
+last_updated: Aug 14, 2026
 template: concept-topic-template
 related:
   - title: Running tests with Robot Framework
@@ -22,6 +22,19 @@ The boilerplate does not include the following:
 
 - **Complete test coverage**: add and adjust the example tests to fit your project.
 - **Correct locators**: the locators in the boilerplate are based on the Spryker B2B Marketplace demo shop. Adjust them to match your project.
+
+## Cypress skills in the AI Dev SDK
+
+Two AI Dev SDK skills cover the work described on this page: adopting the boilerplate as your own suite, and the day-to-day test writing that follows.
+
+| Skill | What it does | Reference |
+|-------|--------------|-----------|
+| `cypress-migration` | Replaces Spryker's demoshop test suites with a project-owned Cypress baseline. A one-time migration that vendors in a proven reference implementation, wires the suite into CI, and generates a companion `cypress-tests` skill tuned to your project | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/cypress-migration/README.md) |
+| `cypress-tests` | Creates, runs, reviews, and validates Cypress end-to-end tests against your project's own suite — storefront, Back Office, Merchant Portal, and Glue API | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/cypress-tests/README.md) |
+
+Run `cypress-migration` once when you adopt the boilerplate. It handles the adaptation this page describes — replacing the demo shop locators with your project's and wiring the CI jobs — and then use `cypress-tests` for ongoing test work.
+
+For the full list of skills and agents, see [Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html).
 
 ## Topics
 
@@ -45,3 +58,11 @@ How to integrate Cypress tests into a continuous integration pipeline.
 ## Internal Cypress tests
 
 Cypress tests are used by Spryker for internal testing of the core Spryker features as well. You should remove the mentions of `cypress-tests` from `composer.json`. You can re-use and customize these tests for your project, however, Spryker does not guarantee these tests will work on your project, if you keep them. Spryker recommends using boilerplate tests instead of these and extending them to cover your functionality.
+
+The `cypress-migration` skill performs this replacement, including the `composer.json` cleanup.
+
+{% info_block infoBox "Two different things named cypress-tests" %}
+
+The `cypress-tests` entry in `composer.json` is Spryker's internal test package, which this section tells you to remove. The `cypress-tests` *skill* described above is unrelated — it writes and runs tests against your own project suite, and you keep using it after the package is gone.
+
+{% endinfo_block %}

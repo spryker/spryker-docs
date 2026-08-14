@@ -1,11 +1,29 @@
 ---
 title: Post-Installation Configuration
 description: Advanced configuration and customization of your Spryker project after initial setup
-last_updated: December 30, 2025
+last_updated: Aug 14, 2026
 template: concept-topic-template
 ---
 
 This document provides guidance on advanced configuration and customization of your Spryker project after completing the initial setup. These steps help you optimize and adapt the Demo Shop to your specific project needs.
+
+## Automate this configuration with the AI Dev SDK
+
+Most of the work on this page — services, stores, and import data — is covered by AI Dev SDK skills. Each skill reads what your project actually contains rather than applying a template, and reports what it plans to change before changing it.
+
+| Skill | What it does | Reference |
+|-------|--------------|-----------|
+| `configure-services` | Changes what infrastructure the project runs on, or builds a new environment deploy file. Makes surgical edits to the keys it owns, leaving neighboring deploy file blocks untouched | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/configure-services/README.md) |
+| `define-stores` | Creates or redefines a project's stores and region. Clears the hardcoded store and locale literals that otherwise abort the boot | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/define-stores/README.md) |
+| `project-data` | Populates, reshapes, reduces, cleans up, or removes the project's import data — one skill for every `data/import` change | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/project-data/README.md) |
+| `spryker-import-tools` | Reads, filters, edits, and validates data import CSV files and manifests. Reliable where shell tools corrupt multi-line quoted fields, and catches boot-aborting data in seconds | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-import-tools/README.md) |
+| `curate-golive-data` | Makes the data the project keeps production-safe before go-live — placeholder tax rates, Spryker CDN imagery, and demo accounts | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/curate-golive-data/README.md) |
+
+If you are setting up a new project, the [Project Starter Wizard](/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html) runs these skills in order from a single interview. Run them individually when you are configuring a project that already exists.
+
+For the full list of skills and agents, see [Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html).
+
+The rest of this document describes the same configuration manually.
 
 ## Manage modules
 
@@ -29,7 +47,11 @@ To learn about the module versioning approach in Spryker, see [Semantic Versioni
 5. [Configure stores](/docs/dg/dev/internationalization-and-multi-store/set-up-multiple-stores.html#configure-stores).
 6. [Set up cronjobs](/docs/dg/dev/backend-development/cronjobs/cronjobs.html).
 
+The `configure-services` skill applies steps 2 to 4 to your deploy file.
+
 ## Clean up store configuration
+
+The `define-stores` skill performs this cleanup, including the hardcoded store and locale literals that are easy to miss and that abort the boot when left behind.
 
 If you chose to start with one store, clean up the configuration of the unneeded stores in the following files:
 - `config/install/*`
@@ -40,6 +62,12 @@ If you chose to start with one store, clean up the configuration of the unneeded
 
 ## Clean up data import
 
+The `project-data` skill performs this cleanup, and `spryker-import-tools` edits and validates the CSV files themselves.
+
 - In `data/import`, remove the files of the unneeded stores.
 - Change the default config in `DataImportConfig::getDefaultYamlConfigPath()`.
 - Define the needed stores in `CodeBucketConfig::getCodeBuckets()`.
+
+## Prepare for go-live
+
+Before go-live, replace the demo values the Demo Shop ships with — placeholder tax rates, Spryker CDN imagery, and demo customer accounts. The `curate-golive-data` skill finds and resolves them.

@@ -1,7 +1,7 @@
 ---
-title: AI Dev SDK Skills and Agents
+title: Skills and Agents
 description: Reference of the skills and agents shipped with the AI Dev SDK
-last_updated: Aug 13, 2026
+last_updated: Aug 14, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, windsurf, copilot, skills, agents, subagents, spryker
 template: concept-topic-template
@@ -17,8 +17,8 @@ The AiDev module is experimental and not stable. There is no backward compatibil
 
 The AI Dev SDK ships a set of skills and agents that codify common Spryker workflows. They reach your project in two ways:
 
-- **Via the `ai-dev:setup` console command** — copies the skills and agents into your project's AI-tool directories (`.claude/skills/` + `.claude/agents/`, `.windsurf/skills/` + `.windsurf/agents/`, and so on). Works for every AI tool listed on the [AI Dev SDK Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html#setup-command) that supports an agents directory. Codex CLI is the one exception — it has no agents directory, so agents are skipped for that tool.
-- **Via the Claude Code plugin** — for Claude Code users, the [Claude Code Plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html) installs the same skills and agents through the official marketplace, no console command required.
+- **Via the `ai-dev:setup` console command** — copies the skills and agents into your project's AI-tool directories (`.claude/skills/` + `.claude/agents/`, `.windsurf/skills/` + `.windsurf/agents/`, and so on). Works for every AI tool listed on the [Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html#setup-command) that supports an agents directory. Codex CLI is the one exception — it has no agents directory, so agents are skipped for that tool.
+- **Via the Claude Code plugin** — for Claude Code users, the [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html) installs the same skills and agents through the official marketplace, no console command required.
 
 Both delivery paths read from the same source files — the plugin just packages them for marketplace installation.
 
@@ -56,8 +56,8 @@ In most cases you do not need to call a skill or agent by name. Describe what yo
 
 If you want to invoke one explicitly:
 
-- **Claude Code plugin** — every skill is also available as a slash command. Type `/<skill-name>` (for example `/spryker-customization`) and the skill loads into the current chat. The full list of commands is on the [Claude Code Plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html#skills) page.
-- **Other AI tools** — invocation follows the tool's own convention for skills and agents. In Cursor, Windsurf, Copilot, OpenCode, and Codex CLI, the skills and agents land in the tool-specific directories (`.cursor/`, `.windsurf/`, etc.) and are picked up automatically by your assistant. The [AI Dev SDK Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html#setup-command) lists the output paths per tool.
+- **Claude Code plugin** — every skill is also available as a slash command. Type `/<skill-name>` (for example `/spryker-customization`) and the skill loads into the current chat. The full list of commands is on the [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html#skills) page.
+- **Other AI tools** — invocation follows the tool's own convention for skills and agents. In Cursor, Windsurf, Copilot, OpenCode, and Codex CLI, the skills and agents land in the tool-specific directories (`.cursor/`, `.windsurf/`, etc.) and are picked up automatically by your assistant. The [Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html#setup-command) lists the output paths per tool.
 - **Agents (subagents)** are not invoked by the user directly — they are spawned by the assistant or by a parent skill when the work calls for an isolated context. You can suggest one by name in your prompt (*"use the spryker-verifier to..."*), but the assistant decides when to spawn.
 
 ## Skills
@@ -136,11 +136,11 @@ Agents are delivered through `ai-dev:setup` (every supported AI tool with an age
 
 ## Related
 
-- [AI Dev SDK Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html)
+- [Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html)
 - [AI Dev MCP Server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html)
-- [Claude Code Plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html)
-- [AI Dev SDK Project Starter Wizard](/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html)
-- [AI Dev SDK Customization Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html)
-- [AI Dev SDK Bugfix Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html)
-- [AI Dev SDK Upgrade Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html)
-- [AI Dev SDK Profiler Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-profiler-workflow.html)
+- [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html)
+- [Project Starter Wizard](/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html)
+- [Customization Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html)
+- [Bugfix Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html)
+- [Upgrade Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html)
+- [Profiler Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-profiler-workflow.html)

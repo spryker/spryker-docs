@@ -25,7 +25,7 @@ entries:
                 url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-backend-gateway.html
               - title: Web Profiler for Zed
                 url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
-              - title: AI Dev SDK Profiler Workflow
+              - title: Profiler Workflow
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-profiler-workflow.html
           - title: Code Quality Tools
             nested:
@@ -39,8 +39,8 @@ entries:
                 url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
           - title: AI tools
             nested:
-              - title: AI Assistant
-                url: /docs/dg/dev/ai/ai-assistants/ai-assistants.html
+              - title: AI Dev SDK
+                url: /docs/dg/dev/ai/ai-dev/ai-dev.html
       - title: Continuous Integration
         url: /docs/dg/dev/ci.html
       - title: Post-Installation Configuration
@@ -103,39 +103,29 @@ entries:
       - title: AI Dev SDK
         url: /docs/dg/dev/ai/ai-dev/ai-dev.html
         nested:
-          - title: AI Dev SDK Overview
+          - title: Overview
             url: /docs/dg/dev/ai/ai-dev/ai-dev-overview.html
           - title: AI Dev MCP Server
             url: /docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html
-          - title: Claude Code Plugin
-            url: /docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html
-          - title: AI Dev SDK Skills and Agents
+          - title: Claude Code
+            url: /docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html
+            nested:
+              - title: Context7 MCP Server
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-context7-mcp-server.html
+              - title: Language Server for Claude Code CLI
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-lsp-for-claude.html
+          - title: Skills and Agents
             url: /docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html
-          - title: AI Dev SDK Project Starter Wizard
+          - title: Project Starter Wizard
             url: /docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html
-          - title: AI Dev SDK Customization Workflow
+          - title: Customization Workflow
             url: /docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html
-          - title: AI Dev SDK Bugfix Workflow
+          - title: Bugfix Workflow
             url: /docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html
-          - title: AI Dev SDK Upgrade Workflow
+          - title: Upgrade Workflow
             url: /docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html
-          - title: AI Dev SDK Profiler Workflow
+          - title: Profiler Workflow
             url: /docs/dg/dev/ai/ai-dev/ai-dev-profiler-workflow.html
-      - title: AI Assistants
-        url: /docs/dg/dev/ai/ai-assistants/ai-assistants.html
-        nested:
-          - title: AI IDE Assistants
-            url: /docs/dg/dev/ai/ai-assistants/ai-ide-assistants.html
-          - title: Context7 MCP Server
-            url: /docs/dg/dev/ai/ai-assistants/context7-mcp-server.html
-          - title: Language Server for Claude Code CLI
-            url: /docs/dg/dev/ai/ai-assistants/lsp-for-claude.html
-          - title: Spryker Engineer GPT
-            url: /docs/dg/dev/ai/ai-assistants/spryker-engineer-gpt.html
-          - title: Spryker K6 Performance Assistant GPT
-            url: /docs/dg/dev/ai/ai-assistants/spryker-k6-performance-assistant-gpt.html
-          - title: Spryker DevQA Assistant GPT
-            url: /docs/dg/dev/ai/ai-assistants/spryker-devqa-assistant-gpt.html
   - title: Set up locally
     url: /docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html
     nested:

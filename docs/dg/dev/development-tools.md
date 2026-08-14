@@ -1,7 +1,7 @@
 ---
 title: Development tools
 description: Complete suite of development tools provided by Spryker for debugging, profiling, code quality assurance, and AI-assisted development.
-last_updated: Jul 27, 2026
+last_updated: Aug 14, 2026
 template: concept-topic-template
 keywords: development tools, debugging, profiling, code quality, static analysis, xdebug, web profiler, phpstan, architecture sniffer, ai assistant
 ---
@@ -99,17 +99,6 @@ Validates project compatibility with Spryker core and checks upgrade readiness:
 ### AI-assisted development tools
 
 Spryker embraces AI technology to accelerate development and improve code quality:
-
-**AI Assistant**
-
-AI-powered development assistance for Spryker projects:
-
-- Code generation for Spryker modules and patterns
-- Best practice recommendations
-- Documentation lookup and integration assistance
-- Common task automation
-
-[AI Assistant documentation](/docs/dg/dev/ai/ai-assistants/ai-assistants.html)
 
 **AI Dev Tool**
 

@@ -1,16 +1,17 @@
 ---
 title: Continuous Integration
-description: Continuous Integration configuration and validation commands for Spryker projects to ensure code quality, stability, and upgradability.
-last_updated: Jul 27, 2026
+description: Continuous Integration setup for Spryker projects—pipeline structure, validation stages, and the AI Dev SDK skills that generate a project CI pipeline and a Cypress end-to-end baseline.
+last_updated: Aug 14, 2026
 template: concept-topic-template
-keywords: CI, continuous integration, automated testing, code quality, GitHub Actions, project stability, upgradability, validation, static analysis, architecture sniffer, codeception, phpstan
+keywords: CI, continuous integration, automated testing, code quality, GitHub Actions, project stability, upgradability, validation, static analysis, cypress, end-to-end
 ---
 
-Continuous Integration (CI) is essential for maintaining code quality, project stability, and upgradability in Spryker projects. This document lists all validation commands from the Spryker demo shop CI pipeline that you can run locally before committing code.
+Continuous Integration (CI) is essential for maintaining code quality, project stability, and upgradability in Spryker projects. This document describes how a Spryker project CI pipeline is structured and how to generate one for your project.
 
 ## Importance of CI for Spryker projects
 
 All CI checks are mandatory for:
+
 - **Project stability**: Prevents breaking changes from reaching production
 - **Code quality**: Enforces coding standards and architectural patterns
 - **Upgradability**: Ensures compatibility with Spryker core updates
@@ -20,133 +21,79 @@ Skipping CI checks leads to technical debt, integration issues, and costly refac
 
 ## Reference CI implementation
 
-The Spryker B2B Demo Marketplace includes a comprehensive GitHub Actions CI workflow: [.github/workflows/ci.yml](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/.github/workflows/ci.yml).
+The Spryker B2B Demo Marketplace includes a GitHub Actions CI workflow you can use as a reference: [.github/workflows/ci.yml](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/.github/workflows/ci.yml).
 
-{% info_block warningBox "Warning" %}
-This CI configuration is specific to the demo shop only and may not be applicable to the project. 
-However, it can be used as an example following recommendations described below.
+{% info_block warningBox "Product CI is not project CI" %}
+
+The demo shop workflow is a *product-delivery* pipeline. It carries jobs that exist only to maintain Spryker itself and that a project must not inherit — a multi-version PHP matrix, release-branch checks, and the upstream Robot and Cypress maintenance suites.
+
+The workflow marks each job with `[project applicable]` or `[remove for project]` so you can tell the two apart. Take only the jobs marked `[project applicable]`.
+
 {% endinfo_block %}
 
-It is recommended to review all available CI workflows in the [Spryker workflows directory](https://github.com/spryker-shop/b2b-demo-marketplace/tree/master/.github/workflows) and adapt the relevant ones for the project. 
-Not all workflows may be applicable to the specific requirements, so select and configure only those that align with the project needs.
+## Pipeline structure
 
-For instructions on setting up CI in different repositories, see the following documents:
+A project pipeline built from the reference workflow runs these stages:
+
+| Stage | What it covers |
+|-------|----------------|
+| Credential scan | Scans the repository for verified secrets before anything else runs |
+| Static analysis | Generates transfers and Propel models, then validates schemas and transfer definitions and runs code style, architecture rules, static analysis, and the Evaluator |
+| Frontend validation | Lints and formats the Yves storefront and Merchant Portal assets, and runs Merchant Portal unit tests |
+| Codeception | Functional, API, and acceptance tests against a built database |
+| Cypress quality gate | Lints and format-checks the Cypress suite itself, so a broken spec fails fast before an environment is booted |
+| Cypress end-to-end | Boots the application through the Docker SDK, warms queues and search, and runs the end-to-end suite |
+
+Two details of this ordering matter. The Cypress quality gate runs before the end-to-end job so that lint failures surface in seconds rather than after a full boot. The end-to-end job depends on static analysis and frontend validation, so a broken build never reaches the expensive stage.
+
+## Testing
+
+### Functional and unit tests
+
+Functional tests are recommended for all Spryker projects to cover custom business logic in facades, clients, services, and plugins. They can also serve as unit tests to verify that code behaves as expected. For details on building them, see [Testing Guidelines](/docs/dg/dev/guidelines/testing-guidelines/testing-guidelines.html).
+
+### End-to-end tests
+
+Cypress is the approach for end-to-end testing in Spryker projects. It covers the storefront, Back Office, Merchant Portal, and Glue API from the user's perspective, with modern debugging and a strong developer experience.
+
+In CI, Cypress runs as the two jobs described above: a fast lint and format gate, then the end-to-end run against a booted application, which uploads screenshots and reports as artifacts when a run fails.
+
+For setup and authoring instructions, see [Cypress Testing](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing.html).
+
+{% info_block infoBox "Migrating from Codeception E2E suites" %}
+
+Earlier Spryker projects covered end-to-end behavior with Codeception API (`@Glue`, `@EndToEnd`) and acceptance (`@Presentation`) suites. Cypress replaces both. If your project still runs them, see [Generate a Cypress baseline](#generate-a-cypress-baseline).
+
+{% endinfo_block %}
+
+## Generate your project CI with the AI Dev SDK
+
+Adapting the demo shop workflow by hand means deciding, job by job, what is product maintenance and what your project actually needs. Two AI Dev SDK skills do this work for you. Both ship with the [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html) plugin, and both are available through `ai-dev:setup` for other supported AI tools.
+
+| Skill | What it does | Reference |
+|-------|--------------|-----------|
+| `project-ci-generator` | Rebuilds an inherited product-style CI setup into a single, lean project pipeline. Reads the CI that actually exists rather than applying a template, proposes a keep/drop plan for your approval before deleting anything, and ports the same jobs to GitLab or Bitbucket | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/project-ci-generator/README.md) |
+| `cypress-migration` | Replaces the demoshop test suites with a project-owned Cypress baseline and wires it into CI. A one-time migration that vendors in a proven reference implementation and generates a companion `cypress-tests` skill for your project | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/cypress-migration/README.md) |
+
+### Generate a project pipeline
+
+Invoke `project-ci-generator` to turn the inherited workflow into your project pipeline. It reports a keep/drop plan first, and deletes nothing until you approve it.
+
+### Generate a Cypress baseline
+
+Invoke `cypress-migration` to replace the demoshop suites with a Cypress baseline owned by your project, including the CI jobs that run it.
+
+Both skills also run as steps 1 and 7 of the [Project Starter Wizard](/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html), which sets up a whole project in one pass. Run them individually when you only need the CI or test half.
+
+For the full list of skills and agents, see [Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html).
+
+## Set up CI in your repository
+
+For instructions on configuring pipelines per platform, see:
+
 - [Azure Pipelines](/docs/ca/dev/configure-deployment-pipelines/configure-azure-pipelines.html)
 - [Bitbucket Pipelines](/docs/ca/dev/configure-deployment-pipelines/configure-bitbucket-pipelines.html)
 - [GitHub Actions](/docs/ca/dev/configure-deployment-pipelines/configure-github-actions.html)
 - [GitLab Pipelines](/docs/ca/dev/configure-deployment-pipelines/configure-gitlab-pipelines.html)
 
-## Validation commands
-
-Use these commands to validate the code before merging it to the main branch.
-
-### Security scanning
-
-**Credential leak detection**
-
-```bash
-# Using TruffleHog (install separately)
-trufflehog filesystem . --log-level=2 --results=verified
-```
-
-### Code validation
-
-**Schema and transfer validation**
-
-```bash
-# Validate Propel schemas
-vendor/bin/console propel:schema:validate
-vendor/bin/console propel:schema:validate-xml-names
-
-# Validate transfer objects
-vendor/bin/console transfer:validate
-```
-
-### Static code analysis
-
-**Code style checks**
-
-```bash
-# PHP code style
-vendor/bin/console code:sniff:style
-
-# Spryker Architecture sniffer, using the project ruleset
-vendor/bin/phpmd src/ text phpmd.xml --minimumpriority=4
-```
-
-The Architecture Sniffer ships a core ruleset and a project ruleset. For projects, use only the **project ruleset** through a project-level `phpmd.xml` file. For setup and customization instructions, see [Architecture Sniffer](/docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html).
-
-**Static analysis**
-
-```bash
-# PHPStan (type checking and analysis at level 6)
-vendor/bin/phpstan analyze -l 6 -c phpstan.neon src/
-
-# Spryker Evaluator (upgradability and compatibility checks)
-vendor/bin/evaluator evaluate --format=compact
-```
-
-### Frontend validation
-
-**JavaScript and CSS checks**
-
-```bash
-
-# Yves (storefront) validation
-npm run yves:stylelint
-npm run yves:lint
-
-# Code formatting
-npm run formatter
-
-# Marketplace frontend validation
-npm run mp:lint
-npm run mp:stylelint
-npm run mp:test
-```
-
-## Automated testing
-
-### Functional and Unit tests
-
-Run functional tests in the CI environment:
-
-```bash
-docker/sdk testing codecept run -c codeception.ci.functional.yml
-```
-
-Functional tests are recommended for all Spryker projects to cover custom business logic in facades, clients, services, plugins, and others. 
-They can also be used as a form of unit testing to ensure the code behaves as expected. 
-For detailed information on how to build functional tests, see [Testing Guidelines](/docs/dg/dev/guidelines/testing-guidelines/testing-guidelines.html).
-
-### End-to-end tests
-
-**Cypress (Recommended)**
-
-Cypress is the **recommended and preferred approach** for end-to-end (E2E) testing in Spryker projects.
-The Spryker Cypress boilerplate provides a modern, comprehensive testing framework for UI testing with superior debugging capabilities and developer experience.
-For detailed information on setting up and running Cypress tests, see [Cypress Testing](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing.html).
-
-**API tests (Glue RestApi) with Codecept**
-
-Run API tests in the CI environment:
-
-```bash
-docker/sdk testing codecept run -c codeception.api.yml
-```
-
-API tests are based on the PHP Codecept framework and test endpoints with groups `@Glue` and `@EndToEnd`.
-These tests validate the REST API responses, data integrity, and endpoint behavior.
-This approach can still be used as is, since it is based on PHP and does not require adding new frameworks or stacks to the project.
-
-**Presentation Acceptance tests with Codecept**
-
-Run acceptance tests in the CI environment:
-
-```bash
-docker/sdk testing codecept run -c codeception.acceptance.yml
-```
-
-Acceptance tests are based on the PHP Codecept framework and test the presentation layer of the application with groups `@Presentation`.
-These tests validate user interactions, page rendering, and business logic flows from the user's perspective.
-
+Review all available workflows in the [Spryker workflows directory](https://github.com/spryker-shop/b2b-demo-marketplace/tree/master/.github/workflows) and adapt the relevant ones. Not all workflows apply to every project, so select only those that align with your needs.

@@ -1,9 +1,12 @@
 ---
 title: Language Server for Claude Code CLI
 description: Configure LSP server for code navigation and analysis in Claude Code
-last_updated: Jan 12, 2026
+last_updated: Aug 14, 2026
 keywords: [ai, coding-assistants, phpactor, intelephense, LSP, language-server-protocol, language-server]
 template: howto-guide-template
+redirect_from:
+  - /docs/dg/dev/ai/ai-assistants/lsp-for-claude
+  - /docs/dg/dev/ai-assistants/lsp-for-claude
 ---
 
 This document describes how to set up and use the LSP server with Claude Code CLI for efficient code navigation and analysis.

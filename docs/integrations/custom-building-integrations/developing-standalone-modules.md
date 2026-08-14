@@ -1,7 +1,7 @@
 ---
 title: Developing standalone modules
 description: Learn how to create a new module in Spryker to encapsulate functionality, improve scalability, and align with modular architecture standards.
-last_updated: July 9, 2025
+last_updated: Aug 14, 2026
 template: default
 ---
 
@@ -26,5 +26,5 @@ When you create a module, you're building a reusable, decoupled component that c
 
 
 - [Create a module manually](/docs/dg/dev/developing-standalone-modules/developing-standalone-modules.html)
-- [Use AI assistants](/docs/dg/dev/ai/ai-assistants/ai-ide-assistants)
+- [Use the AI Dev SDK](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html)
 - [Use Spryks](/docs/dg/dev/sdks/sdk/spryks/spryks)

@@ -1,5 +1,5 @@
 ---
-title: AI Dev SDK Upgrade Workflow
+title: Upgrade Workflow
 description: Upgrade a heavily customized Spryker project to a newer release — driven by the spryker-upgrade skill and its deterministic damage detectors
 last_updated: Aug 14, 2026
 label: early-access
@@ -23,7 +23,7 @@ To update the package in your project:
 composer require spryker-sdk/ai-dev:^0.6.4 --dev
 ```
 
-To update the Claude Code plugin, run `/plugin` in Claude Code and update `spryker-ai-dev-sdk` from the `spryker-plugins-official` marketplace to version 0.4.0 or later. For installation instructions, see [Claude Code Plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html).
+To update the Claude Code plugin, run `/plugin` in Claude Code and update `spryker-ai-dev-sdk` from the `spryker-plugins-official` marketplace to version 0.4.0 or later. For installation instructions, see [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html).
 
 ## What the skill does
 
@@ -98,11 +98,11 @@ Published migration guides are also sometimes stale or absent, so the skill trea
 ## Requirements
 
 - A Spryker project with Composer installed, and host PHP available to run the detector scripts
-- An AI tool with the SDK's skills loaded — either through the [Claude Code plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html) or via `ai-dev:setup` for another supported tool
+- An AI tool with the SDK's skills loaded — either through the [Claude Code plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html) or via `ai-dev:setup` for another supported tool
 
 ## Related
 
 - [`spryker-upgrade` README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/spryker-upgrade/README.md) — the skill's own reference in the plugin repository
-- [AI Dev SDK Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html) — the full reference of every skill and agent
+- [Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html) — the full reference of every skill and agent
 - [Upgrade and migrate](/docs/dg/dev/upgrade-and-migrate/upgrade-and-migrate.html) — the manual upgrade and migration guides
-- [AI Dev SDK Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html) — module and `ai-dev:setup` command
+- [Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html) — module and `ai-dev:setup` command

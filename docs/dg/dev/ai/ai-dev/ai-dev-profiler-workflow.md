@@ -1,5 +1,5 @@
 ---
-title: AI Dev SDK Profiler Workflow
+title: Profiler Workflow
 description: Read the Spryker WebProfiler as hard performance numbers — driven by the spryker-profiler skill
 last_updated: Aug 14, 2026
 label: early-access
@@ -23,7 +23,7 @@ To update the package in your project:
 composer require spryker-sdk/ai-dev:^0.6.4 --dev
 ```
 
-To update the Claude Code plugin, run `/plugin` in Claude Code and update `spryker-ai-dev-sdk` from the `spryker-plugins-official` marketplace to version 0.4.0 or later. For installation instructions, see [Claude Code Plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html).
+To update the Claude Code plugin, run `/plugin` in Claude Code and update `spryker-ai-dev-sdk` from the `spryker-plugins-official` marketplace to version 0.4.0 or later. For installation instructions, see [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html).
 
 ## What the skill does
 
@@ -127,11 +127,11 @@ After changing any of these, empty the cache and reproduce the request.
 ## Requirements
 
 - A running Spryker project (Docker SDK up) with the web profiler enabled
-- An AI tool with the SDK's skills loaded — either through the [Claude Code plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html) or via `ai-dev:setup` for another supported tool
+- An AI tool with the SDK's skills loaded — either through the [Claude Code plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html) or via `ai-dev:setup` for another supported tool
 
 ## Related
 
 - [WebProfiler](/docs/dg/dev/integrate-and-configure/integrate-development-tools/web-profiler.html) — why the profiler matters and how to integrate it per application
 - [`spryker-profiler` README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/spryker-profiler/README.md) — the skill's own reference in the plugin repository
-- [AI Dev SDK Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html) — the full reference of every skill and agent
-- [AI Dev SDK Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html) — module and `ai-dev:setup` command
+- [Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html) — the full reference of every skill and agent
+- [Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html) — module and `ai-dev:setup` command

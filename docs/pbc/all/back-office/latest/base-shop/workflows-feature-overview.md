@@ -3,6 +3,7 @@ title: Workflows feature overview
 description: The Workflows feature lets Back Office users design, adjust, and monitor multi-step business processes without a deployment, and lets developers extend them with custom rules and actions.
 last_updated: Aug 17, 2026
 template: concept-topic-template
+label: early-access
 redirect_from:
   - /docs/pbc/all/back-office/base-shop/workflow-feature-overview.html
 related:
@@ -10,7 +11,15 @@ related:
     link: docs/dg/dev/integrate-and-configure/integrate-workflow-feature.html
 ---
 
+{% info_block warningBox "Early Access" %}
+
+This feature is in Early Access. We'd love for you to try it out and share feedback as we work toward general availability.
+
+{% endinfo_block %}
+
 The Workflows feature lets Back Office users design, adjust, and monitor multi-step business processes — such as B2B company onboarding, order escalations, or approval flows — directly in the Back Office, without a code deployment.
+
+![The Workflows list in the Back Office, showing the 3-step setup guide and the CompanyOnboarding workflow with its status, active version, and triggers](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/back-office/base-shop/workflow-feature-overview/workflows-1.png)
 
 ## Business problems it solves
 
@@ -27,6 +36,10 @@ The Workflows feature removes the deployment dependency. Unlike a classic state 
 A workflow describes how a subject — which can be anything: a company, a user, a product, or any custom entity — moves through a sequence of steps as events occur, conditions are met, or timeouts elapse. A workflow starts when its subject reaches a specific application event, defined in a trigger: for example a company being created, a user registering, or a merchant being updated.
 
 Consider onboarding a new B2B company. When a company is created, a workflow starts and walks it through a series of steps: *business verification*, then *contract agreement*, then *customer group assignment*, and finally *approved*. Some steps advance on their own once a condition is met (for example, the business has been verified); others wait for a Back Office user to confirm; and a step can time out if nothing happens. The whole process — its steps, their order, and the rules between them — is defined and adjusted in the Back Office, not in code.
+
+The Back Office renders this as a diagram, so you can follow the flow without reading the underlying definition:
+
+![The CompanyOnboarding workflow graph in the Back Office, showing the created, business verification, contract agreement, and customer group assignment steps, with a branch to denied if the business is not verified](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/back-office/base-shop/workflow-feature-overview/workflows-3.png)
 
 The example below simplifies this to its first decision point — verifying the business, then approving or denying — to show the underlying definition format from start to finish: a new company moves from `created` to `approved`, passing a verification check and an automatic waiting step along the way.
 
@@ -75,6 +88,10 @@ A workflow definition is an XML document in the `state-machine-01` format. It ha
 </statemachine>{% endraw %}
 ```
 
+This is the definition pasted into the **Create Version** screen, together with the initial state:
+
+![The Create Version screen in the Back Office, with the initial state set to "created" and the state-machine-01 XML definition pasted into the definition field](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/back-office/base-shop/workflow-feature-overview/workflows-2.png)
+
 Here is how a company travels through this definition:
 
 1. **The instance starts.** A trigger (see [Triggers](#triggers)) starts an instance for a new company. The instance begins in the initial state you set when you author the version — here, `created`.
@@ -91,7 +108,7 @@ Three ideas in that trace do the heavy lifting, and each maps to a piece of proj
 
 ## Core concepts
 
-A workflow is built from four entities. The example above is a *version* of a *process*; running it for one company creates an *instance*; and what starts that instance is a *trigger*. You manage all of them in the Back Office under **Administration > Workflows**.
+A workflow is built from four entities. The example above is a *version* of a *process*; running it for one company creates an *instance*; and what starts that instance is a *trigger*. You manage all of them in the Back Office under **Administration > Workflows** (shown at the top of this page).
 
 | Concept | What it is |
 |---------|------------|

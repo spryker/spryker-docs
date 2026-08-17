@@ -1,7 +1,7 @@
 ---
 title: Install the Purchasing Control feature
 description: Learn how to install the Purchasing Control feature into your Spryker project.
-last_updated: Aug 6, 2026
+last_updated: Aug 17, 2026
 template: feature-integration-guide-template
 related:
   - title: Purchasing Control feature overview
@@ -713,6 +713,37 @@ purchasing_control.validation.require-approval,Diese Bestellung überschreitet d
 purchasing_control.validation.required,"Please select a cost center and budget before placing your order.",en_US
 purchasing_control.validation.required,"Bitte wählen Sie vor der Bestellung eine Kostenstelle und ein Budget aus.",de_DE
 ```
+
+If your project also uses the Recurring Orders feature, import the following keys as well. They translate the cost center and budget dropdowns on the recurring order approve and schedule edit forms, and the budget summary rendered by the `recurring-order-budget-summary` molecule:
+
+**data/import/common/common/glossary.csv**
+
+```csv
+purchasing_control.recurring_order.budget.total,Total budget,en_US
+purchasing_control.recurring_order.budget.total,Gesamtbudget,de_DE
+purchasing_control.recurring_order.budget.used,Used,en_US
+purchasing_control.recurring_order.budget.used,Verbraucht,de_DE
+purchasing_control.recurring_order.budget.remaining,Remaining,en_US
+purchasing_control.recurring_order.budget.remaining,Verbleibend,de_DE
+purchasing_control.recurring_order.budget.usage,%used% used of %total%,en_US
+purchasing_control.recurring_order.budget.usage,%used% von %total% verwendet,de_DE
+purchasing_control.recurring_order.cost_center_required,Select cost center,en_US
+purchasing_control.recurring_order.cost_center_required,Kostenstelle wählen,de_DE
+purchasing_control.recurring_order.budget_required,Select budget,en_US
+purchasing_control.recurring_order.budget_required,Budget wählen,de_DE
+purchasing_control.recurring_order.budget_cost_center_mismatch,The selected budget does not belong to the selected cost center.,en_US
+purchasing_control.recurring_order.budget_cost_center_mismatch,Das ausgewählte Budget gehört nicht zur ausgewählten Kostenstelle.,de_DE
+purchasing_control.validation.inactive-budget,The selected budget is no longer available. Please select another budget or contact your manager.,en_US
+purchasing_control.validation.inactive-budget,Das ausgewählte Budget ist nicht mehr verfügbar. Bitte wählen Sie ein anderes Budget oder kontaktieren Sie Ihren Manager.,de_DE
+purchasing_control.validation.approval-rule-not-supported,"The selected budget requires approval and cannot be used for a recurring order. Please select another budget.",en_US
+purchasing_control.validation.approval-rule-not-supported,"Das ausgewählte Budget erfordert eine Genehmigung und kann nicht für eine wiederkehrende Bestellung verwendet werden. Bitte wählen Sie ein anderes Budget aus.",de_DE
+```
+
+{% info_block infoBox "Recurring order translations" %}
+
+These keys render only on recurring order screens. Register the plugins that display them as described in [Set up Recurring Orders plugins](#set-up-recurring-orders-plugins) and [Install the Recurring Orders feature](/docs/pbc/all/order-experience-management/latest/base-shop/install-and-upgrade/install-features/install-the-recurring-orders-feature.html).
+
+{% endinfo_block %}
 
 Import data:
 

@@ -1,7 +1,7 @@
 ---
 title: Install the Recurring Orders feature
 description: Learn how to install the Recurring Orders feature into your Spryker project.
-last_updated: Aug 6, 2026
+last_updated: Aug 17, 2026
 template: feature-integration-guide-template
 related:
   - title: Recurring Orders feature overview
@@ -40,7 +40,7 @@ Both Purchasing Control and SSP Service Management are optional:
 {% info_block infoBox "Required modules" %}
 
 ```bash
-composer require spryker-feature/order-experience-management:"^0.1.4" --update-with-dependencies
+composer require spryker-feature/order-experience-management:"^1.0.0" --update-with-dependencies
 composer update \
   spryker/availability:"^9.32.0" \
   spryker/merchant:"^3.20.0" \
@@ -65,7 +65,8 @@ composer update \
   spryker-shop/checkout-page:"^3.42.0" \
   spryker-shop/customer-page:"^2.80.0" \
   spryker-shop/merchant-product-offer-widget:"^2.0.0" \
-  spryker-shop/product-search-widget:"^1.13.0" \
+  spryker-shop/product-search-widget:"^3.9.0" \
+  spryker-shop/shop-ui:"^2.0.0" \
   --with-dependencies
 ```
 
@@ -79,9 +80,16 @@ The **Review Required** page lets buyers add products to the order being placed.
 | --- | --- |
 | `spryker-shop/product-search-widget` | Provides `ProductConcreteSearchWidget` and the `products-list` molecule that the add-product search bar reuses. |
 | `spryker-shop/merchant-product-offer-widget` | Backs the merchant offer selector rendered for an added product in a marketplace setup. |
+| `spryker-shop/shop-ui` | Provides the `Component` base class, `AjaxProvider`, and app registry used by the recurring order web components. |
 | `spryker/product-alternative-storage` | Provides the alternative products offered as substitutes for discontinued and substituted items. |
 | `spryker/shipment-type-storage` | Resolves the shipment types of an added product to decide whether a recurring order can serve it. |
 | `spryker/product-measurement-unit`, `spryker/product-packaging-unit-storage` | Detect products sold in measurement or packaging units so they can be excluded from the add-product picker. |
+
+{% endinfo_block %}
+
+{% info_block infoBox "Merchant Switcher" %}
+
+`spryker/merchant-switcher` is not a dependency of the feature. Include it in the `composer update` command only if your project uses Merchant Switcher. Its checkout error type is one of the types mapped to a review reason group, so a project without the module simply never produces that error.
 
 {% endinfo_block %}
 
@@ -363,7 +371,7 @@ class OrderExperienceManagementDependencyProvider extends SprykerOrderExperience
 }
 ```
 
-`ServiceProductAddedItemValidatorPlugin` reads the accepted shipment type keys from `SelfServicePortalConfig`. The module default is an empty list, which accepts service products with any shipment type. Define the shipment types your project can serve unattended:
+`ServiceProductAddedItemValidatorPlugin` reads the accepted shipment type keys from `SelfServicePortalConfig`. The module default is an empty list, which accepts service products with any shipment type. Define the shipment types your project can serve unattended by overriding the constant in the shared config, which applies it in Yves and Zed at once:
 
 **src/Pyz/Shared/SelfServicePortal/SelfServicePortalConfig.php**
 
@@ -377,20 +385,30 @@ use SprykerFeature\Shared\SelfServicePortal\SelfServicePortalConfig as SprykerSe
 class SelfServicePortalConfig extends SprykerSelfServicePortalConfig
 {
     /**
-     * @return array<string>
+     * @uses \Spryker\Shared\ShipmentType\ShipmentTypeConfig::SHIPMENT_TYPE_DELIVERY
+     *
+     * @var string
      */
-    public function getRecurringOrderServiceShipmentTypeKeys(): array
-    {
-        return [
-            self::SHIPMENT_TYPE_DELIVERY,
-        ];
-    }
+    public const SHIPMENT_TYPE_DELIVERY = 'delivery';
+
+    /**
+     * @var array<string>
+     */
+    public const RECURRING_ORDER_SERVICE_SHIPMENT_TYPE_KEYS = [
+        self::SHIPMENT_TYPE_DELIVERY,
+    ];
 }
 ```
 
-| CONFIGURATION METHOD | DEFAULT | DESCRIPTION |
+| CONFIGURATION CONSTANT | DEFAULT | DESCRIPTION |
 | --- | --- | --- |
-| `getRecurringOrderServiceShipmentTypeKeys()` | `[]` | Shipment type keys a service product must support to be part of a recurring order. An empty list accepts service products with any shipment type. Override it in the shared config to apply it in Yves and Zed at once. |
+| `RECURRING_ORDER_SERVICE_SHIPMENT_TYPE_KEYS` | `[]` | Shipment type keys a service product must support to be part of a recurring order. An empty list accepts service products with any shipment type. `getRecurringOrderServiceShipmentTypeKeys()` returns this constant, so overriding the constant is enough. |
+
+{% info_block infoBox "Configure the constant once" %}
+
+If your project follows [Install the SSP Service Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-service-management-feature.html), the constant is already defined in `src/Pyz/Shared/SelfServicePortal/SelfServicePortalConfig.php`. Define it in one place only.
+
+{% endinfo_block %}
 
 {% info_block infoBox "Custom added item validators" %}
 
@@ -400,7 +418,7 @@ To reject added products for a project-specific reason, implement `SprykerFeatur
 
 {% info_block warningBox "Verification" %}
 
-Open the **Review Required** page for a schedule and add a service product whose shipment type is not in `getRecurringOrderServiceShipmentTypeKeys()`. Make sure the approval is rejected with an error message naming the product SKU.
+Open the **Review Required** page for a schedule and add a service product whose shipment type is not in `RECURRING_ORDER_SERVICE_SHIPMENT_TYPE_KEYS`. Make sure the approval is rejected with an error message naming the product SKU.
 
 {% endinfo_block %}
 
@@ -454,9 +472,36 @@ The handler plugin registers the following commands and conditions, so you do no
 | Command | RecurringOrders/CompletePlacement | Writes the placement result to the schedule history. |
 | Command | RecurringOrders/AdvanceSchedule | Calculates and stores the next trigger date using the registered cadence type plugin. |
 
+The process XML resolves the `confirm` event out of `review_required` into two transitions, so the target depends on when the buyer approves the review:
+
+```xml
+<transition condition="RecurringOrders/IsPlacementDue">
+    <source>review_required</source>
+    <target>confirmed</target>
+    <event>confirm</event>
+</transition>
+
+<transition>
+    <source>review_required</source>
+    <target>active</target>
+    <event>confirm</event>
+</transition>
+```
+
+- The buyer approves on or after the trigger date: `RecurringOrders/IsPlacementDue` evaluates to `true`, the schedule moves to `confirmed`, and the order is placed in this cycle.
+- The buyer approves before the trigger date: the condition evaluates to `false`, and the schedule returns to `active`. Nothing is placed yet, and the schedule waits for its trigger date.
+
+{% info_block warningBox "Transition order" %}
+
+The conditional transition must precede the unconditional one. The state machine evaluates transitions in document order and takes the first match, so an unconditional transition placed first makes every `confirm` event resolve to `active` and no order is ever placed. Keep this order if you extend the process XML.
+
+{% endinfo_block %}
+
 {% info_block warningBox "Verification" %}
 
-In the Back Office, under **Maintenance > State Machine**, make sure the `RecurringOrderStateMachine` process is listed and the diagram renders correctly.
+1. In the Back Office, under **Maintenance > State Machine**, make sure the `RecurringOrderStateMachine` process is listed and the diagram renders correctly.
+2. Approve a review for a schedule whose trigger date is still in the future. Make sure the schedule status returns to **Active** and no order is placed.
+3. Approve a review for a schedule whose trigger date has been reached. Make sure the schedule status becomes **Confirmed** and the order is placed.
 
 {% endinfo_block %}
 
@@ -703,19 +748,25 @@ If your project uses Symfony Scheduler instead of Jenkins, register the equivale
 
 #### Set up the Back Office navigation
 
-To make the recurring order schedules list available in the Back Office, add the navigation entry to your project navigation:
+To make the recurring order schedules list available in the Back Office, add the navigation entry to the `<pages>` element of the `<sales>` node in your project navigation:
 
 **config/Zed/navigation.xml**
 
 ```xml
-<recurring-order-schedules>
-    <label>Recurring Order Schedules</label>
-    <title>Recurring Order Schedules</title>
-    <bundle>order-experience-management</bundle>
-    <controller>recurring-schedule</controller>
-    <action>index</action>
-    <visible>1</visible>
-</recurring-order-schedules>
+<sales>
+    <!-- ... -->
+    <pages>
+        <!-- ... -->
+        <recurring-order-schedules>
+            <label>Recurring Order Schedules</label>
+            <title>Recurring Order Schedules</title>
+            <bundle>order-experience-management</bundle>
+            <controller>recurring-schedule</controller>
+            <action>index</action>
+            <visible>1</visible>
+        </recurring-order-schedules>
+    </pages>
+</sales>
 ```
 
 Rebuild the navigation cache:
@@ -785,7 +836,6 @@ Override the following configuration methods in your project (if needed) to adju
 
 namespace Pyz\Zed\OrderExperienceManagement;
 
-use SprykerFeature\Shared\OrderExperienceManagement\OrderExperienceManagementConfig as SharedOrderExperienceManagementConfig;
 use SprykerFeature\Zed\OrderExperienceManagement\OrderExperienceManagementConfig as SprykerOrderExperienceManagementConfig;
 
 class OrderExperienceManagementConfig extends SprykerOrderExperienceManagementConfig
@@ -801,46 +851,6 @@ class OrderExperienceManagementConfig extends SprykerOrderExperienceManagementCo
     public function getDefaultNotificationWindowHours(): int
     {
         return 18;
-    }
-
-    /**
-     * Specification:
-     * - Returns a map of review reason groups to the checkout error types that resolve to them.
-     * - Override to add custom checkout error types to existing groups or to introduce new groups.
-     * - The key is a SharedOrderExperienceManagementConfig::REVIEW_REASON_GROUP_* constant.
-     * - The value is a list of raw checkout error type strings reported by the checkout facade.
-     *
-     * @api
-     *
-     * @return array<string, array<string>>
-     */
-    public function getReviewReasonGroupMap(): array
-    {
-        return array_merge_recursive(parent::getReviewReasonGroupMap(), [
-            SharedOrderExperienceManagementConfig::REVIEW_REASON_GROUP_UNAVAILABLE => [
-                // Add project-specific checkout error types here.
-            ],
-        ]);
-    }
-
-    /**
-     * Specification:
-     * - Returns the review reason groups whose items are treated as non-purchasable.
-     * - Items in these groups block order placement and must be removed before the order can proceed.
-     * - Default: [REVIEW_REASON_GROUP_UNAVAILABLE, REVIEW_REASON_GROUP_OUT_OF_STOCK].
-     * - Override to add REVIEW_REASON_GROUP_DISCONTINUED if discontinued items should also block placement.
-     *
-     * @api
-     *
-     * @return array<string>
-     */
-    public function getNonPurchasableReviewReasonGroups(): array
-    {
-        return [
-            SharedOrderExperienceManagementConfig::REVIEW_REASON_GROUP_UNAVAILABLE,
-            SharedOrderExperienceManagementConfig::REVIEW_REASON_GROUP_OUT_OF_STOCK,
-            SharedOrderExperienceManagementConfig::REVIEW_REASON_GROUP_DISCONTINUED,
-        ];
     }
 
     /**
@@ -861,8 +871,8 @@ class OrderExperienceManagementConfig extends SprykerOrderExperienceManagementCo
 | CONFIGURATION METHOD | DEFAULT | DESCRIPTION |
 | --- | --- | --- |
 | `getDefaultNotificationWindowHours()` | `48` | Number of hours before the trigger date when the pre-trigger notification is sent. Per-schedule overrides stored in `spy_recurring_schedule.notification_window_hours` take precedence. |
-| `getReviewReasonGroupMap()` | See `OrderExperienceManagementConfig` | Maps review reason groups to checkout error types. Extend to map project-specific error types to the appropriate review group. |
-| `getNonPurchasableReviewReasonGroups()` | `[REVIEW_REASON_GROUP_UNAVAILABLE, REVIEW_REASON_GROUP_OUT_OF_STOCK]` | Review reason groups whose items block order placement and must be removed before the order can proceed. Override to also block on `REVIEW_REASON_GROUP_DISCONTINUED`. |
+| `getReviewReasonGroupMap()` | `out_of_stock`, `unavailable`, and `discontinued`, each mapped to the checkout error types that resolve to it | Maps review reason groups to checkout error types. The module maps every checkout error type it ships with, so extend it only to map project-specific error types or to introduce a new group. |
+| `getNonPurchasableReviewReasonGroups()` | Every key of `getReviewReasonGroupMap()`: `out_of_stock`, `unavailable`, `discontinued` | Review reason groups whose items block order placement and must be removed before the order can proceed. All groups block placement by default. Narrow the list if items of a group should stay purchasable. |
 | `getDefaultReviewReasonGroup()` | `REVIEW_REASON_GROUP_UNAVAILABLE` | Fallback review reason group used when a checkout error type does not match any known group. |
 | `getForecastPeriodFrom()` | `FORECAST_PERIOD_FROM_MONTH_START` | Lower bound of the Back Office forecast period. Applies to both forecast inputs: schedules still due to run and orders already placed. Switch to `FORECAST_PERIOD_FROM_TODAY` to cover only the remainder of the current month. |
 | `getForecastPeriodTo()` | `FORECAST_PERIOD_TO_MONTH_END` | Upper bound of the Back Office forecast period. Applies to both forecast inputs. |
@@ -1128,7 +1138,7 @@ class PurchasingControlConfig extends SprykerPurchasingControlConfig
 2. Open the recurring schedule edit form and make sure the same dropdowns are displayed.
 3. Submit the form with a budget that does not belong to the selected cost center. Make sure the form is rejected with a validation error.
 4. Set a budget's enforcement rule to **Require approval** in the Back Office. Make sure the budget is no longer offered in the recurring order budget selector.
-5. On the **Review Required** page, search for a service product whose shipment type is not in `getRecurringOrderServiceShipmentTypeKeys()`. Make sure the product is not offered in the add-product search results.
+5. On the **Review Required** page, search for a service product whose shipment type is not in `RECURRING_ORDER_SERVICE_SHIPMENT_TYPE_KEYS`. Make sure the product is not offered in the add-product search results.
 
 {% endinfo_block %}
 
@@ -1392,6 +1402,8 @@ recurring_orders.detail.order_items.empty,No items found.,en_US
 recurring_orders.detail.order_items.empty,Keine Artikel gefunden.,de_DE
 recurring_orders.detail.order_items.label,Order Items,en_US
 recurring_orders.detail.order_items.label,Bestellartikel,de_DE
+recurring_orders.detail.order_items.not_in_next_order_label,Not in next order,en_US
+recurring_orders.detail.order_items.not_in_next_order_label,Nicht in nächster Bestellung,de_DE
 recurring_orders.detail.order_items.one_time_label,Just this order,en_US
 recurring_orders.detail.order_items.one_time_label,Nur diese Bestellung,de_DE
 recurring_orders.detail.order_items.recurring_quantity_label,Recurring: %quantity%,en_US
@@ -1526,6 +1538,14 @@ recurring_orders.mail.notify_buyer_validation_failed.subject,"Action Required: "
 recurring_orders.mail.notify_buyer_validation_failed.subject,"Handlung erforderlich: ""%schedule_name%"" – Ihre Bestellung erfordert Aufmerksamkeit",de_DE
 recurring_orders.menu_item,Recurring Orders,en_US
 recurring_orders.menu_item,Wiederkehrende Bestellungen,de_DE
+recurring_orders.review_details,Review recurring order,en_US
+recurring_orders.review_details,Wiederkehrende Bestellung prüfen,de_DE
+recurring_orders.sku,SKU: %sku%,en_US
+recurring_orders.sku,SKU: %sku%,de_DE
+recurring_orders.summary_of_changes,Summary of changes,en_US
+recurring_orders.summary_of_changes,Zusammenfassung der Änderungen,de_DE
+recurring_orders.view_details,Schedule Details,en_US
+recurring_orders.view_details,Zeitplandetails,de_DE
 recurring_orders.review.all_items_removed,The order cannot be placed - all items are unavailable and the schedule cannot be executed without items.,en_US
 recurring_orders.review.all_items_removed,Die Bestellung kann nicht aufgegeben werden - alle Artikel sind nicht verfügbar und der Zeitplan kann ohne Artikel nicht ausgeführt werden.,de_DE
 recurring_orders.review.approve_error,The changes could not be applied. Please try again.,en_US
@@ -1562,8 +1582,8 @@ recurring_orders.review.column.previous_price,Previous price,en_US
 recurring_orders.review.column.previous_price,Vorheriger Preis,de_DE
 recurring_orders.review.column.reason,Reason,en_US
 recurring_orders.review.column.reason,Grund,de_DE
-recurring_orders.review.cta.accept_and_place,Accept changes & place order,en_US
-recurring_orders.review.cta.accept_and_place,Änderungen akzeptieren & Bestellung aufgeben,de_DE
+recurring_orders.review.cta.accept_and_place,Accept & place order,en_US
+recurring_orders.review.cta.accept_and_place,Bestellung annehmen und aufgeben,de_DE
 recurring_orders.review.execution_scheduled,Execution scheduled for %date%,en_US
 recurring_orders.review.execution_scheduled,Ausführung geplant für %date%,de_DE
 recurring_orders.review.flagged.title,Items requiring your review,en_US
@@ -1596,10 +1616,14 @@ recurring_orders.review.quantity_label,Quantity (every future order),en_US
 recurring_orders.review.quantity_label,Menge (jede zukünftige Bestellung),de_DE
 recurring_orders.review.scope.label,Apply these changes to,en_US
 recurring_orders.review.scope.label,Diese Änderungen anwenden auf,de_DE
-recurring_orders.review.scope.this_order,Just this order,en_US
+recurring_orders.review.scope.this_order,This order only,en_US
 recurring_orders.review.scope.this_order,Nur diese Bestellung,de_DE
-recurring_orders.review.scope.every_future,Every future order,en_US
-recurring_orders.review.scope.every_future,Jede zukünftige Bestellung,de_DE
+recurring_orders.review.scope.every_future,Update schedule permanently,en_US
+recurring_orders.review.scope.every_future,Zeitplan dauerhaft aktualisieren,de_DE
+recurring_orders.review-scope-selector-option.occurrence.note,"Apply to the %date% execution. Your recurring schedule stays unchanged.",en_US
+recurring_orders.review-scope-selector-option.occurrence.note,"Auf die Ausführung am %date% anwenden. Ihr wiederkehrender Zeitplan bleibt unverändert.",de_DE
+recurring_orders.review-scope-selector-option.standing.note,"Apply to this and all future executions, and update reference prices.",en_US
+recurring_orders.review-scope-selector-option.standing.note,"Wenden Sie dies auf diese und alle zukünftigen Ausführungen an und aktualisieren Sie die Referenzpreise.",de_DE
 recurring_orders.review.remove.label,Remove from schedule,en_US
 recurring_orders.review.remove.label,Aus Zeitplan entfernen,de_DE
 recurring_orders.review.remove.undo,Undo removal,en_US
@@ -1615,9 +1639,9 @@ recurring_orders.review.quantity_invalid,Bitte geben Sie eine Menge von mindeste
 recurring_orders.review.not_available,This schedule does not require review.,en_US
 recurring_orders.review.not_available,Dieser Zeitplan erfordert keine Überprüfung.,de_DE
 recurring_orders.review.currency_mismatch,This recurring order can only be reviewed in its own currency. Please switch back to it to make changes.,en_US
-recurring_orders.review.currency_mismatch,Diese wiederkehrende Bestellung kann nur in ihrer eigenen Währung überprüft werden. Bitte wechseln Sie zurück, um Änderungen vorzunehmen.,de_DE
+recurring_orders.review.currency_mismatch,"Diese wiederkehrende Bestellung kann nur in ihrer eigenen Währung überprüft werden. Bitte wechseln Sie zurück, um Änderungen vorzunehmen.",de_DE
 recurring_orders.review.price_mode_mismatch,This recurring order can only be reviewed in its own price mode (gross/net). Please switch back to it to make changes.,en_US
-recurring_orders.review.price_mode_mismatch,Diese wiederkehrende Bestellung kann nur in ihrem eigenen Preismodus (brutto/netto) überprüft werden. Bitte wechseln Sie zurück, um Änderungen vorzunehmen.,de_DE
+recurring_orders.review.price_mode_mismatch,"Diese wiederkehrende Bestellung kann nur in ihrem eigenen Preismodus (brutto/netto) überprüft werden. Bitte wechseln Sie zurück, um Änderungen vorzunehmen.",de_DE
 recurring_orders.review.prices_changed,Prices changed again since you reviewed. Please review the updated order before approving.,en_US
 recurring_orders.review.prices_changed,Die Preise haben sich seit Ihrer Überprüfung erneut geändert. Bitte überprüfen Sie die aktualisierte Bestellung vor der Genehmigung.,de_DE
 recurring_orders.review.reason.discontinued,Discontinued,en_US
@@ -1668,8 +1692,8 @@ recurring_orders.detail.resume.validation.date_required,Please select a resume d
 recurring_orders.detail.resume.validation.date_required,Bitte wählen Sie ein Fortsetzungsdatum aus.,de_DE
 recurring_orders.detail.resume.validation.date_in_past,The resume date must be in the future.,en_US
 recurring_orders.detail.resume.validation.date_in_past,Das Fortsetzungsdatum muss in der Zukunft liegen.,de_DE
-recurring_orders.scheduled.order.errors.title,The following issues were found with your recurring order and it could not be placed:,en_US
-recurring_orders.scheduled.order.errors.title,Die folgenden Probleme wurden bei Ihrer wiederkehrenden Bestellung festgestellt und sie konnte nicht aufgegeben werden:,de_DE
+recurring_orders.scheduled.order.errors.title,Recurring order not placed,en_US
+recurring_orders.scheduled.order.errors.title,Wiederkehrende Bestellung nicht aufgegeben,de_DE
 recurring_orders.review.add_product.add,Add,en_US
 recurring_orders.review.add_product.add,Hinzufügen,de_DE
 recurring_orders.review.add_product.clear,Clear,en_US
@@ -1716,6 +1740,10 @@ recurring_orders.review.substitute.modal.description,%product% is no longer avai
 recurring_orders.review.substitute.modal.description,%product% ist nicht mehr verfügbar. Wählen Sie einen Ersatz für diese Bestellung.,de_DE
 recurring_orders.review.substitute.modal.title,Choose a substitute,en_US
 recurring_orders.review.substitute.modal.title,Ersatzprodukt wählen,de_DE
+recurring_orders.review.substitute.recommended,recommended,en_US
+recurring_orders.review.substitute.recommended,empfohlen,de_DE
+recurring_orders.review.substitute.removed,Removed,en_US
+recurring_orders.review.substitute.removed,Entfernt,de_DE
 recurring_orders.review.substitute.unavailable,unavailable,en_US
 recurring_orders.review.substitute.unavailable,nicht verfügbar,de_DE
 recurring_orders.checkout.error.not_eligible,This cart cannot be placed as a recurring order.,en_US

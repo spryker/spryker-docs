@@ -1,7 +1,7 @@
 ---
 title: Recurring Orders feature overview
 description: Learn how the Recurring Orders feature lets B2B buyers automate repeat purchases on a configurable schedule.
-last_updated: Aug 6, 2026
+last_updated: Aug 17, 2026
 template: concept-topic-template
 ---
 
@@ -127,7 +127,7 @@ The buyer reviews the flagged items on the **Review Required** page. The followi
 | Price unavailable | No current price could be resolved for the product. |
 | Configurable bundle unavailable | A member of a configurable bundle is unpurchasable, so the entire bundle is dropped. |
 
-Items flagged as **unavailable** or **out of stock** are non-purchasable and must be removed or substituted before the order can proceed. Projects can extend this list—for example, to also block on discontinued items.
+Items flagged as **unavailable**, **out of stock**, or **discontinued** are non-purchasable and must be removed or substituted before the order can proceed. Projects can narrow this list through `getNonPurchasableReviewReasonGroups()` if items of a group should stay purchasable.
 
 ### Available review actions
 

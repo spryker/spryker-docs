@@ -943,6 +943,8 @@ Each tier needs a stack of helpers in a specific order. Rather than repeating th
 modules:
     enabled:
         - \SprykerTest\ApiPlatform\Helper\StorefrontApiIntegrationHelper:
+              environmentModule: '\PyzTest\Shared\Testify\Helper\Environment'
+              projectNamespaces: ['Pyz']
               publish: true
         - \PyzTest\Glue\Wishlists\Helper\WishlistsApiHelper
         - \SprykerTest\ApiPlatform\Helper\ApiPlatformHelper:
@@ -952,13 +954,18 @@ modules:
 
 `StorefrontApiIntegrationHelper` registers the integration stack: the database lane, bootstrap, locator, configuration, dependency and data cleanup, transactions, processor resolution, and the in-process Zed transport. Setting `publish: true` adds the in-process publish leg. `StorefrontApiLogicHelper` does the same for the logic tier—container resolution only, with no database and no HTTP.
 
+Two keys are yours to supply, because the core helper cannot know them:
+
+- `environmentModule` is required. It points at the project helper that defines the `APPLICATION` constants. The umbrella creates it in the one position it must occupy—after the bootstrap and before the locator freezes the configuration—which a plain entry in your `enabled` list could not guarantee.
+- `projectNamespaces` tells the class resolver about your project namespace. Without it, a module your project overrides resolves to the Spryker base class and silently loses every plugin you registered.
+
 Three rules govern the list:
 
 - Enable the umbrella helper **first**.
 - Keep `ApiPlatformHelper` **last**. Codeception runs `_afterSuite` in reverse order, and the kernel reset has to happen before the database lane deletes its work database.
 - Never re-list one of the umbrella's own child helpers after it. Codeception creates the child a second time and silently discards the configuration forwarded to the replaced instance.
 
-Per-child configuration overrides go under `modules: config:`. The exceptions are `application`, `projectNamespaces`, and `applicationPluginProvider`, which are umbrella configuration keys—setting them on a child has no effect, because the umbrella overwrites them.
+Per-child configuration overrides go under `modules: config:`. The exceptions are `application`, `projectNamespaces`, `applicationPluginProvider`, and `environmentModule`, which are umbrella configuration keys—setting them on a child has no effect, because the umbrella overwrites them.
 
 Do not enable `ContainerHelper` in an integration suite. Its `_after()` nulls the shared container delegator whenever its container was touched, and the database-fixture path touches it. That discards the compiled container between methods, so every method after the first fails with a null-container `TypeError`. The logic tier keeps `ContainerHelper`, because its container stays untouched.
 

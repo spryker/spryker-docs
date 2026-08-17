@@ -1,7 +1,7 @@
 ---
 title: AI Commerce overview
 description: Technical overview of the AI Commerce SprykerFeature package — architecture, AiFoundation integration, and available features.
-last_updated: Jul 16, 2026
+last_updated: Aug 13, 2026
 template: concept-topic-template
 ---
 
@@ -33,3 +33,7 @@ For the base `AiFoundation` setup, see [Install AI Commerce](/docs/dg/dev/ai/ai-
 ## Installation
 
 To install the AI Commerce base package, see [Install AI Commerce](/docs/dg/dev/ai/ai-commerce/install-ai-commerce.html). Individual features require additional installation steps — see their respective installation guides linked in the table above.
+
+## Customization
+
+To let a feature or agent work with data that no built-in tool covers, add a project-level tool and toolset. For instructions and the security rules that apply, see [Extend AI Commerce agents with custom toolsets](/docs/dg/dev/ai/ai-commerce/extend-ai-commerce-agents-with-toolsets.html).

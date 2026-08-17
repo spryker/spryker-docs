@@ -208,7 +208,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
           "attributes": {
               "customer": {
                   "salutation": "Mr",
-                  "email": "spencor.hopkin@spryker.com",
+                  "email": "spencor.hopkin@acme.com",
                   "firstName": "Spencor",
                   "lastName": "Hopkin"
               },
@@ -226,7 +226,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
                       ],
                       "shippingAddress": {
                           "salutation": "Mr",
-                          "email": "spencor.hopkin@spryker.com",
+                          "email": "spencor.hopkin@acme.com",
                           "firstName": "Spencor",
                           "lastName": "Hopkin",
                           "address1": "West road",
@@ -409,14 +409,14 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
           "attributes": {
               "customer": {
                   "salutation": "Mr",
-                  "email": "spencor.hopkin@spryker.com",
+                  "email": "spencor.hopkin@acme.com",
                   "firstName": "Spencor",
                   "lastName": "Hopkin"
               },
               "idCart": "d60de64b-08c7-564d-8916-d7756f2dc865",
               "billingAddress": {
                   "salutation": "Mr",
-                  "email": "spencor.hopkin@spryker.com",
+                  "email": "spencor.hopkin@acme.com",
                   "firstName": "Spencor",
                   "lastName": "Hopkin",
                   "address1": "West road",
@@ -431,7 +431,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
               },
               "shippingAddress": {
                   "salutation": "Mr",
-                  "email": "spencor.hopkin@spryker.com",
+                  "email": "spencor.hopkin@acme.com",
                   "firstName": "Spencor",
                   "lastName": "Hopkin",
                   "address1": "West road",
@@ -560,7 +560,7 @@ Deactivate one of the shipment types and send a request with the corresponding s
             "attributes": {
                 "customer": {
                     "salutation": "Mr",
-                    "email": "spencor.hopkin@spryker.com",
+                    "email": "spencor.hopkin@acme.com",
                     "firstName": "Spencor",
                     "lastName": "Hopkin"
                 },
@@ -578,7 +578,7 @@ Deactivate one of the shipment types and send a request with the corresponding s
                         ],
                         "shippingAddress": {
                             "salutation": "Mr",
-                            "email": "spencor.hopkin@spryker.com",
+                            "email": "spencor.hopkin@acme.com",
                             "firstName": "Spencor",
                             "lastName": "Hopkin",
                             "address1": "West road",

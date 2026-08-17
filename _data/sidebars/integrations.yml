@@ -50,6 +50,8 @@ entries:
           url: /docs/integrations/spryker-api/api-platform/enablement.html
         - title: Resource schemas
           url: /docs/integrations/spryker-api/api-platform/resource-schemas.html
+        - title: Typed collections in the published contract
+          url: /docs/integrations/spryker-api/api-platform/typed-collections.html
         - title: Validation schemas
           url: /docs/integrations/spryker-api/api-platform/validation-schemas.html
         - title: Resource relationships

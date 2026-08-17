@@ -1,7 +1,7 @@
 ---
 title: AI Dev SDK
 description: Spryker AI Dev SDK
-last_updated: Jun 9, 2026
+last_updated: Aug 14, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/dg/dev/ai-dev/ai-dev
@@ -99,10 +99,10 @@ Ensure that you have a Spryker project with Composer installed.
 
 The AI Dev SDK ships a Claude Code plugin — `spryker-ai-dev-sdk` — that bundles Spryker-aware skills and the `spryker-code-reviewer` subagent. The plugin is distributed through the `spryker-plugins-official` marketplace.
 
-For detailed installation instructions and a full description of bundled skills and capabilities, see [Claude Code Plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html).
+For detailed installation instructions and a full description of bundled skills and capabilities, see [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html).
 
 ## Next steps
 
 - [Configure the AiDev MCP server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html) — Set up the connection to your AI tool
-- [AI Dev SDK Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html) — Learn more about the AI Dev SDK features and capabilities
-- [Claude Code Plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html) — Install the plugin and explore bundled skills
+- [Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html) — Learn more about the AI Dev SDK features and capabilities
+- [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html) — Install the plugin and explore bundled skills

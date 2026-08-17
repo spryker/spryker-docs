@@ -1,8 +1,10 @@
 ---
 title: Workflows feature overview
 description: The Workflows feature lets Back Office users build, version, and run state machines for any process, and lets developers extend them with commands, conditions, and triggers.
-last_updated: Aug 7, 2026
+last_updated: Aug 17, 2026
 template: concept-topic-template
+redirect_from:
+  - /docs/pbc/all/back-office/base-shop/workflow-feature-overview.html
 related:
   - title: Install the Workflow feature
     link: docs/dg/dev/integrate-and-configure/integrate-workflow-feature.html
@@ -10,13 +12,13 @@ related:
 
 The Workflows feature lets Back Office users design and operate state machines directly from the Back Office. A workflow describes how a subject moves through a sequence of states as events occur, conditions are met, or timeouts elapse.
 
-A subject can be anything — a company, a user, a product, or a custom entity. A workflow starts when its subject reaches a specific application event, defined in a trigger: for example a company being created, a user registering, or a merchant being updated. From then on, each subject runs through the workflow independently.
+A subject can be anything — a company, a user, a product, or any custom entity. A workflow starts when its subject reaches a specific application event, defined in a trigger: for example a company being created, a user registering, or a merchant being updated. From then on, each subject runs through the workflow independently.
 
 Unlike classic state machines, which are defined in XML files and require a deployment to change, a workflow is created and adjusted by a Back Office user. This puts process design in the hands of the people who own the process.
 
 ## An example
 
-Consider onboarding a new B2B company. When a company is created, a workflow starts and walks it through a series of states: *business verification*, then *contract agreement*, then *customer group assignment*, and finally *approved*. Some steps advance on their own once a condition is met (for example, the business has been verified); others wait for a Back Office user to confirm; and a step can time out if nothing happens. The whole process — its states, the order of the steps, and the rules between them — is defined and adjusted in the Back Office, not in code.
+Consider the onboarding process of a new B2B company. When a new company is created, a workflow starts and walks it through a series of states: *business verification*, then *contract agreement*, then *customer group assignment*, and finally *approved*. Some steps advance on their own once a condition is met (for example, the business has been verified); others wait for a Back Office user to confirm; and a step can time out if nothing happens. The whole process — its states, the order of the steps, and the rules between them — is defined and adjusted in the Back Office, not in code.
 
 ## How a workflow works
 

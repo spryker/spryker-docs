@@ -42,7 +42,6 @@ Make sure the following modules have been installed:
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | ProductExperienceManagement | vendor/spryker-feature/product-experience-management |
-| ProductApproval | vendor/spryker/product-approval |
 
 {% endinfo_block %}
 

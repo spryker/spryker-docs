@@ -1,7 +1,7 @@
 ---
 title: Product Experience Management
 description: Import and export product data through a backoffice UI using CSV files with schema-driven column mapping.
-last_updated: Aug 12 2026
+last_updated: Aug 18 2026
 template: concept-topic-template
 ---
 
@@ -110,6 +110,8 @@ The values accepted in the *Product Status* column depend on the row type. Value
 | Concrete product row: *Concrete SKU* is filled in | `active`, `inactive` | `active` activates the concrete product, `inactive` deactivates it. |
 
 *Product Status* is required in every row. If the value is empty or does not belong to the accepted values for the row type, the row is skipped and an error is reported. For example, `active` in an abstract product row and `approved` in a concrete product row both fail validation.
+
+The approval statuses of abstract products come from the [Product Approval Process](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-approval-process-feature.html) feature, which the Product Experience Management feature requires. The statuses accepted for concrete products, and the one that activates a concrete product, are defined by `getProductConcreteStatuses()` and `getProductConcreteStatusActive()` in the module's `ProductExperienceManagementConfig`.
 
 ### Error handling
 

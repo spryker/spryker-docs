@@ -103,12 +103,21 @@ entries:
       - title: AI Dev SDK
         url: /docs/dg/dev/ai/ai-dev/ai-dev.html
         nested:
-          - title: Getting Started
-            url: /docs/dg/dev/ai/ai-dev/ai-dev-getting-started.html
-          - title: Overview
-            url: /docs/dg/dev/ai/ai-dev/ai-dev-overview.html
-          - title: AI Dev MCP Server
-            url: /docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html
+          - title: Installation
+            url: /docs/dg/dev/ai/ai-dev/ai-dev-installation.html
+          - title: Skills and Agents
+            url: /docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html
+            nested:
+              - title: Project Starter Wizard
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html
+              - title: Customization Workflow
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html
+              - title: Bugfix Workflow
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html
+              - title: Upgrade Workflow
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html
+              - title: Profiler Workflow
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-profiler-workflow.html
           - title: Claude Code
             url: /docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html
             nested:
@@ -116,18 +125,8 @@ entries:
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-context7-mcp-server.html
               - title: Language Server for Claude Code CLI
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-lsp-for-claude.html
-          - title: Skills and Agents
-            url: /docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html
-          - title: Project Starter Wizard
-            url: /docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html
-          - title: Customization Workflow
-            url: /docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html
-          - title: Bugfix Workflow
-            url: /docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html
-          - title: Upgrade Workflow
-            url: /docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html
-          - title: Profiler Workflow
-            url: /docs/dg/dev/ai/ai-dev/ai-dev-profiler-workflow.html
+          - title: AI Dev MCP Server
+            url: /docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html
   - title: Set up locally
     url: /docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html
     nested:

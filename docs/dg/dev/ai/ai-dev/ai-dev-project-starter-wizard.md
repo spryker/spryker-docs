@@ -27,11 +27,11 @@ It is also the resume entry point — if a previous run left a state file, invok
 
 ## Before you start
 
-The wizard needs the SDK's skills loaded into your AI tool.
+The wizard needs the SDK's skills loaded into your AI tool. If you have not done that yet, [install the AI Dev SDK](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html) first.
 
-**The main option is the Claude Code plugin** — it installs from the official marketplace into Claude Code itself and needs nothing from the project, so your tooling is ready on a fresh clone. Install it as described in [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html#install-the-plugin-from-the-marketplace). The wizard requires plugin version 0.4.0 or later; if the plugin is already installed, run `/plugin` and update it.
+For this wizard, use the Claude Code plugin: it installs into Claude Code itself and needs nothing from the project, so your tooling is ready on a fresh clone. The `ai-dev:setup` console command is the alternative for other assistants, but it requires an installed project — which a fresh clone is not yet.
 
-Alternatively, the [`ai-dev:setup` console command](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html#setup-command) copies the skills into your project's AI-tool directories. It requires an installed project — which a fresh clone is not yet — so for the wizard, prefer the plugin.
+The wizard requires plugin version 0.4.0 or later. If the plugin is already installed, run `/plugin` and update it.
 
 {% info_block infoBox "Verify the installation" %}
 
@@ -174,4 +174,4 @@ The closing summary flags what still needs a human before go-live, such as a git
 - [`project-starter-wizard` README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/project-starter-wizard/README.md) — the skill's own reference in the plugin repository
 - [Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html) — the full reference of every skill and agent this wizard composes
 - [Customization Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html) — build features on the project once it runs
-- [Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html) — module and `ai-dev:setup` command
+- [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html) — install the SDK and generate your project's rules, context file, and skills

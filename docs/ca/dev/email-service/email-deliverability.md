@@ -1,7 +1,7 @@
 ---
 title: Email deliverability
 description: Ensure high email deliverability in Spryker Cloud Commerce OS by configuring SPF, DKIM, and DMARC DNS records
-last_updated: Jun 19, 2024
+last_updated: Aug 19, 2026
 template: concept-topic-template
 ---
 
@@ -20,12 +20,12 @@ You can use domain reputation checkers to assess the reputation of your email do
 
 Your Spryker cloud non-production environments are using a sandboxed Simple Email Service Account *by default*. This means that you can only send emails to [validated recipients](https://docs.spryker.com/docs/ca/dev/email-service/verify-email-addresses.html). This protects you from mistakenly sending faulty emails to many recipients that might report this behavior and damage the reputation of your sender's domain. Only request the SES Sandbox to be disabled when you're confident that your email functionality works as expected.
 
-### Sandbox mode error handling
+### Email sending error handling
 
-When SES is in sandbox mode and an email is sent to or from a non-verified address, the email delivery fails. Spryker handles these failures gracefully:
+Spryker handles email delivery failures gracefully regardless of the cause whether it is a sandbox restriction, a misconfigured sender domain, a network issue, or any other transport-level error. When an email fails to send:
 
 - The failure is logged with full details: SMTP error code, sender and recipient addresses, and the exception message. Check application logs for entries like: `Email sending failed. SMTP error code: 550. Sender: noreply@example.com. Recipients: user@example.com. Exception: ...`
-- The application continues operating—no 500 errors are shown to users, and no business processes are blocked.
+- The application continues operating: no 500 errors are shown to users, and no business processes are blocked.
 - On the Storefront and in the API, users see a meaningful error message instead of a server error.
 
 This means you can safely test all application features in sandbox mode without worrying about email-related crashes. To verify email functionality end-to-end, make sure to [verify the sender and recipient addresses](/docs/ca/dev/email-service/verify-email-addresses.html) in the SES console.

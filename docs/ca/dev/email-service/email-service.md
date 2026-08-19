@@ -1,7 +1,7 @@
 ---
 title: Email service
 description: Set up email services in Spryker Cloud Commerce OS with Amazon SES, covering email verification, quota restrictions, and third-party service integration.
-last_updated: Dec 15, 2023
+last_updated: Aug 19, 2026
 template: concept-topic-template
 ---
 
@@ -32,5 +32,3 @@ When an email fails to send—for example, because the SES account is in sandbox
 | **Glue API** | When email is the primary action (for example, forgot password), the API returns HTTP 422 with error details. When email is secondary (for example, registration), the API returns a success response. |
 
 The error message format is: `The email failed to send. Error code: [SMTP_CODE].`
-
-The `MailTransfer` object carries the response in its `mailResponse` property of type `MailResponse`, which contains an `isSuccess` flag and a list of error messages. Modules that need to surface the error to users can inspect this property after calling `MailFacade::handleMail()`.

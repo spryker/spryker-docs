@@ -4,10 +4,7 @@
 In this new version of the `PurchasingControl` module, we have:
 
 - Made it possible to select a cost center and a budget together in a single submit. The budget dropdown now offers the budgets of every available cost center and is narrowed to the selected cost center in the browser, so changing the cost center no longer reloads the page.
-- Added server-side validation that rejects a budget that does not belong to the selected cost center.
-- Made budget choices unique per budget instead of per budget name, so two cost centers can each own a budget with the same name.
 - Added cost center and budget selection for quote requests, in both the customer and the agent context.
-- Changed cost center resolution so that, on a quote request, the cost centers of the request owner's company business unit are used instead of those of the logged-in customer.
 
 This release contains breaking changes. Review the following sections before upgrading.
 

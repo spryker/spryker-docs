@@ -77,7 +77,8 @@ The typical B2B procurement flow involving cost centers and budgets:
    - The budget dropdown offers the budgets of every cost center available to the buyer, narrowed to the selected cost center.
    - Changing the cost center narrows the budget list immediately, without reloading the page. If the previously selected budget does not belong to the new cost center, the budget field is cleared.
    - If the selected cost center has no active budgets, the budget field is hidden and a message states that no budgets are available.
-   - Selecting a budget is optional, but a budget that is selected must belong to the selected cost center. The pairing is validated on the server, so a mismatched combination is rejected even when the browser-side filtering is bypassed.
+   - A budget that is selected must belong to the selected cost center. The pairing is validated on the server, so a mismatched combination is rejected even when the browser-side filtering is bypassed.
+   - The selector form does not enforce a budget selection by itself, but the field is marked as required in the browser whenever the selected cost center has active budgets. An order cannot be placed without an active budget: if the buyer's business unit has active cost centers and no active budget is resolved, checkout fails and the buyer is asked to select a cost center and a budget.
 4. **Budget is validated.** The system checks whether the order total fits within the remaining budget for the selected cost center.
 5. **Enforcement rules apply.** Based on the configured rule, the order is blocked, a warning is shown, or approval is required.
 6. **Budget is consumed.** Once the order is confirmed, the budget balance is reduced by the order amount.
@@ -92,6 +93,7 @@ The typical B2B procurement flow involving cost centers and budgets:
 | Exceeds budget  -  Require Approval rule | The order is sent for approval; the buyer cannot complete checkout until approved. |
 | Exceeds Buy up to grand total permission limit | The order is sent for approval, same as the standard Approval Process. |
 | Exceeds budget  -  Block rule | Checkout is blocked; no approval option is available. |
+| No active budget resolved while the business unit has active cost centers | Checkout fails; the buyer must select a cost center and a budget before placing the order. |
 
 ## Quote lock
 
@@ -119,6 +121,8 @@ Cost centers are scoped per company business unit. On a quote request, the appli
 Buyers can only change the cost center on their own quote requests. A quote request reference that belongs to another company user is treated as not found, so an unauthorized reference is indistinguishable from a reference that does not exist.
 
 ### Editability
+
+On a quote request, selecting a budget is optional: there is no checkout to pass, so a quote request is saved with a cost center and no budget. A budget that is selected must still belong to the selected cost center.
 
 A cost center and a budget can be changed only while the quote request is in an editable status. The status check runs on the server, so a quote request that is no longer editable is rejected even when the form is submitted directly. Quote requests that are not editable still display the assigned cost center and budget as read-only.
 

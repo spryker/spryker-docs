@@ -17,12 +17,21 @@ This release contains breaking changes. Review the following sections before upg
 | `CostCenterResolverInterface::resolveCostCenters()` gained a second parameter, `?int $idCompanyBusinessUnit = null`. | Project implementations and decorators of the interface must be updated to the new signature. When the argument is `null`, the business unit of the logged-in company user is used, which preserves the previous behavior. |
 | `CostCenterSelectorForm` gained two required options: `OPTION_BUDGET_LABELS` and `OPTION_BUDGET_COST_CENTER_MAP`. | Code that builds the form without going through `CostCenterSelectorFormDataProvider` must pass both options. `OPTION_BUDGET_COST_CENTER_MAP` is an `array<int, int>` that maps a budget ID to the ID of the cost center that owns it. |
 | `CostCenterSelectorFormDataProvider::buildOptions()` was replaced by `getCostCenterBudgetOptions()`, and `buildBudgetChoices()` was replaced by `buildBudgetLabels()`. | Project classes that extend the data provider and override either method must be updated. |
+| `CostCenterSelectorFormDataProvider::buildBudgetChoiceAttrs()` gained a new second parameter: `array $formattedRemainingAmounts` replaces `string $currencyCode`. | Project overrides must adopt the new signature. An override that keeps the old signature fails with a `TypeError` at runtime. The new parameter is an array of formatted remaining amounts keyed by budget ID. |
+| `CostCenterSelectorFormDataProvider::buildBudgetChoiceLabel()` keeps its name and parameter types, but its second parameter changed meaning: `string $formattedRemainingAmount` replaces `string $currencyCode`. | Project overrides must be updated. Because the method signature is unchanged, an override keeps running and silently receives an already-formatted money string where it expects a currency code, which produces incorrect budget labels instead of an error. |
 | `CostCenterSelectorFormDataProvider::getDataAndOptions()` gained a `?int $idCompanyBusinessUnit = null` parameter. | Project overrides must adopt the new signature. Existing call sites are unaffected because the parameter is optional. |
-| Budget choices are keyed by budget ID instead of by budget label. | Code or templates that rely on the label being the choice key must be updated. Labels are now resolved through `OPTION_BUDGET_LABELS` and a `choice_label` closure. |
-| The `onchange="this.form.submit()"` attribute was removed from the cost center select, and the `js-` hook class for that select moved from `CostCenterSelectorForm` into the Twig template. | Projects that relied on the automatic form submit must adopt the client-side filtering shipped in `cost-center-selector.ts`. Projects that reference the hook class from PHP must read it from the template instead. |
-| `cost-center-selector.twig` was restructured: the submit button moved into its own `apply_field` block that is always rendered, and the budget field, remaining amount, and no-budgets rows are always present and toggled with `is-hidden`. | Project template overrides must be re-based against the new blocks. Previously, the budget field and the submit button were not rendered at all until a cost center was persisted. |
+| The shape of the required `OPTION_BUDGET_CHOICES` option changed from `array<string, int>`, which mapped a budget label to a budget ID, to a plain list of budget IDs, `array<int>`. | Code that passes the option must pass `array_keys($budgetLabels)` instead of the label-to-ID map. Labels are no longer part of the choices: they are passed in the new `OPTION_BUDGET_LABELS` option, keyed by budget ID, and resolved through a `choice_label` closure. |
+| The `onchange="this.form.submit()"` attribute was removed from the cost center select. | Projects that relied on the automatic form submit must adopt the client-side filtering shipped in `cost-center-selector.ts`. |
+| `cost-center-selector.twig` was restructured: its `define` gained a `formAction` parameter that defaults to `null` and falls back to `path('company/cost-center/update-quote')`, and the submit button moved into its own `apply_field` block that is always rendered. When at least one budget is available across the cost centers offered to the user, the budget field, the remaining amount, and the no-budgets row are all rendered and toggled with `is-hidden` as the cost center changes. When no cost center has a budget, the template falls back to a static message and nothing is toggled. | Project template overrides must be re-based against the new blocks, and an override must accept `formAction` and use it as the form action. An override that ignores the parameter posts every submit to the cart route, so the quote request pages stop working. Previously, the budget field and the submit button were not rendered at all until a cost center was persisted. |
 | `PurchasingControlFactory::createCostCenterSelectorForm()` gained a `?int $idCompanyBusinessUnit = null` parameter. | Project overrides of the factory method must adopt the new signature. |
+| The cost center selector is rendered from a new `costCenter` block in the `quote-request-details.twig` and `quote-request-edit.twig` templates of `QuoteRequestPage` and `QuoteRequestAgentPage`. | Projects that override any of these templates do not render the selector on the affected pages until the overrides are re-based against the new module templates or the `costCenter` block is added to them. |
 | `spryker/quote-request` and `spryker/quote-request-agent` became hard requirements of `spryker-feature/purchasing-control`. | Both modules are installed even in projects that do not use quote requests. |
+
+{% info_block warningBox "Silent breaking change" %}
+
+If your project overrides `CostCenterSelectorFormDataProvider`, check `buildBudgetChoiceLabel()` before upgrading. Its signature is identical in both versions, so neither PHP nor static analysis reports a problem, but the second argument is now a formatted remaining amount instead of a currency code. An unadjusted override renders wrong budget labels without raising an error.
+
+{% endinfo_block %}
 
 {% info_block warningBox "Behavior change" %}
 
@@ -51,8 +60,8 @@ console transfer:generate
 ```csv
 purchasing_control.budget.validation.cost_center_mismatch,"The selected budget does not belong to the selected cost center.",en_US
 purchasing_control.budget.validation.cost_center_mismatch,"Das ausgewählte Budget gehört nicht zur ausgewählten Kostenstelle.",de_DE
-purchasing_control.quote_request.cost_center_updated,"The cost center and budget of the quote request have been updated.",en_US
-purchasing_control.quote_request.cost_center_updated,"Kostenstelle und Budget der Anfrage wurden aktualisiert.",de_DE
+purchasing_control.quote_request.cost_center_updated,Cost center and budget have been saved.,en_US
+purchasing_control.quote_request.cost_center_updated,Kostenstelle und Budget wurden gespeichert.,de_DE
 ```
 
 ```bash

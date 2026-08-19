@@ -677,8 +677,8 @@ purchasing_control.validation.required,"Please select a cost center and budget b
 purchasing_control.validation.required,"Bitte wählen Sie vor der Bestellung eine Kostenstelle und ein Budget aus.",de_DE
 purchasing_control.budget.validation.cost_center_mismatch,"The selected budget does not belong to the selected cost center.",en_US
 purchasing_control.budget.validation.cost_center_mismatch,"Das ausgewählte Budget gehört nicht zur ausgewählten Kostenstelle.",de_DE
-purchasing_control.quote_request.cost_center_updated,"The cost center and budget of the quote request have been updated.",en_US
-purchasing_control.quote_request.cost_center_updated,"Kostenstelle und Budget der Anfrage wurden aktualisiert.",de_DE
+purchasing_control.quote_request.cost_center_updated,Cost center and budget have been saved.,en_US
+purchasing_control.quote_request.cost_center_updated,Kostenstelle und Budget wurden gespeichert.,de_DE
 ```
 
 Import data:
@@ -957,8 +957,8 @@ Register the following global widgets:
 
 | WIDGET | DESCRIPTION | NAMESPACE |
 | --- | --- | --- |
-| QuoteRequestCostCenterSelectorWidget | Renders the cost center and budget selection UI on the quote request details and quote request edit pages. Takes a `QuoteRequestTransfer` as input. | SprykerFeature\Yves\PurchasingControl\Widget |
-| QuoteRequestAgentCostCenterSelectorWidget | Renders the same selection UI on the agent quote request details and agent quote request edit pages. Takes a `QuoteRequestTransfer` as input. | SprykerFeature\Yves\PurchasingControl\Widget |
+| QuoteRequestCostCenterSelectorWidget | Renders the cost center and budget selection UI on the quote request details and quote request edit pages. Takes a `QuoteRequestTransfer` and an optional form action route name. When the route name is omitted, the form posts to `company/cost-center/update-quote-request`. | SprykerFeature\Yves\PurchasingControl\Widget |
+| QuoteRequestAgentCostCenterSelectorWidget | Renders the same selection UI on the agent quote request details and agent quote request edit pages. Takes the same two arguments. When the route name is omitted, the form posts to `agent/quote-request/cost-center/update`. | SprykerFeature\Yves\PurchasingControl\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -987,7 +987,15 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-Both widgets are rendered by the `QuoteRequestPage` and `QuoteRequestAgentPage` modules from named Twig blocks, so no template changes are required. To change or remove the placement, override the corresponding block in your project.
+Both widgets are rendered from a `costCenter` block in the `quote-request-details.twig` and `quote-request-edit.twig` templates of the `QuoteRequestPage` and `QuoteRequestAgentPage` modules. In a project that uses these templates as they are shipped, no template changes are required. To change or remove the placement, override the `costCenter` block.
+
+{% info_block warningBox "Template overrides" %}
+
+If your project overrides any of the four templates, the widget is not rendered on the affected pages, because your override replaces the module template that contains the `costCenter` block. Re-base your overrides against the new module templates, or add the `costCenter` block to them.
+
+{% endinfo_block %}
+
+The second argument controls where the form returns to after saving. The details pages omit it, so the widget falls back to the details route. The edit pages pass it explicitly: the `QuoteRequestPage` edit template passes `company/cost-center/update-quote-request-from-edit`, and the `QuoteRequestAgentPage` edit template passes `agent/quote-request/cost-center/update-from-edit`. Pass a route name of your own only if you also register a route that returns to your page.
 
 {% info_block infoBox "Info" %}
 
@@ -1014,6 +1022,8 @@ The `CostCenterRouteProviderPlugin` that you registered in [Set up routes](#5-se
 | `company/cost-center/update-quote-request-from-edit` | `/company/cost-center/update-quote-request-from-edit/{quoteRequestReference}` | Quote request edit page |
 | `agent/quote-request/cost-center/update` | `/agent/quote-request/cost-center/update/{quoteRequestReference}` | Agent quote request details page |
 | `agent/quote-request/cost-center/update-from-edit` | `/agent/quote-request/cost-center/update-from-edit/{quoteRequestReference}` | Agent quote request edit page |
+
+The two `-from-edit` routes are reached only when a widget receives a form action route name as its second argument. For details, see [Set up widgets](#3-set-up-widgets).
 
 The two agent routes are deliberately placed under `/agent/` so that they are covered by the agent firewall.
 

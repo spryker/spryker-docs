@@ -60,13 +60,13 @@ The plugin is distributed through the `spryker-plugins-official` marketplace and
    ![step 5](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-plugin-step-5.png)
    ![step 6](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-plugin-step-6.png)
 
-4. After installation, reload the plugins by running the following command in Claude Code:
+4. After installation, activate the plugin's skills and agents. In Claude Code, run:
 
    ```text
    /reload-plugins
    ```
 
-   The command activates the installed plugin's skills and agents without restarting the session. Alternatively, restart the Claude Code session.
+   The command reloads the installed plugins without restarting the session. Alternatively, restart the Claude Code session.
 
 ![Choose output mode step 7](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-plugin-step-7.png)
 

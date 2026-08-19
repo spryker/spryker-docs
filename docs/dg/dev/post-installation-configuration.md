@@ -1,7 +1,7 @@
 ---
 title: Post-Installation Configuration
 description: Advanced configuration and customization of your Spryker project after initial setup
-last_updated: Aug 14, 2026
+last_updated: Aug 19, 2026
 template: concept-topic-template
 ---
 
@@ -21,7 +21,7 @@ Most of the work on this page — services, stores, and import data — is cover
 
 If you are setting up a new project, the [Project Starter Wizard](/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html) runs these skills in order from a single interview. Run them individually when you are configuring a project that already exists.
 
-For the full list of skills and agents, see [Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html).
+For the full list of skills and agents, see [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html).
 
 The rest of this document describes the same configuration manually.
 

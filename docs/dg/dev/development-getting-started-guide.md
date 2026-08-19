@@ -37,7 +37,7 @@ The remaining steps of this guide describe the same work manually. Follow them w
 
 Spryker offers a set of [development tools](/docs/dg/dev/development-tools.html) that make it easier to work with the project: DockerSdk, Xdebug, WebProfiler, Code Quality Tools, and more.
 
-Spryker also provides [AI tools](/docs/dg/dev/ai/ai-dev/ai-dev.html) to speed up development. The AI Dev SDK gives your AI coding assistant Spryker-aware context and a set of skills for code generation, testing, and troubleshooting. For Claude Code, install it as a plugin — see [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html). For the full list of what it can do, see [Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html).
+Spryker also provides [AI tools](/docs/dg/dev/ai/ai-dev/ai-dev.html) to speed up development. The AI Dev SDK gives your AI coding assistant Spryker-aware context and a set of skills for code generation, testing, and troubleshooting. For Claude Code, install it as a plugin — see [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html). For the full list of what it can do, see [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html).
 
 ## 4. Configure repository and Continuous Integration
 

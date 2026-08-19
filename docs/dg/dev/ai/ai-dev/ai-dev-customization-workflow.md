@@ -88,6 +88,6 @@ If verification fails on an acceptance criterion and the skill cannot fix it aft
 ## Related
 
 - [`spryker-customization` README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/spryker-customization/README.md) — the skill's own reference in the plugin repository
-- [Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html) — the full reference of every skill and agent this orchestrator composes
+- [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html) — the full reference of every skill and agent this orchestrator composes
 - [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html) — install the SDK and generate your project's rules, context file, and skills
 - [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html) — how to install the SDK for Claude Code

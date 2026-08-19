@@ -1,7 +1,7 @@
 ---
 title: E2E Testing with Cypress
 description: Learn how to use Cypress for end-to-end testing in Spryker projects.
-last_updated: Aug 14, 2026
+last_updated: Aug 19, 2026
 template: concept-topic-template
 related:
   - title: Running tests with Robot Framework
@@ -34,7 +34,7 @@ Two AI Dev SDK skills cover the work described on this page: adopting the boiler
 
 Run `cypress-migration` once when you adopt the boilerplate. It handles the adaptation this page describes — replacing the demo shop locators with your project's and wiring the CI jobs — and then use `cypress-tests` for ongoing test work.
 
-For the full list of skills and agents, see [Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html).
+For the full list of skills and agents, see [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html).
 
 ## Topics
 

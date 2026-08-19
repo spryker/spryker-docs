@@ -97,6 +97,6 @@ Published migration guides are also sometimes stale or absent, so the skill trea
 ## Related
 
 - [`spryker-upgrade` README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/spryker-upgrade/README.md) — the skill's own reference in the plugin repository
-- [Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html) — the full reference of every skill and agent
+- [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html) — the full reference of every skill and agent
 - [Upgrade and migrate](/docs/dg/dev/upgrade-and-migrate/upgrade-and-migrate.html) — the manual upgrade and migration guides
 - [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html) — install the SDK and generate your project's rules, context file, and skills

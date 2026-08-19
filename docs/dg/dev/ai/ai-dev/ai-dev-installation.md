@@ -51,9 +51,13 @@ If you prefer the interactive `/plugin` menu, the same two steps look as follows
 ![Confirm the plugin installation](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-plugin-step-5.png)
 ![The plugin installed and enabled](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-plugin-step-6.png)
 
-**Verify:** type `/spryker` — the command list filters to the Spryker skills, such as `/spryker-ai-dev-sdk:ai-dev-setup`. If nothing appears, quit Claude Code and run `claude` again.
+{% info_block infoBox "Verify" %}
 
-All [skills and agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html) — packaged, Spryker-aware workflows for building features, fixing bugs, and upgrading — are now available. This already covers work that does not touch a specific project; for work on your codebase and data, complete step 2 first.
+Type `/spryker` — the command list filters to the Spryker skills, such as `/spryker-ai-dev-sdk:ai-dev-setup`. If nothing appears, quit Claude Code and run `claude` again.
+
+{% endinfo_block %}
+
+All [skills and agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html) — packaged, Spryker-aware workflows for building features, fixing bugs, and upgrading — are now available. This already covers work that does not touch a specific project; for work on your codebase and data, complete step 2 first.
 
 ### Step 2: Add your project's context
 
@@ -79,7 +83,13 @@ The skill checks your project's state and handles every case:
 
 It is safe to re-run at any time.
 
-**Verify:** the generated files exist — `ls CLAUDE.md .claude/rules/` in your terminal — and `/context` in Claude Code lists them as loaded:
+{% info_block infoBox "Verify" %}
+
+Run `ls CLAUDE.md .claude/rules/` in your terminal to confirm the generated files exist, then run `/context` in Claude Code to confirm it loads them.
+
+{% endinfo_block %}
+
+The `/context` output looks as follows:
 
 ![Rules and context file loaded into the session](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-install-1.png)
 ![Skills available in the session](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-install-2.png)
@@ -278,6 +288,6 @@ You do not need to learn commands — describe what you want in your own words, 
 
 ## Where to go next
 
-- [Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html) — everything the SDK ships and what each piece does
+- [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html) — everything the SDK ships and what each piece does
 - [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html) — the plugin in detail, slash commands, and optional enhancements
 - [AI Dev MCP Server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html) — the available MCP tools, extension points, and debugging

@@ -127,5 +127,5 @@ After changing any of these, empty the cache and reproduce the request.
 
 - [WebProfiler](/docs/dg/dev/integrate-and-configure/integrate-development-tools/web-profiler.html) — why the profiler matters and how to integrate it per application
 - [`spryker-profiler` README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/spryker-profiler/README.md) — the skill's own reference in the plugin repository
-- [Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html) — the full reference of every skill and agent
+- [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html) — the full reference of every skill and agent
 - [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html) — install the SDK and generate your project's rules, context file, and skills

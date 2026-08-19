@@ -27,7 +27,7 @@ When you use AI tools to write code, they rely on general patterns, which leads 
 
 The AI Dev SDK makes your AI assistant Spryker-aware. It ships:
 
-- **Skills and agents** — packaged workflows for Spryker work: project setup, feature customization, bugfixing, upgrades, testing, and code review. See [Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html).
+- **Skills and agents** — packaged workflows for Spryker work: project setup, feature customization, bugfixing, upgrades, testing, and code review. See [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html).
 - **Rules and a project context file** — Spryker's coding conventions and your project's specifics, loaded into every session.
 - **An MCP server** (MCP — Model Context Protocol, a standard that lets AI tools query external systems) — live access to your running application: transfer objects, module interfaces, order management system (OMS) state machines, and read-only database queries. See [AI Dev MCP Server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html).
 
@@ -45,7 +45,7 @@ The result: the generated code fits your project from the start, and you spend l
 
 ### Ready-made workflows
 
-Four orchestrated workflows drive multi-step work end to end, and the profiler workflow turns the WebProfiler into hard numbers. They are all documented under [Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html):
+Four orchestrated workflows drive multi-step work end to end, and the profiler workflow turns the WebProfiler into hard numbers. They are all documented under [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html):
 
 - [Project Starter Wizard](/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html) — turn a fresh demoshop clone into your project
 - [Customization Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html) — build a feature from a product requirement document to a committed branch
@@ -84,6 +84,6 @@ You can extend the MCP server with custom plugins to add new tools — see [Exte
 ## Next steps
 
 - [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html) — set everything up, from installing your AI assistant to your first prompt
-- [Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html) — everything the SDK ships and what each piece does
+- [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html) — everything the SDK ships and what each piece does
 - [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html) — the plugin in detail, slash commands, and optional enhancements
 - [AI Dev MCP Server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html) — the available MCP tools, extension points, and debugging

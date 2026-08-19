@@ -105,8 +105,8 @@ entries:
         nested:
           - title: Installation
             url: /docs/dg/dev/ai/ai-dev/ai-dev-installation.html
-          - title: Skills and Agents
-            url: /docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html
+          - title: Workflows, Skills, and Agents
+            url: /docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html
             nested:
               - title: Project Starter Wizard
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html

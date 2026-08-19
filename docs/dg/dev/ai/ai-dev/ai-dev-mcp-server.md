@@ -133,4 +133,4 @@ The MCP Inspector requires Node.js on your system. The `npx` command automatical
 
 - [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html) — install the module and register the server in your assistant
 - [AI Dev SDK](/docs/dg/dev/ai/ai-dev/ai-dev.html) — what the SDK is and what it ships
-- [Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html) — the workflows that consume these tools
+- [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html) — the workflows that consume these tools

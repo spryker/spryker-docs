@@ -1,10 +1,12 @@
 ---
-title: Skills and Agents
-description: Reference of the skills and agents shipped with the AI Dev SDK
+title: Workflows, Skills, and Agents
+description: Reference of the workflows, skills, and agents shipped with the AI Dev SDK
 last_updated: Aug 19, 2026
 label: early-access
-keywords: ai, ai-dev, claude, claude code, windsurf, copilot, skills, agents, subagents, spryker
+keywords: ai, ai-dev, claude, claude code, windsurf, copilot, workflows, wizards, skills, agents, subagents, spryker
 template: concept-topic-template
+redirect_from:
+  - /docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents
 ---
 
 {% info_block warningBox "Experimental module" %}
@@ -15,7 +17,7 @@ The AiDev module is experimental and not stable. There is no backward compatibil
 
 ## Overview
 
-The AI Dev SDK ships more than 30 skills and six agents that codify common Spryker workflows — from turning a demoshop clone into a customer project, to building features, fixing bugs, and upgrading releases. Instead of teaching your AI assistant Spryker's conventions prompt by prompt, you install workflows that already know them.
+The AI Dev SDK ships five ready-made workflows, more than 30 skills, and six agents that codify common Spryker practice — from turning a demoshop clone into a customer project, to building features, fixing bugs, and upgrading releases. Instead of teaching your AI assistant Spryker's conventions prompt by prompt, you install workflows that already know them.
 
 The skills and agents reach your project in two ways:
 
@@ -31,18 +33,19 @@ Both delivery paths read from the same source files — the plugin just packages
 
 You do not need to remember the names — the assistant picks the right skill or agent from your prompt. The tables below explain what each one does so you know what to expect.
 
-## Start with the shipped workflows
+## Available workflows and wizards
 
-Four orchestrators cover the work most projects need on day one, so you get value before you write anything of your own:
+Five shipped workflows cover the work most projects need on day one, so you get value before you write anything of your own. Each has its own page, listed under this one in the sidebar:
 
-- [`project-starter-wizard`](/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html) — turn a fresh demoshop clone into your project
-- [`spryker-customization`](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html) — build a feature from a product requirement document to a committed branch
-- [`spryker-bugfix`](/docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html) — drive a bug to a validated, QA-accepted fix
-- [`spryker-upgrade`](/docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html) — upgrade a customized project to a newer Spryker release
+| Workflow | Skill | What it does |
+|----------|-------|--------------|
+| [Project Starter Wizard](/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html) | `project-starter-wizard` | Turns a fresh demoshop clone into your project |
+| [Customization Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html) | `spryker-customization` | Builds a feature from a product requirement document to a committed branch |
+| [Bugfix Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html) | `spryker-bugfix` | Drives a bug to a validated, QA-accepted fix |
+| [Upgrade Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html) | `spryker-upgrade` | Upgrades a customized project to a newer Spryker release |
+| [Profiler Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-profiler-workflow.html) | `spryker-profiler` | Reads the Spryker WebProfiler as hard performance numbers |
 
-Alongside them, [`spryker-profiler`](/docs/dg/dev/ai/ai-dev/ai-dev-profiler-workflow.html) reads the Spryker WebProfiler as hard performance numbers, and `product-requirement-document` turns a feature idea into a research-grounded spec — so you can go from idea to specification to implementation without leaving your assistant.
-
-Each of these workflows has its own page, nested under this one in the sidebar.
+The first four are orchestrators: they own a full workflow and delegate each stage to the specialist skills and agents listed below. Alongside them, `product-requirement-document` turns a feature idea into a research-grounded spec, so you can go from idea to specification to implementation without leaving your assistant.
 
 ## Composable by design
 

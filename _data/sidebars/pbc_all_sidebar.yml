@@ -410,6 +410,8 @@ entries:
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-multicartpage-module.html
                       - title: PersistentCart
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-persistentcart-module.html
+                      - title: PurchasingControl
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-purchasingcontrol-module.html
                       - title: QuickOrder
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-quickorder-module.html
                       - title: QuickOrderPage

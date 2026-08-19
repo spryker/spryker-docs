@@ -1,13 +1,21 @@
 ---
 title: AI Dev MCP Server
 description: Set up and configure the Model Context Protocol server for AI assistant integration
-last_updated: Jun 9, 2026
+last_updated: Aug 19, 2026
 label: early-access
 keywords: ai, mcp, model context protocol, claude, copilot, ai-dev, configuration
 template: howto-guide-template
 ---
 
+{% info_block warningBox "Experimental module" %}
+
+The AiDev module is experimental and not stable. There is no backward compatibility promise for this module. We welcome your feedback and contributions as we continue to develop and improve this module.
+
+{% endinfo_block %}
+
 This document describes how to configure and use the AiDev MCP server to connect AI assistants to your Spryker application.
+
+**Prerequisites:** the `ai-dev:mcp-server` command exists only after the `spryker-sdk/ai-dev` module is installed in your project and its console commands are registered — see [Getting Started](/docs/dg/dev/ai/ai-dev/ai-dev-getting-started.html).
 
 ## About Model Context Protocol (MCP)
 
@@ -30,18 +38,22 @@ The `-q` flag (quiet mode) suppresses unnecessary output, which is important for
 
 ### Claude Code
 
+If you set up your project with the plugin's `ai-dev-setup` skill, the MCP server is already registered — skip this section.
+
 For Claude Code CLI, add the MCP server using the command line.
 
 Navigate to your Spryker project directory and run:
 
 ```bash
-claude mcp add spryker-project "$(pwd)/docker/sdk console ai-dev:mcp-server -q"
+claude mcp add spryker-project "$(pwd)/docker/sdk" -- console ai-dev:mcp-server -q
 ```
 
 This command:
 - Adds the MCP server configuration to Claude Code
 - Uses the current project directory path automatically
 - Configures the server to run in quiet mode
+
+Quote only the executable and keep the arguments after the `--` separator. Passing everything as one quoted string stores the whole string as the executable path, and the server fails to start with `Failed to connect — ENOENT: no such file or directory`. If you registered it that way, remove the entry with `claude mcp remove spryker-project` and add it again as shown.
 
 Claude Code will now have access to Spryker-specific tools through the MCP server.
 ![MCP claude code](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/mcp-tool-claude-code.png)
@@ -57,7 +69,7 @@ For Claude Desktop application, configure the MCP server in the application sett
 ```json
 {
   "mcpServers": {
-    "spryker-ai-dev": {
+    "spryker-project": {
       "command": "/Users/username/projects/spryker-project/docker/sdk",
       "args": [
         "console", 
@@ -82,7 +94,7 @@ For GitHub Copilot Chat in PHPStorm with MCP support (requires PHPStorm 2024.3+)
 ```json
 {
   "servers": {
-    "spryker-mcp": {
+    "spryker-project": {
       "type": "stdio",
       "command": "/Users/username/projects/spryker-project/docker/sdk",
       "args": [

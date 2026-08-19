@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: Integrate AI development tools and MCP server into your Spryker application
-last_updated: Aug 14, 2026
+last_updated: Aug 19, 2026
 label: early-access
 keywords: ai, development, mcp, model context protocol, ai-dev, tools, extension
 template: howto-guide-template
@@ -21,6 +21,8 @@ Make sure your development environment is up to date before installing the AiDev
 {% endinfo_block %}
 
 This document describes how to integrate and use the AiDev module to connect your Spryker application to AI development tools through the Model Context Protocol (MCP).
+
+If you are setting up the AI tooling for the first time, start with [Getting Started](/docs/dg/dev/ai/ai-dev/ai-dev-getting-started.html) — it walks you from installation to your first prompt.
 
 ## Overview
 
@@ -49,7 +51,7 @@ This command:
 - Registers all configured MCP tool plugins
 - Listens for requests from AI assistants
 
-**Usage**: This command is typically configured in AI assistant tools (like Claude Desktop) to enable them to access Spryker-specific information.
+**Usage**: This command is typically configured in AI assistant tools to enable them to access Spryker-specific information. For assistant-specific configuration, see [AI Dev MCP Server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html).
 
 ### Setup Command
 
@@ -95,7 +97,7 @@ If you use Docker sync, the `/.git*` entry in `.dockersyncignore` also excludes 
 
 {% endinfo_block %}
 
-**Usage**: Run this command once when setting up AI tooling for a project.
+**Usage**: Run this command when setting up AI tooling for a project. It is safe to re-run — it refreshes previously generated files from the latest upstream content.
 
 ## Skills and agents
 

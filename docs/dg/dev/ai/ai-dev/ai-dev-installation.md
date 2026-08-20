@@ -42,35 +42,35 @@ The `/reload-plugins` command activates the plugin's skills and agents without r
 
 This step works regardless of your project's state — the plugin installs into Claude Code itself, not into the project.
 
-If you prefer the interactive `/plugin` menu, the same two steps look as follows:
+You can also do both steps through the interactive `/plugin` menu.
+
+The plugin commands:
 
 ![The Claude Code prompt autocompleting the plugin commands](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-plugin-step-1.png)
 
-*The plugin commands*
+The Marketplaces tab:
 
 ![The Marketplaces tab of the plugin manager](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-plugin-step-2.png)
 
-*The Marketplaces tab*
+Adding the Spryker marketplace:
 
 ![The Add Marketplace dialog with the Spryker source entered](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-plugin-step-3.png)
 
-*Adding the Spryker marketplace*
+The plugin in the Discover tab:
 
 ![The Discover tab listing the spryker-ai-dev-sdk plugin](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-plugin-step-4.png)
 
-*The plugin in the Discover tab*
+Plugin details and installation scope:
 
 ![The plugin details with the available installation scopes](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-plugin-step-5.png)
 
-*Plugin details and installation scope*
+Installation confirmed:
 
 ![Claude Code confirming the plugin installation](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-plugin-step-6.png)
 
-*Installation confirmed*
+Applying the plugin:
 
 ![The reload-plugins command typed at the prompt](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-plugin-step-7.png)
-
-*Applying the plugin*
 
 {% info_block infoBox "Verify" %}
 
@@ -103,8 +103,6 @@ At the Claude Code prompt, run:
 
 ![The setup skill invoked at the Claude Code prompt](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-skill-setup.png)
 
-*Running the setup skill*
-
 The skill checks your project's state and handles every case:
 
 - If the `spryker-sdk/ai-dev` module is not in your project yet, it installs it, wires up the console commands, registers the MCP server with Claude Code, and generates `.claude/rules/` and `CLAUDE.md`. The first run takes a few minutes while Composer runs, and Claude Code asks for permission before each command — see [Permission requests](#permission-requests).
@@ -115,8 +113,6 @@ It is safe to re-run at any time.
 The skill finishes with a report of what it changed, and of anything it suggests you set up next:
 
 ![The final report of the ai-dev-setup skill](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-install-1.png)
-
-*The setup skill's final report*
 
 Restart Claude Code with `/exit` and open a new session in the project. The session that ran the setup started before the rules, the context file, and the MCP server existed, so it has not loaded them.
 
@@ -136,19 +132,19 @@ Then, in the new Claude Code session, check that it loads them:
 
 {% endinfo_block %}
 
-The `/context` output lists the plugin's skills, the agents, the context file, and the MCP tools:
+The `/context` output lists the plugin's skills, the agents, the context file, and the MCP tools.
+
+Plugin skills:
 
 ![The context output listing the plugin skills](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-install-4.png)
 
-*`/context`: plugin skills*
+Agents and memory files:
 
 ![The context output listing the agents and the memory file](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-install-3.png)
 
-*`/context`: agents and memory files*
+MCP tools:
 
 ![The context output listing the MCP tools](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-install-2.png)
-
-*`/context`: MCP tools*
 
 ## Permission requests
 
@@ -284,8 +280,6 @@ Claude Code now has access to Spryker-specific tools through the MCP server.
 
 ![The mcp command listing the tools of the registered server](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/mcp-tool-claude-code.png)
 
-*`/mcp`: available tools*
-
 ### Claude Desktop
 
 1. Open Claude Desktop settings.
@@ -341,8 +335,6 @@ MCP support in GitHub Copilot for PHPStorm requires PHPStorm version 2024.3 or l
 {% endinfo_block %}
 
 ![The Configure Tools dialog in GitHub Copilot Chat](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/mcp+copilot.png)
-
-*Configure Tools in GitHub Copilot*
 
 ## Try it
 

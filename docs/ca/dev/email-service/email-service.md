@@ -30,7 +30,7 @@ All email errors are caught in a single place—`MailHandler::sendMail()`—so i
 | **Yves (Storefront)** | A translated flash message is shown to the user via the Messenger. The primary action (for example, registration) still completes successfully. |
 | **Back Office** | A translated flash message is shown to the user via the Messenger. Actions like company deactivation or user password reset complete successfully. |
 | **OMS** | Order management processes like order confirmation or shipment notification continue executing. The email failure is logged but does not block the OMS transition. No flash message is shown because OMS runs in CLI context. |
-| **CLI** | No flash messages are added. CLI is excluded from Messenger notifications via `MailConfig::getExcludedSapiListForMailErrorMessages()`. |
+| **CLI** | No flash messages are added. CLI context is excluded from Messenger notifications by default. |
 | **Glue API** | For the forgot-password endpoint, the API returns HTTP 422 with error details. For other flows, the API returns a success response. Messenger flash messages are not used for API responses. |
 
 ### Error message translation
@@ -46,14 +46,4 @@ To customize the message, update the glossary key in your project's `glossary.cs
 
 ### Suppressing flash messages in specific contexts
 
-By default, Messenger error notifications are enabled in all PHP SAPI contexts. To suppress them in CLI (for example, for OMS console commands), override `MailConfig::getExcludedSapiListForMailErrorMessages()` at the project level:
-
-```php
-// src/Pyz/Zed/Mail/MailConfig.php
-public function getExcludedSapiListForMailErrorMessages(): array
-{
-    return [
-        'cli',
-    ];
-}
-```
+By default, Messenger error notifications are suppressed in CLI context (for example, OMS console commands) and enabled everywhere else (Back Office, Merchant Portal, Storefront). To customize this behavior, override `MailHandler::isMessengerNotificationEnabled()` at the project level.

@@ -1,12 +1,12 @@
 ---
 title: Install the Workflows feature
 description: Learn how to integrate and configure the Workflows feature in a Spryker project.
-last_updated: Aug 7, 2026
+last_updated: Aug 17, 2026
 template: howto-guide-template
 
 related:
   - title: Workflows feature overview
-    link: docs/pbc/all/back-office/latest/base-shop/workflow-feature-overview.html
+    link: docs/pbc/all/back-office/latest/base-shop/workflows-feature-overview.html
 ---
 
 This document describes how to install the Workflow feature.
@@ -160,7 +160,7 @@ class WorkflowDependencyProvider extends SprykerWorkflowDependencyProvider
 }
 ```
 
-For the plugin interfaces and how the engine resolves them, see [Extending a workflow](/docs/pbc/all/back-office/latest/base-shop/workflow-feature-overview.html#extending-a-workflow).
+For the plugin interfaces and how the engine resolves them, see [Extending a workflow](/docs/pbc/all/back-office/latest/base-shop/workflows-feature-overview.html#extending-a-workflow).
 
 ### 6) Register the data importer
 

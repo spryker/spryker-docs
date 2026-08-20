@@ -1,7 +1,7 @@
 ---
 title: AI Dev MCP Server
 description: Reference of the Model Context Protocol server shipped with the AiDev module — available tools, extension points, and debugging
-last_updated: Aug 19, 2026
+last_updated: Aug 20, 2026
 label: early-access
 keywords: ai, mcp, model context protocol, claude, copilot, ai-dev, tools, extension
 template: concept-topic-template

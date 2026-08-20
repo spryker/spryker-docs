@@ -1,7 +1,7 @@
 ---
 title: AI Dev SDK
 description: Make your AI coding assistant Spryker-aware with skills, agents, rules, and an MCP server
-last_updated: Aug 19, 2026
+last_updated: Aug 20, 2026
 label: early-access
 template: concept-topic-template
 redirect_from:

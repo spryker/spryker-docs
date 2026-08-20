@@ -1,7 +1,7 @@
 ---
 title: Profiler Workflow
 description: Read the Spryker WebProfiler as hard performance numbers — driven by the spryker-profiler skill
-last_updated: Aug 19, 2026
+last_updated: Aug 20, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, spryker-profiler, performance, webprofiler, n+1, sql
 template: concept-topic-template

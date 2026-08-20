@@ -1,7 +1,7 @@
 ---
 title: Developing standalone modules
 description: Learn how to create a new module in Spryker to encapsulate functionality, improve scalability, and align with modular architecture standards.
-last_updated: Aug 19, 2026
+last_updated: Aug 20, 2026
 template: default
 ---
 

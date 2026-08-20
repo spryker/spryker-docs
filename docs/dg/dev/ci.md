@@ -1,7 +1,7 @@
 ---
 title: Continuous Integration
 description: Continuous Integration setup for Spryker projects—pipeline structure, validation stages, and the AI Dev SDK skills that generate a project CI pipeline and a Cypress end-to-end baseline.
-last_updated: Aug 19, 2026
+last_updated: Aug 20, 2026
 template: concept-topic-template
 keywords: CI, continuous integration, automated testing, code quality, GitHub Actions, project stability, upgradability, validation, static analysis, cypress, end-to-end
 ---

@@ -1,7 +1,7 @@
 ---
 title: Claude Code
 description: Install and use the Spryker AI Dev SDK in Claude Code to get Spryker-aware skills, code review, and project setup directly in your AI coding assistant.
-last_updated: Aug 19, 2026
+last_updated: Aug 20, 2026
 label: early-access
 keywords: ai, claude, claude code, plugin, marketplace, skills, spryker, ai-dev, code review, ci
 template: howto-guide-template

@@ -1,7 +1,7 @@
 ---
 title: Development tools
 description: Complete suite of development tools provided by Spryker for debugging, profiling, code quality assurance, and AI-assisted development.
-last_updated: Aug 19, 2026
+last_updated: Aug 20, 2026
 template: concept-topic-template
 keywords: development tools, debugging, profiling, code quality, static analysis, xdebug, web profiler, phpstan, architecture sniffer, ai assistant
 ---

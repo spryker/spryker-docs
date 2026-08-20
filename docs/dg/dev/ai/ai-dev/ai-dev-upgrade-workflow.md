@@ -1,7 +1,7 @@
 ---
 title: Upgrade Workflow
 description: Upgrade a heavily customized Spryker project to a newer release — driven by the spryker-upgrade skill and its deterministic damage detectors
-last_updated: Aug 19, 2026
+last_updated: Aug 20, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, spryker-upgrade, upgrade, migration, composer, release
 template: concept-topic-template

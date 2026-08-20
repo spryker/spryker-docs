@@ -1,7 +1,7 @@
 ---
 title: Post-Installation Configuration
 description: Advanced configuration and customization of your Spryker project after initial setup
-last_updated: Aug 19, 2026
+last_updated: Aug 20, 2026
 template: concept-topic-template
 ---
 

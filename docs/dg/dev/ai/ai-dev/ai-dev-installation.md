@@ -1,7 +1,7 @@
 ---
 title: Installation
 description: Install the Spryker AI Dev SDK — skills, agents, rules, and the MCP server — in Claude Code or in another AI assistant
-last_updated: Aug 19, 2026
+last_updated: Aug 20, 2026
 label: early-access
 keywords: ai, ai-dev, installation, install, setup, claude, claude code, cursor, windsurf, copilot, mcp, skills, agents
 template: howto-guide-template
@@ -53,7 +53,13 @@ If you prefer the interactive `/plugin` menu, the same two steps look as follows
 
 {% info_block infoBox "Verify" %}
 
-Type `/spryker` — the command list filters to the Spryker skills, such as `/spryker-ai-dev-sdk:ai-dev-setup`. If nothing appears, quit Claude Code and run `claude` again.
+At the Claude Code prompt, type the following:
+
+```text
+/spryker
+```
+
+The command list filters down to the Spryker skills, such as `/spryker-ai-dev-sdk:ai-dev-setup`. If nothing appears, quit Claude Code and run `claude` again.
 
 {% endinfo_block %}
 
@@ -78,14 +84,24 @@ At the Claude Code prompt, run:
 
 The skill checks your project's state and handles every case:
 
-- If the `spryker-sdk/ai-dev` module is not in your project yet, it installs it, wires up the console commands, registers the MCP server with Claude Code, and generates `.claude/rules/` and `CLAUDE.md`. The first run takes a few minutes while Composer runs — and Claude Code asks for permission before each command; approve them to let the skill proceed.
+- If the `spryker-sdk/ai-dev` module is not in your project yet, it installs it, wires up the console commands, registers the MCP server with Claude Code, and generates `.claude/rules/` and `CLAUDE.md`. The first run takes a few minutes while Composer runs, and Claude Code asks for permission before each command — see [Permission requests](#permission-requests).
 - If the module is already installed, it skips the installation and only refreshes the generated files, asking before it changes any existing file.
 
 It is safe to re-run at any time.
 
 {% info_block infoBox "Verify" %}
 
-Run `ls CLAUDE.md .claude/rules/` in your terminal to confirm the generated files exist, then run `/context` in Claude Code to confirm it loads them.
+In your terminal, from the project root, check that the files were generated:
+
+```bash
+ls CLAUDE.md .claude/rules/
+```
+
+Then, at the Claude Code prompt, check that the session loads them:
+
+```text
+/context
+```
 
 {% endinfo_block %}
 
@@ -95,6 +111,12 @@ The `/context` output looks as follows:
 ![Skills available in the session](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-install-2.png)
 ![MCP server connected](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-install-3.png)
 ![Spryker MCP tools available](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-install-4.png)
+
+## Permission requests
+
+Claude Code asks for approval before it runs a command or changes a file, so expect prompts during setup and during the long workflows. How often it asks depends on the session's permission mode — press `Shift+Tab` at the prompt to switch modes.
+
+You can pre-approve the commands the SDK uses repeatedly, such as `docker/sdk console` and `composer`, and review the active rules with `/permissions`. For the modes, the rule syntax, and the settings files, see [Configure permissions](https://code.claude.com/docs/en/permissions) and [Choose a permission mode](https://code.claude.com/docs/en/permission-modes) in the Claude Code documentation.
 
 ## Set up with another assistant
 
@@ -146,7 +168,13 @@ This path requires an installed project with the Docker environment running (`do
 
    The command detects your assistant, asks you to confirm or select a different one, and writes into that tool's directories — see [Generated files per AI tool](#generated-files-per-ai-tool). It is safe to re-run: it refreshes previously generated files from the latest upstream content.
 
-   **Verify:** your assistant's directories exist — for example, `.cursor/rules/` for Cursor or `.windsurf/rules/` for Windsurf.
+   **Verify:** in your terminal, from the project root, check that your assistant's directory was created. For example, for Cursor:
+
+   ```bash
+   ls .cursor/rules/
+   ```
+
+   For Windsurf, check `.windsurf/rules/` instead. [Generated files per AI tool](#generated-files-per-ai-tool) lists the directory for each assistant.
 
 4. Register the MCP server in your assistant — see [Register the MCP server](#register-the-mcp-server).
 

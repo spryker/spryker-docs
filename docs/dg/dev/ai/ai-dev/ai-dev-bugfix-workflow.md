@@ -1,7 +1,7 @@
 ---
 title: Bugfix Workflow
 description: Drive a bug from a ticket or a plain description to a committed, validated, QA-accepted fix — driven by the spryker-bugfix orchestrator
-last_updated: Aug 19, 2026
+last_updated: Aug 20, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, spryker-bugfix, bugfix, workflow, qa, automation
 template: concept-topic-template

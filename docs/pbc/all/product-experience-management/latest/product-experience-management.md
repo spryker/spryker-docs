@@ -1,7 +1,7 @@
 ---
 title: Product Experience Management
 description: Import and export product data through a backoffice UI using CSV files with schema-driven column mapping.
-last_updated: Apr 08 2026
+last_updated: Aug 18 2026
 template: concept-topic-template
 ---
 
@@ -60,6 +60,58 @@ For the *products-csv-import* schema, the following data is imported and exporte
 | Shipment types | Yes | Yes | Shipment type keys |
 | Product images | Yes | Yes | Per locale and sort order, for both abstract and concrete products |
 | Merchant assignments | Yes | Yes | Merchant reference |
+
+### Import file structure
+
+To check the expected file structure, export the existing products of the import job. The exported file uses the same structure as the import file, so it shows how abstract and concrete products of your shop are represented across rows and which values the columns contain.
+
+Each CSV row describes either an abstract product or a concrete product, never both:
+
+- A row with *Abstract SKU* filled in and *Concrete SKU* empty creates or updates the abstract product.
+- A row with both *Abstract SKU* and *Concrete SKU* filled in creates or updates the concrete product and assigns it to the abstract product identified by the abstract SKU.
+
+To import an abstract product together with its concrete products in one file, place them in separate rows: one row for the abstract product, followed by one row per concrete product. The abstract product is imported before the concrete products, so both can be in the same file:
+
+| ABSTRACT SKU | CONCRETE SKU | PRODUCT STATUS |
+| --- | --- | --- |
+| 001 |  | approved |
+| 001 | 001_25904006 | active |
+| 001 | 001_25904007 | active |
+| 001 | 001_25904008 | active |
+
+An abstract product row is only needed for abstract products you want to create or update. If the abstract product already exists in the system, you can import concrete products for it without adding an abstract product row: enter the SKU of the existing abstract product in the *Abstract SKU* column of each concrete product row. The following file adds two concrete products to the existing abstract product `001`:
+
+| ABSTRACT SKU | CONCRETE SKU | PRODUCT STATUS |
+| --- | --- | --- |
+| 001 | 001_25904006 | active |
+| 001 | 001_25904007 | active |
+
+{% info_block infoBox "Info" %}
+
+If a row contains a concrete SKU but no abstract SKU, the concrete SKU is also used as the abstract SKU. In this case, the abstract product with that SKU must already exist.
+
+{% endinfo_block %}
+
+Because the row type determines which data is imported, some columns are only processed in one of the two row types:
+
+| COLUMNS | PROCESSED IN |
+| --- | --- |
+| *Merchant*, *Stores*, *Categories*, *Tax Set Name*, *URL ({locale})* | Abstract product rows |
+| *Stock ({warehouse})*, *Shipment Types* | Concrete product rows |
+| *Product Status*, *Name ({locale})*, *Description ({locale})*, *Attributes ({locale})*, *Price (…)*, *Image {size} (…)* | Both row types |
+
+### Product statuses
+
+The values accepted in the *Product Status* column depend on the row type. Values are case insensitive.
+
+| ROW TYPE | ACCEPTED VALUES | RESULT |
+| --- | --- | --- |
+| Abstract product row: *Concrete SKU* is empty | `draft`, `waiting_for_approval`, `approved`, `denied` | Sets the approval status of the abstract product. |
+| Concrete product row: *Concrete SKU* is filled in | `active`, `inactive` | `active` activates the concrete product, `inactive` deactivates it. |
+
+*Product Status* is required in every row. If the value is empty or does not belong to the accepted values for the row type, the row is skipped and an error is reported. For example, `active` in an abstract product row and `approved` in a concrete product row both fail validation.
+
+The approval statuses of abstract products come from the [Product Approval Process](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-approval-process-feature.html) feature, which the Product Experience Management feature requires. The statuses accepted for concrete products, and the one that activates a concrete product, are defined by `getProductConcreteStatuses()` and `getProductConcreteStatusActive()` in the module's `ProductExperienceManagementConfig`.
 
 ### Error handling
 

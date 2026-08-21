@@ -15,6 +15,7 @@ entries:
               - title: Set up XDebug profiling
                 url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/set-up-xdebug-profiling.html
           - title: WebProfiler
+            url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/web-profiler.html
             nested:
               - title: Web Profiler for Yves
                 url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
@@ -24,6 +25,8 @@ entries:
                 url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-backend-gateway.html
               - title: Web Profiler for Zed
                 url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
+              - title: Profiler Workflow
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-profiler-workflow.html
           - title: Code Quality Tools
             nested:
               - title: PHPStan
@@ -36,8 +39,8 @@ entries:
                 url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
           - title: AI tools
             nested:
-              - title: AI Assistant
-                url: /docs/dg/dev/ai/ai-assistants/ai-assistants.html
+              - title: AI Dev SDK
+                url: /docs/dg/dev/ai/ai-dev/ai-dev.html
       - title: Continuous Integration
         url: /docs/dg/dev/ci.html
       - title: Post-Installation Configuration
@@ -64,6 +67,8 @@ entries:
             url: /docs/dg/dev/ai/ai-commerce/ai-commerce-overview.html
           - title: Install AI Commerce
             url: /docs/dg/dev/ai/ai-commerce/install-ai-commerce.html
+          - title: Extend AI Commerce agents with custom toolsets
+            url: /docs/dg/dev/ai/ai-commerce/extend-ai-commerce-agents-with-toolsets.html
           - title: Configure multiple AI providers
             url: /docs/dg/dev/ai/ai-commerce/configure-multiple-ai-providers.html
           - title: Visual Add to Cart
@@ -98,33 +103,30 @@ entries:
       - title: AI Dev SDK
         url: /docs/dg/dev/ai/ai-dev/ai-dev.html
         nested:
-          - title: AI Dev SDK Overview
-            url: /docs/dg/dev/ai/ai-dev/ai-dev-overview.html
+          - title: Installation
+            url: /docs/dg/dev/ai/ai-dev/ai-dev-installation.html
+          - title: Workflows, Skills, and Agents
+            url: /docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html
+            nested:
+              - title: Project Starter Wizard
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html
+              - title: Customization Workflow
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html
+              - title: Bugfix Workflow
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html
+              - title: Upgrade Workflow
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html
+              - title: Profiler Workflow
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-profiler-workflow.html
+          - title: Claude Code
+            url: /docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html
+            nested:
+              - title: Context7 MCP Server
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-context7-mcp-server.html
+              - title: Language Server for Claude Code CLI
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-lsp-for-claude.html
           - title: AI Dev MCP Server
             url: /docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html
-          - title: Claude Code Plugin
-            url: /docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html
-          - title: AI Dev SDK Skills and Agents
-            url: /docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html
-          - title: AI Dev SDK Customization Workflow
-            url: /docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html
-      - title: AI Assistants
-        url: /docs/dg/dev/ai/ai-assistants/ai-assistants.html
-        nested:
-          - title: AI IDE Assistants
-            url: /docs/dg/dev/ai/ai-assistants/ai-ide-assistants.html
-          - title: Context7 MCP Server
-            url: /docs/dg/dev/ai/ai-assistants/context7-mcp-server.html
-          - title: Language Server for Claude Code CLI
-            url: /docs/dg/dev/ai/ai-assistants/lsp-for-claude.html
-          - title: Spryker Engineer GPT
-            url: /docs/dg/dev/ai/ai-assistants/spryker-engineer-gpt.html
-          - title: Spryker K6 Performance Assistant GPT
-            url: /docs/dg/dev/ai/ai-assistants/spryker-k6-performance-assistant-gpt.html
-          - title: Spryker DevQA Assistant GPT
-            url: /docs/dg/dev/ai/ai-assistants/spryker-devqa-assistant-gpt.html
-          - title: Spryker Cypress E2E Assistant GPT
-            url: /docs/dg/dev/ai/ai-assistants/spryker-cypress-e2e-assistant-gpt.html
   - title: Set up locally
     url: /docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html
     nested:
@@ -1144,6 +1146,8 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/integrate-symfony-scheduler.html
     - title: Configuration Management feature
       url: /docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html
+    - title: Workflow feature
+      url: /docs/dg/dev/integrate-and-configure/integrate-workflow-feature.html
     - title: Basic Shop Theme feature
       url: /docs/dg/dev/integrate-and-configure/integrate-basic-shop-theme.html
 
@@ -1504,6 +1508,37 @@ entries:
         url: /docs/dg/dev/guidelines/testing-guidelines/running-tests-with-robot-framework.html
       - title: E2E Testing with Cypress
         url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing.html
+        nested:
+          - title: What is E2E testing?
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/what-is-e2e-testing.html
+          - title: Identifying what to test
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/identifying-what-to-test.html
+          - title: Cypress boilerplate project structure
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/project-structure.html
+          - title: Getting started with the Cypress boilerplate
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/getting-started.html
+          - title: Cypress best practices
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/best-practices.html
+          - title: Cypress boilerplate naming conventions
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/naming-conventions.html
+          - title: Cypress test writing conventions
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/test-writing-conventions.html
+          - title: Configuration and environment variables
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/configuration-and-environment-variables.html
+          - title: Cypress boilerplate plugins and libraries
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/plugins-and-libraries.html
+          - title: ESLint and Prettier in the Cypress boilerplate
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/eslint-and-prettier.html
+          - title: HTML reporter
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/html-reporter.html
+          - title: Cypress commands vs scenarios
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/cypress-commands-vs-scenarios.html
+          - title: Validate API responses against a schema
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/how-to-validate-api-response-vs-schema.html
+          - title: Debugging Cypress tests
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/debugging-cypress-tests.html
+          - title: Integrating Cypress tests into CI
+            url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/integrating-cypress-tests-into-ci.html
       - title: Test helpers
         url: /docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
         nested:

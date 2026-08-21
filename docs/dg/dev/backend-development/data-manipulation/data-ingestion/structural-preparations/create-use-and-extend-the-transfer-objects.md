@@ -1,7 +1,7 @@
 ---
 title: Create, use, and extend the transfer objects
 description: The document provides information on the creation and usage of the Transfer objects.
-last_updated: Jun 16, 2021
+last_updated: Aug 12, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-use-transfer-objects
 originalArticleId: f3c1c5d9-348c-4d02-9d4b-f0cede048566
@@ -124,7 +124,7 @@ The following example is a typical use case for a transfer object. The customer 
 <?php
 $customerTransfer = new CustomerTransfer();
 $customerTransfer
-    ->setEmail('john.doe@spryker.com')
+    ->setEmail('john.doe@acme.com')
     ->setFirstName('John')
     ->setLastName('Doe');
 

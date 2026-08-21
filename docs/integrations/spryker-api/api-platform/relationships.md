@@ -320,6 +320,19 @@ properties:
     description: "Customer billing and shipping addresses"
 ```
 
+{% info_block warningBox "A relationship property cannot also declare an items block" %}
+
+When you override a relationship property, do not add an `items` block to it. Schema validation rejects
+a property that is both a relationship target and an inline object list.
+
+Only one docblock is emitted per property, and a relationship property already receives one describing
+its target resource. An `items` block would compete for the same slot, so the ambiguity is rejected
+rather than silently resolved. A property is either a relationship to another resource or an inline
+object list — not both. See
+[Typed collections in the published contract](/docs/integrations/spryker-api/api-platform/typed-collections.html).
+
+{% endinfo_block %}
+
 ## Validation
 
 Relationship configuration is checked in two places, with different behaviour.

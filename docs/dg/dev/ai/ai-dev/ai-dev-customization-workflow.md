@@ -1,9 +1,9 @@
 ---
-title: AI Dev SDK Customization Workflow
+title: Customization Workflow
 description: Turn a feature idea into a working, reviewed Spryker feature on a committed branch — driven by the spryker-customization orchestrator
-last_updated: Jun 22, 2026
+last_updated: Aug 20, 2026
 label: early-access
-keywords: ai, ai-dev, claude, claude code, spryker-customization, workflow, prd, customization, automation
+keywords: ai, ai-dev, claude, claude code, spryker-customization, workflow, prd, customization, automation, cypress
 template: concept-topic-template
 ---
 
@@ -12,6 +12,12 @@ template: concept-topic-template
 The AiDev module is experimental and not stable. There is no backward compatibility promise for this module. We welcome your feedback and contributions as we continue to develop and improve this module.
 
 {% endinfo_block %}
+
+## Availability
+
+The `spryker-customization` skill ships with the `spryker-ai-dev-sdk` Claude Code plugin. Version 0.6.4 of `spryker-sdk/ai-dev`, which ships plugin version 0.4.0, adds the conditional Cypress end-to-end phase described on this page.
+
+To update the Claude Code plugin, run `/plugin` in Claude Code and update `spryker-ai-dev-sdk` from the `spryker-plugins-official` marketplace to version 0.4.0 or later. For installation instructions, see [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html).
 
 ## What the skill does
 
@@ -23,7 +29,7 @@ You do not write code during the run. You make three decisions: what quality bar
 
 ## Workflow at a glance
 
-![AI Dev SDK customization workflow](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/customization-workflow.png)
+![AI Dev SDK customization workflow](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/customization.png)
 
 Each phase delegates to specific skills (pale yellow) and agents (deep amber) — for example, the `spryker-feature-expert` agent researches the relevant Spryker domain during planning, and the `spryker-verifier` agent drives the running storefront and back office to confirm the feature actually works.
 
@@ -35,6 +41,7 @@ Each phase delegates to specific skills (pale yellow) and agents (deep amber) �
 - Per-criterion verification results with real evidence from the running app — what passed, what did not, why
 - A code-review report against the staged diff
 - Tests (when you pick the MVP bar)
+- Cypress end-to-end coverage for the feature (when you pick the MVP bar)
 - The commit waits for your approval; nothing is pushed
 
 If you wanted a product requirement document too, the skill can produce one — by delegating to `product-requirement-document` — as a reusable document under `resources/plan/PRD/` before the build starts.
@@ -49,6 +56,20 @@ You pick one of two bars at the start. The skill asks once and shapes the rest o
 
 Both bars produce a visually integrated feature — new UI elements reuse the project's atomic design components, never raw HTML pasted onto a styled page.
 
+## Cypress end-to-end coverage
+
+Once every acceptance criterion is verified green and any visual sign-offs are done, the workflow runs a Cypress phase. It delegates to the `cypress-tests` skill, which decides what the feature needs against your project's existing suite:
+
+- **Fix** a spec the feature broke
+- **Improve** assertions that would have missed the change
+- **Add** a new spec for the feature
+
+The phase then runs the affected specs and the project's quality gate rather than the whole suite.
+
+The phase is on by default for the MVP bar and off for PoC, and you can switch it either way at the start. It runs only when the feature is visible on an end-to-end surface and your project has a Cypress suite. A skip is always reported with its reason, never silent.
+
+The phase deliberately runs last, after the self-correction loop has converged, so no spec is written against an implementation still in flux. If a spec goes red because the feature is wrong rather than the test, that is treated as a missed acceptance criterion and feeds back into the self-correction loop.
+
 ## Where you decide
 
 The skill runs autonomously between three decision points where it pauses for you:
@@ -61,11 +82,12 @@ If verification fails on an acceptance criterion and the skill cannot fix it aft
 
 ## Requirements
 
-- A running Spryker project (Docker SDK up) with the [AI Dev SDK](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html) installed
-- An AI tool with the SDK's skills loaded — either through the [Claude Code plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html) or via `ai-dev:setup` for another supported tool
+- A running Spryker project (Docker SDK up) with the [AI Dev SDK](/docs/dg/dev/ai/ai-dev/ai-dev.html) installed
+- An AI tool with the SDK's skills loaded — either through the [Claude Code plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html) or via `ai-dev:setup` for another supported tool
 
 ## Related
 
-- [AI Dev SDK Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html) — the full reference of every skill and agent this orchestrator composes
-- [AI Dev SDK Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html) — module and `ai-dev:setup` command
-- [Claude Code Plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html) — how to install the SDK for Claude Code
+- [`spryker-customization` README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/spryker-customization/README.md) — the skill's own reference in the plugin repository
+- [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html) — the full reference of every skill and agent this orchestrator composes
+- [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html) — install the SDK and generate your project's rules, context file, and skills
+- [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html) — how to install the SDK for Claude Code

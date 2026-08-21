@@ -529,6 +529,7 @@ Both can coexist in the same application. For further migration guidance, see [M
 - [Security](/docs/integrations/spryker-api/authenticating-and-authorization/security.html) - Authentication and authorization
 - [Implement an API Platform resource](/docs/integrations/spryker-api/api-platform/enablement.html) - Creating your first resource
 - [Resource schemas](/docs/integrations/spryker-api/api-platform/resource-schemas.html) - Resource schemas
+- [Typed collections in the published contract](/docs/integrations/spryker-api/api-platform/typed-collections.html) - What object collections publish, and when to adopt them
 - [Validation schemas](/docs/integrations/spryker-api/api-platform/validation-schemas.html) - Validation schemas
 - [Native API Platform resources](/docs/integrations/spryker-api/api-platform/native-api-platform-resources.html) - Using native PHP attributes
 - [CodeBucket support](/docs/integrations/spryker-api/api-platform/code-buckets.html) - Region-specific resources

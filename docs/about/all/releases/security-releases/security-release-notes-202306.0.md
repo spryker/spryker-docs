@@ -1,7 +1,7 @@
 ---
 title: Security release notes 202306.0
 description: Security release notes for the Spryker Product release 202306.0
-last_updated: Jul 28, 2026
+last_updated: Aug 21, 2026
 template: concept-topic-template
 redirect_from:
     - /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202306.0/security-release-notes-202306.0.html
@@ -61,7 +61,7 @@ Access validation controls have been implemented to prevent administrators from 
 
 ### How to get the fix
 
-The update requires PHP 8 to be installed. If you are using PHP 7, see [PHP 8.1 as the minimum version for all Spryker projects](https://docs.spryker.com/docs/scos/user/intro-to-spryker/whats-new/php8-as-a-minimum-version-for-all-spryker-projects.html) for details on how to migrate to PHP 8.1.
+The update requires PHP 8 to be installed. If you are using PHP 7, migrate to PHP 8.1 first.
 
 To implement a fix for this vulnerability, upgrade the `company-page` module to version 2.22.0:
 

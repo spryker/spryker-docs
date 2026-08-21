@@ -1,7 +1,7 @@
 ---
 title: Claude Code
 description: Install and use the Spryker AI Dev SDK in Claude Code to get Spryker-aware skills, code review, and project setup directly in your AI coding assistant.
-last_updated: Aug 14, 2026
+last_updated: Aug 20, 2026
 label: early-access
 keywords: ai, claude, claude code, plugin, marketplace, skills, spryker, ai-dev, code review, ci
 template: howto-guide-template
@@ -34,63 +34,17 @@ The `spryker-ai-dev-sdk` Claude Code plugin closes this gap. It gives Claude Cod
 - **Live project context.** The MCP server runs inside your Docker container and gives Claude Code real-time access to your transfer objects, module interfaces, and OMS configuration. The AI works with your actual project data, not guesses.
 - **Consistent code reviews.** The `spryker-code-reviewer` subagent checks your changes against Spryker's coding standards and architectural rules, catching issues before they reach a PR.
 - **Team-wide consistency.** Generated rules and context files are committed to your repository, so every developer on the team works with the same AI configuration.
-- **Workflows you compose yourself.** Each skill covers one stage of work, so you combine them into the long-running workflow your team actually runs. Four ready-made workflows — project setup, customization, bugfix, and upgrade — get you started on day one, and the skills themselves are a template for writing your own. See [Composable by design](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html#composable-by-design).
+- **Workflows you compose yourself.** Each skill covers one stage of work, so you combine them into the long-running workflow your team actually runs. Four ready-made workflows — project setup, customization, bugfix, and upgrade — get you started on day one, and the skills themselves are a template for writing your own. See [Composable by design](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html#composable-by-design).
 
 The plugin is distributed through the `spryker-plugins-official` marketplace and installed directly inside Claude Code.
 
-## Prerequisites
+## Install the plugin
 
-- [Claude Code](https://claude.ai/code) installed
-- Your Spryker project is running: `docker/sdk run`
-
-
-## Install the plugin from the marketplace
-
-1. Open Claude Code in your terminal.
-
-2. Add the Spryker plugin marketplace:
-
-   ![step 1](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-plugin-step-1.png)
-   ![step 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-plugin-step-2.png)
-   ![step 3](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-plugin-step-3.png)
-
-3. Install the plugin:
-
-   ![step 4](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-plugin-step-4.png)
-   ![step 5](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-plugin-step-5.png)
-   ![step 6](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-plugin-step-6.png)
-
-4. After installation, reload plugins in Claude Code.
-
-![Choose output mode step 7](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-plugin-step-7.png)
-
-
-## Set up AI tooling for your project
-
-After installing the plugin, run the `ai-dev-setup` skill to configure your project. The skill generates rules, context files, and reusable AI skills tailored to your project and AI tool.
-
-In Claude Code, run the setup skill:
-
-![ai-dev-setup](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-skill-setup.png)
-
-The skill:
-
-- Installs the `spryker-sdk/ai-dev` package in your Spryker project.
-- Wires up console commands for `McpServerConsole` and `AiToolSetupConsole`.
-- Registers the AI Dev MCP server with Claude Code.
-- Adds `.claude/rules/` with Spryker coding conventions and architectural guidelines.
-- Adds `CLAUDE.md` with project-specific context loaded into every Claude Code session.
-
-**Check with running `/context` in Claude Code to see:**
-
-![claude-setup-1](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-install-1.png)
-![claude-setup-2](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-install-2.png)
-![claude-setup-3](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-install-3.png)
-![claude-setup-4](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-install-4.png)
+The plugin installs from the `spryker-plugins-official` marketplace inside Claude Code, and the `ai-dev-setup` skill then generates your project's rules and context file and registers the MCP server. Both steps, with screenshots and verification, are on one page — see [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html).
 
 ## Capabilities
 
-For a one-page reference of every skill and agent — what each does, when to use it, and the value it adds — see [Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html).
+For a one-page reference of every skill and agent — what each does, when to use it, and the value it adds — see [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html).
 
 Four skills own a full workflow and delegate each stage to the others. Each has its own page:
 

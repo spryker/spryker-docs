@@ -1,7 +1,7 @@
 ---
 title: Purchasing Control feature overview
 description: Learn how the Purchasing Control feature lets B2B companies control departmental spending, define budget enforcement rules, and integrate with the Approval Process.
-last_updated: May 22, 2026
+last_updated: Aug 6, 2026
 template: concept-topic-template
 ---
 
@@ -25,6 +25,10 @@ A *cost center* is an organizational unit within a company that incurs costs but
 
 Every purchase a buyer makes is charged to a cost center so the company can track where money is being spent. In ERP systems such as SAP, Oracle, and Microsoft Dynamics, cost centers are a foundational accounting concept - orders flow into the ERP tagged with a cost center code, enabling financial reporting and cost allocation.
 
+### Deactivated cost centers and budgets
+
+A cost center or budget can be deactivated instead of deleted, which preserves the history of the orders already charged to it. Deactivated records are not offered in the cost center and budget selectors, and a deactivated cost center is no longer shown where the assignment of a cart or quote is displayed. If every cost center available to a buyer is deactivated, or if the selected cost center has no active budget left, no choices are rendered and the buyer cannot assign one until an active record is available again.
+
 ## Budgets
 
 A *budget* is a spending limit assigned to a cost center for a defined period - monthly, quarterly, or annually. It represents the maximum amount that a department or project is authorized to spend in that period.
@@ -40,6 +44,17 @@ Each budget is configured with one of three enforcement rules:
 | Block | The order is rejected outright when the budget is exceeded. The buyer cannot proceed to checkout. |
 | Warn | A warning is displayed to the buyer, but they can proceed. |
 | Require Approval | The order is sent for approval when the budget is exceeded. The buyer cannot complete checkout until an approver accepts the order. |
+
+### Budgets in recurring orders
+
+With the [Recurring Orders feature](/docs/pbc/all/order-experience-management/latest/base-shop/feature-overviews/recurring-orders-feature-overview.html) installed, a recurring order carries a cost center and a budget, selected on the recurring order forms and changeable when the buyer edits the schedule or approves a review.
+
+Budgets with the **Require Approval** enforcement rule cannot be used for a recurring order. A recurring order places its follow-up orders unattended, so no approver can accept them at placement time. The restriction applies in two places:
+
+- Such budgets are not offered in the recurring order budget selector.
+- Checkout is blocked if a quote being set up as a recurring order carries one. This check applies regardless of the quote grand total and of the remaining budget amount, so the budget does not have to be exceeded for the block to take effect.
+
+Regular, non-recurring checkouts are not affected—there, the **Require Approval** rule behaves as described above.
 
 ## Relationship to the Approval Process
 
@@ -88,6 +103,7 @@ The typical B2B procurement flow involving cost centers and budgets:
 | Exceeds budget  -  Require Approval rule | The order is sent for approval; the buyer cannot complete checkout until approved. |
 | Exceeds Buy up to grand total permission limit | The order is sent for approval, same as the standard Approval Process. |
 | Exceeds budget  -  Block rule | Checkout is blocked; no approval option is available. |
+| Recurring order with a Require Approval budget | Checkout is blocked, whether or not the budget is exceeded. The buyer must select a budget bound to the Block or Warn rule. |
 
 ## Quote lock
 

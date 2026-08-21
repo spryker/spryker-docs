@@ -1,7 +1,7 @@
 ---
 title: Install the Purchasing Control feature
 description: Learn how to install the Purchasing Control feature into your Spryker project.
-last_updated: Jul 1, 2026
+last_updated: Aug 17, 2026
 template: feature-integration-guide-template
 related:
   - title: Purchasing Control feature overview
@@ -513,6 +513,52 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 
 {% endinfo_block %}
 
+#### Set up Recurring Orders plugins
+
+{% info_block infoBox "Recurring Orders feature" %}
+
+This step is only required if your project uses the [Recurring Orders feature](/docs/pbc/all/order-experience-management/latest/base-shop/feature-overviews/recurring-orders-feature-overview.html). The plugins belong to the Purchasing Control module but register in the `OrderExperienceManagement` dependency providers.
+
+{% endinfo_block %}
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+| BudgetApprovalRuleRecurringOrderCheckoutValidatorPlugin | Blocks checkout when a quote being set up as a recurring order carries a budget with the `require_approval` enforcement rule. Applies regardless of the quote grand total and the remaining budget amount. Passes when no budget is selected or the budget uses another enforcement rule. | Recurring Orders feature | SprykerFeature\Zed\PurchasingControl\Communication\Plugin\OrderExperienceManagement |
+| CostCenterRecurringOrderApproveFormExpanderPlugin | Adds cost center and budget dropdowns to the recurring order review approve form and validates the selected pair server-side. | Recurring Orders feature | SprykerFeature\Yves\PurchasingControl\Plugin\OrderExperienceManagement |
+| CostCenterRecurringScheduleEditFormExpanderPlugin | Adds cost center and budget dropdowns to the recurring schedule edit form and validates the selected pair server-side. | Recurring Orders feature | SprykerFeature\Yves\PurchasingControl\Plugin\OrderExperienceManagement |
+
+**src/Pyz/Zed/OrderExperienceManagement/OrderExperienceManagementDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\OrderExperienceManagement;
+
+use SprykerFeature\Zed\OrderExperienceManagement\OrderExperienceManagementDependencyProvider as SprykerOrderExperienceManagementDependencyProvider;
+use SprykerFeature\Zed\PurchasingControl\Communication\Plugin\OrderExperienceManagement\BudgetApprovalRuleRecurringOrderCheckoutValidatorPlugin;
+
+class OrderExperienceManagementDependencyProvider extends SprykerOrderExperienceManagementDependencyProvider
+{
+    /**
+     * @return array<\SprykerFeature\Zed\OrderExperienceManagement\Dependency\Plugin\RecurringOrderCheckoutValidatorPluginInterface>
+     */
+    protected function getRecurringOrderCheckoutValidatorPlugins(): array
+    {
+        return [
+            new BudgetApprovalRuleRecurringOrderCheckoutValidatorPlugin(), #PurchasingControlFeature
+        ];
+    }
+}
+```
+
+For the two Yves form expander plugins and the budget enforcement rules that can be selected on the recurring order forms, see [Install the Recurring Orders feature](/docs/pbc/all/order-experience-management/latest/base-shop/install-and-upgrade/install-features/install-the-recurring-orders-feature.html).
+
+{% info_block warningBox "Verification" %}
+
+Set a budget's enforcement rule to **Require approval**, assign it to a cart, and set up that cart as a recurring order at checkout. Make sure checkout is blocked with a message stating that the selected budget requires approval and cannot be used for a recurring order.
+
+{% endinfo_block %}
+
 ### 5) Configure Back Office navigation
 
 Add the Purchasing Control section to the Back Office navigation:
@@ -668,6 +714,37 @@ purchasing_control.validation.required,"Please select a cost center and budget b
 purchasing_control.validation.required,"Bitte wählen Sie vor der Bestellung eine Kostenstelle und ein Budget aus.",de_DE
 ```
 
+If your project also uses the Recurring Orders feature, import the following keys as well. They translate the cost center and budget dropdowns on the recurring order approve and schedule edit forms, and the budget summary rendered by the `recurring-order-budget-summary` molecule:
+
+**data/import/common/common/glossary.csv**
+
+```csv
+purchasing_control.recurring_order.budget.total,Total budget,en_US
+purchasing_control.recurring_order.budget.total,Gesamtbudget,de_DE
+purchasing_control.recurring_order.budget.used,Used,en_US
+purchasing_control.recurring_order.budget.used,Verbraucht,de_DE
+purchasing_control.recurring_order.budget.remaining,Remaining,en_US
+purchasing_control.recurring_order.budget.remaining,Verbleibend,de_DE
+purchasing_control.recurring_order.budget.usage,%used% used of %total%,en_US
+purchasing_control.recurring_order.budget.usage,%used% von %total% verwendet,de_DE
+purchasing_control.recurring_order.cost_center_required,Select cost center,en_US
+purchasing_control.recurring_order.cost_center_required,Kostenstelle wählen,de_DE
+purchasing_control.recurring_order.budget_required,Select budget,en_US
+purchasing_control.recurring_order.budget_required,Budget wählen,de_DE
+purchasing_control.recurring_order.budget_cost_center_mismatch,The selected budget does not belong to the selected cost center.,en_US
+purchasing_control.recurring_order.budget_cost_center_mismatch,Das ausgewählte Budget gehört nicht zur ausgewählten Kostenstelle.,de_DE
+purchasing_control.validation.inactive-budget,The selected budget is no longer available. Please select another budget or contact your manager.,en_US
+purchasing_control.validation.inactive-budget,Das ausgewählte Budget ist nicht mehr verfügbar. Bitte wählen Sie ein anderes Budget oder kontaktieren Sie Ihren Manager.,de_DE
+purchasing_control.validation.approval-rule-not-supported,"The selected budget requires approval and cannot be used for a recurring order. Please select another budget.",en_US
+purchasing_control.validation.approval-rule-not-supported,"Das ausgewählte Budget erfordert eine Genehmigung und kann nicht für eine wiederkehrende Bestellung verwendet werden. Bitte wählen Sie ein anderes Budget aus.",de_DE
+```
+
+{% info_block infoBox "Recurring order translations" %}
+
+These keys render only on recurring order screens. Register the plugins that display them as described in [Set up Recurring Orders plugins](#set-up-recurring-orders-plugins) and [Install the Recurring Orders feature](/docs/pbc/all/order-experience-management/latest/base-shop/install-and-upgrade/install-features/install-the-recurring-orders-feature.html).
+
+{% endinfo_block %}
+
 Import data:
 
 ```bash
@@ -691,7 +768,7 @@ Register the following global widgets:
 | CostCenterMenuItemWidget | Renders the Purchasing Control navigation menu item in the storefront company menu. | SprykerFeature\Yves\PurchasingControl\Widget |
 | CostCenterBudgetFilterWidget | Renders the cost center and budget filter controls on the order history page. | SprykerFeature\Yves\PurchasingControl\Widget |
 | CostCenterOrderDetailWidget | Displays the assigned cost center and budget on the order detail page, taking an `OrderTransfer` as input. | SprykerFeature\Yves\PurchasingControl\Widget |
-| CostCenterDetailWidget | Displays the assigned cost center and budget on the cart or quote detail page, taking a `QuoteTransfer` as input. | SprykerFeature\Yves\PurchasingControl\Widget |
+| CostCenterDetailWidget | Displays the cost center and budget assigned to a quote, taking a `QuoteTransfer` as input and an optional flag that adds a budget usage summary. Renders only where a template calls it—see the note below. Only active cost centers are resolved, so a deactivated cost center makes the widget render nothing. | SprykerFeature\Yves\PurchasingControl\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -728,6 +805,24 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
+{% info_block infoBox "Where CostCenterDetailWidget is rendered" %}
+
+Unlike the other widgets in this table, no Purchasing Control template calls `CostCenterDetailWidget`. It renders only where another template calls it explicitly. In the demo shop, its single caller is the recurring order detail sidebar of the [Recurring Orders feature](/docs/pbc/all/order-experience-management/latest/base-shop/feature-overviews/recurring-orders-feature-overview.html). To display the assigned cost center and budget elsewhere—on the cart page or a quote detail page, for example—call the widget from that template:
+
+```twig
+{% raw %}{% widget 'CostCenterDetailWidget' args [data.quote] only %}{% endwidget %}{% endraw %}
+```
+
+Pass a second argument to add a budget usage summary—the total, used, and remaining amounts, plus a used-percentage bar—below the cost center and budget names:
+
+```twig
+{% raw %}{% widget 'CostCenterDetailWidget' args [data.quote, true] only %}{% endwidget %}{% endraw %}
+```
+
+The summary is rendered by the `recurring-order-budget-summary` molecule the module ships. It is omitted when the argument is `false` or not passed, and also when the quote carries no budget or no currency.
+
+{% endinfo_block %}
+
 {% info_block warningBox "Verification" %}
 
 - Make sure all six widgets are available in Twig templates.
@@ -735,6 +830,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 - On the checkout summary page, make sure the cost center and budget selector is displayed.
 - On the order detail page, make sure the assigned cost center and budget names are displayed.
 - On the order history page, make sure the cost center and budget filter controls are displayed.
+- Call `CostCenterDetailWidget` from a template with a quote that has a cost center assigned, and make sure the cost center and budget names are displayed. Deactivate that cost center and make sure the names are no longer displayed.
 
 {% endinfo_block %}
 

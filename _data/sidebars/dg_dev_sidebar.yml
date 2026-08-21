@@ -977,8 +977,6 @@ entries:
     - title: Migrate from Yarn to npm
       url: /docs/dg/dev/upgrade-and-migrate/migrate-from-yarn-to-npm.html
 
-    - title: Upgrade to PHP 8.1
-      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-php-81.html
     - title: Upgrade to PHP 8.3
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-php-83.html
     - title: Upgrade to PHP 8.4

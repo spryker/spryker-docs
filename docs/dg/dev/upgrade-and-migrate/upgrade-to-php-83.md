@@ -2,7 +2,10 @@
 title: 'Upgrade to PHP 8.3'
 description: Starting from Nov 2024, Demo Shops support PHP 8.3.
 template: concept-topic-template
-last_updated: Aug 7, 2026
+last_updated: Aug 21, 2026
+redirect_from:
+- /docs/scos/user/intro-to-spryker/whats-new/php8-as-a-minimum-version-for-all-spryker-projects.html
+- /docs/dg/dev/upgrade-and-migrate/upgrade-to-php-81.html
 ---
 
 {% info_block warningBox "Warning" %}

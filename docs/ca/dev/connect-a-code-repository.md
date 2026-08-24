@@ -74,7 +74,7 @@ For detailed instructions and permission requirements, see [Create a connection 
 11. Click **Done**.
 12. In the **Edit: Source** pane, click **Done**.
 13. Scroll up and click **Save**.
-14. In the **Save pipeline changes** window, click **Save**.
+14. In the **Save pipeline changes** window, check the box - _No resource updates needed for this source action change_ and click **Save**.
 
 Your GitHub repository is now connected.
 
@@ -97,7 +97,7 @@ Your GitHub repository is now connected.
 11. Click **Done**.
 12. In the **Edit: Source** pane, click **Done**.
 13. Scroll up and click **Save**.
-14. In the **Save pipeline changes** window, click **Save**.
+14. In the **Save pipeline changes** window, check the box - _No resource updates needed for this source action change_ and click **Save**.
 
 Your GitHub Enterprise Server repository is now connected.
 

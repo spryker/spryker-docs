@@ -1,17 +1,11 @@
 ---
 title: Project Starter Wizard
 description: Turn a fresh clone of a Spryker demoshop into a customer project — one developer interview, then nine orchestrated steps to a verified running shop
-last_updated: Aug 20, 2026
+last_updated: Aug 24, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, project-starter-wizard, project setup, onboarding, demoshop
 template: concept-topic-template
 ---
-
-{% info_block warningBox "Experimental module" %}
-
-The AiDev module is experimental and not stable. There is no backward compatibility promise for this module. We welcome your feedback and contributions as we continue to develop and improve this module.
-
-{% endinfo_block %}
 
 Every Spryker project starts from a demoshop — a complete, working reference shop that you reshape into your customer's project. Doing that by hand means changes across CI configuration, namespaces, deploy files, stores, and demo data, in an order that is easy to get wrong. The `project-starter-wizard` skill handles it for you: one developer interview, then a single orchestrated run that ends in a booted shop, verified store by store.
 

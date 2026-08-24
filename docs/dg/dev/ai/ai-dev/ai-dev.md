@@ -9,12 +9,6 @@ redirect_from:
   - /docs/dg/dev/ai/ai-dev/ai-dev-overview
 ---
 
-{% info_block warningBox "Experimental module" %}
-
-The AiDev module is experimental and not stable. There is no backward compatibility promise for this module. We welcome your feedback and contributions as we continue to develop and improve this module.
-
-{% endinfo_block %}
-
 {% info_block warningBox "Warning" %}
 
 Before you use AI-related tools, consult your legal department.

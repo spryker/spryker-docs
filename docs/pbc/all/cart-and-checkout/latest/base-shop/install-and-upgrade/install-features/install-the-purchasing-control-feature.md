@@ -1,13 +1,15 @@
 ---
 title: Install the Purchasing Control feature
 description: Learn how to install the Purchasing Control feature into your Spryker project.
-last_updated: Aug 17, 2026
+last_updated: Aug 21, 2026
 template: feature-integration-guide-template
 related:
   - title: Purchasing Control feature overview
     link: docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/purchasing-control-feature-overview.html
   - title: Install the Approval Process feature
     link: docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-approval-process-feature.html
+  - title: Upgrade the PurchasingControl module
+    link: docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-purchasingcontrol-module.html
 ---
 
 This document describes how to install the [Purchasing Control feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/purchasing-control-feature-overview.html).
@@ -26,11 +28,18 @@ To start feature integration, review and install the necessary features:
 | Company Account | {{page.release_tag}} | [Install the Company Account feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html) |
 | Checkout | {{page.release_tag}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
 | Approval Process | {{page.release_tag}} | [Install the Approval Process feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-approval-process-feature.html) |
+| Quotation Process | {{page.release_tag}} | [Install the Quotation Process feature](/docs/pbc/all/request-for-quote/latest/install-and-upgrade/install-features/install-the-quotation-process-feature.html) |
+
+{% info_block infoBox "Quotation Process" %}
+
+The Quotation Process feature is required only if you want buyers and agents to assign cost centers and budgets to quote requests. The `spryker/quote-request` and `spryker/quote-request-agent` modules are installed as dependencies of `spryker-feature/purchasing-control` in either case, but the Storefront quote request pages are only available with the Quotation Process feature installed. If you do not need this part of the feature, skip [Integrate cost centers with quote requests](#integrate-cost-centers-with-quote-requests).
+
+{% endinfo_block %}
 
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/purchasing-control:"^1.0.0" spryker/sales:"^11.83.0" spryker/sales-extension:"^1.15.0" spryker-shop/checkout-page:"^3.40.0" spryker-shop/company-page:"^2.36.0" spryker-shop/customer-page:"^2.77.0" spryker-shop/shop-ui:"^1.108.0" --update-with-dependencies --ignore-platform-req=ext-grpc
+composer require spryker-feature/purchasing-control:"^2.0.0" spryker/sales:"^11.83.0" spryker/sales-extension:"^1.15.0" spryker-shop/checkout-page:"^3.40.0" spryker-shop/company-page:"^2.36.0" spryker-shop/customer-page:"^2.77.0" spryker-shop/shop-ui:"^1.108.0" --update-with-dependencies --ignore-platform-req=ext-grpc
 ```
 
 ### 2) Set up database schema and transfer objects
@@ -712,6 +721,10 @@ purchasing_control.validation.require-approval,This order exceeds the budget. Pl
 purchasing_control.validation.require-approval,Diese Bestellung überschreitet das Budget. Bitte senden Sie sie zur Genehmigung.,de_DE
 purchasing_control.validation.required,"Please select a cost center and budget before placing your order.",en_US
 purchasing_control.validation.required,"Bitte wählen Sie vor der Bestellung eine Kostenstelle und ein Budget aus.",de_DE
+purchasing_control.budget.validation.cost_center_mismatch,"The selected budget does not belong to the selected cost center.",en_US
+purchasing_control.budget.validation.cost_center_mismatch,"Das ausgewählte Budget gehört nicht zur ausgewählten Kostenstelle.",de_DE
+purchasing_control.quote_request.cost_center_updated,Cost center and budget have been saved.,en_US
+purchasing_control.quote_request.cost_center_updated,Kostenstelle und Budget wurden gespeichert.,de_DE
 ```
 
 If your project also uses the Recurring Orders feature, import the following keys as well. They translate the cost center and budget dropdowns on the recurring order approve and schedule edit forms, and the budget summary rendered by the `recurring-order-budget-summary` molecule:
@@ -852,7 +865,7 @@ Extend the ShopUi `select` atom to render HTML attributes for the cost center an
 
 {% info_block warningBox "Verification" %}
 
-Make sure the cost center and budget dropdowns correctly disable unavailable options.
+Make sure the cost center and budget dropdowns correctly disable unavailable options. Select a cost center and make sure the budget dropdown offers only the budgets of that cost center, and that budgets of other cost centers are both hidden and disabled.
 
 {% endinfo_block %}
 
@@ -881,7 +894,7 @@ Register the following route provider plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| CostCenterRouteProviderPlugin | Adds storefront routes for cost center list, create, update, and quote update actions. | None | SprykerFeature\Yves\PurchasingControl\Plugin\Router |
+| CostCenterRouteProviderPlugin | Adds storefront routes for cost center list, create, update, and quote update actions. Also adds the POST-only routes that update the cost center and budget of a quote request in the customer and agent contexts. | None | SprykerFeature\Yves\PurchasingControl\Plugin\Router |
 | BudgetRouteProviderPlugin | Adds storefront routes for budget list, create, and update actions. | None | SprykerFeature\Yves\PurchasingControl\Plugin\Router |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
@@ -968,5 +981,152 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
 {% info_block warningBox "Verification" %}
 
 On the storefront **My Account > Orders** page, make sure company users see cost center and budget filter dropdowns. Make sure filtering by cost center or budget returns the expected orders.
+
+{% endinfo_block %}
+
+## Integrate cost centers with quote requests
+
+Follow the steps below to let buyers and agents assign a cost center and a budget to a quote request. Skip this section if you do not use quote requests.
+
+{% info_block infoBox "Prerequisites" %}
+
+This part of the feature requires the [Quotation Process](/docs/pbc/all/request-for-quote/latest/install-and-upgrade/install-features/install-the-quotation-process-feature.html) feature.
+
+{% endinfo_block %}
+
+### 1) Install the required modules
+
+```bash
+composer require spryker-shop/quote-request-page:"^3.8.0" spryker-shop/quote-request-agent-page:"^3.7.0" --update-with-dependencies
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure the following modules are installed at the specified versions or higher:
+
+| MODULE | EXPECTED VERSION |
+| --- | --- |
+| QuoteRequestPage | 3.8.0 |
+| QuoteRequestAgentPage | 3.7.0 |
+
+{% endinfo_block %}
+
+### 2) Allow the cost center and budget quote fields for saving
+
+Add `ID_COST_CENTER` and `ID_BUDGET` to the quote fields that are persisted with a quote request version. Without this configuration, both fields are stripped when the quote request version is saved: the update appears to succeed, but the selection is lost.
+
+**src/Pyz/Zed/QuoteRequest/QuoteRequestConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\QuoteRequest;
+
+use Generated\Shared\Transfer\QuoteTransfer;
+use Spryker\Zed\QuoteRequest\QuoteRequestConfig as SprykerQuoteRequestConfig;
+
+class QuoteRequestConfig extends SprykerQuoteRequestConfig
+{
+    /**
+     * @return array<string>
+     */
+    public function getQuoteFieldsAllowedForSaving(): array
+    {
+        return array_merge(parent::getQuoteFieldsAllowedForSaving(), [
+            // ...
+            QuoteTransfer::ID_COST_CENTER, #PurchasingControlFeature
+            QuoteTransfer::ID_BUDGET, #PurchasingControlFeature
+        ]);
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Assign a cost center and a budget to a quote request, then reload the quote request details page. Make sure the selection is still displayed. In the database, make sure `spy_quote_request_version.quote` contains the `idCostCenter` and `idBudget` values.
+
+{% endinfo_block %}
+
+### 3) Set up widgets
+
+Register the following global widgets:
+
+| WIDGET | DESCRIPTION | NAMESPACE |
+| --- | --- | --- |
+| QuoteRequestCostCenterSelectorWidget | Renders the cost center and budget selection UI on the quote request details and quote request edit pages. Takes a `QuoteRequestTransfer` and an optional form action route name. When the route name is omitted, the form posts to `company/cost-center/update-quote-request`. | SprykerFeature\Yves\PurchasingControl\Widget |
+| QuoteRequestAgentCostCenterSelectorWidget | Renders the same selection UI on the agent quote request details and agent quote request edit pages. Takes the same two arguments. When the route name is omitted, the form posts to `agent/quote-request/cost-center/update`. | SprykerFeature\Yves\PurchasingControl\Widget |
+
+**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\ShopApplication;
+
+use SprykerFeature\Yves\PurchasingControl\Widget\QuoteRequestAgentCostCenterSelectorWidget;
+use SprykerFeature\Yves\PurchasingControl\Widget\QuoteRequestCostCenterSelectorWidget;
+use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
+
+class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
+{
+    /**
+     * @return array<string>
+     */
+    protected function getGlobalWidgets(): array
+    {
+        return [
+            // ...
+            QuoteRequestCostCenterSelectorWidget::class, #PurchasingControlFeature
+            QuoteRequestAgentCostCenterSelectorWidget::class, #PurchasingControlFeature
+        ];
+    }
+}
+```
+
+Both widgets are rendered from a `costCenter` block in the `quote-request-details.twig` and `quote-request-edit.twig` templates of the `QuoteRequestPage` and `QuoteRequestAgentPage` modules. In a project that uses these templates as they are shipped, no template changes are required. To change or remove the placement, override the `costCenter` block.
+
+{% info_block warningBox "Template overrides" %}
+
+If your project overrides any of the four templates, the widget is not rendered on the affected pages, because your override replaces the module template that contains the `costCenter` block. Re-base your overrides against the new module templates, or add the `costCenter` block to them.
+
+{% endinfo_block %}
+
+The second argument controls where the form returns to after saving. The details pages omit it, so the widget falls back to the details route. The edit pages pass it explicitly: the `QuoteRequestPage` edit template passes `company/cost-center/update-quote-request-from-edit`, and the `QuoteRequestAgentPage` edit template passes `agent/quote-request/cost-center/update-from-edit`. Pass a route name of your own only if you also register a route that returns to your page.
+
+{% info_block infoBox "Info" %}
+
+The widgets suppress themselves when there is nothing to show. An editable quote request renders the selection form only if at least one cost center is available to the owner's business unit. A quote request that is not editable displays the assigned cost center and budget as read-only.
+
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
+- On the Storefront, open a quote request in an editable status and make sure the cost center and budget selection is displayed on both the details page and the edit page.
+- Select a cost center and a budget, then submit the form. Make sure a success message is displayed and the page returns to the details page or the edit page, depending on where you started.
+- Open a quote request that is not editable and make sure the assigned cost center and budget are displayed as read-only, without a submit button.
+- As an agent, open a customer's quote request and make sure the cost center dropdown lists the cost centers of the customer's business unit, not your own.
+
+{% endinfo_block %}
+
+### 4) Review the quote request routes
+
+The `CostCenterRouteProviderPlugin` that you registered in [Set up routes](#5-set-up-routes) adds the following routes. All of them accept `POST` requests only, and each one determines its own return page, so the redirect target cannot be supplied by the request.
+
+| ROUTE NAME | PATH | RETURNS TO |
+| --- | --- | --- |
+| `company/cost-center/update-quote-request` | `/company/cost-center/update-quote-request/{quoteRequestReference}` | Quote request details page |
+| `company/cost-center/update-quote-request-from-edit` | `/company/cost-center/update-quote-request-from-edit/{quoteRequestReference}` | Quote request edit page |
+| `agent/quote-request/cost-center/update` | `/agent/quote-request/cost-center/update/{quoteRequestReference}` | Agent quote request details page |
+| `agent/quote-request/cost-center/update-from-edit` | `/agent/quote-request/cost-center/update-from-edit/{quoteRequestReference}` | Agent quote request edit page |
+
+The two `-from-edit` routes are reached only when a widget receives a form action route name as its second argument. For details, see [Set up widgets](#3-set-up-widgets).
+
+The two agent routes are deliberately placed under `/agent/` so that they are covered by the agent firewall.
+
+{% info_block warningBox "Verification" %}
+
+- Make sure a `GET` request to any of the four paths is rejected.
+- Make sure a buyer cannot update the cost center of a quote request that belongs to another company user: the request must return `404`, the same response as for a quote request reference that does not exist.
+- Make sure an anonymous request to either agent path is rejected by the agent firewall.
 
 {% endinfo_block %}

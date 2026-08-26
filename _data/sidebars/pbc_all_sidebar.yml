@@ -3808,6 +3808,8 @@ entries:
                     url: /docs/pbc/all/search/base-shop/install-and-upgrade/search-migration-concept.html
                   - title: Upgrade search initialization
                     url: /docs/pbc/all/search/base-shop/install-and-upgrade/upgrade-search-initialization.html
+                  - title: Migrate from OpenSearch 1.3 to 3.5
+                    url: /docs/pbc/all/search/base-shop/install-and-upgrade/migrate-from-opensearch-1.3-to-3.5.html
 
               - title: Manage in the Back Office
                 url: /docs/pbc/all/search/base-shop/manage-in-the-back-office/manage-filters-and-search-preferences-in-the-back-office.html

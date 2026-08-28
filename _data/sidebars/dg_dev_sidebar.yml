@@ -1130,6 +1130,8 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/Integrate-profiler-module.html
     - title: Propel clean command
       url: /docs/dg/dev/integrate-and-configure/integrate-propel-clean-command.html
+    - title: Propel foreign key index normalization
+      url: /docs/dg/dev/integrate-and-configure/integrate-propel-foreign-key-index-normalization.html
     - title: Queue worker signal handling
       url: /docs/dg/dev/integrate-and-configure/configure-queue-worker-signal-handling.html
     - title: Separate endpoint bootstraps

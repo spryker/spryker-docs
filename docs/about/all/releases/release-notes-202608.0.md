@@ -179,7 +179,7 @@ Teams can customise prompts more easily to reflect project-specific language, to
 
 ## Efficient and Flexible Cloud Foundation
 
-### Enhancements to Symfony Scheduler
+### Enhancements to Symfony Scheduler {% include badge.html type="improvement" %}
 
 We improved scheduled job management to give teams more control and better visibility in the Back Office and PaaS environment. You can now manage job execution more easily, run multiple schedules in parallel within the same container, and review richer operational logs and status information.
 

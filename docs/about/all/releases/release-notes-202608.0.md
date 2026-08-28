@@ -40,15 +40,16 @@ This release extends the Spryker Design System in the storefront by modernizing 
 - Reduces future design and development effort through reusable page structures
 
 ### Recurring Orders: general availability {% include badge.html type="feature" %}
+
 Recurring Orders is now generally available. This release gives buyers real control over an upcoming order before it is placed. They can handle the exceptions that used to break a schedule f.e. swapping in a replacement when a product is discontinued, adjusting quantities, adding products that were missed and decide whether each change applies once or permanently. Budget problems can be corrected by the buyer directly rather than raised as a ticket
-**Key capabilities:**
+
+**Key capabilities:**
 - Adjust an upcoming order before it is placed: replace an item that is no longer available, add or remove lines, and change quantities.
 - Choose whether a change applies to the next delivery only or to every delivery from now on.
 - Move an order to a different budget or cost center without cancelling the schedule.
 - Resolve an order that is in review because of an exceeded budget.
 - Proactively editing for Schedule Name, Frequency, Budget & Cost Center, Next Execution date
 - Run schedules with up to 200 line items, at the speed buyers expect across list, overview, and review screens.
-
 
 **Business benefits:**
 - Supply continuity. A missed replenishment can stop a production line. Schedules that survive real-world exceptions keep materials arriving without anyone watching the calendar.
@@ -68,7 +69,7 @@ The Algolia integration has been updated to use the newer PHP client version. Th
 
 **Key capabilities:**
 - Updates the integration to the newer Algolia PHP client version
-- Aligns the integration with Algolia’s current supported SDK direction
+- Aligns the integration with Algolia's current supported SDK direction
 - Prepares customers for continued use without relying on an outdated client
 
 **Business benefits:**
@@ -77,7 +78,7 @@ The Algolia integration has been updated to use the newer PHP client version. Th
 - Helps customers stay current with less ambiguity around SDK support status
 
 **Documentation:**
-- [Algolia module update](https://github.com/spryker-eco/algolia/releases/tag/2.0.0) 
+- [Algolia module update](https://github.com/spryker-eco/algolia/releases/tag/2.0.0)
 - [Migration guide](https://docs.spryker.com/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/upgrade-the-algolia-module)
 
 
@@ -136,9 +137,8 @@ The AI Dev SDK now provides a guided setup wizard for new Spryker B2B Marketplac
 - Improves consistency across early project setup decisions
 - Gives teams a clearer and more reliable path to a ready-for-scope development environment
 
-**Documentation:** 
-- [AI Dev SDK Project Starter Wizard](https://docs.spryker.com/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard) 
-
+**Documentation:**
+- [AI Dev SDK Project Starter Wizard](https://docs.spryker.com/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard)
 
 ### AI Dev SDK: Autonomous Bugfixer & Improved Customization Workflow {% include badge.html type="early-access" %} {% include badge.html type="feature" %}
 
@@ -154,14 +154,13 @@ The AI Dev SDK introduces a new guided workflow for turning bug reports into val
 - Reduces manual handoffs across implementation, QA, and review steps
 - Improves consistency and traceability in AI-assisted development workflows
 
-
 **Documentation:**
-- [AI Dev SDK Bugfix Workflow](https://docs.spryker.com/docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow) 
-- [AI Dev SDK Customization Workflow](https://docs.spryker.com/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow) 
+- [AI Dev SDK Bugfix Workflow](https://docs.spryker.com/docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow)
+- [AI Dev SDK Customization Workflow](https://docs.spryker.com/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow)
 
 ### AI Commerce: Configurable Instructions Prompt {% include badge.html type="improvement,early-access" %}
 
-AI Commerce feature prompts can now be configured consistently through the Back Office across the platform, rather than being hardcoded in the codebase. This applies to capabilities such as Search by Image, Visual Add-to-Cart, the Back Office Assistant, and Smart PIM. 
+AI Commerce feature prompts can now be configured consistently through the Back Office across the platform, rather than being hardcoded in the codebase. This applies to capabilities such as Search by Image, Visual Add-to-Cart, the Back Office Assistant, and Smart PIM.
 
 Teams can customise prompts more easily to reflect project-specific language, tone, and business requirements, without requiring deployments or support from developer teams.
 
@@ -171,7 +170,7 @@ Teams can customise prompts more easily to reflect project-specific language, to
 - Enables easier tuning of AI behavior for specific catalogs, industries, and branding needs
 
 **Business benefits:**
-- Makes AI Commerce features easier to adapt for different business contexts 
+- Makes AI Commerce features easier to adapt for different business contexts
 - Reduces custom code and upgrade friction in AI Commerce projects
 - Shortens iteration cycles for prompt tuning and testing
 
@@ -212,10 +211,9 @@ We delivered routine maintenance and service updates across the cloud foundation
 - Reduces operational risk and technical debt
 
 **Documentation:**
-- [Upgrade to PHP 8.5] (https://docs.spryker.com/docs/dg/dev/upgrade-and-migrate/upgrade-to-php-85)
-- [Supported versions of PHP] (https://docs.spryker.com/docs/dg/dev/supported-versions-of-php)
-- [OpenSearch migration to 3.5]
-(https://docs.spryker.com/docs/pbc/all/search/latest/base-shop/install-and-upgrade/migrate-from-opensearch-1.3-to-3.5)
+- [Upgrade to PHP 8.5](https://docs.spryker.com/docs/dg/dev/upgrade-and-migrate/upgrade-to-php-85)
+- [Supported versions of PHP](https://docs.spryker.com/docs/dg/dev/supported-versions-of-php)
+- [OpenSearch migration to 3.5](https://docs.spryker.com/docs/pbc/all/search/latest/base-shop/install-and-upgrade/migrate-from-opensearch-1.3-to-3.5)
 
 ### Frontend builder for Yves moved into ShopUi {% include badge.html type="improvement" %}
 
@@ -234,6 +232,7 @@ We moved the Yves builder into ShopUi and introduced a cleaner extension approac
 **Documentation:**
 - [Frontend builder for Yves v2](/docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves-v2)
 - [Upgrade to frontend builder v2 for Yves](docs/dg/dev/upgrade-and-migrate/upgrade-to-frontend-builder-v2-for-yves)
+
 ### Dynamic multistore locale visibility fixes {% include badge.html type="improvement" %}
 
 We fixed an issue where adding a new locale via Dynamic Multistore could result in products, category trees, and navigation not being visible as expected.
@@ -250,7 +249,7 @@ We fixed an issue where adding a new locale via Dynamic Multistore could result 
 - Ensures consistent and complete entity data across stores and locales
 
 **Documentation:**
-- [Adjusted editing navigation for new locale](https://api.release.spryker.com/release-group/6658) 
+- [Adjusted editing navigation for new locale](https://api.release.spryker.com/release-group/6658)
 
 ### Customer login consistency improvements {% include badge.html type="improvement" %}
 
@@ -267,7 +266,7 @@ We fixed an issue that could break login behavior when a customer signed in from
 - Lowers support effort related to authentication issues
 
 **Documentation:**
-- [Fixed session handler to avoid behavior inconsistency](https://api.release.spryker.com/release-group/6656) 
+- [Fixed session handler to avoid behavior inconsistency](https://api.release.spryker.com/release-group/6656)
 
 ### Reservation aggregation across multiple plugins {% include badge.html type="improvement" %}
 
@@ -289,9 +288,11 @@ We introduced a new, more flexible plugin stack for reservation calculation. The
 - [Install the Marketplace Inventory Management + Order Management feature](https://docs.spryker.com/docs/pbc/all/warehouse-management-system/latest/marketplace/install-features/install-the-marketplace-inventory-management-order-management-feature#prerequisites)
 - [Install the Marketplace Inventory Management + Packaging Units feature](https://docs.spryker.com/docs/pbc/all/warehouse-management-system/latest/marketplace/install-features/install-the-marketplace-inventory-management-packaging-units-feature#set-up-behavior)
 - [Multistore reservation aggregation](https://api.release.spryker.com/release-group/6611)
-- [Fix reservation aggregation request expander](https://api.release.spryker.com/release-group/6676)  
+- [Fix reservation aggregation request expander](https://api.release.spryker.com/release-group/6676)
 
-### API Platform nested object schema support {% include badge.html type="improvement" %}We extended API Platform resource YAML so a list of objects can declare its element shape. A `type: array` property with a sibling items block now publishes the element as a referenced component schema, instead of a bare untyped array. Single nested objects were already typed; this closes the gap for collections.
+### API Platform nested object schema support {% include badge.html type="improvement" %}
+
+We extended API Platform resource YAML so a list of objects can declare its element shape. A `type: array` property with a sibling items block now publishes the element as a referenced component schema, instead of a bare untyped array. Single nested objects were already typed; this closes the gap for collections.
 
 Key capabilities:
 - Declare `items: {type: object, properties: …}` alongside `type: array` in a resource schema
@@ -308,6 +309,7 @@ Documentation:
 - [Object collections](/docs/integrations/spryker-api/api-platform/resource-schemas.html#object-collections)
 
 ### Graceful handling of email delivery failures {% include badge.html type="improvement" %}
+
 We improved email sending mechanisms across Storefront, Back Office, Merchant Portal, and API to handle delivery failures gracefully without causing system errors or disrupting application workflows.
 
 **Key capabilities:**
@@ -320,7 +322,7 @@ We improved email sending mechanisms across Storefront, Back Office, Merchant Po
 **Business benefits:**
 - Delivers a smooth user experience by preventing app crashes during email failure scenarios
 - Reduces support overhead and troubleshooting effort for technical and operations teams
- 
+
 **Documentation:**
 - [Email service](/docs/ca/dev/email-service/email-service)
 - [Email deliverability](/docs/ca/dev/email-service/email-deliverability)

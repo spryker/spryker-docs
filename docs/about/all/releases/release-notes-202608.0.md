@@ -183,6 +183,12 @@ Teams can customise prompts more easily to reflect project-specific language, to
 
 We improved scheduled job management to give teams more control and better visibility in the Back Office and PaaS environment. You can now manage job execution more easily, run multiple schedules in parallel within the same container, and review richer operational logs and status information.
 
+{% include carousel.html
+images="
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202608/scheduler2.png||::
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202608/scheduler1.png||"
+%}
+
 **Key capabilities:**
 - Start, stop, enable, and disable scheduled jobs from the Back Office
 - Run multiple scheduled jobs in parallel in the same container to reduce infrastructure overhead

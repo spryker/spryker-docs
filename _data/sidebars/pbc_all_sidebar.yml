@@ -1762,6 +1762,12 @@ entries:
                   - title: iAdvize
                     url: /docs/pbc/all/miscellaneous/third-party-integrations/customer-service/iadvize.html
 
+              - title: Integrating an external CMS with Spryker
+                url: /docs/pbc/all/miscellaneous/third-party-integrations/external-cms/guideline-external-cms-integration.html
+                nested:
+                  - title: Scoping an external CMS integration
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/external-cms/guideline-external-cms-integration-scoping.html
+
               - title: Marketing and conversion
                 nested:
                 - title: Customer communication

@@ -231,7 +231,7 @@ We moved the Yves builder into ShopUi and introduced a cleaner extension approac
 
 **Documentation:**
 - [Frontend builder for Yves v2](/docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves-v2)
-- [Upgrade to frontend builder v2 for Yves](docs/dg/dev/upgrade-and-migrate/upgrade-to-frontend-builder-v2-for-yves)
+- [Upgrade to frontend builder v2 for Yves](/docs/dg/dev/upgrade-and-migrate/upgrade-to-frontend-builder-v2-for-yves)
 
 ### Dynamic multistore locale visibility fixes {% include badge.html type="improvement" %}
 
@@ -342,5 +342,5 @@ We included several community-driven improvements in this release. These contrib
 - Strengthens collaboration across the Spryker ecosystem
 
 **Documentation:**
-- [New community PR: Make QuoteApproval compatible to PropelBehavior](https://api.release.spryker.com/release-groups/6664)
+- [New community PR: Make QuoteApproval compatible to PropelBehavior](https://api.release.spryker.com/release-group/6664)
 - [New community PR: Add support of sensitive properties](https://api.release.spryker.com/release-group/6657)

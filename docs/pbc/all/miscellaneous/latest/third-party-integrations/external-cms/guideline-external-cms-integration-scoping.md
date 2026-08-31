@@ -1,5 +1,5 @@
 ---
-title: Detailed ccoping an external CMS integration
+title: Detailed scoping an external CMS integration
 description: Assess an external CMS, select an integration strategy and scope, and plan the build against Spryker extension points.
 last_updated: Aug 31, 2026
 template: concept-topic-template
@@ -279,52 +279,6 @@ requirement discovered after a caching strategy is built usually invalidates tha
 | **Individual** | The response cannot be shared. Render the personalized region client-side over a cached shell, or take that region out of shared caches entirely. Never let a personalized response into a CDN |
 | **A/B testing in the CMS** | The variant identifier must reach both the cache key and analytics. If the CMS assigns variants at its own edge and Spryker caches the result, visitors see variants flip. Prefer assigning variants on the rendering side |
 
-### Decision tree
-
-1. Can the CMS deliver content through an API at all?
-
-   ```text
-   ├─ no  → it is a renderer, not a source → Strategy C only
-   └─ yes → continue
-   ```
-
-2. Who renders the storefront?
-
-   ```text
-   ├─ Yves — the default for replatform and greenfield
-   │    └─ Strategy A
-   │         ├─ Delivery: rate limits, slow responses, or a resilience requirement?
-   │         │    ├─ yes → A2, synchronized projection
-   │         │    │         └─ Projection target:
-   │         │    │              ├─ placement or Back Office tooling wanted
-   │         │    │              │   → Spryker CMS entities
-   │         │    │              └─ faithful mapping of their structures
-   │         │    │                  → dedicated storage
-   │         │    └─ no  → A1, runtime retrieval behind a mandatory cache
-   │         ├─ Payload: does the CMS emit structured content?
-   │         │    ├─ yes → structured payload
-   │         │    └─ no  → A3, markup in named content locations, sanitized
-   │         └─ Scope: level 1, 2, or 3 — and the phase plan
-   │
-   ├─ A frontend application — you own the stack, or live visual editing is required
-   │    └─ Strategy B — first confirm the cost in 3.4
-   │         ├─ Delivery: does direct composition cause too many calls
-   │         │  or leak backend concerns?
-   │         │    ├─ yes → B3, backend-for-frontend
-   │         │    └─ no  → B1, direct composition
-   │         ├─ Payload: structured, or B2 markup in named regions
-   │         └─ Scope: level 2 or 3; level 1 only through Glue
-   │
-   └─ Two or more renderers must serve production traffic
-        └─ Strategy C — only with a segment map defined up front
-             ├─ Is an existing CMS-served site staying live?    → yes, C is the target
-             ├─ Is this a step on the way to A or B?            → set the end state and end date
-             ├─ Is there a stable split boundary — route, page type, store, market?
-             │    └─ no → do not choose C; decide a single renderer first
-             └─ Cart, checkout, account → always a Spryker or frontend segment
-
-   ```
-
 ## The strategies in detail
 
 ### Strategy A — Yves renders
@@ -367,7 +321,12 @@ every model difference lands ([Adapting to a fixed content model](#adapting-to-a
 Yves resolves every route, so the CMS never performs route resolution here. Slugs may originate in the CMS and be
 consumed by Yves as content — which is different from owning resolution.
 
-```mermaid
+{% comment %}
+Diagram source (Mermaid). The rendered SVG is hosted on S3.
+After editing, re-render with mermaid-cli using htmlLabels disabled
+(labels inside foreignObject do not display when the SVG is loaded as an image),
+then re-upload the SVG under the same file name.
+
 flowchart LR
     visitor(("Visitor")) --> yves["Yves<br>renders the page"]
     yves -- "content request" --> cms["External CMS<br>content API"]
@@ -375,7 +334,8 @@ flowchart LR
     adapter --> resolve["Commerce resolution<br>where components carry references"]
     resolve --> twig["Twig components"]
     twig -. "final HTML" .-> visitor
-```
+{% endcomment %}
+![Strategy A request flow: Yves calls the external CMS content API, passes the response through an adapter into validated view models, resolves commerce references, and renders Twig components](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/external-cms/strategy-a-request-flow.svg)
 
 #### A1. Delivery variant — runtime retrieval
 
@@ -405,7 +365,12 @@ Projection target:
 - **dedicated storage** — project-owned, shaped after the CMS's component contract. Faithful, but reuses none of the
   Spryker CMS tooling.
 
-```mermaid
+{% comment %}
+Diagram source (Mermaid). The rendered SVG is hosted on S3.
+After editing, re-render with mermaid-cli using htmlLabels disabled
+(labels inside foreignObject do not display when the SVG is loaded as an image),
+then re-upload the SVG under the same file name.
+
 flowchart LR
     publish["CMS publish event"] --> pipeline["Integration pipeline<br>queue, consumer, idempotency"]
     pipeline --> projection["Spryker content projection"]
@@ -413,7 +378,8 @@ flowchart LR
     yves --> projection
     yves --> commerce["Commerce resolution"]
     yves -. "final HTML" .-> visitor
-```
+{% endcomment %}
+![Strategy A2: a CMS publish event feeds an integration pipeline that writes a Spryker content projection, which Yves reads at request time alongside commerce resolution](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/external-cms/strategy-a2-synchronized-projection.svg)
 
 This takes the CMS call off the request path and gives predictable response times. A CMS outage does not interrupt
 requests while synchronized content is available. Failures move into the pipeline, so define retry behavior,
@@ -572,25 +538,37 @@ explicitly rather than inheriting it.
 The frontend reads CMS content and Spryker data independently and combines them during server-side rendering, static
 generation, incremental regeneration, or client rendering.
 
-```mermaid
+{% comment %}
+Diagram source (Mermaid). The rendered SVG is hosted on S3.
+After editing, re-render with mermaid-cli using htmlLabels disabled
+(labels inside foreignObject do not display when the SVG is loaded as an image),
+then re-upload the SVG under the same file name.
+
 flowchart LR
     cms["External CMS<br>content API"] --> frontend["Frontend renderer"]
     api["Spryker<br>Storefront API"] --> frontend
     frontend -. "HTML or application" .-> visitor(("Visitor"))
-```
+{% endcomment %}
+![Strategy B1: the frontend renderer reads the external CMS content API and the Spryker Storefront API independently and composes the page](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/external-cms/strategy-b1-direct-composition.svg)
 
 #### B3. Delivery variant — backend-for-frontend
 
 A backend-for-frontend resolves CMS references, requests the Spryker resources it needs, normalizes the response, and
 exposes a contract shaped for one frontend.
 
-```mermaid
+{% comment %}
+Diagram source (Mermaid). The rendered SVG is hosted on S3.
+After editing, re-render with mermaid-cli using htmlLabels disabled
+(labels inside foreignObject do not display when the SVG is loaded as an image),
+then re-upload the SVG under the same file name.
+
 flowchart LR
     cms["External CMS<br>content API"] --> bff["Backend-for-frontend"]
     api["Spryker APIs"] --> bff
     bff --> frontend["Frontend renderer"]
     frontend -. "HTML or application" .-> visitor(("Visitor"))
-```
+{% endcomment %}
+![Strategy B3: a backend-for-frontend reads the external CMS and the Spryker APIs and returns one normalized contract to the frontend renderer](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/external-cms/strategy-b3-backend-for-frontend.svg)
 
 Worth its own deployment when direct composition causes too many calls, when tokens must stay server-side, or when
 context mapping is complex enough that several frontends would otherwise duplicate it.
@@ -673,12 +651,18 @@ That last case cannot occur in A or B, and it is why this strategy exists.
 The URL space is split by path, and each segment owner owns the redirects inside its segment. Commerce paths — cart,
 checkout, account — always belong to a Spryker-rendered or frontend-rendered segment.
 
-```mermaid
+{% comment %}
+Diagram source (Mermaid). The rendered SVG is hosted on S3.
+After editing, re-render with mermaid-cli using htmlLabels disabled
+(labels inside foreignObject do not display when the SVG is loaded as an image),
+then re-upload the SVG under the same file name.
+
 flowchart LR
     visitor(("Visitor")) --> split{"Path-based split<br>DNS, reverse proxy, or edge route table"}
     split -- "/content/*, /campaign/*" --> cms["CMS-served or<br>CMS-composed segment"]
     split -- "/product/*, /cart, /checkout, /account" --> spryker["Spryker or<br>frontend segment"]
-```
+{% endcomment %}
+![Path-based split in Strategy C: content and campaign paths go to a CMS-served segment, and product, cart, checkout, and account paths go to a Spryker or frontend segment](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/external-cms/strategy-c-path-based-split.svg)
 
 Two patterns arise specifically from CMS-side rendering, and neither delivers a complete storefront on its own.
 
@@ -686,23 +670,35 @@ Two patterns arise specifically from CMS-side rendering, and neither delivers a 
 pages loads in the browser from the Storefront API, so interactive commerce is limited to what a client-side widget can
 do, and anything stateful is a handoff.
 
-```mermaid
+{% comment %}
+Diagram source (Mermaid). The rendered SVG is hosted on S3.
+After editing, re-render with mermaid-cli using htmlLabels disabled
+(labels inside foreignObject do not display when the SVG is loaded as an image),
+then re-upload the SVG under the same file name.
+
 flowchart LR
     page["CMS-hosted page (HTML)"] --> browser(("Browser"))
     browser -- "commerce request" --> api["Spryker Storefront API"]
     api -. "product, price, availability" .-> browser
     browser -- "cart and checkout links" --> spryker["Spryker-rendered pages"]
-```
+{% endcomment %}
+![CMS-hosted content pages: the browser loads a CMS-hosted page, fetches commerce data from the Spryker Storefront API, and hands off to Spryker-rendered pages for cart and checkout](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/external-cms/strategy-c-cms-hosted-pages.svg)
 
 **Edge composition.** An edge layer holds the route table and assembles responses from CMS HTML and Spryker-rendered
 fragments.
 
-```mermaid
+{% comment %}
+Diagram source (Mermaid). The rendered SVG is hosted on S3.
+After editing, re-render with mermaid-cli using htmlLabels disabled
+(labels inside foreignObject do not display when the SVG is loaded as an image),
+then re-upload the SVG under the same file name.
+
 flowchart LR
     cms["CMS HTML"] --> edge["Edge composition"]
     frag["Spryker fragments"] --> edge
     edge --> browser(("Browser"))
-```
+{% endcomment %}
+![Edge composition: an edge layer assembles a response from CMS HTML and Spryker-rendered fragments before returning it to the browser](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/external-cms/strategy-c-edge-composition.svg)
 
 **Two distinct reasons to be here**, and they must not be confused.
 
@@ -1315,28 +1311,6 @@ ownership never becomes ambiguous.
 
 Default to the first. Reach for C only when the URL space genuinely must split.
 
-### Phase sequence
-
-| Phase | Output | Exit criterion |
-| --- | --- | --- |
-| **1. Assess** | Completed [CMS capability assessment](#cms-capability-assessment) and content-model assessment (see [Assess before mapping](#assess-before-mapping)); every fired constraint communicated | The constraints are acknowledged in writing by whoever owns editorial and by the budget holder |
-| **2. Decide** | Decision record, ownership and scope register, phase plan; for C the segment map | Signed off by architecture and by whoever owns editorial |
-| **3. Thin slice** | One page type and one component type, end to end: retrieval, adapter, mapping, rendering, caching, preview, publish, invalidation | An editor publishes a change and sees it live within the stated freshness target |
-| **4. Scope phase *n*** | The next content types or content locations, per the phase plan | Register updated; no content type owned twice; editors trained on the change |
-| **5. Steady state** | Target scope level reached | Reconciliation clean, drift metrics at zero, review checklist complete |
-
-**Phase 3 must not be skipped.** It surfaces the freshness target, the cache boundary, the adapter mismatch, and the
-preview isolation — the four things that are expensive to retrofit.
-
-### Rules for every phase
-
-- No phase leaves a content type owned by two systems.
-- Each phase updates the ownership and scope register before it ships.
-- Each phase names its editor-facing change and who communicates it. Editorial confusion, not code, is what makes
-  phased integrations fail.
-- Each phase is independently reversible.
-- The phase plan has an end state. "We will see how far we get" produces a permanent half-integration.
-
 ### Rollback
 
 | Situation | Rollback |
@@ -1354,119 +1328,6 @@ the transition state and a defined end date.
 
 **C as a transition state** needs a target strategy, an end date, a migration order per content type, and a standing
 check that the segment map matches deployed routing. Without these it becomes permanent by default.
-
----
-
-## Governance
-
-### Default positions
-
-Document every justified exception in the decision record.
-
-1. Spryker is authoritative for commerce and transactional data. Never author prices, stock, or availability in the
-   CMS.
-2. The external CMS is authoritative for editorial content inside the agreed scope.
-3. Storefront code owns component behavior and final design-system rendering.
-4. Commerce entities are referenced by stable identifier and resolved at render time.
-5. Preview and published delivery are separate paths end to end, caches and credentials included.
-6. Volatile commerce state resolves at runtime, or from a commerce cache fresh enough for it.
-7. Vendor models sit behind the adapter, and the adapter absorbs every difference.
-8. Webhooks for speed, reconciliation for correctness — and reconciliation is mandatory where webhooks do not exist.
-9. URL, navigation, localization, cache, and failure ownership are decided before implementation.
-10. Exactly one system owns each content type, site-wide, at every phase.
-11. Constraints found in the capability assessment are communicated to the people whose expectations they change,
-    before a strategy is committed.
-
-### Anti-patterns
-
-- Rendering unknown component types dynamically, with no allow-list.
-- Passing raw vendor payloads into Twig or frontend components.
-- Letting draft content into public caches.
-- Storing current prices or availability as editable CMS fields — or rendering them when editors have done so anyway.
-- Exposing CMS management tokens or trusted Spryker credentials to browsers.
-- One storefront request making an unbounded number of CMS and commerce API calls.
-- Embedding customer-specific information in shared CMS responses.
-- Treating webhooks as guaranteed delivery, with no reconciliation.
-- Falling back to a live CMS call on every projection miss in production.
-- Two systems authoring one content type — at any scope level, in any phase.
-- Choosing split rendering with no segment map defined up front.
-- Entering Strategy C as an increment with no end state and no end date.
-- Committing to a strategy before completing the capability assessment.
-- Promising live in-context visual editing without confirming the renderer supports it.
-- Receiving webhooks anywhere other than the Backend API — on a public Yves route, or through a Zed controller.
-- Routing CMS content through Spryker in an API-first architecture for no reason beyond tidiness
-  ([Strategy B — APIs](#strategy-b--apis)).
-
-### Architecture review checklist
-
-Each line needs a named owner and a recorded answer.
-
-**Inputs**
-
-- [ ] Capability assessment complete; fired constraints recorded and communicated
-- [ ] Content-model assessment complete, based on real payloads
-- [ ] API contract shape per frontend surface agreed, and new API Platform resources identified — Strategy B
-
-**Ownership and scope**
-
-- [ ] Rendering owner per URL space
-- [ ] Composition owner
-- [ ] Source of truth per data type
-- [ ] Scope level chosen, with the phase plan
-- [ ] Ownership register complete; no content type owned twice, in any phase
-- [ ] Routing, canonical URL, and SEO ownership
-- [ ] Layout shell owner, and for C the replication strategy
-
-**Contracts**
-
-- [ ] Component contract, its versioning, its allow-list, unknown-type behavior
-- [ ] Adapter difference handling documented per [Model differences and how to absorb them](#model-differences-and-how-to-absorb-them)
-- [ ] Commerce-reference model, batching, validation, missing-entity behavior
-- [ ] Spryker API surface and layer recorded
-- [ ] CMS delivery API and token type per environment
-
-**Runtime**
-
-- [ ] Store, locale, currency, and market mapping agreed on both sides
-- [ ] Marketplace entity handling
-- [ ] Cache classes, keys, TTLs, invalidation sources
-- [ ] Personalization model and its effect on cache keys
-- [ ] Fallback and degradation behavior per upstream
-- [ ] Freshness target as a number, with monitoring
-
-**Safety**
-
-- [ ] Preview authorization and preview cache isolation
-- [ ] Webhook authentication and replay protection — or the recorded alternative
-- [ ] Sanitization and content-security policy for any markup payload
-- [ ] Consent handling for CMS-embedded third parties
-- [ ] Credential separation and rotation
-
-**Operations**
-
-- [ ] Observability: upstream latency, error rate, rate-limit headroom, webhook lag, drift
-- [ ] Reconciliation job and its alarm
-- [ ] Test strategy, including schema-drift detection
-- [ ] Phase plan, editor communication per phase, rollback exercised
-
-### Effort and cost signals
-
-Indicative. Replace with project estimates. Relative sizes are more reliable than absolute ones.
-
-| | Strategy A | Strategy B | Strategy C |
-| --- | --- | --- | --- |
-| Commerce UI you build | None — Yves ships it | All of it | Per segment |
-| CMS integration effort | Moderate | Moderate — comparable to A | Moderate, times the number of segments |
-| Total build | Smallest | Largest by a wide margin | Medium build, two of everything |
-| Skills required | Spryker backend and Twig | Frontend framework, API integration, plus Spryker backend | Both, plus edge and routing ownership |
-| Ongoing operational cost | Lowest | Medium — a second deployment target, with its own cache and CDN | Highest — two renderers, shared-content invalidation, an unowned edge cache |
-| Recurring third-party cost | CMS license, API request volume | CMS license, frontend hosting, build minutes | CMS license, both hosting lines, edge compute |
-| Cost of phasing | **Lowest — widen through declared content positions** | High — requires running C during the transition | Inherent, and it is the point |
-| Hidden costs | Component mapping maintenance as CMS schemas change | Contract drift between frontend and API; project-shaped resources accumulating their own maintenance | Layout shell divergence, segment-map drift, duplicated analytics |
-
-The CMS license is rarely decisive — you already pay it. The decisive cost is whether the program also includes a
-full frontend build, because the CMS's editing experience assumes a JavaScript frontend. Establish that in the first
-architecture conversation, not the third.
 
 ---
 

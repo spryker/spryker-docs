@@ -74,11 +74,13 @@ To verify that the integration works correctly:
 3. Verify that the order moves to the expected state and that the refund is created.
 4. Verify that the `spy_vertex_api_access_token` table contains a token record.
 
-To validate the ACL entity metadata configuration, run the following command:
+Validate the ACL entity metadata configuration:
 
 ```bash
 vendor/bin/console acl-entity:metadata:validate
 ```
+
+When the Vertex metadata is registered correctly, the output is `ACL entity metadata configuration is valid.`
 
 ## Next steps
 

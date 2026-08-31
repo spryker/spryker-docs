@@ -48,7 +48,7 @@ capabilities remain fully reachable over its APIs — this is a cost considerati
 **C — Split rendering** applies when an existing CMS-served site stays live and gains commerce, or when the transition
 to A or B must be delivered in stages across the URL space.
 
-*Deeper: [how to eliminate and weigh strategies against your actual CMS instance](/docs/pbc/all/miscellaneous/latest/third-party-integrations/external-cms/guideline-external-cms-integration-scoping.html#the-three-strategies).*
+*If you want to go deeper, read: [how to eliminate and weigh strategies against your actual CMS instance](/docs/pbc/all/miscellaneous/latest/third-party-integrations/external-cms/guideline-external-cms-integration-scoping.html#the-three-strategies).*
 
 ## The boundaries that never move
 
@@ -64,7 +64,7 @@ logic or payment handling, and its output is published once and shared by every 
 CMS-served page — fetched in the browser from the Spryker Storefront API — but anything stateful or requiring
 server-side trust belongs to a Spryker-rendered or frontend-rendered page.
 
-*Deeper: [what stays fixed regardless of strategy — payload rules, the adapter, placement](/docs/pbc/all/miscellaneous/latest/third-party-integrations/external-cms/guideline-external-cms-integration-scoping.html#the-boundaries-that-never-move).*
+*If you want to go deeper, read: [what stays fixed regardless of strategy — payload rules, the adapter, placement](/docs/pbc/all/miscellaneous/latest/third-party-integrations/external-cms/guideline-external-cms-integration-scoping.html#the-boundaries-that-never-move).*
 
 ## The strategies side by side
 
@@ -80,7 +80,7 @@ server-side trust belongs to a Spryker-rendered or frontend-rendered page.
 
 Solid arrows are requests, pointing at whoever handles them. Dotted arrows are the responses.
 
-```mermaid
+{% comment %}
 flowchart LR
     subgraph SA["A — Spryker renders"]
         direction LR
@@ -95,9 +95,10 @@ flowchart LR
         yves -- "lookup" --> commerce
         commerce -. "product, price, availability" .-> yves
     end
-```
+{% endcomment %}
+![Strategy A: a visitor requests a page from Spryker Yves, which requests content from the external CMS and looks up commerce data in Spryker before rendering the page](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/external-cms/strategy-a-spryker-renders.svg)
 
-```mermaid
+{% comment %}
 flowchart LR
     subgraph SB["B — Your frontend renders"]
         direction LR
@@ -112,9 +113,10 @@ flowchart LR
         frontend -- "commerce request" --> api
         api -. "product, cart, customer data" .-> frontend
     end
-```
+{% endcomment %}
+![Strategy B: a visitor requests a page from your frontend application, which requests content from the external CMS and commerce data from the Spryker Storefront API](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/external-cms/strategy-b-frontend-renders.svg)
 
-```mermaid
+{% comment %}
 flowchart LR
     subgraph SC["C — Split rendering"]
         direction LR
@@ -132,9 +134,10 @@ flowchart LR
         cms -- "commerce request<br>from the browser" --> api
         api -. "product, price, availability" .-> cms
     end
-```
+{% endcomment %}
+![Strategy C: a path-based split sends content paths to the external CMS and cart, checkout, and account paths to Spryker-rendered pages, with the browser calling the Spryker Storefront API for commerce data](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/external-cms/strategy-c-split-rendering.svg)
 
-*Deeper: [cost tables, layer-by-layer responsibility, and code-level extension points per strategy](/docs/pbc/all/miscellaneous/latest/third-party-integrations/external-cms/guideline-external-cms-integration-scoping.html#the-strategies-side-by-side).*
+*If you want to go deeper, read: [cost tables, layer-by-layer responsibility, and code-level extension points per strategy](/docs/pbc/all/miscellaneous/latest/third-party-integrations/external-cms/guideline-external-cms-integration-scoping.html#the-strategies-side-by-side).*
 
 ## How common CMS products relate to the strategies
 
@@ -170,7 +173,7 @@ How much of it remains an authoring surface is an explicit scope decision, made 
 over time. One rule holds however much your CMS owns, and in every strategy: **exactly one system owns each content
 type, site-wide.**
 
-*Deeper: [scope levels, per-entity decisions, and the blocks question](/docs/pbc/all/miscellaneous/latest/third-party-integrations/external-cms/guideline-external-cms-integration-scoping.html#integration-scope).*
+*If you want to go deeper, read: [scope levels, per-entity decisions, and the blocks question](/docs/pbc/all/miscellaneous/latest/third-party-integrations/external-cms/guideline-external-cms-integration-scoping.html#integration-scope).*
 
 ## Narrowing the choice
 
@@ -192,7 +195,7 @@ rather than expressing a preference.
 6. **Who owns each cross-cutting concern.** URLs and SEO, navigation, localization, preview, caching and invalidation,
    failure behavior — one owner each.
 
-*Deeper: [turning these six factors into a phase plan, with exit criteria and rollback](/docs/pbc/all/miscellaneous/latest/third-party-integrations/external-cms/guideline-external-cms-integration-scoping.html#phasing-and-rollout).*
+*If you want to go deeper, read [turning these six factors into a phase plan, with exit criteria and rollback](/docs/pbc/all/miscellaneous/latest/third-party-integrations/external-cms/guideline-external-cms-integration-scoping.html#phasing-and-rollout).*
 
 ---
 

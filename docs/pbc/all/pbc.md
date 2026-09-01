@@ -2,7 +2,7 @@
 title: Packaged Business Capabilities
 description: Welcome to the Packaged Business Capabilities (PBC), everything you need to know for all the features in Spryker.
 template: concept-topic-template
-last_updated: April 29, 2026
+last_updated: September 1, 2026
 redirect_from:
   - /docs/scos/user/features/202200.0/features.html
   - /docs/scos/user/features/202212.0/features.html
@@ -61,7 +61,7 @@ This section is in beta because not all the PBCs are covered. Marketplace functi
 | [Tax Management](/docs/pbc/all/tax-management/{{site.version}}/tax-management.html) | Lets you adhere to respective tax regulations in the countries you sell by configuring and managing tax rates for products, shipments, and additional services. You can define tax rates for different countries and apply integrations to manage US taxes. | Lets you comply with fiscal regulations. |
 | [User Management](/docs/pbc/all/user-management/{{site.version}}/user-management.html) | Lets the Back Office users manage user access, set rights, and onboard customers. | Ensures high security and compliance through managed user flows. |
 | [Warehouse Management System (WMS)](/docs/pbc/all/warehouse-management-system/{{site.version}}/warehouse-management-system.html) | Lets you keep an overview of your stock levels in the Back Office to determine accurate availabilities on your store's website. Any open orders or reserved items are taken into consideration when stock availabilities are displayed. | Helps you save your time by keeping an eye on your stock levels. |
-| [Workflows])](/docs/pbc/all/back-office/latest/base-shop/{{site.version}}/workflows-feature-overview.html) | Workflows lets operations teams design, run, and improve multi-step processes for different entities directly in the Back Office, without relying on developers for every change. Teams can manage process definitions and their versions, so they can work on process improvements without disrupting processes that are currently running. |
+| [Workflows](/docs/pbc/all/back-office/latest/base-shop/workflows-feature-overview.html) | Workflows lets operations teams design, run, and improve multi-step processes for different entities directly in the Back Office, without relying on developers for every change. Teams can manage process definitions and their versions, so they can work on process improvements without disrupting processes that are currently running. | Speeds up process changes and reduces developer dependency by letting business teams design and adjust workflows directly in the Back Office. |
 <!--
 | Digital Asset Management (DAM) | The DAM system provides impactful visuals while simultaneously maintaining fast response times, thus helping you reduce your bounce rate effectively and create an enhanced shopping experience. With the DAM, you can add images and videos to any of your pages. | Offers an exceptional brand experience with impactful visuals, banners, and media assets. |
 -->

@@ -13,9 +13,8 @@ This release introduces a workflows infrastructure that lets teams model and man
 
 {% include carousel.html
 images="
-https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202608/bo_smart_cms_1.png||::
-https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202608/bo_smart_cms_2.png||::
-https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202608/bo_smart_cms_3.png||"
+https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-202608.0.md/workflows_1.jpg||::
+https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-202608.0.md/workflows_2.jpg||"
 %}
 
 **Key capabilities:**

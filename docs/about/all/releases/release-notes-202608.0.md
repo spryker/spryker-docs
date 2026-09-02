@@ -35,11 +35,10 @@ https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-2026
 
 This release extends the Spryker Design System in the storefront by modernizing the product listing page and merchant profile page. It helps create a more consistent buying journey for B2B customers while giving teams a scalable foundation for future storefront enhancements.
 
-<figure class="video_container">
-    <video width="100%" height="auto" controls>
-      <source src="https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-202608.0.md/Design_System_PLP.mp4" type="video/mp4">
-  </video>
-</figure>
+{% include carousel.html
+images="
+https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-202608.0.md/Design_System_PLP.mp4||"
+%}
 
 **Key capabilities:**
 - Modernized product listing page based on the B2B design system
@@ -156,135 +155,6 @@ The AI Dev SDK now includes an AI-assisted upgrade workflow for customized Spryk
 
 **Documentation:**
 - [AI Dev SDK Upgrade Workflow](https://docs.spryker.com/docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow)
-
-### AI Dev SDK: Introduce Project Setup Wizard {% include badge.html type="feature,early-access" %}
-
-The AI Dev SDK now provides a guided setup wizard for new Spryker B2B Marketplace projects based on a fresh demoshop clone. It captures project decisions once and applies them through a resumable setup workflow. This helps teams move faster from initial clone to a verified, project-shaped shop.
-
-**Key capabilities:**
-- Runs a guided setup interview covering project identity, services, stores, localization, CI, and run mode
-- Applies setup decisions through orchestrated steps with resume support if the process is interrupted
-- Produces setup artifacts, verification results, and a summary of remaining manual actions
-
-**Business benefits:**
-- Reduces time and effort needed to initialize a new project
-- Improves consistency across early project setup decisions
-- Gives teams a clearer and more reliable path to a ready-for-scope development environment
-
-**Documentation:**
-- [AI Dev SDK Project Starter Wizard](https://docs.spryker.com/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard)
-### AI Dev SDK: Introduce Project Setup Wizard {% include badge.html type="feature,early-access" %}
-
-The AI Dev SDK now provides a guided setup wizard for new Spryker B2B Marketplace projects based on a fresh demoshop clone. It captures project decisions once and applies them through a resumable setup workflow. This helps teams move faster from initial clone to a verified, project-shaped shop.
-
-**Key capabilities:**
-- Runs a guided setup interview covering project identity, services, stores, localization, CI, and run mode
-- Applies setup decisions through orchestrated steps with resume support if the process is interrupted
-- Produces setup artifacts, verification results, and a summary of remaining manual actions
-
-**Business benefits:**
-- Reduces time and effort needed to initialize a new project
-- Improves consistency across early project setup decisions
-- Gives teams a clearer and more reliable path to a ready-for-scope development environment
-
-**Documentation:**
-- [AI Dev SDK Project Starter Wizard](https://docs.spryker.com/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard)
-### AI Dev SDK: Introduce Project Setup Wizard {% include badge.html type="feature,early-access" %}
-
-The AI Dev SDK now provides a guided setup wizard for new Spryker B2B Marketplace projects based on a fresh demoshop clone. It captures project decisions once and applies them through a resumable setup workflow. This helps teams move faster from initial clone to a verified, project-shaped shop.
-
-**Key capabilities:**
-- Runs a guided setup interview covering project identity, services, stores, localization, CI, and run mode
-- Applies setup decisions through orchestrated steps with resume support if the process is interrupted
-- Produces setup artifacts, verification results, and a summary of remaining manual actions
-
-**Business benefits:**
-- Reduces time and effort needed to initialize a new project
-- Improves consistency across early project setup decisions
-- Gives teams a clearer and more reliable path to a ready-for-scope development environment
-
-**Documentation:**
-- [AI Dev SDK Project Starter Wizard](https://docs.spryker.com/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard)
-### AI Dev SDK: Introduce Project Setup Wizard {% include badge.html type="feature,early-access" %}
-
-The AI Dev SDK now provides a guided setup wizard for new Spryker B2B Marketplace projects based on a fresh demoshop clone. It captures project decisions once and applies them through a resumable setup workflow. This helps teams move faster from initial clone to a verified, project-shaped shop.
-
-**Key capabilities:**
-- Runs a guided setup interview covering project identity, services, stores, localization, CI, and run mode
-- Applies setup decisions through orchestrated steps with resume support if the process is interrupted
-- Produces setup artifacts, verification results, and a summary of remaining manual actions
-
-**Business benefits:**
-- Reduces time and effort needed to initialize a new project
-- Improves consistency across early project setup decisions
-- Gives teams a clearer and more reliable path to a ready-for-scope development environment
-
-**Documentation:**
-- [AI Dev SDK Project Starter Wizard](https://docs.spryker.com/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard)
-### AI Dev SDK: Introduce Project Setup Wizard {% include badge.html type="feature,early-access" %}
-
-The AI Dev SDK now provides a guided setup wizard for new Spryker B2B Marketplace projects based on a fresh demoshop clone. It captures project decisions once and applies them through a resumable setup workflow. This helps teams move faster from initial clone to a verified, project-shaped shop.
-
-**Key capabilities:**
-- Runs a guided setup interview covering project identity, services, stores, localization, CI, and run mode
-- Applies setup decisions through orchestrated steps with resume support if the process is interrupted
-- Produces setup artifacts, verification results, and a summary of remaining manual actions
-
-**Business benefits:**
-- Reduces time and effort needed to initialize a new project
-- Improves consistency across early project setup decisions
-- Gives teams a clearer and more reliable path to a ready-for-scope development environment
-
-**Documentation:**
-- [AI Dev SDK Project Starter Wizard](https://docs.spryker.com/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard)
-### AI Dev SDK: Introduce Project Setup Wizard {% include badge.html type="feature,early-access" %}
-
-The AI Dev SDK now provides a guided setup wizard for new Spryker B2B Marketplace projects based on a fresh demoshop clone. It captures project decisions once and applies them through a resumable setup workflow. This helps teams move faster from initial clone to a verified, project-shaped shop.
-
-**Key capabilities:**
-- Runs a guided setup interview covering project identity, services, stores, localization, CI, and run mode
-- Applies setup decisions through orchestrated steps with resume support if the process is interrupted
-- Produces setup artifacts, verification results, and a summary of remaining manual actions
-
-**Business benefits:**
-- Reduces time and effort needed to initialize a new project
-- Improves consistency across early project setup decisions
-- Gives teams a clearer and more reliable path to a ready-for-scope development environment
-
-**Documentation:**
-- [AI Dev SDK Project Starter Wizard](https://docs.spryker.com/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard)
-### AI Dev SDK: Introduce Project Setup Wizard {% include badge.html type="feature,early-access" %}
-
-The AI Dev SDK now provides a guided setup wizard for new Spryker B2B Marketplace projects based on a fresh demoshop clone. It captures project decisions once and applies them through a resumable setup workflow. This helps teams move faster from initial clone to a verified, project-shaped shop.
-
-**Key capabilities:**
-- Runs a guided setup interview covering project identity, services, stores, localization, CI, and run mode
-- Applies setup decisions through orchestrated steps with resume support if the process is interrupted
-- Produces setup artifacts, verification results, and a summary of remaining manual actions
-
-**Business benefits:**
-- Reduces time and effort needed to initialize a new project
-- Improves consistency across early project setup decisions
-- Gives teams a clearer and more reliable path to a ready-for-scope development environment
-
-**Documentation:**
-- [AI Dev SDK Project Starter Wizard](https://docs.spryker.com/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard)
-### AI Dev SDK: Introduce Project Setup Wizard {% include badge.html type="feature,early-access" %}
-
-The AI Dev SDK now provides a guided setup wizard for new Spryker B2B Marketplace projects based on a fresh demoshop clone. It captures project decisions once and applies them through a resumable setup workflow. This helps teams move faster from initial clone to a verified, project-shaped shop.
-
-**Key capabilities:**
-- Runs a guided setup interview covering project identity, services, stores, localization, CI, and run mode
-- Applies setup decisions through orchestrated steps with resume support if the process is interrupted
-- Produces setup artifacts, verification results, and a summary of remaining manual actions
-
-**Business benefits:**
-- Reduces time and effort needed to initialize a new project
-- Improves consistency across early project setup decisions
-- Gives teams a clearer and more reliable path to a ready-for-scope development environment
-
-**Documentation:**
-- [AI Dev SDK Project Starter Wizard](https://docs.spryker.com/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard)
 
 ### AI Dev SDK: Autonomous Bugfixer & Improved Customization Workflow {% include badge.html type="early-access" %} {% include badge.html type="feature" %}
 

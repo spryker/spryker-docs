@@ -17,6 +17,7 @@ Format:
 - Slides with a .mp4, .webm, or .ogg URL render as a video player with controls instead of an image
 - The alt field is ignored for video slides
 - Videos in hidden slides are automatically paused when the carousel moves to another slide
+- Navigation arrows and dots are hidden when there is only one slide
 {% endcomment %}
 {% if include.id %}
 {% assign carousel_id = include.id %}
@@ -26,6 +27,7 @@ Format:
 {% endif %}
 {% assign carousel_js_id = carousel_id | replace: "-", "_" %}
 {% assign images_array = include.images | split: "::" %}
+{% assign slide_count = images_array | size %}
 <div class="docs-carousel" id="{{ carousel_id }}" style="position: relative; max-width: 800px; margin: 2rem auto;">
 <div class="carousel-container" style="position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); height: 500px; display: flex; align-items: center; justify-content: center; background: #f9f9f9;">
 {% for image_data in images_array %}
@@ -58,11 +60,13 @@ Format:
 </div>
 {% endfor %}
 </div>
+{% if slide_count > 1 %}
 <button onclick="moveSlide{{ carousel_js_id }}(-1)" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.9); border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 20px; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.2); z-index: 10;" aria-label="Previous image">‹</button>
 <button onclick="moveSlide{{ carousel_js_id }}(1)" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.9); border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 20px; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.2); z-index: 10;" aria-label="Next image">›</button>
 <div class="carousel-dots" style="text-align: center; padding: 1rem 0;">
 {% for image_data in images_array %}<span class="dot-{{ carousel_id }}" onclick="currentSlide{{ carousel_js_id }}({{ forloop.index }})" style="display: inline-block; width: 12px; height: 12px; margin: 0 4px; {% if forloop.first %}background: #333;{% else %}background: #ccc;{% endif %} border-radius: 50%; cursor: pointer;" aria-label="Go to image {{ forloop.index }}"></span>{% endfor %}
 </div>
+{% endif %}
 </div>
 <script>
 (function() {

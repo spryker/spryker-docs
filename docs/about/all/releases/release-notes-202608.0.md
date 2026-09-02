@@ -113,6 +113,29 @@ The Vertex configuration page in the Back Office has been updated to reflect the
 
 ## Connected, and AI-Enabled Platform
 
+### AI Dev SDK: Introduce Project Setup Wizard {% include badge.html type="feature,early-access" %}
+
+The AI Dev SDK now provides a guided setup wizard for new Spryker B2B Marketplace projects based on a fresh demoshop clone. It captures project decisions once and applies them through a resumable setup workflow. This helps teams move faster from initial clone to a verified, project-shaped shop.
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+      <source src="https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-202608.0.md/AI_DEV_SDK_project_wizard.mp4" type="video/mp4">
+  </video>
+</figure>
+
+**Key capabilities:**
+- Runs a guided setup interview covering project identity, services, stores, localization, CI, and run mode
+- Applies setup decisions through orchestrated steps with resume support if the process is interrupted
+- Produces setup artifacts, verification results, and a summary of remaining manual actions
+
+**Business benefits:**
+- Reduces time and effort needed to initialize a new project
+- Improves consistency across early project setup decisions
+- Gives teams a clearer and more reliable path to a ready-for-scope development environment
+
+**Documentation:**
+- [AI Dev SDK Project Starter Wizard](https://docs.spryker.com/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard)
+
 ### AI Dev SDK: Introduce Project Upgrade Helper {% include badge.html type="feature,early-access" %}
 
 The AI Dev SDK now includes an AI-assisted upgrade workflow for customized Spryker projects. It carries a project from its current release to the target one, adopting major module releases into existing project code and verifying the result against a running application. Team checkpoints keep release choice and feature adoption under explicit control.
@@ -133,24 +156,6 @@ The AI Dev SDK now includes an AI-assisted upgrade workflow for customized Spryk
 
 **Documentation:**
 - [AI Dev SDK Upgrade Workflow](https://docs.spryker.com/docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow)
-
-
-### AI Dev SDK: Introduce Project Setup Wizard {% include badge.html type="feature,early-access" %}
-
-The AI Dev SDK now provides a guided setup wizard for new Spryker B2B Marketplace projects based on a fresh demoshop clone. It captures project decisions once and applies them through a resumable setup workflow. This helps teams move faster from initial clone to a verified, project-shaped shop.
-
-**Key capabilities:**
-- Runs a guided setup interview covering project identity, services, stores, localization, CI, and run mode
-- Applies setup decisions through orchestrated steps with resume support if the process is interrupted
-- Produces setup artifacts, verification results, and a summary of remaining manual actions
-
-**Business benefits:**
-- Reduces time and effort needed to initialize a new project
-- Improves consistency across early project setup decisions
-- Gives teams a clearer and more reliable path to a ready-for-scope development environment
-
-**Documentation:**
-- [AI Dev SDK Project Starter Wizard](https://docs.spryker.com/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard)
 
 ### AI Dev SDK: Autonomous Bugfixer & Improved Customization Workflow {% include badge.html type="early-access" %} {% include badge.html type="feature" %}
 

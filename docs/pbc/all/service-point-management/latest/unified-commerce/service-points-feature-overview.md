@@ -2,7 +2,7 @@
 title: Service Points feature overview
 description: General overview of the Spryker Service Points feature enhancing your Spryker Unified Commerce based projects.
 template: concept-topic-template
-last_updated: Jan 19, 2024
+last_updated: Aug 31, 2026
 ---
 
 The *Service Points* feature lets you create and manage service points, service types, and associated services.
@@ -46,6 +46,14 @@ With the help of service points, types, and services, a store operator can model
 - Product demonstration at a retail location
 - Repair service at a retail location
 
+
+## Service points in the Back Office
+
+Back Office users can review all the service points of a project, including the inactive ones, in **Customer Portal&nbsp;<span aria-label="and then">></span> Service Points**. The list shows the name, key, address, assigned stores, service types, and status of every service point. Opening a service point displays its address, the services provided at it, and the product offers connected to it through those services.
+
+Service points are read-only in the Back Office. To create or change them, use Glue API or data import.
+
+For more details, see [View service points](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-in-the-back-office/view-service-points.html).
 
 ## Service points on the Storefront
 

@@ -2,7 +2,7 @@
 title: 'Upgrade to PHP 8.5'
 description: Upgrade PHP to version 8.5 in your Docker environment and composer.json. Check code and dependencies for compatibility, update configurations, and test your application to ensure a smooth upgrade.
 template: concept-topic-template
-last_updated: Aug 7, 2026
+last_updated: Sep 2, 2026
 ---
 
 This document describes how to upgrade PHP to version 8.5. This upgrades the version in Docker environment and `composer.json`.
@@ -84,7 +84,35 @@ composer update
 
 This updates the dependencies to the latest versions that are compatible with PHP 8.5.
 
-## 4. Update Docker configuration
+## 4. Upgrade Codeception to version 5.3.4 or later
+
+On PHP 8.5, Codeception versions earlier than 5.3.4 fail during configuration on every run with the following error:
+
+```text
+Fatal error: Uncaught Codeception\Exception\ConfigurationException: register_argc_argv must be set to On for running Codeception
+```
+
+Codeception versions earlier than 5.3.4 rely on the `register_argc_argv` PHP setting to read command-line arguments. That mechanism no longer works on PHP 8.5, so Codeception aborts before any test executes. Codeception 5.3.4 or later reads command-line arguments without `register_argc_argv`, so it is required for running tests on PHP 8.5.
+
+1. Check the installed Codeception version:
+
+```bash
+composer show codeception/codeception
+```
+
+2. If the installed version is earlier than 5.3.4, upgrade it:
+
+```bash
+composer update codeception/codeception --with-dependencies
+```
+
+{% info_block warningBox "Warning" %}
+
+Setting `register_argc_argv=On` in the PHP configuration is only a workaround: it masks the error in the current environment and leaves the incompatibility in place. Upgrading Codeception is the proper fix.
+
+{% endinfo_block %}
+
+## 5. Update Docker configuration
 
 1. In all `deploy.yml` files, update the PHP image:
 
@@ -100,7 +128,7 @@ image:
 docker/sdk boot && docker/sdk up --build
 ```
 
-## 5. Resolve common PHP 8.5 deprecations
+## 6. Resolve common PHP 8.5 deprecations
 
 The deprecations below are the ones most likely to appear in a Spryker-based project. They are new in PHP 8.5: on PHP 8.3 and 8.4 the same calls emit nothing at all.
 
@@ -123,7 +151,7 @@ When you pass a plain object—for example, a transfer object—to `ArrayObject`
 
 {% endinfo_block %}
 
-## 6. Test the upgrade
+## 7. Test the upgrade
 
 Thoroughly test your application to identify any issues because of the PHP version upgrade:
 

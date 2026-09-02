@@ -4051,6 +4051,11 @@ entries:
                   - title: "Import file details: service.csv"
                     url: /docs/pbc/all/service-point-management/unified-commerce/import-and-export-data/import-file-details-service.csv.html
 
+              - title: Manage in the Back Office
+                nested:
+                  - title: View service points
+                    url: /docs/pbc/all/service-point-management/unified-commerce/manage-in-the-back-office/view-service-points.html
+
               - title: Manage via API
                 nested:
                   - title: Manage service points

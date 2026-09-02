@@ -1,7 +1,7 @@
 ---
 title: Keeping dependencies updated for performance
 description: Guidelines for keeping Spryker module dependencies up to date to maintain optimal performance and security.
-last_updated: May 29, 2026
+last_updated: Sep 2, 2026
 template: concept-topic-template
 related:
   - title: General performance guidelines
@@ -94,6 +94,30 @@ The following sections list important module updates that include performance im
 - [spryker/merchant-product-offer-storage:^2.6.0](https://github.com/spryker/merchant-product-offer-storage/releases/tag/2.6.0)
 - [spryker/product-offer-storage:^1.8.0](https://github.com/spryker/product-offer-storage/releases/tag/1.8.0)
 - [spryker/propel:^3.45.0](https://github.com/spryker/propel/releases/tag/3.45.0)
+
+### Publish and synchronization (merchant relationship prices)
+
+- [spryker/merchant:^3.21.0](https://github.com/spryker/merchant/releases/tag/3.21.0)
+- [spryker/price-product-merchant-relationship:^1.13.0](https://github.com/spryker/price-product-merchant-relationship/releases/tag/1.13.0)
+- [spryker/price-product-merchant-relationship-storage:^1.22.0](https://github.com/spryker/price-product-merchant-relationship-storage/releases/tag/1.22.0)
+
+Additionally, index the `fk_company_business_unit` column of both storage tables. Create `src/Pyz/Zed/PriceProductMerchantRelationshipStorage/Persistence/Propel/Schema/spy_price_product_merchant_relationship_storage.schema.xml` and run `vendor/bin/console propel:install`:
+
+```xml
+<!--//-->
+    <table name="spy_price_product_abstract_merchant_relationship_storage">
+        <index name="spy_price_product_ab_m_r_storage-fk_company_business_unit">
+            <index-column name="fk_company_business_unit"/>
+        </index>
+    </table>
+
+    <table name="spy_price_product_concrete_merchant_relationship_storage">
+        <index name="spy_price_product_con_m_r_storage-fk_company_business_unit">
+            <index-column name="fk_company_business_unit"/>
+        </index>
+    </table>
+<!--//-->
+```
 
 ### Publish and synchronization (product-related)
 

@@ -14,7 +14,8 @@ This release introduces a workflows infrastructure that lets teams model and man
 {% include carousel.html
 images="
 https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-202608.0.md/workflows_1.jpg||::
-https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-202608.0.md/workflows_2.jpg||"
+https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-202608.0.md/workflows_2.jpg||::
+https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-202608.0.md/workflows_now_next.gif||"
 %}
 
 **Key capabilities:**

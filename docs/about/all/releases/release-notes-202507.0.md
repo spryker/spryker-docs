@@ -168,7 +168,7 @@ These updates make it easier to work with large data sets in the Back Office, es
 ### Business benefits
 
 - Operational speed and efficiency: Save time on routine tasks with faster filtering and improved search capabilities—allowing teams to process orders, manage catalogs and discounts, and support merchants more effectively.
-- Scalability in daily workflows: Handle high volumes of data with ease. The improved navigation and filtering ensure the Backoffice stays responsive and usable as your orders, product, and merchant base grows.
+- Scalability in daily workflows: Handle high volumes of data with ease. The improved navigation and filtering ensure the Back Office stays responsive and usable as your orders, product, and merchant base grows.
 
 
 

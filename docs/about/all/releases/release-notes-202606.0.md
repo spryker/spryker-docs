@@ -1,7 +1,7 @@
 ---
 title: Release notes 202606.0
 description: Release notes for Spryker Cloud Commerce OS version 202606.0
-last_updated: July 7, 2026
+last_updated: Aug 14, 2026
 template: concept-topic-template
 ---
 
@@ -167,7 +167,7 @@ The AI Dev SDK helps teams customize Spryker projects faster and with less manua
 **Documentation:**
 - [AI Dev SDK Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html)
 - [AI Dev SDK Customization Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html)
-- [Claude Code Plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html)
+- [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html)
 
 ### AI Commerce: Smart CMS for AI-assisted content creation {% include badge.html type="early-access" %}
 
@@ -255,9 +255,9 @@ Spryker has modernized its internal GLUE REST API infrastructure by migrating it
 - Supports more consistent and predictable machine-to-machine integrations
 
 **Documentation:**
-- [API Strategy](/docs/integrations/spryker-glue-api/getting-started-with-apis/api-strategy.html)
-- [Spryker API roadmap and adoption](/docs/integrations/spryker-glue-api/getting-started-with-apis/api-roadmap-and-adoption#whats-on-the-roadmap.html)
-- [Storefront API B2B Demo Shop reference](/docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-b2b-demo-shop-reference.html)
+- [API Strategy](/docs/integrations/spryker-api/getting-started-with-apis/api-strategy.html)
+- [Spryker API roadmap and adoption](/docs/integrations/spryker-api/getting-started-with-apis/api-roadmap-and-adoption#whats-on-the-roadmap.html)
+- [Storefront API B2B Demo Shop reference](/docs/integrations/spryker-api/storefront-api/api-references/storefront-api-b2b-demo-shop-reference.html)
 
 ### Backend API added to the Spryker API Strategy {% include badge.html type="feature" %}
 
@@ -275,8 +275,8 @@ Spryker extended its API strategy to cover the Backend API, the application for 
 - Speeds up planning for ERP, PIM, OMS, and marketplace integrations with consistent guidance
 
 **Documentation:**
-- [Spryker API Strategy](/docs/integrations/spryker-glue-api/getting-started-with-apis/api-strategy.html)
-- [Spryker API roadmap and adoption](/docs/integrations/spryker-glue-api/getting-started-with-apis/api-roadmap-and-adoption.html)
+- [Spryker API Strategy](/docs/integrations/spryker-api/getting-started-with-apis/api-strategy.html)
+- [Spryker API roadmap and adoption](/docs/integrations/spryker-api/getting-started-with-apis/api-roadmap-and-adoption.html)
 
 ## Efficient and Flexible Cloud Foundation
 

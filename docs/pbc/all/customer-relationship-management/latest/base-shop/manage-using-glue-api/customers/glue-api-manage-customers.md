@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Manage customers"
 description: Learn how by using the Spryker Glue API you can manage customers within your Spryker Project.
-last_updated: June 9, 2026
+last_updated: July 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customers-via-glue-api
 originalArticleId: 246e73d7-562f-414f-bbc0-d102ef54ff5c
@@ -320,11 +320,11 @@ There is an alternative way to retrieve existing subscriptions, for details see 
 | 420 | The password character set is invalid. |
 | 422 | `newPassword` and `confirmPassword` values are not identic. |
 | 802 | Request is unauthorized. |
-| 901 | Indicates one of the following reasons:<ul><li>Terms of service were not accepted. Note that if you don't have the [REST Request Format](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/validate-rest-request-format.html) validation enabled, then you will recieve the `422` status code instead of the `901` error code.</li><li> `newPassword` and `confirmPassword` are not specified.</li><li>Password length is invalid (it should be from 8 to 64 characters).</li></ul> |
+| 901 | Indicates one of the following reasons:<ul><li>Terms of service were not accepted. Note that if you don't have the [REST Request Format](/docs/integrations/spryker-api/storefront-api/developing-apis/validate-rest-request-format.html) validation enabled, then you will recieve the `422` status code instead of the `901` error code.</li><li> `newPassword` and `confirmPassword` are not specified.</li><li>Password length is invalid (it should be from 8 to 64 characters).</li></ul> |
 | 4606 | Request is unauthorized.|
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
 
 ## Next steps
 

@@ -1,5 +1,5 @@
 version: "latest"
-release_version: "202606.0"
+release_version: "202608.0"
 
 repository: spryker/spryker-docs
 
@@ -69,6 +69,7 @@ commonmark:
 plugins:
   - jekyll-last-modified-at
   - jekyll-include-cache
+  - jekyll-redirect-from
 
 # filter used to process markdown. note that kramdown differs from github-flavored markdown in some subtle ways
 
@@ -162,7 +163,6 @@ versioned_categories:
       - data-import
       - frontend-development
       - system-requirements
-      - glue-api
   pbc:
     all:
       - back-office

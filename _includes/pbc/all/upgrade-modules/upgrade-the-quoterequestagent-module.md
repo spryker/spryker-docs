@@ -52,7 +52,7 @@ To migrate the module `QuoteRequestAgent` from version 1.0.0 to 2.0.0, do the fo
 composer require spryker/quote-request-agent: "^2.0.0" --update-with-dependencies
 ```
 
-3. To generate transfers, run the following command:
+3. Generate transfers:
 
 ```bash
 vendor/bin/console transfer:generate

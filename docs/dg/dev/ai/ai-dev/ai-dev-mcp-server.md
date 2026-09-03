@@ -1,13 +1,19 @@
 ---
 title: AI Dev MCP Server
-description: Set up and configure the Model Context Protocol server for AI assistant integration
-last_updated: Jun 9, 2026
+description: Reference of the Model Context Protocol server shipped with the AiDev module — available tools, extension points, and debugging
+last_updated: Aug 24, 2026
 label: early-access
-keywords: ai, mcp, model context protocol, claude, copilot, ai-dev, configuration
-template: howto-guide-template
+keywords: ai, mcp, model context protocol, claude, copilot, ai-dev, tools, extension
+template: concept-topic-template
 ---
 
-This document describes how to configure and use the AiDev MCP server to connect AI assistants to your Spryker application.
+The AiDev module ships an MCP server that gives AI assistants live access to your running Spryker application: transfer objects, module interfaces, order management system (OMS) state machines, CSV data, and read-only database queries. This page describes what the server exposes, how to extend it, and how to debug it.
+
+{% info_block infoBox "Install first" %}
+
+The `ai-dev:mcp-server` command exists only after the `spryker-sdk/ai-dev` module is installed in your project and its console commands are registered. To install the module and register the server in your assistant, see [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html).
+
+{% endinfo_block %}
 
 ## About Model Context Protocol (MCP)
 
@@ -16,95 +22,15 @@ For Spryker developers, MCP allows AI assistants like Claude or Copilot to under
 
 Learn more about MCP at [modelcontextprotocol.io](https://modelcontextprotocol.io/docs/getting-started/intro).
 
-## Configure the MCP server
+## How the server runs
 
-The AiDev module provides an MCP server through the `ai-dev:mcp-server` console command. To configure it for use with AI assistants, you need the full path to your project and the Docker SDK command.
+The module provides the server through the `ai-dev:mcp-server` console command, which runs inside your project's Docker container over the MCP stdio transport:
 
 ```bash
 docker/sdk console ai-dev:mcp-server -q
 ```
 
-The `-q` flag (quiet mode) suppresses unnecessary output, which is important for the MCP stdio transport.
-
-## Integration with AI assistants
-
-### Claude Code
-
-For Claude Code CLI, add the MCP server using the command line.
-
-Navigate to your Spryker project directory and run:
-
-```bash
-claude mcp add spryker-project "$(pwd)/docker/sdk console ai-dev:mcp-server -q"
-```
-
-This command:
-- Adds the MCP server configuration to Claude Code
-- Uses the current project directory path automatically
-- Configures the server to run in quiet mode
-
-Claude Code will now have access to Spryker-specific tools through the MCP server.
-![MCP claude code](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/mcp-tool-claude-code.png)
-
-### Claude Desktop
-
-For Claude Desktop application, configure the MCP server in the application settings.
-
-1. Open Claude Desktop settings
-2. Navigate to the **Developer** section
-3. Add the following configuration to `claude_desktop_config.json`:
-
-```json
-{
-  "mcpServers": {
-    "spryker-ai-dev": {
-      "command": "/Users/username/projects/spryker-project/docker/sdk",
-      "args": [
-        "console", 
-        "ai-dev:mcp-server", 
-        "-q"
-      ]
-    }
-  }
-}
-```
-
-4. Restart Claude Desktop
-
-### GitHub Copilot in PHPStorm
-
-For GitHub Copilot Chat in PHPStorm with MCP support (requires PHPStorm 2024.3+):
-
-1. Open PHPStorm Settings/Preferences
-2. Navigate to **Tools > GitHub Copilot > MCP Servers**
-3. Add a new server configuration with the following JSON:
-
-```json
-{
-  "servers": {
-    "spryker-mcp": {
-      "type": "stdio",
-      "command": "/Users/username/projects/spryker-project/docker/sdk",
-      "args": [
-        "console",
-        "ai-dev:mcp-server",
-        "-q"
-      ]
-    }
-  },
-  "inputs": []
-}
-```
-
-4. Restart PHPStorm
-
-{% info_block infoBox "PHPStorm version" %}
-
-MCP support in GitHub Copilot for PHPStorm requires PHPStorm version 2024.3 or later. Check your IDE version and update if necessary.
-
-{% endinfo_block %}
-
-![MCP Copilot](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/mcp+copilot.png)
+The command starts the server, registers all configured MCP tool plugins, and listens for requests from AI assistants. You do not usually run it by hand — your assistant starts it. For the registration steps per assistant, see [Register the MCP server](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html#register-the-mcp-server).
 
 ## Available MCP tools
 
@@ -128,3 +54,77 @@ The AiDev module provides the following built-in tools that AI assistants can us
 
 AI assistants can automatically discover and use these tools when connected to the MCP server.
 
+## Extension points
+
+The AiDev module provides plugin interfaces for extending the MCP server with custom functionality.
+
+### AiDevMcpToolPluginInterface
+
+Implement this interface to add custom MCP tools that AI assistants can use to query or interact with your application.
+
+**Interface location**: `SprykerSdk\Zed\AiDev\Dependency\AiDevMcpToolPluginInterface`
+
+**Integration**: Register your tool plugins in `AiDevDependencyProvider::getMcpToolPlugins()`:
+
+```php
+<?php
+
+namespace Pyz\Zed\AiDev;
+
+use SprykerSdk\Zed\AiDev\AiDevDependencyProvider as SprykerAiDevDependencyProvider;
+use Pyz\Zed\AiDev\Communication\Plugins\CustomAiDevMcpToolPlugin;
+
+class AiDevDependencyProvider extends SprykerAiDevDependencyProvider
+{
+    /**
+     * @return array<\SprykerSdk\Zed\AiDev\Dependency\AiDevMcpToolPluginInterface>
+     */
+    protected function getMcpToolPlugins(): array
+    {
+        return array_merge(parent::getMcpToolPlugins(), [
+            new CustomAiDevMcpToolPlugin(),
+        ]);
+    }
+}
+```
+
+## Configuration
+
+You can configure the AiDev module through the `AiDevConfig` class. Refer to the module's configuration class for the available options and their default values.
+
+## Debug the MCP server
+
+Before you connect the MCP server to an AI assistant, you can test and debug it with the [MCP Inspector](https://modelcontextprotocol.io/docs/tools/inspector). The inspector provides a web interface to interact with your MCP server, test tools, and verify that everything works correctly.
+
+Go to your Spryker project directory and run:
+
+```bash
+npx @modelcontextprotocol/inspector docker/sdk console ai-dev:mcp-server -q
+```
+
+This command:
+
+- Starts the MCP Inspector in your browser
+- Connects to your local MCP server
+- Displays all available tools
+- Lets you test tool calls interactively
+
+To run the inspector with Xdebug:
+
+```bash
+npx @modelcontextprotocol/inspector docker/sdk cli -x console ai-dev:mcp-server
+```
+
+{% info_block infoBox "Node.js required" %}
+
+The MCP Inspector requires Node.js on your system. The `npx` command automatically downloads and runs the inspector without a global installation.
+
+{% endinfo_block %}
+
+![MCP Inspector listing the Spryker MCP tools](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/mcp-inspector.png)
+
+## Related
+
+- [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html) — install the module and register the server in your assistant
+- [AI Dev SDK](/docs/dg/dev/ai/ai-dev/ai-dev.html) — what the SDK is and what it ships
+- [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html) — the workflows that consume these tools

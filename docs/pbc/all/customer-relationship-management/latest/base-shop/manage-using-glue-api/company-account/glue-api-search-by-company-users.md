@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Search by company users"
 description: Learn how to search by company users that are configured within your store via the Spryker Glue API.
-last_updated: Jun 16, 2021
+last_updated: Aug 12, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/searching-by-company-users
 originalArticleId: a0cc11ce-40e9-4fcf-8cd5-eddd23b02363
@@ -225,7 +225,7 @@ To retrieve company users of the current authenticated customer, send the reques
             "id": "b2ea10b2-263a-5cd9-88dc-747309f0534a",
             "attributes": {
                 "name": "Hotel Mitte",
-                "email": "Hotel.Mitte@spryker.com",
+                "email": "Hotel.Mitte@acme.com",
                 "phone": "12345617",
                 "externalUrl": "",
                 "bic": "",
@@ -241,7 +241,7 @@ To retrieve company users of the current authenticated customer, send the reques
             "id": "35752ce6-e25f-5d04-8bef-d46b2c359695",
             "attributes": {
                 "name": "Service Mitte",
-                "email": "Service.Mitte@spryker.com",
+                "email": "Service.Mitte@acme.com",
                 "phone": "12345617",
                 "externalUrl": "",
                 "bic": "",
@@ -257,7 +257,7 @@ To retrieve company users of the current authenticated customer, send the reques
             "id": "5a6032dc-fbce-5d0d-9d57-11ade1947bac",
             "attributes": {
                 "name": "Cleaning Mitte",
-                "email": "Cleaning.Mitte@spryker.com",
+                "email": "Cleaning.Mitte@acme.com",
                 "phone": "12345617",
                 "externalUrl": "",
                 "bic": "",
@@ -304,7 +304,7 @@ To retrieve company users of the current authenticated customer, send the reques
 | 001 | The access token is invalid. |
 | 002 | The access token is missing. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
 
 ## Next steps
 

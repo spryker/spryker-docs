@@ -1,7 +1,7 @@
 ---
 title: Use AI tools with the AiFoundation module
 description: Extend AI capabilities by providing custom tools that AI models can invoke during conversations
-last_updated: Apr 29, 2026
+last_updated: Aug 13, 2026
 keywords: foundation, ai, tools, function calling, tool sets, plugins, openai, anthropic, prompt, agent, audit, logging
 template: howto-guide-template
 related:
@@ -13,6 +13,8 @@ related:
     link: docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
   - title: AI Interaction Audit Logs
     link: docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html
+  - title: Extend AI Commerce agents with custom toolsets
+    link: docs/dg/dev/ai/ai-commerce/extend-ai-commerce-agents-with-toolsets.html
 ---
 
 This document describes how to create and use AI tools with the AiFoundation module to extend AI capabilities by providing custom functions that AI models can invoke during conversations.
@@ -621,3 +623,4 @@ Monitor token consumption when using tools extensively.
 
 - [AiFoundation module Overview](/docs/dg/dev/ai/ai-foundation/ai-foundation-module.html)
 - [Use structured responses with the AiFoundation module](/docs/dg/dev/ai/ai-foundation/ai-foundation-transfer-response.html)
+- [Extend AI Commerce agents with custom toolsets](/docs/dg/dev/ai/ai-commerce/extend-ai-commerce-agents-with-toolsets.html)

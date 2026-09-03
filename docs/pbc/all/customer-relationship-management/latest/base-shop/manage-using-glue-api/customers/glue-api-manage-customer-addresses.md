@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Manage customer addresses"
 description: Learn how by using the Spryker Glue API you can Create, retrieve and delete customer addresses within your Spryker Project.
-last_updated: Jun 16, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-addresses-via-glue-api
 originalArticleId: 83f855ab-83ed-4a69-a087-196f88c0007b
@@ -379,7 +379,7 @@ If the address is deleted successfully, the endpoint returns the `204 No Content
 | 412 | No address ID provided. |
 | 901 | One of the following fields is not specified: `salutaion`, `firstName`, `lastName`, `city`, `address1`, `address2`, `zipCode`, `country`, `iso2Code`, `isDefaultShipping`, `isDefaultBilling` |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
 
 ## Next steps
 

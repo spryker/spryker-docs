@@ -1,7 +1,7 @@
 ---
 title: APM — New Relic based troubleshooting
 description: Learn how to use New Relic APM to troubleshoot performance issues in Spryker applications by reviewing metrics, analyzing traces, and identifying bottlenecks.
-last_updated: Feb 26, 2026
+last_updated: Aug 6, 2026
 template: concept-topic-template
 related:
   - title: Monitoring
@@ -27,7 +27,7 @@ While this guide focuses primarily on using New Relic for most troubleshooting s
 To effectively troubleshoot a Spryker application using New Relic, you must look beyond "average" response times. In a complex e-commerce environment, averages are often deceptive; they mask the experience of frustrated users by smoothing out significant outliers. To gain a true architectural view of system health, rely on **percentiles** and **statistical aggregates**. These are not just mathematical jargon; they are tools that categorize your traffic by user experience.
 
 - **The Median (P50):** This is the literal middle of your data. If your P50 is 200ms, it means exactly half of your users are experiencing speeds faster than that, and half are slower. It represents the "typical" user experience.
-- **P95 and P99 (The "Tail"):** These represent the 95th and 99th percentiles, respectively. If your P99 is 5 seconds, it means 1% of your users—perhaps those with massive shopping carts or complex B2B pricing rules—are waiting a grueling five seconds (or more) for a page to load. In APM, focus on these "tails" because that is where the most critical performance bottlenecks and infrastructure strains are hidden.
+- **P95 and P99 (The "Tail"):** These represent the tail of the distribution: 5% of requests are slower than P95, and 1% are slower than P99. If your P99 is 5 seconds, it means 1% of your users—perhaps those with massive shopping carts or complex B2B pricing rules—are waiting a grueling five seconds (or more) for a page to load. In APM, focus on these "tails" because that is where the most critical performance bottlenecks and infrastructure strains are hidden.
 - **Maximum (Max):** This is the single slowest request recorded. While often ignored as a "one-off" glitch, in a Spryker context, a high Max can indicate a specific worker timeout or a deadlock in the database that could eventually cascade into a full system outage.
 
 Understanding these distributions lets you stop optimizing for the "average" and start solving for the "worst-case," ensuring that even your most complex transactions remain performant.
@@ -85,10 +85,10 @@ How New Relic groups incoming traces into Entities depends on the configuration 
 
 | NR Entity | Description |
 | --- | --- |
-| {project-name}-{env-name}-newrelic-app | Default Entity name coming from PHP's NR configuration, captures backend-gateway transactions, sometimes also Backoffice and CLI transactions. |
+| {project-name}-{env-name}-newrelic-app | Default Entity name coming from PHP's NR configuration, captures backend-gateway transactions, sometimes also Back Office and CLI transactions. |
 | YVES-{store-name} ({env-name}) | Yves |
 | GLUE-{store-name} ({env-name}) | Glue, for example GLUE-US (docker.production) |
-| ZED-{store-name} ({env-name}) | Zed / Backoffice |
+| ZED-{store-name} ({env-name}) | Zed / Back Office |
 | MERCHANT_PORTAL-{store-name} ({env_name}) | Merchant Portal |
 
 </div>
@@ -168,8 +168,8 @@ The "Sort by" dropdown lets you switch between those sorting modes:
 
 2. **Review the top indicators**—for each transaction (from the candidates defined in the previous step), click on each one and check:
     1. Average response time—gives an idea of how good it is on average, but not that useful, because you may have too broad a spectrum of response times, for example from a few dozen milliseconds to even a minute.
-    2. Median—it is 50th percentile, it means half of the requests were faster and the other half—slower.
-    3. 95th, 99th percentile—how fast were 95% and 99% of all requests.
+    2. Median—it is P50, it means half of the requests were faster and the other half—slower.
+    3. P95, P99—how fast were 95% and 99% of all requests.
     4. Average error rate and [Apdex](https://docs.newrelic.com/docs/apm/new-relic-apm/apdex/apdex-measure-user-satisfaction/).
 
 Transaction statistics — high-level performance indicators. The same data can be collected by executing a New Relic query provided in the [Useful New Relic query](#useful-new-relic-query) section below for multiple transactions:
@@ -179,7 +179,7 @@ Transaction statistics — high-level performance indicators. The same data can 
 3. Now, depending on business needs, priorities, and time available, you may decide which transactions are the most critically affected in terms of poor performance. That approach of reviewing summaries helps to save time on avoiding analyses where it is not necessary and concentrate on problems that are really impactful (if any). You can translate those metrics to more human language as:
     1. Median (half of all requests, 50%) response time is above 2 seconds.
     2. **95%** of requests are faster than X1 seconds (New Relic metric P95 showing the time bucket that 95% of all requests fall into, for example, number of requests that are faster than X seconds).
-    3. **99%** of requests are faster than X2 seconds (P99, 99th percentile, 99% of requests faster than ... seconds).
+    3. **99%** of requests are faster than X2 seconds (P99, 99% of requests faster than ... seconds).
     4. **Only 4%** of requests are in a range from X1 to X2.
     5. While the maximum response times visible for sampled transactions in the **Traces** section may be to even bigger numbers, for example, X3 seconds, you know that **only 1%** of requests fall into this range from X2 to X3, because you know what the 99% boundary is.
 

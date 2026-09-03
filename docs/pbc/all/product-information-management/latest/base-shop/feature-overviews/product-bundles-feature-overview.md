@@ -1,7 +1,7 @@
 ---
 title: Product Bundles feature overview
 description: With the Product Bundles feature you can freely tie individual items together and sell them as a package in your Spryker project
-last_updated: Jul 26, 2021
+last_updated: Aug 18, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-bundles-feature-overview
 originalArticleId: b0ed4278-e037-4644-a602-ae16f40a4d9c
@@ -63,6 +63,17 @@ Bundle is updated when:
 - Adding new bundled products to bundle.
 - When state machine sets flag reserved to bundled product.
 
+## Bundle activation and deactivation
+
+If a product that is part of a bundle becomes unavailable, the bundle also becomes unavailable. For example, when you deactivate a product variant, all the bundles that contain this variant are deactivated automatically.
+
+Spryker does not reverse this behavior automatically: when the bundled product becomes available again, the bundles that contain it remain deactivated. To sell such a bundle again, you need to activate it explicitly.
+
+{% info_block warningBox "Reactivating a bundle" %}
+
+After you fix the availability of a bundled product, activate every affected bundle manually. For instructions, see [Activating products](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-products.html#activating-products).
+
+{% endinfo_block %}
 
 ## Stock calculation
 

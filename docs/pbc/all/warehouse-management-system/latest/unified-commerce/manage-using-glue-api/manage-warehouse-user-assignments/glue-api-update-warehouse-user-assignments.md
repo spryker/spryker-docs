@@ -2,7 +2,7 @@
 title: "Glue API: Update warehouse user assignments"
 description: Learn how to update warehouse user assignments using Glue API within your Spryker Unified Commerce project.
 template: glue-api-storefront-guide-template
-last_updated: Dec 7, 2023
+last_updated: Jul 30, 2026
 ---
 
 A warehouse user can have multiple warehouses assigned to them. However, because a user can be physically present only in one warehouse, a single warehouse assignment can be active for them at a time. This endpoint lets you make a user warehouse assignment active or inactive.
@@ -149,4 +149,4 @@ Request sample:
 | --- | --- |
 | 5201 | The warehouse user assignment with the specified ID doesn't exist.  |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

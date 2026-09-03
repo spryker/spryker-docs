@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Retrieve autocomplete and search suggestions"
 description: This article provides information on which endpoints to use to get search and auto-completion suggestions for your products, categories, and CMS fields.
-last_updated: Jul 20, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-autocomplete-and-search-suggestions
 originalArticleId: 31e2cfd0-e6e5-46ee-96a9-93ae816d6761
@@ -236,4 +236,4 @@ To retrieve a search suggestion, send the request:
 | abstractProducts.images.externalUrlSmall | String | URL of the product's preview image. |
 | abstractProducts.images.externalUrlLarg | String | URL of the product's large image. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

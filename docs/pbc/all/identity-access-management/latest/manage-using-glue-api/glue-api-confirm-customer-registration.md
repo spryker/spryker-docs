@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Confirm customer registration"
 description: Learn how to confirm the customer registration via the Spryker GLUE API within your Spryker projects.
-last_updated: Jun 21, 2021
+last_updated: Jul 30, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/confirming-customer-registration
 originalArticleId: ce75d090-7be3-4d28-98a2-4ea49eb0d00c
@@ -78,7 +78,7 @@ If the customer email is confirmed successfully, the endpoint returns the `204 N
 | 423 | Confirmation code is invalid or has been already used. |
 | 901 | Confirmation code is empty. |
 
-For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
+For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
 
 ## Next Steps
 

@@ -2,12 +2,18 @@
 title: Test Glue API
 description: Use this guide to Learn how to test Glue API End to end within your Spryker based projects.
 template: howto-guide-template
-last_updated: Jan 9, 2024
+last_updated: Jul 31, 2026
 redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-glue-api.html
 ---
 
 This guide explains how to set up and run Glue API end-to-end (E2E) tests using the `WishlistsRestApi` module as an example and the `Pyz` project namespace. Adjust the module name according to your requirements.
+
+{% info_block infoBox "Applies to both infrastructures" %}
+
+These E2E tests exercise endpoints over HTTP, so they apply regardless of whether an endpoint is served by the legacy Glue infrastructure or by API Platform—the API contract is identical. For API Platform-specific test tooling, such as kernel-based test cases for Providers and Processors, see [Test API Platform resources](/docs/integrations/spryker-api/api-platform/testing.html).
+
+{% endinfo_block %}
 
 ## Prerequisites
 
@@ -30,7 +36,7 @@ This guide explains how to set up and run Glue API end-to-end (E2E) tests using 
   composer update spryker/testify:"^3.12.0"
   ```
 
-2. To validate the response body against the OpenAPI schema, you need to generate the schema. For instructions, see [Document Storefront API Resources](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/document-storefront-api-resources.html).
+2. To validate the response body against the OpenAPI schema, you need to generate the schema. For instructions, see [Document Storefront API Resources](/docs/integrations/spryker-api/storefront-api/developing-apis/document-storefront-api-resources.html).
 
 ## Configure the project and set up test files
 

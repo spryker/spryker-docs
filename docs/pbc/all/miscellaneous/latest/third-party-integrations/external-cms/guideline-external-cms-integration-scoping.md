@@ -342,6 +342,24 @@ flowchart LR
 Yves retrieves structured content during the storefront request, maps it to view models, resolves commerce references,
 and renders Twig components.
 
+{% comment %}
+Diagram source (Mermaid). The rendered SVG is hosted on S3.
+After editing, re-render with mermaid-cli using htmlLabels disabled
+(labels inside foreignObject do not display when the SVG is loaded as an image),
+then re-upload the SVG under the same file name.
+
+flowchart LR
+    visitor(("Visitor")) --> yves["Yves<br>storefront request"]
+    yves --> cache{"Content cache"}
+    cache -. "hit" .-> adapter["Adapter<br>validated view models"]
+    cache -- "miss" --> cms["External CMS<br>content API"]
+    cms -. "structured content" .-> adapter
+    adapter --> resolve["Commerce resolution"]
+    resolve --> twig["Twig components"]
+    twig -. "final HTML" .-> visitor
+{% endcomment %}
+![Strategy A1: Yves checks the content cache during the storefront request and calls the external CMS only on a miss, then adapts the response into validated view models, resolves commerce references, and renders Twig components](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/external-cms/strategy-a1-runtime-retrieval.svg)
+
 Requires a connection that is consistently fast. Derive the acceptable CMS response time from the page latency budget:
 the CMS call is one serial step inside it, alongside commerce resolution and rendering. If it cannot fit its share, it
 needs a cache in front of it, or the A2 projection.
@@ -353,6 +371,19 @@ acceptable delay before a change becomes visible, and the staleness you accept d
 **Main advantage:** near-live delivery, with no synchronization pipeline.
 
 **Blocked when** the [Feasibility matrix](#feasibility-matrix) flags rate limits or unpredictable response times.
+
+```mermaid
+  flowchart LR
+    visitor(("Visitor")) --> yves["Yves<br>storefront request"]
+    yves --> cache{"Content cache"}
+    cache -. "hit" .-> adapter["Adapter<br>validated view models"]
+    cache -- "miss" --> cms["External CMS<br>content API"]
+    cms -. "structured content" .-> adapter
+    adapter --> resolve["Commerce resolution"]
+    resolve --> twig["Twig components"]
+    twig -. "final HTML" .-> visitor
+
+```
 
 #### A2. Delivery variant — synchronized projection
 

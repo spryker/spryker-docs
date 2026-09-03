@@ -220,6 +220,10 @@ https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-
 **Release:**
 - [Enhancements to Symfony Scheduler](https://api.release.spryker.com/release-group/6718)
 
+**Documentation:**
+- [Integrate Symfony Messenger](https://docs.spryker.com/docs/dg/dev/integrate-and-configure/integrate-symfony-messenger)
+- [Integrate Symfony Scheduler](https://docs.spryker.com/docs/dg/dev/integrate-and-configure/integrate-symfony-scheduler)
+
 ### Maintenance and Service Updates {% include badge.html type="improvement" %}
 
 We delivered routine maintenance and service updates across the cloud foundation to keep environments secure, reliable, and aligned with current technology standards. These updates introduce PHP 8.5 as the default runtime version, add initial support for OpenSearch 2.x and 3.x, and establish the foundation for migrating from AWS OpenSearch 1.x.

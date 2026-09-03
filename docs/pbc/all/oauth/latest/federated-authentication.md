@@ -2,7 +2,7 @@
 title: Federated Authentication via OAuth2/OIDC
 description: Learn how Spryker Federated Authentication lets your customers, back-office users, and merchant users log in through an external Identity Provider using OAuth2 and OpenID Connect.
 template: concept-topic-template
-last_updated: Aug 4, 2026
+last_updated: Sep 4, 2026
 ---
 
 If your enterprise customers, back-office operators, or merchant users already authenticate through a corporate Identity Provider — Keycloak, Azure AD, Okta, or any other OAuth2/OIDC-compatible system — this feature lets them bring that identity to Spryker. Instead of maintaining a separate set of credentials for every application, your users log in through the same IdP they already trust, and Spryker handles the rest.
@@ -90,7 +90,7 @@ The anchor for each record is the combination of `provider` and `external_id` �
 
 The resolution logic is the same across all three applications. Spryker first looks for an existing identity record; if it finds one, the user is logged in immediately. If not — because this is the first time they are logging in via this provider — Spryker falls back to email matching.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/oauth/how-auth-works.svg)
+<img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/oauth/how-auth-works.svg" alt="Flowchart of the OAuth login resolution logic" style="display: block; margin: 0 auto; width: 100%; max-width: 400px; height: auto;">
 
 ### First Time a User Logs In via SSO
 
@@ -154,7 +154,7 @@ The practical implication is that **your Spryker session is independent of the I
 
 ## Multi-Factor Authentication
 
-Once your users authenticate through an IdP, you have to decide where Multi-Factor Authentication (MFA) lives — at the IdP, in Spryker's own [Multi-Factor Authentication](/docs/pbc/all/multi-factor-authentication/latest/multi-factor-authentication.html) feature, or both. Each option trades off security assurance against user experience, and setups that mix password and SSO login need extra care to avoid leaving password users without a second factor.
+Once your users authenticate through an Identity Provider (IdP), you have to decide where Multi-Factor Authentication (MFA) lives — at the IdP, in Spryker's own [Multi-Factor Authentication](/docs/pbc/all/multi-factor-authentication/latest/multi-factor-authentication.html) feature, or both. Each option trades off security assurance against user experience, and setups that mix password and SSO login need extra care to avoid leaving password users without a second factor.
 
 For the decision guide, see [Multi-Factor Authentication with SSO](/docs/pbc/all/oauth/latest/multi-factor-authentication-with-sso.html).
 

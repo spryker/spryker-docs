@@ -2,7 +2,7 @@
 title: Multi-Factor Authentication with SSO
 description: Decide where Multi-Factor Authentication should live when your users log in through an external Identity Provider — at the IdP, in Spryker, or both — and understand the trade-offs of each option.
 template: concept-topic-template
-last_updated: Aug 4, 2026
+last_updated: Sep 4, 2026
 related:
   - title: Federated Authentication via OAuth2/OIDC
     link: docs/pbc/all/oauth/latest/federated-authentication.html

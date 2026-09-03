@@ -2,7 +2,7 @@
 title: 'Upgrade to PHP 8.5'
 description: Upgrade PHP to version 8.5 in your Docker environment and composer.json. Check code and dependencies for compatibility, update configurations, and test your application to ensure a smooth upgrade.
 template: concept-topic-template
-last_updated: Sep 2, 2026
+last_updated: Sep 3, 2026
 ---
 
 This document describes how to upgrade PHP to version 8.5. This upgrades the version in Docker environment and `composer.json`.
@@ -86,13 +86,7 @@ This updates the dependencies to the latest versions that are compatible with PH
 
 ## 4. Upgrade Codeception to version 5.3.4 or later
 
-On PHP 8.5, Codeception versions earlier than 5.3.4 fail during configuration on every run with the following error:
-
-```text
-Fatal error: Uncaught Codeception\Exception\ConfigurationException: register_argc_argv must be set to On for running Codeception
-```
-
-Codeception versions earlier than 5.3.4 rely on the `register_argc_argv` PHP setting to read command-line arguments. That mechanism no longer works on PHP 8.5, so Codeception aborts before any test executes. Codeception 5.3.4 or later reads command-line arguments without `register_argc_argv`, so it is required for running tests on PHP 8.5.
+Running tests on PHP 8.5 requires Codeception 5.3.4 or later.
 
 1. Check the installed Codeception version:
 
@@ -103,12 +97,20 @@ composer show codeception/codeception
 2. If the installed version is earlier than 5.3.4, upgrade it:
 
 ```bash
-composer update codeception/codeception --with-dependencies
+composer update codeception/codeception
 ```
 
-{% info_block warningBox "Warning" %}
+{% info_block infoBox "Why it's needed" %}
 
-Setting `register_argc_argv=On` in the PHP configuration is only a workaround: it masks the error in the current environment and leaves the incompatibility in place. Upgrading Codeception is the proper fix.
+On PHP 8.5, Codeception versions earlier than 5.3.4 fail during configuration on every run with the following error:
+
+```text
+Fatal error: Uncaught Codeception\Exception\ConfigurationException: register_argc_argv must be set to On for running Codeception
+```
+
+Codeception versions earlier than 5.3.4 rely on the `register_argc_argv` PHP setting to read command-line arguments. That mechanism no longer works on PHP 8.5, so Codeception aborts before any test executes. Codeception 5.3.4 or later reads command-line arguments without `register_argc_argv`, so it is required for running tests on PHP 8.5.
+
+Setting `register_argc_argv=On` in the PHP configuration is only a workaround: it masks the error in the current environment and leaves the incompatibility in place.
 
 {% endinfo_block %}
 

@@ -10,8 +10,8 @@ redirect_from:
 related:
   - title: How Spryker Support works
     link: docs/about/all/support/how-spryker-support-works.html
-  - title: How to use the Support Portal
-    link: docs/about/all/support/using-the-support-portal.html
+  - title: Using the Support Hub
+    link: docs/about/all/support/using-the-support-hub.html
 ---
 
 

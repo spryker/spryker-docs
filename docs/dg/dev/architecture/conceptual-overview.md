@@ -1,7 +1,7 @@
 ---
 title: Conceptual overview
-description: Spryker is a Commerce Operating System composed of the following applications- Storefront (Yves), Backoffice (Zed), Storefront API (Glue).
-last_updated: Sep 4, 2026
+description: Spryker is a Commerce Operating System composed of the following applications - Storefront (Yves), Backoffice (Zed), Storefront API (Glue).
+last_updated: Sep 7, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/architecture/conceptual-overview.html
@@ -18,13 +18,50 @@ related:
 
 Spryker is a Commerce Operating System, mainly composed of several applications, such as Storefront (Yves), Back Office (Zed) and Storefront API (Glue).
 
-- *Storefront*—Frontend-presentation layer for customers, provided by Yves Application Layer based on [Symfony Components](https://symfony.com/packages).
-- *Back Office*—an application that contains all business logic and the backend GUI, provided by Zed Application Layer, and also uses the Symfony Components.
-- *Storefront API*—an application providing resources for customers' interaction, provided by the Glue Application Layer, and can work based on either REST or [JSON API convention](https://jsonapi.org/).
+- *Storefront* — Frontend-presentation layer for customers, provided by Yves Application Layer based on [Symfony Packages](https://symfony.com/packages).
+- *Back Office* — an application that contains all business logic and the backend GUI, provided by Zed Application Layer, and also uses the Symfony Packages.
+- *Storefront API* — an application providing resources for customers' interaction, provided by the Glue Application Layer, and can work based on either REST or [JSON API convention](https://jsonapi.org/).
 
 The following diagram shows the conceptual parts of the application and their connections:
 
-![Spryker overview](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Architecture+Concepts/Conceptual+Overview/spryker-overview.png)
+![Spryker overview](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Architecture+Concepts/Conceptual+Overview/spryker-overview.svg)
+
+{% comment %}
+Mermaid source for the diagram above. Edit here, re-render, and re-upload the SVG to the same S3 path.
+
+Render with:
+  npx @mermaid-js/mermaid-cli -i spryker-overview.mmd -o spryker-overview.svg -b transparent
+
+%%{init: {"layout": "elk", "elk": {"nodePlacementStrategy": "BRANDES_KOEPF"}} }%%
+flowchart TB
+    Sessions[("Sessions<br/>for example, Redis")]
+    KV[("KV Storage<br/>for example, Redis")]
+    ES[("Search Engine<br/>Elasticsearch")]
+
+    Yves["<b>Storefront (Yves)</b><br/><br/>Based on Symfony Packages<br/><br/><b>Purpose:</b><br/>Provides a customer-facing application<br/><br/><b>Goals:</b><br/>• Performance<br/>• Scalability<br/>• Continuous delivery"]
+    Glue["<b>Storefront API</b><br/><br/>Based on Glue or API Platform<br/><br/><b>Purpose:</b><br/>API support of a customer-facing solution"]
+    Zed["<b>Back Office (Zed)</b><br/><br/>Based on Symfony Packages<br/><br/><b>Purpose:</b><br/>• Contains all business logic<br/>• Connection to external providers<br/>• Data persistence"]
+
+    DB[("Database<br/>PostgreSQL or MySQL")]
+
+    Sessions --> Yves
+    KV -- "Read only" --> Yves
+    KV -- "Read only" --> Glue
+    ES -- "Read only" --> Yves
+    ES -- "Read only" --> Glue
+
+    Yves -- "RPC (JSON transfer)" --> Zed
+    Glue -- "RPC (JSON transfer)" --> Zed
+
+    Zed -- "Push updates" --> KV
+    Zed -- "Push updates" --> ES
+    Zed <--> DB
+
+    classDef app fill:#fff,stroke:#333,stroke-width:1px
+    classDef store fill:#f4f4f4,stroke:#333,stroke-width:1px
+    class Yves,Glue,Zed app
+    class ES,Sessions,KV,DB store
+{% endcomment %}
 
 The Spryker OS provides the following Application Layers:
 

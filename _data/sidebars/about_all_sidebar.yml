@@ -116,8 +116,8 @@ entries:
         url: /docs/about/all/support/support-case-escalations.html
       - title: Preparing for heavy loads and traffic
         url: /docs/about/all/support/preparing-for-heavy-loads-and-traffic.html
-      - title: How to use the Support Portal
-        url: /docs/about/all/support/using-the-support-portal.html
+      - title: Using the Support Hub
+        url: /docs/about/all/support/using-the-support-hub.html
       - title: Share secrets with the Spryker Support Team
         url: /docs/about/all/support/share-secrets-with-the-spryker-support-team.html
       - title: Understanding ticket status

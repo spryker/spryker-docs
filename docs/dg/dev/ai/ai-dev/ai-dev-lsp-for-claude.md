@@ -2,7 +2,7 @@
 title: Language Server for Claude Code CLI
 description: Configure LSP server for code navigation and analysis in Claude Code
 last_updated: Sep 4, 2026
-keywords: [ai, coding-assistants, phpactor, intelephense, LSP, language-server-protocol, language-server]
+keywords: ai, coding-assistants, phpactor, intelephense, LSP, language-server-protocol, language-server
 template: howto-guide-template
 redirect_from:
   - /docs/dg/dev/ai/ai-assistants/lsp-for-claude
@@ -32,7 +32,7 @@ phpactor -v
 ```
 
 ```text
-Phpactor 2025.12.21.1
+Phpactor 2026.07.22.0
 ```
 
 2. Ensure Claude Code version is `2.1.5` or higher:

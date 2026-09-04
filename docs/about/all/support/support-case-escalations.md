@@ -28,7 +28,7 @@ In Support, we acknowledge that we cannot always produce a satisfying result. We
 
 ### Initiate an escalation
 
-Creating an [Emergency Case](/docs/about/all/support/using-the-support-portal.html#emergencies) always starts an escalation. You will receive an email notifying you that an escalation has been started.
+Creating an [Emergency Case](/docs/about/all/support/using-the-support-hub.html#emergencies) always starts an escalation. You will receive an email notifying you that an escalation has been started.
 
 ### The escalation process
 

@@ -1,7 +1,7 @@
 ---
 title: Migration status - Glue API to API Platform
 description: Tracks the migration status of API modules to the Spryker API Platform across StorefrontAPI and BackendAPI, with endpoint coverage.
-last_updated: Jul 31, 2026
+last_updated: Sep 4, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/dg/dev/upgrade-and-migrate/glue-api-migration-status.html
@@ -152,7 +152,7 @@ All BackendAPI modules tracked in the migration scope.
 | Module | Category | Status | Released In | Requires | Key endpoints |
 |---|---|---|---|---|---|
 | CartNotesBackendApi | Extension-Only BackendAPI | Planned | — | SalesOrdersBackendApi | (extension-only) |
-| CategoriesBackendApi | BackendAPI | Planned | — | — | GET,POST /categories<br>GET,PATCH /categories/{id} |
+| CategoriesBackendApi | BackendAPI | Migrated | ProductExperienceManagement 1.0.0 | — | GET,POST /categories<br>GET,PATCH,DELETE /categories/{categoryKey}<br>GET /categories/{categoryKey}/products<br>GET /categories/{categoryKey}/products/{sku}<br>POST /categories/{categoryKey}/assign-products<br>POST /categories/{categoryKey}/unassign-products |
 | DynamicEntityBackendApi | BackendAPI | Planned | — | — | GET,POST,PATCH,PUT /dynamic-entity/{entity-name} (~62 auto-generated entity endpoints) |
 | OauthBackendApi | BackendAPI | Planned | — | — | POST /token |
 | PickingListsBackendApi | BackendAPI | Planned | — | — | GET /picking-lists<br>GET /picking-lists/{id}<br>PATCH /picking-lists/{id}/picking-list-items/{id}<br>POST /start-picking |

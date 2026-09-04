@@ -2850,6 +2850,20 @@ entries:
         nested:
           - title: Install the Product Experience Management feature
             url: /docs/pbc/all/product-experience-management/latest/install-the-product-experience-management-feature.html
+          - title: Manage via Backend API
+            nested:
+              - title: Manage categories
+                nested:
+                  - title: Retrieve categories
+                    url: /docs/pbc/all/product-experience-management/latest/manage-using-backend-api/manage-categories/backend-api-retrieve-categories.html
+                  - title: Create a category
+                    url: /docs/pbc/all/product-experience-management/latest/manage-using-backend-api/manage-categories/backend-api-create-a-category.html
+                  - title: Update a category
+                    url: /docs/pbc/all/product-experience-management/latest/manage-using-backend-api/manage-categories/backend-api-update-a-category.html
+                  - title: Delete a category
+                    url: /docs/pbc/all/product-experience-management/latest/manage-using-backend-api/manage-categories/backend-api-delete-a-category.html
+                  - title: Manage product assignments of a category
+                    url: /docs/pbc/all/product-experience-management/latest/manage-using-backend-api/manage-categories/backend-api-manage-product-assignments-of-a-category.html
 
       - title: Product Information Management
         url: /docs/pbc/all/product-information-management/product-information-management.html

@@ -1,7 +1,7 @@
 ---
 title: Workflows, Skills, and Agents
 description: Reference of the workflows, skills, and agents shipped with the AI Dev SDK
-last_updated: Aug 24, 2026
+last_updated: Sep 4, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, windsurf, copilot, workflows, wizards, skills, agents, subagents, spryker
 template: concept-topic-template
@@ -20,7 +20,7 @@ The skills and agents reach your project in two ways:
 
 Both delivery paths read from the same source files — the plugin just packages them for marketplace installation.
 
-**What's the difference between a skill and an agent?**
+**What is the difference between a skill and an agent?**
 
 - **Skills** load into the active chat on demand. Use them when you want the assistant to follow a specific workflow (write a product requirement document, refresh caches, run QA).
 - **Agents** are isolated sub-conversations the assistant delegates to. Use them when you want focused, single-purpose work done in its own context window (verify a behavior, diagnose a failure).

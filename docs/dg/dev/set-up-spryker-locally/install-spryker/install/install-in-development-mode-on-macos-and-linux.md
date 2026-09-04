@@ -1,7 +1,7 @@
 ---
 title: Install in Development mode on MacOS and Linux
 description: Learn how to install and configure Spryker in Development mode on MacOS and Linux in a local environment.
-last_updated: Feb 19, 2026
+last_updated: Sep 4, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/installing-in-development-mode-on-macos-and-linux
 originalArticleId: 3a4af86a-3fb7-4fb2-b47e-4f1eb703fae6
@@ -45,14 +45,14 @@ Product images, product data, other images or fonts displaced in a demo shop are
 2. Clone the Demo Shop and navigate into its folder:
 
  ```shell
- git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b {{page.release_tag}} --single-branch ./b2b-demo-marketplace && \
+ git clone https://github.com/spryker-shop/b2b-demo-marketplace -b {{page.release_tag}} --single-branch ./b2b-demo-marketplace && \
  cd b2b-demo-marketplace
  ```
 
 3. Clone the Docker SDK:
 
 ```bash
-git clone https://github.com/spryker/docker-sdk.git --single-branch docker
+git clone https://github.com/spryker/docker-sdk --single-branch docker
 ```
 
 

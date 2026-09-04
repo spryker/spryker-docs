@@ -1,10 +1,8 @@
 ---
 title: Conceptual overview
 description: Spryker is a Commerce Operating System composed of the following applications- Storefront (Yves), Backoffice (Zed), Storefront API (Glue).
-last_updated: Aug 7, 2026
+last_updated: Sep 4, 2026
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/conceptual-overview
-originalArticleId: 92a95e93-3608-4a70-93be-cf6aec4f9017
 redirect_from:
   - /docs/scos/dev/architecture/conceptual-overview.html
 related:
@@ -20,7 +18,7 @@ related:
 
 Spryker is a Commerce Operating System, mainly composed of several applications, such as Storefront (Yves), Back Office (Zed) and Storefront API (Glue).
 
-- *Storefront*—Frontend-presentation layer for customers, provided by Yves Application Layer based on [Symfony Components](https://symfony.com/components).
+- *Storefront*—Frontend-presentation layer for customers, provided by Yves Application Layer based on [Symfony Components](https://symfony.com/packages).
 - *Back Office*—an application that contains all business logic and the backend GUI, provided by Zed Application Layer, and also uses the Symfony Components.
 - *Storefront API*—an application providing resources for customers' interaction, provided by the Glue Application Layer, and can work based on either REST or [JSON API convention](https://jsonapi.org/).
 
@@ -53,7 +51,7 @@ Along with the default frontend app that is provided out of the box, you can hav
 
 The application separation brings three main benefits:
 
-1. *Performance*. A frontend applications in Spryker uses a data storage separated from the backend one. It uses a blazing fast key-value storage while the backend uses a relational database. With this separation, it's way faster than using the traditional way of sharing one relational database for both applications.
+1. *Performance*. A frontend applications in Spryker uses a data storage separated from the backend one. It uses a blazing fast key-value storage while the backend uses a relational database. With this separation, it is way faster than using the traditional way of sharing one relational database for both applications.
 2. *Scalability*. As frontends in Spryker have their own applications, storages, and deployments, scalability becomes easily achievable and given by the architecture. Spryker can be easily scaled out horizontally by simply just adding more instances with more storages without affecting the backend application and logic.
 3. *Security*. Having two applications, accessing the backend relational database becomes a harder challenge for cyber attacks. The backend application also is usually hidden behind a firewall making the Commerce OS even more secured for different e-commerce applications.
 

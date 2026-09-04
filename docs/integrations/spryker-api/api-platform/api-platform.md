@@ -1,7 +1,7 @@
 ---
 title: API Platform
 description: Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation and the integration of the API Platform Bundle.
-last_updated: Aug 7, 2026
+last_updated: Sep 4, 2026
 template: concept-topic-template
 related:
   - title: Integrate API Platform
@@ -536,4 +536,4 @@ Both can coexist in the same application. For further migration guidance, see [M
 - [Sparse Fieldsets](/docs/integrations/spryker-api/api-platform/sparse-fieldsets.html) - Request only needed attributes
 - [Serialization](/docs/integrations/spryker-api/api-platform/serialization.html) - How requests and responses are serialized
 - [Troubleshooting API Platform](/docs/integrations/spryker-api/api-platform/troubleshooting.html) - Common issues
-- [API Platform official documentation](https://api-platform.com/docs/)
+- [API Platform official documentation](https://api-platform.com/docs/symfony/)

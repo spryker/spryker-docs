@@ -1,10 +1,8 @@
 ---
 title: Client
 description: This document provides general information about the client part of the Yves applications layer and describes how to use it.
-last_updated: Jun 16, 2021
+last_updated: Sep 4, 2026
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/client
-originalArticleId: a959a1bf-affd-4959-8ed9-811583b5562f
 redirect_from:
   - /docs/scos/dev/back-end-development/client/client.html
 related:
@@ -28,11 +26,11 @@ End customers interact only with the frontend application. The frontend applicat
 
 The *client's* job is to connect the frontend application to all of the surrounding resources needed for the frontend application to work. These resources include the Commerce OS, Storage, and Search. It also contains some other resources like Session and Queues.
 
-For each of these resources, there is a client. So, it's not only one client, but many of them. Each one of them is responsible for a specific resource or functionality. Spryker, by default, is shipped with the following clients:
+For each of these resources, there is a client. So, it is not only one client, but many of them. Each one of them is responsible for a specific resource or functionality. Spryker, by default, is shipped with the following clients:
 
 - SearchClient: to connect to Elasticsearch using its API.
 - StorageClient: to connect to the key-value store (Redis or Valkey) using the key-value store (Redis or Valkey) protocol; RESP.
-- Commerce OS clients: every functional unit, a module as it's called in Spryker, has its client. For example, there are separated clients for the cart (CartClient), checkout (CheckoutClient), and customer (CustomerClient). The same applies to all the other modules in Spryker.
+- Commerce OS clients: every functional unit, a module as it is called in Spryker, has its client. For example, there are separated clients for the cart (CartClient), checkout (CheckoutClient), and customer (CustomerClient). The same applies to all the other modules in Spryker.
 
 Commerce OS clients communicate with the Commerce OS using HTTP. They mainly perform RPCs (remote procedure calls) using HTTP POST requests with a serialized JSON payload. They also do all the necessary authorization and authentication between the two applications.
 The client's purpose is to encapsulate the logic that runs the shop independent from the overlying application. So in case you want to use a different technology stack, you can reuse the client.

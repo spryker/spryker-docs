@@ -209,7 +209,7 @@ How it works:
 - - - - -▶ (dashed): Asynchronous event, queue, or deferred processing
 {% endraw %}
 
-For instructions on configuring direct sync, see [Configure direct synchronize](/docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/configure-direct-synchronize.html).
+For instructions on configuring direct sync, see [Configure direct synchronize](/docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/configure-direct-synchronize).
 
 ### Key differences from asynchronous synchronization
 
@@ -376,7 +376,7 @@ In direct synchronization mode, the behavior of entities, such as `SpyProductAbs
 
 This approach uses `DirectSynchronizationConsolePlugin`, which leverages Symfony's `onTerminate` event to perform the final synchronization step after the console command completes execution.
 
-For details on configuring direct sync, see [Configure direct synchronize](/docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/configure-direct-synchronize.html).
+For details on configuring direct sync, see [Configure direct synchronize](/docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/configure-direct-synchronize).
 
 ## Data architecture
 

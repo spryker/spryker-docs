@@ -118,7 +118,7 @@ $config[KernelConstants::PROJECT_NAMESPACES] = [
 
 3. Extend FE builder paths to include your own namespace following [Extend builder paths (custom namespaces)](/docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves.html#extend-builder-paths-custom-namespaces).
 
-More information about [upgradability](/docs/dg/dev/sdks/sdk/customization-strategies-and-upgradability.html).
+More information about [upgradability](/docs/dg/dev/sdks/sdk/customization-strategies-and-upgradability).
 
 ### Configure the local environment
 

@@ -1,10 +1,8 @@
 ---
 title: Modules and application layers
 description: Learn about the layers in the Spryker Commerce OS and how they are related with each other.
-last_updated: Jun 16, 2021
+last_updated: Sep 4, 2026
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/modules-and-layers
-originalArticleId: 2c4ec7d1-3056-4dc2-bc82-8865dfbc49de
 redirect_from:
   - /docs/scos/dev/architecture/modules-and-application-layers.html
 related:
@@ -43,7 +41,7 @@ All the business logic is implemented in the *Business* layer. It usually has se
 
 The *Communication* layer is the entry point of a module. When a frontend application communicates with the Commerce OS, it accesses the Communication layer first. Then, depending on the request functionality, the request is passed further from the Communication layer.
 
-The Communication Layer is located above the Business layer, so it can access all the business logic in a module. That's how the Communication layer invokes the right business logic when requested.
+The Communication Layer is located above the Business layer, so it can access all the business logic in a module. That is how the Communication layer invokes the right business logic when requested.
 
 ### Presentation layer
 
@@ -57,7 +55,7 @@ The following are recommendations on splitting functionality into modules:
 
 1. Identify core business capabilities. Each capability can be a candidate for a module. For example: Product, Cart, Checkout. Break down your application into these high-level domains and assign each to a module.
 2. Follow the single-responsibility principle (SRP). Each module should have a single responsibility and focus on one specific functionality. Avoid creating monolithic modules that handle multiple unrelated tasks. This ensures that modules remain lightweight, reusable, and easy to maintain.
-3. Group related features together. If some features are closely related, group them into a single module. However, ensure that the module doesn't become too large or violate the SRP.
+3. Group related features together. If some features are closely related, group them into a single module. However, ensure that the module does not become too large or violate the SRP.
 4. Separate cross-cutting concerns, such as logging, authentication, or caching, into their own modules. This approach ensures that these concerns are reusable across multiple modules.
 5. Clearly define the boundaries of each module to avoid tight coupling. Modules should communicate with each other through well-defined interfaces, such as Facade, Client, Service, or Plugin.
 6. Organize modules by layers: Persistence, Business, Communication and Presentation.

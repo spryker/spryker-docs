@@ -19,7 +19,7 @@ The expertise in Spryker is shared among the many engineers and entrepreneurs cr
 
 ## What's in the docs
 
-The docs are focused on covering all the functionality that comes with Spryker and how to build projects with that functionality. Because the docs are community-owned, the content adapts to the users' demands. If you don't find the information you are looking for, feel free to [create an issue](https://github.com/spryker/spryker-docs/issues) and we will look into covering the topic. Or ask the Spryker community at [CommerceQuest](https://commercequest.space/).
+The docs are focused on covering all the functionality that comes with Spryker and how to build projects with that functionality. Because the docs are community-owned, the content adapts to the users' demands. If you don't find the information you are looking for, feel free to [create an issue](https://github.com/spryker/spryker-docs/issues) and we will look into covering the topic. Or ask the [Spryker community on Slack]({{ site.community_slack_invite }}).
 
 ## Next step
 

@@ -36,7 +36,7 @@ Problems can be reports suspecting a bug or issues with the hosting services. To
 
 ### Ask a Question
 
-For any questions about Spryker. We want the knowledge about Spryker to be available to everyone. So, we'll provide you with a link to [Spryker Community](https://commercequest.space/) to ask your question there. If there are docs on the topic, we will provide a link to that.
+For any questions about Spryker. We want the knowledge about Spryker to be available to everyone. So, we'll provide you with a link to the [Spryker community Slack]({{ site.community_slack_invite }}) to ask your question there. If there are docs on the topic, we will provide a link to that.
 
 ### Infrastructure Change Request and Access Management
 

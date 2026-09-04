@@ -1,7 +1,7 @@
 ---
 title: Language Server for Claude Code CLI
 description: Configure LSP server for code navigation and analysis in Claude Code
-last_updated: Aug 14, 2026
+last_updated: Sep 4, 2026
 keywords: [ai, coding-assistants, phpactor, intelephense, LSP, language-server-protocol, language-server]
 template: howto-guide-template
 redirect_from:
@@ -149,7 +149,7 @@ Spryker uses inheritance often and LSP Server helps to understand the code depen
 
 Before using Search/Glob/Grep/Read to find implementations, references, or definitions:
 1. **FIRST try using LSP Server**
-2. Only fall back to Search/Glob/Grep if LSP doesn't provide results
+2. Only fall back to Search/Glob/Grep if LSP does not provide results
 
 ### LSP Operations (phpactor@claude-code-lsps)
 
@@ -173,7 +173,7 @@ Use these LSP operations for code navigation:
 - Any code navigation task
 
 **Only use Search/Glob/Grep/Read when:**
-- LSP doesn't return results
+- LSP does not return results
 - Searching for string patterns (not code symbols)
 - Searching in non-PHP files
 ```

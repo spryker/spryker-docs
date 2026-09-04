@@ -1,17 +1,15 @@
 ---
 title: Development getting started guide
 description: This is a step-by-step checklist that you can follow through all the stages of working with Spryker.
-last_updated: Aug 20, 2026
+last_updated: Sep 4, 2026
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/dev-getting-started
-originalArticleId: 79b50d48-6f09-45b0-9e4a-f372e274d462
 redirect_from:
   - /docs/scos/dev/module-migration-guides/about-migration-guides.html
   - /docs/pbc/all/punchout/202307.0/punchout-catalogs-overview.html
   - /docs/scos/dev/developer-getting-started-guide.html
 ---
 
-This document helps you get started with the Spryker Cloud Commerce OS. It has been structured as a step-by-step checklist to help get you through all of the stages involved in working with Spryker. If you have any questions after following these instructions, you can connect with the Spryker community at [CommerceQuest](https://commercequest.space/).
+This document helps you get started with the Spryker Cloud Commerce OS. It has been structured as a step-by-step checklist to help get you through all of the stages involved in working with Spryker. If you have any questions after following these instructions, you can connect with the Spryker community on [Slack]({{ site.community_slack_invite }}).
 
 ## 1. Install Spryker
 
@@ -19,7 +17,7 @@ Start from the [Marketplace B2B Demo Shop](/docs/about/all/spryker-marketplace/m
 
 If your project does not need marketplace capabilities, install the Marketplace B2B Demo Shop and then remove them. For instructions, see [Uninstall the Marketplace from B2B Demo Marketplace](/docs/about/all/uninstall-marketplace-from-b2b-demo-marketplace.html). Starting from the marketplace shop and removing what you do not need is preferable to starting from a smaller shop and adding marketplace features later.
 
-You can run Spryker on MacOS, Linux, and Windows with WSL1 or WSL2. For installation instructions, see [Set up Spryker locally](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html).
+You can run Spryker on macOS, Linux, and Windows with WSL1 or WSL2. For installation instructions, see [Install Spryker](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-spryker.html).
 
 ## 2. Set up your project with the Project Starter Wizard (AI Dev SDK)
 
@@ -56,9 +54,9 @@ In PhpStorm, to disable cache indexing, right-click the folder and select **Mark
 It is safe to disable cache indexing for the following directories:
 - `data/cache`
 - `data/tmp`
-- `public/(Yves/Zed/Marketlace)/assets`
+- `public/(Yves/Zed/Marketplace)/assets`
 - `.angular/cache`
-- `src/Generated/(Yves/Zed/Marketlace)/Twig`
+- `src/Generated/(Yves/Zed/Marketplace)/Twig`
 - `src/Generated/Yves/Router`
 
 A couple of plugins for PhpStorm from the community are recommended:

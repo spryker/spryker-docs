@@ -23,7 +23,7 @@ To retrieve a paginated collection of the addresses of a customer, send the requ
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{customer_reference}}***{% endraw %} | Reference of the customer whose addresses you want to retrieve. To get it, [retrieve customers](/docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/backend-api-manage-customers.html#retrieve-customers). |
+| {% raw %}***{{customer_reference}}***{% endraw %} | Reference of the customer whose addresses you want to retrieve. To get it, [retrieve customers](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/backend-api-manage-customers.html#retrieve-customers). |
 
 ### Request
 
@@ -338,8 +338,8 @@ If the deleted address was a default billing or shipping address, the customer i
 
 ## Other management options
 
-- [Backend API: Manage customers](/docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/backend-api-manage-customers.html)
-- [Backend API: Manage customer notes](/docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-notes.html)
+- [Backend API: Manage customers](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/backend-api-manage-customers.html)
+- [Backend API: Manage customer notes](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-notes.html)
 
 ## Possible errors
 

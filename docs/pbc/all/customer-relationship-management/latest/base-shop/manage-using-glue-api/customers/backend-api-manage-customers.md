@@ -65,7 +65,7 @@ Sorting by a field that is not on the list returns `400` with the error code `12
 | REQUEST | USAGE |
 | --- | --- |
 | `GET https://glue-backend.mysprykershop.com/customers` | Retrieve the first page of customers. |
-| `GET https://glue-backend.mysprykershop.com/customers?page[limit]=50&page[offset]=100` | Retrieve 50 customers, starting from the 101st. |
+| `GET https://glue-backend.mysprykershop.com/customers?page[limit]=50&page[offset]=100` | Retrieve 50 customers, skipping the first 100. |
 | `GET https://glue-backend.mysprykershop.com/customers?q=hopkin` | Retrieve customers whose email, first name, or last name matches `hopkin`. |
 | `GET https://glue-backend.mysprykershop.com/customers?filter[customers.email]=spencor.hopkin@acme.com` | Retrieve the customer with the given email address. |
 | `GET https://glue-backend.mysprykershop.com/customers?sort=-createdAt` | Retrieve customers, newest first. |
@@ -194,7 +194,7 @@ Sorting by a field that is not on the list returns `400` with the error code `12
 
 {% info_block infoBox "Included notes" %}
 
-When you request notes with `include=notes`, the endpoint returns the first 10 notes of the customer and ignores the `page` and `sort` parameters of the request, because those parameters address the customer collection. To page or sort notes, use [Retrieve customer notes](/docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-notes.html).
+When you request notes with `include=notes`, the endpoint returns the first 10 notes of the customer and ignores the `page` and `sort` parameters of the request, because those parameters address the customer collection. To page or sort notes, use [Retrieve customer notes](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-notes.html).
 
 {% endinfo_block %}
 
@@ -408,8 +408,8 @@ This endpoint anonymizes the customer to satisfy the right to erasure. The recor
 
 ## Other management options
 
-- [Backend API: Manage customer addresses](/docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-addresses.html)
-- [Backend API: Manage customer notes](/docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-notes.html)
+- [Backend API: Manage customer addresses](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-addresses.html)
+- [Backend API: Manage customer notes](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-notes.html)
 
 ## Possible errors
 

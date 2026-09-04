@@ -29,7 +29,7 @@ To retrieve a paginated collection of the notes of a customer, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{customer_reference}}***{% endraw %} | Reference of the customer whose notes you want to retrieve. To get it, [retrieve customers](/docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/backend-api-manage-customers.html#retrieve-customers). |
+| {% raw %}***{{customer_reference}}***{% endraw %} | Reference of the customer whose notes you want to retrieve. To get it, [retrieve customers](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/backend-api-manage-customers.html#retrieve-customers). |
 
 ### Request
 
@@ -121,7 +121,7 @@ The collection does not accept filters.
 
 {% include pbc/all/glue-api-guides/latest/customer-backend-api-pagination-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/latest/customer-backend-api-pagination-attributes.md -->
 
-You can also retrieve the notes of a customer together with the customer. For more information, see [Retrieve a customer](/docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/backend-api-manage-customers.html#retrieve-a-customer).
+You can also retrieve the notes of a customer together with the customer. For more information, see [Retrieve a customer](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/backend-api-manage-customers.html#retrieve-a-customer).
 
 ## Retrieve a customer note
 
@@ -226,8 +226,8 @@ Response sample:
 
 ## Other management options
 
-- [Backend API: Manage customers](/docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/backend-api-manage-customers.html)
-- [Backend API: Manage customer addresses](/docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-addresses.html)
+- [Backend API: Manage customers](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/backend-api-manage-customers.html)
+- [Backend API: Manage customer addresses](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-addresses.html)
 
 ## Possible errors
 

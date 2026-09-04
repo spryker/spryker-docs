@@ -1073,6 +1073,17 @@ entries:
                   - title: Manage customer access to Storefront API resources
                     url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/manage-customer-access-to-glue-api-resources.html
 
+              - title: Manage via Backend API
+                nested:
+                  - title: Customers
+                    nested:
+                      - title: Manage customers
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/backend-api-manage-customers.html
+                      - title: Manage customer addresses
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-addresses.html
+                      - title: Manage customer notes
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-notes.html
+
               - title: Generate login tokens
                 url: /docs/pbc/all/customer-relationship-management/base-shop/generate-login-tokens.html
               - title: Domain model and relationships

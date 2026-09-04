@@ -1,7 +1,7 @@
 ---
 title: Product and code releases
 description: An introduction to the Spryker product and atomic code releases and how Spryker releases new updates and features.
-last_updated: Mar 4, 2024
+last_updated: Sep 3, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/spryker-release-process
 originalArticleId: 3195aac4-0b8e-43a7-b540-0222f567c9fc
@@ -76,3 +76,4 @@ To receive the security updates, request a subscription at [support@spryker.com]
 ## Next steps
 
 - [Release notes](/docs/about/all/releases/product-and-code-releases.html)
+- [Release documentation archive](/docs/about/all/releases/releases-archive.html)

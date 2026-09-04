@@ -69,7 +69,7 @@ permalink: /search.html
             container: '#hits',
             templates: {
                 item(hit) {
-                    const url = hit.url_without_anchor;
+                    const url = toCurrentOriginUrl(hit.url_without_anchor);
                     const title = hit.title ? hit.title : hit.url_without_anchor;
                     const description = hit.description ? hit.description : '';
 
@@ -116,6 +116,15 @@ permalink: /search.html
     ]);
 
     search.start();
+
+    function toCurrentOriginUrl(url) {
+        try {
+            const parsed = new URL(url, window.location.origin);
+            return window.location.origin + parsed.pathname + parsed.search + parsed.hash;
+        } catch (e) {
+            return url;
+        }
+    }
 
     function extractMarkedContext(text, maxMarks = 5, contextSize = 5) {
         const regex = /<mark>(.*?)<\/mark>/gi;

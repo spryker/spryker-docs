@@ -25,6 +25,8 @@ entries:
         url: /docs/about/all/releases/release-notes-202404.0.html
       - title: Release notes 202311.0
         url: /docs/about/all/releases/release-notes-202311.0.html
+      - title: Release documentation archive
+        url: /docs/about/all/releases/releases-archive.html
       - title: Upcoming major module releases
         url: /docs/about/all/releases/upcoming-major-module-releases.html
       - title: Security releases

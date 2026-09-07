@@ -5,15 +5,6 @@ last_updated: Sep 7, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/architecture/conceptual-overview.html
-related:
-  - title: Application layers and how various functionality is encapsulated in modules
-    link: docs/dg/dev/architecture/modules-and-application-layers.html
-  - title: Building blocks of Spryker
-    link: docs/dg/dev/architecture/programming-concepts.html
-  - title: Technology stack
-    link: docs/dg/dev/architecture/technology-stack.html
-  - title: Code buckets
-    link: docs/dg/dev/architecture/code-buckets.html
 ---
 
 Spryker is a Commerce Operating System, mainly composed of several applications, such as Storefront (Yves), Back Office (Zed) and Storefront API (Glue).

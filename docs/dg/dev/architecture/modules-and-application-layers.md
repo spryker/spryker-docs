@@ -6,10 +6,6 @@ template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/architecture/modules-and-application-layers.html
 related:
-  - title: Building blocks of Spryker
-    link: docs/dg/dev/architecture/programming-concepts.html
-  - title: Application layers
-    link: docs/dg/dev/architecture/conceptual-overview.html
   - title: Modular programming
     link: https://en.wikipedia.org/wiki/Modular_programming
   - title: Layered architecture pattern
@@ -20,10 +16,6 @@ related:
     link: https://en.wikipedia.org/wiki/List_of_system_quality_attributes
   - title: Modularity
     link: https://www.modularmanagement.com/blog/software-modularity
-  - title: Technology stack
-    link: docs/dg/dev/architecture/technology-stack.html
-  - title: Code buckets
-    link: docs/dg/dev/architecture/code-buckets.html
 ---
 
 At Spryker, we use modular programming and packaging principles for organizing functionalities into independent software packages – modules.

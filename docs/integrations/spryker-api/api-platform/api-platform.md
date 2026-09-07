@@ -10,30 +10,8 @@ related:
     link: docs/integrations/spryker-api/authenticating-and-authorization/integrate-api-platform-security.html
   - title: Migrate to API Platform
     link: docs/integrations/spryker-api/migrate-from-glue-to-api-platform/migrate-to-api-platform.html
-  - title: API Platform configuration
-    link: docs/integrations/spryker-api/api-platform/configuration.html
   - title: Security
     link: docs/integrations/spryker-api/authenticating-and-authorization/security.html
-  - title: Implement an API Platform resource
-    link: docs/integrations/spryker-api/api-platform/enablement.html
-  - title: Resource schemas
-    link: docs/integrations/spryker-api/api-platform/resource-schemas.html
-  - title: Typed collections in the published contract
-    link: docs/integrations/spryker-api/api-platform/typed-collections.html
-  - title: Validation schemas
-    link: docs/integrations/spryker-api/api-platform/validation-schemas.html
-  - title: Native API Platform resources
-    link: docs/integrations/spryker-api/api-platform/native-api-platform-resources.html
-  - title: CodeBucket support
-    link: docs/integrations/spryker-api/api-platform/code-buckets.html
-  - title: Sparse Fieldsets
-    link: docs/integrations/spryker-api/api-platform/sparse-fieldsets.html
-  - title: Serialization
-    link: docs/integrations/spryker-api/api-platform/serialization.html
-  - title: Troubleshooting API Platform
-    link: docs/integrations/spryker-api/api-platform/troubleshooting.html
-  - title: Resource relationships
-    link: docs/integrations/spryker-api/api-platform/relationships.html
   - title: Dependency Injection
     link: docs/dg/dev/architecture/dependency-injection.html
   - title: API Platform official documentation

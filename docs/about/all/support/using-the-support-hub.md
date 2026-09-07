@@ -6,11 +6,6 @@ template: concept-topic-template
 redirect_from:
 - /docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html
 - /docs/about/all/support/using-the-support-portal.html
-related:
-  - title: How Spryker Support works
-    link: docs/about/all/support/how-spryker-support-works.html
-  - title: Getting the most out of Spryker Support
-    link: docs/about/all/support/getting-the-most-out-of-spryker-support.html
 ---
 
 This document describes how to use the Support Hub to create and manage your tickets.

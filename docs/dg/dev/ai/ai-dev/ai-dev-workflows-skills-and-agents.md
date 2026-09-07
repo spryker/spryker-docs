@@ -7,25 +7,6 @@ keywords: ai, ai-dev, claude, claude code, windsurf, copilot, workflows, wizards
 template: concept-topic-template
 redirect_from:
   - /docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents
-related:
-  - title: AI Dev SDK
-    link: docs/dg/dev/ai/ai-dev/ai-dev.html
-  - title: Installation
-    link: docs/dg/dev/ai/ai-dev/ai-dev-installation.html
-  - title: AI Dev MCP Server
-    link: docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html
-  - title: Claude Code
-    link: docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html
-  - title: Project Starter Wizard
-    link: docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html
-  - title: Customization Workflow
-    link: docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html
-  - title: Bugfix Workflow
-    link: docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html
-  - title: Upgrade Workflow
-    link: docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html
-  - title: Profiler Workflow
-    link: docs/dg/dev/ai/ai-dev/ai-dev-profiler-workflow.html
 ---
 
 ## Overview

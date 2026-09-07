@@ -13,20 +13,20 @@ portal, or route a community contributor into a login wall. The linters catch pr
 **Verify the page against reality before judging it** — its front matter, its body, and the live HTTP status of its
 links. Not the page title, and not your prior about what a page named like that usually holds.
 
-## Run the checker first
+## Run the `related:` checker first
 
 ```bash
-_scripts/docs_rot_checker/docs_rot_checker.py            # files changed vs master
-_scripts/docs_rot_checker/docs_rot_checker.py --all      # whole tree
-_scripts/docs_rot_checker/docs_rot_checker.py --selftest # verify the checks still fire
+_scripts/related_checker/related_checker.py            # files changed vs master
+_scripts/related_checker/related_checker.py --all      # whole tree
+_scripts/related_checker/related_checker.py --selftest # verify the checks still fire
 ```
 
-It covers every mechanical rule below: legacy front matter, `keywords` as a YAML array, retired hosts, body link
-sections, `related:` link shape and dead targets, uppercase internal URLs, `.git` clone suffixes. Exit 1 on
-findings. Do not retype these as greps — hand-typed patterns are how the singular `## Next step` got missed across
-52 files.
+It reports sisters and subpages, non-`https` external links, leading slashes, missing `.html`, dead targets, and
+leftover body link sections. Exit 1 on findings. Run `--selftest` after editing it: a broken pattern reports
+nothing and looks like a pass, which is how the singular `## Next step` slipped past a hand-typed grep across 52
+files.
 
-The checker cannot judge the rest of this document. Those rules need a reader.
+Everything else in this document needs a reader.
 
 ## Facts the checker encodes
 
@@ -79,6 +79,26 @@ gets icons and `data-toc-skip`; a body list instead pollutes the TOC. Repo-wide 
 
 Internal links are path-only with `.html` and no leading slash. **External links must be `https://`** — the layout
 prepends `/` to anything else.
+
+**Drop sisters and direct subpages.** The sidebar already lists the pages beside the current one, so a `related:`
+entry pointing there is duplicate navigation. The test is one directory comparison: drop the entry when the target
+is in the source page's own directory. Anything further away stays — deeper descendants, parents, cousins in a
+neighbouring branch, and pages in another section.
+
+```text
+docs/a/b/page.md  →  docs/a/b/other.html          drop (sister)
+                  →  docs/a/b/deeper/child.html   keep (subpage)
+                  →  docs/a/parent.html           keep (parent)
+                  →  docs/a/c/other.html          keep (cousin)
+```
+
+Do not judge this from the sidebar YAML. Its nesting is not reliably parseable across sidebar files — an indexer
+reported `api-platform.html`'s parent as `architecture.html`, which would have deleted a legitimate cross-section
+link.
+
+**Removing the last entry removes the key.** An empty `related:` is not valid front matter; delete the whole key.
+Whole blocks do go: 11 of 13 files in one sweep lost `related:` entirely, because a page's related links were all
+its own children.
 
 **Ordering:** the body list's order first, then entries that existed only in `related:`. Deduplicate.
 

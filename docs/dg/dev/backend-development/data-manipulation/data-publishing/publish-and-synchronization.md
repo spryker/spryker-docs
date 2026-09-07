@@ -6,22 +6,6 @@ template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
 related:
-  - title: Implement Publish and Synchronization
-    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
-  - title: Handle data with Publish and Synchronization
-    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
-  - title: Adding publish events
-    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/add-publish-events.html
-  - title: Implement event trigger publisher plugins
-    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
-  - title: Implement synchronization plugins
-    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
-  - title: Debug listeners
-    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/debug-listeners.html
-  - title: Publish and synchronize and multi-store shop systems
-    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
-  - title: Publish and Synchronize repeated export
-    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-re-synchronization-and-re-generation.html
   - title: Synchronization behavior - enabling multiple mappings
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.html
 ---

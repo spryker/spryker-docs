@@ -5,11 +5,6 @@ last_updated: Sep 7, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/back-end-development/client/client.html
-related:
-  - title: Implement a client for your project
-    link: docs/dg/dev/backend-development/client/implement-a-client.html
-  - title: Use and configuring key-value storage (Redis or Valkey)
-    link: docs/dg/dev/backend-development/client/use-and-configure-redis-or-valkey-as-a-key-value-store.html
 ---
 
 This document provides general information about the client part of the Yves applications layer and describes how to use it.

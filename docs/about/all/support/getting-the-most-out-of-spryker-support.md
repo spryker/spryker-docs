@@ -7,11 +7,6 @@ originalLink: https://documentation.spryker.com/2021080/docs/how-to-get-the-most
 originalArticleId: 3ab286da-5f06-4035-bc52-0b0237ed410f
 redirect_from:
 - /docs/scos/user/intro-to-spryker/support/getting-the-most-out-of-spryker-support.html
-related:
-  - title: How Spryker Support works
-    link: docs/about/all/support/how-spryker-support-works.html
-  - title: Using the Support Hub
-    link: docs/about/all/support/using-the-support-hub.html
 ---
 
 

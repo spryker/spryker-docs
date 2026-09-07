@@ -7,11 +7,6 @@ originalLink: https://documentation.spryker.com/2021080/docs/how-spryker-support
 originalArticleId: 2923122e-fde2-4893-98df-1375f8cc7742
 redirect_from:
 - /docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html
-related:
-  - title: Getting the most out of Spryker Support
-    link: docs/about/all/support/getting-the-most-out-of-spryker-support.html
-  - title: Using the Support Hub
-    link: docs/about/all/support/using-the-support-hub.html
 ---
 
 We believe that you can only deliver great support when you are on the same page as your customers. Being transparent about our performance metrics and processes is a necessary step towards that.

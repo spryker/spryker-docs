@@ -8,13 +8,6 @@ redirect_from:
   - /docs/scos/user/intro-to-spryker/support/handling-new-feature-requests.html
   - /docs/scos/user/intro-to-spryker/support/how-to-contact-spryker-support.html
 
-related:
-  - title: Using the Support Hub
-    link: docs/about/all/support/using-the-support-hub.html
-  - title: How Spryker Support works
-    link: docs/about/all/support/how-spryker-support-works.html
-  - title: Getting the most out of Spryker Support
-    link: docs/about/all/support/getting-the-most-out-of-spryker-support.html
 
 ---
 

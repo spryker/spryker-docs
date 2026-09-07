@@ -15,7 +15,8 @@ Spryker is a Commerce Operating System, mainly composed of several applications,
 
 The following diagram shows the conceptual parts of the application and their connections:
 
-![Spryker overview](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Architecture+Concepts/Conceptual+Overview/spryker-overview.svg)
+<img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Architecture+Concepts/Conceptual+Overview/spryker-overview.svg" alt="Spryker overview" width="700">
+
 
 {% comment %}
 Mermaid source for the diagram above. Edit here, re-render, and re-upload the SVG to the same S3 path.

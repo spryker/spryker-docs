@@ -113,6 +113,30 @@ $config[OmsConstants::PROCESS_LOCATION] = [
 
 **Reporting:** If the section doesn't have a filename mentioned in it or before it, report as a warning.
 
+### Data-backed pages
+
+Some pages render their content from a data file instead of from their own Markdown body. The page's Markdown barely changes, so `last_updated` silently goes stale while the content readers see keeps changing.
+
+**Rule:** when a data file changes, the page that renders it must be updated in the same change — at minimum, `last_updated` set to the date of the data change.
+
+Known page/data pairs:
+
+| Page | Data file |
+|---|---|
+| `docs/integrations/integrations-catalog.md` | `js/integrations/tpi_list.json` |
+
+Add a row whenever a new data-backed page appears — a page whose body is `{% raw %}` markup plus a `<script src="/js/...">` include is the signal.
+
+**Detection:** the data file is in the change set and its page is not.
+
+```bash
+git diff master..HEAD --name-only | grep -q '^js/integrations/tpi_list.json$' &&
+  ! git diff master..HEAD --name-only | grep -q '^docs/integrations/integrations-catalog.md$' &&
+  echo "tpi_list.json changed but integrations-catalog.md was not updated"
+```
+
+**Fix:** set the page's `last_updated` to the current date. If entries were added, removed, or renamed, also check that the page's `description` and any counts in it still hold.
+
 ### Sidebar issues
 
 When there is a page missing in the sidebar the issues shows fileName.md to be missing. To fix this use the same path to be added and replace `md` with `html`.
@@ -134,5 +158,13 @@ npx markdownlint-cli2 "docs/**/*.md" "_includes/pbc/**/*.md" "#node_modules"
 Run Sidebar checker
 ```bash
 ./_scripts/sidebar_checker/sidebar_checker.sh
+```
+
+Check data-backed pages (see Fix guidelines > Data-backed pages)
+```bash
+changed=$(git diff master..HEAD --name-only)
+echo "$changed" | grep -q '^js/integrations/tpi_list.json$' &&
+  ! echo "$changed" | grep -q '^docs/integrations/integrations-catalog.md$' &&
+  echo "tpi_list.json changed but integrations-catalog.md was not updated"
 ```
 

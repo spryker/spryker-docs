@@ -875,6 +875,8 @@ entries:
           url: /docs/dg/dev/frontend-development/marketplace/angular-services.html
         - title: "Building the Merchant Portal frontend"
           url: /docs/dg/dev/frontend-development/marketplace/building-the-merchant-portal-frontend.html
+        - title: "Frontend builder for the Merchant Portal"
+          url: /docs/dg/dev/frontend-development/marketplace/frontend-builder-for-the-merchant-portal.html
         - title: "Project structure"
           url: /docs/dg/dev/frontend-development/marketplace/marketplace-frontend-project-and-module-structure.html
         - title: "Set up the Merchant Portal"
@@ -966,6 +968,8 @@ entries:
 
     - title: Upgrade to frontend builder v2 for Yves
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-frontend-builder-v2-for-yves.html
+    - title: Upgrade to the Merchant Portal frontend builder
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-the-merchant-portal-frontend-builder.html
     - title: Upgrade to Webpack v5
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-webpack-v5.html
     - title: Upgrade to Stylelint 16 and css-loader 6

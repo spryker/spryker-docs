@@ -1525,6 +1525,45 @@ Make sure sales service points are empty for order items during the reorder proc
 
 {% endinfo_block %}
 
+### 9) Set up the Back Office navigation
+
+The `ServicePoint` module ships the Back Office pages that let you review service points. To display them in the navigation, do the following:
+
+1. Add the service points page to the section of the Back Office navigation you want it in, for example, **Customer Portal**:
+
+**config/Zed/navigation.xml**
+
+```xml
+<?xml version="1.0"?>
+<config>
+    <ssp>
+        <pages>
+            <service-points>
+                <label>Service Points</label>
+                <title>Service Points</title>
+                <bundle>service-point</bundle>
+                <controller>list</controller>
+                <action>index</action>
+            </service-points>
+        </pages>
+    </ssp>
+</config>
+```
+
+2. Rebuild the navigation cache:
+
+```bash
+console navigation:build-cache
+```
+
+{% info_block warningBox "Verification" %}
+
+1. In the Back Office, go to **Customer Portal&nbsp;<span aria-label="and then">></span> Service Points**.
+2. Make sure the page lists the service points with their name, key, address, assigned stores, service types, and status, including the inactive ones.
+3. Next to a service point, click **View** and make sure the **Service Point**, **Address**, and **Services** panes are displayed.
+
+{% endinfo_block %}
+
 ## Install feature frontend
 
 Follow the steps below to install the Service Points feature frontend.

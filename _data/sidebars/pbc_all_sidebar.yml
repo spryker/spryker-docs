@@ -2860,7 +2860,7 @@ entries:
           - title: Install the Products Backend API
             url: /docs/pbc/all/product-experience-management/latest/install/install-the-products-backend-api.html
           - title: Install the Product Attribute Visibility feature
-            url: /docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-attribute-visibility-feature.html
+            url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-attribute-visibility-feature.html
 
       - title: Product Information Management
         url: /docs/pbc/all/product-information-management/product-information-management.html

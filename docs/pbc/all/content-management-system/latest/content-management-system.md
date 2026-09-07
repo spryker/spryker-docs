@@ -5,6 +5,9 @@ last_updated: August 28, 2026
 template: concept-topic-template
 redirect_from:
 - /docs/pbc/all/content-management-system/202204.0/content-management-system.html
+related:
+  - title: Integrating an external CMS with Spryker
+    link: /docs/integrations/custom-building-integrations/external-cms/guideline-external-cms-integration.html
 ---
 
 *Content Management System* (CMS) capability enables content managers to add, customize, and effectively manage content on all the pages of a shop.

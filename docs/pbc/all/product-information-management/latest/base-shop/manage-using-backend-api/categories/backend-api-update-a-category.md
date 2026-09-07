@@ -7,20 +7,20 @@ related:
   - title: Authenticate as a Back Office user
     link: docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html
   - title: Retrieve categories
-    link: docs/pbc/all/product-experience-management/latest/manage-using-backend-api/manage-categories/backend-api-retrieve-categories.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-backend-api/categories/backend-api-retrieve-categories.html
   - title: Create a category
-    link: docs/pbc/all/product-experience-management/latest/manage-using-backend-api/manage-categories/backend-api-create-a-category.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-backend-api/categories/backend-api-create-a-category.html
   - title: Delete a category
-    link: docs/pbc/all/product-experience-management/latest/manage-using-backend-api/manage-categories/backend-api-delete-a-category.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-backend-api/categories/backend-api-delete-a-category.html
   - title: Manage product assignments of a category
-    link: docs/pbc/all/product-experience-management/latest/manage-using-backend-api/manage-categories/backend-api-manage-product-assignments-of-a-category.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-backend-api/categories/backend-api-manage-product-assignments-of-a-category.html
 ---
 
 The `categories` resource of the Backend API lets Back Office integrations update categories, including moving them in the category tree and reordering them among their siblings. This document describes how to update a category.
 
 ## Installation
 
-For details on the module that provides the API capability and how to install it, see [Install the Product Experience Management feature](/docs/pbc/all/product-experience-management/latest/install-the-product-experience-management-feature.html).
+The endpoints are provided by the `Category` and `ProductCategory` modules. For details on installing the category capability, see [Install the Category Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html).
 
 ## Update a category
 
@@ -33,7 +33,7 @@ To update a category, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{category_key}}***{% endraw %} | Key of the category to update. The key is matched case-insensitively. To get it, [retrieve categories](/docs/pbc/all/product-experience-management/latest/manage-using-backend-api/manage-categories/backend-api-retrieve-categories.html#retrieve-categories). |
+| {% raw %}***{{category_key}}***{% endraw %} | Key of the category to update. The key is matched case-insensitively. To get it, [retrieve categories](/docs/pbc/all/product-information-management/latest/base-shop/manage-using-backend-api/categories/backend-api-retrieve-categories.html#retrieve-categories). |
 
 ### Request
 

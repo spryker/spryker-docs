@@ -35,6 +35,7 @@ This page only tracks **which** modules are available on API Platform and their 
 | Status | Meaning |
 |---|---|
 | Migrated | Module is available on API Platform and production-ready. |
+| Reimplemented | The legacy module's endpoints are superseded by a new API Platform implementation delivered by other modules. Not backward compatible: payloads, identifiers, validation and the set of available operations differ — see the linked documentation. |
 | Planned | Module is scheduled or queued for migration to API Platform. |
 
 ## Storefront API modules
@@ -149,26 +150,34 @@ The following modules are not migrated to API Platform and do not need to be. Th
 
 All BackendAPI modules tracked in the migration scope.
 
-| Module | Category | Status | Released In | Requires | Key endpoints |
-|---|---|---|---|---|---|
-| CartNotesBackendApi | Extension-Only BackendAPI | Planned | — | SalesOrdersBackendApi | (extension-only) |
-| CategoriesBackendApi | BackendAPI | Migrated | ProductExperienceManagement 1.0.0 | — | GET,POST /categories<br>GET,PATCH,DELETE /categories/{categoryKey}<br>GET /categories/{categoryKey}/products<br>GET /categories/{categoryKey}/products/{sku}<br>POST /categories/{categoryKey}/assign-products<br>POST /categories/{categoryKey}/unassign-products |
-| DynamicEntityBackendApi | BackendAPI | Planned | — | — | GET,POST,PATCH,PUT /dynamic-entity/{entity-name} (~62 auto-generated entity endpoints) |
-| OauthBackendApi | BackendAPI | Planned | — | — | POST /token |
-| PickingListsBackendApi | BackendAPI | Planned | — | — | GET /picking-lists<br>GET /picking-lists/{id}<br>PATCH /picking-lists/{id}/picking-list-items/{id}<br>POST /start-picking |
-| PickingListsUsersBackendApi | Extension-Only BackendAPI | Planned | — | PickingListsBackendApi, UsersBackendApi | (extension-only) |
-| PickingListsWarehousesBackendApi | Extension-Only BackendAPI | Planned | — | PickingListsBackendApi, WarehousesBackendApi | (extension-only) |
-| ProductAttributesBackendApi | BackendAPI | Planned | — | — | GET,POST /product-attributes<br>GET,PATCH /product-attributes/{id} |
-| ProductImageSetsBackendApi | BackendAPI | Planned | — | — | GET /concrete-product-image-sets |
-| ProductPackagingUnitsBackendApi | Extension-Only BackendAPI | Planned | — | PickingListsBackendApi | (extension-only) |
-| ProductsBackendApi | BackendAPI | Planned | — | — | GET,POST /product-abstract<br>DELETE,GET,PATCH /product-abstract/{id} |
-| PushNotificationsBackendApi | BackendAPI | Planned | — | — | GET,POST /push-notification-providers<br>PATCH,DELETE /push-notification-providers/{id}<br>POST /push-notification-subscriptions |
-| SalesOrdersBackendApi | BackendAPI | Planned | — | — | GET /sales-orders |
-| ServicePointsBackendApi | BackendAPI | Planned | — | — | GET,POST /service-points<br>GET,PATCH /service-points/{id}<br>GET,POST /service-point-addresses<br>PATCH /service-points/{id}/service-point-addresses/{id}<br>GET,POST /service-types<br>GET,PATCH /service-types/{id}<br>GET,POST /services<br>GET,PATCH /services/{id} |
-| ShipmentTypesBackendApi | BackendAPI | Planned | — | — | GET,POST /shipment-types<br>GET,PATCH /shipment-types/{id} |
-| ShipmentsBackendApi | BackendAPI | Planned | — | — | GET /sales-shipments |
-| StoresBackendApi | BackendAPI | Planned | — | — | GET,POST,PATCH /stores |
-| UsersBackendApi | BackendAPI | Planned | — | — | GET /users |
-| WarehouseOauthBackendApi | BackendAPI | Planned | — | — | POST /warehouse-tokens |
-| WarehouseUsersBackendApi | BackendAPI | Planned | — | — | GET,POST /warehouse-user-assignments<br>GET,PATCH,DELETE /warehouse-user-assignments/{id} |
-| WarehousesBackendApi | BackendAPI | Planned | — | — | GET /warehouses |
+{% info_block warningBox "Backend API endpoints are not backward compatible" %}
+
+The Backend API migration is not implemented inside the legacy modules listed below. The new endpoints are delivered by the feature modules listed in the **Feature** column, and they are **not backward compatible** with the legacy Glue endpoints they replace: payloads, identifiers, validation, error responses, and the set of available operations can differ.
+
+Before you migrate, review the differences for each feature individually in that feature's documentation.
+
+{% endinfo_block %}
+
+| Module | Category | Status | Implemented in | Released In | Requires | Key endpoints |
+|---|---|---|---|---|---|---|
+| CartNotesBackendApi | Extension-Only BackendAPI | Planned | — | — | SalesOrdersBackendApi | (extension-only) |
+| CategoriesBackendApi | BackendAPI | Reimplemented | `Spryker.Category`, `Spryker.ProductCategory` — see [Manage categories via Backend API](/docs/pbc/all/product-information-management/latest/base-shop/manage-using-backend-api/categories/backend-api-retrieve-categories.html) | — | — | GET,POST /categories<br>GET,PATCH,DELETE /categories/{categoryKey}<br>GET /categories/{categoryKey}/products<br>GET /categories/{categoryKey}/products/{sku}<br>POST /categories/{categoryKey}/assign-products<br>POST /categories/{categoryKey}/unassign-products |
+| DynamicEntityBackendApi | BackendAPI | Planned | — | — | — | GET,POST,PATCH,PUT /dynamic-entity/{entity-name} (~62 auto-generated entity endpoints) |
+| OauthBackendApi | BackendAPI | Planned | — | — | — | POST /token |
+| PickingListsBackendApi | BackendAPI | Planned | — | — | — | GET /picking-lists<br>GET /picking-lists/{id}<br>PATCH /picking-lists/{id}/picking-list-items/{id}<br>POST /start-picking |
+| PickingListsUsersBackendApi | Extension-Only BackendAPI | Planned | — | — | PickingListsBackendApi, UsersBackendApi | (extension-only) |
+| PickingListsWarehousesBackendApi | Extension-Only BackendAPI | Planned | — | — | PickingListsBackendApi, WarehousesBackendApi | (extension-only) |
+| ProductAttributesBackendApi | BackendAPI | Planned | — | — | — | GET,POST /product-attributes<br>GET,PATCH /product-attributes/{id} |
+| ProductImageSetsBackendApi | BackendAPI | Planned | — | — | — | GET /concrete-product-image-sets |
+| ProductPackagingUnitsBackendApi | Extension-Only BackendAPI | Planned | — | — | PickingListsBackendApi | (extension-only) |
+| ProductsBackendApi | BackendAPI | Planned | — | — | — | GET,POST /product-abstract<br>DELETE,GET,PATCH /product-abstract/{id} |
+| PushNotificationsBackendApi | BackendAPI | Planned | — | — | — | GET,POST /push-notification-providers<br>PATCH,DELETE /push-notification-providers/{id}<br>POST /push-notification-subscriptions |
+| SalesOrdersBackendApi | BackendAPI | Planned | — | — | — | GET /sales-orders |
+| ServicePointsBackendApi | BackendAPI | Planned | — | — | — | GET,POST /service-points<br>GET,PATCH /service-points/{id}<br>GET,POST /service-point-addresses<br>PATCH /service-points/{id}/service-point-addresses/{id}<br>GET,POST /service-types<br>GET,PATCH /service-types/{id}<br>GET,POST /services<br>GET,PATCH /services/{id} |
+| ShipmentTypesBackendApi | BackendAPI | Planned | — | — | — | GET,POST /shipment-types<br>GET,PATCH /shipment-types/{id} |
+| ShipmentsBackendApi | BackendAPI | Planned | — | — | — | GET /sales-shipments |
+| StoresBackendApi | BackendAPI | Planned | — | — | — | GET,POST,PATCH /stores |
+| UsersBackendApi | BackendAPI | Planned | — | — | — | GET /users |
+| WarehouseOauthBackendApi | BackendAPI | Planned | — | — | — | POST /warehouse-tokens |
+| WarehouseUsersBackendApi | BackendAPI | Planned | — | — | — | GET,POST /warehouse-user-assignments<br>GET,PATCH,DELETE /warehouse-user-assignments/{id} |
+| WarehousesBackendApi | BackendAPI | Planned | — | — | — | GET /warehouses |

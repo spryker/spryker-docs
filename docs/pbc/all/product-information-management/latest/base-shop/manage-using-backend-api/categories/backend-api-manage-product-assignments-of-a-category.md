@@ -7,20 +7,20 @@ related:
   - title: Authenticate as a Back Office user
     link: docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html
   - title: Retrieve categories
-    link: docs/pbc/all/product-experience-management/latest/manage-using-backend-api/manage-categories/backend-api-retrieve-categories.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-backend-api/categories/backend-api-retrieve-categories.html
   - title: Create a category
-    link: docs/pbc/all/product-experience-management/latest/manage-using-backend-api/manage-categories/backend-api-create-a-category.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-backend-api/categories/backend-api-create-a-category.html
   - title: Update a category
-    link: docs/pbc/all/product-experience-management/latest/manage-using-backend-api/manage-categories/backend-api-update-a-category.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-backend-api/categories/backend-api-update-a-category.html
   - title: Delete a category
-    link: docs/pbc/all/product-experience-management/latest/manage-using-backend-api/manage-categories/backend-api-delete-a-category.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-backend-api/categories/backend-api-delete-a-category.html
 ---
 
 The `category-products` sub-resource of the Backend API manages which abstract products are assigned to a category. This document describes how to assign products to a category in bulk, retrieve the assigned products, and unassign some or all of them.
 
 ## Installation
 
-For details on the module that provides the API capability and how to install it, see [Install the Product Experience Management feature](/docs/pbc/all/product-experience-management/latest/install-the-product-experience-management-feature.html).
+The endpoints are provided by the `Category` and `ProductCategory` modules. For details on installing the category capability, see [Install the Category Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html).
 
 ## Assign products to a category
 
@@ -33,7 +33,7 @@ To assign one or more abstract products to a category, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{category_key}}***{% endraw %} | Key of the category. The key is matched case-insensitively. To get it, [retrieve categories](/docs/pbc/all/product-experience-management/latest/manage-using-backend-api/manage-categories/backend-api-retrieve-categories.html#retrieve-categories). |
+| {% raw %}***{{category_key}}***{% endraw %} | Key of the category. The key is matched case-insensitively. To get it, [retrieve categories](/docs/pbc/all/product-information-management/latest/base-shop/manage-using-backend-api/categories/backend-api-retrieve-categories.html#retrieve-categories). |
 
 ### Request
 
@@ -136,7 +136,7 @@ Request sample: retrieve the products assigned to a category
 | name | String | Name of the product in the request locale. |
 | position | Integer | Position of the product within the category. |
 
-The pagination summary in `meta.pagination` has the same structure as in the [category collection](/docs/pbc/all/product-experience-management/latest/manage-using-backend-api/manage-categories/backend-api-retrieve-categories.html#retrieve-categories).
+The pagination summary in `meta.pagination` has the same structure as in the [category collection](/docs/pbc/all/product-information-management/latest/base-shop/manage-using-backend-api/categories/backend-api-retrieve-categories.html#retrieve-categories).
 
 ## Retrieve a product assigned to a category
 

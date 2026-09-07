@@ -1,6 +1,7 @@
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | categoryKey | String | Unique key of the category. It is also the resource `id`. |
+| uuid | String | Universally unique identifier of the category. Read-only. It is `null` on installations that do not have the optional `uuid` column, and on categories created before it was introduced until `uuid:generate Category spy_category` has been run for them. `categoryKey`, not `uuid`, is the resource `id`. |
 | isActive | Boolean | Defines whether the category is active. |
 | isInMenu | Boolean | Defines whether the category is shown in the Storefront navigation menu. |
 | isSearchable | Boolean | Defines whether the category is searchable. |

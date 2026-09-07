@@ -1,7 +1,7 @@
 ---
 title: Integrating an external CMS with Spryker
 description: Learn how an external CMS and Spryker fit together, which integration strategies are available, and which boundaries never move.
-last_updated: Aug 31, 2026
+last_updated: Sep 7, 2026
 template: concept-topic-template
 ---
 
@@ -13,7 +13,7 @@ how to tell which applies to you, and which boundaries never move whichever you 
 
 This is the short version. For the extended, technical version — capability assessment, delivery mechanics,
 code-level extension points, and a phase plan — see
-[Scoping an External CMS Integration](/docs/pbc/all/miscellaneous/latest/third-party-integrations/external-cms/guideline-external-cms-integration-scoping.html).
+[Scoping an External CMS Integration](/docs/integrations/custom-building-integrations/external-cms/guideline-external-cms-integration-scoping.html).
 
 Nothing about it has to change to make this work. Its content model, delivery API, preview mechanism, and
 localization design are taken as given. Where your CMS and Spryker disagree, the adaptation is written on the
@@ -48,7 +48,7 @@ capabilities remain fully reachable over its APIs — this is a cost considerati
 **C — Split rendering** applies when an existing CMS-served site stays live and gains commerce, or when the transition
 to A or B must be delivered in stages across the URL space.
 
-*If you want to go deeper, read: [how to eliminate and weigh strategies against your actual CMS instance](/docs/pbc/all/miscellaneous/latest/third-party-integrations/external-cms/guideline-external-cms-integration-scoping.html#the-three-strategies).*
+*If you want to go deeper, read: [how to eliminate and weigh strategies against your actual CMS instance](/docs/integrations/custom-building-integrations/external-cms/guideline-external-cms-integration-scoping.html#the-three-strategies).*
 
 ## The boundaries that never move
 
@@ -64,7 +64,7 @@ logic or payment handling, and its output is published once and shared by every 
 CMS-served page — fetched in the browser from the Spryker Storefront API — but anything stateful or requiring
 server-side trust belongs to a Spryker-rendered or frontend-rendered page.
 
-*If you want to go deeper, read: [what stays fixed regardless of strategy — payload rules, the adapter, placement](/docs/pbc/all/miscellaneous/latest/third-party-integrations/external-cms/guideline-external-cms-integration-scoping.html#the-boundaries-that-never-move).*
+*If you want to go deeper, read: [what stays fixed regardless of strategy — payload rules, the adapter, placement](/docs/integrations/custom-building-integrations/external-cms/guideline-external-cms-integration-scoping.html#the-boundaries-that-never-move).*
 
 ## The strategies side by side
 
@@ -137,7 +137,7 @@ flowchart LR
 {% endcomment %}
 ![Strategy C: a path-based split sends content paths to the external CMS and cart, checkout, and account paths to Spryker-rendered pages, with the browser calling the Spryker Storefront API for commerce data](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/external-cms/strategy-c-split-rendering.svg)
 
-*If you want to go deeper, read: [cost tables, layer-by-layer responsibility, and code-level extension points per strategy](/docs/pbc/all/miscellaneous/latest/third-party-integrations/external-cms/guideline-external-cms-integration-scoping.html#the-strategies-side-by-side).*
+*If you want to go deeper, read: [cost tables, layer-by-layer responsibility, and code-level extension points per strategy](/docs/integrations/custom-building-integrations/external-cms/guideline-external-cms-integration-scoping.html#the-strategies-side-by-side).*
 
 ## How common CMS products relate to the strategies
 
@@ -160,7 +160,7 @@ and operational limits such as rate limits and latency.
 | WordPress, Drupal | Traditional, with headless modes | Rendered pages, or JSON through API modules | Usually C, keeping the existing marketing site |
 
 Run your own instance through the
-[capability assessment](/docs/pbc/all/miscellaneous/latest/third-party-integrations/external-cms/guideline-external-cms-integration-scoping.html#cms-capability-assessment)
+[capability assessment](/docs/integrations/custom-building-integrations/external-cms/guideline-external-cms-integration-scoping.html#cms-capability-assessment)
 in the extended version. That, not the product name, is what settles which strategies remain open.
 
 ## Spryker's own CMS is not displaced by this
@@ -173,7 +173,7 @@ How much of it remains an authoring surface is an explicit scope decision, made 
 over time. One rule holds however much your CMS owns, and in every strategy: **exactly one system owns each content
 type, site-wide.**
 
-*If you want to go deeper, read: [scope levels, per-entity decisions, and the blocks question](/docs/pbc/all/miscellaneous/latest/third-party-integrations/external-cms/guideline-external-cms-integration-scoping.html#integration-scope).*
+*If you want to go deeper, read: [scope levels, per-entity decisions, and the blocks question](/docs/integrations/custom-building-integrations/external-cms/guideline-external-cms-integration-scoping.html#integration-scope).*
 
 ## Narrowing the choice
 
@@ -195,10 +195,10 @@ rather than expressing a preference.
 6. **Who owns each cross-cutting concern.** URLs and SEO, navigation, localization, preview, caching and invalidation,
    failure behavior — one owner each.
 
-*If you want to go deeper, read [turning these six factors into a phase plan, with exit criteria and rollback](/docs/pbc/all/miscellaneous/latest/third-party-integrations/external-cms/guideline-external-cms-integration-scoping.html#phasing-and-rollout).*
+*If you want to go deeper, read [turning these six factors into a phase plan, with exit criteria and rollback](/docs/integrations/custom-building-integrations/external-cms/guideline-external-cms-integration-scoping.html#phasing-and-rollout).*
 
 ---
 
-Once you have decided, hand this off to your architects — [Scoping an External CMS Integration](/docs/pbc/all/miscellaneous/latest/third-party-integrations/external-cms/guideline-external-cms-integration-scoping.html)
+Once you have decided, hand this off to your architects — [Scoping an External CMS Integration](/docs/integrations/custom-building-integrations/external-cms/guideline-external-cms-integration-scoping.html)
 walks them through the capability assessment, the decision record, code-level extension points per strategy, and the
 review checklist to sign off against.

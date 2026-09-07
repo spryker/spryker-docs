@@ -1,7 +1,7 @@
 ---
 title: Detailed scoping an external CMS integration
 description: Assess an external CMS, select an integration strategy and scope, and plan the build against Spryker extension points.
-last_updated: Aug 31, 2026
+last_updated: Sep 7, 2026
 template: concept-topic-template
 ---
 

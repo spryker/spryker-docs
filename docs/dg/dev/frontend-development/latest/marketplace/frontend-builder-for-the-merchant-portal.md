@@ -15,7 +15,7 @@ related:
 
 The Merchant Portal frontend builder compiles the Angular application of the Merchant Portal: the entry points of all Merchant Portal modules, their styles, assets, and tests.
 
-Starting from `spryker/zed-ui` version 4.2.0, the builder ships inside the ZedUi module and lives in `vendor/spryker/zed-ui/src/Spryker/Zed/ZedUi/FrontendBuilder/`. Projects no longer carry a `frontend/merchant-portal/` directory. For the upgrade steps, see [Upgrade to the Merchant Portal frontend builder](/docs/dg/dev/upgrade-and-migrate/upgrade-to-the-merchant-portal-frontend-builder.html).
+Starting from `spryker/zed-ui` version 4.3.0, the builder ships inside the ZedUi module and lives in `vendor/spryker/zed-ui/src/Spryker/Zed/ZedUi/FrontendBuilder/`. Projects no longer carry a `frontend/merchant-portal/` directory. For the upgrade steps, see [Upgrade to the Merchant Portal frontend builder](/docs/dg/dev/upgrade-and-migrate/upgrade-to-the-merchant-portal-frontend-builder.html).
 
 ## The builder at a glance
 
@@ -34,9 +34,20 @@ Starting from `spryker/zed-ui` version 4.2.0, the builder ships inside the ZedUi
 
 - Node.js 24.15.0 or later. Angular 22 accepts `^22.22.3 || ^24.15.0 || >=26.0.0`, so Node.js 25 is *not* supported even though it satisfies `>=24.15.0`.
 - npm 10 or later.
-- `spryker/zed-ui` 4.2.0 or later.
+- `spryker/zed-ui` 4.3.0 or later.
 
 ## Commands
+
+The builder is an npm workspace named `mp-zed-ui`, so the project declares the module as a workspace and its `mp:*` scripts delegate to it:
+
+```json
+"workspaces": [
+    "vendor/spryker/zed-ui"
+],
+"scripts": {
+    "mp:build": "npm run build -w mp-zed-ui --"
+}
+```
 
 All commands are run from the project root:
 
@@ -58,6 +69,20 @@ npm run mp:stylelint -- -p 'src/Pyz/Zed/FooGui/Presentation/Components/**/*.less
 ```
 
 The built assets are written to `public/MerchantPortal/assets/js`.
+
+## Dependencies that come with the module
+
+ZedUi declares the whole npm dependency set of the Merchant Portal, so the project and its Merchant Portal modules declare none of it. To see what that set is, open `vendor/spryker/zed-ui/package.json`:
+
+| Section | Who installs it | What it means for your project |
+| --- | --- | --- |
+| `dependencies` | ZedUi | Angular, ng-zorro, `@spryker/*`, rxjs, zone.js and the rest of the runtime. Remove them from your `package.json`. |
+| `devDependencies` | ZedUi | The Angular builders, the Angular CLI, `jest-preset-angular`, `fast-glob` and the other build-time packages. Remove them from your `package.json`. |
+| `peerDependencies` | your project | The packages ZedUi expects the project to provide. Keep these. |
+
+At the time of ZedUi 4.3.0, the peer dependencies are `@jest/globals`, `@typescript-eslint/eslint-plugin`, `@typescript-eslint/parser`, `stylelint`, `ts-jest`, `typescript`, and `webpack`. Read the file rather than this list when you migrate — it is the source of truth for the version ranges.
+
+To check where an installed package comes from, run `npm ls <package>` in the project root: a package provided by ZedUi is listed under `mp-zed-ui`.
 
 ## Generated configuration
 
@@ -117,6 +142,10 @@ Twig templates are *not* watched: Zed caches them server-side, so a browser relo
 ## Module entry points and path aliases
 
 Every Merchant Portal module has an `entry.ts` in `Presentation/Components/`, which the builder collects as a webpack entry, and an `mp.public-api.ts` in the module root, which is what other modules import. The builder generates a `@mp/<module>` path alias per module out of these, plus `@mp/polyfills` for the polyfills file — so a module imports its neighbours as `@mp/zed-ui` or `@mp/gui-table` rather than by path.
+
+## Date adapter
+
+`DefaultMerchantPortalConfigModule` registers the ng-zorro date adapter, which ng-zorro 22 no longer provides implicitly. A project that imports this module needs no date adapter provider of its own — if your `AppModule` still calls `provideNzDateFnsAdapter()` from an earlier version, remove it.
 
 ## Angular 20 projects
 

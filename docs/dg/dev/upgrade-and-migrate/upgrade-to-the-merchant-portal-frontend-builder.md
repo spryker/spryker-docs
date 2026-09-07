@@ -20,7 +20,7 @@ For an overview of the builder, see [Frontend builder for the Merchant Portal](/
 ## Prerequisites
 
 - Node.js 24.15.0 or later, npm 10 or later.
-- `spryker/zed-ui` 4.2.0 or later, together with the Merchant Portal modules that allow it.
+- `spryker/zed-ui` 4.3.0 or later, together with the Merchant Portal modules that allow it.
 - Angular 22, or Angular 20 with the `@spryker/*` packages pinned — see [Staying on Angular 20](#staying-on-angular-20).
 
 {% info_block warningBox "Node.js 25 is not supported" %}
@@ -31,10 +31,10 @@ Angular 22 accepts `^22.22.3 || ^24.15.0 || >=26.0.0`. Node.js 25 satisfies a `>
 
 ## 1) Update composer packages
 
-ZedUi 4.2.0 declares the whole `@spryker/*` dependency set for the Merchant Portal, and the modules that no longer declare npm dependencies themselves require it. Update ZedUi together with the Merchant Portal modules:
+ZedUi 4.3.0 declares the whole npm dependency set of the Merchant Portal, and the modules that no longer declare npm dependencies themselves require it. Update ZedUi together with the Merchant Portal modules:
 
 ```bash
-composer require spryker/zed-ui:"^4.2.0" --no-update
+composer require spryker/zed-ui:"^4.3.0" --no-update
 composer update spryker/zed-ui "spryker/*-merchant-portal-gui" spryker/gui-table --with-dependencies
 ```
 
@@ -69,17 +69,15 @@ image:
 }
 ```
 
-2. Declare the vendor packages as npm workspaces, so that npm resolves the builder and its dependencies:
+2. Declare the ZedUi module as an npm workspace, so that npm resolves the builder and its dependencies. The Merchant Portal needs this one entry:
 
 ```json
 "workspaces": [
-    "vendor/spryker/*",
-    "vendor/spryker/*/assets/Zed",
-    "vendor/spryker-feature/*",
-    "vendor/spryker-feature/*/assets/Zed",
-    "vendor/spryker-shop/*"
+    "vendor/spryker/zed-ui"
 ]
 ```
+
+A project that also uses the Yves builder adds `vendor/spryker-shop/shop-ui`, and a project that already declares broader globs such as `vendor/spryker/*` needs no extra entry — the workspace is matched either way. The workspace is named `mp-zed-ui`, which is the name the `mp:*` scripts address.
 
 3. Point the `mp:*` scripts at the `mp-zed-ui` workspace, which is the ZedUi module:
 
@@ -96,7 +94,15 @@ image:
 }
 ```
 
-4. Remove the Merchant Portal build dependencies from the project `package.json` — webpack and its loaders, the Angular builders, Jest and its presets, the ng-zorro and `@spryker/*` packages. ZedUi declares them now, and a duplicate declaration in the project pins a second version of the same package.
+4. Remove the Merchant Portal dependencies that ZedUi declares now. A duplicate declaration in the project pins a second version of the same package, which is how two Angular or two ng-zorro copies end up in one build.
+
+To see what ZedUi brings, open `vendor/spryker/zed-ui/package.json`:
+
+- `dependencies` — the runtime set: Angular, ng-zorro, `@spryker/*`, rxjs, zone.js. Remove these from your `package.json`.
+- `devDependencies` — the build-time set: the Angular builders and CLI, `jest-preset-angular`, `fast-glob`. Remove these too.
+- `peerDependencies` — what ZedUi expects *you* to provide. Keep these in your `package.json`. In ZedUi 4.3.0 they are `@jest/globals`, `@typescript-eslint/eslint-plugin`, `@typescript-eslint/parser`, `stylelint`, `ts-jest`, `typescript`, and `webpack`; read the file for the exact ranges.
+
+After `npm install`, `npm ls <package>` shows where a package comes from: one provided by ZedUi is listed under `mp-zed-ui`.
 
 ## 4) Delete the project build tooling
 
@@ -166,23 +172,7 @@ Without the `./` prefixes, the compiler fails with `TS5090: Non-relative paths a
 
 The `paths` in the three `tsconfig.mp*.json` files are generated, so you never edit those by hand.
 
-## 7) Register the ng-zorro date adapter on ZedUi 4.2.0
-
-ng-zorro 22 no longer ships an implicit date adapter, so on ZedUi 4.2.0 an unconfigured date picker throws `NullInjectorError` at runtime. Add the provider to the project `AppModule`:
-
-```ts
-import { provideNzDateFnsAdapter } from 'ng-zorro-antd/core/time';
-
-@NgModule({
-    imports: [/* … */],
-    providers: [provideNzDateFnsAdapter()],
-})
-export class AppModule extends RootMerchantPortalModule {}
-```
-
-From ZedUi 4.3.0, `DefaultMerchantPortalConfigModule` registers the adapter itself, and the project provider can be removed.
-
-## 8) Install and build
+## 7) Install and build
 
 ```bash
 npm install
@@ -199,7 +189,9 @@ npm run mp:stylelint
 
 In a project, all three cover `src/Pyz` only: the core modules arrive in `vendor/` and are not the project's to report on.
 
-Finally, check the Merchant Portal in the browser at `$[local_domain]/security-merchant-portal-gui/login`, and open a page with a date picker to confirm the date adapter is in place.
+Finally, check the Merchant Portal in the browser at `$[local_domain]/security-merchant-portal-gui/login`.
+
+If your `AppModule` still calls `provideNzDateFnsAdapter()`, remove it: from ZedUi 4.3.0, `DefaultMerchantPortalConfigModule` registers the ng-zorro date adapter itself.
 
 ## Staying on Angular 20
 

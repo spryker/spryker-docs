@@ -1,15 +1,25 @@
 ---
 title: Modules and application layers
 description: Learn about the layers in the Spryker Commerce OS and how they are related with each other.
-last_updated: Sep 4, 2026
+last_updated: Sep 7, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/architecture/modules-and-application-layers.html
 related:
-  - title: Conceptual overview
-    link: docs/dg/dev/architecture/conceptual-overview.html
-  - title: Programming concepts
+  - title: Building blocks of Spryker
     link: docs/dg/dev/architecture/programming-concepts.html
+  - title: Application layers
+    link: docs/dg/dev/architecture/conceptual-overview.html
+  - title: Modular programming
+    link: https://en.wikipedia.org/wiki/Modular_programming
+  - title: Layered architecture pattern
+    link: https://en.wikipedia.org/wiki/Multitier_architecture
+  - title: Packaging principles
+    link: https://principles-wiki.net/collections:robert_c._martin_s_principle_collection
+  - title: Quality attributes
+    link: https://en.wikipedia.org/wiki/List_of_system_quality_attributes
+  - title: Modularity
+    link: https://www.modularmanagement.com/blog/software-modularity
   - title: Technology stack
     link: docs/dg/dev/architecture/technology-stack.html
   - title: Code buckets
@@ -62,13 +72,3 @@ The following are recommendations on splitting functionality into modules:
 7. Avoid over-modularization. While modularity is beneficial, over-modularization can lead to unnecessary complexity. Avoid creating too many small modules that perform trivial tasks. Instead, focus on creating modules that encapsulate meaningful and reusable functionality.
 8. Each module should be independently testable. Write functional or API tests for each module to ensure it works as expected. Use Spryker's testing tools and frameworks to streamline this process.
 9. Reuse and enhance existing modules. Before creating a new module, check if Spryker or its ecosystem already provides a module that meets your needs. Reusing existing modules saves time and ensures compatibility with the platform.
-
-## Next steps
-
-- To learn about the building blocks of Spryker, see [Programming concepts](/docs/dg/dev/architecture/programming-concepts.html).
-- To learn about application layers, see [Concept overview](/docs/dg/dev/architecture/conceptual-overview.html).
-- To learn about modular programming, see [Modular programming](https://en.wikipedia.org/wiki/Modular_programming).
-- To learn about the layered architecture pattern, see [Multitier architecture](https://en.wikipedia.org/wiki/Multitier_architecture).
-- To learn about packaging principles, see [Packaging principles](http://principles-wiki.net/collections:robert_c._martin_s_principle_collection).
-- To learn about quality attributes, see [Quality attributes](https://en.wikipedia.org/wiki/List_of_system_quality_attributes).
-- To learn about modularity, see [Software Modularity](https://www.modularmanagement.com/blog/software-modularity).

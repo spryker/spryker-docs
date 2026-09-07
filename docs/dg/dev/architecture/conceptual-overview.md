@@ -6,12 +6,12 @@ template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/architecture/conceptual-overview.html
 related:
-  - title: Programming concepts
+  - title: Application layers and how various functionality is encapsulated in modules
+    link: docs/dg/dev/architecture/modules-and-application-layers.html
+  - title: Building blocks of Spryker
     link: docs/dg/dev/architecture/programming-concepts.html
   - title: Technology stack
     link: docs/dg/dev/architecture/technology-stack.html
-  - title: Modules and layers
-    link: docs/dg/dev/architecture/modules-and-application-layers.html
   - title: Code buckets
     link: docs/dg/dev/architecture/code-buckets.html
 ---
@@ -119,8 +119,3 @@ With data separation comes the question: how to sync data between both applicati
 The idea behind this concept is that the necessary data (stored in the relational database) is being watched for changes (create, update, delete). When a change occurs, the relevant data gets published to the relevant place (Search and/or Storage). It is an eventually consistent method of providing data for the frontend.
 
 For more details on how Publish & Sync works, see [Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html).
-
-## Next steps
-
-- To know more about the application layers and how various functionality is encapsulated in modules, see [Modules and layers](/docs/dg/dev/architecture/modules-and-application-layers.html).
-- To know more about the building blocks of Spryker, see [Programming Concepts](/docs/dg/dev/architecture/programming-concepts.html).

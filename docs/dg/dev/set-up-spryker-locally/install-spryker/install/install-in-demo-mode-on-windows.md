@@ -1,7 +1,7 @@
 ---
 title: Install in Demo mode on Windows
 description: Learn how you can install and configure Spryker in Demo mode on Windows in a local environment.
-last_updated: Sep 4, 2026
+last_updated: Sep 7, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/installing-in-demo-mode-on-windows
 originalArticleId: 57e6858b-6419-47b3-9d61-8b1d6213e4aa
@@ -9,6 +9,16 @@ redirect_from:
   - /docs/scos/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-windows.html
   - /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-windows.html
 related:
+  - title: Troubleshooting
+    link: docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/troubleshooting-installation.html
+  - title: Configuring debugging in Docker
+    link: docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/configure-debugging.html
+  - title: Deploy file reference
+    link: docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html
+  - title: Configuring services
+    link: docs/dg/dev/integrate-and-configure/configure-services.html
+  - title: Set up a self-signed SSL certificate
+    link: docs/dg/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html
   - title: Database access credentials
     link: docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html
 ---
@@ -134,11 +144,3 @@ To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. Y
 ## Get the list of useful commands
 
 To get the full and up-to-date list of commands, run `docker/sdk help`.
-
-## Next steps
-
-- [Troubleshooting](/docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/troubleshooting-installation.html)
-- [Configuring debugging in Docker](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/configure-debugging.html)
-- [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)
-- [Configuring services](/docs/dg/dev/integrate-and-configure/configure-services.html)
-- [Set up a self-signed SSL certificate](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html)

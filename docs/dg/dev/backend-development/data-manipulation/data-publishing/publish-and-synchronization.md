@@ -1,7 +1,7 @@
 ---
 title: Publish and Synchronization
 description: Publish and Synchronization process synchronizes all changes made on the backend need to be propagated to the client data stores.
-last_updated: Sep 4, 2026
+last_updated: Sep 7, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
@@ -21,7 +21,7 @@ related:
   - title: Publish and synchronize and multi-store shop systems
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
   - title: Publish and Synchronize repeated export
-    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-re-synchronization-and-re-generation.html
   - title: Synchronization behavior - enabling multiple mappings
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.html
 ---

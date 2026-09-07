@@ -51,10 +51,6 @@ Report an issue with Spryker CI (Buddy), such as errors or issues with its UI or
 
 Inform the Customer Success Team that you are close to going live.
 
-### Request Help with Spryker ACP
-
-Report an issue with a Spryker ACP connector.
-
 ### Request Professional Services
 
 This category offers a selection of professional services. For example, you may need it when implementing a complex custom feature.

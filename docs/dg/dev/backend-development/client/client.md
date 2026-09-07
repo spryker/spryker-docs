@@ -1,15 +1,15 @@
 ---
 title: Client
 description: This document provides general information about the client part of the Yves applications layer and describes how to use it.
-last_updated: Sep 4, 2026
+last_updated: Sep 7, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/back-end-development/client/client.html
 related:
-  - title: Implementing a client
-    link: docs/scos/dev/back-end-development/client/implement-a-client.html
+  - title: Implement a client for your project
+    link: docs/dg/dev/backend-development/client/implement-a-client.html
   - title: Use and configuring key-value storage (Redis or Valkey)
-    link: docs/scos/dev/back-end-development/client/use-and-configure-redis-as-a-key-value-storage.html
+    link: docs/dg/dev/backend-development/client/use-and-configure-redis-or-valkey-as-a-key-value-store.html
 ---
 
 This document provides general information about the client part of the Yves applications layer and describes how to use it.
@@ -109,7 +109,3 @@ The request from Yves to Zed involves two important classes:
 
 - The *stub* represents the remote methods in the client.
 - The *gateway controller* represents the entry point on the Zed side.
-
-## Next step
-
-To implement a client for your project, see [Implementing a client](/docs/dg/dev/backend-development/client/implement-a-client.html).

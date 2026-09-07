@@ -1,10 +1,13 @@
 ---
 title: About Spryker docs
 description: Everything you need to know about Spryker Documentation, the one stop hub for all the information you need for your Spryker Projects
-last_updated: Sep 4, 2026
+last_updated: Sep 7, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/about/all/about-the-docs/docs-updates.html
+related:
+  - title: Contribute to the docs
+    link: docs/about/all/about-the-docs/contribute-to-the-docs/contribute-to-the-docs.html
 ---
 
 Spryker docs are your one-stop hub for all the information about Spryker Cloud Commerce OS.
@@ -25,7 +28,3 @@ problem or build around an interesting use case.
 The docs are focused on covering all the functionality that comes with Spryker and how to build projects with that functionality. 
 Because the docs are community-owned, the content adapts to the users' demands. If you don't find the information you are looking for, 
 feel free to [create an issue](https://github.com/spryker/spryker-docs/issues) and we will look into covering the topic. Or ask the [Spryker community on Slack]({{ site.community_slack_invite }}).
-
-## Next step
-
-[Contribute to the docs](/docs/about/all/about-the-docs/contribute-to-the-docs/contribute-to-the-docs.html)

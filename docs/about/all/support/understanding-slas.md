@@ -1,10 +1,8 @@
 ---
 title: Understanding SLAs
 description: Explore Spryker's SLAs to understand expected response times, responsibilities, and best practices for seamless support and timely issue resolution.
-last_updated: Sep 6, 2021
+last_updated: Sep 7, 2026
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/understand-slas
-originalArticleId: 8cc87de0-43f6-4d9c-b65b-3ec9cad7a38b
 redirect_from:
 - /docs/scos/user/intro-to-spryker/support/understand-slas.html
 ---

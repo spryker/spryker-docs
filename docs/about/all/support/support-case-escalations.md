@@ -1,10 +1,8 @@
 ---
 title: Support case escalations
 description: Learn Spryker's process for handling escalated support cases, ensuring urgent issues are addressed by the right team to meet critical business needs.
-last_updated: Oct 25, 2021
+last_updated: Sep 7, 2026
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/case-escalation
-originalArticleId: 42b43d4c-fb40-4663-a210-1bdea01b4b22
 redirect_from:
 - /docs/scos/user/intro-to-spryker/support/escalations.html
 ---

@@ -9,7 +9,7 @@ redirect_from:
   - /docs/scos/dev/developer-getting-started-guide.html
 ---
 
-This document helps you get started with the Spryker Cloud Commerce OS. It has been structured as a step-by-step checklist to help get you through all of the stages involved in working with Spryker. If you have any questions after following these instructions, you can connect with the Spryker community on [Slack]({{ site.community_slack_invite }}).
+This document helps you get started with the Spryker Cloud Commerce OS. It has been structured as a step-by-step checklist to help get you through all the stages involved in working with Spryker. If you have any questions after following these instructions, you can connect with the Spryker community on [Slack]({{ site.community_slack_invite }}).
 
 ## 1. Install Spryker
 
@@ -58,9 +58,8 @@ It is safe to disable cache indexing for the following directories:
 - `.angular/cache`
 - `src/Generated/(Yves/Zed/Marketplace)/Twig`
 - `src/Generated/Yves/Router`
-
-A couple of plugins for PhpStorm from the community are recommended:
-![phpstorm plugins](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/spryker-phpstorm-plugins.png)
+- `src/Generated/Router`
+- `src/OpenTelemetry`
 
 ## 6. Explore Spryker Documentation
 

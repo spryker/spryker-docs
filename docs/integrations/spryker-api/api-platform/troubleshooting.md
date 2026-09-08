@@ -95,6 +95,46 @@ docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate --force
 ✅ resource:
     name: Customers
     shortName: customers
+
+# Error: Property declares both "items" and "openapiContext.items"
+# openapiContext is merged on top of the derived schema, so the hand-written
+# shape would win and the typed element schema would be discarded silently.
+❌ categories:
+    type: array
+    items:
+        type: object
+        properties:
+            categoryKey: { type: string }
+    openapiContext:
+        items:
+            type: object
+            properties:
+                categoryKey: { type: string }
+
+✅ categories:
+    type: array
+    items:
+        type: object
+        properties:
+            categoryKey: { type: string }
+
+# Error: Property is both a relationship and an inline object list
+# A relationship property already receives a docblock describing its target
+# resource, and only one docblock is emitted per property.
+❌ includes:
+    - relationshipName: addresses
+      targetResource: CustomersAddresses
+  properties:
+    addresses:
+        type: array
+        items:
+            type: object
+            properties:
+                city: { type: string }
+
+✅ includes:
+    - relationshipName: addresses
+      targetResource: CustomersAddresses
 ```
 
 **Solution:**
@@ -111,6 +151,57 @@ docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate --force
    ```bash
    docker/sdk cli glue  api:debug resource-name --show-merged
    ```
+
+### A list property still publishes as an untyped array
+
+**Symptom:** A `type: array` property has an `items` block, but the published contract shows
+`"type": "array"` with no `items` reference, and SDK generators produce an untyped collection.
+
+**Possible causes:**
+
+1. **`items` is nested under `openapiContext` instead of being a sibling of `type: array`**
+
+   Only a sibling triggers typing. An `items` block under `openapiContext` is documentation
+   passthrough: it generates no class and produces no reference.
+
+   ```yaml
+   ❌ categories:
+       type: array
+       openapiContext:
+           items:
+               type: object
+               properties:
+                   categoryKey: { type: string }
+
+   ✅ categories:
+       type: array
+       items:
+           type: object
+           properties:
+               categoryKey: { type: string }
+   ```
+
+2. **`items.type` is a scalar**
+
+   A list of scalars generates no element class and no reference. This is expected — there is nothing
+   to type.
+
+3. **The resource was not regenerated after the schema change**
+
+   ```bash
+   docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate
+   ```
+
+4. **Stale generated code is still being served**
+
+   See [Inspecting generated code](#inspecting-generated-code) to confirm what is on disk.
+
+**Solution:**
+
+Confirm the generated resource class carries a `@var array<\Generated\…>` docblock on the property.
+That docblock is what API Platform reads to build the element reference — if it is absent, the contract
+falls back to an untyped array. See
+[Typed collections in the published contract](/docs/integrations/spryker-api/api-platform/typed-collections.html).
 
 ## Runtime issues
 

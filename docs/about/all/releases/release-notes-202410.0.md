@@ -1,7 +1,7 @@
 ---
 title: Release notes 202410.0
 description: Release notes for Spryker Cloud Commerce OS version 202410.0
-last_updated: Feb 26, 2026
+last_updated: Aug 14, 2026
 template: concept-topic-template
 ---
 
@@ -180,7 +180,7 @@ These GPTs leverage Open AI and are provided under the following conditions:
 
 ### Documentation
 
-[AI Assistants](/docs/dg/dev/ai/ai-assistants/ai-assistants)
+These GPTs have since been retired. For current AI-assisted development tooling, see the [AI Dev SDK](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html).
 
 ## Audit logs {% include badge.html type="feature" %}
 

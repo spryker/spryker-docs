@@ -68,6 +68,10 @@ Analyze the overall tone to align with technical documentation styles (Google De
 **Spelling:**
 - Use American spelling consistently
 
+**Punctuation:**
+- Always put a space on both sides of an em dash (`—`). Write `covers — for example`, never `covers—for example`.
+- This applies to prose only. Never alter em dashes inside code blocks, inline code, or file paths.
+
 **Terminology (Vale `terms` style):**
 - Use the exact terms enforced by the Vale rules in `vale/styles/terms/`. These are `error`-level and will fail the `vale-lint` CI check.
 - Most common: use **Back Office** (two words), never "Backoffice" or "backoffice". This applies even to API/type names — write **Back Office API**, not "Backoffice API".

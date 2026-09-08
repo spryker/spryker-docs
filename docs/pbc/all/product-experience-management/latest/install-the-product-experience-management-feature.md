@@ -1,7 +1,7 @@
 ---
 title: Install the Product Experience Management feature
 description: Learn how to install the Product Experience Management feature into your Spryker project.
-last_updated: Jul 27 2026
+last_updated: Aug 18 2026
 template: feature-integration-guide-template
 ---
 
@@ -21,6 +21,7 @@ Install the required features:
 | Locale | {{page.release_tag}} | Required |
 | Category | {{page.release_tag}} | Required |
 | Merchant | {{page.release_tag}} | Required |
+| Product Approval Process | {{page.release_tag}} | Required |
 | Shipment Type | {{page.release_tag}} | Required |
 | File System | {{page.release_tag}} | Required |
 
@@ -105,6 +106,61 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE]['product-experience-management-
 {% info_block warningBox "Verification" %}
 
 Make sure the filesystem directories exist and are writable by the application. For local development, verify that `/data/pem-imports` and `/data/pem-exports` directories are created inside the Docker container.
+
+{% endinfo_block %}
+
+#### Product statuses and error display
+
+The feature reads the *Product Status* column of the imported CSV file and relies on `spryker/product-approval` for the approval statuses of abstract products. The following settings are defined in `SprykerFeature\Zed\ProductExperienceManagement\ProductExperienceManagementConfig`:
+
+| SETTING | TYPE | DESCRIPTION |
+| --- | --- | --- |
+| `IMPORT_ERROR_DISPLAY_THRESHOLD` | Constant | Maximum number of import errors displayed inline on the import job run detail page. When a run produces more errors than this threshold, the errors are offered as a downloadable summary instead. |
+| `getProductConcreteStatuses()` | Method | Statuses accepted in the *Product Status* column of concrete product rows. Rows with any other value are skipped and reported as errors. |
+| `getProductConcreteStatusActive()` | Method | Status that activates a concrete product. Every other status from `getProductConcreteStatuses()` deactivates it. |
+
+To change the defaults, extend the module configuration on the project level:
+
+**src/Pyz/Zed/ProductExperienceManagement/ProductExperienceManagementConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ProductExperienceManagement;
+
+use SprykerFeature\Zed\ProductExperienceManagement\ProductExperienceManagementConfig as SprykerProductExperienceManagementConfig;
+
+class ProductExperienceManagementConfig extends SprykerProductExperienceManagementConfig
+{
+    /**
+     * @var int
+     */
+    protected const IMPORT_ERROR_DISPLAY_THRESHOLD = 20;
+
+    /**
+     * @return list<string>
+     */
+    public function getProductConcreteStatuses(): array
+    {
+        return ['active', 'inactive'];
+    }
+
+    /**
+     * @return string
+     */
+    public function getProductConcreteStatusActive(): string
+    {
+        return 'active';
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Import a CSV file with a concrete product row and verify the following:
+
+- A row with the status returned by `getProductConcreteStatusActive()` activates the concrete product.
+- A row with a status that is not in `getProductConcreteStatuses()` is skipped and reported as an error.
 
 {% endinfo_block %}
 

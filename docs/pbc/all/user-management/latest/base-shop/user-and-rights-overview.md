@@ -1,6 +1,6 @@
 ---
 title: Users and rights overview
-last_updated: Aug 20, 2021
+last_updated: Aug 12, 2026
 description: User and rights management is a general term that describes the security functionality for controlling user access to perform various roles throughout the system
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/docs/user-and-rights-overview
@@ -96,7 +96,7 @@ With the configuration provided in the example, users are granted access to thes
 
 ```php
 $config[AclConstants::ACL_DEFAULT_CREDENTIALS] = [
-    'winner@spryker.com' => [
+    'winner@acme.com' => [
         'rules' => [
             [
                 'bundle' => '*',
@@ -109,6 +109,6 @@ $config[AclConstants::ACL_DEFAULT_CREDENTIALS] = [
 ]
 ```
 
-In the example, we grant the user **winner@spryker.com** access to all Zed resources. To make it work, we should also add **winner@spryker.com** to this option: `UserConstants::USER_SYSTEM_USERS`. Here, a system user is any user who has additional ACL rules defined for them in `config_*.php` file.
+In the example, we grant the user **winner@acme.com** access to all Zed resources. To make it work, we should also add **winner@acme.com** to this option: `UserConstants::USER_SYSTEM_USERS`. Here, a system user is any user who has additional ACL rules defined for them in `config_*.php` file.
 
 - Note that if there is at least one `allow` type for a resource, the user will have access to it in spite of having a `deny` type for the same resource. It works for `AclConstants::ACL_USER_RULE_WHITELIST`, `AclConstants::ACL_DEFAULT_CREDENTIALS` and rules configured via Zed UI, except for `AclConstants::ACL_DEFAULT_RULES` as it's handled before checking if user logged in or not.

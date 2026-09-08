@@ -41,6 +41,8 @@ entries:
                 url: /docs/pbc/all/back-office/base-shop/backoffice-configuration-framework.html
               - title: Basic Shop Theme feature overview
                 url: /docs/pbc/all/back-office/base-shop/basic-shop-theme-feature-overview.html
+              - title: Workflows feature overview
+                url: /docs/pbc/all/back-office/base-shop/workflows-feature-overview.html
               - title: Install and upgrade
                 nested:
                   - title: Install the Spryker Core Back Office feature
@@ -408,6 +410,8 @@ entries:
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-multicartpage-module.html
                       - title: PersistentCart
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-persistentcart-module.html
+                      - title: PurchasingControl
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-purchasingcontrol-module.html
                       - title: QuickOrder
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-quickorder-module.html
                       - title: QuickOrderPage
@@ -1359,6 +1363,8 @@ entries:
                 url: /docs/pbc/all/oauth/latest/install-and-upgrade/install-federated-authentication.html
           - title: Storefront account bootstrapping
             url: /docs/pbc/all/oauth/latest/storefront-account-bootstrapping.html
+          - title: Multi-Factor Authentication with SSO
+            url: /docs/pbc/all/oauth/latest/multi-factor-authentication-with-sso.html
           - title: Add an OAuth provider
             url: /docs/pbc/all/oauth/latest/install-and-upgrade/add-an-oauth-provider.html
           - title: Set up Keycloak for local development
@@ -3804,6 +3810,8 @@ entries:
                     url: /docs/pbc/all/search/base-shop/install-and-upgrade/search-migration-concept.html
                   - title: Upgrade search initialization
                     url: /docs/pbc/all/search/base-shop/install-and-upgrade/upgrade-search-initialization.html
+                  - title: Migrate from OpenSearch 1.3 to 3.5
+                    url: /docs/pbc/all/search/base-shop/install-and-upgrade/migrate-from-opensearch-1.3-to-3.5.html
 
               - title: Manage in the Back Office
                 url: /docs/pbc/all/search/base-shop/manage-in-the-back-office/manage-filters-and-search-preferences-in-the-back-office.html
@@ -4044,6 +4052,11 @@ entries:
                     url: /docs/pbc/all/service-point-management/unified-commerce/import-and-export-data/import-file-details-service-type.csv.html
                   - title: "Import file details: service.csv"
                     url: /docs/pbc/all/service-point-management/unified-commerce/import-and-export-data/import-file-details-service.csv.html
+
+              - title: Manage in the Back Office
+                nested:
+                  - title: View service points
+                    url: /docs/pbc/all/service-point-management/unified-commerce/manage-in-the-back-office/view-service-points.html
 
               - title: Manage via API
                 nested:
@@ -4301,6 +4314,8 @@ entries:
             nested:
               - title: Install the Tax + Merchant Portal - Marketplace Product feature
                 url: /docs/pbc/all/tax-management/marketplace/install-the-tax-merchant-portal-marketplace-product-feature.html
+              - title: Integrate Vertex for Marketplace
+                url: /docs/pbc/all/tax-management/marketplace/integrate-vertex-for-marketplace.html
 
       - title: User Management
         url: /docs/pbc/all/user-management/user-management.html

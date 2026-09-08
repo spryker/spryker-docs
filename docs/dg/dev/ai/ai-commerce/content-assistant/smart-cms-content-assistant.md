@@ -1,7 +1,7 @@
 ---
 title: Smart CMS Content Assistant
 description: Technical overview of the Smart CMS Content Assistant feature — architecture, AiFoundation integration, plugin structure, and configuration options.
-last_updated: Jun 08, 2026
+last_updated: Aug 13, 2026
 template: concept-topic-template
 ---
 
@@ -36,6 +36,8 @@ The panel collects entity context (name, template, URL slug, key, SEO meta, stor
 | PLUGIN | LOCATION | DESCRIPTION |
 |--------|----------|-------------|
 | `SmartCmsContentToolSetPlugin` | `AiFoundationDependencyProvider::getAiToolSetPlugins()` | Registers the Smart CMS Content Assistant toolset, including the `get_content_items` tool. |
+
+To make additional tools available to the Smart CMS Content Assistant, add your own toolset to `AiCommerceConfig::getSmartCmsToolSetNames()`. For instructions, see [Extend AI Commerce agents with custom toolsets](/docs/dg/dev/ai/ai-commerce/extend-ai-commerce-agents-with-toolsets.html).
 
 Content widget plugins are registered in `AiCommerceDependencyProvider::getContentGuiEditorPlugins()` and are used to resolve available CMS widgets that the AI can reference in generated content:
 

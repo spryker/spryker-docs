@@ -50,6 +50,8 @@ entries:
           url: /docs/integrations/spryker-api/api-platform/enablement.html
         - title: Resource schemas
           url: /docs/integrations/spryker-api/api-platform/resource-schemas.html
+        - title: Typed collections in the published contract
+          url: /docs/integrations/spryker-api/api-platform/typed-collections.html
         - title: Validation schemas
           url: /docs/integrations/spryker-api/api-platform/validation-schemas.html
         - title: Resource relationships
@@ -253,5 +255,10 @@ entries:
       url: /docs/pbc/all/punchout-gateway/punchout-gateway.html
     - title: Using PSP Integration Template
       url: /docs/integrations/custom-building-integrations/psp-integration-template.html
+    - title: Integrating an external CMS with Spryker
+      url: /docs/integrations/custom-building-integrations/external-cms/guideline-external-cms-integration.html
+      nested:
+        - title: Scoping an external CMS integration
+          url: /docs/integrations/custom-building-integrations/external-cms/guideline-external-cms-integration-scoping.html
   - title: Community contributions
     url: /docs/integrations/community-contributions.html

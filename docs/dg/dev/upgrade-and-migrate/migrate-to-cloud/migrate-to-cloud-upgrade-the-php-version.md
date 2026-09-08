@@ -4,10 +4,10 @@ description: Learn how to migrate to Spryker Cloud Commerce OS and upgrade the P
 template: howto-guide-template
 redirect_from:
 - /docs/scos/dev/migration-concepts/migrate-to-sccos/step-2-upgrade-the-php-version.html
-last_updated: Dec 6, 2023
+last_updated: Aug 7, 2026
 ---
 
-After you have [Integrated the Docker SDK](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-integrate-the-docker-sdk.html),  [Upgrade to PHP 8.4](/docs/dg/dev/upgrade-and-migrate/upgrade-to-php-84.html).
+After you have [Integrated the Docker SDK](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-integrate-the-docker-sdk.html),  [Upgrade to PHP 8.5](/docs/dg/dev/upgrade-and-migrate/upgrade-to-php-85.html).
 
 ## Next step
 

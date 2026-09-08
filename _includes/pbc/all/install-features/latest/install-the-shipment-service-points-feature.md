@@ -366,7 +366,7 @@ Make sure that validation plugins work as expected:
       "idCart": "{{cart_uuid}}",
       "customer": {
         "salutation": "Mr",
-        "email": "spencor.hopkin@spryker.com",
+        "email": "spencor.hopkin@acme.com",
         "firstName": "Spencor",
         "lastName": "Hopkin"
       },
@@ -398,13 +398,13 @@ Make sure a service point address is set as a shipping address during checkout:
       "idCart": "{{cart_uuid}}",
       "customer": {
         "salutation": "Mr",
-        "email": "spencor.hopkin@spryker.com",
+        "email": "spencor.hopkin@acme.com",
         "firstName": "Spencor",
         "lastName": "Hopkin"
       },
       "billingAddress": {
         "salutation": "Mr",
-        "email": "spencor.hopkin@spryker.com",
+        "email": "spencor.hopkin@acme.com",
         "firstName": "spencor",
         "lastName": "hopkin",
         "address1": "Seeburger Str. 270",
@@ -444,7 +444,7 @@ Make sure a service point address is set as a shipping address during checkout:
           ],
           "shippingAddress": {
             "salutation": "Mr",
-            "email": "spencor.hopkin@spryker.com",
+            "email": "spencor.hopkin@acme.com",
             "firstName": "spencor",
             "lastName": "hopkin",
             "address1": "Seeburger Str. 270",

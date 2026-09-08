@@ -1,7 +1,7 @@
 ---
 title: Implement Publish and Synchronization
 description: To implement Publish and Synchronize in your code, you need to perform the following steps
-last_updated: Oct 13, 2025
+last_updated: Aug 20, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/publish-and-synchronization-reference
 originalArticleId: cdb95c33-1519-4323-9d27-7cba32a8ac82
@@ -39,7 +39,7 @@ We recommend putting a `Publish & Synchronization` related code in a separate mo
 You can create a module with a few options:
 - Create a module manually. For details, see [Create a module](/docs/dg/dev/backend-development/extend-spryker/create-modules).
 - Use Spryks for creating a module. For details, see [Spryks](/docs/dg/dev/sdks/sdk/spryks/spryks).
-- Or you can try to use AI coding assistants [AI coding assistants](/docs/dg/dev/ai-coding-assistants) to create a module. You can ask the AI agent to use this document as a reference.
+- Use an [AI coding assistant](/docs/dg/dev/ai/ai-dev/ai-dev.html) to create a module. You can ask the AI agent to use this document as a reference.
 
 {% info_block infoBox "Naming convention"%}
 

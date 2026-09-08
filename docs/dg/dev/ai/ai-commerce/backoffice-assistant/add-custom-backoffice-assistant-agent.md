@@ -1,11 +1,13 @@
 ---
 title: Add a custom Back Office Assistant agent
 description: Learn how to implement and register a custom agent and toolset for the Back Office Assistant feature, including a dedicated AI configuration and SSE streaming.
-last_updated: Jul 17, 2026
+last_updated: Aug 13, 2026
 template: concept-topic-template
 ---
 
 Back Office Assistant routes each conversation to the most appropriate agent through its intent router. To handle a new domain—for example, managing customers or CMS content—implement a custom agent and register it alongside the built-in agents described in [Back Office Assistant](/docs/dg/dev/ai/ai-commerce/backoffice-assistant/backoffice-assistant.html).
+
+To add tools to an agent or feature that already exists instead of creating a new agent, see [Extend AI Commerce agents with custom toolsets](/docs/dg/dev/ai/ai-commerce/extend-ai-commerce-agents-with-toolsets.html).
 
 ## 1) Implement the agent plugin
 
@@ -136,6 +138,8 @@ class CustomerManagementToolSetPlugin extends AbstractPlugin implements ToolSetP
 ```
 
 Each tool referenced in `getTools()` implements `ToolPluginInterface` from `Spryker\Zed\AiFoundation\Dependency\Tools`, exposing `getName()`, `getDescription()`, `getParameters()`, and `execute()`. The AI model uses `getName()` and `getDescription()` to decide when to call the tool, and `getParameters()` to know which arguments to pass.
+
+For a full tool implementation example and the security rules that apply to every tool you expose, see [Extend AI Commerce agents with custom toolsets](/docs/dg/dev/ai/ai-commerce/extend-ai-commerce-agents-with-toolsets.html).
 
 ## 3) Register the plugins
 

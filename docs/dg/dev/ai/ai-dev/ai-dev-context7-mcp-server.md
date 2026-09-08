@@ -1,7 +1,11 @@
 ---
 title: Context7 MCP Server
 description: Use Context7 MCP server with Claude for intelligent context search in Spryker public documentation
+last_updated: Aug 14, 2026
 template: concept-topic-template
+redirect_from:
+  - /docs/dg/dev/ai/ai-assistants/context7-mcp-server
+  - /docs/dg/dev/ai-assistants/context7-mcp-server
 ---
 
 This document describes how to use the Context7 MCP server with Claude to enable intelligent context search across Spryker public documentation.

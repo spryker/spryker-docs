@@ -495,4 +495,5 @@ class VertexConfig extends SprykerEcoVertexConfig
 ## Next steps
 
 - [Configure Vertex-specific metadata](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/configure-vertex-specific-metadata.html)
+- [Integrate Vertex for Marketplace](/docs/pbc/all/tax-management/latest/marketplace/integrate-vertex-for-marketplace.html)
 - [Migrate from the ACP Vertex app](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/migrate-from-acp-to-vertex.html)

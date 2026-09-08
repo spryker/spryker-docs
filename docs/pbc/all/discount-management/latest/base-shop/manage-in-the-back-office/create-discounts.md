@@ -1,7 +1,7 @@
 ---
 title: Create discounts
 description: Learn how to create discounts using the discounts module in the back office of Spryker Cloud Commerce OS.
-last_updated: Sep 07, 2026
+last_updated: Sep 08, 2026
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-a-voucher
 originalArticleId: 5d9e5e07-5260-4f0a-8118-aaa324af6fbc
@@ -127,7 +127,7 @@ Plain query:
 ![Discount_Calculation_Plain Query](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Calculation:+Reference+Information/discount-calculation-plain-query.png)
 
 A decision rule consists of the following:
-- Attribute. For example, *attribute.color*. Attribute fields are named `attribute.<attribute_key>` and are generated from the product attribute keys that exist in your project. If an attribute key does not exist in your project, the corresponding field is not offered. To add attribute keys, see [Create product attributes](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/attributes/create-product-attributes.html).
+- Attribute. For example, *attribute.color*. Attribute fields are named `attribute.<attribute_key>` and are generated from the product attribute keys that exist in your database. If an attribute key does not exist in your database, the corresponding field is not offered. To add attribute keys, see [Create product attributes](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/attributes/create-product-attributes.html).
 - Relation operator. For example, *equal*.
 - Value. For example, *black*.
 
@@ -202,7 +202,7 @@ This section describes complex decision rule attributes:
 |month|Number|  The month of the year: 1-12. |
 |time| hour:minute | The time of the day. |
 |total-quantity|Number| The total cart quantity. |
-|attribute.&#42;|String, number, list| One field per product attribute key in your project, named `attribute.<attribute_key>`. If no attribute keys exist, no attribute fields are available. |
+|attribute.&#42;|String, number, list| One field per product attribute key in your database, named `attribute.<attribute_key>`. If no attribute keys exist, no attribute fields are available. |
 |customer-group|String|    Any value, use a customer group name for an exact match. |
 | customer-order-count | Number |   Any value. Checked against the number of placed orders in a customer account. |
 | product-offer-reference | String | Unique identifier of a [product offer](/docs/pbc/all/offer-management/latest/marketplace/marketplace-product-offer-feature-overview.html). Marketplace only. |
@@ -232,6 +232,8 @@ The operators offered for a field depend on the value types that the field accep
 {% info_block infoBox "Missing operators" %}
 
 If a field offers fewer operators than you expect, the field accepts fewer value types. Attribute fields accept strings, numbers, and lists, so they offer all of the operators. A field that accepts only lists offers **In** and **Not in** only.
+
+The set of operators available for a field is also influenced by performance. When you check whether a value is one of a known set, prefer **In** or **Not in** over **Contains**: **In** compares a value against a delimited list, whereas **Contains** performs a substring match, which is more expensive on large catalogs.
 
 {% endinfo_block %}
 

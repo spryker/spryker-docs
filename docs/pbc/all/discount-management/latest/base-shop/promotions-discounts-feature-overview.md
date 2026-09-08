@@ -1,7 +1,7 @@
 ---
 title: Promotions & Discounts feature overview
 description: The feature lets you create different types of discounts and apply multiple in-built discount settings suitable for any business requirements.
-last_updated: Sep 07, 2026
+last_updated: Sep 08, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/promotions-discounts-feature-overview
 originalArticleId: bdb56333-569c-42ac-9a12-2f8ecc84c6b5
@@ -52,9 +52,16 @@ To learn how a Back Office user can create a cart rule in the Back Office, see [
 
 ### Decision rule
 
-A *decision rule* is a condition assigned to a discount that must be fulfilled for the discount to apply.
+In the Back Office, you define discounts by building a query. A query consists of one or more rules, and each rule compares a parameter to a value using a relation operator. Such a rule is called a *decision rule*.
 
-A discount can have one or more decision rules. Find an example combination below:
+A query serves one of two purposes, depending on where you build it:
+
+- Under **Apply when**, the query is a condition: it determines whether the discount applies to the cart at all.
+- Under **Apply to**, the query is a filter: it selects which items in the cart receive the discount.
+
+The Back Office does not use the term *decision rule*. You build queries in the **Apply when** and **Apply to** fields, which are described in [Apply to compared to Apply when](#apply-to-compared-to-apply-when).
+
+A query can contain one or more rules. Find an example combination below:
 
 | PARAMETER | RELATION OPERATOR | VALUE |
 | --- | --- | --- |
@@ -63,21 +70,21 @@ A discount can have one or more decision rules. Find an example combination belo
 
 In this case, the discount is applied if the cart contains three items and the purchase is made on the fifth day of the week (Friday).
 
-Multiple decision rules form a query. A query is a request for information based on the defined parameters. In the Discount Management capability, a query requests information from a cart to check if it's eligible for the discount. By specifying decision rules, you define the parameters of the query.
+Multiple rules form a single query. A query is a request for information based on the defined parameters. In the Discount Management capability, a query requests information from a cart, either to check whether the cart is eligible for the discount or to select the items to discount. By specifying rules, you define the parameters of the query.
 
-In the Back Office, you create decision rules in a Query Builder. Query Builder transforms the decision rules into a single query.
+In the Back Office, you create the rules in a Query Builder. Query Builder transforms the rules into a single query.
 
-The decision rules from the previous example look as follows in the Query Builder:
+The rules from the previous example look as follows in the Query Builder:
 
 ![Query Builder showing the rules total-quantity equal 3 and day-of-week equal 5 combined with AND](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/discount-management/latest/marketplace/marketplace-promotions-discounts-feature-overview/image-1788795776069.png)
 
 A Back Office user can enter a query manually as well.
 
-The same decision rules look as follows as a plain query:
+The same rules look as follows as a plain query:
 
 `total-quantity = '3' AND day-of-week = '5'`
 
-You can switch between Query Builder and Plain query modes to see how the specified decision rules look in either of them.  
+You can switch between Query Builder and Plain query modes to see how the specified rules look in either of them.  
 
 Decision rules are combined with *AND* and *OR*  combination operators. With the AND operator, all the rules must be fulfilled for the discount to be applied. With the OR operator, at least one must be fulfilled for the discount to be applied.
 
@@ -108,7 +115,7 @@ If you do not see the attribute you expect in the Query Builder, the correspondi
 
 {% endinfo_block %}
 
-The examples in this document use attribute keys such as `attribute.color` and `attribute.processor_cores`, provided as a demo data in the [current demoshop](https://github.com/spryker-shop/b2b-demo-marketplace/). Replace them with the attribute keys that exist in your own project.
+The examples in this document use attribute keys such as `attribute.color` and `attribute.processor_cores`. Depending on the demo shop you started with, these keys may not exist in your database. Replace them with the attribute keys that exist in your own database.
 
 #### Decision rule group
 
@@ -174,7 +181,7 @@ On the **Conditions** tab, *Apply when* determines whether the discount applies 
 
 {% info_block infoBox "Example" %}
 
-A discount with *Apply when* set to `total-quantity >= 10` and *Apply to* set to `attribute.color = 'white'` applies only when the cart contains at least ten items in total, ignoring their `attribute.color` value first. It then reduces the price of the ones with `attribute.color = 'white'` items only.
+A discount with *Apply when* set to `total-quantity >= 10` and *Apply to* set to `attribute.color = 'white'` first checks the total number of items in the cart, regardless of their color. If the cart contains at least ten items, the discount then reduces the price of the white items only.
 
 {% endinfo_block %}
 
@@ -193,7 +200,7 @@ The product selection based on the query string is dynamic:
 
 {% info_block infoBox "Attribute keys in the examples" %}
 
-This example uses the `attribute.color` field. Attribute fields are generated from the product attribute keys in your own project, so replace `attribute.color` with an attribute key that exists in your project. For details, see [Product attributes in decision rules](#product-attributes-in-decision-rules).
+This example uses the `attribute.color` field. Attribute fields are generated from the product attribute keys in your own database, so replace `attribute.color` with an attribute key that exists in your database. For details, see [Product attributes in decision rules](#product-attributes-in-decision-rules).
 
 {% endinfo_block %}
 

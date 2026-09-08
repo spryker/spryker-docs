@@ -2,7 +2,7 @@
 title: Marketplace Promotions & Discounts feature overview
 description: This document contains concept information for the Marketplace Promotions and Discounts feature.
 template: concept-topic-template
-last_updated: Sep 07, 2026
+last_updated: Sep 08, 2026
 redirect_from:
   - /docs/marketplace/user/features/202311.0/marketplace-promotions-and-discounts-feature-overview.html
   - /docs/marketplace/dev/feature-walkthroughs/202311.0/marketplace-promotions-and-discounts-feature-walkthrough.html
@@ -61,9 +61,16 @@ To learn how a product catalog manager can create a cart rule in the Back Office
 
 ### Decision rule
 
-A decision rule is a condition assigned to a discount that should be fulfilled for the discount to be applied.
+In the Back Office, you define discounts by building a query. A query consists of one or more rules, and each rule compares a parameter to a value using a relation operator. Such a rule is called a *decision rule*.
 
-A discount can have one or more decision rules. Find an exemplary combination below:
+A query serves one of two purposes, depending on where you build it:
+
+- Under **Apply when**, the query is a condition: it determines whether the discount applies to the cart at all.
+- Under **Apply to**, the query is a filter: it selects which items in the cart receive the discount.
+
+The Back Office does not use the term *decision rule*. You build queries in the **Apply when** and **Apply to** fields, which are described in [Apply to compared to Apply when](#apply-to-compared-to-apply-when).
+
+A query can contain one or more rules. Find an exemplary combination below:
 
 | PARAMETER | RELATION OPERATOR | VALUE |
 | --- | --- | --- |
@@ -72,11 +79,11 @@ A discount can have one or more decision rules. Find an exemplary combination be
 
 In this case, the discount is applied if the cart contains three items and the purchase is made on the fifth day of the week (Friday).
 
-Multiple decision rules form a query. A query is a request for information based on the defined parameters. In the Discount feature, a query requests information from a cart to check whether it is eligible for the discount. By specifying decision rules, you define the parameters of the query.
+Multiple rules form a single query. A query is a request for information based on the defined parameters. In the Discount feature, a query requests information from a cart, either to check whether the cart is eligible for the discount or to select the items to discount. By specifying rules, you define the parameters of the query.
 
-In the Back Office, a product catalog manager creates decision rules in a Query Builder. The decision rules created in the Query Builder are transformed into a single query.
+In the Back Office, a product catalog manager creates the rules in a Query Builder. The rules created in the Query Builder are transformed into a single query.
 
-The decision rules from the previous example look as follows in the Query Builder:
+The rules from the previous example look as follows in the Query Builder:
 
 <div class="width-100">
 
@@ -86,14 +93,14 @@ The decision rules from the previous example look as follows in the Query Builde
 
 A product catalog manager can enter the query manually as well.
 
-The same decision rules look as follows as a plain query:
+The same rules look as follows as a plain query:
 
 <div class="width-100">
 
 ![Plain query](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/plain-query.png)
 </div>
 
-You can switch between Query Builder and Plain query modes to see how the specified decision rules look in either of them.  
+You can switch between Query Builder and Plain query modes to see how the specified rules look in either of them.  
 
 
 Decision rules are combined with *AND* and *OR*  combination operators. With the AND operator, all the rules should be fulfilled for the discount to be applied. With the OR operator, at least one of them should be fulfilled for the discount to be applied.
@@ -127,7 +134,7 @@ If you do not see the attribute you expect in the Query Builder, the correspondi
 
 {% endinfo_block %}
 
-The examples in this document use attribute keys such as `attribute.color` and `attribute.processor_cores`. These keys are illustrative. Replace them with the attribute keys that exist in your own project.
+The examples in this document use attribute keys such as `attribute.color` and `attribute.processor_cores`. Depending on the demo shop you started with, these keys may not exist in your database. Replace them with the attribute keys that exist in your own database.
 
 #### Decision rule group
 
@@ -168,7 +175,7 @@ The product selection based on the query string is dynamic:
 
 {% info_block infoBox "Attribute keys in the examples" %}
 
-This example uses the `attribute.color` field. Attribute fields are generated from the product attribute keys in your own project, so replace `attribute.color` with an attribute key that exists in your project. For details, see [Product attributes in decision rules](#product-attributes-in-decision-rules).
+This example uses the `attribute.color` field. Attribute fields are generated from the product attribute keys in your own database, so replace `attribute.color` with an attribute key that exists in your database. For details, see [Product attributes in decision rules](#product-attributes-in-decision-rules).
 
 {% endinfo_block %}
 
@@ -207,7 +214,7 @@ On the **Conditions** tab, *Apply when* determines whether the discount applies 
 
 {% info_block infoBox "Example" %}
 
-A discount with *Apply when* set to `total-quantity >= 10` and *Apply to* set to `attribute.color = 'white'` applies only when the cart contains at least ten items in total. It then reduces the price of the white items only.
+A discount with *Apply when* set to `total-quantity >= 10` and *Apply to* set to `attribute.color = 'white'` first checks the total number of items in the cart, regardless of their color. If the cart contains at least ten items, the discount then reduces the price of the white items only.
 
 {% endinfo_block %}
 

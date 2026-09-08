@@ -231,7 +231,7 @@ The operators offered for a field depend on the value types that the field accep
 
 {% info_block infoBox "Missing operators" %}
 
-If a field offers fewer operators than you expect, the field accepts fewer value types. Attribute fields accept strings, numbers, and lists, so they offer all of the operators. A field that accepts only lists offers **In** and **Not in** only. This is also done because of performance considerations.
+If a field offers fewer operators than you expect, the field accepts fewer value types. Attribute fields accept strings, numbers, and lists, so they offer all of the operators. A field that accepts only lists offers **In** and **Not in** only. Operators that are costly to evaluate for a value type are left out for performance reasons.
 
 {% endinfo_block %}
 

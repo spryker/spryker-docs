@@ -2784,6 +2784,8 @@ entries:
                 nested:
                   - title: Create personalized prices
                     url: /docs/pbc/all/price-management/base-shop/tutorials-and-howtos/create-personalized-prices.html
+                  - title: Handle price explosion and ERP-owned pricing in B2B
+                    url: /docs/pbc/all/price-management/base-shop/tutorials-and-howtos/handle-price-explosion-and-erp-owned-pricing-in-b2b.html
                   - title: Handle twenty five million prices in Spryker Commerce OS
                     url: /docs/pbc/all/price-management/base-shop/tutorials-and-howtos/handle-twenty-five-million-prices-in-spryker-commerce-os.html
                   - title: Manage business unit specific prices via data import

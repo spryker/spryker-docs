@@ -2850,8 +2850,19 @@ entries:
       - title: Product Experience Management
         url: /docs/pbc/all/product-experience-management/latest/product-experience-management.html
         nested:
-          - title: Install the Product Experience Management feature
-            url: /docs/pbc/all/product-experience-management/latest/install-the-product-experience-management-feature.html
+          - title: Back Office Product CSV Import and Export
+            url: /docs/pbc/all/product-experience-management/latest/back-office-product-csv-import-and-export-feature-overview.html
+          - title: Products Backend API
+            url: /docs/pbc/all/product-experience-management/latest/products-backend-api.html
+            nested:
+              - title: "Glue API: Manage products"
+                url: /docs/pbc/all/product-experience-management/latest/glue-api-manage-products.html
+          - title: Install the Back Office Product CSV Import and Export feature
+            url: /docs/pbc/all/product-experience-management/latest/install/install-the-back-office-product-csv-import-and-export-feature.html
+          - title: Install the Products Backend API
+            url: /docs/pbc/all/product-experience-management/latest/install/install-the-products-backend-api.html
+          - title: Install the Product Attribute Visibility feature
+            url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-attribute-visibility-feature.html
 
       - title: Product Information Management
         url: /docs/pbc/all/product-information-management/product-information-management.html
@@ -4314,6 +4325,8 @@ entries:
             nested:
               - title: Install the Tax + Merchant Portal - Marketplace Product feature
                 url: /docs/pbc/all/tax-management/marketplace/install-the-tax-merchant-portal-marketplace-product-feature.html
+              - title: Integrate Vertex for Marketplace
+                url: /docs/pbc/all/tax-management/marketplace/integrate-vertex-for-marketplace.html
 
       - title: User Management
         url: /docs/pbc/all/user-management/user-management.html
@@ -4524,6 +4537,8 @@ entries:
                   - title: Marketplace Inventory Management + Wishlist
                     url: /docs/pbc/all/warehouse-management-system/marketplace/install-glue-api/install-the-marketplace-inventory-management-wishlist-glue-api.html
 
+              - title: Integrate warehouse address ACL for the Merchant Portal
+                url: /docs/pbc/all/warehouse-management-system/marketplace/integrate-warehouse-address-acl-for-merchant-portal.html
               - title: Retrieve product offer availability via Storefront API
                 url: /docs/pbc/all/warehouse-management-system/marketplace/glue-api-retrieve-product-offer-availability.html
               - title: "Marketplace Inventory Management feature: Domain model"

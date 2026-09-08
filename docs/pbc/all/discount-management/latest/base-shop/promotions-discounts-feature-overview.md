@@ -174,7 +174,7 @@ On the **Conditions** tab, *Apply when* determines whether the discount applies 
 
 {% info_block infoBox "Example" %}
 
-A discount with *Apply when* set to `total-quantity >= 10` and *Apply to* set to `attribute.color = 'white'` applies only when the cart contains at least ten items in total. It then reduces the price of the white items only.
+A discount with *Apply when* set to `total-quantity >= 10` and *Apply to* set to `attribute.color = 'white'` applies only when the cart contains at least ten items in total, ignoring their `attribute.color` value first. It then reduces the price of the ones with `attribute.color = 'white'` items only.
 
 {% endinfo_block %}
 

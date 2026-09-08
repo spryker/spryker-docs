@@ -221,7 +221,7 @@ This section describes complex decision rule attributes:
 |Greater|>|Number| Checks if the value is greater than the value of the right operand|
 |Greater or equal|>=|Number| Checks if the value is greater than or equal to the value of the right operand |
 
-The operators offered for a field depend on the value types that the field accepts, so not every field offers all of the operators above. For example:
+The operators offered for a field depend on the value types that the field accepts, so not every field offers all of the operators above. The available operators are also chosen with performance in mind: where an operator would be costly to evaluate for a given value type, it is not offered. For example:
 
 | FIELD | OPERATORS OFFERED |
 | --- | --- |
@@ -229,11 +229,11 @@ The operators offered for a field depend on the value types that the field accep
 | `sku` | Equal, Not equal, Contains, Doesn't contain, In, Not in |
 | `item-price` | Equal, Not equal, Contains, Doesn't contain, Less, Less or equal, Greater, Greater or equal |
 
+For the same reason, consider performance when you choose between operators that both produce the result you want. To check whether a value is one of a known set, prefer **In** or **Not in** over **Contains**: **In** compares a value against a delimited list, whereas **Contains** performs a substring match, which is more expensive on large catalogs.
+
 {% info_block infoBox "Missing operators" %}
 
 If a field offers fewer operators than you expect, the field accepts fewer value types. Attribute fields accept strings, numbers, and lists, so they offer all of the operators. A field that accepts only lists offers **In** and **Not in** only.
-
-The set of operators available for a field is also influenced by performance. When you check whether a value is one of a known set, prefer **In** or **Not in** over **Contains**: **In** compares a value against a delimited list, whereas **Contains** performs a substring match, which is more expensive on large catalogs.
 
 {% endinfo_block %}
 

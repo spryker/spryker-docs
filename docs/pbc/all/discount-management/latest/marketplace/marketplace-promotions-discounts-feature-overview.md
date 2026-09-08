@@ -120,7 +120,7 @@ To use a product attribute in a decision rule, reference it as `attribute.<attri
 
 {% info_block warningBox "Add attribute keys before you use them" %}
 
-If you do not see the attribute you expect in the Query Builder, the corresponding attribute key does not exist in your project yet. Add it in one of the following ways:
+If you do not see the attribute you expect in the Query Builder, the corresponding attribute key does not exist in your database yet. Add it in one of the following ways:
 
 - [Create product attributes](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/attributes/create-product-attributes.html) in the Back Office.
 - Import attribute keys with the `product-attribute-key` data entity. For details, see [Import file details: product_attribute_key.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-attribute-key.csv.html).

@@ -108,7 +108,7 @@ If you do not see the attribute you expect in the Query Builder, the correspondi
 
 {% endinfo_block %}
 
-The examples in this document use attribute keys such as `attribute.color` and `attribute.processor_cores`. These keys are illustrative. Replace them with the attribute keys that exist in your own project.
+The examples in this document use attribute keys such as `attribute.color` and `attribute.processor_cores`, provided as a demo data in the [current demoshop](https://github.com/spryker-shop/b2b-demo-marketplace/). Replace them with the attribute keys that exist in your own project.
 
 #### Decision rule group
 

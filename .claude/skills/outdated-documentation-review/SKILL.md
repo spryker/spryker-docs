@@ -13,6 +13,17 @@ portal, or route a community contributor into a login wall. The linters catch pr
 **Verify the page against reality before judging it** — its front matter, its body, and the live HTTP status of its
 links. Not the page title, and not your prior about what a page named like that usually holds.
 
+## What gets checked
+
+| Check | Catches |
+|---|---|
+| `related_checker.py` | Sister and subpage `related:` entries, non-`https` external links, leading slashes, missing `.html`, dead targets, leftover body link sections |
+| Retired hosts and legacy front matter | `support.spryker.com`, `commercequest.space`, `documentation.spryker.com`, and the `originalLink` / `originalArticleId` they left behind |
+| Link liveness, `curl` without `-L` | Redirects hidden behind a final `200`, and a `200` that lands somewhere useless — a member login wall, a restructured path |
+| Hand-written body link sections | Trailing link lists that duplicate what the theme renders from front-matter `related:` |
+| Inbound references | Body links, other pages' `related:` blocks, sidebar `url:` **and** `title:`, `redirect_from`, and `#fragment` targets after a page changes identity |
+| Prose patterns Vale misses | Stiff phrasing, unexpanded acronyms, and contradictory escalation paths that no rule fires on |
+
 ## Run the `related:` checker first
 
 ```bash
@@ -139,23 +150,6 @@ rule above: a rename copies the destination's name, a conversion keeps the sourc
 
 **Check `#fragment` links still find their heading.**
 
-## Validation
-
-```bash
-vale --minAlertLevel=error path/to/file.md
-npx --yes markdownlint-cli2@0.13.0 path/to/file.md
-```
-
-Pin markdownlint to `0.13.0` on Node 18 — current versions pull a `string-width` using the regex `v` flag and die
-with `SyntaxError: Invalid regular expression flags`. Run from the repo root, or the repo config is not picked up
-and you get spurious MD013 line-length errors.
-
-**Errors only.** Re-run after the requester hand-edits your proposal — a human rewrite introduces fresh Vale errors
-(a reintroduced `please` is the common one).
-
-`{% comment %}` blocks are still parsed by markdownlint. A Mermaid `---` frontmatter inside one reads as a setext
-heading and flips the whole file's heading style; use the `%%{init: ...}%%` form instead.
-
 ## Prose patterns Vale misses
 
 | Pattern | Fix |
@@ -179,41 +173,3 @@ the changes that matter.
 
 **Change only what was asked.** If the request is the team column, do not also rewrite the rationale beside it —
 flag the inconsistency and let the requester decide.
-
-## Mapping analytics rows to source files
-
-The GA page title is the rendered browser title and often does **not** match front-matter `title:` — `Claude Code
-Plugin` is `ai-dev-claude-code.md` ("Claude Code"); `AI Dev SDK Skills and Agents` is
-`ai-dev-workflows-skills-and-agents.md` ("Workflows, Skills, and Agents"). It tends to be section name plus page
-name.
-
-**Two rows can be one page.** `AI Dev SDK Overview` (rank 12) and `AI Dev SDK` (rank 26) both resolve to
-`ai-dev.md` — the title changed mid-quarter, so GA split one page in two and halved its apparent traffic. Resolve
-to paths and check for duplicates before ranking by views.
-
-Ranks are traffic evidence: after deleting rows, keep the gaps rather than renumbering.
-
-## Assigning audit ownership
-
-**Read the page before assigning it.** `Spryker Marketplace` looked like evaluator content by title and metrics
-(240 views, 7.9s). Its own description reads "how to start developing for your Spryker Marketplace project" — a
-44-line developer hub, where the 7.9s is a link list being traversed, not a bounce.
-
-**Assign by failure mode, not audience.** What would be wrong on this page in six months?
-
-| Failure mode | Owner |
-|---|---|
-| A stale index of what ships | The team that decides what ships |
-| Wrong operational steps | The team that runs the operation |
-| Wrong architectural model | Architecture |
-| Outdated positioning or partner data | The commercial owner |
-
-| Traffic signature | Reading |
-|---|---|
-| High views, engagement under 15s | Hub or link list — audit the routing, not the prose |
-| Views per user above 2.5 | Reference consulted mid-task; repeat visits often mean a gap |
-| Broad unique users, views per user near 1.0 | First-visit orientation traffic |
-| High views, very low engagement, high unique users | The page is not answering the question people arrive with |
-
-**Clusters share one owner** or they get audited to different standards — the three quickstart variants split
-across two teams in one draft. Cap the team list at what the requester asked for.

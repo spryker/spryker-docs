@@ -4526,6 +4526,8 @@ entries:
                   - title: Marketplace Inventory Management + Wishlist
                     url: /docs/pbc/all/warehouse-management-system/marketplace/install-glue-api/install-the-marketplace-inventory-management-wishlist-glue-api.html
 
+              - title: Integrate warehouse address ACL for the Merchant Portal
+                url: /docs/pbc/all/warehouse-management-system/marketplace/integrate-warehouse-address-acl-for-merchant-portal.html
               - title: Retrieve product offer availability via Storefront API
                 url: /docs/pbc/all/warehouse-management-system/marketplace/glue-api-retrieve-product-offer-availability.html
               - title: "Marketplace Inventory Management feature: Domain model"

@@ -1,7 +1,7 @@
 ---
 title: Install the Shared Carts Glue API
 description: A guide on how to install the Spryker Shared Carts glue API feature in to your projects.
-last_updated: Aug 6, 2026
+last_updated: Sep 8, 2026
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-shared-carts-feature-integration.html  
@@ -118,7 +118,7 @@ The result should be 0 records.
 
 - `CartPermissionGroupsResourceRoutePlugin` is a protected resource for the `GET` request.
 
-For more details, see the `configure` function in [Resource Routing](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/storefront-infrastructure.html).
+For more details, see the `configure` function in [Resource Routing](/docs/integrations/spryker-api/storefront-api/developing-apis/glue-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 

@@ -2,7 +2,7 @@
 title: Install the Quotation Process Glue API
 description: Learn how to integrate the Quotation Process feature GLUE API into a Spryker project
 template: feature-integration-guide-template
-last_updated: Aug 6, 2026
+last_updated: Sep 8, 2026
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-quotation-process-feature-integration.html
   - /docs/pbc/all/request-for-quote/202204.0/install-and-upgrade/install-features/install-the-quotation-process-glue-api.html
@@ -644,7 +644,7 @@ class QuoteRequestsRestApiDependencyProvider extends SprykerQuoteRequestsRestApi
         "attributes": {
           "defaultBillingAddress": null,
           "name": "Acme Corporation HR department",
-          "email": "HR@spryker.com",
+          "email": "HR@acme.com",
           "phone": "4902890031",
           "externalUrl": "",
           "bic": "",

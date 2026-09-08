@@ -1,7 +1,7 @@
 ---
 title: Integrate the Shopping Lists Glue API
 description: Learn how to integrate the Spryker Shopping Lists GLUE API in to your Spryker Cloud Commerce OS Projects.
-last_updated: Aug 6, 2026
+last_updated: Sep 8, 2026
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-shopping-lists-feature-integration
 originalArticleId: 36dac1bc-e05e-4a7e-85fa-af59e77fa7ee
@@ -133,7 +133,7 @@ SELECT COUNT(*) FROM spy_shopping_list_item WHERE uuid IS NULL;
 
 {% info_block infoBox %}
 
-`ShoppingListsResourcePlugin` GET, POST, PATCH and DELETE, `ShoppingListItemsResourcePlugin` POST, PATCH and DELETE verbs are protected resources. For details, refer to the Configure section of [Glue Infrastructure documentation](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/storefront-infrastructure.html).
+`ShoppingListsResourcePlugin` GET, POST, PATCH and DELETE, `ShoppingListItemsResourcePlugin` POST, PATCH and DELETE verbs are protected resources. For details, refer to the Configure section of [Glue Infrastructure documentation](/docs/integrations/spryker-api/storefront-api/developing-apis/glue-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 

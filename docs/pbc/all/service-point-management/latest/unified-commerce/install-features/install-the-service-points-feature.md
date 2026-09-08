@@ -1,7 +1,7 @@
 ---
 title: Install the Service Points feature
 description: Learn how to integrate the Service Points feature into your Spryker Unified Commerce project
-last_updated: Aug 6, 2026
+last_updated: Sep 8, 2026
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202304.0/install-the-service-points-feature.html
@@ -1533,6 +1533,45 @@ class CustomerReorderWidgetDependencyProvider extends SprykerCustomerReorderWidg
 {% info_block warningBox "Verification" %}
 
 Make sure sales service points are empty for order items during the reorder process.
+
+{% endinfo_block %}
+
+### 9) Set up the Back Office navigation
+
+The `ServicePoint` module ships the Back Office pages that let you review service points. To display them in the navigation, do the following:
+
+1. Add the service points page to the section of the Back Office navigation you want it in, for example, **Customer Portal**:
+
+**config/Zed/navigation.xml**
+
+```xml
+<?xml version="1.0"?>
+<config>
+    <ssp>
+        <pages>
+            <service-points>
+                <label>Service Points</label>
+                <title>Service Points</title>
+                <bundle>service-point</bundle>
+                <controller>list</controller>
+                <action>index</action>
+            </service-points>
+        </pages>
+    </ssp>
+</config>
+```
+
+2. Rebuild the navigation cache:
+
+```bash
+console navigation:build-cache
+```
+
+{% info_block warningBox "Verification" %}
+
+1. In the Back Office, go to **Customer Portal&nbsp;<span aria-label="and then">></span> Service Points**.
+2. Make sure the page lists the service points with their name, key, address, assigned stores, service types, and status, including the inactive ones.
+3. Next to a service point, click **View** and make sure the **Service Point**, **Address**, and **Services** panes are displayed.
 
 {% endinfo_block %}
 

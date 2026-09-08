@@ -116,7 +116,7 @@ When rules are combined by the OR operator, they do not exclude each other. If a
 
 #### Product attributes in decision rules
 
-To use a product attribute in a decision rule, reference it as `attribute.<attribute_key>` — for example, `attribute.color`. Spryker does not predefine these fields: it generates one field per product attribute key that exists in your project, so the attributes you can select depend on your own data.
+To use a product attribute in a decision rule, reference it as `attribute.<attribute_key>` — for example, `attribute.color`. Spryker does not predefine these fields: it generates one field per product attribute key that exists in your database.
 
 {% info_block warningBox "Add attribute keys before you use them" %}
 

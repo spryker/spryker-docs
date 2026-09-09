@@ -1,7 +1,7 @@
 ---
 title: Resource schemas
 description: Understanding API Platform resource schema definitions in Spryker.
-last_updated: Jul 31, 2026
+last_updated: Aug 17, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -258,6 +258,18 @@ customerReference:
   type: string
   identifier: true  # URL becomes /customers/{customerReference}
 ```
+
+In a JSON:API response, the identifier is what fills `data.id`. It is therefore not an attribute, and combining `identifier: true` with `readable: false` keeps it out of the `attributes` block:
+
+```yaml
+uuid:
+  type: string
+  identifier: true
+  readable: false
+  writable: false
+```
+
+That combination is what reproduces the legacy Glue response shape, where the UUID appears as `data.id` and never inside `attributes`. Leave `readable` at its default and the same value is serialized twice—once as `data.id` and once as an attribute—which is a breaking change for clients that were written against the legacy shape.
 
 #### required
 
@@ -971,6 +983,22 @@ The operation names map to HTTP methods:
 - `put` → PUT (replace)
 - `patch` → PATCH (update)
 - `delete` → DELETE (remove)
+
+### Write-only resources need `gen_id: false`
+
+Serializing a created representation normally includes an IRI pointing at the new resource, which the serializer builds from the resource's item operation. A resource that declares only a `Post` and no `Get` has no item operation, so there is no IRI to build and the success response fails to serialize.
+
+Turn the ID generation off for that operation:
+
+```yaml
+operations:
+  - type: Post
+    description: 'Initialize a pre-order payment'
+    normalizationContext:
+        gen_id: false
+```
+
+This applies to action-shaped resources—payments, cancellations, and similar endpoints that accept a command and return a result rather than exposing a retrievable entity.
 
 ## Pagination
 

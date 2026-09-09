@@ -60,11 +60,10 @@ https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-2026
 
 This release extends the Spryker Design System in the storefront by modernizing the product listing page and merchant profile page. It helps create a more consistent buying journey for B2B customers while giving teams a scalable foundation for future storefront enhancements.
 
-<figure class="video_container">
-    <video width="100%" height="auto" controls>
-      <source src="https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-202608.0.md/Design_System_PLP.mp4" type="video/mp4">
-  </video>
-</figure>
+{% include carousel.html
+images="
+https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-202608.0.md/Design_System_PLP.mp4||"
+%}
 
 **Key capabilities:**
 - Modernized product listing page based on the B2B design system

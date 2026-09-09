@@ -47,6 +47,16 @@ All relative internal links MUST follow this format:
 - Formulate improved sentence structures for better readability
 - Ensure Markdown is correct and content conforms with web best practices (alt text, no skipped headings)
 
+### Clarity and Precision
+
+These rules come from the most frequently repeated reviewer feedback on documentation PRs.
+
+- **Avoid vague qualifiers.** Never use words like "some," "certain," "all versions," "until you enable it," or "per scope" when a concrete value exists. State the exact setting, flag, menu path, or version number being referenced.
+- **Define terms and states on first use.** Do not assume a status word (for example "masked," "unset," "active") is self-explanatory — define it the first time it appears.
+- **Explain new or non-obvious concepts before the technical detail.** When introducing a new feature, command, or acronym, state in plain language what it does and why the reader needs it before presenting configuration or code. If a reviewer says a section is unclear, rewrite it — do not only reply with a clarifying comment.
+- **Explain why before how.** Open a new procedure or configuration section with a sentence stating why the change or step is needed, before describing how to perform it.
+- **Prefer the technically precise term over an approximate synonym.** When two similar words could apply (for example "inclusion" vs. "exclusion," "resource name" vs. "module name"), verify which one is factually correct before using it.
+
 ### Tone of Voice
 
 Analyze the overall tone to align with technical documentation styles (Google Developer Documentation Style Guide, Microsoft Style Guide). The tone should be:
@@ -70,12 +80,15 @@ Analyze the overall tone to align with technical documentation styles (Google De
 
 **Punctuation:**
 - Always put a space on both sides of an em dash (`—`). Write `covers — for example`, never `covers—for example`.
-- This applies to prose only. Never alter em dashes inside code blocks, inline code, or file paths.
+- The same spacing convention applies to a hyphen used to join clauses in prose (not a compound adjective): write `word - word`, not `word-word`.
+- This applies to prose only. Never alter em dashes or prose hyphens inside code blocks, inline code, or file paths.
 
 **Terminology (Vale `terms` style):**
 - Use the exact terms enforced by the Vale rules in `vale/styles/terms/`. These are `error`-level and will fail the `vale-lint` CI check.
 - Most common: use **Back Office** (two words), never "Backoffice" or "backoffice". This applies even to API/type names — write **Back Office API**, not "Backoffice API".
 - When introducing a product, feature, or component name, check `vale/styles/terms/` for the canonical spelling before using it.
+- **Match names exactly to code and UI.** Every module, class, resource, and feature name used in prose or code examples must match its current name in the codebase and the Back Office UI exactly, including capitalization and singular/plural form (for example, write "Workflows" if that is the Back Office menu label, not "Workflow"). Page and section titles for a feature must use the name a reader would actually search for or find in the Back Office menu.
+- Use example email addresses with the `@example.com` domain in generic illustrative examples (for example, API request/response samples). For canonical demo-shop customer data specifically, follow `.claude/rules/demo-data-inventory.md` (`@acme.com`).
 
 **Markdown Formatting:**
 - Use standard Markdown for headings, lists, links, code blocks, and inline formatting
@@ -94,6 +107,7 @@ Analyze the overall tone to align with technical documentation styles (Google De
 
   {% endinfo_block %}
   ```
+- **info_block usage:** Use callouts sparingly. If a callout's content duplicates the surrounding body text, merge it into the body instead of boxing it separately. Match the severity to the actual risk — do not use `errorBox` for a low-risk or already-enforced condition; use `warningBox` or `infoBox` instead.
 - Ensure output renders correctly in Jekyll but remains readable in raw Markdown
 
 ### Presenting Suggestions
@@ -121,6 +135,30 @@ After adding a new file, the sidebar link must be added to reflect the new file 
 After removing a file, the sidebar link must be removed.
 After renaming a file, the sidebar link must be renamed to reflect the new file location.
 After moving a file, the sidebar link must be updated to reflect the new file location.
+
+### Content Scope and Duplication
+
+- **Keep each document scoped to its stated topic.** Remove sections that belong to a different feature or to a prerequisite/related guide, and link to the canonical document instead of repeating its content.
+- **Do not duplicate content.** Never repeat the same table, code example, or explanatory paragraph within a page or across pages. Consolidate into one canonical version and link to it. If two near-identical examples exist, keep one and explain only what differs.
+- **Do not maintain two documents for the same feature.** If a new page overlaps substantially with an existing one, merge them and keep a single source of truth.
+- **Split multi-topic content.** If a bullet, section, or page covers more than one distinct topic and becomes hard to follow, split it into separate list items or, for large sections (for example, a roadmap), into a separate linked page.
+
+### Internal Information
+
+Public documentation must never leak internal-only context. Before publishing, remove:
+
+- Internal team names, JIRA ticket links, or internal project/phase names.
+- References to the internal Suite monorepo layout or repository structure.
+- Mentions of tooling or configuration that is not actually integrated into the documented project — point to the real source of truth instead of inlining config that can go stale.
+- Product variants or features that are no longer supported (for example, do not mention deprecated shop types unless historically relevant).
+
+### Publishing Accuracy
+
+- Before stating that a fallback, extension point, or capability exists, confirm its current status with the feature owner. If uncertain or not yet released, say so explicitly rather than asserting it as fact.
+- Verify version numbers, release identifiers, and composer version constraints against the actual package/release before publishing.
+- Verify that Back Office menu paths, labels, and actor/role names mentioned in docs still exist in the current product.
+- Verify that example class, resource, and module names exist in the current codebase, not a planned or removed one.
+- Do not retroactively edit already-published release notes — they are a historical record.
 
 ### Twig examples
 Always wrap Twig code in `{% raw %}` and `{% endraw %}` tags.
@@ -165,10 +203,13 @@ markdownlint-cli2 path/to/file.md
 3. Validate with Documentation Standards
     - internal links format
     - grammar and sentence structure
+    - clarity and precision (no vague qualifiers, terms defined on first use, why explained before how)
     - tone of voice
     - writing style, markup and markdown
     - `last_updated` date should be updated to the date of the last modification of any file in this PR.
     - sidebar links
+    - content scope and duplication (no repeated content, no overlapping documents)
+    - no internal-only information (team names, JIRA links, Suite monorepo details, unintegrated tooling)
 
 4. Finalize
 

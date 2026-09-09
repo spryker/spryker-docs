@@ -1,7 +1,7 @@
 ---
 title: Resource schemas
 description: Understanding API Platform resource schema definitions in Spryker.
-last_updated: Jul 31, 2026
+last_updated: Sep 9, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -1439,7 +1439,7 @@ Security expressions protect resources and operations using [Symfony's Expressio
 
 {% info_block infoBox "Where roles come from" %}
 
-Roles like `ROLE_CUSTOMER` in security expressions come from OAuth scopes that are automatically mapped to Symfony roles. The mapping convention is as follows: a scope name is uppercased and prefixed with `ROLE_`. For example, the `customer` scope becomes `ROLE_CUSTOMER`.
+Roles like `ROLE_CUSTOMER` in security expressions come from OAuth scopes that are automatically mapped to Symfony roles. The mapping convention is as follows: a scope name is uppercased, hyphens become underscores, and the result is prefixed with `ROLE_`. For example, the `customer` scope becomes `ROLE_CUSTOMER`, and the `back-office-user` scope becomes `ROLE_BACK_OFFICE_USER`.
 
 Scopes are provided by scope provider plugins registered in `OauthDependencyProvider::getScopeProviderPlugins()`. The following table lists the out-of-the-box scope provider plugins and the scopes they provide:
 
@@ -1449,7 +1449,8 @@ Scopes are provided by scope provider plugins registered in `OauthDependencyProv
 | `CompanyUserOauthScopeProviderPlugin` | `company_user` |
 | `AgentOauthScopeProviderPlugin` | `agent` |
 | `CustomerImpersonationOauthScopeProviderPlugin` | `customer_impersonation`, `customer` |
-| `UserOauthScopeProviderPlugin` | `user`, plus UserType sub-plugins |
+| `UserOauthScopeProviderPlugin` | `user`, plus `back-office-user` when no user type plugin claims the user |
+| `MerchantUserTypeOauthScopeProviderPlugin` | `merchant-user`, for users assigned to a merchant |
 | `WarehouseOauthScopeProviderPlugin` | `warehouse` |
 
 For details on how the mapping works, see [Security — Roles and OAuth scope mapping](/docs/integrations/spryker-api/authenticating-and-authorization/security.html). For instructions on setting up scopes, see [Integrate the authorization scopes](/docs/integrations/spryker-api/backend-api/integrate-backend-api/integrate-the-authorization-scopes.html).

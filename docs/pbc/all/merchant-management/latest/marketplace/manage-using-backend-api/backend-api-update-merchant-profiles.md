@@ -14,6 +14,12 @@ related:
 
 A merchant user updates the profile of the merchant they are assigned to, and a Back Office user updates the profile of any merchant by its merchant reference. Both endpoints accept the same request body and apply the same rules.
 
+{% info_block warningBox "API Platform only" %}
+
+The `merchant-profiles` resource is an [API Platform](/docs/integrations/spryker-api/api-platform/api-platform.html) resource. It is available with the API Platform integration of the Backend API only and has no counterpart on the legacy Glue infrastructure. For the prerequisites, see [Install the Merchant Profile Backend API](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-profile-backend-api.html).
+
+{% endinfo_block %}
+
 ## Installation
 
 The endpoints are provided by the `MerchantProfile` module. For installation instructions, see [Install the Merchant Profile Backend API](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-profile-backend-api.html). Updating addresses requires the `Uuid` feature described there.

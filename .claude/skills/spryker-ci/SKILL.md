@@ -113,6 +113,36 @@ $config[OmsConstants::PROCESS_LOCATION] = [
 
 **Reporting:** If the section doesn't have a filename mentioned in it or before it, report as a warning.
 
+### HTML table headers
+
+In HTML tables, cells inside `<thead>` must be `<th>`, never `<td>`. A `<td>` in `<thead>` does not render as a header.
+
+A table without `<thead>` is fine — a header row made of bare `<th>` cells needs no change. The rule applies only when `<thead>` is present.
+
+**Wrong:**
+```html
+<table>
+   <thead>
+      <tr>
+         <td>Name</td>
+         <td>Description</td>
+      </tr>
+   </thead>
+```
+
+**Correct:**
+```html
+<table>
+   <thead>
+      <tr>
+         <th>Name</th>
+         <th>Description</th>
+      </tr>
+   </thead>
+```
+
+**Detection:** For every `<thead>` block, convert any `<td>` cells to `<th>` (keep attributes such as `colspan` and `rowspan`). Do not add `<thead>` to tables that lack it, and do not touch `<th>` cells outside `<thead>`. Ignore tables inside code blocks.
+
 ### Sidebar issues
 
 When there is a page missing in the sidebar the issues shows fileName.md to be missing. To fix this use the same path to be added and replace `md` with `html`.

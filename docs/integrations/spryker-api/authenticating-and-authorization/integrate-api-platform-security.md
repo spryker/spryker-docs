@@ -178,7 +178,7 @@ docker/sdk cli glue api:generate
 
 ## 4. Optional: Enable Persistent ACL for the Backend API
 
-For tokens of Back Office and merchant users, the Backend API resolves the user behind the token and makes it the acting user of the request. To have Persistent ACL scope the data of the request to that user the same way the Merchant Portal does, register the following plugins.
+For tokens of Back Office and merchant users, the Backend API resolves the user behind the token and makes it the acting user of the request. To have Persistent ACL scope the data of the request to that user the same way the Merchant Portal does, register the following plugins. The scoping applies to API Platform resources only: legacy Glue resources run without an acting user, so Persistent ACL stays disabled for them.
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |

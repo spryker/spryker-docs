@@ -43,7 +43,7 @@ If no `Authorization` header is present, the request proceeds as unauthenticated
 
 For tokens issued to Back Office and merchant users, the Backend API also resolves the user record behind the token and makes it the acting user of the request. Persistent ACL and every business rule that depends on the current user then apply as they do in the Back Office and the Merchant Portal. This applies to API Platform resources only; the legacy Glue infrastructure does not establish an acting user and exposes the token data as `GlueRequestTransfer.requestUser` instead.
 
-By default, the user is looked up by the `id_user` claim of the token. Only active users qualify: a token of a deactivated or deleted user, or one that resolves to no single user, is rejected with `401` before the resource is reached.
+By default, the user is looked up by the `id_user` claim of the token. Only active users qualify: a token of a deactivated or deleted user, or one that resolves to no single user, is rejected with `401` and the error code `003` before the resource is reached.
 
 Tokens issued by a third-party identity provider may not carry `id_user`. To resolve the user from other claims, implement `\Spryker\Shared\UserExtension\Dependency\Plugin\UserIdentityCriteriaExpanderPluginInterface` and register the plugin in `UserDependencyProvider::getUserIdentityCriteriaExpanderPlugins()` of the Glue layer. The plugin receives the decoded claims and maps them onto the user criteria; the default `id_user` lookup applies only when no plugin adds an identifying condition.
 

@@ -69,7 +69,7 @@ image:
 }
 ```
 
-2. Declare the ZedUi module as an npm workspace, so that npm resolves the builder and its dependencies. The Merchant Portal needs this one entry:
+2. Declare the ZedUi module as an npm workspace, so that npm installs the builder's dependencies:
 
 ```json
 "workspaces": [
@@ -77,7 +77,7 @@ image:
 ]
 ```
 
-A project that also uses the Yves builder adds `vendor/spryker-shop/shop-ui`, and a project that already declares broader globs such as `vendor/spryker/*` needs no extra entry — the workspace is matched either way. The workspace is named `mp-zed-ui`, which is the name the `mp:*` scripts address.
+For what this does and how it changes the commands, see [npm workspaces for the frontend builders](/docs/dg/dev/frontend-development/npm-workspaces-for-frontend-builders.html).
 
 3. Point the `mp:*` scripts at the `mp-zed-ui` workspace, which is the ZedUi module:
 
@@ -94,15 +94,11 @@ A project that also uses the Yves builder adds `vendor/spryker-shop/shop-ui`, an
 }
 ```
 
-4. Remove the Merchant Portal dependencies that ZedUi declares now. A duplicate declaration in the project pins a second version of the same package, which is how two Angular or two ng-zorro copies end up in one build.
+4. Remove the Merchant Portal dependencies that ZedUi declares now, and keep the ones it declares as peer dependencies. A duplicate declaration in the project pins a second version of the same package, which is how two Angular or two ng-zorro copies end up in one build.
 
-To see what ZedUi brings, open `vendor/spryker/zed-ui/package.json`:
+`vendor/spryker/zed-ui/package.json` is the source of truth. Its `dependencies` and `devDependencies` — Angular, ng-zorro, `@spryker/*`, the Angular builders and CLI, `jest-preset-angular` — come with the module and go from your `package.json`. Its `peerDependencies` stay with the project: in ZedUi 4.3.0 they are `@jest/globals`, `@typescript-eslint/eslint-plugin`, `@typescript-eslint/parser`, `stylelint`, `ts-jest`, `typescript`, and `webpack`.
 
-- `dependencies` — the runtime set: Angular, ng-zorro, `@spryker/*`, rxjs, zone.js. Remove these from your `package.json`.
-- `devDependencies` — the build-time set: the Angular builders and CLI, `jest-preset-angular`, `fast-glob`. Remove these too.
-- `peerDependencies` — what ZedUi expects *you* to provide. Keep these in your `package.json`. In ZedUi 4.3.0 they are `@jest/globals`, `@typescript-eslint/eslint-plugin`, `@typescript-eslint/parser`, `stylelint`, `ts-jest`, `typescript`, and `webpack`; read the file for the exact ranges.
-
-After `npm install`, `npm ls <package>` shows where a package comes from: one provided by ZedUi is listed under `mp-zed-ui`.
+See [Where the npm dependencies come from](/docs/dg/dev/frontend-development/npm-workspaces-for-frontend-builders.html#where-the-npm-dependencies-come-from) for how to check what an installed package comes from.
 
 ## 4) Delete the project build tooling
 

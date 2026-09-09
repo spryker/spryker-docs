@@ -531,6 +531,8 @@ entries:
   - title: Frontend development
     url: /docs/dg/dev/frontend-development/frontend-development.html
     nested:
+    - title: npm workspaces for the frontend builders
+      url: /docs/dg/dev/frontend-development/npm-workspaces-for-frontend-builders.html
     - title: Zed
       url: /docs/dg/dev/frontend-development/zed/zed-frontend.html
       nested:

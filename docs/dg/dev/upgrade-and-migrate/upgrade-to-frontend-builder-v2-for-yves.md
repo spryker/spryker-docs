@@ -90,7 +90,7 @@ image:
 }
 ```
 
-2. Declare the ShopUi module as an npm workspace, so that npm resolves the builder and its dependencies. Yves needs this one entry:
+2. Declare the ShopUi module as an npm workspace, so that npm installs the builder's dependencies:
 
 ```json
 "workspaces": [
@@ -98,7 +98,7 @@ image:
 ]
 ```
 
-A project that also uses the Merchant Portal builder adds `vendor/spryker/zed-ui`, and a project that already declares broader globs such as `vendor/spryker-shop/*` needs no extra entry — the workspace is matched either way. The workspace is named `shop-ui`, which is the name the `yves:*` scripts address.
+For what this does and how it changes the commands, see [npm workspaces for the frontend builders](/docs/dg/dev/frontend-development/npm-workspaces-for-frontend-builders.html).
 
 3. Replace the `yves:*` scripts so they delegate to that workspace:
 
@@ -122,14 +122,15 @@ A project that also uses the Merchant Portal builder adds `vendor/spryker/zed-ui
 
 The parameter overview previously provided by `yves:help` is now available via `npm run yves -- --help`.
 
-5. Remove the Yves build dependencies that ShopUi declares now. A duplicate declaration in the project pins a second version of the same package.
+5. Remove the Yves build dependencies that ShopUi declares now, and keep the ones it declares as peer dependencies. `vendor/spryker-shop/shop-ui/package.json` is the source of truth for both — see [Where the npm dependencies come from](/docs/dg/dev/frontend-development/npm-workspaces-for-frontend-builders.html#where-the-npm-dependencies-come-from).
 
-To see what ShopUi brings, open `vendor/spryker-shop/shop-ui/package.json`:
+Three packages go regardless of that split, because the new builder does not use them at all:
 
-- `dependencies` and `devDependencies` — everything the builder needs to run: `sass-embedded`, `chokidar`, the webpack plugins, `autoprefixer`, `stylelint-config-standard-scss`. Remove these from your `package.json`, together with the packages the new builder no longer uses at all: `sass`, `sass-resources-loader`, and `terser-webpack-plugin`.
-- `peerDependencies` — what ShopUi expects *you* to provide: `babel-loader`, `css-loader`, `postcss-loader`, `sass-loader`, `webpack`, `typescript`, `stylelint`, `ts-jest`, `@jest/globals`, and the `@typescript-eslint` packages. Keep these in your `package.json`; read the file for the exact ranges.
-
-After `npm install`, `npm ls <package>` shows where a package comes from: one provided by ShopUi is listed under `shop-ui`.
+```json
+"sass": "x.x.x",
+"sass-resources-loader": "x.x.x",
+"terser-webpack-plugin": "x.x.x"
+```
 
 The shared Sass context (settings, helpers, and cross-component mixins) is injected by the builder itself, so `sass-resources-loader` has no consumer left. Check for project-owned webpack configurations that still reference it before removing it.
 

@@ -192,16 +192,7 @@ Every error the builder reports contains the offending file, the reason in plain
 
 ## Commands
 
-The builder is an npm workspace named `shop-ui`, so the project declares the module as a workspace and its `yves:*` scripts delegate to it:
-
-```json
-"workspaces": [
-    "vendor/spryker-shop/shop-ui"
-],
-"scripts": {
-    "yves": "npm run build -w shop-ui --"
-}
-```
+The project runs the builder through the npm workspace named `shop-ui`, and its `yves:*` scripts delegate to it. For the setup and what it does, see [npm workspaces for the frontend builders](/docs/dg/dev/frontend-development/npm-workspaces-for-frontend-builders.html).
 
 The builder has several modes to build the frontend:
 

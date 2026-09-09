@@ -38,16 +38,7 @@ Starting from `spryker/zed-ui` version 4.3.0, the builder ships inside the ZedUi
 
 ## Commands
 
-The builder is an npm workspace named `mp-zed-ui`, so the project declares the module as a workspace and its `mp:*` scripts delegate to it:
-
-```json
-"workspaces": [
-    "vendor/spryker/zed-ui"
-],
-"scripts": {
-    "mp:build": "npm run build -w mp-zed-ui --"
-}
-```
+The project runs the builder through the npm workspace named `mp-zed-ui`, and its `mp:*` scripts delegate to it. For the setup and what it does, see [npm workspaces for the frontend builders](/docs/dg/dev/frontend-development/npm-workspaces-for-frontend-builders.html).
 
 All commands are run from the project root:
 
@@ -72,46 +63,9 @@ The built assets are written to `public/MerchantPortal/assets/js`.
 
 ## Dependencies that come with the module
 
-ZedUi declares the whole npm dependency set of the Merchant Portal, so the project and its Merchant Portal modules declare none of it. To see what that set is, open `vendor/spryker/zed-ui/package.json`:
+ZedUi declares the whole npm dependency set of the Merchant Portal, so neither the project nor its Merchant Portal modules declare any of it. `vendor/spryker/zed-ui/package.json` is the source of truth: what it lists in `dependencies` and `devDependencies` comes with the module, and what it lists in `peerDependencies` is what your project provides. In ZedUi 4.3.0, the peer dependencies are `@jest/globals`, `@typescript-eslint/eslint-plugin`, `@typescript-eslint/parser`, `stylelint`, `ts-jest`, `typescript`, and `webpack`.
 
-| Section | Who installs it | What it means for your project |
-| --- | --- | --- |
-| `dependencies` | ZedUi | Angular, ng-zorro, `@spryker/*`, rxjs, zone.js and the rest of the runtime. Remove them from your `package.json`. |
-| `devDependencies` | ZedUi | The Angular builders, the Angular CLI, `jest-preset-angular`, `fast-glob` and the other build-time packages. Remove them from your `package.json`. |
-| `peerDependencies` | your project | The packages ZedUi expects the project to provide. Keep these. |
-
-At the time of ZedUi 4.3.0, the peer dependencies are `@jest/globals`, `@typescript-eslint/eslint-plugin`, `@typescript-eslint/parser`, `stylelint`, `ts-jest`, `typescript`, and `webpack`. Read the file rather than this list when you migrate — it is the source of truth for the version ranges.
-
-To check where an installed package comes from, run `npm ls <package>` in the project root: a package provided by ZedUi is listed under `mp-zed-ui`.
-
-## Generated configuration
-
-`angular.json`, `tsconfig.mp.json`, `tsconfig.mp.spec.json`, and `tsconfig.mp.lint.json` contain values that depend on where the core modules are installed — `vendor/spryker/zed-ui` in a project, `src/Spryker/ZedUi` in the Spryker monorepo — so ZedUi cannot ship them ready-made. `npm run mp:update:config` generates those values instead.
-
-`angular.json` stays at the project root, because the Angular CLI finds it by walking up from the working directory. The three `tsconfig.mp*.json` files are written inside the builder directory, unless the project already keeps a file of that name in its root — in that case the reconciliation works on that file and writes no second copy.
-
-In the `tsconfig.mp*.json` files:
-
-| Value | Owner |
-| --- | --- |
-| `compilerOptions.paths` (`@mp/*`) | generated — added, repointed, and removed as core modules come and go |
-| `include`, `files` | generated — the core and project globs, and the test setup file |
-| everything else (`compilerOptions`, `angularCompilerOptions`, `exclude`, `extends`) | yours |
-
-In `angular.json`, inside the `merchant-portal` project:
-
-| Value | Owner |
-| --- | --- |
-| `build.options.customWebpackConfig.path`, `build.options.indexTransform` | generated — the builder entry points |
-| `build.options.outputPath`, `build.options.baseHref` | generated from the builder settings |
-| `build.options.tsConfig`, `test.options.tsConfig`, `test.options.config` | generated — the files above, and the packaged Jest configuration |
-| `build.options.assets` entries rooted at the core directory, and the core entry of `build.options.styles` | generated — your own entries are kept |
-| `test.options.zoneless` | generated as `false`; `@angular-builders/jest` 22 defaults it to `true`, which runs the suite without zone.js change detection |
-| everything else — `index`, `main`, `polyfills`, `fileReplacements`, `budgets`, optimization flags, your assets and styles | yours |
-
-Because the reconciliation happens in place rather than as a rewrite, whatever `ng update` or `ng add` writes into `angular.json` survives it. A value the builder *does* generate belongs to it, so a hand edit is corrected on the next run.
-
-Your Merchant Portal project in `angular.json` has to be named `merchant-portal`, unless it is the only project in the file.
+For the mechanics of that split, see [Where the npm dependencies come from](/docs/dg/dev/frontend-development/npm-workspaces-for-frontend-builders.html#where-the-npm-dependencies-come-from).
 
 ## Source layout detection
 

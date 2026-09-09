@@ -14,6 +14,14 @@ This endpoint allows authenticating as a merchant user. A merchant user is a Bac
 
 The merchant does not have to be approved: a merchant user of a merchant that is still waiting for approval can authenticate and use the endpoints available to merchant users.
 
+{% info_block warningBox "API Platform only" %}
+
+The JSON:API request format, the roles, and the resolution of the acting user described on this page are available with the [API Platform](/docs/integrations/spryker-api/api-platform/api-platform.html) integration of the Backend API only. Before using them, [integrate API Platform](/docs/integrations/spryker-api/migrate-from-glue-to-api-platform/integrate-api-platform.html) and [integrate API Platform security](/docs/integrations/spryker-api/authenticating-and-authorization/integrate-api-platform-security.html).
+
+On the legacy Glue infrastructure, `POST /token` with the form-encoded body still issues a token that carries the `merchant-user` scope, but no roles are derived from it and no acting user is established. Resources there are protected by scope-based authorization instead: `MerchantUserTypeOauthScopeAuthorizationCheckerPlugin` checks the request path against `OauthMerchantUserConfig::getAllowedForMerchantUserPaths()`.
+
+{% endinfo_block %}
+
 ## Installation
 
 The endpoint is provided by the `OauthBackendApi` module. Merchant user scopes are provided by the `OauthMerchantUser` module; to register its plugins, see [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html#optional-enable-the-backend-api-authentication).

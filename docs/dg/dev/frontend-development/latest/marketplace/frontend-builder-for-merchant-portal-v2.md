@@ -2,7 +2,7 @@
 title: Frontend builder for the Merchant Portal v2
 description: Learn about the Angular frontend builder that ships with the ZedUi module and builds the Merchant Portal assets for core and project modules.
 keywords: ZedUi, zed-ui, frontend builder, Merchant Portal, Angular, webpack, jest, build, live reload
-last_updated: Sep 7, 2026
+last_updated: Sep 9, 2026
 template: howto-guide-template
 related:
   - title: Building the Merchant Portal frontend

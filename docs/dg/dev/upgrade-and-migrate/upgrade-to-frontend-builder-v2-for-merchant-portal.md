@@ -2,7 +2,7 @@
 title: Upgrade to frontend builder v2 for the Merchant Portal
 description: Learn how to move your project from the Merchant Portal build tooling in the frontend directory to the builder shipped with the ZedUi module, and how to update Angular and TypeScript along the way.
 keywords: ZedUi, zed-ui, frontend builder, Merchant Portal, migration, upgrade, Angular, TypeScript, webpack
-last_updated: Sep 7, 2026
+last_updated: Sep 9, 2026
 template: concept-topic-template
 related:
   - title: Frontend builder for the Merchant Portal v2

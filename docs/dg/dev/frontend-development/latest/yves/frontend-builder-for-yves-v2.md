@@ -192,7 +192,7 @@ Every error the builder reports contains the offending file, the reason in plain
 
 ## Commands
 
-The project runs the builder through the npm workspace named `shop-ui`, and its `yves:*` scripts delegate to it. For the setup and what it does, see [npm workspaces for the frontend builders](/docs/dg/dev/frontend-development/npm-workspaces-for-frontend-builders.html).
+The project runs the builder through the npm workspace named `shop-ui`, and its `yves:*` scripts delegate to it. For the setup and what it does, see [npm workspaces for the frontend builders](/docs/dg/dev/frontend-development/latest/npm-workspaces-for-frontend-builders.html).
 
 The builder has several modes to build the frontend:
 

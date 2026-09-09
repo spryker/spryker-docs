@@ -98,7 +98,7 @@ image:
 ]
 ```
 
-For what this does and how it changes the commands, see [npm workspaces for the frontend builders](/docs/dg/dev/frontend-development/npm-workspaces-for-frontend-builders.html).
+For what this does and how it changes the commands, see [npm workspaces for the frontend builders](/docs/dg/dev/frontend-development/latest/npm-workspaces-for-frontend-builders.html).
 
 3. Replace the `yves:*` scripts so they delegate to that workspace:
 
@@ -122,7 +122,7 @@ For what this does and how it changes the commands, see [npm workspaces for the 
 
 The parameter overview previously provided by `yves:help` is now available via `npm run yves -- --help`.
 
-5. Remove the Yves build dependencies that ShopUi declares now, and keep the ones it declares as peer dependencies. `vendor/spryker-shop/shop-ui/package.json` is the source of truth for both — see [Where the npm dependencies come from](/docs/dg/dev/frontend-development/npm-workspaces-for-frontend-builders.html#where-the-npm-dependencies-come-from).
+5. Remove the Yves build dependencies that ShopUi declares now, and keep the ones it declares as peer dependencies. `vendor/spryker-shop/shop-ui/package.json` is the source of truth for both — see [Where the npm dependencies come from](/docs/dg/dev/frontend-development/latest/npm-workspaces-for-frontend-builders.html#where-the-npm-dependencies-come-from).
 
 Three packages go regardless of that split, because the new builder does not use them at all:
 

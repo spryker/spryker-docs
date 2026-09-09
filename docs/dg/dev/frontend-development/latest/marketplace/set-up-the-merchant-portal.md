@@ -11,8 +11,8 @@ redirect_from:
 related:
   - title: Building the project
     link: docs/dg/dev/frontend-development/latest/marketplace/set-up-the-merchant-portal.html
-  - title: Frontend builder for the Merchant Portal
-    link: docs/dg/dev/frontend-development/latest/marketplace/frontend-builder-for-the-merchant-portal.html
+  - title: Frontend builder for the Merchant Portal v2
+    link: docs/dg/dev/frontend-development/latest/marketplace/frontend-builder-for-merchant-portal-v2.html
 ---
 
 This document provides details about how to set up the Spryker Merchant Portal.

@@ -9,8 +9,8 @@ redirect_from:
   - /docs/scos/dev/front-end-development/202404.0/marketplace/building-the-merchant-portal-frontend.html
 
 related:
-  - title: Frontend builder for the Merchant Portal
-    link: docs/dg/dev/frontend-development/latest/marketplace/frontend-builder-for-the-merchant-portal.html
+  - title: Frontend builder for the Merchant Portal v2
+    link: docs/dg/dev/frontend-development/latest/marketplace/frontend-builder-for-merchant-portal-v2.html
   - title: Project structure
     link: docs/dg/dev/frontend-development/latest/marketplace/marketplace-frontend-project-and-module-structure.html
   - title: Setting up the Merchant Portal
@@ -20,8 +20,8 @@ related:
 This document provides details about building the frontend part of the Merchant Portal.
 
 Spryker uses [webpack](https://webpack.js.org/guides/getting-started/) to build frontend. At its core, webpack is a static module bundler for modern JavaScript applications. As webpack processes an application, it builds an internal dependency graph that maps every module that the project requires and generates one or more bundles.
-- Starting from `spryker/zed-ui` 4.2.0, the builder and all its configuration ship inside the ZedUi module, in `vendor/spryker/zed-ui/src/Spryker/Zed/ZedUi/FrontendBuilder`. Projects that still keep a `frontend/merchant-portal` folder migrate as described in [Upgrade to the Merchant Portal frontend builder](/docs/dg/dev/upgrade-and-migrate/upgrade-to-the-merchant-portal-frontend-builder.html).
-- `angular.json` stays at the project root, and `npm run mp:update:config` keeps the values that depend on where the core modules are installed in sync. See [Frontend builder for the Merchant Portal](/docs/dg/dev/frontend-development/latest/marketplace/frontend-builder-for-the-merchant-portal.html).
+- Starting from `spryker/zed-ui` 4.2.0, the builder and all its configuration ship inside the ZedUi module, in `vendor/spryker/zed-ui/src/Spryker/Zed/ZedUi/FrontendBuilder`. Projects that still keep a `frontend/merchant-portal` folder migrate as described in [Upgrade to frontend builder v2 for the Merchant Portal](/docs/dg/dev/upgrade-and-migrate/upgrade-to-frontend-builder-v2-for-merchant-portal.html).
+- `angular.json` stays at the project root, and `npm run mp:update:config` keeps the values that depend on where the core modules are installed in sync. See [Frontend builder for the Merchant Portal v2](/docs/dg/dev/frontend-development/latest/marketplace/frontend-builder-for-merchant-portal-v2.html).
 - The built frontend assets (css, fonts, images, js) are in the `/public/MerchantPortal/assets` folder.
 
 Modules for Merchant Portal are split into composer modules, and each module has its own application in the form of an Angular Module with Angular+Web Components.

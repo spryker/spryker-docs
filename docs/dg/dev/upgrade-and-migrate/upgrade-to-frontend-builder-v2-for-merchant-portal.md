@@ -1,19 +1,19 @@
 ---
-title: Upgrade to the Merchant Portal frontend builder
+title: Upgrade to frontend builder v2 for the Merchant Portal
 description: Learn how to move your project from the Merchant Portal build tooling in the frontend directory to the builder shipped with the ZedUi module, and how to update Angular and TypeScript along the way.
 keywords: ZedUi, zed-ui, frontend builder, Merchant Portal, migration, upgrade, Angular, TypeScript, webpack
 last_updated: Sep 7, 2026
 template: concept-topic-template
 related:
-  - title: Frontend builder for the Merchant Portal
-    link: docs/dg/dev/frontend-development/latest/marketplace/frontend-builder-for-the-merchant-portal.html
+  - title: Frontend builder for the Merchant Portal v2
+    link: docs/dg/dev/frontend-development/latest/marketplace/frontend-builder-for-merchant-portal-v2.html
   - title: Building the Merchant Portal frontend
     link: docs/dg/dev/frontend-development/latest/marketplace/building-the-merchant-portal-frontend.html
 ---
 
-This document provides instructions for moving a project from the Merchant Portal build tooling in its `frontend/merchant-portal/` directory to the builder that ships inside the ZedUi module.
+This document provides instructions for moving a project from the Merchant Portal build tooling in its `frontend/merchant-portal/` directory — builder v1 — to builder v2, which ships inside the ZedUi module.
 
-For an overview of the builder, see [Frontend builder for the Merchant Portal](/docs/dg/dev/frontend-development/latest/marketplace/frontend-builder-for-the-merchant-portal.html).
+For an overview of the builder, see [Frontend builder for the Merchant Portal v2](/docs/dg/dev/frontend-development/latest/marketplace/frontend-builder-for-merchant-portal-v2.html).
 
 *Estimated migration time: 1h*
 
@@ -77,7 +77,7 @@ image:
 ]
 ```
 
-For what this does and how it changes the commands, see [npm workspaces for the frontend builders](/docs/dg/dev/frontend-development/npm-workspaces-for-frontend-builders.html).
+For what this does and how it changes the commands, see [npm workspaces for the frontend builders](/docs/dg/dev/frontend-development/latest/npm-workspaces-for-frontend-builders.html).
 
 3. Point the `mp:*` scripts at the `mp-zed-ui` workspace, which is the ZedUi module:
 
@@ -98,7 +98,7 @@ For what this does and how it changes the commands, see [npm workspaces for the 
 
 `vendor/spryker/zed-ui/package.json` is the source of truth. Its `dependencies` and `devDependencies` — Angular, ng-zorro, `@spryker/*`, the Angular builders and CLI, `jest-preset-angular` — come with the module and go from your `package.json`. Its `peerDependencies` stay with the project: in ZedUi 4.3.0 they are `@jest/globals`, `@typescript-eslint/eslint-plugin`, `@typescript-eslint/parser`, `stylelint`, `ts-jest`, `typescript`, and `webpack`.
 
-See [Where the npm dependencies come from](/docs/dg/dev/frontend-development/npm-workspaces-for-frontend-builders.html#where-the-npm-dependencies-come-from) for how to check what an installed package comes from.
+See [Where the npm dependencies come from](/docs/dg/dev/frontend-development/latest/npm-workspaces-for-frontend-builders.html#where-the-npm-dependencies-come-from) for how to check what an installed package comes from.
 
 ## 4) Delete the project build tooling
 
@@ -140,7 +140,7 @@ npm run mp:update:config
 
 It repoints `angular.json` at the module: the builder entry points, the Jest configuration, `outputPath` and `baseHref`, the core asset roots and the core stylesheet, and `test.options.zoneless: false`. Your `index`, `main`, `polyfills`, budgets, and optimization settings are left alone. The three `tsconfig.mp*.json` files are written inside the builder directory, unless the project already keeps a file of that name in its root.
 
-Keep `angular.json` at the project root — the Angular CLI locates it only by walking up from the working directory — and commit it. For the full ownership split, see [Generated configuration](/docs/dg/dev/frontend-development/latest/marketplace/frontend-builder-for-the-merchant-portal.html#generated-configuration).
+Keep `angular.json` at the project root — the Angular CLI locates it only by walking up from the working directory — and commit it. For the full ownership split, see [Generated configuration](/docs/dg/dev/frontend-development/latest/marketplace/frontend-builder-for-merchant-portal-v2.html#generated-configuration).
 
 `postinstall` runs the same command, so a plain `npm install` keeps the configuration current afterwards.
 
@@ -186,8 +186,6 @@ npm run mp:stylelint
 In a project, all three cover `src/Pyz` only: the core modules arrive in `vendor/` and are not the project's to report on.
 
 Finally, check the Merchant Portal in the browser at `$[local_domain]/security-merchant-portal-gui/login`.
-
-If your `AppModule` still calls `provideNzDateFnsAdapter()`, remove it: from ZedUi 4.3.0, `DefaultMerchantPortalConfigModule` registers the ng-zorro date adapter itself.
 
 ## Staying on Angular 20
 

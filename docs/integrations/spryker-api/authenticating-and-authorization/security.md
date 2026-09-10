@@ -1,7 +1,7 @@
 ---
 title: API Platform security
 description: Understanding authentication and authorization in API Platform resources.
-last_updated: Sep 9, 2026
+last_updated: Sep 10, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -41,7 +41,7 @@ If no `Authorization` header is present, the request proceeds as unauthenticated
 
 ### Resolving the user behind a token
 
-For tokens issued to Back Office and merchant users, the Backend API also resolves the user record behind the token and makes it the acting user of the request. Persistent ACL and every business rule that depends on the current user then apply as they do in the Back Office and the Merchant Portal. This applies to API Platform resources only; the legacy Glue infrastructure does not establish an acting user and exposes the token data as `GlueRequestTransfer.requestUser` instead.
+For tokens issued to Back Office and merchant users, the Backend API also resolves the user record behind the token and makes it the acting user of the request. Business rules that depend on the current user then apply as they do in the Back Office and the Merchant Portal, and Persistent ACL scopes merchant users to their merchant the way the Merchant Portal does; Back Office users are not scoped. This applies to API Platform resources only; the legacy Glue infrastructure does not establish an acting user and exposes the token data as `GlueRequestTransfer.requestUser` instead.
 
 By default, the user is looked up by the `id_user` claim of the token. Only active users qualify: a token of a deactivated or deleted user, or one that resolves to no single user, is rejected with `401` and the error code `003` before the resource is reached.
 

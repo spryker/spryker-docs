@@ -57,10 +57,8 @@ Request sample: authenticate as a merchant user
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| grantType | String | | OAuth grant type: `password` (default) or `refresh_token`. |
 | username | String | &check; | Username of the merchant user. You define it when [creating a merchant user](/docs/pbc/all/merchant-management/latest/marketplace/manage-in-the-back-office/manage-merchant-users/create-merchant-users.html). |
-| password | String | &check; | Password of the merchant user. Required for the `password` grant. |
-| refreshToken | String | | Refresh token to exchange for a new token pair. Required for the `refresh_token` grant. |
+| password | String | &check; | Password of the merchant user. |
 
 ### Response
 
@@ -88,34 +86,61 @@ Request sample: authenticate as a merchant user
 | accessToken | String | Authentication token used to send requests to the protected resources available for this merchant user. It is also the resource `id`. |
 | tokenType | String | Type of the authentication token. Set this type when sending a request with the token. |
 | expiresIn | Integer | Time in seconds in which the `accessToken` token expires. |
-| refreshToken | String | Authentication token used to refresh `accessToken`. |
+| refreshToken | String | Authentication token used to refresh `accessToken`. See [Refresh the access token](#refresh-the-access-token). |
 
 ## Refresh the access token
 
 To exchange a refresh token for a new access token and refresh token, send the request:
 
 ---
-`POST` **/token**
+`POST` **/refresh-tokens**
 
 ---
 
 Request sample: refresh the access token
 
-`POST https://glue-backend.mysprykershop.com/token`
+`POST https://glue-backend.mysprykershop.com/refresh-tokens`
 
 ```json
 {
     "data": {
-        "type": "tokens",
+        "type": "refresh-tokens",
         "attributes": {
-            "grantType": "refresh_token",
             "refreshToken": "def50200a1b2c3d4e5f6789012345678901234567890abcdef..."
         }
     }
 }
 ```
 
-The response has the same structure as the response of [Authenticate as a merchant user](#authenticate-as-a-merchant-user). The refresh token of the request is revoked; use the one from the response for the next refresh.
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
+| --- | --- | --- | --- |
+| refreshToken | String | &check; | Refresh token returned by [Authenticate as a merchant user](#authenticate-as-a-merchant-user) or by a previous refresh. |
+
+<details><summary>Response sample: refresh the access token</summary>
+
+```json
+{
+    "data": {
+        "type": "refresh-tokens",
+        "id": "def50200f1e2d3c4b5a6978012345678901234567890fedcba...",
+        "attributes": {
+            "refreshToken": "def50200f1e2d3c4b5a6978012345678901234567890fedcba...",
+            "accessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9...",
+            "tokenType": "Bearer",
+            "expiresIn": 28800
+        }
+    }
+}
+```
+
+</details>
+
+| ATTRIBUTE | TYPE | DESCRIPTION |
+| --- | --- | --- |
+| refreshToken | String | Newly issued refresh token. It is also the resource `id`. The refresh token of the request is revoked. |
+| accessToken | String | Newly issued authentication token. |
+| tokenType | String | Type of the authentication token. |
+| expiresIn | Integer | Time in seconds in which the `accessToken` token expires. |
 
 ## Roles the token grants
 
@@ -137,7 +162,7 @@ On every request with a valid token, the Backend API resolves the user behind th
 | 401 | invalid_grant | The provided user credentials are incorrect or invalid. |
 | 401 | 001 | The user could not be authenticated. |
 | 401 | 003 | The access token does not belong to an active user (on protected resources). |
-| 401 | invalid_request | The refresh token is unknown, expired, or revoked. |
-| 422 | N/A | The request body is not a valid `tokens` document, for example, `username` or `password` is missing for the `password` grant, or `refreshToken` is missing for the `refresh_token` grant. |
+| 401 | invalid_request | The refresh token sent to `/refresh-tokens` is unknown, expired, or revoked. |
+| 422 | N/A | The request body is not a valid document for the resource, for example, `username` or `password` is missing on `/token`, or `refreshToken` is missing on `/refresh-tokens`. |
 
 To view generic errors and status codes of the Backend API, see [Backend API request and response reference](/docs/integrations/spryker-api/backend-api/developing-apis/backend-api-request-and-response-reference.html).

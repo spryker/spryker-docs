@@ -1,7 +1,7 @@
 ---
 title: Import and export Price Management data
 description: Learn how data import works and different ways of importing price management data in to your Spryker project.
-last_updated: Jun 16, 2021
+last_updated: Sep 8, 2026
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/pricing
 originalArticleId: c6b46b26-89ca-4a40-b927-e36fc14266e9
@@ -18,6 +18,8 @@ To learn how data import works and about different ways of importing data, see [
 - [product_price_schedule.csv](/docs/pbc/all/price-management/latest/base-shop/import-and-export-data/import-file-details-product-price-schedule.csv.html): use this file to schedule a specific price for a product. For that you have to define the price type, whether it's gross or net, its value, the store and currency to which the price applies, the activation date of that price, and its validity.
 
 - [currency.csv](/docs/pbc/all/price-management/latest/base-shop/import-and-export-data/import-file-details-currency.csv.html)
+
+If you import contract prices at high volume — millions of records from an ERP — see [Handle price explosion and ERP-owned pricing in B2B](/docs/pbc/all/price-management/latest/base-shop/tutorials-and-howtos/handle-price-explosion-and-erp-owned-pricing-in-b2b.html) for the architecture and write-path options before you tune the importers.
 
 
 The table below provides details on Pricing data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.

@@ -1,10 +1,8 @@
 ---
 title: Configure Elasticsearch
 description: Elasticsearch is a NoSQL data store that lets you predefine the structure of the data you store in it.
-last_updated: Feb 5, 2026
+last_updated: Sep 7, 2026
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/search-configure-elasticsearch
-originalArticleId: 6aa9f4ab-25de-46bc-b734-54bccb25cf0b
 redirect_from:
   - /2021080/docs/search-configure-elasticsearch
   - /2021080/docs/en/search-configure-elasticsearch
@@ -55,17 +53,6 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-elasticsearch.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-elasticsearch.html
   - /docs/pbc/all/search/202311.0/tutorials-and-howtos/configure-elasticsearch.html
-related:
-  - title: Configure search for multi-currency
-    link: docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/configure-search-for-multi-currency.html
-  - title: Configure the search features
-    link: docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/configure-search-features.html
-  - title: Configure the search query
-    link: docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/configure-a-search-query.html
-  - title: Expand search data
-    link: docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/expand-search-data.html
-  - title: Facet filter overview and configuration
-    link: docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/facet-filter-overview-and-configuration.html
 ---
 
 Elasticsearch is a NoSQL data store that lets you predefine the structure of the data you store in it.
@@ -445,7 +432,7 @@ APPLICATION_STORE=DE console publish:trigger-events
 APPLICATION_STORE=DE console sync:data
 ```
 
-For help with more specific cases, engage with the [Spryker community](https://commercequest.space/) or [contact support](https://support.spryker.com).
+For help with more specific cases, engage with the [Spryker community Slack]({{ site.community_slack_invite }}) or [contact support](https://portal.spryker.com).
 
 ## Advanced configuration
 

@@ -1,14 +1,22 @@
 ---
 title: Install in Demo mode on Windows
 description: Learn how you can install and configure Spryker in Demo mode on Windows in a local environment.
-last_updated: Feb 19, 2026
+last_updated: Sep 7, 2026
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/installing-in-demo-mode-on-windows
-originalArticleId: 57e6858b-6419-47b3-9d61-8b1d6213e4aa
 redirect_from:
   - /docs/scos/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-windows.html
   - /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-windows.html
 related:
+  - title: Troubleshooting
+    link: docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/troubleshooting-installation.html
+  - title: Configuring debugging in Docker
+    link: docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/configure-debugging.html
+  - title: Deploy file reference
+    link: docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html
+  - title: Configuring services
+    link: docs/dg/dev/integrate-and-configure/configure-services.html
+  - title: Set up a self-signed SSL certificate
+    link: docs/dg/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html
   - title: Database access credentials
     link: docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html
 ---
@@ -37,7 +45,7 @@ Product images, product data, other images or fonts displaced in a demo shop are
 4. Clone the [Demo Shops](/docs/about/all/about-spryker.html#demo-shops) and navigate into its folder:
 
  ```shell
- git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b {{page.release_tag}} --single-branch ./b2b-demo-marketplace && \
+ git clone https://github.com/spryker-shop/b2b-demo-marketplace -b {{page.release_tag}} --single-branch ./b2b-demo-marketplace && \
  cd b2b-demo-marketplace
  ```
 
@@ -50,7 +58,7 @@ Make sure that you are in the Demo Shop's folder by running the `pwd` command.
 5. Clone the Docker SDK repository into the same folder:
 
 ```shell
-git clone https://github.com/spryker/docker-sdk.git --single-branch docker
+git clone https://github.com/spryker/docker-sdk --single-branch docker
 ```
 
 ## Configure and start the instance
@@ -134,11 +142,3 @@ To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. Y
 ## Get the list of useful commands
 
 To get the full and up-to-date list of commands, run `docker/sdk help`.
-
-## Next steps
-
-- [Troubleshooting](/docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/troubleshooting-installation.html)
-- [Configuring debugging in Docker](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/configure-debugging.html)
-- [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)
-- [Configuring services](/docs/dg/dev/integrate-and-configure/configure-services.html)
-- [Set up a self-signed SSL certificate](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html)

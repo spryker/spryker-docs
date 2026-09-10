@@ -1,35 +1,17 @@
 ---
 title: Publish and Synchronization
 description: Publish and Synchronization process synchronizes all changes made on the backend need to be propagated to the client data stores.
-last_updated: Sep 18, 2025
+last_updated: Sep 7, 2026
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/publish-and-synchronization
-originalArticleId: 58721bca-2881-4583-a9fa-59d698e8b9bb
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
 related:
-  - title: Implement Publish and Synchronization
-    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
-  - title: Handle data with Publish and Synchronization
-    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
-  - title: Adding publish events
-    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/add-publish-events.html
-  - title: Implement event trigger publisher plugins
-    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
-  - title: Implement synchronization plugins
-    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
-  - title: Debug listeners
-    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/debug-listeners.html
-  - title: Publish and synchronize and multi-store shop systems
-    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
-  - title: Publish and Synchronize repeated export
-    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
   - title: Synchronization behavior - enabling multiple mappings
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.html
 ---
 
 
-To serve data quickly, your shop application reads from Redis (key–value storage) and Elasticsearch (search and analytics). The client doesn't access the primary SQL database directly. Instead, Spryker uses the Publish and Synchronize (P&S) mechanism to move data from the relational database to Redis and Elasticsearch.
+To serve data quickly, your shop application reads from Redis (key–value storage) and Elasticsearch (search and analytics). The client does not access the primary SQL database directly. Instead, Spryker uses the Publish and Synchronize (P&S) mechanism to move data from the relational database to Redis and Elasticsearch.
 
 P&S denormalizes and distributes data to achieve the following:
 
@@ -51,7 +33,7 @@ Benefits of P&S:
 
 - Store- and locale-specific data support.
 
-- Spryker relies on Propel behaviors to fire events automatically whenever you save, update, or delete an entity. So you don't need to call any P&S code manually.
+- Spryker relies on Propel behaviors to fire events automatically whenever you save, update, or delete an entity. So you do not need to call any P&S code manually.
 
 ## P&S process
 
@@ -87,7 +69,7 @@ The event dispatcher plugin responsible for this behavior is `Spryker\Zed\EventB
 
 {% info_block infobox %}
 
-If the process finishes early, and events are not processed during runtime, they're handled automatically by the command in Jenkins:
+If the process finishes early, and events are not processed during runtime, they are handled automatically by the command in Jenkins:
 
 ```bash
 vendor/bin/console event:trigger:timeout
@@ -122,7 +104,7 @@ When the publish process is triggered, one or more event messages are posted to 
 
 - Foreign keys used to trace back the updated Propel entities
 
-The message doesn't include the actual changed data because the data might change before the event is being processed.
+The message does not include the actual changed data because the data might change before the event is being processed.
 
 Example:
 
@@ -409,7 +391,7 @@ When designing a solution that incorporates P&S, consider the following:
 
 ### Data object limitations
 
-To ensure system stability, it's critical to define and enforce appropriate non-functional requirements for P&S, such as the following:
+To ensure system stability, it is critical to define and enforce appropriate non-functional requirements for P&S, such as the following:
 
 - The maximum size of a storage synchronization message should not exceed 256 KB. This prevents processing issues and ensures that API consumers can reliably receive data without encountering failures because of large payloads.
 
@@ -417,4 +399,4 @@ To ensure system stability, it's critical to define and enforce appropriate non-
 
 As with any non-functional requirements, you can adapt these constraints based on project needs. However, this may require a custom implementation or refactoring Spryker's default functionality.
 
-For example, if your project must support sending API payloads larger than 10 MB - an uncommon scenario for e-commerce platforms - it's still achievable with Spryker. However, this requires a thorough review of the business logic tied to the relevant API endpoints and adjustments to support larger objects.
+For example, if your project must support sending API payloads larger than 10 MB - an uncommon scenario for e-commerce platforms - it is still achievable with Spryker. However, this requires a thorough review of the business logic tied to the relevant API endpoints and adjustments to support larger objects.

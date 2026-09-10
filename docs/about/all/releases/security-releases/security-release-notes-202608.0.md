@@ -66,28 +66,45 @@ Both packages are declared by Spryker modules, so the fixed versions become avai
 ### Affected modules
 
 - `spryker/gui`: < 5.3.2 — declares `dompurify`
-- `spryker/chart`: < 1.6.4 — declares `pbf`
+- `spryker/chart`: < 1.7.0 — removes `pbf`, replaces plotly.js with new version of 'plotly.js-dist-min'
 
 ### Fix the vulnerability
 
 1. Update the affected packages:
 
 ```bash
-composer update spryker/gui:"^5.3.2" spryker/chart:"^1.6.4"
-composer show spryker/gui spryker/chart # Verify the versions
+composer update spryker/gui:"^5.3.2" spryker/chart:"^1.7.0" spryker/state-machine-visualizer:"^0.1.2"
+composer show spryker/gui spryker/chart spryker/state-machine-visualizer # Verify the versions
 ```
 
-2. Reinstall the npm dependencies and rebuild the Back Office assets:
+Check if your project’s `package.json` file contains overrides for the `pbf` or `probe-image-size` packages. You can remove them if none of your custom code requires them.
+
+```json
+{
+    "overrides": {
+        "pbf": "~5.1.2",
+        "probe-image-size": "^7.4.0"
+    }
+}
+```
+
+2. Run scan and security update for npm packages
+
+```bash
+npm audit fix
+```
+
+3. Reinstall the npm dependencies and rebuild the Back Office assets:
 
 ```bash
 console frontend:project:install-dependencies
 console frontend:zed:build
 ```
 
-3. Verify that the fixed versions are installed:
+4. Verify that the fixed versions are installed:
 
 ```bash
-npm ls dompurify pbf
+npm ls dompurify
 ```
 
 ### Fix the vulnerability without a module update
@@ -98,7 +115,6 @@ If you cannot update the modules yet, enforce the fixed versions from the root `
 {
     "overrides": {
         "dompurify": "^3.4.12",
-        "pbf": "~5.1.2"
     }
 }
 ```
@@ -106,8 +122,8 @@ If you cannot update the modules yet, enforce the fixed versions from the root `
 Afterwards, re-resolve the dependencies and rebuild the Back Office assets:
 
 ```bash
-npm update dompurify pbf
-npm ls dompurify pbf # Verify the versions
+npm update dompurify
+npm ls dompurify # Verify the versions
 console frontend:zed:build
 ```
 

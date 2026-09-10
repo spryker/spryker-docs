@@ -1,7 +1,7 @@
 ---
 title: Publish and synchronize and multi-store shop systems
 description: This document describes a way to synchronize data between multiple stores.
-last_updated: Sep 18, 2025
+last_updated: Sep 10, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/p-s-and-multi-store-shop-systems
 originalArticleId: 06d70e00-611d-4d96-835e-70a6490066f7
@@ -22,8 +22,8 @@ related:
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
   - title: Debug listeners
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/debug-listeners.html
-  - title: Publish and Synchronize repeated export
-    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
+  - title: "Publish and synchronize: Re-synchronization and re-generation"
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-re-synchronization-and-re-generation.html
   - title: Synchronization behavior - enabling multiple mappings
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.html
 ---
@@ -68,12 +68,12 @@ Using the previous example, you can observe the following:
 
 ### Defining a multi-store entity
 
-Define a multi-store entity in `schema.xml`:
+Define a multi-store entity in `src/Pyz/Zed/ProductStorage/Persistence/Propel/Schema/schema.xml`:
 
 ```xml
 <table name="spy_product_abstract_storage">
     ...
-    <behavior name="synchronization>
+    <behavior name="synchronization">
         ...
         <parameter name="store" required="true"/>
     </behavior>
@@ -95,7 +95,7 @@ Queue processing diagram:
 ### Defining a global entity
 
 
-Define a multi-store entity in `schema.xml`:
+Define a global entity in `src/Pyz/Zed/UrlStorage/Persistence/Propel/Schema/spy_url_storage.schema.xml`:
 
 
 ```xml

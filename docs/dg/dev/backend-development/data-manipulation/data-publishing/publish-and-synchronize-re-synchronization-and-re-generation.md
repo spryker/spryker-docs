@@ -1,7 +1,7 @@
 ---
 title: "Publish and synchronize: Re-synchronization and re-generation"
 description: Learn how to publish and synchronize repeated exports in Spryker. Optimize backend data handling for consistent and efficient data publishing.
-last_updated: Sep 18, 2025
+last_updated: Sep 10, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/publish-and-synchronize-repeated-export
 originalArticleId: f1d13f30-7763-4804-8674-e87edf95653f
@@ -110,4 +110,4 @@ Example:
 vendor/bin/console publish:trigger-events -r availability -i 1,2
 ```
 
-For each resource you want to re-publish, you need to implement a publisher plugin. For instructions, see [Implement synchronization plugins](/docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-synchronization-plugins).
+For each resource you want to re-publish, you need to implement a publisher plugin. For instructions, see [Implement event trigger publisher plugins](/docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html).

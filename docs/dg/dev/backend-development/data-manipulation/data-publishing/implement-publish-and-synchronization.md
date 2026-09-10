@@ -1,7 +1,7 @@
 ---
 title: Implement Publish and Synchronization
 description: To implement Publish and Synchronize in your code, you need to perform the following steps
-last_updated: Aug 20, 2026
+last_updated: Sep 10, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/publish-and-synchronization-reference
 originalArticleId: cdb95c33-1519-4323-9d27-7cba32a8ac82
@@ -23,8 +23,8 @@ related:
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/debug-listeners.html
   - title: Publish and synchronize and multi-store shop systems
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
-  - title: Publish and Synchronize repeated export
-    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
+  - title: "Publish and synchronize: Re-synchronization and re-generation"
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-re-synchronization-and-re-generation.html
   - title: Synchronization behavior - enabling multiple mappings
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.html
 ---
@@ -464,7 +464,7 @@ class StoreSynchronizationDataPlugin extends AbstractPlugin implements Synchroni
 
 ```
 
-If the entity is store related - `hasStore()` method must return `true`, otherwise `getSynchronizationQueuePoolName()` need to return a string with the pool name. It should be the same as is provided in table definition [queue_pool](#create-a-new storage-or-search-table) of Synchronization behavior.
+If the entity is store related - `hasStore()` method must return `true`, otherwise `getSynchronizationQueuePoolName()` need to return a string with the pool name. It should be the same as is provided in table definition [queue_pool](#3-create-a-new-storage-or-search-table) of Synchronization behavior.
 
 Below you can see an example of the code that provides data for the `getData()` method. Data taken from the Storage table and mapped to the `SynchronizationDataTransfer` object.:
 
@@ -550,4 +550,4 @@ For the publishing we are using the default publish queue, which is defined in t
 To validate the implementation, you can update a Propel entity in the Back Office and check if the data is published to the *Storage* or *Search* databases. If any errors occur during the process, you can check the error queue in the RabbitMQ management UI. The error queue is created automatically by adding an `error` suffix to the queue name.
 
 For the Search you can check this [document](/docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/configure-a-search-query.html) to get more info how you can work with data that you just sync.
-For the Storage on the other hand, you can check this [document](/docs/dg/dev/backend-development/client/use-and-configure-redis-as-a-key-value-storage) to learn more.
+For the Storage, see [Use and configure Redis or Valkey as a key-value store](/docs/dg/dev/backend-development/client/use-and-configure-redis-or-valkey-as-a-key-value-store.html).

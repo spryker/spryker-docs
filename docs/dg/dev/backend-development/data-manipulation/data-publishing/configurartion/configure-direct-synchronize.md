@@ -1,7 +1,7 @@
 ---
 title: Configure direct synchronize
 description: 
-last_updated: August 5, 2026
+last_updated: Sep 10, 2026
 template: howto-guide-template
 ---
 
@@ -43,7 +43,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+**src/Pyz/Zed/SynchronizationBehavior/SynchronizationBehaviorConfig.php**
 
 ```php
 <?php
@@ -89,6 +89,7 @@ class QueueConfig extends SprykerQueueConfig
 
 5. Optional: To disable direct sync for specific entities, add an additional parameter in the Propel schema:
 
+**src/Pyz/Zed/MyModuleStorage/Persistence/Propel/Schema/spy_table_storage.schema.xml**
 
 ```xml
 <table name="spy_table_storage" identifierQuoting="true">

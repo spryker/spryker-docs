@@ -21,12 +21,15 @@ All relative internal links MUST follow this format:
 
 **Rules:**
 - Path starts with `/`
-- Path ends with `.html` (NOT `.md`)
-- Use the actual file path, replacing `.md` extension with `.html`
+- Path never ends with `.md`
+- Use the actual file path, dropping the `.md` extension
+- The `.html` suffix is **optional**. The documentation portal serves both `/docs/…/page` and `/docs/…/page.html` — neither redirects to the other, and both are final URLs. Write new links with `.html` for consistency with the majority of the corpus.
+- **Never edit an existing link only to add or remove `.html`.** Both forms work, so such a change has no reader-visible effect and only buries the substantive edits in the diff. Adjust the suffix only when you are already rewriting that URL for a real reason, such as a renamed or moved target.
 
 **Example:**
 - File location: `docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler.md`
 - Link format: `[Web Profiler Integration](/docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler.html)`
+- Equally valid: `[Web Profiler Integration](/docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler)`
 
 ### Purpose and Goals
 
@@ -77,6 +80,12 @@ Analyze the overall tone to align with technical documentation styles (Google De
 - Most common: use **Back Office** (two words), never "Backoffice" or "backoffice". This applies even to API/type names — write **Back Office API**, not "Backoffice API".
 - When introducing a product, feature, or component name, check `vale/styles/terms/` for the canonical spelling before using it.
 
+**File paths in code examples:**
+- Label every code example that represents a file with the **full path from the project root**, and make the path match the code in the block.
+- A bare or arbitrary filename is not allowed: write `**src/Pyz/Zed/SynchronizationBehavior/SynchronizationBehaviorConfig.php**`, never `**SynchronizationBehaviorConfig.php**`, `**config file**`, or a path copied from a neighboring example.
+- The path must resolve in a real project: `src/Pyz/...`, `config/Shared/...`, `vendor/spryker/...`, `data/import/...`. When the example is a class, the path must correspond to its namespace.
+- The same rule applies to paths named in prose and to schema, YAML, and Twig examples.
+
 **Markdown Formatting:**
 - Use standard Markdown for headings, lists, links, code blocks, and inline formatting
 - Verify proper use of headings, lists, code blocks, links, bolding, italics, etc.
@@ -113,7 +122,11 @@ Present all suggestions in a numbered list. Each item must have:
 
 ### Last updated date
 
-After editing a file, the field `last_updated` must be always updated to the current date.
+After editing the body of a file, the field `last_updated` must be always updated to the current date.
+
+Do not update `last_updated` in these cases:
+- The page content did not change. Validating a page, or confirming it is in sync with another page, is not a change.
+- Only the header (front matter) changed — for example, a `related:` or `redirect_from:` entry.
 
 ### Sidebar Links
 

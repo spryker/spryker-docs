@@ -1,7 +1,7 @@
 ---
 title: Data publishing
 description: Discover how to manage and publish data efficiently in Spryker. Explore best practices for seamless data publishing in backend development.
-last_updated: Apr 25, 2023
+last_updated: Sep 10, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/data-publishing.html
@@ -17,6 +17,6 @@ In this section, you can find the following documents:
 - [Implement Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html)
 - [Implement synchronization plugins](/docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-synchronization-plugins.html)
 - [Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html)
-- [Publish and synchronize and multi-store shop systems](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-re-synchronization-and-re-generation.html)
+- [Publish and synchronize and multi-store shop systems](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html)
 - [Publish and Synchronize repeated export](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-re-synchronization-and-re-generation.html)
 - [Synchronization behavior - enabling multiple mappings](/docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.html)

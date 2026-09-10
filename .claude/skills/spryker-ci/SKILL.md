@@ -22,15 +22,17 @@ Run the CI gates, present each failure, fix it after approval, re-run. A page ca
 
 - **Never apply a fix without approval.** One issue at a time.
 - **Changed files only.** The tree carries a large backlog of pre-existing findings — `check_related_links.yml` scopes to changed pages for exactly this reason. A whole-tree run is for reporting, never for editing. Do not fix backlog findings unless asked.
-- **`last_updated` on every file you edit** — current date, `Mon D, YYYY` format (`Sep 9, 2026`). CI enforces it.
+- **`last_updated` on every file whose body you edit** — current date, `Mon D, YYYY` format (`Sep 9, 2026`). CI enforces it. Never bump it on a page you only validated, or on one where just the front matter changed.
 - **Never edit archived version directories** — `docs/**/202311.0/**`, `docs/**/202404.0/**`. Vale skips them; the other tools do not, so a well-meant fix there is out of scope. Release notes likewise keep their historical wording and versioned links.
 - **Link format differs by location:**
 
   | Location | Form | Example |
   |---|---|---|
-  | Body link | leading `/`, `.html` suffix | `/docs/dg/dev/integrate-web-profiler.html` |
+  | Body link | leading `/`, `.html` suffix optional | `/docs/dg/dev/integrate-web-profiler.html` |
   | Front-matter `related:` | same path, no leading slash | `docs/dg/dev/integrate-web-profiler.html` |
   | `related:` external | must be `https://` | the layout prepends `/` to anything else |
+
+  Both `/docs/…/page` and `/docs/…/page.html` are final URLs that serve `200`; neither redirects to the other. Never edit a link only to add or remove the suffix — that is a cosmetic diff, not a finding. See `references/outdated-review.md`.
 
   A `related:` link is the body-link path minus the leading `/` — nothing else changes. Leaving the slash on is a `related-leading-slash` finding. See `references/related-links.md`.
 - **`--selftest` before trusting the related checker.** A broken pattern reports nothing and reads as a pass. CI runs the selftest as its first step.

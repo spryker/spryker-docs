@@ -1,7 +1,7 @@
 ---
 title: API Platform security
 description: Understanding authentication and authorization in API Platform resources.
-last_updated: Jul 31, 2026
+last_updated: Sep 10, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -38,6 +38,37 @@ When a request includes an `Authorization: Bearer <token>` header, the following
 4. An `ApiUser` object is created with the extracted claims and made available through Symfony's security system.
 
 If no `Authorization` header is present, the request proceeds as unauthenticated. Resources that require authentication must enforce it using security expressions.
+
+### Resolving the user behind a token
+
+For tokens issued to Back Office and merchant users, the Backend API also resolves the user record behind the token and makes it the acting user of the request. Business rules that depend on the current user then apply as they do in the Back Office and the Merchant Portal, and Persistent ACL scopes merchant users to their merchant the way the Merchant Portal does; Back Office users are not scoped. This applies to API Platform resources only; the legacy Glue infrastructure does not establish an acting user and exposes the token data as `GlueRequestTransfer.requestUser` instead.
+
+By default, the user is looked up by the `id_user` claim of the token. Only active users qualify: a token of a deactivated or deleted user, or one that resolves to no single user, is rejected with `401` and the error code `003` before the resource is reached.
+
+Tokens issued by a third-party identity provider may not carry `id_user`. To resolve the user from other claims, implement `\Spryker\Shared\UserExtension\Dependency\Plugin\UserIdentityCriteriaExpanderPluginInterface` and register the plugin in `UserDependencyProvider::getUserIdentityCriteriaExpanderPlugins()` of the Glue layer. The plugin receives the decoded claims and maps them onto the user criteria; the default `id_user` lookup applies only when no plugin adds an identifying condition.
+
+```php
+<?php
+
+namespace Pyz\Glue\User\Plugin\User;
+
+use Generated\Shared\Transfer\UserCriteriaTransfer;
+use Spryker\Shared\UserExtension\Dependency\Plugin\UserIdentityCriteriaExpanderPluginInterface;
+
+class SubjectClaimUserIdentityCriteriaExpanderPlugin implements UserIdentityCriteriaExpanderPluginInterface
+{
+    public function expand(array $identityClaims, UserCriteriaTransfer $userCriteriaTransfer): UserCriteriaTransfer
+    {
+        if (!isset($identityClaims['sub'])) {
+            return $userCriteriaTransfer;
+        }
+
+        $userCriteriaTransfer->getUserConditionsOrFail()->addUsername($identityClaims['sub']);
+
+        return $userCriteriaTransfer;
+    }
+}
+```
 
 ### Public by default
 
@@ -89,6 +120,27 @@ resource:
 ```
 
 Operation-level security overrides resource-level security for that specific operation.
+
+{% info_block warningBox "Declare security on the resource" %}
+
+Bearer token validation runs only for resources that declare a `security` expression at the resource level. If only the operations carry expressions, an anonymous request skips authentication and is answered with `403` instead of `401`. When the operations of a resource need different roles, declare the union at the resource level and narrow it per operation:
+
+```yaml
+resource:
+  name: MerchantProfiles
+  shortName: merchant-profiles
+  security: "is_granted('ROLE_MERCHANT_USER') or is_granted('ROLE_BACK_OFFICE_USER')"
+
+  operations:
+    - type: Get
+      uriTemplate: '/merchant-profile'
+      security: "is_granted('ROLE_MERCHANT_USER')"
+    - type: Get
+      uriTemplate: '/merchant-profiles/{merchantReference}'
+      security: "is_granted('ROLE_BACK_OFFICE_USER')"
+```
+
+{% endinfo_block %}
 
 ### Post-denormalize security
 
@@ -171,7 +223,12 @@ When a JWT token is validated, OAuth scopes are automatically mapped to Symfony 
 | `read` | `ROLE_READ` |
 | `write` | `ROLE_WRITE` |
 | `admin` | `ROLE_ADMIN` |
+| `customer` | `ROLE_CUSTOMER` |
+| `back-office-user` | `ROLE_BACK_OFFICE_USER` |
+| `merchant-user` | `ROLE_MERCHANT_USER` |
 | `{custom_scope}` | `ROLE_{CUSTOM_SCOPE}` |
+
+The scope name is uppercased and hyphens become underscores, so the roles match the ones the Back Office and the Merchant Portal use. The `user` scope, which every Back Office and merchant user token carries, is not mapped to a role; instead, every authenticated caller holds `ROLE_USER`. Use `ROLE_BACK_OFFICE_USER` or `ROLE_MERCHANT_USER` to distinguish the two audiences. For how the tokens are obtained, see [Authenticate as a Back Office user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html) and [Authenticate as a merchant user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-merchant-user.html).
 
 All authenticated users automatically receive `ROLE_USER` in addition to their scope-based roles.
 

@@ -1,7 +1,7 @@
 ---
 title: Integrate API Platform security
 description: This document describes how to set up authentication and authorization for API Platform in your Spryker application.
-last_updated: Aug 7, 2026
+last_updated: Sep 10, 2026
 template: howto-guide-template
 related:
   - title: Security
@@ -176,7 +176,70 @@ After adding security expressions, regenerate your API resources:
 docker/sdk cli glue api:generate
 ```
 
-## 4. Clear caches
+## 4. Optional: Enable Persistent ACL for the Backend API
+
+For tokens of Back Office and merchant users, the Backend API resolves the user behind the token and makes it the acting user of the request. To have Persistent ACL scope the requests of merchant users to their merchant the same way the Merchant Portal does, register the following plugins. Back Office users are not scoped, as in the Back Office. The scoping applies to API Platform resources only: legacy Glue resources run without an acting user, so Persistent ACL stays disabled for them.
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+| AclEntityApplicationPlugin | Enables Persistent ACL for the Backend API application. | | Spryker\Glue\AclEntity\Plugin\Application |
+| NoCurrentMerchantUserAclEntityDisablerPlugin | Disables Persistent ACL unless the acting user is a merchant user, so that Back Office users, userless requests like the token endpoint, and public endpoints are not filtered. | | Spryker\Zed\MerchantUser\Communication\Plugin\AclEntity |
+
+**src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Glue\GlueBackendApiApplication;
+
+use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
+use Spryker\Glue\AclEntity\Plugin\Application\AclEntityApplicationPlugin;
+
+class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface>
+     */
+    protected function getApplicationPlugins(): array
+    {
+        return [
+            new AclEntityApplicationPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/AclEntity/AclEntityDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\AclEntity;
+
+use Spryker\Zed\AclEntity\AclEntityDependencyProvider as SprykerAclEntityDependencyProvider;
+use Spryker\Zed\MerchantUser\Communication\Plugin\AclEntity\NoCurrentMerchantUserAclEntityDisablerPlugin;
+
+class AclEntityDependencyProvider extends SprykerAclEntityDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityDisablerPluginInterface>
+     */
+    protected function getAclEntityDisablerPlugins(): array
+    {
+        return [
+            new NoCurrentMerchantUserAclEntityDisablerPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Authenticate as a merchant user and request a resource that is scoped by Persistent ACL, for example, `GET /merchant-profile`. Make sure the response contains only the data of the merchant the user is assigned to, that a Back Office user still reads the data of every merchant, and that `POST /token` still succeeds without an `Authorization` header.
+
+{% endinfo_block %}
+
+## 5. Clear caches
 
 Clear application caches after configuration changes:
 

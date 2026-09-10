@@ -1339,6 +1339,8 @@ entries:
                 url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html
               - title: Authenticate as a Back Office user
                 url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html
+              - title: Authenticate as a merchant user
+                url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-authenticate-as-a-merchant-user.html
               - title: Authenticate as a company user
                 url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html
               - title: Manage company user authentication tokens

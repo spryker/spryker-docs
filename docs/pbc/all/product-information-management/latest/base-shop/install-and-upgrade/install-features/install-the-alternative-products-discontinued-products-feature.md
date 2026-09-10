@@ -1,7 +1,7 @@
 ---
 title: Alternative Products + Discontinued Products feature integration
 description: This guide describes all the steps needed to be performed in order to integrate the Alternative Products + Discontinued Products features into your project.
-last_updated: Jun 16, 2021
+last_updated: Aug 6, 2026
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/alternative-products-discontinued-products-feature-integration
 originalArticleId: eb447174-6a43-4adb-8914-747a9771c4a9
@@ -14,4 +14,87 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-alternative-products-discontinued-products-feature.html
 ---
 
-{% include pbc/all/install-features/latest/install-the-alternative-products-discontinued-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-alternative-products-discontinued-products-feature.md -->
+This document describes how to install the Alternative Products + Discontinued Products.
+
+## Install feature core
+
+Follow the steps below to install the Alternative Products + Discontinued Products feature core.
+
+### Prerequisites
+
+Install the required features:
+
+| NAME           | VERSION           | INSTALLATION GUIDE |
+| -------------- | ----------------- | ----------------- |
+| Alternative Products | {{page.release_tag}} | [Install the Alternative Products feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-alternative-products-feature.html#install-feature-core) |
+| Discontinued Products | {{page.release_tag}} |  |
+
+### 1) Set up behavior
+
+Register the following plugins:
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+| DiscontinuedCheckAlternativeProductApplicablePlugin | Checks if product alternatives should be shown for the product. | Expects `SKU`and `idProductConcrete` to be set for `ProductViewTransfer`. | Spryker\Client\ProductDiscontinuedStorage\Plugin\ProductAlternativeStorage |
+| DiscontinuedCheckAlternativeProductApplicablePlugin | Checks if product alternatives should be shown for the product. | None | Spryker\Zed\ProductDiscontinued\Communication\Plugin\ProductAlternative |
+
+**src/Pyz/Client/ProductAlternativeStorage/ProductAlternativeStorageDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Client\ProductAlternativeStorage;
+
+use Spryker\Client\ProductAlternativeStorage\ProductAlternativeStorageDependencyProvider as SprykerProductAlternativeStorageDependencyProvider;
+use Spryker\Client\ProductDiscontinuedStorage\Plugin\ProductAlternativeStorage\DiscontinuedCheckAlternativeProductApplicablePlugin;
+
+class ProductAlternativeStorageDependencyProvider extends SprykerProductAlternativeStorageDependencyProvider
+{
+    /**
+     * @return \Spryker\Client\ProductAlternativeStorageExtension\Dependency\Plugin\AlternativeProductApplicablePluginInterface[]
+     */
+    protected function getAlternativeProductApplicableCheckPlugins(): array
+    {
+        return [
+            new DiscontinuedCheckAlternativeProductApplicablePlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/ProductAlternative/ProductAlternativeDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ProductAlternative;
+
+use Spryker\Zed\ProductAlternative\ProductAlternativeDependencyProvider as SprykerProductAlternativeDependencyProvider;
+use Spryker\Zed\ProductDiscontinued\Communication\Plugin\ProductAlternative\DiscontinuedCheckAlternativeProductApplicablePlugin;
+
+class ProductAlternativeDependencyProvider extends SprykerProductAlternativeDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\ProductAlternativeExtension\Dependency\Plugin\AlternativeProductApplicablePluginInterface[]
+     */
+    protected function getAlternativeProductApplicablePlugins(): array
+    {
+        return [
+            new DiscontinuedCheckAlternativeProductApplicablePlugin(), #ProductDiscontinuedFeature
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that you can see alternatives for products that are marked as **discontinued** on the product details page.
+
+{% endinfo_block %}
+
+
+{% info_block infoBox "Store relation" %}
+
+If the [Product Labels feature](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-labels-feature-overview.html) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by re-importing [product_label_store.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/import-file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
+
+{% endinfo_block %}

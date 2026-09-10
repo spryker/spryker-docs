@@ -1,7 +1,7 @@
 ---
 title: Install the Alternative Products Glue API
 description: This guide will navigate you through the process of installing and configuring the Alternative Products API feature in the Spryker OS.
-last_updated: Jun 16, 2021
+last_updated: Aug 6, 2026
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-alternative-products-feature-integration
 originalArticleId: 0cac6f60-0429-4b7e-8ff4-9236b8cc51d0
@@ -20,4 +20,77 @@ related:
     link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/glue-api-retrieve-alternative-products.html
 ---
 
-{% include pbc/all/install-features/latest/install-glue-api/install-the-alternative-products-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-alternative-products-glue-api.md -->
+## Install Feature API
+
+### Prerequisites
+
+Install the required features:
+
+| NAME | VERSION | REQUIRED SUB-FEATURE |
+| --- | --- | --- |
+| Spryker Core | {{page.release_tag}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
+| Alternative Products | {{page.release_tag}} | |
+| Products | {{page.release_tag}} | [Install the Product Glue API](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html) |
+
+## 1) Install the required modules
+
+Install the required modules using Composer:
+
+```bash
+composer require spryker/alternative-products-rest-api:"^1.0.0" --update-with-dependencies
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following module is installed:
+
+| MODULE | EXPECTED DIRECTORY |
+| --- | --- |
+| AlternativeProductsRestApi | vendor/spryker/alternative-products-rest-api |
+
+{% endinfo_block %}
+
+
+## 2) Set up behavior
+
+Activate the following plugins:
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+| AbstractAlternativeProductsResourceRoutePlugin | Registers the abstract alternative products resource. | None | Spryker\Glue\AlternativeProductsRestApi\Plugin\GlueApplication |
+| ConcreteAlternativeProductsResourceRoutePlugin | Registers the concrete alternative products resource. | None | Spryker\Glue\AlternativeProductsRestApi\Plugin\GlueApplication |
+
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Glue\GlueApplication;
+
+use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
+use Spryker\Glue\AlternativeProductsRestApi\Plugin\GlueApplication\AbstractAlternativeProductsResourceRoutePlugin;
+use Spryker\Glue\AlternativeProductsRestApi\Plugin\GlueApplication\ConcreteAlternativeProductsResourceRoutePlugin
+
+class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
+{
+    /**
+     * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface[]
+     */
+    protected function getResourceRoutePlugins(): array
+    {
+        return [
+            new AbstractAlternativeProductsResourceRoutePlugin(),
+            new ConcreteAlternativeProductsResourceRoutePlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following endpoints are available:
+
+- `http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/abstract-alternative-products`
+- `http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/abstract-alternative-products`
+
+{% endinfo_block %}

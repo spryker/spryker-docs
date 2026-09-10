@@ -1,10 +1,61 @@
 ---
 title: Install the Marketplace Product Offer + Service Points feature
 description: Learn how you can install and implement  the Marketplace Product Offer + Service Points feature in to your Spryker Unified Commerce project.    
-last_updated: July 05, 2023
+last_updated: Aug 6, 2026
 template: feature-integration-guide-template
 redirect_from:
   - /docs/pbc/all/offer-management/202311.0/marketplace/install-and-upgrade/install-the-marketplace-product-offer-service-points-feature.html
 ---
 
-{% include pbc/all/install-features/latest/marketplace/install-the-marketplace-product-offer-service-points-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-product-offer-service-points-feature.md -->
+This document describes how to install the Marketplace Product Offer + Service Points feature.
+
+## Install feature core
+
+Follow the steps below to install the Marketplace Product Offer + Service Points feature core.
+
+### Prerequisites
+
+Install the required features:
+
+| NAME                         | VERSION          | INSTALLATION GUIDE                                                                                                                                                                               |
+|------------------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Marketplace Product Offer    | {{page.release_tag}} | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
+| Product Offer + Service Points | {{page.release_tag}} | [Install the Product Offer + Service Points feature](/docs/pbc/all/offer-management/latest/unified-commerce/install-features/install-the-product-offer-service-points-feature.html)                            |
+
+### 1) Set up behavior
+
+Enable the following behaviors by registering the plugins:
+
+| PLUGIN                                          | DESCRIPTION                                                                 | PREREQUISITES | NAMESPACE                                                                                    |
+|-------------------------------------------------|-----------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------------|
+| MerchantProductOfferServiceCollectionStorageFilterPlugin  | Filters product offer services collection by active and approved merchants. |               | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\ProductOfferServicePointStorage |
+
+**src/Pyz/Zed/ProductOfferServicePointStorage/ProductOfferServicePointStorageDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ProductOfferServicePointStorage;
+
+use Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\ProductOfferServicePointStorage\MerchantProductOfferServiceCollectionStorageFilterPlugin;
+use Spryker\Zed\ProductOfferServicePointStorage\ProductOfferServicePointStorageDependencyProvider as SprykerProductOfferServicePointStorageDependencyProvider;
+
+class ProductOfferServicePointStorageDependencyProvider extends SprykerProductOfferServicePointStorageDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\ProductOfferServicePointStorageExtension\Dependency\Plugin\ProductOfferServiceCollectionStorageFilterPluginInterface>
+     */
+    protected function getProductOfferServiceCollectionStorageFilterPlugins(): array
+    {
+        return [
+            new MerchantProductOfferServiceCollectionStorageFilterPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the only product offer service with active and approved merchant are published into the key-value store (Redis or Valkey).
+
+{% endinfo_block %}

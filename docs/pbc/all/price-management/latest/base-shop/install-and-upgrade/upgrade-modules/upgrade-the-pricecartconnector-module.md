@@ -1,7 +1,7 @@
 ---
 title: Upgrade the PriceCartConnector module
 description: Use the guide to learn how to update the PriceCartConnector module within your Srpyker based projects.
-last_updated: Jun 16, 2021
+last_updated: Aug 6, 2026
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-price-cart-connector
 originalArticleId: 2755d789-693c-4f7c-8488-7935e1c455d2
@@ -40,4 +40,16 @@ related:
     link: docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-multi-currency.html
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-pricecartconnector-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-pricecartconnector-module.md -->
+## Upgrading from version 4.* to version 6.0.0
+
+{% info_block infoBox %}
+
+In order to dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. [Contact us](https://spryker.com/en/support/) if you have any questions.
+
+{% endinfo_block %}
+
+
+## Upgrading from version 3.* to version 4.*
+
+In version 4 we have added support for multi-currency. First of all make sure you have [migrated the Price module](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html).
+We have changed the way the default price type is assigned, it's not coming from the new price module, also the price will be assigned based on the current price mode, currency, type combination.

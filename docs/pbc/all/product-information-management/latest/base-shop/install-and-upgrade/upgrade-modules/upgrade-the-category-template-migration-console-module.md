@@ -1,7 +1,7 @@
 ---
 title: Migration guide - Category Template Migration Console
 decsription: Learn how you can upgrade from an older version to a newer version of the category templates within your Spryker based projects.
-last_updated: Jun 16, 2021
+last_updated: Aug 6, 2026
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-category-template-console
 originalArticleId: 4e32a6a9-559f-4c06-b6c0-a9c8639f51e0
@@ -16,4 +16,104 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/migration-guide-category-template-migration-console.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-category-template-migration-console-module.html
 ---
-{% include pbc/all/upgrade-modules/upgrade-the-category-template-migration-console-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-category-template-migration-console-module.md -->
+## Category template migration script
+
+Use this script to migrate the category template:
+
+```php
+<?php
+
+/**
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
+
+namespace Pyz\Zed\Category\Communication\Console;
+
+use Exception;
+use Orm\Zed\Category\Persistence\SpyCategoryQuery;
+use Orm\Zed\Category\Persistence\SpyCategoryTemplateQuery;
+use Spryker\Zed\Category\CategoryConfig;
+use Spryker\Zed\Kernel\Communication\Console\Console;
+use Spryker\Zed\PropelOrm\Business\Runtime\ActiveQuery\Criteria;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+
+/**
+ * @method \Spryker\Zed\Category\Business\CategoryFacadeInterface getFacade()
+ */
+class CategoryTemplateMigration extends Console
+{
+
+    const COMMAND_NAME = 'category-template:migrate';
+
+    /**
+     * @var \Symfony\Component\Console\Output\OutputInterface
+     */
+    protected $output;
+
+    /**
+     * @param \Symfony\Component\Console\Input\InputInterface $input
+     * @param \Symfony\Component\Console\Output\OutputInterface $output
+     *
+     * @return void
+     */
+    public function execute(InputInterface $input, OutputInterface $output)
+    {
+        $this->output = $output;
+
+        $this->getFacade()->syncCategoryTemplate();
+        $this->assignTemplateToAllCategories();
+
+        $output->writeln('Successfully finished.');
+    }
+
+    /**
+    * @return void
+    */
+    protected function configure()
+    {
+        parent::configure();
+
+        $this->setName(static::COMMAND_NAME);
+        $this->setDescription('');
+    }
+
+    /**
+    * @throws \Exception
+    *
+    * @return void
+    */
+    protected function assignTemplateToAllCategories()
+    {
+        $spyCategoryTemplate = SpyCategoryTemplateQuery::create()
+            ->filterByName(CategoryConfig::CATEGORY_TEMPLATE_DEFAULT)
+            ->findOne();
+
+        if (empty($spyCategoryTemplate)) {
+            throw new Exception('Please specify CATEGORY_TEMPLATE_DEFAULT in your category template list configuration');
+        }
+
+        $query = SpyCategoryQuery::create()
+            ->filterByFkCategoryTemplate(null, Criteria::ISNULL);
+
+        $this->output->writeln('Will update ' . $query->count() . ' categories without template.');
+
+        foreach ($query->find() as $category) {
+            $category->setFkCategoryTemplate($spyCategoryTemplate->getIdCategoryTemplate());
+            $category->save();
+        }
+    }
+
+    /**
+    * @return array
+    */
+    protected function getTemplateList()
+    {
+        return $this->getFactory()
+                ->getConfig()
+                ->getTemplateList();
+    }
+
+}
+```

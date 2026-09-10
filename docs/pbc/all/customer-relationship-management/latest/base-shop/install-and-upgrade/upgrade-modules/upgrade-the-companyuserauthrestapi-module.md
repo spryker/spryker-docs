@@ -1,7 +1,7 @@
 ---
 title: Upgrade the CompanyUserAuthRestApi module
 description: Learn how to upgrade to a newer version of Spryker Company User Auth Rest API module from older ones in your Spryker project.
-last_updated: Jun 16, 2021
+last_updated: Aug 6, 2026
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/companyuserauthrestapi-migration-guide
 originalArticleId: 8ea27f48-a875-4d28-8e5c-989459640412
@@ -28,4 +28,32 @@ redirect_from:
   - /docs/pbc/all/customer-relationship-management/202204.0/install-and-upgrade/upgrade-modules/upgrade-the-companyuserauthrestapi-module.html
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-companyuserauthrestapi-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-companyuserauthrestapi-module.md -->
+## Upgrading from version 1.* to version 2.*
+
+
+CompanyUserAuthRestApi module version 2.0.0 brings the following major change:
+Glue layer authentication has been moved from `OauthCompanyUser` to `CompanyUserAuthRestApi`.
+
+To perform the upgrade:
+
+1. Update Composer:
+
+```php
+composer require spryker/company-user-auth-rest-api: "^2.0.0" --update-with-dependencies
+```
+
+2. Generate transfer objects:
+
+```php
+vendor/bin/console transfer:generate
+```
+
+3. In `\Pyz\Glue\AuthRestApi\AuthRestApiDependencyProvider::getRestUserExpanderPlugins()` replace `Spryker\Glue\OauthCompanyUser\Plugin\AuthRestApi\CompanyUserRestUserMapperPlugin` with `Spryker\Glue\CompanyUserAuthRestApi\Plugin\AuthRestApi\CompanyUserRestUserMapperPlugin`:
+
+
+```php
+ - use Spryker\Glue\OauthCompanyUser\Plugin\AuthRestApi\CompanyUserRestUserMapperPlugin;
+ + use Spryker\Glue\CompanyUserAuthRestApi\Plugin\AuthRestApi\CompanyUserRestUserMapperPlugin;
+```
+
+*Estimated migration time: ~5 minutes*

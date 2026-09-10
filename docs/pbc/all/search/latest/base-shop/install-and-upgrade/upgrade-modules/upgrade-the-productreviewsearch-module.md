@@ -1,7 +1,7 @@
 ---
 title: Upgrade the ProductReviewSearch module
 description: Learn how to upgrade to a newer version of the Product Review Search module within your Spryker based projects.
-last_updated: Jun 16, 2021
+last_updated: Aug 6, 2026
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-productreviewsearch
 originalArticleId: b8c887b4-96de-4269-b503-eb8b11980671
@@ -21,4 +21,47 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productreviewsearch-module.html
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-productreviewsearch-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productreviewsearch-module.md -->
+## Upgrading from version 1.3.* to version 1.4.*
+
+{% info_block errorBox "Prerequisites" %}
+
+This migration guide is a part of the [Search migration effort](/docs/pbc/all/search/{{site.version}}/base-shop/install-and-upgrade/search-migration-concept.html). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/pbc/all/search/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-search–module.html#upgrading-from-version-89-to-version-810).
+
+{% endinfo_block %}
+
+To upgrade the module, do the following:
+
+1. Update the module using Composer:
+
+```bash
+composer update spryker/product-review-search
+```
+
+2. Remove the usage of deprecated `Spryker\Zed\ProductReviewSearch\Communication\Plugin\PageMapExpander\ProductReviewMapExpanderPlugin` from `Pyz\Zed\ProductPageSearch\ProductPageSearchDependencyProvider`.
+3. Enable the replacement plugin:
+
+```php
+<?php
+
+namespace Pyz\Zed\ProductPageSearch;
+
+...
+use Spryker\Zed\ProductReviewSearch\Communication\Plugin\ProductPageSearch\Elasticsearch\ProductReviewMapExpanderPlugin;
+use Spryker\Zed\ProductPageSearch\ProductPageSearchDependencyProvider as SprykerProductPageSearchDependencyProvider;
+
+class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDependencyProvider
+{
+    ...
+
+    /**
+     * @return \Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductAbstractMapExpanderPluginInterface[]
+     */
+    protected function getProductAbstractMapExpanderPlugins(): array
+    {
+        return [
+            ...
+            new ProductReviewMapExpanderPlugin(),
+        ];
+    }
+}
+```

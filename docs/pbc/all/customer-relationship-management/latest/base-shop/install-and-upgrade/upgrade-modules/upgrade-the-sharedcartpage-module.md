@@ -1,7 +1,7 @@
 ---
 title: Upgrade the SharedCartPage module
 description: Learn how to upgrade to a newer version of Spryker shared cart page module from older ones in your Spryker project.
-last_updated: Jun 16, 2021
+last_updated: Aug 6, 2026
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-shared-cart-page
 originalArticleId: 6ca4c748-ee67-474b-a2fb-dc41722c85b7
@@ -31,4 +31,22 @@ redirect_from:
   - /docs/pbc/all/customer-relationship-management/202204.0/install-and-upgrade/upgrade-modules/upgrade-the-sharedcartpage-module.html
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-sharedcartpage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-sharedcartpage-module.md -->
+## Upgrading from version 1.* to version 2.*
+
+From version 2 we have removed the disabled users from the shared list. The ability to enable/disable users was added to the `CompanyUser` module, version 2.0.0.
+
+*Estimated migration time: 10 minutes*
+
+To upgrade to the new version of the module, do the following:
+
+1. Upgrade the `CompanyUser` module to version 2.0.0. See [Upgrade the CompanyUser module](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-companyuser-module.html) for more details:
+
+```yaml
+composer require spryker/company-user: "^2.0.0"
+```
+
+2. Regenerate transfer objects:
+
+```yaml
+vendor/bin/console transfer:generate
+```

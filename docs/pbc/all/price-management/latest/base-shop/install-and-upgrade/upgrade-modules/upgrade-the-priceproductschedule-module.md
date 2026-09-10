@@ -1,7 +1,7 @@
 ---
 title: Upgrade the PriceProductSchedule module
 description: Use the guide to update the PriceProductSchedule module to a newer version.
-last_updated: Jun 16, 2021
+last_updated: Aug 6, 2026
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-price-product-schedule
 originalArticleId: f5314ef7-b1aa-4309-8f02-6815e4202415
@@ -25,4 +25,18 @@ redirect_from:
 
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-priceproductschedule-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-priceproductschedule-module.md -->
+## Upgrading from version 1.* to version 2.0.0
+
+*Estimated migration time: 5 minutes*
+
+1. Upgrade the `PriceProductSchedule` module to version 2.0.0:
+
+```bash
+composer require spryker/price-product-schedule: "^2.0.0" --update-with-dependencies
+```
+
+2. Generate transfers:
+
+```bash
+console transfer:generate
+```

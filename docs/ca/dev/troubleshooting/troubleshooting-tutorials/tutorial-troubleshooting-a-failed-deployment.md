@@ -2,7 +2,7 @@
 title: Tutorial — Troubleshooting a failed deployment
 description: Troubleshoot failed deployments in Spryker by following detailed steps to identify issues in build, pre-deploy, and service deployment stages.
 template: troubleshooting-guide-template
-last_updated: Oct 6, 2023
+last_updated: Aug 6, 2026
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-a-failed-deployment.html
 ---
@@ -114,11 +114,55 @@ If a deployment fails at the `Deploy_Scheduler`, do the following.
 
 ### 1. Check Jenkins status
 
-{% include checking-jenkins-status.md %} <!-- To edit, see /_includes/checking-jenkins-status.md -->
+1. In the AWS Management Console, go to **Services** > **EC2**.
+2. In the navigation pane, select **Instances**.
+3. Select the checkbox next to the Jenkins instance you want to check for issues. The *Name* format is `{ENVIRONMENT_NAME}-scheduler`.
+4. Next to the instance name, check *Instance state* and *Status check*.
+5. In the pane of the instance that has appeared below, switch to the **Monitoring** tab.
+6. Select the desired time period.
+7. Check the graphs for spikes. Consider 10 times the usual usage a spike.
+
+![jenkins-status](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/_includes/checking-jenkins-status.md/jenkins-status.png)
+
+
+{% info_block infoBox "" %}
+
+Depending on your screen size, you may have to scroll down to see all the graphs.
+
+{% endinfo_block %}
 
 ### 2. Check Jenkins system information
 
-{% include checking-jenkins-system-information.md %} <!-- To edit, see /_includes/checking-jenkins-status.md -->
+1. In the AWS Management Console, go to **Services** >  **EC2**.
+2. In the navigation pane, select **Instances**.
+3. Select the checkbox next to the Jenkins instance you want to check the system information of.
+4. In the pane of the instance that has appeared below, copy *Private IPv4 addresses.*
+
+![jenkins-ip-address](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/_includes/checking-jenkins-system-information.md/jenkins-ip-address.png)
+
+5. Using the IP address you've copied, open the Jenkins Web UI at `https://{PRIVATE_IPV4_ADDRESS}/script`.
+6. On the *Script Console* page, insert the following script and select **Run**.
+
+```bash
+def dh = "df -h".execute()
+def la = "w".execute()
+def vmstat = "vmstat -S M".execute()
+def mpstat = "mpstat -P ALL".execute()
+
+println "------- dh -------"
+println dh.text
+println "------- la -------\n"
+println la.text
+println "------- vmstat -------\n"
+println vmstat.text
+println "------- mpstat -------\n"
+println mpstat.text
+```
+
+Output example:
+
+
+![jenkins-system-information-output](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/_includes/checking-jenkins-system-information.md/jenkins-system-information-output.png)
 
 ### 3. Check Jenkins deploy logs
 

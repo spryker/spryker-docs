@@ -2,7 +2,7 @@
 title: Tutorial — Troubleshooting 403 error
 description: Troubleshoot 403 errors in Spryker by identifying triggered WAF rules, with steps to analyze logs and resolve access restrictions efficiently.
 template: troubleshooting-guide-template
-last_updated: Oct 6, 2023
+last_updated: Aug 6, 2026
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-403-error.html
 ---
@@ -12,7 +12,9 @@ A website functionality is not working properly, or there is a 403 status respon
 
 To check 403 errors via browser console, do the following:
 
-{% include checking-errors-via-browser-console.md %} <!-- To edit, see /_includes/checking-errors-via-browser-console.md -->
+1. In the page you want to check for errors, right-click and select **Inspect**.
+2. In the navigation bar of the inspect pane, switch to the  **Network** tab.
+3. Search by the status code of the needed error, for example 403.
 
 ## Checking the WAF rule that triggered the 403 error
 

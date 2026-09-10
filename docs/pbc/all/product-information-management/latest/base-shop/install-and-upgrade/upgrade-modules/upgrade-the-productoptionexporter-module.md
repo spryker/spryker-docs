@@ -1,7 +1,7 @@
 ---
 title: Upgrade the ProductOptionExporter module
 description: Use the guide to learn how to update the ProductOptionExporter module to a newer version.
-last_updated: Jun 16, 2021
+last_updated: Aug 6, 2026
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-product-option-exporter
 originalArticleId: e57262ce-2da8-4146-a936-a019b4ae392d
@@ -27,4 +27,6 @@ related:
     link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoptiondiscountconnector-module.html
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-productoptionexporter-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productoptionexporter-module.md -->
+## Upgrading from version 2.* to version 3.*
+
+The `ProductOptionExporter`  module does not provide the tax functionality anymore. Upgrade [Upgrade the Tax module](/docs/pbc/all/tax-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-tax-module.html).

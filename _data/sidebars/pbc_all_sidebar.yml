@@ -2784,6 +2784,8 @@ entries:
                 nested:
                   - title: Create personalized prices
                     url: /docs/pbc/all/price-management/base-shop/tutorials-and-howtos/create-personalized-prices.html
+                  - title: Handle price explosion and ERP-owned pricing in B2B
+                    url: /docs/pbc/all/price-management/base-shop/tutorials-and-howtos/handle-price-explosion-and-erp-owned-pricing-in-b2b.html
                   - title: Handle twenty five million prices in Spryker Commerce OS
                     url: /docs/pbc/all/price-management/base-shop/tutorials-and-howtos/handle-twenty-five-million-prices-in-spryker-commerce-os.html
                   - title: Manage business unit specific prices via data import
@@ -3345,6 +3347,21 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/manage-using-glue-api/glue-api-retrieve-product-attributes.html
                   - title: Retrieve product labels
                     url: /docs/pbc/all/product-information-management/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html
+
+              - title: Manage via Backend API
+                nested:
+                  - title: Categories
+                    nested:
+                      - title: Retrieve categories
+                        url: /docs/pbc/all/product-information-management/base-shop/manage-using-backend-api/categories/backend-api-retrieve-categories.html
+                      - title: Create a category
+                        url: /docs/pbc/all/product-information-management/base-shop/manage-using-backend-api/categories/backend-api-create-a-category.html
+                      - title: Update a category
+                        url: /docs/pbc/all/product-information-management/base-shop/manage-using-backend-api/categories/backend-api-update-a-category.html
+                      - title: Delete a category
+                        url: /docs/pbc/all/product-information-management/base-shop/manage-using-backend-api/categories/backend-api-delete-a-category.html
+                      - title: Manage product assignments of a category
+                        url: /docs/pbc/all/product-information-management/base-shop/manage-using-backend-api/categories/backend-api-manage-product-assignments-of-a-category.html
 
               - title: Third-party integrations
                 nested:

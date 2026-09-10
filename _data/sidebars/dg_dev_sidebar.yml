@@ -135,7 +135,7 @@ entries:
     - title: "Quickstart guides: Install Spryker"
       url: /docs/dg/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guides-install-spryker.html
       nested:
-      - title: "Quickstart guide: Install Spryker on MacOS and Linux"
+      - title: "Quickstart guide: Install Spryker on macOS and Linux"
         url: /docs/dg/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux.html
       - title: "Quickstart guide: Install Spryker on Windows"
         url: /docs/dg/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-windows.html
@@ -531,6 +531,8 @@ entries:
   - title: Frontend development
     url: /docs/dg/dev/frontend-development/frontend-development.html
     nested:
+    - title: npm workspaces for the frontend builders
+      url: /docs/dg/dev/frontend-development/npm-workspaces-for-frontend-builders.html
     - title: Zed
       url: /docs/dg/dev/frontend-development/zed/zed-frontend.html
       nested:
@@ -875,6 +877,8 @@ entries:
           url: /docs/dg/dev/frontend-development/marketplace/angular-services.html
         - title: "Building the Merchant Portal frontend"
           url: /docs/dg/dev/frontend-development/marketplace/building-the-merchant-portal-frontend.html
+        - title: "Frontend builder for the Merchant Portal v2"
+          url: /docs/dg/dev/frontend-development/marketplace/frontend-builder-for-merchant-portal-v2.html
         - title: "Project structure"
           url: /docs/dg/dev/frontend-development/marketplace/marketplace-frontend-project-and-module-structure.html
         - title: "Set up the Merchant Portal"
@@ -966,6 +970,8 @@ entries:
 
     - title: Upgrade to frontend builder v2 for Yves
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-frontend-builder-v2-for-yves.html
+    - title: Upgrade to frontend builder v2 for the Merchant Portal
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-frontend-builder-v2-for-merchant-portal.html
     - title: Upgrade to Webpack v5
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-webpack-v5.html
     - title: Upgrade to Stylelint 16 and css-loader 6

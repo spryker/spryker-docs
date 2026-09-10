@@ -1,10 +1,8 @@
 ---
 title: Understanding SLAs
 description: Explore Spryker's SLAs to understand expected response times, responsibilities, and best practices for seamless support and timely issue resolution.
-last_updated: Sep 6, 2021
+last_updated: Sep 7, 2026
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/understand-slas
-originalArticleId: 8cc87de0-43f6-4d9c-b65b-3ec9cad7a38b
 redirect_from:
 - /docs/scos/user/intro-to-spryker/support/understand-slas.html
 ---
@@ -57,7 +55,7 @@ There is a number of things you can do to avoid problems.
 ### Keep updated on Spryker
 
 Keeping your Spryker environment up to date is important, but it's equally important to keep your knowledge about what is going on with Spryker updated, too.
-Our Spryker Community on [CommerceQuest](https://commercequest.space/), a vibrant forum for people using Spryker, is a perfect platform to use. It is also a place where people come to discuss. We would like to invite every customer to join and contribute actively. Often, you will hear the latest news first there. In addition, our community team also hosts monthly Spryker User Group Meetups in which internal Spryker teams and community members share and discuss the latest developments. See [commercequest.space/events](https://commercequest.space/events/category) for upcoming meetups and other relevant events.
+The [Spryker community Slack]({{ site.community_slack_invite }}) is where people using Spryker come to discuss it, and we invite every customer to join and contribute actively. Often, you will hear the latest news first there, including announcements of the monthly Spryker User Group Meetups in which internal Spryker teams and community members share and discuss the latest developments.
 
 Also, subscribe to our new newsletter (soon to come) and be sure to check out our Technical News Page (soon to come), for the latest important news.
 

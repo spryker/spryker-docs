@@ -1,10 +1,8 @@
 ---
 title: Install in Development mode on MacOS and Linux
 description: Learn how to install and configure Spryker in Development mode on MacOS and Linux in a local environment.
-last_updated: Feb 19, 2026
+last_updated: Sep 7, 2026
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/installing-in-development-mode-on-macos-and-linux
-originalArticleId: 3a4af86a-3fb7-4fb2-b47e-4f1eb703fae6
 redirect_from:
   - /docs/scos/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-macos-and-linux.html
   - /docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html
@@ -14,6 +12,16 @@ redirect_from:
   - /docs/marketplace/dev/setup/202212.0/spryker-marketplace-setup.html  
   - /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html
 related:
+  - title: Troubleshooting
+    link: docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/troubleshooting-installation.html
+  - title: Configuring debugging in Docker
+    link: docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/configure-debugging.html
+  - title: Deploy file reference
+    link: docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html
+  - title: Configuring services
+    link: docs/dg/dev/integrate-and-configure/configure-services.html
+  - title: Set up a self-signed SSL certificate
+    link: docs/dg/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html
   - title: Database access credentials
     link: docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html
 ---
@@ -45,14 +53,14 @@ Product images, product data, other images or fonts displaced in a demo shop are
 2. Clone the Demo Shop and navigate into its folder:
 
  ```shell
- git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b {{page.release_tag}} --single-branch ./b2b-demo-marketplace && \
+ git clone https://github.com/spryker-shop/b2b-demo-marketplace -b {{page.release_tag}} --single-branch ./b2b-demo-marketplace && \
  cd b2b-demo-marketplace
  ```
 
 3. Clone the Docker SDK:
 
 ```bash
-git clone https://github.com/spryker/docker-sdk.git --single-branch docker
+git clone https://github.com/spryker/docker-sdk --single-branch docker
 ```
 
 
@@ -98,11 +106,3 @@ To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. Y
 ## Get the list of useful commands
 
 To get the full and up-to-date list of commands, run `docker/sdk help`.
-
-## Next steps
-
-- [Troubleshooting](/docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/troubleshooting-installation.html)
-- [Configuring debugging in Docker](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/configure-debugging.html)
-- [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)
-- [Configuring services](/docs/dg/dev/integrate-and-configure/configure-services.html)
-- [Set up a self-signed SSL certificate](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html)

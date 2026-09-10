@@ -77,18 +77,18 @@ composer update spryker/gui:"^5.3.2" spryker/chart:"^1.7.0" spryker/state-machin
 composer show spryker/gui spryker/chart spryker/state-machine-visualizer # Verify the versions
 ```
 
-Check if your project’s `package.json` file contains overrides for the `pbf` or `probe-image-size` packages. You can remove them if none of your custom code requires them.
+Check whether your project's `package.json` file contains overrides for the `pbf` or `probe-image-size` packages. Remove these overrides if your custom code does not require them.
 
 ```json
 {
-    "overrides": {
-        "pbf": "~5.1.2",
-        "probe-image-size": "^7.4.0"
-    }
+  "overrides": {
+    "pbf": "~5.1.2",
+    "probe-image-size": "^7.4.0"
+  }
 }
 ```
 
-2. Run scan and security update for npm packages
+2. Run a security audit and update the npm packages:
 
 ```bash
 npm audit fix

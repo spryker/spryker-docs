@@ -183,7 +183,7 @@ For tokens of Back Office and merchant users, the Backend API resolves the user 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | AclEntityApplicationPlugin | Enables Persistent ACL for the Backend API application. | | Spryker\Zed\AclEntity\Communication\Plugin\Application |
-| NoCurrentMerchantUserAclEntityDisablerPlugin | Disables Persistent ACL unless the acting user is a merchant user, so that Back Office users, userless requests like the token endpoint, and public endpoints are not filtered. | | Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity |
+| NoCurrentMerchantUserAclEntityDisablerPlugin | Disables Persistent ACL unless the acting user is a merchant user, so that Back Office users, userless requests like the token endpoint, and public endpoints are not filtered. | | Spryker\Zed\MerchantUser\Communication\Plugin\AclEntity |
 
 **src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
 
@@ -217,7 +217,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 namespace Pyz\Zed\AclEntity;
 
 use Spryker\Zed\AclEntity\AclEntityDependencyProvider as SprykerAclEntityDependencyProvider;
-use Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity\NoCurrentMerchantUserAclEntityDisablerPlugin;
+use Spryker\Zed\MerchantUser\Communication\Plugin\AclEntity\NoCurrentMerchantUserAclEntityDisablerPlugin;
 
 class AclEntityDependencyProvider extends SprykerAclEntityDependencyProvider
 {

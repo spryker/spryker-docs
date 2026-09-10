@@ -143,6 +143,36 @@ Some pages render their content from a data file instead of from their own Markd
 
 Add a row whenever a new data-backed page appears — a body of `{% raw %}` markup plus a `<script src="/js/...">` include is the signal.
 
+### HTML table headers
+
+In HTML tables, cells inside `<thead>` must be `<th>`, never `<td>`. A `<td>` in `<thead>` does not render as a header.
+
+A table without `<thead>` is fine — a header row made of bare `<th>` cells needs no change. The rule applies only when `<thead>` is present.
+
+**Wrong:**
+```html
+<table>
+   <thead>
+      <tr>
+         <td>Name</td>
+         <td>Description</td>
+      </tr>
+   </thead>
+```
+
+**Correct:**
+```html
+<table>
+   <thead>
+      <tr>
+         <th>Name</th>
+         <th>Description</th>
+      </tr>
+   </thead>
+```
+
+**Detection:** For every `<thead>` block, convert any `<td>` cells to `<th>` (keep attributes such as `colspan` and `rowspan`). Do not add `<thead>` to tables that lack it, and do not touch `<th>` cells outside `<thead>`. Ignore tables inside code blocks.
+
 ### Sidebar issues
 
 A finding names the missing page as `fileName.md`. Add the same path to the sidebar with `md` replaced by `html`. Read the named file for its `title`, and present that title for verification before writing it.

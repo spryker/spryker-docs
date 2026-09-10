@@ -1,25 +1,21 @@
 ---
 title: API Platform
 description: Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation and the integration of the API Platform Bundle.
-last_updated: Aug 7, 2026
+last_updated: Sep 7, 2026
 template: concept-topic-template
 related:
   - title: Integrate API Platform
     link: docs/integrations/spryker-api/migrate-from-glue-to-api-platform/integrate-api-platform.html
-  - title: API Platform configuration
-    link: docs/integrations/spryker-api/api-platform/configuration.html
-  - title: Resource relationships
-    link: docs/integrations/spryker-api/api-platform/relationships.html
-  - title: Dependency Injection
-    link: docs/dg/dev/architecture/dependency-injection.html
+  - title: Integrate API Platform security
+    link: docs/integrations/spryker-api/authenticating-and-authorization/integrate-api-platform-security.html
+  - title: Migrate to API Platform
+    link: docs/integrations/spryker-api/migrate-from-glue-to-api-platform/migrate-to-api-platform.html
   - title: Security
     link: docs/integrations/spryker-api/authenticating-and-authorization/security.html
-  - title: Native API Platform resources
-    link: docs/integrations/spryker-api/api-platform/native-api-platform-resources.html
-  - title: Sparse Fieldsets
-    link: docs/integrations/spryker-api/api-platform/sparse-fieldsets.html
-  - title: Serialization
-    link: docs/integrations/spryker-api/api-platform/serialization.html
+  - title: Dependency Injection
+    link: docs/dg/dev/architecture/dependency-injection.html
+  - title: API Platform official documentation
+    link: https://api-platform.com/docs/symfony/
 redirect_from:
   - /docs/dg/dev/architecture/api-platform.html
 ---
@@ -519,21 +515,3 @@ properties:
 | Use cases | Standard CRUD | Complex business logic |
 
 Both can coexist in the same application. For further migration guidance, see [Migrate to API Platform](/docs/integrations/spryker-api/migrate-from-glue-to-api-platform/migrate-to-api-platform.html).
-
-## Next steps
-
-- [Integrate API Platform](/docs/integrations/spryker-api/migrate-from-glue-to-api-platform/integrate-api-platform.html) - Setup and configuration
-- [Integrate API Platform security](/docs/integrations/spryker-api/authenticating-and-authorization/integrate-api-platform-security.html) - Authentication and authorization setup
-- [Migrate to API Platform](/docs/integrations/spryker-api/migrate-from-glue-to-api-platform/migrate-to-api-platform.html) - Migrate endpoints from Glue API
-- [API Platform configuration](/docs/integrations/spryker-api/api-platform/configuration.html) - Configure API Platform settings
-- [Security](/docs/integrations/spryker-api/authenticating-and-authorization/security.html) - Authentication and authorization
-- [Implement an API Platform resource](/docs/integrations/spryker-api/api-platform/enablement.html) - Creating your first resource
-- [Resource schemas](/docs/integrations/spryker-api/api-platform/resource-schemas.html) - Resource schemas
-- [Typed collections in the published contract](/docs/integrations/spryker-api/api-platform/typed-collections.html) - What object collections publish, and when to adopt them
-- [Validation schemas](/docs/integrations/spryker-api/api-platform/validation-schemas.html) - Validation schemas
-- [Native API Platform resources](/docs/integrations/spryker-api/api-platform/native-api-platform-resources.html) - Using native PHP attributes
-- [CodeBucket support](/docs/integrations/spryker-api/api-platform/code-buckets.html) - Region-specific resources
-- [Sparse Fieldsets](/docs/integrations/spryker-api/api-platform/sparse-fieldsets.html) - Request only needed attributes
-- [Serialization](/docs/integrations/spryker-api/api-platform/serialization.html) - How requests and responses are serialized
-- [Troubleshooting API Platform](/docs/integrations/spryker-api/api-platform/troubleshooting.html) - Common issues
-- [API Platform official documentation](https://api-platform.com/docs/)

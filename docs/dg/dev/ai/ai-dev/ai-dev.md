@@ -1,7 +1,7 @@
 ---
 title: AI Dev SDK
 description: Make your AI coding assistant Spryker-aware with skills, agents, rules, and an MCP server
-last_updated: Aug 20, 2026
+last_updated: Sep 7, 2026
 label: early-access
 template: concept-topic-template
 redirect_from:
@@ -74,10 +74,3 @@ AI can execute read-only database queries to inspect data when debugging issues.
 ### Extensible for your project
 
 You can extend the MCP server with custom plugins to add new tools — see [Extension points](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html#extension-points). The shipped skills are plain Markdown files, so you can also use them as a template for your team's own workflows.
-
-## Next steps
-
-- [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html) — set everything up, from installing your AI assistant to your first prompt
-- [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html) — everything the SDK ships and what each piece does
-- [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html) — the plugin in detail, slash commands, and optional enhancements
-- [AI Dev MCP Server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html) — the available MCP tools, extension points, and debugging

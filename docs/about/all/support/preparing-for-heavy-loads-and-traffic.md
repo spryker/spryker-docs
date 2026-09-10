@@ -1,10 +1,8 @@
 ---
 title: Preparing for heavy loads and traffic
 description: Guidance and tips on how to prepare your shop for higher traffic volume during busy trading seasons.
-last_updated: Jun 16, 2021
+last_updated: Sep 7, 2026
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/special-prepare-for-a-busy-season
-originalArticleId: 03eeeab9-d5fd-4b18-80f9-5a1dd3fcf33e
 redirect_from:
 - /docs/scos/user/intro-to-spryker/support/special-prepare-for-a-busy-season.html
 ---
@@ -29,7 +27,7 @@ This document helps you prepare for a traditionally very busy season of the year
 - Global business: co-locate infrastructure and your customers.
 - Make sure infrastructure monitoring is in place so you can watch for errors or issues.
 - Test your deployment: you should be able to quickly deliver fixes if needed.
-- If your project is hosted with Spryker PaaS, let us know that you are expecting a higher load using the [Support Portal](/docs/about/all/support/using-the-support-portal.html#announce-high-trafficload)
+- If your project is hosted with Spryker PaaS, let us know that you are expecting a higher load using the [Support Hub](/docs/about/all/support/using-the-support-hub.html#announce-high-trafficload)
 
 ## Tips for developers
 

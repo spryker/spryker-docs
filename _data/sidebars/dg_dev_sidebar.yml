@@ -135,7 +135,7 @@ entries:
     - title: "Quickstart guides: Install Spryker"
       url: /docs/dg/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guides-install-spryker.html
       nested:
-      - title: "Quickstart guide: Install Spryker on MacOS and Linux"
+      - title: "Quickstart guide: Install Spryker on macOS and Linux"
         url: /docs/dg/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux.html
       - title: "Quickstart guide: Install Spryker on Windows"
         url: /docs/dg/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-windows.html

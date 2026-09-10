@@ -4,24 +4,12 @@ description: Understanding API Platform resource schema definitions in Spryker.
 last_updated: Sep 10, 2026
 template: concept-topic-template
 related:
-  - title: API Platform
-    link: docs/integrations/spryker-api/api-platform/api-platform.html
   - title: Integrate API Platform
     link: docs/integrations/spryker-api/migrate-from-glue-to-api-platform/integrate-api-platform.html
-  - title: Resource relationships
-    link: docs/integrations/spryker-api/api-platform/relationships.html
-  - title: Validation schemas
-    link: docs/integrations/spryker-api/api-platform/validation-schemas.html
-  - title: CodeBucket support
-    link: docs/integrations/spryker-api/api-platform/code-buckets.html
-  - title: Implement an API Platform resource
-    link: docs/integrations/spryker-api/api-platform/enablement.html
-  - title: Test API Platform resources
-    link: docs/integrations/spryker-api/api-platform/testing.html
   - title: Security
     link: docs/integrations/spryker-api/authenticating-and-authorization/security.html
-  - title: Native API Platform resources
-    link: docs/integrations/spryker-api/api-platform/native-api-platform-resources.html
+  - title: API Platform documentation
+    link: https://api-platform.com/docs/
 redirect_from:
   - /docs/dg/dev/architecture/api-platform/resource-schemas.html
 ---
@@ -1784,13 +1772,3 @@ email:
   writable: true
   readable: true
 ```
-
-## Next steps
-
-- [API Platform](/docs/integrations/spryker-api/api-platform/api-platform.html) - Architecture overview
-- [Validation schemas](/docs/integrations/spryker-api/api-platform/validation-schemas.html) - Define validation rules
-- [CodeBucket support](/docs/integrations/spryker-api/api-platform/code-buckets.html) - Code Bucket-specific resources
-- [Implement an API Platform resource](/docs/integrations/spryker-api/api-platform/enablement.html) - Creating resources
-- [Test API Platform resources](/docs/integrations/spryker-api/api-platform/testing.html) - Writing and running tests
-- [Troubleshooting](/docs/integrations/spryker-api/api-platform/troubleshooting.html) - Common issues
-- [API Platform Documentation](https://api-platform.com/docs/) - Official API Platform docs

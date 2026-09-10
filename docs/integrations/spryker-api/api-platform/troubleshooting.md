@@ -4,18 +4,8 @@ description: Common issues and solutions when working with API Platform in Spryk
 last_updated: Sep 10, 2026
 template: troubleshooting-guide-template
 related:
-  - title: API Platform
-    link: docs/integrations/spryker-api/api-platform/api-platform.html
   - title: Integrate API Platform
     link: docs/integrations/spryker-api/migrate-from-glue-to-api-platform/integrate-api-platform.html
-  - title: Implement an API Platform resource
-    link: docs/integrations/spryker-api/api-platform/enablement.html
-  - title: Resource schemas
-    link: docs/integrations/spryker-api/api-platform/resource-schemas.html
-  - title: Validation schemas
-    link: docs/integrations/spryker-api/api-platform/validation-schemas.html
-  - title: Test API Platform resources
-    link: docs/integrations/spryker-api/api-platform/testing.html
 redirect_from:
   - /docs/dg/dev/architecture/api-platform/troubleshooting.html
 ---
@@ -589,12 +579,3 @@ If you encounter issues not covered here:
 | `Validation failed` | Schema mismatch | Regenerate with `--force` |
 | `Cache is stale` | Outdated cache | Run `cache:clear` |
 | API docs UI broken/unstyled | Assets not installed | Run `docker/sdk cli glue assets:install` |
-
-## Next steps
-
-- [API Platform](/docs/integrations/spryker-api/api-platform/api-platform.html) - Overview and concepts
-- [Integrate API Platform](/docs/integrations/spryker-api/migrate-from-glue-to-api-platform/integrate-api-platform.html) - Setup guide
-- [Implement an API Platform resource](/docs/integrations/spryker-api/api-platform/enablement.html) - Creating resources
-- [Resource schemas](/docs/integrations/spryker-api/api-platform/resource-schemas.html) - Resource schema reference
-- [Validation schemas](/docs/integrations/spryker-api/api-platform/validation-schemas.html) - Validation schema reference
-- [Test API Platform resources](/docs/integrations/spryker-api/api-platform/testing.html) - Testing guide

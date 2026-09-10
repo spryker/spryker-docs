@@ -65,8 +65,8 @@ Both packages are declared by Spryker modules, so the fixed versions become avai
 
 ### Affected modules
 
-- `spryker/gui`: < 5.3.2 — declares `dompurify`
-- `spryker/chart`: < 1.7.0 — removes `pbf`, replaces plotly.js with new version of 'plotly.js-dist-min'
+- `spryker/gui`: < 5.3.2 — declares `dompurify`.
+- `spryker/chart`: < 1.7.0 — removes `pbf` and replaces `plotly.js` with a new version of `plotly.js-dist-min`.
 
 ### Fix the vulnerability
 

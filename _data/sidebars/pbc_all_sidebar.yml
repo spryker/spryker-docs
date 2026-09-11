@@ -1751,6 +1751,15 @@ entries:
               - title: Add push notification subscriptions
                 url: /docs/pbc/all/miscellaneous/manage-using-glue-api/glue-api-add-push-notification-subscriptions.html
 
+              - title: Manage glossary keys via Backend API
+                nested:
+                  - title: Retrieve glossary keys
+                    url: /docs/pbc/all/miscellaneous/manage-using-backend-api/glossary-keys/backend-api-retrieve-glossary-keys.html
+                  - title: Create a glossary key
+                    url: /docs/pbc/all/miscellaneous/manage-using-backend-api/glossary-keys/backend-api-create-a-glossary-key.html
+                  - title: Update translations of a glossary key
+                    url: /docs/pbc/all/miscellaneous/manage-using-backend-api/glossary-keys/backend-api-update-translations-of-a-glossary-key.html
+
           - title: Third-party integrations
             nested:
               - title: Customer service

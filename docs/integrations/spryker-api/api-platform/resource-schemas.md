@@ -1106,7 +1106,7 @@ The pagination options are rendered as named parameters in the `#[ApiResource]` 
 
 ### Provider requirements
 
-Providers extending `Spryker\ApiPlatform\State\Provider\AbstractProvider` read the requested window with `buildPaginationTransfer()`, pass it to the facade, and publish the result total with `setCollectionPagination()`:
+Providers extending `Spryker\ApiPlatform\State\Provider\AbstractProvider` call `buildPaginationTransfer()` to read `page[limit]` and `page[offset]` from the request into a `PaginationTransfer`, pass it to the facade, and call `setCollectionPagination()` with the total number of results:
 
 ```php
 $paginationTransfer = $this->buildPaginationTransfer();

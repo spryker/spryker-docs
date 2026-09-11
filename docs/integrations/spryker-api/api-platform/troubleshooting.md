@@ -388,7 +388,7 @@ The `assets:install` command must be run after integrating API Platform and when
      paginationItemsPerPage: 10
    ```
 
-2. Pass the requested window to the facade and publish the result total in the provider:
+2. In the provider, read `page[limit]` and `page[offset]` with `buildPaginationTransfer()`, pass the transfer to the facade, and report the total number of results with `setCollectionPagination()`:
 
    ```php
    $paginationTransfer = $this->buildPaginationTransfer();

@@ -392,7 +392,7 @@ Standardized JSON:API offset pagination with query parameters:
 GET /customers?page[limit]=20&page[offset]=20
 ```
 
-Providers extending `AbstractProvider` resolve the window with `buildPaginationTransfer()` and publish the total with `setCollectionPagination()`. The response carries the summary in the top-level `meta.pagination` object and the `first`, `last`, `prev`, and `next` links in the top-level `links` object. See [Resource schemas — Pagination](/docs/integrations/spryker-api/api-platform/resource-schemas.html#pagination).
+Providers extending `AbstractProvider` call `buildPaginationTransfer()` to read `page[limit]` and `page[offset]` from the request into a `PaginationTransfer`, pass it to the facade, and call `setCollectionPagination()` with the total number of results. The response carries the summary in the top-level `meta.pagination` object and the `first`, `last`, `prev`, and `next` links in the top-level `links` object. See [Resource schemas — Pagination](/docs/integrations/spryker-api/api-platform/resource-schemas.html#pagination).
 
 ### Operation-specific behavior
 

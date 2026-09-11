@@ -1,7 +1,7 @@
 ---
 title: API Platform
 description: Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation and the integration of the API Platform Bundle.
-last_updated: Sep 7, 2026
+last_updated: Sep 10, 2026
 template: concept-topic-template
 related:
   - title: Integrate API Platform
@@ -360,6 +360,8 @@ docker/sdk cli glue  api:debug customers --api-type=backend --show-sources
 API Platform generates interactive OpenAPI documentation:
 
 - Swagger UI at the root URL `/` for example `http://glue-backend.eu.spryker.local/`
+- Query parameters declared under an operation's `openapiContext.parameters`, such as `sort` or `filter[...]`, are rendered as input fields. Paginated collections get `page[limit]` and `page[offset]` automatically.
+- Operations marked with `openapi: false` keep their route but are not listed. See [Operation options](/docs/integrations/spryker-api/api-platform/resource-schemas.html#operation-options).
 
 You can disable this interface in production environments by configuring the settings in your `api_platform.php` configuration file. For details, see [Enable the documentation UI only in development](/docs/integrations/spryker-api/api-platform/configuration.html#enable-the-documentation-ui-only-in-development).
 
@@ -384,22 +386,13 @@ public ?string $email = null;
 
 ### Pagination support
 
-Standardized pagination with query parameters:
+Standardized JSON:API offset pagination with query parameters:
 
 ```MARKDOWN
-GET /customers?page=2&itemsPerPage=20
+GET /customers?page[limit]=20&page[offset]=20
 ```
 
-Provider returns `PaginatorInterface`:
-
-```php
-return new TraversablePaginator(
-    new \ArrayObject($results),
-    $currentPage,
-    $itemsPerPage,
-    $totalItems
-);
-```
+Providers extending `AbstractProvider` call `buildPaginationTransfer()` to read `page[limit]` and `page[offset]` from the request into a `PaginationTransfer`, pass it to the facade, and call `setCollectionPagination()` with the total number of results. The response carries the summary in the top-level `meta.pagination` object and the `first`, `last`, `prev`, and `next` links in the top-level `links` object. See [Resource schemas — Pagination](/docs/integrations/spryker-api/api-platform/resource-schemas.html#pagination).
 
 ### Operation-specific behavior
 

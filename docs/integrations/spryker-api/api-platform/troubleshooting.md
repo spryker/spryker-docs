@@ -1,21 +1,11 @@
 ---
 title: Troubleshooting API Platform
 description: Common issues and solutions when working with API Platform in Spryker.
-last_updated: Jul 31, 2026
+last_updated: Sep 10, 2026
 template: troubleshooting-guide-template
 related:
-  - title: API Platform
-    link: docs/integrations/spryker-api/api-platform/api-platform.html
   - title: Integrate API Platform
     link: docs/integrations/spryker-api/migrate-from-glue-to-api-platform/integrate-api-platform.html
-  - title: Implement an API Platform resource
-    link: docs/integrations/spryker-api/api-platform/enablement.html
-  - title: Resource schemas
-    link: docs/integrations/spryker-api/api-platform/resource-schemas.html
-  - title: Validation schemas
-    link: docs/integrations/spryker-api/api-platform/validation-schemas.html
-  - title: Test API Platform resources
-    link: docs/integrations/spryker-api/api-platform/testing.html
 redirect_from:
   - /docs/dg/dev/architecture/api-platform/troubleshooting.html
 ---
@@ -398,28 +388,31 @@ The `assets:install` command must be run after integrating API Platform and when
      paginationItemsPerPage: 10
    ```
 
-2. Return `PaginatorInterface` from provider:
+2. In the provider, read `page[limit]` and `page[offset]` with `buildPaginationTransfer()`, pass the transfer to the facade, and report the total number of results with `setCollectionPagination()`:
 
    ```php
-   use ApiPlatform\State\Pagination\TraversablePaginator;
+   $paginationTransfer = $this->buildPaginationTransfer();
+   $criteriaTransfer->setPagination($paginationTransfer);
 
-   return new TraversablePaginator(
-       new \ArrayObject($results),
-       $currentPage,
-       $itemsPerPage,
-       $totalItems
-   );
+   $collectionTransfer = $this->facade->getCollection($criteriaTransfer);
+
+   $nbResults = $collectionTransfer->getPagination()?->getNbResults();
+   if ($nbResults !== null) {
+       $this->setCollectionPagination($paginationTransfer->getOffsetOrFail(), $paginationTransfer->getLimitOrFail(), $nbResults);
+   }
    ```
 
-3. Use pagination query parameters:
+3. Use the JSON:API pagination query parameters:
 
    ```bash
-   GET /customers?page=2&itemsPerPage=20
+   GET /customers?page[limit]=20&page[offset]=20
    ```
+
+   A page number parameter such as `page=2` is not supported. If `meta.pagination` is missing from the response, the facade did not return `nbResults` in the collection's `pagination` transfer.
 
 ### Client cannot change items per page
 
-**Symptom:** The `itemsPerPage` query parameter is ignored.
+**Symptom:** The `page[limit]` query parameter is ignored.
 
 **Solution:**
 
@@ -586,12 +579,3 @@ If you encounter issues not covered here:
 | `Validation failed` | Schema mismatch | Regenerate with `--force` |
 | `Cache is stale` | Outdated cache | Run `cache:clear` |
 | API docs UI broken/unstyled | Assets not installed | Run `docker/sdk cli glue assets:install` |
-
-## Next steps
-
-- [API Platform](/docs/integrations/spryker-api/api-platform/api-platform.html) - Overview and concepts
-- [Integrate API Platform](/docs/integrations/spryker-api/migrate-from-glue-to-api-platform/integrate-api-platform.html) - Setup guide
-- [Implement an API Platform resource](/docs/integrations/spryker-api/api-platform/enablement.html) - Creating resources
-- [Resource schemas](/docs/integrations/spryker-api/api-platform/resource-schemas.html) - Resource schema reference
-- [Validation schemas](/docs/integrations/spryker-api/api-platform/validation-schemas.html) - Validation schema reference
-- [Test API Platform resources](/docs/integrations/spryker-api/api-platform/testing.html) - Testing guide

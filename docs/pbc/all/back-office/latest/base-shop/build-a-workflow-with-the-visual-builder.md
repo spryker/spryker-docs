@@ -5,8 +5,6 @@ last_updated: Sep 14, 2026
 template: back-office-user-guide-template
 label: early-access
 related:
-  - title: Workflows feature overview
-    link: docs/pbc/all/back-office/base-shop/workflows-feature-overview.html
   - title: Install the Workflows feature
     link: docs/dg/dev/integrate-and-configure/integrate-workflow-feature.html
 ---

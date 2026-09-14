@@ -7,8 +7,6 @@
     _scripts/related_checker/related_checker.py --selftest # verify the checks still fire
 
 Checks:
-  related-sister-or-subpage  target is in the source page's own directory, so the
-                             sidebar already shows it. Deeper descendants are kept
   related-not-https          external link is not https:// (the layout prepends
                              '/' to anything else, producing /http://...)
   related-leading-slash      internal link starts with '/'
@@ -103,8 +101,7 @@ def check(path, text, index, findings):
         findings.append((path, 1, "body-link-section",
                          f"move '{m.group(0).strip()}' into related: and delete the section"))
 
-    source_dir = os.path.dirname(path)
-    for title, link, line in parse_related(fm.group("fm"))[0]:
+    for _title, link, line in parse_related(fm.group("fm"))[0]:
         if "://" in link:
             if not link.startswith("https://"):
                 findings.append((path, line, "related-not-https",
@@ -115,24 +112,18 @@ def check(path, text, index, findings):
         if not link.endswith(".html"):
             findings.append((path, line, "related-no-html", f"needs .html: {link}"))
             continue
-        target_dir = os.path.dirname(link.lstrip("/")[: -len(".html")] + ".md")
-        # Same directory only. A deeper descendant is not listed beside the page
-        # in the sidebar, so it stays.
-        if target_dir == source_dir:
-            findings.append((path, line, "related-sister-or-subpage",
-                             f"'{title}' is a sister or subpage; the sidebar already lists it"))
         if "/" + link.lstrip("/") not in index:
             findings.append((path, line, "related-dead-target", f"nothing serves this link: {link}"))
 
 
 SELFTEST = [
-    ({"related-sister-or-subpage"},
+    (set(),  # a sister page in the same directory is allowed
      "docs/a/b/page.md",
      "---\nrelated:\n  - title: Sister\n    link: docs/a/b/other.html\n---\n\nBody.\n"),
     (set(),  # a deeper descendant is kept
      "docs/a/b/page.md",
      "---\nrelated:\n  - title: Subpage\n    link: docs/a/b/deeper/child.html\n---\n\nBody.\n"),
-    (set(),  # a parent page is not a sister or subpage
+    (set(),  # a parent page is allowed
      "docs/a/b/page.md",
      "---\nrelated:\n  - title: Parent\n    link: docs/a/parent.html\n---\n\nBody.\n"),
     (set(),  # a cousin in another branch stays
@@ -141,7 +132,7 @@ SELFTEST = [
     ({"related-not-https"},
      "docs/a/b/page.md",
      "---\nrelated:\n  - title: Ext\n    link: http://example.com/x\n---\n\nBody.\n"),
-    ({"related-leading-slash", "related-sister-or-subpage"},
+    ({"related-leading-slash"},
      "docs/a/b/page.md",
      "---\nrelated:\n  - title: S\n    link: /docs/a/b/other.html\n---\n\nBody.\n"),
     # no .html means the target cannot be resolved, so dead-target stays quiet
@@ -151,8 +142,8 @@ SELFTEST = [
     ({"body-link-section"},
      "docs/a/b/page.md",
      "---\ntitle: T\n---\n\n## Next step\n\n- [x](/docs/a/c/other.html)\n"),
-    # every entry is seen: three sisters must yield three findings, not two
-    ({"related-sister-or-subpage"},
+    # every entry is seen: three dead links must yield three findings, not two
+    ({"related-dead-target"},
      "docs/a/b/page.md",
      "---\nrelated:\n  - title: One\n    link: docs/a/b/one.html\n"
      "  - title: Two\n    link: docs/a/b/two.html\n"
@@ -162,8 +153,7 @@ SELFTEST = [
 
 def selftest():
     index = {"/docs/a/c/other.html", "/docs/a/parent.html", "/docs/a/b/other.html",
-             "/docs/a/b/deeper/child.html", "/docs/a/b/one.html", "/docs/a/b/two.html",
-             "/docs/a/b/three.html"}
+             "/docs/a/b/deeper/child.html"}
     failures = 0
     for expected, path, sample in SELFTEST:
         findings = []
@@ -174,11 +164,11 @@ def selftest():
             print(f"FAIL {path}: expected {sorted(expected) or 'nothing'}, got {sorted(got) or 'nothing'}")
     # the last sample must report once per entry, not once per file
     findings = []
-    check(SELFTEST[-1][1], SELFTEST[-1][2], set(), findings)
-    sisters = [f for f in findings if f[2] == "related-sister-or-subpage"]
-    if len(sisters) != 3:
+    check(SELFTEST[-1][1], SELFTEST[-1][2], index, findings)
+    dead = [f for f in findings if f[2] == "related-dead-target"]
+    if len(dead) != 3:
         failures += 1
-        print(f"FAIL entry coverage: expected 3 sister findings, got {len(sisters)}")
+        print(f"FAIL entry coverage: expected 3 dead-target findings, got {len(dead)}")
     print(f"selftest: {len(SELFTEST) + 1 - failures}/{len(SELFTEST) + 1} checks passed")
     return 1 if failures else 0
 

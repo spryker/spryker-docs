@@ -1,7 +1,7 @@
 ---
 title: Keeping dependencies updated for performance
 description: Guidelines for keeping Spryker module dependencies up to date to maintain optimal performance and security.
-last_updated: Sep 2, 2026
+last_updated: Sep 14, 2026
 template: concept-topic-template
 related:
   - title: General performance guidelines
@@ -206,6 +206,30 @@ For comprehensive guidance on optimizing cart performance, see [Cart page perfor
 
 - [spryker-shop/checkout-page:^3.41.0](https://github.com/spryker-shop/checkout-page/releases/tag/3.41.0)
 - [spryker-shop/session-customer-validation-page:^1.4.0](https://github.com/spryker-shop/session-customer-validation-page/releases/tag/1.4.0)
+
+### Back Office product abstract list page performance
+
+- [spryker/product-management:^0.20.17](https://github.com/spryker/product-management/releases/tag/0.20.17)
+
+### Product detail page performance on Yves
+
+- [spryker/currency:^4.9.0](https://github.com/spryker/currency/releases/tag/4.9.0)
+- [spryker/glossary-storage:^1.15.0](https://github.com/spryker/glossary-storage/releases/tag/1.15.0)
+- [spryker/kernel:^3.87.0](https://github.com/spryker/kernel/releases/tag/3.87.0)
+- [spryker/price-product:^4.55.0](https://github.com/spryker/price-product/releases/tag/4.55.0)
+- [spryker/price-product-storage:^4.18.0](https://github.com/spryker/price-product-storage/releases/tag/4.18.0)
+- [spryker/product-image-storage:^1.22.0](https://github.com/spryker/product-image-storage/releases/tag/1.22.0)
+- [spryker/product-storage:^1.58.0](https://github.com/spryker/product-storage/releases/tag/1.58.0)
+- [spryker/quote:^2.27.0](https://github.com/spryker/quote/releases/tag/2.27.0)
+- [spryker/redis:^2.14.0](https://github.com/spryker/redis/releases/tag/2.14.0)
+- [spryker/router:^1.27.0](https://github.com/spryker/router/releases/tag/1.27.0)
+- [spryker-shop/product-group-widget:^1.14.0](https://github.com/spryker-shop/product-group-widget/releases/tag/1.14.0)
+- [spryker-shop/product-review-widget:^1.21.0](https://github.com/spryker-shop/product-review-widget/releases/tag/1.21.0)
+- [spryker-shop/shop-ui:^2.2.0](https://github.com/spryker-shop/shop-ui/releases/tag/2.2.0)
+- [spryker-shop/store-widget:^1.6.0](https://github.com/spryker-shop/store-widget/releases/tag/1.6.0)
+- [spryker/store:^1.39.0](https://github.com/spryker/store/releases/tag/1.39.0)
+- [spryker/synchronization:^1.20.0](https://github.com/spryker/synchronization/releases/tag/1.20.0)
+- [spryker/url-storage:^1.26.0](https://github.com/spryker/url-storage/releases/tag/1.26.0)
 
 ## Update strategy
 

@@ -88,7 +88,7 @@ A workflow definition is an XML document in the `state-machine-01` format. It ha
 </statemachine>{% endraw %}
 ```
 
-You do not write this XML by hand. On the **Create Version** screen, a visual builder lets you draw the states and transitions on a canvas and set each one's properties in an inspector; the builder keeps the underlying `state-machine-01` definition in sync. The raw XML above is still available through the builder's advanced panel for review or direct editing.
+You do not write this XML by hand. On the **Create Version** screen, a visual builder lets you draw the states and transitions on a canvas and set each one's properties in an inspector. The raw XML above is still available through the builder's advanced panel for review or direct editing.
 
 ![The Create Version screen in the Back Office, with the visual builder showing the workflow states on a canvas and the properties inspector on the right](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/back-office/base-shop/workflow-feature-overview/workflows-2.png)
 

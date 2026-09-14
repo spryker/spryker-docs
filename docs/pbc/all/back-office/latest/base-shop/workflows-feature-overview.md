@@ -1,7 +1,7 @@
 ---
 title: Workflows feature overview
 description: The Workflows feature lets Back Office users design, adjust, and monitor multi-step business processes without a deployment, and lets developers extend them with custom rules and actions.
-last_updated: Aug 17, 2026
+last_updated: Sep 14, 2026
 template: concept-topic-template
 label: early-access
 redirect_from:
@@ -29,7 +29,7 @@ Multi-step business processes are often hard-coded into a project, which creates
 - **Process logic is invisible to the business.** Without reading source code or asking a developer, business teams cannot see or explain how a process actually behaves.
 - **Ad hoc tracking does not scale.** Teams fall back to spreadsheets, shared inboxes, or manual reminders to track where a company, order, or customer stands in a process, with no single source of truth.
 
-The Workflows feature removes the deployment dependency. Unlike a classic state machine, which lives in a deployed code file and requires a release to change, a workflow's definition is created, versioned, and activated directly in the Back Office — putting process design in the hands of the people who own the process.
+The Workflows feature removes the deployment dependency. Unlike a classic state machine, which lives in a deployed code file and requires a release to change, a workflow is designed, versioned, and activated directly in the Back Office. A visual builder lets you draw the process—adding steps and linking them—on a canvas, so process design is in the hands of the people who own the process, without writing state-machine XML by hand.
 
 ## How a workflow works
 
@@ -88,9 +88,9 @@ A workflow definition is an XML document in the `state-machine-01` format. It ha
 </statemachine>{% endraw %}
 ```
 
-This is the definition pasted into the **Create Version** screen, together with the initial state:
+You do not write this XML by hand. On the **Create Version** screen, a visual builder lets you draw the states and transitions on a canvas and set each one's properties in an inspector; the builder keeps the underlying `state-machine-01` definition in sync. The raw XML above is still available through the builder's advanced panel for review or direct editing.
 
-![The Create Version screen in the Back Office, with the initial state set to "created" and the state-machine-01 XML definition pasted into the definition field](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/back-office/base-shop/workflow-feature-overview/workflows-2.png)
+![The Create Version screen in the Back Office, with the visual builder showing the workflow states on a canvas and the properties inspector on the right](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/back-office/base-shop/workflow-feature-overview/workflows-2.png)
 
 Here is how a company travels through this definition:
 

@@ -101,7 +101,7 @@ Request sample: create an order for an existing customer
 | items.salesUnit | Object | | The measurement unit the line is ordered in—"2 metres" rather than "200 base units". Omit it for a product sold in base units. |
 | items.salesUnit.code | String | | Measurement unit code—for example, `METR`, `KILO`. Must be a unit the line's product is sold in, and available in the order's store. |
 | items.salesUnit.amount | Number | | How many of `code` are ordered. The base-unit `quantity` is derived as `amount * conversion`; the order is rejected when that is not a whole number of base units. Omit it to supply `quantity` directly instead. |
-| items.unitCustomPrice | Integer | | Unit price in cents to charge instead of the product's own price—a deliberate admin capability. Omitted lines are priced from the catalog. |
+| items.unitCustomPrice | Integer | | Unit price in cents to charge instead of the resolved catalog price—a deliberate admin capability, and the required override when the catalog has no price for the line at all (see [Price resolution](#price-resolution) below). Omitted lines are priced from the catalog. |
 | items.merchantReference | String | | Merchant fulfilling the line, for a marketplace line. Supply with `sku`; omit for an operator-sold line. |
 | items.productOfferReference | String | | The specific offer to buy, when a merchant holds several offers for the SKU. |
 | items.note | String | | Free-text note carried on the line. |
@@ -120,6 +120,21 @@ Request sample: create an order for an existing customer
 {% info_block infoBox "On-behalf-of ordering" %}
 
 Passing `companyBusinessUnitUuid` also decides whose place-order permission is checked. Naming a business unit whose company user lacks that permission gets the order rejected as requiring approval, even though the named business unit is a valid one for the customer.
+
+{% endinfo_block %}
+
+### Price resolution
+
+Each line is priced individually, and "the product's own price" is not one fixed number—it depends on who is buying:
+
+- When `companyBusinessUnitUuid` is set, the price is looked up in that business unit's merchant-relationship contract prices first. Different business units can be entitled to different negotiated prices for the same SKU, store, and currency.
+- Otherwise, the standard catalog price for the order's store and currency applies.
+
+`priceMode` selects whether the resolved figure is read as gross or net; it does not change which price list is consulted.
+
+{% info_block warningBox "No price found" %}
+
+When the catalog has no price for a line at all—in the resolved business unit's contract or, absent one, the standard price list—the item is rejected rather than defaulted to zero, unless you supply `items.unitCustomPrice` for it. See `items[<index>].unitCustomPrice` in [Possible errors](#possible-errors).
 
 {% endinfo_block %}
 
@@ -228,6 +243,7 @@ The request is validated as a whole: if any check fails, nothing is created and 
 | 422 | N/A | The customer referenced by `customerReference` doesn't exist. |
 | 422 | N/A | `companyBusinessUnitUuid` doesn't belong to the named customer, or the customer's company user lacks the place-order permission for it. |
 | 422 | N/A | A line item's `sku` doesn't exist, or isn't available in the order's store. |
+| 422 | N/A | The catalog has no price for a line's `sku` in the resolved price list, store, and currency—for example, `items[1].unitCustomPrice => No price found for "001_25904006" in DE EUR. Send a unitCustomPrice to override.`. Supply `items.unitCustomPrice` for that line. |
 | 422 | N/A | A line item's `productOptions.sku` doesn't exist, isn't offered for the product, or isn't priced in the order's store and currency. |
 | 422 | N/A | A line item's `salesUnit.code` isn't a unit the product is sold in, or `salesUnit.amount` doesn't derive to a whole number of base units. |
 | 422 | N/A | A line item's `packagingAmount.amount` violates the package's configured minimum, maximum, or step. |

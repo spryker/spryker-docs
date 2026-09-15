@@ -16,6 +16,9 @@ redirect_from:
   - /docs/pbc/all/discount-management/202311.0/manage-in-the-back-office/create-discounts.html
   - /docs/pbc/all/discount-management/202204.0/base-shop/manage-in-the-back-office/create-discounts.html  
   - /docs/pbc/all/discount-management/202505.0/base-shop/manage-in-the-back-office/create-discounts.html
+related:
+  - title: Edit discounts
+    link: docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/edit-discounts.html
 ---
 
 This document describes how to create discounts in the Back Office.
@@ -234,10 +237,6 @@ The operators offered for a field depend on the value types that the field accep
 If a field offers fewer operators than you expect, the field accepts fewer value types. Attribute fields accept strings, numbers, and lists, so they offer all of the operators. A field that accepts only lists offers **In** and **Not in** only. Operators that are costly to evaluate for a value type are left out for performance reasons.
 
 {% endinfo_block %}
-
-## Next steps
-
-[Edit discounts](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/edit-discounts.html)
 
 
 

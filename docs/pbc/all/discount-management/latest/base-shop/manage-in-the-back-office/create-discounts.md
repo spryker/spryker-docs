@@ -1,7 +1,7 @@
 ---
 title: Create discounts
 description: Learn how to create discounts using the discounts module in the back office of Spryker Cloud Commerce OS.
-last_updated: Aug 27, 2021
+last_updated: Sep 08, 2026
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-a-voucher
 originalArticleId: 5d9e5e07-5260-4f0a-8118-aaa324af6fbc
@@ -121,13 +121,13 @@ Example:
 A query string defines what products a discount applies to. A query string consists of decision rules. Only the products that fulfill all the decision rules are discountable. You can define a query string by entering a plain query or by using a query builder.
 
 Query builder:
-![Discount_Calculation_Query](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Calculation:+Reference+Information/query-string.png)
+![Discount calculation tab showing the discount application type options and an Apply to query](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/discount-management/latest/marketplace/marketplace-promotions-discounts-feature-overview/image-1788795781771.png)
 
 Plain query:
 ![Discount_Calculation_Plain Query](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Calculation:+Reference+Information/discount-calculation-plain-query.png)
 
 A decision rule consists of the following:
-- Attribute. For example, *attribute.color*.
+- Attribute. For example, *attribute.color*. Attribute fields are named `attribute.<attribute_key>` and are generated from the product attribute keys that exist in your database. If an attribute key does not exist in your database, the corresponding field is not offered. To add attribute keys, see [Create product attributes](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/attributes/create-product-attributes.html).
 - Relation operator. For example, *equal*.
 - Value. For example, *black*.
 
@@ -150,7 +150,16 @@ To give away a promotional product for free, select percentage calculator type a
 
 ## Reference information: Define on what conditions the discount can be applied
 
-Similarly to [defining discounted products](#discount-application-type-query-string), the conditions on which a discount is a applied are defined using a query string.
+Similarly to [defining discounted products](#discount-application-type-query-string), the conditions on which a discount is applied are defined using a query string. However, the two settings serve different purposes:
+
+| SETTING | TAB | PURPOSE |
+| --- | --- | --- |
+| **APPLY TO** | Discount calculation | Selects the cart items that receive the discount. |
+| **APPLY WHEN** | Conditions | Determines whether the discount applies to the cart at all. |
+
+**APPLY WHEN** acts as a gate: if its decision rules are not fulfilled, the discount is not applied. **APPLY TO** then selects which of the items in the cart the discount value is distributed across. Because of this, **APPLY WHEN** also offers cart-level and customer-level fields, such as `grand-total`, `total-quantity`, and `customer-group`, while **APPLY TO** offers only item-level fields, such as `sku`, `item-price`, and `attribute.<attribute_key>`.
+
+The fields that appear in both places have a different meaning in each. For example, `sku` under **APPLY WHEN** checks whether the cart contains an item with a given SKU, while `sku` under **APPLY TO** restricts the discount to the items with that SKU.
 
 Example: The discount is applied if five or more items are in the cart, and if it's Tuesday or Wednesday.
 ![Discount Condition](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/discount-condition.png)
@@ -193,7 +202,7 @@ This section describes complex decision rule attributes:
 |month|Number|  The month of the year: 1-12. |
 |time| hour:minute | The time of the day. |
 |total-quantity|Number| The total cart quantity. |
-|attribute.*|String, number|   Depends on your product attributes setup. |
+|attribute.&#42;|String, number, list| One field per product attribute key in your database, named `attribute.<attribute_key>`. If no attribute keys exist, no attribute fields are available. |
 |customer-group|String|    Any value, use a customer group name for an exact match. |
 | customer-order-count | Number |   Any value. Checked against the number of placed orders in a customer account. |
 | product-offer-reference | String | Unique identifier of a [product offer](/docs/pbc/all/offer-management/latest/marketplace/marketplace-product-offer-feature-overview.html). Marketplace only. |
@@ -211,6 +220,20 @@ This section describes complex decision rule attributes:
 |Less or equal|<=|Number| Checks if the value is less than or equal to the value of the right operand|
 |Greater|>|Number| Checks if the value is greater than the value of the right operand|
 |Greater or equal|>=|Number| Checks if the value is greater than or equal to the value of the right operand |
+
+The operators offered for a field depend on the value types that the field accepts, so not every field offers all of the operators above. For example:
+
+| FIELD | OPERATORS OFFERED |
+| --- | --- |
+| `attribute.<attribute_key>` | Equal, Not equal, Contains, Doesn't contain, In, Not in, Less, Less or equal, Greater, Greater or equal |
+| `sku` | Equal, Not equal, Contains, Doesn't contain, In, Not in |
+| `item-price` | Equal, Not equal, Contains, Doesn't contain, Less, Less or equal, Greater, Greater or equal |
+
+{% info_block infoBox "Missing operators" %}
+
+If a field offers fewer operators than you expect, the field accepts fewer value types. Attribute fields accept strings, numbers, and lists, so they offer all of the operators. A field that accepts only lists offers **In** and **Not in** only. Operators that are costly to evaluate for a value type are left out for performance reasons.
+
+{% endinfo_block %}
 
 ## Next steps
 

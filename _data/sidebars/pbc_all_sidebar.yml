@@ -2340,6 +2340,8 @@ entries:
                     nested:
                       - title: Recurring Orders
                         url: /docs/pbc/all/order-experience-management/latest/base-shop/install-and-upgrade/install-features/install-the-recurring-orders-feature.html
+                      - title: Orders Backend API
+                        url: /docs/pbc/all/order-experience-management/latest/base-shop/install-and-upgrade/install-features/install-the-orders-backend-api-feature.html
 
       - title: Payment Service Provider
         url: /docs/pbc/all/payment-service-provider/payment-service-provider.html

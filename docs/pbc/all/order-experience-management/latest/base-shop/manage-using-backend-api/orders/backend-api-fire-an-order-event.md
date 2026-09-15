@@ -18,7 +18,7 @@ An order has no state of its own: its line items advance independently through t
 
 ## Installation
 
-The endpoints are provided by the `OrderExperienceManagement` module, which delegates state transitions to the existing `Oms` module rather than reimplementing them. Install it with `composer require spryker-feature/order-experience-management`, then run `console transfer:generate` and `console propel:install` to apply the module's schema extension.
+The endpoints are provided by the `OrderExperienceManagement` module, which delegates state transitions to the existing `Oms` module rather than reimplementing them. For details on installing it, see [Install the Orders Backend API feature](/docs/pbc/all/order-experience-management/latest/base-shop/install-and-upgrade/install-features/install-the-orders-backend-api-feature.html).
 
 ## Fire an order event
 

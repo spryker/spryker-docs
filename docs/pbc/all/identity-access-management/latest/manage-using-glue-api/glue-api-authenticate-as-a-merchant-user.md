@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Authenticate as a merchant user"
 description: Learn how to authenticate as a merchant user using the Spryker Backend API and which roles the issued token carries.
-last_updated: Sep 9, 2026
+last_updated: Sep 16, 2026
 template: glue-api-storefront-guide-template
 related:
   - title: Authenticate as a Back Office user
@@ -24,7 +24,7 @@ On the legacy Glue infrastructure, `POST /token` with the form-encoded body stil
 
 ## Installation
 
-The endpoint is provided by the `OauthBackendApi` module. Merchant user scopes are provided by the `OauthMerchantUser` module; to register its plugins, see [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html#optional-enable-the-backend-api-authentication).
+The endpoint is provided by the `OauthBackendApi` module; to install it, see [Integrate the authentication](/docs/integrations/spryker-api/backend-api/integrate-backend-api/integrate-the-authentication.html). The `merchant-user` scope is provided by the `OauthMerchantUser` module; to register its plugins, see [Optional: Enable merchant user authentication](/docs/integrations/spryker-api/backend-api/integrate-backend-api/integrate-the-authentication.html#4-optional-enable-merchant-user-authentication).
 
 ## Authenticate as a merchant user
 
@@ -153,7 +153,7 @@ The scopes in the token decide which roles the Backend API grants to the request
 
 `ROLE_USER` is held by every authenticated caller, so a resource that must distinguish the two audiences checks `ROLE_MERCHANT_USER` or `ROLE_BACK_OFFICE_USER`. A merchant user calling a resource that requires `ROLE_BACK_OFFICE_USER` gets `403`, and the other way round.
 
-On every request with a valid token, the Backend API resolves the user behind the token and makes it the acting user. The user must be active; a token of a deactivated or deleted user is rejected with `401` and the error code `003`. For details, see [API Platform security](/docs/integrations/spryker-api/authenticating-and-authorization/security.html#resolving-the-user-behind-a-token).
+On every request with a valid token, the Backend API resolves the user behind the token and makes it the acting user. The user must be active; a token of a deactivated or deleted user is rejected with `401` and the error code `003`. For details, see [API Platform security](/docs/integrations/spryker-api/authenticating-and-authorization/security.html#resolving-the-user-behind-a-token). To restrict merchant users to the data of their merchant, see [Integrate Persistent ACL for merchant API endpoints](/docs/integrations/spryker-api/authenticating-and-authorization/integrate-persistent-acl-for-merchant-api-endpoints.html).
 
 ## Possible errors
 

@@ -185,6 +185,8 @@ entries:
           url: /docs/integrations/spryker-api/authenticating-and-authorization/security.html
         - title: Integrate API Platform security
           url: /docs/integrations/spryker-api/authenticating-and-authorization/integrate-api-platform-security.html
+        - title: Integrate Persistent ACL for merchant API endpoints
+          url: /docs/integrations/spryker-api/authenticating-and-authorization/integrate-persistent-acl-for-merchant-api-endpoints.html
       - title: Create grant type parameters
         url: /docs/integrations/spryker-api/authenticating-and-authorization/create-grant-type-parameters.html
       - title: Configure cross-origin resource sharing for Glue API

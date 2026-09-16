@@ -1,7 +1,7 @@
 ---
 title: "Backend API: Manage customer addresses"
 description: Learn how to retrieve, create, update, and delete customer addresses in your Spryker shop using the Spryker Backend API.
-last_updated: Sep 4, 2026
+last_updated: Sep 16, 2026
 template: glue-api-storefront-guide-template
 ---
 
@@ -34,12 +34,11 @@ To retrieve a paginated collection of the addresses of a customer, send the requ
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
-| page | Page number to return. | From `1` to any. Defaults to `1`. |
 | page[limit] | Maximum number of items to return per page. | From `1` to any. Defaults to `10`. |
 | page[offset] | Number of items to skip before the page begins. | From `0` to any. Defaults to `0`. |
 | sort | Sorts the collection by the given field. Prefix a field with `-` to sort in descending order. Separate several fields with a comma. | firstName, lastName, zipCode |
 
-Without a `sort` parameter, the collection is ordered the same way the Back Office address table orders it. Sorting by a field that is not on the list returns `400` with the error code `1203`, and the error message names the supported fields.
+Without a `sort` parameter, the collection is ordered by address ID in ascending order, the same default the Back Office address table uses. Sorting by a field that is not on the list returns `400` with the error code `1203`, and the error message names the supported fields.
 
 The collection does not accept filters.
 
@@ -47,6 +46,7 @@ The collection does not accept filters.
 | --- | --- |
 | `GET https://glue-backend.mysprykershop.com/customers/DE--1/addresses` | Retrieve the first page of the addresses of the customer `DE--1`. |
 | `GET https://glue-backend.mysprykershop.com/customers/DE--1/addresses?sort=zipCode` | Retrieve the addresses of the customer `DE--1`, ordered by postal code. |
+| `GET https://glue-backend.mysprykershop.com/customers/DE--1/addresses?page[limit]=50&page[offset]=50` | Retrieve up to 50 addresses of the customer `DE--1`, skipping the first 50. |
 
 ### Response
 
@@ -79,23 +79,25 @@ The collection does not accept filters.
                 "isDefaultBilling": true,
                 "isDefaultShipping": true,
                 "createdAt": "2026-08-31 10:06:00.000000",
-                "updatedAt": "2026-08-31 12:30:00.000000",
-                "pagination": {
-                    "numFound": 2,
-                    "currentPage": 1,
-                    "maxPage": 1,
-                    "currentItemsPerPage": 10
-                }
+                "updatedAt": "2026-08-31 12:30:00.000000"
             },
             "links": {
                 "self": "https://glue-backend.mysprykershop.com/customers/DE--1/addresses/5caa05f5-41f5-5e6c-a254-07d7887fb4e9"
             }
         }
     ],
+    "meta": {
+        "pagination": {
+            "numFound": 2,
+            "currentPage": 1,
+            "maxPage": 1,
+            "currentItemsPerPage": 10
+        }
+    },
     "links": {
-        "self": "https://glue-backend.mysprykershop.com/customers/DE--1/addresses?page=1",
-        "first": "https://glue-backend.mysprykershop.com/customers/DE--1/addresses?page=1",
-        "last": "https://glue-backend.mysprykershop.com/customers/DE--1/addresses?page=1"
+        "self": "https://glue-backend.mysprykershop.com/customers/DE--1/addresses",
+        "first": "https://glue-backend.mysprykershop.com/customers/DE--1/addresses?page[limit]=10&page[offset]=0",
+        "last": "https://glue-backend.mysprykershop.com/customers/DE--1/addresses?page[limit]=10&page[offset]=0"
     }
 }
 ```
@@ -150,7 +152,7 @@ Request sample: `GET https://glue-backend.mysprykershop.com/customers/DE--1/addr
 
 ### Response
 
-The response contains the same attributes as [Retrieve customer addresses](#retrieve-customer-addresses), without the `pagination` object.
+The response contains the same attributes as [Retrieve customer addresses](#retrieve-customer-addresses), without the `meta.pagination` object.
 
 {% info_block infoBox "Addresses of another customer" %}
 
@@ -340,6 +342,7 @@ If the deleted address was a default billing or shipping address, the customer i
 
 - [Backend API: Manage customers](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/backend-api-manage-customers.html)
 - [Backend API: Manage customer notes](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-notes.html)
+- [Backend API: Manage company users](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/backend-api-manage-company-users.html)
 
 ## Possible errors
 

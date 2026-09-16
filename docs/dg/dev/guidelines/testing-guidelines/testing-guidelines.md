@@ -1,7 +1,7 @@
 ---
 title: Testing guidelines
 description: This section lists documents inside the Testing guidelines to help you be able to test your Spryker projects effectively.
-last_updated: Apr 26, 2023
+last_updated: Sep 16, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/testing-guidelines.html

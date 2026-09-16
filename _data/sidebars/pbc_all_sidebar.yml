@@ -1378,6 +1378,8 @@ entries:
                 url: /docs/pbc/all/oauth/latest/install-and-upgrade/install-federated-authentication.html
           - title: Storefront account bootstrapping
             url: /docs/pbc/all/oauth/latest/storefront-account-bootstrapping.html
+          - title: Multi-Factor Authentication with SSO
+            url: /docs/pbc/all/oauth/latest/multi-factor-authentication-with-sso.html
           - title: Add an OAuth provider
             url: /docs/pbc/all/oauth/latest/install-and-upgrade/add-an-oauth-provider.html
           - title: Set up Keycloak for local development
@@ -1763,6 +1765,15 @@ entries:
 
               - title: Add push notification subscriptions
                 url: /docs/pbc/all/miscellaneous/manage-using-glue-api/glue-api-add-push-notification-subscriptions.html
+
+              - title: Manage glossary keys via Backend API
+                nested:
+                  - title: Retrieve glossary keys
+                    url: /docs/pbc/all/miscellaneous/manage-using-backend-api/glossary-keys/backend-api-retrieve-glossary-keys.html
+                  - title: Create a glossary key
+                    url: /docs/pbc/all/miscellaneous/manage-using-backend-api/glossary-keys/backend-api-create-a-glossary-key.html
+                  - title: Update translations of a glossary key
+                    url: /docs/pbc/all/miscellaneous/manage-using-backend-api/glossary-keys/backend-api-update-translations-of-a-glossary-key.html
 
           - title: Third-party integrations
             nested:
@@ -2797,6 +2808,8 @@ entries:
                 nested:
                   - title: Create personalized prices
                     url: /docs/pbc/all/price-management/base-shop/tutorials-and-howtos/create-personalized-prices.html
+                  - title: Handle price explosion and ERP-owned pricing in B2B
+                    url: /docs/pbc/all/price-management/base-shop/tutorials-and-howtos/handle-price-explosion-and-erp-owned-pricing-in-b2b.html
                   - title: Handle twenty five million prices in Spryker Commerce OS
                     url: /docs/pbc/all/price-management/base-shop/tutorials-and-howtos/handle-twenty-five-million-prices-in-spryker-commerce-os.html
                   - title: Manage business unit specific prices via data import
@@ -2863,8 +2876,19 @@ entries:
       - title: Product Experience Management
         url: /docs/pbc/all/product-experience-management/latest/product-experience-management.html
         nested:
-          - title: Install the Product Experience Management feature
-            url: /docs/pbc/all/product-experience-management/latest/install-the-product-experience-management-feature.html
+          - title: Back Office Product CSV Import and Export
+            url: /docs/pbc/all/product-experience-management/latest/back-office-product-csv-import-and-export-feature-overview.html
+          - title: Products Backend API
+            url: /docs/pbc/all/product-experience-management/latest/products-backend-api.html
+            nested:
+              - title: "Glue API: Manage products"
+                url: /docs/pbc/all/product-experience-management/latest/glue-api-manage-products.html
+          - title: Install the Back Office Product CSV Import and Export feature
+            url: /docs/pbc/all/product-experience-management/latest/install/install-the-back-office-product-csv-import-and-export-feature.html
+          - title: Install the Products Backend API
+            url: /docs/pbc/all/product-experience-management/latest/install/install-the-products-backend-api.html
+          - title: Install the Product Attribute Visibility feature
+            url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-attribute-visibility-feature.html
 
       - title: Product Information Management
         url: /docs/pbc/all/product-information-management/product-information-management.html
@@ -3347,6 +3371,21 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/manage-using-glue-api/glue-api-retrieve-product-attributes.html
                   - title: Retrieve product labels
                     url: /docs/pbc/all/product-information-management/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html
+
+              - title: Manage via Backend API
+                nested:
+                  - title: Categories
+                    nested:
+                      - title: Retrieve categories
+                        url: /docs/pbc/all/product-information-management/base-shop/manage-using-backend-api/categories/backend-api-retrieve-categories.html
+                      - title: Create a category
+                        url: /docs/pbc/all/product-information-management/base-shop/manage-using-backend-api/categories/backend-api-create-a-category.html
+                      - title: Update a category
+                        url: /docs/pbc/all/product-information-management/base-shop/manage-using-backend-api/categories/backend-api-update-a-category.html
+                      - title: Delete a category
+                        url: /docs/pbc/all/product-information-management/base-shop/manage-using-backend-api/categories/backend-api-delete-a-category.html
+                      - title: Manage product assignments of a category
+                        url: /docs/pbc/all/product-information-management/base-shop/manage-using-backend-api/categories/backend-api-manage-product-assignments-of-a-category.html
 
               - title: Third-party integrations
                 nested:
@@ -4327,6 +4366,8 @@ entries:
             nested:
               - title: Install the Tax + Merchant Portal - Marketplace Product feature
                 url: /docs/pbc/all/tax-management/marketplace/install-the-tax-merchant-portal-marketplace-product-feature.html
+              - title: Integrate Vertex for Marketplace
+                url: /docs/pbc/all/tax-management/marketplace/integrate-vertex-for-marketplace.html
 
       - title: User Management
         url: /docs/pbc/all/user-management/user-management.html
@@ -4537,6 +4578,8 @@ entries:
                   - title: Marketplace Inventory Management + Wishlist
                     url: /docs/pbc/all/warehouse-management-system/marketplace/install-glue-api/install-the-marketplace-inventory-management-wishlist-glue-api.html
 
+              - title: Integrate warehouse address ACL for the Merchant Portal
+                url: /docs/pbc/all/warehouse-management-system/marketplace/integrate-warehouse-address-acl-for-merchant-portal.html
               - title: Retrieve product offer availability via Storefront API
                 url: /docs/pbc/all/warehouse-management-system/marketplace/glue-api-retrieve-product-offer-availability.html
               - title: "Marketplace Inventory Management feature: Domain model"

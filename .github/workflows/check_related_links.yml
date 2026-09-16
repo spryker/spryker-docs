@@ -1,0 +1,34 @@
+name: Check related links
+
+on:
+  pull_request:
+
+jobs:
+  check-related-links:
+    name: Are related links clean?
+    runs-on: ubuntu-latest
+
+    steps:
+      # Full history so the diff against the pull request base is available.
+      - name: Checkout code
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      # A pattern that matches nothing reports nothing and looks like a pass, so
+      # verify the checks before trusting the run below.
+      - name: Verify the related checker still works
+        run: ./_scripts/related_checker/related_checker.py --selftest
+
+      # Changed pages only: the tree carries a large backlog of pre-existing
+      # findings, so a whole-tree gate would fail every pull request. A pull
+      # request has to leave the pages it touches clean. No continue-on-error —
+      # a finding fails the job on the spot.
+      - name: Check related links on changed pages
+        env:
+          GITHUB_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          git diff --name-only --diff-filter=d "$GITHUB_BASE_SHA...HEAD" -- 'docs/**/*.md' > changed.txt
+          echo "Changed pages:"
+          cat changed.txt
+          xargs -r -d '\n' ./_scripts/related_checker/related_checker.py < changed.txt

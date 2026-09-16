@@ -2,7 +2,7 @@
 title: Frontend builder for Yves v2
 description: Learn about the TypeScript-based frontend builder v2 that ships with the ShopUi module and builds Yves assets for all namespaces and themes.
 keywords: ShopUi, shop-ui, frontend builder, Yves, webpack, build, assets, live reload
-last_updated: Aug 4, 2026
+last_updated: Sep 9, 2026
 template: howto-guide-template
 related:
   - title: Frontend builder for Yves (deprecated)
@@ -192,14 +192,25 @@ Every error the builder reports contains the offending file, the reason in plain
 
 ## Commands
 
+The project runs the builder through the npm workspace named `shop-ui`, and its `yves:*` scripts delegate to it. For the setup and what it does, see [npm workspaces for the frontend builders](/docs/dg/dev/frontend-development/latest/npm-workspaces-for-frontend-builders.html).
+
 The builder has several modes to build the frontend:
 
 - `npm run yves`—builds assets in the development mode for all namespaces and themes.
 - `npm run yves:watch`—builds assets in the watch mode with live reload. Rebuilds immediately after SCSS, TypeScript, or Twig files change.
 - `npm run yves:production`—builds assets in the production mode (minified files, no comments) for all namespaces and themes.
 - `npm run yves -- --help`—displays all available parameters.
-- `npm run yves:stylelint`—lints Yves styles.
+- `npm run yves:stylelint`—lints Yves styles. `-f` fixes what is fixable, and `-p <path>` runs over a single file or glob, resolved from the project root: `npm run yves:stylelint -- -p 'src/Pyz/Yves/**/Theme/**/*.scss'`.
 - `npm run yves:lint`—lints Yves TypeScript and JavaScript.
+
+### What lint covers
+
+From ShopUi 2.1.0, `yves:lint` and `yves:stylelint` report on the sources the running repository owns:
+
+- In a project, the core, eco, and feature sources are installed under `vendor/`. They are installed code, not the project's to report on, so both commands cover `src/Pyz/Yves` only.
+- In the Spryker monorepo, those sources are part of the repository, so they are covered together with the project sources.
+
+Nothing has to be passed to select this — the source layout the builder already detects decides it. Both commands look at the theme files of each source root, so styles and scripts outside a `Theme` directory are not linted.
 
 ## Parameters
 

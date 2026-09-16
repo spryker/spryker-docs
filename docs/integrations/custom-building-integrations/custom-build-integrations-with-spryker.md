@@ -1,7 +1,7 @@
 ---
 title: Custom build integrations with Spryker
 description: Learn how to create custom integrations with Spryker to connect third-party systems, services, or tools seamlessly, leveraging modular architecture and API capabilities for tailored business solutions.
-last_updated: Apr 28, 2026
+last_updated: Sep 7, 2026
 template: default
 layout: custom_new
 ---
@@ -56,6 +56,12 @@ Custom integrations enable you to seamlessly connect third-party systems, servic
     <div class="cst_card_title">Implement PSP integration</div>
     <div class="cst_card_desc">Build custom payment provider integrations using a GitHub template with pre-configured module structure, OMS workflows, and checkout integration.</div>
     <a class="cst_card_button" href="/docs/integrations/custom-building-integrations/psp-integration-template.html"> Find out more </a>
+  </div>
+
+  <div class="cst_card">
+    <div class="cst_card_title">Integrating an external CMS with Spryker</div>
+    <div class="cst_card_desc">Learn how an external CMS and Spryker fit together: which integration strategies are available, how to tell which one applies to your project, and which boundaries never move.</div>
+    <a class="cst_card_button" href="/docs/integrations/custom-building-integrations/external-cms/guideline-external-cms-integration.html"> Find out more </a>
   </div>
  </div>
 

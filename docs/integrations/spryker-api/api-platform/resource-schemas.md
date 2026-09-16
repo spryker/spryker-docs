@@ -1,27 +1,15 @@
 ---
 title: Resource schemas
 description: Understanding API Platform resource schema definitions in Spryker.
-last_updated: Jul 31, 2026
+last_updated: Sep 10, 2026
 template: concept-topic-template
 related:
-  - title: API Platform
-    link: docs/integrations/spryker-api/api-platform/api-platform.html
   - title: Integrate API Platform
     link: docs/integrations/spryker-api/migrate-from-glue-to-api-platform/integrate-api-platform.html
-  - title: Resource relationships
-    link: docs/integrations/spryker-api/api-platform/relationships.html
-  - title: Validation schemas
-    link: docs/integrations/spryker-api/api-platform/validation-schemas.html
-  - title: CodeBucket support
-    link: docs/integrations/spryker-api/api-platform/code-buckets.html
-  - title: Implement an API Platform resource
-    link: docs/integrations/spryker-api/api-platform/enablement.html
-  - title: Test API Platform resources
-    link: docs/integrations/spryker-api/api-platform/testing.html
   - title: Security
     link: docs/integrations/spryker-api/authenticating-and-authorization/security.html
-  - title: Native API Platform resources
-    link: docs/integrations/spryker-api/api-platform/native-api-platform-resources.html
+  - title: API Platform documentation
+    link: https://api-platform.com/docs/
 redirect_from:
   - /docs/dg/dev/architecture/api-platform/resource-schemas.html
 ---
@@ -972,6 +960,65 @@ The operation names map to HTTP methods:
 - `patch` → PATCH (update)
 - `delete` → DELETE (remove)
 
+### Operation options
+
+Each operation entry accepts the following optional keys:
+
+| Key | Description |
+|-----|-------------|
+| `name` | Operation name used in the generated attribute. Required when a resource has several operations of the same type. |
+| `uriTemplate` | Custom URL path for the operation. See [Custom URL paths](#custom-url-paths). |
+| `description` | Prose shown for the operation in Swagger UI. |
+| `openapiContext` | OpenAPI details for the operation: `summary`, `parameters`, `responses`, and a custom `requestBody` example. |
+| `openapi` | Set to `false` to keep the route but hide the operation from the OpenAPI document and Swagger UI. |
+| `security`, `securityMessage` | Operation-level security expression. See [Security expressions](#security-expressions). |
+
+#### Documenting query parameters
+
+Query parameters that a provider reads, such as `sort`, `filter[<resource>.<field>]`, or `q`, are not derived from the resource properties. Declare each of them under `openapiContext.parameters` so that it appears as an input field in Swagger UI. Use `schema.enum` for closed value sets, for example the supported sort fields.
+
+```yaml
+operations:
+  - type: GetCollection
+    description: 'List categories.'
+    openapiContext:
+      summary: 'Retrieve the category collection'
+      parameters:
+        - name: sort
+          in: query
+          required: false
+          description: 'Sort field. Prefix with `-` for descending order.'
+          schema:
+            type: string
+            enum: [categoryKey, -categoryKey, position, -position, name, -name]
+          example: -position
+        - name: parentCategoryKey
+          in: query
+          required: false
+          description: 'Return only the direct children of this category.'
+          schema:
+            type: string
+          example: computer
+      responses:
+        200:
+          description: 'Category collection.'
+```
+
+Do not declare `page[limit]` and `page[offset]`: they are added to every paginated collection operation automatically. See [Pagination](#pagination).
+
+#### Hiding an operation from the documentation
+
+Some operations exist only to answer legacy URL shapes with a `400` or `501` error, for example `GET /abstract-products/abstract-product-prices` next to the real `GET /abstract-products/{sku}/abstract-product-prices`. Mark them with `openapi: false`. The route keeps working, but Swagger UI does not list the operation as an endpoint.
+
+```yaml
+operations:
+  - type: GetCollection
+    name: getAbstractProductPricesBare
+    uriTemplate: /abstract-products/abstract-product-prices
+    description: 'Returns 400 when called without the abstract product SKU.'
+    openapi: false
+```
+
 ## Pagination
 
 API Platform provides built-in pagination for collection endpoints (`GetCollection`). You can configure pagination behavior per resource using YAML schema options.
@@ -982,9 +1029,11 @@ API Platform provides built-in pagination for collection endpoints (`GetCollecti
 |--------|------|-------------|
 | `paginationEnabled` | `boolean` | Enables or disables pagination for this resource. When `false`, `GetCollection` returns all results without pagination. Default: inherits from global configuration. |
 | `paginationItemsPerPage` | `integer` | Number of items returned per page. Overrides the global default. |
-| `paginationMaximumItemsPerPage` | `integer` | Maximum number of items a client can request per page via `itemsPerPage` query parameter. Prevents clients from requesting excessively large pages. |
+| `paginationMaximumItemsPerPage` | `integer` | Maximum number of items a client can request per page via the `page[limit]` query parameter. Larger values are clamped to this maximum. |
 | `paginationClientEnabled` | `boolean` | Allows clients to enable or disable pagination via the `pagination` query parameter (for example, `?pagination=false`). |
-| `paginationClientItemsPerPage` | `boolean` | Allows clients to set the number of items per page via the `itemsPerPage` query parameter (for example, `?itemsPerPage=50`). |
+| `paginationClientItemsPerPage` | `boolean` | Allows clients to set the number of items per page via the `page[limit]` query parameter. |
+
+Spryker resources use the JSON:API offset pagination parameters `page[limit]` and `page[offset]`. The OpenAPI document exposes these two parameters on every paginated collection operation instead of API Platform's native `page` and `itemsPerPage`.
 
 The global default for `paginationItemsPerPage` is defined in the project's `api_platform.php` configuration file. To override it for a specific resource, set `paginationItemsPerPage` in the resource schema.
 
@@ -1026,15 +1075,17 @@ With this configuration, clients can use the following query parameters:
 # Default pagination (20 items per page)
 GET /products
 
-# Navigate to page 3
-GET /products?page=3
+# Third page of 20 items
+GET /products?page[offset]=40
 
 # Request 50 items per page (up to maximum of 100)
-GET /products?itemsPerPage=50
+GET /products?page[limit]=50
 
-# Disable pagination to get all results
-GET /products?pagination=false
+# 50 items per page, second page
+GET /products?page[limit]=50&page[offset]=50
 ```
+
+A `page[limit]` below `1` falls back to the default items per page, and a negative `page[offset]` is treated as `0`. A page number parameter such as `page=3` is not supported.
 
 ### Generated output
 
@@ -1055,20 +1106,45 @@ The pagination options are rendered as named parameters in the `#[ApiResource]` 
 
 ### Provider requirements
 
-For pagination to work, your Provider must return a `TraversablePaginator` instance for collection operations:
+Providers extending `Spryker\ApiPlatform\State\Provider\AbstractProvider` call `buildPaginationTransfer()` to read `page[limit]` and `page[offset]` from the request into a `PaginationTransfer`, pass it to the facade, and call `setCollectionPagination()` with the total number of results:
 
 ```php
-use ApiPlatform\State\Pagination\TraversablePaginator;
+$paginationTransfer = $this->buildPaginationTransfer();
+$criteriaTransfer->setPagination($paginationTransfer);
 
-return new TraversablePaginator(
-    new \ArrayObject($resources),
-    $currentPage,
-    $itemsPerPage,
-    $totalItems
-);
+$collectionTransfer = $this->facade->getCollection($criteriaTransfer);
+
+$nbResults = $collectionTransfer->getPagination()?->getNbResults();
+if ($nbResults !== null) {
+    $this->setCollectionPagination($paginationTransfer->getOffsetOrFail(), $paginationTransfer->getLimitOrFail(), $nbResults);
+}
+
+return $resources;
 ```
 
-If `paginationEnabled` is `true` but the Provider returns a plain array, API Platform wraps the result in a `PartialPaginatorInterface`, which may not include total count or page metadata.
+`buildPaginationTransfer()` resolves `page[limit]` against `paginationItemsPerPage` and `paginationMaximumItemsPerPage` and `page[offset]` against `0`. `setCollectionPagination()` renders the top-level `meta.pagination` object with `numFound`, `currentPage`, `maxPage`, and `currentItemsPerPage`, and the `first`, `last`, `prev`, and `next` entries of the top-level `links` object. Collection members do not carry pagination data.
+
+```json
+{
+    "links": {
+        "first": "https://glue-backend.mysprykershop.com/products?page[limit]=20&page[offset]=0",
+        "last": "https://glue-backend.mysprykershop.com/products?page[limit]=20&page[offset]=80",
+        "prev": "https://glue-backend.mysprykershop.com/products?page[limit]=20&page[offset]=20",
+        "next": "https://glue-backend.mysprykershop.com/products?page[limit]=20&page[offset]=60"
+    },
+    "meta": {
+        "pagination": {
+            "numFound": 97,
+            "currentPage": 3,
+            "maxPage": 5,
+            "currentItemsPerPage": 20
+        }
+    },
+    "data": []
+}
+```
+
+Native API Platform resources that do not extend `AbstractProvider` return a `TraversablePaginator` instead. See [Native API Platform resources](/docs/integrations/spryker-api/api-platform/native-api-platform-resources.html).
 
 ### Global pagination defaults
 
@@ -1696,13 +1772,3 @@ email:
   writable: true
   readable: true
 ```
-
-## Next steps
-
-- [API Platform](/docs/integrations/spryker-api/api-platform/api-platform.html) - Architecture overview
-- [Validation schemas](/docs/integrations/spryker-api/api-platform/validation-schemas.html) - Define validation rules
-- [CodeBucket support](/docs/integrations/spryker-api/api-platform/code-buckets.html) - Code Bucket-specific resources
-- [Implement an API Platform resource](/docs/integrations/spryker-api/api-platform/enablement.html) - Creating resources
-- [Test API Platform resources](/docs/integrations/spryker-api/api-platform/testing.html) - Writing and running tests
-- [Troubleshooting](/docs/integrations/spryker-api/api-platform/troubleshooting.html) - Common issues
-- [API Platform Documentation](https://api-platform.com/docs/) - Official API Platform docs

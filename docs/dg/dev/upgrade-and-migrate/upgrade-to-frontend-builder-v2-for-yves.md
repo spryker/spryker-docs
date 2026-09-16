@@ -2,7 +2,7 @@
 title: Upgrade to frontend builder v2 for Yves
 description: Learn how to upgrade your Spryker project from the legacy frontend builder in the frontend directory to the frontend builder v2 shipped with the ShopUi module.
 keywords: ShopUi, shop-ui, frontend builder, Yves, migration, upgrade, webpack, build
-last_updated: Aug 4, 2026
+last_updated: Sep 9, 2026
 template: concept-topic-template
 related:
   - title: Frontend builder for Yves v2
@@ -21,9 +21,9 @@ For an overview of the new builder and its features, see [Frontend builder for Y
 
 Frontend builder v2 is executed by Node.js directly as TypeScript, so it requires:
 
-- Node.js 24 or later
+- Node.js 24.15.0 or later
 - npm 10 or later
-- `spryker-shop/shop-ui` version 2.0.0 or later
+- `spryker-shop/shop-ui` version 2.1.0 or later
 
 ## 1) Update composer packages
 
@@ -47,7 +47,7 @@ All `spryker-feature/spryker-core` releases up to and including 202606.0 constra
 2. Require ShopUi 2 and update it together with all modules that depend on it:
 
 ```bash
-composer require spryker-shop/shop-ui:"^2.0.0" --no-update
+composer require spryker-shop/shop-ui:"^2.1.0" --no-update
 composer update spryker-shop/shop-ui "spryker-shop/*" "spryker-feature/*" --with-dependencies
 ```
 
@@ -90,18 +90,29 @@ image:
 }
 ```
 
-2. Replace the `yves:*` scripts so they point at the builder inside the ShopUi module:
+2. Declare the ShopUi module as an npm workspace, so that npm installs the builder's dependencies:
+
+```json
+"workspaces": [
+    "vendor/spryker-shop/shop-ui"
+]
+```
+
+For what this does and how it changes the commands, see [npm workspaces for the frontend builders](/docs/dg/dev/frontend-development/latest/npm-workspaces-for-frontend-builders.html).
+
+3. Replace the `yves:*` scripts so they delegate to that workspace:
 
 ```json
 "scripts": {
-    "yves": "node ./vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/FrontendBuilder/build.mts development",
-    "yves:watch": "node ./vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/FrontendBuilder/build.mts development-watch",
-    "yves:production": "node ./vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/FrontendBuilder/build.mts production",
-    "yves:stylelint": "node ./vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/FrontendBuilder/libs/lint/stylelint.mts"
+    "yves": "npm run build -w shop-ui --",
+    "yves:watch": "npm run build:watch -w shop-ui --",
+    "yves:production": "npm run build:production -w shop-ui --",
+    "yves:stylelint": "npm run stylelint -w shop-ui --",
+    "yves:lint": "npm run lint -w shop-ui --"
 }
 ```
 
-3. Remove the scripts that no longer exist:
+4. Remove the scripts that no longer exist:
 
 ```json
 "yves:help": "node ./frontend/libs/command-line-parser --help",
@@ -111,28 +122,9 @@ image:
 
 The parameter overview previously provided by `yves:help` is now available via `npm run yves -- --help`.
 
-4. Update the dependencies:
+5. Remove the Yves build dependencies that ShopUi declares now, and keep the ones it declares as peer dependencies. `vendor/spryker-shop/shop-ui/package.json` is the source of truth for both — see [Where the npm dependencies come from](/docs/dg/dev/frontend-development/latest/npm-workspaces-for-frontend-builders.html#where-the-npm-dependencies-come-from).
 
-- Replace `sass` with `sass-embedded`:
-
-```json
-"sass-embedded": "~1.97.0"
-```
-
-- Add `chokidar` (used by the watch mode's Twig watcher):
-
-```json
-"chokidar": "~4.0.3"
-```
-
-- Update the versions:
-
-```json
-"compression-webpack-plugin": "~12.0.0",
-"postcss": "~8.5.18"
-```
-
-- Remove the dependencies that the new builder doesn't need:
+Three packages go regardless of that split, because the new builder does not use them at all:
 
 ```json
 "sass": "x.x.x",
@@ -140,7 +132,7 @@ The parameter overview previously provided by `yves:help` is now available via `
 "terser-webpack-plugin": "x.x.x"
 ```
 
-Builder v2 uses only `babel-loader`, `css-loader`, `postcss-loader`, and `sass-loader`. The shared Sass context (settings, helpers, and cross-component mixins) is injected by the builder itself, so `sass-resources-loader` has no consumer left. Check for project-owned webpack configurations that still reference it before removing it.
+The shared Sass context (settings, helpers, and cross-component mixins) is injected by the builder itself, so `sass-resources-loader` has no consumer left. Check for project-owned webpack configurations that still reference it before removing it.
 
 ## 4) Remove the legacy builder from the `frontend/` directory
 
@@ -436,6 +428,7 @@ The remaining modules only widen their ShopUi constraint.
 - **Sass deprecation warnings are no longer silenced.** The v1 builder suppressed warnings from dependencies; builder v2 shows them and points at the real file. Fix them in your project code instead of suppressing—they become hard errors in future Sass versions. See the base hook mechanism in [Extending components](/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/extending-components.html#extend-base-styles-with-a-base-hook) for the recommended way to extend core component base styles without triggering the `mixed-decls` deprecation.
 - **Legacy style rescue.** Component SCSS files that emit CSS at the top level without being imported from a component entry point are still compiled, with a warning naming the file. Migrate such components by importing their styles from the component's `index.ts`.
 - **Live reload.** `npm run yves:watch` now includes live reload: CSS changes are applied without a page reload, and JavaScript and Twig changes trigger a full reload that preserves scroll position and form state. No extra setup is needed.
+- **Lint scope.** From ShopUi 2.1.0, `npm run yves:lint` and `npm run yves:stylelint` report on the sources the running repository owns. In a project, the core, eco, and feature sources are installed under `vendor/`, so both commands cover `src/Pyz/Yves` only. See [What lint covers](/docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves-v2.html#what-lint-covers).
 
 ## Example migration
 

@@ -1,6 +1,7 @@
 ---
 title: Back-end development
 description: Learn how to implement backend development in Spryker's customizable ecommerce platform. Explore key tools and processes for effective backend setup and integration.
+last_updated: Sep 4, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/back-end-development/back-end-development.html

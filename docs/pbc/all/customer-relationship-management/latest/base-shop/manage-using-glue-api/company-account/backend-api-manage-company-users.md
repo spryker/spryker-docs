@@ -17,12 +17,6 @@ This resource does not manage customers. It creates, moves, and removes the link
 
 {% endinfo_block %}
 
-{% info_block infoBox "Backend API and Back Office API" %}
-
-The Backend API is an *application*, and the Back Office API is one of the *types* of API it hosts. These endpoints are served by the Backend API application at `glue-backend` and authorize Back Office users. For more information, see [Spryker API strategy](/docs/integrations/spryker-api/getting-started-with-apis/api-strategy.html).
-
-{% endinfo_block %}
-
 ## Installation
 
 These endpoints are provided by API Platform. To install and enable it, see [Enable API Platform](/docs/integrations/spryker-api/api-platform/enablement.html).

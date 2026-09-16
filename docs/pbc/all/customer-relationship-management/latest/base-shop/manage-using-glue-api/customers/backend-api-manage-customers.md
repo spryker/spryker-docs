@@ -9,12 +9,6 @@ This document describes how to manage customers using the Backend API. These end
 
 Customers are addressed by `customerReference`. The internal database identifier is never exposed.
 
-{% info_block infoBox "Backend API and Back Office API" %}
-
-The Backend API is an *application*, and the Back Office API is one of the *types* of API it hosts. These endpoints are served by the Backend API application at `glue-backend` and authorize Back Office users. For more information, see [Spryker API strategy](/docs/integrations/spryker-api/getting-started-with-apis/api-strategy.html).
-
-{% endinfo_block %}
-
 ## Installation
 
 These endpoints are provided by API Platform. To install and enable it, see [Enable API Platform](/docs/integrations/spryker-api/api-platform/enablement.html).

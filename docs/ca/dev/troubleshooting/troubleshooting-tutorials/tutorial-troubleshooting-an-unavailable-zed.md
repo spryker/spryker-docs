@@ -2,7 +2,7 @@
 title: Tutorial — Troubleshooting an unavailable Zed
 description: Resolve issues with an unavailable Zed in Spryker by troubleshooting ECS services, key-value storage (Redis or Valkey), RDS, and logs to restore functionality and improve performance.
 template: troubleshooting-guide-template
-last_updated: Oct 6, 2023
+last_updated: Aug 6, 2026
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-an-unavailable-zed.html
 ---
@@ -105,4 +105,14 @@ To check Elasticsearch indices via a CLI, do the following.
 
 Check the status of the RDS database:
 
-{% include checking-rds-database-status.md %} <!-- To edit, see /_includes/checking-rds-database-status.md -->
+1. In the AWS management console, go to **Services** > **RDS**.
+2. In the navigation pane, select **Databases**.
+
+3. In the *Databases* pane, select the database of the desired environment.
+
+   This opens the page of the database. To check for issues, do the following:
+
+- In the *Summary* pane, check the *Status*. If the status is *Available*, the database is running.
+- Switch to the **Monitoring** tab and, In the *CloudWatch* pane, check if there are any spikes on the graphs. Consider ten times more of a usual usage a spike. For example, if the usual CPU Utilization is 4%, consider any usage above 40% a spike.  
+
+![rds-database-graphs](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/_includes/checking-rds-database-status.md/rds-database-graphs.png)

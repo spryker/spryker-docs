@@ -1,10 +1,64 @@
 ---
 title: Install the Marketplace Shipment + Checkout feature
 description: This document describes the process how to integrate Marketplace Shipment + Checkout feature into your project
-last_updated: Jul 05, 2021
+last_updated: Aug 6, 2026
 template: feature-integration-guide-template
 redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202311.0/marketplace-shipment-checkout-feature-integration.html
 ---
 
-{% include pbc/all/install-features/latest/marketplace/install-the-marketplace-shipment-checkout-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-shipment-checkout-feature.md -->
+This document describes how to install the Marketplace Shipment + Checkout feature.
+
+## Install feature core
+
+Follow the steps below to install the Marketplace Shipment + Checkout feature core.
+
+### Prerequisites
+
+Install the required features:
+
+| NAME | VERSION | INSTALLATION GUIDE |
+| --------- | ------ | -----------|
+| Marketplace Shipment | {{page.release_tag}} | [Install the Marketplace Shipment feature](/docs/pbc/all/carrier-management/latest/marketplace/install-features/install-marketplace-shipment-feature.html) |
+| Checkout | {{page.release_tag}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
+
+### 1) Set up behavior
+
+Enable the following behaviors by registering the plugins:
+
+| PLUGIN  | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| ------------ | ----------- | ----- | ------------ |
+| MerchantShipmentCheckoutPageStepEnginePreRenderPlugin | Copies all item merchant references to their attached shipment merchant reference before rendering checkout steps. |  |   Spryker\Yves\MerchantShipment\Plugin\CheckoutPage |
+
+<details>
+<summary>src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Yves\CartPage;
+
+use SprykerShop\Yves\CheckoutPage\CheckoutPageDependencyProvider as SprykerShopCheckoutPageDependencyProvider;
+use Spryker\Yves\MerchantShipment\Plugin\CheckoutPage\MerchantShipmentCheckoutPageStepEnginePreRenderPlugin;
+
+class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyProvider
+{
+    /**
+     * @return array<\SprykerShop\Yves\CheckoutPageExtension\Dependency\Plugin\StepEngine\CheckoutPageStepEnginePreRenderPluginInterface>
+     */
+    protected function getCheckoutPageStepEnginePreRenderPlugins(): array
+    {
+        return [
+            new MerchantShipmentCheckoutPageStepEnginePreRenderPlugin(),
+        ];
+    }
+}
+```
+
+</details>
+
+{% info_block warningBox "Verification" %}
+
+Make sure that during the checkout steps, items and their shipments have the same merchant reference attached to them.
+
+{% endinfo_block %}

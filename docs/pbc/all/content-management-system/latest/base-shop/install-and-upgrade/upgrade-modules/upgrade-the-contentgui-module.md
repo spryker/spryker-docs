@@ -1,7 +1,7 @@
 ---
 title: Upgrade the ContentGui module
 description: Learn how to upgrade to a newer version of the Spryker Content GUI module from an older one in your Spryker Project.
-last_updated: Jun 16, 2021
+last_updated: Aug 6, 2026
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-contentgui-201907
 originalArticleId: 4714c1ab-fcb6-425d-87fd-dd2e8f19ae1a
@@ -27,4 +27,38 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-contentgui-module.html
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-contentgui-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-contentgui-module.md -->
+## Upgrading from version 1.* to version 2.*
+
+Version 2.0.0 of the `ContentGui` module introduces the [Content Items](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/navigation-feature-overview.html) functionality that allows creating and managing content and later selecting where it should be inserted.
+
+The `ContentGui` module version 2.0.0 introduced the following changes:
+
+- Adjusted models to support parameter KEY of Content.
+- Introduced the `ContentTransfer::$key` transfer object property.
+- Changed a header in `EditContent/index.twig` to use a key instead of the ID.
+- Increased the version of `spryker/content` in composer.json.
+
+You can find more details about the changes on the [ContentGui module release notes](https://github.com/spryker/content-gui/releases/tag/2.0.0) page.
+
+*Estimated migration time: 30 minutes*
+
+To upgrade to the new version of the module, do the following:
+
+1. Perform the steps in [Upgrade the Content module](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-content-module.html).
+2. Upgrade the `ContentGui` module to version 2.0.0:
+
+```bash
+composer require spryker/content-gui:"^2.0.0" --update-with-dependencies
+```
+
+3. Re-generate transfer objects:
+
+```bash
+console transfer:generate
+```
+
+4. Re-build the Zed UI:
+
+```bash
+console frontend:zed:build
+```

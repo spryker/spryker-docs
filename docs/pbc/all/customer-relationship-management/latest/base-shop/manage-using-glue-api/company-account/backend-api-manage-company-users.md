@@ -55,6 +55,8 @@ To retrieve a paginated collection of company users across all companies, send t
 
 Filters are combined with `AND`, so each filter you add narrows the result further. An unknown company uuid or business unit uuid returns an empty collection rather than an error.
 
+The collection always excludes company users whose customer has been anonymized.
+
 Sorting by a field that is not on the list returns `400` with the error code `1203`, and the error message names the supported fields.
 
 | REQUEST | USAGE |
@@ -195,6 +197,8 @@ The response contains the same attributes as [Retrieve company users](#retrieve-
 
 This endpoint also returns inactive company users, as well as company users of companies that are themselves inactive or not yet approved, so that you can inspect a company user before you reactivate it.
 
+A company user whose customer has been anonymized is not returned, matching the collection. Requesting one returns `404` with the error code `1216`.
+
 ## Create a company user
 
 To create a company user, send the request:
@@ -280,7 +284,7 @@ Request sample: create a company user together with a customer
 
 To create the customer at the same time, omit `customerReference` and send a `customer` object. The new customer receives the usual registration mail, and a password-reset mail as well if you set `customer.sendPasswordToken` to `true`. The resource never accepts a password.
 
-If you send neither, the request returns `422` with the error code `1218`.
+If you send neither, the request returns `422` with the error code `1220`.
 
 {% endinfo_block %}
 
@@ -433,7 +437,7 @@ A deactivated company user is kept in full: the customer, the roles, and the bus
 
 Sending the status a company user already has succeeds and changes nothing.
 
-If the request body is missing or unparseable, or if `isActive` is absent or not a boolean, the endpoint returns `400` with the error code `1217`.
+If the request body is missing or unparseable, or if `isActive` is absent or not a boolean, the endpoint returns `400` with the error code `1219`.
 
 ### Response
 
@@ -481,7 +485,7 @@ Unsetting leaves the customer with no default at all — no other company user t
 
 Sending the state a company user already has succeeds and changes nothing.
 
-If the request body is missing or unparseable, or if `isDefault` is absent or not a boolean, the endpoint returns `400` with the error code `1219`.
+If the request body is missing or unparseable, or if `isDefault` is absent or not a boolean, the endpoint returns `400` with the error code `1221`.
 
 ### Response
 
@@ -535,12 +539,12 @@ To revoke access without deleting anything, deactivate the company user with [Ac
 | 1201 | No customer matches the reference given in `customerReference`. |
 | 1202 | The company user was rejected. For example, the customer already has a company user in the target business unit, or the new customer account could not be created because the email address is already in use. |
 | 1203 | The `sort` parameter names a field that the collection does not support. |
-| 1213 | No company user matches the given uuid. |
-| 1214 | No company matches the given `companyUuid`. |
-| 1215 | No business unit matches the given `companyBusinessUnitUuid`. |
-| 1216 | No company role matches one of the given `companyRoleUuids`. |
-| 1217 | The `set-status` request body does not contain an `isActive` boolean. |
-| 1218 | Neither `customerReference` nor a `customer` object with an email address was sent. |
-| 1219 | The `set-default` request body does not contain an `isDefault` boolean. |
+| 1213 | No company matches the given `companyUuid`. |
+| 1216 | No company user matches the given uuid. |
+| 1217 | No business unit matches the given `companyBusinessUnitUuid`. |
+| 1218 | No company role matches one of the given `companyRoleUuids`. |
+| 1219 | The `set-status` request body does not contain an `isActive` boolean. |
+| 1220 | Neither `customerReference` nor a `customer` object with an email address was sent. |
+| 1221 | The `set-default` request body does not contain an `isDefault` boolean. |
 
 To view generic errors, see [API errors and troubleshooting](/docs/integrations/spryker-api/spryker-api-errors-and-troubleshooting.html).

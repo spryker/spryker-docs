@@ -127,18 +127,18 @@ Bearer token validation runs only for resources that declare a `security` expres
 
 ```yaml
 resource:
-  name: MerchantProfiles
-  shortName: merchant-profiles
+  name: Reports
+  shortName: reports
   security: "is_granted('ROLE_MERCHANT_USER') or is_granted('ROLE_BACK_OFFICE_USER')"
 
   operations:
     - type: Get
-      uriTemplate: '/merchant-profile'
-      security: "is_granted('ROLE_MERCHANT_USER')"
-    - type: Get
-      uriTemplate: '/merchant-profiles/{merchantReference}'
+      security: "is_granted('ROLE_MERCHANT_USER') or is_granted('ROLE_BACK_OFFICE_USER')"
+    - type: Delete
       security: "is_granted('ROLE_BACK_OFFICE_USER')"
 ```
+
+When each audience gets its own routes, prefer one resource per audience with a single resource-level role instead of narrowing per operation. The merchant profile resources follow this pattern: `merchant-profile` (`/merchant-profile`) declares `is_granted('ROLE_MERCHANT_USER')`, and `merchant-profiles` (`/merchant-profiles/{merchantReference}`) declares `is_granted('ROLE_BACK_OFFICE_USER')`; each resource then also has its own JSON:API type.
 
 {% endinfo_block %}
 

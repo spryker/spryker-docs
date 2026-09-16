@@ -1,7 +1,7 @@
 ---
 title: "Backend API: Retrieve merchant profiles"
 description: Learn how a merchant user retrieves the profile of their merchant and how a Back Office user retrieves any merchant profile using the Spryker Backend API.
-last_updated: Sep 9, 2026
+last_updated: Sep 16, 2026
 template: default
 related:
   - title: Authenticate as a merchant user
@@ -12,22 +12,16 @@ related:
     link: docs/pbc/all/merchant-management/latest/marketplace/manage-using-backend-api/backend-api-update-merchant-profiles.html
 ---
 
-The `merchant-profiles` resource of the Backend API serves two audiences:
+The Backend API exposes merchant profiles through two resources, one per audience:
 
-- A merchant user retrieves the profile of the merchant they are assigned to. The merchant is resolved from the access token, so the endpoint carries no identifier.
-- A Back Office user retrieves the profile of any merchant by its merchant reference.
+- `merchant-profile`: a merchant user retrieves the profile of the merchant they are assigned to. The merchant is resolved from the access token, so the endpoint carries no identifier. The resource covers what the merchant manages on the Merchant Portal profile page, including the merchant details, the Storefront URLs, the address, and the localized texts.
+- `merchant-profiles`: a Back Office user retrieves the profile of any merchant by its merchant reference.
 
-The two audiences are strictly separated. A merchant user calling the Back Office endpoint, or a Back Office user calling the merchant endpoint, gets a `403` response.
-
-{% info_block warningBox "API Platform only" %}
-
-The `merchant-profiles` resource is an [API Platform](/docs/integrations/spryker-api/api-platform/api-platform.html) resource. It is available with the API Platform integration of the Backend API only and has no counterpart on the legacy Glue infrastructure. For the prerequisites, see [Install the Merchant Profile Backend API](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-profile-backend-api.html).
-
-{% endinfo_block %}
+The two audiences are strictly separated. A merchant user calling the `merchant-profiles` endpoint, or a Back Office user calling the `merchant-profile` endpoint, gets a `403` response.
 
 ## Installation
 
-The endpoints are provided by the `MerchantProfile` module. For installation instructions, see [Install the Merchant Profile Backend API](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-profile-backend-api.html).
+The endpoints are provided by the `MerchantProfile` module and require the API Platform integration of the Backend API. For installation instructions, see [Install the Merchant Profile Backend API](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-profile-backend-api.html).
 
 ## Retrieve the profile of your merchant
 
@@ -44,65 +38,83 @@ To retrieve the profile of the merchant the authenticated merchant user is assig
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the merchant user to send requests to protected resources. Get it by [authenticating as a merchant user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-merchant-user.html). |
 
+The merchant of the authenticated user must be approved. A merchant user of a merchant that is still waiting for approval gets a `403` response, as in the Merchant Portal.
+
 Request sample: retrieve the profile of your merchant
 
 `GET https://glue-backend.mysprykershop.com/merchant-profile`
 
 ### Response
 
+`merchantUrls` and `localizedAttributes` contain one entry per locale of the stores listed in `stores`, with `null` values where a URL or text is not set.
+
 <details><summary>Response sample: retrieve the profile of your merchant</summary>
 
 ```json
 {
     "data": {
-        "type": "merchant-profiles",
+        "type": "merchant-profile",
         "id": "MER000001",
         "attributes": {
             "merchantReference": "MER000001",
-            "merchantName": "Spryker",
-            "contactPersonRole": "E-commerce manager",
-            "contactPersonTitle": "Mr",
-            "contactPersonFirstName": "Michele",
-            "contactPersonLastName": "Nemeth",
-            "contactPersonPhone": "+49 30 123456",
-            "publicEmail": "info@sony-experts.com",
-            "publicPhone": "+49 30 654321",
-            "faxNumber": "+49 30 654322",
-            "logoUrl": "https://images.icecat.biz/img/gallery/40208824_9199.jpg",
-            "localizedAttributes": [
+            "name": "Spryker",
+            "email": "spryker@spryker.com",
+            "registrationNumber": "HRB 134310",
+            "isActive": true,
+            "isOpenForRelationRequest": true,
+            "stores": [
+                "DE",
+                "AT"
+            ],
+            "merchantUrls": [
                 {
                     "localeName": "de_DE",
-                    "description": "Sony Experts ist Ihr Partner für Unterhaltungselektronik.",
-                    "bannerUrl": "https://cdn.spryker.com/banner-de.png",
-                    "deliveryTime": "1-3 Werktage",
-                    "termsConditions": "Es gelten unsere allgemeinen Geschäftsbedingungen.",
-                    "cancellationPolicy": "Widerruf innerhalb von 14 Tagen.",
-                    "imprint": "Sony Experts GmbH, Berlin.",
-                    "dataPrivacy": "Wir verarbeiten Ihre Daten gemäß DSGVO."
+                    "url": "/de/merchant/spryker"
                 },
                 {
                     "localeName": "en_US",
-                    "description": "Sony Experts is your partner for consumer electronics.",
-                    "bannerUrl": null,
+                    "url": "/en/merchant/spryker"
+                }
+            ],
+            "contactPersonTitle": "Mr",
+            "contactPersonFirstName": "Harald",
+            "contactPersonLastName": "Schmidt",
+            "contactPersonRole": "E-Commerce Manager",
+            "contactPersonPhone": "+49 30 208498350",
+            "publicEmail": "info@spryker.com",
+            "publicPhone": "+49 30 208498350",
+            "faxNumber": "+49 30 208498351",
+            "logoUrl": "https://images.example.com/merchants/spryker/logo.png",
+            "address": {
+                "countryIso2Code": "DE",
+                "zipCode": "10117",
+                "city": "Berlin",
+                "address1": "Julie-Wolfthorn-Straße",
+                "address2": "1",
+                "address3": null,
+                "latitude": "52.5290",
+                "longitude": "13.3846"
+            },
+            "localizedAttributes": [
+                {
+                    "localeName": "de_DE",
+                    "description": "Spryker ist der führende Anbieter für Unterhaltungselektronik.",
+                    "bannerUrl": "https://images.example.com/merchants/spryker/banner-de.png",
+                    "deliveryTime": "1-3 Werktage",
+                    "termsConditions": "<p>Es gelten unsere allgemeinen Geschäftsbedingungen.</p>",
+                    "cancellationPolicy": "<p>Widerruf innerhalb von 14 Tagen.</p>",
+                    "imprint": "<p>Spryker Systems GmbH, Berlin.</p>",
+                    "dataPrivacy": "<p>Wir verarbeiten Ihre Daten gemäß DSGVO.</p>"
+                },
+                {
+                    "localeName": "en_US",
+                    "description": "Spryker is your partner for consumer electronics.",
+                    "bannerUrl": "https://images.example.com/merchants/spryker/banner-en.png",
                     "deliveryTime": "1-3 business days",
                     "termsConditions": null,
                     "cancellationPolicy": null,
                     "imprint": null,
                     "dataPrivacy": null
-                }
-            ],
-            "addresses": [
-                {
-                    "uuid": "2c1a70a5-7e5a-4a5a-9a5f-6d2a0a2d1f11",
-                    "iso2Code": "DE",
-                    "countryName": "Germany",
-                    "address1": "Julie-Wolfthorn-Straße",
-                    "address2": "1",
-                    "address3": "",
-                    "city": "Berlin",
-                    "zipCode": "10115",
-                    "latitude": "52.5308",
-                    "longitude": "13.3847"
                 }
             ]
         }
@@ -139,7 +151,83 @@ Request sample: retrieve a merchant profile
 
 ### Response
 
-The response has the same structure as the response of [Retrieve the profile of your merchant](#retrieve-the-profile-of-your-merchant).
+The response has the same attributes as the response of [Retrieve the profile of your merchant](#retrieve-the-profile-of-your-merchant), with the resource type `merchant-profiles`. `merchantUrls` and `localizedAttributes` contain one entry for every locale configured in the project, not only the locales of the merchant's stores. A merchant that has no profile yet is returned with `null` profile attributes.
+
+<details><summary>Response sample: retrieve a merchant profile</summary>
+
+```json
+{
+    "data": {
+        "type": "merchant-profiles",
+        "id": "MER000001",
+        "attributes": {
+            "merchantReference": "MER000001",
+            "name": "Spryker",
+            "email": "spryker@spryker.com",
+            "registrationNumber": "HRB 134310",
+            "isActive": true,
+            "isOpenForRelationRequest": true,
+            "stores": [
+                "DE",
+                "AT"
+            ],
+            "merchantUrls": [
+                {
+                    "localeName": "de_DE",
+                    "url": "/de/merchant/spryker"
+                },
+                {
+                    "localeName": "en_US",
+                    "url": "/en/merchant/spryker"
+                }
+            ],
+            "contactPersonTitle": "Mr",
+            "contactPersonFirstName": "Harald",
+            "contactPersonLastName": "Schmidt",
+            "contactPersonRole": "E-Commerce Manager",
+            "contactPersonPhone": "+49 30 208498350",
+            "publicEmail": "info@spryker.com",
+            "publicPhone": "+49 30 208498350",
+            "faxNumber": "+49 30 208498351",
+            "logoUrl": "https://images.example.com/merchants/spryker/logo.png",
+            "address": {
+                "countryIso2Code": "DE",
+                "zipCode": "10117",
+                "city": "Berlin",
+                "address1": "Julie-Wolfthorn-Straße",
+                "address2": "1",
+                "address3": null,
+                "latitude": "52.5290",
+                "longitude": "13.3846"
+            },
+            "localizedAttributes": [
+                {
+                    "localeName": "de_DE",
+                    "description": "Spryker ist der führende Anbieter für Unterhaltungselektronik.",
+                    "bannerUrl": "https://images.example.com/merchants/spryker/banner-de.png",
+                    "deliveryTime": "1-3 Werktage",
+                    "termsConditions": "<p>Es gelten unsere allgemeinen Geschäftsbedingungen.</p>",
+                    "cancellationPolicy": "<p>Widerruf innerhalb von 14 Tagen.</p>",
+                    "imprint": "<p>Spryker Systems GmbH, Berlin.</p>",
+                    "dataPrivacy": "<p>Wir verarbeiten Ihre Daten gemäß DSGVO.</p>"
+                },
+                {
+                    "localeName": "en_US",
+                    "description": "Spryker is your partner for consumer electronics.",
+                    "bannerUrl": "https://images.example.com/merchants/spryker/banner-en.png",
+                    "deliveryTime": "1-3 business days",
+                    "termsConditions": null,
+                    "cancellationPolicy": null,
+                    "imprint": null,
+                    "dataPrivacy": null
+                }
+            ]
+        }
+    }
+}
+```
+
+</details>
 
 {% include /pbc/all/glue-api-guides/latest/merchant-profiles-backend-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/latest/merchant-profiles-backend-response-attributes.md -->
 
@@ -149,7 +237,8 @@ The response has the same structure as the response of [Retrieve the profile of 
 | --- | --- | --- |
 | 401 | N/A | The `Authorization` header is missing, or the access token is invalid or expired. |
 | 403 | N/A | The authenticated user is a merchant user calling `/merchant-profiles/{merchant_reference}`, or a Back Office user calling `/merchant-profile`. |
-| 403 | 1302 | The access token carries the merchant user scope, but the user is not assigned to a merchant. |
-| 404 | 1301 | The merchant with the specified reference doesn't exist, or the merchant doesn't have a profile. |
+| 403 | N/A | The access token carries the merchant user scope, but the user is not assigned to a merchant. |
+| 403 | N/A | The merchant of the authenticated merchant user is not approved. |
+| 404 | N/A | The merchant with the specified reference doesn't exist. |
 
-To view generic errors and status codes of the Backend API, see [Backend API request and response reference](/docs/integrations/spryker-api/backend-api/developing-apis/backend-api-request-and-response-reference.html).
+To view generic errors and status codes of the Backend API, see [Backend API request and response reference](/docs/integrations/spryker-api/backend-api/developing-apis/backend-api-request-and-response-reference.html#http-status-codes).

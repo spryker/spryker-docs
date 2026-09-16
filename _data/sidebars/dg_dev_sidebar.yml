@@ -1502,6 +1502,8 @@ entries:
     - title: Testing guidelines
       url: /docs/dg/dev/guidelines/testing-guidelines/testing-guidelines.html
       nested:
+      - title: Testing strategy
+        url: /docs/dg/dev/guidelines/testing-guidelines/testing-strategy.html
       - title: Code coverage
         url: /docs/dg/dev/guidelines/testing-guidelines/code-coverage.html
       - title: Test framework
@@ -1568,6 +1570,8 @@ entries:
             url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-the-asynchronous-api.html
           - title: Test the publish and synchronization process
             url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/testing-the-publish-and-synchronization-process.html
+          - title: Testing the Publish and Synchronization golden path
+            url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/testing-the-publish-and-synchronization-golden-path.html
 
       - title: Testify
         url: /docs/dg/dev/guidelines/testing-guidelines/testify.html

@@ -9,7 +9,10 @@ redirect_from:
 
 Get comprehensive guidance for effective testing in Spryker projects. Discover a range of topics, including available test helpers, code coverage generation, data builders for creating transfer objects, executing tests, setting up efficient test organization, configuring and using the Codeception test framework, testing best practices and console commands, and more.
 
+Start with the [Testing strategy](/docs/dg/dev/guidelines/testing-guidelines/testing-strategy.html): it explains which kind of test answers which question and how the layers fit together. The other documents in this section cover the mechanics.
+
 The *Testing guidelines* section includes the following documents:
+- [Testing strategy](/docs/dg/dev/guidelines/testing-guidelines/testing-strategy.html)
 - [Available test helpers](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html)
 - [Code coverage](/docs/dg/dev/guidelines/testing-guidelines/code-coverage.html)
 - [Data builders](/docs/dg/dev/guidelines/testing-guidelines/data-builders.html)

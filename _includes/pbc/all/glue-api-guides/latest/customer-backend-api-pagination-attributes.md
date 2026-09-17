@@ -1,7 +1,10 @@
+A collection response carries its pagination summary in the top-level `meta.pagination` object:
+
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| pagination | Object | Pagination details of the collection. Spryker returns this object on the first item of a collection response only. |
-| pagination.numFound | Integer | Total number of items found. |
-| pagination.currentPage | Integer | Current page number. |
-| pagination.maxPage | Integer | Total number of pages. |
-| pagination.currentItemsPerPage | Integer | Number of items per page. |
+| meta.pagination.numFound | Integer | Total number of items found. |
+| meta.pagination.currentPage | Integer | Current page number. |
+| meta.pagination.maxPage | Integer | Total number of pages. |
+| meta.pagination.currentItemsPerPage | Integer | Number of items per page. |
+
+The top-level `links` object carries the `first` and `last` links, plus `prev` and `next` when those pages exist. Each link repeats the query parameters of the request and rewrites the window as `page[limit]` and `page[offset]`, so you can follow it as it is.

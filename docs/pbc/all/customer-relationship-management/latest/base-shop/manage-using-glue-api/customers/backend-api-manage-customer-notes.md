@@ -1,7 +1,7 @@
 ---
 title: "Backend API: Manage customer notes"
 description: Learn how to retrieve and add customer notes in your Spryker shop using the Spryker Backend API.
-last_updated: Sep 14, 2026
+last_updated: Sep 16, 2026
 template: glue-api-storefront-guide-template
 ---
 
@@ -40,7 +40,6 @@ To retrieve a paginated collection of the notes of a customer, send the request:
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
-| page | Page number to return. | From `1` to any. Defaults to `1`. |
 | page[limit] | Maximum number of items to return per page. | From `1` to any. Defaults to `10`. |
 | page[offset] | Number of items to skip before the page begins. | From `0` to any. Defaults to `0`. |
 | sort | Sorts the collection by the given field. Prefix a field with `-` to sort in descending order. Separate several fields with a comma. | createdAt, username |
@@ -72,12 +71,7 @@ The collection does not accept filters.
                 "message": "Called the customer about invoice 4711; they will pay by Friday.",
                 "username": "Admin Spryker",
                 "createdAt": "2026-08-31 10:06:00.000000",
-                "pagination": {
-                    "numFound": 2,
-                    "currentPage": 1,
-                    "maxPage": 1,
-                    "currentItemsPerPage": 10
-                }
+                "updatedAt": "2026-08-31 10:06:00.000000"
             },
             "links": {
                 "self": "https://glue-backend.mysprykershop.com/customers/DE--1/notes/b1f7c3d2-8a41-5c6e-9d70-2e5b8f0a4c31"
@@ -98,10 +92,18 @@ The collection does not accept filters.
             }
         }
     ],
+    "meta": {
+        "pagination": {
+            "numFound": 2,
+            "currentPage": 1,
+            "maxPage": 1,
+            "currentItemsPerPage": 10
+        }
+    },
     "links": {
-        "self": "https://glue-backend.mysprykershop.com/customers/DE--1/notes?page=1",
-        "first": "https://glue-backend.mysprykershop.com/customers/DE--1/notes?page=1",
-        "last": "https://glue-backend.mysprykershop.com/customers/DE--1/notes?page=1"
+        "self": "https://glue-backend.mysprykershop.com/customers/DE--1/notes",
+        "first": "https://glue-backend.mysprykershop.com/customers/DE--1/notes?page[limit]=10&page[offset]=0",
+        "last": "https://glue-backend.mysprykershop.com/customers/DE--1/notes?page[limit]=10&page[offset]=0"
     }
 }
 ```
@@ -143,7 +145,7 @@ Request sample: `GET https://glue-backend.mysprykershop.com/customers/DE--1/note
 
 ### Response
 
-The response contains the same attributes as [Retrieve customer notes](#retrieve-customer-notes), without the `pagination` object.
+The response contains the same attributes as [Retrieve customer notes](#retrieve-customer-notes), without the `meta.pagination` object.
 
 {% info_block infoBox "Notes of another customer" %}
 
@@ -224,6 +226,7 @@ Response sample:
 
 - [Backend API: Manage customers](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/backend-api-manage-customers.html)
 - [Backend API: Manage customer addresses](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-addresses.html)
+- [Backend API: Manage company users](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/backend-api-manage-company-users.html)
 
 ## Possible errors
 

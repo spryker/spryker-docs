@@ -9,12 +9,6 @@ This document describes how to manage customers using the Backend API. These end
 
 Customers are addressed by `customerReference`. The internal database identifier is never exposed.
 
-{% info_block infoBox "Backend API and Back Office API" %}
-
-The Backend API is an *application*, and the Back Office API is one of the *types* of API it hosts. These endpoints are served by the Backend API application at `glue-backend` and authorize Back Office users. For more information, see [Spryker API strategy](/docs/integrations/spryker-api/getting-started-with-apis/api-strategy.html).
-
-{% endinfo_block %}
-
 ## Installation
 
 These endpoints are provided by API Platform. To install and enable it, see [Enable API Platform](/docs/integrations/spryker-api/api-platform/enablement.html).
@@ -36,7 +30,6 @@ To retrieve a paginated collection of customers, send the request:
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
-| page | Page number to return. | From `1` to any. Defaults to `1`. |
 | page[limit] | Maximum number of items to return per page. | From `1` to any. Defaults to `10`. |
 | page[offset] | Number of items to skip before the page begins. | From `0` to any. Defaults to `0`. |
 | q | Free-text search, matched against the email, first name, and last name. | Any string. |
@@ -44,19 +37,18 @@ To retrieve a paginated collection of customers, send the request:
 | filter[customers.email] | Filters the collection by an exact email address. | Any email address. |
 | filter[customers.firstName] | Filters the collection by a partial first name. | Any string. |
 | filter[customers.lastName] | Filters the collection by a partial last name. | Any string. |
-| filter[customers.includeAnonymized] | Includes anonymized customers in the result. By default, the collection contains active customers only. | `1`, `0` |
 | sort | Sorts the collection by the given field. Prefix a field with `-` to sort in descending order. Separate several fields with a comma. | customerReference, createdAt, email, firstName, lastName, registered |
 | include | Adds resource relationships to the request. | notes |
 
-{% info_block infoBox "Pagination" %}
+{% info_block infoBox "Anonymized customers" %}
 
-You can page the collection in two ways: with `page` as a page number, or with the `page[limit]` and `page[offset]` item window. Do not combine the two forms in one request.
+The collection always excludes anonymized customers. There is no parameter that brings them back into the result.
 
 {% endinfo_block %}
 
 {% info_block infoBox "Free-text search and name filters" %}
 
-`q` takes precedence over `filter[customers.firstName]` and `filter[customers.lastName]`. If you send `q`, the endpoint ignores both name filters. Combining `q` with `filter[customers.email]`, `filter[customers.customerReference]`, or `filter[customers.includeAnonymized]` works as expected.
+`q` takes precedence over `filter[customers.firstName]` and `filter[customers.lastName]`. If you send `q`, the endpoint ignores both name filters. Combining `q` with `filter[customers.email]` or `filter[customers.customerReference]` works as expected.
 
 {% endinfo_block %}
 
@@ -69,7 +61,6 @@ Sorting by a field that is not on the list returns `400` with the error code `12
 | `GET https://glue-backend.mysprykershop.com/customers?q=hopkin` | Retrieve customers whose email, first name, or last name matches `hopkin`. |
 | `GET https://glue-backend.mysprykershop.com/customers?filter[customers.email]=spencor.hopkin@acme.com` | Retrieve the customer with the given email address. |
 | `GET https://glue-backend.mysprykershop.com/customers?sort=-createdAt` | Retrieve customers, newest first. |
-| `GET https://glue-backend.mysprykershop.com/customers?filter[customers.includeAnonymized]=1` | Retrieve customers, including the anonymized ones. |
 
 ### Response
 
@@ -97,13 +88,7 @@ Sorting by a field that is not on the list returns `400` with the error code `12
                 "registered": "2026-08-27",
                 "createdAt": "2026-08-27 10:06:00.000000",
                 "updatedAt": "2026-08-27 12:30:00.000000",
-                "anonymizedAt": null,
-                "pagination": {
-                    "numFound": 42,
-                    "currentPage": 1,
-                    "maxPage": 5,
-                    "currentItemsPerPage": 10
-                }
+                "anonymizedAt": null
             },
             "links": {
                 "self": "https://glue-backend.mysprykershop.com/customers/DE--1"
@@ -134,11 +119,19 @@ Sorting by a field that is not on the list returns `400` with the error code `12
             }
         }
     ],
+    "meta": {
+        "pagination": {
+            "numFound": 42,
+            "currentPage": 1,
+            "maxPage": 5,
+            "currentItemsPerPage": 10
+        }
+    },
     "links": {
-        "self": "https://glue-backend.mysprykershop.com/customers?page=1",
-        "first": "https://glue-backend.mysprykershop.com/customers?page=1",
-        "last": "https://glue-backend.mysprykershop.com/customers?page=5",
-        "next": "https://glue-backend.mysprykershop.com/customers?page=2"
+        "self": "https://glue-backend.mysprykershop.com/customers",
+        "first": "https://glue-backend.mysprykershop.com/customers?page[limit]=10&page[offset]=0",
+        "last": "https://glue-backend.mysprykershop.com/customers?page[limit]=10&page[offset]=40",
+        "next": "https://glue-backend.mysprykershop.com/customers?page[limit]=10&page[offset]=10"
     }
 }
 ```
@@ -194,7 +187,7 @@ Sorting by a field that is not on the list returns `400` with the error code `12
 
 {% info_block infoBox "Included notes" %}
 
-When you request notes with `include=notes`, the endpoint returns the first 10 notes of the customer and ignores the `page` and `sort` parameters of the request, because those parameters address the customer collection. To page or sort notes, use [Retrieve customer notes](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-notes.html).
+When you request notes with `include=notes`, the endpoint returns the first 10 notes of the customer and ignores the `page[limit]`, `page[offset]`, and `sort` parameters of the request, because those parameters address the customer collection. To page or sort notes, use [Retrieve customer notes](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-notes.html).
 
 {% endinfo_block %}
 
@@ -247,9 +240,9 @@ To retrieve a single customer, send the request:
 
 ### Response
 
-The response contains the same attributes as [Retrieve customers](#retrieve-customers), without the `pagination` object.
+The response contains the same attributes as [Retrieve customers](#retrieve-customers), without the `meta.pagination` object.
 
-An anonymized customer is no longer retrievable by reference and returns `404` with the error code `1201`. To read an anonymized record, retrieve the collection with `filter[customers.includeAnonymized]=1`.
+An anonymized customer is no longer retrievable by reference and returns `404` with the error code `1201`.
 
 ## Create a customer
 
@@ -404,7 +397,7 @@ A successful request returns the `204 No Content` status code with an empty body
 
 {% info_block warningBox "Anonymization is not deletion" %}
 
-This endpoint anonymizes the customer to satisfy the right to erasure. The record is retained, `anonymizedAt` is set, and the personal data is scrubbed. The customer is no longer retrievable by reference, and the collection returns the record only with `filter[customers.includeAnonymized]=1`. There is no endpoint that deletes a customer row.
+This endpoint anonymizes the customer to satisfy the right to erasure. The record is retained, `anonymizedAt` is set, and the personal data is scrubbed. The customer is no longer retrievable by reference, and the collection never returns the record again. There is no endpoint that deletes a customer row.
 
 {% endinfo_block %}
 
@@ -412,6 +405,7 @@ This endpoint anonymizes the customer to satisfy the right to erasure. The recor
 
 - [Backend API: Manage customer addresses](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-addresses.html)
 - [Backend API: Manage customer notes](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-notes.html)
+- [Backend API: Manage company users](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/backend-api-manage-company-users.html)
 
 ## Possible errors
 

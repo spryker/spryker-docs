@@ -48,7 +48,7 @@ The Data Exchange API writes to tables you configure and does not apply company 
 
 All operations require a Back Office user access token. See [Authenticate as a Back Office user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).
 
-For requests, responses, the full attribute reference, and update behavior, see [Glue API: Manage companies](/docs/pbc/all/customer-relationship-management/base-shop/glue-api-manage-companies.html).
+For requests, responses, the full attribute reference, and update behavior, see [Backend API: Manage companies](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/backend-api-manage-companies.html).
 
 ## Company attributes
 
@@ -112,5 +112,5 @@ A request whose path exists but whose method no operation declares is answered w
 
 | GLUE API GUIDES | INSTALLATION GUIDES |
 | --- | --- |
-| [Glue API: Manage companies](/docs/pbc/all/customer-relationship-management/base-shop/glue-api-manage-companies.html) | [Install the Companies Backend API](/docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-glue-api/install-the-companies-backend-api.html) |
+| [Backend API: Manage companies](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/backend-api-manage-companies.html) | [Install the Companies Backend API](/docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-glue-api/install-the-companies-backend-api.html) |
 | [Authenticate as a Back Office user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html) | [Integrate API Platform](/docs/integrations/spryker-api/migrate-from-glue-to-api-platform/integrate-api-platform.html) |

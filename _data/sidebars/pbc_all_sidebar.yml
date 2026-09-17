@@ -968,9 +968,6 @@ entries:
 
               - title: Companies Backend API
                 url: /docs/pbc/all/customer-relationship-management/base-shop/companies-backend-api.html
-                nested:
-                  - title: "Glue API: Manage companies"
-                    url: /docs/pbc/all/customer-relationship-management/base-shop/glue-api-manage-companies.html
 
               - title: Company Account feature overview
                 url: /docs/pbc/all/customer-relationship-management/base-shop/company-account-feature-overview/company-account-feature-overview.html
@@ -1080,6 +1077,13 @@ entries:
 
                   - title: Manage customer access to Storefront API resources
                     url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/manage-customer-access-to-glue-api-resources.html
+
+              - title: Manage via Backend API
+                nested:
+                  - title: Company account
+                    nested:
+                      - title: Manage companies
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/company-account/backend-api-manage-companies.html
 
               - title: Generate login tokens
                 url: /docs/pbc/all/customer-relationship-management/base-shop/generate-login-tokens.html

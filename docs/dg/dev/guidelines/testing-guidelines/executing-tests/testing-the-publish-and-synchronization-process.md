@@ -1,7 +1,7 @@
 ---
 title: Testing the Publish and Synchronization process
 description: Learn how to test the publish and synchronization process with this helpful guide for your Spryker based projects.
-last_updated: Sep 16, 2026
+last_updated: Sep 17, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/publish-and-synchronization-testing
 originalArticleId: 5691dcf2-a612-4cf9-bdff-8609f299ffec
@@ -49,11 +49,13 @@ In short, in P&S, you create or update an entity in the database. The process is
 
 For a better testing experience, Spryker provides some helpers that turn this asynchronous process into a synchronous one. For some sort of the process visualization, use the `-vvv` flag in `vendor/bin/codecept` to see what happens in the background.
 
-## What a module-level P&S test proves
+## What a P&S module test proves
 
-A module-level P&S test runs in one process against the real database. The queue, the storage, and the search are replaced by in-memory helpers: `QueueHelper`, `StorageHelper`, and `SearchHelper` each register an in-memory plugin in place of the real service. No message reaches a real broker and no key reaches a real storage or search product. The test proves that the module's publisher and synchronizer produce the right event, the right `*_storage` or `*_search` table row, and the right key and payload. It cannot prove that the real services are wired correctly; that is the job of the [golden path test](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/testing-the-publish-and-synchronization-golden-path.html), which runs once per critical domain on the assembled project.
+{% include diagrams/testing/publish-and-synchronize-coverage.md %}
 
-The tests live in the `Communication` suite of the `*Storage` or `*Search` module, because the subjects are plugins: the publish listener or publisher plugin that writes the table row, and the synchronization data repository plugin that reads it back for the queue. `Persistence` in Spryker names the Propel layer of a module, so it is not the place for these tests even though storage and search hold data.
+A P&S module test runs in one process against the real database. The queue, the storage, and the search are replaced by in-memory helpers: `QueueHelper`, `StorageHelper`, and `SearchHelper` each register an in-memory plugin in place of the real service. No message reaches a real broker and no key reaches a real storage or search product. The test proves that the module's publisher and synchronizer produce the right event, the right `*_storage` or `*_search` table row, and the right key and payload. It cannot prove that the real services are wired correctly; that is the job of the [golden path test](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/testing-the-publish-and-synchronization-golden-path.html), which runs once per critical domain on the assembled project and is still *Planned*. For how the two fit into the wider picture, see [Testing strategy](/docs/dg/dev/guidelines/testing-guidelines/testing-strategy.html).
+
+The tests live in the `Communication` suite of the `*Storage` or `*Search` module, because the subjects are plugins: the publish listener or publisher plugin that writes the table row, and the synchronization data repository plugin that reads it back for the queue. `Persistence` in Spryker names the Propel application layer of a module, so it is not the place for these tests even though storage and search hold data.
 
 ## Two ways to write the test
 

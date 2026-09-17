@@ -1,0 +1,38 @@
+%%{init: {"flowchart": {"htmlLabels": true, "curve": "basis"}} }%%
+flowchart LR
+    subgraph SUB["A test type replaces something…"]
+        direction TB
+        s1["<b>API contract test</b><br/>does not run the synchronize step<br/>that writes into storage"]
+        s2["<b>API contract test</b><br/>stubs token introspection"]
+        s3["<b>API contract test</b><br/>stubs the search engine response"]
+        s4["<b>API contract test</b><br/>runs on a lightweight database engine"]
+        s5["<b>P&amp;S module test</b><br/>replaces queue, storage and search<br/>with in-memory helpers"]
+        s6["<b>Facade test</b><br/>never goes over HTTP"]
+        s7["<b>Any test</b><br/>stubs an external provider<br/>such as tax or payment"]
+    end
+
+    subgraph OWN["…so another test type must prove the real thing"]
+        direction TB
+        o1["<b>P&amp;S module test</b><br/>key format, store and locale scoping"]
+        o2["<b>Cypress journey</b><br/>logs in over real HTTP"]
+        o3["<b>Search query test</b><br/>against a real search engine"]
+        o4["<b>Facade test</b><br/>on the production database engine"]
+        o5["<b>P&amp;S golden path</b><br/>real queue, storage and search"]
+        o6["<b>API contract test</b><br/>status codes, envelope, JSON shape"]
+        o7["<b>One contract test</b><br/>against the provider sandbox"]
+    end
+
+    s1 --> o1
+    s2 --> o2
+    s3 --> o3
+    s4 --> o4
+    s5 --> o5
+    s6 --> o6
+    s7 --> o7
+
+    classDef gap fill:#FDF0EC,stroke:#C9502B,stroke-width:1.4px,color:#2B2B28
+    classDef owner fill:#EAF3EC,stroke:#2E7D5B,stroke-width:1.4px,color:#2B2B28
+    class s1,s2,s3,s4,s5,s6,s7 gap
+    class o1,o2,o3,o4,o5,o6,o7 owner
+    style SUB fill:#FFFFFF,stroke:#C9502B,stroke-dasharray:4 3,color:#2B2B28
+    style OWN fill:#FFFFFF,stroke:#2E7D5B,stroke-dasharray:4 3,color:#2B2B28

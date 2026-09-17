@@ -5,7 +5,7 @@ last_updated: Sep 16, 2026
 template: feature-integration-guide-template
 ---
 
-This document describes how to install the [Companies Backend API](/docs/pbc/all/customer-relationship-management/base-shop/companies-backend-api.html), which exposes company data at `/companies` on the Glue Backend API.
+This document describes how to install the Companies Backend API, which exposes company data at `/companies` on the Glue Backend API. For the endpoint reference, see [Backend API: Manage companies](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/backend-api-manage-companies.html).
 
 ## Prerequisites
 

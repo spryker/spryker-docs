@@ -966,9 +966,6 @@ entries:
                       - title: SharedCartPage
                         url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-sharedcartpage-module.html
 
-              - title: Companies Backend API
-                url: /docs/pbc/all/customer-relationship-management/base-shop/companies-backend-api.html
-
               - title: Company Account feature overview
                 url: /docs/pbc/all/customer-relationship-management/base-shop/company-account-feature-overview/company-account-feature-overview.html
                 nested:

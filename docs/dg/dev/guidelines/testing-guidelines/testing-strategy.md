@@ -22,7 +22,7 @@ Every kind of test answers one question. A facade test answers "is the business 
 
 This document tells you which test to write for which question, what each test type must and must not cover, and how the test types are arranged so that their blind spots do not line up.
 
-## Words this page uses
+## Terminology this page uses
 
 Spryker already uses the word *layer* for the code layers inside a module, so this page never uses that word for anything else.
 

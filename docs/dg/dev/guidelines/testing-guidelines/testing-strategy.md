@@ -24,7 +24,7 @@ This document tells you which test to write for which question, what each test t
 
 ## Terminology this page uses
 
-Spryker already uses the word *layer* for the code layers inside a module, so this page never uses that word for anything else.
+Spryker already uses the term *layer* for the code layers inside a module, so this page never uses that word for anything else.
 
 | Term | What it means | Examples |
 |---|---|---|

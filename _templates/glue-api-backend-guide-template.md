@@ -26,7 +26,7 @@ These endpoints are provided by API Platform. To install and enable it, see [Ena
 To {task}, send the request:
 
 ***
-`{method}` {% raw %}**{endpoint}*{{path_parameter}}***{% endraw %}
+`{method}` {% raw %}**{endpoint}/*{{path_parameter}}***{% endraw %}
 ***
 
 | PATH PARAMETER | DESCRIPTION |

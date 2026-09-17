@@ -1,7 +1,7 @@
 ---
 title: General rules and guidance for adding docs
 description: Understand the core fundamentals of contributing to the Spryker Documentation site and our general rules and guidance for adding articles.
-last_updated: Feb 19, 2026
+last_updated: Sep 17, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html
@@ -84,7 +84,7 @@ Every document must have a YAML front matter block. This block consists of key-v
 ---
 title: Foo bar document
 description: Exemplary description text.
-last_updated: Dec 09, 2021
+last_updated: Sep 17, 2026
 template: concept-topic-template
 tags: [new, B2B, B2C]
 redirect_from:

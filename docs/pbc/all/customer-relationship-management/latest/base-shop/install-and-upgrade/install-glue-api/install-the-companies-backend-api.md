@@ -5,7 +5,7 @@ last_updated: Sep 16, 2026
 template: feature-integration-guide-template
 ---
 
-This document describes how to install the Companies Backend API, which exposes company data at `/companies` on the Glue Backend API. For the endpoint reference, see [Backend API: Manage companies](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/backend-api-manage-companies.html).
+This document describes how to install the Companies Backend API, which exposes company data at `/companies` through the Glue Backend application. For the endpoint reference, see [Backend API: Manage companies](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/backend-api-manage-companies.html).
 
 ## Prerequisites
 
@@ -64,7 +64,7 @@ Also confirm that `config/GlueBackend/bundles.php` registers `SprykerApiPlatform
 
 ### 3) Set up the database schema and transfer objects
 
-Apply the database changes and generate the transfer objects:
+Apply the database schema changes and generate the transfer objects:
 
 ```bash
 docker/sdk console transfer:generate
@@ -97,7 +97,9 @@ Make sure the generated resource class exists at `src/Generated/Api/Backend/Comp
 
 ## Verification
 
-Request a Back Office access token as described in [Authenticate as a Back Office user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html), then retrieve a company collection:
+Request a Back Office access token as described in [Authenticate as a Back Office user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html), then retrieve a company collection.
+
+### Retrieve a company collection
 
 ```bash
 curl "https://glue-backend.mysprykershop.com/companies?page[limit]=1" \
@@ -119,7 +121,7 @@ curl -X POST "https://glue-backend.mysprykershop.com/companies" \
 
 The request returns `201` with the created company, which is `pending` and inactive.
 
-### Troubleshooting
+## Troubleshooting
 
 | SYMPTOM | CAUSE |
 | --- | --- |

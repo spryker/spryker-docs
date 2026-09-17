@@ -5,13 +5,13 @@ last_updated: Sep 17, 2026
 template: glue-api-backend-guide-template
 ---
 
-This document describes how to manage companies using the Backend API. These endpoints expose the same company lifecycle that the Back Office uses, so you can build Back Office extensions, CRM and ERP integrations, and onboarding automation against one contract.
+This document describes how to manage companies using the Backend API. You can use these endpoints to build Back Office extensions, CRM and ERP integrations, and onboarding automation.
 
 ## Installation
 
 These endpoints are provided by API Platform. To install and enable it, see [Enable API Platform](/docs/integrations/spryker-api/api-platform/enablement.html).
 
-For the modules that provide the company endpoints and their installation instructions, see [Install the Companies Backend API](/docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-glue-api/install-the-companies-backend-api.html).
+For the modules that provide the company endpoints and their installation instructions, see [Install the Companies Backend API](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-companies-backend-api.html).
 
 ## Retrieve companies
 
@@ -96,7 +96,7 @@ A request for a page beyond the last one serves the last page and reports it as 
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| uuid | String | Public unique company identifier. Addresses the company in every operation. |
+| uuid | String | Public unique identifier of the company. Use it to address the company in subsequent operations. |
 | name | String | Name of the company. |
 | status | String | Approval status of the company: `pending`, `approved`, or `denied`. |
 | isActive | Boolean | Whether the company is active. |
@@ -122,7 +122,7 @@ To retrieve a single company, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{company_uuid}}***{% endraw %} | UUID of the company to retrieve. To get it, [retrieve companies](#retrieve-companies). |
+| {% raw %}***{{company_uuid}}***{% endraw %} | UUID of the company to retrieve. To obtain it, [retrieve companies](#retrieve-companies). |
 
 ### Request
 
@@ -243,7 +243,7 @@ A company created without `status` or `isActive` is pending and inactive, exactl
 
 </details>
 
-A successful request returns the `201 Created` status code. The database assigns the `uuid` that addresses the company from now on.
+A successful request returns the `201 Created` status code. The response contains the `uuid` that you can use to address the company in subsequent requests.
 
 ## Edit a company
 
@@ -281,7 +281,7 @@ The request accepts the same writable attributes as [Create a company](#create-a
 
 {% info_block infoBox "Status transitions" %}
 
-On update, `status` accepts `approved` or `denied` only. A company cannot be returned to `pending` once it has left that state, which matches the Back Office lifecycle.
+On update, `status` accepts `approved` or `denied` only. You cannot change a company's status back to `pending` after it leaves that state.
 
 {% endinfo_block %}
 

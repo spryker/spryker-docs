@@ -1,7 +1,7 @@
 ---
 title: "Backend API: Manage customer notes"
 description: Learn how to retrieve and add customer notes in your Spryker shop using the Spryker Backend API.
-last_updated: Sep 4, 2026
+last_updated: Sep 14, 2026
 template: glue-api-storefront-guide-template
 ---
 
@@ -11,7 +11,7 @@ Notes are addressed by `uuid`. The internal database identifier is never exposed
 
 {% info_block infoBox "Notes are append-only" %}
 
-The resource supports reading notes and adding notes. It has no update and no delete operation, so a customer note timeline is a permanent record. `PATCH` and `DELETE` requests to a note return `404`.
+The resource supports reading notes and adding notes. It has no update and no delete operation, so a customer note timeline is a permanent record. `PATCH` and `DELETE` requests to a note return `404`. For the same reason a note carries `createdAt` alone: there is no second timestamp to report, and you cannot sort the collection by one.
 
 {% endinfo_block %}
 
@@ -43,7 +43,7 @@ To retrieve a paginated collection of the notes of a customer, send the request:
 | page | Page number to return. | From `1` to any. Defaults to `1`. |
 | page[limit] | Maximum number of items to return per page. | From `1` to any. Defaults to `10`. |
 | page[offset] | Number of items to skip before the page begins. | From `0` to any. Defaults to `0`. |
-| sort | Sorts the collection by the given field. Prefix a field with `-` to sort in descending order. Separate several fields with a comma. | createdAt, updatedAt, username |
+| sort | Sorts the collection by the given field. Prefix a field with `-` to sort in descending order. Separate several fields with a comma. | createdAt, username |
 
 Without a `sort` parameter, the collection returns the newest note first. Sorting by a field that is not on the list returns `400` with the error code `1203`, and the error message names the supported fields.
 
@@ -72,7 +72,6 @@ The collection does not accept filters.
                 "message": "Called the customer about invoice 4711; they will pay by Friday.",
                 "username": "Admin Spryker",
                 "createdAt": "2026-08-31 10:06:00.000000",
-                "updatedAt": "2026-08-31 10:06:00.000000",
                 "pagination": {
                     "numFound": 2,
                     "currentPage": 1,
@@ -92,8 +91,7 @@ The collection does not accept filters.
                 "customerReference": "DE--1",
                 "message": "Customer asked for the invoice to be reissued to the billing department.",
                 "username": "Admin Spryker",
-                "createdAt": "2026-08-29 14:22:00.000000",
-                "updatedAt": "2026-08-29 14:22:00.000000"
+                "createdAt": "2026-08-29 14:22:00.000000"
             },
             "links": {
                 "self": "https://glue-backend.mysprykershop.com/customers/DE--1/notes/c2a8d4e3-9b52-5d7f-8e81-3f6c9a1b5d42"
@@ -116,8 +114,7 @@ The collection does not accept filters.
 | customerReference | String | Reference of the customer this note belongs to. |
 | message | String | Text of the note. |
 | username | String | Display name of the Back Office user who wrote the note. |
-| createdAt | String | Date and time when the note was written. |
-| updatedAt | String | Date and time when the note record was last touched. |
+| createdAt | String | Date and time when the note was written. A note is never modified after it is written, so this is the only timestamp the resource carries. |
 
 {% include pbc/all/glue-api-guides/latest/customer-backend-api-pagination-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/latest/customer-backend-api-pagination-attributes.md -->
 
@@ -214,8 +211,7 @@ Response sample:
             "customerReference": "DE--1",
             "message": "Called the customer about invoice 4711; they will pay by Friday.",
             "username": "Admin Spryker",
-            "createdAt": "2026-09-04 10:06:00.000000",
-            "updatedAt": "2026-09-04 10:06:00.000000"
+            "createdAt": "2026-09-04 10:06:00.000000"
         },
         "links": {
             "self": "https://glue-backend.mysprykershop.com/customers/DE--1/notes/b1f7c3d2-8a41-5c6e-9d70-2e5b8f0a4c31"

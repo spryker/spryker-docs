@@ -1,7 +1,7 @@
 ---
 title: "Backend API: Manage customer addresses"
 description: Learn how to retrieve, create, update, and delete customer addresses in your Spryker shop using the Spryker Backend API.
-last_updated: Sep 4, 2026
+last_updated: Sep 14, 2026
 template: glue-api-storefront-guide-template
 ---
 
@@ -73,7 +73,7 @@ The collection does not accept filters.
                 "zipCode": "10115",
                 "iso2Code": "DE",
                 "country": "Germany",
-                "region": "DE-BE",
+                "region": "",
                 "phone": "+49 30 234567890",
                 "comment": "Please ring the doorbell twice.",
                 "isDefaultBilling": true,

@@ -1,7 +1,7 @@
 ---
 title: "Backend API: Manage customers"
 description: Learn how to retrieve, create, update, and anonymize customers in your Spryker shop using the Spryker Backend API.
-last_updated: Sep 4, 2026
+last_updated: Sep 16, 2026
 template: glue-api-storefront-guide-template
 ---
 
@@ -295,17 +295,17 @@ Request sample: `POST https://glue-backend.mysprykershop.com/customers`
 | phone | String |  | Phone number of the customer. Must not exceed 255 characters. |
 | company | String |  | Company label of the customer. Must not exceed 100 characters. |
 | localeName | String |  | Locale to assign to the customer. Must not exceed 15 characters. If you omit it, the customer receives the current locale. |
-| storeName | String |  | Store context for outgoing mail templates. Must not exceed 255 characters. Required when `sendPasswordToken` is `true`. |
+| storeName | String | &check; | Store to register the customer for. It is the context of every mail the registration sends, so the confirmation link points at the right storefront. Must name a configured store and must not exceed 255 characters. |
 | sendPasswordToken | Boolean |  | Sends a password-restore mail so that the customer sets their own password. Requires `storeName`. |
-| skipSendingRegistrationToken | Boolean |  | Suppresses the registration-confirmation mail that customer registration sends by default. |
+| sendRegistrationToken | Boolean |  | Sends the registration-confirmation mail. Defaults to `true`. Set it to `false` to suppress the mail. Accepted when you create a customer only. |
 
 {% info_block infoBox "Setting a password" %}
 
-The resource has no `password` attribute. Sending `sendPasswordToken` with `storeName` is the only way to give a customer a password through this API, which mirrors the **Send password token through email** checkbox in the Back Office. Sending `sendPasswordToken` without `storeName` returns `422` with the error code `1204`.
+The resource has no `password` attribute. Sending `sendPasswordToken` with `storeName` is the only way to give a customer a password through this API, which mirrors the **Send password token through email** checkbox in the Back Office. Creating a customer always requires `storeName`; when you update one, `storeName` is optional, so sending `sendPasswordToken` without it returns `422` with the error code `1204`.
 
 {% endinfo_block %}
 
-`sendPasswordToken` and `skipSendingRegistrationToken` are write-only. The response does not echo them back.
+`sendPasswordToken` and `sendRegistrationToken` are write-only. The response does not echo them back.
 
 ### Response
 
@@ -370,7 +370,9 @@ Request sample: `PATCH https://glue-backend.mysprykershop.com/customers/DE--1`
 }
 ```
 
-The request accepts the same writable attributes as [Create a customer](#create-a-customer), and all of them are optional. The endpoint applies only the attributes present in the payload; every attribute you omit keeps its stored value.
+The request accepts the same writable attributes as [Create a customer](#create-a-customer), except `sendRegistrationToken`, and all of them are optional. The endpoint applies only the attributes present in the payload; every attribute you omit keeps its stored value.
+
+A registration token is issued only when a customer registers, so `sendRegistrationToken` is not part of this operation. If you send it, it is ignored.
 
 ### Response
 

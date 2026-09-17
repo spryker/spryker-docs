@@ -295,11 +295,6 @@ There is no endpoint that deletes a company. To take a company out of use, set `
 
 {% endinfo_block %}
 
-## Other management options
-
-- [Backend API: Manage company users](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/backend-api-manage-company-users.html)
-- [Backend API: Manage customers](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/backend-api-manage-customers.html)
-
 ## Possible errors
 
 | CODE  | REASON |

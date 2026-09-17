@@ -116,7 +116,7 @@ class ProductGoldenPathTest extends Unit
         $localeName = $this->tester->getDefaultLocaleName();
 
         // Act
-        $storageData = $this->tester->getClient()->findProductAbstractStorageData(
+        $storageData = $this->tester->getStorageClient()->findProductAbstractStorageData(
             $productAbstractEntity->getIdProductAbstract(),
             $localeName,
         );

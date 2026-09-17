@@ -149,7 +149,7 @@ API contract tests do not assert what a value *means*. Whether a cart total is r
 
 API contract tests run without storage, search, a message broker, or a second application. They do not skip those parts of the system. They substitute the infrastructure adapter and keep every line of application code above it running for real: the tests run on a lightweight database engine, storage reads come from the database-backed storage tables, the publish step runs in-process, and the remote call from the client to the backend is dispatched in-process. Two things are stubbed: token introspection and the search engine response. Every one of those substitutions is paired with a test in another test type. See [Closing the gaps on purpose](#closing-the-gaps-on-purpose).
 
-### Provider or processor test
+### API Provider or Processor test
 
 *Tier: unit. Status: Rolling out.*
 

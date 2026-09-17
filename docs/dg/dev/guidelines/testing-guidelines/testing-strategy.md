@@ -102,7 +102,7 @@ Work through these questions in order and stop at the first match.
 2. **Does the change alter what a request may send or what a response contains?** Change the resource or validation schema first, then write or extend the API contract test for that operation. If the change is a branch inside a provider or processor that does not surface as a new response shape, add a provider or processor test instead.
 3. **Does the change alter what lands in storage or search when an entity is saved?** Write or extend the module's Publish and Synchronize test.
 4. **Does the change alter how a search query is built or what shape it returns?** Write or extend the search query test for that resource.
-5. **Does the change touch a flow on the critical journey list?** Extend the Cypress journey that already covers it. Adding a journey to that list is a decision about the list, not about your change: propose it separately rather than adding a journey in a feature pull request. See [Identifying what to test](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/identifying-what-to-test.html) for what a journey may assert.
+5. **Does the change touch a flow that a Cypress journey already walks?** Extend that journey. A *new* journey needs a reviewer other than the author to agree that no cheaper test type can see the defect, because every new journey is paid for on every run from then on. See [Identifying what to test](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/identifying-what-to-test.html) for what a journey may assert.
 6. **None of the above.** The change is covered by existing tests at the type that owns it, or it needs no test. A refactor that keeps every test type green needs no new test.
 
 Not every change earns a test at every type. Most changes match exactly one line above, and the tests at every other type stay untouched. A test type exists so that there is one obvious place for its question, not so that every change has to visit it.
@@ -120,11 +120,11 @@ Each test type owns a set of questions and is forbidden from answering others. T
 
 *Tier: end-to-end. Status: Available.*
 
-- **Owns.** One customer or business-user journey per critical flow: login, search to checkout, registration, order placement, the account area. A small fixed number of journeys, about thirty.
+- **Owns.** One customer or business-user journey per critical flow: login, search to checkout, registration, order placement, the account area.
 - **Must not.** Permutations, business rules, admin CRUD, visual details, data consistency across systems.
 - **Lives in.** The Cypress suite. See [Identifying what to test](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/identifying-what-to-test.html).
 
-The number of journeys is a fixed list, not a budget each team spends. A Cypress journey proves a flow works on a fully assembled system; it does not localize a failure and it does not enumerate cases.
+A Cypress journey proves a flow works on a fully assembled system. It does not localize a failure and it does not enumerate cases, so a second journey through the same flow costs a full run and proves almost nothing the first one did not. What keeps this test type small is the *must not* list above, applied on every addition, rather than a number.
 
 ### API contract test
 

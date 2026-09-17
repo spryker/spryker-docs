@@ -9,9 +9,13 @@ This document describes how to manage companies using the Backend API. You can u
 
 ## Installation
 
-These endpoints are provided by API Platform. To install and enable it, see [Enable API Platform](/docs/integrations/spryker-api/api-platform/enablement.html).
+These endpoints are implemented using API Platform. To install and enable it, see [Enable API Platform](/docs/integrations/spryker-api/api-platform/enablement.html).
 
 For the modules that provide the company endpoints and their installation instructions, see [Install the Companies Backend API](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-companies-backend-api.html).
+
+## Conventions
+
+Request headers, pagination, and the filter and sort syntax are the same for every Backend API resource—see [Backend API conventions](/docs/integrations/spryker-api/backend-api/backend-api-conventions.html). This page lists only what is specific to companies.
 
 ## Retrieve companies
 
@@ -23,15 +27,8 @@ To retrieve a paginated collection of companies, send the request:
 
 ### Request
 
-| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
-| --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html). |
-| Accept | application/vnd.api+json |  | Media type of the response. If you omit this header, the endpoint answers with `application/vnd.api+json`. |
-
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
-| page[limit] | Maximum number of items to return per page. | From `1` to any. Defaults to `10`. |
-| page[offset] | Number of items to skip before the page begins. | From `0` to any. Defaults to `0`. |
 | filter[companies.name] | Filters the collection by a partial company name, matched case-insensitively. | Any string. |
 | sort | Sorts the collection by the given field. Prefix a field with `-` to sort in descending order. | name, status, isActive |
 
@@ -41,9 +38,7 @@ To retrieve a paginated collection of companies, send the request:
 
 {% endinfo_block %}
 
-`name` is the only filterable property. A filter that addresses another property returns `400` with the error code `1215`, and a filter key without the `companies.` prefix returns `400` with the error code `011`. Sorting by a field that is not on the list returns `400` with the error code `1203`, and the error message names the supported fields.
-
-A request for a page beyond the last one serves the last page and reports it as the current page.
+`name` is the only filterable property; a filter addressing any other property returns `400` with the error code `1215`.
 
 | REQUEST | USAGE |
 | --- | --- |
@@ -101,17 +96,6 @@ A request for a page beyond the last one serves the last page and reports it as 
 | status | String | Approval status of the company: `pending`, `approved`, or `denied`. |
 | isActive | Boolean | Whether the company is active. |
 
-A collection response carries its pagination summary in the top-level `meta.pagination` object:
-
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| meta.pagination.numFound | Integer | Total number of items found. |
-| meta.pagination.currentPage | Integer | Current page number. |
-| meta.pagination.maxPage | Integer | Total number of pages. |
-| meta.pagination.currentItemsPerPage | Integer | Number of items per page. |
-
-The top-level `links` object carries the `first` and `last` links, plus `prev` and `next` when those pages exist. Collection members do not carry pagination data.
-
 ## Retrieve a company
 
 To retrieve a single company, send the request:
@@ -125,10 +109,6 @@ To retrieve a single company, send the request:
 | {% raw %}***{{company_uuid}}***{% endraw %} | UUID of the company to retrieve. To obtain it, [retrieve companies](#retrieve-companies). |
 
 ### Request
-
-| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
-| --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html). |
 
 | REQUEST | USAGE |
 | --- | --- |
@@ -172,11 +152,6 @@ To create a company, send the request:
 ***
 
 ### Request
-
-| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
-| --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html). |
-| Content-Type | application/vnd.api+json | &check; | Media type of the request body. |
 
 Request sample: `POST https://glue-backend.mysprykershop.com/companies`
 
@@ -258,11 +233,6 @@ To update a company, send the request:
 | {% raw %}***{{company_uuid}}***{% endraw %} | UUID of the company to update. To get it, [retrieve companies](#retrieve-companies). |
 
 ### Request
-
-| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
-| --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html). |
-| Content-Type | application/vnd.api+json | &check; | Media type of the request body. |
 
 Request sample: `PATCH https://glue-backend.mysprykershop.com/companies/0818f408-cc84-575d-ad54-92118a0e4273`
 

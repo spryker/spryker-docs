@@ -86,15 +86,12 @@ Make sure the `spy_company` table has a `uuid` column and that existing rows are
 
 ### 4) Generate the API resources
 
-Clear the Glue Backend cache and regenerate the API resources:
+Generate the API resources, then clear the Glue Backend kernel cache:
 
 ```bash
-rm -rf data/cache/GlueBackend/<environment>
-docker/sdk cli "GLUE_APPLICATION=GLUE_BACKEND vendor/bin/glue cache:clear"
 docker/sdk cli "GLUE_APPLICATION=GLUE_BACKEND vendor/bin/glue api:generate"
+rm -rf data/cache/GlueBackend/*
 ```
-
-Replace `<environment>` with your environment name, for example, `development`.
 
 {% info_block warningBox "Verification" %}
 
@@ -132,6 +129,7 @@ The request returns `201` with the created company, which is `pending` and inact
 
 | SYMPTOM | CAUSE |
 | --- | --- |
-| `404` on `/companies` | The resource was not generated. Confirm that `spryker/api-platform` is installed, that `src/Generated/Api/Backend/CompaniesBackendResource.php` exists, and repeat step 4. If your project overrides `sourceDirectories()`, check that it still covers the directory the feature is installed into. |
+| `404` with error code `007` while `src/Generated/Api/Backend/CompaniesBackendResource.php` exists | The route is unknown to the API Platform kernel, so the Glue router answered instead. The kernel cache is stale—check that you removed the directory that actually exists under `data/cache/GlueBackend/`, then re-run step 4 in order. The Glue container's standard error stream names the real cause: `docker logs <glue-backend-container> --since 5m 2>&1 \| grep -i exception`. See [API Platform troubleshooting](/docs/integrations/spryker-api/api-platform/troubleshooting.html). |
+| `404` on `/companies` and no generated resource class | The schema was not discovered. Confirm that `spryker/api-platform` is installed, and, if your project overrides `sourceDirectories()`, that it still covers the directory the feature is installed into. |
 | Validation messages come back in English when another language was requested | The feature ships its API messages as `data/translation/Api/{locale}.csv` inside the installed package, keyed by the English message. If they are not loaded, Symfony falls back to the message itself, so the response stays readable and the problem is easy to miss. Send `Accept-Language` and compare. Loading these files requires a `spryker/api-platform` version that reads them—update it to the latest version your project supports. |
 | `404` with error code 1213 for a company you can see in the Back Office | That company's `uuid` is empty. Save it once in the Back Office to have the UUID behavior fill the column. |

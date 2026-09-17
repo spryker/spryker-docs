@@ -940,6 +940,8 @@ entries:
                     nested:
                       - title: Company Account
                         url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html
+                      - title: Companies Backend API
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-glue-api/install-the-companies-backend-api.html
                       - title: Customer Account Management
                         url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-glue-api/install-the-customer-account-management-glue-api.html
 
@@ -963,6 +965,12 @@ entries:
                         url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-customerreorderwidget-module.html
                       - title: SharedCartPage
                         url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-sharedcartpage-module.html
+
+              - title: Companies Backend API
+                url: /docs/pbc/all/customer-relationship-management/base-shop/companies-backend-api.html
+                nested:
+                  - title: "Glue API: Manage companies"
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/glue-api-manage-companies.html
 
               - title: Company Account feature overview
                 url: /docs/pbc/all/customer-relationship-management/base-shop/company-account-feature-overview/company-account-feature-overview.html

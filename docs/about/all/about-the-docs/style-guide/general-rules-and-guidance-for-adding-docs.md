@@ -84,7 +84,7 @@ Every document must have a YAML front matter block. This block consists of key-v
 ---
 title: Foo bar document
 description: Exemplary description text.
-last_updated: Sep 17, 2026
+last_updated: Dec 09, 2021
 template: concept-topic-template
 tags: [new, B2B, B2C]
 related:

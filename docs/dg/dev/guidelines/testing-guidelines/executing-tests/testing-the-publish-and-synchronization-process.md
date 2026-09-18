@@ -1,7 +1,7 @@
 ---
 title: Testing the Publish and Synchronization process
 description: Learn how to test the publish and synchronization process with this helpful guide for your Spryker based projects.
-last_updated: Jun 16, 2021
+last_updated: Sep 17, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/publish-and-synchronization-testing
 originalArticleId: 5691dcf2-a612-4cf9-bdff-8609f299ffec
@@ -10,28 +10,32 @@ redirect_from:
   - /docs/scos/dev/guidelines/testing/publish-and-synchronization-testing.html
   - /docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html
 related:
+  - title: Testing strategy
+    link: docs/dg/dev/guidelines/testing-guidelines/testing-strategy.html
+  - title: Testing the Publish and Synchronization golden path
+    link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/testing-the-publish-and-synchronization-golden-path.html
   - title: Available test helpers
-    link: docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
+    link: docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
   - title: Code coverage
-    link: docs/scos/dev/guidelines/testing-guidelines/code-coverage.html
+    link: docs/dg/dev/guidelines/testing-guidelines/code-coverage.html
   - title: Data builders
-    link: docs/scos/dev/guidelines/testing-guidelines/data-builders.html
+    link: docs/dg/dev/guidelines/testing-guidelines/data-builders.html
   - title: Executing tests
-    link: docs/scos/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
+    link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
   - title: Setting up tests
-    link: docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
+    link: docs/dg/dev/guidelines/testing-guidelines/setting-up-tests.html
   - title: Test framework
-    link: docs/scos/dev/guidelines/testing-guidelines/test-framework.html
+    link: docs/dg/dev/guidelines/testing-guidelines/test-framework.html
   - title: Test helpers
-    link: docs/scos/dev/guidelines/testing-guidelines/test-helpers.html
+    link: docs/dg/dev/guidelines/testing-guidelines/test-helpers/using-test-helpers.html
   - title: Testify
-    link: docs/scos/dev/guidelines/testing-guidelines/testify.html
+    link: docs/dg/dev/guidelines/testing-guidelines/testify.html
   - title: Testing best practices
-    link: docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
+    link: docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/best-practices-for-effective-testing.html
   - title: Testing concepts
-    link: docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
+    link: docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/testing-concepts.html
   - title: Testing console commands
-    link: docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
+    link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
 ---
 
 Publish & Synchronize (P&S) is an asynchronous process of changing data available to customers by pushing the data into storage, for example, Redis, and making it searchable, for example, with Elasticsearch. Because of its asynchronous nature, it's not easy to test the full process while developing.
@@ -45,6 +49,25 @@ In short, in P&S, you create or update an entity in the database. The process is
 
 For a better testing experience, Spryker provides some helpers that turn this asynchronous process into a synchronous one. For some sort of the process visualization, use the `-vvv` flag in `vendor/bin/codecept` to see what happens in the background.
 
+## What a P&S module test proves
+
+{% include diagrams/testing/publish-and-synchronize-coverage.md %}
+
+A P&S module test runs in one process against the real database. The queue, the storage, and the search are replaced by in-memory helpers: `QueueHelper`, `StorageHelper`, and `SearchHelper` each register an in-memory plugin in place of the real service. No message reaches a real broker and no key reaches a real storage or search product. The test proves that the module's publisher and synchronizer produce the right event, the right `*_storage` or `*_search` table row, and the right key and payload. It cannot prove that the real services are wired correctly; that is the job of the [golden path test](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/testing-the-publish-and-synchronization-golden-path.html), which runs once per critical domain on the assembled project and is still *Planned*. For how the two fit into the wider picture, see [Testing strategy](/docs/dg/dev/guidelines/testing-guidelines/testing-strategy.html).
+
+The tests live in the `Communication` suite of the `*Storage` or `*Search` module, because the subjects are plugins: the publish listener or publisher plugin that writes the table row, and the synchronization data repository plugin that reads it back for the queue. `Persistence` in Spryker names the Propel application layer of a module, so it is not the place for these tests even though storage and search hold data.
+
+## Two ways to write the test
+
+Core modules test the plugins directly. This is the common form and the one to start with:
+
+- A publish listener test creates an entity through the module's fixture helper, calls `handleBulk()` on the listener with the entity's id and event name, and asserts through the storage module's repository that the expected `*_storage` row exists with the expected payload fields.
+- A synchronization data repository plugin test creates a storage row through the fixture helper, calls `getData()` on the plugin, and asserts that the returned synchronization data transfers carry the expected key and data.
+
+Both tests register the queue adapters through `setDependency()` so that no real broker is contacted.
+
+The `PublishAndSynchronizeHelper` offers the second form: it drives the whole in-process chain from a saved entity to a key in the in-memory storage or search. Use it when a module's chain has several steps between event and key, for example a publisher that fans out into more than one storage table, and the plugin-level tests would leave the connection between those steps unproven. The rest of this page describes that form.
+
 The main helpers involved in the P&S testing are:
 
 - [PublishAndSynchronizeHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#publishandsynchronizehelper)
@@ -55,7 +78,7 @@ The main helpers involved in the P&S testing are:
 
 ## P&S testing storage
 
-Let's test that the relevant data of a saved entity is available in the Storage, for example, in the key-value store (Redis or Valkey).
+Let's test that the relevant data of a saved entity is available in the Storage. In the test, the Storage is the in-memory replacement registered by `StorageHelper`, not the key-value store the project runs, for example, Redis or Valkey.
 
 Since we work with the real database, we execute one test for:
 
@@ -67,7 +90,7 @@ Since we work with the real database, we execute one test for:
 
 To prepare for the test, do the following:
 
-- Create a `Persistence` test suite for your `*Storage` module.
+- Use the `Communication` test suite of your `*Storage` module.
 - Besides some other [helpers](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html), add the necessary P&S helpers:
   - [PublishAndSynchronizeHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#publishandsynchronizehelper)
   - [EventBehaviorHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#eventbehaviorhelper)
@@ -104,7 +127,7 @@ When you delete an entity:
 
 ## P&S testing Search
 
-Let's test that the relevant data of a saved entity is available in the Search, for example, Elasticsearch.
+Let's test that the relevant data of a saved entity is available in the Search. In the test, the Search is the in-memory replacement registered by `SearchHelper`, not the search engine the project runs, for example, Elasticsearch.
 
 Since we work with the real database, we execute one test for:
 
@@ -116,7 +139,7 @@ Since we work with the real database, we execute one test for:
 
 To prepare for the test, do the following:
 
-- Create a `Persistence` test suite for your `*Search` module
+- Use the `Communication` test suite of your `*Search` module
 - Besides some other [helpers](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html), add the necessary P&S helpers:
   - [PublishAndSynchronizeHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#publishandsynchronizehelper)
   - [EventBehaviorHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#eventbehaviorhelper)

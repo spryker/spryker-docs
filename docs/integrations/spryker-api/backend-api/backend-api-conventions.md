@@ -43,7 +43,7 @@ A request for a page beyond the last one serves the last page and reports it as 
 
 Filters use the JSON:API filter form, and the key always carries the resource name:
 
-```
+```text
 filter[{resource}.{property}]={value}
 ```
 
@@ -58,7 +58,7 @@ Each resource supports its own set of filterable properties—see the resource's
 
 The `sort` parameter names the field to sort by. Prefix it with `-` for descending order:
 
-```
+```text
 sort=name
 sort=-name
 ```

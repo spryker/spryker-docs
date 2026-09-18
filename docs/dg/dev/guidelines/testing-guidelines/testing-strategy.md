@@ -4,6 +4,8 @@ description: Learn which test type answers which question in a Spryker project, 
 last_updated: Sep 17, 2026
 template: concept-topic-template
 related:
+  - title: Testing strategy examples
+    link: docs/dg/dev/guidelines/testing-guidelines/testing-strategy-examples.html
   - title: Best practices for effective testing
     link: docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/best-practices-for-effective-testing.html
   - title: Test API Platform resources
@@ -113,6 +115,8 @@ Work through these questions in order and stop at the first match.
 6. **None of the above.** The change is covered by existing tests at the type that owns it, or it needs no test. A refactor that keeps every test type green needs no new test.
 
 Not every change earns a test at every type. Most changes match exactly one line above, and the tests at every other type stay untouched. A test type exists so that there is one obvious place for its question, not so that every change has to visit it.
+
+[Testing strategy examples](/docs/dg/dev/guidelines/testing-guidelines/testing-strategy-examples.html) walks concrete changes through this list, including the ones that match several steps at once.
 
 Two heuristics apply at every step:
 

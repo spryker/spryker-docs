@@ -1504,6 +1504,8 @@ entries:
       nested:
       - title: Testing strategy
         url: /docs/dg/dev/guidelines/testing-guidelines/testing-strategy.html
+      - title: Testing strategy examples
+        url: /docs/dg/dev/guidelines/testing-guidelines/testing-strategy-examples.html
       - title: Code coverage
         url: /docs/dg/dev/guidelines/testing-guidelines/code-coverage.html
       - title: Test framework

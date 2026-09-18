@@ -1,7 +1,7 @@
 ---
 title: Testing strategy
 description: Learn which test type answers which question in a Spryker project, how the test types map onto the testing trophy, and how to keep the gaps between them from lining up.
-last_updated: Sep 17, 2026
+last_updated: Sep 18, 2026
 template: concept-topic-template
 related:
   - title: Testing strategy examples
@@ -76,6 +76,8 @@ Cost is more than runtime. Each step up the trophy changes five things:
 
 Put a test in the cheapest tier that can still see the defect you want it to catch.
 
+The tiers are also the order the tests should run in. A cheaper tier that fails should stop the more expensive tiers, so a defect that several test types could see is reported once, by the cheapest type that can see it, instead of again twenty minutes later by the browser suite. Two test types that can both see one defect are therefore not duplicating work: only one of them ever reports it, and the one that does names the smallest piece of the system. Ordering the whole pipeline strictly this way is *Planned*.
+
 ## The test types at a glance
 
 | Test type | Tier | Status | The question it answers | Typical cost per test |
@@ -90,6 +92,25 @@ Put a test in the cheapest tier that can still see the defect you want it to cat
 | [API Provider or Processor test](#api-provider-or-processor-test) | unit | Rolling out | Which branch inside this provider or processor runs? | well under a millisecond |
 | [Class unit test](#class-unit-test) | unit | Available | Is this one class right, where no wider test can reach the branch? | milliseconds |
 | [Static analysis](#static-analysis) | static | Available | Do the types, the style, and the application layer boundaries hold? | no test to write |
+
+### What these names are called in the code
+
+The names above name *questions*. Codeception suites are named after the application layer a test enters, so searching a project for "facade test" or "API contract test" finds nothing. This is where each test type lives today:
+
+| Test type | Where to look | What it is called there |
+|---|---|---|
+| Cypress journey | the `spryker/cypress-tests` package, `cypress/e2e` | a Cypress spec |
+| Publish and Synchronize golden path | — | *Planned*. The target shape is `tests/PyzTest/Shared/PublishAndSynchronize`, suite `GoldenPath` |
+| API golden path | — | *Planned*. A project-level suite next to the P&S golden path |
+| API contract test | `tests/PyzTest/Glue/<Module>` | the `RestApi`, `StorefrontApi`, `BackendApi`, or `BackendApiIntegration` suite. Being split into an `Integration` suite |
+| Facade test | `<Module>/tests/SprykerTest/Zed/<Module>/Business` | the `Business` suite, `<Module>FacadeTest.php` |
+| Publish and Synchronize module test | `<Module>Storage/tests/SprykerTest/Zed/<Module>Storage/Communication` | the `Communication` suite of the `*Storage` or `*Search` module. Named after the plugin it tests, such as `<Entity>PublishListenerTest.php` |
+| Search query test | — | *Planned*. No suite exists yet |
+| API Provider or Processor test | `tests/PyzTest/Glue/<Module>` | the `Logic` suite, being introduced |
+| Class unit test | next to the class, in the module's test suite | `<Class>Test.php` |
+| Static analysis | no test directory | PHPStan, Code Sniffer, Architecture Sniffer |
+
+Spryker is not renaming these suites, and CI keeps running them the way it runs them today. A suite name states which application layer a test enters; a test type name states which question it answers. Both facts are useful and neither replaces the other.
 
 ## Where a request enters, and which test type enters with it
 
@@ -210,8 +231,6 @@ The golden path runs on the fully assembled stack with the real queue, storage, 
 
 A second entity per domain repeats the module test at many times the cost and proves no new wiring. The golden path is the paired test for every in-memory storage and search helper, which is why it exists and why it stays small. It is owned by the project, because only the project knows its own wiring.
 
-A Cypress journey reaches the same data, so it is fair to ask what the golden path adds. It adds attribution and reach. An unregistered publisher plugin makes a product page return "not found" after a fresh import; Cypress reports a missing page and leaves you to bisect the stack, while the golden path reports that an imported product abstract never reached storage. It also runs in the job that already assembles the stack and already runs the import, so a developer can reproduce it without a browser.
-
 ### API golden path
 
 *Tier: end-to-end. Status: Planned.*
@@ -234,7 +253,7 @@ This is the home of the few API requests that a browser suite used to carry. An 
 - **Must not.** Assert the ranking of seed data, assert business logic above the adapter, or test behaviour that belongs to the search product itself.
 - **Lives in.** A dedicated suite per search-backed resource, run against the search engine, separate from the API suites.
 
-This test type does not test the search engine. Relevance, sharding, and availability belong to the search product a project runs, and asserting them would test somebody else's software. What belongs to Spryker is the query the application builds from its own query expanders and plugins, and the mapping of the raw result back into transfers. Neither of those is exercised anywhere else: an API contract test stubs the search response, and a facade test never reaches the adapter. Without this test type, a query that the engine rejects, or a result field that moved, is first seen by a customer.
+Spryker owns two things in a search: the query the application builds from its own query expanders and plugins, and the mapping of the raw result back into transfers. A search query test runs that query against a real engine and maps the result back, so a query the engine rejects or a result field that moved is reported by the module that owns it, within seconds, rather than by a browser suite or a customer. Nothing else exercises either half: an API contract test stubs the search response, and a facade test never reaches the adapter. Relevance, sharding, and availability belong to the search product a project runs, so this test type leaves them alone.
 
 ### Class unit test
 
@@ -265,7 +284,9 @@ Every substituted or stubbed answer must be paired with a test, in another test 
 
 A substitute is an in-memory helper, a stub, or a lighter engine that stands in for a real collaborator, and the answer it returns is written by the test rather than produced by the system. The `StorageHelper`, `SearchHelper`, and `QueueHelper` are substitutes. So is a stubbed token introspection response and a lightweight database engine in place of the production one.
 
-When you introduce a substitute in a test suite, name the test type that pairs it in a comment on the line that registers the substitute, and check that the pairing register below already covers it. If it does not, the pairing register gains a row and somebody writes that test.
+When you introduce a substitute in a test suite, name the pairing test type in a comment on the line that registers the substitute, and check that the register below already covers that substitution. If it does not, the register gains a row and somebody writes the test.
+
+The register is the table in the next section of this page. It is not a separate system: nothing generates it, no tool reads it, and it is kept up to date by hand and checked in code review. A machine-readable marker on the registering line, so that a substitute without a pairing fails static analysis instead of waiting for a reviewer, is *Planned*.
 
 ### The pairing register
 

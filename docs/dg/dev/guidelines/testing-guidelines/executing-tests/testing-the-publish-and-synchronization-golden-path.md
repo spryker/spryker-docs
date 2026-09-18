@@ -1,7 +1,7 @@
 ---
 title: Testing the Publish and Synchronization golden path
 description: Learn how a golden path test proves that queue, storage, and search are wired correctly on a fully assembled project after a full data import, and where such tests live.
-last_updated: Sep 17, 2026
+last_updated: Sep 18, 2026
 template: concept-topic-template
 related:
   - title: Testing strategy
@@ -74,7 +74,11 @@ tests/PyzTest/Shared/PublishAndSynchronize/
 
 The suite does not enable the in-memory `StorageHelper`, `SearchHelper`, or `QueueHelper`. The tester resolves the real Storage and Search clients, so the test reads exactly what a storefront request would read.
 
-One test class per critical domain. Start with the domains a customer cannot shop without: product, price, availability, category, CMS page, and glossary. Add a domain only when its data reaches the storefront through its own publisher and its own storage or search module.
+One test class per critical domain.
+
+A *domain* here is data that reaches the storefront through its own publisher plugin and its own `*Storage` or `*Search` module. That is the whole test: if covering something means registering a new publisher and a new storage or search module, it is a domain and earns one golden path test. If it rides a publisher that already exists, it does not, and the module test of that publisher already covers it.
+
+The definition bounds the count at the number of critical publishers rather than the number of features. Start with the domains a customer cannot shop without: product, price, availability, category, CMS page, and glossary.
 
 ## How the golden path runs
 

@@ -226,6 +226,40 @@ password:
   readable: false   # Not included in responses
 ```
 
+A property with `writable: false` is marked `readOnly` in the generated schema and is left out of every request body, because OpenAPI defines a read-only property as response-only. A resource whose properties are all read-only — an action endpoint addressed by its URI — documents the bare JSON:API envelope with no `attributes` member.
+
+#### groups
+
+Serialization groups scope a property to particular write operations. An operation accepts the property only when its `denormalizationContext.groups` names one of the property's groups, and with `disable_json_schema_serializer_groups: false` the same groups shape the documented request body:
+
+```yaml
+operations:
+  - type: Post
+    denormalizationContext:
+      groups: ['customers:write', 'customers:write:create']
+      disable_json_schema_serializer_groups: false
+  - type: Patch
+    denormalizationContext:
+      groups: ['customers:write']
+      disable_json_schema_serializer_groups: false
+
+properties:
+  email:
+    type: string
+    groups: ['customers:write']
+  sendRegistrationToken:
+    type: boolean
+    groups: ['customers:write:create']   # accepted when creating a customer only
+```
+
+Use this for a property that only one write operation accepts, such as a flag that has meaning at registration only. Without it, the property is documented and accepted on every write operation.
+
+{% info_block warningBox "Cover the writable surface with tests" %}
+
+A property outside an operation's groups is dropped silently by the serializer, with no error. Every writable property therefore needs a group: if you forget one, the property stops being writable and nothing reports it.
+
+{% endinfo_block %}
+
 #### readable
 
 Controls if property is included in responses:

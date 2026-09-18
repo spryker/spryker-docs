@@ -91,9 +91,9 @@ Put a test in the cheapest tier that can still see the defect you want it to cat
 | [Class unit test](#class-unit-test) | unit | Available | Is this one class right, where no wider test can reach the branch? | milliseconds |
 | [Static analysis](#static-analysis) | static | Available | Do the types, the style, and the application layer boundaries hold? | no test to write |
 
-## Where each test type enters the application
+## Where a request enters, and which test type enters with it
 
-A test type does not *belong to* a set of application layers. It enters the application at one point and runs everything below that point for real. The picture is a depth, not a list.
+A test type does not *belong to* a set of application layers. It enters the application at one point and runs everything below that point for real. The picture is a depth, not a list. It follows one synchronous request inward, so it holds only the test types that attach to a point on that path.
 
 {% include diagrams/testing/test-types-entry-points.md %}
 
@@ -101,7 +101,7 @@ There are two ways in from the outside, and they meet only at the Business layer
 
 A facade test enters at the Business layer and runs the Persistence layer and the real database underneath it. An API contract test enters at the Communication layer of a Glue module and runs the Business and Persistence layers underneath it. This is why an API contract test that asserts a business value is a facade test with an API round-trip in the way: the deeper test type already owns that question and answers it faster.
 
-The Publish and Synchronize test types enter the same stack from the side, where an entity save turns into an event. [The Publish and Synchronize test types](#publish-and-synchronize-module-test) show that path.
+The remaining test types are absent from the picture because they do not ride a request. The Publish and Synchronize test types enter the same stack from the side, where an entity save turns into an event, and the [Publish and Synchronize test types](#publish-and-synchronize-module-test) section draws that path instead. A [search query test](#search-query-test) enters at the Business layer as a facade test does, but what it exercises is the search engine, which is not a layer of this stack. An [API Provider or Processor test](#api-provider-or-processor-test) sits at the same depth as a class unit test, inside a single class. [Static analysis](#static-analysis) never issues a request at all, so there is no point at which it enters.
 
 ## Choosing the test to write
 

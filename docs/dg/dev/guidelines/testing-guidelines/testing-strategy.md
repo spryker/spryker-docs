@@ -200,7 +200,7 @@ The module test runs in one process against the real database, with the queue, s
 
 ### Publish and Synchronize golden path
 
-*Tier: end-to-end. Status: Planned. Spryker is building the reference implementation in the demo shops.*
+*Tier: end-to-end. Status: Planned.*
 
 - **Owns.** That the real queue, storage, and search are wired correctly, once per critical domain, after a full data import.
 - **Must not.** Cover more than one entity per domain, or assert business values.

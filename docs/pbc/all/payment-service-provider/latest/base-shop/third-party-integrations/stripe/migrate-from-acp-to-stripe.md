@@ -214,7 +214,7 @@ use Spryker\Shared\OauthClient\OauthClientConstants;
 // $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_ACP] = ...
 ```
 
-If your project added a Stripe-specific entry to `$config[Spryker\Shared\Kernel\KernelConstants::DOMAIN_WHITELIST]` (for example `connect.stripe.com`) for the old ACP-based integration, remove it. The direct `spryker-eco/stripe` module doesn't redirect the customer's browser to a Stripe-owned domain, so this whitelist doesn't need a Stripe entry. See [Network access for Stripe.js and the Stripe API](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html#network-access-for-stripejs-and-the-stripe-api) in the integration guide.
+If your project added a Stripe-specific entry to `$config[Spryker\Shared\Kernel\KernelConstants::DOMAIN_WHITELIST]` (for example `connect.stripe.com`) for the old ACP-based integration, you can remove it for a **base shop**: the direct `spryker-eco/stripe` storefront flow doesn't redirect the customer's browser to a Stripe-owned domain. For a **marketplace** project, keep `connect.stripe.com` whitelisted if you use Merchant Portal's Stripe Connect onboarding or Express Dashboard access — those flows do redirect the merchant's browser to `connect.stripe.com`. See [Network access for Stripe.js and the Stripe API](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html#network-access-for-stripejs-and-the-stripe-api) in the integration guide.
 
 ## 3. Add new Stripe configuration
 

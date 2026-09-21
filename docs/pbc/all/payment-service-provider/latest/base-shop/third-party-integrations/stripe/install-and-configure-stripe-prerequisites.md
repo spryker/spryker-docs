@@ -67,12 +67,6 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 ];
 ```
 
-{% info_block warningBox "Use the payment method, not the payment provider" %}
-
-The mapping key must be the **payment method** (`StripeConfig::PAYMENT_METHOD_NAME`), not the **payment provider** (`StripeConfig::PAYMENT_PROVIDER_NAME`). `Spryker\Zed\Sales\Business\StateMachineResolver\OrderStateMachineResolver` resolves the OMS process from `Payment.paymentSelection`, which is populated with the payment method.
-
-{% endinfo_block %}
-
 ## Step 4: Register Stripe OMS command and condition plugins
 
 In `src/Pyz/Zed/Oms/OmsDependencyProvider.php`, register the Stripe command and condition plugins.
@@ -348,7 +342,7 @@ vendor/bin/console setup:init-db
 
 {% info_block infoBox "acl-entity:synchronize is Merchant Portal-only" %}
 
-`acl-entity:synchronize` is provided by `spryker/acl-merchant-portal`, which is part of the Merchant Portal ACL feature. `spryker-eco/stripe` doesn't require this module. Run this command only if your project uses Merchant Portal roles and permissions (typically marketplace projects).
+`acl-entity:synchronize` is provided by `spryker/acl-merchant-portal`, which is part of the Merchant Portal ACL feature. Run this command only if your project uses Merchant Portal roles and permissions (typically marketplace projects).
 
 {% endinfo_block %}
 
@@ -417,16 +411,17 @@ Google Pay and Apple Pay require domain registration. In your Stripe Dashboard, 
 
 ## Network access for Stripe.js and the Stripe API
 
-The storefront loads Stripe.js directly from `https://js.stripe.com/v3/` to render Stripe Elements and confirm payments in the browser. If your project enforces a Content Security Policy or an outbound network allowlist for the storefront, allow:
+The storefront loads Stripe.js directly from `https://js.stripe.com/v3/` to render Stripe Elements and confirm payments in the browser.
+If your project enforces a Content Security Policy or an outbound network allowlist for the storefront, allow:
 
 - `https://js.stripe.com` (script and frame source for Stripe.js and Elements)
 - `https://api.stripe.com` (the domain Stripe.js itself calls from the browser to create and confirm payments)
 
-`$config[Spryker\Shared\Kernel\KernelConstants::DOMAIN_WHITELIST]` is used by `Spryker\Zed\Kernel\Communication\Controller\AbstractController::assertRedirectIsAllowed()` to validate URLs the application redirects the customer's or merchant's browser to via `redirectResponseExternal()`. For checkout, this doesn't apply: `SprykerEco\Yves\Stripe\Controller\PaymentController` only redirects to internal routes, and Stripe Elements/Stripe.js talks to Stripe directly from the browser without a full-page redirect, so no checkout-related entry is needed in the whitelist.
+`$config[Spryker\Shared\Kernel\KernelConstants::DOMAIN_WHITELIST]` is used to validate URLs the application redirects the customer's or merchant's browser to via `redirectResponseExternal()`.
+For checkout, this doesn't apply: `SprykerEco\Yves\Stripe\Controller\PaymentController` only redirects to internal routes,
+and Stripe Elements/Stripe.js talks to Stripe directly from the browser without a full-page redirect, so no checkout-related entry is needed in the whitelist.
 
-For **marketplace** projects, this is different: Merchant Portal's Stripe Connect onboarding (`SprykerEco\Zed\Stripe\Communication\Controller\OnboardingController`) and Express Dashboard access (`SprykerEco\Zed\Stripe\Communication\Controller\DashboardController`) do redirect the merchant's browser to a Stripe-owned domain (`connect.stripe.com`, returned by the Stripe Account Links and Login Links APIs). As of the current module version, both controllers build that redirect with a plain `Symfony\Component\HttpFoundation\RedirectResponse` instead of `redirectResponseExternal()`, so `DOMAIN_WHITELIST` isn't actually consulted for them either — but this is an internal implementation detail, not a documented guarantee. If your project uses Merchant Portal Stripe onboarding, keep `connect.stripe.com` whitelisted rather than relying on that bypass.
-
-This is different from the previous ACP-based integration, which relied on `connect.stripe.com` being whitelisted for its own redirect flow. If you're migrating from the ACP app, see [Migrate from the ACP Stripe app](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/migrate-from-acp-to-stripe.html) for what to remove.
+For **marketplace** projects it's different, Merchant Portal's Stripe Connect onboarding (`SprykerEco\Zed\Stripe\Communication\Controller\OnboardingController`) and Express Dashboard access (`SprykerEco\Zed\Stripe\Communication\Controller\DashboardController`) do redirect the merchant's browser to a Stripe-owned domain (`connect.stripe.com`, returned by the Stripe Account Links and Login Links APIs). As of the current module version, both controllers build that redirect with a plain `Symfony\Component\HttpFoundation\RedirectResponse` instead of `redirectResponseExternal()`, so `DOMAIN_WHITELIST` isn't actually consulted for them either — but this is an internal implementation detail, not a documented guarantee. If your project uses Merchant Portal Stripe onboarding, keep `connect.stripe.com` whitelisted rather than relying on that bypass.
 
 ## Migrating from the ACP Stripe app
 

@@ -1,7 +1,7 @@
 ---
 title: Integrate Stripe
 description: Learn how to install and configure the spryker-eco/stripe module in your Spryker project.
-last_updated: Jun 09, 2026
+last_updated: Sep 21, 2026
 template: howto-guide-template
 redirect_from:
 - docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/embed-the-stripe-payment-page-as-an-iframe
@@ -63,9 +63,15 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
     'StripeManual01', // Use StripeManualMarketplace01 for marketplace
 ];
 $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
-    StripeConfig::PAYMENT_PROVIDER_NAME => 'StripeManual01', // Use StripeManualMarketplace01 for marketplace
+    StripeConfig::PAYMENT_METHOD_NAME => 'StripeManual01', // Use StripeManualMarketplace01 for marketplace
 ];
 ```
+
+{% info_block warningBox "Use the payment method, not the payment provider" %}
+
+The mapping key must be the **payment method** (`StripeConfig::PAYMENT_METHOD_NAME`), not the **payment provider** (`StripeConfig::PAYMENT_PROVIDER_NAME`). `Spryker\Zed\Sales\Business\StateMachineResolver\OrderStateMachineResolver` resolves the OMS process from `Payment.paymentSelection`, which is populated with the payment method. Using `PAYMENT_PROVIDER_NAME` here causes checkout to fail with `MissingOrderItemProcessStatemachineMappingException: You need to provide at least one state machine process for given method!`.
+
+{% endinfo_block %}
 
 ## Step 4: Register Stripe OMS command and condition plugins
 
@@ -332,7 +338,21 @@ vendor/bin/console data:import glossary
 ```bash
 vendor/bin/console propel:install
 vendor/bin/console transfer:generate
+```
+
+Run the following commands only when you initially set up the database in an environment (for example, right after `docker/sdk boot deploy.dev.yml` on a fresh local setup). Don't run them as part of routine deployments to an already-initialized environment:
+
+```bash
 vendor/bin/console setup:init-db
+```
+
+{% info_block infoBox "acl-entity:synchronize is Merchant Portal-only" %}
+
+`acl-entity:synchronize` is provided by `spryker/acl-merchant-portal`, which is part of the Merchant Portal ACL feature. `spryker-eco/stripe` doesn't require this module. Run this command only if your project uses Merchant Portal roles and permissions (typically marketplace projects); otherwise the `acl-entity` namespace doesn't exist and the command fails with `NamespaceNotFoundException`.
+
+{% endinfo_block %}
+
+```bash
 vendor/bin/console acl-entity:synchronize
 ```
 
@@ -394,6 +414,15 @@ Google Pay and Apple Pay require domain registration. In your Stripe Dashboard, 
 5. (Marketplace only) Log in to Merchant Portal and verify Payment Settings.
 6. (Marketplace only) Complete merchant onboarding to Stripe Connect.
 7. (Marketplace only) Trigger a payout and verify the Stripe Connect transfer appears.
+
+## Network access for Stripe.js and the Stripe API
+
+The storefront loads Stripe.js directly from `https://js.stripe.com/v3/` to render Stripe Elements and confirm payments in the browser. If your project enforces a Content Security Policy or an outbound network allowlist for the storefront, allow:
+
+- `https://js.stripe.com` (script and frame source for Stripe.js and Elements)
+- `https://api.stripe.com` (the domain Stripe.js itself calls from the browser to create and confirm payments)
+
+The `spryker-eco/stripe` module communicates with the Stripe API directly from the Zed application (server-to-server), so no additional entry is required in `$config[Spryker\Shared\Kernel\KernelConstants::DOMAIN_WHITELIST]`: that whitelist is used by `RedirectUrlValidator` to validate URLs the application redirects the customer's browser to, and neither `SprykerEco\Yves\Stripe\Controller\PaymentController` nor any other controller in the module redirects to a Stripe-owned domain. This is different from the previous ACP-based integration, which relied on `connect.stripe.com` being whitelisted for its own redirect flow. If you're migrating from the ACP app, see [Migrate from the ACP Stripe app](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/migrate-from-acp-to-stripe.html) for what to remove.
 
 ## Migrating from the ACP Stripe app
 

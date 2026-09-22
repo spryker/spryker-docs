@@ -1417,6 +1417,13 @@ entries:
                     url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/upgrade-the-merchantgui-module.html
                   - title: Upgrade the Merchant module
                     url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/upgrade-the-merchant-module.html
+                  - title: Install the Merchants Backend API
+                    url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/install-glue-api/install-the-merchants-backend-api.html
+
+              - title: Manage using Backend API
+                nested:
+                  - title: "Backend API: Manage merchants"
+                    url: /docs/pbc/all/merchant-management/base-shop/manage-using-backend-api/backend-api-manage-merchants.html
 
               - title: Manage in the Back Office
                 url: /docs/pbc/all/merchant-management/base-shop/manage-in-the-back-office/manage-merchants-in-the-back-office.html

@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Retrieve MFA methods"
 description: This article explains how to retrieve available MFA methods for a user
-last_updated: Jun 16, 2025
+last_updated: Sep 22, 2026
 template: glue-api-storefront-guide-template
 ---
 
@@ -23,7 +23,7 @@ To retrieve MFA methods and the user's status for each of them, send the request
 
 
 ---
-`GET` **/stores**
+`GET` **/multi-factor-auth-types**
 
 ---
 
@@ -48,18 +48,20 @@ Authorization: Bearer <access_token>
       "type": "multi-factor-auth-types",
       "attributes": {
         "type": "email",
-        "status": 0
+        "status": "deactivated"
       }
     }
   ]
 }
 ```
 
-| Status | Name                      | DESCRIPTION |
-|--------|---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 0      | Disabled                  | MFA method is available but disabled for the user. Protected actions don't require MFA. |
-| 1      | Activation is in progress | User initiated the MFA setup but didn't complete the verification. Protected actions don't require MFA. |
-| 2      | Enabled                   | MFA method is enabled for the user. All protected actions require MFA. |
+| STATUS | DESCRIPTION |
+| --- | --- |
+| deactivated | MFA method is available but not activated for the user. Protected actions don't require MFA. |
+| activation is pending | User initiated the MFA setup but didn't complete the verification. Protected actions don't require MFA. |
+| activated | MFA method is activated for the user. All protected actions require MFA. |
+
+Back Office users and merchant users retrieve their MFA methods through the Backend API—see [Backend API: Manage Multi-Factor Authentication](/docs/pbc/all/multi-factor-authentication/latest/manage-using-glue-api/backend-api-manage-multi-factor-authentication.html).
 
 
 

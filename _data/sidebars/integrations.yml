@@ -104,6 +104,8 @@ entries:
     - title: Backend API
       url: /docs/integrations/spryker-api/backend-api/backend-api.html
       nested:
+      - title: Backend API conventions
+        url: /docs/integrations/spryker-api/backend-api/backend-api-conventions.html
       - title: API references
         nested:
         - title: Backend B2B API reference

@@ -1,7 +1,7 @@
 ---
 title: Workflows, Skills, and Agents
 description: Reference of the workflows, skills, and agents shipped with the AI Dev SDK
-last_updated: Aug 24, 2026
+last_updated: Sep 4, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, windsurf, copilot, workflows, wizards, skills, agents, subagents, spryker
 template: concept-topic-template
@@ -11,16 +11,19 @@ redirect_from:
 
 ## Overview
 
-The AI Dev SDK ships five ready-made workflows, more than 30 skills, and six agents that codify common Spryker practice — from turning a demoshop clone into a customer project, to building features, fixing bugs, and upgrading releases. Instead of teaching your AI assistant Spryker's conventions prompt by prompt, you install workflows that already know them.
+The AI Dev SDK ships five ready-made workflows, more than 30 skills, and six agents that codify common Spryker practice — from turning a demoshop clone into a customer project,
+to building features, fixing bugs, and upgrading releases.
+Instead of teaching your AI assistant Spryker's conventions prompt by prompt, you install workflows that already know them.
 
 The skills and agents reach your project in two ways:
 
-- **Via the `ai-dev:setup` console command** — copies the skills and agents into your project's AI-tool directories (`.claude/skills/` + `.claude/agents/`, `.windsurf/skills/` + `.windsurf/agents/`, and so on) for every AI tool listed under [Generated files per AI tool](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html#generated-files-per-ai-tool). Codex CLI has no agents directory, so agents are skipped for that tool.
+- **Via the `ai-dev:setup` console command** — copies the skills and agents into your project's AI-tool directories (`.claude/skills/` + `.claude/agents/`, `.windsurf/skills/` + `.windsurf/agents/`, and so on) 
+- for every AI tool listed under [Generated files per AI tool](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html#generated-files-per-ai-tool). Codex CLI has no agents directory, so agents are skipped for that tool.
 - **Via the Claude Code plugin** — for Claude Code users, the [Claude Code plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html) installs the same skills and agents through the official marketplace, no console command required.
 
 Both delivery paths read from the same source files — the plugin just packages them for marketplace installation.
 
-**What's the difference between a skill and an agent?**
+**What is the difference between a skill and an agent?**
 
 - **Skills** load into the active chat on demand. Use them when you want the assistant to follow a specific workflow (write a product requirement document, refresh caches, run QA).
 - **Agents** are isolated sub-conversations the assistant delegates to. Use them when you want focused, single-purpose work done in its own context window (verify a behavior, diagnose a failure).
@@ -138,15 +141,3 @@ Each agent does one narrowly defined job in its own context and reports back —
 | `spryker-issue-diagnoser` | Investigate why something failed and return a root cause | Reads logs, DB state, queue, search, browser console — returns a suggested direction; never attempts the fix itself |
 | `spryker-data-seeder` | Create small additive test data through Spryker's existing import path | Safe and incremental — CSV + `data:import` only; never edits code, never writes directly to the database |
 | `spryker-screenshot-collector` | Capture screenshots and GIFs of pages and flows for demos and documentation | Pure capture — never asserts whether something works, never investigates failures, never edits |
-
-## Related
-
-- [AI Dev SDK](/docs/dg/dev/ai/ai-dev/ai-dev.html)
-- [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html)
-- [AI Dev MCP Server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html)
-- [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html)
-- [Project Starter Wizard](/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html)
-- [Customization Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html)
-- [Bugfix Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html)
-- [Upgrade Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html)
-- [Profiler Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-profiler-workflow.html)

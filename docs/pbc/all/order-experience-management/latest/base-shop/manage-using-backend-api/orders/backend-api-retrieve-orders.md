@@ -40,23 +40,28 @@ To retrieve a paginated collection of orders, send the request:
 | page[limit] | Number of orders per page. Default: `25`, maximum: `100`. A higher value is reduced to the maximum. | `page[limit]=50` |
 | page[offset] | Number of orders to skip. Default: `0`. | `page[offset]=50` |
 | sort | Sorts the collection by a field. Prefix the field with `-` for descending order. The only supported field is `createdAt`; an unrecognized field is ignored rather than causing an error. | `sort=createdAt`<br>`sort=-createdAt` |
-| orderReference | Returns the orders with the specified reference. Comma-separate to look up several orders in one call. | `orderReference=DE--1234`<br>`orderReference=DE--1234,DE--1235` |
-| customerReference | Returns every order belonging to the specified customer. Comma-separate for several customers. | `customerReference=DE--6` |
-| storeName | Returns only orders placed in the specified store. | `storeName=DE` |
-| itemState | Returns orders with at least one item in the specified OMS state. Comma-separate to match any of several states. Items advance independently, so an order reports the set of states in `itemStates` rather than one state of its own. An unknown state name matches nothing. | `itemState=shipped`<br>`itemState=shipped,delivered` |
-| createdAtFrom | Returns orders created at or after this timestamp (inclusive). | `createdAtFrom=2026-01-01 00:00:00` |
-| createdAtTo | Returns orders created at or before this timestamp (inclusive). | `createdAtTo=2026-12-31 23:59:59` |
+| filter[orders.orderReference] | Returns the orders with the specified reference. Comma-separate to look up several orders in one call. | `filter[orders.orderReference]=DE--1234`<br>`filter[orders.orderReference]=DE--1234,DE--1235` |
+| filter[orders.customerReference] | Returns every order belonging to the specified customer. Comma-separate for several customers. | `filter[orders.customerReference]=DE--6` |
+| filter[orders.storeName] | Returns only orders placed in the specified store. | `filter[orders.storeName]=DE` |
+| filter[orders.itemState] | Returns orders with at least one item in the specified OMS state. Comma-separate to match any of several states. Items advance independently, so an order reports the set of states in `itemStates` rather than one state of its own. An unknown state name matches nothing. | `filter[orders.itemState]=shipped`<br>`filter[orders.itemState]=shipped,delivered` |
+| filter[orders.createdAtFrom] | Returns orders created at or after this timestamp (inclusive). | `filter[orders.createdAtFrom]=2026-01-01 00:00:00` |
+| filter[orders.createdAtTo] | Returns orders created at or before this timestamp (inclusive). | `filter[orders.createdAtTo]=2026-12-31 23:59:59` |
 
 All filters are optional and AND-combined.
+
+Filtering follows the JSON:API `filter[orders.<property>]` form. A key inside `filter[]` that doesn't
+follow that form, or that names a property other than the ones listed above, is rejected with a `400`.
+A bare query parameter outside `filter[]`—for example, `?orderReference=DE--1234`—is not a filter at
+all: it's ignored, and the request returns the unfiltered collection.
 
 | REQUEST | USAGE |
 | --- | --- |
 | `GET https://glue-backend.mysprykershop.com/orders` | Retrieve the first page of the order collection. |
 | `GET https://glue-backend.mysprykershop.com/orders?page[limit]=10&page[offset]=10` | Retrieve the second page of the collection with 10 orders per page. |
 | `GET https://glue-backend.mysprykershop.com/orders?sort=-createdAt` | Retrieve orders sorted by creation date, newest first. |
-| `GET https://glue-backend.mysprykershop.com/orders?customerReference=DE--6` | Retrieve every order belonging to customer `DE--6`. |
-| `GET https://glue-backend.mysprykershop.com/orders?itemState=shipped,delivered` | Retrieve orders that have at least one item in the `shipped` or `delivered` state. |
-| `GET https://glue-backend.mysprykershop.com/orders?createdAtFrom=2026-01-01 00:00:00&createdAtTo=2026-01-31 23:59:59` | Retrieve orders placed in January 2026. |
+| `GET https://glue-backend.mysprykershop.com/orders?filter[orders.customerReference]=DE--6` | Retrieve every order belonging to customer `DE--6`. |
+| `GET https://glue-backend.mysprykershop.com/orders?filter[orders.itemState]=shipped,delivered` | Retrieve orders that have at least one item in the `shipped` or `delivered` state. |
+| `GET https://glue-backend.mysprykershop.com/orders?filter[orders.createdAtFrom]=2026-01-01 00:00:00&filter[orders.createdAtTo]=2026-01-31 23:59:59` | Retrieve orders placed in January 2026. |
 
 ### Response
 

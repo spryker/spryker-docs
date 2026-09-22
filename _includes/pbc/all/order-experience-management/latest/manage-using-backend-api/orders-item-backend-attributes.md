@@ -14,7 +14,7 @@
 | items.unitPrice | Integer | Unit price actually charged, in cents. |
 | items.merchantReference | String | Merchant fulfilling the line, for a marketplace line. |
 | items.productOfferReference | String | The specific offer the line was bought from, if the merchant holds several offers for the SKU. |
-| items.note | String | Free-text note carried on the line. |
+| items.cartNote | String | Free-text note carried on the line. |
 | items.packagingAmount | Object | For a product sold as a package, how much of the contained product the line's packages hold. Absent for a product that is not sold as a package. |
 | items.packagingAmount.amount | Number | Amount per package, not for the whole line—3 boxes of 250 is `quantity: 3` with `amount: 250`. |
 | items.packagingAmount.salesUnitCode | String | Measurement unit the amount is expressed in—a unit of the contained product, not of the package itself. |

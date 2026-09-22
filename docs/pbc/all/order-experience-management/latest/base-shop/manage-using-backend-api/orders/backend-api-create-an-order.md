@@ -104,7 +104,7 @@ Request sample: create an order for an existing customer
 | items.unitCustomPrice | Integer | | Unit price in cents to charge instead of the resolved catalog price—a deliberate admin capability, and the required override when the catalog has no price for the line at all (see [Price resolution](#price-resolution) below). Omitted lines are priced from the catalog. |
 | items.merchantReference | String | | Merchant fulfilling the line, for a marketplace line. Supply with `sku`; omit for an operator-sold line. |
 | items.productOfferReference | String | | The specific offer to buy, when a merchant holds several offers for the SKU. |
-| items.note | String | | Free-text note carried on the line. |
+| items.cartNote | String | | Free-text note carried on the line. |
 | items.packagingAmount | Object | | For a product sold as a package, how much of the contained product the package holds. Omit it to order the package's configured default amount, and omit the whole object for a product that isn't sold as a package. |
 | items.packagingAmount.amount | Number | | Amount per package, not for the whole line—3 boxes of 250 is `quantity: 3` with `packagingAmount.amount: 250`. Must respect the package's configured minimum, maximum, and step, and can differ from the default only when the package allows a variable amount. |
 | items.packagingAmount.salesUnitCode | String | | Measurement unit the amount is expressed in—a unit of the contained product, not of the package itself. Defaults to the contained product's default unit when omitted. |
@@ -115,7 +115,7 @@ Request sample: create an order for an existing customer
 | companyBusinessUnitUuid | String | | Business unit to place the order for. Selects which merchant-relationship contract prices apply, and is recorded on the order. Must be one the order's customer belongs to through an active company user. Resolved automatically when the customer belongs to exactly one business unit, and required when they belong to several. |
 | priceMode | String | | Whether submitted unit prices are gross or net: `GROSS_MODE` or `NET_MODE`. Default: `GROSS_MODE`. |
 | locale | String | | Locale to place the order in—for example, `de_DE`. Also selects the language of the order-confirmation email. Falls back to whatever checkout resolves by default when omitted. Must be a locale known to the platform. |
-| cardCodes | Array | | Codes to apply to the order at placement—gift cards, vouchers, or any other code a registered cart-code plugin resolves. See `payments` in the response for how much a redeemed gift card actually covered. |
+| cartCodes | Array | | Codes to apply to the order at placement—gift cards, vouchers, or any other code a registered cart-code plugin resolves. Every code must actually apply: one that is unknown, inactive, or not applicable to this order rejects the whole request with a `422` rather than being dropped from it. See `payments` in the response for how much a redeemed gift card actually covered. |
 
 {% info_block infoBox "On-behalf-of ordering" %}
 
@@ -248,10 +248,10 @@ The request is validated as a whole: if any check fails, nothing is created and 
 | 422 | N/A | A line item's `salesUnit.code` isn't a unit the product is sold in, or `salesUnit.amount` doesn't derive to a whole number of base units. |
 | 422 | N/A | A line item's `packagingAmount.amount` violates the package's configured minimum, maximum, or step. |
 | 422 | N/A | A referenced address `uuid` doesn't belong to the order's customer. |
-
+| 422 | N/A | A `cartCodes` entry didn't apply—the code is unknown, inactive, or not applicable to this order. The order isn't placed; resend without the code, or with one that applies. |
 | 401 | N/A | The `Authorization` header is missing, or the access token is invalid or expired. |
 | 403 | N/A | The authenticated Back Office user is not allowed to access the `orders` resource. |
 
-Checkout errors are translated into the caller's `Accept-Language` where a glossary translation exists.
+Checkout errors are translated into the caller's `Accept-Language` where a glossary translation exists. Use the standard hyphenated form—`Accept-Language: de-DE` or `Accept-Language: de`. An underscored value such as `de_DE` isn't valid in this header and silently falls back to the default locale.
 
 To view generic errors and status codes of the Backend API, see [Backend API request and response reference](/docs/integrations/spryker-api/backend-api/developing-apis/backend-api-request-and-response-reference.html#http-status-codes).

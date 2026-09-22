@@ -12,6 +12,8 @@ related:
     link: docs/integrations/spryker-api/api-platform/resource-schemas.html
   - title: Native API Platform resources
     link: docs/integrations/spryker-api/api-platform/native-api-platform-resources.html
+  - title: Symfony Security documentation
+    link: https://symfony.com/doc/current/security.html
 redirect_from:
   - /docs/dg/dev/architecture/api-platform/security.html
 ---
@@ -338,9 +340,3 @@ Error responses keep the Glue-compatible JSON:API format. The exact response dep
 - **GET requests on resources with `securityGetStatusCode`**: instead of `403`, the response is rewritten to the configured status—typically `404` with the provider's not-found error—so the API does not reveal whether a resource exists for someone else's account.
 
 - **Resources that do not require Bearer tokens** (`securityBearerAuthRequired` not set, for example agent endpoints): an unauthenticated denial returns `401` with the resource's configured error code.
-
-## Next steps
-
-- [Integrate API Platform security](/docs/integrations/spryker-api/authenticating-and-authorization/integrate-api-platform-security.html) - Setup guide
-- [Resource schemas](/docs/integrations/spryker-api/api-platform/resource-schemas.html) - Security expression syntax in schemas
-- [Symfony Security documentation](https://symfony.com/doc/current/security.html) - Full Symfony Security reference

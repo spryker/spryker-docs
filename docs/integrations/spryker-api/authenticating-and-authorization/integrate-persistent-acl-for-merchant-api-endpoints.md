@@ -12,6 +12,8 @@ related:
     link: docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-merchant-user.html
   - title: Persistence ACL feature overview
     link: docs/pbc/all/user-management/latest/marketplace/persistence-acl-feature-overview/persistence-acl-feature-overview.html
+  - title: Persistence ACL configuration
+    link: docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-portal-core-feature-overview/persistence-acl-configuration.html
 ---
 
 This document describes how to enable [Persistent ACL](/docs/pbc/all/user-management/latest/marketplace/persistence-acl-feature-overview/persistence-acl-feature-overview.html) for the Backend API so that merchant users see and change only the data of their merchant, the same way they do in the Merchant Portal.
@@ -134,8 +136,3 @@ docker/sdk cli console cache:empty-all
 3. Send `POST /token` without an `Authorization` header. Make sure a token is issued.
 
 {% endinfo_block %}
-
-## Next steps
-
-- [API Platform security](/docs/integrations/spryker-api/authenticating-and-authorization/security.html): roles, security expressions, and how the acting user is resolved.
-- [Persistence ACL configuration](/docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-portal-core-feature-overview/persistence-acl-configuration.html): extend the rules that decide which entities a merchant user can access.

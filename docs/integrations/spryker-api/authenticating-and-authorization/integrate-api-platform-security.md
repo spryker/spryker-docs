@@ -14,6 +14,8 @@ related:
     link: docs/integrations/spryker-api/api-platform/resource-schemas.html
   - title: Integrate Persistent ACL for merchant API endpoints
     link: docs/integrations/spryker-api/authenticating-and-authorization/integrate-persistent-acl-for-merchant-api-endpoints.html
+  - title: API Platform configuration
+    link: docs/integrations/spryker-api/api-platform/configuration.html
 redirect_from:
   - /docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html
 ---
@@ -222,10 +224,3 @@ your bundles.php to enable security expression evaluation.
 ```
 
 This validation is performed by the `SecurityServiceRegistrationPass` compiler pass.
-
-## Next steps
-
-- [Security](/docs/integrations/spryker-api/authenticating-and-authorization/security.html) - Understanding authentication and authorization
-- [Resource schemas](/docs/integrations/spryker-api/api-platform/resource-schemas.html) - Security expression syntax
-- [API Platform configuration](/docs/integrations/spryker-api/api-platform/configuration.html) - Configuration options
-- [Integrate Persistent ACL for merchant API endpoints](/docs/integrations/spryker-api/authenticating-and-authorization/integrate-persistent-acl-for-merchant-api-endpoints.html) - Scope the Backend API requests of merchant users to their merchant

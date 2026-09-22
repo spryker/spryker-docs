@@ -1,7 +1,7 @@
 ---
 title: Integrate the authentication
 description: Create an authentication token for the Backend API application in a Spryker project.
-last_updated: Sep 16, 2026
+last_updated: Sep 22, 2026
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-authentication-integration.html
@@ -19,6 +19,7 @@ Install the required features:
 
 | NAME           | VERSION           | INSTALLATION GUIDE |
 | -------------- | ----------------- | ----------------- |
+| Marketplace Merchant | {{page.release_tag}} | [Integrate Marketplace Merchant](docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 | Backend API Application | {{page.release_tag}} | [Integrate Backend API](/docs/integrations/spryker-api/backend-api/integrate-backend-api/integrate-backend-api.html) |
 
 ## 1) Install the required modules

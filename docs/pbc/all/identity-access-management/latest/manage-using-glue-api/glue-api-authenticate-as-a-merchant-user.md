@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Authenticate as a merchant user"
 description: Learn how to authenticate as a merchant user using the Spryker Backend API and which roles the issued token carries.
-last_updated: Sep 16, 2026
+last_updated: Sep 22, 2026
 template: glue-api-storefront-guide-template
 related:
   - title: Authenticate as a Back Office user
@@ -157,12 +157,31 @@ On every request with a valid token, the Backend API resolves the user behind th
 
 ## Possible errors
 
+Failed requests return a JSON:API error document. The `code` of an authentication failure is the error type reported by the OAuth server that issues the tokens; the same OAuth server serves the Back Office, the Merchant Portal, and the legacy form-encoded `POST /token` request.
+
+<details><summary>Response sample: wrong credentials</summary>
+
+```json
+{
+    "errors": [
+        {
+            "code": "invalid_grant",
+            "status": 401,
+            "detail": "The user credentials were incorrect.",
+            "message": "The user credentials were incorrect."
+        }
+    ]
+}
+```
+
+</details>
+
 | STATUS | CODE | REASON |
 | --- | --- | --- |
-| 401 | invalid_grant | The provided user credentials are incorrect or invalid. |
-| 401 | 001 | The user could not be authenticated. |
-| 401 | 003 | The access token does not belong to an active user (on protected resources). |
-| 401 | invalid_request | The refresh token sent to `/refresh-tokens` is unknown, expired, or revoked. |
-| 422 | N/A | The request body is not a valid document for the resource, for example, `username` or `password` is missing on `/token`, or `refreshToken` is missing on `/refresh-tokens`. |
+| 401 | invalid_grant | `POST /token`: the username or password is incorrect, or the user is not active. |
+| 401 | invalid_request | `POST /refresh-tokens`: the refresh token is unknown, cannot be decrypted, has expired, has been revoked, or belongs to another client. A refresh token is revoked when it has already been exchanged. |
+| 401 | 001 | The OAuth server rejected the request without reporting an error type. This does not happen with the default OAuth server; a custom `AuthenticationServerPluginInterface` implementation that returns an invalid response without an `OauthResponse.error` gets this code. |
+| 401 | 003 | On protected resources: the access token does not belong to an active user. |
+| 422 | 901 | The request body is not a valid document for the resource, for example, `username` or `password` is missing on `/token`, or `refreshToken` is missing on `/refresh-tokens`. |
 
 To view generic errors and status codes of the Backend API, see [Backend API request and response reference](/docs/integrations/spryker-api/backend-api/developing-apis/backend-api-request-and-response-reference.html).

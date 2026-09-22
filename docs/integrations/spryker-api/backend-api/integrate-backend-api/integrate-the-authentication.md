@@ -19,7 +19,7 @@ Install the required features:
 
 | NAME           | VERSION           | INSTALLATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| Marketplace Merchant | {{page.release_tag}} | [Integrate Marketplace Merchant](docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
+| Marketplace Merchant (for merchant user authentication only, see step 4) | {{page.release_tag}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 | Backend API Application | {{page.release_tag}} | [Integrate Backend API](/docs/integrations/spryker-api/backend-api/integrate-backend-api/integrate-backend-api.html) |
 
 ## 1) Install the required modules

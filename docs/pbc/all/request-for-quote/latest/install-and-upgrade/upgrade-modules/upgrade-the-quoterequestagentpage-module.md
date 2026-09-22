@@ -1,7 +1,7 @@
 ---
 title: Upgrade the QuoteRequestAgentPage module
 description: Learn how to upgrade to a newer version of the Quote Request Agent page module in your Spryker based projects.
-last_updated: Jun 16, 2021
+last_updated: Aug 6, 2026
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-quoterequestagentpage
 originalArticleId: 479461ef-8500-4c8d-98f6-0a9288f9548f
@@ -27,4 +27,34 @@ redirect_from:
   - /docs/pbc/all/request-for-quote/202204.0/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagentpage-module.html
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-quoterequestagentpage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-quoterequestagentpage-module.md -->
+## Upgrading from version 1.x.x to version 2.x.x
+
+The only major change of the `QuoteRequestAgentPage` 2.x.x is the dependency update for `spryker/quote-request-agent:^2.0.0` and `spryker/quote-request:^2.0.0`
+
+Also, transfer property `QuoteRequestTranser::isLatestVersionHidden` was replaced by `QuoteRequestTransfer:isLatestVersionVisible`.
+
+*Estimated migration time: ~1h*
+
+To migrate do the following:
+
+1. Update `spryker/quote-request-agent` to version ^2.0.0 by following the steps from [Upgrade the QuoteRequest module](/docs/pbc/all/request-for-quote/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-quoterequest-module.html).
+2. Update `spryker/quote-request` to version ^2.0.0 by following the steps from [Upgrade the QuoteRequestAgent module](/docs/pbc/all/request-for-quote/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-quoterequest-module.html).
+3. Update `spryker-shop/quote-request-agent-page:^2.0.0`
+
+```bash
+composer require spryker-shop/quote-request-agent-page: "^2.0.0" --update-with-dependencies
+```
+
+4. If you modified anything in the following files on the project level, ensure that the new module version changes do not conflict with yours:
+
+```php
+src/SprykerShop/Yves/QuoteRequestAgentPage/Form/QuoteRequestAgentForm.php
+src/SprykerShop/Yves/QuoteRequestAgentPage/Theme/default/views/quote-request-details/quote-request-details.twig   
+src/SprykerShop/Yves/QuoteRequestAgentPage/Theme/default/views/quote-request-edit/quote-request-edit.twig
+```
+
+5. Generate transfers:
+
+```bash
+vendor/bin/console transfer:generate
+```

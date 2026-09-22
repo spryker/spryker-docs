@@ -1,7 +1,7 @@
 ---
 title: Upgrade the PersistentCart module
 description: Use the guide to migrate and upgrade to a newer version of the Spryker PersistentCart module.
-last_updated: Jun 16, 2021
+last_updated: Aug 6, 2026
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-persistent-cart
 originalArticleId: 60def6a2-692d-4f3c-86a6-61b3a07b88fc
@@ -34,4 +34,10 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-persistentcart-module.html
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-persistentcart-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-persistentcart-module.md -->
+## Upgrading from version 1.* to version 3.0.0
+
+{% info_block infoBox %}
+
+In order to dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. [Contact us](https://spryker.com/en/support/) if you have any questions.
+
+{% endinfo_block %}

@@ -101,7 +101,6 @@ On the `merchant-profile` resource, a merchant user is held to the rules of the 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | StoreLocaleMerchantProfileValidatorPlugin | Rejects a `merchantUrls` or `localizedAttributes` entry whose locale doesn't belong to a store of the merchant. | | Spryker\Glue\MerchantProfile\Plugin\MerchantProfile |
-| MerchantUrlPrefixMerchantProfileValidatorPlugin | Rejects a merchant URL that doesn't start with the language code of its locale followed by `/merchant/`. | | Spryker\Glue\MerchantProfile\Plugin\MerchantProfile |
 | HtmlTagWhitelistMerchantProfileValidatorPlugin | Rejects a localized text containing an HTML tag other than `h1` to `h6`, `br`, and `p`. | | Spryker\Glue\MerchantProfile\Plugin\MerchantProfile |
 
 **src/Pyz/Glue/MerchantProfile/MerchantProfileDependencyProvider.php**
@@ -113,7 +112,6 @@ namespace Pyz\Glue\MerchantProfile;
 
 use Spryker\Glue\MerchantProfile\MerchantProfileDependencyProvider as SprykerMerchantProfileDependencyProvider;
 use Spryker\Glue\MerchantProfile\Plugin\MerchantProfile\HtmlTagWhitelistMerchantProfileValidatorPlugin;
-use Spryker\Glue\MerchantProfile\Plugin\MerchantProfile\MerchantUrlPrefixMerchantProfileValidatorPlugin;
 use Spryker\Glue\MerchantProfile\Plugin\MerchantProfile\StoreLocaleMerchantProfileValidatorPlugin;
 
 class MerchantProfileDependencyProvider extends SprykerMerchantProfileDependencyProvider
@@ -125,14 +123,13 @@ class MerchantProfileDependencyProvider extends SprykerMerchantProfileDependency
     {
         return [
             new StoreLocaleMerchantProfileValidatorPlugin(),
-            new MerchantUrlPrefixMerchantProfileValidatorPlugin(),
             new HtmlTagWhitelistMerchantProfileValidatorPlugin(),
         ];
     }
 }
 ```
 
-The plugins apply to the `merchant-profile` resource only; the `merchant-profiles` resource of the Back Office user carries none of these rules, as the Back Office merchant form doesn't. To add a project-specific rule, implement `Spryker\Glue\MerchantExtension\Dependency\Plugin\MerchantProfileValidatorPluginInterface` and register the plugin in the same method. The allowed HTML tags and the URL prefix segment are configured in `Spryker\Glue\MerchantProfile\MerchantProfileConfig`.
+The plugins apply to the `merchant-profile` resource only; the `merchant-profiles` resource of the Back Office user carries none of these rules, as the Back Office merchant form doesn't. To add a project-specific rule, implement `Spryker\Glue\MerchantExtension\Dependency\Plugin\MerchantProfileValidatorPluginInterface` and register the plugin in the same method. The allowed HTML tags and the URL prefix segment that is prepended to submitted merchant URLs (`merchant` in `/de/merchant/spryker`) are configured in `Spryker\Glue\MerchantProfile\MerchantProfileConfig`.
 
 ### 4) Generate the API resources
 
@@ -160,7 +157,7 @@ Make sure the response contains the merchant profile. Then [authenticate as a me
 
 - `GET https://glue-backend.mysprykershop.com/merchant-profile` returns the profile of the merchant the user is assigned to.
 - `GET https://glue-backend.mysprykershop.com/merchant-profiles/MER000001` returns a `403` response.
-- `PATCH https://glue-backend.mysprykershop.com/merchant-profile` with a `merchantUrls` entry whose `url` doesn't start with `/{language code}/merchant/` returns a `422` response.
+- `PATCH https://glue-backend.mysprykershop.com/merchant-profile` with a `localizedAttributes` entry whose `localeName` doesn't belong to a store of the merchant returns a `422` response.
 
 For the request details, see [Retrieve merchant profiles](/docs/pbc/all/merchant-management/latest/marketplace/manage-using-backend-api/backend-api-retrieve-merchant-profiles.html) and [Update merchant profiles](/docs/pbc/all/merchant-management/latest/marketplace/manage-using-backend-api/backend-api-update-merchant-profiles.html).
 

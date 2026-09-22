@@ -14,8 +14,8 @@ related:
 
 A merchant user updates the profile of the merchant they are assigned to through the `merchant-profile` resource, and a Back Office user updates the profile of any merchant by its merchant reference through the `merchant-profiles` resource. Each resource lets its audience change what it can change in its own UI:
 
-- A merchant user can update the same data as on the Merchant Portal profile page: the merchant details (`name`, `email`, `registrationNumber`, `isActive`, `isOpenForRelationRequest`), the Storefront URLs, the contact person, the public contact data, the address, and the localized texts.
-- A Back Office user can update the profile data only. The merchant details and the Storefront URLs are managed through the `merchants` resource; if they are sent, they are ignored.
+- A merchant user can update the same data as on the Merchant Portal profile page: the merchant details (`name`, `email`, `registrationNumber`, `isOpenForRelationRequest`), the store status (`isActive`), the Storefront URLs, the contact person, the public contact data, the address, and the localized texts.
+- A Back Office user can update the profile data only. The merchant details, the store status, and the Storefront URLs are managed through the `merchants` resource; if they are sent, they are ignored.
 
 ## Installation
 
@@ -42,13 +42,13 @@ The merchant of the authenticated user must be approved. A merchant user of a me
 The update is partial: attributes you omit keep their stored values. An attribute set to `null` clears the stored value; `null` is rejected with a `422` error for the required attributes listed in the table below. Attributes that hold an object or a list behave as follows:
 
 - `address`: the fields are merged. A field you omit keeps its stored value; `null` clears it. The address can't be removed.
-- `merchantUrls`: entries are merged by `localeName`. A URL can be replaced but not removed.
+- `merchantUrls`: entries are merged by `localeName`. A URL can be replaced but not removed. Send the part of the URL after the locale prefix—for example, `spryker`. The prefix `/{language code}/merchant/` is prepended automatically, as on the Merchant Portal profile page; a URL that already starts with it is stored as is. The response always contains the full URL.
 - `localizedAttributes`: entries are merged by `localeName`, and within an entry by text. A text you omit keeps its stored value; `null` removes the text. Locales you omit stay untouched.
 
 The following rules apply to a merchant user, as on the Merchant Portal profile page:
 
 - `merchantUrls` and `localizedAttributes` accept only the locales of the stores the merchant is assigned to. The stores are listed in the `stores` attribute of the profile.
-- A URL must start with the language code of its locale followed by `/merchant/`—for example, `/de/merchant/spryker`. It must be unique across the shop and must not contain whitespace or backslashes.
+- A URL must be unique across the shop and must not contain whitespace or backslashes.
 - The texts in `localizedAttributes` may contain only the HTML tags `h1` to `h6`, `br`, and `p`.
 
 Request sample: update the contact person and the German texts of your merchant
@@ -89,11 +89,11 @@ Request sample: rename your merchant, set its Storefront URLs, and clear the fax
             "merchantUrls": [
                 {
                     "localeName": "de_DE",
-                    "url": "/de/merchant/spryker-systems"
+                    "url": "spryker-systems"
                 },
                 {
                     "localeName": "en_US",
-                    "url": "/en/merchant/spryker-systems"
+                    "url": "spryker-systems"
                 }
             ],
             "address": {
@@ -110,9 +110,9 @@ Request sample: rename your merchant, set its Storefront URLs, and clear the fax
 | name | String | &check; | Name of the merchant. Can't be `null`. |
 | email | String | &check; | Contact email of the merchant. Must be unique across merchants. Can't be `null`. |
 | registrationNumber | String | | Official business registration number. |
-| isActive | Boolean | &check; | Defines whether the merchant is active. Deactivating the merchant blocks the login of its merchant users. Can't be `null`. |
+| isActive | Boolean | &check; | Defines whether the merchant's store is online, as the "Store Status" switch of the Merchant Portal. `false` removes the merchant from the Storefront and makes its offers unavailable; merchant users keep their access. Can't be `null`. |
 | isOpenForRelationRequest | Boolean | | Defines whether the merchant accepts merchant relation requests. |
-| merchantUrls | Array | | URLs of the merchant page, merged by `localeName`. Each entry has `localeName` and `url`; `url` can't be `null`. |
+| merchantUrls | Array | | URLs of the merchant page, merged by `localeName`. Each entry has `localeName` and `url`; `url` can't be `null`. Send the part after the `/{language code}/merchant/` prefix; the prefix is prepended automatically. |
 | contactPersonTitle | String | | Title of the contact person: `Mr`, `Mrs`, `Dr`, or `Ms`. |
 | contactPersonFirstName | String | &check; | First name of the contact person. Must not contain `:`, `/`, `<`, or `>`. Can't be `null`. |
 | contactPersonLastName | String | &check; | Last name of the contact person. Must not contain `:`, `/`, `<`, or `>`. Can't be `null`. |
@@ -214,7 +214,6 @@ The request is validated as a whole: if any check fails, nothing is updated and 
 | 422 | 901 | An attribute has a wrong type, or a required attribute is set to `null`. |
 | 422 | N/A | A `merchantUrls` or `localizedAttributes` entry names a locale that is not configured. |
 | 422 | N/A | A `merchantUrls` or `localizedAttributes` entry names a locale that doesn't belong to a store of the merchant. Applies to `/merchant-profile` only. |
-| 422 | N/A | A URL doesn't start with the language code of its locale followed by `/merchant/`. Applies to `/merchant-profile` only. |
 | 422 | N/A | A URL is already used by another merchant or another page. |
 | 422 | N/A | A text contains an HTML tag other than `h1` to `h6`, `br`, or `p`. Applies to `/merchant-profile` only. |
 | 422 | N/A | `address.countryIso2Code` is not a configured country. |

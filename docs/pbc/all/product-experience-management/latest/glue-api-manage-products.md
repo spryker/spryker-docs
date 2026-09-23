@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Manage products"
 description: Retrieve, create, and update products through the Products Backend API, including the full attribute reference and update behavior.
-last_updated: Sep 7, 2026
+last_updated: Sep 10, 2026
 template: glue-api-storefront-guide-template
 ---
 
@@ -131,23 +131,49 @@ To retrieve a collection of concrete products, send the request:
 | `filter[products.sku]` | Returns the concrete product with this SKU. |
 | `filter[products.skus][]` | Returns the concrete products with these SKUs. Repeat the parameter once per SKU. |
 | `filter[products.abstractSku]` | Returns all variants of this parent abstract product. |
-| `page` | Number of the page to return. The default is `1`. |
-| `perPage` | Number of products per page. The default is `10`. |
+| `page[limit]` | Number of products per page. The default is `10`. |
+| `page[offset]` | Number of products to skip. The default is `0`. |
 
 Filter keys must include the `products.` resource prefix. A key without the prefix is rejected. An unknown value in `filter[products.abstractSku]` matches nothing and returns an empty collection with status `200`, not an error.
 
-The API does not enforce a maximum page size, so keep `perPage` moderate on large catalogs.
+The API does not enforce a maximum page size, so keep `page[limit]` moderate on large catalogs. A `page[limit]` below `1` falls back to the default, and a negative `page[offset]` is treated as `0`.
 
 ### Request
 
 ```http
-GET /products?filter[products.abstractSku]=093&page=2&perPage=20
+GET /products?filter[products.abstractSku]=093&page[limit]=20&page[offset]=20
 Authorization: Bearer <access_token>
 ```
 
 ### Response
 
-The response contains a `data` array of product resources in the same shape as [Retrieve a concrete product](#retrieve-a-concrete-product).
+The response contains a `data` array of product resources in the same shape as [Retrieve a concrete product](#retrieve-a-concrete-product). The pagination summary is returned in the top-level `meta.pagination` object, and the pagination links in the top-level `links` object. Collection members do not carry pagination data.
+
+```json
+{
+    "links": {
+        "self": "https://glue-backend.mysprykershop.com/products?filter[products.abstractSku]=093",
+        "first": "https://glue-backend.mysprykershop.com/products?filter[products.abstractSku]=093&page[limit]=20&page[offset]=0",
+        "last": "https://glue-backend.mysprykershop.com/products?filter[products.abstractSku]=093&page[limit]=20&page[offset]=20",
+        "prev": "https://glue-backend.mysprykershop.com/products?filter[products.abstractSku]=093&page[limit]=20&page[offset]=0"
+    },
+    "meta": {
+        "pagination": {
+            "numFound": 27,
+            "currentPage": 2,
+            "maxPage": 2,
+            "currentItemsPerPage": 20
+        }
+    },
+    "data": [
+        {
+            "type": "products",
+            "id": "093_56994599",
+            "attributes": {}
+        }
+    ]
+}
+```
 
 ## Create a concrete product
 

@@ -123,7 +123,7 @@ Request sample: rename your merchant, set its Storefront URLs, and clear the fax
 | faxNumber | String | | Fax number of the merchant. |
 | logoUrl | String | | URL of the merchant logo. Must not contain whitespace or backslashes. |
 | address | Object | | Business address, merged field by field: `countryIso2Code`, `zipCode`, `city`, `address1`, `address2`, `address3`, `latitude`, `longitude`. `countryIso2Code` must be a configured country and can't be `null`. |
-| localizedAttributes | Array | | Texts to update, merged by `localeName` and by text. Each entry has `localeName` and any of `description`, `bannerUrl`, `deliveryTime`, `termsConditions`, `cancellationPolicy`, `imprint`, and `dataPrivacy`. `bannerUrl` can't be `null`. |
+| localizedAttributes | Array | | Texts to update, merged by `localeName` and by text. Each entry has `localeName` and any of `description`, `bannerUrl`, `deliveryTime`, `termsConditions`, `cancellationPolicy`, `imprint`, and `dataPrivacy`. `bannerUrl` can't be `null` and must not contain whitespace or backslashes. |
 
 `merchantReference` and `stores` can't be changed. Required means the attribute can't be cleared; you can still omit it to keep the stored value.
 
@@ -145,6 +145,8 @@ To update the profile of a merchant as a Back Office user, send the request:
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | {% raw %}***{{merchant_reference}}***{% endraw %} | Reference of the merchant whose profile to update. |
+
+The merchant does not have to be approved: a Back Office user updates the profile of a merchant that is still waiting for approval, as in the Back Office.
 
 ### Request
 
@@ -193,7 +195,7 @@ Request sample: update the public contact data and the English description of a 
 | faxNumber | String | | Fax number of the merchant. |
 | logoUrl | String | | URL of the merchant logo. Must not contain whitespace or backslashes. |
 | address | Object | | Business address, merged field by field: `countryIso2Code`, `zipCode`, `city`, `address1`, `address2`, `address3`, `latitude`, `longitude`. `countryIso2Code` must be a configured country and can't be `null`. |
-| localizedAttributes | Array | | Texts to update, merged by `localeName` and by text. Each entry has `localeName` and any of `description`, `bannerUrl`, `deliveryTime`, `termsConditions`, `cancellationPolicy`, `imprint`, and `dataPrivacy`. `bannerUrl` can't be `null`. |
+| localizedAttributes | Array | | Texts to update, merged by `localeName` and by text. Each entry has `localeName` and any of `description`, `bannerUrl`, `deliveryTime`, `termsConditions`, `cancellationPolicy`, `imprint`, and `dataPrivacy`. `bannerUrl` can't be `null` and must not contain whitespace or backslashes. |
 
 ### Response
 

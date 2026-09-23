@@ -40,7 +40,7 @@ If your project overrides the search schema of these modules, apply the equivale
 
 Consult the breaking changes and deprecation notices for OpenSearch 2.19, and check your indexes and cluster settings against them to determine whether the cluster is eligible for the upgrade.
 
-- If the cluster is eligible, upgrade it to 2.19 and continue to [4. Check the upgrade eligibility for 3.5](#4-check-the-upgrade-eligibility-for-35).
+- If the cluster is eligible, upgrade it to 2.19 and continue to [Check the upgrade eligibility for 3.5](#check-the-upgrade-eligibility-for-35).
 - If the cluster is not eligible, one or more incompatibilities block the upgrade.
   - For an index with an incompatible index format, unblock the upgrade by reindexing it as described in the following section.
   - For any other incompatibility, for example a deprecated index setting or a breaking plugin change, fix it first. Only continue with the upgrade after all the incompatibilities are resolved.

@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Authenticate as a merchant user"
 description: Learn how to authenticate as a merchant user using the Spryker Backend API and which roles the issued token carries.
-last_updated: Sep 9, 2026
+last_updated: Sep 22, 2026
 template: glue-api-storefront-guide-template
 related:
   - title: Authenticate as a Back Office user
@@ -12,7 +12,7 @@ related:
 
 This endpoint allows authenticating as a merchant user. A merchant user is a Back Office user that is assigned to a merchant; the access token it receives carries the `merchant-user` scope, which the Backend API maps to the `ROLE_MERCHANT_USER` role. Resources built for the Merchant Portal audience, like the merchant profile, check for this role.
 
-The merchant does not have to be approved to authenticate: a merchant user of a merchant that is still waiting for approval receives a token. Individual resources may still require an approved merchant—for example, the `merchant-profile` resource responds with `403` until the merchant is approved, as the Merchant Portal does.
+The merchant does not have to be approved: a merchant user of a merchant that is still waiting for approval can authenticate and use the endpoints available to merchant users. Individual resources may still require an approved merchant—for example, the `merchant-profile` resource responds with `403` until the merchant is approved, as the Merchant Portal does.
 
 {% info_block warningBox "API Platform only" %}
 
@@ -24,7 +24,7 @@ On the legacy Glue infrastructure, `POST /token` with the form-encoded body stil
 
 ## Installation
 
-The endpoint is provided by the `OauthBackendApi` module. Merchant user scopes are provided by the `OauthMerchantUser` module; to register its plugins, see [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html#optional-enable-the-backend-api-authentication).
+The endpoint is provided by the `OauthBackendApi` module; to install it, see [Integrate the authentication](/docs/integrations/spryker-api/backend-api/integrate-backend-api/integrate-the-authentication.html). The `merchant-user` scope is provided by the `OauthMerchantUser` module; to register its plugins, see [Optional: Enable merchant user authentication](/docs/integrations/spryker-api/backend-api/integrate-backend-api/integrate-the-authentication.html#4-optional-enable-merchant-user-authentication).
 
 ## Authenticate as a merchant user
 
@@ -153,16 +153,35 @@ The scopes in the token decide which roles the Backend API grants to the request
 
 `ROLE_USER` is held by every authenticated caller, so a resource that must distinguish the two audiences checks `ROLE_MERCHANT_USER` or `ROLE_BACK_OFFICE_USER`. A merchant user calling a resource that requires `ROLE_BACK_OFFICE_USER` gets `403`, and the other way round.
 
-On every request with a valid token, the Backend API resolves the user behind the token and makes it the acting user. The user must be active; a token of a deactivated or deleted user is rejected with `401` and the error code `003`. For details, see [API Platform security](/docs/integrations/spryker-api/authenticating-and-authorization/security.html#resolving-the-user-behind-a-token).
+On every request with a valid token, the Backend API resolves the user behind the token and makes it the acting user. The user must be active; a token of a deactivated or deleted user is rejected with `401` and the error code `003`. For details, see [API Platform security](/docs/integrations/spryker-api/authenticating-and-authorization/security.html#resolving-the-user-behind-a-token). To restrict merchant users to the data of their merchant, see [Integrate Persistent ACL for merchant API endpoints](/docs/integrations/spryker-api/authenticating-and-authorization/integrate-persistent-acl-for-merchant-api-endpoints.html).
 
 ## Possible errors
 
+Failed requests return a JSON:API error document. The `code` of an authentication failure is the error type reported by the OAuth server that issues the tokens; the same OAuth server serves the Back Office, the Merchant Portal, and the legacy form-encoded `POST /token` request.
+
+<details><summary>Response sample: wrong credentials</summary>
+
+```json
+{
+    "errors": [
+        {
+            "code": "invalid_grant",
+            "status": 401,
+            "detail": "The user credentials were incorrect.",
+            "message": "The user credentials were incorrect."
+        }
+    ]
+}
+```
+
+</details>
+
 | STATUS | CODE | REASON |
 | --- | --- | --- |
-| 401 | invalid_grant | The provided user credentials are incorrect or invalid. |
-| 401 | 001 | The user could not be authenticated. |
-| 401 | 003 | The access token does not belong to an active user (on protected resources). |
-| 401 | invalid_request | The refresh token sent to `/refresh-tokens` is unknown, expired, or revoked. |
-| 422 | N/A | The request body is not a valid document for the resource, for example, `username` or `password` is missing on `/token`, or `refreshToken` is missing on `/refresh-tokens`. |
+| 401 | invalid_grant | `POST /token`: the username or password is incorrect, or the user is not active. |
+| 401 | invalid_request | `POST /refresh-tokens`: the refresh token is unknown, cannot be decrypted, has expired, has been revoked, or belongs to another client. A refresh token is revoked when it has already been exchanged. |
+| 401 | 001 | The OAuth server rejected the request without reporting an error type. This does not happen with the default OAuth server; a custom `AuthenticationServerPluginInterface` implementation that returns an invalid response without an `OauthResponse.error` gets this code. |
+| 401 | 003 | On protected resources: the access token does not belong to an active user. |
+| 422 | 901 | The request body is not a valid document for the resource, for example, `username` or `password` is missing on `/token`, or `refreshToken` is missing on `/refresh-tokens`. |
 
 To view generic errors and status codes of the Backend API, see [Backend API request and response reference](/docs/integrations/spryker-api/backend-api/developing-apis/backend-api-request-and-response-reference.html).

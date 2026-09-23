@@ -1,7 +1,7 @@
 ---
 title: Community contributions
 description: Discover open-source Spryker tools and extensions from the community. Speed up development, cut costs, and boost efficiency with proven, ready-made solutions.
-last_updated: July 9, 2025
+last_updated: Sep 4, 2026
 template: default
 layout: custom_new
 ---
@@ -9,7 +9,7 @@ layout: custom_new
   <p class="header-title">Connect, create, contribute.</p>
   <p>Spryker thrives because of its powerful technology and the people who build on it. Discover how community driven innovation can accelerate your next project.</p>
   <p>Explore developer driven tools and extensions that boost your Spryker project. Brought to you by the community, for the community.</p>
-  <a class="hero-cta" href="https://commercequest.space/community-tools/">Browse community tools</a>
+  <a class="hero-cta" href="{{ site.community_slack_invite }}">Join the community Slack</a>
 </div>
 
 
@@ -75,21 +75,16 @@ Examples include:
 
 ## Discover contributions
 
-All contributions are owned and maintained by their creators—but we've curated and categorized them for easy discovery on [CommerceQuest](https://commercequest.space/community-tools/).
+All contributions are owned and maintained by their creators. To find out what other teams have built and what they recommend, ask in the Spryker community Slack.
 
-Look for tools by the following:
-- Tags, such as `cli`, `monitoring`, `payment`, or `ai`
-- Partner or agency name
-- License type, mostly MIT
-
-**Start exploring now →** [Community Tools on CommerceQuest](https://commercequest.space/community-tools/)
+**Start exploring now →** [Spryker community Slack]({{ site.community_slack_invite }})
 
 
 ## Contributing
 
 Have you built something useful for Spryker?
 
-Share it with the community and help other teams go further, faster. Submit your tool via the [Community Forum](https://commercequest.space/).
+Share it with the community and help other teams go further, faster. Post your tool in the [Spryker community Slack]({{ site.community_slack_invite }}).
 
 Every contribution strengthens the Spryker ecosystem.
 

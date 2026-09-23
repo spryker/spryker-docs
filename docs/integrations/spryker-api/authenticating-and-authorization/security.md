@@ -1,7 +1,7 @@
 ---
 title: API Platform security
 description: Understanding authentication and authorization in API Platform resources.
-last_updated: Sep 10, 2026
+last_updated: Sep 16, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -12,6 +12,8 @@ related:
     link: docs/integrations/spryker-api/api-platform/resource-schemas.html
   - title: Native API Platform resources
     link: docs/integrations/spryker-api/api-platform/native-api-platform-resources.html
+  - title: Symfony Security documentation
+    link: https://symfony.com/doc/current/security.html
 redirect_from:
   - /docs/dg/dev/architecture/api-platform/security.html
 ---
@@ -41,7 +43,13 @@ If no `Authorization` header is present, the request proceeds as unauthenticated
 
 ### Resolving the user behind a token
 
-For tokens issued to Back Office and merchant users, the Backend API also resolves the user record behind the token and makes it the acting user of the request. Business rules that depend on the current user then apply as they do in the Back Office and the Merchant Portal, and Persistent ACL scopes merchant users to their merchant the way the Merchant Portal does; Back Office users are not scoped. This applies to API Platform resources only; the legacy Glue infrastructure does not establish an acting user and exposes the token data as `GlueRequestTransfer.requestUser` instead.
+For tokens issued to Back Office and merchant users, the Backend API also resolves the user record behind the token and makes it the acting user of the request. Business rules that depend on the current user then apply as they do in the Back Office and the Merchant Portal. With Persistent ACL enabled for the Backend API, merchant users are scoped to their merchant the way the Merchant Portal does, and Back Office users are not scoped. For the setup, see [Integrate Persistent ACL for merchant API endpoints](/docs/integrations/spryker-api/authenticating-and-authorization/integrate-persistent-acl-for-merchant-api-endpoints.html).
+
+{% info_block warningBox "API Platform only" %}
+
+Resolving the user behind a token is a feature of the API Platform integration and does not exist for the legacy Glue API. Legacy Glue resources run without an acting user: the token data is available as `GlueRequestTransfer.requestUser` only, current-user business rules do not apply, and Persistent ACL cannot scope them.
+
+{% endinfo_block %}
 
 By default, the user is looked up by the `id_user` claim of the token. Only active users qualify: a token of a deactivated or deleted user, or one that resolves to no single user, is rejected with `401` and the error code `003` before the resource is reached.
 
@@ -77,6 +85,12 @@ The default security configuration grants `PUBLIC_ACCESS` to all paths. This mea
 ## Security expressions
 
 Security expressions are the primary mechanism for protecting API resources. They use [Symfony's ExpressionLanguage](https://symfony.com/doc/current/security/expressions.html) and are evaluated at different stages of request processing.
+
+{% info_block warningBox "API Platform only" %}
+
+The `security` key of the YAML resource schemas, including expressions like `is_granted('ROLE_MERCHANT_USER') or is_granted('ROLE_BACK_OFFICE_USER')`, is evaluated by the API Platform integration only. Resources of the legacy Glue API have no `security` key; protect them with scopes and route rules instead, as described in [Use Backend API authorization scopes](/docs/integrations/spryker-api/authenticating-and-authorization/backend-api/use-backend-api-authorization-scopes.html) and [Create protected Backend API endpoints](/docs/integrations/spryker-api/authenticating-and-authorization/backend-api/create-protected-backend-api-endpoints.html).
+
+{% endinfo_block %}
 
 ### Resource-level security
 
@@ -326,9 +340,3 @@ Error responses keep the Glue-compatible JSON:API format. The exact response dep
 - **GET requests on resources with `securityGetStatusCode`**: instead of `403`, the response is rewritten to the configured status—typically `404` with the provider's not-found error—so the API does not reveal whether a resource exists for someone else's account.
 
 - **Resources that do not require Bearer tokens** (`securityBearerAuthRequired` not set, for example agent endpoints): an unauthenticated denial returns `401` with the resource's configured error code.
-
-## Next steps
-
-- [Integrate API Platform security](/docs/integrations/spryker-api/authenticating-and-authorization/integrate-api-platform-security.html) - Setup guide
-- [Resource schemas](/docs/integrations/spryker-api/api-platform/resource-schemas.html) - Security expression syntax in schemas
-- [Symfony Security documentation](https://symfony.com/doc/current/security.html) - Full Symfony Security reference

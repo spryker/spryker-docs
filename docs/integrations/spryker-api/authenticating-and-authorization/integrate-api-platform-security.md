@@ -1,7 +1,7 @@
 ---
 title: Integrate API Platform security
 description: This document describes how to set up authentication and authorization for API Platform in your Spryker application.
-last_updated: Sep 10, 2026
+last_updated: Sep 16, 2026
 template: howto-guide-template
 related:
   - title: Security
@@ -12,6 +12,10 @@ related:
     link: docs/dg/dev/architecture/symfony-bundles.html
   - title: Resource schemas
     link: docs/integrations/spryker-api/api-platform/resource-schemas.html
+  - title: Integrate Persistent ACL for merchant API endpoints
+    link: docs/integrations/spryker-api/authenticating-and-authorization/integrate-persistent-acl-for-merchant-api-endpoints.html
+  - title: API Platform configuration
+    link: docs/integrations/spryker-api/api-platform/configuration.html
 redirect_from:
   - /docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html
 ---
@@ -283,9 +287,3 @@ your bundles.php to enable security expression evaluation.
 ```
 
 This validation is performed by the `SecurityServiceRegistrationPass` compiler pass.
-
-## Next steps
-
-- [Security](/docs/integrations/spryker-api/authenticating-and-authorization/security.html) - Understanding authentication and authorization
-- [Resource schemas](/docs/integrations/spryker-api/api-platform/resource-schemas.html) - Security expression syntax
-- [API Platform configuration](/docs/integrations/spryker-api/api-platform/configuration.html) - Configuration options

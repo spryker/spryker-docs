@@ -940,6 +940,8 @@ entries:
                     nested:
                       - title: Company Account
                         url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html
+                      - title: Companies Backend API
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-glue-api/install-the-companies-backend-api.html
                       - title: Customer Account Management
                         url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-glue-api/install-the-customer-account-management-glue-api.html
 
@@ -1072,6 +1074,13 @@ entries:
 
                   - title: Manage customer access to Storefront API resources
                     url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/manage-customer-access-to-glue-api-resources.html
+
+              - title: Manage via Backend API
+                nested:
+                  - title: Company account
+                    nested:
+                      - title: Manage companies
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/company-account/backend-api-manage-companies.html
 
               - title: Generate login tokens
                 url: /docs/pbc/all/customer-relationship-management/base-shop/generate-login-tokens.html
@@ -1761,6 +1770,15 @@ entries:
 
               - title: Add push notification subscriptions
                 url: /docs/pbc/all/miscellaneous/manage-using-glue-api/glue-api-add-push-notification-subscriptions.html
+
+              - title: Manage glossary keys via Backend API
+                nested:
+                  - title: Retrieve glossary keys
+                    url: /docs/pbc/all/miscellaneous/manage-using-backend-api/glossary-keys/backend-api-retrieve-glossary-keys.html
+                  - title: Create a glossary key
+                    url: /docs/pbc/all/miscellaneous/manage-using-backend-api/glossary-keys/backend-api-create-a-glossary-key.html
+                  - title: Update translations of a glossary key
+                    url: /docs/pbc/all/miscellaneous/manage-using-backend-api/glossary-keys/backend-api-update-translations-of-a-glossary-key.html
 
           - title: Third-party integrations
             nested:

@@ -1,7 +1,7 @@
 ---
 title: Integrations Catalog
 description: Explore our comprehensive catalogue of integrations, showcasing diverse methods and solutions tailored to your needs.
-last_updated: May 7, 2026
+last_updated: Sep 7, 2026
 template: default
 layout: custom_new
 redirect_from:

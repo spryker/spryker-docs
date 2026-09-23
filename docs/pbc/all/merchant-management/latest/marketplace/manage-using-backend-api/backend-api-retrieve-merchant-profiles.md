@@ -19,6 +19,8 @@ The Backend API exposes merchant profiles through two resources, one per audienc
 
 The two audiences are strictly separated. A merchant user calling the `merchant-profiles` endpoint, or a Back Office user calling the `merchant-profile` endpoint, gets a `403` response.
 
+There is no endpoint to create or delete a profile: a profile is created together with its merchant and removed with it. To create a merchant, use the Back Office.
+
 ## Installation
 
 The endpoints are provided by the `MerchantProfile` module and require the API Platform integration of the Backend API. For installation instructions, see [Install the Merchant Profile Backend API](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-profile-backend-api.html).
@@ -144,6 +146,8 @@ To retrieve the profile of a merchant as a Back Office user, send the request:
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html). |
+
+The merchant does not have to be approved: a Back Office user retrieves the profile of a merchant that is still waiting for approval, as in the Back Office.
 
 Request sample: retrieve a merchant profile
 

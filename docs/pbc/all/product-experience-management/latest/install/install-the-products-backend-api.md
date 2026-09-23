@@ -1,7 +1,7 @@
 ---
 title: Install the Products Backend API
 description: Learn how to install the Products Backend API into your Spryker project.
-last_updated: Sep 7, 2026
+last_updated: Sep 10, 2026
 template: feature-integration-guide-template
 redirect_from:
   - /docs/pbc/all/product-experience-management/latest/install-the-products-backend-api.html
@@ -436,7 +436,7 @@ Replace `<environment>` with your environment name, for example, `development`.
 Request a Back Office access token as described in [Authenticate as a Back Office user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html), then retrieve a product collection:
 
 ```bash
-curl "https://glue-backend.mysprykershop.com/products?perPage=1" \
+curl "https://glue-backend.mysprykershop.com/products?page[limit]=1" \
   -H "Authorization: Bearer {access_token}"
 ```
 

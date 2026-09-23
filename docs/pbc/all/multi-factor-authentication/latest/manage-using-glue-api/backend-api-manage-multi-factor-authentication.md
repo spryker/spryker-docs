@@ -267,7 +267,7 @@ A successful response contains no MFA-specific information. A request without th
 | 5902 | 400 | The `type` attribute is missing. |
 | 5903 | 400 | The method to verify is already activated. |
 | 5904 | 400 | The method to activate is already activated. |
-| 5906 | 400 | The method is not registered in the project, or it is not in the status the operation expects—for example, deactivating a method that is not activated. |
+| 5906 | 400 | `Multi-factor authentication type is not found.`: the method is not registered in the project. `Multi-factor authentication type is not found for the current user.`: the method is registered but not in the status the operation expects for the authenticated user—for example, requesting a code through, or deactivating, a method that is not activated, or verifying a method without a pending activation. |
 | 5910 | 503 | The code could not be sent, for example because the mail transport is unavailable. Retry later. |
 
 To view generic errors, see [API errors and troubleshooting](/docs/integrations/spryker-api/spryker-api-errors-and-troubleshooting.html).

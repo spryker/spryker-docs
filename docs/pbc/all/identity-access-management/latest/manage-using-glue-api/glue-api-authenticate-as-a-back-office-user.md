@@ -1,11 +1,13 @@
 ---
 title: "Glue API: Authenticate as a Back Office user"
 description: Learn how to authenticate as a Back Office user using the Spryker Glue API for your Spryker users
-last_updated: July 30, 2026
+last_updated: Sep 10, 2026
 template: glue-api-storefront-guide-template
 ---
 
-This endpoint allows authenticating as a Back Office user.
+This endpoint allows authenticating as a Back Office user. For a Back Office user that is assigned to a merchant, see [Authenticate as a merchant user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-merchant-user.html).
+
+With the API Platform integration of the Backend API, the same endpoint also accepts a JSON:API `tokens` document, and `POST /refresh-tokens` exchanges a refresh token for a new token pair; the form-encoded request described here keeps working. For details, see [Authenticate as a merchant user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-merchant-user.html).
 
 ## Installation
 

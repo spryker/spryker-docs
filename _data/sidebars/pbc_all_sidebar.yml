@@ -940,6 +940,8 @@ entries:
                     nested:
                       - title: Company Account
                         url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html
+                      - title: Companies Backend API
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-glue-api/install-the-companies-backend-api.html
                       - title: Customer Account Management
                         url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-glue-api/install-the-customer-account-management-glue-api.html
 
@@ -1085,6 +1087,8 @@ entries:
                         url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-notes.html
                   - title: Company account
                     nested:
+                      - title: Manage companies
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/company-account/backend-api-manage-companies.html
                       - title: Manage company users
                         url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/company-account/backend-api-manage-company-users.html
 
@@ -1354,6 +1358,8 @@ entries:
                 url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html
               - title: Authenticate as a Back Office user
                 url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html
+              - title: Authenticate as a merchant user
+                url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-authenticate-as-a-merchant-user.html
               - title: Authenticate as a company user
                 url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html
               - title: Manage company user authentication tokens
@@ -1518,6 +1524,8 @@ entries:
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-feature.html
                       - title: Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature.html
+                      - title: Merchant Profile Backend API
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-profile-backend-api.html
                       - title: Merchant Switcher
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-switcher-feature.html
                       - title: Merchant Switcher + Customer Account Management
@@ -1629,6 +1637,13 @@ entries:
                     url: /docs/pbc/all/merchant-management/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-addresses.html
                   - title: Retrieve merchant opening hours
                     url: /docs/pbc/all/merchant-management/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-opening-hours.html
+
+              - title: Manage via Backend API
+                nested:
+                  - title: Retrieve merchant profiles
+                    url: /docs/pbc/all/merchant-management/marketplace/manage-using-backend-api/backend-api-retrieve-merchant-profiles.html
+                  - title: Update merchant profiles
+                    url: /docs/pbc/all/merchant-management/marketplace/manage-using-backend-api/backend-api-update-merchant-profiles.html
 
               - title: Tutorials and HowTos
                 nested:

@@ -275,11 +275,13 @@ Module tests send messages to an in-memory transport, so a message that the real
 
 *Tier: integration. Status: Planned.*
 
-- **Owns.** That what application code writes straight into storage, outside Publish and Synchronize, reads back through the real client under the key the reader expects. Examples are the SecurityBlocker login attempt counters and the customer invalidation stamps.
+- **Owns.** That what application code writes straight into storage, outside Publish and Synchronize, reads back through the real client under the key the reader expects. Both current examples are security controls. The SecurityBlocker login attempt counters block a login after the configured number of failed attempts and release it when the block expires. The customer invalidation records end a customer's storefront sessions after their company role or company user changes, so revoked permissions stop working on the next request.
 - **Must not.** Assert the business rule that decided to write. That belongs to the facade test.
 - **Lives in.** No suite exists yet.
 
 The Publish and Synchronize golden path covers only what the synchronize step writes. These writes skip that step, so their module tests replace the storage with an in-memory stand-in and nothing else reaches the real one.
+
+This is not a Cypress journey. A journey walks a user's goal along the happy path. A lockout threshold, its expiry, and a key that the writer and the reader disagree on are branches that no journey walks, and a browser suite cannot wait for a block to expire. The only symptom of a broken session revocation is that nobody gets logged out, which no journey asserts.
 
 ### Provider sandbox contract test
 
@@ -346,7 +348,7 @@ The register is the table in the next section of this page, kept by hand and che
 | A facade test never goes over a browser request, so controller wiring, form binding, CSRF, session login, redirects, and rendering are not exercised | The Cypress journey that walks that flow. A browser-only flow that no journey walks carries this gap knowingly, because the journey costs a full run |
 | Calls to external services such as tax, payment, or mail providers are stubbed at an outbound adapter seam | Provider sandbox contract test, one per provider (*Planned*) |
 | The message broker transport is in-memory in module tests | Message broker transport test, against the real broker adapter (*Planned*) |
-| Storage written directly by application code outside Publish and Synchronize, such as SecurityBlocker counters and customer invalidation stamps, is in-memory in module tests | Direct storage write test, reading it back through the real client (*Planned*) |
+| Storage written directly by application code outside Publish and Synchronize, such as SecurityBlocker login attempt counters and the customer invalidation records that end sessions, is in-memory in module tests | Direct storage write test, reading it back through the real client (*Planned*) |
 
 #### Declared substitutes
 

@@ -1,7 +1,7 @@
 ---
 title: Install the Configuration Management feature
 description: Learn how to integrate and configure Configuration Management feature in a Spryker project.
-last_updated: Aug 3, 2026
+last_updated: Aug 24, 2026
 template: howto-guide-template
 
 related:
@@ -728,6 +728,17 @@ Create the directory with a `.gitkeep` file:
 ```bash
 mkdir -p data/configuration
 touch data/configuration/.gitkeep
+```
+
+Add the `data/configuration/` directory to `.dockerignore` exceptions to ensure the directory is included in the Docker build context and reaches the image:
+
+**.dockerignore**
+
+```diff
+ /data
+ !/data/import
+ !/data/export
++!/data/configuration
 ```
 
 {% info_block warningBox "Verification" %}

@@ -2,7 +2,7 @@
 title: Connect a code repository
 description: Connect a GitHub, Bitbucket or GitLab code repository to your Spryker Cloud project.
 template: howto-guide-template
-last_updated: Oct 6, 2023
+last_updated: Aug 24, 2026
 originalLink: https://cloud.spryker.com/docs/connecting-code-repository
 originalArticleId: cf723ab0-922f-4255-a26b-f405b15098e5
 redirect_from:
@@ -74,7 +74,7 @@ For detailed instructions and permission requirements, see [Create a connection 
 11. Click **Done**.
 12. In the **Edit: Source** pane, click **Done**.
 13. Scroll up and click **Save**.
-14. In the **Save pipeline changes** window, click **Save**.
+14. In the **Save pipeline changes** window, select the **No resource updates needed for this source action change** checkbox and click **Save**.
 
 Your GitHub repository is now connected.
 
@@ -97,7 +97,7 @@ Your GitHub repository is now connected.
 11. Click **Done**.
 12. In the **Edit: Source** pane, click **Done**.
 13. Scroll up and click **Save**.
-14. In the **Save pipeline changes** window, click **Save**.
+14. In the **Save pipeline changes** window, select the **No resource updates needed for this source action change** checkbox and click **Save**.
 
 Your GitHub Enterprise Server repository is now connected.
 
@@ -145,7 +145,7 @@ Ensure that your Bitbucket account has **Admin** permissions in the code reposit
 11. Click **Done**.
 12. In the **Edit: Source** pane, click **Done**.
 13. Scroll up and click **Save**.
-14. In the **Save pipeline changes** window, click **Save**.
+14. In the **Save pipeline changes** window, select the **No resource updates needed for this source action change** checkbox and click **Save**.
 
 Your Bitbucket repository is now connected.
 
@@ -171,9 +171,12 @@ Ensure that your GitLab account has **Admin** permissions in the code repository
 9. Follow the authorization process to grant AWS CodePipeline access to your GitLab repository.
 10. For **Repository name**, enter and select the repository you want to connect.
 11. For **Branch name**, enter and select the branch you want to connect.
-12. Save the changes to complete the wizard.
+12. Click **Done**.
+13. In the **Edit: Source** pane, click **Done**.
+14. Scroll up and click **Save**.
+15. In the **Save pipeline changes** window, select the **No resource updates needed for this source action change** checkbox and click **Save**.
 
-Your GitLab repository is now successfully connected!
+Your GitLab repository is now connected.
 
 
 ## Legacy: Connect a GitLab code repository through mirroring

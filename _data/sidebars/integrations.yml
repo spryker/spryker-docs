@@ -106,6 +106,8 @@ entries:
     - title: Backend API
       url: /docs/integrations/spryker-api/backend-api/backend-api.html
       nested:
+      - title: Backend API conventions
+        url: /docs/integrations/spryker-api/backend-api/backend-api-conventions.html
       - title: API references
         nested:
         - title: Backend B2B API reference
@@ -187,6 +189,8 @@ entries:
           url: /docs/integrations/spryker-api/authenticating-and-authorization/security.html
         - title: Integrate API Platform security
           url: /docs/integrations/spryker-api/authenticating-and-authorization/integrate-api-platform-security.html
+        - title: Integrate Persistent ACL for merchant API endpoints
+          url: /docs/integrations/spryker-api/authenticating-and-authorization/integrate-persistent-acl-for-merchant-api-endpoints.html
       - title: Create grant type parameters
         url: /docs/integrations/spryker-api/authenticating-and-authorization/create-grant-type-parameters.html
       - title: Configure cross-origin resource sharing for Glue API
@@ -257,5 +261,10 @@ entries:
       url: /docs/pbc/all/punchout-gateway/punchout-gateway.html
     - title: Using PSP Integration Template
       url: /docs/integrations/custom-building-integrations/psp-integration-template.html
+    - title: Integrating an external CMS with Spryker
+      url: /docs/integrations/custom-building-integrations/external-cms/guideline-external-cms-integration.html
+      nested:
+        - title: Scoping an external CMS integration
+          url: /docs/integrations/custom-building-integrations/external-cms/guideline-external-cms-integration-scoping.html
   - title: Community contributions
     url: /docs/integrations/community-contributions.html

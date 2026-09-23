@@ -70,6 +70,7 @@ Make sure the following package is listed in `composer.lock`:
 | SelfServicePortalConfig::getProductOfferServiceAvailabilityShipmentTypeKeys() | Returns a list of shipment type keys that are applicable for product offer service availability.                                                             | SprykerFeature\Client\SelfServicePortal            |
 | SelfServicePortalConfig::getDefaultSelectedShipmentTypeKey()                  | This shipment type will be pre-selected in the shipment type options for the services.                                                                       | Pyz\Yves\SelfServicePortal\SelfServicePortalConfig |
 | SelfServicePortalConfig::getDeliveryLikeShipmentTypes()                       | Override this method in project-level configuration to define delivery-like shipment types.                                                                  | Pyz\Yves\SelfServicePortal\SelfServicePortalConfig |
+| SelfServicePortalConfig::getRecurringOrderServiceShipmentTypeKeys()           | Returns the shipment type keys a service product must support to be part of a recurring order. The module default is an empty list, which accepts service products with any shipment type. | SprykerFeature\Shared\SelfServicePortal            |
 | KernelConstants::CORE_NAMESPACES                                              | Defines the core namespaces.                                                                                                                                 | Spryker\Shared\Kerne                    |
 
 
@@ -136,6 +137,41 @@ class SelfServicePortalConfig extends SprykerSelfServicePortalConfig
     }
 }
 ```
+
+**src/Pyz/Shared/SelfServicePortal/SelfServicePortalConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Shared\SelfServicePortal;
+
+use SprykerFeature\Shared\SelfServicePortal\SelfServicePortalConfig as SprykerSelfServicePortalConfig;
+
+class SelfServicePortalConfig extends SprykerSelfServicePortalConfig
+{
+    /**
+     * @uses \Spryker\Shared\ShipmentType\ShipmentTypeConfig::SHIPMENT_TYPE_DELIVERY
+     *
+     * @var string
+     */
+    public const SHIPMENT_TYPE_DELIVERY = 'delivery';
+
+    /**
+     * @var array<string>
+     */
+    public const RECURRING_ORDER_SERVICE_SHIPMENT_TYPE_KEYS = [
+        self::SHIPMENT_TYPE_DELIVERY,
+    ];
+}
+```
+
+{% info_block infoBox "Service products in recurring orders" %}
+
+`RECURRING_ORDER_SERVICE_SHIPMENT_TYPE_KEYS` applies only if your project also uses the [Recurring Orders feature](/docs/pbc/all/order-experience-management/latest/base-shop/feature-overviews/recurring-orders-feature-overview.html). A service fulfilled on site or in a service center needs an appointment, which a recurring order places unattended and therefore cannot book. List only the shipment types your project can serve unattended—the example above allows delivery only.
+
+The restriction is enforced by two plugins the module provides: `ServiceProductAddedProductConcreteRestrictionPlugin` hides the product from the add-product picker in Yves, and `ServiceProductAddedItemValidatorPlugin` rejects it in Zed. Register them as described in [Install the Recurring Orders feature](/docs/pbc/all/order-experience-management/latest/base-shop/install-and-upgrade/install-features/install-the-recurring-orders-feature.html).
+
+{% endinfo_block %}
 
 **src/Pyz/Zed/DataImport/DataImportConfig.php**
 

@@ -731,6 +731,7 @@ Enable the following behaviors by registering the plugins:
 | MerchantOmsMerchantOrderExpanderPlugin | Expands merchant order with merchant Oms data, such as item state and manual events.  | | Spryker\Zed\MerchantOms\Communication\Plugin\MerchantSalesOrder |
 | MerchantStateMachineHandlerPlugin | Wires merchant order updates into the State Machine module. | |Spryker\Zed\MerchantOms\Communication\Plugin\StateMachine |
 | MerchantOmsStateOrderItemsTableExpanderPlugin  |Expands the order item table with merchant order item state. | | Spryker\Zed\MerchantOmsGui\Communication\Plugin\Sales |
+| MerchantStateOrderItemExpanderPlugin | Reads the current merchant order item states for a collection of order items in a single query and sets `ItemTransfer.merchantStateMachineItem` on each of them. Items that do not belong to a merchant order receive an empty `StateMachineItemTransfer`. | | Spryker\Zed\MerchantOms\Communication\Plugin\Sales |
 | MerchantOrderDataOrderExpanderPlugin  | Expands order data with merchant order details. | | Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales |
 | MerchantReferenceOrderItemExpanderPreSavePlugin  | Expands order items with merchant references before saving them to the database. | | Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales |
 | MerchantReferencesOrderExpanderPlugin  | Expands orders with merchant references from order items.  | |	Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales  |
@@ -777,6 +778,7 @@ class MerchantOmsCommunicationFactory extends SprykerMerchantOmsCommunicationFac
 
 namespace Pyz\Zed\Sales;
 
+use Spryker\Zed\MerchantOms\Communication\Plugin\Sales\MerchantStateOrderItemExpanderPlugin;
 use Spryker\Zed\MerchantOmsGui\Communication\Plugin\Sales\MerchantOmsStateOrderItemsTableExpanderPlugin;
 use Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales\MerchantOrderDataOrderExpanderPlugin;
 use Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales\MerchantReferenceOrderItemExpanderPreSavePlugin;
@@ -809,6 +811,16 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     }
 
     /**
+     * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemExpanderPluginInterface>
+     */
+    protected function getOrderItemExpanderPlugins(): array
+    {
+        return [
+            new MerchantStateOrderItemExpanderPlugin(),
+        ];
+    }
+
+    /**
      * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemsTableExpanderPluginInterface>
      */
     protected function getOrderItemsTableExpanderPlugins(): array
@@ -819,6 +831,14 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     }
 }
 ```
+
+{% info_block infoBox "Order item state performance" %}
+
+`MerchantStateOrderItemExpanderPlugin` is a performance optimization for `MerchantOmsStateOrderItemsTableExpanderPlugin`, which renders one cell per order item. Without it, the table plugin resolves each item's merchant state with its own query, so an order with many items produces one query per item. With it registered, the states are resolved once for the whole collection and the table plugin reads the already-resolved value.
+
+The table plugin falls back to its own per-item lookup when the value is absent, so registering the expander is optional and changes no rendered output—only the number of queries.
+
+{% endinfo_block %}
 
 </details>
 

@@ -1,17 +1,11 @@
 ---
 title: Profiler Workflow
 description: Read the Spryker WebProfiler as hard performance numbers — driven by the spryker-profiler skill
-last_updated: Aug 14, 2026
+last_updated: Aug 24, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, spryker-profiler, performance, webprofiler, n+1, sql
 template: concept-topic-template
 ---
-
-{% info_block warningBox "Experimental module" %}
-
-The AiDev module is experimental and not stable. There is no backward compatibility promise for this module. We welcome your feedback and contributions as we continue to develop and improve this module.
-
-{% endinfo_block %}
 
 ## Availability
 
@@ -127,5 +121,5 @@ After changing any of these, empty the cache and reproduce the request.
 
 - [WebProfiler](/docs/dg/dev/integrate-and-configure/integrate-development-tools/web-profiler.html) — why the profiler matters and how to integrate it per application
 - [`spryker-profiler` README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/spryker-profiler/README.md) — the skill's own reference in the plugin repository
-- [Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html) — the full reference of every skill and agent
-- [Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html) — module and `ai-dev:setup` command
+- [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html) — the full reference of every skill and agent
+- [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html) — install the SDK and generate your project's rules, context file, and skills

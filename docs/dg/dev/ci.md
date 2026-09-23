@@ -1,7 +1,7 @@
 ---
 title: Continuous Integration
 description: Continuous Integration setup for Spryker projects—pipeline structure, validation stages, and the AI Dev SDK skills that generate a project CI pipeline and a Cypress end-to-end baseline.
-last_updated: Aug 14, 2026
+last_updated: Aug 20, 2026
 template: concept-topic-template
 keywords: CI, continuous integration, automated testing, code quality, GitHub Actions, project stability, upgradability, validation, static analysis, cypress, end-to-end
 ---
@@ -85,7 +85,7 @@ Invoke `cypress-migration` to replace the demoshop suites with a Cypress baselin
 
 Both skills also run as steps 1 and 7 of the [Project Starter Wizard](/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html), which sets up a whole project in one pass. Run them individually when you only need the CI or test half.
 
-For the full list of skills and agents, see [Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html).
+For the full list of skills and agents, see [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html).
 
 ## Set up CI in your repository
 

@@ -1,7 +1,7 @@
 ---
 title: Email deliverability
 description: Ensure high email deliverability in Spryker Cloud Commerce OS by configuring SPF, DKIM, and DMARC DNS records
-last_updated: Jun 19, 2024
+last_updated: Aug 19, 2026
 template: concept-topic-template
 ---
 
@@ -19,6 +19,18 @@ You can use domain reputation checkers to assess the reputation of your email do
 ## Testing email sending features
 
 Your Spryker cloud non-production environments are using a sandboxed Simple Email Service Account *by default*. This means that you can only send emails to [validated recipients](https://docs.spryker.com/docs/ca/dev/email-service/verify-email-addresses.html). This protects you from mistakenly sending faulty emails to many recipients that might report this behavior and damage the reputation of your sender's domain. Only request the SES Sandbox to be disabled when you're confident that your email functionality works as expected.
+
+### Email sending error handling
+
+Spryker handles email delivery failures gracefully regardless of the cause whether it's a sandbox restriction, a misconfigured sender domain, a network issue, or any other transport-level error. All failures are caught centrally in `MailHandler`, so no individual business logic needs its own error handling. When an email fails to send:
+
+- The failure is logged with the error code, mail type, and exception message. Check application logs for entries like: `Email sending failed. Error code: 550. Mail type: customer-registration. Exception: ...`
+- The application continues operating: no 500 errors are shown to users, and no business processes are blocked.
+- In the Storefront and Back Office, users see a translated flash message. In CLI contexts (for example, OMS), flash messages are suppressed by default project-level configuration.
+
+This means you can safely test all application features in sandbox mode without worrying about email-related crashes. To verify email functionality end-to-end, make sure to [verify the sender and recipient addresses](/docs/ca/dev/email-service/verify-email-addresses.html) in the SES console.
+
+For details on the error handling behavior per context, see [Email sending error handling](/docs/ca/dev/email-service/email-service.html#email-sending-error-handling).
 
 ## Configure email authentication DNS records
 

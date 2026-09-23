@@ -1,17 +1,11 @@
 ---
 title: Bugfix Workflow
 description: Drive a bug from a ticket or a plain description to a committed, validated, QA-accepted fix — driven by the spryker-bugfix orchestrator
-last_updated: Aug 14, 2026
+last_updated: Aug 24, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, spryker-bugfix, bugfix, workflow, qa, automation
 template: concept-topic-template
 ---
-
-{% info_block warningBox "Experimental module" %}
-
-The AiDev module is experimental and not stable. There is no backward compatibility promise for this module. We welcome your feedback and contributions as we continue to develop and improve this module.
-
-{% endinfo_block %}
 
 ## Availability
 
@@ -94,12 +88,12 @@ Every file the run produces lives in one folder per bug under `.ai-dev/spryker-b
 
 ## Requirements
 
-- A running Spryker project (Docker SDK up) with the [AI Dev SDK](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html) installed
+- A running Spryker project (Docker SDK up) with the [AI Dev SDK](/docs/dg/dev/ai/ai-dev/ai-dev.html) installed
 - An AI tool with the SDK's skills loaded — either through the [Claude Code plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html) or via `ai-dev:setup` for another supported tool
 
 ## Related
 
 - [`spryker-bugfix` README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/spryker-bugfix/README.md) — the skill's own reference in the plugin repository
-- [Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html) — the full reference of every skill and agent this orchestrator composes
+- [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html) — the full reference of every skill and agent this orchestrator composes
 - [Customization Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html) — the same orchestration shape for building new features
-- [Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html) — module and `ai-dev:setup` command
+- [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html) — install the SDK and generate your project's rules, context file, and skills

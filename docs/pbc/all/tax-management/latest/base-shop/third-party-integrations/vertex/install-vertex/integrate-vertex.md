@@ -1,7 +1,7 @@
 ---
 title: Integrate Vertex
 description: Find out how you can integrate Vertex into your Spryker shop
-last_updated: Jul 23, 2026
+last_updated: Aug 24, 2026
 template: howto-guide-template
 related:
   - title: Vertex
@@ -127,6 +127,7 @@ The following methods must be overridden in `src/Pyz/Zed/Vertex/VertexConfig.php
 | `isTaxIdValidatorEnabled()` | `false` | Enables tax ID validation via [Vertex Validator](https://developer.vertexinc.com/vertex-e-commerce/docs/stand-alone-deployments). Requires `TAXAMO_API_URL` and `TAXAMO_TOKEN` to be set.                                                                                     |
 | `isTaxAssistEnabled()` | `false` | Enables the tax assist feature. Return Assisted Parameters in the response that will provide more details about the calculation. The logs can be checked in the Vertex Dashboard. |
 | `isInvoicingEnabled()` | `false` | Enables invoicing functionality. Requires OMS plugins to be registered. See [Register OMS plugins](#register-oms-plugins).                                                        |
+| `isShipmentRefundable()` | `true` | Determines whether shipment costs are included when reporting a refund to Vertex. Set to `false` if your shop never refunds shipping costs to customers. This excludes the shipment expense from the refund request instead of reporting it as a credit. See [Handling shipment costs in refunds](#handling-shipment-costs-in-refunds). |
 | `getSellerCountryCode()` | `''` | Overrides the default seller country code (2-letter ISO code, for example, `US`). Defaults to the first country of the store.                                                     |
 | `getCustomerCountryCode()` | `''` | Overrides the default customer country code (applied only when no customer billing address is provided).  Defaults to the first country of the store.                             |
 
@@ -471,7 +472,28 @@ The refund functionality will only work if the OMS event is called `refund`.
 
 {% endinfo_block %}
 
+### Handling shipment costs in refunds
+
+By default, when you refund an order, the refund request includes the shipment expense. Vertex then credits the tax it previously reported for shipping.
+
+If your shop never refunds shipping costs to customers, exclude the shipment from the refund request by overriding `isShipmentRefundable()` in `src/Pyz/Zed/Vertex/VertexConfig.php`:
+
+```php
+namespace Pyz\Zed\Vertex;
+
+use SprykerEco\Zed\Vertex\VertexConfig as SprykerEcoVertexConfig;
+
+class VertexConfig extends SprykerEcoVertexConfig
+{
+    public function isShipmentRefundable(): bool
+    {
+        return false;
+    }
+}
+```
+
 ## Next steps
 
 - [Configure Vertex-specific metadata](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/configure-vertex-specific-metadata.html)
+- [Integrate Vertex for Marketplace](/docs/pbc/all/tax-management/latest/marketplace/integrate-vertex-for-marketplace.html)
 - [Migrate from the ACP Vertex app](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/migrate-from-acp-to-vertex.html)

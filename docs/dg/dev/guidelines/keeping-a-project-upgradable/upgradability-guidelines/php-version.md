@@ -2,7 +2,7 @@
 title: PHP version
 description: Learn how to resolve issues that occur around the allowed and consistent PHP version being used in your Spryker based projects.
 template: howto-guide-template
-last_updated: Oct 24, 2023
+last_updated: Aug 7, 2026
 redirect_from:
   - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html
 ---
@@ -31,7 +31,7 @@ The PHP version in your deploy files should correspond to the PHP version declar
   "description": "Spryker B2C Demo Shop",
   "license": "proprietary",
   "require": {
-    "php": ">=8.4",
+    "php": ">=8.5",
     ...
   }
 }
@@ -42,7 +42,7 @@ The PHP version in your deploy files should correspond to the PHP version declar
 ```yaml
 ...
 image:
-    tag: spryker/php:8.4
+    tag: spryker/php:8.5
     php:
         ini:
             "opcache.revalidate_freq": 0

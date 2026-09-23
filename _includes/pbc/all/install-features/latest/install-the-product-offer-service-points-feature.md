@@ -600,3 +600,72 @@ class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependency
 3. Scroll down the page and make sure the **SERVICES** pane is displayed.
 
 {% endinfo_block %}
+
+
+### 8) Set up the Back Office service point details
+
+1. To display the product offers connected to a service point on the service point details page in the Back Office, register the following plugin:
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+|---|---|---|---|
+| ProductOfferServicePointViewSectionPlugin | Adds the **Connected Offers** pane with the product offers reachable through the services of a service point to the service point details page. | The service points Back Office navigation is set up. | \Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ServicePoint |
+
+**src/Pyz/Zed/ServicePoint/ServicePointDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ServicePoint;
+
+use Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ServicePoint\ProductOfferServicePointViewSectionPlugin;
+use Spryker\Zed\ServicePoint\ServicePointDependencyProvider as SprykerServicePointDependencyProvider;
+
+class ServicePointDependencyProvider extends SprykerServicePointDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\ServicePoint\Dependency\Plugin\ServicePointViewSectionPluginInterface>
+     */
+    protected function getServicePointViewSectionPlugins(): array
+    {
+        return [
+            new ProductOfferServicePointViewSectionPlugin(),
+        ];
+    }
+}
+```
+
+2. Optional: To display the actions of the **Connected Offers** pane, define the Back Office URLs of your product offer pages. While a URL is not defined, the corresponding action is not displayed.
+
+**src/Pyz/Zed/ProductOfferServicePoint/ProductOfferServicePointConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ProductOfferServicePoint;
+
+use Spryker\Zed\ProductOfferServicePoint\ProductOfferServicePointConfig as SprykerProductOfferServicePointConfig;
+
+class ProductOfferServicePointConfig extends SprykerProductOfferServicePointConfig
+{
+    public function findProductOfferViewUrl(): ?string
+    {
+        return '/product-offer-gui/view';
+    }
+
+    public function findProductOfferEditUrl(): ?string
+    {
+        return '/product-offer-gui/edit';
+    }
+}
+```
+
+If your project uses different request parameters for the product offer ID, adjust `getProductOfferViewUrlIdParameterName()` and `getProductOfferEditUrlIdParameterName()` accordingly.
+
+{% info_block warningBox "Verification" %}
+
+1. In the Back Office, go to **Customer Portal&nbsp;<span aria-label="and then">></span> Service Points**.
+2. Next to a service point that provides services with connected product offers, click **View**.
+3. Make sure the **Connected Offers** pane lists those product offers with their offer reference, SKU, stores, approval status, and status. A product offer connected through several services of the same service point is listed once.
+4. If you defined the product offer URLs, make sure the actions of the pane open the corresponding pages.
+
+{% endinfo_block %}

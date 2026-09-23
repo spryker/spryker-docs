@@ -1,17 +1,11 @@
 ---
 title: Upgrade Workflow
 description: Upgrade a heavily customized Spryker project to a newer release — driven by the spryker-upgrade skill and its deterministic damage detectors
-last_updated: Aug 14, 2026
+last_updated: Aug 24, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, spryker-upgrade, upgrade, migration, composer, release
 template: concept-topic-template
 ---
-
-{% info_block warningBox "Experimental module" %}
-
-The AiDev module is experimental and not stable. There is no backward compatibility promise for this module. We welcome your feedback and contributions as we continue to develop and improve this module.
-
-{% endinfo_block %}
 
 ## Availability
 
@@ -97,6 +91,6 @@ Published migration guides are also sometimes stale or absent, so the skill trea
 ## Related
 
 - [`spryker-upgrade` README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/spryker-upgrade/README.md) — the skill's own reference in the plugin repository
-- [Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html) — the full reference of every skill and agent
+- [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html) — the full reference of every skill and agent
 - [Upgrade and migrate](/docs/dg/dev/upgrade-and-migrate/upgrade-and-migrate.html) — the manual upgrade and migration guides
-- [Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html) — module and `ai-dev:setup` command
+- [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html) — install the SDK and generate your project's rules, context file, and skills

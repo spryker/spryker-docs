@@ -2,7 +2,7 @@
 title: Integrating with Middleware
 description: Learn how to integrate external systems with Middleware to streamline
   data exchange, enhance scalability, and simplify maintenance for your core platform.
-last_updated: July 30, 2026
+last_updated: Sep 8, 2026
 template: default
 ---
 
@@ -40,4 +40,6 @@ Middleware can leverage any combination of these methods depending on your integ
 - Choose appropriate Spryker integration method: API for real-time, files for bulk operations  
 - Design for resilience: Implement proper error handling, logging, and monitoring  
 - Plan for scalability: Consider future growth in data volume and integration partners  
-- Establish governance: Define data quality standards and integration testing procedures  
+- Establish governance: Define data quality standards and integration testing procedures
+
+For a worked example of these trade-offs in one domain, see [Handle price explosion and ERP-owned pricing in B2B](/docs/pbc/all/price-management/latest/base-shop/tutorials-and-howtos/handle-price-explosion-and-erp-owned-pricing-in-b2b.html), which compares synced, cached, live, and hybrid pricing architectures — including the middleware-backed cached pattern.  

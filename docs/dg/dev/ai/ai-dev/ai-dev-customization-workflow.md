@@ -1,23 +1,20 @@
 ---
 title: Customization Workflow
 description: Turn a feature idea into a working, reviewed Spryker feature on a committed branch — driven by the spryker-customization orchestrator
-last_updated: Aug 14, 2026
+last_updated: Sep 7, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, spryker-customization, workflow, prd, customization, automation, cypress
 template: concept-topic-template
+related:
+  - title: spryker-customization README
+    link: https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-customization/README.md
 ---
-
-{% info_block warningBox "Experimental module" %}
-
-The AiDev module is experimental and not stable. There is no backward compatibility promise for this module. We welcome your feedback and contributions as we continue to develop and improve this module.
-
-{% endinfo_block %}
 
 ## Availability
 
 The `spryker-customization` skill ships with the `spryker-ai-dev-sdk` Claude Code plugin. Version 0.6.4 of `spryker-sdk/ai-dev`, which ships plugin version 0.4.0, adds the conditional Cypress end-to-end phase described on this page.
 
-To update the Claude Code plugin, run `/plugin` in Claude Code and update `spryker-ai-dev-sdk` from the `spryker-plugins-official` marketplace to version 0.4.0 or later. For installation instructions, see [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html).
+To update the Claude Code plugin, run `/plugin` in Claude Code and update `spryker-ai-dev-sdk` from the `spryker-plugins-official` marketplace to the latest version. For installation instructions, see [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html).
 
 ## What the skill does
 
@@ -82,12 +79,5 @@ If verification fails on an acceptance criterion and the skill cannot fix it aft
 
 ## Requirements
 
-- A running Spryker project (Docker SDK up) with the [AI Dev SDK](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html) installed
+- A running Spryker project (Docker SDK up) with the [AI Dev SDK](/docs/dg/dev/ai/ai-dev/ai-dev.html) installed
 - An AI tool with the SDK's skills loaded — either through the [Claude Code plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html) or via `ai-dev:setup` for another supported tool
-
-## Related
-
-- [`spryker-customization` README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/spryker-customization/README.md) — the skill's own reference in the plugin repository
-- [Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html) — the full reference of every skill and agent this orchestrator composes
-- [Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html) — module and `ai-dev:setup` command
-- [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html) — how to install the SDK for Claude Code

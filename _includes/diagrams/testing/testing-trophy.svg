@@ -14,14 +14,14 @@
   <text x="468" y="94" font-size="14" font-weight="600" fill="#2B2B28">P&amp;S golden path</text>
   <text x="468" y="112" font-size="13" fill="#55554F">— one entity per critical domain, real queue, storage, search</text>
   <text x="468" y="136" font-size="14" font-weight="600" fill="#2B2B28">API golden path</text>
-  <text x="468" y="154" font-size="13" fill="#55554F">— a handful of API requests, real token, on the deployed application</text>
+  <text x="468" y="154" font-size="13" fill="#55554F">— a handful of API requests, real token, over real HTTP</text>
 
   <!-- Integration -->
   <rect x="40" y="166" width="400" height="104" rx="8" fill="#E9F3EE" stroke="#2E7D5B" stroke-width="2"/>
   <text x="240" y="202" text-anchor="middle" font-size="16" font-weight="700" fill="#2B2B28">Integration</text>
   <text x="240" y="224" text-anchor="middle" font-size="12.5" fill="#55554F">the bulk of the suite</text>
   <text x="240" y="242" text-anchor="middle" font-size="12.5" fill="#55554F">real code, real database,</text>
-  <text x="240" y="258" text-anchor="middle" font-size="12.5" fill="#55554F">one process, no external services</text>
+  <text x="240" y="258" text-anchor="middle" font-size="12.5" fill="#55554F">one process, a service only where named</text>
   <line x1="442" y1="218" x2="455" y2="218" stroke="#2E7D5B" stroke-width="1.5" stroke-dasharray="3 3"/>
   <text x="468" y="198" font-size="14" font-weight="600" fill="#2B2B28">Facade test</text>
   <text x="620" y="198" font-size="13" fill="#55554F">— business rules and derived values</text>

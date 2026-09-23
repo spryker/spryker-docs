@@ -9,19 +9,23 @@ flowchart LR
         s5["<b>P&amp;S module test</b><br/>replaces queue, storage and search<br/>with in-memory helpers"]
         s6["<b>Facade test</b><br/>never goes over an API request"]
         s7["<b>Facade test</b><br/>never goes over a browser request"]
-        s8["<b>Any test</b><br/>stubs an external provider<br/>such as tax or payment"]
+        s8["<b>Any test</b><br/>stubs an external provider<br/>such as tax, payment or mail"]
+        s9["<b>Module test</b><br/>sends messages to an<br/>in-memory broker transport"]
+        s10["<b>Module test</b><br/>writes storage directly,<br/>outside P&amp;S, in memory"]
     end
 
     subgraph OWN["…so another test type must prove the real thing"]
         direction TB
         o1["<b>P&amp;S module test</b><br/>key format, store and locale scoping"]
-        o2["<b>API golden path</b><br/>real token on the deployed application"]
+        o2["<b>API golden path</b><br/>real token over a real HTTP request"]
         o3["<b>Search query test</b><br/>against a real search engine"]
         o4["<b>Facade test</b><br/>on the production database engine"]
         o5["<b>P&amp;S golden path</b><br/>real queue, storage and search"]
         o6["<b>API contract test</b><br/>status codes, envelope, JSON shape"]
         o7["<b>Cypress journey</b><br/>controller, form, redirect, rendering"]
-        o8["<b>One contract test</b><br/>against the provider sandbox"]
+        o8["<b>Provider sandbox contract test</b><br/>one per provider"]
+        o9["<b>Message broker transport test</b><br/>real broker adapter"]
+        o10["<b>Direct storage write test</b><br/>read back through the real client"]
     end
 
     s1 --> o1
@@ -32,10 +36,12 @@ flowchart LR
     s6 --> o6
     s7 --> o7
     s8 --> o8
+    s9 --> o9
+    s10 --> o10
 
     classDef gap fill:#FDF0EC,stroke:#C9502B,stroke-width:1.4px,color:#2B2B28
     classDef owner fill:#EAF3EC,stroke:#2E7D5B,stroke-width:1.4px,color:#2B2B28
-    class s1,s2,s3,s4,s5,s6,s7,s8 gap
-    class o1,o2,o3,o4,o5,o6,o7,o8 owner
+    class s1,s2,s3,s4,s5,s6,s7,s8,s9,s10 gap
+    class o1,o2,o3,o4,o5,o6,o7,o8,o9,o10 owner
     style SUB fill:#FFFFFF,stroke:#C9502B,stroke-dasharray:4 3,color:#2B2B28
     style OWN fill:#FFFFFF,stroke:#2E7D5B,stroke-dasharray:4 3,color:#2B2B28

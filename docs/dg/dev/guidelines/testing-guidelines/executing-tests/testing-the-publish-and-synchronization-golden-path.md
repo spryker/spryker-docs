@@ -1,7 +1,7 @@
 ---
 title: Testing the Publish and Synchronization golden path
 description: Learn how a golden path test proves that queue, storage, and search are wired correctly on a fully assembled project after a full data import, and where such tests live.
-last_updated: Sep 18, 2026
+last_updated: Sep 23, 2026
 template: concept-topic-template
 related:
   - title: Testing strategy
@@ -14,9 +14,9 @@ related:
 
 A golden path test proves that Publish and Synchronize (P&S) works on the fully assembled project: the real queue, the real storage, and the real search engine, wired the way the project configured them. It runs once per critical domain after a full data import. It is the counterpart of the [P&S module test](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/testing-the-publish-and-synchronization-process.html), which runs in one process with in-memory replacements for those services.
 
-{% info_block warningBox "This test type does not exist yet" %}
+{% info_block infoBox "Rolling out" %}
 
-The golden path is *Planned*. Nothing described on this page ships today. The page states the target design so that projects can plan for it and so that the reference implementation Spryker is building in the demo shops has something to match. Until it arrives, the [P&S module test](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/testing-the-publish-and-synchronization-process.html) is the only automated proof of P&S, and it cannot see past the in-memory helpers.
+The golden path is *Rolling out*. The product domain ships: `tests/PyzTest/Zed/ProductStorage` reads a product abstract back from storage and `tests/PyzTest/Zed/ProductPageSearch` reads its page document back from search. The other domains follow the same shape. Until a domain has its golden path, the [P&S module test](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/testing-the-publish-and-synchronization-process.html) is the only automated proof of P&S for it, and it cannot see past the in-memory helpers.
 
 {% endinfo_block %}
 
@@ -52,29 +52,32 @@ The golden path also runs in the job that already assembles the stack and alread
 
 ## Why the golden path lives in the project
 
-Only the project knows its own wiring: which publisher and synchronization plugins are registered, how the queues are named and grouped, which stores and locales exist, which data import recipe fills the database, and which storage and search products run underneath. A core module cannot assert a stack it does not own. The golden path is therefore delivered and maintained at the project level. Spryker ships a reference implementation in the demo shops that a project copies and adjusts to its own domains.
+Only the project knows its own wiring: which publisher and synchronization plugins are registered, how the queues are named and grouped, which stores and locales exist, which data import recipe fills the database, and which storage and search products run underneath. A core module cannot assert a stack it does not own. The golden path is therefore delivered and maintained at the project level, in the project's own test directory, and a project copies the reference suites below and adjusts them to its own domains.
 
 ## Where the tests live
 
-The directory structure below is the target shape. No project ships it yet.
+Each domain's golden path lives in the project test directory of the domain's `*Storage` or `*Search` module, in a suite called `PublishAndSynchronize`. The product domain ships as follows:
 
 ```text
-tests/PyzTest/Shared/PublishAndSynchronize/
-├── codeception.yml            # suite: GoldenPath
-├── GoldenPath/
-│   ├── ProductGoldenPathTest.php
-│   ├── PriceGoldenPathTest.php
-│   ├── AvailabilityGoldenPathTest.php
-│   ├── CategoryGoldenPathTest.php
-│   ├── CmsPageGoldenPathTest.php
-│   └── GlossaryGoldenPathTest.php
+tests/PyzTest/Zed/ProductStorage/
+├── codeception.yml            # suite: PublishAndSynchronize
+├── PublishAndSynchronize/
+│   └── ProductAbstractStorageSynchronizationTest.php
 └── _support/
-    └── PublishAndSynchronizeGoldenPathTester.php
+    └── ProductStorageSynchronizationTester.php
+tests/PyzTest/Zed/ProductPageSearch/
+├── codeception.yml            # suite: PublishAndSynchronize
+├── PublishAndSynchronize/
+│   └── ProductAbstractPageSearchSynchronizationTest.php
+└── _support/
+    └── ProductPageSearchSynchronizationTester.php
+tests/PyzTest/Shared/Queue/_support/Helper/
+└── QueuesDrainedHelper.php    # shared by every PublishAndSynchronize suite
 ```
 
-The suite does not enable the in-memory `StorageHelper`, `SearchHelper`, or `QueueHelper`. The tester resolves the real Storage and Search clients, so the test reads exactly what a storefront request would read.
+The suite does not enable the in-memory `StorageHelper`, `SearchHelper`, or `QueueHelper`. It does not enable `DataCleanupHelper` or `TransactionHelper` either, because it writes nothing. The test resolves the real Storage and Search clients, so it reads exactly what a storefront request would read.
 
-One test class per critical domain.
+One test class per critical domain, in the domain's `*Storage` or `*Search` module test directory.
 
 A *domain* here is data that reaches the storefront through its own publisher plugin and its own `*Storage` or `*Search` module. That is the whole test: if covering something means registering a new publisher and a new storage or search module, it is a domain and earns one golden path test. If it rides a publisher that already exists, it does not, and the module test of that publisher already covers it.
 
@@ -88,68 +91,60 @@ The golden path runs in a job on the assembled stack, not on a developer machine
 2. Run the full data import.
 3. Trigger publishing for all publisher plugins.
 4. Start the queue workers until every queue is empty.
-5. Run the `GoldenPath` suite.
+5. Run the `PublishAndSynchronize` suites.
 
 ```bash
 console data:import
 console publish:trigger-events
 console queue:worker:start --stop-when-empty
-vendor/bin/codecept run -c tests/PyzTest/Shared/PublishAndSynchronize GoldenPath
+vendor/bin/codecept run -c tests/PyzTest/Zed/ProductStorage PublishAndSynchronize
+vendor/bin/codecept run -c tests/PyzTest/Zed/ProductPageSearch PublishAndSynchronize
 ```
 
-The first assertion of the suite is that the run itself was clean: no queue holds an unprocessed message and no message ended in an error queue. A non-empty error queue fails the suite before any domain test runs, because every later assertion would report the same root cause less clearly.
+Spryker's own Functional CI job runs the same sequence from a prebuilt database dump: it restores the dump, runs `console sync:data` and `console queue:worker:start --stop-when-empty`, and then runs the suites.
+
+The first check of the suite is that the run itself was clean. `QueuesDrainedHelper` runs once, before the first test of the suite, and fails the suite when any queue still holds a message, including an error queue. Every later assertion would report the same root cause less clearly. It runs before the first test rather than when the suite starts, because `codecept fixtures` loads every suite before the workers run, and the queues are full by design at that moment.
 
 ## How a golden path test looks
 
-A golden path test does three things: it picks an entity that the data import created, it reads that entity back through the real clients, and it asserts that the read succeeded with the declared shape. It never hard-codes a SKU, a name, or a price from the import files. It selects an entity from the database at run time, so the test survives every change to the import data.
+A golden path test does three things: it picks a storage or search table row that the import and the publisher produced, it reads that row back through the real client, and it asserts that the read succeeded with the declared shape. It never hard-codes a SKU, a name, or a price from the import files. It selects the row from the database at run time, so the test survives every change to the import data. This is the shipped product storage test:
 
 ```php
-namespace PyzTest\Shared\PublishAndSynchronize\GoldenPath;
+namespace PyzTest\Zed\ProductStorage\PublishAndSynchronize;
 
 use Codeception\Test\Unit;
-use PyzTest\Shared\PublishAndSynchronize\PublishAndSynchronizeGoldenPathTester;
+use PyzTest\Zed\ProductStorage\ProductStorageSynchronizationTester;
 
-class ProductGoldenPathTest extends Unit
+class ProductAbstractStorageSynchronizationTest extends Unit
 {
-    protected PublishAndSynchronizeGoldenPathTester $tester;
+    protected ProductStorageSynchronizationTester $tester;
 
-    public function testGivenImportedProductAbstractWhenReadingFromStorageThenTheDeclaredAttributesArePresent(): void
+    public function testGivenASynchronizedProductAbstractRowWhenReadingThroughTheStorageClientThenTheRowIsInStorage(): void
     {
         // Arrange
-        $productAbstractEntity = $this->tester->pickAnyActiveProductAbstract();
-        $localeName = $this->tester->getDefaultLocaleName();
+        $storageEntity = $this->tester->pickOldestProductAbstractStorageRow();
 
         // Act
-        $storageData = $this->tester->getStorageClient()->findProductAbstractStorageData(
-            $productAbstractEntity->getIdProductAbstract(),
-            $localeName,
+        $storageData = $this->tester->getLocator()->productStorage()->client()->findProductAbstractStorageData(
+            $storageEntity->getFkProductAbstract(),
+            $storageEntity->getLocale(),
+            $storageEntity->getStore(),
         );
 
         // Assert
-        $this->assertNotNull($storageData, 'Product abstract was imported but did not reach storage.');
-        $this->assertSame($productAbstractEntity->getIdProductAbstract(), $storageData['id_product_abstract']);
-        $this->assertSame($productAbstractEntity->getSku(), $storageData['sku']);
+        $this->assertNotNull($storageData, sprintf(
+            'Row %d of spy_product_abstract_storage never reached storage: the queue, the worker or the storage adapter is misconfigured.',
+            $storageEntity->getIdProductAbstractStorage(),
+        ));
+        $this->assertSame($storageEntity->getFkProductAbstract(), $storageData['id_product_abstract']);
+        $this->assertSame($storageEntity->getData()['sku'], $storageData['sku']);
         $this->assertArrayHasKey('name', $storageData);
         $this->assertArrayHasKey('url', $storageData);
-    }
-
-    public function testGivenImportedProductAbstractWhenReadingFromSearchThenTheDocumentExists(): void
-    {
-        // Arrange
-        $productAbstractEntity = $this->tester->pickAnyActiveProductAbstract();
-        $searchKey = $this->tester->buildProductPageSearchKey($productAbstractEntity);
-
-        // Act
-        $document = $this->tester->getSearchClient()->read($searchKey);
-
-        // Assert
-        $this->assertNotNull($document, 'Product abstract was imported but did not reach search.');
-        $this->assertSame($productAbstractEntity->getSku(), $document['search-result-data']['sku']);
     }
 }
 ```
 
-The tester holds the small amount of project knowledge the tests need: how to pick an entity, the default store and locale, how the project builds its search keys, and how to resolve the domain storage client and the Search client. Everything else comes from the real clients.
+The tester holds the small amount of project knowledge the test needs: how to pick a row. `pickOldestProductAbstractStorageRow()` takes the oldest row of `spy_product_abstract_storage` and fails with a pointed message when the table is empty. The row carries its store and locale, so the read uses the scope the publisher wrote. Everything else comes from the real client. The search test has the same shape and reads the page document back through the Search client.
 
 ### Rules for a golden path test
 

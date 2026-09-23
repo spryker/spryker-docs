@@ -20,7 +20,7 @@ flowchart LR
     end
 
     CY ==>|"drives a real browser"| BR
-    AG ==>|"real request to the deployed application"| GL
+    AG ==>|"real HTTP request to the running application"| GL
     AC ==>|"boots the kernel in-process"| GL
     FA ==>|"calls the facade directly"| BU
     UN ==>|"one class inside it"| BU

@@ -1,7 +1,7 @@
 ---
 title: Testing strategy
 description: Learn which test type answers which question in a Spryker project, how the test types map onto the testing trophy, and how to keep the gaps between them from lining up.
-last_updated: Sep 18, 2026
+last_updated: Sep 23, 2026
 template: concept-topic-template
 related:
   - title: Testing strategy examples
@@ -60,7 +60,7 @@ A test type marked *Rolling out* or *Planned* is never a reason to leave a gap u
 
 Spryker is integration-heavy. Most tests run real code against a real database inside a single process. Browser tests are few and cover complete journeys. Tests of a single class are the smallest group and are written only where a wider test cannot reach the logic. This is the shape often called the *testing trophy*: a broad base of static analysis, a narrow stem of single-class tests, a wide middle of integration tests, and a thin top of end-to-end tests.
 
-The classic testing pyramid puts most weight on unit tests with mocked collaborators. In a modular monolith like Spryker, most defects live in the interaction between a facade, its persistence layer, and the plugins a project registers. Mocking those interactions away tests the mock. Running them for real, but in one process and without external services, keeps tests fast and keeps them honest.
+The classic testing pyramid puts most weight on unit tests with mocked collaborators. In a modular monolith like Spryker, most defects live in the interaction between a facade, its persistence layer, and the plugins a project registers. Mocking those interactions away tests the mock. Running them for real, but in one process, keeps tests fast and keeps them honest. An integration test needs no service besides the database unless that service is what its test type proves: the search query test needs the search engine, and the message broker transport test, the direct storage write test, and the provider sandbox contract test need the service in their name.
 
 The opposite failure is the ice-cream cone: most coverage in browser tests. Those tests are the slowest, the flakiest, and the worst at telling you which module broke. They stay at the top and they stay few.
 
@@ -83,12 +83,15 @@ The tiers are also the order the tests should run in. A cheaper tier that fails 
 | Test type | Tier | Status | The question it answers | Typical cost per test |
 |---|---|---|---|---|
 | [Cypress journey](#cypress-journey) | end-to-end | Available | Can a customer still complete this journey in the browser, on the assembled system? | tens of seconds to minutes |
-| [Publish and Synchronize golden path](#publish-and-synchronize-golden-path) | end-to-end | Planned | Are the real queue, storage, and search wired correctly on this project? | seconds to a minute |
-| [API golden path](#api-golden-path) | end-to-end | Planned | Do real tokens, headers, and transport status work on the deployed application? | seconds |
+| [Publish and Synchronize golden path](#publish-and-synchronize-golden-path) | end-to-end | Rolling out | Are the real queue, storage, and search wired correctly on this project? | seconds to a minute |
+| [API golden path](#api-golden-path) | end-to-end | Rolling out | Do real tokens, headers, and transport status work over a real HTTP request to the running application? | seconds |
 | [API contract test](#api-contract-test) | integration | Rolling out | Does the endpoint honour the contract its schemas declare? | seconds |
 | [Facade test](#facade-test) | integration | Available | Is the business rule right? | milliseconds |
 | [Publish and Synchronize module test](#publish-and-synchronize-module-test) | integration | Available | Does saving this entity produce the right event, table row, key, and payload? | milliseconds to seconds |
-| [Search query test](#search-query-test) | integration | Planned | Does the query this module builds return the shape the application maps? | seconds |
+| [Search query test](#search-query-test) | integration | Rolling out | Does the query this module builds return the shape the application maps? | seconds |
+| [Message broker transport test](#message-broker-transport-test) | integration | Planned | Does a message the module sends arrive through the real broker adapter as the receiver expects it? | seconds |
+| [Direct storage write test](#direct-storage-write-test) | integration | Planned | Does what application code writes straight into storage, outside Publish and Synchronize, read back through the real client? | seconds |
+| [Provider sandbox contract test](#provider-sandbox-contract-test) | integration | Planned | Does the external provider's sandbox accept the request the outbound adapter builds and answer in the shape it maps? | seconds |
 | [API Provider or Processor test](#api-provider-or-processor-test) | unit | Rolling out | Which branch inside this provider or processor runs? | well under a millisecond |
 | [Class unit test](#class-unit-test) | unit | Available | Is this one class right, where no wider test can reach the branch? | milliseconds |
 | [Static analysis](#static-analysis) | static | Available | Do the types, the style, and the application layer boundaries hold? | no test to write |
@@ -100,12 +103,15 @@ The names above name *questions*. Codeception suites are named after the applica
 | Test type | Where to look | What it is called there |
 |---|---|---|
 | Cypress journey | the `spryker/cypress-tests` package, `cypress/e2e` | a Cypress spec |
-| Publish and Synchronize golden path | — | *Planned*. The target shape is `tests/PyzTest/Shared/PublishAndSynchronize`, suite `GoldenPath` |
-| API golden path | — | *Planned*. A project-level suite next to the P&S golden path |
+| Publish and Synchronize golden path | `tests/PyzTest/Zed/<Module>Storage` and `tests/PyzTest/Zed/<Module>Search` | the `PublishAndSynchronize` suite. `ProductStorage` and `ProductPageSearch` exist |
+| API golden path | `tests/PyzTest/Glue/AccessToken` and `tests/PyzTest/Glue/OauthBackendApi` | the `Transport` suite |
 | API contract test | `tests/PyzTest/Glue/<Module>` | the `RestApi`, `StorefrontApi`, `BackendApi`, or `BackendApiIntegration` suite. Being split into an `Integration` suite |
 | Facade test | `<Module>/tests/SprykerTest/Zed/<Module>/Business` | the `Business` suite, `<Module>FacadeTest.php` |
 | Publish and Synchronize module test | `<Module>Storage/tests/SprykerTest/Zed/<Module>Storage/Communication` | the `Communication` suite of the `*Storage` or `*Search` module. Named after the plugin it tests, such as `<Entity>PublishListenerTest.php` |
-| Search query test | — | *Planned*. No suite exists yet |
+| Search query test | `tests/PyzTest/Client/Catalog` | the `SearchQuery` suite |
+| Message broker transport test | — | *Planned*. No suite exists yet |
+| Direct storage write test | — | *Planned*. No suite exists yet |
+| Provider sandbox contract test | — | *Planned*. No suite exists yet |
 | API Provider or Processor test | `tests/PyzTest/Glue/<Module>` | the `Logic` suite, being introduced |
 | Class unit test | next to the class, in the module's test suite | `<Class>Test.php` |
 | Static analysis | no test directory | PHPStan, Code Sniffer, Architecture Sniffer |
@@ -221,11 +227,11 @@ The module test runs in one process against the real database, with the queue, s
 
 ### Publish and Synchronize golden path
 
-*Tier: end-to-end. Status: Planned.*
+*Tier: end-to-end. Status: Rolling out.*
 
-- **Owns.** That the real queue, storage, and search are wired correctly, once per critical domain, after a full data import.
-- **Must not.** Cover more than one entity per domain, or assert business values.
-- **Lives in.** A dedicated `GoldenPath` suite at the project level, run in a job on the real infrastructure. See [Testing the Publish and Synchronization golden path](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/testing-the-publish-and-synchronization-golden-path.html).
+- **Owns.** That the real queue, storage, and search are wired correctly, once per critical domain, after the data import and the queue workers have run.
+- **Must not.** Cover more than one entity per domain, or assert business values. It reads what the import produced and never writes an entity of its own.
+- **Lives in.** The `PublishAndSynchronize` suite of the domain's `tests/PyzTest/Zed/<Module>Storage` or `tests/PyzTest/Zed/<Module>Search` directory, run in a job on the real infrastructure. The product domain ships as `ProductStorage` and `ProductPageSearch`; the other domains follow. See [Testing the Publish and Synchronization golden path](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/testing-the-publish-and-synchronization-golden-path.html).
 
 The golden path runs on the fully assembled stack with the real queue, storage, and search. It runs the full data import, drains the publish and synchronize queues, and then asserts that one known imported entity per critical domain is readable through the Storage client and the Search client, under the expected key and with the declared shape. It proves wiring: queue configuration, key generation, the storage and search adapters, the index mappings, and the workers. It says nothing new about any module. When it fails, the configuration or the infrastructure is wrong.
 
@@ -233,27 +239,55 @@ A second entity per domain repeats the module test at many times the cost and pr
 
 ### API golden path
 
-*Tier: end-to-end. Status: Planned.*
+*Tier: end-to-end. Status: Rolling out.*
 
-- **Owns.** That an API request survives the deployed application: a real token is issued and introspected, request headers arrive expanded as the client sends them, client middleware runs, and the status a caller sees is the one the application returned. A handful of requests, once per deployment.
+- **Owns.** That an API request survives a real HTTP round trip to the running application: a real token is issued and introspected, request headers arrive expanded as the client sends them, client middleware runs, and the status a caller sees is the one the application returned. A handful of requests per API.
 - **Must not.** Re-assert the contract, enumerate operations or validation rules, assert business values, or grow an endpoint at a time. Every one of those is an API contract test paying a full deployment for an answer it already has.
-- **Lives in.** A dedicated project-level suite run against the deployed application, next to the Publish and Synchronize golden path.
+- **Lives in.** The `Transport` suite of `tests/PyzTest/Glue/AccessToken` for the Storefront API and of `tests/PyzTest/Glue/OauthBackendApi` for the Backend API, run against the running application.
 
 An API contract test boots the kernel in-process and stubs token introspection, which is what makes it fast and what makes it blind to everything in front of the kernel. A token that is never minted cannot expire, be rejected by the wrong issuer, or carry the wrong scopes. A header that is never sent over a network cannot be dropped by a proxy. A status the application returns is not always the status the caller sees.
 
-The API golden path closes exactly that band and nothing else: mint a token against the running application, call one secured endpoint with it, call one without it, and assert the status and the envelope in each case. It proves deployment wiring, so it belongs to the project, and Spryker ships a reference implementation in the demo shops. When it fails, the deployment is wrong, not a module.
+The API golden path closes exactly that band and nothing else: mint a token against the running application, call one secured endpoint with it, call it again without a token, and assert the status and the envelope in each case. Today a storefront request without a token is answered with `403` and a backend request with `401`. It proves application wiring, so it belongs to the project. When it fails, the wiring is wrong, not a module.
 
 This is the home of the few API requests that a browser suite used to carry. An API request in a Cypress spec proves the same thing at the price of a browser runner and under a test type that must not own it.
 
 ### Search query test
 
-*Tier: integration. Status: Planned.*
+*Tier: integration. Status: Rolling out.*
 
 - **Owns.** That the query the application builds is accepted by a real search engine and that its result maps into the transfers the application expects.
 - **Must not.** Assert the ranking of seed data, assert business logic above the adapter, or test behaviour that belongs to the search product itself.
-- **Lives in.** A dedicated suite per search-backed resource, run against the search engine, separate from the API suites.
+- **Lives in.** A `SearchQuery` suite per search-backed resource, run against the search engine, separate from the API suites. The catalog search ships as `tests/PyzTest/Client/Catalog`: the real product page publisher writes one fixture product into the index, and the test runs the catalog search for a term only that product carries.
 
 Spryker owns two things in a search: the query the application builds from its own query expanders and plugins, and the mapping of the raw result back into transfers. A search query test runs that query against a real engine and maps the result back, so a query the engine rejects or a result field that moved is reported by the module that owns it, within seconds, rather than by a browser suite or a customer. Nothing else exercises either half: an API contract test stubs the search response, and a facade test never reaches the adapter. Relevance, sharding, and availability belong to the search product a project runs, so this test type leaves them alone.
+
+### Message broker transport test
+
+*Tier: integration. Status: Planned.*
+
+- **Owns.** That a message a module sends is serialized, routed, and delivered through the real broker adapter, and arrives with the headers and body the receiving handler maps.
+- **Must not.** Assert what the handler does with the message. That belongs to the facade test of the receiving module.
+- **Lives in.** No suite exists yet.
+
+Module tests send messages to an in-memory transport, so a message that the real adapter cannot serialize or route passes every one of them.
+
+### Direct storage write test
+
+*Tier: integration. Status: Planned.*
+
+- **Owns.** That what application code writes straight into storage, outside Publish and Synchronize, reads back through the real client under the key the reader expects. Examples are the SecurityBlocker login attempt counters and the customer invalidation stamps.
+- **Must not.** Assert the business rule that decided to write. That belongs to the facade test.
+- **Lives in.** No suite exists yet.
+
+The Publish and Synchronize golden path covers only what the synchronize step writes. These writes skip that step, so their module tests replace the storage with an in-memory stand-in and nothing else reaches the real one.
+
+### Provider sandbox contract test
+
+*Tier: integration. Status: Planned.*
+
+- **Owns.** That the external provider accepts the request the outbound adapter builds and answers in the shape the adapter maps, once per provider, against the provider's sandbox. Tax, payment, and mail providers are examples.
+- **Must not.** Enumerate the provider's own rules or assert business values.
+- **Lives in.** No suite exists yet.
 
 ### Class unit test
 
@@ -284,9 +318,9 @@ Every substituted or stubbed answer must be paired with a test, in another test 
 
 A substitute is an in-memory helper, a stub, or a lighter engine that stands in for a real collaborator, and the answer it returns is written by the test rather than produced by the system. The `StorageHelper`, `SearchHelper`, and `QueueHelper` are substitutes. So is a stubbed token introspection response and a lightweight database engine in place of the production one.
 
-When you introduce a substitute in a test suite, name the pairing test type in a comment on the line that registers the substitute, and check that the register below already covers that substitution. If it does not, the register gains a row and somebody writes the test.
+When you introduce a substitute, declare `#[Substitutes(realCollaborator: '…', provenBy: TestType::…)]` on the helper class, and check that the register below already covers that substitution. Every `TestType` value is the heading of a test type on this page, so a declaration can only name a test type that exists here. If the register does not cover the substitution, it gains a row, `TestType` gains the case, and somebody writes the test.
 
-The register is the table in the next section of this page. It is not a separate system: nothing generates it, no tool reads it, and it is kept up to date by hand and checked in code review. A machine-readable marker on the registering line, so that a substitute without a pairing fails static analysis instead of waiting for a reviewer, is *Planned*.
+The register is the table in the next section of this page, kept by hand and checked in code review. The declarations are checked in code: `SubstitutePairingTest` in the Testify module fails on a helper that looks like a substitute and declares nothing, and `vendor/bin/codecept pairing:register` prints every declaration as the table under [Declared substitutes](#declared-substitutes).
 
 ### The pairing register
 
@@ -294,14 +328,38 @@ The register is the table in the next section of this page. It is not a separate
 
 | Substituted or not exercised | Which test type proves the real thing |
 |---|---|
-| The synchronize step that writes into storage, including key format and store and locale scoping, is not run in API contract tests | Publish and Synchronize module test, plus the golden path |
+| The synchronize step that writes into storage, including key format and store and locale scoping, is not run in API contract tests | Publish and Synchronize module test, plus the Publish and Synchronize golden path |
 | The queue, storage, and search are in-memory helpers in a Publish and Synchronize module test | Publish and Synchronize golden path, on the real services |
 | The search engine response is stubbed in API contract tests | Search query test for that resource |
-| Token introspection is stubbed in API contract tests, and so are token issuance, request header expansion, client middleware, and transport-level status semantics on an API request | API golden path, against the deployed application |
+| Token introspection is stubbed in API contract tests, and so are token issuance, request header expansion, client middleware, and transport-level status semantics on an API request | API golden path, over a real HTTP request to the running application |
 | API contract tests run on a lightweight database engine, so database-specific SQL is not exercised | The facade test of the module, on the production database engine |
 | A facade test never goes over an API request, so status codes, envelope, and JSON shape are not exercised | API contract test for the operation |
 | A facade test never goes over a browser request, so controller wiring, form binding, CSRF, session login, redirects, and rendering are not exercised | The Cypress journey that walks that flow. A browser-only flow that no journey walks carries this gap knowingly, because the journey costs a full run |
-| Calls to external services such as tax or payment providers are stubbed at an outbound adapter seam | One contract test against the provider's sandbox |
+| Calls to external services such as tax, payment, or mail providers are stubbed at an outbound adapter seam | Provider sandbox contract test, one per provider (*Planned*) |
+| The message broker transport is in-memory in module tests | Message broker transport test, against the real broker adapter (*Planned*) |
+| Storage written directly by application code outside Publish and Synchronize, such as SecurityBlocker counters and customer invalidation stamps, is in-memory in module tests | Direct storage write test, reading it back through the real client (*Planned*) |
+
+#### Declared substitutes
+
+Every helper that declares `#[Substitutes]`, as `vendor/bin/codecept pairing:register` prints it. Regenerate the table with that command after you add or change a declaration, and paste it here.
+
+| Substitute | Stands in for | Proven by |
+|---|---|---|
+| `SprykerTest\Client\Queue\Helper\QueueHelper` | RabbitMQ | Publish and Synchronize golden path |
+| `SprykerTest\Client\Search\Helper\SearchHelper` | the search engine | Publish and Synchronize golden path |
+| `SprykerTest\Client\Search\Helper\SearchResponseStubHelper` | the search engine response | Search query test |
+| `SprykerTest\Client\SecurityBlocker\Helper\SecurityBlockerRedisHelper` | Redis behind SecurityBlocker | Direct storage write test |
+| `SprykerTest\Client\StorageDatabase\Helper\SqliteStorageHelper` | Redis storage, read side | Publish and Synchronize golden path |
+| `SprykerTest\Client\Storage\Helper\StorageHelper` | Redis storage | Publish and Synchronize golden path |
+| `SprykerTest\Zed\Customer\Helper\CustomerInvalidationStorageStubHelper` | Redis, customer invalidation writes | Direct storage write test |
+| `SprykerTest\Zed\Mail\Helper\MailCaptureHelper` | the mail provider | Provider sandbox contract test |
+| `SprykerTest\Zed\MessageBroker\Helper\InMemoryMessageBrokerHelper` | the message broker transport | Message broker transport test |
+| `SprykerTest\Zed\MessageBroker\Helper\MessageBrokerHelper` | the message broker transport | Message broker transport test |
+| `SprykerTest\Zed\Publisher\Helper\PublishAndSynchronizeHelper` | RabbitMQ and the queue worker | Publish and Synchronize golden path |
+| `SprykerTest\Zed\Publisher\Helper\PublishHelper` | the publish queue and its worker | Publish and Synchronize golden path |
+| `SprykerTest\Zed\QuoteCheckoutConnector\Helper\QuoteCheckoutLockHelper` | Redis behind the duplicate-order guard of the checkout | Cypress journey |
+
+The Cypress journey that proves `QuoteCheckoutLockHelper` walks the checkout on the real storage, so the lock is taken for real. No journey submits the same checkout twice, so the duplicate-submit branch of the lock is not proven by it.
 
 ### What each test type hands off
 

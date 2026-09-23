@@ -1,7 +1,7 @@
 ---
 title: Install the Configuration Management feature
 description: Learn how to integrate and configure Configuration Management feature in a Spryker project.
-last_updated: Aug 24, 2026
+last_updated: Sep 23, 2026
 template: howto-guide-template
 
 related:
@@ -119,24 +119,30 @@ $config[ConfigurationConstants::ENCRYPTION_INIT_VECTOR] = hex2bin(getenv('SPRYKE
 
 #### 2.2) Provide environment variables
 
+Upgrade Docker SDK to version [1.76.0+](https://github.com/spryker/docker-sdk/releases/tag/1.76.0). The `SPRYKER_CONFIGURATION_ENCRYPTION_KEY` and `SPRYKER_CONFIGURATION_ENCRYPTION_INIT_VECTOR` environment variables are then generated automatically during local project setup (`docker/sdk boot deploy.dev.yml && docker/sdk up`).
 
-For local development, add the following environment variables to your deploy file (`deploy.dev.yml` or equivalent):
+In Cloud, start the deployment pipeline with the new version of Docker SDK to propagate these variables to the containers.
 
-```yaml
-image:
-    environment:
-        SPRYKER_CONFIGURATION_ENCRYPTION_KEY: '<your-64-char-hex-key>'
-        SPRYKER_CONFIGURATION_ENCRYPTION_INIT_VECTOR: '<your-32-char-hex-iv>'
-```
+{% info_block infoBox "" %}
 
-In Cloud, add environment variables using [Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store).
+If you cannot update Docker SDK in Cloud, you can add custom variables using [Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store).
 
 To generate new keys, run:
 
 ```bash
-openssl rand -hex 32  # generates SPRYKER_CONFIGURATION_ENCRYPTION_KEY
-openssl rand -hex 16  # generates SPRYKER_CONFIGURATION_ENCRYPTION_INIT_VECTOR
+openssl rand -hex 32  # generates CONFIGURATION_ENCRYPTION_KEY
+openssl rand -hex 16  # generates CONFIGURATION_ENCRYPTION_INIT_VECTOR
 ```
+
+In this case, use env names without the `SPRYKER_` prefix in the PHP config file:
+
+```php
+// Configuration system
+$config[ConfigurationConstants::ENCRYPTION_KEY] = hex2bin(getenv('CONFIGURATION_ENCRYPTION_KEY') ?: '') ?: null;
+$config[ConfigurationConstants::ENCRYPTION_INIT_VECTOR] = hex2bin(getenv('CONFIGURATION_ENCRYPTION_INIT_VECTOR') ?: '') ?: null;
+```
+
+{% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 

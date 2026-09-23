@@ -1,13 +1,22 @@
 ---
 title: Backend API conventions
 description: The request headers, pagination, filtering, and sorting conventions that every Spryker Backend API resource follows.
-last_updated: Sep 17, 2026
+last_updated: Sep 23, 2026
 template: concept-topic-template
 ---
 
 Every Backend API resource follows the same conventions for authorization headers, pagination, filtering, and sorting. This page describes them once. Individual resource guides list only what is specific to that resource—the filterable properties, the sortable fields, and the attributes.
 
 These conventions are [JSON:API](https://jsonapi.org/format/) as implemented by [API Platform](https://api-platform.com/docs/core/pagination/), not a Spryker invention: `page[limit]`/`page[offset]`, the `filter[…]` family, the `sort` parameter with its `-` prefix, and the `first`/`last`/`prev`/`next` link set all come from that stack. The one Spryker-specific part is the shape of the `meta.pagination` object, which keeps the keys the legacy Glue REST API returned.
+
+## Where to find the full schema
+
+Every Backend API resource is generated from its `*.resource.yml` and `*.validation.yml` files, so the attribute list, parameter descriptions, request and response schemas, and validation rules are already published where they cannot go stale: your project's own generated OpenAPI documentation.
+
+- **Swagger UI**: served at the root URL of your Glue Backend application, for example `http://glue-backend.eu.spryker.local/`. Disabled in production by default—see [Enable the documentation UI only in development](/docs/integrations/spryker-api/api-platform/configuration.html#enable-the-documentation-ui-only-in-development).
+- **CLI**: `docker/sdk cli glue api:debug {resource} --api-type=backend` prints the merged schema for one resource, including every property contributed by every installed module.
+
+Resource guides do not repeat this schema. They document only what the generated schema cannot show: which module and version an endpoint or attribute ships in, which plugins you need to register, and behavior that spans multiple modules or isn't expressible in a `*.resource.yml` file.
 
 ## Request headers
 
@@ -38,6 +47,10 @@ filter[{resource}.{property}]={value}
 For example, `filter[companies.name]=acme`. A key without the resource prefix returns `400` with the error code `011`, and a filter addressing an unsupported property returns `400` with the error message naming the properties that are supported. An unsupported `sort` field returns `400` with the error code `1203`.
 
 Collections are ordered deterministically, so paging through one never repeats or skips an item.
+
+## Partial updates
+
+A `PATCH` request applies only the attributes present in the payload; every attribute you omit keeps its stored value. Resource guides call this out only where a resource has an exception—for example, a default that a create operation applies but an update does not.
 
 ## Errors
 

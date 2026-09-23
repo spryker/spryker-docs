@@ -7,7 +7,7 @@ template: glue-api-backend-guide-template
 
 The `merchants` Backend API resource lets you retrieve, create, and update merchants (`GET /merchants`, `GET /merchants/{merchantReference}`, `POST /merchants`, `PATCH /merchants/{merchantReference}`). You can use it to build Back Office extensions, ERP and PIM integrations, and merchant onboarding automation.
 
-This page does not repeat the attribute list, parameter reference, or response schema—see [Where to find the full schema](/docs/integrations/spryker-api/backend-api/backend-api-conventions.html#where-to-find-the-full-schema). It documents only what that generated schema does not show: installation, module wiring, and behavior that spans multiple modules.
+This page does not repeat the attribute list, parameter reference, or response schema—for those, use the Swagger UI your Glue Backend application serves at its root URL, or run `docker/sdk cli glue api:debug merchants --api-type=backend`. It documents only what that generated schema does not show: installation, module wiring, and behavior that spans multiple modules.
 
 ## Installation
 
@@ -20,11 +20,11 @@ For the required module version and plugin registration, see [Install the Mercha
 
 ## Conventions
 
-Request headers, pagination, filtering, sorting, partial updates, and errors follow the rules in [Backend API conventions](/docs/integrations/spryker-api/backend-api/backend-api-conventions.html).
+Request headers, pagination, filtering, sorting, and errors follow the rules in [Backend API conventions](/docs/integrations/spryker-api/backend-api/backend-api-conventions.html). A `PATCH` request applies only the attributes present in the payload; every attribute you omit keeps its stored value.
 
 ## Behavior notes
 
-The following behaviors are either not expressible in a `*.resource.yml` schema or currently differ from what it describes. Everything else—filterable and sortable fields, attribute types and defaults, and per-operation error codes—is in the generated schema (Swagger UI or `docker/sdk cli glue api:debug merchants --api-type=backend`), not here.
+The following behaviors are either not expressible in a `*.resource.yml` schema or currently differ from what it describes. Everything else—filterable and sortable fields, attribute types and defaults, and per-operation error codes—is in the generated schema, not here.
 
 {% info_block warningBox "merchantUrls.url: the schema description is out of date" %}
 

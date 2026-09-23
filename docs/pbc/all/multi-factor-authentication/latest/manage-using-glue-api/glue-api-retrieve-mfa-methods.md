@@ -3,6 +3,11 @@ title: "Glue API: Retrieve MFA methods"
 description: This article explains how to retrieve available MFA methods for a user
 last_updated: Sep 22, 2026
 template: glue-api-storefront-guide-template
+related:
+  - title: Activate and deactivate MFA
+    link: docs/pbc/all/multi-factor-authentication/latest/manage-using-glue-api/glue-api-activate-and-deactivate-mfa.html
+  - title: "Backend API: Manage Multi-Factor Authentication"
+    link: docs/pbc/all/multi-factor-authentication/latest/manage-using-glue-api/backend-api-manage-multi-factor-authentication.html
 ---
 
 
@@ -81,79 +86,3 @@ Back Office users and merchant users retrieve their MFA methods through the Back
 | 5907 | RESPONSE_CUSTOMER_NOT_FOUND                        | Customer not found.              |
 | 5908 | RESPONSE_USER_NOT_FOUND                            | User not found.                  |
 | 5909 | RESPONSE_CODE_NO_USER_IDENTIFIER                   | No user identifier provided.     |
-
-
-
-## Next step
-
-[Activate MFA](/docs/pbc/all/multi-factor-authentication/latest/manage-using-glue-api/glue-api-activate-and-deactivate-mfa.html)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

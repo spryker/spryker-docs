@@ -967,6 +967,8 @@ entries:
           url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-18.html
         - title: Upgrade to Angular 20
           url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-20.html
+        - title: Upgrade to Angular 22 and later
+          url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-22.html
 
     - title: Upgrade to frontend builder v2 for Yves
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-frontend-builder-v2-for-yves.html

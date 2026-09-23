@@ -322,7 +322,7 @@ A substitute is an in-memory helper, a stub, or a lighter engine that stands in 
 
 When you introduce a substitute, declare `#[Substitutes(realCollaborator: '…', provenBy: TestType::…)]` on the helper class, and check that the register below already covers that substitution. Every `TestType` value is the heading of a test type on this page, so a declaration can only name a test type that exists here. If the register does not cover the substitution, it gains a row, `TestType` gains the case, and somebody writes the test.
 
-The reference test of a test type declares the other half of the pairing, `#[\SprykerTest\Shared\Testify\Attribute\Proves(TestType::…)]`, on its class. It states that the test exists to close the gap its substitutes leave, so deleting or renaming it without a replacement fails in code, not in production. For example, `CatalogSearchQueryTest` declares `Proves(TestType::SearchQueryTest)`, the type that `SearchResponseStubHelper` names.
+The reference test of a test type declares the other half of the pairing, `#[Proves(TestType::…)]`, on its class. It states that the test exists to close the gap its substitutes leave, so deleting or renaming it without a replacement fails in code, not in production. For example, `CatalogSearchQueryTest` declares `Proves(TestType::SearchQueryTest)`, the type that `SearchResponseStubHelper` names.
 
 The register is the table in the next section of this page, kept by hand and checked in code review. The declarations are checked in code. `SubstitutePairingTest` in the Testify module fails in each of these cases:
 

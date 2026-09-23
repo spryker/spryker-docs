@@ -134,7 +134,12 @@ For existing projects that do not have these variables yet, you have two options
 {% info_block infoBox "" %}
 
 - Create a support request with Spryker to add `SPRYKER_CONFIGURATION_ENCRYPTION_KEY` and `SPRYKER_CONFIGURATION_ENCRYPTION_INIT_VECTOR` for your project. The `SPRYKER_` prefix is reserved for variables managed by Spryker, so you cannot add them yourself.
-- Use different variable names without the `SPRYKER_` prefix (for example, `CONFIGURATION_ENCRYPTION_KEY` and `CONFIGURATION_ENCRYPTION_INIT_VECTOR`), add them yourself using [Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html), and reference these names in `config_default.php` instead.
+- Use different variable names without the `SPRYKER_` prefix (for example, `CONFIGURATION_ENCRYPTION_KEY` and `CONFIGURATION_ENCRYPTION_INIT_VECTOR`), add them yourself using [Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html), and reference these names in `config_default.php` instead. To generate new keys, run:
+
+  ```bash
+  openssl rand -hex 32  # generates CONFIGURATION_ENCRYPTION_KEY
+  openssl rand -hex 16  # generates CONFIGURATION_ENCRYPTION_INIT_VECTOR
+  ```
 
 {% endinfo_block %}
 

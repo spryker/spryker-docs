@@ -269,6 +269,17 @@ email:
   required: true    # Must be present
 ```
 
+#### responseOptional
+
+Exempts a readable property from the required-response-attribute check of the [contract coverage gate](/docs/integrations/spryker-api/api-platform/contract-coverage.html), because the server cannot always populate it. It describes the response contract and is independent of the request-side `required` flag:
+
+```yaml
+updatedAt:
+  type: string
+  readable: true
+  responseOptional: true   # Absent until the resource is first changed
+```
+
 #### default
 
 Sets default value:

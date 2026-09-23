@@ -1,7 +1,7 @@
 ---
 title: Test API Platform resources
 description: Learn how to write and run tests for your API Platform resources in Spryker.
-last_updated: Aug 17, 2026
+last_updated: Sep 23, 2026
 template: howto-guide-template
 related:
   - title: Prove API Platform contract coverage
@@ -16,6 +16,10 @@ related:
     link: docs/integrations/spryker-api/api-platform/validation-schemas.html
   - title: Troubleshooting
     link: docs/integrations/spryker-api/api-platform/troubleshooting.html
+  - title: Codeception documentation
+    link: https://codeception.com/docs/Introduction
+  - title: API Platform testing guide
+    link: https://api-platform.com/docs/symfony/testing/
 redirect_from:
   - /docs/dg/dev/architecture/api-platform/testing.html
 ---
@@ -824,7 +828,7 @@ public function testGivenUnauthorizedRequestWhenAccessingProtectedResourceThen40
 
 ## Running tests
 
-Both tiers run on your host without Docker and without any running service.
+The Storefront API tiers, `StorefrontApiLogic` and `StorefrontApiIntegration`, run on your host without Docker and without any running service. Backend API integration suites, `BackendApiIntegration`, boot the `GLUE_BACKEND` kernel in-process but run against the environment's own database, so they run inside Docker.
 
 ### Generate the code the suites need
 
@@ -838,6 +842,8 @@ vendor/bin/console propel:model:build
 vendor/bin/console transfer:entity:generate
 vendor/bin/console search:setup:source-map
 GLUE_APPLICATION=GLUE_STOREFRONT vendor/bin/glue api:generate
+GLUE_APPLICATION=GLUE_BACKEND vendor/bin/glue api:generate
+vendor/bin/console rest-api:build-request-validation-cache
 vendor/bin/console testify:build:sqlite-template
 ```
 
@@ -851,19 +857,24 @@ DEVELOPMENT_CONSOLE_COMMANDS=1
 
 `search:setup:source-map` writes the `Generated\Shared\Search\*IndexMap` classes. Only search-backed resources need them, but the catalog query plugins reference them while the query is being built, so a missing map is a fatal error rather than an empty result.
 
-`api:generate` is a Glue console command, so use `vendor/bin/glue` and not `vendor/bin/console`. It removes `src/Generated/Api/{ApiType}` before it parses anything, and `--dry-run` does not suppress that. An interrupted run therefore leaves no resources behind, and every test fails with `Class "Generated\Api\Storefront\…Resource" not found`. Re-run the command to recover, and pass `--keep-existing` when you only want to inspect the output.
+`api:generate` is a Glue console command, so use `vendor/bin/glue` and not `vendor/bin/console`. It removes `src/Generated/Api/{ApiType}` before it parses anything, and `--dry-run` does not suppress that. An interrupted run therefore leaves no resources behind, and every test fails with `Class "Generated\Api\Storefront\…Resource" not found`. Re-run the command to recover, and pass `--keep-existing` when you only want to inspect the output. Each run cleans only its own API type's output directory, so generate both types.
+
+`rest-api:build-request-validation-cache` is needed because the Storefront application still reaches legacy Glue plugins through the compatibility bridge, and their request validator refuses to run without its cache file.
 
 `testify:build:sqlite-template` leaves an existing template alone. Pass `--force` to drop and rebuild it after a Zed schema change, or `--path` to build it somewhere other than the configured default. A suite run rebuilds a missing template on its own, so calling it explicitly only front-loads the cost or forces a rebuild.
 
 ### Run a suite
 
 ```bash
-APPLICATION_ENV=devtest vendor/bin/codecept run -c tests/PyzTest/Glue/Wishlists/codeception.yml
+vendor/bin/codecept build -c tests/PyzTest/Glue/<Module>/codeception.yml
+APPLICATION_ENV=devtest vendor/bin/codecept run -c tests/PyzTest/Glue/<Module>/codeception.yml StorefrontApiIntegration
 ```
+
+Name the suite. A module configuration can still carry legacy Docker-lane suites next to the API Platform tiers.
 
 ### Enable the test container
 
-Both tiers resolve services from the container, which needs Symfony's test container. Turn `framework.test` on for the environment the suites run in—it is configured per application in `config/<App>/packages/framework.php`. Without it, the suites fail with `Could not find service "test.service_container"`.
+Both tiers resolve services from the container, which needs Symfony's test container. Turn `framework.test` on for the environment the suites run in—it is configured per application in `config/<App>/packages/framework.php`. Without it, the suites fail with `Could not find service "test.service_container"`. It is already on for `devtest`, `dockerdev`, and `dockerci`.
 
 The container is compiled on first use and then cached, which takes roughly 45 seconds. That is a one-time cost per checkout and after any change to configuration or generated resources. Run the suites once after regenerating and the compile is behind you.
 
@@ -879,15 +890,15 @@ CI runs from a bare checkout where the file is absent and resolution is live, so
 
 ### In CI
 
-The suites are found by convention. Every `tests/PyzTest/Glue/*/codeception.yml` that declares a `StorefrontApiLogic` or a `StorefrontApiIntegration` suite is picked up, one process per module configuration.
+The suites are found by convention. Every `tests/PyzTest/Glue/*/codeception.yml` that declares a `StorefrontApiLogic` or a `StorefrontApiIntegration` suite is picked up, and each of those suites runs in its own codecept process.
 
 Use exactly those two suite names. A new module then needs no workflow change. Use different names and the suites either run nowhere or land in the Docker lane, which they cannot survive.
 
-One process per module configuration is a requirement, not a preference. These suites boot the Glue kernel in-process and need `APPLICATION=GLUE_STOREFRONT`. The constant is process-global and first-wins, so a suite sharing a process with the Docker Glue lane inherits whatever that lane set.
+One process per suite is a requirement, not a preference. These suites boot the Glue kernel in-process and need `APPLICATION=GLUE_STOREFRONT`. The constant is process-global and first-wins, so a suite sharing a process with the Docker Glue lane inherits whatever that lane set. The umbrella helper fails the test with an explicit error when it detects that.
 
 ### Running inside Docker
 
-Test suites that predate the host lane still run through the Docker SDK:
+Test suites that predate the host lane, and the `BackendApiIntegration` suites, run through the Docker SDK:
 
 ```bash
 # Run Backend API tests only
@@ -945,14 +956,23 @@ modules:
         - \SprykerTest\ApiPlatform\Helper\StorefrontApiIntegrationHelper:
               environmentModule: '\PyzTest\Shared\Testify\Helper\Environment'
               projectNamespaces: ['Pyz']
-              publish: true
-        - \PyzTest\Glue\Wishlists\Helper\WishlistsApiHelper
+        - \SprykerTest\ApiPlatform\Helper\OauthKeyContentsHelper
+        - \SprykerTest\Client\StorageDatabase\Helper\SqliteStorageHelper
+        - \SprykerTest\Shared\Customer\Helper\CustomerDataHelper
+        - \SprykerTest\Shared\Wishlist\Helper\WishlistHelper
+        - \SprykerTest\ApiPlatform\Helper\ApiLoginHelper
+        - \SprykerTest\Shared\Wishlist\Helper\WishlistApiTestHelper
+        - \SprykerTest\ApiPlatform\Helper\ApiRequestHelper
         - \SprykerTest\ApiPlatform\Helper\ApiPlatformHelper:
+              mode: 'project'
+              apiType: 'Storefront'
               bootOnce: true
               reuseApplicationContainer: true
 ```
 
-`StorefrontApiIntegrationHelper` registers the integration stack: the database lane, bootstrap, locator, configuration, dependency and data cleanup, transactions, processor resolution, and the in-process Zed transport. Setting `publish: true` adds the in-process publish leg. `StorefrontApiLogicHelper` does the same for the logic tier—container resolution only, with no database and no HTTP.
+`StorefrontApiIntegrationHelper` registers the integration stack: the database lane, bootstrap, locator, configuration, dependency and data cleanup, transactions, processor resolution, and the in-process Zed transport. Setting `publish: true` adds the in-process publish leg. With `publish: true`, the umbrella also registers `PublishHelper`, `QueueHelper`, `EventHelper`, `EventBehaviorHelper`, `BusinessHelper`, `ClientHelper`, and `DependencyProviderHelper`, so do not list them. `StorefrontApiLogicHelper` does the same for the logic tier—container resolution only, with no database and no HTTP.
+
+`BackendApiIntegrationHelper` and `BackendApiLogicHelper` are the Backend API equivalents and set `APPLICATION` to `GLUE_BACKEND`. The Backend integration umbrella runs against the environment's own database rather than SQLite and has no `publish` option. Pair it with `\SprykerTest\ApiPlatform\Helper\BackendApiLoginHelper` and `\SprykerTest\Shared\User\Helper\UserDataHelper`.
 
 Two keys are yours to supply, because the core helper cannot know them:
 
@@ -965,9 +985,9 @@ Three rules govern the list:
 - Keep `ApiPlatformHelper` **last**. Codeception runs `_afterSuite` in reverse order, and the kernel reset has to happen before the database lane deletes its work database.
 - Never re-list one of the umbrella's own child helpers after it. Codeception creates the child a second time and silently discards the configuration forwarded to the replaced instance.
 
-Per-child configuration overrides go under `modules: config:`. The exceptions are `application`, `projectNamespaces`, `applicationPluginProvider`, and `environmentModule`, which are umbrella configuration keys—setting them on a child has no effect, because the umbrella overwrites them.
+Per-child configuration overrides go under `modules: config:`. The exceptions are `application`, `projectNamespaces`, `applicationPluginProvider`, and `environmentModule`, which are umbrella configuration keys. Set them on the umbrella. It pushes `application`, `applicationPluginProvider`, and a non-empty `projectNamespaces` onto the child after creating it, which overrides anything set on the child.
 
-Do not enable `ContainerHelper` in an integration suite. Its `_after()` nulls the shared container delegator whenever its container was touched, and the database-fixture path touches it. That discards the compiled container between methods, so every method after the first fails with a null-container `TypeError`. The logic tier keeps `ContainerHelper`, because its container stays untouched.
+Do not enable `ContainerHelper` in an integration suite. Its `_after()` nulls the shared container delegator whenever its container was touched, and the database-fixture path touches it. That discards the compiled container between methods, so every method after the first fails with a null-container `TypeError`. The logic umbrellas register `ContainerHelper` themselves, because the logic tier's container stays untouched. Do not list it again.
 
 ### ApiPlatformHelper modes
 
@@ -982,7 +1002,7 @@ modules:
 
 | Mode | Use this when | Before suite | After suite |
 |---|---|---|---|
-| `project` (default) | Testing your own project's API resources end-to-end. | Validates that the project-generated resources in `src/Generated/Api/` exist. Skips generation. | Does nothing — the compiled container is preserved across runs for fast subsequent invocations. |
+| `project` (default) | Testing your own project's API resources end-to-end. | Uses the pre-generated resources in `src/Generated/Api/{ApiType}/`. When `apiType` is set and none are found, logs a debug note rather than failing. Skips generation. | Resets the shared kernel and the container delegator, so no resolved service leaks into the next suite. Keeps the compiled container cache on disk for fast subsequent runs. |
 | `core` | Testing the `ApiPlatform` module itself (or any module that ships its own schemas in isolation from a project). | Generates fresh resources into `tests/_data/Api/{ApiType}/`. Requires `apiType` to be set on the helper. | Removes the generated resources and clears the compiled test kernel cache so the next suite starts from a clean slate. |
 
 Use `project` mode for almost all real-world test suites — it is significantly faster because the compiled Symfony container is reused. Reach for `core` mode only when you intentionally want each suite to regenerate resources from scratch (typical when testing schema generation or a single module without a project around it).
@@ -1010,27 +1030,27 @@ These keys are all opt-in. Omitting one keeps the slower per-method boot with de
       reuseApplicationContainer: true  # keep the container delegator singleton; default false
 ```
 
-With `bootOnce`, the kernel is built once per process rather than once per test method. The container is still reset between methods, which is what lets each method bind its own stubs—a service already bound in the container cannot be replaced.
+With `bootOnce`, the kernel is built once per suite rather than once per test method, and `ApiPlatformHelper` takes it before each method runs. The container is still reset between methods, which is what lets each method bind its own stubs—a service already bound in the container cannot be replaced.
 
 #### Register stubs before you resolve the system under test
 
-Call `setService($id, $stub)` **before** the first `createClient()`, `getTestKernel()`, `getProcessor()`, or `getProvider()` in a test method. Stubs are bound when the kernel is taken for that method, so registering an ID after that point has no effect, and the same ID cannot be re-bound within one method once the container holds it.
+Call `setService($id, $stub)` **before** anything in the test method resolves that service—before the `getProcessor()`, `getProvider()`, or request that uses it. A stub registered before the kernel boots is bound at boot. A stub registered against a kernel that is already up is bound immediately, as long as the container has not built that service yet. Once the container has built it, Symfony refuses the replacement and the stub is silently ignored: the real service keeps answering.
 
 The container knows nothing about stubs at compile time. They are bound afterwards through Symfony's test container.
 
 ### Infrastructure stand-in helpers
 
-The host lane has no Redis, no Elasticsearch, and nothing draining the queue. These helpers put a real substitute behind each one, so the code above them runs unchanged. None of them stubs the resource under test.
+The host lane has no Redis, no Elasticsearch, and nothing draining the queue. These helpers put a real substitute behind each one, so the code above them runs unchanged. None of them stubs the resource under test. `SqliteStorageHelper`, `StorageCacheHelper`, and `SearchResponseStubHelper` are not part of the umbrella; list them after it.
 
 | Helper | Stands in for | Provides |
 |---|---|---|
 | `\SprykerTest\Client\StorageDatabase\Helper\SqliteStorageHelper` | Redis, read side | Points the Storage client at the storage-database plugin, so reads hit the `spy_*_storage` tables of the lane's SQLite database. Configuration only, no methods. |
-| `\SprykerTest\Zed\Publisher\Helper\PublishHelper` | The queue | `publishPendingEvents()` drains what the test just created. `publishEntities($eventName, $ids)` publishes rows that never raised an event. The synchronization leg stays off, because it only pushes into Redis. |
-| `\SprykerTest\Shared\Testify\Helper\StorageCacheHelper` | — | `resetStorageCaches()`, plus a reset before every test. Storage clients memoize in statics that survive a container reset, so a read taken before the arrange step otherwise pins the empty result for the whole process. |
-| `\SprykerTest\Client\Search\Helper\SearchResponseStubHelper` | Elasticsearch | `stubSearchResult(array $formattedSearchResult)` takes over the search-adapter plugin list. Everything above the adapter runs for real, so the array is the post-formatting result and not a raw Elasticsearch body. |
+| `\SprykerTest\Zed\Publisher\Helper\PublishHelper` | The queue | `publishPendingEvents()` drains what the test just created. `publishEntities($eventName, $ids)` publishes rows that never raised an event. `registerEventSubscribers($subscribers)` restores legacy event subscribers; call it before anything writes. The synchronization leg stays off, because it only pushes into Redis. |
+| `\SprykerTest\Shared\Testify\Helper\StorageCacheHelper` | — | `resetStorageCaches()`, plus a reset before every test. Storage clients memoize in statics that survive a container reset, so a read taken before the arrange step otherwise pins the empty result for the whole process. Add further caches from the suite's `codeception.yml` with `caches: { \Some\Client\Reader: [staticPropertyName] }`. |
+| `\SprykerTest\Client\Search\Helper\SearchResponseStubHelper` | Elasticsearch | `stubSearchResult(array $formattedSearchResult)` replaces the search-adapter plugin list. The Catalog client, query plugins, and query expanders still run, but the query is discarded and the result formatters are bypassed. So the array is the post-formatting result, keyed by formatter name such as `products` and `pagination`, and not a raw Elasticsearch body. |
 | `\SprykerTest\Client\Queue\Helper\QueueHelper` | — | Backs the publish leg's in-memory queue. Set `application: Zed` for a `Glue`-namespaced suite: without it, the configuration resolver guesses the application from the suite namespace, guesses `Glue`, and finds no queue configuration. The umbrella helper forces this when `publish: true`. |
 
-A storage resource whose name does not derive its table as `spy_<resource>_storage` needs an entry in `SprykerTest\Client\StorageDatabase\Sqlite\SqliteStorageDatabaseConfig`. Two exist by default: `translation` maps to `spy_glossary_storage`, and `product_search_config_extension` maps to `spy_product_search_config_storage`.
+A storage resource whose name does not derive its table as `spy_<resource>_storage` needs an entry in `SprykerTest\Client\StorageDatabase\Sqlite\SqliteStorageDatabaseConfig`. Three exist by default: `translation` maps to `spy_glossary_storage`, `product_search_config_extension` maps to `spy_product_search_config_storage`, and `product_abstract_tax_set` maps to `spy_tax_product_storage`.
 
 Miss the `translation` entry and *every* error response becomes `PDOException: no such table`, because the error provider translates its message before rendering. The reported exception then has nothing to do with the actual failure.
 
@@ -1198,11 +1218,13 @@ A test owns the data it asserts against. In the integration tier, that means cre
 Module-owned data and assertions belong in that module's helper, shipped from the core module so that projects can enable it. For example, a wishlist helper builds the transfers a stubbed client returns and asserts a resource against them:
 
 ```php
-$wishlistTransfer = $this->tester->haveWishlistTransfer();   // non-persisting, logic tier
-$wishlistTransfer = $this->tester->haveWishlist();           // DB-backed, integration tier
+$wishlistTransfer = $this->tester->haveWishlistTransfer(); // non-persisting, logic tier
+$wishlistTransfer = $this->tester->haveWishlist([WishlistTransfer::FK_CUSTOMER => $customerTransfer->getIdCustomer()]); // DB-backed, integration tier
 ```
 
-The authenticated customer transfer comes from the core customer helper: `haveCustomerTransfer()` for the logic tier and `haveCustomer()` for the integration tier. The API test lanes carry no customer code of their own.
+The authenticated customer transfer comes from the core `\SprykerTest\Shared\Customer\Helper\CustomerDataHelper`: `haveCustomerTransfer()` for the logic tier and `haveCustomer()` for the integration tier. The API test lanes carry no customer code of their own.
+
+Authenticate with `\SprykerTest\ApiPlatform\Helper\ApiLoginHelper`—`actingAsCustomer()`, `actingAsCompanyUser()`, `actingWithScopes()`, or `actingWithInvalidToken()`. A request left anonymous exercises the real firewall. Dispatch requests with `\SprykerTest\ApiPlatform\Helper\ApiRequestHelper`, for example `$this->tester->handleApiRequest('GET', '/wishlists/' . $uuid)`. Enable `\SprykerTest\ApiPlatform\Helper\OauthKeyContentsHelper` in any suite that mints or verifies a real token.
 
 ## Troubleshooting
 
@@ -1241,7 +1263,7 @@ Ensure your test case extends the correct base class:
 
 ```php
 // For Backend API
-use PyzTest\Shared\ApiPlatform\Test\BackendApiTestCase;
+use SprykerTest\ApiPlatform\Test\BackendApiTestCase;
 
 class CustomersBackendApiTest extends BackendApiTestCase
 {
@@ -1249,7 +1271,7 @@ class CustomersBackendApiTest extends BackendApiTestCase
 }
 
 // For Storefront API
-use PyzTest\Shared\ApiPlatform\Test\StorefrontApiTestCase;
+use SprykerTest\ApiPlatform\Test\StorefrontApiTestCase;
 
 class CustomersStorefrontApiTest extends StorefrontApiTestCase
 {
@@ -1295,13 +1317,3 @@ class CustomersBackendApiTest extends BackendApiTestCase
 ```bash
 docker/sdk cli vendor/bin/codecept build
 ```
-
-## Next steps
-
-- [Prove API Platform contract coverage](/docs/integrations/spryker-api/api-platform/contract-coverage.html) - Declare what your tests cover and gate it in CI
-- [Implement an API Platform resource](/docs/integrations/spryker-api/api-platform/enablement.html) - Creating API resources
-- [Resource schemas](/docs/integrations/spryker-api/api-platform/resource-schemas.html) - Resource schema reference
-- [Validation schemas](/docs/integrations/spryker-api/api-platform/validation-schemas.html) - Validation schema reference
-- [Troubleshooting](/docs/integrations/spryker-api/api-platform/troubleshooting.html) - Common issues and solutions
-- [Codeception Documentation](https://codeception.com/docs/Introduction) - Codeception framework docs
-- [Test API Platform resources](https://api-platform.com/docs/symfony/testing/) - Official API Platform testing guide

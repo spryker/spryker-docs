@@ -50,6 +50,23 @@ Both tiers resolve the system under test from the container, so both exercise th
 
 The logic tier stubs the collaborators a test names and calls `provide()` or `process()` directly. Nothing else is stubbed, and there is no automatic doubling—a collaborator you want to control must be registered explicitly.
 
+```php
+$wishlistTransfer = $this->tester->haveWishlistTransfer();
+$this->tester->setService(
+    WishlistClientInterface::class,
+    $this->tester->createClientStub(WishlistClientInterface::class, [
+        'getWishlistByFilter' => $this->tester->haveSuccessfulWishlistResponseTransfer($wishlistTransfer),
+    ]),
+);
+$provider = $this->tester->getProvider(WishlistsStorefrontProvider::class);
+
+$result = $provider->provide(
+    $this->tester->getGetOperation(WishlistsStorefrontResource::class),
+    ['uuid' => $wishlistTransfer->getUuid()],
+    $this->tester->getAuthenticatedContext(),
+);
+```
+
 The integration tier runs without Docker. The booted Glue kernel drives the real client and facade, and each client-to-Zed remote call is dispatched in-process to the gateway controller against a SQLite database, preserving the JSON round trip. Only OAuth token introspection is stubbed. Everything on the data path is real.
 
 Authentication and input-validation negatives belong in the integration tier even though they persist nothing, because the firewall and the framework validator answer before the data layer is reached.
@@ -195,7 +212,7 @@ Backend API tests extend `BackendApiTestCase` and use the `BackendApiTester` tes
 namespace PyzTest\Glue\Customer\BackendApi;
 
 use PyzTest\Glue\Customer\BackendApiTester;
-use SprykerTest\Shared\ApiPlatform\Test\BackendApiTestCase;
+use SprykerTest\ApiPlatform\Test\BackendApiTestCase;
 
 /**
  * @group PyzTest
@@ -539,7 +556,7 @@ namespace PyzTest\Glue\Customer\StorefrontApi;
 use Codeception\Stub;
 use Pyz\Client\Customer\CustomerClientInterface;
 use PyzTest\Glue\Customer\StorefrontApiTester;
-use SprykerTest\Shared\ApiPlatform\Test\StorefrontApiTestCase;
+use SprykerTest\ApiPlatform\Test\StorefrontApiTestCase;
 
 /**
  * @group PyzTest
@@ -562,7 +579,7 @@ class CustomersStorefrontApiTest extends StorefrontApiTestCase
                 ->setLastName('Doe'),
         ]);
 
-        static::getContainer()->set(CustomerClientInterface::class, $customerClientStub);
+        $this->setService(CustomerClientInterface::class, $customerClientStub);
 
         // Act
         static::createClient()->request('GET', '/customers/me');
@@ -576,6 +593,8 @@ class CustomersStorefrontApiTest extends StorefrontApiTestCase
 
 ### Testing with service mocks
 
+Register mocks with `setService()` rather than setting them on the container yourself. It is the supported seam, and it binds the mock in whichever tier the test runs. For when to call it, see [Register stubs before you resolve the system under test](#register-stubs-before-you-resolve-the-system-under-test).
+
 ```php
 public function testGivenMultipleCustomersWhenRetrievingCollectionViaGetThenAllCustomersAreReturned(): void
 {
@@ -587,7 +606,7 @@ public function testGivenMultipleCustomersWhenRetrievingCollectionViaGetThenAllC
         ],
     ]);
 
-    static::getContainer()->set(CustomerClientInterface::class, $customerClientStub);
+    $this->setService(CustomerClientInterface::class, $customerClientStub);
 
     // Act
     static::createClient()->request('GET', '/customers');

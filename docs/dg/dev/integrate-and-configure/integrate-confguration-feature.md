@@ -131,8 +131,6 @@ For new projects deployed with Docker SDK 1.76.0+, the variables are prefilled a
 
 For existing projects that do not have these variables yet, you have two options:
 
-{% info_block infoBox "" %}
-
 - Create a support request with Spryker to add `SPRYKER_CONFIGURATION_ENCRYPTION_KEY` and `SPRYKER_CONFIGURATION_ENCRYPTION_INIT_VECTOR` for your project. The `SPRYKER_` prefix is reserved for variables managed by Spryker, so you cannot add them yourself.
 - Use different variable names without the `SPRYKER_` prefix (for example, `CONFIGURATION_ENCRYPTION_KEY` and `CONFIGURATION_ENCRYPTION_INIT_VECTOR`), add them yourself using [Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html), and reference these names in `config_default.php` instead. To generate new keys, run:
 
@@ -140,8 +138,6 @@ For existing projects that do not have these variables yet, you have two options
   openssl rand -hex 32  # generates CONFIGURATION_ENCRYPTION_KEY
   openssl rand -hex 16  # generates CONFIGURATION_ENCRYPTION_INIT_VECTOR
   ```
-
-{% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 

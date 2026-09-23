@@ -320,7 +320,16 @@ A substitute is an in-memory helper, a stub, or a lighter engine that stands in 
 
 When you introduce a substitute, declare `#[Substitutes(realCollaborator: '…', provenBy: TestType::…)]` on the helper class, and check that the register below already covers that substitution. Every `TestType` value is the heading of a test type on this page, so a declaration can only name a test type that exists here. If the register does not cover the substitution, it gains a row, `TestType` gains the case, and somebody writes the test.
 
-The register is the table in the next section of this page, kept by hand and checked in code review. The declarations are checked in code: `SubstitutePairingTest` in the Testify module fails on a helper that looks like a substitute and declares nothing, and `vendor/bin/codecept pairing:register` prints every declaration as the table under [Declared substitutes](#declared-substitutes).
+The reference test of a test type declares the other half of the pairing, `#[\SprykerTest\Shared\Testify\Attribute\Proves(TestType::…)]`, on its class. It states that the test exists to close the gap its substitutes leave, so deleting or renaming it without a replacement fails in code, not in production. For example, `CatalogSearchQueryTest` declares `Proves(TestType::SearchQueryTest)`, the type that `SearchResponseStubHelper` names.
+
+The register is the table in the next section of this page, kept by hand and checked in code review. The declarations are checked in code. `SubstitutePairingTest` in the Testify module fails in each of these cases:
+
+- A helper looks like a substitute and declares nothing.
+- A substitute names a test type that no test declares `#[Proves]` for. Two kinds of test type are exempt: a *Planned* type without a reference test yet, and the Cypress journey, whose tests live in another repository.
+- A test declares `#[Proves]` for a test type that no substitute names.
+- A *Planned* type has gained a reference test but is still listed as exempt.
+
+`vendor/bin/codecept pairing:register` prints every declaration, with the reference tests of its test type, as the table under [Declared substitutes](#declared-substitutes).
 
 ### The pairing register
 
@@ -341,23 +350,24 @@ The register is the table in the next section of this page, kept by hand and che
 
 #### Declared substitutes
 
-Every helper that declares `#[Substitutes]`, as `vendor/bin/codecept pairing:register` prints it. Regenerate the table with that command after you add or change a declaration, and paste it here.
+Every helper that declares `#[Substitutes]`, and every test that declares `#[Proves]` for its test type, as `vendor/bin/codecept pairing:register` prints it. A dash means the test type has no reference test in this repository: it's still *Planned*, or its tests live in another repository. Regenerate the table with that command after you add or change a declaration, and paste it here.
 
-| Substitute | Stands in for | Proven by |
-|---|---|---|
-| `SprykerTest\Client\Queue\Helper\QueueHelper` | RabbitMQ | Publish and Synchronize golden path |
-| `SprykerTest\Client\Search\Helper\SearchHelper` | the search engine | Publish and Synchronize golden path |
-| `SprykerTest\Client\Search\Helper\SearchResponseStubHelper` | the search engine response | Search query test |
-| `SprykerTest\Client\SecurityBlocker\Helper\SecurityBlockerRedisHelper` | Redis behind SecurityBlocker | Direct storage write test |
-| `SprykerTest\Client\StorageDatabase\Helper\SqliteStorageHelper` | Redis storage, read side | Publish and Synchronize golden path |
-| `SprykerTest\Client\Storage\Helper\StorageHelper` | Redis storage | Publish and Synchronize golden path |
-| `SprykerTest\Zed\Customer\Helper\CustomerInvalidationStorageStubHelper` | Redis, customer invalidation writes | Direct storage write test |
-| `SprykerTest\Zed\Mail\Helper\MailCaptureHelper` | the mail provider | Provider sandbox contract test |
-| `SprykerTest\Zed\MessageBroker\Helper\InMemoryMessageBrokerHelper` | the message broker transport | Message broker transport test |
-| `SprykerTest\Zed\MessageBroker\Helper\MessageBrokerHelper` | the message broker transport | Message broker transport test |
-| `SprykerTest\Zed\Publisher\Helper\PublishAndSynchronizeHelper` | RabbitMQ and the queue worker | Publish and Synchronize golden path |
-| `SprykerTest\Zed\Publisher\Helper\PublishHelper` | the publish queue and its worker | Publish and Synchronize golden path |
-| `SprykerTest\Zed\QuoteCheckoutConnector\Helper\QuoteCheckoutLockHelper` | Redis behind the duplicate-order guard of the checkout | Cypress journey |
+| Substitute | Stands in for | Proven by | Reference tests |
+|---|---|---|---|
+| `SprykerTest\ApiPlatform\Helper\BackendApiLoginHelper` | token issuance and introspection, Backend API | API golden path | `PyzTest\Glue\AccessToken\Transport\AccessTokenTransportCest`<br>`PyzTest\Glue\OauthBackendApi\Transport\TokenTransportCest` |
+| `SprykerTest\Client\Queue\Helper\QueueHelper` | RabbitMQ | Publish and Synchronize golden path | `PyzTest\Zed\ProductPageSearch\PublishAndSynchronize\ProductAbstractPageSearchSynchronizationTest`<br>`PyzTest\Zed\ProductStorage\PublishAndSynchronize\ProductAbstractStorageSynchronizationTest` |
+| `SprykerTest\Client\Search\Helper\SearchHelper` | the search engine | Publish and Synchronize golden path | `PyzTest\Zed\ProductPageSearch\PublishAndSynchronize\ProductAbstractPageSearchSynchronizationTest`<br>`PyzTest\Zed\ProductStorage\PublishAndSynchronize\ProductAbstractStorageSynchronizationTest` |
+| `SprykerTest\Client\Search\Helper\SearchResponseStubHelper` | the search engine response | Search query test | `PyzTest\Client\Catalog\SearchQuery\CatalogSearchQueryTest` |
+| `SprykerTest\Client\SecurityBlocker\Helper\SecurityBlockerRedisHelper` | Redis behind SecurityBlocker | Direct storage write test | — |
+| `SprykerTest\Client\StorageDatabase\Helper\SqliteStorageHelper` | Redis storage, read side | Publish and Synchronize golden path | `PyzTest\Zed\ProductPageSearch\PublishAndSynchronize\ProductAbstractPageSearchSynchronizationTest`<br>`PyzTest\Zed\ProductStorage\PublishAndSynchronize\ProductAbstractStorageSynchronizationTest` |
+| `SprykerTest\Client\Storage\Helper\StorageHelper` | Redis storage | Publish and Synchronize golden path | `PyzTest\Zed\ProductPageSearch\PublishAndSynchronize\ProductAbstractPageSearchSynchronizationTest`<br>`PyzTest\Zed\ProductStorage\PublishAndSynchronize\ProductAbstractStorageSynchronizationTest` |
+| `SprykerTest\Zed\Customer\Helper\CustomerInvalidationStorageStubHelper` | Redis, customer invalidation writes | Direct storage write test | — |
+| `SprykerTest\Zed\Mail\Helper\MailCaptureHelper` | the mail provider | Provider sandbox contract test | — |
+| `SprykerTest\Zed\MessageBroker\Helper\InMemoryMessageBrokerHelper` | the message broker transport | Message broker transport test | — |
+| `SprykerTest\Zed\MessageBroker\Helper\MessageBrokerHelper` | the message broker transport | Message broker transport test | — |
+| `SprykerTest\Zed\Publisher\Helper\PublishAndSynchronizeHelper` | RabbitMQ and the queue worker | Publish and Synchronize golden path | `PyzTest\Zed\ProductPageSearch\PublishAndSynchronize\ProductAbstractPageSearchSynchronizationTest`<br>`PyzTest\Zed\ProductStorage\PublishAndSynchronize\ProductAbstractStorageSynchronizationTest` |
+| `SprykerTest\Zed\Publisher\Helper\PublishHelper` | the publish queue and its worker | Publish and Synchronize golden path | `PyzTest\Zed\ProductPageSearch\PublishAndSynchronize\ProductAbstractPageSearchSynchronizationTest`<br>`PyzTest\Zed\ProductStorage\PublishAndSynchronize\ProductAbstractStorageSynchronizationTest` |
+| `SprykerTest\Zed\QuoteCheckoutConnector\Helper\QuoteCheckoutLockHelper` | Redis behind the duplicate-order guard of the checkout | Cypress journey | — |
 
 The Cypress journey that proves `QuoteCheckoutLockHelper` walks the checkout on the real storage, so the lock is taken for real. No journey submits the same checkout twice, so the duplicate-submit branch of the lock is not proven by it.
 

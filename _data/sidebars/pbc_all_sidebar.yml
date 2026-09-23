@@ -1077,10 +1077,20 @@ entries:
 
               - title: Manage via Backend API
                 nested:
+                  - title: Customers
+                    nested:
+                      - title: Manage customers
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/backend-api-manage-customers.html
+                      - title: Manage customer addresses
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-addresses.html
+                      - title: Manage customer notes
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-notes.html
                   - title: Company account
                     nested:
                       - title: Manage companies
                         url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/company-account/backend-api-manage-companies.html
+                      - title: Manage company users
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/company-account/backend-api-manage-company-users.html
 
               - title: Generate login tokens
                 url: /docs/pbc/all/customer-relationship-management/base-shop/generate-login-tokens.html

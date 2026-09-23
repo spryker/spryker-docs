@@ -117,15 +117,24 @@ $config[ConfigurationConstants::ENCRYPTION_KEY] = hex2bin(getenv('SPRYKER_CONFIG
 $config[ConfigurationConstants::ENCRYPTION_INIT_VECTOR] = hex2bin(getenv('SPRYKER_CONFIGURATION_ENCRYPTION_INIT_VECTOR') ?: '') ?: null;
 ```
 
+If your project's Cloud environment cannot use `SPRYKER_`-prefixed variables (see [2.2) Provide environment variables](#22-provide-environment-variables)), replace the variable names above with your own, for example `CONFIGURATION_ENCRYPTION_KEY` and `CONFIGURATION_ENCRYPTION_INIT_VECTOR`.
+
 #### 2.2) Provide environment variables
 
-Upgrade Docker SDK to version [1.76.0+](https://github.com/spryker/docker-sdk/releases/tag/1.76.0).
-The `SPRYKER_CONFIGURATION_ENCRYPTION_KEY` and `SPRYKER_CONFIGURATION_ENCRYPTION_INIT_VECTOR` environment variables are then generated automatically
-during local project setup (`docker/sdk boot deploy.dev.yml && docker/sdk up`).
+**Local development**
+
+Upgrade Docker SDK to version [1.76.0+](https://github.com/spryker/docker-sdk/releases/tag/1.76.0). The `SPRYKER_CONFIGURATION_ENCRYPTION_KEY` and `SPRYKER_CONFIGURATION_ENCRYPTION_INIT_VECTOR` environment variables are then generated and populated automatically during project setup (`docker/sdk boot deploy.dev.yml && docker/sdk up`). This applies to both new and existing projects.
+
+**Cloud**
+
+For new projects deployed with Docker SDK 1.76.0+, the variables are prefilled automatically.
+
+For existing projects that do not have these variables yet, you have two options:
 
 {% info_block infoBox "" %}
 
-In Cloud, create support request for these environment variables to be added for your project.
+- Create a support request with Spryker to add `SPRYKER_CONFIGURATION_ENCRYPTION_KEY` and `SPRYKER_CONFIGURATION_ENCRYPTION_INIT_VECTOR` for your project. The `SPRYKER_` prefix is reserved for variables managed by Spryker, so you cannot add them yourself.
+- Use different variable names without the `SPRYKER_` prefix (for example, `CONFIGURATION_ENCRYPTION_KEY` and `CONFIGURATION_ENCRYPTION_INIT_VECTOR`), add them yourself using [Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html), and reference these names in `config_default.php` instead.
 
 {% endinfo_block %}
 

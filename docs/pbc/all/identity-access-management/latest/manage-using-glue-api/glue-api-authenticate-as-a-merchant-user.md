@@ -12,7 +12,7 @@ related:
 
 This endpoint allows authenticating as a merchant user. A merchant user is a Back Office user that is assigned to a merchant; the access token it receives carries the `merchant-user` scope, which the Backend API maps to the `ROLE_MERCHANT_USER` role. Resources built for the Merchant Portal audience, like the merchant profile, check for this role.
 
-The merchant does not have to be approved: a merchant user of a merchant that is still waiting for approval can authenticate and use the endpoints available to merchant users. Individual resources may still require an approved merchant—for example, the `merchant-profile` resource responds with `403` until the merchant is approved, as the Merchant Portal does.
+The merchant does not have to be approved: a merchant user of a merchant that is still waiting for approval can authenticate and use the endpoints available to merchant users. Individual resources may still require an approved merchant — for example, the `merchant-profile` resource responds with `403` until the merchant is approved, as the Merchant Portal does.
 
 {% info_block warningBox "API Platform only" %}
 

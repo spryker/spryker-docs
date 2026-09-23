@@ -38,7 +38,6 @@ Install the required modules using Composer:
 ```bash
 composer require \
   spryker/merchant-profile:"^1.11.0" \
-  spryker/merchant-extension:"^1.3.0" \
   spryker/merchant-user:"^1.10.0" \
   spryker/api-platform:"^1.30.0" \
   spryker/oauth-backend-api:"^1.8.0" \
@@ -52,7 +51,6 @@ composer require \
 | MODULE | MINIMUM VERSION | PROVIDES |
 | --- | --- | --- |
 | spryker/merchant-profile | ^1.11.0 | The `merchant-profile` and `merchant-profiles` resources and the validator plugins for the merchant user route |
-| spryker/merchant-extension | ^1.3.0 | `MerchantProfileValidatorPluginInterface` |
 | spryker/merchant-user | ^1.10.0 | Resolving the merchant user behind an access token, including merchant users of merchants that are not approved yet |
 | spryker/api-platform | ^1.30.0 | The `ROLE_MERCHANT_USER` and `ROLE_BACK_OFFICE_USER` roles derived from the token scopes |
 | spryker/oauth-backend-api | ^1.8.0 | The `POST /token` endpoint that issues merchant user and Back Office user tokens |
@@ -67,7 +65,6 @@ Make sure the following modules have been installed:
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | MerchantProfile | vendor/spryker/merchant-profile |
-| MerchantExtension | vendor/spryker/merchant-extension |
 | MerchantUser | vendor/spryker/merchant-user |
 | ApiPlatform | vendor/spryker/api-platform |
 | OauthBackendApi | vendor/spryker/oauth-backend-api |

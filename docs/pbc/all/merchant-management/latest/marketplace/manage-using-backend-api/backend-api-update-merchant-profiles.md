@@ -14,7 +14,7 @@ related:
 
 A merchant user updates the profile of the merchant they are assigned to through the `merchant-profile` resource, and a Back Office user updates the profile of any merchant by its merchant reference through the `merchant-profiles` resource. Each resource lets its audience change what it can change in its own UI:
 
-- A merchant user can update the same data as on the Merchant Portal profile page: the merchant details (`name`, `email`, `registrationNumber`, `isOpenForRelationRequest`), the store status (`isActive`), the Storefront URLs, the contact person, the public contact data, the address, and the localized texts.
+- A merchant user can update the same data as on the Merchant Portal profile page: the merchant details (`name`, `email`, `registrationNumber`, `isOpenForRelationRequest`), the Storefront URLs, the contact person, the public contact data, the address, and the localized texts.
 - A Back Office user can update the profile data only. The merchant details, the store status, and the Storefront URLs are managed through the `merchants` resource; if they are sent, they are ignored.
 
 ## Installation

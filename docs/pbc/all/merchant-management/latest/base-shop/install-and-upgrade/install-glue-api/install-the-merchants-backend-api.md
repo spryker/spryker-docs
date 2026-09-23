@@ -103,7 +103,6 @@ Apply the database schema changes and generate the transfer objects:
 
 ```bash
 docker/sdk console transfer:generate
-docker/sdk console propel:install
 ```
 
 ### 5) Generate the API resources

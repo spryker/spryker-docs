@@ -9,7 +9,7 @@ This document describes how to manage customer groups using the Backend API. You
 
 A customer group is a named segment of customers. Discounts and other shop rules target a group, so moving a customer in or out of one changes what that customer sees. A customer can belong to any number of groups at the same time.
 
-Customer groups are addressed by `uuid`. The internal database identifier is never exposed. The uuid is derived from the group id, so it is stable for the lifetime of the group — renaming the group does not change it.
+Customer groups are addressed by `uuid`. The internal database identifier is never exposed. The UUID is derived from the group id, so it is stable for the lifetime of the group — renaming the group does not change it.
 
 The group itself and its members are managed through two resources: `/customer-groups` carries the name and description, and `/customer-groups/{uuid}/customers` carries the members.
 
@@ -17,17 +17,17 @@ The group itself and its members are managed through two resources: `/customer-g
 
 These endpoints are provided by API Platform. To install and enable it, see [Enable API Platform](/docs/integrations/spryker-api/api-platform/enablement.html).
 
-{% info_block warningBox "Backfill the uuids of existing customer groups" %}
+{% info_block warningBox "Backfill the UUIDs of existing customer groups" %}
 
 The `uuid` column is new on `spy_customer_group`, and it is stamped only when a row is saved. Reads never backfill it.
 
-If your installation had customer groups before the upgrade, generate the missing uuids once:
+If your installation had customer groups before the upgrade, generate the missing UUIDs once:
 
 ```bash
 docker/sdk console uuid:generate CustomerGroup spy_customer_group
 ```
 
-A single row with a `NULL` uuid makes `GET /customer-groups` fail with `400` for the whole collection, not only for that row. The command is idempotent — it touches only the rows where the column is still `NULL` — so it is safe to repeat and safe to add to a deployment recipe after `propel:migrate`.
+A single row with a `NULL` UUID makes `GET /customer-groups` fail with `400` for the whole collection, not only for that row. The command is idempotent — it touches only the rows where the column is still `NULL` — so it is safe to repeat and safe to add to a deployment recipe after `propel:migrate`.
 
 {% endinfo_block %}
 
@@ -141,7 +141,7 @@ To retrieve a single customer group, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{customer_group_uuid}}***{% endraw %} | Uuid of the customer group to retrieve. To get it, [retrieve customer groups](#retrieve-customer-groups). |
+| {% raw %}***{{customer_group_uuid}}***{% endraw %} | UUID of the customer group to retrieve. To get it, [retrieve customer groups](#retrieve-customer-groups). |
 
 ### Request
 
@@ -155,7 +155,7 @@ Request sample: `GET https://glue-backend.mysprykershop.com/customer-groups/4b1e
 
 The response contains the same attributes as [Retrieve customer groups](#retrieve-customer-groups), without the `meta.pagination` object.
 
-If no group matches the uuid, the endpoint returns `404` with the error code `1222`.
+If no group matches the UUID, the endpoint returns `404` with the error code `1222`.
 
 ## Create a customer group
 
@@ -266,7 +266,7 @@ To update a customer group, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{customer_group_uuid}}***{% endraw %} | Uuid of the customer group to update. To get it, [retrieve customer groups](#retrieve-customer-groups). |
+| {% raw %}***{{customer_group_uuid}}***{% endraw %} | UUID of the customer group to update. To get it, [retrieve customer groups](#retrieve-customer-groups). |
 
 ### Request
 
@@ -297,7 +297,7 @@ Request sample: `PATCH https://glue-backend.mysprykershop.com/customer-groups/4b
 
 The endpoint applies only the attributes present in the payload; every attribute you omit keeps its stored value.
 
-Renaming a group does not change its uuid, so links and integrations that address the group keep working. Sending the group its own current name succeeds and changes nothing. Sending a name another group already uses, in any casing, returns `422` with the error code `1223`.
+Renaming a group does not change its UUID, so links and integrations that address the group keep working. Sending the group its own current name succeeds and changes nothing. Sending a name another group already uses, in any casing, returns `422` with the error code `1223`.
 
 {% info_block infoBox "Membership is not managed here" %}
 
@@ -327,7 +327,7 @@ To delete a customer group, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{customer_group_uuid}}***{% endraw %} | Uuid of the customer group to delete. To get it, [retrieve customer groups](#retrieve-customer-groups). |
+| {% raw %}***{{customer_group_uuid}}***{% endraw %} | UUID of the customer group to delete. To get it, [retrieve customer groups](#retrieve-customer-groups). |
 
 ### Request
 
@@ -359,7 +359,7 @@ To retrieve a paginated collection of the customers assigned to a group, send th
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{customer_group_uuid}}***{% endraw %} | Uuid of the customer group whose members you want to retrieve. To get it, [retrieve customer groups](#retrieve-customer-groups). |
+| {% raw %}***{{customer_group_uuid}}***{% endraw %} | UUID of the customer group whose members you want to retrieve. To get it, [retrieve customer groups](#retrieve-customer-groups). |
 
 ### Request
 
@@ -443,7 +443,7 @@ All four attributes are read-only. To change customer data, see [Backend API: Ma
 
 {% include pbc/all/glue-api-guides/latest/customer-backend-api-pagination-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/latest/customer-backend-api-pagination-attributes.md -->
 
-If no group matches the uuid, the endpoint returns `404` with the error code `1222`.
+If no group matches the UUID, the endpoint returns `404` with the error code `1222`.
 
 ## Add customers to a customer group
 
@@ -455,7 +455,7 @@ To add customers to a group without removing the members it already has, send th
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{customer_group_uuid}}***{% endraw %} | Uuid of the customer group to add the customers to. To get it, [retrieve customer groups](#retrieve-customer-groups). |
+| {% raw %}***{{customer_group_uuid}}***{% endraw %} | UUID of the customer group to add the customers to. To get it, [retrieve customer groups](#retrieve-customer-groups). |
 
 ### Request
 
@@ -504,7 +504,7 @@ To set the complete list of members of a group in one call, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{customer_group_uuid}}***{% endraw %} | Uuid of the customer group whose members you want to replace. To get it, [retrieve customer groups](#retrieve-customer-groups). |
+| {% raw %}***{{customer_group_uuid}}***{% endraw %} | UUID of the customer group whose members you want to replace. To get it, [retrieve customer groups](#retrieve-customer-groups). |
 
 ### Request
 
@@ -561,7 +561,7 @@ To remove one customer from a group, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{customer_group_uuid}}***{% endraw %} | Uuid of the customer group to remove the customer from. To get it, [retrieve customer groups](#retrieve-customer-groups). |
+| {% raw %}***{{customer_group_uuid}}***{% endraw %} | UUID of the customer group to remove the customer from. To get it, [retrieve customer groups](#retrieve-customer-groups). |
 | {% raw %}***{{customer_reference}}***{% endraw %} | Reference of the customer to remove. To get it, [retrieve the customers of a customer group](#retrieve-the-customers-of-a-customer-group). |
 
 ### Request
@@ -578,7 +578,7 @@ A successful request returns the `204 No Content` status code with an empty body
 
 The customer account is kept, and so is every other group the customer belongs to.
 
-If no group matches the uuid, the endpoint returns `404` with the error code `1222`. If the group exists but the customer is not one of its members, the endpoint returns `404` with the error code `1225`.
+If no group matches the UUID, the endpoint returns `404` with the error code `1222`. If the group exists but the customer is not one of its members, the endpoint returns `404` with the error code `1225`.
 
 ## Other management options
 
@@ -596,7 +596,7 @@ If no group matches the uuid, the endpoint returns `404` with the error code `12
 | 901 | The request body failed schema validation. Each error names the rejected attribute in `source.pointer`. |
 | 1202 | The customer group request was rejected by a validation rule that has no more specific code. |
 | 1203 | The `sort` parameter names a field that the collection does not support. |
-| 1222 | No customer group matches the given uuid. |
+| 1222 | No customer group matches the given UUID. |
 | 1223 | The name is already taken by another customer group. Names are compared without regard to case. |
 | 1224 | No customer matches one of the given `customerReferences`. Each unknown reference gets its own `errors[]` entry. |
 | 1225 | The customer is not a member of the customer group. |

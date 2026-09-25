@@ -1,7 +1,7 @@
 ---
 title: Testing strategy
 description: Learn which test type answers which question in a Spryker project, how the test types map onto the testing trophy, and how to keep the gaps between them from lining up.
-last_updated: Sep 23, 2026
+last_updated: Sep 25, 2026
 template: concept-topic-template
 related:
   - title: Testing strategy examples
@@ -23,6 +23,17 @@ related:
 Every kind of test answers one question. A facade test answers "is the business rule right?". An API test answers "does the endpoint honour its declared contract?". An end-to-end test answers "can a customer still complete this journey?". No single kind answers all three, and a suite that tries to answer all three everywhere becomes slow, brittle, and still leaves gaps.
 
 This document tells you which test to write for which question, what each test type must and must not cover, and how the test types are arranged so that their blind spots do not line up.
+
+{% info_block infoBox "In short" %}
+
+- Most tests are facade tests: they prove business rules on the real code and the real database.
+- API contract tests prove what an API request may send and what its response contains, never business values.
+- Cypress journeys stay few and walk only the flows that no cheaper test type can see.
+- Every substitution a test type makes has an owner that proves the real collaborator, so no gap is left uncovered.
+
+To decide what to write for a change, go straight to [Choosing the test to write](#choosing-the-test-to-write).
+
+{% endinfo_block %}
 
 ## Terminology this page uses
 
@@ -124,9 +135,19 @@ A test type does not *belong to* a set of application layers. It enters the appl
 
 {% include diagrams/testing/test-types-entry-points.md %}
 
-There are two ways in from the outside, and they meet only at the Business layer. A browser request enters Yves or the Back Office. An API request enters Glue. A Cypress journey therefore proves nothing about an API request, and an API test proves nothing about a page.
+There are two ways in from the outside, and they meet only at the Business layer:
 
-A facade test enters at the Business layer and runs the Persistence layer and the real database underneath it. An API contract test enters at the Communication layer of a Glue module and runs the Business and Persistence layers underneath it. This is why an API contract test that asserts a business value is a facade test with an API round-trip in the way: the deeper test type already owns that question and answers it faster.
+- A browser request enters Yves or the Back Office.
+- An API request enters Glue.
+
+A Cypress journey therefore proves nothing about an API request, and an API test proves nothing about a page.
+
+Below the entry point, each test type runs everything underneath it for real:
+
+- A facade test enters at the Business layer and runs the Persistence layer and the real database underneath it.
+- An API contract test enters at the Communication layer of a Glue module and runs the Business and Persistence layers underneath it.
+
+This is why an API contract test that asserts a business value is a facade test with an API round-trip in the way: the deeper test type already owns that question and answers it faster.
 
 The remaining test types are absent from the picture because they do not ride a request. The Publish and Synchronize test types enter the same stack from the side, where an entity save turns into an event, and the [Publish and Synchronize test types](#publish-and-synchronize-module-test) section draws that path instead. A [search query test](#search-query-test) enters at the Business layer as a facade test does, but what it exercises is the search engine, which is not a layer of this stack. An [API Provider or Processor test](#api-provider-or-processor-test) sits at the same depth as a class unit test, inside a single class. [Static analysis](#static-analysis) never issues a request at all, so there is no point at which it enters.
 

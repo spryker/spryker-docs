@@ -43,47 +43,7 @@ Install or upgrade `spryker/merchant` to at least `3.22.0` using Composer:
 composer require spryker/merchant:"^3.22.0" --update-with-dependencies
 ```
 
-### 2) Register the merchant validator plugins
-
-The uniqueness and URL validation behind error code `1302`—duplicate email, duplicate merchant reference, duplicate name, or a duplicate or blank merchant URL—runs only if the validator plugins are registered. Add them in `src/Pyz/Zed/Merchant/MerchantDependencyProvider.php`:
-
-```php
-<?php
-
-namespace Pyz\Zed\Merchant;
-
-use Spryker\Zed\Merchant\Communication\Plugin\Merchant\UniqueEmailMerchantValidatorPlugin;
-use Spryker\Zed\Merchant\Communication\Plugin\Merchant\UniqueMerchantReferenceMerchantValidatorPlugin;
-use Spryker\Zed\Merchant\Communication\Plugin\Merchant\UniqueNameMerchantValidatorPlugin;
-use Spryker\Zed\Merchant\Communication\Plugin\Merchant\UrlMerchantValidatorPlugin;
-use Spryker\Zed\Merchant\MerchantDependencyProvider as SprykerMerchantDependencyProvider;
-
-class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantValidatorPluginInterface>
-     */
-    protected function getMerchantValidatorPlugins(): array
-    {
-        return [
-            new UniqueEmailMerchantValidatorPlugin(),
-            new UniqueMerchantReferenceMerchantValidatorPlugin(),
-            new UniqueNameMerchantValidatorPlugin(),
-            new UrlMerchantValidatorPlugin(),
-        ];
-    }
-}
-```
-
-If your project already extends `Pyz\Zed\Merchant\MerchantDependencyProvider`, add these plugins to the existing `getMerchantValidatorPlugins()` method instead of replacing the class.
-
-{% info_block warningBox "Without these plugins" %}
-
-Without them, `POST` and `PATCH` accept duplicate emails, duplicate merchant references, duplicate names, and duplicate or blank merchant URLs instead of rejecting them with error code `1302`.
-
-{% endinfo_block %}
-
-### 3) Check the API Platform configuration
+### 2) Check the API Platform configuration
 
 The resource schema ships inside the installed package, at `vendor/spryker/merchant/resources/api/backend/merchants.resource.yml`. The generator finds it as long as the Glue Backend application serves the `backend` API type and scans the directory the module is installed into.
 
@@ -97,7 +57,7 @@ If your project sets `sourceDirectories()` explicitly, **add** the directory the
 
 Also confirm that `config/GlueBackend/bundles.php` registers `SprykerApiPlatformBundle` and `ApiPlatformBundle`. If it does not, your project has not enabled API Platform for the Glue Backend yet—see [Enable API Platform](/docs/integrations/spryker-api/api-platform/enablement.html).
 
-### 4) Set up the database schema and transfer objects
+### 3) Set up the database schema and transfer objects
 
 Apply the database schema changes and generate the transfer objects:
 
@@ -105,7 +65,7 @@ Apply the database schema changes and generate the transfer objects:
 docker/sdk console transfer:generate
 ```
 
-### 5) Generate the API resources
+### 4) Generate the API resources
 
 Generate the API resources, then clear the Glue Backend kernel cache:
 
@@ -116,7 +76,7 @@ rm -rf data/cache/GlueBackend/*
 
 {% info_block warningBox "Verification" %}
 
-Make sure the generated resource class exists at `src/Generated/Api/Backend/MerchantsBackendResource.php`. If it does not, the schema was not discovered—check the `sourceDirectories` setting from step 3, and confirm `spryker/merchant` resolved to at least `3.22.0`.
+Make sure the generated resource class exists at `src/Generated/Api/Backend/MerchantsBackendResource.php`. If it does not, the schema was not discovered—check the `sourceDirectories` setting from step 2, and confirm `spryker/merchant` resolved to at least `3.22.0`.
 
 {% endinfo_block %}
 
@@ -169,7 +129,7 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 
 {% info_block warningBox "Regenerate after registering the plugins" %}
 
-Re-run step 5 from [Install the module](#install-the-module)—`vendor/bin/glue api:generate`—and clear the Glue Backend kernel cache, so the generated schema picks up `isOpenForRelationRequest`.
+Re-run step 4 from [Install the module](#install-the-module)—`vendor/bin/glue api:generate`—and clear the Glue Backend kernel cache, so the generated schema picks up `isOpenForRelationRequest`.
 
 {% endinfo_block %}
 
@@ -203,6 +163,6 @@ The request returns `201` with the created merchant, which is `waiting-for-appro
 
 | SYMPTOM | CAUSE |
 | --- | --- |
-| `404` with error code `007` while `src/Generated/Api/Backend/MerchantsBackendResource.php` exists | The route is unknown to the API Platform kernel, so the Glue router answered instead. The kernel cache is stale—check that you removed the directory that actually exists under `data/cache/GlueBackend/`, then re-run step 5 in order. The Glue container's standard error stream names the real cause: `docker logs <glue-backend-container> --since 5m 2>&1 \| grep -i exception`. See [API Platform troubleshooting](/docs/integrations/spryker-api/api-platform/troubleshooting.html). |
+| `404` with error code `007` while `src/Generated/Api/Backend/MerchantsBackendResource.php` exists | The route is unknown to the API Platform kernel, so the Glue router answered instead. The kernel cache is stale—check that you removed the directory that actually exists under `data/cache/GlueBackend/`, then re-run step 4 in order. The Glue container's standard error stream names the real cause: `docker logs <glue-backend-container> --since 5m 2>&1 \| grep -i exception`. See [API Platform troubleshooting](/docs/integrations/spryker-api/api-platform/troubleshooting.html). |
 | `404` on `/merchants` and no generated resource class | The schema was not discovered. Confirm that `spryker/api-platform` is installed, that `spryker/merchant` resolved to at least `3.22.0`, and, if your project overrides `sourceDirectories()`, that it still covers the directory the module is installed into. |
 | Validation messages come back in English when another language was requested | The module ships its API messages as `data/translation/Api/{locale}.csv` inside the installed package, keyed by the English message. If they are not loaded, Symfony falls back to the message itself, so the response stays readable and the problem is easy to miss. Send `Accept-Language` and compare. Loading these files requires a `spryker/api-platform` version that reads them—update it to the latest version your project supports. |

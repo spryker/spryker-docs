@@ -13,10 +13,7 @@ This page does not repeat the attribute list, parameter reference, or response s
 
 These endpoints are implemented using API Platform. To install and enable it, see [Enable API Platform](/docs/integrations/spryker-api/api-platform/enablement.html).
 
-For the required module version and plugin registration, see [Install the Merchants Backend API](/docs/pbc/all/merchant-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-merchants-backend-api.html). In particular:
-
-- The uniqueness and URL validation behind error code `1302` (duplicate email, merchant reference, name, or merchant URL) runs only if the merchant validator plugins are registered.
-- The `isOpenForRelationRequest` attribute is contributed by the Merchant Relation Request module and appears in the schema only once that module is installed and its expander plugins are registered.
+For the required module version and plugin registration, see [Install the Merchants Backend API](/docs/pbc/all/merchant-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-merchants-backend-api.html). In particular, the `isOpenForRelationRequest` attribute is contributed by the Merchant Relation Request module and appears in the schema only once that module is installed and its expander plugins are registered.
 
 ## Conventions
 

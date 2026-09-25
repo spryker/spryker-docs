@@ -1,7 +1,7 @@
 ---
 title: Install the Merchants Backend API
 description: Learn how to install the Merchants Backend API into your Spryker project.
-last_updated: Sep 22, 2026
+last_updated: Sep 25, 2026
 template: feature-integration-guide-template
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Backend API: Manage merchants"
 description: Learn how to install and extend the merchants Backend API endpoint in your Spryker shop.
-last_updated: Sep 23, 2026
+last_updated: Sep 25, 2026
 template: glue-api-backend-guide-template
 ---
 

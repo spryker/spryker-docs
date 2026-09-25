@@ -1,9 +1,11 @@
 ---
 title: Security release notes 202608.0
 description: Security updates released for version 202608.0
-last_updated: Aug 17, 2026
+last_updated: Sep 25, 2026
 template: concept-topic-template
 publish_date: "2026-08-06"
+redirect_from:
+- /docs/about/all/releases/security-releases/security-release-notes-202608.0.html
 ---
 
 This document describes the security-related issues that have been recently resolved.

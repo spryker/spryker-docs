@@ -139,7 +139,7 @@ curl -X POST "https://glue-backend.mysprykershop.com/company-business-units" \
   -d '{"data":{"type":"company-business-units","attributes":{"name":"Headquarters","companyUuid":"{company_uuid}"}}}'
 ```
 
-The request returns `201` with the created business unit.
+The request returns `201 Created` with the created business unit.
 
 ## Troubleshooting
 

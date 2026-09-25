@@ -46,7 +46,7 @@ To retrieve a paginated collection of addresses, send the request:
 
 Without either filter, the collection contains every address. A filter addressing any other property returns `400` with the error code `1215`.
 
-Without a `sort` parameter, the most recently created address leads.
+Without a `sort` parameter, the most recently created address appears first.
 
 | REQUEST | USAGE |
 | --- | --- |
@@ -131,7 +131,7 @@ To retrieve a single address, send the request:
 
 ### Response
 
-The response contains one address, with the same attributes as [Retrieve business unit addresses](#retrieve-business-unit-addresses).
+The response contains one address with the same attributes as [Retrieve business unit addresses](#retrieve-business-unit-addresses).
 
 ## Create a business unit address
 
@@ -174,7 +174,7 @@ Request sample: `POST https://glue-backend.mysprykershop.com/company-business-un
 
 {% info_block infoBox "Labels are matched by name" %}
 
-`labels` takes the label *names* configured in the shop, such as `contact person` or `billing`, not identifiers. A name that no configured label matches is rejected with `422`, and the error lists the names the shop accepts.
+`labels` accepts the label names configured in the shop, such as `contact person` or `billing`, rather than identifiers. A name that no configured label matches is rejected with `422`, and the error lists the names the shop accepts.
 
 Sending `labels` replaces the whole set, so send every label that should stay attached. An empty array detaches all of them, and leaving the attribute out of an update keeps the current labels.
 
@@ -212,7 +212,7 @@ Request sample: `PATCH https://glue-backend.mysprykershop.com/company-business-u
 }
 ```
 
-The request accepts the same writable attributes as [Create a business unit address](#create-a-business-unit-address), and all of them are optional. The endpoint applies only the attributes present in the payload; every attribute you omit keeps its stored value.
+The request accepts the same writable attributes as [Create a business unit address](#create-a-business-unit-address). All attributes are optional. The endpoint applies only the attributes present in the payload; every attribute you omit keeps its stored value.
 
 Unlike a business unit, an address can be moved to another company: send `companyUuid` with the new owner.
 
@@ -222,7 +222,7 @@ The response contains the updated address, with the same attributes as [Retrieve
 
 {% info_block warningBox "Addresses are not deleted" %}
 
-There is no endpoint that deletes a business unit address. To take an address out of use, unassign it from every business unit by sending the remaining addresses in `addressUuids` on each of them.
+There is no endpoint for deleting a business unit address. To take an address out of use, unassign it from every business unit by sending the remaining addresses in `addressUuids` for each business unit.
 
 {% endinfo_block %}
 

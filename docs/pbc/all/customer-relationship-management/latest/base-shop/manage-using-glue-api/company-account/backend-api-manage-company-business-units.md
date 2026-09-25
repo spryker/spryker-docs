@@ -5,7 +5,7 @@ last_updated: Sep 20, 2026
 template: glue-api-backend-guide-template
 ---
 
-This document describes how to manage company business units using the Backend API. A business unit is a department, branch, or site of a company, and company users are assigned to one. You can use these endpoints to build Back Office extensions, CRM and ERP integrations, and onboarding automation.
+This document describes how to manage company business units using the Backend API. A business unit represents a department, branch, or site of a company. Company users are assigned to a business unit. You can use these endpoints to build Back Office extensions, CRM and ERP integrations, and onboarding automation.
 
 ## Installation
 
@@ -35,11 +35,11 @@ To retrieve a paginated collection of business units, send the request:
 
 `name` is the only filterable property; a filter addressing any other property returns `400` with the error code `1215`.
 
-`q` and the name filter can be combined: the collection then contains the business units that match both.
+You can combine `q` with the name filter. The collection then contains only the business units that match both criteria.
 
 {% info_block infoBox "Ordering" %}
 
-Without a `sort` parameter, the most recently created business unit leads. The collection is ordered deterministically, so paging through it never repeats or skips a business unit.
+Without a `sort` parameter, the most recently created business unit leads. The collection uses a deterministic order, so paging through it does not repeat or skip business units.
 
 {% endinfo_block %}
 
@@ -163,7 +163,7 @@ Request sample: `POST https://glue-backend.mysprykershop.com/company-business-un
 
 {% info_block infoBox "Addresses are assigned, not created" %}
 
-`addressUuids` assigns addresses that already exist; it does not create them. Create the addresses first with [Create a business unit address](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/backend-api-manage-company-business-unit-addresses.html#create-a-business-unit-address), then pass their uuids here. An address belonging to another company is rejected with `422` and error code `1229`, and an address that does not exist with `404` and error code `1227`. A value that is not a uuid is refused by the request schema before anything is looked up, and that response carries the schema error on its own—`901`, naming the position of the entry, such as `addressUuids.2`. Once the list is well formed, the whole of it is checked before the request is refused, so the response carries one error entry per rejected entry rather than stopping at the first: `1227` for a uuid no address matches and `1229` for an address of another company. A list whose only problem is addresses nobody can find answers `404`; if any entry is rejected rather than missing, the request answers `422`.
+`addressUuids` assigns existing addresses to the business unit. It does not create addresses. Create the addresses first with [Create a business unit address](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/backend-api-manage-company-business-unit-addresses.html#create-a-business-unit-address), then pass their uuids here. An address belonging to another company is rejected with `422` and error code `1229`, and an address that does not exist with `404` and error code `1227`. The request schema rejects values that are not UUIDs before the API looks them up. The response contains schema error `901` and identifies the position of the invalid entry, such as `addressUuids.2`. Once the list is well formed, the whole of it is checked before the request is refused, so the response carries one error entry per rejected entry rather than stopping at the first: `1227` for a uuid no address matches and `1229` for an address of another company. If the only problem is that an address cannot be found, the request returns `404`. If any entry is rejected for another reason, the request returns `422`.
 
 {% endinfo_block %}
 
@@ -258,7 +258,7 @@ A business unit belongs to the company it was created for, for its lifetime. Sen
 
 {% endinfo_block %}
 
-A parent that would make the business unit its own ancestor is rejected with `422` and the error code `1225`, and a parent that belongs to another company with the error code `1226`.
+A parent that would make the business unit its own ancestor is rejected with `422` and error code `1225`. A parent that belongs to another company is rejected with error code `1226`.
 
 ### Response
 
@@ -282,7 +282,7 @@ A successful request returns the `204 No Content` status code with an empty body
 
 {% info_block warningBox "What deletion touches" %}
 
-Business units that have the deleted one as their parent are left without a parent rather than deleted with it. Addresses assigned to it stay with the company but lose the assignment.
+Business units that have the deleted business unit as their parent remain without a parent. They are not deleted. Addresses assigned to it stay with the company but lose the assignment.
 
 A business unit that still has company users assigned cannot be deleted; the request returns `422` with the error code `1224`. Reassign or remove those company users first.
 

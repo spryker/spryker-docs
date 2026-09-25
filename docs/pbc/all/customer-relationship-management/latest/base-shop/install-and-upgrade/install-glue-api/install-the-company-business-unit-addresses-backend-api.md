@@ -1,11 +1,11 @@
 ---
 title: Install the Company Business Unit Addresses Backend API
-description: Learn how to install the Company Business Unit Addresses Backend API into your Spryker project.
+description: Learn how to install the Company Business Unit Addresses Backend API in your Spryker project.
 last_updated: Sep 21, 2026
 template: feature-integration-guide-template
 ---
 
-This document describes how to install the Company Business Unit Addresses Backend API, which exposes company business unit address data at `/company-business-unit-addresses` through the Glue Backend application. For the endpoint reference, see [Backend API: Manage company business unit addresses](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/backend-api-manage-company-business-unit-addresses.html).
+This document describes how to install the Company Business Unit Addresses Backend API. The API exposes company business unit address data at `/company-business-unit-addresses` through the Glue Backend application. For the endpoint reference, see [Backend API: Manage company business unit addresses](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/backend-api-manage-company-business-unit-addresses.html).
 
 ## Prerequisites
 
@@ -17,7 +17,7 @@ Install the required features:
 | Company Account | {{page.release_tag}} | [Install the Company Account feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html) |
 | API Platform | — | [Enable API Platform](/docs/integrations/spryker-api/api-platform/enablement.html) |
 
-Step 1 installs the remaining modules the API depends on, so you do not have to install them beforehand.
+Step 1 installs the remaining modules that the API depends on, so you do not have to install them separately.
 
 {% info_block warningBox "API Platform is required" %}
 
@@ -53,13 +53,13 @@ The feature pins the module versions it needs in its own `composer.json`, so ste
 
 ### 2) Check the API Platform configuration
 
-The resource schema ships inside the installed package, at `vendor/spryker-feature/customer-experience-management/resources/api/backend/company-business-unit-addresses.resource.yml`. The generator finds it as long as the Glue Backend application serves the `backend` API type and scans the directory the feature is installed into.
+The resource schema is included in the installed package at `vendor/spryker-feature/customer-experience-management/resources/api/backend/company-business-unit-addresses.resource.yml`. The generator finds it as long as the Glue Backend application serves the `backend` API type and scans the directory the feature is installed into.
 
-In `config/GlueBackend/packages/spryker_api_platform.php`, confirm that `apiTypes()` includes `backend`. Leave `sourceDirectories()` alone unless your project overrides it—the default already covers installed packages. For what both settings do, see [Configuration](/docs/integrations/spryker-api/api-platform/configuration.html).
+In `config/GlueBackend/packages/spryker_api_platform.php`, confirm that `apiTypes()` includes `backend`. Do not change `sourceDirectories()` unless your project overrides it. The default configuration already covers installed packages. For what both settings do, see [Configuration](/docs/integrations/spryker-api/api-platform/configuration.html).
 
 {% info_block warningBox "Projects that override sourceDirectories" %}
 
-If your project sets `sourceDirectories()` explicitly, **add** the directory the feature is installed into rather than replacing the list. Dropping the other entries hides every resource your project already serves.
+If your project sets `sourceDirectories()` explicitly, add the directory where the feature is installed instead of replacing the existing list. Dropping the other entries hides every resource your project already serves.
 
 {% endinfo_block %}
 
@@ -76,7 +76,7 @@ docker/sdk console propel:install
 
 {% info_block warningBox "This step adds a column" %}
 
-`CompanyUnitAddress` now declares the `uuid` column on `spy_company_unit_address` itself, so the Backend API no longer depends on the storefront module that used to provide it. Projects that already installed [the Company Account Glue API](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html) have the column and the migration is a no-op; every other project gains the column here. Until `propel:install` has run, the address endpoints cannot filter or resolve addresses by UUID.
+`CompanyUnitAddress` declares the `uuid` column on `spy_company_unit_address`, so the Backend API no longer depends on the storefront module that previously provided it. Projects that already installed [the Company Account Glue API](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html) have the column and the migration is a no-op; every other project gains the column here. Until `propel:install` has run, the address endpoints cannot filter or resolve addresses by UUID.
 
 {% endinfo_block %}
 
@@ -90,7 +90,7 @@ docker/sdk console uuid:generate CompanyUnitAddress spy_company_unit_address
 
 {% info_block warningBox "Verification" %}
 
-Make sure every row has a UUID:
+Verify that every row has a UUID:
 
 ```sql
 select count(*) from spy_company_unit_address where uuid is NULL;
@@ -127,7 +127,7 @@ curl "https://glue-backend.mysprykershop.com/company-business-unit-addresses?pag
   -H "Accept: application/vnd.api+json"
 ```
 
-The integration is successful when the request returns `200` with a `data` array and a `meta.pagination` object.
+The integration is successful when the request returns `200` and the response contains a `data` array and a `meta.pagination` object.
 
 Create an address to confirm the write path:
 
@@ -139,7 +139,7 @@ curl -X POST "https://glue-backend.mysprykershop.com/company-business-unit-addre
   -d '{"data":{"type":"company-business-unit-addresses","attributes":{"companyUuid":"{company_uuid}","iso2Code":"DE","street":"Julie-Wolfthorn-Straße","city":"Berlin","zipCode":"10115"}}}'
 ```
 
-The request returns `201` with the created address.
+The request returns `201 Created` with the created address.
 
 ## Troubleshooting
 
@@ -150,4 +150,4 @@ The request returns `201` with the created address.
 | The collection returns addresses, but filtering by `companyUuid` or `companyBusinessUnitUuid` returns everything | The `uuid` column is missing from `spy_company_unit_address`, so the repository skips the UUID filter instead of failing. Run step 3. |
 | `404` with error code 1227 for an address you can see in the Back Office | That address's `uuid` is empty. Run step 4, or save the address once in the Back Office to have the UUID behavior fill the column. |
 | `422` with error code 1210 for a valid country code | The shop does not stock that country. Countries are managed by the `Country` module; add the country before you use its code. |
-| Validation messages come back in English when another language was requested | The feature ships its API messages as `data/translation/Api/{locale}.csv` inside the installed package, keyed by the English message. If they are not loaded, Symfony falls back to the message itself, so the response stays readable and the problem is easy to miss. Send `Accept-Language` and compare. Loading these files requires a `spryker/api-platform` version that reads them—update it to the latest version your project supports. |
+| Validation messages come back in English when another language was requested | The feature includes its API messages in `data/translation/Api/{locale}.csv` inside the installed package. The messages use the English message as the key. If they are not loaded, Symfony falls back to the message itself, so the response stays readable and the problem is easy to miss. Send `Accept-Language` and compare. Loading these files requires a `spryker/api-platform` version that reads them. Update the package to the latest version your project supports. |

@@ -1085,13 +1085,6 @@ entries:
                     nested:
                       - title: Manage companies
                         url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/company-account/backend-api-manage-companies.html
-
-              - title: Manage via Backend API
-                nested:
-                  - title: Company account
-                    nested:
-                      - title: Manage companies
-                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/company-account/backend-api-manage-companies.html
                       - title: Manage company business units
                         url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/company-account/backend-api-manage-company-business-units.html
                       - title: Manage company business unit addresses

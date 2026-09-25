@@ -20,11 +20,11 @@ We work only with credentials shared in the way described below and delete crede
 
 ## Retrieve a secret
 
-If we share a onetimesecret link with you, use the password provided in the Link Passphrase field of the support case. If the password doesn't work, let us know in the case.
+If we share a one-time secret link with you by email in the ticket, retrieve the passphrase from the **Secret password** field under **About this Ticket**. Use this passphrase to access the content in the one-time secret link. If the passphrase doesn't work, let us know in the ticket.
 
 ## Share a secret
 
-1. Using [One-Time Secret](https://eu.onetimesecret.com/), create a secret message by entering the secret and configuring a passphrase.
+1. Using [One-Time Secret](https://eu.onetimesecret.com/), create a secret message by entering the secret and configuring a passphrase. Create a new passphrase for every individual secret.
 
 {% info_block warningBox %}
 
@@ -34,7 +34,6 @@ Create a new link for every individual secret you want to share.
 
 {% endinfo_block %}
 
-2. In the **Case Details**, in the **Link Passphrase** field add the secret link.
-3. Create a comment on the case that the team must retrieve the secret link for.
-3. The team retrieves the link and then clears the field and provides a comment.
-4. Add the passphrase to the link in the same — now empty— field.
+2. In the **About this Ticket** section, in the **Secret password** field, add the passphrase.
+3. Share the one-time secret link as an email in the ticket.
+4. The team retrieves the passphrase from the Secret password field, uses it to access the content in the one-time secret link, and provides a confirmation in the ticket.

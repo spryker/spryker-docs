@@ -1,7 +1,7 @@
 ---
 title: Install the Configuration Management feature
 description: Learn how to integrate and configure Configuration Management feature in a Spryker project.
-last_updated: Aug 24, 2026
+last_updated: Sep 23, 2026
 template: howto-guide-template
 
 related:
@@ -117,26 +117,27 @@ $config[ConfigurationConstants::ENCRYPTION_KEY] = hex2bin(getenv('SPRYKER_CONFIG
 $config[ConfigurationConstants::ENCRYPTION_INIT_VECTOR] = hex2bin(getenv('SPRYKER_CONFIGURATION_ENCRYPTION_INIT_VECTOR') ?: '') ?: null;
 ```
 
+If your project's Cloud environment cannot use `SPRYKER_`-prefixed variables (see [2.2) Provide environment variables](#22-provide-environment-variables)), replace the variable names above with your own, for example `CONFIGURATION_ENCRYPTION_KEY` and `CONFIGURATION_ENCRYPTION_INIT_VECTOR`.
+
 #### 2.2) Provide environment variables
 
+**Local development**
 
-For local development, add the following environment variables to your deploy file (`deploy.dev.yml` or equivalent):
+Upgrade Docker SDK to version [1.76.0+](https://github.com/spryker/docker-sdk/releases/tag/1.76.0). The `SPRYKER_CONFIGURATION_ENCRYPTION_KEY` and `SPRYKER_CONFIGURATION_ENCRYPTION_INIT_VECTOR` environment variables are then generated and populated automatically during project setup (`docker/sdk boot deploy.dev.yml && docker/sdk up`). This applies to both new and existing projects.
 
-```yaml
-image:
-    environment:
-        SPRYKER_CONFIGURATION_ENCRYPTION_KEY: '<your-64-char-hex-key>'
-        SPRYKER_CONFIGURATION_ENCRYPTION_INIT_VECTOR: '<your-32-char-hex-iv>'
-```
+**Cloud**
 
-In Cloud, add environment variables using [Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store).
+For new projects deployed with Docker SDK 1.76.0+, the variables are prefilled automatically.
 
-To generate new keys, run:
+For existing projects that do not have these variables yet, you have two options:
 
-```bash
-openssl rand -hex 32  # generates SPRYKER_CONFIGURATION_ENCRYPTION_KEY
-openssl rand -hex 16  # generates SPRYKER_CONFIGURATION_ENCRYPTION_INIT_VECTOR
-```
+- Create a support request with Spryker to add `SPRYKER_CONFIGURATION_ENCRYPTION_KEY` and `SPRYKER_CONFIGURATION_ENCRYPTION_INIT_VECTOR` for your project. The `SPRYKER_` prefix is reserved for variables managed by Spryker, so you cannot add them yourself.
+- Use different variable names without the `SPRYKER_` prefix (for example, `CONFIGURATION_ENCRYPTION_KEY` and `CONFIGURATION_ENCRYPTION_INIT_VECTOR`), add them yourself using [Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html), and reference these names in `config_default.php` instead. To generate new keys, run:
+
+  ```bash
+  openssl rand -hex 32  # generates CONFIGURATION_ENCRYPTION_KEY
+  openssl rand -hex 16  # generates CONFIGURATION_ENCRYPTION_INIT_VECTOR
+  ```
 
 {% info_block warningBox "Verification" %}
 

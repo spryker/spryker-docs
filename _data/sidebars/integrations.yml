@@ -70,6 +70,8 @@ entries:
           url: /docs/integrations/spryker-api/api-platform/native-api-platform-resources.html
         - title: Test API Platform resources
           url: /docs/integrations/spryker-api/api-platform/testing.html
+        - title: Prove API Platform contract coverage
+          url: /docs/integrations/spryker-api/api-platform/contract-coverage.html
         - title: IDE integration
           url: /docs/integrations/spryker-api/api-platform/ide-integration.html
         - title: Troubleshooting

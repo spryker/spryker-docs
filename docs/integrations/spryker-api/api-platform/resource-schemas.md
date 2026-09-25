@@ -1,7 +1,7 @@
 ---
 title: Resource schemas
 description: Understanding API Platform resource schema definitions in Spryker.
-last_updated: Sep 10, 2026
+last_updated: Sep 23, 2026
 template: concept-topic-template
 related:
   - title: Integrate API Platform
@@ -226,6 +226,40 @@ password:
   readable: false   # Not included in responses
 ```
 
+A property with `writable: false` is marked `readOnly` in the generated schema and is left out of every request body, because OpenAPI defines a read-only property as response-only. A resource whose properties are all read-only — an action endpoint addressed by its URI — documents the bare JSON:API envelope with no `attributes` member.
+
+#### groups
+
+Serialization groups scope a property to particular write operations. An operation accepts the property only when its `denormalizationContext.groups` names one of the property's groups, and with `disable_json_schema_serializer_groups: false` the same groups shape the documented request body:
+
+```yaml
+operations:
+  - type: Post
+    denormalizationContext:
+      groups: ['customers:write', 'customers:write:create']
+      disable_json_schema_serializer_groups: false
+  - type: Patch
+    denormalizationContext:
+      groups: ['customers:write']
+      disable_json_schema_serializer_groups: false
+
+properties:
+  email:
+    type: string
+    groups: ['customers:write']
+  sendRegistrationToken:
+    type: boolean
+    groups: ['customers:write:create']   # accepted when creating a customer only
+```
+
+Use this for a property that only one write operation accepts, such as a flag that has meaning at registration only. Without it, the property is documented and accepted on every write operation.
+
+{% info_block warningBox "Cover the writable surface with tests" %}
+
+A property outside an operation's groups is dropped silently by the serializer, with no error. Every writable property therefore needs a group: if you forget one, the property stops being writable and nothing reports it.
+
+{% endinfo_block %}
+
 #### readable
 
 Controls if property is included in responses:
@@ -247,6 +281,18 @@ customerReference:
   identifier: true  # URL becomes /customers/{customerReference}
 ```
 
+In a JSON:API response, the identifier is what fills `data.id`. It is therefore not an attribute, and combining `identifier: true` with `readable: false` keeps it out of the `attributes` block:
+
+```yaml
+uuid:
+  type: string
+  identifier: true
+  readable: false
+  writable: false
+```
+
+That combination is what reproduces the legacy Glue response shape, where the UUID appears as `data.id` and never inside `attributes`. Leave `readable` at its default and the same value is serialized twice—once as `data.id` and once as an attribute—which is a breaking change for clients that were written against the legacy shape.
+
 #### required
 
 Makes property mandatory (use validation schemas for detailed rules):
@@ -255,6 +301,17 @@ Makes property mandatory (use validation schemas for detailed rules):
 email:
   type: string
   required: true    # Must be present
+```
+
+#### responseOptional
+
+Exempts a readable property from the required-response-attribute check of the [contract coverage gate](/docs/integrations/spryker-api/api-platform/contract-coverage.html), because the server cannot always populate it. It describes the response contract and is independent of the request-side `required` flag:
+
+```yaml
+updatedAt:
+  type: string
+  readable: true
+  responseOptional: true   # Absent until the resource is first changed
 ```
 
 #### default
@@ -1019,6 +1076,22 @@ operations:
     openapi: false
 ```
 
+### Write-only resources need `gen_id: false`
+
+Serializing a created representation normally includes an IRI pointing at the new resource, which the serializer builds from the resource's item operation. A resource that declares only a `Post` and no `Get` has no item operation, so there is no IRI to build and the success response fails to serialize.
+
+Turn the ID generation off for that operation:
+
+```yaml
+operations:
+  - type: Post
+    description: 'Initialize a pre-order payment'
+    normalizationContext:
+        gen_id: false
+```
+
+This applies to action-shaped resources—payments, cancellations, and similar endpoints that accept a command and return a result rather than exposing a retrievable entity.
+
 ## Pagination
 
 API Platform provides built-in pagination for collection endpoints (`GetCollection`). You can configure pagination behavior per resource using YAML schema options.
@@ -1515,7 +1588,7 @@ Security expressions protect resources and operations using [Symfony's Expressio
 
 {% info_block infoBox "Where roles come from" %}
 
-Roles like `ROLE_CUSTOMER` in security expressions come from OAuth scopes that are automatically mapped to Symfony roles. The mapping convention is as follows: a scope name is uppercased and prefixed with `ROLE_`. For example, the `customer` scope becomes `ROLE_CUSTOMER`.
+Roles like `ROLE_CUSTOMER` in security expressions come from OAuth scopes that are automatically mapped to Symfony roles. The mapping convention is as follows: a scope name is uppercased, hyphens become underscores, and the result is prefixed with `ROLE_`. For example, the `customer` scope becomes `ROLE_CUSTOMER`, and the `back-office-user` scope becomes `ROLE_BACK_OFFICE_USER`.
 
 Scopes are provided by scope provider plugins registered in `OauthDependencyProvider::getScopeProviderPlugins()`. The following table lists the out-of-the-box scope provider plugins and the scopes they provide:
 
@@ -1525,7 +1598,8 @@ Scopes are provided by scope provider plugins registered in `OauthDependencyProv
 | `CompanyUserOauthScopeProviderPlugin` | `company_user` |
 | `AgentOauthScopeProviderPlugin` | `agent` |
 | `CustomerImpersonationOauthScopeProviderPlugin` | `customer_impersonation`, `customer` |
-| `UserOauthScopeProviderPlugin` | `user`, plus UserType sub-plugins |
+| `UserOauthScopeProviderPlugin` | `user`, plus `back-office-user` when no user type plugin claims the user |
+| `MerchantUserTypeOauthScopeProviderPlugin` | `merchant-user`, for users assigned to a merchant |
 | `WarehouseOauthScopeProviderPlugin` | `warehouse` |
 
 For details on how the mapping works, see [Security — Roles and OAuth scope mapping](/docs/integrations/spryker-api/authenticating-and-authorization/security.html). For instructions on setting up scopes, see [Integrate the authorization scopes](/docs/integrations/spryker-api/backend-api/integrate-backend-api/integrate-the-authorization-scopes.html).

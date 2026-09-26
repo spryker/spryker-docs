@@ -1933,6 +1933,8 @@ entries:
                 url: /docs/pbc/all/multi-factor-authentication/manage-using-glue-api/glue-api-activate-and-deactivate-mfa.html
               - title: Authenticate through MFA
                 url: /docs/pbc/all/multi-factor-authentication/manage-using-glue-api/glue-api-authenticate-through-mfa.html
+              - title: "Backend API: Manage MFA"
+                url: /docs/pbc/all/multi-factor-authentication/manage-using-glue-api/backend-api-manage-multi-factor-authentication.html
 
       - title: Offer Management
         url: /docs/pbc/all/offer-management/offer-management.html

@@ -1,0 +1,35 @@
+%%{init: {"fontFamily": "Arial, Helvetica, sans-serif", "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}, "flowchart": {"htmlLabels": true, "curve": "linear", "padding": 16}} }%%
+flowchart LR
+    EN["<b>Entity saved</b><br/><i>Persistence layer</i><br/>of the domain module"]
+    EV["<b>Event dispatched</b><br/>EventBehavior"]
+    PB["<b>Publish listener / publisher plugin</b><br/><i>Communication layer</i> of the<br/>*Storage or *Search module"]
+    TB[("<b>*_storage / *_search</b><br/>table row")]
+    SY["<b>Synchronization plugin</b><br/>builds the key and the payload"]
+    QU(["<b>Queue</b><br/>sync.storage / sync.search"])
+    WK["<b>Queue worker</b><br/>writes into the real service"]
+    ST[("<b>Storage</b> and <b>Search</b>")]
+    RD["<b>Storefront read</b><br/>through the Storage or Search client"]
+
+    EN --> EV --> PB --> TB --> SY --> QU --> WK --> ST --> RD
+
+    subgraph MOD["<b>P&amp;S module test</b> proves this much — one process, real database, queue / storage / search in memory"]
+        EN
+        EV
+        PB
+        TB
+        SY
+    end
+
+    subgraph GOLD["<b>P&amp;S golden path</b> runs the whole chain for real and asserts here"]
+        QU
+        WK
+        ST
+        RD
+    end
+
+    classDef step fill:#F6F6F4,stroke:#6B6B68,stroke-width:1.2px,color:#2B2B28
+    classDef store fill:#EFEFED,stroke:#6B6B68,stroke-width:1.2px,color:#2B2B28
+    class EN,EV,PB,SY,WK,RD step
+    class TB,QU,ST store
+    style MOD fill:#EAF3EC,stroke:#2E7D5B,stroke-width:1.6px,color:#2B2B28
+    style GOLD fill:#FDF0EC,stroke:#C9502B,stroke-width:1.6px,color:#2B2B28

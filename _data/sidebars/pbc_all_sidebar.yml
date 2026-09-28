@@ -1085,12 +1085,16 @@ entries:
                         url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-addresses.html
                       - title: Manage customer notes
                         url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-notes.html
+                      - title: Manage customer groups
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-groups.html
                   - title: Company account
                     nested:
                       - title: Manage companies
                         url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/company-account/backend-api-manage-companies.html
                       - title: Manage company users
                         url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/company-account/backend-api-manage-company-users.html
+                  - title: Manage customer access
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/backend-api-manage-customer-access.html
 
               - title: Generate login tokens
                 url: /docs/pbc/all/customer-relationship-management/base-shop/generate-login-tokens.html

@@ -282,7 +282,7 @@ A successful request returns the `204 No Content` status code with an empty body
 
 {% info_block warningBox "What deletion touches" %}
 
-Business units that have the deleted business unit as their parent remain without a parent. They are not deleted. Addresses assigned to it stay with the company but lose the assignment.
+Business units that have the deleted business unit as their parent remain without a parent. They are not deleted. Addresses assigned to it stay with the company but lose the assignment. Merchant relationships and merchant relation requests that the business unit owns are deleted with it.
 
 A business unit that still has company users assigned cannot be deleted; the request returns `422` with the error code `1224`. Reassign or remove those company users first.
 

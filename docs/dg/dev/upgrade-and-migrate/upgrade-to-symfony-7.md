@@ -13,13 +13,11 @@ Although Spryker still supports older versions of Symfony, avoid installing them
 
 {% endinfo_block %}
 
-<a name="changes"></a>
-
 ## Main changes in Symfony 7.4
 
 Symfony 7.4 is a long-term support (LTS) release. The major changes include the following:
 
-- Removal of code that was deprecated throughout the Symfony 6.x series.
+- Symfony 7.4 removes all code deprecated throughout the Symfony 6.x series. For the full list of removed code, see [UPGRADE-7.0.md](https://github.com/symfony/symfony/blob/7.4/UPGRADE-7.0.md).
 - PHP 8.2 as the minimum required version of PHP.
 - Continued adoption of native PHP attributes over annotations across Symfony components.
 - `symfony/monolog-bridge` now requires `monolog/monolog` version 3. Update the [Monolog](https://github.com/spryker/monolog) module to version 2.1.0 or later, which widens its `monolog/monolog` constraint to support version 3:

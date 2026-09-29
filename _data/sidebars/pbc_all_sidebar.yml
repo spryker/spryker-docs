@@ -1165,6 +1165,8 @@ entries:
                         url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-category-management-feature.html
                       - title: Install the Multiple Abstract Products as Promotional Products & Discounts feature
                         url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/install-features/install-the-multiple-abstract-products-as-promotional-products-discounts-feature.html
+                      - title: Install the Discounts Backend API
+                        url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/install-glue-api/install-the-discounts-backend-api.html
 
                   - title: Upgrade modules
                     nested:
@@ -1208,6 +1210,15 @@ entries:
                     url: /docs/pbc/all/discount-management/base-shop/manage-using-glue-api/glue-api-manage-discount-vouchers-in-guest-carts.html
                   - title: Retrieve discounts in guest carts
                     url: /docs/pbc/all/discount-management/base-shop/manage-using-glue-api/glue-api-retrieve-discounts-in-guest-carts.html
+
+              - title: Manage via Backend API
+                nested:
+                  - title: "Backend API: Manage discounts"
+                    url: /docs/pbc/all/discount-management/base-shop/manage-using-backend-api/backend-api-manage-discounts.html
+                  - title: "Backend API: Manage discount voucher codes"
+                    url: /docs/pbc/all/discount-management/base-shop/manage-using-backend-api/backend-api-manage-discount-voucher-codes.html
+                  - title: "Backend API: Retrieve discount options"
+                    url: /docs/pbc/all/discount-management/base-shop/manage-using-backend-api/backend-api-retrieve-discount-options.html
 
               - title: Import and export data
                 url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/import-discount-management-data.html

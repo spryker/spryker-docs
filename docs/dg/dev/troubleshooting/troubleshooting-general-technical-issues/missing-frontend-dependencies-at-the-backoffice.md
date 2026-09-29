@@ -1,7 +1,7 @@
 ---
 title: Missing Frontend Dependencies When Building Back Office Assets
 description: Learn how to resolve missing frontend dependencies when building Back Office assets.
-last_updated: Sep 28, 2026
+last_updated: Sep 29, 2026
 template: troubleshooting-guide-template
 ---
 

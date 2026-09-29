@@ -2,7 +2,7 @@
 title: Upgrade to frontend builder v2 for the Back Office
 description: Learn how to move your project from the oryx-for-zed npm package to the Back Office frontend builder shipped with the Gui module.
 keywords: Gui, spryker-zed-gui, frontend builder, Back Office, Zed, oryx-for-zed, migration, upgrade, webpack, TypeScript
-last_updated: Sep 28, 2026
+last_updated: Sep 29, 2026
 template: concept-topic-template
 related:
   - title: Frontend builder for the Back Office v2

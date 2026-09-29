@@ -2,7 +2,7 @@
 title: npm workspaces for the frontend builders
 description: Learn how Spryker frontend builders are wired into a project as npm workspaces, how the build commands change, and which npm dependencies come from the modules.
 keywords: npm workspaces, frontend builder, ShopUi, ZedUi, Gui, shop-ui, mp-zed-ui, spryker-zed-gui, package.json, dependencies
-last_updated: Sep 28, 2026
+last_updated: Sep 29, 2026
 template: concept-topic-template
 related:
   - title: Frontend builder for Yves v2

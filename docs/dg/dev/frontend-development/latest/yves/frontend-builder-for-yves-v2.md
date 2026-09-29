@@ -2,7 +2,7 @@
 title: Frontend builder for Yves v2
 description: Learn about the TypeScript-based frontend builder v2 that ships with the ShopUi module and builds Yves assets for all namespaces and themes.
 keywords: ShopUi, shop-ui, frontend builder, Yves, webpack, build, assets, live reload
-last_updated: Sep 28, 2026
+last_updated: Sep 29, 2026
 template: howto-guide-template
 related:
   - title: Frontend builder for Yves (deprecated)
@@ -115,7 +115,11 @@ The generated `design-tokens.css` exposes each token as a CSS custom property on
 }
 ```
 
-The `style-dictionary` package is an optional dependency, probed by presence: with the package installed, the CSS is regenerated on every build; without it, a previously generated (committed) `design-tokens.css` is served as is. If the tokens source exists but neither the package nor a committed CSS is available, the step is skipped with a warning. A project without the tokens source doesn't use design tokens, and the step is skipped silently. For details, see [Design tokens](/docs/dg/dev/frontend-development/latest/design-tokens.html).
+From ShopUi 2.3.0, `style-dictionary` comes with the module as one of its dependencies, so nothing has to be installed: whenever the tokens source exists, the CSS is regenerated on every build. A project without the tokens source does not use design tokens — a previously generated (committed) `design-tokens.css` is still served when one exists, otherwise the step is skipped silently.
+
+Up to ShopUi 2.2, `style-dictionary` was an optional dependency, probed by presence: with the package installed, the CSS was regenerated on every build; without it, a committed `design-tokens.css` was served as is, and a tokens source without either produced a warning and no tokens.
+
+For details, see [Design tokens](/docs/dg/dev/frontend-development/latest/design-tokens.html).
 
 ### Legacy style rescue
 

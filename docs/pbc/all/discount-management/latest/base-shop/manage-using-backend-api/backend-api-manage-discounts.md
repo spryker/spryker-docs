@@ -14,7 +14,7 @@ related:
 
 This document describes how to manage discounts using the Backend API. The `discounts` resource exposes the same discount configuration the Back Office **Discount** form uses—cart rules and voucher discounts, their calculation method, the items they apply to, and the cart conditions under which they apply—so you can build Back Office extensions, campaign tooling, and ERP or PIM integrations against one contract.
 
-Discounts are addressed by `uuid`. The internal database identifier is never exposed. A new discount is created inactive; you switch it on and off through the `activate` and `deactivate` actions.
+Discounts are addressed by `uuid`. The internal database identifier is never exposed. A discount is created inactive unless `isActive` is sent; you switch it on and off by updating `isActive`.
 
 ## Installation
 
@@ -87,9 +87,9 @@ Without a `sort` parameter, the collection is ordered by `createdAt` descending,
                 "isExclusive": false,
                 "validFrom": "2026-01-01 00:00:00",
                 "validTo": "2026-12-31 23:59:59",
-                "calculatorPlugin": "PLUGIN_CALCULATOR_PERCENTAGE",
-                "amount": 10,
-                "moneyAmounts": [],
+                "calculatorType": "percentage",
+                "percentage": 10,
+                "fixedAmounts": [],
                 "collectorStrategyType": "query-string",
                 "collector": {
                     "rules": [
@@ -130,7 +130,7 @@ Without a `sort` parameter, the collection is ordered by `createdAt` descending,
                 },
                 "collectorQueryString": "sku = '*'",
                 "decisionRuleQueryString": "sub-total >= '500' and (currency = 'EUR' or currency = 'CHF')",
-                "minimumItemAmount": 1,
+                "minimumItemQuantity": 1,
                 "priority": 100,
                 "stores": [
                     "DE"
@@ -152,9 +152,9 @@ Without a `sort` parameter, the collection is ordered by `createdAt` descending,
                 "isExclusive": false,
                 "validFrom": "2026-01-01 00:00:00",
                 "validTo": "2026-12-31 23:59:59",
-                "calculatorPlugin": "PLUGIN_CALCULATOR_FIXED",
-                "amount": 0,
-                "moneyAmounts": [
+                "calculatorType": "fixed",
+                "percentage": 0,
+                "fixedAmounts": [
                     {
                         "currencyIsoCode": "EUR",
                         "netAmount": 500,
@@ -178,7 +178,7 @@ Without a `sort` parameter, the collection is ordered by `createdAt` descending,
                 },
                 "collectorQueryString": "sku = '*'",
                 "decisionRuleQueryString": "",
-                "minimumItemAmount": 1,
+                "minimumItemQuantity": 1,
                 "priority": 100,
                 "stores": [
                     "DE",
@@ -216,22 +216,22 @@ Without a `sort` parameter, the collection is ordered by `createdAt` descending,
 | displayName | String | Display name of the discount. Unique across discounts. |
 | description | String | Free-text description. |
 | discountType | String | `cart_rule` for a discount applied automatically when its conditions match, or `voucher` for a discount that requires a voucher code. |
-| isActive | Boolean | Whether the discount is applied. A new discount is inactive; change the state with [Activate a discount](#activate-a-discount) and [Deactivate a discount](#deactivate-a-discount). |
+| isActive | Boolean | Whether the discount is applied. Defaults to `false` on creation. |
 | isExclusive | Boolean | Whether the discount is exclusive. An exclusive discount is not combined with other discounts. |
 | validFrom | String | Start of the validity period, UTC, in the `Y-m-d H:i:s` format. The discount is not applied before this moment. |
 | validTo | String | End of the validity period, UTC, in the `Y-m-d H:i:s` format. The discount is not applied after this moment. |
-| calculatorPlugin | String | Calculation method—for example, `PLUGIN_CALCULATOR_PERCENTAGE` or `PLUGIN_CALCULATOR_FIXED`. The available methods and their `inputType` are listed by [Retrieve discount options](/docs/pbc/all/discount-management/latest/base-shop/manage-using-backend-api/backend-api-retrieve-discount-options.html). |
-| amount | Number | Percentage value from `1` to `100`, where `10` stands for 10%. Used by calculators with the `calculator-default-input-type` input type and ignored by the others. |
-| moneyAmounts | Array | Fixed amounts per currency, in cents. Used by calculators with the `calculator-money-input-type` input type and ignored by the others. Whether `netAmount` or `grossAmount` is applied depends on the price mode of the cart. |
-| moneyAmounts.currencyIsoCode | String | ISO 4217 code of a currency of one of the selected stores. |
-| moneyAmounts.netAmount | Integer | Net amount in cents, applied to carts in the net price mode. |
-| moneyAmounts.grossAmount | Integer | Gross amount in cents, applied to carts in the gross price mode. |
+| calculatorType | String | Key of the calculation method—for example, `percentage` or `fixed`. The available methods, their display names, and their `inputType` are listed by [Retrieve discount options](/docs/pbc/all/discount-management/latest/base-shop/manage-using-backend-api/backend-api-retrieve-discount-options.html). |
+| percentage | Number | Percentage of the discount from `1` to `100`, where `10` stands for 10%. Used by calculation methods with the `calculator-default-input-type` input type and ignored by the others. |
+| fixedAmounts | Array | Fixed amounts per currency, in cents. Used by calculators with the `calculator-money-input-type` input type and ignored by the others. Whether `netAmount` or `grossAmount` is applied depends on the price mode of the cart. |
+| fixedAmounts.currencyIsoCode | String | ISO 4217 code of a currency of one of the selected stores. |
+| fixedAmounts.netAmount | Integer | Net amount in cents, applied to carts in the net price mode. |
+| fixedAmounts.grossAmount | Integer | Gross amount in cents, applied to carts in the gross price mode. |
 | collectorStrategyType | String | How the discounted items are selected: `query-string` for the items matched by the `collector` rules, or `promotion` for the promotional products of `promotion`. The available strategies are listed by [Retrieve discount options](/docs/pbc/all/discount-management/latest/base-shop/manage-using-backend-api/backend-api-retrieve-discount-options.html). |
 | collector | Object | Rule group that selects the cart items the discount applies to. Present when `collectorStrategyType` is `query-string`. For the structure, see [Rule groups](#rule-groups). |
-| decisionRule | Object | Rule group of the cart conditions under which the discount applies. A root group without rules and nested groups means that the discount applies to every cart. For the structure, see [Rule groups](#rule-groups). |
+| decisionRule | Object | Rule group of the cart conditions under which the discount applies. A root group without rules and nested groups, or no group at all, means that the discount applies to every cart. For the structure, see [Rule groups](#rule-groups). |
 | collectorQueryString | String | `collector` in the query string notation of the Back Office. Read-only. |
 | decisionRuleQueryString | String | `decisionRule` in the query string notation of the Back Office. Read-only. |
-| minimumItemAmount | Integer | Minimum number of items in the cart for the discount to apply. |
+| minimumItemQuantity | Integer | Minimum number of cart items matching the collector rules for the discount to apply. |
 | priority | Integer | Priority of the discount among the discounts applicable to the same cart, from `1` to `9999`. A lower number is applied first. |
 | stores | Array | Names of the stores the discount is available in. |
 | promotion | Object | Promotional products offered when the conditions match. Present when `collectorStrategyType` is `promotion`, and only if the `DiscountPromotion` module is installed. |
@@ -298,9 +298,9 @@ A voucher discount carries the `voucherCodesExport` link next to `self`. It is t
             "isExclusive": false,
             "validFrom": "2026-01-01 00:00:00",
             "validTo": "2026-12-31 23:59:59",
-            "calculatorPlugin": "PLUGIN_CALCULATOR_PERCENTAGE",
-            "amount": 10,
-            "moneyAmounts": [],
+            "calculatorType": "percentage",
+            "percentage": 10,
+            "fixedAmounts": [],
             "collectorStrategyType": "query-string",
             "collector": {
                 "rules": [
@@ -324,7 +324,7 @@ A voucher discount carries the `voucherCodesExport` link next to `self`. It is t
             },
             "collectorQueryString": "sku = '*'",
             "decisionRuleQueryString": "sub-total >= '500'",
-            "minimumItemAmount": 1,
+            "minimumItemQuantity": 1,
             "priority": 100,
             "stores": [
                 "DE"
@@ -371,8 +371,8 @@ Request sample: create a percentage cart rule for orders of 500 EUR or more
             "isExclusive": false,
             "validFrom": "2026-01-01 00:00:00",
             "validTo": "2026-12-31 23:59:59",
-            "calculatorPlugin": "PLUGIN_CALCULATOR_PERCENTAGE",
-            "amount": 10,
+            "calculatorType": "percentage",
+            "percentage": 10,
             "collectorStrategyType": "query-string",
             "collector": {
                 "condition": "and",
@@ -395,7 +395,7 @@ Request sample: create a percentage cart rule for orders of 500 EUR or more
                     }
                 ]
             },
-            "minimumItemAmount": 1,
+            "minimumItemQuantity": 1,
             "priority": 100,
             "stores": ["DE", "AT"]
         }
@@ -417,8 +417,8 @@ Request sample: create a fixed amount voucher discount
             "isExclusive": true,
             "validFrom": "2026-01-01 00:00:00",
             "validTo": "2026-12-31 23:59:59",
-            "calculatorPlugin": "PLUGIN_CALCULATOR_FIXED",
-            "moneyAmounts": [
+            "calculatorType": "fixed",
+            "fixedAmounts": [
                 { "currencyIsoCode": "EUR", "netAmount": 500, "grossAmount": 595 },
                 { "currencyIsoCode": "CHF", "netAmount": 460, "grossAmount": 500 }
             ],
@@ -430,7 +430,7 @@ Request sample: create a fixed amount voucher discount
             "decisionRule": {
                 "rules": []
             },
-            "minimumItemAmount": 1,
+            "minimumItemQuantity": 1,
             "priority": 50,
             "stores": ["DE"]
         }
@@ -452,8 +452,8 @@ Request sample: create a promotion that offers a free product
             "isExclusive": false,
             "validFrom": "2026-01-01 00:00:00",
             "validTo": "2026-12-31 23:59:59",
-            "calculatorPlugin": "PLUGIN_CALCULATOR_PERCENTAGE",
-            "amount": 100,
+            "calculatorType": "percentage",
+            "percentage": 100,
             "collectorStrategyType": "promotion",
             "promotion": {
                 "abstractSkus": ["001"],
@@ -464,7 +464,7 @@ Request sample: create a promotion that offers a free product
                     { "field": "sub-total", "operator": ">=", "value": "1000" }
                 ]
             },
-            "minimumItemAmount": 1,
+            "minimumItemQuantity": 1,
             "priority": 10,
             "stores": ["DE"]
         }
@@ -477,25 +477,26 @@ Request sample: create a promotion that offers a free product
 | displayName | String | &check; | Display name of the discount. Never blank, and unique across discounts. |
 | description | String |  | Free-text description. |
 | discountType | String | &check; | `cart_rule` or `voucher`. A voucher discount is created with an empty voucher pool; add codes with [Generate voucher codes](/docs/pbc/all/discount-management/latest/base-shop/manage-using-backend-api/backend-api-manage-discount-voucher-codes.html#generate-voucher-codes). |
+| isActive | Boolean |  | Whether the discount is applied right away. Defaults to `false`. |
 | isExclusive | Boolean | &check; | Whether the discount is exclusive. |
 | validFrom | String | &check; | Start of the validity period, UTC, in the `Y-m-d H:i:s` format. Must be before `2038-01-19 03:14:07`. |
 | validTo | String | &check; | End of the validity period, UTC, in the `Y-m-d H:i:s` format. Must be after `validFrom` and before `2038-01-19 03:14:07`. |
-| calculatorPlugin | String | &check; | Calculation method. Must be one of the keys listed in `calculatorPlugins` by [Retrieve discount options](/docs/pbc/all/discount-management/latest/base-shop/manage-using-backend-api/backend-api-retrieve-discount-options.html). |
-| amount | Number |  | Percentage value from `1` to `100`. Required when `calculatorPlugin` is `PLUGIN_CALCULATOR_PERCENTAGE`. |
-| moneyAmounts | Array |  | Fixed amounts per currency, in cents, for calculators with the `calculator-money-input-type` input type. At least one amount is required for such a calculator, and each currency must belong to one of the selected `stores`. |
+| calculatorType | String | &check; | Calculation method. Must be one of the keys listed in `calculatorTypes` by [Retrieve discount options](/docs/pbc/all/discount-management/latest/base-shop/manage-using-backend-api/backend-api-retrieve-discount-options.html). |
+| percentage | Number |  | Percentage value from `1` to `100`. Required when `calculatorType` is `percentage`. |
+| fixedAmounts | Array |  | Fixed amounts per currency, in cents, for calculators with the `calculator-money-input-type` input type. At least one amount is required for such a calculator, and each currency must belong to one of the selected `stores`. |
 | collectorStrategyType | String |  | `query-string` or `promotion`. Defaults to `query-string`. |
-| collector | Object |  | Rule group that selects the discounted items. Required when `collectorStrategyType` is `query-string`, ignored otherwise. For the structure, see [Rule groups](#rule-groups). |
-| decisionRule | Object | &check; | Rule group of the cart conditions. Send a group with an empty `rules` array to create a discount without conditions. |
+| collector | Object |  | Rule group that selects the discounted items. Required when `collectorStrategyType` is `query-string`, where a missing group is rejected with the error code `5706`; ignored otherwise. For the structure, see [Rule groups](#rule-groups). |
+| decisionRule | Object |  | Rule group of the cart conditions. Omit it, send `null`, or send a group with an empty `rules` array to create a discount without conditions. |
 | promotion | Object |  | Promotional products. Required when `collectorStrategyType` is `promotion`, ignored otherwise. Requires the `DiscountPromotion` module. |
 | promotion.abstractSkus | Array | &check; | SKUs of existing abstract products offered as promotional items. At least one. |
 | promotion.quantity | Integer | &check; | Maximum quantity of the promotional product the customer may add. |
-| minimumItemAmount | Integer | &check; | Minimum number of items in the cart. At least `1`. |
+| minimumItemQuantity | Integer | &check; | Minimum number of cart items matching the collector rules. At least `1`. |
 | priority | Integer |  | Priority from `1` to `9999`. The allowed range is listed in `priority` by [Retrieve discount options](/docs/pbc/all/discount-management/latest/base-shop/manage-using-backend-api/backend-api-retrieve-discount-options.html). |
 | stores | Array |  | Names of existing stores the discount is available in. |
 
 {% info_block infoBox "Which amount attribute to send" %}
 
-Every calculator declares an `inputType` in [Retrieve discount options](/docs/pbc/all/discount-management/latest/base-shop/manage-using-backend-api/backend-api-retrieve-discount-options.html). A calculator with `calculator-default-input-type` reads `amount`; a calculator with `calculator-money-input-type` reads `moneyAmounts`. The other attribute is ignored, and the stored value is echoed back as `0` or an empty array.
+Every calculator declares an `inputType` in [Retrieve discount options](/docs/pbc/all/discount-management/latest/base-shop/manage-using-backend-api/backend-api-retrieve-discount-options.html). A calculation method with `calculator-default-input-type` reads `percentage`; one with `calculator-money-input-type` reads `fixedAmounts`. The other attribute is ignored, and the stored value is echoed back as `0` or an empty array.
 
 {% endinfo_block %}
 
@@ -524,9 +525,9 @@ Each rule's `field`, `operator`, and `value` type must match the field definitio
             "isExclusive": false,
             "validFrom": "2026-01-01 00:00:00",
             "validTo": "2026-12-31 23:59:59",
-            "calculatorPlugin": "PLUGIN_CALCULATOR_PERCENTAGE",
-            "amount": 10,
-            "moneyAmounts": [],
+            "calculatorType": "percentage",
+            "percentage": 10,
+            "fixedAmounts": [],
             "collectorStrategyType": "query-string",
             "collector": {
                 "rules": [
@@ -567,7 +568,7 @@ Each rule's `field`, `operator`, and `value` type must match the field definitio
             },
             "collectorQueryString": "sku = '*'",
             "decisionRuleQueryString": "sub-total >= '500' and (currency = 'EUR' or currency = 'CHF')",
-            "minimumItemAmount": 1,
+            "minimumItemQuantity": 1,
             "priority": 100,
             "stores": [
                 "DE",
@@ -584,7 +585,7 @@ Each rule's `field`, `operator`, and `value` type must match the field definitio
 
 </details>
 
-A successful request returns the `201 Created` status code. The response contains the discount as stored, with the `uuid` that you can use to address it in subsequent requests. The discount is inactive until you [activate](#activate-a-discount) it.
+A successful request returns the `201 Created` status code. The response contains the discount as stored, with the `uuid` that you can use to address it in subsequent requests. The discount is inactive unless `isActive` was sent as `true`.
 
 ## Edit a discount
 
@@ -615,7 +616,8 @@ Request sample: `PATCH https://glue-backend.mysprykershop.com/discounts/2e622c64
         "attributes": {
             "description": "Extended to the autumn campaign",
             "validTo": "2027-03-31 23:59:59",
-            "priority": 7
+            "priority": 7,
+            "isActive": true
         }
     }
 }
@@ -623,7 +625,7 @@ Request sample: `PATCH https://glue-backend.mysprykershop.com/discounts/2e622c64
 
 The request accepts the same attributes as [Create a discount](#create-a-discount), and all of them are optional. The endpoint applies only the attributes present in the payload; every attribute you omit keeps its stored value. Attributes that hold a list or an object behave as follows:
 
-- `moneyAmounts`: omit the attribute to keep the stored amounts, send an empty array to clear them, or send a list to replace them.
+- `fixedAmounts`: omit the attribute to keep the stored amounts, send an empty array to clear them, or send a list to replace them.
 - `collector` and `decisionRule`: a rule group you send replaces the stored group. Inside it, omit `groups` to keep the stored nested groups, or send an empty array to clear them.
 - `promotion.abstractSkus`: omit the attribute to keep the stored SKUs, send an empty array to clear them, or send a list to replace them. A promotion discount must keep at least one SKU.
 - `stores`: a list you send replaces the stored store assignment.
@@ -638,72 +640,20 @@ Changing `discountType` from `voucher` to `cart_rule` detaches the voucher codes
 
 The response contains the updated discount, with the same attributes as [Retrieve a discount](#retrieve-a-discount).
 
-## Activate a discount
+## Deactivate or delete a discount
 
-To activate a discount, send the request:
-
-***
-`POST` {% raw %}**/discounts/*{{discount_uuid}}*/activate**{% endraw %}
-***
-
-| PATH PARAMETER | DESCRIPTION |
-| --- | --- |
-| {% raw %}***{{discount_uuid}}***{% endraw %} | UUID of the discount to activate. To get it, [retrieve discounts](#retrieve-discounts). |
-
-### Request
-
-| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
-| --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html). |
-
-Request sample: `POST https://glue-backend.mysprykershop.com/discounts/2e622c64-5ddb-58dd-b313-af61c15c65ba/activate`
-
-The request has no body. A request that sends a JSON:API document without `data`, such as `{}`, is rejected with `400`.
-
-### Response
-
-The response contains the discount with `isActive` set to `true`, with the same attributes as [Retrieve a discount](#retrieve-a-discount). The action is idempotent: activating an active discount returns `200` and changes nothing.
-
-## Deactivate a discount
-
-To deactivate a discount, send the request:
-
-***
-`POST` {% raw %}**/discounts/*{{discount_uuid}}*/deactivate**{% endraw %}
-***
-
-| PATH PARAMETER | DESCRIPTION |
-| --- | --- |
-| {% raw %}***{{discount_uuid}}***{% endraw %} | UUID of the discount to deactivate. To get it, [retrieve discounts](#retrieve-discounts). |
-
-### Request
-
-| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
-| --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html). |
-
-Request sample: `POST https://glue-backend.mysprykershop.com/discounts/2e622c64-5ddb-58dd-b313-af61c15c65ba/deactivate`
-
-The request has no body.
-
-### Response
-
-The response contains the discount with `isActive` set to `false`. Deactivating an inactive discount returns `200` and changes nothing.
-
-{% info_block infoBox "There is no endpoint to delete a discount" %}
-
-A discount can be deactivated but not deleted through the API, as in the Back Office. A deactivated discount keeps its configuration and voucher codes and can be activated again.
-
-{% endinfo_block %}
+A discount can be deactivated but not deleted through the API, as in the Back Office. To take a discount out of use, [edit it](#edit-a-discount) with `isActive` set to `false`. A deactivated discount keeps its configuration and voucher codes and can be activated again the same way.
 
 ## Possible errors
 
+A business validation error names the rejected attribute in `detail`, in the form `<attribute> => <message>`—for example, `calculatorType => Calculator type "PLUGIN_X" is not available.` or `fixedAmounts.1 => Invalid fixed amount. ...` for the second fixed amount.
+
 | CODE  | REASON |
 | --- | --- |
-| 901 | The request body or a query parameter failed schema validation—for example, a required attribute is missing, `validTo` is before `validFrom`, `priority` is out of range, or `filter[discounts.isActive]` is not a boolean. Each body error names the rejected attribute in `source.pointer`. |
+| 901 | The request body or a query parameter failed schema validation—for example, a required attribute is missing, `validTo` is before `validFrom`, `priority` or `percentage` is out of range, a fixed amount is negative, or `filter[discounts.isActive]` is not a boolean. Each body error names the rejected attribute in `source.pointer`. |
 | 5700 | No discount matches the given UUID. |
 | 5701 | The display name is already used by another discount. |
-| 5703 | `calculatorPlugin` names a calculation method this installation does not offer. |
+| 5703 | `calculatorType` names a calculation method this installation does not offer. |
 | 5705 | The fixed amounts are invalid: none was given for a money calculator, or a currency does not belong to one of the selected stores. |
 | 5706 | A rule of `collector` or `decisionRule` is invalid. The error message quotes the query string parser. |
 | 5707 | A rule group is nested deeper than three levels. |

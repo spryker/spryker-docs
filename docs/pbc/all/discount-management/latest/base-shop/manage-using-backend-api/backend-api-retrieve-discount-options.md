@@ -10,7 +10,7 @@ related:
     link: docs/pbc/all/discount-management/latest/base-shop/manage-using-backend-api/backend-api-manage-discount-voucher-codes.html
 ---
 
-This document describes how to retrieve the discount options using the Backend API. The `discount-options` resource lists every value the Back Office **Discount** form offers in its dropdowns and enforces in its ranges: the discount types, the calculation methods and which amount attribute each reads, the item-selection strategies, the rule fields with their operators and fixed values, the stores with their currencies, and the allowed ranges for the priority and the voucher code generation. Read it before you [create a discount](/docs/pbc/all/discount-management/latest/base-shop/manage-using-backend-api/backend-api-manage-discounts.html#create-a-discount) to build a valid payload, or to render a discount form of your own.
+This document describes how to retrieve the discount options using the Backend API. The `discount-options` resource lists every value the Back Office **Discount** form offers in its dropdowns and enforces in its ranges: the discount types, the calculation methods with their display names and which amount attribute each reads, the item-selection strategies, the rule fields with their operators and fixed values, the stores with their currencies, and the allowed ranges for the priority and the voucher code generation. Read it before you [create a discount](/docs/pbc/all/discount-management/latest/base-shop/manage-using-backend-api/backend-api-manage-discounts.html#create-a-discount) to build a valid payload, or to render a discount form of your own.
 
 The values are not static. Calculation methods, rule fields, and strategies come from the plugins registered in the project, so an installation with additional discount plugins lists additional options.
 
@@ -53,13 +53,15 @@ The resource is a singleton without an identifier and without pagination. The re
                 "cart_rule",
                 "voucher"
             ],
-            "calculatorPlugins": [
+            "calculatorTypes": [
                 {
-                    "key": "PLUGIN_CALCULATOR_PERCENTAGE",
+                    "key": "percentage",
+                    "label": "Percentage",
                     "inputType": "calculator-default-input-type"
                 },
                 {
-                    "key": "PLUGIN_CALCULATOR_FIXED",
+                    "key": "fixed",
+                    "label": "Fixed amount",
                     "inputType": "calculator-money-input-type"
                 }
             ],
@@ -195,9 +197,10 @@ The resource is a singleton without an identifier and without pagination. The re
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | discountTypes | Array | Allowed values of the `discountType` attribute of a discount. |
-| calculatorPlugins | Array | Available calculation methods for the `calculatorPlugin` attribute. |
-| calculatorPlugins.key | String | Key of the calculation method—for example, `PLUGIN_CALCULATOR_PERCENTAGE`. |
-| calculatorPlugins.inputType | String | Which amount attribute the method reads: `calculator-default-input-type` reads `amount`, `calculator-money-input-type` reads `moneyAmounts`. |
+| calculatorTypes | Array | Available calculation methods for the `calculatorType` attribute. |
+| calculatorTypes.key | String | Key of the calculation method—for example, `percentage` or `fixed`. It is the value of the `calculatorType` attribute of a discount. A calculator plugin added by the project is listed under its plugin key until the project maps it to a readable key in `Spryker\Glue\Discount\DiscountConfig::getCalculatorPluginKeyByCalculatorType()`. |
+| calculatorTypes.label | String | Name of the calculation method to show to users, translated into the locale of the `Accept-Language` header—for example, `Percentage`. A method added by the project without a translation is labeled by its plugin key without the `PLUGIN_CALCULATOR_` prefix—for example, `Bonus points` for `PLUGIN_CALCULATOR_BONUS_POINTS`. |
+| calculatorTypes.inputType | String | Which amount attribute the method reads: `calculator-default-input-type` reads `percentage`, `calculator-money-input-type` reads `fixedAmounts`. |
 | collectorStrategyTypes | Array | Available item-selection strategies for the `collectorStrategyType` attribute. `query-string` is always present; other strategies, such as `promotion`, are contributed by their modules. |
 | collectorStrategyTypes.key | String | Key of the strategy. |
 | collectorStrategyTypes.label | String | Label of the strategy as shown in the Back Office. |
@@ -208,7 +211,7 @@ The resource is a singleton without an identifier and without pagination. The re
 | voucherCodeLength | Object | Allowed range of the `codeLength` attribute when generating voucher codes. |
 | stores | Array | Stores a discount can be assigned to, with the currencies a fixed amount can be given in. |
 | stores.name | String | Name of the store, as used in the `stores` attribute of a discount. |
-| stores.currencyIsoCodes | Array | ISO 4217 codes of the currencies available in the store, as used in `moneyAmounts.currencyIsoCode`. |
+| stores.currencyIsoCodes | Array | ISO 4217 codes of the currencies available in the store, as used in `fixedAmounts.currencyIsoCode`. |
 | decisionRuleFields | Array | Fields a `decisionRule` rule can check. |
 | collectorFields | Array | Fields a `collector` rule can check. |
 | decisionRuleFields.field, collectorFields.field | String | Name of the field, as used in `rules.field`. |

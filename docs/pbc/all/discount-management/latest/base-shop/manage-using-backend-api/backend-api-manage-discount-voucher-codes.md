@@ -10,7 +10,7 @@ related:
     link: docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/export-voucher-codes.html
 ---
 
-This document describes how to manage the voucher codes of a discount using the Backend API. A voucher discount is applied only when the customer redeems one of its codes. The endpoints cover what the Back Office **Discount** page offers for a voucher pool: listing the codes with their usage, generating a batch of codes, removing a code, and downloading all codes as a CSV file.
+This document describes how to manage the voucher codes of a discount using the Backend API. A voucher discount is applied only when the customer redeems one of its codes. The endpoints cover what the Back Office **Discount** page offers for a voucher pool: listing the codes with their usage, generating a batch of codes, removing codes one by one or all at once, and downloading all codes as a CSV file.
 
 Voucher codes belong to a discount and are addressed below it, by the discount `uuid` and the code itself. The discount must be of the `voucher` type; to create one, see [Backend API: Manage discounts](/docs/pbc/all/discount-management/latest/base-shop/manage-using-backend-api/backend-api-manage-discounts.html#create-a-discount).
 
@@ -87,6 +87,7 @@ Without a `sort` parameter, the collection is ordered by `createdAt`. Sorting by
                 "discountUuid": "2e622c64-5ddb-58dd-b313-af61c15c65ba",
                 "code": "SALE-M4XP9A",
                 "maxNumberOfUses": 1,
+                "numberOfUses": 0,
                 "isActive": true,
                 "voucherBatch": 3,
                 "createdAt": "2026-09-29 09:28:50"
@@ -116,9 +117,9 @@ Without a `sort` parameter, the collection is ordered by `createdAt`. Sorting by
 | --- | --- | --- |
 | discountUuid | String | UUID of the discount the code belongs to. |
 | code | String | The voucher code the customer redeems. Together with `discountUuid`, it forms the resource `id`. |
-| maxNumberOfUses | Integer | How many times the code can be redeemed in total. `0` means unlimited. |
-| numberOfUses | Integer | How many times the code has been redeemed so far. Omitted for a code that has never been redeemed. |
-| isActive | Boolean | Whether the code can currently be redeemed. |
+| maxNumberOfUses | Integer | How many times the code can be redeemed in total. `0` means unlimited, also for a code created without a limit in the Back Office. |
+| numberOfUses | Integer | How many times the code has been redeemed so far. `0` for a code that has never been redeemed. |
+| isActive | Boolean | Whether the code can be redeemed. Codes are generated active; the flag is cleared only by a data import, there is no action in the API or the Back Office that toggles it. |
 | voucherBatch | Integer | Number of the generation batch the code was created in. `0` for a code created one by one in the Back Office. |
 | createdAt | String | Date and time when the code was created. |
 
@@ -143,7 +144,7 @@ To generate a batch of voucher codes for a discount, send the request:
 | Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html). |
 | Content-Type | application/vnd.api+json | &check; | Media type of the request body. |
 
-Request sample: generate 100 single-use codes with a prefix
+Request sample: generate three single-use codes with a prefix
 
 `POST https://glue-backend.mysprykershop.com/discounts/2e622c64-5ddb-58dd-b313-af61c15c65ba/voucher-codes/generate`
 
@@ -152,7 +153,7 @@ Request sample: generate 100 single-use codes with a prefix
     "data": {
         "type": "discount-voucher-codes-generate",
         "attributes": {
-            "quantity": 100,
+            "quantity": 3,
             "codeLength": 6,
             "customCode": "SALE-[code]",
             "maxNumberOfUses": 1
@@ -184,7 +185,7 @@ Request sample: generate 10 random codes that can be redeemed without limit
 | customCode | String |  | Template of the codes. The `[code]` placeholder is replaced by the random part; without the placeholder, the random part is appended to the template. Required when `codeLength` is not given. |
 | maxNumberOfUses | Integer |  | How many times each generated code can be redeemed. `0` means unlimited. Defaults to `0`. |
 
-The generated codes are not part of the response. To read them, [retrieve voucher codes](#retrieve-voucher-codes) filtered by the returned `voucherBatch`, or [export voucher codes](#export-voucher-codes).
+The response lists the generated codes. To read them again later, [retrieve voucher codes](#retrieve-voucher-codes) filtered by the returned `voucherBatch`, or [export voucher codes](#export-voucher-codes).
 
 ### Response
 
@@ -198,7 +199,12 @@ Response sample:
         "attributes": {
             "discountUuid": "2e622c64-5ddb-58dd-b313-af61c15c65ba",
             "voucherBatch": 3,
-            "generatedCount": 100
+            "generatedCount": 3,
+            "codes": [
+                "SALE-7GH2KQ",
+                "SALE-M4XP9A",
+                "SALE-Q2WD8N"
+            ]
         }
     }
 }
@@ -211,6 +217,7 @@ A successful request returns the `201 Created` status code.
 | discountUuid | String | UUID of the discount the codes were generated for. |
 | voucherBatch | Integer | Number assigned to the batch. Use it as the `voucherBatch` filter of [Retrieve voucher codes](#retrieve-voucher-codes). |
 | generatedCount | Integer | Number of codes actually generated. |
+| codes | Array | The codes created by this request, in the order they were created. Only these codes are listed, even for batch `0`. |
 
 {% info_block infoBox "Codes are unique across the shop" %}
 
@@ -218,18 +225,17 @@ A generated code must not exist in any voucher pool. When every attempt to gener
 
 {% endinfo_block %}
 
-## Delete a voucher code
+## Delete voucher codes
 
-To delete a voucher code, send the request:
+To delete voucher codes of a discount, send the request:
 
 ***
-`DELETE` {% raw %}**/discounts/*{{discount_uuid}}*/voucher-codes/*{{code}}***{% endraw %}
+`POST` {% raw %}**/discounts/*{{discount_uuid}}*/voucher-codes/delete**{% endraw %}
 ***
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{discount_uuid}}***{% endraw %} | UUID of the discount the code belongs to. |
-| {% raw %}***{{code}}***{% endraw %} | The voucher code to delete. To get it, [retrieve voucher codes](#retrieve-voucher-codes). |
+| {% raw %}***{{discount_uuid}}***{% endraw %} | UUID of the discount the codes belong to. |
 
 ### Request
 
@@ -237,11 +243,48 @@ To delete a voucher code, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html). |
 
-Request sample: `DELETE https://glue-backend.mysprykershop.com/discounts/2e622c64-5ddb-58dd-b313-af61c15c65ba/voucher-codes/SALE-7GH2KQ`
+Request sample: delete the listed codes
+
+`POST https://glue-backend.mysprykershop.com/discounts/2e622c64-5ddb-58dd-b313-af61c15c65ba/voucher-codes/delete`
+
+```json
+{
+    "data": {
+        "type": "discount-voucher-codes",
+        "attributes": {
+            "codes": ["SALE-7GH2KQ", "SALE-M4XP9A"]
+        }
+    }
+}
+```
+
+Request sample: delete all codes of the discount
+
+`POST https://glue-backend.mysprykershop.com/discounts/2e622c64-5ddb-58dd-b313-af61c15c65ba/voucher-codes/delete`
+
+```json
+{
+    "data": {
+        "type": "discount-voucher-codes",
+        "attributes": {
+            "all": true
+        }
+    }
+}
+```
+
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
+| --- | --- | --- | --- |
+| codes | Array | &check; unless `all` is `true` | Codes to delete, at most 100 per request. To get them, [retrieve voucher codes](#retrieve-voucher-codes). Send either `codes` or `all`, not both. |
+| all | Boolean | &check; unless `codes` is given | Set to `true` to delete every voucher code of the discount. |
 
 ### Response
 
-A successful request returns the `204 No Content` status code with an empty body. The code is deleted permanently. A code that does not belong to the given discount returns `404` with the error code `5720`.
+A successful request returns the `204 No Content` status code with an empty body. The codes are deleted permanently.
+
+The code list is all-or-nothing: if any listed code does not belong to the discount, nothing is deleted, and the response is `404` with one error per offending code. The error code is `5720`, and `detail` names the list position, for example, `codes.1 => Voucher code "SALE-M4XP9A" was not found for discount with uuid "2e622c64-...".`
+
+`all: true` deletes whatever codes the discount has and returns `204` even when the pool is already empty. A body that carries neither a non-empty `codes` list nor `all: true`, or carries both, returns `400` with the error code `5722`.
 
 ## Export voucher codes
 
@@ -272,15 +315,15 @@ The response is not a JSON:API document. It carries the `Content-Type: text/csv;
 ```text
 code,maxNumberOfUses,numberOfUses,isActive
 SALE-7GH2KQ,1,1,1
-SALE-M4XP9A,1,,1
+SALE-M4XP9A,1,0,1
 ```
 
 | COLUMN | DESCRIPTION |
 | --- | --- |
 | code | The voucher code. |
 | maxNumberOfUses | How many times the code can be redeemed in total. `0` means unlimited. |
-| numberOfUses | How many times the code has been redeemed. Empty for a code that has never been redeemed. |
-| isActive | `1` if the code can currently be redeemed, `0` otherwise. |
+| numberOfUses | How many times the code has been redeemed. `0` for a code that has never been redeemed. |
+| isActive | `1` if the code can be redeemed, `0` otherwise. |
 
 The file is the same the Back Office produces with [Export voucher codes](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/export-voucher-codes.html). A voucher discount without codes returns the header row only; a cart rule returns the header row as well, because it has no voucher pool.
 
@@ -288,9 +331,10 @@ The file is the same the Back Office produces with [Export voucher codes](/docs/
 
 | CODE  | REASON |
 | --- | --- |
-| 901 | The request body or a query parameter failed schema validation—for example, `quantity` is out of range, neither `codeLength` nor `customCode` is given, or `maxNumberOfUses` is negative. Each body error names the rejected attribute in `source.pointer`. |
+| 901 | The request body or a query parameter failed schema validation—for example, `quantity` is out of range, neither `codeLength` nor `customCode` is given, `maxNumberOfUses` is negative, or more than 100 `codes` are listed. Each body error names the rejected attribute in `source.pointer`. |
 | 5700 | No discount matches the given UUID. |
-| 5720 | No voucher code with the given value belongs to the discount. |
+| 5720 | A listed voucher code does not belong to the discount. Nothing is deleted; the response carries one error per such code. |
+| 5722 | The delete request carries neither a non-empty `codes` list nor `all: true`, or carries both. |
 | 5721 | Voucher codes can be generated for a voucher discount only, and the discount is a cart rule. |
 | 5726 | No code could be generated for the given length and template, because every candidate collides with an existing code. |
 | 5740 | The `sort` parameter names a field that the collection does not support. |

@@ -303,7 +303,7 @@ curl "https://glue-backend.mysprykershop.com/discount-options" \
   -H "Accept: application/vnd.api+json"
 ```
 
-The integration is successful when the request returns `200` with `calculatorPlugins`, `collectorFields`, and `stores` populated. If the `DiscountPromotion` plugins are registered, `collectorStrategyTypes` lists `promotion` next to `query-string`.
+The integration is successful when the request returns `200` with `calculatorTypes`, `collectorFields`, and `stores` populated. If the `DiscountPromotion` plugins are registered, `collectorStrategyTypes` lists `promotion` next to `query-string`.
 
 Retrieve a discount collection:
 
@@ -322,7 +322,7 @@ curl -X POST "https://glue-backend.mysprykershop.com/discounts" \
   -H "Authorization: Bearer {access_token}" \
   -H "Content-Type: application/vnd.api+json" \
   -H "Accept: application/vnd.api+json" \
-  -d '{"data":{"type":"discounts","attributes":{"displayName":"API voucher","discountType":"voucher","isExclusive":false,"validFrom":"2026-01-01 00:00:00","validTo":"2026-12-31 23:59:59","calculatorPlugin":"PLUGIN_CALCULATOR_PERCENTAGE","amount":10,"collector":{"rules":[{"field":"sku","operator":"=","value":"*"}]},"decisionRule":{"rules":[]},"minimumItemAmount":1,"priority":100,"stores":["DE"]}}}'
+  -d '{"data":{"type":"discounts","attributes":{"displayName":"API voucher","discountType":"voucher","isExclusive":false,"validFrom":"2026-01-01 00:00:00","validTo":"2026-12-31 23:59:59","calculatorType":"percentage","percentage":10,"collector":{"rules":[{"field":"sku","operator":"=","value":"*"}]},"decisionRule":{"rules":[]},"minimumItemQuantity":1,"priority":100,"stores":["DE"]}}}'
 ```
 
 ```bash
@@ -343,6 +343,5 @@ Both requests return `201 Created`. The first response carries the `uuid` of the
 | `404` on `/discounts` and no generated resource class | The schema was not discovered. Confirm that `spryker/api-platform` is installed, and, if your project overrides `sourceDirectories()`, that it still covers the directory the modules are installed into. |
 | `500` with `DiscountUuidNotEnabledException` on every request that addresses a discount | `isDiscountUuidEnabled()` returns `false`. Complete step 3. |
 | `404` with error code `5700` for a discount you can see in the Back Office | That discount's `uuid` is empty. Run step 5, or save the discount once in the Back Office to have the UUID behavior fill the column. |
-| `400` with `Post data is invalid` on `/activate` or `/deactivate` | The request sent a body. These actions take none—send the request without a body. |
 | `/discount-options` lists `query-string` only, and a discount with the `promotion` strategy is rejected | The `DiscountPromotion` plugins are not registered. Complete step 6. |
 | Errors of promotional products are reported with code `5799` instead of `5730` | The optional glossary key mapping of step 3 is not in place. |

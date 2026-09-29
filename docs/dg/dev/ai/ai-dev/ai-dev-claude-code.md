@@ -1,7 +1,7 @@
 ---
 title: Claude Code
 description: Install and use the Spryker AI Dev SDK in Claude Code to get Spryker-aware skills, code review, and project setup directly in your AI coding assistant.
-last_updated: Sep 7, 2026
+last_updated: Sep 29, 2026
 label: early-access
 keywords: ai, claude, claude code, plugin, marketplace, skills, spryker, ai-dev, code review, ci
 template: howto-guide-template
@@ -73,7 +73,9 @@ The plugin bundles the following Spryker-aware skills. Invoke them in Claude Cod
 | Cypress Migration | `/spryker-ai-dev-sdk:cypress-migration` | Replaces Spryker's demoshop test suites with a project-owned Cypress baseline and wires it into CI | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/cypress-migration/README.md) |
 | Static Validation | `/spryker-ai-dev-sdk:static-validation` | Runs PHP and frontend static analysis over only the code that changed against a base branch | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/static-validation/README.md) |
 | Payment Template | `/spryker-ai-dev-sdk:payment-template` | Scaffolds payment method integration following Spryker payment module patterns | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/payment-template/README.md) |
-| Yves Atomic Frontend | `/spryker-ai-dev-sdk:yves-atomic-frontend` | Helps create atomic design components for the Yves frontend | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/yves-atomic-frontend/README.md) |
+| Yves Atomic Frontend | `/spryker-ai-dev-sdk:yves-atomic-frontend` | Creates and overrides atomic design components for the Yves storefront — Twig, SCSS, and TypeScript | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/yves-atomic-frontend/README.md) |
+| Back Office Frontend | `/spryker-ai-dev-sdk:backoffice-frontend` | Builds or overrides Back Office pages — Zed Twig templates, navigation and ACL, and Back Office JavaScript and SCSS | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/backoffice-frontend/README.md) |
+| Merchant Portal Frontend | `/spryker-ai-dev-sdk:merchant-portal-frontend` | Creates, extends, or replaces Merchant Portal Angular components, the Twig pages that render them, and their Jest specs | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/merchant-portal-frontend/README.md) |
 | Product Requirement Document | `/spryker-ai-dev-sdk:product-requirement-document` | Drafts a research-grounded product requirement document for a Spryker feature before implementation | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/product-requirement-document/README.md) |
 | Spryker Customization | `/spryker-ai-dev-sdk:spryker-customization` | Orchestrates the end-to-end build of a customization from product requirement document to committed branch | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-customization/README.md) |
 | Spryker Bugfix | `/spryker-ai-dev-sdk:spryker-bugfix` | Orchestrates the end-to-end bug fix from a ticket or description to a committed, validated, QA-accepted branch (Autonomous mode adds a pushed draft PR with a CI watch loop) | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-bugfix/README.md) |
@@ -106,7 +108,7 @@ The `ai-dev-setup` skill writes a set of [Spryker-specific coding rules](https:/
 |-----------|-----------------|
 | `business-models.md` | Business model structure and responsibilities |
 | `client-zed-communication.md` | Client–Zed gateway communication patterns |
-| `controller.md` | Controller conventions and responsibilities |
+| `controller.md` | Controller conventions and responsibilities, including translatable flash messages |
 | `dependency-provider.md` | Dependency provider wiring and plugin stacks |
 | `enforce-constants-for-control-flow.md` | Use of constants instead of magic strings in control flow |
 | `expander-pattern.md` | Expander pattern for extending transfer objects |
@@ -114,6 +116,7 @@ The `ai-dev-setup` skill writes a set of [Spryker-specific coding rules](https:/
 | `form-data-loading-performance.md` | Performant data loading in Zed forms |
 | `layer-communication.md` | Cross-layer call rules (Presentation → Communication → Business → Persistence) |
 | `mapper-pattern.md` | Mapper pattern for transfer-to-transfer and entity-to-transfer mappings |
+| `merchant-portal-angular.md` | Merchant Portal Angular components: reuse of installed `@spryker/*` UI components, project-side extension of core, and validation with the `mp:*` scripts |
 | `module-config.md` | Module configuration class conventions |
 | `naming-conventions.md` | Class, method, and variable naming standards |
 | `owasp.md` | OWASP security guidelines applied to Spryker code |
@@ -124,6 +127,10 @@ The `ai-dev-setup` skill writes a set of [Spryker-specific coding rules](https:/
 | `table.md` | Back Office table and query container conventions |
 | `transfer-object.md` | Transfer object usage and immutability rules |
 | `upgradability.md` | Backward compatibility and upgradability guidelines |
+| `yves-frontend.md` | Yves storefront Twig, SCSS, and TypeScript: project-level overrides of core components, BEM and JavaScript hook conventions, and validation with the project's npm lint scripts |
+| `zed-backoffice-frontend.md` | Back Office Twig, JavaScript, SCSS, and navigation: overrides that extend core blocks, Bootstrap 5 markup, no new jQuery, translated text, safe escaping, and server-side ACL |
+
+The frontend rules — `yves-frontend.md`, `zed-backoffice-frontend.md`, and `merchant-portal-angular.md` — are scoped by file path, so Claude Code loads each one only when you work on files of that frontend.
 
 ### Context file
 

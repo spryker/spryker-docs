@@ -1,7 +1,7 @@
 ---
 title: API Platform migration overview
 description: End-to-end walk-through for migrating an existing Spryker shop from Glue REST to API Platform.
-last_updated: Jul 31, 2026
+last_updated: Sep 29, 2026
 template: howto-guide-template
 related:
   - title: Integrate API Platform
@@ -34,6 +34,12 @@ Once a module is migrated, its endpoint wiring is the API Platform resource sche
 {% info_block warningBox "One client-visible behavior change: the Accept header" %}
 
 Backward compatibility has one exception. Legacy Glue REST accepted requests that omitted the `Accept` header (or sent `*/*`) and answered with `application/vnd.api+json`. API Platform's content negotiation does not, so such clients can receive `406 Not Acceptable` or a response in a different format. `spryker/api-platform` **1.15.0+** restores the legacy fallback. See [Requests without an Accept header](/docs/integrations/spryker-api/api-platform/troubleshooting.html#requests-without-an-accept-header-are-rejected-or-return-the-wrong-format) in troubleshooting.
+
+{% endinfo_block %}
+
+{% info_block warningBox "Monitoring tools see new endpoint names" %}
+
+After you switch a module, its endpoints report API Platform route names, such as `_api_/customers/{customerReference}{._format}_get`, instead of legacy Glue names, such as `CustomersRestApi/customer-resource/get`, to your Application Performance Monitoring (APM) tool. Dashboards, alerts, and grouping rules in tools like New Relic or Dynatrace need updates. To keep the legacy names instead, see [Monitoring and APM impact](/docs/integrations/spryker-api/migrate-from-glue-to-api-platform/migrate-to-api-platform.html#monitoring-and-application-performance-monitoring-apm-impact).
 
 {% endinfo_block %}
 

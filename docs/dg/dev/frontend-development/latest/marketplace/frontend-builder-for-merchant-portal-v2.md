@@ -2,7 +2,7 @@
 title: Frontend builder for the Merchant Portal v2
 description: Learn about the Angular frontend builder that ships with the ZedUi module and builds the Merchant Portal assets for core and project modules.
 keywords: ZedUi, zed-ui, frontend builder, Merchant Portal, Angular, webpack, jest, build, live reload
-last_updated: Sep 9, 2026
+last_updated: Sep 29, 2026
 template: howto-guide-template
 related:
   - title: Building the Merchant Portal frontend
@@ -32,6 +32,7 @@ For the upgrade steps, see [Upgrade to frontend builder v2 for the Merchant Port
 | Seeing a change in the browser | rebuild + manual page reload | reloaded automatically in watch mode |
 | Sources that lint and tests report on | core and project alike | only what the repository owns |
 | Switching between the monorepo and a project | different configuration | detected automatically, no configuration |
+| Project namespaces other than `Pyz` | `angular.json` and the build files edited by hand | one optional `frontend/merchant-portal.settings.mts` |
 
 ## What's new
 
@@ -100,7 +101,7 @@ The built assets are written to `public/MerchantPortal/assets/js`.
 
 ## Dependencies that come with the module
 
-ZedUi declares the whole npm dependency set of the Merchant Portal, so neither the project nor its Merchant Portal modules declare any of it. `vendor/spryker/zed-ui/package.json` is the source of truth: what it lists in `dependencies` and `devDependencies` comes with the module, and what it lists in `peerDependencies` is what your project provides. In ZedUi 4.3.0, the peer dependencies are `@jest/globals`, `@typescript-eslint/eslint-plugin`, `@typescript-eslint/parser`, `stylelint`, `ts-jest`, `typescript`, and `webpack`.
+ZedUi declares the whole npm dependency set of the Merchant Portal, so neither the project nor its Merchant Portal modules declare any of it. `vendor/spryker/zed-ui/package.json` is the source of truth: what it lists in `dependencies` and `devDependencies` comes with the module, and what it lists in `peerDependencies` is what your project provides. In ZedUi 4.3.0, the peer dependencies are `@jest/globals`, `@typescript-eslint/eslint-plugin`, `@typescript-eslint/parser`, `stylelint`, `ts-jest`, `typescript`, and `webpack`. From ZedUi 4.4.0, the module declares these packages itself and has no peer dependencies, so the project declares nothing for the Merchant Portal build.
 
 For the mechanics of that split, see [Where the npm dependencies come from](/docs/dg/dev/frontend-development/latest/npm-workspaces-for-frontend-builders.html#where-the-npm-dependencies-come-from).
 
@@ -142,7 +143,44 @@ The builder resolves every path from the project root, which it finds by walking
 | Project | `vendor/spryker` | `vendor/spryker` | `src/Pyz/Zed` |
 | Spryker monorepo | `src/Spryker` | `src/Spryker` | `src/Pyz/*/src/Pyz/Zed` |
 
-Nothing has to be configured for this: the same commands work in both layouts, and the detected layout decides which modules are built, linted, and tested.
+Nothing has to be configured for this: the same commands work in both layouts, and the detected layout decides which modules are built, linted, and tested. A project whose modules live outside `src/Pyz` registers them in the [project-level builder settings](#project-level-builder-settings).
+
+## Project-level builder settings
+
+The legacy builder was configured by editing `angular.json` and the files under `frontend/merchant-portal/`, which the project owned entirely. In v2, project overrides live in a single optional file, `frontend/merchant-portal.settings.mts`. When the file exists, the builder loads it automatically; when it does not, the defaults apply.
+
+The file exports the result of `defineConfig()`, which merges your overrides into the packaged defaults:
+
+```ts
+// frontend/merchant-portal.settings.mts
+import { defineConfig } from '../vendor/spryker/zed-ui/src/Spryker/Zed/ZedUi/FrontendBuilder/settings.mts';
+
+export default defineConfig({
+    paths: {
+        projectModulesDirectories: {
+            // A further project namespace, scanned for Merchant Portal modules after src/Pyz/Zed.
+            acme: './src/Acme/Zed',
+        },
+        // Where main.ts, polyfills.ts, styles.less and the environments live, if not in the Pyz ZedUi module.
+        projectApplicationDirectory: './src/Acme/Zed/ZedUi/Presentation/Components',
+    },
+});
+```
+
+Projects may override:
+
+- `paths.projectModulesDirectories` — the directories the builder scans for project modules: their `entry.ts` files, `mp.public-api.ts` aliases, assets, stylesheets, and specs. An entry named `pyz` replaces the default directory; a new name adds a directory, scanned after the default one. When two directories contain a module of the same name, the later one wins.
+- `paths.projectApplicationDirectory` — the directory holding the Angular application files (`index.html`, `main.ts`, `polyfills.ts`, `styles.less`, `environments/`), `src/Pyz/Zed/ZedUi/Presentation/Components` by default.
+
+All other settings are fixed and inherited from the packaged defaults.
+
+The registered directories flow into everything the builder generates: `angular.json` receives an asset root per directory and points `main`, `polyfills`, and `styles` at the application directory; the TypeScript configurations include the new sources; and `mp:lint`, `mp:stylelint`, and `mp:test` cover them. Run `npm run mp:update:config` after changing the file so the configurations are reconciled.
+
+{% info_block warningBox "Note" %}
+
+`frontend/merchant-portal.settings.mts` is executed by Node.js directly via type stripping, so it must use only erasable TypeScript syntax: type annotations are fine, but `enum`, `namespace`, and constructor parameter properties fail at runtime.
+
+{% endinfo_block %}
 
 ## What lint and tests cover
 

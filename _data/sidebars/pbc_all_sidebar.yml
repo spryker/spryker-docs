@@ -946,6 +946,8 @@ entries:
                         url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-glue-api/install-the-company-business-units-backend-api.html
                       - title: Company Business Unit Addresses Backend API
                         url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-glue-api/install-the-company-business-unit-addresses-backend-api.html
+                      - title: Company Roles Backend API
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-glue-api/install-the-company-roles-backend-api.html
                       - title: Customer Account Management
                         url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-glue-api/install-the-customer-account-management-glue-api.html
 
@@ -1101,6 +1103,10 @@ entries:
                         url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/company-account/backend-api-manage-company-business-units.html
                       - title: Manage company business unit addresses
                         url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/company-account/backend-api-manage-company-business-unit-addresses.html
+                      - title: Manage company roles
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/company-account/backend-api-manage-company-roles.html
+                      - title: Manage company role permissions
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/company-account/backend-api-manage-company-role-permissions.html
                   - title: Manage customer access
                     url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/backend-api-manage-customer-access.html
 

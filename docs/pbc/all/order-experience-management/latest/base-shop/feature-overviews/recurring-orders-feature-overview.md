@@ -1,7 +1,7 @@
 ---
 title: Recurring Orders feature overview
 description: Learn how the Recurring Orders feature lets B2B buyers automate repeat purchases on a configurable schedule.
-last_updated: Aug 17, 2026
+last_updated: Sep 29, 2026
 template: concept-topic-template
 ---
 

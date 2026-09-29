@@ -1504,16 +1504,55 @@ entries:
     - title: Testing guidelines
       url: /docs/dg/dev/guidelines/testing-guidelines/testing-guidelines.html
       nested:
-      - title: Code coverage
-        url: /docs/dg/dev/guidelines/testing-guidelines/code-coverage.html
+      - title: Testing best practices
+        url: /docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/testing-best-practices.html
+        nested:
+          - title: Testing concepts
+            url: /docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/testing-concepts.html
+          - title: Best practices for effective testing
+            url: /docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/best-practices-for-effective-testing.html
+          - title: Test types best practices
+            url: /docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/test-types-best-practices.html
+
       - title: Test framework
         url: /docs/dg/dev/guidelines/testing-guidelines/test-framework.html
       - title: Setting up tests
         url: /docs/dg/dev/guidelines/testing-guidelines/setting-up-tests.html
       - title: Building tests for test-driven development
         url: /docs/dg/dev/guidelines/testing-guidelines/building-tests-for-test-driven-devleopment.html
-      - title: Running tests with Robot Framework
-        url: /docs/dg/dev/guidelines/testing-guidelines/running-tests-with-robot-framework.html
+
+      - title: Test helpers
+        url: /docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
+        nested:
+          - title: Using test helpers
+            url: /docs/dg/dev/guidelines/testing-guidelines/test-helpers/using-test-helpers.html
+          - title: Test helpers best practices
+            url: /docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers-best-practices.html
+
+      - title: Data builders
+        url: /docs/dg/dev/guidelines/testing-guidelines/data-builders.html
+      - title: Testify
+        url: /docs/dg/dev/guidelines/testing-guidelines/testify.html
+
+      - title: Executing tests
+        url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
+        nested:
+          - title: Execute tests
+            url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/execute-tests.html
+          - title: Test console commands
+            url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
+          - title: Test Glue API
+            url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-glue-api.html
+          - title: Test Glue Backend API
+            url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-glue-backend-api.html
+          - title: Test the asynchronous API
+            url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-the-asynchronous-api.html
+          - title: Test the publish and synchronization process
+            url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/testing-the-publish-and-synchronization-process.html
+
+      - title: Code coverage
+        url: /docs/dg/dev/guidelines/testing-guidelines/code-coverage.html
+
       - title: E2E Testing with Cypress
         url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing.html
         nested:
@@ -1547,45 +1586,9 @@ entries:
             url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/debugging-cypress-tests.html
           - title: Integrating Cypress tests into CI
             url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/integrating-cypress-tests-into-ci.html
-      - title: Test helpers
-        url: /docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
-        nested:
-          - title: Using test helpers
-            url: /docs/dg/dev/guidelines/testing-guidelines/test-helpers/using-test-helpers.html
-          - title: Test helpers best practices
-            url: /docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers-best-practices.html
 
-      - title: Executing tests
-        url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
-        nested:
-          - title: Execute tests
-            url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/execute-tests.html
-          - title: Test console commands
-            url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
-          - title: Test Glue API
-            url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-glue-api.html
-          - title: Test Glue Backend API
-            url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-glue-backend-api.html
-          - title: Test the asynchronous API
-            url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-the-asynchronous-api.html
-          - title: Test the publish and synchronization process
-            url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/testing-the-publish-and-synchronization-process.html
-
-      - title: Testify
-        url: /docs/dg/dev/guidelines/testing-guidelines/testify.html
-      - title: Testing concepts
-        url: /docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/testing-concepts.html
-      - title: Data builders
-        url: /docs/dg/dev/guidelines/testing-guidelines/data-builders.html
-      - title: Testing best practices
-        url: /docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/testing-best-practices.html
-        nested:
-          - title: Testing concepts
-            url: /docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/testing-concepts.html
-          - title: Best practices for effective testing
-            url: /docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/best-practices-for-effective-testing.html
-          - title: Test types best practices
-            url: /docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/test-types-best-practices.html
+      - title: Running tests with Robot Framework
+        url: /docs/dg/dev/guidelines/testing-guidelines/running-tests-with-robot-framework.html
 
     - title: Project development guidelines
       url: /docs/dg/dev/guidelines/project-development-guidelines.html

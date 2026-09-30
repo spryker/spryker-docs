@@ -1,7 +1,7 @@
 ---
 title: Integrate Persistent ACL for merchant API endpoints
 description: Learn how to scope the Backend API requests of merchant users to their merchant with Persistent ACL in the API Platform integration.
-last_updated: Sep 16, 2026
+last_updated: Sep 30, 2026
 template: howto-guide-template
 related:
   - title: Integrate API Platform security
@@ -21,7 +21,7 @@ This document describes how to enable [Persistent ACL](/docs/pbc/all/user-manage
 With the API Platform integration, the Backend API resolves the user behind a Back Office or merchant user token and makes it the acting user of the request. Persistent ACL uses the acting user to filter database queries. After the integration described here, the following applies:
 
 - A merchant user reads and writes the data of the merchant it is assigned to only. Merchant-specific resources like the merchant profile return `404` or an empty collection for data of other merchants.
-- A Back Office user without a merchant is not scoped and reads the data of every merchant, as in the Back Office.
+- A Back Office user is scoped by the Persistent ACL rules of their roles. In the demo data, users of the `root_group` group have the `root_role` role, which grants `CRUD` on every entity (`*`) with `global` scope, so they read the data of every merchant.
 - Requests without an acting user, such as `POST /token` and public endpoints, are not filtered.
 
 {% info_block warningBox "API Platform only" %}
@@ -39,13 +39,12 @@ The acting user of a request exists only in the [API Platform](/docs/integration
 Install the required modules using Composer:
 
 ```bash
-composer require spryker/acl-entity:"^1.18.0" spryker/merchant-user:"^1.10.0" --update-with-dependencies
+composer require spryker/acl-entity:"^1.19.0" --update-with-dependencies
 ```
 
 | MODULE | MINIMUM VERSION | PROVIDES |
 | --- | --- | --- |
-| spryker/acl-entity | ^1.18.0 | The `AclEntityApplicationPlugin` for the Glue layer, which enables Persistent ACL in the Backend API application. |
-| spryker/merchant-user | ^1.10.0 | The `NoCurrentMerchantUserAclEntityDisablerPlugin`, which limits the scoping to merchant users. |
+| spryker/acl-entity | ^1.19.0 | The `AclEntityApplicationPlugin` for the Glue layer, which enables Persistent ACL in the Backend API application, and the `NoCurrentUserAclEntityDisablerPlugin`, which keeps requests without an acting user unfiltered. |
 
 ## 1. Enable Persistent ACL in the Backend API application
 
@@ -85,13 +84,13 @@ The Zed layer ships its own `Spryker\Zed\AclEntity\Communication\Plugin\Applicat
 
 {% endinfo_block %}
 
-## 2. Limit the scoping to merchant users
+## 2. Disable Persistent ACL for requests without an acting user
 
-Persistent ACL filters every query of a request once it is enabled for the application. To keep Back Office users and requests without an acting user unfiltered, register a disabler plugin that turns Persistent ACL off unless the acting user is a merchant user:
+Persistent ACL filters every query of a request once it's enabled for the application. To keep requests without an acting user unfiltered, such as `POST /token`, register a disabler plugin that turns Persistent ACL off when no user is logged in. The plugin reads the current user without querying the database.
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| NoCurrentMerchantUserAclEntityDisablerPlugin | Disables Persistent ACL when the current request has no acting user or the acting user is not assigned to a merchant. | | Spryker\Zed\MerchantUser\Communication\Plugin\AclEntity |
+| NoCurrentUserAclEntityDisablerPlugin | Disables Persistent ACL when the current request has no acting user. | | Spryker\Zed\AclEntity\Communication\Plugin\AclEntity |
 
 **src/Pyz/Zed/AclEntity/AclEntityDependencyProvider.php**
 
@@ -101,7 +100,7 @@ Persistent ACL filters every query of a request once it is enabled for the appli
 namespace Pyz\Zed\AclEntity;
 
 use Spryker\Zed\AclEntity\AclEntityDependencyProvider as SprykerAclEntityDependencyProvider;
-use Spryker\Zed\MerchantUser\Communication\Plugin\AclEntity\NoCurrentMerchantUserAclEntityDisablerPlugin;
+use Spryker\Zed\AclEntity\Communication\Plugin\AclEntity\NoCurrentUserAclEntityDisablerPlugin;
 
 class AclEntityDependencyProvider extends SprykerAclEntityDependencyProvider
 {
@@ -111,15 +110,27 @@ class AclEntityDependencyProvider extends SprykerAclEntityDependencyProvider
     protected function getAclEntityDisablerPlugins(): array
     {
         return [
-            new NoCurrentMerchantUserAclEntityDisablerPlugin(),
+            new NoCurrentUserAclEntityDisablerPlugin(),
         ];
     }
 }
 ```
 
+{% info_block warningBox "Back Office users need Persistent ACL rules" %}
+
+Every logged-in user is scoped, Back Office users included. A Back Office user whose roles have no Persistent ACL rules for an entity gets no access to it, because the default operation mask, `AclEntityConfig::getDefaultGlobalOperationMask()`, is `0`. Before you register the plugin, make sure the roles of your Back Office users contain the rules they need. For example, assign them to the `root_group` group or add rules to their roles.
+
+{% endinfo_block %}
+
+{% info_block infoBox "Replaces NoCurrentMerchantUserAclEntityDisablerPlugin" %}
+
+`NoCurrentUserAclEntityDisablerPlugin` replaces the deprecated `Spryker\Zed\MerchantUser\Communication\Plugin\AclEntity\NoCurrentMerchantUserAclEntityDisablerPlugin`. The deprecated plugin looked up the merchant user in the database on every request and skipped Persistent ACL for Back Office users who aren't merchant users. If your project registers the deprecated plugin, replace it with `NoCurrentUserAclEntityDisablerPlugin` and review the Persistent ACL rules of your Back Office roles.
+
+{% endinfo_block %}
+
 {% info_block infoBox "Disabler plugins apply to every application" %}
 
-Disabler plugins are evaluated wherever Persistent ACL is enabled, including the Merchant Portal. There, the acting user is always a merchant user, so the plugin does not change the Merchant Portal behavior. If your project already registers other disabler plugins, keep them in the list.
+Disabler plugins are evaluated wherever Persistent ACL is enabled, including the Merchant Portal. There, every request has an acting merchant user, so the plugin doesn't change the Merchant Portal behavior. If your project already registers other disabler plugins, keep them in the list.
 
 {% endinfo_block %}
 
@@ -132,7 +143,7 @@ docker/sdk cli console cache:empty-all
 {% info_block warningBox "Verification" %}
 
 1. [Authenticate as a merchant user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-merchant-user.html) and request a resource that is scoped by Persistent ACL, for example, `GET /merchant-profile`. Make sure the response contains only the data of the merchant the user is assigned to.
-2. Authenticate as a Back Office user without a merchant and request a resource that reads merchant data, for example, `GET /merchant-profiles/{merchantReference}` of several merchants. Make sure every merchant is returned.
+2. Authenticate as a Back Office user of the `root_group` group and request a resource that reads merchant data, for example, `GET /merchant-profiles/{merchantReference}` of several merchants. Make sure every merchant is returned.
 3. Send `POST /token` without an `Authorization` header. Make sure a token is issued.
 
 {% endinfo_block %}

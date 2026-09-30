@@ -275,6 +275,7 @@ If the ACL entities have already been synchronized, the synchronization process 
 | AclEntityAclRolePostSavePlugin          | Saves `RoleTransfer.aclEntityRules` to the database.                                                                                                 |               | Spryker\Zed\AclEntity\Communication\Plugin\Acl         |
 | AclRulesAclRolesExpanderPlugin          | Expands the `Roles` transfer object with ACL rules.                                                                                                  |               | Spryker\Zed\AclEntity\Communication\Plugin\Acl         |
 | AclEntityApplicationPlugin              | Enables ACL for the whole Application.                                                                                                           |               | Spryker\Zed\AclEntity\Communication\Plugin\Application |
+| NoCurrentUserAclEntityDisablerPlugin    | Disables ACL when no user is logged in. Reads the current user without querying the database.                                                   |               | Spryker\Zed\AclEntity\Communication\Plugin\AclEntity   |
 
 **src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php**
 
@@ -437,6 +438,38 @@ class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalA
     }
 }
 ```
+
+3. To skip ACL checks for requests without a logged-in user, register `NoCurrentUserAclEntityDisablerPlugin`. When a user is logged in, ACL stays enabled and the user's ACL entity rules apply.
+
+**src/Pyz/Zed/AclEntity/AclEntityDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\AclEntity;
+
+use Spryker\Zed\AclEntity\AclEntityDependencyProvider as SprykerAclEntityDependencyProvider;
+use Spryker\Zed\AclEntity\Communication\Plugin\AclEntity\NoCurrentUserAclEntityDisablerPlugin;
+
+class AclEntityDependencyProvider extends SprykerAclEntityDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityDisablerPluginInterface>
+     */
+    protected function getAclEntityDisablerPlugins(): array
+    {
+        return [
+            new NoCurrentUserAclEntityDisablerPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block infoBox "Replaces NoCurrentMerchantUserAclEntityDisablerPlugin" %}
+
+`NoCurrentUserAclEntityDisablerPlugin` replaces the deprecated `Spryker\Zed\MerchantUser\Communication\Plugin\AclEntity\NoCurrentMerchantUserAclEntityDisablerPlugin`. The deprecated plugin looked up the merchant user in the database each time ACL checked whether it was active. It also skipped ACL for Back Office users who aren't merchant users. The replacement doesn't query the database. ACL now applies to every logged-in user, Back Office users included. Before you switch plugins, make sure your Back Office users' ACL roles contain the ACL entity rules they need. In the demo data, `acl_entity_rule.csv` grants the `root_role` role `CRUD` on every entity (`*`) with `global` scope, so users of the `root_group` group keep full access.
+
+{% endinfo_block %}
 
 ## 6) Install the database data for ACL
 

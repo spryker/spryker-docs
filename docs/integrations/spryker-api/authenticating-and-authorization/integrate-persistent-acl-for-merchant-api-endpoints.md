@@ -86,7 +86,7 @@ The Zed layer ships its own `Spryker\Zed\AclEntity\Communication\Plugin\Applicat
 
 ## 2. Disable Persistent ACL for requests without an acting user
 
-Persistent ACL filters every query of a request once it's enabled for the application. To keep requests without an acting user unfiltered, such as `POST /token`, register a disabler plugin that turns Persistent ACL off when no user is logged in. The plugin reads the current user without querying the database.
+Persistent ACL filters every query of a request once it is enabled for the application. To keep requests without an acting user unfiltered, such as `POST /token`, register a disabler plugin that turns Persistent ACL off when no user is logged in. The plugin reads the current user without querying the database.
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |

@@ -1,7 +1,7 @@
 ---
 title: Uninstall the Marketplace from B2B Demo Marketplace
 description: Learn how to transform your B2B Demo Marketplace into a standard B2B Demo Shop by removing all marketplace-specific features using the provided uninstallation scripts.
-last_updated: Feb 9, 2026
+last_updated: Sep 30, 2026
 template: concept-topic-template
 related:
   - title: B2B Suite

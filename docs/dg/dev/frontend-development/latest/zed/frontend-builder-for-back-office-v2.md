@@ -2,7 +2,7 @@
 title: Frontend builder for the Back Office v2
 description: Learn about the frontend builder that ships with the Gui module and builds the Back Office assets of core, feature, and project modules.
 keywords: Gui, spryker-zed-gui, frontend builder, Back Office, Zed, webpack, TypeScript, build, live reload, oryx-for-zed
-last_updated: Sep 29, 2026
+last_updated: Sep 30, 2026
 template: howto-guide-template
 related:
   - title: Upgrade to frontend builder v2 for the Back Office
@@ -275,8 +275,8 @@ import { defineConfig } from '../vendor/spryker/gui/src/Spryker/Zed/Gui/Frontend
 export default defineConfig({
     paths: {
         sources: {
-            // An extra directory the builder scans for entry points, after the project root.
-            legacyModules: './src/Legacy/Zed',
+            // A further project namespace, scanned for Back Office modules after src/Pyz/Zed.
+            acme: './src/Acme/Zed',
         },
     },
     // Off by default in a project — see TypeScript above.

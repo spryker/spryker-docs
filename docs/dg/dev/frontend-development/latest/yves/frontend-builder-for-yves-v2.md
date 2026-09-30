@@ -2,7 +2,7 @@
 title: Frontend builder for Yves v2
 description: Learn about the TypeScript-based frontend builder v2 that ships with the ShopUi module and builds Yves assets for all namespaces and themes.
 keywords: ShopUi, shop-ui, frontend builder, Yves, webpack, build, assets, live reload
-last_updated: Sep 9, 2026
+last_updated: Sep 29, 2026
 template: howto-guide-template
 related:
   - title: Frontend builder for Yves (deprecated)
@@ -115,7 +115,11 @@ The generated `design-tokens.css` exposes each token as a CSS custom property on
 }
 ```
 
-The `style-dictionary` package is an optional dependency, probed by presence: with the package installed, the CSS is regenerated on every build; without it, a previously generated (committed) `design-tokens.css` is served as is. If the tokens source exists but neither the package nor a committed CSS is available, the step is skipped with a warning. A project without the tokens source doesn't use design tokens, and the step is skipped silently. For details, see [Design tokens](/docs/dg/dev/frontend-development/latest/design-tokens.html).
+From ShopUi 2.3.0, `style-dictionary` comes with the module as one of its dependencies, so nothing has to be installed: whenever the tokens source exists, the CSS is regenerated on every build. A project without the tokens source does not use design tokens — a previously generated (committed) `design-tokens.css` is still served when one exists, otherwise the step is skipped silently.
+
+Up to ShopUi 2.2, `style-dictionary` was an optional dependency, probed by presence: with the package installed, the CSS was regenerated on every build; without it, a committed `design-tokens.css` was served as is, and a tokens source without either produced a warning and no tokens.
+
+For details, see [Design tokens](/docs/dg/dev/frontend-development/latest/design-tokens.html).
 
 ### Legacy style rescue
 
@@ -201,7 +205,8 @@ The builder has several modes to build the frontend:
 - `npm run yves:production`—builds assets in the production mode (minified files, no comments) for all namespaces and themes.
 - `npm run yves -- --help`—displays all available parameters.
 - `npm run yves:stylelint`—lints Yves styles. `-f` fixes what is fixable, and `-p <path>` runs over a single file or glob, resolved from the project root: `npm run yves:stylelint -- -p 'src/Pyz/Yves/**/Theme/**/*.scss'`.
-- `npm run yves:lint`—lints Yves TypeScript and JavaScript.
+- `npm run yves:lint`—lints Yves TypeScript and JavaScript and, from ShopUi 2.3.0, runs the TypeScript compiler over the Yves TypeScript sources. See [Type checking](#type-checking).
+- `npm run update:config -w shop-ui`—from ShopUi 2.3.0, regenerates `tsconfig.yves.json`; `postinstall` runs it for you. See [Generated TypeScript configuration](#generated-typescript-configuration).
 
 ### What lint covers
 
@@ -211,6 +216,12 @@ From ShopUi 2.1.0, `yves:lint` and `yves:stylelint` report on the sources the ru
 - In the Spryker monorepo, those sources are part of the repository, so they are covered together with the project sources.
 
 Nothing has to be passed to select this — the source layout the builder already detects decides it. Both commands look at the theme files of each source root, so styles and scripts outside a `Theme` directory are not linted.
+
+### Type checking
+
+From ShopUi 2.3.0, `yves:lint` runs the TypeScript compiler over the Yves TypeScript sources after ESLint, with the same scope as lint. The build itself compiles TypeScript with Babel, which erases the types without checking them, so this is the step that catches type errors.
+
+In the Spryker monorepo, type checking is on. In a project, it is off by default, because the project's Yves sources were never type-checked before and turning it on in a minor release would fail the project's lint on code nobody changed. To enable it, set `typecheck: true` in `frontend/yves.settings.mts` — see [Project-level builder settings](#project-level-builder-settings).
 
 ## Parameters
 
@@ -252,6 +263,7 @@ Projects may override:
 - `paths.sources`—the directories the builder scans for component assets. Use this to register custom namespaces; there is no longer a separate `dirs` list to keep in sync.
 - `paths.iconSprite`—icon sprite source and target locations.
 - `buildHooks`—project build steps that run before webpack assembly and may contribute entries to the bundles.
+- `typecheck`—from ShopUi 2.3.0, whether `yves:lint` runs the TypeScript compiler. See [Type checking](#type-checking).
 
 All other settings are fixed and inherited from the packaged defaults.
 
@@ -260,6 +272,14 @@ All other settings are fixed and inherited from the packaged defaults.
 `frontend/yves.settings.mts` is executed by Node.js directly via type stripping, so it must use only erasable TypeScript syntax: type annotations are fine, but `enum`, `namespace`, and constructor parameter properties fail at runtime.
 
 {% endinfo_block %}
+
+## Generated TypeScript configuration
+
+The builder reads the component path aliases — `ShopUi/*` and the aliases of every module that ships a `Theme` — from `tsconfig.yves.json`. Up to ShopUi 2.2, the project keeps that file at its root and maintains it by hand. From ShopUi 2.3.0, the builder generates it: `npm run update:config -w shop-ui`, which the project's `postinstall` script runs on every `npm install`, writes `tsconfig.yves.json` and `tsconfig.defaults.json` inside the builder directory.
+
+The `paths` and `include` sections of `tsconfig.yves.json` are generated and follow the installed modules; everything else is yours. If the project keeps a `tsconfig.yves.json` in its root, the generation works on that file — the aliases and globs are reconciled in place, and whatever it extends is kept — and writes no second copy.
+
+`tsconfig.yves.json` extends `tsconfig.defaults.json`, which holds the Yves compiler options, and then the project root `tsconfig.json`, so a compiler option set in the root `tsconfig.json` overrides the builder default. A root `tsconfig.json` that does not exist is created as an editor-only solution file, `{ "files": [], "references": [...] }`, referencing `tsconfig.yves.json`; a root `tsconfig.json` that is a complete configuration of your own is never modified.
 
 ## Overriding the core styles layer
 

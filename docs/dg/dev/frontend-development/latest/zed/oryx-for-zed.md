@@ -1,7 +1,7 @@
 ---
 title: Oryx for Zed
 description: oryx-for-zed is a tool that performs a full build for Spryker Zed UI applications.
-last_updated: May 15, 2023
+last_updated: Sep 29, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/oryx-for-zed
 originalArticleId: 7bb2b280-f309-4bd4-b7cd-d5c30b345cc0
@@ -10,6 +10,15 @@ redirect_from:
   - /docs/scos/dev/front-end-development/zed/oryx-for-zed.html
 ---
 
+
+{% info_block warningBox "Deprecation notice" %}
+
+This document describes the legacy Back Office frontend builder, the `@spryker/oryx-for-zed` npm package. Starting from `spryker/gui` version 5.8.0, the builder ships as part of the Gui module, and `oryx-for-zed` is deprecated.
+
+- For the current builder, see [Frontend builder for the Back Office v2](/docs/dg/dev/frontend-development/latest/zed/frontend-builder-for-back-office-v2.html).
+- For upgrade instructions, see [Upgrade to frontend builder v2 for the Back Office](/docs/dg/dev/upgrade-and-migrate/upgrade-to-frontend-builder-v2-for-back-office.html).
+
+{% endinfo_block %}
 
 `oryx-for-zed` is a tool that performs a full build for Spryker Zed UI applications. It also provides access to Zed settings and Zed Webpack configuration, so you can extend and change the whole building process.
 

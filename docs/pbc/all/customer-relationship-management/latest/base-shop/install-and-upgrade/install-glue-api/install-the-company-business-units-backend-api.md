@@ -69,12 +69,9 @@ Also confirm that `config/GlueBackend/bundles.php` registers `SprykerApiPlatform
 
 The Backend API addresses CompanyBusinessUnits by `uuid`, so `spy_company_business_unit` must carry that column.
 
-`CompanyBusinessUnit` declares it only when `CompanyBusinessUnitConfig::isUuidEnabled()` returns `true`, and it returns `false` by
-default. Other installed modules declare the same column independently and Propel merges
-every module's schema, so on a project that has any of those the column already exists and nothing
-more is needed.
+`CompanyBusinessUnit` declares the column only when `CompanyBusinessUnitConfig::isUuidEnabled()` returns `true`, which is `false` by default. Other installed modules can declare the same column independently. Because Propel merges the schemas of installed modules, the column already exists if your project has a module that declares it, and you do not need to enable it here.
 
-If none of them is installed, enable it on the module:
+If no other installed module declares the column, enable UUID support in `CompanyBusinessUnit`:
 
 **src/Pyz/Zed/CompanyBusinessUnit/CompanyBusinessUnitConfig.php**
 
@@ -105,7 +102,7 @@ docker/sdk console propel:install
 
 {% info_block warningBox "This step adds a column" %}
 
-`propel:install` applies whatever the merged schema declares. If the column was already supplied by another installed module the migration is a no-op; if it comes from `CompanyBusinessUnit` because the previous step enabled it, it is added here together with its unique index. Until `propel:install` has run, the API cannot resolve any business unit.
+`propel:install` applies the merged schema. If another installed module already supplies the column, no additional column is added. If `CompanyBusinessUnit` supplies the column because you enabled it in the previous step, `propel:install` adds it to the database. Until `propel:install` has run, the API cannot resolve business units by UUID.
 
 {% endinfo_block %}
 
@@ -176,6 +173,6 @@ The request returns `201 Created` with the created business unit.
 | --- | --- |
 | `404` with error code `007` while `src/Generated/Api/Backend/CompanyBusinessUnitsBackendResource.php` exists | The route is unknown to the API Platform kernel, so the Glue router answered instead. The kernel cache is stale—check that you removed the directory that actually exists under `data/cache/GlueBackend/`, then re-run step 6 in order. The Glue container's standard error stream names the real cause: `docker logs <glue-backend-container> --since 5m 2>&1 \| grep -i exception`. See [API Platform troubleshooting](/docs/integrations/spryker-api/api-platform/troubleshooting.html). |
 | `404` on `/company-business-units` and no generated resource class | The schema was not discovered. Confirm that `spryker/api-platform` is installed, and, if your project overrides `sourceDirectories()`, that it still covers the directory the feature is installed into. |
-| `404` with error code 1217 for a business unit you can see in the Back Office | That business unit's `uuid` is empty. Run step 5, or save the business unit once in the Back Office to have the UUID behavior fill the column. |
+| `404` with error code 1217 for a business unit you can see in the Back Office | That business unit's `uuid` is empty. Run step 5 to generate the missing UUIDs, or save the business unit once in the Back Office to have the UUID behavior fill the column. |
 | `404` with error code 1213 when creating a business unit | The company named by `companyUuid` was not found, or that company's `uuid` column is empty. Companies carry their own `uuid`, filled by the UUID behavior when the company is saved. |
 | Validation messages come back in English when another language was requested | The feature ships its API messages as `data/translation/Api/{locale}.csv` inside the installed package, keyed by the English message. If they are not loaded, Symfony falls back to the message itself, so the response stays readable and the problem is easy to miss. Send `Accept-Language` and compare. Loading these files requires a `spryker/api-platform` version that reads them—update it to the latest version your project supports. |

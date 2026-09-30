@@ -67,14 +67,11 @@ Also confirm that `config/GlueBackend/bundles.php` registers `SprykerApiPlatform
 
 ### 3) Make sure the `uuid` column is present
 
-The Backend API addresses CompanyUnitAddresss by `uuid`, so `spy_company_unit_address` must carry that column.
+The Backend API addresses `CompanyUnitAddress` entities by `uuid`, so `spy_company_unit_address` must contain that column.
 
-`CompanyUnitAddress` declares it only when `CompanyUnitAddressConfig::isUuidEnabled()` returns `true`, and it returns `false` by
-default. Other installed modules declare the same column independently and Propel merges
-every module's schema, so on a project that has any of those the column already exists and nothing
-more is needed.
+`CompanyUnitAddress` declares the column only when `CompanyUnitAddressConfig::isUuidEnabled()` returns `true`, which is `false` by default. Other installed modules can declare the same column independently. Because Propel merges the schemas of installed modules, the column already exists if your project has a module that declares it, and you do not need to enable it here.
 
-If none of them is installed, enable it on the module:
+If no other installed module declares the column, enable UUID support in `CompanyUnitAddress`:
 
 **src/Pyz/Zed/CompanyUnitAddress/CompanyUnitAddressConfig.php**
 
@@ -105,7 +102,7 @@ docker/sdk console propel:install
 
 {% info_block warningBox "This step adds a column" %}
 
-`propel:install` applies whatever the merged schema declares. If the column was already supplied by another installed module the migration is a no-op; if it comes from `CompanyUnitAddress` because the previous step enabled it, it is added here together with its unique index. Until `propel:install` has run, the address endpoints cannot filter or resolve addresses by UUID.
+`propel:install` applies the merged schema. If another installed module already supplies the column, no additional column is added. If `CompanyUnitAddress` supplies the column because you enabled it in the previous step, `propel:install` adds it to the database. Until `propel:install` has run, the address endpoints cannot filter or resolve addresses by UUID.
 
 {% endinfo_block %}
 
@@ -176,7 +173,7 @@ The request returns `201 Created` with the created address.
 | --- | --- |
 | `404` with error code `007` while `src/Generated/Api/Backend/CompanyBusinessUnitAddressesBackendResource.php` exists | The route is unknown to the API Platform kernel, so the Glue router answered instead. The kernel cache is stale—check that you removed the directory that actually exists under `data/cache/GlueBackend/`, then re-run step 6 in order. The Glue container's standard error stream names the real cause: `docker logs <glue-backend-container> --since 5m 2>&1 \| grep -i exception`. See [API Platform troubleshooting](/docs/integrations/spryker-api/api-platform/troubleshooting.html). |
 | `404` on `/company-business-unit-addresses` and no generated resource class | The schema was not discovered. Confirm that `spryker/api-platform` is installed, and, if your project overrides `sourceDirectories()`, that it still covers the directory the feature is installed into. |
-| The collection returns addresses, but filtering by `companyUuid` or `companyBusinessUnitUuid` returns everything | The `uuid` column is missing from `spy_company_unit_address`, so the repository skips the UUID filter instead of failing. Run steps 3 and 4. |
-| `404` with error code 1227 for an address you can see in the Back Office | That address's `uuid` is empty. Run step 5, or save the address once in the Back Office to have the UUID behavior fill the column. |
+| The collection returns addresses, but filtering by `companyUuid` or `companyBusinessUnitUuid` returns everything | The `uuid` column is missing from `spy_company_unit_address`, so the repository skips the UUID filter instead of failing. Make sure the UUID column is enabled in step 3, then apply the schema changes in step 4. |
+| `404` with error code 1227 for an address you can see in the Back Office | That address's `uuid` is empty. Run step 5 to generate the missing UUIDs, or save the address once in the Back Office to have the UUID behavior fill the column. |
 | `422` with error code 1210 for a valid country code | The shop does not stock that country. Countries are managed by the `Country` module; add the country before you use its code. |
 | Validation messages come back in English when another language was requested | The feature includes its API messages in `data/translation/Api/{locale}.csv` inside the installed package. The messages use the English message as the key. If they are not loaded, Symfony falls back to the message itself, so the response stays readable and the problem is easy to miss. Send `Accept-Language` and compare. Loading these files requires a `spryker/api-platform` version that reads them. Update the package to the latest version your project supports. |

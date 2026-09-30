@@ -14,6 +14,12 @@ This document describes how to uninstall marketplace features from
 the [B2B Demo Marketplace](https://github.com/spryker-shop/b2b-demo-marketplace) to transform it into a standard B2B
 Demo Shop.
 
+{% info_block infoBox "Info" %}
+
+These instructions are one-time use only.
+
+{% endinfo_block %}
+
 ## Overview
 
 The B2B Demo Marketplace comes with all marketplace-specific features pre-installed, including the Merchant Portal,

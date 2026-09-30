@@ -16,7 +16,7 @@ Demo Shop.
 
 {% info_block infoBox "Info" %}
 
-These instructions are one-time use only.
+These instructions are one-time use only, you don't need to run these scripts after the project was started.
 
 {% endinfo_block %}
 

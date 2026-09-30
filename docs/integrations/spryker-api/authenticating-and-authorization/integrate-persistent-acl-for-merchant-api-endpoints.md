@@ -130,7 +130,7 @@ Every logged-in user is scoped, Back Office users included. A Back Office user w
 
 {% info_block infoBox "Disabler plugins apply to every application" %}
 
-Disabler plugins are evaluated wherever Persistent ACL is enabled, including the Merchant Portal. There, every request has an acting merchant user, so the plugin doesn't change the Merchant Portal behavior. If your project already registers other disabler plugins, keep them in the list.
+Disabler plugins are evaluated wherever Persistent ACL is enabled, including the Merchant Portal. There, every request has an acting merchant user, so the plugin does not change the Merchant Portal behavior. If your project already registers other disabler plugins, keep them in the list.
 
 {% endinfo_block %}
 

@@ -65,7 +65,36 @@ If your project sets `sourceDirectories()` explicitly, add the directory where t
 
 Also confirm that `config/GlueBackend/bundles.php` registers `SprykerApiPlatformBundle` and `ApiPlatformBundle`. If it does not, your project has not enabled API Platform for the Glue Backend yet—see [Enable API Platform](/docs/integrations/spryker-api/api-platform/enablement.html).
 
-### 3) Set up the database schema and transfer objects
+### 3) Make sure the `uuid` column is present
+
+The Backend API addresses CompanyUnitAddresss by `uuid`, so `spy_company_unit_address` must carry that column.
+
+`CompanyUnitAddress` declares it only when `CompanyUnitAddressConfig::isUuidEnabled()` returns `true`, and it returns `false` by
+default. Other installed modules declare the same column independently and Propel merges
+every module's schema, so on a project that has any of those the column already exists and nothing
+more is needed.
+
+If none of them is installed, enable it on the module:
+
+**src/Pyz/Zed/CompanyUnitAddress/CompanyUnitAddressConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\CompanyUnitAddress;
+
+use Spryker\Zed\CompanyUnitAddress\CompanyUnitAddressConfig as SprykerCompanyUnitAddressConfig;
+
+class CompanyUnitAddressConfig extends SprykerCompanyUnitAddressConfig
+{
+    public function isUuidEnabled(): bool
+    {
+        return true;
+    }
+}
+```
+
+### 4) Set up the database schema and transfer objects
 
 Apply the database schema changes and generate the transfer objects:
 
@@ -76,11 +105,11 @@ docker/sdk console propel:install
 
 {% info_block warningBox "This step adds a column" %}
 
-`CompanyUnitAddress` declares the `uuid` column on `spy_company_unit_address`, so the Backend API no longer depends on the storefront module that previously provided it. Projects that already installed [the Company Account Glue API](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html) have the column and the migration is a no-op; every other project gains the column here. Until `propel:install` has run, the address endpoints cannot filter or resolve addresses by UUID.
+`propel:install` applies whatever the merged schema declares. If the column was already supplied by another installed module the migration is a no-op; if it comes from `CompanyUnitAddress` because the previous step enabled it, it is added here together with its unique index. Until `propel:install` has run, the address endpoints cannot filter or resolve addresses by UUID.
 
 {% endinfo_block %}
 
-### 4) Back-fill the address UUIDs
+### 5) Back-fill the address UUIDs
 
 The UUID behavior fills `uuid` when an address is saved, so addresses that existed before the column was added have an empty `uuid` and cannot be addressed by the API. Generate the missing values:
 
@@ -100,7 +129,7 @@ The result must be 0.
 
 {% endinfo_block %}
 
-### 5) Generate the API resources
+### 6) Generate the API resources
 
 Generate the API resources, then clear the Glue Backend kernel cache:
 
@@ -145,9 +174,9 @@ The request returns `201 Created` with the created address.
 
 | SYMPTOM | CAUSE |
 | --- | --- |
-| `404` with error code `007` while `src/Generated/Api/Backend/CompanyBusinessUnitAddressesBackendResource.php` exists | The route is unknown to the API Platform kernel, so the Glue router answered instead. The kernel cache is stale—check that you removed the directory that actually exists under `data/cache/GlueBackend/`, then re-run step 5 in order. The Glue container's standard error stream names the real cause: `docker logs <glue-backend-container> --since 5m 2>&1 \| grep -i exception`. See [API Platform troubleshooting](/docs/integrations/spryker-api/api-platform/troubleshooting.html). |
+| `404` with error code `007` while `src/Generated/Api/Backend/CompanyBusinessUnitAddressesBackendResource.php` exists | The route is unknown to the API Platform kernel, so the Glue router answered instead. The kernel cache is stale—check that you removed the directory that actually exists under `data/cache/GlueBackend/`, then re-run step 6 in order. The Glue container's standard error stream names the real cause: `docker logs <glue-backend-container> --since 5m 2>&1 \| grep -i exception`. See [API Platform troubleshooting](/docs/integrations/spryker-api/api-platform/troubleshooting.html). |
 | `404` on `/company-business-unit-addresses` and no generated resource class | The schema was not discovered. Confirm that `spryker/api-platform` is installed, and, if your project overrides `sourceDirectories()`, that it still covers the directory the feature is installed into. |
-| The collection returns addresses, but filtering by `companyUuid` or `companyBusinessUnitUuid` returns everything | The `uuid` column is missing from `spy_company_unit_address`, so the repository skips the UUID filter instead of failing. Run step 3. |
-| `404` with error code 1227 for an address you can see in the Back Office | That address's `uuid` is empty. Run step 4, or save the address once in the Back Office to have the UUID behavior fill the column. |
+| The collection returns addresses, but filtering by `companyUuid` or `companyBusinessUnitUuid` returns everything | The `uuid` column is missing from `spy_company_unit_address`, so the repository skips the UUID filter instead of failing. Run steps 3 and 4. |
+| `404` with error code 1227 for an address you can see in the Back Office | That address's `uuid` is empty. Run step 5, or save the address once in the Back Office to have the UUID behavior fill the column. |
 | `422` with error code 1210 for a valid country code | The shop does not stock that country. Countries are managed by the `Country` module; add the country before you use its code. |
 | Validation messages come back in English when another language was requested | The feature includes its API messages in `data/translation/Api/{locale}.csv` inside the installed package. The messages use the English message as the key. If they are not loaded, Symfony falls back to the message itself, so the response stays readable and the problem is easy to miss. Send `Accept-Language` and compare. Loading these files requires a `spryker/api-platform` version that reads them. Update the package to the latest version your project supports. |

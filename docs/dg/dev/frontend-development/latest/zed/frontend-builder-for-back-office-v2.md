@@ -2,7 +2,7 @@
 title: Frontend builder for the Back Office v2
 description: Learn about the frontend builder that ships with the Gui module and builds the Back Office assets of core, feature, and project modules.
 keywords: Gui, spryker-zed-gui, frontend builder, Back Office, Zed, webpack, TypeScript, build, live reload, oryx-for-zed
-last_updated: Sep 30, 2026
+last_updated: Oct 1, 2026
 template: howto-guide-template
 related:
   - title: Upgrade to frontend builder v2 for the Back Office
@@ -31,10 +31,9 @@ For the upgrade steps, see [Upgrade to frontend builder v2 for the Back Office](
 | Seeing a change in the browser | rebuild + manual page reload | CSS applied in place; JavaScript and Twig changes reload the page with scroll and form state preserved |
 | Twig templates in watch mode | not watched | watched |
 | Code loaded on demand with `import()` | merged into the shared bundle every page loads | emitted as separate, hashed chunks and fetched when needed |
-| ESLint and Stylelint for Back Office assets | none | `npm run zed:lint` and `npm run zed:stylelint`, scoped to what the repository owns |
+| ESLint and Stylelint for Back Office assets | none | `npm run zed:lint` and `npm run zed:stylelint`, scoped to the project sources |
 | Sass deprecation warnings in your stylesheets | logged | fail the build, so they never become errors in a later Sass version |
 | Asset discovery order | filesystem order — differs per machine and run | sorted, identical on every machine |
-| Switching between the monorepo and a project | not applicable | detected automatically, no configuration |
 | Builder language | JavaScript (CommonJS) | TypeScript (native ESM), no transpilation step |
 
 ## What's new
@@ -57,7 +56,7 @@ The builder scans `src/Pyz/Zed` as one of its source roots, so a project adds Ba
 
 ### Lint for Back Office assets
 
-ESLint and Stylelint ship with the builder and cover the Back Office JavaScript, TypeScript, and stylesheets — in a project, the ones in `src/Pyz`. There was no lint for Back Office assets before. See [What lint covers](#what-lint-covers).
+ESLint and Stylelint ship with the builder and cover the Back Office JavaScript, TypeScript, and stylesheets of the project modules — the ones in `src/Pyz/Zed` and in every namespace you register. There was no lint for Back Office assets before. See [What lint covers](#what-lint-covers).
 
 ### No silenced Sass deprecation warnings
 
@@ -69,7 +68,7 @@ A module that loads a library with `import()` gets it as a separate chunk in `js
 
 ### Automatic source layout detection
 
-Nothing configures the difference between the Spryker monorepo and a project: the builder detects the layout from a marker directory and resolves the core, eco, SDK, feature, and project module paths from it. The same commands work in both. See [Source layout detection](#source-layout-detection).
+Nothing configures the module paths: the builder finds the project root and resolves the core, eco, SDK, feature, and project module paths from it. See [Source layout detection](#source-layout-detection).
 
 ### Generated TypeScript configuration
 
@@ -77,7 +76,7 @@ The TypeScript configuration of the Back Office — the `@zed/*` path aliases an
 
 ### Errors that name the file and the next step
 
-Every error the builder raises names the offending path, states the reason in plain language, and says what to do next. An undetectable source layout, for example, names both marker directories it looked for and tells you to run the command from the project root.
+Every error the builder raises names the offending path, states the reason in plain language, and says what to do next. An undetectable source layout, for example, names the directory it looked for and tells you to run the command from the project root.
 
 ## Requirements
 
@@ -130,14 +129,17 @@ A Back Office module that needs a library of its own — a module in `src/Pyz/Ze
 
 ## Source layout detection
 
-The builder resolves every path from the project root, which it finds by walking up from the working directory until it sees `package-lock.json`. It then detects the layout from a marker directory:
+The builder resolves every path from the project root, which it finds by walking up from the working directory until it sees `package-lock.json`. It then checks that the Spryker modules are installed in `vendor/spryker` and scans the following source roots, in this order:
 
-| Layout | Marker | Source roots, in scan order |
-| --- | --- | --- |
-| Project | `vendor/spryker` | `vendor/spryker`, `vendor/spryker-eco`, `vendor/spryker-sdk`, `vendor/spryker-feature`, `src/Pyz/Zed` |
-| Spryker monorepo | `src/Spryker` | `src/Spryker`, `vendor/spryker-eco`, `vendor/spryker-sdk`, `src/SprykerFeature`, `src/Pyz/*/src/Pyz/Zed` |
+| Source root | Path |
+| --- | --- |
+| `core` | `vendor/spryker` |
+| `eco` | `vendor/spryker-eco` |
+| `sdk` | `vendor/spryker-sdk` |
+| `features` | `vendor/spryker-feature` |
+| `project` | `src/Pyz/Zed` |
 
-Nothing has to be configured for this: the same commands work in both layouts, and the detected layout decides which modules are built, linted, and type-checked. The scan order is also the precedence order — see the next section.
+Nothing has to be configured for this. The source root names are the keys you use in `paths.sources` to replace a root or add one — see [Project-level builder settings](#project-level-builder-settings). The scan order is also the precedence order — see the next section.
 
 ## How the builder collects entry points
 
@@ -175,26 +177,38 @@ Webpack provides `$`, `jQuery`, `SprykerAjax`, `SprykerAjaxCallbacks`, and `Spry
 
 ## TypeScript
 
-The Back Office TypeScript is compiled by Babel, which erases the types without checking them. Type checking is a separate step that `npm run zed:lint` runs after ESLint: the TypeScript compiler over `tsconfig.zed.lint.json`, which covers the `.ts` files of the sources the repository owns. The legacy JavaScript is compiled but never type-checked.
+The Back Office TypeScript is compiled by Babel, which erases the types without checking them. Type checking is a separate step that `npm run zed:lint` runs after ESLint: the TypeScript compiler over `tsconfig.zed.lint.json`, which covers the `.ts` files of the project sources — every source root outside `vendor/`. The legacy JavaScript is compiled but never type-checked.
 
-In the Spryker monorepo, type checking is on. In a project, it is off by default, because the project's Back Office sources were never type-checked before and turning it on in a minor release would fail the project's lint on code nobody changed. To enable it, set `typecheck` in the project settings file:
+Type checking is off by default, because the project's Back Office sources were never type-checked before and turning it on in a minor release would fail the project's lint on code nobody changed. To enable it, set `typecheck: true` in the project-level builder settings file, `frontend/backoffice.settings.mts`. For details about the file, see [Project-level builder settings](#project-level-builder-settings).
+
+By default, type checking covers `src/Pyz/Zed`. If your project keeps Back Office modules in a namespace other than `Pyz`, register the namespace in `paths.sources` of `frontend/backoffice.settings.mts`. You can use the custom namespace together with `Pyz` or instead of it:
+
+- To keep `src/Pyz/Zed` and add the custom namespace, add an entry with a new name, such as `acme`. The builder scans the custom namespace after `src/Pyz/Zed`, and builds, lints, and type-checks both. When both contain an entry point with the same name, the entry point of the custom namespace wins.
+- To use only the custom namespace, set the `project` entry to it. The custom namespace then replaces `src/Pyz/Zed` in the build, in the path aliases, in lint, and in the type check.
 
 ```ts
 // frontend/backoffice.settings.mts
 import { defineConfig } from '../vendor/spryker/gui/src/Spryker/Zed/Gui/FrontendBuilder/settings.mts';
 
 export default defineConfig({
-    // Default: false in a project, true in the Spryker monorepo.
-    // true: `npm run zed:lint` also runs `tsc --noEmit` over the project's Back Office TypeScript.
-    typecheck: true,
+    paths: {
+        sources: {
+            // Adds the custom namespace; src/Pyz/Zed stays a source root.
+            acme: './src/Acme/Zed',
+            // Alternatively, replace src/Pyz/Zed with the custom namespace:
+            // project: './src/Acme/Zed',
+        },
+    },
 });
 ```
+
+After changing `paths.sources`, run `npm run update:config -w spryker-zed-gui` or `npm install` so that the generated `tsconfig.zed.json` and `tsconfig.zed.lint.json` pick up the new source root.
 
 The compiler options of the Back Office are strict: `strict` and `noImplicitAny` are on, `allowJs` lets a TypeScript module import the legacy JavaScript, and `checkJs` is off. The options are generated into `tsconfig.defaults.json`; to override one, set it in the project root `tsconfig.json` — see [Generated configuration](#generated-configuration).
 
 ## Generated configuration
 
-`tsconfig.zed.json`, `tsconfig.zed.lint.json`, and `tsconfig.defaults.json` contain values that depend on where the modules are installed — `vendor/spryker` in a project, `src/Spryker` in the Spryker monorepo — so the Gui module cannot ship them ready-made. `npm run update:config -w spryker-zed-gui` generates them, and the project's `postinstall` script runs it on every `npm install`.
+`tsconfig.zed.json`, `tsconfig.zed.lint.json`, and `tsconfig.defaults.json` contain values that depend on which modules are installed and on the source roots of the project, so the Gui module cannot ship them ready-made. `npm run update:config -w spryker-zed-gui` generates them, and the project's `postinstall` script runs it on every `npm install`.
 
 The files are written inside the builder directory, unless the project already keeps a file of that name in its root — in that case the reconciliation works on that file and writes no second copy. A file inside the builder directory lives in `vendor/` and is written from scratch after a fresh install, so hand-written entries survive only in a root copy: to keep an alias or an `include` entry of your own, keep `tsconfig.zed.json` in the project root and commit it.
 
@@ -204,7 +218,7 @@ The files are written inside the builder directory, unless the project already k
 | `tsconfig.zed.json` → `compilerOptions.paths` | generated — the `@zed/*` and legacy aliases are added, repointed, and removed as modules come and go; an alias you added by hand is kept |
 | `tsconfig.zed.json` → `include`, `extends` | generated — the `.ts` globs of every source root and the ambient type declarations; an entry you added is kept |
 | `tsconfig.zed.json` → everything else | yours |
-| `tsconfig.zed.lint.json` | generated — the same, narrowed to the sources the repository owns |
+| `tsconfig.zed.lint.json` | generated — the same, narrowed to the project sources outside `vendor/` |
 
 `tsconfig.zed.json` extends `tsconfig.defaults.json` first and the project root `tsconfig.json` last, so a compiler option set in the root `tsconfig.json` overrides the builder default for the Back Office.
 
@@ -218,10 +232,7 @@ Because the reconciliation happens in place rather than as a rewrite, a value th
 
 ## What lint covers
 
-`npm run zed:lint` and `npm run zed:stylelint` report on the modules the running repository owns:
-
-- In a project, the core, eco, SDK, and feature modules arrive in `vendor/`. They are installed code, not the project's to report on, so only `src/Pyz/Zed` is covered.
-- In the Spryker monorepo, the core and feature modules are sources of the repository, so they are covered together with the project modules.
+`npm run zed:lint` and `npm run zed:stylelint` report on the project modules. The core, eco, SDK, and feature modules arrive in `vendor/`. They are installed code, not the project's to report on, so only the source roots outside `vendor/` are covered: `src/Pyz/Zed` by default, and every namespace you register in `paths.sources`.
 
 Both commands look at the `assets/Zed` directory of each module: ESLint at the `.js` and `.ts` files, Stylelint at the `.css` and `.scss` files. The vendored Inspinia theme directories and minified files are excluded from Stylelint.
 
@@ -231,7 +242,7 @@ Project-level lint configuration is picked up from the project root when present
 
 The builder compiles Sass with the native `sass-embedded` compiler through the modern Sass API. Sass deprecation warnings are classified by where they come from:
 
-- A warning in a stylesheet the repository owns — in a project, anything outside `vendor/` and `node_modules/` — fails the build. The error names each file and the fix: `@import` of your own partial becomes `@use`, `@import` of a package stylesheet becomes `@use 'package/file.css' as *`, and a global color function such as `darken()` becomes its `sass:color` equivalent. Each of these deprecations is removed in Dart Sass 3, so the build reports it now rather than when it becomes an error.
+- A warning in a stylesheet the project owns — anything outside `vendor/` and `node_modules/` — fails the build. The error names each file and the fix: `@import` of your own partial becomes `@use`, `@import` of a package stylesheet becomes `@use 'package/file.css' as *`, and a global color function such as `darken()` becomes its `sass:color` equivalent. Each of these deprecations is removed in Dart Sass 3, so the build reports it now rather than when it becomes an error.
 - Warnings from installed packages, from the vendored Inspinia theme, and from the Gui module's own legacy stylesheets are printed as one summary line per build, for example `Sass: 21 deprecation warning(s) from vendored stylesheets (bootstrap x21)`. They are never suppressed with `quietDeps` or `silenceDeprecations`.
 
 Package stylesheets resolve from `node_modules` directly, so there is no webpack `~` prefix in `@use`. A package stylesheet can also be loaded from JavaScript instead:
@@ -289,7 +300,7 @@ Projects may override:
 - `paths.sources` — the directories the builder scans for entry points and path aliases, and that `npm run zed:lint` and `npm run zed:stylelint` cover. An entry with the name of a built-in root (`core`, `eco`, `sdk`, `features`, `project`) replaces that root; a new name adds a root, scanned after the built-in ones.
 - `paths.publicDir` — the build output directory, `./public/Backoffice/assets` by default.
 - `paths.mirrorDir` — the mirror the Docker SDK checks, `./public/Zed/assets` by default.
-- `typecheck` — whether `npm run zed:lint` runs the TypeScript compiler. `false` by default in a project, `true` in the Spryker monorepo.
+- `typecheck` — whether `npm run zed:lint` runs the TypeScript compiler. `false` by default.
 
 All other settings are fixed and inherited from the packaged defaults.
 

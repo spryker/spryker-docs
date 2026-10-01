@@ -2,7 +2,7 @@
 title: npm workspaces for the frontend builders
 description: Learn how Spryker frontend builders are wired into a project as npm workspaces, how the build commands change, and which npm dependencies come from the modules.
 keywords: npm workspaces, frontend builder, ShopUi, ZedUi, Gui, shop-ui, mp-zed-ui, spryker-zed-gui, package.json, dependencies
-last_updated: Sep 29, 2026
+last_updated: Oct 1, 2026
 template: concept-topic-template
 related:
   - title: Frontend builder for Yves v2
@@ -117,7 +117,7 @@ Open the `package.json` of the builder module — `vendor/spryker-shop/shop-ui/p
 | `devDependencies` | the module | The build-time packages: compilers, loaders, plugins, test presets. Remove them too. |
 | `peerDependencies` | your project | The packages the module expects the project to provide, if any. Keep these, and follow the version ranges declared there — see [Peer dependencies, and why you install them yourself](#peer-dependencies-and-why-you-install-them-yourself). |
 
-Starting from Gui 5.8.0, ShopUi 2.3.0, and ZedUi 4.4.0, the builder modules declare the whole toolchain — webpack, TypeScript, the loaders, Stylelint, ESLint, Jest — in their own `devDependencies` and have no peer dependencies. A project on these versions declares nothing for its frontend builds; the Spryker monorepo's own `package.json`, for example, keeps only `prettier`. For the package names per builder, see [What you can remove from your package.json](#what-you-can-remove-from-your-packagejson). Earlier ShopUi 2.x and ZedUi 4.x releases declare part of the toolchain as peer dependencies, and the next section applies to them.
+Starting from Gui 5.8.0, ShopUi 2.3.0, and ZedUi 4.4.0, the builder modules declare the whole toolchain — webpack, TypeScript, the loaders, Stylelint, ESLint, Jest — in their own `devDependencies` and have no peer dependencies. A project on these versions declares nothing for its frontend builds. For the package names per builder, see [What you can remove from your package.json](#what-you-can-remove-from-your-packagejson). Earlier ShopUi 2.x and ZedUi 4.x releases declare part of the toolchain as peer dependencies, and the next section applies to them.
 
 Declaring a package that the module already declares is not additive: it pins a second version of the same package, which is how two copies of a compiler or a framework end up in one build.
 

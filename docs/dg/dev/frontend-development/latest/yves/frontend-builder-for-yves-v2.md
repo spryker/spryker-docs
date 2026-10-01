@@ -2,7 +2,7 @@
 title: Frontend builder for Yves v2
 description: Learn about the TypeScript-based frontend builder v2 that ships with the ShopUi module and builds Yves assets for all namespaces and themes.
 keywords: ShopUi, shop-ui, frontend builder, Yves, webpack, build, assets, live reload
-last_updated: Sep 29, 2026
+last_updated: Oct 1, 2026
 template: howto-guide-template
 related:
   - title: Frontend builder for Yves (deprecated)
@@ -210,18 +210,15 @@ The builder has several modes to build the frontend:
 
 ### What lint covers
 
-From ShopUi 2.1.0, `yves:lint` and `yves:stylelint` report on the sources the running repository owns:
+From ShopUi 2.1.0, `yves:lint` and `yves:stylelint` report on the project sources. The core, eco, and feature sources are installed under `vendor/`. They are installed code, not the project's to report on, so both commands cover only the source roots in `src/`: `src/Pyz/Yves` by default, and every namespace you register in `paths.sources`.
 
-- In a project, the core, eco, and feature sources are installed under `vendor/`. They are installed code, not the project's to report on, so both commands cover `src/Pyz/Yves` only.
-- In the Spryker monorepo, those sources are part of the repository, so they are covered together with the project sources.
-
-Nothing has to be passed to select this — the source layout the builder already detects decides it. Both commands look at the theme files of each source root, so styles and scripts outside a `Theme` directory are not linted.
+Nothing has to be passed to select this. Both commands look at the theme files of each source root, so styles and scripts outside a `Theme` directory are not linted.
 
 ### Type checking
 
 From ShopUi 2.3.0, `yves:lint` runs the TypeScript compiler over the Yves TypeScript sources after ESLint, with the same scope as lint. The build itself compiles TypeScript with Babel, which erases the types without checking them, so this is the step that catches type errors.
 
-In the Spryker monorepo, type checking is on. In a project, it is off by default, because the project's Yves sources were never type-checked before and turning it on in a minor release would fail the project's lint on code nobody changed. To enable it, set `typecheck: true` in `frontend/yves.settings.mts` — see [Project-level builder settings](#project-level-builder-settings).
+Type checking is off by default, because the project's Yves sources were never type-checked before and turning it on in a minor release would fail the project's lint on code nobody changed. To enable it, set `typecheck: true` in `frontend/yves.settings.mts` — see [Project-level builder settings](#project-level-builder-settings).
 
 ## Parameters
 
@@ -251,8 +248,10 @@ import { defineConfig } from '../vendor/spryker-shop/shop-ui/src/SprykerShop/Yve
 export default defineConfig({
     paths: {
         sources: {
-            // Register a custom namespace: SCSS/TS under this path is scanned for components.
-            newNamespace: './PATH_TO_YOUR_FOLDER',
+            // Adds a custom namespace; src/Pyz/Yves stays a source root.
+            acme: './src/Acme/Yves',
+            // Alternatively, replace src/Pyz/Yves with the custom namespace:
+            // project: './src/Acme/Yves',
         },
     },
 });
@@ -260,7 +259,7 @@ export default defineConfig({
 
 Projects may override:
 
-- `paths.sources`—the directories the builder scans for component assets. Use this to register custom namespaces; there is no longer a separate `dirs` list to keep in sync.
+- `paths.sources`—the directories the builder scans for component assets. Use this to register custom namespaces; there is no longer a separate `dirs` list to keep in sync. An entry named `project` replaces `src/Pyz/Yves`; an entry with a new name adds a source root, scanned after `src/Pyz/Yves`, so you can use a custom namespace together with `Pyz`. Lint and type checking cover the source roots in `src/`.
 - `paths.iconSprite`—icon sprite source and target locations.
 - `buildHooks`—project build steps that run before webpack assembly and may contribute entries to the bundles.
 - `typecheck`—from ShopUi 2.3.0, whether `yves:lint` runs the TypeScript compiler. See [Type checking](#type-checking).

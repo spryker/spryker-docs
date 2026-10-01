@@ -199,9 +199,6 @@ export default defineConfig({
             // project: './src/Acme/Zed',
         },
     },
-    // Default: false.
-    // true: `npm run zed:lint` also runs `tsc --noEmit` over the project's Back Office TypeScript.
-    typecheck: true,
 });
 ```
 

@@ -177,18 +177,28 @@ Webpack provides `$`, `jQuery`, `SprykerAjax`, `SprykerAjaxCallbacks`, and `Spry
 
 The Back Office TypeScript is compiled by Babel, which erases the types without checking them. Type checking is a separate step that `npm run zed:lint` runs after ESLint: the TypeScript compiler over `tsconfig.zed.lint.json`, which covers the `.ts` files of the sources the repository owns. The legacy JavaScript is compiled but never type-checked.
 
-In the Spryker monorepo, type checking is on. In a project, it is off by default, because the project's Back Office sources were never type-checked before and turning it on in a minor release would fail the project's lint on code nobody changed. To enable it, set `typecheck` in the project settings file:
+In the Spryker monorepo, type checking is on. In a project, it is off by default, because the project's Back Office sources were never type-checked before and turning it on in a minor release would fail the project's lint on code nobody changed. To enable it, set `typecheck` in the project settings file.
+
+Type checking covers the project root, `src/Pyz/Zed` by default. If your project namespace is not `Pyz`, point the `project` root at your namespace in the same file. The custom root then replaces `src/Pyz/Zed` in the build, in the path aliases, and in the type check:
 
 ```ts
 // frontend/backoffice.settings.mts
 import { defineConfig } from '../vendor/spryker/gui/src/Spryker/Zed/Gui/FrontendBuilder/settings.mts';
 
 export default defineConfig({
+    paths: {
+        sources: {
+            // Replaces the default project root ./src/Pyz/Zed with the custom namespace.
+            project: './src/Acme/Zed',
+        },
+    },
     // Default: false in a project, true in the Spryker monorepo.
     // true: `npm run zed:lint` also runs `tsc --noEmit` over the project's Back Office TypeScript.
     typecheck: true,
 });
 ```
+
+After changing `paths.sources`, run `npm run update:config -w spryker-zed-gui` (or `npm install`) so that the generated `tsconfig.zed.json` and `tsconfig.zed.lint.json` pick up the new root.
 
 The compiler options of the Back Office are strict: `strict` and `noImplicitAny` are on, `allowJs` lets a TypeScript module import the legacy JavaScript, and `checkJs` is off. The options are generated into `tsconfig.defaults.json`; to override one, set it in the project root `tsconfig.json` — see [Generated configuration](#generated-configuration).
 

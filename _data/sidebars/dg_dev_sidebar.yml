@@ -45,6 +45,8 @@ entries:
         url: /docs/dg/dev/ci.html
       - title: Post-Installation Configuration
         url: /docs/dg/dev/post-installation-configuration.html
+      - title: Spryker GitHub organizations and repositories
+        url: /docs/dg/dev/spryker-github-organizations-and-repositories.html
   - title: AI
     nested:
       - title: AI Foundation

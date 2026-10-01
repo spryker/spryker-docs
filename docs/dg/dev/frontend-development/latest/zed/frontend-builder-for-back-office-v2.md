@@ -56,7 +56,7 @@ The builder scans `src/Pyz/Zed` as one of its source roots, so a project adds Ba
 
 ### Lint for Back Office assets
 
-ESLint and Stylelint ship with the builder and cover the Back Office JavaScript, TypeScript, and stylesheets — in a project, the ones in `src/Pyz`. There was no lint for Back Office assets before. See [What lint covers](#what-lint-covers).
+ESLint and Stylelint ship with the builder and cover the Back Office JavaScript, TypeScript, and stylesheets of the project modules — the ones in `src/Pyz/Zed` and in every namespace you register. There was no lint for Back Office assets before. See [What lint covers](#what-lint-covers).
 
 ### No silenced Sass deprecation warnings
 

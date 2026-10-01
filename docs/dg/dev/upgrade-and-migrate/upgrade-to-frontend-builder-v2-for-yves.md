@@ -452,7 +452,7 @@ The remaining modules only widen their ShopUi constraint.
 - **Legacy style rescue.** Component SCSS files that emit CSS at the top level without being imported from a component entry point are still compiled, with a warning naming the file. Migrate such components by importing their styles from the component's `index.ts`.
 - **Live reload.** `npm run yves:watch` now includes live reload: CSS changes are applied without a page reload, and JavaScript and Twig changes trigger a full reload that preserves scroll position and form state. No extra setup is needed.
 - **Type checking.** From ShopUi 2.3.0, `npm run yves:lint` also runs the TypeScript compiler over the Yves TypeScript sources. It is off by default; set `typecheck: true` in `frontend/yves.settings.mts` to enable it. See [Type checking](/docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves-v2.html#type-checking).
-- **Lint scope.** From ShopUi 2.1.0, `npm run yves:lint` and `npm run yves:stylelint` report on the project sources. The core, eco, and feature sources are installed under `vendor/`, so both commands cover `src/Pyz/Yves` only. See [What lint covers](/docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves-v2.html#what-lint-covers).
+- **Lint scope.** From ShopUi 2.1.0, `npm run yves:lint` and `npm run yves:stylelint` report on the project sources. The core, eco, and feature sources are installed under `vendor/`, so both commands cover only the project sources — `src/Pyz/Yves` and every namespace in `src/` registered in `paths.sources` of `frontend/yves.settings.mts`. See [What lint covers](/docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves-v2.html#what-lint-covers).
 
 ## Example migration
 

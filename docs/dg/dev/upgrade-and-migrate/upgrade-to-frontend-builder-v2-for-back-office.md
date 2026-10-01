@@ -2,7 +2,7 @@
 title: Upgrade to frontend builder v2 for the Back Office
 description: Learn how to move your project from the oryx-for-zed npm package to the Back Office frontend builder shipped with the Gui module.
 keywords: Gui, spryker-zed-gui, frontend builder, Back Office, Zed, oryx-for-zed, migration, upgrade, webpack, TypeScript
-last_updated: Sep 29, 2026
+last_updated: Oct 1, 2026
 template: concept-topic-template
 related:
   - title: Frontend builder for the Back Office v2
@@ -167,7 +167,7 @@ npm run zed:lint
 npm run zed:stylelint
 ```
 
-In a project, both cover `src/Pyz/Zed` only: the core modules arrive in `vendor/` and are not the project's to report on. `zed:lint` reports that type checking is off — it is off by default in a project, see [TypeScript](/docs/dg/dev/frontend-development/latest/zed/frontend-builder-for-back-office-v2.html#typescript).
+Both cover `src/Pyz/Zed` only: the core modules arrive in `vendor/` and are not the project's to report on. `zed:lint` reports that type checking is off — it is off by default, see [TypeScript](/docs/dg/dev/frontend-development/latest/zed/frontend-builder-for-back-office-v2.html#typescript).
 
 Finally, check the Back Office in the browser. Every entry point still produces `js/<name>.js` and `css/<name>.css` under the same names, so the templates need no change. The only new files are the hashed chunks under `js/chunks/` and `css/chunks/`.
 

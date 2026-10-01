@@ -2,7 +2,7 @@
 title: Upgrade to frontend builder v2 for Yves
 description: Learn how to upgrade your Spryker project from the legacy frontend builder in the frontend directory to the frontend builder v2 shipped with the ShopUi module.
 keywords: ShopUi, shop-ui, frontend builder, Yves, migration, upgrade, webpack, build
-last_updated: Sep 29, 2026
+last_updated: Oct 1, 2026
 template: concept-topic-template
 related:
   - title: Frontend builder for Yves v2
@@ -451,8 +451,8 @@ The remaining modules only widen their ShopUi constraint.
 - **Sass deprecation warnings are no longer silenced.** The v1 builder suppressed warnings from dependencies; builder v2 shows them and points at the real file. Fix them in your project code instead of suppressing—they become hard errors in future Sass versions. See the base hook mechanism in [Extending components](/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/extending-components.html#extend-base-styles-with-a-base-hook) for the recommended way to extend core component base styles without triggering the `mixed-decls` deprecation.
 - **Legacy style rescue.** Component SCSS files that emit CSS at the top level without being imported from a component entry point are still compiled, with a warning naming the file. Migrate such components by importing their styles from the component's `index.ts`.
 - **Live reload.** `npm run yves:watch` now includes live reload: CSS changes are applied without a page reload, and JavaScript and Twig changes trigger a full reload that preserves scroll position and form state. No extra setup is needed.
-- **Type checking.** From ShopUi 2.3.0, `npm run yves:lint` also runs the TypeScript compiler over the Yves TypeScript sources. In a project, it is off by default; set `typecheck: true` in `frontend/yves.settings.mts` to enable it. See [Type checking](/docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves-v2.html#type-checking).
-- **Lint scope.** From ShopUi 2.1.0, `npm run yves:lint` and `npm run yves:stylelint` report on the sources the running repository owns. In a project, the core, eco, and feature sources are installed under `vendor/`, so both commands cover `src/Pyz/Yves` only. See [What lint covers](/docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves-v2.html#what-lint-covers).
+- **Type checking.** From ShopUi 2.3.0, `npm run yves:lint` also runs the TypeScript compiler over the Yves TypeScript sources. It is off by default; set `typecheck: true` in `frontend/yves.settings.mts` to enable it. See [Type checking](/docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves-v2.html#type-checking).
+- **Lint scope.** From ShopUi 2.1.0, `npm run yves:lint` and `npm run yves:stylelint` report on the project sources. The core, eco, and feature sources are installed under `vendor/`, so both commands cover `src/Pyz/Yves` only. See [What lint covers](/docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves-v2.html#what-lint-covers).
 
 ## Example migration
 

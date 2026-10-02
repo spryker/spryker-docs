@@ -1,7 +1,7 @@
 ---
 title: API Platform migration overview
 description: End-to-end walk-through for migrating an existing Spryker shop from Glue REST to API Platform.
-last_updated: Sep 29, 2026
+last_updated: Oct 2, 2026
 template: howto-guide-template
 related:
   - title: Integrate API Platform
@@ -39,7 +39,7 @@ Backward compatibility has one exception. Legacy Glue REST accepted requests tha
 
 {% info_block warningBox "Monitoring tools see new endpoint names" %}
 
-After you switch a module, its endpoints report API Platform route names, such as `_api_/customers/{customerReference}{._format}_get`, instead of legacy Glue names, such as `CustomersRestApi/customer-resource/get`, to your Application Performance Monitoring (APM) tool. Dashboards, alerts, and grouping rules in tools like New Relic or Dynatrace need updates. To keep the legacy names instead, see [Monitoring and APM impact](/docs/integrations/spryker-api/migrate-from-glue-to-api-platform/migrate-to-api-platform.html#monitoring-and-application-performance-monitoring-apm-impact).
+After you switch a module, its endpoints report API Platform route names, such as `_api_/customers/{customerReference}{._format}_get`, instead of legacy Glue names, such as `CustomersRestApi/customer-resource/get`, to your Application Performance Monitoring (APM) tool. Dashboards, alerts, and grouping rules in tools like New Relic or Dynatrace stop matching on the day you deploy the switch. Upgrading packages alone doesn't change any name. Before you switch a module in production, decide with whoever owns your monitoring setup whether to update it or to keep the legacy names. For examples of the new names and how to keep the legacy ones, see [Monitoring and APM impact](/docs/integrations/spryker-api/migrate-from-glue-to-api-platform/migrate-to-api-platform.html#monitoring-and-application-performance-monitoring-apm-impact).
 
 {% endinfo_block %}
 

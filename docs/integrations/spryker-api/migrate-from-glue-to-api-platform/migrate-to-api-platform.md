@@ -1,7 +1,7 @@
 ---
 title: Migrate to API Platform
 description: This document describes how to migrate existing Glue API resources to API Platform.
-last_updated: Sep 29, 2026
+last_updated: Oct 2, 2026
 template: howto-guide-template
 related:
   - title: Integrate API Platform
@@ -34,6 +34,14 @@ Migrating from Glue API to API Platform provides several benefits:
 - **Better maintainability**: Clearer separation of concerns with providers and processors
 
 The recommended default is **batch migration** — migrating a group of related modules together, as described in the [API Platform migration overview](/docs/integrations/spryker-api/migrate-from-glue-to-api-platform/migrate-to-api-platform-overview.html). The per-resource steps below are the mechanics you apply to each resource *within* a batch; none of it breaks existing API consumers.
+
+{% info_block warningBox "Migrating changes your monitoring transaction names" %}
+
+Switching a module to API Platform changes the transaction names that New Relic, Dynatrace, or any other Application Performance Monitoring (APM) tool shows for its endpoints, for example from `CustomersRestApi/customer-resource/get` to `_api_/customers/{customerReference}{._format}_get`. Dashboards, alerts, Service Level Objectives (SLOs), and grouping rules that match the old names stop matching on the day you deploy the switch.
+
+Updating packages alone doesn't change any name: the names change only for modules you switch yourself in [Step 8](#step-8-switch-routing-to-api-platform). Before you switch a module in production, agree with whoever owns your monitoring setup whether to update it to the new names or to keep the legacy names with a route name mapping. For examples of the new names and both options, see [Monitoring and APM impact](#monitoring-and-application-performance-monitoring-apm-impact).
+
+{% endinfo_block %}
 
 ## Prerequisites
 
@@ -386,7 +394,7 @@ console cache:clear
 
 {% info_block warningBox "Monitoring names change with the switch" %}
 
-From the moment you remove the plugin, the endpoints of this module report new transaction names to your Application Performance Monitoring (APM) tool. Before you remove the plugin, read [Monitoring and APM impact](#monitoring-and-application-performance-monitoring-apm-impact).
+From the moment you remove the plugin, the endpoints of this module report new transaction names to your APM tool, and dashboards and alerts that match the legacy names stop matching. Before you remove the plugin in production, either update your monitoring setup or generate the route name mapping that keeps the legacy names. See [Monitoring and APM impact](#monitoring-and-application-performance-monitoring-apm-impact).
 
 {% endinfo_block %}
 
@@ -491,12 +499,35 @@ The migration doesn't change URLs or responses, but it changes the names that yo
 
 The monitoring integration takes the transaction name from the Symfony route name of the request (the `_route` request attribute). With OpenTelemetry, the same name is also used for the root span name and the `http.route` attribute. The two infrastructures name their routes differently:
 
-| Infrastructure | Route name pattern | Example for `GET /customers/{customerReference}` |
-|---|---|---|
-| Legacy Glue REST | `Module/controller/action` | `CustomersRestApi/customer-resource/get` |
-| API Platform | `_api_{uriTemplate}_{method}`, with the `_collection` suffix for collection operations | `_api_/customers/{customerReference}{._format}_get` |
+| Infrastructure | Route name pattern |
+|---|---|
+| Legacy Glue REST | `Module/controller/action` |
+| API Platform, default | `_api_{uriTemplate}_{method}`, with the `_collection` suffix for collection operations. `{._format}` is part of the name when the URI template of the resource includes it. |
+| API Platform, named operation | The operation `name` from the resource schema, such as `getAbstractProduct` |
 
-The change happens per endpoint, at the moment you remove the module's `*ResourceRoutePlugin` in [Step 8](#step-8-switch-routing-to-api-platform). Modules that are still on Glue keep reporting their legacy names. This is how the migration works, not a defect.
+A route name is built from the URI template, so it contains placeholders such as `{customerReference}`, never the values of a request. A transaction name never contains a customer reference, cart ID, or SKU, and every request to an endpoint reports the same name, as with legacy Glue REST.
+
+The following examples are taken from the suite. The legacy name is what the endpoint reports while it's served by Glue REST, and the API Platform name is what it reports after you switch the module without a route name mapping:
+
+| Request | Legacy Glue REST name | API Platform name |
+|---|---|---|
+| `POST /access-tokens` | `AuthRestApi/access-tokens-resource/post` | `_api_/access-tokens_post` |
+| `GET /customers/{customerReference}` | `CustomersRestApi/customer-resource/get` | `_api_/customers/{customerReference}{._format}_get` |
+| `GET /customers/{customerReference}/addresses` | `CustomersRestApi/address-resource/get` | `_api_/customers/{customerReference}/addresses_get_collection` |
+| `POST /carts` | `CartsRestApi/carts-resource/post` | `_api_/carts{._format}_post` |
+| `PATCH /carts/{cartId}/items/{groupKey}` | `CartsRestApi/cart-items-resource/patch` | `_api_/carts/{cartId}/items/{groupKey}_patch` |
+| `GET /catalog-search` | `CatalogSearchRestApi/catalog-search-resource/get` | `_api_/catalog-search_get_collection` |
+| `POST /checkout` | `CheckoutRestApi/checkout-resource/post` | `_api_/checkout_post` |
+| `GET /abstract-products/{sku}` | `ProductsRestApi/abstract-products-resource/get` | `getAbstractProduct` |
+| `POST /shopping-lists` | `ShoppingListsRestApi/shopping-lists-resource/post` | `createShoppingList` |
+
+Legacy Glue REST reported one name per resource and HTTP method, so the item request and the collection request of a resource shared a name. API Platform reports a separate name for each, for example `_api_/customers/{customerReference}/addresses/{uuid}_get` and `_api_/customers/{customerReference}/addresses_get_collection`.
+
+Some endpoints exist only in API Platform and never had a legacy name, for example `GET /carts/{cartId}/items/{groupKey}` reports `_api_/carts/{cartId}/items/{groupKey}_get`, and `GET /shopping-lists/{shoppingListUuid}/shopping-list-items` reports `getShoppingListItems`. They report their API Platform name with or without a route name mapping.
+
+To list the route names of your project, run `vendor/bin/glue debug:router`. To find the name for a single URL, run `vendor/bin/glue router:match /customers/DE--21`.
+
+The change happens per endpoint, at the moment you remove the module's `*ResourceRoutePlugin` in [Step 8](#step-8-switch-routing-to-api-platform). Upgrading modules doesn't change any name, and modules that are still on Glue keep reporting their legacy names. An endpoint whose module never registered a `*ResourceRoutePlugin` reports its API Platform name from the beginning. This is how the migration works, not a defect.
 
 ### Recommended: update your monitoring setup
 

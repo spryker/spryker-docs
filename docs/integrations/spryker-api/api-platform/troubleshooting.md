@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting API Platform
 description: Common issues and solutions when working with API Platform in Spryker.
-last_updated: Sep 29, 2026
+last_updated: Oct 2, 2026
 template: troubleshooting-guide-template
 related:
   - title: Integrate API Platform
@@ -403,7 +403,7 @@ In both cases the exception is logged to the container's standard error stream, 
 
 ### Transaction names changed in New Relic or Dynatrace after migration
 
-**Symptom:** After you migrate a module to API Platform, your Application Performance Monitoring (APM) tool shows new transaction names for its endpoints, for example `_api_/customers/{customerReference}{._format}_get` instead of `CustomersRestApi/customer-resource/get`. Dashboards, alerts, and endpoint grouping rules no longer match.
+**Symptom:** After you migrate a module to API Platform, your Application Performance Monitoring (APM) tool shows new transaction names for its endpoints, for example `_api_/customers/{customerReference}{._format}_get` instead of `CustomersRestApi/customer-resource/get`. Dashboards, alerts, and endpoint grouping rules no longer match. The names contain placeholders such as `{customerReference}`, not the values of a request, so every request to an endpoint still reports the same name.
 
 **Cause:** The transaction name comes from the Symfony route name. API Platform names its routes differently from legacy Glue REST, and the new names apply to each endpoint as soon as you remove the module's `*ResourceRoutePlugin`. This is how the migration works, not a defect.
 

@@ -1,7 +1,7 @@
 ---
 title: Common pitfalls in OMS design
 description: This document explains the common pitfalls in OMS design in the Spryker Commerce OS.
-last_updated: Jan 13, 2022
+last_updated: Oct 2, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
@@ -220,3 +220,35 @@ vendor/bin/console oms:process-cache:warm-up
     <event name="confirmation" onEnter="true" command="Oms/SendOrderConfirmation"/>
 </events>
 ```
+
+## Deferred processing of new order items
+
+**Issue:** By default, the checkout request runs the first state machine iteration for new order items, including reservations, `onEnter` events, and timeouts of the initial state. This makes order placement depend on state machine logic.
+
+**Solution:** Enable deferred processing of new order items. With this flag, the checkout places the order as soon as possible and only initializes the state machine for its items. State machine processing is permanently moved to the background, where `oms:check-timeout` executes it.
+
+To enable deferred processing, update `spryker/oms` to version 11.55.0 or higher and enable the flag:
+
+**src/Pyz/Zed/Oms/OmsConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Oms;
+
+use Spryker\Zed\Oms\OmsConfig as SprykerOmsConfig;
+
+class OmsConfig extends SprykerOmsConfig
+{
+    public function isDeferredNewOrderItemProcessingEnabled(): bool
+    {
+        return true;
+    }
+}
+```
+
+{% info_block warningBox "Warning" %}
+
+Make sure the `oms:check-timeout` command is scheduled. New order items stay in their initial state, and their stock is not reserved until the command processes them.
+
+{% endinfo_block %}

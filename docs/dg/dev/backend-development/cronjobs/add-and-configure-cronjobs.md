@@ -70,3 +70,16 @@ For each job you can define several configurations:
 When you do not use Jenkins for job scheduling, there is no locking between concurrently running commands.
 
 {% endinfo_block %}
+
+
+### Troubleshoot Jenkins errors
+
+If during console command execution any request to Jenkins API fails, the command exits with a non-zero status and reports the affected job together with the Jenkins HTTP error and response.
+
+For example:
+```text
+Scheduler Status: ERROR
+- DE_consume-queue
+Scheduler Error: Job "DE_consume-queue": Jenkins request POST ... failed with HTTP 400 Bad Request. Jenkins error: A job already exists with the name "DE_consume-queue".
+```
+

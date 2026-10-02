@@ -1,7 +1,7 @@
 ---
 title: Workflows, Skills, and Agents
 description: Reference of the workflows, skills, and agents shipped with the AI Dev SDK
-last_updated: Sep 4, 2026
+last_updated: Sep 29, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, windsurf, copilot, workflows, wizards, skills, agents, subagents, spryker
 template: concept-topic-template
@@ -110,7 +110,9 @@ The `project-starter-wizard` runs these as its steps, and each also works standa
 | `data-import` | Create and modify data import CSV files and importers | Generates importers that fit Spryker's data-import path | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/data-import/README.md) |
 | `static-validation` | Run static analysis over only the code that changed against a base branch — PHP and frontend | Validates the diff rather than the whole project; groups PHP by changed file or by whole changed module | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/static-validation/README.md) |
 | `payment-template` | Scaffold payment method integration | Follows Spryker payment module patterns end-to-end | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/payment-template/README.md) |
-| `yves-atomic-frontend` | Create atomic design components for the Yves storefront | Components match the project's atomic conventions | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/yves-atomic-frontend/README.md) |
+| `yves-atomic-frontend` | Create and override atomic design components for the Yves storefront — Twig, SCSS, and TypeScript | Components match the project's atomic conventions; catches project-specific pitfalls such as an `index.ts` that replaces the core entry or a same-name component that silently shadows a core one | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/yves-atomic-frontend/README.md) |
+| `backoffice-frontend` | Build or override Back Office pages — Zed Twig templates, navigation and ACL, and Back Office JavaScript and SCSS | Overrides extend core blocks instead of copying them; covers the cache warm-ups a new template, menu entry, or action needs before it shows up | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/backoffice-frontend/README.md) |
+| `merchant-portal-frontend` | Create, extend, or replace Merchant Portal Angular components, the Twig pages that render them, and their Jest specs | Registers components in `entry.ts`, reuses installed `@spryker/*` UI components, and narrows `mp:test` runs to the spec you changed | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/merchant-portal-frontend/README.md) |
 | `product-requirement-document` | Turn a feature idea into a research-grounded product requirement document before any code is written | Spec-before-code; assigns a real Spryker actor to every story; cuts ambiguity before implementation | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/product-requirement-document/README.md) |
 | `spryker-refresher` | Run the right post-change console and composer commands after edits | Owns the file-to-command mapping (codegen, caches, frontend builds, class-resolver); no missed cache rebuilds | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-refresher/README.md) |
 | `spryker-docs-research` | Look up the right answer in official Spryker documentation | Grounds AI work in documented behavior rather than the model's memory; falls back gracefully when MCP tools are unavailable | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-docs-research/README.md) |

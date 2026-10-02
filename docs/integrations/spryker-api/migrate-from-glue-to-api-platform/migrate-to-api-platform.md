@@ -10,6 +10,12 @@ related:
     link: docs/integrations/spryker-api/api-platform/api-platform.html
   - title: Implement an API Platform resource
     link: docs/integrations/spryker-api/api-platform/enablement.html
+  - title: Resource schemas
+    link: docs/integrations/spryker-api/api-platform/resource-schemas.html
+  - title: Validation schemas
+    link: docs/integrations/spryker-api/api-platform/validation-schemas.html
+  - title: Troubleshooting API Platform
+    link: docs/integrations/spryker-api/api-platform/troubleshooting.html
 redirect_from:
   - /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform.html
 ---
@@ -836,11 +842,3 @@ The `/{resource}` endpoint is being migrated to API-Platform.
 - New endpoint: Available now
 - Deprecation: Old endpoint will return deprecation headers starting 2026-09-01
 ```
-
-## Next steps
-
-- [API Platform](/docs/integrations/spryker-api/api-platform/api-platform.html) - Architecture overview
-- [Implement an API Platform resource](/docs/integrations/spryker-api/api-platform/enablement.html) - Creating resources
-- [Resource schemas](/docs/integrations/spryker-api/api-platform/resource-schemas.html) - Resource schemas
-- [Validation schemas](/docs/integrations/spryker-api/api-platform/validation-schemas.html) - Validation schemas
-- [Troubleshooting](/docs/integrations/spryker-api/api-platform/troubleshooting.html) - Common issues

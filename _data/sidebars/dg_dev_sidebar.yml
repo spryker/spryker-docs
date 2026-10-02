@@ -1568,7 +1568,7 @@ entries:
             url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/execute-tests.html
           - title: Test console commands
             url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
-          - title: Test Glue API
+          - title: Test Glue API with HTTP integration tests
             url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-glue-api.html
           - title: Test Glue Backend API
             url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-glue-backend-api.html

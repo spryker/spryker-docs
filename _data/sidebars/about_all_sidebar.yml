@@ -83,6 +83,8 @@ entries:
           nested:
           - title: Release notes for spryker-php 20260908
             url: /docs/about/all/releases/image-releases/spryker-php/release-notes-spryker-php-20260908.html
+          - title: Release notes for spryker-php 20260820
+            url: /docs/about/all/releases/image-releases/spryker-php/release-notes-spryker-php-20260820.html
           - title: Release notes for spryker-php 20260706
             url: /docs/about/all/releases/image-releases/spryker-php/release-notes-spryker-php-20260706.html
           - title: Release notes for spryker-php 20260625

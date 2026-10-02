@@ -1,7 +1,7 @@
 ---
 title: API Platform security
 description: Understanding authentication and authorization in API Platform resources.
-last_updated: Jul 31, 2026
+last_updated: Sep 16, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -12,6 +12,8 @@ related:
     link: docs/integrations/spryker-api/api-platform/resource-schemas.html
   - title: Native API Platform resources
     link: docs/integrations/spryker-api/api-platform/native-api-platform-resources.html
+  - title: Symfony Security documentation
+    link: https://symfony.com/doc/current/security.html
 redirect_from:
   - /docs/dg/dev/architecture/api-platform/security.html
 ---
@@ -39,6 +41,43 @@ When a request includes an `Authorization: Bearer <token>` header, the following
 
 If no `Authorization` header is present, the request proceeds as unauthenticated. Resources that require authentication must enforce it using security expressions.
 
+### Resolving the user behind a token
+
+For tokens issued to Back Office and merchant users, the Backend API also resolves the user record behind the token and makes it the acting user of the request. Business rules that depend on the current user then apply as they do in the Back Office and the Merchant Portal. With Persistent ACL enabled for the Backend API, merchant users are scoped to their merchant the way the Merchant Portal does, and Back Office users are not scoped. For the setup, see [Integrate Persistent ACL for merchant API endpoints](/docs/integrations/spryker-api/authenticating-and-authorization/integrate-persistent-acl-for-merchant-api-endpoints.html).
+
+{% info_block warningBox "API Platform only" %}
+
+Resolving the user behind a token is a feature of the API Platform integration and does not exist for the legacy Glue API. Legacy Glue resources run without an acting user: the token data is available as `GlueRequestTransfer.requestUser` only, current-user business rules do not apply, and Persistent ACL cannot scope them.
+
+{% endinfo_block %}
+
+By default, the user is looked up by the `id_user` claim of the token. Only active users qualify: a token of a deactivated or deleted user, or one that resolves to no single user, is rejected with `401` and the error code `003` before the resource is reached.
+
+Tokens issued by a third-party identity provider may not carry `id_user`. To resolve the user from other claims, implement `\Spryker\Shared\UserExtension\Dependency\Plugin\UserIdentityCriteriaExpanderPluginInterface` and register the plugin in `UserDependencyProvider::getUserIdentityCriteriaExpanderPlugins()` of the Glue layer. The plugin receives the decoded claims and maps them onto the user criteria; the default `id_user` lookup applies only when no plugin adds an identifying condition.
+
+```php
+<?php
+
+namespace Pyz\Glue\User\Plugin\User;
+
+use Generated\Shared\Transfer\UserCriteriaTransfer;
+use Spryker\Shared\UserExtension\Dependency\Plugin\UserIdentityCriteriaExpanderPluginInterface;
+
+class SubjectClaimUserIdentityCriteriaExpanderPlugin implements UserIdentityCriteriaExpanderPluginInterface
+{
+    public function expand(array $identityClaims, UserCriteriaTransfer $userCriteriaTransfer): UserCriteriaTransfer
+    {
+        if (!isset($identityClaims['sub'])) {
+            return $userCriteriaTransfer;
+        }
+
+        $userCriteriaTransfer->getUserConditionsOrFail()->addUsername($identityClaims['sub']);
+
+        return $userCriteriaTransfer;
+    }
+}
+```
+
 ### Public by default
 
 The default security configuration grants `PUBLIC_ACCESS` to all paths. This means all endpoints are publicly accessible unless a resource explicitly defines a `security` expression. This approach lets you selectively protect resources rather than maintaining a global allowlist.
@@ -46,6 +85,12 @@ The default security configuration grants `PUBLIC_ACCESS` to all paths. This mea
 ## Security expressions
 
 Security expressions are the primary mechanism for protecting API resources. They use [Symfony's ExpressionLanguage](https://symfony.com/doc/current/security/expressions.html) and are evaluated at different stages of request processing.
+
+{% info_block warningBox "API Platform only" %}
+
+The `security` key of the YAML resource schemas, including expressions like `is_granted('ROLE_MERCHANT_USER') or is_granted('ROLE_BACK_OFFICE_USER')`, is evaluated by the API Platform integration only. Resources of the legacy Glue API have no `security` key; protect them with scopes and route rules instead, as described in [Use Backend API authorization scopes](/docs/integrations/spryker-api/authenticating-and-authorization/backend-api/use-backend-api-authorization-scopes.html) and [Create protected Backend API endpoints](/docs/integrations/spryker-api/authenticating-and-authorization/backend-api/create-protected-backend-api-endpoints.html).
+
+{% endinfo_block %}
 
 ### Resource-level security
 
@@ -89,6 +134,27 @@ resource:
 ```
 
 Operation-level security overrides resource-level security for that specific operation.
+
+{% info_block warningBox "Declare security on the resource" %}
+
+Bearer token validation runs only for resources that declare a `security` expression at the resource level. If only the operations carry expressions, an anonymous request skips authentication and is answered with `403` instead of `401`. When the operations of a resource need different roles, declare the union at the resource level and narrow it per operation:
+
+```yaml
+resource:
+  name: Reports
+  shortName: reports
+  security: "is_granted('ROLE_MERCHANT_USER') or is_granted('ROLE_BACK_OFFICE_USER')"
+
+  operations:
+    - type: Get
+      security: "is_granted('ROLE_MERCHANT_USER') or is_granted('ROLE_BACK_OFFICE_USER')"
+    - type: Delete
+      security: "is_granted('ROLE_BACK_OFFICE_USER')"
+```
+
+When each audience gets its own routes, prefer one resource per audience with a single resource-level role instead of narrowing per operation. The merchant profile resources follow this pattern: `merchant-profile` (`/merchant-profile`) declares `is_granted('ROLE_MERCHANT_USER')`, and `merchant-profiles` (`/merchant-profiles/{merchantReference}`) declares `is_granted('ROLE_BACK_OFFICE_USER')`; each resource then also has its own JSON:API type.
+
+{% endinfo_block %}
 
 ### Post-denormalize security
 
@@ -171,7 +237,12 @@ When a JWT token is validated, OAuth scopes are automatically mapped to Symfony 
 | `read` | `ROLE_READ` |
 | `write` | `ROLE_WRITE` |
 | `admin` | `ROLE_ADMIN` |
+| `customer` | `ROLE_CUSTOMER` |
+| `back-office-user` | `ROLE_BACK_OFFICE_USER` |
+| `merchant-user` | `ROLE_MERCHANT_USER` |
 | `{custom_scope}` | `ROLE_{CUSTOM_SCOPE}` |
+
+The scope name is uppercased and hyphens become underscores, so the roles match the ones the Back Office and the Merchant Portal use. The `user` scope, which every Back Office and merchant user token carries, is not mapped to a role; instead, every authenticated caller holds `ROLE_USER`. Use `ROLE_BACK_OFFICE_USER` or `ROLE_MERCHANT_USER` to distinguish the two audiences. For how the tokens are obtained, see [Authenticate as a Back Office user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html) and [Authenticate as a merchant user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-merchant-user.html).
 
 All authenticated users automatically receive `ROLE_USER` in addition to their scope-based roles.
 
@@ -269,9 +340,3 @@ Error responses keep the Glue-compatible JSON:API format. The exact response dep
 - **GET requests on resources with `securityGetStatusCode`**: instead of `403`, the response is rewritten to the configured status—typically `404` with the provider's not-found error—so the API does not reveal whether a resource exists for someone else's account.
 
 - **Resources that do not require Bearer tokens** (`securityBearerAuthRequired` not set, for example agent endpoints): an unauthenticated denial returns `401` with the resource's configured error code.
-
-## Next steps
-
-- [Integrate API Platform security](/docs/integrations/spryker-api/authenticating-and-authorization/integrate-api-platform-security.html) - Setup guide
-- [Resource schemas](/docs/integrations/spryker-api/api-platform/resource-schemas.html) - Security expression syntax in schemas
-- [Symfony Security documentation](https://symfony.com/doc/current/security.html) - Full Symfony Security reference

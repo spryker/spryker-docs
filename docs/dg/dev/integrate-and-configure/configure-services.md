@@ -1,10 +1,8 @@
 ---
 title: Configure services
 description: Learn how to set up and configure services that come out of the box of your Spryker shop.
-last_updated: July 30, 2026
+last_updated: Sep 7, 2026
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/configuring-services
-originalArticleId: 5b51acd3-1f5c-477d-995a-d821e88fd5f8
 redirect_from:
   - /docs/scos/dev/the-docker-sdk/202005.0/services.html
   - /docs/scos/dev/the-docker-sdk/201811.0/configuring-services.html
@@ -73,48 +71,66 @@ git clone https://github.com/spryker/docker-sdk.git ./docker
 
 When configuring a service, you need to define its version. The Docker SDK supports the following service versions:
 
-| SERVICE         | ENGINE       | VERSIONS      | ARM SUPPORT | NOTE |
-|-----------------|--------------|---------------|----|---|
-| datab           | postgres     | 17            | &check;     |    |
-|                 |              | 10            | &check;     |    |
-|                 |              | 11            | &check;     |    |
-|                 |              | 12            | &check;     |    |
-|                 | mysql        | 5.7           |             |    |
-|                 |              | 8.4           |             |    |
-|                 |              | mariadb-10.2  | &check;     |    |
-|                 |              | mariadb-10.3  | &check;     |    |
-|                 |              | mariadb-10.4  | &check;     |    |
-|                 |              | mariadb-10.5  | &check;     |    |
-|                 |              | mariadb-10.6  | &check;     |    |
-|                 |              | mariadb-10.11 | &check;     |    |
-|                 |              | mariadb-11.4  | &check;     |    |
-|                 |              | mariadb-11.8  | &check;     |    |
-| broke           | rabbitmq     | 3.7           |             |    |
-|                 |              | 3.8           | &check;     |    |
-|                 |              | 3.9           | &check;     |    |
-|                 |              | 4.1           | &check;     |    |
-| session         | redis        | 5.0           | &check;     |    |
-|                 | valkey       | 7.2           | &check;     |    |
-| key_value_store | redis        | 5.0           | &check;     |    |
-|                 | valkey       | 7.2           | &check;     |    |
-| search          | elastic      | 5.6*          | &check;     | [Policy and Product End of Life Dates](https://www.elastic.co/support/eol) |
-|                 |              | 6.8           | &check;     | [Policy and Product End of Life Dates](https://www.elastic.co/support/eol) |
-|                 |              | 7.6           | &check;     |    |
-|                 |              | 7.10          | &check;     |    |
-|                 | opensearch   | 1.3           | &check;     |  [Support Schedule](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/what-is.html#end-of-support)  |
-| scheduler       | jenkins      | 2.176         |             |    |
-|                 |              | 2.305         | &check;     |    |
-|                 |              | 2.324         | &check;     |    |
-|                 |              | 2.516.3         | &check;     |    |
-| webdriver       | phantomjs    | latest*       |             |    |
-|                 | chromedriver | latest        | &check;      |    |
-| mail_catcher    | mailhog      | 1.0           | &check;     |    |
-| swagger         | swagger-ui   | v3.24         | &check;      |    |
-| kibana          | kibana       | 5.6*          | &check;     |  |
-|                 |              | 6.8           | &check;     |  |
-|                 |              | 7.6           | &check;     |    |
-|                 |              | 7.10          | &check;     |    |
-| blackfire       | blackfire    | latest        | &check;      |      |
+| SERVICE         | ENGINE          | VERSIONS      | ARM SUPPORT | NOTE                                                                                                                 |
+|-----------------|-----------------|---------------|-------------|----------------------------------------------------------------------------------------------------------------------|
+| database        | postgres        | 9.6*          | &check;     |                                                                                                                      |
+|                 |                 | 10            | &check;     |                                                                                                                      |
+|                 |                 | 11            | &check;     |                                                                                                                      |
+|                 |                 | 12            | &check;     |                                                                                                                      |
+|                 |                 | 17            | &check;     |                                                                                                                      |
+|                 | mysql           | 5.7           |             |                                                                                                                      |
+|                 |                 | 8.4           |             |                                                                                                                      |
+|                 |                 | mariadb-10.2  | &check;     | [MariaDB server release dates](https://endoflife.date/mariadb)                                                       |
+|                 |                 | mariadb-10.3  | &check;     | [MariaDB server release dates](https://endoflife.date/mariadb)                                                       |
+|                 |                 | mariadb-10.4  | &check;     |                                                                                                                      |
+|                 |                 | mariadb-10.5  | &check;     |                                                                                                                      |
+|                 |                 | mariadb-10.6  | &check;     |                                                                                                                      |
+|                 |                 | mariadb-10.11 | &check;     |                                                                                                                      |
+|                 |                 | mariadb-11.4  | &check;     |                                                                                                                      |
+|                 |                 | mariadb-11.8  | &check;     |                                                                                                                      |
+| broker          | rabbitmq        | 3.7           |             |                                                                                                                      |
+|                 |                 | 3.8           | &check;     |                                                                                                                      |
+|                 |                 | 3.9           | &check;     |                                                                                                                      |
+|                 |                 | 3.10          | &check;     |                                                                                                                      |
+|                 |                 | 3.11          | &check;     |                                                                                                                      |
+|                 |                 | 3.12          | &check;     |                                                                                                                      |
+|                 |                 | 3.13          | &check;     |                                                                                                                      |
+|                 |                 | 4.1           | &check;     |                                                                                                                      |
+|                 |                 | 4.2           | &check;     |                                                                                                                      |
+| session         | redis           | 5.0*          | &check;     |                                                                                                                      |
+|                 |                 | 6.2           | &check;     |                                                                                                                      |
+|                 | valkey          | 7.2           | &check;     |                                                                                                                      |
+| key_value_store | redis           | 5.0*          | &check;     |                                                                                                                      |
+|                 |                 | 6.2           | &check;     |                                                                                                                      |
+|                 | valkey          | 7.2           | &check;     |                                                                                                                      |
+| search          | elastic         | 5.6*          | &check;     | [Policy and Product End of Life Dates](https://www.elastic.co/support/eol)                                           |
+|                 |                 | 6.8           | &check;     | [Policy and Product End of Life Dates](https://www.elastic.co/support/eol)                                           |
+|                 |                 | 7.6           | &check;     |                                                                                                                      |
+|                 |                 | 7.10          | &check;     |                                                                                                                      |
+|                 | opensearch      | 1.3           | &check;     | [Support Schedule](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/what-is.html#end-of-support) |
+|                 |                 | 2.19          | &check;     | [Support Schedule](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/what-is.html#end-of-support) |
+|                 |                 | 3.5           | &check;     | [Support Schedule](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/what-is.html#end-of-support) |
+| scheduler       | jenkins         | 2.176         |             |                                                                                                                      |
+|                 |                 | 2.305         | &check;     |                                                                                                                      |
+|                 |                 | 2.324         | &check;     |                                                                                                                      |
+|                 |                 | 2.401         | &check;     |                                                                                                                      |
+|                 |                 | 2.442         | &check;     |                                                                                                                      |
+|                 |                 | 2.488         | &check;     |                                                                                                                      |
+|                 |                 | 2.492.3       | &check;     |                                                                                                                      |
+|                 |                 | 2.516.3       | &check;     |                                                                                                                      |
+|                 |                 | 2.555.1       | &check;     |                                                                                                                      |
+| webdriver       | phantomjs       | latest*       |             |                                                                                                                      |
+|                 | chromedriver    | latest        | &check;     |                                                                                                                      |
+| mail_catcher    | mailhog         | 1.0           | &check;     |                                                                                                                      |
+|                 | mailpit         | 1.22          | &check;     |                                                                                                                      |
+|                 |                 | latest        | &check;     |                                                                                                                      |
+| swagger         | swagger-ui      | v3.24         | &check;     |                                                                                                                      |
+| kibana          | kibana          | 5.6*          | &check;     | [Policy and Product End of Life Dates](https://www.elastic.co/support/eol)                                           |
+|                 |                 | 6.8           | &check;     | [Policy and Product End of Life Dates](https://www.elastic.co/support/eol)                                           |
+|                 |                 | 7.6           | &check;     |                                                                                                                      |
+| redis-gui       | redis-commander | 0.8.0*        | &check;     |                                                                                                                      |
+|                 |                 | 0.9.0         | &check;     |                                                                                                                      |
+| blackfire       | blackfire       | latest        | &check;     |                                                                                                                      |
 
 
 ## Database services
@@ -127,11 +143,11 @@ You can switch to MySQL or PostgreSQL as described in the following sections.
 
 [MariaDB](https://mariadb.org/) is a community-developed, commercially supported fork of the [MySQL](https://dev.mysql.com/doc/) relational database management system.
 
-For more details, see [MariaDB knowledge base](https://mariadb.com/kb/en/).
+For more details, see [MariaDB documentation](https://mariadb.com/docs?q=en).
 
 {% info_block infoBox "Default service" %}
 
-MariaDB is provided as a service by default. You may only need to use this configuration if you are running an older version of the Docker SDK or if you've previously switched to another database engine.
+MariaDB is provided as a service by default. You may only need to use this configuration if you are running an older version of the Docker SDK or if you have previously switched to another database engine.
 
 {% endinfo_block %}
 
@@ -232,7 +248,7 @@ docker/sdk up --build --data
 For more information, see the following documents:
 
 - [Configure Elasticsearch](/docs/pbc/all/search/{{site.version}}/base-shop/tutorials-and-howtos/configure-elasticsearch.html)—describes ElastciSearch configuration in Spryker.
-- [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)—provides detailed information about Elasticsearch.
+- [Elasticsearch documentation](https://www.elastic.co/docs/reference/elasticsearch)—provides detailed information about Elasticsearch.
 
 ### Configure Elasticsearch
 
@@ -251,7 +267,7 @@ services:
 
 [Kibana](https://www.elastic.co/kibana) is an open-source analytics and visualization platform designed to work with Elasticsearch. You use Kibana to search, view, and interact with data stored in Elasticsearch indices. You can easily perform advanced data analysis and visualize your data in a variety of charts, tables, and maps.
 
-For more information, see [Kibana documentation](https://www.elastic.co/guide/en/kibana/current/index.html).
+For more information, see [Kibana documentation](https://www.elastic.co/docs/get-started/the-stack).
 
 In Docker SDK, Kibana UI is provided as a service by default.
 
@@ -278,7 +294,7 @@ echo "127.0.0.1 {custom_endpoint}" | sudo tee -a /etc/hosts
 
 ## RabbitMQ
 
-[RabbitMQ](https://www.rabbitmq.com/) is a messaging broker—an intermediary for messaging. It gives your applications a common platform to send and receive messages and your messages a safe place to live until received.
+[RabbitMQ](https://www.rabbitmq.com/) is a messaging broker — an intermediary for messaging. It gives your applications a common platform to send and receive messages and your messages a safe place to live until received.
 
 ### Configure RabbitMQ
 
@@ -297,7 +313,7 @@ services:
 
 ## Swagger UI
 
-[Swagger UI](https://swagger.io/tools/swagger-ui/) allows anyone—be it your development team or your end consumers—to visualize and interact with the API's resources without having any of the implementation logic in place. It's automatically generated from your OpenAPI (formerly known as Swagger) Specification, with the visual documentation making it easy for backend implementation and client-side consumption.
+[Swagger UI](https://swagger.io/open-source/swagger-ui/) allows anyone — be it your development team or your end consumers — to visualize and interact with the API's resources without having any of the implementation logic in place. It is automatically generated from your OpenAPI (formerly known as Swagger) Specification, with the visual documentation making it easy for backend implementation and client-side consumption.
 
 For more details, see [Swagger UI documentation](https://swagger.io/docs/open-source-tools/swagger-ui/usage/installation/).
 
@@ -305,7 +321,7 @@ In Docker SDK, Swagger UI is provided as a service by default.
 
 ### Rest API Reference in Spryker
 
-Spryker provides the basic functionality to generate [OpenApi schema specification](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md) for REST API endpoints. This document provides an overview of REST API endpoints. For each endpoint, you can find the URL, REST request parameters as well as the appropriate request and response data formats.
+Spryker provides the basic functionality to generate [OpenApi schema specification](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/2.0.md) for REST API endpoints. This document provides an overview of REST API endpoints. For each endpoint, you can find the URL, REST request parameters as well as the appropriate request and response data formats.
 
 ### Configure Swagger UI
 
@@ -332,7 +348,7 @@ echo "127.0.0.1 {custom_endpoint}" | sudo tee -a /etc/hosts
 
 [Redis](https://redis.io) is an open-source (BSD licensed), in-memory data structure store used as a database, cache, and message broker. It supports data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs, geospatial indexes with radius queries, and streams.
 
-For more information, see [Redis documentation](https://redis.io/documentation).
+For more information, see [Redis documentation](https://redis.io/docs/latest/).
 
 ### Configure Redis
 
@@ -349,7 +365,7 @@ services:
 
 ## Redis GUI
 
-[Redis Commander](http://joeferner.github.io/redis-commander/) is a web management tool that provides a graphical user interface to access Redis databases and perform basic operations like view keys as a tree, view CRUD keys, or import and export databases.
+[Redis Commander](https://joeferner.github.io/redis-commander/) is a web management tool that provides a graphical user interface to access Redis databases and perform basic operations like view keys as a tree, view CRUD keys, or import and export databases.
 
 ### Configure Redis GUI
 
@@ -384,7 +400,7 @@ With the MailHog service, developers can do the following:
 
 By default, the following applies:
 
-- `http://mail.demo-spryker.com/` is used to see incoming emails.
+- `http://mail.spryker.local/` is used to see incoming emails.
 - Login is not required.
 
 {% endinfo_block %}
@@ -424,7 +440,7 @@ To enable Blackfire, follow these steps:
 
 ```yaml
 image:
-    tag: spryker/php:7.4 # Use the same tag you had in `image`
+    tag: spryker/php:8.5 # Use the same tag you had in `image`
     php:
         ...
         enabled-extensions:
@@ -446,7 +462,7 @@ services:
 
 #### Alternative configuration
 
-Use the following configuration if you are going to change server or client details often or if you don't want to define them in your deploy file.
+Use the following configuration if you are going to change server or client details often or if you do not want to define them in your deploy file.
 
 To enable Blackfire, follow these steps:
 
@@ -454,7 +470,7 @@ To enable Blackfire, follow these steps:
 
 ```yaml
 image:
-    tag: spryker/php:7.4 # Use the same tag you had in `image`
+    tag: spryker/php:8.5 # Use the same tag you had in `image`
     php:
         ...
         enabled-extensions:
@@ -535,7 +551,7 @@ image:
 
 
 
-3. Submit an infrastructure change request via the [Support Portal](/docs/about/all/support/using-the-support-portal.html). Set up a Change Request for existing Parameter Store values and request your values to be set for the following parameters:
+3. Submit an infrastructure change request via the [Support Hub](/docs/about/all/support/using-the-support-hub.html). Set up a Change Request for existing Parameter Store values and request your values to be set for the following parameters:
 - NEWRELIC_LICENSE
 - NEWRELIC_ACCOUNT_ID
 - NEWRELIC_INSIGHTS_KEY
@@ -547,7 +563,7 @@ Once New Relic is enabled, in the New Relic dashboard, you may see either `compa
 
 {% info_block infoBox %}
 
-If you update the name of an application, [contact support](/docs/about/all/support/using-the-support-portal.html) to update the changes in your APM.
+If you update the name of an application, [contact support](/docs/about/all/support/using-the-support-hub.html) to update the changes in your APM.
 
 {% endinfo_block %}
 
@@ -869,7 +885,7 @@ vendor/bin/console newrelic:record-deployment <AppName>
 ```
 
 where `AppName` corresponds to the preconfigured in NewRelicEnv::NEW_RELIC_APPLICATION_ID_ARRAY.
-For more details, see [Upgrade the Monitoring module](/docs/scos/dev/module-migration-guides/migration-guide-monitoring.html)
+For more details, see [Upgrade the Monitoring module](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/upgrade-modules/upgrade-the-monitoring-module.html)
 
 ## Webdriver
 
@@ -877,7 +893,7 @@ PhantomJS is provided as a webdriver service by default, but you can switch to C
 
 ### ChromeDriver
 
-[ChromeDriver](https://chromedriver.chromium.org/) is a thin wrapper on WebDriver and a [Chromium](https://chromedriver.chromium.org/) headless browser. It is used for automating web page interaction, JavaScript execution, and other testing-related activities. It provides full-control API to make end-to-end testing flexible and comfortable.
+[ChromeDriver](https://developer.chrome.com/docs/chromedriver/) is a thin wrapper on WebDriver and a [Chromium](https://developer.chrome.com/docs/chromedriver/) headless browser. It is used for automating web page interaction, JavaScript execution, and other testing-related activities. It provides full-control API to make end-to-end testing flexible and comfortable.
 
 #### Configure ChromeDriver
 
@@ -942,7 +958,7 @@ services:
 
 ```yaml
 image:
-    tag: spryker/php:7.4 # the image tag was previously used in `image`
+    tag: spryker/php:8.5 # the image tag was previously used in `image`
     php:
         ...
         enabled-extensions:

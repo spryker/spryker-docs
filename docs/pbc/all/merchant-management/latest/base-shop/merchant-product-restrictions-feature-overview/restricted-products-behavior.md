@@ -14,10 +14,10 @@ On this page, you can find commonly encountered cases of product restrictions be
 <table cellspacing="0">
    <thead>
       <tr>
-         <td>Name</td>
-         <td>Blacklist/Whitelist</td>
-         <td>Description</td>
-         <td>Example</td>
+         <th>Name</th>
+         <th>Blacklist/Whitelist</th>
+         <th>Description</th>
+         <th>Example</th>
       </tr>
    </thead>
    <tbody>

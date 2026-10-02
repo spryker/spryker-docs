@@ -25,5 +25,5 @@ This section contains a collection of integration guides for tools that enhance 
 - [Queue worker signal handling](/docs/dg/dev/integrate-and-configure/configure-queue-worker-signal-handling.html)
 - [Search initialization enhancement](/docs/pbc/all/search/{{site.version}}/base-shop/install-and-upgrade/upgrade-search-initialization.html)
 - [Separate endpoint bootstraps](/docs/dg/dev/integrate-and-configure/integrate-separate-endpoint-bootstraps.html)
-- [Symfony 5](/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-5.html)
+- [Symfony 7.4](/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-7.html)
 - [Arm architecture (M1 chip)](/docs/dg/dev/integrate-and-configure/switch-to-arm-architecture-m1-chip.html)

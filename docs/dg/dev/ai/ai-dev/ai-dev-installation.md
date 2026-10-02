@@ -1,17 +1,11 @@
 ---
 title: Installation
 description: Install the Spryker AI Dev SDK — skills, agents, rules, and the MCP server — in Claude Code or in another AI assistant
-last_updated: Aug 20, 2026
+last_updated: Aug 24, 2026
 label: early-access
 keywords: ai, ai-dev, installation, install, setup, claude, claude code, cursor, windsurf, copilot, mcp, skills, agents
 template: howto-guide-template
 ---
-
-{% info_block warningBox "Experimental module" %}
-
-The AiDev module is experimental and not stable. There is no backward compatibility promise for this module. We welcome your feedback and contributions as we continue to develop and improve this module.
-
-{% endinfo_block %}
 
 {% info_block warningBox "Warning" %}
 

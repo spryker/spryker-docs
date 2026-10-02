@@ -2,7 +2,7 @@
 title: Manage Multi-Factor Authentication using Glue API
 description: Learn how to create and implement your own Multi-Factor Authentication method in Spryker.
 template: howto-guide-template
-last_updated: Aug 22, 2025
+last_updated: Sep 22, 2026
 related:
   - title: Multi-Factor Authentication Feature overview
     link: docs/pbc/all/multi-factor-authentication/latest/multi-factor-authentication.html
@@ -15,7 +15,7 @@ related:
 ---
 
 
-Spryker's Glue API supports Multi-Factor Authentication (MFA) to enhance security for sensitive operations performed by authenticated customers across all API types.
+Spryker's Glue API supports Multi-Factor Authentication (MFA) to enhance security for sensitive operations performed by authenticated customers, Back Office users, and merchant users across all API types.
 
 ## MFA Enforcement in Glue API
 
@@ -41,7 +41,16 @@ By default, the following Glue API endpoints are protected by MFA:
   - order-payments
 - Glue Backend API: warehouse-user-assignments
 
-To customize which endpoints are protected by MFA, see to [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/latest/install-multi-factor-authentication-feature#configure-protected-routes-and-forms-for-customers).
+To customize which endpoints are protected by MFA, see [Configure protected routes and forms for Storefront API](/docs/pbc/all/multi-factor-authentication/latest/install-multi-factor-authentication-feature.html#configure-protected-routes-and-forms-for-storefront-api) and [Configure protected resources for Backend API](/docs/pbc/all/multi-factor-authentication/latest/install-multi-factor-authentication-feature.html#configure-protected-resources-for-backend-api).
+
+## Manage MFA using the API
+
+Customers manage their MFA methods through the Storefront API and the Glue REST API:
+- [Retrieve MFA methods](/docs/pbc/all/multi-factor-authentication/latest/manage-using-glue-api/glue-api-retrieve-mfa-methods.html)
+- [Activate and deactivate MFA](/docs/pbc/all/multi-factor-authentication/latest/manage-using-glue-api/glue-api-activate-and-deactivate-mfa.html)
+- [Authenticate through MFA](/docs/pbc/all/multi-factor-authentication/latest/manage-using-glue-api/glue-api-authenticate-through-mfa.html)
+
+Back Office users and merchant users manage their MFA methods through the Backend API: [Backend API: Manage Multi-Factor Authentication](/docs/pbc/all/multi-factor-authentication/latest/manage-using-glue-api/backend-api-manage-multi-factor-authentication.html). Back Office users and merchant users share the same MFA settings, so a method activated through the API, in the Back Office, or in the Merchant Portal applies everywhere.
 
 ## MFA for customers
 

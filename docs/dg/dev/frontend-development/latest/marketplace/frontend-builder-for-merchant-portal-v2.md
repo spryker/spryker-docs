@@ -1,0 +1,215 @@
+---
+title: Frontend builder for the Merchant Portal v2
+description: Learn about the Angular frontend builder that ships with the ZedUi module and builds the Merchant Portal assets for core and project modules.
+keywords: ZedUi, zed-ui, frontend builder, Merchant Portal, Angular, webpack, jest, build, live reload
+last_updated: Oct 1, 2026
+template: howto-guide-template
+related:
+  - title: Building the Merchant Portal frontend
+    link: docs/dg/dev/frontend-development/latest/marketplace/building-the-merchant-portal-frontend.html
+  - title: Upgrade to frontend builder v2 for the Merchant Portal
+    link: docs/dg/dev/upgrade-and-migrate/upgrade-to-frontend-builder-v2-for-merchant-portal.html
+  - title: Extending the Merchant Portal frontend
+    link: docs/dg/dev/frontend-development/latest/marketplace/extending-the-merchant-portal-frontend.html
+---
+
+The Merchant Portal frontend builder compiles the Angular application of the Merchant Portal: the entry points of all Merchant Portal modules, their styles, assets, and tests.
+
+Starting from `spryker/zed-ui` version 4.3.0, the builder ships inside the ZedUi module and lives in `vendor/spryker/zed-ui/src/Spryker/Zed/ZedUi/FrontendBuilder/`. This generation is builder v2. The previous one was copied into every project as `frontend/merchant-portal/` and is gone: projects no longer carry Merchant Portal build tooling of their own.
+
+For the upgrade steps, see [Upgrade to frontend builder v2 for the Merchant Portal](/docs/dg/dev/upgrade-and-migrate/upgrade-to-frontend-builder-v2-for-merchant-portal.html).
+
+## Builder v2 at a glance
+
+|  | Builder v1 (legacy) | Builder v2 |
+| --- | --- | --- |
+| Build tooling in your project | 11 files in `frontend/merchant-portal/`, owned and migrated by hand | 0 files — ships and updates with the ZedUi module |
+| npm dependencies of Merchant Portal modules | a `package.json` per module, kept in sync by hand | one dependency set, declared by ZedUi |
+| `angular.json` and the TypeScript configurations | edited by hand on every core change | reconciled by `npm run mp:update:config`, your own values kept |
+| `@mp/*` path aliases | maintained by hand | generated from the module entry points |
+| Angular | 20 | 22 — 20 still supported |
+| TypeScript | 5 | 6 |
+| Seeing a change in the browser | rebuild + manual page reload | reloaded automatically in watch mode |
+| Sources that lint and tests report on | core and project alike | only the project modules |
+| Project namespaces other than `Pyz` | `angular.json` and the build files edited by hand | one optional `frontend/merchant-portal.settings.mts` |
+
+## What's new
+
+### Ships with the ZedUi module
+
+The build tooling every project used to carry in `frontend/merchant-portal/` is gone from the project tree. The builder is distributed inside the `spryker/zed-ui` composer package, so fixes and improvements arrive with a regular module update — the same way as any other Spryker code.
+
+### One dependency set for every Merchant Portal module
+
+Each Merchant Portal module used to declare its own npm dependencies, and every project pinned the build tooling a second time. ZedUi now declares the whole set — Angular, ng-zorro, `@spryker/*`, and the build-time packages — so the per-module `package.json` files are deleted and the project keeps only what ZedUi declares as peer dependencies. See [Dependencies that come with the module](#dependencies-that-come-with-the-module).
+
+### Configuration reconciled in place, not overwritten
+
+`angular.json` and the TypeScript configurations no longer have to be edited whenever a core module is added, moved, or removed. `npm run mp:update:config` — which `postinstall` runs for you — writes the values that depend on the installation layout and leaves every value you own untouched, including whatever `ng update` or `ng add` wrote. See [Generated configuration](#generated-configuration).
+
+### Angular 22 and TypeScript 6
+
+The builder runs on Angular 22 and TypeScript 6, and keeps accepting Angular and ng-zorro `>=20.3.0 <23.0.0`, so the builder can be adopted before the framework upgrade. See [Angular 20 projects](#angular-20-projects).
+
+### Live reload in watch mode
+
+`npm run mp:build:watch` reloads the open Back Office page after an edited `.ts` or `.less` file, without a dev server or any extra infrastructure. See [Live reload](#live-reload).
+
+### Automatic source layout detection
+
+Nothing configures the module paths: the builder finds the project root and resolves the core and project module paths from it. See [Source layout detection](#source-layout-detection).
+
+### Lint and tests scoped to the project modules
+
+`mp:lint`, `mp:stylelint`, and `mp:test` no longer report on installed code. They cover the modules in `src/Pyz` and in every project namespace you register. See [What lint and tests cover](#what-lint-and-tests-cover).
+
+### Errors that name the file and the next step
+
+Every error the builder raises names the offending path, states the reason in plain language, and says what to do next. An undetectable source layout, for example, names the directory it looked for and tells you to run the command from the project root.
+
+## Requirements
+
+- Node.js 24.15.0 or later. Angular 22 accepts `^22.22.3 || ^24.15.0 || >=26.0.0`, so Node.js 25 is *not* supported even though it satisfies `>=24.15.0`.
+- npm 10 or later.
+- `spryker/zed-ui` 4.3.0 or later.
+
+## Commands
+
+The project runs the builder through the npm workspace named `mp-zed-ui`, and its `mp:*` scripts delegate to it. For the setup and what it does, see [npm workspaces for the frontend builders](/docs/dg/dev/frontend-development/latest/npm-workspaces-for-frontend-builders.html).
+
+All commands are run from the project root:
+
+| Command | What it does |
+| --- | --- |
+| `npm run mp:build` | Development build |
+| `npm run mp:build:watch` | Development build in watch mode, with live reload |
+| `npm run mp:build:production` | Production build |
+| `npm run mp:test` | Jest test suite of the Merchant Portal modules |
+| `npm run mp:lint` | ESLint over the Merchant Portal TypeScript and templates |
+| `npm run mp:stylelint` | Stylelint over the Merchant Portal Less files |
+| `npm run mp:update:config` | Reconciles `angular.json` and the TypeScript configurations; `postinstall` runs it for you |
+
+`mp:stylelint` takes two options: `-f` fixes what is fixable, and `-p <path>` runs over a single file or glob, resolved from the project root:
+
+```bash
+npm run mp:stylelint -- -f
+npm run mp:stylelint -- -p 'src/Pyz/Zed/FooGui/Presentation/Components/**/*.less'
+```
+
+The built assets are written to `public/MerchantPortal/assets/js`.
+
+## Dependencies that come with the module
+
+ZedUi declares the whole npm dependency set of the Merchant Portal, so neither the project nor its Merchant Portal modules declare any of it. `vendor/spryker/zed-ui/package.json` is the source of truth: what it lists in `dependencies` and `devDependencies` comes with the module, and what it lists in `peerDependencies` is what your project provides. In ZedUi 4.3.0, the peer dependencies are `@jest/globals`, `@typescript-eslint/eslint-plugin`, `@typescript-eslint/parser`, `stylelint`, `ts-jest`, `typescript`, and `webpack`. From ZedUi 4.4.0, the module declares these packages itself and has no peer dependencies, so the project declares nothing for the Merchant Portal build.
+
+For the mechanics of that split, see [Where the npm dependencies come from](/docs/dg/dev/frontend-development/latest/npm-workspaces-for-frontend-builders.html#where-the-npm-dependencies-come-from).
+
+## Generated configuration
+
+`angular.json`, `tsconfig.mp.json`, `tsconfig.mp.spec.json`, and `tsconfig.mp.lint.json` contain values that depend on which core modules are installed and on the project module directories, so ZedUi cannot ship them ready-made. `npm run mp:update:config` generates those values instead.
+
+`angular.json` stays at the project root, because the Angular CLI finds it by walking up from the working directory. The three `tsconfig.mp*.json` files are written inside the builder directory, unless the project already keeps a file of that name in its root — in that case the reconciliation works on that file and writes no second copy.
+
+In the `tsconfig.mp*.json` files:
+
+| Value | Owner |
+| --- | --- |
+| `compilerOptions.paths` (`@mp/*`) | generated — added, repointed, and removed as core modules come and go |
+| `include`, `files` | generated — the core and project globs, and the test setup file |
+| everything else (`compilerOptions`, `angularCompilerOptions`, `exclude`, `extends`) | yours |
+
+In `angular.json`, inside the `merchant-portal` project:
+
+| Value | Owner |
+| --- | --- |
+| `build.options.customWebpackConfig.path`, `build.options.indexTransform` | generated — the builder entry points |
+| `build.options.outputPath`, `build.options.baseHref` | generated from the builder settings |
+| `build.options.tsConfig`, `test.options.tsConfig`, `test.options.config` | generated — the files above, and the packaged Jest configuration |
+| `build.options.assets` entries rooted at the core directory, and the core entry of `build.options.styles` | generated — your own entries are kept |
+| `test.options.zoneless` | generated as `false`; `@angular-builders/jest` 22 defaults it to `true`, which runs the suite without zone.js change detection |
+| everything else — `index`, `main`, `polyfills`, `fileReplacements`, `budgets`, optimization flags, your assets and styles | yours |
+
+Because the reconciliation happens in place rather than as a rewrite, whatever `ng update` or `ng add` writes into `angular.json` survives it. A value the builder *does* generate belongs to it, so a hand edit is corrected on the next run.
+
+Your Merchant Portal project in `angular.json` has to be named `merchant-portal`, unless it is the only project in the file.
+
+## Source layout detection
+
+The builder resolves every path from the project root, which it finds by walking up from the working directory until it sees `package-lock.json`. It then checks that the Spryker modules are installed in `vendor/spryker` and resolves the module paths:
+
+| Modules | Path |
+| --- | --- |
+| Core modules | `vendor/spryker` |
+| Project modules | `src/Pyz/Zed` |
+
+Nothing has to be configured for this. A project whose modules live outside `src/Pyz` registers them in the [project-level builder settings](#project-level-builder-settings).
+
+## Project-level builder settings
+
+The legacy builder was configured by editing `angular.json` and the files under `frontend/merchant-portal/`, which the project owned entirely. In v2, project overrides live in a single optional file, `frontend/merchant-portal.settings.mts`. When the file exists, the builder loads it automatically; when it does not, the defaults apply.
+
+The file exports the result of `defineConfig()`, which merges your overrides into the packaged defaults.
+
+If your project keeps Merchant Portal modules in a namespace other than `Pyz`, register the namespace in `paths.projectModulesDirectories`. You can use the custom namespace together with `Pyz` or instead of it:
+
+- To keep `src/Pyz/Zed` and add the custom namespace, add an entry with a new name, such as `acme`. The builder scans the custom namespace after `src/Pyz/Zed`, and builds, lints, and tests both. When both contain a module with the same entry point name, the entry point of the custom namespace wins.
+- To use only the custom namespace, set the `pyz` entry to it. The custom namespace then replaces `src/Pyz/Zed`.
+
+```ts
+// frontend/merchant-portal.settings.mts
+import { defineConfig } from '../vendor/spryker/zed-ui/src/Spryker/Zed/ZedUi/FrontendBuilder/settings.mts';
+
+export default defineConfig({
+    paths: {
+        projectModulesDirectories: {
+            // Adds the custom namespace; src/Pyz/Zed stays a project modules directory.
+            acme: './src/Acme/Zed',
+            // Alternatively, replace src/Pyz/Zed with the custom namespace:
+            // pyz: './src/Acme/Zed',
+        },
+    },
+});
+```
+
+Registering a namespace does not move the Angular application files: `main.ts`, `polyfills.ts`, `styles.less`, and the environments stay in `src/Pyz/Zed/ZedUi/Presentation/Components`. If you replace `src/Pyz/Zed`, or keep the ZedUi module in the custom namespace, also set `paths.projectApplicationDirectory`, for example, to `./src/Acme/Zed/ZedUi/Presentation/Components`.
+
+Projects may override:
+
+- `paths.projectModulesDirectories` — the directories the builder scans for project modules: their `entry.ts` files, assets, stylesheets, and specs. An entry named `pyz` replaces the default directory; a new name adds a directory, scanned after the default one. When two directories contain an entry point of the same name, the later one wins.
+- `paths.projectApplicationDirectory` — the directory holding the Angular application files (`index.html`, `main.ts`, `polyfills.ts`, `styles.less`, `environments/`), `src/Pyz/Zed/ZedUi/Presentation/Components` by default.
+
+All other settings are fixed and inherited from the packaged defaults.
+
+The registered directories flow into everything the builder generates: `angular.json` receives an asset root per directory and points `main`, `polyfills`, and `styles` at the application directory; the TypeScript configurations include the new sources; and `mp:lint`, `mp:stylelint`, and `mp:test` cover them. Run `npm run mp:update:config` after changing the file so the configurations are reconciled.
+
+{% info_block warningBox "Note" %}
+
+`frontend/merchant-portal.settings.mts` is executed by Node.js directly via type stripping, so it must use only erasable TypeScript syntax: type annotations are fine, but `enum`, `namespace`, and constructor parameter properties fail at runtime.
+
+{% endinfo_block %}
+
+## What lint and tests cover
+
+`mp:lint`, `mp:stylelint`, and `mp:test` report on the project modules. The core modules arrive in `vendor/`. They are installed code, not the project's to report on, so only `src/Pyz` and the directories registered in `paths.projectModulesDirectories` are covered.
+
+Project-level lint configuration is picked up from the project root when present: `eslint.config.mp.mjs` replaces the packaged ESLint configuration, and `.stylelintrc.mp.js` replaces the packaged Stylelint configuration. Without them, the configurations shipped in the module are used.
+
+## Live reload
+
+`npm run mp:build:watch` writes a build manifest next to the bundles and injects a small polling client, so an edited `.ts` or `.less` file reloads the open Back Office page. Production and plain development builds contain neither the client nor the manifest.
+
+Twig templates are *not* watched: Zed caches them server-side, so a browser reload alone would not show the change.
+
+## Module entry points and path aliases
+
+Every Merchant Portal module has an `entry.ts` in `Presentation/Components/`, which the builder collects as a webpack entry, and an `mp.public-api.ts` in the module root, which is what other modules import. The builder generates a `@mp/<module>` path alias per core module out of these, plus `@mp/polyfills` for the polyfills file — so a module imports its neighbours as `@mp/zed-ui` or `@mp/gui-table` rather than by path.
+
+## Angular 20 projects
+
+ZedUi accepts Angular and ng-zorro `>=20.3.0 <23.0.0`, so a project that has not moved to Angular 22 keeps working. The `@spryker/*` packages declare their ranges as `^old || ^new` for the same reason.
+
+{% info_block warningBox "Pin the @spryker/* packages on Angular 20" %}
+
+npm does not backtrack on peer conflicts — it selects the highest version satisfying a range and then fails if the peers do not line up — so an unpinned install on Angular 20 can resolve the new major and abort with `ERESOLVE`. Pin each `@spryker/*` package to its old major explicitly. A blanket `^3` is **wrong**: `actions.confirmation`, `datasource.dependable`, `datasource.trigger`, `datasource.trigger.change`, `datasource.trigger.input`, and `table.column.button-action` are on the `^2.x` line.
+
+{% endinfo_block %}

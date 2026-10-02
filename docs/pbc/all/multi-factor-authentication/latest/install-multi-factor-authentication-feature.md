@@ -2,7 +2,7 @@
 title: Install the Multi-Factor Authentication feature
 description: This document describes how to install the Multi-Factor Authentication (MFA) feature in your Spryker project.
 template: feature-integration-guide-template
-last_updated: Aug 6, 2026
+last_updated: Sep 22, 2026
 redirect_from:
   - /docs/pbc/all/multi-factor-authentication/202505.0/install-multi-factor-authentication-feature.html
 ---
@@ -313,11 +313,13 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 ```
 
 
-### Configure protected routes for Backend API
+### Configure protected resources for Backend API
 
-Only resource routes are supported for MFA protection. Custom routes defined via `RouteProviderPlugins` can't be protected with MFA.
+List the Backend API resources whose `POST`, `PATCH`, and `DELETE` requests require a valid `X-MFA-Code` header when the user has an activated MFA method. Use the resource name: for an API Platform resource, its `shortName`—for example, `companies`; for a legacy Backend API resource, its resource type—for example, `warehouse-user-assignments`. `GET` requests are never checked.
 
-For more information about Glue Backend API resources, see [Create backend resources](/docs/integrations/spryker-api/backend-api/developing-apis/create-backend-resources.html).
+Only resources are supported for MFA protection. Custom routes defined via `RouteProviderPlugins` can't be protected with MFA.
+
+For more information about Backend API resources, see [Create backend resources](/docs/integrations/spryker-api/backend-api/developing-apis/create-backend-resources.html).
 
 **src/Pyz/Glue/MultiFactorAuth/MultiFactorAuthConfig.php**
 
@@ -581,12 +583,7 @@ Enable the following behaviors by registering the plugins:
 | MultiFactorAuthActivateResourcePlugin                     | Triggers code sending the provided MFA method to be activated for Glue REST API.                                                   |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueApplication\RestApi                           |
 | MultiFactorAuthDeactivateResourcePlugin                   | Deactivates the provided MFA method for Glue REST API.                                                                             |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueApplication\RestApi                           |
 | MultiFactorAuthTypeVerifyResourcePlugin                   | Verifies MFA code and activates the provided MFA method for Glue REST API.                                                         |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueApplication\RestApi                           |
-| MultiFactorAuthBackendApiRequestValidatorPlugin           | Validates requests against MFA for Backend API.                                                                                    |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueBackendApiApplication                         |
-| MultiFactorAuthBackendResourcePlugin                      | Provides available MFA methods for Backend API.                                                                                    |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueBackendApiApplication                         |
-| MultiFactorAuthTriggerBackendResourcePlugin               | Triggers code sending for the provided enabled MFA method for Backend API.                                                         |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueBackendApiApplication                         |
-| MultiFactorAuthTypeActivateBackendResourcePlugin          | Triggers code sending the provided MFA method to be activated for Backend API.                                                     |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueBackendApiApplication                         |
-| MultiFactorAuthTypeDeactivateBackendResourcePlugin        | Deactivates the provided MFA method for Backend API.                                                                               |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueBackendApiApplication                         |
-| MultiFactorAuthTypeVerifyBackendResourcePlugin            | Verifies MFA code and activates the provided MFA method for Backend API.                                                           |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueBackendApiApplication                         |
+| MultiFactorAuthBackendApiRequestValidatorPlugin           | Validates requests to protected legacy Backend API resources against MFA. API Platform resources are validated by the module itself. |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueBackendApiApplication                         |
 | MultiFactorAuthStorefrontApiRequestValidatorPlugin        | Validates requests against MFA for Storefront API.                                                                                 |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueStorefrontApiApplication                      |
 | MultiFactorAuthStorefrontResourcePlugin                   | Provides available MFA methods for Storefront API.                                                                                 |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueStorefrontApiApplication                      |
 | MultiFactorAuthTriggerStorefrontResourcePlugin            | Triggers code sending for the provided enabled MFA method for Storefront API.                                                      |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueStorefrontApiApplication                      |
@@ -911,7 +908,24 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ```
 
 
-### Register plugins For Glue Backend API
+### Set up the Backend API resources
+
+The Backend API MFA resources are implemented using API Platform. Their schemas ship inside the installed module, at `vendor/spryker/multi-factor-auth/resources/api/backend/*.resource.yml`, and are discovered as long as the Glue Backend application serves the `backend` API type—see [Enable API Platform](/docs/integrations/spryker-api/api-platform/enablement.html). No resource plugins need to be registered.
+
+Generate the API resources, then clear the Glue Backend kernel cache:
+
+```bash
+docker/sdk cli "GLUE_APPLICATION=GLUE_BACKEND vendor/bin/glue api:generate"
+rm -rf data/cache/GlueBackend/*
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure the generated resource classes exist, for example `src/Generated/Api/Backend/MultiFactorAuthTypesBackendResource.php`.
+
+{% endinfo_block %}
+
+Requests to protected API Platform resources are validated by the module itself. Register `MultiFactorAuthBackendApiRequestValidatorPlugin` only if the list from [Configure protected resources for Backend API](#configure-protected-resources-for-backend-api) contains legacy Backend API resources:
 
 **src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
 
@@ -919,42 +933,22 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 namespace Pyz\Glue\GlueBackendApiApplication;
 
 use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
-use Spryker\Glue\MultiFactorAuth\Plugin\GlueBackendApiApplication\MultiFactorAuthActivateBackendResourcePlugin;
 use Spryker\Glue\MultiFactorAuth\Plugin\GlueBackendApiApplication\MultiFactorAuthBackendApiRequestValidatorPlugin;
-use Spryker\Glue\MultiFactorAuth\Plugin\GlueBackendApiApplication\MultiFactorAuthTriggerBackendResourcePlugin;
-use Spryker\Glue\MultiFactorAuth\Plugin\GlueBackendApiApplication\MultiFactorAuthTypeActivateBackendResourcePlugin;
-use Spryker\Glue\MultiFactorAuth\Plugin\GlueBackendApiApplication\MultiFactorAuthTypeDeactivateBackendResourcePlugin;
-use Spryker\Glue\MultiFactorAuth\Plugin\GlueBackendApiApplication\MultiFactorAuthTypeVerifyBackendResourcePlugin;
-use Spryker\Glue\MultiFactorAuth\Plugin\GlueBackendApiApplication\MultiFactorAuthTypesBackendResourcePlugin;
 
 class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
 {
-    protected function getResourcePlugins(): array
-    {
-        return [
-            new MultiFactorAuthTypesBackendResourcePlugin(),
-            new MultiFactorAuthTriggerBackendResourcePlugin(),
-            new MultiFactorAuthActivateBackendResourcePlugin(),
-            new MultiFactorAuthTypeVerifyBackendResourcePlugin(),
-            new MultiFactorAuthTypeDeactivateBackendResourcePlugin(),
-            new MultiFactorAuthTypeActivateBackendResourcePlugin(),
-        ];
-    }
-    
     protected function getRequestAfterRoutingValidatorPlugins(): array
     {
         return [
-            // This is a crucial part of the MFA integration as this plugin checks all requests to protected resources and enforces Multi-Factor Authentication validation
             new MultiFactorAuthBackendApiRequestValidatorPlugin(),
         ];
     }
 }
 ```
 
-
 {% info_block warningBox "Verification" %}
 
-Make sure you can authenticate with MFA using Storefront API. For instructions, see [Authenticate through MFA](/docs/pbc/all/multi-factor-authentication/latest/manage-using-glue-api/glue-api-authenticate-through-mfa.html).
+Make sure you can authenticate with MFA using the Storefront API and the Backend API. For instructions, see [Authenticate through MFA](/docs/pbc/all/multi-factor-authentication/latest/manage-using-glue-api/glue-api-authenticate-through-mfa.html) and [Backend API: Manage Multi-Factor Authentication](/docs/pbc/all/multi-factor-authentication/latest/manage-using-glue-api/backend-api-manage-multi-factor-authentication.html).
 
 {% endinfo_block %}
 

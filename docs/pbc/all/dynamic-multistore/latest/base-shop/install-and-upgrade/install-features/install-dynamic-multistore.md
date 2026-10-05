@@ -1,7 +1,7 @@
 ---
 title: Install Dynamic Multistore
 description: Learn how you can integrate the Dynamic Store feature into your Spryker project
-last_updated: Nov 12, 2024
+last_updated: Sep 22, 2026
 template: feature-integration-guide-template
 ---
 

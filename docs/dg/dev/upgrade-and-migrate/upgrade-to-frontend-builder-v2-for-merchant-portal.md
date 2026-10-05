@@ -2,7 +2,7 @@
 title: Upgrade to frontend builder v2 for the Merchant Portal
 description: Learn how to move your project from the Merchant Portal build tooling in the frontend directory to the builder shipped with the ZedUi module, and how to update Angular and TypeScript along the way.
 keywords: ZedUi, zed-ui, frontend builder, Merchant Portal, migration, upgrade, Angular, TypeScript, webpack
-last_updated: Sep 9, 2026
+last_updated: Oct 1, 2026
 template: concept-topic-template
 related:
   - title: Frontend builder for the Merchant Portal v2
@@ -96,7 +96,14 @@ For what this does and how it changes the commands, see [npm workspaces for the 
 
 4. Remove the Merchant Portal dependencies that ZedUi declares now, and keep the ones it declares as peer dependencies. A duplicate declaration in the project pins a second version of the same package, which is how two Angular or two ng-zorro copies end up in one build.
 
-`vendor/spryker/zed-ui/package.json` is the source of truth. Its `dependencies` and `devDependencies` — Angular, ng-zorro, `@spryker/*`, the Angular builders and CLI, `jest-preset-angular` — come with the module and go from your `package.json`. Its `peerDependencies` stay with the project: in ZedUi 4.3.0 they are `@jest/globals`, `@typescript-eslint/eslint-plugin`, `@typescript-eslint/parser`, `stylelint`, `ts-jest`, `typescript`, and `webpack`.
+`vendor/spryker/zed-ui/package.json` is the source of truth. Its `dependencies` and `devDependencies` — Angular, ng-zorro, `@spryker/*`, the Angular builders and CLI, `jest-preset-angular` — come with the module and go from your `package.json`. Its `peerDependencies` stay with the project: in ZedUi 4.3.0 they are `@jest/globals`, `@typescript-eslint/eslint-plugin`, `@typescript-eslint/parser`, `stylelint`, `ts-jest`, `typescript`, and `webpack`. From ZedUi 4.4.0, the module declares these packages itself and has no peer dependencies, so they go from your `package.json` as well.
+
+Everything below is installed automatically through the `mp-zed-ui` workspace and goes from your `package.json`:
+
+- Toolchain: `@angular-builders/custom-webpack`, `@angular-builders/jest`, `@angular-devkit/build-angular`, `@angular-eslint/builder`, `@angular-eslint/eslint-plugin`, `@angular-eslint/eslint-plugin-template`, `@angular-eslint/template-parser`, `@angular/cli`, `@angular/compiler-cli`, `@angular/language-service`, `@types/jest`, `@types/node`, `angular-eslint`, `commander`, `fast-glob`, `jest-environment-jsdom`, `jest-preset-angular`, `postcss-less`, `stylelint-config-standard-less` and, from ZedUi 4.4.0, `@jest/globals`, `@typescript-eslint/eslint-plugin`, `@typescript-eslint/parser`, `stylelint`, `ts-jest`, `typescript`, `typescript-eslint`, `webpack`.
+- Runtime libraries of the Merchant Portal: every `@angular/*` package, every `@spryker/*` UI package, `ng-zorro-antd`, `reflect-metadata`, `rxjs`, `tslib`, `zone.js`. The one exception is a project that stays on Angular 20, which keeps the `@spryker/*` packages pinned — see [Staying on Angular 20](#staying-on-angular-20).
+
+For the full list, see [What you can remove from your package.json](/docs/dg/dev/frontend-development/latest/npm-workspaces-for-frontend-builders.html#what-you-can-remove-from-your-packagejson).
 
 See [Where the npm dependencies come from](/docs/dg/dev/frontend-development/latest/npm-workspaces-for-frontend-builders.html#where-the-npm-dependencies-come-from) for how to check what an installed package comes from.
 
@@ -183,7 +190,7 @@ npm run mp:lint
 npm run mp:stylelint
 ```
 
-In a project, all three cover `src/Pyz` only: the core modules arrive in `vendor/` and are not the project's to report on.
+All three cover the project modules only — `src/Pyz/Zed` and any directory registered in `frontend/merchant-portal.settings.mts`: the core modules arrive in `vendor/` and are not the project's to report on.
 
 Finally, check the Merchant Portal in the browser at `$[local_domain]/security-merchant-portal-gui/login`.
 

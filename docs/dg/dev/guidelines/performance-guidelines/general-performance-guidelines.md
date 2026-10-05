@@ -1,7 +1,7 @@
 ---
 title: General performance guidelines
 description: This guideline explains how to optimize the server-side execution time for your Spryker based projects.
-last_updated: May 15, 2026
+last_updated: Sep 23, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/performance-guidelines
 originalArticleId: 5feb83b8-5196-44f9-8f6a-ffb208a2c162
@@ -100,13 +100,76 @@ $config[\Spryker\Shared\Config\ConfigConstants::ENABLE_WEB_PROFILER] = false;
 
 ## Disable automatic queue creation
 
-During the synchronization part of Publish & Sync, each time the `queue:task:start QUEUE-NAME` command is started, the RabbitMQ client tries to create all the configured queues and exchanges: `\Spryker\Client\RabbitMq\Model\Connection\Connection::__construct`. It takes up to 25% of CPU time per run. The effect becomes more significant for multi-store setups with each additional store.
+Each time the application opens a RabbitMQ connection, the client declares all configured queues, exchanges, and bindings in `\Spryker\Client\RabbitMq\Model\Connection\Connection::__construct`. This happens on every `queue:task:start` and `queue:worker:start` process and on Yves and Glue requests that use the broker. It takes up to 25% of CPU time per run, and the cost grows with each additional store.
 
-For backward compatibility reasons, `RabbitMqEnv::RABBITMQ_ENABLE_RUNTIME_SETTING_UP` is enabled by default in the module configuration class: `\Spryker\Client\RabbitMq\RabbitMqConfig::isRuntimeSettingUpEnabled`. For production environments, we recommend disabling it by setting it to `false` in `config_default.php` or another config file.
+You can disable this behavior and create queues once per deployment instead.
 
-Side effects:
-- The application doesn't try to recreate queues and exchanges "on the fly" while interacting with RabbitMQ. If a queue is deleted, and the application attempts to access it, there will be an exception.
-- The only way to create queues and exchanges to configure RabbitMQ is to run the `console queue:setup` CLI command defined in `\Spryker\Zed\RabbitMq\Communication\Console\QueueSetupConsole`. Make sure to *adjust your deploy scripts* accordingly.
+### Prerequisites
+
+The `RabbitMqEnv::RABBITMQ_ENABLE_runtime_SETTING_UP` setting and the `queue:setup` command are available in `spryker/rabbit-mq` 2.13.0 and later. To check the installed version, use Composer:
+
+```bash
+composer show spryker/rabbit-mq | grep versions
+```
+
+If your version is earlier than 2.13.0, update the module. This is a minor update and is backward compatible:
+
+```bash
+composer update spryker/rabbit-mq
+```
+
+### Disable the setting
+
+The setting is enabled by default for backward compatibility. To disable it, add the following to `config/Shared/config_default.php`:
+
+```php
+use Spryker\Shared\RabbitMq\RabbitMqEnv;
+
+$config[RabbitMqEnv::RABBITMQ_ENABLE_runtime_SETTING_UP] = false;
+```
+
+We recommend disabling the setting in `config_default.php` rather than only for production. This way, a missing `queue:setup` step shows up during development instead of during deployment. For a reference, see [config_default.php in the B2B Demo Marketplace](https://github.com/spryker-shop/b2b-demo-marketplace/blob/82c1e3dfcc41941d44d4324ac73c7c56059f2869/config/Shared/config_default.php#L630).
+
+### Create queues during deployment
+
+With the setting disabled, queues and exchanges exist only after you run the `queue:setup` command. Add the command to your install recipes.
+
+In `config/install/production.yml`, run the command after `configuration:sync` and before the scheduler starts:
+
+```yaml
+sections:
+    configuration:
+        configuration-sync:
+            command: 'vendor/bin/console configuration:sync -vvv --no-ansi'
+
+    scheduler-start:
+        queue-setup:
+            command: 'vendor/bin/console queue:setup'
+        scheduler-setup:
+            command: 'vendor/bin/console scheduler:setup -vvv --no-ansi'
+```
+
+In `config/install/development.yml`, run the command for each store:
+
+```yaml
+queue-setup:
+    command: 'vendor/bin/console queue:setup'
+    stores: true
+```
+
+For a reference, see [production.yml](https://github.com/spryker-shop/b2b-demo-marketplace/blob/82c1e3dfcc41941d44d4324ac73c7c56059f2869/config/install/production.yml#L28-L36) and [development.yml](https://github.com/spryker-shop/b2b-demo-marketplace/blob/82c1e3dfcc41941d44d4324ac73c7c56059f2869/config/install/development.yml#L223-L225) in the B2B Demo Marketplace.
+
+Keep the following in mind:
+
+- Run the command on every deployment, not only once. A module update can add a new queue.
+- If your project runs several stores without Dynamic Store, add `stores: true` to the production entry as well. The command sets up the default connection, which depends on the store context.
+- During development, run `vendor/bin/console queue:setup` after you change the queue configuration or install a module that adds a queue.
+
+{% info_block warningBox "Warning" %}
+
+With the setting disabled, the application does not recreate missing queues. If a queue is deleted and the application tries to access it, an exception is thrown. To restore the queues, run `queue:setup`.
+
+{% endinfo_block %}
 
 ## Disable INFO event logs
 

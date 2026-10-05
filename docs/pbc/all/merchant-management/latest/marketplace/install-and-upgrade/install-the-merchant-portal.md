@@ -1,6 +1,6 @@
 ---
 title: Install the Merchant Portal
-last_updated: Aug 31, 2022
+last_updated: Sep 28, 2026
 description: Learn how you can integrate the Merchant Portal feature into a Spryker B2B Marketplace project.
 draft: true
 template: feature-integration-guide-template

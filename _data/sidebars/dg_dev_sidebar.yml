@@ -45,6 +45,8 @@ entries:
         url: /docs/dg/dev/ci.html
       - title: Post-Installation Configuration
         url: /docs/dg/dev/post-installation-configuration.html
+      - title: Spryker GitHub organizations and repositories
+        url: /docs/dg/dev/spryker-github-organizations-and-repositories.html
   - title: AI
     nested:
       - title: AI Foundation
@@ -536,6 +538,8 @@ entries:
     - title: Zed
       url: /docs/dg/dev/frontend-development/zed/zed-frontend.html
       nested:
+      - title: Frontend builder for the Back Office v2
+        url: /docs/dg/dev/frontend-development/zed/frontend-builder-for-back-office-v2.html
       - title: Custom twig functions for Zed
         url: /docs/dg/dev/frontend-development/zed/custom-twig-functions-for-zed.html
       - title: Overriding Webpack, JS, SCSS for ZED on project level
@@ -967,11 +971,15 @@ entries:
           url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-18.html
         - title: Upgrade to Angular 20
           url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-20.html
+        - title: Upgrade to Angular 22 and later
+          url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-22.html
 
     - title: Upgrade to frontend builder v2 for Yves
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-frontend-builder-v2-for-yves.html
     - title: Upgrade to frontend builder v2 for the Merchant Portal
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-frontend-builder-v2-for-merchant-portal.html
+    - title: Upgrade to frontend builder v2 for the Back Office
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-frontend-builder-v2-for-back-office.html
     - title: Upgrade to Webpack v5
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-webpack-v5.html
     - title: Upgrade to Stylelint 16 and css-loader 6
@@ -993,10 +1001,10 @@ entries:
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-php-85.html
     - title: Upgrade to PHPUnit 11
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-phpunit-11.html
-    - title: Upgrade to Symfony 5
-      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-5.html
     - title: Upgrade to Symfony 6
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-6.html
+    - title: Upgrade to Symfony 7
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-7.html
 
     - title: Upgrade Publish and Sync
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-publish-and-sync.html

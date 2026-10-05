@@ -31,8 +31,8 @@ entries:
         url: /docs/about/all/releases/upcoming-major-module-releases.html
       - title: Security releases
         nested:
-        - title: Security release notes 202608.0
-          url: /docs/about/all/releases/security-releases/security-release-notes-202608.0.html
+        - title: Security release notes 202609.0
+          url: /docs/about/all/releases/security-releases/security-release-notes-202609.0.html
         - title: Security release notes 202606.0
           url: /docs/about/all/releases/security-releases/security-release-notes-202606.0.html
         - title: Security release notes 202603.0
@@ -83,6 +83,10 @@ entries:
           nested:
           - title: Release notes for spryker-php 20260915
             url: /docs/about/all/releases/image-releases/spryker-php/release-notes-spryker-php-20260915.html
+          - title: Release notes for spryker-php 20260908
+            url: /docs/about/all/releases/image-releases/spryker-php/release-notes-spryker-php-20260908.html
+          - title: Release notes for spryker-php 20260820
+            url: /docs/about/all/releases/image-releases/spryker-php/release-notes-spryker-php-20260820.html
           - title: Release notes for spryker-php 20260706
             url: /docs/about/all/releases/image-releases/spryker-php/release-notes-spryker-php-20260706.html
           - title: Release notes for spryker-php 20260625

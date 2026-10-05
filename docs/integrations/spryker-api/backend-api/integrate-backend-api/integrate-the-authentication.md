@@ -1,7 +1,7 @@
 ---
 title: Integrate the authentication
 description: Create an authentication token for the Backend API application in a Spryker project.
-last_updated: Jul 30, 2026
+last_updated: Sep 22, 2026
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-authentication-integration.html
@@ -19,6 +19,7 @@ Install the required features:
 
 | NAME           | VERSION           | INSTALLATION GUIDE |
 | -------------- | ----------------- | ----------------- |
+| Marketplace Merchant (for merchant user authentication only, see step 4) | {{page.release_tag}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 | Backend API Application | {{page.release_tag}} | [Integrate Backend API](/docs/integrations/spryker-api/backend-api/integrate-backend-api/integrate-backend-api.html) |
 
 ## 1) Install the required modules
@@ -402,5 +403,57 @@ grant_type=password&username={user_username}&password={user_password}
 
 Make sure the output contains the 201 response with a valid token and the user can assess protected resources.
 
+
+{% endinfo_block %}
+
+## 4) Optional: Enable merchant user authentication
+
+Back Office users that are assigned to a merchant receive the `merchant-user` scope in their access token when the following plugins are registered. Without them, merchant users authenticate like other Back Office users and receive the `back-office-user` scope only.
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+| MerchantUserTypeOauthScopeProviderPlugin | Provides the `merchant-user` scope for users assigned to a merchant. | | Spryker\Zed\OauthMerchantUser\Communication\Plugin\OauthUserConnector |
+| MerchantUserTypeOauthScopeAuthorizationCheckerPlugin | Executes the authorization check based on the merchant user OAuth scope for legacy Glue routes. | | Spryker\Zed\OauthMerchantUser\Communication\Plugin\OauthUserConnector |
+
+**src/Pyz/Zed/OauthUserConnector/OauthUserConnectorDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\OauthUserConnector;
+
+use Spryker\Zed\OauthMerchantUser\Communication\Plugin\OauthUserConnector\MerchantUserTypeOauthScopeAuthorizationCheckerPlugin;
+use Spryker\Zed\OauthMerchantUser\Communication\Plugin\OauthUserConnector\MerchantUserTypeOauthScopeProviderPlugin;
+use Spryker\Zed\OauthUserConnector\Communication\Plugin\OauthUserConnector\BackofficeUserOauthScopeAuthorizationCheckerPlugin;
+use Spryker\Zed\OauthUserConnector\OauthUserConnectorDependencyProvider as SprykerOauthUserConnectorDependencyProvider;
+
+class OauthUserConnectorDependencyProvider extends SprykerOauthUserConnectorDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\OauthUserConnectorExtension\Dependency\Plugin\UserTypeOauthScopeProviderPluginInterface>
+     */
+    protected function getUserTypeOauthScopeProviderPlugins(): array
+    {
+        return [
+            new MerchantUserTypeOauthScopeProviderPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Zed\OauthUserConnectorExtension\Dependency\Plugin\UserTypeOauthScopeAuthorizationCheckerPluginInterface>
+     */
+    protected function getUserTypeOauthScopeAuthorizationCheckerPlugins(): array
+    {
+        return [
+            new MerchantUserTypeOauthScopeAuthorizationCheckerPlugin(),
+            new BackofficeUserOauthScopeAuthorizationCheckerPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Authenticate with the credentials of a merchant user and decode the access token. Make sure its `scope` claim contains `merchant-user`. With the API Platform integration, the scope is mapped to the `ROLE_MERCHANT_USER` role; see [Authenticate as a merchant user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-merchant-user.html).
 
 {% endinfo_block %}

@@ -1,7 +1,7 @@
 ---
 title: Dynamic Multistore
 description: A list of features that are within Spryker Dynamic Multistore allowing you to create and manage multiple online stores from the Spryker Back Office.
-last_updated: Nov 12, 2024
+last_updated: Sep 22, 2026
 template: concept-topic-template
 related:
    - title: Install Dynamic Multistore
@@ -42,6 +42,18 @@ To define which currencies the customers can you use, you can assign them to the
 
 To define additional store settings in the **Settings** tab.
 When creating a store, you can assign timezone per application or specify a default one.
+
+## Hiding a store from customers
+
+You can hide a store from customers without removing it from the system. This is useful, for example, when you want to prepare a store in advance but keep it unavailable until launch. When a store is hidden, it does not appear on the Storefront or in public Glue APIs, and it is excluded from publish and synchronization, so its data no longer appears in the key-value store (Redis or Valkey).
+
+To hide a store from customers, in the Back Office, go to **Administration&nbsp;<span aria-label="and then">></span> Stores**, and in the store form, clear the **Visible to Customer** checkbox. The **Stores** table also shows the current visibility of each store in the **Visible to Customer** column.
+
+{% info_block infoBox "Info" %}
+
+This setting must be enabled for your project. For details, see [Install Dynamic Multistore](/docs/pbc/all/dynamic-multistore/latest/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html).
+
+{% endinfo_block %}
 
 ## Publishing and synchronizing
 

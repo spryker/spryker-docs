@@ -2,7 +2,7 @@
 title: Upgrade to frontend builder v2 for Yves
 description: Learn how to upgrade your Spryker project from the legacy frontend builder in the frontend directory to the frontend builder v2 shipped with the ShopUi module.
 keywords: ShopUi, shop-ui, frontend builder, Yves, migration, upgrade, webpack, build
-last_updated: Sep 9, 2026
+last_updated: Oct 1, 2026
 template: concept-topic-template
 related:
   - title: Frontend builder for Yves v2
@@ -112,6 +112,12 @@ For what this does and how it changes the commands, see [npm workspaces for the 
 }
 ```
 
+From ShopUi 2.3.0, also add the configuration generation to `postinstall`, so that `npm install` regenerates `tsconfig.yves.json` — see [step 6](#6-verify-tsconfigyvesjson):
+
+```json
+"postinstall": "npm run update:config -w shop-ui"
+```
+
 4. Remove the scripts that no longer exist:
 
 ```json
@@ -123,6 +129,13 @@ For what this does and how it changes the commands, see [npm workspaces for the 
 The parameter overview previously provided by `yves:help` is now available via `npm run yves -- --help`.
 
 5. Remove the Yves build dependencies that ShopUi declares now, and keep the ones it declares as peer dependencies. `vendor/spryker-shop/shop-ui/package.json` is the source of truth for both — see [Where the npm dependencies come from](/docs/dg/dev/frontend-development/latest/npm-workspaces-for-frontend-builders.html#where-the-npm-dependencies-come-from).
+
+From ShopUi 2.3.0, the module declares the whole toolchain itself and has no peer dependencies, so the project declares nothing for the Yves build. Everything below is installed automatically through the `shop-ui` workspace and goes from your `package.json`:
+
+- Toolchain: `@babel/core`, `@babel/plugin-transform-class-properties`, `@babel/plugin-transform-runtime`, `@babel/preset-env`, `@babel/preset-typescript`, `@babel/runtime`, `@colordx/core`, `@jest/globals`, `@jsdevtools/file-path-filter`, `@types/node`, `@typescript-eslint/eslint-plugin`, `@typescript-eslint/parser`, `autoprefixer`, `babel-loader`, `chokidar`, `commander`, `compression-webpack-plugin`, `copy-webpack-plugin`, `css-loader`, `css-minimizer-webpack-plugin`, `eslint`, `fast-glob`, `jest`, `mini-css-extract-plugin`, `postcss`, `postcss-loader`, `postcss-selector-parser`, `sass-embedded`, `sass-loader`, `style-dictionary`, `stylelint`, `stylelint-config-standard-scss`, `ts-jest`, `typescript`, `webpack`, `webpack-merge`.
+- Runtime libraries of the ShopUi components: `autonumeric`, `lodash-es`, `password-validator`.
+
+On ShopUi 2.1 and 2.2, keep the packages the module lists in `peerDependencies`. Either way, `vendor/spryker-shop/shop-ui/package.json` is the source of truth — see [What you can remove from your package.json](/docs/dg/dev/frontend-development/latest/npm-workspaces-for-frontend-builders.html#what-you-can-remove-from-your-packagejson).
 
 Three packages go regardless of that split, because the new builder does not use them at all:
 
@@ -177,13 +190,23 @@ Direct webpack config customizations from `frontend/configs/development.js` or `
 
 ## 6) Verify `tsconfig.yves.json`
 
-The builder reads component path aliases from `tsconfig.yves.json` and requires the `ShopUi` alias to locate the core shared stylesheet. Make sure it's present:
+The builder reads component path aliases from `tsconfig.yves.json` and requires the `ShopUi` alias to locate the core shared stylesheet.
+
+Up to ShopUi 2.2, the file lives at the project root and is maintained by hand. Make sure the alias is present:
 
 ```json
 "paths": {
     "ShopUi/*": ["./vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/*"]
 }
 ```
+
+From ShopUi 2.3.0, the file is generated. Run the generation once, and `postinstall` keeps it current afterwards:
+
+```bash
+npm run update:config -w shop-ui
+```
+
+It writes `tsconfig.yves.json` inside the builder directory with the aliases of every installed module. If the project keeps a `tsconfig.yves.json` in its root, the generation reconciles the aliases and `include` globs in that file instead and writes no second copy, so a root copy can stay. For the ownership split, see [Generated TypeScript configuration](/docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves-v2.html#generated-typescript-configuration).
 
 ## 7) Install and build
 
@@ -428,7 +451,8 @@ The remaining modules only widen their ShopUi constraint.
 - **Sass deprecation warnings are no longer silenced.** The v1 builder suppressed warnings from dependencies; builder v2 shows them and points at the real file. Fix them in your project code instead of suppressing—they become hard errors in future Sass versions. See the base hook mechanism in [Extending components](/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/extending-components.html#extend-base-styles-with-a-base-hook) for the recommended way to extend core component base styles without triggering the `mixed-decls` deprecation.
 - **Legacy style rescue.** Component SCSS files that emit CSS at the top level without being imported from a component entry point are still compiled, with a warning naming the file. Migrate such components by importing their styles from the component's `index.ts`.
 - **Live reload.** `npm run yves:watch` now includes live reload: CSS changes are applied without a page reload, and JavaScript and Twig changes trigger a full reload that preserves scroll position and form state. No extra setup is needed.
-- **Lint scope.** From ShopUi 2.1.0, `npm run yves:lint` and `npm run yves:stylelint` report on the sources the running repository owns. In a project, the core, eco, and feature sources are installed under `vendor/`, so both commands cover `src/Pyz/Yves` only. See [What lint covers](/docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves-v2.html#what-lint-covers).
+- **Type checking.** From ShopUi 2.3.0, `npm run yves:lint` also runs the TypeScript compiler over the Yves TypeScript sources. It is off by default; set `typecheck: true` in `frontend/yves.settings.mts` to enable it. See [Type checking](/docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves-v2.html#type-checking).
+- **Lint scope.** From ShopUi 2.1.0, `npm run yves:lint` and `npm run yves:stylelint` report on the project sources. The core, eco, and feature sources are installed under `vendor/`, so both commands cover only the project sources — `src/Pyz/Yves` and every namespace in `src/` registered in `paths.sources` of `frontend/yves.settings.mts`. See [What lint covers](/docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves-v2.html#what-lint-covers).
 
 ## Example migration
 

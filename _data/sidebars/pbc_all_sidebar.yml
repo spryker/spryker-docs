@@ -940,6 +940,14 @@ entries:
                     nested:
                       - title: Company Account
                         url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html
+                      - title: Companies Backend API
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-glue-api/install-the-companies-backend-api.html
+                      - title: Company Business Units Backend API
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-glue-api/install-the-company-business-units-backend-api.html
+                      - title: Company Business Unit Addresses Backend API
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-glue-api/install-the-company-business-unit-addresses-backend-api.html
+                      - title: Company Roles Backend API
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-glue-api/install-the-company-roles-backend-api.html
                       - title: Customer Account Management
                         url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-glue-api/install-the-customer-account-management-glue-api.html
 
@@ -1072,6 +1080,35 @@ entries:
 
                   - title: Manage customer access to Storefront API resources
                     url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/manage-customer-access-to-glue-api-resources.html
+
+              - title: Manage via Backend API
+                nested:
+                  - title: Customers
+                    nested:
+                      - title: Manage customers
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/backend-api-manage-customers.html
+                      - title: Manage customer addresses
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-addresses.html
+                      - title: Manage customer notes
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-notes.html
+                      - title: Manage customer groups
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-groups.html
+                  - title: Company account
+                    nested:
+                      - title: Manage companies
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/company-account/backend-api-manage-companies.html
+                      - title: Manage company users
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/company-account/backend-api-manage-company-users.html
+                      - title: Manage company business units
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/company-account/backend-api-manage-company-business-units.html
+                      - title: Manage company business unit addresses
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/company-account/backend-api-manage-company-business-unit-addresses.html
+                      - title: Manage company roles
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/company-account/backend-api-manage-company-roles.html
+                      - title: Manage company role permissions
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/company-account/backend-api-manage-company-role-permissions.html
+                  - title: Manage customer access
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/backend-api-manage-customer-access.html
 
               - title: Generate login tokens
                 url: /docs/pbc/all/customer-relationship-management/base-shop/generate-login-tokens.html
@@ -1339,6 +1376,8 @@ entries:
                 url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html
               - title: Authenticate as a Back Office user
                 url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html
+              - title: Authenticate as a merchant user
+                url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-authenticate-as-a-merchant-user.html
               - title: Authenticate as a company user
                 url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html
               - title: Manage company user authentication tokens
@@ -1406,6 +1445,13 @@ entries:
                     url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/upgrade-the-merchantgui-module.html
                   - title: Upgrade the Merchant module
                     url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/upgrade-the-merchant-module.html
+                  - title: Install the Merchants Backend API
+                    url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/install-glue-api/install-the-merchants-backend-api.html
+
+              - title: Manage using Backend API
+                nested:
+                  - title: "Backend API: Manage merchants"
+                    url: /docs/pbc/all/merchant-management/base-shop/manage-using-backend-api/backend-api-manage-merchants.html
 
               - title: Manage in the Back Office
                 url: /docs/pbc/all/merchant-management/base-shop/manage-in-the-back-office/manage-merchants-in-the-back-office.html
@@ -1503,6 +1549,8 @@ entries:
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-feature.html
                       - title: Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature.html
+                      - title: Merchant Profile Backend API
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-profile-backend-api.html
                       - title: Merchant Switcher
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-switcher-feature.html
                       - title: Merchant Switcher + Customer Account Management
@@ -1614,6 +1662,13 @@ entries:
                     url: /docs/pbc/all/merchant-management/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-addresses.html
                   - title: Retrieve merchant opening hours
                     url: /docs/pbc/all/merchant-management/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-opening-hours.html
+
+              - title: Manage via Backend API
+                nested:
+                  - title: Retrieve merchant profiles
+                    url: /docs/pbc/all/merchant-management/marketplace/manage-using-backend-api/backend-api-retrieve-merchant-profiles.html
+                  - title: Update merchant profiles
+                    url: /docs/pbc/all/merchant-management/marketplace/manage-using-backend-api/backend-api-update-merchant-profiles.html
 
               - title: Tutorials and HowTos
                 nested:
@@ -1899,6 +1954,8 @@ entries:
                 url: /docs/pbc/all/multi-factor-authentication/manage-using-glue-api/glue-api-activate-and-deactivate-mfa.html
               - title: Authenticate through MFA
                 url: /docs/pbc/all/multi-factor-authentication/manage-using-glue-api/glue-api-authenticate-through-mfa.html
+              - title: "Backend API: Manage MFA"
+                url: /docs/pbc/all/multi-factor-authentication/manage-using-glue-api/backend-api-manage-multi-factor-authentication.html
 
       - title: Offer Management
         url: /docs/pbc/all/offer-management/offer-management.html
@@ -2320,12 +2377,28 @@ entries:
             nested:
               - title: Recurring Orders feature overview
                 url: /docs/pbc/all/order-experience-management/latest/base-shop/feature-overviews/recurring-orders-feature-overview.html
+              - title: Manage using Backend API
+                nested:
+                  - title: Orders
+                    nested:
+                      - title: Retrieve orders
+                        url: /docs/pbc/all/order-experience-management/latest/base-shop/manage-using-backend-api/orders/backend-api-retrieve-orders.html
+                      - title: Create an order
+                        url: /docs/pbc/all/order-experience-management/latest/base-shop/manage-using-backend-api/orders/backend-api-create-an-order.html
+                      - title: Fire an order event
+                        url: /docs/pbc/all/order-experience-management/latest/base-shop/manage-using-backend-api/orders/backend-api-fire-an-order-event.html
+                      - title: Retrieve order comments
+                        url: /docs/pbc/all/order-experience-management/latest/base-shop/manage-using-backend-api/orders/backend-api-retrieve-order-comments.html
+                      - title: Create an order comment
+                        url: /docs/pbc/all/order-experience-management/latest/base-shop/manage-using-backend-api/orders/backend-api-create-an-order-comment.html
               - title: Install and upgrade
                 nested:
                   - title: Install features
                     nested:
                       - title: Recurring Orders
                         url: /docs/pbc/all/order-experience-management/latest/base-shop/install-and-upgrade/install-features/install-the-recurring-orders-feature.html
+                      - title: Orders Backend API
+                        url: /docs/pbc/all/order-experience-management/latest/base-shop/install-and-upgrade/install-features/install-the-orders-backend-api-feature.html
 
       - title: Payment Service Provider
         url: /docs/pbc/all/payment-service-provider/payment-service-provider.html

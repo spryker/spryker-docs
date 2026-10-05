@@ -1022,6 +1022,8 @@ Enable the following behaviors by registering the plugins:
 | LocaleStoreTableExpanderPlugin | Expands the locale table with a store column. |  | Spryker\Zed\LocaleGui\Communication\Plugin\StoreGui |
 | CountryStoreTableExpanderPlugin | Expands table data rows of the store table with country codes. |  | Spryker\Zed\CountryGui\Communication\Plugin\StoreGui |
 | ContextStoreCollectionExpanderPlugin | Expands a store collection with application contexts. |  | Spryker\Zed\StoreContext\Communication\Plugin\Store |
+| StoreVisibilityFormExpanderPlugin | Adds the **Visible to Customer** checkbox to the Store form. | `StoreConfig::isVisibleToCustomerEnabled()` returns `true`. | Spryker\Zed\Store\Communication\Plugin\StoreGui |
+| StoreVisibilityTableExpanderPlugin | Adds the **Visible to Customer** column to the Store table. | `StoreConfig::isVisibleToCustomerEnabled()` returns `true`. | Spryker\Zed\Store\Communication\Plugin\StoreGui |
 
 
 **src/Pyz/Client/Store/StoreDependencyProvider.php**
@@ -1290,6 +1292,8 @@ use Spryker\Zed\LocaleGui\Communication\Plugin\StoreGui\LocaleStoreFormExpanderP
 use Spryker\Zed\LocaleGui\Communication\Plugin\StoreGui\LocaleStoreFormTabExpanderPlugin;
 use Spryker\Zed\LocaleGui\Communication\Plugin\StoreGui\LocaleStoreFormViewExpanderPlugin;
 use Spryker\Zed\LocaleGui\Communication\Plugin\StoreGui\LocaleStoreTableExpanderPlugin;
+use Spryker\Zed\Store\Communication\Plugin\StoreGui\StoreVisibilityFormExpanderPlugin;
+use Spryker\Zed\Store\Communication\Plugin\StoreGui\StoreVisibilityTableExpanderPlugin;
 use Spryker\Zed\StoreContextGui\Communication\Plugin\StoreGui\ContextStoreFormExpanderPlugin;
 use Spryker\Zed\StoreContextGui\Communication\Plugin\StoreGui\ContextStoreFormTabExpanderPlugin;
 use Spryker\Zed\StoreGui\StoreGuiDependencyProvider as SprykerStoreGuiDependencyProvider;
@@ -1305,6 +1309,7 @@ class StoreGuiDependencyProvider extends SprykerStoreGuiDependencyProvider
             new LocaleStoreFormExpanderPlugin(),
             new CountryStoreFormExpanderPlugin(),
             new ContextStoreFormExpanderPlugin(),
+            new StoreVisibilityFormExpanderPlugin(),
         ];
     }
 
@@ -1351,6 +1356,7 @@ class StoreGuiDependencyProvider extends SprykerStoreGuiDependencyProvider
         return [
             new LocaleStoreTableExpanderPlugin(),
             new CountryStoreTableExpanderPlugin(),
+            new StoreVisibilityTableExpanderPlugin(),
         ];
     }
 }
@@ -1358,6 +1364,30 @@ class StoreGuiDependencyProvider extends SprykerStoreGuiDependencyProvider
 ```
 
 </details>
+
+{% info_block infoBox "Info" %}
+
+`StoreVisibilityFormExpanderPlugin` and `StoreVisibilityTableExpanderPlugin` only take effect when `StoreConfig::isVisibleToCustomerEnabled()` returns `true`:
+
+**src/Pyz/Zed/Store/StoreConfig.php**
+
+```php
+namespace Pyz\Zed\Store;
+
+use Spryker\Zed\Store\StoreConfig as SprykerStoreConfig;
+
+class StoreConfig extends SprykerStoreConfig
+{
+    public function isVisibleToCustomerEnabled(): bool
+    {
+        return true;
+    }
+}
+```
+
+When enabled, the `is_visible_to_customer` column is added to the `spy_store` table the next time you run `console propel:install`.
+
+{% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
@@ -1373,6 +1403,8 @@ class StoreGuiDependencyProvider extends SprykerStoreGuiDependencyProvider
 - Make sure the table with assigned countries is displayed on the Store view page.
 - Make sure the locale codes are displayed in the store table.
 - Make sure the countries are displayed in the store table.
+- Make sure the **Visible to Customer** checkbox is displayed on the Store form.
+- Make sure the **Visible to Customer** column is displayed in the store table.
 
 {% endinfo_block %}
 

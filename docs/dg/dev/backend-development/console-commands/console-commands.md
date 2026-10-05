@@ -1,7 +1,7 @@
 ---
 title: Console commands
 description: The list of console commands contains the command names together with a short description of what the command does.
-last_updated: Aug 31, 2022
+last_updated: Sep 29, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/console
 originalArticleId: d4062a3e-5dac-4905-afc7-105978e27432
@@ -240,9 +240,9 @@ To use the npm commands, download and install [Node.js](https://docs.npmjs.com/d
 |                      | Runs a production build which compresses and minifies both core and project scripts, styles, fonts, and images to the `public/Yves/assets` folder.           | npm run yves:production     | console frontend:yves:build --environment production |
 |                      | Precompiles Twig templates on Yves to improve performance by avoiding on-the-fly compilation during the first page load.                                     |                             | vendor/bin/yves twig:template:warmer                 |
 | Zed                  | Installs dependencies. Installs and packages all modules from `vendor/spryker` for the split version and `vendor/spryker/spryker` for the non-split version. |                             | console frontend:project:install-dependencies        |
-|                      | Builds Zed scripts, styles, fonts, and images to the `public/Zed/assets` folder.                                                                             | npm run zed                 | console frontend:zed:build                           |
+|                      | Builds Zed scripts, styles, fonts, and images to the `public/Backoffice/assets` folder.                                                                             | npm run zed                 | console frontend:zed:build                           |
 |                      | Runs a build command every time when Zed scripts or style files change during development.                                                                   | npm run zed:watch           |                                                      |
-|                      | Runs a production build which compresses and minifies Zed scripts, styles, fonts, and images to the `public/Zed/assets` folder.                              | npm run zed:production      | console frontend:zed:build --environment production  |
+|                      | Runs a production build which compresses and minifies Zed scripts, styles, fonts, and images to the `public/Backoffice/assets` folder.                       | npm run zed:production      | console frontend:zed:build --environment production  |
 |                      | Precompiles Twig templates on Zed to improve performance by avoiding on-the-fly compilation during the first page load.                                      |                             | console twig:template:warmer                         |
 | Merchant Portal      | Installs dependencies. Installs and packages all modules from `vendor/spryker` for the split version and `vendor/spryker/spryker` for the nonsplit version.  |                             | console frontend:project:install-dependencies        |
 |                      | Builds Merchant Portal scripts, styles, fonts, and images to the `public/MerchantPortal/assets` folder.                                                      | npm run mp:build            | console frontend:mp:build                            |

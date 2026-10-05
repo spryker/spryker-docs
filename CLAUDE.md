@@ -147,17 +147,13 @@ After moving a file, the sidebar link must be updated to reflect the new file lo
 
 Public documentation must never leak internal-only context. Before publishing, remove:
 
-- Internal team names, JIRA ticket links, or internal project/phase names.
+- Internal team names, JIRA ticket links.
+- Internal project or phase names should be reported for a review before removal.
 - References to the internal Suite monorepo layout or repository structure.
-- Mentions of tooling or configuration that is not actually integrated into the documented project — point to the real source of truth instead of inlining config that can go stale.
-- Product variants or features that are no longer supported (for example, do not mention deprecated shop types unless historically relevant).
 
 ### Publishing Accuracy
 
-- Before stating that a fallback, extension point, or capability exists, confirm its current status with the feature owner. If uncertain or not yet released, say so explicitly rather than asserting it as fact.
 - Verify version numbers, release identifiers, and composer version constraints against the actual package/release before publishing.
-- Verify that Back Office menu paths, labels, and actor/role names mentioned in docs still exist in the current product.
-- Verify that example class, resource, and module names exist in the current codebase, not a planned or removed one.
 - Do not retroactively edit already-published release notes — they are a historical record.
 
 ### Twig examples

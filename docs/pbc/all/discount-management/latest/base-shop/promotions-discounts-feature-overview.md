@@ -1,7 +1,7 @@
 ---
 title: Promotions & Discounts feature overview
 description: The feature lets you create different types of discounts and apply multiple in-built discount settings suitable for any business requirements.
-last_updated: Oct 13, 2021
+last_updated: Sep 08, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/promotions-discounts-feature-overview
 originalArticleId: bdb56333-569c-42ac-9a12-2f8ecc84c6b5
@@ -52,9 +52,16 @@ To learn how a Back Office user can create a cart rule in the Back Office, see [
 
 ### Decision rule
 
-A *decision rule* is a condition assigned to a discount that must be fulfilled for the discount to apply.
+In the Back Office, you define discounts by building a query. A query consists of one or more rules, and each rule compares a parameter to a value using a relation operator. Such a rule is called a *decision rule*.
 
-A discount can have one or more decision rules. Find an example combination below:
+A query serves one of two purposes, depending on where you build it:
+
+- Under **Apply when**, the query is a condition: it determines whether the discount applies to the cart at all.
+- Under **Apply to**, the query is a filter: it selects which items in the cart receive the discount.
+
+The Back Office does not use the term *decision rule*. You build queries in the **Apply when** and **Apply to** fields, which are described in [Apply to compared to Apply when](#apply-to-compared-to-apply-when).
+
+A query can contain one or more rules. Find an example combination below:
 
 | PARAMETER | RELATION OPERATOR | VALUE |
 | --- | --- | --- |
@@ -63,21 +70,21 @@ A discount can have one or more decision rules. Find an example combination belo
 
 In this case, the discount is applied if the cart contains three items and the purchase is made on the fifth day of the week (Friday).
 
-Multiple decision rules form a query. A query is a request for information based on the defined parameters. In the Discount Management capability, a query requests information from a cart to check if it's eligible for the discount. By specifying decision rules, you define the parameters of the query.
+Multiple rules form a single query. A query is a request for information based on the defined parameters. In the Discount Management capability, a query requests information from a cart, either to check whether the cart is eligible for the discount or to select the items to discount. By specifying rules, you define the parameters of the query.
 
-In the Back Office, you create decision rules in a Query Builder. Query Builder transforms the decision rules into a single query.
+In the Back Office, you create the rules in a Query Builder. Query Builder transforms the rules into a single query.
 
-The decision rules from the previous example look as follows in the Query Builder:
+The rules from the previous example look as follows in the Query Builder:
 
-![Query builder](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+%26+Discounts/Discount/Discount+Feature+Overview/query-builder.png)
+![Query Builder showing the rules total-quantity equal 3 and day-of-week equal 5 combined with AND](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/discount-management/latest/marketplace/marketplace-promotions-discounts-feature-overview/image-1788795776069.png)
 
 A Back Office user can enter a query manually as well.
 
-The same decision rules look as follows as a plain query:
+The same rules look as follows as a plain query:
 
 `total-quantity = '3' AND day-of-week = '5'`
 
-You can switch between Query Builder and Plain query modes to see how the specified decision rules look in either of them.  
+You can switch between Query Builder and Plain query modes to see how the specified rules look in either of them.  
 
 Decision rules are combined with *AND* and *OR*  combination operators. With the AND operator, all the rules must be fulfilled for the discount to be applied. With the OR operator, at least one must be fulfilled for the discount to be applied.
 
@@ -94,6 +101,21 @@ In the following example, for the discount to apply, either the cart must contai
 When rules are combined by the OR operator, they do not exclude each other. If a cart fulfills both such rules, the discount is still applied.
 
 {% endinfo_block %}
+
+#### Product attributes in decision rules
+
+To use a product attribute in a decision rule, reference it as `attribute.<attribute_key>` — for example, `attribute.color`. Spryker does not predefine these fields: it generates one field per product attribute key that exists in your database.
+
+{% info_block warningBox "Add attribute keys before you use them" %}
+
+If you do not see the attribute you expect in the Query Builder, the corresponding attribute key does not exist in your database. Add it in one of the following ways:
+
+- [Create product attributes](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/attributes/create-product-attributes.html) in the Back Office.
+- Import attribute keys with the `product-attribute-key` data entity. For details, see [Import file details: product_attribute_key.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-attribute-key.csv.html).
+
+{% endinfo_block %}
+
+The examples in this document use attribute keys such as `attribute.color` and `attribute.processor_cores`. Depending on the demo shop you started with, these keys may not exist in your database. Replace them with the attribute keys that exist in your own database.
 
 #### Decision rule group
 
@@ -124,6 +146,46 @@ There are two types of the discount application:
 - Query string
 - Promotional product
 
+### Apply to compared to Apply when
+
+A discount is configured in two separate places that serve different purposes:
+
+| CONFIGURATION | BACK OFFICE TAB | SECTION HEADING | PURPOSE |
+| --- | --- | --- | --- |
+| **APPLY TO** | Discount calculation | Define what to apply the discount to | Selects the cart items that receive the discount. |
+| **APPLY WHEN** | Conditions | Define when to apply the discount | Determines whether the discount applies to the cart at all. |
+
+*Apply when* acts as a gate: if its decision rules are not fulfilled, the discount is not applied to the cart. *Apply to* then selects which of the items in the cart the discount value is distributed across.
+
+Because the two settings serve different purposes, they offer different fields. *Apply when* evaluates the cart as a whole, so it also offers cart-level and customer-level fields, such as `grand-total`, `sub-total`, `total-quantity`, `currency`, `day-of-week`, and `customer-group`. *Apply to* selects individual items, so it offers only item-level fields, such as `sku`, `item-quantity`, `item-price`, `category`, and `attribute.<attribute_key>`.
+
+Some fields, such as `sku`, `item-quantity`, and `item-price`, are available in both places, where they have a different meaning:
+
+| FIELD | UNDER APPLY WHEN | UNDER APPLY TO |
+| --- | --- | --- |
+| `sku` | Checks whether the cart contains an item with this SKU. | Restricts the discount to the items with this SKU. |
+| `item-quantity` | Checks whether an item with this quantity is in the cart. | Restricts the discount to the items with this quantity. |
+| `item-price` | Checks whether an item with this price is in the cart. | Restricts the discount to the items with this price. |
+
+The fields under *Apply to* do not discount an SKU or a quantity by themselves. They narrow down the set of items that the discount is applied to.
+
+The following screenshots show the same rule in both places. The field list offered under *Apply to* is a subset of the one offered under *Apply when*, because *Apply to* only offers item-level fields. The attribute key in these screenshots comes from the demo data, so the key you see in your own project differs.
+
+On the **Discount calculation** tab, *Apply to* selects the items that receive the discount:
+
+![Apply to on the Discount calculation tab, with the rule attribute.farbe equal](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/discount-management/latest/marketplace/marketplace-promotions-discounts-feature-overview/image-1788793722162.png)
+
+On the **Conditions** tab, *Apply when* determines whether the discount applies to the cart at all:
+
+![Apply when on the Conditions tab, with the rule attribute.farbe equal](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/discount-management/latest/marketplace/marketplace-promotions-discounts-feature-overview/image-1788793729064.png)
+
+{% info_block infoBox "Example" %}
+
+A discount with *Apply when* set to `total-quantity >= 10` and *Apply to* set to `attribute.color = 'white'` first checks the total number of items in the cart, regardless of their color. If the cart contains at least ten items, the discount then reduces the price of the white items only.
+
+{% endinfo_block %}
+
+
 ### Query string
 
 A *query string* is a discount application type that uses [decision rules](#decision-rule) to dynamically determine which products qualify for discounts.
@@ -135,6 +197,12 @@ The discount in the example below applies to white color products.
 The product selection based on the query string is dynamic:
 - If at some point the color attribute of a product changes from white to anything else, the product is no longer eligible for a discount.
 - If at some point a product receives the white color attribute, it becomes eligible for a discount.
+
+{% info_block infoBox "Attribute keys in the examples" %}
+
+This example uses the `attribute.color` field. Attribute fields are generated from the product attribute keys in your own database, so replace `attribute.color` with an attribute key that exists in your database. For details, see [Product attributes in decision rules](#product-attributes-in-decision-rules).
+
+{% endinfo_block %}
 
 ### Promotional product
 

@@ -633,7 +633,7 @@ class QuoteRequestsRestApiDependencyProvider extends SprykerQuoteRequestsRestApi
         "attributes": {
           "defaultBillingAddress": null,
           "name": "Acme Corporation HR department",
-          "email": "HR@spryker.com",
+          "email": "HR@acme.com",
           "phone": "4902890031",
           "externalUrl": "",
           "bic": "",

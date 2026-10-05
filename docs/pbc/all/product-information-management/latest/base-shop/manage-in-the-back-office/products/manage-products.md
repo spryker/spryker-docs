@@ -1,7 +1,7 @@
 ---
 title: Manage products
 description: Use this guide to view product details, activate or update product attributes in the Back Office.
-last_updated: Aug 10, 2021
+last_updated: Aug 18, 2026
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-products
 originalArticleId: 9b2e066a-b1db-4a74-93ba-82d399ee18f8
@@ -40,3 +40,9 @@ The product turns visible to the customers of your online store.
 Each variant needs to be activated in order to be visible to your customers.
 
 {% endinfo_block %}
+
+## Deactivating products that are part of a bundle
+
+If you deactivate a product variant that is used in a [product bundle](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-bundles-feature-overview.html), all the bundles that contain this variant are deactivated automatically.
+
+Activating the variant again does not activate these bundles. To sell them again, activate each affected bundle in the same way as any other product variant.

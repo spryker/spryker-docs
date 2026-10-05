@@ -1,7 +1,7 @@
 ---
 title: Release notes 202606.0
 description: Release notes for Spryker Cloud Commerce OS version 202606.0
-last_updated: July 30, 2026
+last_updated: Aug 14, 2026
 template: concept-topic-template
 ---
 
@@ -167,7 +167,7 @@ The AI Dev SDK helps teams customize Spryker projects faster and with less manua
 **Documentation:**
 - [AI Dev SDK Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html)
 - [AI Dev SDK Customization Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html)
-- [Claude Code Plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html)
+- [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html)
 
 ### AI Commerce: Smart CMS for AI-assisted content creation {% include badge.html type="early-access" %}
 

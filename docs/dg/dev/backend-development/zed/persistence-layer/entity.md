@@ -1,7 +1,7 @@
 ---
 title: Entity
 description: In Spryker, an entity represents one entry from a table in the database. Entities are an implementation of the Active record design pattern, so their usage is very simple.
-last_updated: Jun 16, 2021
+last_updated: Aug 12, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/entity
 originalArticleId: 768b00eb-1182-4cf3-8c6c-1fbfb294a3b2
@@ -35,7 +35,7 @@ Spryker's entities are called Active Record classes or just Models there.
 $customer = new SpyCustomer();
 $customer->setFirstName('John');
 $customer->setLastName('Doe');
-$customer->setEmail('john.doe@spryker.com');
+$customer->setEmail('john.doe@acme.com');
 $customer->save();
 ```
 

@@ -1,7 +1,7 @@
 ---
 title: Install the SSP Service Management feature
 description: Learn how to integrate SSP Service Management into a Spryker project
-last_updated: May 18, 2026
+last_updated: Aug 5, 2026
 template: feature-integration-guide-template
 ---
 

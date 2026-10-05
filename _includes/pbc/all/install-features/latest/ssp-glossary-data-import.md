@@ -1847,4 +1847,12 @@ self_service_portal.inquiry.validation.subject_required,Subject is required.,en_
 self_service_portal.inquiry.validation.subject_required,Betreff ist erforderlich.,de_DE
 self_service_portal.inquiry.validation.description_required,Description is required.,en_US
 self_service_portal.inquiry.validation.description_required,Beschreibung ist erforderlich.,de_DE
+self_service_portal.recurring_order.add_product.error.service_delivery_required,Service product %sku% does not support delivery. Please remove it or choose a different product.,en_US
+self_service_portal.recurring_order.add_product.error.service_delivery_required,Das Serviceprodukt %sku% unterstützt keine Lieferung. Bitte entfernen Sie es oder wählen Sie ein anderes Produkt.,de_DE
 ```
+
+{% info_block infoBox "Recurring order translations" %}
+
+`self_service_portal.recurring_order.add_product.error.service_delivery_required` is the message `ServiceProductAddedItemValidatorPlugin` returns when a buyer adds a service product that a recurring order cannot serve. Import it only if your project also uses the [Recurring Orders feature](/docs/pbc/all/order-experience-management/latest/base-shop/install-and-upgrade/install-features/install-the-recurring-orders-feature.html).
+
+{% endinfo_block %}

@@ -1,7 +1,7 @@
 ---
 title: Integrate Stripe
 description: Learn how to install and configure the spryker-eco/stripe module in your Spryker project.
-last_updated: Jun 09, 2026
+last_updated: Sep 21, 2026
 template: howto-guide-template
 redirect_from:
 - docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/embed-the-stripe-payment-page-as-an-iframe
@@ -63,7 +63,7 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
     'StripeManual01', // Use StripeManualMarketplace01 for marketplace
 ];
 $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
-    StripeConfig::PAYMENT_PROVIDER_NAME => 'StripeManual01', // Use StripeManualMarketplace01 for marketplace
+    StripeConfig::PAYMENT_METHOD_NAME => 'StripeManual01', // Use StripeManualMarketplace01 for marketplace
 ];
 ```
 
@@ -332,7 +332,21 @@ vendor/bin/console data:import glossary
 ```bash
 vendor/bin/console propel:install
 vendor/bin/console transfer:generate
+```
+
+Run the following commands only when you initially set up the database in an environment (for example, right after `docker/sdk boot deploy.dev.yml` on a fresh local setup). Don't run them as part of routine deployments to an already-initialized environment:
+
+```bash
 vendor/bin/console setup:init-db
+```
+
+{% info_block infoBox "acl-entity:synchronize is Merchant Portal-only" %}
+
+`acl-entity:synchronize` is provided by `spryker/acl-merchant-portal`, which is part of the Merchant Portal ACL feature. Run this command only if your project uses Merchant Portal roles and permissions (typically marketplace projects).
+
+{% endinfo_block %}
+
+```bash
 vendor/bin/console acl-entity:synchronize
 ```
 
@@ -394,6 +408,20 @@ Google Pay and Apple Pay require domain registration. In your Stripe Dashboard, 
 5. (Marketplace only) Log in to Merchant Portal and verify Payment Settings.
 6. (Marketplace only) Complete merchant onboarding to Stripe Connect.
 7. (Marketplace only) Trigger a payout and verify the Stripe Connect transfer appears.
+
+## Network access for Stripe.js and the Stripe API
+
+The storefront loads Stripe.js directly from `https://js.stripe.com/v3/` to render Stripe Elements and confirm payments in the browser.
+If your project enforces a Content Security Policy or an outbound network allowlist for the storefront, allow:
+
+- `https://js.stripe.com` (script and frame source for Stripe.js and Elements)
+- `https://api.stripe.com` (the domain Stripe.js itself calls from the browser to create and confirm payments)
+
+`$config[Spryker\Shared\Kernel\KernelConstants::DOMAIN_WHITELIST]` is used to validate URLs the application redirects the customer's or merchant's browser to via `redirectResponseExternal()`.
+For checkout, this doesn't apply: `SprykerEco\Yves\Stripe\Controller\PaymentController` only redirects to internal routes,
+and Stripe Elements/Stripe.js talks to Stripe directly from the browser without a full-page redirect, so no checkout-related entry is needed in the whitelist.
+
+For **marketplace** projects it's different, Merchant Portal's Stripe Connect onboarding (`SprykerEco\Zed\Stripe\Communication\Controller\OnboardingController`) and Express Dashboard access (`SprykerEco\Zed\Stripe\Communication\Controller\DashboardController`) do redirect the merchant's browser to a Stripe-owned domain (`connect.stripe.com`, returned by the Stripe Account Links and Login Links APIs). As of the current module version, both controllers build that redirect with a plain `Symfony\Component\HttpFoundation\RedirectResponse` instead of `redirectResponseExternal()`, so `DOMAIN_WHITELIST` isn't actually consulted for them either — but this is an internal implementation detail, not a documented guarantee. If your project uses Merchant Portal Stripe onboarding, keep `connect.stripe.com` whitelisted rather than relying on that bypass.
 
 ## Migrating from the ACP Stripe app
 

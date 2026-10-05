@@ -1,0 +1,48 @@
+name: Links preview
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+# Essential for the workflow to read code and write comments to the PR
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  process-and-comment:
+    runs-on: ubuntu-latest
+    steps:
+      # Depth 2 covers the PR merge commit and its first parent (the base branch)
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Collect changed links
+        id: links
+        env:
+          GITHUB_BASE_SHA: HEAD^1
+          GITHUB_HEAD_SHA: HEAD
+        run: |
+          {
+            echo 'links<<LINKS_EOF'
+            bash _scripts/changed_links.sh | grep '^http' || true
+            echo 'LINKS_EOF'
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Post PR comment
+        if: steps.links.outputs.links != ''
+        uses: actions/github-script@v7
+        env:
+          LINKS: ${{ steps.links.outputs.links }}
+        with:
+          script: |
+            const links = process.env.LINKS.split('\n').map(l => `- ${l}`).join('\n');
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `### 🔗 Changed pages\n\n${links}`,
+            });

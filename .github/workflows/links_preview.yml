@@ -39,11 +39,20 @@ jobs:
           LINKS: ${{ steps.links.outputs.links }}
         with:
           script: |
+            const marker = '<!-- links-preview -->';
             const links = process.env.LINKS.split('\n').map(l => `- ${l}`).join('\n');
+            const body = `${marker}\n### 🔗 Changed pages\n\n${links}\n\nMake sure that preview was deployed before using these links.`;
+            const params = { owner: context.repo.owner, repo: context.repo.repo };
 
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
+            // Update the previous links comment instead of posting a new one on every push
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              ...params,
               issue_number: context.issue.number,
-              body: `### 🔗 Changed pages\n\n${links}\n\nMake sure that preview was deployed before using these links.`,
             });
+            const previous = comments.find(c => c.user.type === 'Bot' && c.body.includes(marker));
+
+            if (previous) {
+              await github.rest.issues.updateComment({ ...params, comment_id: previous.id, body });
+            } else {
+              await github.rest.issues.createComment({ ...params, issue_number: context.issue.number, body });
+            }

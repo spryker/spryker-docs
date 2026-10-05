@@ -24,10 +24,11 @@ jobs:
         env:
           GITHUB_BASE_SHA: HEAD^1
           GITHUB_HEAD_SHA: HEAD
+          PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
           {
             echo 'links<<LINKS_EOF'
-            bash _scripts/changed_links.sh | grep '^http' || true
+            bash _scripts/changed_links.sh "https://deploy-preview-${PR_NUMBER}--spryker-docs.netlify.app/" | grep '^http' || true
             echo 'LINKS_EOF'
           } >> "$GITHUB_OUTPUT"
 
@@ -44,5 +45,5 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              body: `### 🔗 Changed pages\n\n${links}`,
+              body: `### 🔗 Changed pages\n\n${links}\n\nMake sure that preview was deployed before using these links.`,
             });

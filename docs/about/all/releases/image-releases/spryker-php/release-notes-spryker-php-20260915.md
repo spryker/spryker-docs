@@ -16,4 +16,4 @@ If you found a new security vulnerability, contact us at **security@spryker.com*
 
 **Improvements**:
 
-- Introduce PHP XLS extension as optional
+- Introduce PHP XSL extension as optional

@@ -1,7 +1,7 @@
 ---
 title: "Backend API: Manage discount voucher codes"
 description: Learn how to retrieve, generate, delete, and export the voucher codes of a discount in your Spryker shop using the Spryker Backend API.
-last_updated: Sep 29, 2026
+last_updated: Oct 6, 2026
 template: glue-api-backend-guide-template
 related:
   - title: "Backend API: Manage discounts"
@@ -50,7 +50,7 @@ To retrieve a paginated collection of the voucher codes of a discount, send the 
 | filter[discount-voucher-codes.voucherBatch] | Filters the collection down to the codes generated in one batch. | Batch number as returned by [Generate voucher codes](#generate-voucher-codes). `0` matches the codes created one by one in the Back Office. |
 | sort | Sorts the collection by the given field. Prefix a field with `-` to sort in descending order. Separate several fields with a comma. | code, numberOfUses, maxNumberOfUses, createdAt, voucherBatch |
 
-Without a `sort` parameter, the collection is ordered by `createdAt`. Sorting by a field that is not on the list returns `400` with the error code `5740`.
+Without a `sort` parameter, the collection is ordered by `createdAt`. Sorting by a field that is not on the list returns `400` with the error code `5740`. A `voucherBatch` filter that is not an integer returns `422` with the error code `901`.
 
 | REQUEST | USAGE |
 | --- | --- |
@@ -182,7 +182,7 @@ Request sample: generate 10 random codes that can be redeemed without limit
 | --- | --- | --- | --- |
 | quantity | Integer | &check; | Number of codes to generate, from `1` to `14000`. The allowed range is listed in `voucherCodesQuantity` by [Retrieve discount options](/docs/pbc/all/discount-management/latest/base-shop/manage-using-backend-api/backend-api-retrieve-discount-options.html). |
 | codeLength | Integer |  | Length of the random part of each code, from `3` to `10`. Required when `customCode` is not given. The allowed range is listed in `voucherCodeLength` by [Retrieve discount options](/docs/pbc/all/discount-management/latest/base-shop/manage-using-backend-api/backend-api-retrieve-discount-options.html). |
-| customCode | String |  | Template of the codes. The `[code]` placeholder is replaced by the random part; without the placeholder, the random part is appended to the template. Required when `codeLength` is not given. |
+| customCode | String |  | Template of the codes, at most 245 characters. The `[code]` placeholder is replaced by the random part; without the placeholder, the random part is appended to the template. Required when `codeLength` is not given. |
 | maxNumberOfUses | Integer |  | How many times each generated code can be redeemed. `0` means unlimited. Defaults to `0`. |
 
 The response lists the generated codes. To read them again later, [retrieve voucher codes](#retrieve-voucher-codes) filtered by the returned `voucherBatch`, or [export voucher codes](#export-voucher-codes).
@@ -331,12 +331,13 @@ The file is the same the Back Office produces with [Export voucher codes](/docs/
 
 | CODE  | REASON |
 | --- | --- |
-| 901 | The request body or a query parameter failed schema validation—for example, `quantity` is out of range, neither `codeLength` nor `customCode` is given, `maxNumberOfUses` is negative, or more than 100 `codes` are listed. Each body error names the rejected attribute in `source.pointer`. |
+| 901 | The request body or a query parameter failed schema validation—for example, `quantity` is out of range, neither `codeLength` nor `customCode` is given, `customCode` is longer than 245 characters, `maxNumberOfUses` is negative, more than 100 `codes` are listed, or `filter[discount-voucher-codes.voucherBatch]` is not an integer. Each body error names the rejected attribute in `source.pointer`. |
 | 5700 | No discount matches the given UUID. |
 | 5720 | A listed voucher code does not belong to the discount. Nothing is deleted; the response carries one error per such code. |
 | 5722 | The delete request carries neither a non-empty `codes` list nor `all: true`, or carries both. |
 | 5721 | Voucher codes can be generated for a voucher discount only, and the discount is a cart rule. |
 | 5726 | No code could be generated for the given length and template, because every candidate collides with an existing code. |
 | 5740 | The `sort` parameter names a field that the collection does not support. |
+| 5790 | Discounts cannot be addressed by UUID: the `uuid` column is disabled, or a discount has no UUID yet. Returned with `500`; the error message names the fix. See [Install the Discounts Backend API](/docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-discounts-backend-api.html). |
 
 To view generic errors, see [API errors and troubleshooting](/docs/integrations/spryker-api/spryker-api-errors-and-troubleshooting.html).

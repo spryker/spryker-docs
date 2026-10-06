@@ -1,7 +1,7 @@
 ---
 title: "Backend API: Manage discounts"
 description: Learn how to retrieve, create, update, activate, and deactivate discounts in your Spryker shop using the Spryker Backend API.
-last_updated: Sep 29, 2026
+last_updated: Oct 6, 2026
 template: glue-api-backend-guide-template
 related:
   - title: "Backend API: Manage discount voucher codes"
@@ -56,7 +56,7 @@ To retrieve a paginated collection of discounts, send the request:
 
 Filters combine with each other. The collection then contains only the discounts that match every criterion. The bare `filter[<property>]` form without the `discounts.` prefix is accepted as well.
 
-Without a `sort` parameter, the collection is ordered by `createdAt` descending, so the newest discount leads. Sorting by a field that is not on the list returns `400` with the error code `5740`, and the error message names the supported fields. An `isActive` filter that is not a boolean returns `422` with the error code `901`.
+Without a `sort` parameter, the collection is ordered by `createdAt` descending, so the newest discount leads. Sorting by a field that is not on the list returns `400` with the error code `5740`, and the error message names the supported fields. An `isActive` filter that is not a boolean, or a `validFrom` or `validTo` filter that is not a date in the `Y-m-d H:i:s` format, returns `422` with the error code `901`.
 
 | REQUEST | USAGE |
 | --- | --- |
@@ -252,7 +252,7 @@ Without a `sort` parameter, the collection is ordered by `createdAt` descending,
 | rules.field | String | Field the rule checks—for example, `sku`, `sub-total`, or `currency`. The fields, their operators, and their fixed values are listed by [Retrieve discount options](/docs/pbc/all/discount-management/latest/base-shop/manage-using-backend-api/backend-api-retrieve-discount-options.html): `collectorFields` for `collector` and `decisionRuleFields` for `decisionRule`. |
 | rules.attribute | String | Product attribute the rule checks. Only for attribute-based fields. |
 | rules.operator | String | Operator of the rule—for example, `=`, `>=`, or `is in`. |
-| rules.value | String | Value the field is compared with, always a string. `*` matches any value. For the list operators, separate the values with `;`—for example, `shoes;sneakers`. |
+| rules.value | String | Value the field is compared with, always a string. `*` matches any value. For the list operators, separate the values with `;`—for example, `shoes;sneakers`. Quotes (`'` and `"`) are not allowed in `field`, `attribute`, or `value`; a rule containing one is rejected with the error code `5706`. |
 | groups | Array | Nested rule groups, combined with the rules of this group by `condition`. A rule group can be nested three levels deep, including the root group. A nested group must contain at least one rule or group. |
 
 ## Retrieve a discount
@@ -474,8 +474,8 @@ Request sample: create a promotion that offers a free product
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| displayName | String | &check; | Display name of the discount. Never blank, and unique across discounts. |
-| description | String |  | Free-text description. |
+| displayName | String | &check; | Display name of the discount. Never blank, unique across discounts, and at most 255 characters. |
+| description | String |  | Free-text description, at most 1024 characters. |
 | discountType | String | &check; | `cart_rule` or `voucher`. A voucher discount is created with an empty voucher pool; add codes with [Generate voucher codes](/docs/pbc/all/discount-management/latest/base-shop/manage-using-backend-api/backend-api-manage-discount-voucher-codes.html#generate-voucher-codes). |
 | isActive | Boolean |  | Whether the discount is applied right away. Defaults to `false`. |
 | isExclusive | Boolean | &check; | Whether the discount is exclusive. |
@@ -623,12 +623,12 @@ Request sample: `PATCH https://glue-backend.mysprykershop.com/discounts/2e622c64
 }
 ```
 
-The request accepts the same attributes as [Create a discount](#create-a-discount), and all of them are optional. The endpoint applies only the attributes present in the payload; every attribute you omit keeps its stored value. Attributes that hold a list or an object behave as follows:
+The request accepts the same attributes as [Create a discount](#create-a-discount), and all of them are optional. The endpoint applies only the attributes present in the payload: an attribute you omit keeps its stored value, and so does an attribute you send as `null`. To clear a value, send its empty form:
 
-- `fixedAmounts`: omit the attribute to keep the stored amounts, send an empty array to clear them, or send a list to replace them.
-- `collector` and `decisionRule`: a rule group you send replaces the stored group. Inside it, omit `groups` to keep the stored nested groups, or send an empty array to clear them.
-- `promotion.abstractSkus`: omit the attribute to keep the stored SKUs, send an empty array to clear them, or send a list to replace them. A promotion discount must keep at least one SKU.
-- `stores`: a list you send replaces the stored store assignment.
+- `description`: send `""` to clear the description.
+- `fixedAmounts` and `stores`: send an empty array to clear the list, or a list to replace it.
+- `collector` and `decisionRule`: a rule group you send replaces the stored group as a whole, nested `groups` included—repeat the nested groups you want to keep. Sending `{ "rules": [] }` as `decisionRule` removes every condition, so the discount applies to every cart.
+- `promotion`: the object is merged field by field—omit `abstractSkus` or `quantity` to keep the stored value, or send one to replace it. A promotion discount must keep at least one SKU, so an empty `abstractSkus` array is rejected with the error code `5730`.
 
 {% info_block infoBox "Changing the discount type" %}
 
@@ -650,16 +650,17 @@ A business validation error names the rejected attribute in `detail`, in the for
 
 | CODE  | REASON |
 | --- | --- |
-| 901 | The request body or a query parameter failed schema validation—for example, a required attribute is missing, `validTo` is before `validFrom`, `priority` or `percentage` is out of range, a fixed amount is negative, or `filter[discounts.isActive]` is not a boolean. Each body error names the rejected attribute in `source.pointer`. |
+| 901 | The request body or a query parameter failed schema validation—for example, a required attribute is missing, `displayName` or `description` is too long, `validTo` is before `validFrom`, `priority` or `percentage` is out of range, a fixed amount is negative, `filter[discounts.isActive]` is not a boolean, or `filter[discounts.validFrom]` is not a date in the `Y-m-d H:i:s` format. Each body error names the rejected attribute in `source.pointer`. |
 | 5700 | No discount matches the given UUID. |
 | 5701 | The display name is already used by another discount. |
 | 5703 | `calculatorType` names a calculation method this installation does not offer. |
 | 5705 | The fixed amounts are invalid: none was given for a money calculator, or a currency does not belong to one of the selected stores. |
-| 5706 | A rule of `collector` or `decisionRule` is invalid. The error message quotes the query string parser. |
+| 5706 | A rule of `collector` or `decisionRule` is invalid—for example, it uses an unknown field or operator, or contains a quote. The error message quotes the query string parser. |
 | 5707 | A rule group is nested deeper than three levels. |
 | 5710 | `stores` names a store that does not exist. |
 | 5730 | `promotion` is invalid: `abstractSkus` is empty or names a product that does not exist, or `quantity` is below `1`. |
 | 5740 | The `sort` parameter names a field that the collection does not support. |
+| 5790 | Discounts cannot be addressed by UUID: the `uuid` column is disabled, or a discount has no UUID yet. Returned with `500`; the error message names the fix. See [Install the Discounts Backend API](/docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-discounts-backend-api.html). |
 | 5799 | The discount was rejected by another business rule—for example, an invalid validity period. |
 
 To view generic errors, see [API errors and troubleshooting](/docs/integrations/spryker-api/spryker-api-errors-and-troubleshooting.html).

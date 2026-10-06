@@ -118,6 +118,8 @@ entries:
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html
               - title: Profiler Workflow
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-profiler-workflow.html
+              - title: Rules
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-rules.html
           - title: Claude Code
             url: /docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html
             nested:

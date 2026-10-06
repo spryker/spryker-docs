@@ -154,7 +154,6 @@ Public documentation must never leak internal-only context. Before publishing, r
 ### Publishing Accuracy
 
 - Verify version numbers, release identifiers, and composer version constraints against the actual package/release before publishing.
-- Do not retroactively edit already-published release notes — they are a historical record.
 
 ### Twig examples
 Always wrap Twig code in `{% raw %}` and `{% endraw %}` tags.

@@ -29,7 +29,7 @@ Through this legacy feature, invoices can be generated and sent to the customer'
 
 Sellers subject to a mandate must generate compliant invoices and credit notes in their ERP or via a certified e-invoicing provider. Order data can be retrieved from Spryker to feed that system through the [Orders data export](/docs/pbc/all/order-management-system/latest/base-shop/import-and-export-data/orders-data-export/orders-data-export.html) and the [Storefront API](/docs/pbc/all/order-management-system/latest/base-shop/glue-api-retrieve-orders.html).
 
-To store an invoice document per order and let buyers and Back Office users open it, use the [Order invoice documents](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/order-invoice-documents-overview.html) feature. It stores the document that is generated on the seller's side and makes it available to the correct buyer; it does not make the legacy email compliant.
+To let buyers and Back Office users open this emailed invoice as a page they can save as PDF, use the [Order invoice documents](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/order-invoice-documents-overview.html) feature. It shows the same document on demand; it does not make the legacy email compliant.
 
 ## Legacy invoice generation
 

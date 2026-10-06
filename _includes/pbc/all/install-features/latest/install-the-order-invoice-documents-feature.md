@@ -33,7 +33,7 @@ The legacy invoice notification email must be set up, including the invoice temp
 Install the required modules using Composer:
 
 ```bash
-composer require spryker/sales-invoice:"^1.6.0" spryker/sales-invoice-extension:"^1.1.0" --update-with-dependencies
+composer require spryker/sales-invoice:"^1.6.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -43,112 +43,31 @@ Make sure the following modules have been installed:
 | MODULE | EXPECTED DIRECTORY |
 |---|---|
 | SalesInvoice | vendor/spryker/sales-invoice |
-| SalesInvoiceExtension | vendor/spryker/sales-invoice-extension |
-| FileSystem | vendor/spryker/file-system |
-| UuidBehavior | vendor/spryker/uuid-behavior |
 
 {% endinfo_block %}
 
-### 2) Set up configuration
+### 2) Set up transfer objects
 
-1. Enable the file generation in the Shared config. The Zed and Yves configs of the module delegate to it:
-
-**src/Pyz/Shared/SalesInvoice/SalesInvoiceConfig.php**
-
-```php
-<?php
-
-namespace Pyz\Shared\SalesInvoice;
-
-use Spryker\Shared\SalesInvoice\SalesInvoiceConfig as SprykerSalesInvoiceConfig;
-
-class SalesInvoiceConfig extends SprykerSalesInvoiceConfig
-{
-    /**
-     * {@inheritDoc}
-     *
-     * @api
-     */
-    public function isOrderInvoiceFileGenerationEnabled(): bool
-    {
-        return true;
-    }
-}
-```
-
-2. Configure a private file system for the documents and tell the module its name. The example uses an S3 bucket in cloud environments and a local directory for development:
-
-**config/Shared/config_default.php**
-
-```php
-<?php
-
-use Spryker\Service\FileSystem\FileSystemConstants;
-use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\Aws3v3FilesystemBuilderPlugin;
-use Spryker\Shared\SalesInvoice\SalesInvoiceConstants;
-
-$config[FileSystemConstants::FILESYSTEM_SERVICE]['sales-invoice-files'] = [
-    'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
-    'key' => getenv('SPRYKER_S3_SALES_INVOICE_FILES_KEY') ?: '',
-    'secret' => getenv('SPRYKER_S3_SALES_INVOICE_FILES_SECRET') ?: '',
-    'bucket' => getenv('SPRYKER_S3_SALES_INVOICE_FILES_BUCKET') ?: '',
-    'region' => getenv('SPRYKER_S3_SALES_INVOICE_FILES_REGION') ?: 'eu-central-1',
-    'root' => '/sales-invoice-files',
-];
-
-$config[SalesInvoiceConstants::ORDER_INVOICE_FILE_SYSTEM_NAME] = 'sales-invoice-files';
-```
-
-**config/Shared/config_default-docker.dev.php**
-
-```php
-<?php
-
-use Spryker\Service\FileSystem\FileSystemConstants;
-use Spryker\Service\FlysystemLocalFileSystem\Plugin\Flysystem\LocalFilesystemBuilderPlugin;
-
-$config[FileSystemConstants::FILESYSTEM_SERVICE]['sales-invoice-files'] = [
-    'sprykerAdapterClass' => LocalFilesystemBuilderPlugin::class,
-    'root' => APPLICATION_ROOT_DIR . '/data',
-    'path' => '/sales-invoice-files',
-];
-```
-
-{% info_block warningBox "Verification" %}
-
-The file system must not be publicly readable. Documents are served only through the authorized download routes of the Storefront and the Back Office.
-
-{% endinfo_block %}
-
-### 3) Set up database schema and transfer objects
-
-Apply the database changes and generate the entity and transfer changes:
+Generate the transfer changes:
 
 ```bash
-console propel:install
 console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following changes have been applied in the database:
-
-| DATABASE ENTITY | TYPE | EVENT |
-|---|---|---|
-| spy_sales_order_invoice_file | table | created |
-
 Make sure the following transfer objects have been generated:
 
 | TRANSFER | TYPE | EVENT | PATH |
 |---|---|---|---|
-| OrderInvoiceFile | class | created | src/Generated/Shared/Transfer/OrderInvoiceFileTransfer |
-| OrderInvoice.orderInvoiceFiles | property | created | src/Generated/Shared/Transfer/OrderInvoiceTransfer |
-| Order.orderInvoices | property | created | src/Generated/Shared/Transfer/OrderTransfer |
-| Order.merchants | property | created | src/Generated/Shared/Transfer/OrderTransfer |
+| Order.fkCustomer | property | created | src/Generated/Shared/Transfer/OrderTransfer |
+| Order.customer | property | created | src/Generated/Shared/Transfer/OrderTransfer |
+| Customer.idCustomer | property | created | src/Generated/Shared/Transfer/CustomerTransfer |
+| Customer.customerReference | property | created | src/Generated/Shared/Transfer/CustomerTransfer |
 
 {% endinfo_block %}
 
-### 4) Add translations
+### 3) Add translations
 
 1. Append the glossary for the Storefront according to your configuration:
 
@@ -159,10 +78,10 @@ sales_invoice.order_documents.title,Documents,en_US
 sales_invoice.order_documents.title,Dokumente,de_DE
 sales_invoice.order_documents.no_documents,No documents,en_US
 sales_invoice.order_documents.no_documents,Keine Dokumente,de_DE
-sales_invoice.document.save_as_pdf,Save as PDF,en_US
-sales_invoice.document.save_as_pdf,Als PDF speichern,de_DE
-sales_invoice.format.html,PDF,en_US
-sales_invoice.format.html,PDF,de_DE
+sales_invoice.order_documents.pdf,PDF,en_US
+sales_invoice.order_documents.pdf,PDF,de_DE
+sales_invoice.order_documents.save_as_pdf,Save as PDF,en_US
+sales_invoice.order_documents.save_as_pdf,Als PDF speichern,de_DE
 ```
 
 2. Import the glossary:
@@ -183,39 +102,13 @@ Make sure the configured data has been added to the `spy_glossary_key` and `spy_
 
 {% endinfo_block %}
 
-### 5) Set up behavior
+### 4) Set up behavior
 
-1. Register the plugins:
+1. Register the Back Office block plugin:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
-| HtmlOrderInvoiceFileGeneratorPlugin | Renders the invoice template wrapped by the document template into one HTML file per invoice. |  | Spryker\Zed\SalesInvoice\Communication\Plugin\SalesInvoice |
-| OrderInvoiceOrderExpanderPlugin | Adds the invoices of an order and their files to `OrderTransfer.orderInvoices` when an order is loaded. |  | Spryker\Zed\SalesInvoice\Communication\Plugin\Sales |
 | OrderInvoiceSalesListBlockRendererPlugin | Renders the **Documents** block on the Back Office order page. |  | Spryker\Zed\SalesInvoice\Communication\Plugin\Sales |
-
-**src/Pyz/Zed/SalesInvoice/SalesInvoiceDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\SalesInvoice;
-
-use Spryker\Zed\SalesInvoice\Communication\Plugin\SalesInvoice\HtmlOrderInvoiceFileGeneratorPlugin;
-use Spryker\Zed\SalesInvoice\SalesInvoiceDependencyProvider as SprykerSalesInvoiceDependencyProvider;
-
-class SalesInvoiceDependencyProvider extends SprykerSalesInvoiceDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Zed\SalesInvoiceExtension\Dependency\Plugin\OrderInvoiceFileGeneratorPluginInterface>
-     */
-    protected function getOrderInvoiceFileGeneratorPlugins(): array
-    {
-        return [
-            new HtmlOrderInvoiceFileGeneratorPlugin(),
-        ];
-    }
-}
-```
 
 **src/Pyz/Zed/Sales/SalesDependencyProvider.php**
 
@@ -225,21 +118,10 @@ class SalesInvoiceDependencyProvider extends SprykerSalesInvoiceDependencyProvid
 namespace Pyz\Zed\Sales;
 
 use Spryker\Zed\Sales\SalesDependencyProvider as SprykerSalesDependencyProvider;
-use Spryker\Zed\SalesInvoice\Communication\Plugin\Sales\OrderInvoiceOrderExpanderPlugin;
 use Spryker\Zed\SalesInvoice\Communication\Plugin\Sales\OrderInvoiceSalesListBlockRendererPlugin;
 
 class SalesDependencyProvider extends SprykerSalesDependencyProvider
 {
-    /**
-     * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderExpanderPluginInterface>
-     */
-    protected function getOrderHydrationPlugins(): array
-    {
-        return [
-            new OrderInvoiceOrderExpanderPlugin(),
-        ];
-    }
-
     /**
      * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\SalesDetailBlockRendererPluginInterface>
      */
@@ -278,20 +160,7 @@ class SalesConfig extends SprykerSalesConfig
 }
 ```
 
-3. Add the **Save as PDF** block to your invoice template, right after the opening `<body>` tag. The email ignores the empty block; the document template fills it with the print toolbar:
-
-**src/Pyz/Zed/SalesInvoice/Presentation/Invoice/invoice.twig**
-
-```twig
-{% raw %}
-<body>
-{% block orderInvoiceDocumentToolbar %}{% endblock %}
-...
-</body>
-{% endraw %}
-```
-
-4. Rebuild the caches:
+3. Rebuild the caches:
 
 ```bash
 console cache:class-resolver:build
@@ -301,7 +170,7 @@ console cache:empty-all
 
 {% info_block warningBox "Verification" %}
 
-Trigger the `invoice-generate` event on a confirmed order in the Back Office. Make sure a row with the format `html` appears in `spy_sales_order_invoice_file`, the file exists in the configured file system, and the **Documents** block of the order page shows the invoice with a **PDF** link that opens the document in a new tab.
+Open an order with a generated invoice in the Back Office. Make sure the **Documents** block lists the invoice and the **PDF** link opens the invoice page in a new tab with a **Save as PDF** button.
 
 {% endinfo_block %}
 
@@ -325,7 +194,7 @@ Install the required features:
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
 | OrderInvoicesWidget | Renders the **Documents** section on the order details page. |  | Spryker\Yves\SalesInvoice\Widget |
-| SalesInvoiceRouteProviderPlugin | Provides the authorized download route `customer/order/invoice/download`. |  | Spryker\Yves\SalesInvoice\Plugin\Router |
+| SalesInvoiceRouteProviderPlugin | Provides the route `customer/order/invoice` that shows the invoice page to the authorized customer. |  | Spryker\Yves\SalesInvoice\Plugin\Router |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -397,6 +266,6 @@ console twig:cache:warmer
 
 {% info_block warningBox "Verification" %}
 
-Log in as the customer of an order with a generated invoice and open the order in **My Account > Orders**. Make sure the **Documents** section lists the invoice and the **PDF** link opens the document in a new tab. Open the same download URL as another customer and make sure it answers with a 404 page.
+Log in as the customer of an order with a generated invoice and open the order in **My Account > Orders**. Make sure the **Documents** section lists the invoice and the **PDF** link opens the invoice page in a new tab. Open the same URL as another customer and make sure it answers with a 404 page.
 
 {% endinfo_block %}

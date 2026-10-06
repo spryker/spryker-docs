@@ -2294,8 +2294,6 @@ entries:
                 url: /docs/pbc/all/order-management-system/base-shop/disable-split-delivery-on-the-storefront.html
               - title: Email invoices using BCC
                 url: /docs/pbc/all/order-management-system/base-shop/email-invoices-using-bcc.html
-              - title: Replace the default order invoice document
-                url: /docs/pbc/all/order-management-system/base-shop/replace-the-default-order-invoice-document.html
               - title: Third-party integrations
                 nested:
                   - title: CollectAI

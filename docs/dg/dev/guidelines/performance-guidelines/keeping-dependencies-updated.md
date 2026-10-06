@@ -1,7 +1,7 @@
 ---
 title: Keeping dependencies updated for performance
 description: Guidelines for keeping Spryker module dependencies up to date to maintain optimal performance and security.
-last_updated: Sep 14, 2026
+last_updated: Oct 6, 2026
 template: concept-topic-template
 related:
   - title: General performance guidelines
@@ -230,6 +230,14 @@ For comprehensive guidance on optimizing cart performance, see [Cart page perfor
 - [spryker/store:^1.39.0](https://github.com/spryker/store/releases/tag/1.39.0)
 - [spryker/synchronization:^1.20.0](https://github.com/spryker/synchronization/releases/tag/1.20.0)
 - [spryker/url-storage:^1.26.0](https://github.com/spryker/url-storage/releases/tag/1.26.0)
+
+### Merchant profile page and merchant ACL performance optimization
+
+- [spryker/acl-entity:^1.19.1](https://github.com/spryker/acl-entity/releases/tag/1.19.1)
+- [spryker/country:^4.10.0](https://github.com/spryker/country/releases/tag/4.10.0)
+- [spryker/merchant-profile-merchant-portal-gui:^4.6.0](https://github.com/spryker/merchant-profile-merchant-portal-gui/releases/tag/4.6.0)
+- [spryker/translator:^1.15.2](https://github.com/spryker/translator/releases/tag/1.15.2)
+- [spryker/zed-ui:^4.4.1](https://github.com/spryker/zed-ui/releases/tag/4.4.1)
 
 ## Update strategy
 

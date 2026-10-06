@@ -1,7 +1,7 @@
 ---
 title: Email invoices using BCC
 description: This document provides detailed instructions on emailing invoices using BCC.
-last_updated: Jun 16, 2021
+last_updated: Oct 06, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-emailing-invoices-using-bcc
 originalArticleId: 5fdd0927-fb7a-43b7-9feb-caa171a3c51a
@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-emailing-invoices-using-bcc.html
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-email-invoices-using-bcc.html
 related:
-  - title: Invoice Generation overview
+  - title: Order confirmation / invoice notification email (legacy)
     link: docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/invoice-generation-overview.html
 ---
 

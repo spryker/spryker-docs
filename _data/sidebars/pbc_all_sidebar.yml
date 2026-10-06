@@ -2117,8 +2117,10 @@ entries:
               - title: Order Management feature overview
                 url: /docs/pbc/all/order-management-system/base-shop/order-management-feature-overview/order-management-feature-overview.html
                 nested:
-                  - title: Invoice generation
+                  - title: Order confirmation / invoice notification email (legacy)
                     url: /docs/pbc/all/order-management-system/base-shop/order-management-feature-overview/invoice-generation-overview.html
+                  - title: Order invoice documents
+                    url: /docs/pbc/all/order-management-system/base-shop/order-management-feature-overview/order-invoice-documents-overview.html
                   - title: Order cancellation
                     url: /docs/pbc/all/order-management-system/base-shop/order-management-feature-overview/order-cancellation-overview.html
                   - title: Splittable order items
@@ -2165,6 +2167,8 @@ entries:
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html
                       - title: Order Amendment
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-order-amendment-feature.html
+                      - title: Order Invoice Documents
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-order-invoice-documents-feature.html
                       - title: Reclamations
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-reclamations-feature.html
                       - title: Reorder
@@ -2226,6 +2230,8 @@ entries:
                         url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/orders/edit-shipments.html
                       - title: View returns of an order
                         url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/orders/view-returns-of-an-order.html
+                      - title: View order invoice documents
+                        url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/orders/view-order-invoice-documents.html
 
                   - title: Reclamations
                     nested:
@@ -2288,6 +2294,8 @@ entries:
                 url: /docs/pbc/all/order-management-system/base-shop/disable-split-delivery-on-the-storefront.html
               - title: Email invoices using BCC
                 url: /docs/pbc/all/order-management-system/base-shop/email-invoices-using-bcc.html
+              - title: Replace the default order invoice document
+                url: /docs/pbc/all/order-management-system/base-shop/replace-the-default-order-invoice-document.html
               - title: Third-party integrations
                 nested:
                   - title: CollectAI

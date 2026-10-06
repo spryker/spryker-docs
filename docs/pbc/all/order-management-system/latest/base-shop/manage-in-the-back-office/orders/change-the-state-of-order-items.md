@@ -1,7 +1,7 @@
 ---
 title: Change the state of order items
 description: Learn how to change the state of an order items in the Spryker Cloud Commerce OS Back Office.
-last_updated: Aug 10, 2021
+last_updated: Oct 06, 2026
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-orders
 originalArticleId: 6d125a8a-63ca-4ddc-bb74-1526aa1fe44b
@@ -60,7 +60,7 @@ The following table describes the states you can select for order items.
 | Pay | Select this state once you receive the payment for the order from your customer. |
 | Cancel | Select this state to cancel the order on the customer's behalf. |
 | Skip Timeout | Select this status to end the time period during which the customer can cancel the order. |
-| Generate invoice | Select this state to generate the invoice and send it to the customer. If invoice BCC is configured for your project, the copy of the invoice will be sent to the specified email address as well. You can trigger the invoice-generate only for the whole order. Even if you selected just some of the order items, the invoice is generated for the whole order.|
+| Generate invoice notification email (legacy feature) | Select this state to generate the invoice notification email and send it to the customer. If invoice BCC is configured for your project, the copy of the invoice will be sent to the specified email address as well. You can trigger the invoice-generate only for the whole order. Even if you selected just some of the order items, the invoice is generated for the whole order. If the [Order invoice documents](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/order-invoice-documents-overview.html) feature is enabled, this event also stores the invoice document for the order. |
 | Picking list generation schedule | Select this state to generate a picklist. Available with the [Fulfillment App](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/fulfillment-app-overview.html). |
 | Prepare for picking | Makes the picklist available in the Fulfillment App. Available with the [Fulfillment App](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/fulfillment-app-overview.html). |
 | Ship | Select this state once the order is shipped.|

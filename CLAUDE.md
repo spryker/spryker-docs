@@ -149,7 +149,7 @@ Public documentation must never leak internal-only context. Before publishing, r
 
 - Internal team names, JIRA ticket links.
 - Internal project or phase names should be reported for a review before removal.
-- References to the internal Suite monorepo layout or repository structure.
+- References to the internal `spryker/suite` monorepo. Detect this by the literal string `suite` in a repository path, a package name, or a composer path repository entry — for example `packages/suite/...` or `"url": "../suite"`.
 
 ### Publishing Accuracy
 

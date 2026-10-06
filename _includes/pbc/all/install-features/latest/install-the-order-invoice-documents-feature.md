@@ -8,7 +8,7 @@ Spryker's role is limited to forwarding the document links from the seller, maki
 
 Spryker does not transmit documents to national e-invoicing or clearance networks such as Peppol, KSeF, or SdI. Transmission remains the responsibility of the seller or their e-invoicing provider.
 
-The legacy [Order confirmation / invoice notification email feature](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/invoice-generation-overview.html) is non compliant with the latest EU e-invoicing requirements.
+The [Order confirmation / invoice notification email feature](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/invoice-generation-overview.html) is non compliant with the latest EU e-invoicing requirements.
 
 {% endinfo_block %}
 
@@ -26,7 +26,7 @@ Install the required features:
 | Order Management | {{page.release_tag}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
 | Customer Account Management | {{page.release_tag}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
 
-The legacy invoice notification email must be set up, including the invoice template in `SalesInvoiceConfig::getOrderInvoiceTemplatePath()` and the `invoice-generate` event in your OMS process. For details, see [Order confirmation / invoice notification email (legacy)](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/invoice-generation-overview.html).
+The invoice notification email must be set up, including the invoice template in `SalesInvoiceConfig::getOrderInvoiceTemplatePath()` and the `invoice-generate` event in your OMS process. For details, see [Order confirmation / invoice notification email](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/invoice-generation-overview.html).
 
 ### 1) Install the required modules
 

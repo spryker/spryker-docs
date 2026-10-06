@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-emailing-invoices-using-bcc.html
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-email-invoices-using-bcc.html
 related:
-  - title: Order confirmation / invoice notification email (legacy)
+  - title: Order confirmation / invoice notification email
     link: docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/invoice-generation-overview.html
 ---
 

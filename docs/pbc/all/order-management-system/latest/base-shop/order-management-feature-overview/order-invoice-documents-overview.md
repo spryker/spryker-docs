@@ -8,6 +8,8 @@ related:
     link: docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-invoice-documents-feature.html
   - title: View order invoice documents
     link: docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/view-order-invoice-documents.html
+  - title: Customize the order invoice document
+    link: docs/pbc/all/order-management-system/latest/base-shop/customize-the-order-invoice-document.html
 ---
 
 {% info_block infoBox "Liability" %}
@@ -18,7 +20,7 @@ Spryker's role is limited to forwarding the document links from the seller, maki
 
 Spryker does not transmit documents to national e-invoicing or clearance networks such as Peppol, KSeF, or SdI. Transmission remains the responsibility of the seller or their e-invoicing provider.
 
-The legacy [Order confirmation / invoice notification email feature](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/invoice-generation-overview.html) is non compliant with the latest EU e-invoicing requirements.
+The [Order confirmation / invoice notification email feature](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/invoice-generation-overview.html) is non compliant with the latest EU e-invoicing requirements.
 
 {% endinfo_block %}
 
@@ -27,7 +29,7 @@ The *Order invoice documents* feature makes the invoice of an order visible in t
 - On the Storefront, in a **Documents** section of the order details page in the customer's order history.
 - In the Back Office, in a **Documents** block of the order page.
 
-Both places list the invoices of the order with a **PDF** link. The link opens the invoice in a new browser tab, rendered on request from the project's invoice template, the same HTML the [legacy invoice notification email](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/invoice-generation-overview.html) contains. A **Save as PDF** button on that page opens the browser's print dialog, where the PDF printer produces the file. Nothing is generated or stored in advance: the feature extends the `SalesInvoice` module with a Storefront client, a widget, two controllers, and a Back Office block, and reuses the module's existing invoice reading and rendering.
+Both places list the invoices of the order with a **PDF** link. The link opens the invoice in a new browser tab, rendered on request from the project's invoice template, the same HTML the [invoice notification email](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/invoice-generation-overview.html) contains. A **Save as PDF** button on that page opens the browser's print dialog, where the PDF printer produces the file. Nothing is generated or stored in advance: the feature extends the `SalesInvoice` module with a Storefront client, a widget, two controllers, and a Back Office block, and reuses the module's existing invoice reading and rendering.
 
 ## How it works
 
@@ -47,19 +49,14 @@ The order page shows a **Documents** block with the columns **Reference No.**, *
 
 ## The document
 
-The page shows the invoice template configured in `SalesInvoiceConfig::getOrderInvoiceTemplatePath()`. Changing the template changes both the email and the page. The document inherits the constraints of the [legacy invoice template](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/invoice-generation-overview.html#invoice-template): product options and mixed tax rates are not fully represented, and it is not a structured e-invoice (EN 16931, XRechnung, ZUGFeRD). The PDF is produced by the browser, so page breaks and margins depend on it.
+The page shows the invoice template configured in `SalesInvoiceConfig::getOrderInvoiceTemplatePath()`. Changing the template changes both the email and the page. The document inherits the constraints of the [invoice template](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/invoice-generation-overview.html#invoice-template): product options and mixed tax rates are not fully represented, and it is not a structured e-invoice (EN 16931, XRechnung, ZUGFeRD). The PDF is produced by the browser, so page breaks and margins depend on it.
 
 To change the page around the document (button, frame), override the Storefront view `@SalesInvoice/views/order-invoice/order-invoice.twig` or the Back Office template `@SalesInvoice/Document/index.twig` in your project.
 
 ## Current constraints
 
-- One invoice per order: the invoice is generated once by the legacy flow.
+- One invoice per order: the invoice is generated once by the invoice notification email flow.
 - Credit notes, delivery notes, compliant e-invoice formats, and documents provided by an external system are not supported.
 - In marketplace shops, the document covers the whole order; there is no document per merchant.
 - The invoices are not exposed through the Storefront API or the Back Office API.
 - The invoice email does not contain the document as an attachment.
-
-## Next steps
-
-- [Install the Order Invoice Documents feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-invoice-documents-feature.html)
-- [View order invoice documents](/docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/view-order-invoice-documents.html)

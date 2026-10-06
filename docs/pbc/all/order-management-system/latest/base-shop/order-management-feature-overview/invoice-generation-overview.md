@@ -1,6 +1,6 @@
 ---
-title: Order confirmation / invoice notification email (legacy)
-description: Learn what the legacy invoice notification email does, why it is not an e-invoice, and what you must do yourself to comply with e-invoicing mandates.
+title: Order confirmation / invoice notification email
+description: Learn what the invoice notification email does, why it is not an e-invoice, and what you must do yourself to comply with e-invoicing mandates.
 last_updated: Oct 06, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/invoice-generation-overview
@@ -20,7 +20,7 @@ Spryker does not generate, validate, or assume legal responsibility for invoices
 
 {% endinfo_block %}
 
-Through this legacy feature, invoices can be generated and sent to the customer's email when they place an order in the shop. Before you rely on it, consider the following:
+Through this feature, invoices can be generated and sent to the customer's email when they place an order in the shop. Before you rely on it, consider the following:
 
 - The emailed document is not a structured e-invoice and does not comply with the EU ViDA EN 16931, XRechnung, or ZUGFeRD requirements.
 - It is not persisted in the Back Office or on the Storefront; the only retention path is a BCC copy.
@@ -29,9 +29,9 @@ Through this legacy feature, invoices can be generated and sent to the customer'
 
 Sellers subject to a mandate must generate compliant invoices and credit notes in their ERP or via a certified e-invoicing provider. Order data can be retrieved from Spryker to feed that system through the [Orders data export](/docs/pbc/all/order-management-system/latest/base-shop/import-and-export-data/orders-data-export/orders-data-export.html) and the [Storefront API](/docs/pbc/all/order-management-system/latest/base-shop/glue-api-retrieve-orders.html).
 
-To let buyers and Back Office users open this emailed invoice as a page they can save as PDF, use the [Order invoice documents](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/order-invoice-documents-overview.html) feature. It shows the same document on demand; it does not make the legacy email compliant.
+To let buyers and Back Office users open this emailed invoice as a page they can save as PDF, use the [Order invoice documents](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/order-invoice-documents-overview.html) feature. It shows the same document on demand; it does not make the email compliant.
 
-## Legacy invoice generation
+## Invoice generation
 
 Invoices can be generated and sent to the customer's email every time they place an order in the shop.
 

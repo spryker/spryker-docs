@@ -2,7 +2,7 @@
 title: Frontend builder for the Merchant Portal v2
 description: Learn about the Angular frontend builder that ships with the ZedUi module and builds the Merchant Portal assets for core and project modules.
 keywords: ZedUi, zed-ui, frontend builder, Merchant Portal, Angular, webpack, jest, build, live reload
-last_updated: Oct 1, 2026
+last_updated: Oct 7, 2026
 template: howto-guide-template
 related:
   - title: Building the Merchant Portal frontend
@@ -132,6 +132,14 @@ In `angular.json`, inside the `merchant-portal` project:
 Because the reconciliation happens in place rather than as a rewrite, whatever `ng update` or `ng add` writes into `angular.json` survives it. A value the builder *does* generate belongs to it, so a hand edit is corrected on the next run.
 
 Your Merchant Portal project in `angular.json` has to be named `merchant-portal`, unless it is the only project in the file.
+
+## Build configuration from the backend
+
+`vendor/bin/console frontend:mp:build` writes `data/cache/MerchantPortal/frontend/build-config.json` with the backend's `CORE_NAMESPACES` and `PROJECT_NAMESPACES`, then runs the npm build. The builder reads that file on every run and scans the Merchant Portal modules of every namespace in it: core namespaces first, project namespaces last, so the namespace the class resolver prefers is scanned last and its modules win. A namespace maps to `src/<Namespace>` when that directory exists, otherwise to `vendor/<namespace-in-kebab-case>`; a project namespace is scanned as `src/<Namespace>/Zed` and `src/<Namespace>/*/src/<Namespace>/Zed`. The Angular application files are taken from the strongest project namespace that has `ZedUi/Presentation/Components`. `Spryker` has to be among the core namespaces, because ZedUi lives there.
+
+So a project namespace is changed in `config_default.php` and nowhere else. Every run prints which configuration it uses: `Build configuration: generated (…)`, or `built-in defaults (…)` when the console command has not run yet and the packaged layout below applies. After the file changes, run `npm run mp:update:config` so that `angular.json` and the TypeScript configurations follow; `postinstall` does it on `npm install`.
+
+To override, use `frontend/merchant-portal.settings.mts`, which is applied on top: a new `paths.projectModulesDirectories` entry adds a directory scanned after all generated ones, `pyz` replaces the `Pyz` directory, and `paths.projectApplicationDirectory` wins over the derived one. See [Project-level builder settings](#project-level-builder-settings).
 
 ## Source layout detection
 

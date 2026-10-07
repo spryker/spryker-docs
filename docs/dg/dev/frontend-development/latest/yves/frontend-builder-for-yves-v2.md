@@ -2,7 +2,7 @@
 title: Frontend builder for Yves v2
 description: Learn about the TypeScript-based frontend builder v2 that ships with the ShopUi module and builds Yves assets for all namespaces and themes.
 keywords: ShopUi, shop-ui, frontend builder, Yves, webpack, build, assets, live reload
-last_updated: Oct 1, 2026
+last_updated: Oct 7, 2026
 template: howto-guide-template
 related:
   - title: Frontend builder for Yves (deprecated)
@@ -234,6 +234,14 @@ Type checking is off by default, because the project's Yves sources were never t
 The namespace and theme config file format is unchanged from v1 and is located at `config/Yves/frontend-build-config.json` by default. For multi-theme setup, see [Multi-theme](/docs/dg/dev/frontend-development/latest/yves/multi-theme.html).
 
 {% endinfo_block %}
+
+## Build configuration from the backend
+
+`vendor/bin/console frontend:yves:build` writes `data/cache/Yves/frontend/build-config.json` with the backend's `CORE_NAMESPACES`, `PROJECT_NAMESPACES`, `YVES_THEME`, and default theme, then runs the npm build. The builder reads that file on every run and derives everything from it: the source roots—core namespaces first, project namespaces last, so the namespace the class resolver prefers is scanned last and wins—the core theme root, and the themes, where the backend theme is added to every entry of `config/Yves/frontend-build-config.json` without modifying the file. A namespace maps to `src/<Namespace>` when that directory exists, otherwise to `vendor/<namespace-in-kebab-case>`.
+
+So a project namespace or a theme is changed in `config_default.php` and nowhere else. Every run prints which configuration it uses: `Build configuration: generated (…)`, or `built-in defaults (…)` when the console command has not run yet and the packaged layout applies. After the file changes, run `npm run update:config -w shop-ui` so that `tsconfig.yves.json` follows; `postinstall` does it on `npm install`.
+
+To override, use `frontend/yves.settings.mts`, which is applied on top: a new `paths.sources` entry adds a root scanned after all generated ones, `project` replaces the `Pyz` root, and `paths.coreThemeRoot` or `paths.iconSprite.sources` win over the derived values. See [Project-level builder settings](#project-level-builder-settings).
 
 ## Project-level builder settings
 

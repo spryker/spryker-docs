@@ -2,7 +2,7 @@
 title: Frontend builder for the Back Office v2
 description: Learn about the frontend builder that ships with the Gui module and builds the Back Office assets of core, feature, and project modules.
 keywords: Gui, spryker-zed-gui, frontend builder, Back Office, Zed, webpack, TypeScript, build, live reload, oryx-for-zed
-last_updated: Oct 1, 2026
+last_updated: Oct 7, 2026
 template: howto-guide-template
 related:
   - title: Upgrade to frontend builder v2 for the Back Office
@@ -126,6 +126,14 @@ The Gui module declares the whole npm dependency set of the Back Office in `vend
 Declaring one of these packages in the project `package.json` is not additive: it pins a second version of the same package, which is how two copies of jQuery end up in one build. To see where an installed package comes from, run `npm ls <package>` in the project root; a package provided by the builder is listed under `spryker-zed-gui`.
 
 A Back Office module that needs a library of its own — a module in `src/Pyz/Zed` included — declares it in its own `assets/Zed/package.json`, and the project lists that directory as an npm workspace. The builder adds every `assets/Zed/node_modules` directory it finds to webpack's module resolution, so the library resolves from wherever npm installed it.
+
+## Build configuration from the backend
+
+`vendor/bin/console frontend:zed:build` writes `data/cache/Zed/frontend/build-config.json` with the backend's `CORE_NAMESPACES` and `PROJECT_NAMESPACES`, then runs the npm build. The builder reads that file on every run and scans one source root per namespace: core namespaces first, project namespaces last, so the namespace the class resolver prefers is scanned last and its entry points win. A namespace maps to `src/<Namespace>` when that directory exists, otherwise to `vendor/<namespace-in-kebab-case>`. The roots are keyed `core` for `Spryker`, `features` for `SprykerFeature`, `project` for `Pyz`, and the lowercase namespace name for the rest.
+
+So a project namespace is changed in `config_default.php` and nowhere else. Every run prints which configuration it uses: `Build configuration: generated (…)`, or `built-in defaults (…)` when the console command has not run yet and the packaged layout below applies. After the file changes, run `npm run update:config -w spryker-zed-gui` so that the TypeScript configurations follow; `postinstall` does it on `npm install`.
+
+To override, use `frontend/backoffice.settings.mts`, which is applied on top: a new `paths.sources` entry adds a root scanned after all generated ones, and an entry with the name of a generated root replaces it. See [Project-level builder settings](#project-level-builder-settings).
 
 ## Source layout detection
 

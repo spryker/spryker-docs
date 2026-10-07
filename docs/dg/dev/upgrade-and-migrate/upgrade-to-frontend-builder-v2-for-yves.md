@@ -2,7 +2,7 @@
 title: Upgrade to frontend builder v2 for Yves
 description: Learn how to upgrade your Spryker project from the legacy frontend builder in the frontend directory to the frontend builder v2 shipped with the ShopUi module.
 keywords: ShopUi, shop-ui, frontend builder, Yves, migration, upgrade, webpack, build
-last_updated: Oct 1, 2026
+last_updated: Oct 7, 2026
 template: concept-topic-template
 related:
   - title: Frontend builder for Yves v2
@@ -184,7 +184,7 @@ Unlike v1, a single `sources` entry is enough—there are no separate `dirs` arr
 
 {% info_block warningBox "Webpack config customizations" %}
 
-Direct webpack config customizations from `frontend/configs/development.js` or `frontend/configs/production.js` have no direct equivalent: the webpack configuration is owned by the builder. Most common customizations are covered by `defineConfig()` overrides and build hooks; review any remaining ones case by case.
+Direct webpack config customizations from `frontend/configs/development.js` or `frontend/configs/production.js` have no direct equivalent: the webpack configuration is owned by the builder. Most common customizations are covered by `defineConfig()` overrides and build hooks; review any remaining ones case by case. Extra entry points—for example, a separate print stylesheet—are build hooks that return `entries` (from ShopUi 2.4.0); see [Build hooks](/docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves-v2.html#build-hooks).
 
 {% endinfo_block %}
 
@@ -236,7 +236,7 @@ docker/sdk cli npm run yves
 
 ## Minimum changes to legacy project styles
 
-Migrating the project styles to the Sass module system is **not** part of this upgrade. Project component files keep working in the legacy form—the builder injects the shared context (settings, helpers, and cross-component mixins) into every component file at compile time, so they need no `@use` rules of their own. Files that emit CSS at the top level compile with a legacy style rescue warning and stay in the bundles.
+Migrating the project styles to the Sass module system is **not** part of this upgrade. Project component files keep working in the legacy form—the builder injects the shared context (settings, helpers, and cross-component mixins) into every component file at compile time, so they need no `@use` rules of their own. Files that emit CSS at the top level compile through the legacy style rescue and stay in the bundles; `--debug-injection` lists them. From ShopUi 2.4.0, such a file of a component that your project or theme overrides is not compiled—the override replaced it. A vendor component you override only in TypeScript therefore loses the vendor styles after the update; import them from your override if you still want them. See [Component overrides and themes](/docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves-v2.html#component-overrides-and-themes).
 
 One legacy pattern fails to compile and must be adjusted: a shared helper mixin that reads a variable defined in the consuming component file.
 

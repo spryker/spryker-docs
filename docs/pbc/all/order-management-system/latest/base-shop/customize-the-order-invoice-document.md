@@ -1,6 +1,6 @@
 ---
 title: Customize the order invoice document
-description: Learn how to change the content and the look of the order invoice document with your own template, add data to it with an expander plugin, and set the reference or the template per invoice with a before-save plugin.
+description: Learn how to change the content and the look of the order invoice document with your own template, provide your own document formats such as a generated PDF with a document provider plugin, add data with an expander plugin, and set the reference or the template per invoice with a before-save plugin.
 last_updated: Oct 06, 2026
 template: howto-guide-template
 related:
@@ -26,11 +26,12 @@ The [Order confirmation / invoice notification email feature](/docs/pbc/all/orde
 
 The [Order invoice documents](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/order-invoice-documents-overview.html) feature shows the invoice that the `SalesInvoice` module renders from a Twig template. The same rendered document goes into the invoice email and onto the invoice page. This document describes the three places where a project changes what the document contains and how it looks:
 
-- The invoice template: content, layout, and styles of the document.
+- The invoice template: content, layout, and styles of the default document.
+- A document provider plugin: the documents of an invoice, for example a PDF generated on the project side or the links of an external system.
 - An expander plugin: data that the template can use but the invoice does not store.
 - A before-save plugin: the reference and the template path of every new invoice.
 
-The feature renders HTML only. A PDF is produced by the browser's print dialog from the invoice page; there is no plugin for other file formats.
+Without a project plugin, the feature shows the rendered HTML, and a PDF is produced by the browser's print dialog from the invoice page.
 
 ## Prerequisites
 
@@ -73,6 +74,107 @@ Edit the template to change the content, the layout, or the styles. Keep the fol
 - The template is a complete HTML document. Keep the styles inline or in a `<style>` block: the document is shown inside a frame and sent as an email body, so external stylesheets are not loaded.
 - Translate text with the `trans` filter. The keys are glossary keys and are translated into the locale of the order.
 - Every invoice stores the path of the template it was generated with. Changing the path in the config affects new invoices only; invoices generated earlier keep rendering with the template they were created with, so do not delete a template that generated invoices still reference.
+
+## Provide your own documents
+
+`OrderInvoiceDocumentProviderPluginInterface` from the `SalesInvoiceExtension` module decides which documents an invoice has and provides their content. The plugin has two methods:
+
+- `getOrderInvoiceDocuments()` lists the documents of an invoice: `format`, `fileName`, `mimeType`, and optionally `url`. It runs every time invoices are listed, so it must not generate content.
+- `provideOrderInvoiceDocument()` fills `content` of a listed document without `url`. It runs when the document is requested; `OrderInvoiceTransfer.renderedInvoice` contains the HTML of the invoice email at that moment.
+
+The default plugin, `RenderedOrderInvoiceDocumentProviderPlugin`, lists one `pdf` document whose content is the rendered HTML; HTML documents open as a page with a **Save as PDF** button, every other MIME type is downloaded, and a document with `url` is linked directly. Nothing is stored: the content is produced on every request.
+
+To provide a real PDF generated on the project side:
+
+1. Add a PDF library to the project, for example:
+
+```bash
+composer require dompdf/dompdf
+```
+
+2. Implement the plugin:
+
+**src/Pyz/Zed/SalesInvoice/Communication/Plugin/SalesInvoice/PdfOrderInvoiceDocumentProviderPlugin.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\SalesInvoice\Communication\Plugin\SalesInvoice;
+
+use Dompdf\Dompdf;
+use Generated\Shared\Transfer\OrderInvoiceDocumentTransfer;
+use Generated\Shared\Transfer\OrderInvoiceTransfer;
+use Generated\Shared\Transfer\OrderTransfer;
+use Spryker\Zed\Kernel\Communication\AbstractPlugin;
+use Spryker\Zed\SalesInvoiceExtension\Dependency\Plugin\OrderInvoiceDocumentProviderPluginInterface;
+
+class PdfOrderInvoiceDocumentProviderPlugin extends AbstractPlugin implements OrderInvoiceDocumentProviderPluginInterface
+{
+    protected const string FORMAT = 'pdf';
+
+    /**
+     * @return array<\Generated\Shared\Transfer\OrderInvoiceDocumentTransfer>
+     */
+    public function getOrderInvoiceDocuments(OrderInvoiceTransfer $orderInvoiceTransfer, OrderTransfer $orderTransfer): array
+    {
+        return [
+            (new OrderInvoiceDocumentTransfer())
+                ->setFormat(static::FORMAT)
+                ->setFileName($orderInvoiceTransfer->getReferenceOrFail() . '.pdf')
+                ->setMimeType('application/pdf'),
+        ];
+    }
+
+    public function provideOrderInvoiceDocument(
+        OrderInvoiceDocumentTransfer $orderInvoiceDocumentTransfer,
+        OrderInvoiceTransfer $orderInvoiceTransfer,
+        OrderTransfer $orderTransfer
+    ): OrderInvoiceDocumentTransfer {
+        $dompdf = new Dompdf();
+        $dompdf->loadHtml($orderInvoiceTransfer->getRenderedInvoiceOrFail());
+        $dompdf->render();
+
+        return $orderInvoiceDocumentTransfer->setContent($dompdf->output());
+    }
+}
+```
+
+3. Register the plugin instead of the default one:
+
+**src/Pyz/Zed/SalesInvoice/SalesInvoiceDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\SalesInvoice;
+
+use Pyz\Zed\SalesInvoice\Communication\Plugin\SalesInvoice\PdfOrderInvoiceDocumentProviderPlugin;
+use Spryker\Zed\SalesInvoice\SalesInvoiceDependencyProvider as SprykerSalesInvoiceDependencyProvider;
+
+class SalesInvoiceDependencyProvider extends SprykerSalesInvoiceDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\SalesInvoiceExtension\Dependency\Plugin\OrderInvoiceDocumentProviderPluginInterface>
+     */
+    protected function getOrderInvoiceDocumentProviderPlugins(): array
+    {
+        return [
+            new PdfOrderInvoiceDocumentProviderPlugin(),
+        ];
+    }
+}
+```
+
+The **PDF** link in the Storefront section and in the Back Office block now downloads `Invoice-12.pdf`; the file is generated on every click and never stored.
+
+To offer several formats, return several documents, or register several plugins; every format gets its own link. Add a label for every new format: the glossary key `sales_invoice.format.<format>` for the Storefront and the Zed translation `sales_invoice.format.<format>` for the Back Office, for example:
+
+```yaml
+sales_invoice.format.xrechnung,XRechnung (XML),en_US
+sales_invoice.format.xrechnung,XRechnung (XML),de_DE
+```
+
+To link documents of an external system, for example an ERP, set `url` in `getOrderInvoiceDocuments()`; the link then leads there directly, and `provideOrderInvoiceDocument()` is not called.
 
 ## Add data to the document
 

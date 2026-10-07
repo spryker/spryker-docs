@@ -78,8 +78,8 @@ sales_invoice.order_documents.title,Documents,en_US
 sales_invoice.order_documents.title,Dokumente,de_DE
 sales_invoice.order_documents.no_documents,No documents,en_US
 sales_invoice.order_documents.no_documents,Keine Dokumente,de_DE
-sales_invoice.order_documents.pdf,PDF,en_US
-sales_invoice.order_documents.pdf,PDF,de_DE
+sales_invoice.format.pdf,PDF,en_US
+sales_invoice.format.pdf,PDF,de_DE
 sales_invoice.order_documents.save_as_pdf,Save as PDF,en_US
 sales_invoice.order_documents.save_as_pdf,Als PDF speichern,de_DE
 ```
@@ -104,11 +104,36 @@ Make sure the configured data has been added to the `spy_glossary_key` and `spy_
 
 ### 4) Set up behavior
 
-1. Register the Back Office block plugin:
+1. Register the plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
+| RenderedOrderInvoiceDocumentProviderPlugin | Provides the default document of an invoice: the rendered invoice as a **PDF** document that opens as a page. |  | Spryker\Zed\SalesInvoice\Communication\Plugin\SalesInvoice |
 | OrderInvoiceSalesListBlockRendererPlugin | Renders the **Documents** block on the Back Office order page. |  | Spryker\Zed\SalesInvoice\Communication\Plugin\Sales |
+
+**src/Pyz/Zed/SalesInvoice/SalesInvoiceDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\SalesInvoice;
+
+use Spryker\Zed\SalesInvoice\Communication\Plugin\SalesInvoice\RenderedOrderInvoiceDocumentProviderPlugin;
+use Spryker\Zed\SalesInvoice\SalesInvoiceDependencyProvider as SprykerSalesInvoiceDependencyProvider;
+
+class SalesInvoiceDependencyProvider extends SprykerSalesInvoiceDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\SalesInvoiceExtension\Dependency\Plugin\OrderInvoiceDocumentProviderPluginInterface>
+     */
+    protected function getOrderInvoiceDocumentProviderPlugins(): array
+    {
+        return [
+            new RenderedOrderInvoiceDocumentProviderPlugin(),
+        ];
+    }
+}
+```
 
 **src/Pyz/Zed/Sales/SalesDependencyProvider.php**
 
@@ -170,7 +195,7 @@ console cache:empty-all
 
 {% info_block warningBox "Verification" %}
 
-Open an order with a generated invoice in the Back Office. Make sure the **Documents** block lists the invoice and the **PDF** link opens the invoice page in a new tab with a **Save as PDF** button.
+Open an order with a generated invoice in the Back Office. Make sure the **Documents** block lists the invoice with a **PDF** link and the link opens the invoice page in a new tab with a **Save as PDF** button.
 
 {% endinfo_block %}
 

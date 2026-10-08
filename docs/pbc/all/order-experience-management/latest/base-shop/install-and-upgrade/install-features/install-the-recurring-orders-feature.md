@@ -1,7 +1,7 @@
 ---
 title: Install the Recurring Orders feature
 description: Learn how to install the Recurring Orders feature into your Spryker project.
-last_updated: Aug 17, 2026
+last_updated: Oct 8, 2026
 template: feature-integration-guide-template
 related:
   - title: Recurring Orders feature overview
@@ -109,6 +109,7 @@ Make sure the following changes have been applied in the database:
 | DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
 | spy_recurring_schedule | table | created |
+| spy_recurring_schedule.cadence_options | column | created |
 | spy_recurring_schedule_item | table | created |
 | spy_recurring_schedule_history | table | created |
 | spy_recurring_schedule_forecast | table | created |
@@ -141,6 +142,7 @@ Make sure the following changes have been applied in transfer objects:
 | RecurringScheduleTableFilter | class | created | src/Generated/Shared/Transfer/RecurringScheduleTableFilterTransfer.php |
 | RecurringScheduleDueData | class | created | src/Generated/Shared/Transfer/RecurringScheduleDueDataTransfer.php |
 | RecurringScheduleError | class | created | src/Generated/Shared/Transfer/RecurringScheduleErrorTransfer.php |
+| CadenceValidationResponse | class | created | src/Generated/Shared/Transfer/CadenceValidationResponseTransfer.php |
 | RecurringOrderSettings | class | created | src/Generated/Shared/Transfer/RecurringOrderSettingsTransfer.php |
 | RecurringOrderQuoteUpdateRequest | class | created | src/Generated/Shared/Transfer/RecurringOrderQuoteUpdateRequestTransfer.php |
 | RecurringOrderQuoteUpdateResponse | class | created | src/Generated/Shared/Transfer/RecurringOrderQuoteUpdateResponseTransfer.php |
@@ -241,6 +243,7 @@ Register the built-in cadence type and schedule validator plugins:
 | BiWeeklyCadenceTypePlugin | Calculates the next trigger date 14 days after the current trigger date. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence |
 | MonthlyCadenceTypePlugin | Calculates the next trigger date on the same day of the following month. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence |
 | EveryNWeeksCadenceTypePlugin | Calculates the next trigger date every N weeks. Requires `cadenceValue` to be set on the schedule. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence |
+| ByDaysCadenceTypePlugin | Calculates the next trigger date as the next selected day of the week after the current trigger date. Requires `cadenceOptions` to contain at least one ISO-8601 weekday number, from `1` (Monday) to `7` (Sunday). | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence |
 | PriceScheduleValidatorPlugin | Detects price increases on recurring schedule items compared to their stored reference prices before order placement. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\ScheduleValidator |
 | CheckoutPlaceabilityScheduleValidatorPlugin | Simulates a checkout to detect availability, discontinuation, or product approval issues on recurring schedule items before order placement. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\ScheduleValidator |
 
@@ -252,6 +255,7 @@ Register the built-in cadence type and schedule validator plugins:
 namespace Pyz\Zed\OrderExperienceManagement;
 
 use SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence\BiWeeklyCadenceTypePlugin;
+use SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence\ByDaysCadenceTypePlugin;
 use SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence\EveryNWeeksCadenceTypePlugin;
 use SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence\MonthlyCadenceTypePlugin;
 use SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence\WeeklyCadenceTypePlugin;
@@ -271,6 +275,7 @@ class OrderExperienceManagementDependencyProvider extends SprykerOrderExperience
             new BiWeeklyCadenceTypePlugin(), #RecurringOrdersFeature
             new MonthlyCadenceTypePlugin(), #RecurringOrdersFeature
             new EveryNWeeksCadenceTypePlugin(), #RecurringOrdersFeature
+            new ByDaysCadenceTypePlugin(), #RecurringOrdersFeature
         ];
     }
 
@@ -289,9 +294,11 @@ class OrderExperienceManagementDependencyProvider extends SprykerOrderExperience
 
 {% info_block warningBox "Verification" %}
 
-Make sure all four cadence types (weekly, bi-weekly, monthly, every N weeks) are available when setting up a recurring order on the storefront.
+Make sure all five cadence types (weekly, bi-weekly, monthly, every N weeks, on specific days) are available when setting up a recurring order on the storefront. When you select **On specific days**, make sure a day picker is displayed and checkout is blocked if no day is selected.
 
 {% endinfo_block %}
+
+To add a project-specific cadence type, implement `SprykerFeature\Zed\OrderExperienceManagement\Dependency\Plugin\CadenceTypePluginInterface` and register the plugin in `getCadenceTypePlugins()`. Besides `getNextTriggerDate()`, the plugin must implement `isCadenceValid()`, which validates the cadence value and cadence options of the schedule. On failure, return a `CadenceValidationResponseTransfer` with `isSuccess` set to `false` and a glossary key in `message`. Checkout and schedule updates are rejected when the cadence fails this validation. To offer the cadence type in the forms and filters, also extend `getSupportedCadenceTypes()` in the Yves config and `getBackOfficeFilterCadenceTypes()` in the Zed config.
 
 #### Set up recurring order checkout validator plugins
 
@@ -878,7 +885,8 @@ class OrderExperienceManagementConfig extends SprykerOrderExperienceManagementCo
 | `getForecastPeriodTo()` | `FORECAST_PERIOD_TO_MONTH_END` | Upper bound of the Back Office forecast period. Applies to both forecast inputs. |
 | `getMonthlyForecastKey()` | `monthly` | Key under which the forecast snapshot is stored in `spy_recurring_schedule_forecast`. |
 | `getBackOfficeFilterStatuses()` | Active, Paused, Review required, Cancelled, Failed | Statuses selectable in the Back Office **Recurring Order Schedules** filter. |
-| `getBackOfficeFilterCadenceTypes()` | Weekly, Bi-weekly, Monthly, Every N weeks | Cadence types selectable in the Back Office **Recurring Order Schedules** filter. Extend it when you register a custom cadence type plugin. |
+| `getBackOfficeFilterCadenceTypes()` | Weekly, Bi-weekly, Monthly, Every N weeks, By days | Cadence types selectable in the Back Office **Recurring Order Schedules** filter. Extend it when you register a custom cadence type plugin. |
+| `getSupportedWeekDays()` | Monday to Sunday | Days of the week accepted for the *on specific days* cadence, as ISO-8601 weekday numbers. Reads the value from the shared config. To narrow or reorder the days, override `getSupportedWeekDays()` in the shared config to apply it in Yves and Zed at once. |
 | `getSmStateNameToStatusMap()` | See `OrderExperienceManagementConfig` | Maps each state machine state name to the public schedule status it represents. State names that are not in the map resolve to no status. Extend it when you add states to the process XML. |
 | `getSupportedAddedItemShipmentTypeKeys()` | `[delivery, on-site-service]` | Shipment type keys accepted for products added on the **Review Required** page, in preference order. When an offer or store exposes several supported types, the first one is used. |
 | `getSubstitutableReviewReasons()` | `[discontinued, substituted]` | Review reason groups for which a substitute product can be offered on the **Review Required** page. |
@@ -1239,8 +1247,10 @@ class OrderExperienceManagementConfig extends SprykerOrderExperienceManagementCo
 
 | CONFIGURATION METHOD | DEFAULT | DESCRIPTION |
 | --- | --- | --- |
-| `getSupportedCadenceTypes()` | Weekly, bi-weekly, monthly, every N weeks | Cadence types offered in the storefront recurring order forms, as `[glossary key => cadence value]`. Extend it when you register a custom cadence type plugin. |
+| `getSupportedCadenceTypes()` | Weekly, bi-weekly, monthly, every N weeks, on specific days | Cadence types offered in the storefront recurring order forms, as `[glossary key => cadence value]`. Extend it when you register a custom cadence type plugin. |
 | `getCadenceTypeEveryNWeeks()` | `every_n_weeks` | Cadence type that requires an additional numeric interval. |
+| `getCadenceTypeByDays()` | `by_days` | Cadence type that requires a set of days of the week. |
+| `getSupportedWeekDays()` | Monday to Sunday | Days of the week offered in the day picker of the *on specific days* cadence, in display order. Days outside this list are rejected. Reads the value from the shared config. |
 | `getInvoicePaymentMethodKeys()` | `[invoice, purchaseOnAccount, dummyMarketplacePaymentInvoice]` | Payment method keys that qualify as invoice-based. Only quotes with a matching payment method can generate a recurring schedule. Override this in the shared config to apply it in Yves and Zed at once. |
 | `getBusinessUnitChoicesLimit()` | `100` | Maximum number of company business units loaded into the recurring order search scope dropdown. Projects with more business units should raise this value or switch to an async autocomplete widget. |
 | `getRecurringScheduleListItemsPerPage()` | `10` | Number of recurring schedules shown per page on the list page. |
@@ -1296,12 +1306,36 @@ recurring_orders.attention_banner.message,You have %count% recurring schedule(s)
 recurring_orders.attention_banner.message,"Sie haben %count% wiederkehrende(n) Zeitplan/Zeitpläne, die Ihre Aufmerksamkeit erfordern.",de_DE
 recurring_orders.cadence.bi_weekly,Bi-weekly,en_US
 recurring_orders.cadence.bi_weekly,Zweiwöchentlich,de_DE
+recurring_orders.cadence.by_days,On specific days,en_US
+recurring_orders.cadence.by_days,An bestimmten Tagen,de_DE
 recurring_orders.cadence.every_n_weeks,Every N weeks,en_US
 recurring_orders.cadence.every_n_weeks,Alle N Wochen,de_DE
 recurring_orders.cadence.monthly,Monthly,en_US
 recurring_orders.cadence.monthly,Monatlich,de_DE
 recurring_orders.cadence.weekly,Weekly,en_US
 recurring_orders.cadence.weekly,Wöchentlich,de_DE
+recurring_orders.cadence.validation.days_required,Select at least one day.,en_US
+recurring_orders.cadence.validation.days_required,Wählen Sie mindestens einen Tag aus.,de_DE
+recurring_orders.cadence.validation.date_not_selected_week_day,Select a date that falls on one of the selected days.,en_US
+recurring_orders.cadence.validation.date_not_selected_week_day,"Wählen Sie ein Datum, das auf einen der ausgewählten Tage fällt.",de_DE
+recurring_orders.cadence.validation.value_required,Please choose an interval for the recurring order.,en_US
+recurring_orders.cadence.validation.value_required,Bitte wählen Sie ein Intervall für die wiederkehrende Bestellung aus.,de_DE
+recurring_orders.checkout.days_label,Days,en_US
+recurring_orders.checkout.days_label,Tage,de_DE
+recurring_orders.day.monday,Monday,en_US
+recurring_orders.day.monday,Montag,de_DE
+recurring_orders.day.tuesday,Tuesday,en_US
+recurring_orders.day.tuesday,Dienstag,de_DE
+recurring_orders.day.wednesday,Wednesday,en_US
+recurring_orders.day.wednesday,Mittwoch,de_DE
+recurring_orders.day.thursday,Thursday,en_US
+recurring_orders.day.thursday,Donnerstag,de_DE
+recurring_orders.day.friday,Friday,en_US
+recurring_orders.day.friday,Freitag,de_DE
+recurring_orders.day.saturday,Saturday,en_US
+recurring_orders.day.saturday,Samstag,de_DE
+recurring_orders.day.sunday,Sunday,en_US
+recurring_orders.day.sunday,Sonntag,de_DE
 recurring_orders.checkout.cadence_label,Frequency,en_US
 recurring_orders.checkout.cadence_label,Häufigkeit,de_DE
 recurring_orders.checkout.cadence_placeholder,Select frequency,en_US
@@ -1430,6 +1464,8 @@ recurring_orders.detail.edit.frequency_label,Frequency,en_US
 recurring_orders.detail.edit.frequency_label,Häufigkeit,de_DE
 recurring_orders.detail.edit.cadence_value_label,Interval,en_US
 recurring_orders.detail.edit.cadence_value_label,Intervall,de_DE
+recurring_orders.detail.edit.days_label,Days,en_US
+recurring_orders.detail.edit.days_label,Tage,de_DE
 recurring_orders.detail.edit.starting_date_label,Next Execution Date,en_US
 recurring_orders.detail.edit.starting_date_label,Nächstes Ausführungsdatum,de_DE
 recurring_orders.detail.edit.validation.name_required,Please enter a name.,en_US
@@ -1748,8 +1784,6 @@ recurring_orders.review.substitute.unavailable,unavailable,en_US
 recurring_orders.review.substitute.unavailable,nicht verfügbar,de_DE
 recurring_orders.checkout.error.not_eligible,This cart cannot be placed as a recurring order.,en_US
 recurring_orders.checkout.error.not_eligible,Dieser Warenkorb kann nicht als wiederkehrende Bestellung aufgegeben werden.,de_DE
-recurring_orders.checkout.error.cadence_value_required,Please choose an interval for the recurring order.,en_US
-recurring_orders.checkout.error.cadence_value_required,Bitte wählen Sie ein Intervall für die wiederkehrende Bestellung aus.,de_DE
 recurring_orders.error.quote_not_found,The cart could not be found or access was denied.,en_US
 recurring_orders.error.quote_not_found,Der Warenkorb wurde nicht gefunden oder der Zugriff wurde verweigert.,de_DE
 recurring_orders.review.reason.configurable_bundle_unavailable,Configurable bundle unavailable,en_US

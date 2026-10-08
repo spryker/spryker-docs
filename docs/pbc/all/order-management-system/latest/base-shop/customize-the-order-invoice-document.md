@@ -1,6 +1,6 @@
 ---
 title: Customize the order invoice document
-description: Learn how to change the content and the look of the order invoice document with your own template, provide your own document formats such as a generated PDF with a document provider plugin, add data with an expander plugin, and set the reference or the template per invoice with a before-save plugin.
+description: Learn how to change the content and the look of the order invoice document with your own template, add data with an expander plugin, set the reference or the template per invoice with a before-save plugin, and serve your own file format such as a generated PDF with your own download actions.
 last_updated: Oct 06, 2026
 template: howto-guide-template
 related:
@@ -24,14 +24,12 @@ The [Order confirmation / invoice notification email feature](/docs/pbc/all/orde
 
 {% endinfo_block %}
 
-The [Order invoice documents](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/order-invoice-documents-overview.html) feature shows the invoice that the `SalesInvoice` module renders from a Twig template. The same rendered document goes into the invoice email and onto the invoice page. This document describes the three places where a project changes what the document contains and how it looks:
+The [Order invoice documents](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/order-invoice-documents-overview.html) feature shows the invoice that the `SalesInvoice` module renders from a Twig template. The same rendered document goes into the invoice email and onto the invoice page. The module itself ships no extension point for other file formats: by default the feature shows the rendered HTML, and a PDF is produced by the browser's print dialog. This document describes the places where a project changes what the document contains, how it looks, and how it is delivered:
 
-- The invoice template: content, layout, and styles of the default document.
-- A document provider plugin: the documents of an invoice, for example a PDF generated on the project side or the links of an external system.
+- The invoice template: content, layout, and styles of the document.
 - An expander plugin: data that the template can use but the invoice does not store.
 - A before-save plugin: the reference and the template path of every new invoice.
-
-Without a project plugin, the feature shows the rendered HTML, and a PDF is produced by the browser's print dialog from the invoice page.
+- Your own download actions: another file format, for example a PDF generated on the project side, or a link to the document of an external system, with the module's links pointing to them.
 
 ## Prerequisites
 
@@ -75,16 +73,9 @@ Edit the template to change the content, the layout, or the styles. Keep the fol
 - Translate text with the `trans` filter. The keys are glossary keys and are translated into the locale of the order.
 - Every invoice stores the path of the template it was generated with. Changing the path in the config affects new invoices only; invoices generated earlier keep rendering with the template they were created with, so do not delete a template that generated invoices still reference.
 
-## Provide your own documents
+## Serve your own file format
 
-`OrderInvoiceDocumentProviderPluginInterface` from the `SalesInvoiceExtension` module decides which documents an invoice has and provides their content. The plugin has two methods:
-
-- `getOrderInvoiceDocuments()` lists the documents of an invoice: `format`, `fileName`, `mimeType`, and optionally `url`. It runs every time invoices are listed, so it must not generate content.
-- `provideOrderInvoiceDocument()` fills `content` of a listed document without `url`. It runs when the document is requested; `OrderInvoiceTransfer.renderedInvoice` contains the HTML of the invoice email at that moment.
-
-The default plugin, `RenderedOrderInvoiceDocumentProviderPlugin`, lists one `pdf` document whose content is the rendered HTML; HTML documents open as a page with a **Save as PDF** button, every other MIME type is downloaded, and a document with `url` is linked directly. Nothing is stored: the content is produced on every request.
-
-To provide a real PDF generated on the project side:
+The module's controllers always answer with the invoice page. To deliver a file instead, for example a PDF generated on the project side, add your own download actions in the project and point the **PDF** links to them. The invoice itself comes from `SalesInvoiceFacade::getOrderInvoices()` / `SalesInvoiceClient::getOrderInvoices()` with `expandWithRenderedInvoice`, exactly as the module's pages get it, so the generated file is based on the same HTML as the email.
 
 1. Add a PDF library to the project, for example:
 
@@ -92,89 +83,132 @@ To provide a real PDF generated on the project side:
 composer require dompdf/dompdf
 ```
 
-2. Implement the plugin:
+2. Add the Back Office action. A controller in the project namespace of the module is served at `/sales-invoice/download` without further routing:
 
-**src/Pyz/Zed/SalesInvoice/Communication/Plugin/SalesInvoice/PdfOrderInvoiceDocumentProviderPlugin.php**
+**src/Pyz/Zed/SalesInvoice/Communication/Controller/DownloadController.php**
 
 ```php
 <?php
 
-namespace Pyz\Zed\SalesInvoice\Communication\Plugin\SalesInvoice;
+namespace Pyz\Zed\SalesInvoice\Communication\Controller;
 
 use Dompdf\Dompdf;
-use Generated\Shared\Transfer\OrderInvoiceDocumentTransfer;
-use Generated\Shared\Transfer\OrderInvoiceTransfer;
-use Generated\Shared\Transfer\OrderTransfer;
-use Spryker\Zed\Kernel\Communication\AbstractPlugin;
-use Spryker\Zed\SalesInvoiceExtension\Dependency\Plugin\OrderInvoiceDocumentProviderPluginInterface;
+use Generated\Shared\Transfer\OrderInvoiceCriteriaTransfer;
+use Spryker\Zed\Kernel\Communication\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\ResponseHeaderBag;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
-class PdfOrderInvoiceDocumentProviderPlugin extends AbstractPlugin implements OrderInvoiceDocumentProviderPluginInterface
+/**
+ * @method \Spryker\Zed\SalesInvoice\Business\SalesInvoiceFacadeInterface getFacade()
+ */
+class DownloadController extends AbstractController
 {
-    protected const string FORMAT = 'pdf';
-
-    /**
-     * @return array<\Generated\Shared\Transfer\OrderInvoiceDocumentTransfer>
-     */
-    public function getOrderInvoiceDocuments(OrderInvoiceTransfer $orderInvoiceTransfer, OrderTransfer $orderTransfer): array
+    public function indexAction(Request $request): Response
     {
-        return [
-            (new OrderInvoiceDocumentTransfer())
-                ->setFormat(static::FORMAT)
-                ->setFileName($orderInvoiceTransfer->getReferenceOrFail() . '.pdf')
-                ->setMimeType('application/pdf'),
-        ];
+        $orderInvoiceCriteriaTransfer = (new OrderInvoiceCriteriaTransfer())
+            ->addSalesOrderId($request->query->getInt('id-sales-order'))
+            ->setExpandWithRenderedInvoice(true);
+
+        foreach ($this->getFacade()->getOrderInvoices($orderInvoiceCriteriaTransfer)->getOrderInvoices() as $orderInvoiceTransfer) {
+            if ($orderInvoiceTransfer->getIdSalesOrderInvoice() === $request->query->getInt('id-sales-order-invoice')) {
+                return $this->createPdfResponse($orderInvoiceTransfer->getReferenceOrFail(), $orderInvoiceTransfer->getRenderedInvoiceOrFail());
+            }
+        }
+
+        throw new NotFoundHttpException();
     }
 
-    public function provideOrderInvoiceDocument(
-        OrderInvoiceDocumentTransfer $orderInvoiceDocumentTransfer,
-        OrderInvoiceTransfer $orderInvoiceTransfer,
-        OrderTransfer $orderTransfer
-    ): OrderInvoiceDocumentTransfer {
+    protected function createPdfResponse(string $reference, string $renderedInvoice): Response
+    {
         $dompdf = new Dompdf();
-        $dompdf->loadHtml($orderInvoiceTransfer->getRenderedInvoiceOrFail());
+        $dompdf->loadHtml($renderedInvoice);
         $dompdf->render();
 
-        return $orderInvoiceDocumentTransfer->setContent($dompdf->output());
+        $response = new Response($dompdf->output(), Response::HTTP_OK, ['Content-Type' => 'application/pdf']);
+        $response->headers->set('Content-Disposition', $response->headers->makeDisposition(
+            ResponseHeaderBag::DISPOSITION_ATTACHMENT,
+            $reference . '.pdf',
+        ));
+
+        return $response;
     }
 }
 ```
 
-3. Register the plugin instead of the default one:
+3. Add the Storefront action. Send the current customer in the criteria: the Zed gateway of the module answers nothing for orders the customer did not place, which keeps the access check of the module.
 
-**src/Pyz/Zed/SalesInvoice/SalesInvoiceDependencyProvider.php**
+**src/Pyz/Yves/SalesInvoice/Controller/DownloadController.php**
 
 ```php
 <?php
 
-namespace Pyz\Zed\SalesInvoice;
+namespace Pyz\Yves\SalesInvoice\Controller;
 
-use Pyz\Zed\SalesInvoice\Communication\Plugin\SalesInvoice\PdfOrderInvoiceDocumentProviderPlugin;
-use Spryker\Zed\SalesInvoice\SalesInvoiceDependencyProvider as SprykerSalesInvoiceDependencyProvider;
+use Dompdf\Dompdf;
+use Generated\Shared\Transfer\OrderInvoiceCriteriaTransfer;
+use Spryker\Yves\Kernel\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\ResponseHeaderBag;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
-class SalesInvoiceDependencyProvider extends SprykerSalesInvoiceDependencyProvider
+/**
+ * @method \Spryker\Yves\SalesInvoice\SalesInvoiceFactory getFactory()
+ */
+class DownloadController extends AbstractController
 {
-    /**
-     * @return array<\Spryker\Zed\SalesInvoiceExtension\Dependency\Plugin\OrderInvoiceDocumentProviderPluginInterface>
-     */
-    protected function getOrderInvoiceDocumentProviderPlugins(): array
+    public function indexAction(Request $request): Response
     {
-        return [
-            new PdfOrderInvoiceDocumentProviderPlugin(),
-        ];
+        $customerTransfer = $this->getFactory()->getCustomerClient()->getCustomer();
+
+        if ($customerTransfer === null) {
+            throw new NotFoundHttpException();
+        }
+
+        $orderInvoiceCriteriaTransfer = (new OrderInvoiceCriteriaTransfer())
+            ->addSalesOrderId($request->query->getInt('id'))
+            ->setCustomer($customerTransfer)
+            ->setExpandWithRenderedInvoice(true);
+
+        foreach ($this->getFactory()->getSalesInvoiceClient()->getOrderInvoices($orderInvoiceCriteriaTransfer)->getOrderInvoices() as $orderInvoiceTransfer) {
+            if ($orderInvoiceTransfer->getIdSalesOrderInvoice() === $request->query->getInt('invoice')) {
+                return $this->createPdfResponse($orderInvoiceTransfer->getReferenceOrFail(), $orderInvoiceTransfer->getRenderedInvoiceOrFail());
+            }
+        }
+
+        throw new NotFoundHttpException();
+    }
+
+    protected function createPdfResponse(string $reference, string $renderedInvoice): Response
+    {
+        $dompdf = new Dompdf();
+        $dompdf->loadHtml($renderedInvoice);
+        $dompdf->render();
+
+        $response = new Response($dompdf->output(), Response::HTTP_OK, ['Content-Type' => 'application/pdf']);
+        $response->headers->set('Content-Disposition', $response->headers->makeDisposition(
+            ResponseHeaderBag::DISPOSITION_ATTACHMENT,
+            $reference . '.pdf',
+        ));
+
+        return $response;
     }
 }
 ```
 
-The **PDF** link in the Storefront section and in the Back Office block now downloads `Invoice-12.pdf`; the file is generated on every click and never stored.
+4. Register a route for the Storefront action with a route provider plugin of your project, for example `customer/order/invoice/download` under the customer firewall, and add the plugin to `RouterDependencyProvider::getRouteProvider()`.
 
-To offer several formats, return several documents, or register several plugins; every format gets its own link. Add a label for every new format: the glossary key `sales_invoice.format.<format>` for the Storefront and the Zed translation `sales_invoice.format.<format>` for the Back Office, for example:
+5. Point the links to the new actions by overriding the templates in your project: `src/Pyz/Zed/SalesInvoice/Presentation/Sales/list.twig` for the Back Office block (`url('/sales-invoice/download', ...)`) and `src/Pyz/Yves/SalesInvoice/Theme/default/views/order-invoices/order-invoices.twig` for the Storefront section (`path('customer/order/invoice/download', ...)`), then rebuild the caches:
 
-```yaml
-sales_invoice.format.xrechnung,XRechnung (XML),en_US
-sales_invoice.format.xrechnung,XRechnung (XML),de_DE
+```bash
+console cache:class-resolver:build
+console router:cache:warm-up
+console twig:cache:warmer
 ```
 
-To link documents of an external system, for example an ERP, set `url` in `getOrderInvoiceDocuments()`; the link then leads there directly, and `provideOrderInvoiceDocument()` is not called.
+The **PDF** link now downloads `Invoice-12.pdf`. The file is generated on every click and never stored. To link the document of an external system instead, for example an ERP, store its URL on the invoice with an expander plugin (see the next section) and use it in the overridden templates.
 
 ## Add data to the document
 

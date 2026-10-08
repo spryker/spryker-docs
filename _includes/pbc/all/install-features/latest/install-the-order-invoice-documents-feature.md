@@ -60,10 +60,12 @@ Make sure the following transfer objects have been generated:
 
 | TRANSFER | TYPE | EVENT | PATH |
 |---|---|---|---|
-| Order.fkCustomer | property | created | src/Generated/Shared/Transfer/OrderTransfer |
-| Order.customer | property | created | src/Generated/Shared/Transfer/OrderTransfer |
-| Customer.idCustomer | property | created | src/Generated/Shared/Transfer/CustomerTransfer |
 | Customer.customerReference | property | created | src/Generated/Shared/Transfer/CustomerTransfer |
+| OrderInvoiceCriteria.customer | property | created | src/Generated/Shared/Transfer/OrderInvoiceCriteriaTransfer |
+| OrderCriteria.orderConditions | property | created | src/Generated/Shared/Transfer/OrderCriteriaTransfer |
+| OrderConditions.salesOrderIds | property | created | src/Generated/Shared/Transfer/OrderConditionsTransfer |
+| OrderConditions.customerReferences | property | created | src/Generated/Shared/Transfer/OrderConditionsTransfer |
+| OrderCollection.orders | property | created | src/Generated/Shared/Transfer/OrderCollectionTransfer |
 
 {% endinfo_block %}
 
@@ -78,8 +80,8 @@ sales_invoice.order_documents.title,Documents,en_US
 sales_invoice.order_documents.title,Dokumente,de_DE
 sales_invoice.order_documents.no_documents,No documents,en_US
 sales_invoice.order_documents.no_documents,Keine Dokumente,de_DE
-sales_invoice.format.pdf,PDF,en_US
-sales_invoice.format.pdf,PDF,de_DE
+sales_invoice.order_documents.pdf,PDF,en_US
+sales_invoice.order_documents.pdf,PDF,de_DE
 sales_invoice.order_documents.save_as_pdf,Save as PDF,en_US
 sales_invoice.order_documents.save_as_pdf,Als PDF speichern,de_DE
 ```
@@ -104,36 +106,11 @@ Make sure the configured data has been added to the `spy_glossary_key` and `spy_
 
 ### 4) Set up behavior
 
-1. Register the plugins:
+1. Register the Back Office block plugin:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
-| RenderedOrderInvoiceDocumentProviderPlugin | Provides the default document of an invoice: the rendered invoice as a **PDF** document that opens as a page. |  | Spryker\Zed\SalesInvoice\Communication\Plugin\SalesInvoice |
 | OrderInvoiceSalesListBlockRendererPlugin | Renders the **Documents** block on the Back Office order page. |  | Spryker\Zed\SalesInvoice\Communication\Plugin\Sales |
-
-**src/Pyz/Zed/SalesInvoice/SalesInvoiceDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\SalesInvoice;
-
-use Spryker\Zed\SalesInvoice\Communication\Plugin\SalesInvoice\RenderedOrderInvoiceDocumentProviderPlugin;
-use Spryker\Zed\SalesInvoice\SalesInvoiceDependencyProvider as SprykerSalesInvoiceDependencyProvider;
-
-class SalesInvoiceDependencyProvider extends SprykerSalesInvoiceDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Zed\SalesInvoiceExtension\Dependency\Plugin\OrderInvoiceDocumentProviderPluginInterface>
-     */
-    protected function getOrderInvoiceDocumentProviderPlugins(): array
-    {
-        return [
-            new RenderedOrderInvoiceDocumentProviderPlugin(),
-        ];
-    }
-}
-```
 
 **src/Pyz/Zed/Sales/SalesDependencyProvider.php**
 

@@ -1,7 +1,7 @@
 ---
 title: Recurring Orders feature overview
 description: Learn how the Recurring Orders feature lets B2B buyers automate repeat purchases on a configurable schedule.
-last_updated: Sep 29, 2026
+last_updated: Oct 8, 2026
 template: concept-topic-template
 ---
 
@@ -17,7 +17,7 @@ The *Recurring Orders* feature lets B2B buyers set up automated repeat purchases
 | --- | --- |
 | Recurring schedule | The configuration record that drives automated order placement. Stores the cadence, the serialized quote snapshot, and the state machine state. |
 | Reference price | The unit price each schedule item is measured against during validation. Captured per item when the schedule is created, and replaced when the buyer accepts a price change during a review. Placing an order does not change it. See [Reference prices](#reference-prices). |
-| Cadence | The interval at which the order is placed. One of: weekly, bi-weekly, monthly, or every N weeks. |
+| Cadence | The interval at which the order is placed. One of: weekly, bi-weekly, monthly, every N weeks, or on specific days. |
 | Trigger date | The date on which the state machine attempts to place the next order. |
 | Notification window | The number of hours before the trigger date when the pre-trigger notification is sent to the buyer. |
 | Review Required | A state the schedule enters when price increases or product issues are detected at pre-placement validation. The buyer must accept or adjust the order before it is placed. |
@@ -28,7 +28,7 @@ The *Recurring Orders* feature lets B2B buyers set up automated repeat purchases
 
 ## Setting up a recurring order
 
-At checkout, an eligible buyer can enable the recurring order setup widget. The buyer selects a cadence (for example, weekly or monthly), a start date, and optionally a schedule name and an interval value for the *every N weeks* cadence.
+At checkout, an eligible buyer can enable the recurring order setup widget. The buyer selects a cadence (for example, weekly or monthly), a start date, and optionally a schedule name. The *every N weeks* cadence also requires an interval value, and the *on specific days* cadence requires one or more days of the week.
 
 When the order is placed, the system:
 
@@ -38,8 +38,8 @@ When the order is placed, the system:
 
 The checkout order itself is placed as usual and is not counted as a recurring execution. The start date determines when the first *recurring* order is placed:
 
-- If the buyer picks a future date, the first recurring order is placed on that date, and later orders repeat from it at the selected cadence.
-- If the start date is today or is not set, the first recurring order is placed one cadence interval later.
+- If the buyer picks a future date, the first recurring order is placed on that date, and later orders repeat from it at the selected cadence. For the *on specific days* cadence, the date must fall on one of the selected days.
+- If the start date is today or is not set, the first recurring order is placed one cadence interval later. For the *on specific days* cadence, it is placed on the next selected day after today.
 - A start date in the past is rejected.
 
 A recurring schedule is **only available** for quotes that meet all of the following conditions:
@@ -59,6 +59,7 @@ Projects can add their own conditions, and features can contribute conditions of
 | Bi-weekly | Places an order every 14 days. |
 | Monthly | Places an order on the same calendar day each month. If the scheduled day does not exist in the target month, the date overflows: for example, a schedule anchored to January 31 next fires on March 3 (not February 28), and all subsequent executions are anchored to the third of each month. To avoid drift, use a start date on the twenty-eighth or earlier. |
 | Every N weeks | Places an order every N weeks. Requires a positive integer value for N. |
+| On specific days | Places an order on each selected day of the week — for example, every Monday and Thursday. Requires at least one selected day. The start date and the next execution date must fall on one of the selected days. Skipping an execution moves the schedule to the next selected day. |
 
 ![Recurring order setup at checkout](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Recurring+Orders/RecurringOrders_3.png)
 
@@ -88,10 +89,10 @@ Buyers can perform the following manual actions from the recurring order detail 
 
 | ACTION | AVAILABLE FROM STATES | DESCRIPTION |
 | --- | --- | --- |
-| Edit | Any non-terminal state | Opens a modal for editing the schedule name, cadence, interval value, and next execution date. With the Purchasing Control feature installed, the cost center and budget can also be changed. The next execution date cannot be set in the past. |
+| Edit | Any non-terminal state | Opens a modal for editing the schedule name, cadence, interval value, selected days, and next execution date. With the Purchasing Control feature installed, the cost center and budget can also be changed. The next execution date cannot be set in the past. |
 | Pause | `active` | Temporarily stops order placement. The schedule can be resumed at any time with an optional custom resume date. |
 | Resume | `paused` | Reactivates the schedule. The buyer can set a new next trigger date or keep the existing one. |
-| Skip | `active`, `pre_trigger_notified`, `review_required` | Skips the next scheduled execution. The new trigger date is calculated by advancing the current trigger date by one cadence interval. If the current trigger date is already in the past due to processing lag, the recalculated date may also fall in the past and the schedule will process on the next cron run. |
+| Skip | `active`, `pre_trigger_notified`, `review_required` | Skips the next scheduled execution. The new trigger date is calculated by advancing the current trigger date by one cadence interval, or to the next selected day for the *on specific days* cadence. If the current trigger date is already in the past due to processing lag, the recalculated date may also fall in the past and the schedule will process on the next cron run. |
 | Cancel | `active`, `paused`, `pre_trigger_notified`, `review_required`, `failed`, `draft` | Permanently cancels the schedule. This action cannot be undone. The `draft` state is transient and is normally activated synchronously at checkout; cancellation from `draft` is a safety fallback. |
 | Review | `review_required` | Opens the Review Required page where the buyer can accept price changes, adjust quantities, remove or substitute unavailable items, add products, and place the order. If the trigger date has not been reached yet, confirming the review returns the schedule to `active` and the confirmed changes are placed on the trigger date. |
 | Retry | `failed` | Moves the schedule to `review_required` so the buyer can review and re-attempt placement. |
@@ -236,7 +237,7 @@ The following filters are available:
 | Company | Restricts the list to schedules belonging to a company. |
 | Business unit | Restricts the list to schedules belonging to a company business unit. Depends on the selected company. |
 | Statuses | Multi-select filter over active, paused, review required, cancelled, and failed. |
-| Cadence types | Multi-select filter over weekly, bi-weekly, monthly, and every N weeks. |
+| Cadence types | Multi-select filter over weekly, bi-weekly, monthly, every N weeks, and on specific days. |
 | Cycle total from/to | Restricts the list by the estimated total of one execution. |
 | Next trigger date from/to | Restricts the list by the next trigger date. |
 

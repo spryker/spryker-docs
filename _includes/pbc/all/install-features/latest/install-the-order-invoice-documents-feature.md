@@ -60,6 +60,7 @@ Make sure the following transfer objects have been generated:
 
 | TRANSFER | TYPE | EVENT | PATH |
 |---|---|---|---|
+| Order.orderInvoice | property | created | src/Generated/Shared/Transfer/OrderTransfer |
 | Customer.customerReference | property | created | src/Generated/Shared/Transfer/CustomerTransfer |
 | OrderInvoiceCriteria.customer | property | created | src/Generated/Shared/Transfer/OrderInvoiceCriteriaTransfer |
 | OrderCriteria.orderConditions | property | created | src/Generated/Shared/Transfer/OrderCriteriaTransfer |
@@ -106,10 +107,11 @@ Make sure the configured data has been added to the `spy_glossary_key` and `spy_
 
 ### 4) Set up behavior
 
-1. Register the Back Office block plugin:
+1. Register the plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
+| OrderInvoiceOrderExpanderPlugin | Expands `OrderTransfer.orderInvoice` with the invoice of the order when the Sales module reads an order; the Storefront widget shows it. |  | Spryker\Zed\SalesInvoice\Communication\Plugin\Sales |
 | OrderInvoiceSalesListBlockRendererPlugin | Renders the **Documents** block on the Back Office order page. |  | Spryker\Zed\SalesInvoice\Communication\Plugin\Sales |
 
 **src/Pyz/Zed/Sales/SalesDependencyProvider.php**
@@ -120,10 +122,21 @@ Make sure the configured data has been added to the `spy_glossary_key` and `spy_
 namespace Pyz\Zed\Sales;
 
 use Spryker\Zed\Sales\SalesDependencyProvider as SprykerSalesDependencyProvider;
+use Spryker\Zed\SalesInvoice\Communication\Plugin\Sales\OrderInvoiceOrderExpanderPlugin;
 use Spryker\Zed\SalesInvoice\Communication\Plugin\Sales\OrderInvoiceSalesListBlockRendererPlugin;
 
 class SalesDependencyProvider extends SprykerSalesDependencyProvider
 {
+    /**
+     * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderExpanderPluginInterface>
+     */
+    protected function getOrderHydrationPlugins(): array
+    {
+        return [
+            new OrderInvoiceOrderExpanderPlugin(),
+        ];
+    }
+
     /**
      * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\SalesDetailBlockRendererPluginInterface>
      */

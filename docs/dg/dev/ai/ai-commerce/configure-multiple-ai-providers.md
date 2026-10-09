@@ -1,7 +1,7 @@
 ---
 title: Configure multiple AI providers for AI Commerce
 description: Learn how to configure OpenAI, AWS Bedrock, and Anthropic providers independently for each AI Commerce feature.
-last_updated: Jul 16, 2026
+last_updated: Oct 9, 2026
 template: howto-guide-template
 ---
 
@@ -276,7 +276,7 @@ console configuration:sync
 Each AI Commerce feature has an **AI Configuration** radio selector in the Back Office that controls which provider it uses.
 
 1. In the Back Office, go to **AI Commerce**.
-2. Open the tab for the feature you want to configure (for example, **Smart PIM**, **Quick Order**, **Search by Image**, or **Back Office Assistant**).
+2. Open the tab for the feature you want to configure (for example, **Smart PIM**, **Quick Order**, **Search by Image**, **Back Office Assistant**, or **Storefront Assistant**).
 3. Under **General**, select the active provider: **OpenAI**, **AWS Bedrock**, or **Anthropic**.
 4. Optionally, update the model name shown for the selected provider. Each provider shows its model field only when selected.
 5. Click **Save**.
@@ -289,10 +289,11 @@ Default models per feature and provider:
 | Quick Order Image-to-Cart | `gpt-4o-mini` | `eu.anthropic.claude-haiku-4-5-20251001-v1:0` | `claude-haiku-4-5` |
 | Search by Image | `gpt-4o-mini` | `eu.anthropic.claude-haiku-4-5-20251001-v1:0` | `claude-haiku-4-5` |
 | Back Office Assistant | `gpt-4.1` | `eu.anthropic.claude-sonnet-4-5-20250929-v1:0` | `claude-sonnet-4-5` |
+| Storefront Assistant | `gpt-6-luna` | `eu.anthropic.claude-haiku-4-5-20251001-v1:0` | `claude-haiku-4-5` |
 
 {% info_block infoBox "Model requirements" %}
 
-All AI Commerce features require a model that supports image input and structured output. Verify that the model you select meets these requirements for the provider you use.
+All AI Commerce features require a model that supports image input and structured output. Storefront Assistant also requires a model that supports streaming and tool calls. Verify that the model you select meets these requirements for the provider you use.
 
 {% endinfo_block %}
 
@@ -306,5 +307,6 @@ The following table maps each feature to its configuration constants and the Bac
 | Quick Order Image-to-Cart | `ai_commerce:quick_order:ai_vendor:ai_configuration` | `AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_OPENAI` | `AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_AWS` | `AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_ANTHROPIC` |
 | Search by Image | `ai_commerce:search_by_image:ai_vendor:ai_configuration` | `AI_CONFIGURATION_SEARCH_BY_IMAGE_OPENAI` | `AI_CONFIGURATION_SEARCH_BY_IMAGE_AWS` | `AI_CONFIGURATION_SEARCH_BY_IMAGE_ANTHROPIC` |
 | Back Office Assistant | `ai_commerce:backoffice_assistant:ai_vendor:ai_configuration` | `AI_CONFIGURATION_INTENT_ROUTER_OPENAI` (and `_GENERAL_AGENT_OPENAI`, `_ORDER_MANAGEMENT_OPENAI`, `_DISCOUNT_MANAGEMENT_OPENAI`, `_FORM_FILL_OPENAI`) | `AI_CONFIGURATION_INTENT_ROUTER_AWS` (and `_AWS` variants) | `AI_CONFIGURATION_INTENT_ROUTER_ANTHROPIC` (and `_ANTHROPIC` variants) |
+| Storefront Assistant | `ai_commerce:storefront_assistant:ai_vendor:ai_configuration` | `AI_CONFIGURATION_STOREFRONT_ASSISTANT_OPENAI` | `AI_CONFIGURATION_STOREFRONT_ASSISTANT_AWS` | `AI_CONFIGURATION_STOREFRONT_ASSISTANT_ANTHROPIC` |
 
 All constants are in your project's `Pyz\Shared\AiCommerce\AiCommerceConstants`.

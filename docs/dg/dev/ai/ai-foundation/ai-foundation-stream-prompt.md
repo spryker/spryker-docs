@@ -38,7 +38,7 @@ related:
 
 ## How streaming works
 
-`streamPrompt()` runs in the Client layer, not in Zed. A Zed RPC call returns one response, so it cannot send chunks while they arrive. The Client calls the AI provider directly and calls Zed only to do the following:
+`streamPrompt()` runs in the Client layer, calls the AI provider directly, and calls Zed only to do the following:
 
 - Load the AI configuration and the stored conversation.
 - Save the conversation.
@@ -46,13 +46,15 @@ related:
 
 The text chunks never go through Zed. They go from the AI provider to your stream event plugins, and these plugins write them to the browser.
 
+In the following diagram, `NeuronVendorAiAdapter` is the part of `AiFoundationClient` that runs in your application, for example, Yves. The **Zed gateway** column shows the only calls that go to Zed.
+
 ![streamPrompt() lifecycle](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-foundation/streamPrompt.png)
 
-One call of `streamPrompt()` is one *turn*. Each turn has four steps:
+A *turn* is one user message and the full model response to it, including all tool calls. One call of `streamPrompt()` processes one turn. Each turn has four steps:
 
 1. **Start the session.** Zed returns the AI configuration and the conversation history. If this step fails, the turn stops and no plugin runs.
-2. **Stream and run tools.** Each chunk goes to the stream event plugins. When the model requests a tool, the Client runs the tool and sends the result back to the model. The model can request tools in a maximum of 5 rounds.
-3. **Save the conversation.** This step runs only when `conversationReference` is set.
+2. **Stream and run tools.** Each chunk goes to the stream event plugins. When the model requests a tool, `AiFoundationClient` runs the tool plugin in your application and sends the result back to the model. The model can request tools in a maximum of 5 rounds. This limit prevents endless tool loops and high token costs. To change it, extend `NeuronVendorAiAdapter`, override the `MAX_TOOL_LOOP_ITERATIONS` constant, and return your adapter from `AiFoundationFactory::createVendorAiAdapter()` in the Client layer.
+3. **Save the conversation.** Zed saves the conversation history in the `spy_ai_conversation_history` table. This step runs only when you set `PromptRequestTransfer.conversationReference`. For details, see [Conversation History](/docs/dg/dev/ai/ai-foundation/ai-foundation-conversation-history.html).
 4. **Run post-prompt plugins.** They run once at the end of the turn.
 
 ## Stream a prompt
@@ -228,7 +230,7 @@ class PromptController extends AbstractController
         $promptRequestTransfer = (new PromptRequestTransfer())
             ->setAiConfigurationName(ProductAssistantConstants::AI_CONFIGURATION_PRODUCT_ASSISTANT)
             ->setPromptMessage((new PromptMessageTransfer())->setContent((string)$request->request->get('message')))
-            ->setConversationReference('product-assistant-' . $request->getSession()->getId()) // omit it to not save the conversation
+            ->setConversationReference('product-assistant-' . $request->getSession()->getId()) // omit it to not save the conversation history in Zed
             ->setToolNames(['search_products', 'get_product_availability']);
 
         ignore_user_abort(true); // the turn continues and is saved when the browser disconnects

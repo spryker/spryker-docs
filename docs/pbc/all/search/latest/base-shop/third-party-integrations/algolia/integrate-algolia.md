@@ -2,7 +2,7 @@
 title: Integrate Algolia
 description: Learn how to integrate Algolia Search into your Spryker-based projects.
 template: howto-guide-template
-last_updated: Jul 22, 2026
+last_updated: Oct 9, 2026
 redirect_from:
   - /docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/configure-algolia.html
   - /docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/disconnect-algolia.html
@@ -21,6 +21,17 @@ composer require -W spryker-eco/algolia:"^2.0.0"
 ## Configure Algolia credentials
 
 You can configure Algolia credentials using environment variables or the Back Office.
+
+{% info_block warningBox "Warning" %}
+
+Starting from version 1.1.0, `AlgoliaConfig::getIsActive()` returns `true` when the Algolia credentials are set and no longer depends on the `AlgoliaConstants::IS_ACTIVE` configuration. If the `ALGOLIA_APPLICATION_ID` and `ALGOLIA_SEARCH_API_KEY` values are still set in the AWS Parameter Store or in the Back Office, the module exports search data to Algolia after the upgrade.
+
+To prevent this, before you upgrade to version 1.1.0 or higher, do one of the following:
+
+- Remove the `ALGOLIA_APPLICATION_ID` and `ALGOLIA_SEARCH_API_KEY` values or set them to empty values in the AWS Parameter Store or, if you use the Back Office configuration, in **Configuration > Integrations > Algolia**.
+- On the project level, override `getIsActive()` in `Pyz\Zed\Algolia\AlgoliaConfig` and `Pyz\Client\Algolia\AlgoliaConfig` to return `false` in the environments where the Algolia integration must stay inactive.
+
+{% endinfo_block %}
 
 ### Option A: Environment variable-based credentials
 

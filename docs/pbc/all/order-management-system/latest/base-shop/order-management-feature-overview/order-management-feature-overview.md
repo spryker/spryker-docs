@@ -1,7 +1,7 @@
 ---
 title: Order Management feature overview
 description: Efficiently keep track of the order processing and ensure quick fulfillment. With the Spryker Order Management feature.
-last_updated: Jul 7, 2021
+last_updated: Oct 06, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/order-management
 originalArticleId: f9fbd2cd-af2f-4850-a07a-1cb4d8934171
@@ -16,7 +16,7 @@ Bringing flexible shipping options to your online business may have a key impact
 
 In B2B companies, it's important to control employees' purchases and add order references to the external systems. To keep the order references in your Spryker-based shop, use *Custom Order References* that let you link the reference used in external systems, such as an ERP, to your internal orders. For example, your company pays the products with an invoice that has a reference. To make it easier to report and track the operations in your external systems, you, as a buyer, can include this reference number in your order.
 
-*Invoice Generation* lets you generate and send invoices to customers after they placed an order. At the same time, you can also keep the invoices for your records by sending a copy of the invoices to your own email address.
+The *Order confirmation / invoice notification email* lets you send a template-based invoice email to customers after they placed an order and keep a BCC copy for your records. It is not a structured e-invoice. *Order invoice documents* shows the invoice of an order in a **Documents** section on the Storefront order details page and on the Back Office order page, as a page the user can save as PDF.
 
 With *Order Cancellation*, let your customers cancel orders within a defined period and avoid doing it manually on your side on the customer's behalf. For example, a customer may change their mind about the color of an item they have ordered. Instead of contacting support representatives, they can cancel the order right away and replace it with the needed color.  
 
@@ -29,7 +29,8 @@ B2B customers usually purchase large volumes of products selecting specific meas
 | OVERVIEWS | BACK OFFICE GUIDES |
 |---| - |
 | [Custom Order Reference](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/custom-order-reference-overview.html) | [Add and remove custom order references](/docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/add-and-remove-custom-order-references.html) |
-| [Invoice Generation](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/invoice-generation-overview.html)  |  [Change the state of order items](/docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html) |
+| [Order confirmation / invoice notification email](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/invoice-generation-overview.html)  |  [Change the state of order items](/docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html) |
+| [Order invoice documents](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/order-invoice-documents-overview.html)  |  [View order invoice documents](/docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/view-order-invoice-documents.html) |
 | [OMS (Order management system) matrix](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/oms-order-management-system-matrix.html) | [Comment orders](/docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/comment-orders.html) |
 | [Order Cancellation](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/order-cancellation-overview.html)   | [Create returns](/docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/create-returns.html) |
 | [Split Delivery](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/split-delivery-overview.html)   | [Create shipments](/docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/create-shipments.html) |

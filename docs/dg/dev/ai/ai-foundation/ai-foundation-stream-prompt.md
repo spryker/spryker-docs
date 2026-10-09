@@ -230,21 +230,11 @@ class PromptController extends AbstractController
         $promptRequestTransfer = (new PromptRequestTransfer())
             ->setAiConfigurationName(ProductAssistantConstants::AI_CONFIGURATION_PRODUCT_ASSISTANT)
             ->setPromptMessage((new PromptMessageTransfer())->setContent((string)$request->request->get('message')))
-            ->setConversationReference('product-assistant-' . $request->getSession()->getId())
-            ->setToolNames(['search_products', 'get_product_availability']);
-
-        ignore_user_abort(true); // the turn continues and is saved when the browser disconnects
-        set_time_limit(120);
+            ->setConversationReference('product-assistant-' . $request->getSession()->getId());
 
         return new StreamedResponse(
             function () use ($promptRequestTransfer): void {
-                $promptResponseTransfer = $this->getFactory()->getAiFoundationClient()->streamPrompt($promptRequestTransfer);
-
-                // Send the final status to the browser. The text chunks are already sent.
-                echo sprintf("event: done\ndata: %s\n\n", json_encode([
-                    'isSuccessful' => $promptResponseTransfer->getIsSuccessful(),
-                ]));
-                flush();
+                $this->getFactory()->getAiFoundationClient()->streamPrompt($promptRequestTransfer);
             },
             200,
             ['Content-Type' => 'text/event-stream', 'Cache-Control' => 'no-cache', 'X-Accel-Buffering' => 'no'],

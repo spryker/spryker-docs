@@ -159,12 +159,11 @@ class ProductAssistantSseStreamEventPlugin extends AbstractPlugin implements Str
             return;
         }
 
-        echo sprintf(
-            "event: %s\ndata: %s\n\n",
-            $promptStreamChunkTransfer->getType(), // text or reasoning
-            json_encode(['content' => $promptStreamChunkTransfer->getContent()]),
-        );
+        // Example SSE event format. Use the format your frontend expects.
+        $type = $promptStreamChunkTransfer->getType(); // text or reasoning
+        $data = json_encode(['content' => $promptStreamChunkTransfer->getContent()]);
 
+        echo "event: {$type}\ndata: {$data}\n\n";
         flush();
     }
 }

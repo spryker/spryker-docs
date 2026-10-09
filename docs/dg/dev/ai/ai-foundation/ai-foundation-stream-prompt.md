@@ -48,7 +48,7 @@ The text chunks never go through Zed. They go from the AI provider to your strea
 
 In the following diagram, `NeuronVendorAiAdapter` is the part of `AiFoundationClient` that runs in your application, for example, Yves. The **Zed gateway** column shows the only calls that go to Zed.
 
-![streamPrompt() lifecycle](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-foundation/streamPrompt.png)
+![streamPrompt() lifecycle](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-foundation/stream-prompt-2.png)
 
 A *turn* is one user message and the full model response to it, including all tool calls. One call of `streamPrompt()` processes one turn. Each turn has four steps:
 

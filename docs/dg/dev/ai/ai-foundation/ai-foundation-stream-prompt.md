@@ -203,7 +203,7 @@ class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvid
 
 ### 4. Call streamPrompt() in a controller
 
-Call `streamPrompt()` inside a `StreamedResponse` with server-sent events (SSE) headers. The following controller is one example of a streaming setup, not the only way to call `streamPrompt()`. In this example, the conversation reference is bound to the customer session, so each customer continues their own conversation. If you do not set `conversationReference`, Zed does not save the conversation history, and step 3 of the turn does nothing:
+Call `streamPrompt()` inside a `StreamedResponse` with server-sent events (SSE) headers. The following controller is one example of a streaming setup, not the only way to call `streamPrompt()`. To save the conversation history, set `PromptRequestTransfer.conversationReference`. For details, see [Conversation History](/docs/dg/dev/ai/ai-foundation/ai-foundation-conversation-history.html):
 
 **src/Pyz/Yves/ProductAssistant/Controller/PromptController.php**
 
@@ -228,8 +228,7 @@ class PromptController extends AbstractController
     {
         $promptRequestTransfer = (new PromptRequestTransfer())
             ->setAiConfigurationName(ProductAssistantConstants::AI_CONFIGURATION_PRODUCT_ASSISTANT)
-            ->setPromptMessage((new PromptMessageTransfer())->setContent((string)$request->request->get('message')))
-            ->setConversationReference('product-assistant-' . $request->getSession()->getId());
+            ->setPromptMessage((new PromptMessageTransfer())->setContent((string)$request->request->get('message')));
 
         return new StreamedResponse(
             function () use ($promptRequestTransfer): void {

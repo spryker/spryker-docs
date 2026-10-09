@@ -1,0 +1,38 @@
+name: Check self-redirects
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - labeled
+
+jobs:
+  check-self-redirects:
+    name: Are redirect_from entries free of self-redirects?
+    runs-on: ubuntu-latest
+    if: ${{ !contains(github.event.pull_request.labels.*.name, 'ignore-self-redirects') }}
+
+    steps:
+      # Full history so the diff against the pull request base is available.
+      - name: Checkout code
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      # A pattern that matches nothing reports nothing and looks like a pass, so
+      # verify the checks before trusting the run below.
+      - name: Verify the self-redirect checker still works
+        run: ./_scripts/self_redirect_checker/self_redirect_checker.py --selftest
+
+      # Changed pages only: a self-redirect is only ever introduced by editing a
+      # page's redirect_from block, so a pull request has to leave the pages it
+      # touches clean. No continue-on-error — a finding fails the job on the spot.
+      - name: Check self-redirects on changed pages
+        env:
+          GITHUB_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          git diff --name-only --diff-filter=d "$GITHUB_BASE_SHA...HEAD" -- 'docs/**/*.md' > changed.txt
+          echo "Changed pages:"
+          cat changed.txt
+          xargs -r -d '\n' ./_scripts/self_redirect_checker/self_redirect_checker.py < changed.txt

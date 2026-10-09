@@ -9,7 +9,6 @@ related:
   - title: Integrate Vertex
     link: docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html
 redirect_from:
-  - /docs/pbc/all/tax-management/latest/marketplace/integrate-vertex-for-marketplace
   - /docs/pbc/all/tax-management/marketplace/integrate-vertex-for-marketplace.html
   - /docs/pbc/all/tax-management/202204.0/third-party-integrations/integrate-avalara.html
 ---

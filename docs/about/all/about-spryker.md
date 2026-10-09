@@ -19,6 +19,8 @@ redirect_from:
   - /docs/scos/user/intro-to-spryker/whats-new/ie11-end-of-life.html
   - /docs/scos/user/intro-to-spryker/whats-new/whats-new.html
   - /docs/scos/user/intro-to-spryker/whats-new/vat-rates-reduction-in-germany-between-july-2020-and-january-2021.html
+  - /about_spryker/about-spryker.htm
+  - /docs/about-spryker
 
 ---
 

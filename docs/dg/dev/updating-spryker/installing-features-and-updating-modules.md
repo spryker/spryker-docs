@@ -5,6 +5,7 @@ last_updated: Jun 16, 2021
 template: concept-topic-template
 redirect_from:
 - /docs/scos/dev/updating-spryker/installing-features-and-updating-modules.html
+- /docs/installing-spryker-with-docker
 ---
 
 This document describes how to install new features and modules and take different kind of updates.

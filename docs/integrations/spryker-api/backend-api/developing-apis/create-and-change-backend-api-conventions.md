@@ -11,6 +11,8 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/create-and-change-glue-api-conventions.html
   - /docs/scos/dev/glue-api-guides/202404.0/create-and-change-glue-api-conventions.html
   - /docs/dg/dev/glue-api/latest/create-and-change-glue-api-conventions.html
+  - /docs/integrations/spryker-glue-api/create-glue-api-applications/create-and-change-glue-api-conventions
+  - /docs/scos/dev/glue-api-guides/202212.0/create-and-change-glue-api-conventions.html
 
   - /docs/integrations/spryker-glue-api/backend-api/developing-apis/create-and-change-backend-api-conventions.html
 ---

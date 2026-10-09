@@ -6,6 +6,7 @@ last_updated: Nov 17, 2023
 redirect_from:
 - /docs/pbc/all/content-management-system/202311.0/manage-in-the-back-office/product-sets/delete-product-sets.html
 - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/product-sets/delete-product-sets.html
+- /docs/scos/user/back-office-user-guides/202204.0/merchandising/product-sets/delete-product-sets.html
 related:
   - title: Create product sets
     link: docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/product-sets/create-product-sets.html

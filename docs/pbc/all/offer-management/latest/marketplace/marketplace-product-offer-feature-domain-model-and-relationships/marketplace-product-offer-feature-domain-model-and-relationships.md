@@ -3,6 +3,8 @@ title: "Marketplace Product Offer feature: Domain model and relationships"
 description: Discover the domain model and relationships of the Spryker Marketplace Product Offer feature, enabling management of product offers for marketplace projects.
 template: concept-topic-template
 last_updated: Nov 21, 2023
+redirect_from:
+  - /docs/pbc/all/offer-management/202212.0/marketplace/marketplace-product-offer-feature-domain-model-and-relationships/marketplace-product-offer-feature-domain-model-and-relationships.html
 ---
 
 The *Marketplace Product Offer* entity is created when multiple merchants sell the same product on the Marketplace. The product offer is a variation of a concrete product with its own specific price (and volume price) and stock. It can be "owned" by any entity, however, in a B2C or B2B Marketplace, it's owned by a merchant.

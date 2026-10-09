@@ -5,6 +5,7 @@ description: This document describes the merchant-order-status.csv file to updat
 template: import-file-template
 redirect_from:
   - /docs/pbc/all/order-management-system/202311.0/marketplace/import-and-export-data/file-details-merchant-order-status.csv.html
+  - /docs/marketplace/dev/data-import/202108.0/file-details-merchant-order-status.csv.html
 related:
   - title: Merchant order overview
     link: docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html

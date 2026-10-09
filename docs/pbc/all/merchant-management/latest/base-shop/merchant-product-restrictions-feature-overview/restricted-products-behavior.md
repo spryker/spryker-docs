@@ -6,6 +6,8 @@ template: concept-topic-template
 redirect_from:
   - docs/scos/dev/feature-walkthroughs/202311.0/merchant-product-restrictions-feature-walkthrough/restricted-products-behavior.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/merchant-product-restrictions-feature-walkthrough/restricted-products-behavior.html
+  - /docs/scos/dev/feature-integration-guides/201811.0/merchant-product-restrictions-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202009.0/merchant-product-restrictions-feature-integration.html
 ---
 
 <div class="width-100">

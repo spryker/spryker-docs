@@ -6,6 +6,10 @@ template: glue-api-storefront-guide-template
 redirect_from:
   - /docs/pbc/all/ratings-reviews/202311.0/manage-using-glue-api/retrieve-product-reviews-when-retrieving-concrete-products.html
   - /docs/pbc/all/ratings-reviews/202204.0/manage-using-glue-api/glue-api-retrieve-product-reviews-when-retrieving-concrete-products.html
+  - /docs/pbc/all/ratings-reviews/202204.0/manage-using-glue-api/manage-product-reviews-using-glue-api.html
+  - /docs/scos/dev/glue-api-guides/201811.0/managing-products/retrieving-product-information.html
+  - /docs/scos/dev/glue-api-guides/202005.0/managing-products/managing-product-ratings-and-reviews.html
+  - /docs/scos/dev/glue-api-guides/202009.0/managing-products/concrete-products/retrieving-concrete-product-prices.html
 ---
 
 This endpoint allows retrieving general information about concrete products.

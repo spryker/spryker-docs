@@ -7,6 +7,7 @@ redirect_from:
   - /docs/marketplace/user/features/202311.0/marketplace-promotions-and-discounts-feature-overview.html
   - /docs/marketplace/dev/feature-walkthroughs/202311.0/marketplace-promotions-and-discounts-feature-walkthrough.html
   - /docs/pbc/all/discount-management/202505.0/marketplace/marketplace-promotions-discounts-feature-overview.html
+  - /docs/scos/user/features/201907.0/promotions-discounts-feature-overview.html
 related:
     - title: Discount
       link: docs/pbc/all/discount-management/latest/marketplace/marketplace-promotions-discounts-feature-overview.html

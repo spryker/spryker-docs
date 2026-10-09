@@ -3,6 +3,9 @@ title: Install Visual Add to Cart
 description: Learn how to install the Visual Add to Cart feature that lets buyers upload a product image on the Quick Order page to automatically populate the order form.
 last_updated: Jul 16, 2026
 template: feature-integration-guide-template
+redirect_from:
+  - /docs/en/cart
+  - /2021080/docs/cart
 ---
 
 Visual Add to Cart lets storefront users upload a product image on the Quick Order page to automatically recognize products and populate the order form. This document describes how to install the Visual Add to Cart feature.

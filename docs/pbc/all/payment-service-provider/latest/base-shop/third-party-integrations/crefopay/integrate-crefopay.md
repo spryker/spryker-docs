@@ -14,6 +14,9 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/crefopay/integrating-crefopay.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/crefopay/integrate-crefopay.html
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/crefopay/integrating-crefopay.html
+  - /docs/scos/user/technology-partners/202212.0/payment-partners/crefopay.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/crefopay/integrate-crefopay.html
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/crefopay.html
 related:
   - title: CrefoPay
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/crefopay.html

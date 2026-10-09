@@ -6,6 +6,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/back-end-development/back-end-development.html
   - /docs/dg/dev/backend-development/data-manipulation/run-and-revert-a-database-migration.html
+  - /docs/dg/dev/backend-development/
 ---
 
 This section contains overviews and instructions for back-end developing on the the Spryker Commerce OS. It includes the following components and topics:

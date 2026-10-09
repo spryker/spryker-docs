@@ -12,6 +12,8 @@ related:
     link: docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-overview.html
   - title: Merchant order overview
     link: docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html
+redirect_from:
+  - /docs/marketplace/user/features/202204.0/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
 ---
 
 The basic concept of state machines allows creating a patterned behavior and automation for complicated processes defined by the business, for example, order processes.

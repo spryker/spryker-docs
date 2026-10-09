@@ -7,6 +7,7 @@ originalArticleId: 9a8dbfcd-e0ef-4ff2-b435-5a66f638a503
 redirect_from:
   - /docs/scos/dev/front-end-development/202404.0/yves/atomic-frontend/managing-the-components/overriding-a-component.html
   - /docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/overriding-a-component.html
+  - /docs/scos/dev/front-end-development/202212.0/yves/atomic-frontend/managing-the-components/overriding-a-component.html
 related:
   - title: Creating a Component
     link: docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/creating-components.html

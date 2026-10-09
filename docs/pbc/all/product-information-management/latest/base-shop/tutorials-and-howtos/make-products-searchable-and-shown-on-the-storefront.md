@@ -8,6 +8,7 @@ originalArticleId: c8a71f89-7fea-4bd5-9c50-3f372b8af760
 redirect_from:
   - /docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/tutorials-and-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
+  - /docs/pbc/all/product-information-management/202307.0/base-shop/tutorials-and-howtos/make-products-searchable-and-shown-on-the-storefront.html
 related:
   - title: Creating Product Variants
     link: docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html

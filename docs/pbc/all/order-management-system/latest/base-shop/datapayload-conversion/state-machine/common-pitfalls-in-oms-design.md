@@ -5,6 +5,7 @@ last_updated: Oct 2, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
+  - /docs/pbc/all/order-management-system/202307.0/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
 related:
   - title: Order management system multi-thread
     link: docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/state-machine/order-management-system-multi-thread.html

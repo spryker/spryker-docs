@@ -11,6 +11,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202404.0/use-authentication-servers-with-glue-api.html
   - /docs/dg/dev/glue-api/latest/use-authentication-servers-with-glue-api.html
   - /docs/integrations/spryker-glue-api/authenticating-and-authorization/backend-api/use-authentication-servers-with-backend-api.html
+  - /docs/scos/dev/glue-api-guides/202212.0/use-authentication-servers-with-glue-api.html
 ---
 
 This document describes how to use authentication servers with Backend API.

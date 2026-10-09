@@ -7,6 +7,8 @@ originalLink: https://documentation.spryker.com/2021080/docs/mindlab
 originalArticleId: 9ed22cbb-d549-4160-86ee-b1ef6932a5ab
 redirect_from:
   - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/analytics/mindlab.html
+  - /docs/pbc/all/miscellaneous/202307.0/third-party-integrations/marketing-and-conversion/analytics/mindlab.html
+  - /docs/scos/user/technology-partners/202204.0/marketing-and-conversion/analytics/mindlab.html
 ---
 
 ## Partner Information

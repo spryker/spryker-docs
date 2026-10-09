@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/users/managing-users/activating-and-deactivating-users.html
   - /docs/scos/user/back-office-user-guides/202311.0/users/managing-users/creating-users.html
   - /docs/pbc/all/user-management/202204.0/base-shop/manage-in-the-back-office/manage-users/create-users.html
+  - /docs/pbc/all/user-management/202212.0/base-shop/manage-in-the-back-office/manage-users/create-users.html
 related:
   - title: Assigning and deassigning customers from users
     link: docs/pbc/all/user-management/latest/base-shop/manage-in-the-back-office/manage-users/assign-and-deassign-customers-from-users.html

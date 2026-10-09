@@ -7,6 +7,11 @@ keywords: ai, ai-dev, claude, claude code, windsurf, copilot, workflows, wizards
 template: concept-topic-template
 redirect_from:
   - /docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents
+  - /docs/dg/dev/ai/ai-dev/ai-dev-sdk-setup
+  - /docs/sdk/dev/ai-dev-sdk/
+  - /docs/sdk/dev/ai-dev-sdk/ai-dev-sdk
+  - /docs/sdk/dev/ai-dev-sdk/ai-dev-sdk.html
+  - /docs/sdk/dev/ai-dev-sdk/install-the-ai-dev-sdk.html
 ---
 
 ## Overview

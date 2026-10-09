@@ -5,6 +5,7 @@ last_updated: Jan 11, 2024
 template: concept-topic-template
 redirect_from:
 - /docs/scos/dev/example-modules.html
+- /developing_with_spryker/module_guide/modules.html
 ---
 
 The Spryker *core modules* provide generic, reusable functionality that benefits a wide range of use cases. These modules offer a foundation for customization and serve as versatile building blocks.

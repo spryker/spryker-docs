@@ -3,6 +3,8 @@ title: Release documentation archive
 description: Find links to archived versions of the Spryker documentation for previous release tags.
 last_updated: Sep 9, 2026
 template: concept-topic-template
+redirect_from:
+  - /docs/about/all/releases/
 ---
 
 When a release tag is no longer covered by the current documentation, its content is preserved in a Release documentation archive. Use the following table to find the archived documentation for a specific release tag.

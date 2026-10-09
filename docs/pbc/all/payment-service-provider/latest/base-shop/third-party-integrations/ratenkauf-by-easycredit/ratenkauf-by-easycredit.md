@@ -8,6 +8,8 @@ originalArticleId: 86cf0b54-43b8-4585-adef-0245c01e702a
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/ratenkauf-by-easycredit.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html
+  - /docs/pbc/all/payment-service-provider/202307.0/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html
 related:
   - title: Installing and configuring ratenkauf by easyCredit
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratenkauf-by-easycredit/install-and-configure-ratenkauf-by-easycredit.html

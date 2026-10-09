@@ -8,6 +8,8 @@ redirect_from:
   - /docs/dg/dev/glue-api/latest/old-glue-infrastructure/marketplace-glue-api-resolve-search-engine-friendly-urls.html
   - /docs/dg/dev/glue-api/latest/rest-api/marketplace-glue-api-resolve-search-engine-friendly-urls.html
   - /docs/integrations/spryker-glue-api/storefront-api/developing-apis/marketplace-glue-api-resolve-search-engine-friendly-urls.html
+  - /docs/dg/dev/glue-api/202307.0/old-glue-infrastructure/marketplace-glue-api-resolve-search-engine-friendly-urls.html
+  - /docs/marketplace/dev/glue-api-guides/202108.0/resolving-search-engine-friendly-urls.html
 last_updated: Aug 7, 2026
 ---
 

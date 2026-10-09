@@ -2,11 +2,16 @@ name: Check related links
 
 on:
   pull_request:
+    types:
+      - opened
+      - synchronize
+      - labeled
 
 jobs:
   check-related-links:
     name: Are related links clean?
     runs-on: ubuntu-latest
+    if: ${{ !contains(github.event.pull_request.labels.*.name, 'ignore-related') }}
 
     steps:
       # Full history so the diff against the pull request base is available.

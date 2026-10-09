@@ -6,6 +6,7 @@ last_updated: Sep 29, 2026
 redirect_from:
   - docs/scos/dev/front-end-development/zed/zed.html
   - /docs/scos/dev/front-end-development/202404.0/zed/zed.html
+  - /docs/dg/dev/frontend-development/202307.0/zed/zed-frontend.html
 
 ---
 

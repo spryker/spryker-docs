@@ -10,6 +10,10 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paypal-payment-method-for-computop.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-paypal-payment-method-for-computop.html
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paypal-payment-method-for-computop.html
+  - /docs/pbc/all/payment-service-provider/202307.0/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-paypal-payment-method-for-computop.html
+  - /docs/pbc/all/payment-service-provider/202307.0/computop/integrate-payment-methods-for-computop/integrate-the-paypal-payment-method-for-computop.html
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/computop/computop-payment-methods/computop-paypal.html
+  - /industry_partners/payment/computop/computop-paypal.htm
 related:
   - title: Computop
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/computop.html

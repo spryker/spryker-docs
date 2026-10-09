@@ -5,6 +5,12 @@ template: concept-topic-template
 last_updated: Jul 30, 2026
 redirect_from:
   - /docs/marketplace/user/features/202311.0/marketplace-product-options-feature-overview.html
+  - /docs/marketplace/user/features/202108.0/marketplace-product-options-feature-overview.html
+  - /docs/scos/user/features/202005.0/product-options-feature-overview.html
+  - /docs/marketplace/user/features/202204.0/marketplace-product-options-feature-overview.html
+  - /docs/scos/user/features/202009.0/product-options-feature-overview.html
+  - /docs/pbc/all/product-information-management/202212.0/product-options-feature-overview.html
+  - /docs/scos/user/features/201907.0/product-options-feature-overview.html
 related:
   - title: Creating product options
     link: docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-back-office/product-options/create-product-options.html

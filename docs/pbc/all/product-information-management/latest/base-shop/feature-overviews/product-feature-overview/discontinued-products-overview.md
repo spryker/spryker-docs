@@ -14,6 +14,9 @@ redirect_from:
   - /docs/discontinued-products
   - /docs/scos/user/features/202311.0/product-feature-overview/discontinued-products-overview.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-feature-overview/discontinued-products-overview.html
+  - /docs/scos/user/features/202108.0/product-feature-overview/discontinued-products-overview.html
+  - /docs/pbc/all/product-information-management/202307.0/base-shop/feature-overviews/product-feature-overview/discontinued-products-overview.html
+  - /docs/scos/user/features/202005.0/product-feature-overview/discontinued-products-overview.html
 ---
 
 If a concrete product runs out of stock, it's tagged as out of stock and cannot be added to cart:

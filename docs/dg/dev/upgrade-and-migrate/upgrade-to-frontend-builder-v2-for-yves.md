@@ -9,6 +9,8 @@ related:
     link: docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves-v2.html
   - title: Frontend builder for Yves (deprecated)
     link: docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves.html
+redirect_from:
+  - /docs/about/all/releases/docs/dg/dev/upgrade-and-migrate/upgrade-to-frontend-builder-v2-for-yves
 ---
 
 This document provides instructions for upgrading from the legacy Yves frontend builder, located in the project's `frontend/` directory, to frontend builder v2, which ships inside the ShopUi module.

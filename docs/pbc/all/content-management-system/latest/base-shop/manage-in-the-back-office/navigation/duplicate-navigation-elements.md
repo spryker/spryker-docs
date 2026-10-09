@@ -6,6 +6,8 @@ template: back-office-user-guide-template
 redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/manage-in-the-back-office/navigation/duplicate-navigation-nodes.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/navigation/duplicate-navigation-elements.html
+  - /docs/pbc/all/content-management-system/202204.0/manage-in-the-back-office/navigation/duplicate-navigation-elements.html
+  - /docs/pbc/all/content-management-system/202307.0/base-shop/manage-in-the-back-office/navigation/duplicate-navigation-elements.html
 related:
   - title: Navigation feature overview
     link: docs/pbc/all/content-management-system/latest/base-shop/navigation-feature-overview.html

@@ -6,6 +6,8 @@ last_updated: Jan 12, 2024
 redirect_from:
   - /docs/marketplace/user/features/202311.0/marketplace-product-feature-overview.html
   - /docs/marketplace/user/features/202204.0/marketplace-product-feature-overview.html
+  - /docs/marketplace/user/features/202108.0/marketplace-product-feature-overview.html
+  - /docs/marketplace/dev/feature-integration-guides/202108.0/glue/marketplace-product-feature-integration.html
 related:
   - title: Creating marketplace abstract product
     link: docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-products.html

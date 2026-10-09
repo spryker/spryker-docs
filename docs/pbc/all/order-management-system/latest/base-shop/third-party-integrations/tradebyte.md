@@ -12,6 +12,11 @@ redirect_from:
   - /docs/en/tradebyte
   - /docs/scos/user/technology-partners/202200.0/order-management-erpoms/tradebyte.html
   - /docs/scos/user/technology-partners/202311.0/order-management-erpoms/tradebyte.html
+  - /docs/scos/user/technology-partners/201903.0/order-management-erpoms/tradebyte.html
+  - /docs/scos/user/technology-partners/202001.0/order-management-erpoms/tradebyte.html
+  - /docs/scos/user/technology-partners/202009.0/order-management-erpoms/tradebyte.html
+  - /docs/pbc/all/order-management-system/202307.0/base-shop/third-party-integrations/tradebyte.html
+  - /docs/scos/user/technology-partners/202005.0/order-management-erpoms/tradebyte.html
 ---
 
 ## Partner Information

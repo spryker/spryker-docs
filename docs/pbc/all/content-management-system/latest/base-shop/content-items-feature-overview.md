@@ -16,6 +16,13 @@ redirect_from:
   - /docs/scos/user/features/202311.0/content-items-feature-overview.html
   - /docs/pbc/all/content-management-system/202311.0/content-items-feature-overview.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/content-items-feature-overview.html
+  - /docs/scos/user/features/202204.0/content-items-feature-overview.html
+  - /docs/scos/user/features/201907.0/content-items-feature-overview.html
+  - /docs/scos/user/features/202108.0/content-items-feature-overview.html
+  - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-content-items-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202001.0/glue-api/glue-api-content-items-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202005.0/content-items-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202108.0/content-items-feature-integration.html
 ---
 
 The *Content Items* feature creates an abstraction layer for content management in the Back Office. It lets content managers create and preserve small content pieces. Later, they are inserted into [CMS blocks](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-blocks-overview.html) and, subsequently, into Storefront pages. Content items are rendered on Storefront using [Content Item Widget](#content-item-widget).

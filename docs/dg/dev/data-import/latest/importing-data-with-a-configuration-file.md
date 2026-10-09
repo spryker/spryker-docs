@@ -8,6 +8,7 @@ originalArticleId: 6b17897b-a145-443e-a0ff-162ad92138a9
 redirect_from:
   - /docs/scos/dev/data-import/202404.0/importing-data-with-a-configuration-file.html
   - /docs/scos/dev/data-import/202204.0/importing-data-with-a-configuration-file.html
+  - /docs/scos/dev/data-import/202009.0/importing-data-with-a-configuration-file.html
 ---
 
 To quickly populate your shop system with data such as product information, customers, categories, etc., you can import it from the .csv files. To import your data, you can use [console commands](/docs/dg/dev/data-import/latest/importing-data-with-a-configuration-file.html#console-commands-to-run-import) to either run an individual data importer or import multiple data in bulk.

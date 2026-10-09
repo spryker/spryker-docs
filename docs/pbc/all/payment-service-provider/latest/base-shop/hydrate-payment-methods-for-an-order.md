@@ -9,6 +9,8 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-hydrate-payment-methods-for-an-order.html
   - /docs/pbc/all/payment-service-provider/202311.0/hydrate-payment-methods-for-an-order.html
   - /docs/pbc/all/payment-service-provider/202311.0/hydrate-payment-methods-for-an-order.html
+  - /docs/pbc/all/payment-service-provider/202307.0/spryker-pay/base-shop/hydrate-payment-methods-for-an-order.html
+  - /docs/pbc/all/payment-service-provider/202307.0/base-shop/hydrate-payment-methods-for-an-order.html
 ---
 
 {% info_block warningBox "Warning" %}

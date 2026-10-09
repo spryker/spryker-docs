@@ -13,6 +13,8 @@ redirect_from:
   - /scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-alternative-products-feature-integration.html
   - /scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-alternative-products-feature-integration.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html
+  - /docs/pbc/all/product-information-management/202212.0/base-shop/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html
+  - /docs/pbc/all/product-information-management/202307.0/base-shop/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html
 related:
   - title: Install the Alternative Products feature
     link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-alternative-products-feature.html

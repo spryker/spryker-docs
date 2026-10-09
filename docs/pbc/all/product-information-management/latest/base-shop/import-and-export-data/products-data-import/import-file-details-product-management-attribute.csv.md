@@ -10,6 +10,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202311.0/import-and-export-data/products-data-import/file-details-product-management-attribute.csv.html
   - /docs/pbc/all/product-information-management/202311.0/base-shop/import-and-export-data/products-data-import/file-details-product-management-attribute.csv.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/products-data-import/import-file-details-product-management-attribute.csv.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/products-data-import/file-details-product-management-attribute.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html

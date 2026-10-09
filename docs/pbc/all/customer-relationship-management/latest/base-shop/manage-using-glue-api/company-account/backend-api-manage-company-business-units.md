@@ -3,8 +3,6 @@ title: "Backend API: Manage company business units"
 description: Learn how to retrieve, create, update, and delete company business units in your Spryker shop using the Spryker Backend API.
 last_updated: Sep 20, 2026
 template: glue-api-backend-guide-template
-redirect_from:
-  - /docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/backend-api-manage-company-business-units
 ---
 
 This document describes how to manage company business units using the Backend API. A business unit represents a department, branch, or site of a company. Company users are assigned to a business unit. You can use these endpoints to build Back Office extensions, CRM and ERP integrations, and onboarding automation.

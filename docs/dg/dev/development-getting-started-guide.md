@@ -7,7 +7,6 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/about-migration-guides.html
   - /docs/pbc/all/punchout/202307.0/punchout-catalogs-overview.html
   - /docs/scos/dev/developer-getting-started-guide.html
-  - /docs/dg/dev/development-getting-started-guide.md
   - /docs/dev-getting-started
   - /docs/getting-started-with-docker
 ---

@@ -4,7 +4,6 @@ description: Find links to archived versions of the Spryker documentation for pr
 last_updated: Sep 9, 2026
 template: concept-topic-template
 redirect_from:
-  - /docs/about/all/releases/releases-archive.html
   - /docs/about/all/releases/
 ---
 

@@ -5,8 +5,6 @@ last_updated: Aug 24, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, project-starter-wizard, project setup, onboarding, demoshop
 template: concept-topic-template
-redirect_from:
-  - /docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html
 ---
 
 Every Spryker project starts from a demoshop — a complete, working reference shop that you reshape into your customer's project. Doing that by hand means changes across CI configuration, namespaces, deploy files, stores, and demo data, in an order that is easy to get wrong. The `project-starter-wizard` skill handles it for you: one developer interview, then a single orchestrated run that ends in a booted shop, verified store by store.

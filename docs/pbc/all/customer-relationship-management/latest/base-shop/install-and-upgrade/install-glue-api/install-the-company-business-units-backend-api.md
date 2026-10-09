@@ -3,6 +3,8 @@ title: Install the Company Business Units Backend API
 description: Learn how to install the Company Business Units Backend API into your Spryker project.
 last_updated: Sep 21, 2026
 template: feature-integration-guide-template
+redirect_from:
+  - /docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-company-business-units-backend-api.html
 ---
 
 This document describes how to install the Company Business Units Backend API, which exposes company business unit data at `/company-business-units` through the Glue Backend application. For the endpoint reference, see [Backend API: Manage company business units](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/backend-api-manage-company-business-units.html).

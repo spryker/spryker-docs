@@ -13,6 +13,9 @@ related:
 redirect_from:
 - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/datasources/datasources.html
 - /docs/scos/dev/front-end-development/202404.0/marketplace/ui-components-library/datasources/datasources.html
+- /docs/marketplace/dev/front-end/202204.0/ui-components-library/datasources
+- /docs/scos/dev/front-end-development/202212.0/marketplace/ui-components-library/datasources/datasources.html
+- /docs/marketplace/dev/front-end/202204.0/ui-components-library/datasources/
 
 ---
 

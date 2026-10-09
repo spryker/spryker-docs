@@ -13,6 +13,8 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/import-and-export-data/file-details-navigation-node.csv.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/import-and-export-data/file-details-navigation-node.csv.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/import-and-export-data/import-file-details-navigation-node.csv.html
+  - /docs/pbc/all/content-management-system/202212.0/base-shop/import-and-export-data/import-file-details-navigation-node.csv.html
+  - /docs/scos/dev/data-import/202108.0/data-import-categories/navigation-setup/navigation-setup.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html

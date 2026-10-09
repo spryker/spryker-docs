@@ -7,6 +7,8 @@ originalLink: https://documentation.spryker.com/2021080/docs/channelpilot-analyt
 originalArticleId: 56a3d03b-a02f-468c-ba91-31e422fd458a
 redirect_from:
   - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/analytics/channelpilot-analytics.html
+  - /docs/scos/user/technology-partners/202005.0/marketing-and-conversion/analytics/channelpilot-analytics.html
+  - /docs/scos/user/technology-partners/201903.0/marketing-and-conversion/analytics/channelpilot-analytics.html
 ---
 
 ## Partner Information

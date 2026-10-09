@@ -10,6 +10,8 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-schedule-cron-job-for-scheduled-prices.html
   - /docs/pbc/all/price-management/202311.0/base-shop/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html
   - /docs/pbc/all/price-management/202204.0/base-shop/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html
+  - /docs/pbc/all/price-management/202204.0/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html
+  - /docs/pbc/all/price-management/202212.0/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html
 related:
   - title: Scheduled Prices feature walkthrough
     link: docs/pbc/all/price-management/latest/base-shop/scheduled-prices-feature-overview.html

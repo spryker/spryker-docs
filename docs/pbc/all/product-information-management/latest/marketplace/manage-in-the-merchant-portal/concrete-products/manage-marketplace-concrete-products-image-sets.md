@@ -6,6 +6,8 @@ template: back-office-user-guide-template
 related:
   - title: Marketplace Product feature overview
     link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html
+redirect_from:
+  - /docs/marketplace/user/merchant-portal-user-guides/202212.0/products/concrete-products/managing-marketplace-concrete-products-image-sets.html
 ---
 
 This document describes how to manage image sets of the marketplace concrete products in the Merchant Portal.

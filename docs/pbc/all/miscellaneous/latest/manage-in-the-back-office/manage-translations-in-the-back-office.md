@@ -3,6 +3,8 @@ title: Manage translations in the Back Office
 description: Learn how to manage translations in the Spryker Cloud Commerce OS Back Office for your Spryker projects.
 last_updated: June 03, 2026
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/pbc/all/miscellaneous/202307.0/manage-in-the-back-office/manage-translations-in-the-back-office.html
 ---
 
 Once you are logged into the Back Office, navigate to the `/glossary` located by default in **Administration &rarr; Glossary**.

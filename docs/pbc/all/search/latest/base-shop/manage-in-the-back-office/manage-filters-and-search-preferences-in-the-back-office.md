@@ -5,6 +5,8 @@ last_updated: Apr 13, 2023
 template: back-office-user-guide-template
 redirect_from:
   - /docs/pbc/all/search/202311.0/manage-in-the-back-office/log-into-the-back-office.html
+  - /docs/scos/user/back-office-user-guides/201903.0/merchandising/search-and-filters/managing-search-preferences.html
+  - /docs/scos/user/back-office-user-guides/202108.0/merchandising/search-and-filters/managing-search-preferences.html
 ---
 
 This section contains the guides on managing filters and search preferences in the Back Office:

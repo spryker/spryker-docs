@@ -7,6 +7,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/dg/dev/ai-dev/ai-dev
   - /docs/dg/dev/ai/ai-dev/ai-dev-overview
+  - /docs/dg/dev
 ---
 
 {% info_block warningBox "Warning" %}

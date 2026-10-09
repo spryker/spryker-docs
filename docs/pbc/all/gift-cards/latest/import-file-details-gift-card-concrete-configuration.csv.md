@@ -11,6 +11,8 @@ redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/special-product-types/gift-cards/file-details-gift-card-concrete-configuration.csv.html
   - /docs/pbc/all/gift-cards/202311.0/import-and-export-data/file-details-gift-card-concrete-configuration.csv.html
    - /docs/pbc/all/gift-cards/202204.0/import-and-export-data/import-file-details-gift-card-concrete-configuration.csv.html
+  - /docs/pbc/all/gift-cards/202204.0/import-and-export-data/file-details-gift-card-concrete-configuration.csv.html
+  - /docs/scos/dev/feature-integration-guides/202001.0/gift-cards-feature-integration.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html

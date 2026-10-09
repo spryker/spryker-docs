@@ -12,6 +12,11 @@ redirect_from:
   - /docs/scos/user/features/202108.0/prices-feature-overview/prices-feature-overview.html
   - /docs/scos/user/features/202005.0/prices-feature-overview/prices-feature-overview.html
   - /docs/pbc/all/price-management/202204.0/base-shop/prices-feature-overview/prices-feature-overview.html
+  - /docs/scos/user/features/201903.0/prices-feature-overview/prices-feature-overview.html
+  - /docs/pbc/all/price-management/202212.0/prices-feature-overview/prices-feature-overview.html
+  - /docs/pbc/all/price-management/prices-feature-overview/prices-feature-overview.html
+  - /docs/pbc/all/price-management/202212.0/base-shop/prices-feature-overview/prices-feature-overview.html
+  - /docs/pbc/all/price-management/202307.0/base-shop/prices-feature-overview/prices-feature-overview.html
 ---
 
 The *Prices* feature enables Back Office users to set prices for products and manage them effectively.

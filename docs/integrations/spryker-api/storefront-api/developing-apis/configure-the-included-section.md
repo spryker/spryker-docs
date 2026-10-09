@@ -11,6 +11,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202404.0/configure-the-included-section.html
   - /docs/dg/dev/glue-api/latest/configure-the-included-section.html
   - /docs/integrations/spryker-glue-api/storefront-api/developing-apis/configure-the-included-section.html
+  - /docs/dg/dev/glue-api/202307.0/configure-the-included-section.html
 ---
 
 Responses of Spryker Glue REST API can return the **included** and **relationships** sections. The sections contain additional information on the resource requested. Such information is presented in the form of related resources. For example, if you request information on products, the sections can include such additional related resources as image sets, prices, and availability information.

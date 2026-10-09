@@ -12,6 +12,7 @@ related:
     link: https://api-platform.com/docs/
 redirect_from:
   - /docs/dg/dev/architecture/api-platform/resource-schemas.html
+  - /docs/dg/dev/architecture/api-platform/schemas-and-resource-generation
 ---
 
 This document explains how to define API Platform resource schemas in Spryker.

@@ -5,6 +5,9 @@ last_updated: Nov 15, 2022
 template: concept-topic-template
 redirect_from:
 - /docs/pbc/all/request-for-quote/202204.0/use-cases-request-for-quote-processes.html
+- /docs/pbc/all/request-for-quote-rfq/
+- /docs/pbc/all/request-for-quote-rfq/request-for-quote-rfq-overview.html
+- /docs/scos/user/features/latest/quote-request/quote-request-feature-overview.html
 ---
 
 

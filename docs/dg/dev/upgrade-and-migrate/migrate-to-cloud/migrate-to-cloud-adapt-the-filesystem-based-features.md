@@ -4,6 +4,8 @@ description: Learn how to migrate to Spryker Cloud Commerce os and adapt the fil
 template: howto-guide-template
 redirect_from:
 - /docs/scos/dev/migration-concepts/migrate-to-sccos/step-8-adapt-the-filesystem-based-features.html
+- /docs/scos/user/features/202108.0/features.html
+- /capabilities/features.htm
 last_updated: Dec 6, 2023
 
 ---

@@ -3,6 +3,8 @@ title: Handle price explosion and ERP-owned pricing in B2B
 description: A decision-oriented guideline that helps you choose a pricing architecture for large-volume, ERP-owned B2B pricing before you start technical optimization.
 last_updated: Sep 8, 2026
 template: concept-topic-template
+redirect_from:
+  - /docs/pbc/all/price-management/base-shop/tutorials-and-howtos/handle-price-explosion-and-erp-owned-pricing-in-b2b.html
 ---
 
 **A decision-oriented guideline for large-volume, ERP-owned B2B pricing**

@@ -31,6 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/migration-guide-availabilitygui.html
   - /module_migration_guides/mg-availability-gui.htm
   - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilitygui-module.html
+  - /docs/pbc/all/warehouse-management-system/202212.0/install-and-upgrade/upgrade-modules/upgrade-the-availabilitygui-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-availabilitygui-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-availabilitygui-module.md -->

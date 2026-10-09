@@ -10,6 +10,8 @@ related:
     link: docs/dg/dev/guidelines/testing-guidelines/cypress-testing/project-structure.html
   - title: Test writing conventions
     link: docs/dg/dev/guidelines/testing-guidelines/cypress-testing/test-writing-conventions.html
+redirect_from:
+  - /docs/dg/dev/guidelines/testing-guidelines/cypress-testing/naming-conventions.html
 ---
 
 Consistent naming conventions keep the Cypress boilerplate codebase clean and readable.

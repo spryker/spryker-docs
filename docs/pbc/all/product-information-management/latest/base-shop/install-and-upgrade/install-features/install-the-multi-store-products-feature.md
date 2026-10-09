@@ -13,6 +13,8 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/multi-store-products-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/multi-store-products-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/multi-store-products-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201811.0/multi-store-products-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201907.0/multi-store-products-feature-integration.html
 related:
   - title: Upgrade the Collector module
     link: docs/pbc/all/miscellaneous/latest/install-and-upgrade/upgrade-modules/upgrade-the-collector-module.html

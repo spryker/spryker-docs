@@ -10,6 +10,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/abstract-products/retrieving-abstract-product-availability.html  
   - /docs/pbc/all/warehouse-management-system/202311.0/base-shop/manage-using-glue-api/retrieve-abstract-product-availability.html
   - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-availability.html
+  - /docs/pbc/all/warehouse-management-system/202307.0/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-availability.html
 related:
   - title: Retrieving abstract products
     link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html

@@ -5,6 +5,7 @@ last_updated: October 3, 2023
 template: concept-topic-template
 redirect_from:
 - /docs/scos/dev/front-end-development/202404.0/oryx/building-applications/styling/oryx-responsive-design.html
+- /docs/scos/user/features/202001.0/multi-channel/responsive-design.html
 
 ---
 

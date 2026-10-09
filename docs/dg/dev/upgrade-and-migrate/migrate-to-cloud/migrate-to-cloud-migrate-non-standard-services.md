@@ -4,6 +4,7 @@ description: Learn how to migrate to Spryker Cloud Commerce OS and migrate non-s
 template: howto-guide-template
 redirect_from:
 - /docs/scos/dev/migration-concepts/migrate-to-sccos/step-3-migrate-non-standard-services.html
+- /docs/services
 ---
 
 Spryker comes pre-configured with the following services by default:

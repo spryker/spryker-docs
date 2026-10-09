@@ -31,6 +31,7 @@ redirect_from:
   - /docs/pbc/all/miscellaneous/202311.0/third-party-integrations/operational-tools-monitoring-legal/new-relic.html
   - /docs/pbc/all/miscellaneous/202212.0/third-party-integrations/operational-tools-monitoring-legal/new-relic.html
   - /docs/pbc/all/miscellaneous/202307.0/third-party-integrations/operational-tools-monitoring-legal/new-relic.html
+  - /docs/scos/dev/the-docker-sdk/202307.0/configure-services.html
 
 related:
   - title: Deploy file reference

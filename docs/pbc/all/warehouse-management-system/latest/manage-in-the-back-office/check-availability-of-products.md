@@ -10,6 +10,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/availability/managing-products-availability.html
   - /docs/scos/user/back-office-user-guides/202311.0/catalog/availability/managing-products-availability.html  
   - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/manage-in-the-back-office/check-availability-of-products.html
+  - /docs/pbc/all/warehouse-management-system/manage-in-the-back-office/check-availability-of-products.html
 related:
   - title: Timed Product Availability Feature Overview
     link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/timed-product-availability-overview.html

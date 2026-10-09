@@ -9,6 +9,10 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/payolution/payolution-request-flow.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payolution/payolution-request-flow.html
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/payolution/payolution-request-flow.html
+  - /docs/pbc/all/payment-service-provider/202307.0/base-shop/third-party-integrations/payolution/payolution-request-flow.html
+  - /docs/scos/dev/technology-partner-guides/201903.0/payment-partners/payolution/payolution-request-flow.html
+  - /docs/scos/dev/technology-partner-guides/202009.0/payment-partners/payolution/payolution-request-flow.html
+  - /docs/scos/dev/technology-partner-guides/202001.0/payment-partners/payolution/payolution-request-flow.html
 related:
   - title: Integrating the invoice paymnet method for Payolution
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/integrate-the-invoice-payment-method-for-payolution.html

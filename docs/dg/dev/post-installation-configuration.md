@@ -3,6 +3,8 @@ title: Post-Installation Configuration
 description: Advanced configuration and customization of your Spryker project after initial setup
 last_updated: Aug 20, 2026
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-integration-guides/202005.0/glue-api/glue-api-installation-and-configuration.html
 ---
 
 This document provides guidance on advanced configuration and customization of your Spryker project after completing the initial setup. These steps help you optimize and adapt the Demo Shop to your specific project needs.

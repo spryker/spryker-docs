@@ -8,6 +8,8 @@ originalArticleId: 55ba509a-6fe7-480d-914f-1bbcf9e84d2f
 redirect_from:
   - /docs/scos/user/technology-partners/202108.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html
   - /docs/scos/user/technology-partners/202311.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html
+  - /docs/scos/user/technology-partners/202204.0/marketing-and-conversion/personalization-and-cross-selling/econda.html
+  - /industry_partners/performance/econda/econda.htm
 ---
 
 ## Partner information

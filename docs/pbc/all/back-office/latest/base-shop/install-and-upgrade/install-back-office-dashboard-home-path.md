@@ -3,6 +3,10 @@ title: Install Back Office dashboard home path
 description: Learn how to configure the Back Office to redirect users to the dashboard as the default landing page after login.
 template: howto-guide-template
 last_updated: Apr 16, 2026
+redirect_from:
+  - /docs/pbc/all/back-office/202212.0/manage-in-the-back-office/view-dashboard.html
+  - /docs/pbc/all/back-office/202307.0/base-shop/manage-in-the-back-office/view-dashboard.html
+  - /docs/pbc/all/back-office/202307.0/manage-in-the-back-office/view-dashboard.html
 ---
 
 This document explains how to configure the Back Office to redirect users to `/dashboard` as the default landing page after login, replacing the default Spryker home path.

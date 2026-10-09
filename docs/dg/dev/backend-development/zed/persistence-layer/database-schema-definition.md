@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/database-schema-def
 originalArticleId: 49d1d709-2b32-486f-888f-484f0ad72319
 redirect_from:
   - /docs/scos/dev/back-end-development/zed/persistence-layer/database-schema-definition.html
+  - /docs/database-schema-definition
 related:
   - title: Database overview
     link: docs/dg/dev/backend-development/zed/persistence-layer/database-overview.html

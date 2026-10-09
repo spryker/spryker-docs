@@ -14,6 +14,7 @@ redirect_from:
   - /docs/scos/dev/sdk/202009.0/code-generator.html
   - /docs/scos/dev/sdk/202108.0/code-generator.html
   - /docs/scos/dev/code-generator.html
+  - /docs/scos/dev/sdk/code-generator.html
 related:
   - title: Cronjob scheduling
     link: docs/dg/dev/backend-development/cronjobs/cronjobs.html

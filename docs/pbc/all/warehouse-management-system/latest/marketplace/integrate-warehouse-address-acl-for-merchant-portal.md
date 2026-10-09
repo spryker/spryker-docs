@@ -8,6 +8,8 @@ related:
     link: docs/pbc/all/warehouse-management-system/latest/marketplace/marketplace-inventory-management-feature-domain-model.html
   - title: Integrate Vertex for Marketplace
     link: docs/pbc/all/tax-management/latest/marketplace/integrate-vertex-for-marketplace.html
+redirect_from:
+  - /docs/pbc/all/warehouse-management-system/latest/marketplace/integrate-warehouse-address-acl-for-merchant-portal
 ---
 
 In the Merchant Portal, Propel queries are scoped by ACL entity rules, and an entity that is absent from the composed ACL entity metadata configuration is not readable for merchant users. `Orm\Zed\StockAddress\Persistence\SpyStockAddress` is such an entity unless you register it explicitly.

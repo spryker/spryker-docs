@@ -6,6 +6,7 @@ last_updated: Sep 21, 2023
 redirect_from:
   - /docs/marketplace/user/intro-to-spryker-marketplace/back-office-for-marketplace-operator.html
   - /docs/scos/user/intro-to-spryker/spryker-marketplace/back-office-for-marketplace-operator.html
+  - /docs/pbc/all/back-office/latest/base-shop/workflow-feature-overview
 
 ---
 

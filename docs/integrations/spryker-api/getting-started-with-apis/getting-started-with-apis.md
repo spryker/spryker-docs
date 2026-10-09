@@ -6,6 +6,7 @@ template: default
 layout: custom_new
 redirect_from:
   - /docs/integrations/spryker-glue-api/getting-started-with-apis/getting-started-with-apis.html
+  - /docs/integrations/spryker-api/getting-started-with-apis/getting-started-with-apis.html
 ---
 
 <div class="content_box">

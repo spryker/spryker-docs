@@ -8,6 +8,9 @@ related:
     link: docs/pbc/all/shopping-list-and-wishlist/latest/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-shopping-lists-glue-api.html
   - title: Marketplace Shopping Lists feature walkthrough
     link: docs/pbc/all/shopping-list-and-wishlist/latest/marketplace/marketplace-shopping-lists-feature-overview.html
+redirect_from:
+  - /docs/pbc/all/shopping-list-and-wishlist/202204.0/install-and-upgrade/integrate-the-shopping-lists-feature.html
+  - /docs/pbc/all/shopping-list-and-wishlist/202212.0/install-and-upgrade/integrate-the-shopping-lists-glue-api.html
 ---
 
 {% include pbc/all/install-features/latest/marketplace/install-the-marketplace-shopping-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-shopping-lists-feature.md -->

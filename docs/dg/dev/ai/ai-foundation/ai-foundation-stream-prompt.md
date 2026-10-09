@@ -204,7 +204,7 @@ class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvid
 
 ### 4. Call streamPrompt() in a controller
 
-Call `streamPrompt()` inside a `StreamedResponse` with server-sent events (SSE) headers. In this example, the conversation reference is bound to the customer session, so each customer continues their own conversation:
+Call `streamPrompt()` inside a `StreamedResponse` with server-sent events (SSE) headers. In this example, the conversation reference is bound to the customer session, so each customer continues their own conversation. If you do not set `conversationReference`, Zed does not save the conversation history, and step 3 of the turn does nothing:
 
 **src/Pyz/Yves/ProductAssistant/Controller/PromptController.php**
 
@@ -230,7 +230,7 @@ class PromptController extends AbstractController
         $promptRequestTransfer = (new PromptRequestTransfer())
             ->setAiConfigurationName(ProductAssistantConstants::AI_CONFIGURATION_PRODUCT_ASSISTANT)
             ->setPromptMessage((new PromptMessageTransfer())->setContent((string)$request->request->get('message')))
-            ->setConversationReference('product-assistant-' . $request->getSession()->getId()) // omit it to not save the conversation history in Zed
+            ->setConversationReference('product-assistant-' . $request->getSession()->getId())
             ->setToolNames(['search_products', 'get_product_availability']);
 
         ignore_user_abort(true); // the turn continues and is saved when the browser disconnects

@@ -5,6 +5,7 @@ last_updated: Sep 4, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/code-contribution-guide.html
+  - /docs/code-contribution-guide
 
 ---
 

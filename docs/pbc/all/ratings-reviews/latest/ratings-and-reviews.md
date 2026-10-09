@@ -22,6 +22,8 @@ redirect_from:
   - /docs/pbc/all/ratings-reviews/latest/third-party-integrations/integrate-bazaarvoice
   - /docs/pbc/all/ratings-reviews/latest/third-party-integrations/configure-bazaarvoice
   - /docs/pbc/all/ratings-reviews/latest/third-party-integrations/disconnect-bazaarvoice
+  - /docs/pbc/all/ratings-reviews/202212.0/ratings-and-reviews.html
+  - /docs/pbc/all/ratings-reviews/ratings-reviews.html
 ---
 
 Drive sales by including user reviews and ratings. Reviews and ratings are a proven sign of trust; they allow brands to receive valuable and moderate feedback in the Administration Interface. The Ratings and Reviews feature also comes with the functionality to add text-free reviews and star ratings.

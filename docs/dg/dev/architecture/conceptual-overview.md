@@ -5,6 +5,7 @@ last_updated: Sep 7, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/architecture/conceptual-overview.html
+  - /docs/conceptual-overview
 ---
 
 Spryker is a Commerce Operating System, mainly composed of several applications, such as Storefront (Yves), Back Office (Zed) and Storefront API (Glue).

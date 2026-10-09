@@ -8,6 +8,7 @@ redirect_from:
   - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/actions/actions-http.html
   - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/actions/actions.html
   - /docs/scos/dev/front-end-development/202404.0/marketplace/ui-components-library/actions/actions-http.html
+  - /docs/marketplace/dev/front-end/202204.0/ui-components-library/actions/actions-http.html
 
 related:
   - title: Actions

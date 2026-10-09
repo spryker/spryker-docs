@@ -3,6 +3,8 @@ title: Install the Company Business Unit Addresses Backend API
 description: Learn how to install the Company Business Unit Addresses Backend API in your Spryker project.
 last_updated: Sep 21, 2026
 template: feature-integration-guide-template
+redirect_from:
+  - /docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-company-business-unit-addresses-backend-api.html
 ---
 
 This document describes how to install the Company Business Unit Addresses Backend API. The API exposes company business unit address data at `/company-business-unit-addresses` through the Glue Backend application. For the endpoint reference, see [Backend API: Manage company business unit addresses](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/backend-api-manage-company-business-unit-addresses.html).

@@ -6,6 +6,7 @@ last_updated: Sep 25, 2023
 redirect_from:
   - /docs/marketplace/dev/howtos/how-to-upgrade-spryker-instance-to-marketplace.html
   - /docs/scos/dev/migration-concepts/upgrade-to-marketplace.html
+  - /docs/pbc/all/merchant-management/latest/marketplace
 ---
 
 This document describes how to upgrade the existing instance of Spryker Shop to the Marketplace.

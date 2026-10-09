@@ -6,6 +6,7 @@ last_updated: May 23, 2023
 redirect_from:
   - /docs/scos/dev/front-end-development/202404.0/oryx/oryx-supported-browsers.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/getting-started/oryx-supported-browsers.html
+  - /docs/dg/dev/frontend-development/202212.0/oryx/getting-started/oryx-supported-browsers.html
 
 ---
 

@@ -11,6 +11,8 @@ related:
     link: docs/dg/dev/upgrade-and-migrate/upgrade-to-frontend-builder-v2-for-yves.html
   - title: Design tokens
     link: docs/dg/dev/frontend-development/latest/design-tokens.html
+redirect_from:
+  - /docs/dg/dev/frontend-development/yves/frontend-builder-for-yves-v2
 ---
 
 Frontend builder v2 is the build tool that prepares Yves assets—CSS, JavaScript, images, fonts, icons—for all configured namespaces and their themes.

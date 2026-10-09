@@ -14,6 +14,8 @@ related:
       link: docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
     - title: 'How-to: Create a new MerchantOms flow'
       link: docs/pbc/all/order-management-system/latest/marketplace/create-merchant-oms-flows.html
+redirect_from:
+  - /docs/pbc/all/order-management-system/202212.0/marketplace/marketplace-order-management-feature-domain-model-and-relationships.html
 ---
 
 

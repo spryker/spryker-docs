@@ -7,6 +7,7 @@ redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/web-components.html
   - /docs/scos/dev/front-end-development/202204.0/marketplace/web-components.html
   - /docs/scos/dev/front-end-development/202404.0/marketplace/web-components.html
+  - /docs/dg/dev/frontend-development/202307.0/marketplace/web-components.html
 
 related:
   - title: Angular Components

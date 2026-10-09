@@ -5,6 +5,9 @@ description: This document describes the price-product-offer.csv file to configu
 template: import-file-template
 redirect_from:
   - /docs/marketplace/dev/data-import/202311.0/file-details-price-product-offer.csv.html
+  - /docs/marketplace/dev/data-import/202204.0/file-details-price-product-offer.csv.html
+  - /docs/pbc/all/price-management/202212.0/marketplace/import-and-export-data/file-details-price-product-offer.csv.html
+  - /docs/pbc/all/price-management/latest/marketplace/import-and-export-data/file-details-price-product-offer.csv
 related:
   - title: Marketplace Product Offer feature walkthrough
     link: docs/pbc/all/offer-management/latest/marketplace/marketplace-merchant-portal-product-offer-management-feature-overview.html

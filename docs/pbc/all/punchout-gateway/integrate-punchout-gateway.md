@@ -3,6 +3,9 @@ title: Integrate PunchOut Gateway
 description: Integrate PunchOut Gateway into a Spryker shop.
 last_updated: Jun 24, 2026
 template: howto-guide-template
+redirect_from:
+  - /docs/pbc/all/punchout-management/base-shop/punchout-gateway.html
+  - /docs/pbc/all/punchout-management/punchout-gateway.html
 ---
 
 This document describes how to integrate the PunchOut Gateway module into a Spryker shop.

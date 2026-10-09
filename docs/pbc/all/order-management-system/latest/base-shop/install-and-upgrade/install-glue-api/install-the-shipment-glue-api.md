@@ -6,6 +6,8 @@ template: feature-integration-guide-template
 redirect_from:
   - /docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-the-shipment-glue-api.html
   - /docs/pbc/all/order-management-system/202311.0/base-shop/install-and-update/install-glue-api/install-the-shipment-glue-api.html
+  - /docs/pbc/all/order-management-system/202212.0/base-shop/install-and-upgrade/install-glue-api/install-the-shipment-glue-api.html
+  - /docs/pbc/all/order-management-system/202212.0/install-and-upgrade/install-glue-api/install-the-shipment-glue-api.html
 related:
   - title: Install the Shipment feature
     link: docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html

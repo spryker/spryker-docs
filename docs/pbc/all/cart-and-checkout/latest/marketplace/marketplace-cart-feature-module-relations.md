@@ -4,6 +4,8 @@ description: Explore the Marketplace Cart feature module relations in Spryker Ma
 last_updated: Nov 1, 2021
 description: Buyers can add notes to carts of their orders.
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/module-migration-guides/migration-guide-checkout.html
 ---
 
 The following diagram illustrates the dependencies between the modules for the *Marketplace Cart* feature.

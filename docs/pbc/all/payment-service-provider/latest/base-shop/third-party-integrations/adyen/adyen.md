@@ -8,6 +8,10 @@ originalArticleId: 0d0cbb43-1cdd-47b8-86a1-a963cef8a788
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/adyen.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/adyen/adyen.html
+  - /docs/pbc/all/payment-service-provider/202307.0/base-shop/third-party-integrations/adyen/adyen.html
+  - /docs/pbc/all/payment-service-provider/202307.0/adyen/adyen.html
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/adyen/adyen.html
+  - /industry_partners/payment/adyen/adyen.htm
 related:
   - title: Installing and configuring Adyen
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/install-and-configure-adyen.html

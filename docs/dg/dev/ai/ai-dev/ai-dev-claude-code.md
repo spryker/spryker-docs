@@ -7,6 +7,7 @@ keywords: ai, claude, claude code, plugin, marketplace, skills, spryker, ai-dev,
 template: howto-guide-template
 redirect_from:
   - /docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin
+  - /docs/sdk/dev/ai-dev-sdk/claude-code-plugin.html
 ---
 
 {% info_block warningBox "Project must be running" %}

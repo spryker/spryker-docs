@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/user/technology-partners/202200.0/product-information-pimerp/xentral.html
   - /docs/scos/user/technology-partners/202311.0/product-information-pimerp/xentral.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/third-party-integrations/xentral.html
+  - /docs/scos/user/technology-partners/202009.0/product-information-pimerp/xentral.html
 ---
 
 ## Partner Information

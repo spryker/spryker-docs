@@ -7,6 +7,7 @@ redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/data-transformers/data-transformer-object-map.html
   - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/data-transformers/object-map.html
   - /docs/scos/dev/front-end-development/202404.0/marketplace/ui-components-library/data-transformers/data-transformer-object-map.html
+  - /docs/dg/dev/frontend-development/202307.0/marketplace/ui-components-library/data-transformers/data-transformer-object-map.html
 
 related:
   - title: Data Transformers

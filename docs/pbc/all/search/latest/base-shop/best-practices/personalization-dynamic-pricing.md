@@ -22,6 +22,8 @@ redirect_from:
   - /v2/docs/en/personalization-dymanic-pricing  
   - /v1/docs/personalization-dymanic-pricing
   - /v1/docs/en/personalization-dymanic-pricing
+  - /docs/pbc/all/search/202307.0/base-shop/best-practices/personalization-dynamic-pricing.html
+  - /docs/pbc/all/search/202212.0/base-shop/best-practices/personalization-dynamic-pricing.html
 related:
   - title: Data-driven ranking
     link: docs/pbc/all/search/latest/base-shop/best-practices/data-driven-ranking.html

@@ -3,6 +3,8 @@ title: Integrating security releases
 description: Integrate Spryker security releases to mitigate vulnerabilities, enhance protection, and maintain compliance by applying critical security updates via the Spryker Code Upgrader.
 template: concept-topic-template
 last_updated: Dec 20, 2023
+redirect_from:
+  - /docs/about/all/releases/security-releases
 ---
 
 Being on top of security releases of your vendor or third parties is very crucial:

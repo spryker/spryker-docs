@@ -17,6 +17,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202311.0/product-bundles-cart-feature-integration.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-bundles-cart-feature.html
   - /docs/pbc/all/product-information-management/202505.0/base-shop/install-and-upgrade/install-features/install-the-product-bundles-cart-feature.html
+  - /docs/pbc/all/product-information-management/202407.0/base-shop/install-and-upgrade/install-features/install-the-product-bundles-cart-feature.html
 related:
   - title: "Install the Product Bundle + Cart Glue API"
     link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundle-cart-glue-api.html

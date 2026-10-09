@@ -12,6 +12,9 @@ redirect_from:
   - /docs/en/managing-customers
   - /docs/scos/user/back-office-user-guides/202311.0/customer/customer-customer-access-customer-groups/managing-customers.html
   - /docs/scos/user/back-office-user-guides/202204.0/customer/customers/create-customers.html
+  - /docs/pbc/all/customer-relationship-management/202212.0/base-shop/manage-in-the-back-office/customers/create-customers.html
+  - /docs/scos/user/back-office-user-guides/202108.0/customer/customers/create-customers.html
+  - /docs/scos/user/back-office-user-guides/202212.0/customer/customers/create-customers.html
 related:
   - title: Customer Account Management feature overview
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html

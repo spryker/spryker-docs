@@ -11,6 +11,7 @@ redirect_from:
   - /docs/product-relations-feature-integration
   - /docs/en/product-relations-feature-integration
   - /docs/scos/dev/feature-integration-guides/202204.0/product-relations-feature-integration.html
+  - /docs/pbc/all/product-relationship-management/202212.0/install-and-upgrade/install-the-product-relations-feature.html
 related:
   - title: Install the Product Relations Glue API
     link: docs/pbc/all/product-relationship-management/latest/install-and-upgrade/install-the-product-relations-glue-api.html

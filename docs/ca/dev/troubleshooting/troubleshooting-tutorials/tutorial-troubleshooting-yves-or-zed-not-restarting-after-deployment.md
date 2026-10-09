@@ -5,6 +5,7 @@ template: troubleshooting-guide-template
 last_updated: Oct 6, 2023
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-yves-or-zed-not-restarting-after-deployment.html
+  - /docs/dg/dev/zed-api/tutorial-using-zed-api
 ---
 
 Yves or Zed is not accessible after deployment or the deployment is failed.

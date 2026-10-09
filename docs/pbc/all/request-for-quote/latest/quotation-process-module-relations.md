@@ -6,6 +6,10 @@ last_updated: Jun 16, 2021
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/quotation-process-feature-walkthrough/quotation-process-module-relations.html
   - /docs/pbc/all/request-for-quote/202204.0/quotation-process-module-relations.html
+  - /docs/quotation-process-rfq-201907
+  - /docs/scos/dev/feature-integration-guides/202001.0/quotation-process-feature-integration.html
+  - /docs/scos/user/features/202001.0/quotation-process-feature-overview.html
+  - /docs/scos/user/features/202108.0/quotation-process-feature-overview.html
 ---
 
 On this page, you can find the module relations for the [Quotation Process](/docs/pbc/all/request-for-quote/latest/request-for-quote.html) feature.

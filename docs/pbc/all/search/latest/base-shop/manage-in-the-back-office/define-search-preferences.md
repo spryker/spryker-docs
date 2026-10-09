@@ -11,6 +11,8 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/merchandising/search-preferences/define-search-preferences.html
   - /docs/pbc/all/search/202311.0/manage-in-the-back-office/define-search-preferences.html
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/search-preferences/define-search-preferences.html
+  - /docs/scos/user/features/201903.0/search-feature-overview/search-preferences.html
+  - /docs/pbc/all/search/202307.0/base-shop/manage-in-the-back-office/define-search-preferences.html
 related:
   - title: Edit search preferences
     link: docs/pbc/all/search/latest/base-shop/manage-in-the-back-office/edit-search-preferences.html

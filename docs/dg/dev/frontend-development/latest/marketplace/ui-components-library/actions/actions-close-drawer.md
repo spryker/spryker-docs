@@ -7,6 +7,8 @@ redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/actions/actions-close-drawer.html
   - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/actions/actions-close-drawer.html
   - /docs/scos/dev/front-end-development/202404.0/marketplace/ui-components-library/actions/actions-close-drawer.html
+  - /docs/marketplace/dev/front-end/202204.0/ui-components-library/actions/actions-close-drawer.html
+  - /docs/marketplace/dev/front-end/202204.0/ui-components-library/actions/
 
 related:
   - title: Actions

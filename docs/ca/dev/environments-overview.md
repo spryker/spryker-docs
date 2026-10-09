@@ -3,6 +3,7 @@ title: Environments overview
 description: Learn about the development, staging, and production environments of the Spryker Cloud Commerce OS
 template: concept-topic-template
 redirect_from:
+  - /docs/cloud/dev/spryker-cloud-commerce-os/environments-overview.html
 last_updated: Jun 8, 2023
   - /docs/cloud/dev/spryker-cloud-commerce-os/environments-overview.html
 ---

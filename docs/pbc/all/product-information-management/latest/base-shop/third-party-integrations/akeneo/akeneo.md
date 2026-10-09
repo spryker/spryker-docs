@@ -12,6 +12,8 @@ redirect_from:
   - /docs/en/akeneo
   - /docs/scos/user/technology-partners/202311.0/product-information-pimerp/akeneo.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/third-party-integrations/akeneo/akeneo.html
+  - /docs/pbc/all/product-information-management/202212.0/base-shop/third-party-integrations/akeneo/akeneo.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo.html
 related:
   - title: Akeneo Connector (Eco module) — Console commands
     link: docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/akeneo/akeneo-connector-eco-module-console-commands.html

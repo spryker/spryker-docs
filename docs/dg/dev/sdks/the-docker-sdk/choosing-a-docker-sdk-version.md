@@ -10,6 +10,7 @@ redirect_from:
   - /docs/scos/dev/the-docker-sdk/202204.0/choosing-a-docker-sdk-version.html
   - /docs/scos/dev/the-docker-sdk/202307.0/choosing-a-docker-sdk-version.html
   - /docs/scos/dev/the-docker-sdk/202212.0/choosing-a-docker-sdk-version.html
+  - /docs/scos/dev/the-docker-sdk/202009.0/choosing-a-docker-sdk-version.html
 
 related:
   - title: The Docker SDK

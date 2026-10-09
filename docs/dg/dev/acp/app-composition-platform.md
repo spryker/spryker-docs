@@ -7,6 +7,8 @@ redirect_from:
     - /docs/aop/user/intro-to-acp/acp-overview.html
     - /docs/acp/user/intro-to-acp/acp-overview.html
     - /docs/dg/dev/acp/acp-overview.html
+    - /docs/acp/user/app-composition-platform-overview
+    - /docs/dg/dev/acp/app-composition-platform-overview
 keywords: acp
 related:
     - title: SCCOS Dependencies required for ACP

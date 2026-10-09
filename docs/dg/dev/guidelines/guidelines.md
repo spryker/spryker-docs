@@ -7,6 +7,7 @@ redirect_from:
   - /docs/scos/dev/guidelines/guidelines.html
   - /docs/scos/dev/best-practices/
   - /docs/scos/dev/best-practices/best-practices.html
+  - /docs/dg/dev/guidelines/
 ---
 
 This section contains a collection of useful guidelines for developing on the Spryker Commerce OS:  

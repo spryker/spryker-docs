@@ -7,6 +7,13 @@ originalLink: https://documentation.spryker.com/2021080/docs/authenticating-as-a
 originalArticleId: 33952f89-fed4-4e33-95f4-79e969752e9d
 redirect_from:
 - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html
+- /docs/agent-assist
+- /docs/pbc/all/identity-access-management/202212.0/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html
+- /docs/scos/dev/feature-integration-guides/201811.0/agent-assist-feature-integration.html
+- /docs/scos/dev/feature-integration-guides/201903.0/agent-assist-feature-integration.html
+- /docs/scos/dev/feature-integration-guides/201907.0/agent-assist-feature-integration.html
+- /docs/scos/dev/feature-integration-guides/202005.0/agent-assist-feature-integration.html
+- /docs/scos/dev/feature-integration-guides/202009.0/glue-api/glue-api-agent-assist-feature-integration.html
 related:
   - title: Agent Assist feature overview
     link: docs/pbc/all/user-management/latest/base-shop/agent-assist-feature-overview.html

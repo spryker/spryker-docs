@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/glue-api-measurement-units-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-measurement-units-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-measurement-units-feature-integration.html
+  - /docs/pbc/all/product-information-management/202212.0/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html
 related:
   - title: Install the Measurement Units feature
     link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html

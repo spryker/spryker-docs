@@ -10,6 +10,8 @@ related:
     link: docs/pbc/all/order-experience-management/latest/base-shop/manage-using-backend-api/orders/backend-api-create-an-order-comment.html
   - title: Retrieve orders
     link: docs/pbc/all/order-experience-management/latest/base-shop/manage-using-backend-api/orders/backend-api-retrieve-orders.html
+redirect_from:
+  - /docs/scos/dev/feature-integration-guides/202001.0/comments-order-management-feature-integration.html
 ---
 
 The `order-comments` resource of the Backend API lets Back Office integrations read the comment thread of a placed order—the same comments shown on the order screens. This document describes how to retrieve an order's comments.

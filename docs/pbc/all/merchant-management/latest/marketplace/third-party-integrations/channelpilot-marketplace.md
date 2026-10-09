@@ -8,6 +8,7 @@ originalArticleId: 74542238-4686-4f7c-ab7e-6c38acc89e7d
 redirect_from:
   - /docs/scos/user/technology-partners/202200.0/marketplace-integrations/channelpilot-marketplace.html
   - /docs/scos/user/technology-partners/202311.0/marketplace-integrations/channelpilot-marketplace.html
+  - /docs/scos/user/technology-partners/201903.0/marketplace-integrations/channelpilot-marketplace.html
 ---
 
 ## Partner Information

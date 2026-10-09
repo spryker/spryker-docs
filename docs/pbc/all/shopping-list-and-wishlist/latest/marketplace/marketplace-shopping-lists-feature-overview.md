@@ -3,6 +3,12 @@ title: Marketplace Shopping Lists feature overview
 description: This document contains concept information for the Marketplace Shopping List feature.
 template: concept-topic-template
 last_updated: Nov 21, 2023
+redirect_from:
+  - /docs/marketplace/dev/feature-integration-guides/202212.0/marketplace-shopping-lists-feature-integration.html
+  - /docs/marketplace/dev/feature-walkthroughs/202212.0/marketplace-shopping-lists-feature-walkthrough.html
+  - /docs/pbc/all/shopping-list-and-wishlist/202212.0/manage-via-glue-api/manage-shopping-lists-via-glue-api.html
+  - /docs/scos/dev/feature-integration-guides/201903.0/shopping-lists-feature-integration.html
+  - /docs/scos/user/features/latest/shopping-lists/shopping-list-feature-overview.html
 ---
 
 A shopping list is a list of the items that shoppers buy or plan to buy frequently or regularly.

@@ -24,6 +24,7 @@ redirect_from:
   - /v1/docs/en/float-stock-for-products
   - /docs/scos/dev/migration-concepts/float-stock-for-products-migration-concept.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/float-stock-for-products-migration-concept.html
+  - /docs/pbc/all/product-information-management/202212.0/install-and-upgrade/float-stock-for-products-migration-concept.html
 related:
   - title: CRUD Scheduled Prices migration concept
     link: docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html

@@ -7,6 +7,7 @@ redirect_from:
     - /docs/sdk/dev/sdk-conventions.com
     - /docs/scos/dev/sdk/sdk.html
     - /docs/sdk/dev/spryker-sdk.html
+    - /docs/dg/dev/sdks/sdk
 
 ---
 The Spryker SDK aims to provide a single entry point to accelerate your productivity while working with Spryker. The Spryker SDK provides tools to validate existing code, implement new features with Spryker, and go live with your project.

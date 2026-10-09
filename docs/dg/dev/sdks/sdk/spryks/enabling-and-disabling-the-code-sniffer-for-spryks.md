@@ -4,6 +4,8 @@ description: Find out how you can enable or disable the Code Sniffer when runnin
 template: howto-guide-template
 redirect_from:
 - /docs/sdk/dev/spryks/enabling-and-disabling-the-code-sniffer-for-spryks.html
+- /docs/scos/dev/glue-api-guides/202009.0/glue-spryks.html
+- /docs/scos/dev/glue-api-guides/202108.0/glue-spryks.html
 
 last_updated: Nov 8, 2022
 ---

@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/howto-generate-a-token-for-login
   - /v6/docs/howto-generate-a-token-for-login
   - /v6/docs/en/howto-generate-a-token-for-login
+  - /docs/pbc/all/customer-relationship-management/202307.0/base-shop/generate-login-tokens.html
 related:
   - title: Customer Login by Token overview
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/customer-login-by-token-overview.html

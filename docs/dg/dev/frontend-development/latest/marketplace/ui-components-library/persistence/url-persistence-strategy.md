@@ -7,6 +7,7 @@ redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/persistence/url-persistence-strategy.html
   - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/persistence/url-persistence-strategy.html
   - /docs/scos/dev/front-end-development/202404.0/marketplace/ui-components-library/persistence/url-persistence-strategy.html
+  - /docs/marketplace/dev/front-end/202204.0/ui-components-library/persistence/url-persistence-strategy.html
 
 related:
   - title: Persistence

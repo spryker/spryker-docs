@@ -3,6 +3,10 @@ title: Integration of the Algolia UI Library in the Front End
 description: A how-to guide for integrating the Algolia UI Library into the Spryker front end, covering architectural considerations, component customization, and key feature implementation.
 last_updated: Feb 20, 2026
 template: howto-guide-template
+redirect_from:
+  - /docs/pbc/all/search/202212.0/base-shop/third-party-integrations/algolia/configure-algolia.html
+  - /docs/pbc/all/search/202212.0/base-shop/third-party-integrations/algolia/disconnect-algolia.html
+  - /docs/pbc/all/search/202307.0/base-shop/third-party-integrations/algolia/disconnect-algolia.html
 ---
 
 This guide provides technical instructions for integrating the Algolia UI Library into the Spryker front end for the [Algolia eco module](https://github.com/spryker-eco/algolia).

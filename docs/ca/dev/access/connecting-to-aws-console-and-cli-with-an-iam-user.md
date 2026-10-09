@@ -10,6 +10,8 @@ redirect_from:
   - /docs/generating-access-keys
   - /docs/en/generating-access-keys
   - /docs/cloud/dev/spryker-cloud-commerce-os/security/generating-access-keys.html
+  - /docs/ca/dev/access/access-the-aws-management-console
+  - /docs/ca/dev/access/access-the-aws-management-console.html
 ---
 
 This document describes how to access the AWS Management Console and configure AWS CLI access as an IAM user with Multi-Factor Authentication (MFA) enforced.

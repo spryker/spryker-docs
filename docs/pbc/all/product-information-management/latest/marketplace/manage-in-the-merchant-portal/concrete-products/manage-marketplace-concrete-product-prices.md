@@ -8,6 +8,8 @@ related:
     link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html
   - title: Marketplace Merchant Custom Prices feature overview
     link: docs/pbc/all/price-management/latest/marketplace/marketplace-merchant-custom-prices-feature-overview.html
+redirect_from:
+  - /docs/marketplace/user/merchant-portal-user-guides/202212.0/products/concrete-products/managing-marketplace-concrete-product-prices.html
 ---
 
 This document describes how to manage marketplace concrete product prices in the Merchant Portal.

@@ -8,6 +8,9 @@ originalArticleId: 218ea4d5-de80-4aba-96fc-f67a9d13711c
 redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html
 - /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-stores-with-multiple-locales.html
+- /docs/scos/user/back-office-user-guides/202005.0/administration/stores.html
+- /docs/scos/user/back-office-user-guides/202009.0/administration/stores.html
+- /docs/multiple-stores
 
 ---
 

@@ -13,6 +13,8 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/analytics/fact-finder/exporting-product-data-for-fact-finder.html
   - /docs/scos/dev/technology-partner-guides/202212.0/marketing-and-conversion/analytics/fact-finder/exporting-product-data-for-fact-finder.html
   - /docs/scos/dev/technology-partner-guides/202311.0/marketing-and-conversion/analytics/fact-finder/exporting-product-data-for-fact-finder.html
+  - /docs/pbc/all/miscellaneous/202212.0/third-party-integrations/marketing-and-conversion/analytics/fact-finder/exporting-product-data-for-fact-finder.html
+  - /docs/pbc/all/miscellaneous/202307.0/third-party-integrations/marketing-and-conversion/analytics/fact-finder/exporting-product-data-for-fact-finder.html
 related:
   - title: Installing and configuring FACT-Finder
     link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html

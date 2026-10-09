@@ -7,6 +7,7 @@ redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-column-types/table-column-type-dynamic.html
   - /docs/scos/dev/front-end-development/202204.0/marketplace/table-design/table-column-type-extension/table-column-type-dynamic.html
   - /docs/scos/dev/front-end-development/202404.0/marketplace/table-design/table-column-type-extension/table-column-type-dynamic.html
+  - /docs/dg/dev/frontend-development/202307.0/marketplace/table-design/table-column-type-extension/table-column-type-dynamic.html
 
 related:
   - title: Table Column Type extension

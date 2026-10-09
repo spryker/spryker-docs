@@ -1186,7 +1186,3 @@ Make sure the following applies:
 | The chat shows no refinement chips. | `ProductSearchConfigExpanderPlugin` is not registered. | Check step 6. |
 | The answer arrives in one block, not as a stream. | A reverse proxy or PHP output buffering holds the response. | The controller sends `X-Accel-Buffering: no` for nginx. Disable response buffering for `/shopping-assistant/prompt` on other proxies and load balancers. |
 | A project-level override has no effect. | The class resolver cache is outdated. | Run `console cache:class-resolver:build` and `console cache:empty-all`. |
-
-## Next steps
-
-- [Add a custom Storefront Assistant agent](/docs/dg/dev/ai/ai-commerce/storefront-assistant/add-custom-storefront-assistant-agent.html)

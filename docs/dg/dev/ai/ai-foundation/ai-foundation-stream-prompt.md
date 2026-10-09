@@ -136,19 +136,13 @@ If the configuration name is not in this list, `streamPrompt()` returns `isSucce
 
 ### 2. Create a stream event plugin
 
-A stream event plugin receives each chunk and writes it to the HTTP response. Implement `Spryker\Client\AiFoundation\Dependency\Plugin\StreamEventPluginInterface`:
+A stream event plugin receives each chunk and writes it to the HTTP response. 
+Implement `Spryker\Client\AiFoundation\Dependency\Plugin\StreamEventPluginInterface`:
 
 ```php
 <?php
 
-namespace Pyz\Yves\ProductAssistant\Plugin\AiFoundation;
-
-use Generated\Shared\Transfer\PromptRequestTransfer;
-use Generated\Shared\Transfer\PromptStreamChunkTransfer;
-use Pyz\Shared\ProductAssistant\ProductAssistantConstants;
-use Spryker\Client\AiFoundation\Dependency\Plugin\StreamEventPluginInterface;
-use Spryker\Yves\Kernel\AbstractPlugin;
-
+// Example only, not production-ready code. Add the namespace and use statements for your project.
 class ProductAssistantSseStreamEventPlugin extends AbstractPlugin implements StreamEventPluginInterface
 {
     public function onStreamEvent(
@@ -212,23 +206,12 @@ Call `streamPrompt()` inside a `StreamedResponse` with server-sent events (SSE) 
 
 namespace Pyz\Yves\ProductAssistant\Controller;
 
-use Generated\Shared\Transfer\PromptMessageTransfer;
-use Generated\Shared\Transfer\PromptRequestTransfer;
-use Pyz\Shared\ProductAssistant\ProductAssistantConstants;
-use Spryker\Yves\Kernel\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\StreamedResponse;
-
-/**
- * @method \Pyz\Yves\ProductAssistant\ProductAssistantFactory getFactory()
- */
+// Example only, not production-ready code. Add the use statements for your project.
 class PromptController extends AbstractController
 {
     public function indexAction(Request $request): StreamedResponse
     {
-        $promptRequestTransfer = (new PromptRequestTransfer())
-            ->setAiConfigurationName(ProductAssistantConstants::AI_CONFIGURATION_PRODUCT_ASSISTANT)
-            ->setPromptMessage((new PromptMessageTransfer())->setContent((string)$request->request->get('message')));
+        // Build $promptRequestTransfer here, for example with aiConfigurationName and promptMessage.
 
         return new StreamedResponse(
             function () use ($promptRequestTransfer): void {
@@ -241,24 +224,13 @@ class PromptController extends AbstractController
 }
 ```
 
-`PromptResponseTransfer` contains the following data:
-
-- `isSuccessful` and `errors`: the status of the turn.
-- `streamedContent`: all text of the turn. When the stream fails, it contains the text that arrived before the failure.
-
-To override the system prompt of the AI configuration for one turn, set `PromptRequestTransfer.systemPrompt`.
-
 ## Use tools
 
 Tools let the model get data or run actions during the turn. For streaming, register tools in the Client, not in Zed.
 
 1. Create a tool plugin that implements `Spryker\Client\AiFoundation\Dependency\Tools\ToolPluginInterface`. For details about tool plugins, see [Use AI tools with the AiFoundation module](/docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html).
 2. Register the tool plugin in `getAiToolPlugins()` of the Client `AiFoundationDependencyProvider`.
-3. Add the tool names to the request. The tool name is the value that `ToolPluginInterface::getName()` returns:
-
-    ```php
-    $promptRequestTransfer->setToolNames(['search_products', 'get_product_availability']);
-    ```
+3. Add the tool names to `PromptRequestTransfer.toolNames`. The tool name is the value that `ToolPluginInterface::getName()` returns.
 
 Note the following behavior:
 

@@ -332,7 +332,7 @@ export default defineConfig({
 
 The build emits `css/yves_default.print.css` into the public assets directory of the namespace and theme; load it from the project `page-blank.twig` with `publicPath('css/yves_default.print.css')`. A file under `Theme/<theme>/styles/` receives the shared context (settings and helpers) the way `basic.scss` does; a file elsewhere loads `~ShopUi/styles/shared` itself.
 
-The names `vendor`, `app`, `critical`, `non-critical`, and `util` are reserved for the builder's bundles—contribute to those through the keys above. A hook that throws is reported and skipped, so one failing step doesn't abort the build; a hook result that names a reserved or invalid entry is a settings error and fails the build with a message naming the hook and the fix.
+The names `vendor`, `app`, `app-stylesheet`, `critical`, `non-critical`, and `util` are reserved for the builder's bundles—contribute to those through the keys above. A hook that throws is reported and skipped, so one failing step doesn't abort the build; a hook result that names a reserved or invalid entry is a settings error and fails the build with a message naming the hook and the fix.
 
 ## Generated TypeScript configuration
 

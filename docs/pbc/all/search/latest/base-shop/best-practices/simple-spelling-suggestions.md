@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/simple-spelling-suggestions  
   - /v1/docs/simple-spelling-suggestions
   - /v1/docs/en/simple-spelling-suggestions
+  - /docs/pbc/all/search/202212.0/best-practices/simple-spelling-suggestions.html
 related:
   - title: Data-driven ranking
     link: docs/pbc/all/search/latest/base-shop/best-practices/data-driven-ranking.html

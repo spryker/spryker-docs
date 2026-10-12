@@ -10,6 +10,11 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/billpay/integrating-billpay.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/billpay/billpay.html
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/billpay/integrating-billpay.html
+  - /docs/scos/user/technology-partners/202204.0/payment-partners/billpay.html
+  - /docs/pbc/all/payment-service-provider/202307.0/base-shop/third-party-integrations/billpay/integrate-billpay.html
+  - /docs/scos/user/technology-partners/202009.0/payment-partners/billpay.html
+  - /docs/scos/user/technology-partners/201903.0/payment-partners/billpay.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/billpay/integrate-billpay.html
 related:
   - title: Billpay
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/billpay/billpay.html

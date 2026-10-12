@@ -11,6 +11,7 @@ redirect_from:
   - /docs/file-details-glossarycsv
   - /docs/en/file-details-glossarycsv
   - /docs/scos/dev/data-import/202204.0/data-import-categories/commerce-setup/file-details-glossary.csv.html
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/commerce-setup/file-details-glossary.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html

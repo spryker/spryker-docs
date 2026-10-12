@@ -8,6 +8,7 @@ originalArticleId: 5774ec3a-945c-46f1-a51c-475e6e1d9df9
 redirect_from:
   - /docs/scos/dev/glue-api-guides/latest/retrieving-orders.html
   - /docs/scos/dev/glue-api-guides/202204.0/retrieving-orders.html
+  - /docs/pbc/all/order-management-system/202212.0/base-shop/glue-api-retrieve-orders.html
 related:
   - title: Retrieving customer orders
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html

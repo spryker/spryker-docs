@@ -3,6 +3,10 @@ title: Segment scope
 last_updated: Nov 05, 2021
 description: The segment rules let you grant permissions to subset of an entity collection. Segment entities are connected through a plain many-to-many tables, this allows minimizing performance impact.
 template: concept-topic-template
+redirect_from:
+  - /docs/marketplace/dev/feature-walkthroughs/202212.0/persistence-acl-feature-walkthrough/rules-and-scopes/segment-scope.html
+  - /docs/marketplace/dev/feature-walkthroughs/202204.0/persistence-acl-feature-walkthrough/rules-and-scopes/segment-scope.html
+  - /docs/pbc/all/user-management/202307.0/marketplace/persistence-acl-feature-overview/rules-and-scopes/segment-scope.html
 ---
 
 The segment rules let you grant permissions to subset of an entity collection.

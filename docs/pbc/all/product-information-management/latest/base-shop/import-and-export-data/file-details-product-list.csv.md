@@ -6,6 +6,8 @@ last_updated: Jun 1, 2023
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
+redirect_from:
+  - /docs/pbc/all/product-information-management/202212.0/base-shop/import-and-export-data/file-details-product-list.csv.html
 ---
 
 This document describes the `product_list.csv` file to configure information about [product lists](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-lists-feature-overview.html) in your Spryker shop.

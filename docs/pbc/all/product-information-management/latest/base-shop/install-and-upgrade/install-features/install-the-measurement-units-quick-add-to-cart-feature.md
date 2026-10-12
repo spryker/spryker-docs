@@ -5,5 +5,6 @@ last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 redirect_from:
 - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-measurement-units-quick-add-to-cart-feature.html
+- /docs/pbc/all/product-information-management/202307.0/base-shop/install-and-upgrade/install-features/install-the-measurement-units-quick-add-to-cart-feature.html
 ---
 {% include pbc/all/install-features/latest/install-the-quick-add-to-cart-measurement-units-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-quick-add-to-cart-measurement-units-feature.md -->

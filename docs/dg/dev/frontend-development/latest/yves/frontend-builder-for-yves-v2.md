@@ -2,7 +2,7 @@
 title: Frontend builder for Yves v2
 description: Learn about the TypeScript-based frontend builder v2 that ships with the ShopUi module and builds Yves assets for all namespaces and themes.
 keywords: ShopUi, shop-ui, frontend builder, Yves, webpack, build, assets, live reload
-last_updated: Sep 9, 2026
+last_updated: Oct 7, 2026
 template: howto-guide-template
 related:
   - title: Frontend builder for Yves (deprecated)
@@ -11,6 +11,8 @@ related:
     link: docs/dg/dev/upgrade-and-migrate/upgrade-to-frontend-builder-v2-for-yves.html
   - title: Design tokens
     link: docs/dg/dev/frontend-development/latest/design-tokens.html
+redirect_from:
+  - /docs/dg/dev/frontend-development/yves/frontend-builder-for-yves-v2
 ---
 
 Frontend builder v2 is the build tool that prepares Yves assets—CSS, JavaScript, images, fonts, icons—for all configured namespaces and their themes.
@@ -115,11 +117,17 @@ The generated `design-tokens.css` exposes each token as a CSS custom property on
 }
 ```
 
-The `style-dictionary` package is an optional dependency, probed by presence: with the package installed, the CSS is regenerated on every build; without it, a previously generated (committed) `design-tokens.css` is served as is. If the tokens source exists but neither the package nor a committed CSS is available, the step is skipped with a warning. A project without the tokens source doesn't use design tokens, and the step is skipped silently. For details, see [Design tokens](/docs/dg/dev/frontend-development/latest/design-tokens.html).
+From ShopUi 2.3.0, `style-dictionary` comes with the module as one of its dependencies, so nothing has to be installed: whenever the tokens source exists, the CSS is regenerated on every build. A project without the tokens source does not use design tokens — a previously generated (committed) `design-tokens.css` is still served when one exists, otherwise the step is skipped silently.
+
+Up to ShopUi 2.2, `style-dictionary` was an optional dependency, probed by presence: with the package installed, the CSS was regenerated on every build; without it, a committed `design-tokens.css` was served as is, and a tokens source without either produced a warning and no tokens.
+
+For details, see [Design tokens](/docs/dg/dev/frontend-development/latest/design-tokens.html).
 
 ### Legacy style rescue
 
-Component styles written against the v1 contract—files that emit CSS at the top level without being imported from a component entry point—are still compiled, with a warning that names the file and explains how to migrate it. Their CSS stays in the bundles until the affected modules are updated, so the upgrade doesn't silently drop styles.
+Component styles written against the v1 contract—files that emit CSS at the top level without being imported from a component entry point—are still compiled, and their CSS stays in the bundles until the affected modules are updated, so the upgrade doesn't silently drop styles. Run the build with `--debug-injection` to list the rescued files, each with the step that migrates it.
+
+From ShopUi 2.4.0, the rescue respects component overrides: when another directory provides the component—a project override of a vendor component, a code bucket module, or the current theme over the default theme—the self-emitting file of the overridden directory is not compiled, because the override replaced it. See [Component overrides and themes](#component-overrides-and-themes).
 
 ### Component initialization: `readyCallback()` is removed
 
@@ -201,16 +209,20 @@ The builder has several modes to build the frontend:
 - `npm run yves:production`—builds assets in the production mode (minified files, no comments) for all namespaces and themes.
 - `npm run yves -- --help`—displays all available parameters.
 - `npm run yves:stylelint`—lints Yves styles. `-f` fixes what is fixable, and `-p <path>` runs over a single file or glob, resolved from the project root: `npm run yves:stylelint -- -p 'src/Pyz/Yves/**/Theme/**/*.scss'`.
-- `npm run yves:lint`—lints Yves TypeScript and JavaScript.
+- `npm run yves:lint`—lints Yves TypeScript and JavaScript and, from ShopUi 2.3.0, runs the TypeScript compiler over the Yves TypeScript sources. See [Type checking](#type-checking).
+- `npm run update:config -w shop-ui`—from ShopUi 2.3.0, regenerates `tsconfig.yves.json`; `postinstall` runs it for you. See [Generated TypeScript configuration](#generated-typescript-configuration).
 
 ### What lint covers
 
-From ShopUi 2.1.0, `yves:lint` and `yves:stylelint` report on the sources the running repository owns:
+From ShopUi 2.1.0, `yves:lint` and `yves:stylelint` report on the project sources. The core, eco, and feature sources are installed under `vendor/`. They are installed code, not the project's to report on, so both commands cover only the source roots in `src/`: `src/Pyz/Yves` by default, and every namespace you register in `paths.sources`.
 
-- In a project, the core, eco, and feature sources are installed under `vendor/`. They are installed code, not the project's to report on, so both commands cover `src/Pyz/Yves` only.
-- In the Spryker monorepo, those sources are part of the repository, so they are covered together with the project sources.
+Nothing has to be passed to select this. Both commands look at the theme files of each source root, so styles and scripts outside a `Theme` directory are not linted.
 
-Nothing has to be passed to select this — the source layout the builder already detects decides it. Both commands look at the theme files of each source root, so styles and scripts outside a `Theme` directory are not linted.
+### Type checking
+
+From ShopUi 2.3.0, `yves:lint` runs the TypeScript compiler over the Yves TypeScript sources after ESLint, with the same scope as lint. The build itself compiles TypeScript with Babel, which erases the types without checking them, so this is the step that catches type errors.
+
+Type checking is off by default, because the project's Yves sources were never type-checked before and turning it on in a minor release would fail the project's lint on code nobody changed. To enable it, set `typecheck: true` in `frontend/yves.settings.mts` — see [Project-level builder settings](#project-level-builder-settings).
 
 ## Parameters
 
@@ -227,6 +239,14 @@ The namespace and theme config file format is unchanged from v1 and is located a
 
 {% endinfo_block %}
 
+## Build configuration from the backend
+
+`vendor/bin/console frontend:yves:build` writes `data/cache/Yves/frontend/build-config.json` with the backend's `CORE_NAMESPACES`, `PROJECT_NAMESPACES`, `YVES_THEME`, and default theme, then runs the npm build. The builder reads that file on every run and derives everything from it: the source roots—core namespaces first, project namespaces last, so the namespace the class resolver prefers is scanned last and wins—the core theme root, and the themes, where the backend theme is added to every entry of `config/Yves/frontend-build-config.json` without modifying the file. A namespace maps to `src/<Namespace>` when that directory exists, otherwise to `vendor/<namespace-in-kebab-case>`.
+
+The file is written by `spryker/setup-frontend` 1.9.0 or later; with an older version the builder keeps its packaged layout, so require that version when the build has to follow the backend. So a project namespace or a theme is changed in `config_default.php` and nowhere else. Every run prints which configuration it uses: `Build configuration: generated (…)`, or `built-in defaults (…)` when the console command has not run yet and the packaged layout applies. After the file changes, run `npm run update:config -w shop-ui` so that `tsconfig.yves.json` follows; `postinstall` does it on `npm install`.
+
+To override, use `frontend/yves.settings.mts`, which is applied on top: a new `paths.sources` entry adds a root scanned after all generated ones, `project` replaces the `Pyz` root, and `paths.coreThemeRoot` or `paths.iconSprite.sources` win over the derived values. See [Project-level builder settings](#project-level-builder-settings).
+
 ## Project-level builder settings
 
 The v1 builder was configured by editing `frontend/settings.js`, which the project owned entirely. In v2, project overrides live in a single optional file: `frontend/yves.settings.mts`. When the file exists, the builder loads it automatically; when it doesn't, the defaults apply.
@@ -240,8 +260,10 @@ import { defineConfig } from '../vendor/spryker-shop/shop-ui/src/SprykerShop/Yve
 export default defineConfig({
     paths: {
         sources: {
-            // Register a custom namespace: SCSS/TS under this path is scanned for components.
-            newNamespace: './PATH_TO_YOUR_FOLDER',
+            // Adds a custom namespace; src/Pyz/Yves stays a source root.
+            acme: './src/Acme/Yves',
+            // Alternatively, replace src/Pyz/Yves with the custom namespace:
+            // project: './src/Acme/Yves',
         },
     },
 });
@@ -249,9 +271,10 @@ export default defineConfig({
 
 Projects may override:
 
-- `paths.sources`—the directories the builder scans for component assets. Use this to register custom namespaces; there is no longer a separate `dirs` list to keep in sync.
+- `paths.sources`—the directories the builder scans for component assets. Use this to register custom namespaces; there is no longer a separate `dirs` list to keep in sync. An entry named `project` replaces `src/Pyz/Yves`; an entry with a new name adds a source root, scanned after `src/Pyz/Yves`, so you can use a custom namespace together with `Pyz`. Lint and type checking cover the source roots in `src/`.
 - `paths.iconSprite`—icon sprite source and target locations.
-- `buildHooks`—project build steps that run before webpack assembly and may contribute entries to the bundles.
+- `buildHooks`—project build steps that run before webpack assembly and may contribute files to the bundles or add bundles of their own. See [Build hooks](#build-hooks).
+- `typecheck`—from ShopUi 2.3.0, whether `yves:lint` runs the TypeScript compiler. See [Type checking](#type-checking).
 
 All other settings are fixed and inherited from the packaged defaults.
 
@@ -260,6 +283,50 @@ All other settings are fixed and inherited from the packaged defaults.
 `frontend/yves.settings.mts` is executed by Node.js directly via type stripping, so it must use only erasable TypeScript syntax: type annotations are fine, but `enum`, `namespace`, and constructor parameter properties fail at runtime.
 
 {% endinfo_block %}
+
+### Build hooks
+
+A build hook is an object with a `name` and a `run(appSettings)` function. Hooks run once per namespace and theme, before webpack assembles the bundles, in the order they are registered. `run` may return nothing—a pure side effect, such as generating a file—or an object that contributes files to the bundles:
+
+| Key | Effect |
+| --- | --- |
+| `critical` | Prepended to the `critical` bundle, before `basic.scss`. |
+| `app` | Appended to the `app` bundle. |
+| `nonCritical` | Prepended to the `non-critical` bundle. |
+| `entries` | From ShopUi 2.4.0—additional named entries. Each key becomes its own bundle, emitted as `yves_default.<name>.css` and `yves_default.<name>.js` next to the builder's bundles. |
+
+Each value is a path or a list of paths. For example, to ship a print stylesheet as a separate bundle that the layout loads with `media="print"`:
+
+```ts
+// frontend/yves.settings.mts
+import { join } from 'node:path';
+import { defineConfig } from '../vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/FrontendBuilder/settings.mts';
+
+export default defineConfig({
+    buildHooks: [
+        {
+            name: 'print-stylesheet',
+            run: (appSettings) => ({
+                entries: {
+                    print: join(appSettings.context, 'src/Pyz/Yves/ShopUi/Theme', appSettings.theme, 'styles/print.scss'),
+                },
+            }),
+        },
+    ],
+});
+```
+
+The build emits `css/yves_default.print.css` into the public assets directory of the namespace and theme; load it from the project `page-blank.twig` with `publicPath('css/yves_default.print.css')`. A file under `Theme/<theme>/styles/` receives the shared context (settings and helpers) the way `basic.scss` does; a file elsewhere loads `~ShopUi/styles/shared` itself.
+
+The names `vendor`, `app`, `critical`, `non-critical`, and `util` are reserved for the builder's bundles—contribute to those through the keys above. A hook that throws is reported and skipped, so one failing step doesn't abort the build; a hook result that names a reserved or invalid entry is a settings error and fails the build with a message naming the hook and the fix.
+
+## Generated TypeScript configuration
+
+The builder reads the component path aliases — `ShopUi/*` and the aliases of every module that ships a `Theme` — from `tsconfig.yves.json`. Up to ShopUi 2.2, the project keeps that file at its root and maintains it by hand. From ShopUi 2.3.0, the builder generates it: `npm run update:config -w shop-ui`, which the project's `postinstall` script runs on every `npm install`, writes `tsconfig.yves.json` and `tsconfig.defaults.json` inside the builder directory.
+
+The `paths` and `include` sections of `tsconfig.yves.json` are generated and follow the installed modules; everything else is yours. If the project keeps a `tsconfig.yves.json` in its root, the generation works on that file — the aliases and globs are reconciled in place, and whatever it extends is kept — and writes no second copy.
+
+`tsconfig.yves.json` extends `tsconfig.defaults.json`, which holds the Yves compiler options, and then the project root `tsconfig.json`, so a compiler option set in the root `tsconfig.json` overrides the builder default. A root `tsconfig.json` that does not exist is created as an editor-only solution file, `{ "files": [], "references": [...] }`, referencing `tsconfig.yves.json`; a root `tsconfig.json` that is a complete configuration of your own is never modified.
 
 ## Overriding the core styles layer
 
@@ -379,6 +446,19 @@ Relying on discovery order to win a same-specificity conflict was never reliable
 
 {% endinfo_block %}
 
+### Component overrides and themes
+
+A component is identified by its type and name—`molecules/side-drawer`—and is provided by exactly one directory per build: the one found last in discovery order. Themes add a level to that order. The builder collects the default theme of every source first and the current theme of every source after it, so for a project with a custom theme the precedence is:
+
+```text
+core default → … → project default → core custom → … → project custom
+                                                         ^^^^^^^^^^^^^^ wins
+```
+
+The winning directory owns the component: its `index.ts` is the entry point, and the styles it loads are the component's styles. The other directories for the same component contribute nothing—neither their `style.scss` nor their self-emitting legacy files (see [Legacy style rescue](#legacy-style-rescue)). An override that ships only `index.ts` also owns the styles; it then has none. To keep part of the replaced styles, load them explicitly from the override, as shown in [Yves multi-themes](/docs/dg/dev/frontend-development/latest/yves/yves-multi-themes.html#extending-scss).
+
+The mixin index follows the same order—from ShopUi 2.4.0; before, it covered the default theme only. When several themes or sources define a mixin of the same name, an `@include` resolves to the one found last, so a custom theme redefines `shop-ui-side-drawer` or defines a `-base-hook` mixin without extra wiring. Run the build with `--debug-injection` to see which file each mixin resolved to and which legacy files were skipped because another directory provides their component.
+
 ### Code buckets
 
 A [code bucket](/docs/dg/dev/architecture/code-buckets.html) lets a namespace ship its own variant of a module—for example, `ShopUiDE` next to `ShopUi`. The builder reads the code bucket per namespace from the `codeBucket` field of `config/Yves/frontend-build-config.json`:
@@ -405,6 +485,17 @@ For a namespace with code bucket `DE`, the builder:
 - excludes modules of all *other* code buckets from this namespace's build, so `ShopUiUS` code never leaks into the `DE` assets.
 
 Duplicate components are resolved by component name: when several sources provide `molecules/side-drawer`, the one found last (code bucket over plain module, later source level over earlier) becomes the entry point.
+
+## CSS bundles and lazy loading
+
+The build emits four stylesheets from the same sources:
+
+- `yves_default.critical.css`—design tokens, `basic.scss`, and the components of the critical modules (ShopUi, CatalogPage, HomePage, ProductDetailPage).
+- `yves_default.non-critical.css`—the remaining components and `util.scss`.
+- `yves_default.app.css`—the complete stylesheet.
+- `yves_default.util.css`—the service styles on their own.
+
+The page-blank layout loads `critical.css` and `non-critical.css` when the `isCssLazyLoadSupported` Twig variable is `true`, and `app.css` when it is `false`. From ShopUi 2.4.0, `app.css` contains exactly the sources of `critical.css` followed by those of `non-critical.css`, so the variable decides how the CSS is delivered, never how it cascades. See [Integrate CSS lazy loading](/docs/dg/dev/integrate-and-configure/integrate-css-lazy-loading.html).
 
 ## Public assets
 

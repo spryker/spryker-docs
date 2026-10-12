@@ -10,6 +10,8 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html
   - /docs/scos/dev/technology-partner-guides/202212.0/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html
   - /docs/scos/dev/technology-partner-guides/202311.0/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html
+  - /docs/pbc/all/miscellaneous/202212.0/third-party-integrations/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html
+  - /docs/scos/user/technology-partners/202108.0/marketing-and-conversion/analytics/fact-finder.html
 related:
   - title: Installing and configuring FACT-Finder
     link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html

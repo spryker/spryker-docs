@@ -5,6 +5,7 @@ template: concept-topic-template
 last_updated: Feb 19, 2025
 redirect_from:
   - /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook.html
+  - /docs/pbc/all/order-management-system/202212.0/base-shop/state-machine-cookbook/state-machine-cookbook.html
 related:
   - title: State machine fundamentals
     link: docs/pbc/all/order-management-system/latest/base-shop/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html

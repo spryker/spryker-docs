@@ -2,7 +2,7 @@
 title: Building the Merchant Portal frontend
 description: This document provides details how to build the frontend part of the Merchant Portal.
 template: concept-topic-template
-last_updated: Sep 9, 2026
+last_updated: Sep 29, 2026
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/building-the-project.html
   - /docs/scos/dev/front-end-development/202204.0/marketplace/building-the-project.html
@@ -52,4 +52,4 @@ The frontend of the Merchant Portal is built using the following commands:
 
 In watch mode, an edited `.ts` or `.less` file reloads the open Back Office page. Twig templates are not watched, because Zed caches them server-side.
 
-The tests, ESLint, and Stylelint of the Merchant Portal are run with `npm run mp:test`, `npm run mp:lint`, and `npm run mp:stylelint`. In a project, all three cover the project modules in `src/Pyz` only — core modules arrive in `vendor/` as installed code.
+The tests, ESLint, and Stylelint of the Merchant Portal are run with `npm run mp:test`, `npm run mp:lint`, and `npm run mp:stylelint`. In a project, all three cover the project modules only — `src/Pyz/Zed` and any directory registered in the [project-level builder settings](/docs/dg/dev/frontend-development/latest/marketplace/frontend-builder-for-merchant-portal-v2.html#project-level-builder-settings) — core modules arrive in `vendor/` as installed code.

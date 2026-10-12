@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/quotation-process-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/quotation-process-feature-integration.html 
   - /docs/pbc/all/request-for-quote/202204.0/install-and-upgrade/install-features/install-the-quotation-process-feature.html 
+  - /docs/pbc/all/request-for-quote/202307.0/install-and-upgrade/install-features/install-the-quotation-process-feature.html
 related:
     - title: Install the Quotation Process Glue API
       link: docs/pbc/all/request-for-quote/latest/install-and-upgrade/install-features/install-the-quotation-process-glue-api.html

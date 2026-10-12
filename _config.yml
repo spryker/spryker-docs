@@ -26,6 +26,9 @@ google_analytics: "G-NEMRFN24T7"
 google_tag_manager_id: "GTM-WX7WLRBF"
 # if you have google-analytics ID, put it in. if not, edit this value to blank.
 
+hubspot_portal_id: "2770802"
+# HubSpot portal that serves the cookie consent banner and HubSpot tracking. Leave blank to disable the HubSpot embed code.
+
 feedback_disable: true
 
 host: 127.0.0.1

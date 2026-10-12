@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 originalArticleId: 246e73d7-562f-414f-bbc0-d102ef54ff5c
 redirect_from:
 - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-create-customers.html
+- /docs/pbc/all/identity-access-management/202212.0/manage-using-glue-api/glue-api-create-customers.html
 related:
   - title: Searching by company users
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html

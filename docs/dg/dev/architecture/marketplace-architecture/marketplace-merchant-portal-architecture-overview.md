@@ -6,6 +6,7 @@ last_updated: Sep 21, 2023
 redirect_from:
   - /docs/marketplace/dev/architecture-overview/marketplace-merchant-portal-architecture-overview.html
   - /docs/scos/dev/architecture/marketplace-architecture/marketplace-merchant-portal-architecture-overview.html
+  - /docs/scos/dev/architecture/architecture-overview.html
 related:
   - title: Marketplace Application composition
     link: docs/marketplace/dev/architecture-overview/marketplace-application-composition.html

@@ -11,6 +11,8 @@ redirect_from:
   - /docs/pbc/all/discount-management/202204.0/base-shop/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html
   - /docs/pbc/all/discount-management/202204.0/base-shop/create-discounts-based-on-shipment.html
   - /docs/pbc/all/discount-management/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html
+  - /docs/pbc/all/discount-management/202204.0/manage-via-glue-api/manage-discounts-via-glue-api.html
+  - /docs/pbc/all/discount-management/202212.0/base-shop/manage-via-glue-api/manage-discounts-via-glue-api.html
 related:
   - title: Shipment feature overview
     link: docs/pbc/all/carrier-management/latest/base-shop/shipment-feature-overview.html

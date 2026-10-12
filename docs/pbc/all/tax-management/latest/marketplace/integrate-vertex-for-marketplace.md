@@ -8,6 +8,9 @@ related:
     link: docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/vertex.html
   - title: Integrate Vertex
     link: docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html
+redirect_from:
+  - /docs/pbc/all/tax-management/marketplace/integrate-vertex-for-marketplace.html
+  - /docs/pbc/all/tax-management/202204.0/third-party-integrations/integrate-avalara.html
 ---
 
 This document describes the marketplace-specific additions to the base shop Vertex integration. Before you follow the steps below, complete [Integrate Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html).

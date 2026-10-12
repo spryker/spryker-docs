@@ -1,7 +1,7 @@
 ---
 title: Recurring Orders feature overview
 description: Learn how the Recurring Orders feature lets B2B buyers automate repeat purchases on a configurable schedule.
-last_updated: Aug 17, 2026
+last_updated: Sep 29, 2026
 template: concept-topic-template
 ---
 
@@ -16,6 +16,7 @@ The *Recurring Orders* feature lets B2B buyers set up automated repeat purchases
 | TERM | DESCRIPTION |
 | --- | --- |
 | Recurring schedule | The configuration record that drives automated order placement. Stores the cadence, the serialized quote snapshot, and the state machine state. |
+| Reference price | The unit price each schedule item is measured against during validation. Captured per item when the schedule is created, and replaced when the buyer accepts a price change during a review. Placing an order does not change it. See [Reference prices](#reference-prices). |
 | Cadence | The interval at which the order is placed. One of: weekly, bi-weekly, monthly, or every N weeks. |
 | Trigger date | The date on which the state machine attempts to place the next order. |
 | Notification window | The number of hours before the trigger date when the pre-trigger notification is sent to the buyer. |
@@ -31,7 +32,7 @@ At checkout, an eligible buyer can enable the recurring order setup widget. The 
 
 When the order is placed, the system:
 
-1. Saves a serialized snapshot of the quote—including products, quantities, prices, shipment method, and payment method.
+1. Saves a serialized snapshot of the quote—including products, quantities, prices, shipment method, and payment method—and stores the unit price of each item as that item's reference price.
 2. Creates a recurring schedule record in `spy_recurring_schedule` with the first trigger date resolved from the start date and the cadence.
 3. Registers the schedule with the `RecurringOrder` state machine in the `draft` state and immediately activates it.
 
@@ -117,7 +118,7 @@ The buyer reviews the flagged items on the **Review Required** page. The followi
 
 | ISSUE | DESCRIPTION |
 | --- | --- |
-| Price increased | The current unit price is higher than the reference price stored on the schedule item. |
+| Price increased | The current unit price is higher than that item's [reference price](#reference-prices). |
 | Unavailable | The product is inactive or blocked by a merchant or product approval rule. |
 | Out of stock | The product has no available stock for the store. |
 | Packaging unit unavailable | The product packaging unit constraints cannot be satisfied—for example, the required minimum or lead quantity is not available. |
@@ -128,6 +129,22 @@ The buyer reviews the flagged items on the **Review Required** page. The followi
 | Configurable bundle unavailable | A member of a configurable bundle is unpurchasable, so the entire bundle is dropped. |
 
 Items flagged as **unavailable**, **out of stock**, or **discontinued** are non-purchasable and must be removed or substituted before the order can proceed. Projects can narrow this list through `getNonPurchasableReviewReasonGroups()` if items of a group should stay purchasable.
+
+### Reference prices
+
+Price validation compares the current unit price of each item with that item's *reference price*—not with the price of the last order the schedule placed.
+
+A reference price is written in exactly two moments:
+
+- **When the schedule is created**, from the unit price on the checkout quote.
+- **When the buyer accepts a price change during a review.** The accepted price replaces the stored reference for that item, so the next execution is measured against the price the buyer agreed to.
+
+Nothing else changes it. Placing an order, skipping an execution, pausing, resuming, and editing the schedule all leave reference prices untouched.
+
+Two consequences follow:
+
+- A price the buyer has already accepted does not trigger a review again. The schedule re-anchors to the accepted price, and only movement beyond that point is flagged.
+- Re-anchoring happens per item, and only for the items the buyer accepted. An item that was not flagged keeps its existing reference price, so increases too small to require a review stay measured against the earlier price and accumulate across executions until their total exceeds the threshold.
 
 ### Available review actions
 

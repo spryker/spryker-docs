@@ -8,6 +8,7 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-personalized-prices.html
   - /docs/pbc/all/price-management/202311.0/base-shop/tutorials-and-howtos/howto-create-personalized-prices.html
   - /docs/pbc/all/price-management/202204.0/base-shop/tutorials-and-howtos/howto-create-personalized-prices.html
+  - /docs/pbc/all/price-management/202212.0/tutorials-and-howtos/howto-create-personalized-prices.html
 ---
 
 This document describes the steps to consider when implementing personalized prices for customer groups.

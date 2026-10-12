@@ -20,6 +20,7 @@ redirect_from:
   - /docs/integrations/spryker-glue-api/storefront-api/storefront-api.html
   - /docs/integrations/spryker-glue-api/storefront-api/developing-apis/storefront-api.html
   - /docs/integrations/spryker-api/storefront-api/developing-apis/storefront-api.html
+  - /docs/integrations/spryker-glue-api/storefront-api/storefront-api
 ---
 
 The *Spryker Storefront API* is a JSON REST API that is designed for customer-facing applications and buyer journey touchpoints. It is built to be used as a contract between the Spryker Commerce OS backend and any possible customer touchpoint or integration with third-party systems. As an application, Storefront API knows how to read and interpret API resources and leverage feature modules that expose existing Spryker functionality for customer experiences.

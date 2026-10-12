@@ -241,11 +241,25 @@ The namespace and theme config file format is unchanged from v1 and is located a
 
 ## Build configuration from the backend
 
-`vendor/bin/console frontend:yves:build` writes `data/cache/Yves/frontend/build-config.json` with the backend's `CORE_NAMESPACES`, `PROJECT_NAMESPACES`, `YVES_THEME`, and default theme, then runs the npm build. The builder reads that file on every run and derives everything from it: the source roots—core namespaces first, project namespaces last, so the namespace the class resolver prefers is scanned last and wins—the core theme root, and the themes, where the backend theme is added to every entry of `config/Yves/frontend-build-config.json` without modifying the file. A namespace maps to `src/<Namespace>` when that directory exists, otherwise to `vendor/<namespace-in-kebab-case>`.
+`vendor/bin/console frontend:yves:build` writes `data/cache/Yves/frontend/build-config.json` with the backend's `CORE_NAMESPACES`, `PROJECT_NAMESPACES`, `YVES_THEME`, and default theme, then runs the npm build. The builder reads that file on every run and derives everything from it: the source roots and their order—see [Scan order from the backend](#scan-order-from-the-backend)—the core theme root, and the themes, where the backend theme is added to every entry of `config/Yves/frontend-build-config.json` without modifying the file. A namespace maps to `src/<Namespace>` when that directory exists, otherwise to `vendor/<namespace-in-kebab-case>`.
 
 The file is written by `spryker/setup-frontend` 1.9.0 or later; with an older version the builder keeps its packaged layout, so require that version when the build has to follow the backend. So a project namespace or a theme is changed in `config_default.php` and nowhere else. Every run prints which configuration it uses: `Build configuration: generated (…)`, or `built-in defaults (…)` when the console command has not run yet and the packaged layout applies. After the file changes, run `npm run update:config -w shop-ui` so that `tsconfig.yves.json` follows; `postinstall` does it on `npm install`.
 
 To override, use `frontend/yves.settings.mts`, which is applied on top: a new `paths.sources` entry adds a root scanned after all generated ones, `project` replaces the `Pyz` root, and `paths.coreThemeRoot` or `paths.iconSprite.sources` win over the derived values. See [Project-level builder settings](#project-level-builder-settings).
+
+### Scan order from the backend
+
+The builder scans `CORE_NAMESPACES` in reverse order, then `PROJECT_NAMESPACES` in reverse order. The namespace scanned last wins, so the same namespace wins as on the backend: the first one in the list.
+
+```text
+CORE_NAMESPACES      SprykerShop, SprykerEco, Spryker, SprykerSdk, SprykerFeature
+PROJECT_NAMESPACES   Pyz
+
+Scan order           SprykerFeature → SprykerSdk → Spryker → SprykerEco → SprykerShop → Pyz
+                                                                                      ^^^ wins
+```
+
+The project still wins. Among the core namespaces the backend order now applies: here `SprykerShop` wins over `SprykerFeature`. After the update, CSS rules and component scripts can come in a different order in the bundle; the files and the rules themselves stay the same.
 
 ## Project-level builder settings
 
@@ -318,7 +332,7 @@ export default defineConfig({
 
 The build emits `css/yves_default.print.css` into the public assets directory of the namespace and theme; load it from the project `page-blank.twig` with `publicPath('css/yves_default.print.css')`. A file under `Theme/<theme>/styles/` receives the shared context (settings and helpers) the way `basic.scss` does; a file elsewhere loads `~ShopUi/styles/shared` itself.
 
-The names `vendor`, `app`, `critical`, `non-critical`, and `util` are reserved for the builder's bundles—contribute to those through the keys above. A hook that throws is reported and skipped, so one failing step doesn't abort the build; a hook result that names a reserved or invalid entry is a settings error and fails the build with a message naming the hook and the fix.
+The names `vendor`, `app`, `app-stylesheet`, `critical`, `non-critical`, and `util` are reserved for the builder's bundles—contribute to those through the keys above. A hook that throws is reported and skipped, so one failing step doesn't abort the build; a hook result that names a reserved or invalid entry is a settings error and fails the build with a message naming the hook and the fix.
 
 ## Generated TypeScript configuration
 
@@ -389,7 +403,7 @@ The global style roots are discovered per project with a core fallback: when `sr
 
 ## How the builder collects SCSS and JS files
 
-The builder scans the following source directories (in a standard project layout):
+Without a [build configuration from the backend](#build-configuration-from-the-backend), the builder scans the following source directories, in this order (in a standard project layout):
 
 | Source | Path |
 | --- | --- |
@@ -403,9 +417,11 @@ Entry points are discovered per component (`components/atoms/*/index.ts`, `compo
 
 The project directory is scanned last and has the highest priority: a project-level component or mixin overrides a same-named one from any other source.
 
+With a build configuration from the backend, the directories and their order come from `CORE_NAMESPACES` and `PROJECT_NAMESPACES` instead—see [Scan order from the backend](#scan-order-from-the-backend).
+
 ### Discovery order and precedence
 
-The order in which the builder collects component files decides two things: which component wins when several sources provide the same one, and in which order their CSS lands in the bundle. Builder v2 changes that order in three ways.
+The order in which the builder collects component files decides two things: which component wins when several sources provide the same one, and in which order their CSS lands in the bundle. Builder v2 changes that order in three ways. The diagrams below show the built-in order. With a build configuration from the backend, the core part follows `CORE_NAMESPACES` instead—see [Scan order from the backend](#scan-order-from-the-backend).
 
 **1. The project level now wins over features.** The v1 builder scanned features after the project, so a feature module silently overrode a same-named project component:
 

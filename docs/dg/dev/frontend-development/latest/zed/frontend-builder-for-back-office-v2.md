@@ -129,7 +129,17 @@ A Back Office module that needs a library of its own — a module in `src/Pyz/Ze
 
 ## Build configuration from the backend
 
-`vendor/bin/console frontend:zed:build` writes `data/cache/Zed/frontend/build-config.json` with the backend's `CORE_NAMESPACES` and `PROJECT_NAMESPACES`, then runs the npm build. The builder reads that file on every run and scans one source root per namespace: core namespaces first, project namespaces last, so the namespace the class resolver prefers is scanned last and its entry points win. A namespace maps to `src/<Namespace>` when that directory exists, otherwise to `vendor/<namespace-in-kebab-case>`. The roots are keyed `core` for `Spryker`, `features` for `SprykerFeature`, `project` for `Pyz`, and the lowercase namespace name for the rest.
+`vendor/bin/console frontend:zed:build` writes `data/cache/Zed/frontend/build-config.json` with the backend's `CORE_NAMESPACES` and `PROJECT_NAMESPACES`, then runs the npm build. The builder reads that file on every run and scans one source root per namespace. A namespace maps to `src/<Namespace>` when that directory exists, otherwise to `vendor/<namespace-in-kebab-case>`. The roots are keyed `core` for `Spryker`, `features` for `SprykerFeature`, `project` for `Pyz`, and the lowercase namespace name for the rest.
+
+The builder scans `CORE_NAMESPACES` in reverse order, then `PROJECT_NAMESPACES` in reverse order. The root scanned last wins, so the same namespace wins as on the backend, and the project always wins over core:
+
+```text
+CORE_NAMESPACES      SprykerShop, SprykerEco, Spryker, SprykerSdk, SprykerFeature
+PROJECT_NAMESPACES   Pyz
+
+Scan order           features → sprykersdk → core → sprykereco → sprykershop → project
+                                                                               ^^^^^^^ wins
+```
 
 The file is written by `spryker/setup-frontend` 1.9.0 or later; with an older version the builder keeps its packaged layout, so require that version when the build has to follow the backend. So a project namespace is changed in `config_default.php` and nowhere else. Every run prints which configuration it uses: `Build configuration: generated (…)`, or `built-in defaults (…)` when the console command has not run yet and the packaged layout below applies. After the file changes, run `npm run update:config -w spryker-zed-gui` so that the TypeScript configurations follow; `postinstall` does it on `npm install`.
 
@@ -137,7 +147,7 @@ To override, use `frontend/backoffice.settings.mts`, which is applied on top: a 
 
 ## Source layout detection
 
-The builder resolves every path from the project root, which it finds by walking up from the working directory until it sees `package-lock.json`. It then checks that the Spryker modules are installed in `vendor/spryker` and scans the following source roots, in this order:
+The builder resolves every path from the project root, which it finds by walking up from the working directory until it sees `package-lock.json`. It then checks that the Spryker modules are installed in `vendor/spryker`. Without a [build configuration from the backend](#build-configuration-from-the-backend), it scans the following source roots, in this order:
 
 | Source root | Path |
 | --- | --- |
@@ -153,7 +163,7 @@ Nothing has to be configured for this. The source root names are the keys you us
 
 In every source root, the builder collects the files matching `**/Zed/**/*.entry.js` and `**/Zed/**/*.entry.ts`. The entry name is the file name without the suffix: `spryker-zed-tax-main.entry.js` in `vendor/spryker/tax/assets/Zed/js/` becomes `js/spryker-zed-tax-main.js`, and `css/spryker-zed-tax-main.css` when its import graph contains styles.
 
-Source roots are scanned in the order of the table above, and a later root replaces an earlier one. So a project entry point in `src/Pyz/Zed/<Module>/assets/Zed/js/` with the same file name as a core one replaces the core entry point — no alias, no custom build script.
+Source roots are scanned in the order of the table above—or, with a build configuration from the backend, in the reversed backend order—and a later root replaces an earlier one. So a project entry point in `src/Pyz/Zed/<Module>/assets/Zed/js/` with the same file name as a core one replaces the core entry point — no alias, no custom build script.
 
 Within a root, files are discovered in sorted order, so the same sources produce the same bundles on every machine.
 

@@ -253,7 +253,9 @@ Without a `sort` parameter, the collection is ordered by `createdAt` descending,
 | rules.attribute | String | Product attribute the rule checks. Only for attribute-based fields. |
 | rules.operator | String | Operator of the rule—for example, `=`, `>=`, or `is in`. |
 | rules.value | String | Value the field is compared with, always a string. `*` matches any value. For the list operators, separate the values with `;`—for example, `shoes;sneakers`. Quotes (`'` and `"`) are not allowed in `field`, `attribute`, or `value`; a rule containing one is rejected with the error code `5706`. |
-| groups | Array | Nested rule groups, combined with the rules of this group by `condition`. A rule group can be nested three levels deep, including the root group. A nested group must contain at least one rule or group. |
+| groups | Array | Nested rule groups, combined with the rules of this group by `condition`. Rule groups can be nested without a depth limit. A nested group must contain at least one rule or group. |
+
+The query string has no operator precedence: a rule the Back Office stores with both operators in one group and no parentheses is evaluated from left to right. The API returns it the same way—`a and b or c` is an `or` group holding the rule `c` and a nested `and` group with `a` and `b`.
 
 ## Retrieve a discount
 
@@ -502,7 +504,7 @@ Every calculator declares an `inputType` in [Retrieve discount options](/docs/pb
 
 {% info_block infoBox "Rules are validated as the Back Office validates them" %}
 
-Each rule's `field`, `operator`, and `value` type must match the field definitions of the corresponding options list. A rule that uses an unknown field or an operator the field does not support is rejected with `422` and the error code `5706`, and the error message quotes the query string parser. A rule group nested deeper than three levels is rejected with the error code `5707`.
+Each rule's `field`, `operator`, and `value` type must match the field definitions of the corresponding options list. A rule that uses an unknown field or an operator the field does not support is rejected with `422` and the error code `5706`, and the error message quotes the query string parser.
 
 {% endinfo_block %}
 
@@ -623,11 +625,11 @@ Request sample: `PATCH https://glue-backend.mysprykershop.com/discounts/2e622c64
 }
 ```
 
-The request accepts the same attributes as [Create a discount](#create-a-discount), and all of them are optional. The endpoint applies only the attributes present in the payload: an attribute you omit keeps its stored value, and so does an attribute you send as `null`. To clear a value, send its empty form:
+The request accepts the same attributes as [Create a discount](#create-a-discount), and all of them are optional. The endpoint applies only the attributes present in the payload: an attribute you omit keeps its stored value. To clear a nullable attribute, send `null` or its empty form:
 
-- `description`: send `""` to clear the description.
-- `fixedAmounts` and `stores`: send an empty array to clear the list, or a list to replace it.
-- `collector` and `decisionRule`: a rule group you send replaces the stored group as a whole, nested `groups` included—repeat the nested groups you want to keep. Sending `{ "rules": [] }` as `decisionRule` removes every condition, so the discount applies to every cart.
+- `description`: send `null` or `""` to clear the description.
+- `fixedAmounts` and `stores`: send `null` or an empty array to clear the list, or a list to replace it.
+- `collector` and `decisionRule`: a rule group you send replaces the stored group as a whole, nested `groups` included—repeat the nested groups you want to keep. Sending `null` or `{ "rules": [] }` as `decisionRule` removes every condition, so the discount applies to every cart.
 - `promotion`: the object is merged field by field—omit `abstractSkus` or `quantity` to keep the stored value, or send one to replace it. A promotion discount must keep at least one SKU, so an empty `abstractSkus` array is rejected with the error code `5730`.
 
 {% info_block infoBox "Changing the discount type" %}
@@ -656,11 +658,9 @@ A business validation error names the rejected attribute in `detail`, in the for
 | 5703 | `calculatorType` names a calculation method this installation does not offer. |
 | 5705 | The fixed amounts are invalid: none was given for a money calculator, or a currency does not belong to one of the selected stores. |
 | 5706 | A rule of `collector` or `decisionRule` is invalid—for example, it uses an unknown field or operator, or contains a quote. The error message quotes the query string parser. |
-| 5707 | A rule group is nested deeper than three levels. |
 | 5710 | `stores` names a store that does not exist. |
 | 5730 | `promotion` is invalid: `abstractSkus` is empty or names a product that does not exist, or `quantity` is below `1`. |
 | 5740 | The `sort` parameter names a field that the collection does not support. |
-| 5790 | Discounts cannot be addressed by UUID: the `uuid` column is disabled, or a discount has no UUID yet. Returned with `500`; the error message names the fix. See [Install the Discounts Backend API](/docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-discounts-backend-api.html). |
 | 5799 | The discount was rejected by another business rule—for example, an invalid validity period. |
 
 To view generic errors, see [API errors and troubleshooting](/docs/integrations/spryker-api/spryker-api-errors-and-troubleshooting.html).

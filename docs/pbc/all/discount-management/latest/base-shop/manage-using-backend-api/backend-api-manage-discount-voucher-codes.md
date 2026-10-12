@@ -22,7 +22,7 @@ For the modules that provide the voucher code endpoints and their installation i
 
 ## Conventions
 
-Request headers, pagination, and the filter and sort syntax are the same for every Backend API resource—see [Backend API conventions](/docs/integrations/spryker-api/backend-api/developing-apis/create-and-change-backend-api-conventions.html). This page lists only what is specific to voucher codes.
+Request headers, pagination, and the filter and sort syntax are the same for every Backend API resource—see [Backend API conventions](/docs/integrations/spryker-api/backend-api/backend-api-conventions.html). This page lists only what is specific to voucher codes.
 
 ## Retrieve voucher codes
 
@@ -50,7 +50,7 @@ To retrieve a paginated collection of the voucher codes of a discount, send the 
 | filter[discount-voucher-codes.voucherBatch] | Filters the collection down to the codes generated in one batch. | Batch number as returned by [Generate voucher codes](#generate-voucher-codes). `0` matches the codes created one by one in the Back Office. |
 | sort | Sorts the collection by the given field. Prefix a field with `-` to sort in descending order. Separate several fields with a comma. | code, numberOfUses, maxNumberOfUses, createdAt, voucherBatch |
 
-Without a `sort` parameter, the collection is ordered by `createdAt`. Sorting by a field that is not on the list returns `400` with the error code `5740`. A `voucherBatch` filter that is not an integer returns `422` with the error code `901`.
+Without a `sort` parameter, the collection is ordered by `createdAt` descending, so the newest code leads. Sorting by a field that is not on the list returns `400` with the error code `5740`. A `voucherBatch` filter that is not an integer returns `422` with the error code `901`.
 
 | REQUEST | USAGE |
 | --- | --- |
@@ -338,6 +338,5 @@ The file is the same the Back Office produces with [Export voucher codes](/docs/
 | 5721 | Voucher codes can be generated for a voucher discount only, and the discount is a cart rule. |
 | 5726 | No code could be generated for the given length and template, because every candidate collides with an existing code. |
 | 5740 | The `sort` parameter names a field that the collection does not support. |
-| 5790 | Discounts cannot be addressed by UUID: the `uuid` column is disabled, or a discount has no UUID yet. Returned with `500`; the error message names the fix. See [Install the Discounts Backend API](/docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-discounts-backend-api.html). |
 
 To view generic errors, see [API errors and troubleshooting](/docs/integrations/spryker-api/spryker-api-errors-and-troubleshooting.html).

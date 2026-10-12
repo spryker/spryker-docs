@@ -38,6 +38,7 @@ Install the required modules using Composer:
 
 ```bash
 composer require \
+  spryker/api-platform:"^1.51.0" \
   spryker/discount:"^9.57.0" \
   spryker/discount-extension:"^1.4.0" \
   spryker/discount-promotion:"^4.17.0" \
@@ -50,7 +51,8 @@ composer require \
 
 | MODULE | MINIMUM VERSION | PROVIDES |
 | --- | --- | --- |
-| spryker/discount | ^9.57.0 | The `discounts`, `discount-voucher-codes`, `discount-voucher-codes-generate`, `discount-voucher-codes-export`, and `discount-options` resources, the `uuid` column of `spy_discount`, and the business validation the resources share with the Back Office form |
+| spryker/api-platform | ^1.51.0 | The collection query reader the discount resources read their filter, sort, and pagination parameters with, and the resource links the `discounts` resource declares. Older versions do not boot the discount providers, so the version is pinned here even if the package is already installed |
+| spryker/discount | ^9.57.0 | The `discounts`, `discount-voucher-codes`, `discount-voucher-codes-generate`, `discount-voucher-codes-export`, and `discount-options` resources, the `uuid` column of `spy_discount`, and the business rules the resources validate with |
 | spryker/discount-extension | ^1.4.0 | The plugin interfaces other modules use to extend the discounts the API reads, the discount options, and the validation |
 | spryker/discount-promotion | ^4.17.0 | The `promotion` attribute of the `discounts` resource and the `promotion` item-selection strategy, wired through the Glue configuration of step 3 and the plugins of step 6. Optional: install it only if your project uses promotional products |
 | spryker/uuid-behavior | ^1.0.0 | Generation of the discount UUIDs |
@@ -74,7 +76,7 @@ Make sure the following modules have been installed:
 
 The resource schemas ship inside the installed packages, at `vendor/spryker/discount/resources/api/backend/*.resource.yml` and `vendor/spryker/discount-promotion/resources/api/backend/discounts.resource.yml`. The generator finds them as long as the Glue Backend application serves the `backend` API type and scans the directory the modules are installed into.
 
-In `config/GlueBackend/packages/spryker_api_platform.php`, confirm that `apiTypes()` includes `backend`. Leave `sourceDirectories()` alone unless your project overrides it—the default already covers installed packages. For what both settings do, see [Configuration](/docs/integrations/spryker-api/api-platform/configuration.html).
+In `config/GlueBackend/packages/spryker_api_platform.php`, confirm that `apiTypes()` includes `backend`. Leave `sourceDirectories()` alone unless your project overrides it: the default is `vendor/spryker` and `src/Pyz`, which covers the installed packages. For what both settings do, see [Configuration](/docs/integrations/spryker-api/api-platform/configuration.html).
 
 {% info_block warningBox "Projects that override sourceDirectories" %}
 
@@ -106,7 +108,7 @@ class DiscountConfig extends SprykerDiscountConfig
 
 {% info_block warningBox "The UUID must be enabled" %}
 
-Every discount resource resolves its discount by UUID. With `isDiscountUuidEnabled()` left at `false`, every discount request fails with `500` and the error code `5790` instead of returning a wrong discount; the error message names this setting.
+Every discount resource resolves its discount by UUID. With `isDiscountUuidEnabled()` left at `false`, every discount request fails with a generic `500` instead of returning a wrong discount; the exception logged by the Glue Backend application names this setting.
 
 {% endinfo_block %}
 
@@ -121,18 +123,34 @@ namespace Pyz\Glue\Discount;
 
 use Spryker\Glue\Discount\DiscountConfig as SprykerDiscountConfig;
 use Spryker\Shared\DiscountPromotion\DiscountPromotionConfig;
-use Spryker\Zed\DiscountPromotion\Business\Validator\Rule\DiscountPromotion\AbstractSkusDiscountPromotionValidatorRule;
-use Spryker\Zed\DiscountPromotion\Business\Validator\Rule\DiscountPromotion\QuantityDiscountPromotionValidatorRule;
 
 class DiscountConfig extends SprykerDiscountConfig
 {
+    protected const string ATTRIBUTE_PROMOTION = 'promotion';
+
+    protected const string TRANSFER_PATH_DISCOUNT_PROMOTION = 'discountCalculator.discountPromotion';
+
+    protected const string ATTRIBUTE_PROMOTION_ABSTRACT_SKUS = 'promotion.abstractSkus';
+
+    protected const string ATTRIBUTE_PROMOTION_QUANTITY = 'promotion.quantity';
+
+    /**
+     * @uses \Spryker\Zed\DiscountPromotion\Business\Validator\Rule\DiscountPromotion\AbstractSkusDiscountPromotionValidatorRule::ENTITY_IDENTIFIER_ABSTRACT_SKUS
+     */
+    protected const string ENTITY_IDENTIFIER_PROMOTION_ABSTRACT_SKUS = 'discountCalculator.discountPromotion.abstractSkus';
+
+    /**
+     * @uses \Spryker\Zed\DiscountPromotion\Business\Validator\Rule\DiscountPromotion\QuantityDiscountPromotionValidatorRule::ENTITY_IDENTIFIER_QUANTITY
+     */
+    protected const string ENTITY_IDENTIFIER_PROMOTION_QUANTITY = 'discountCalculator.discountPromotion.quantity';
+
     /**
      * @return array<string, string>
      */
     public function getTransferPathByAttribute(): array
     {
         return parent::getTransferPathByAttribute() + [
-            'promotion' => 'discountCalculator.discountPromotion',
+            static::ATTRIBUTE_PROMOTION => static::TRANSFER_PATH_DISCOUNT_PROMOTION,
         ];
     }
 
@@ -142,8 +160,8 @@ class DiscountConfig extends SprykerDiscountConfig
     public function getAttributeByEntityIdentifier(): array
     {
         return parent::getAttributeByEntityIdentifier() + [
-            AbstractSkusDiscountPromotionValidatorRule::ENTITY_IDENTIFIER_ABSTRACT_SKUS => 'promotion.abstractSkus',
-            QuantityDiscountPromotionValidatorRule::ENTITY_IDENTIFIER_QUANTITY => 'promotion.quantity',
+            static::ENTITY_IDENTIFIER_PROMOTION_ABSTRACT_SKUS => static::ATTRIBUTE_PROMOTION_ABSTRACT_SKUS,
+            static::ENTITY_IDENTIFIER_PROMOTION_QUANTITY => static::ATTRIBUTE_PROMOTION_QUANTITY,
         ];
     }
 
@@ -180,12 +198,28 @@ Make sure the `uuid` column has been added to the `spy_discount` table, and that
 | DiscountConditions | class | created | src/Generated/Shared/Transfer/DiscountConditionsTransfer.php |
 | DiscountConfiguratorCollection | class | created | src/Generated/Shared/Transfer/DiscountConfiguratorCollectionTransfer.php |
 | DiscountConfigurationOptions | class | created | src/Generated/Shared/Transfer/DiscountConfigurationOptionsTransfer.php |
+| DiscountCalculatorPluginOption | class | created | src/Generated/Shared/Transfer/DiscountCalculatorPluginOptionTransfer.php |
+| DiscountCollectorStrategyOption | class | created | src/Generated/Shared/Transfer/DiscountCollectorStrategyOptionTransfer.php |
+| DiscountIntegerRange | class | created | src/Generated/Shared/Transfer/DiscountIntegerRangeTransfer.php |
+| DiscountRuleFieldOption | class | created | src/Generated/Shared/Transfer/DiscountRuleFieldOptionTransfer.php |
+| DiscountRuleFieldValueOption | class | created | src/Generated/Shared/Transfer/DiscountRuleFieldValueOptionTransfer.php |
 | DiscountRuleGroup | class | created | src/Generated/Shared/Transfer/DiscountRuleGroupTransfer.php |
+| DiscountRule | class | created | src/Generated/Shared/Transfer/DiscountRuleTransfer.php |
 | DiscountRuleGroupResponse | class | created | src/Generated/Shared/Transfer/DiscountRuleGroupResponseTransfer.php |
 | DiscountVoucherCriteria | class | created | src/Generated/Shared/Transfer/DiscountVoucherCriteriaTransfer.php |
+| DiscountVoucherConditions | class | created | src/Generated/Shared/Transfer/DiscountVoucherConditionsTransfer.php |
 | DiscountVoucherCollection | class | created | src/Generated/Shared/Transfer/DiscountVoucherCollectionTransfer.php |
+| DiscountVoucherCollectionDeleteCriteria | class | created | src/Generated/Shared/Transfer/DiscountVoucherCollectionDeleteCriteriaTransfer.php |
+| DiscountVoucherCollectionResponse | class | created | src/Generated/Shared/Transfer/DiscountVoucherCollectionResponseTransfer.php |
 | DiscountVoucherResponse | class | created | src/Generated/Shared/Transfer/DiscountVoucherResponseTransfer.php |
-| Sort | class | created | src/Generated/Shared/Transfer/SortTransfer.php |
+| Discount.uuid | property | created | src/Generated/Shared/Transfer/DiscountTransfer.php |
+| DiscountGeneral.uuid, createdAt | property | created | src/Generated/Shared/Transfer/DiscountGeneralTransfer.php |
+| DiscountVoucher.idDiscountVoucher, isActive, createdAt | property | created | src/Generated/Shared/Transfer/DiscountVoucherTransfer.php |
+| DiscountConfiguratorResponse.errors | property | created | src/Generated/Shared/Transfer/DiscountConfiguratorResponseTransfer.php |
+| VoucherCreateInfo.codes | property | created | src/Generated/Shared/Transfer/VoucherCreateInfoTransfer.php |
+| MoneyValue.fkCurrency | property | created | src/Generated/Shared/Transfer/MoneyValueTransfer.php |
+| Currency.idCurrency | property | created | src/Generated/Shared/Transfer/CurrencyTransfer.php |
+| Store.availableCurrencyIsoCodes | property | created | src/Generated/Shared/Transfer/StoreTransfer.php |
 
 {% endinfo_block %}
 
@@ -216,7 +250,7 @@ The `DiscountPromotion` module contributes the `promotion` strategy through plug
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | DiscountPromotionConfigurationOptionsExpanderPlugin | Adds the `promotion` strategy to `collectorStrategyTypes` of the `discount-options` resource. | | Spryker\Zed\DiscountPromotion\Communication\Plugin\Discount |
-| DiscountPromotionDiscountConfiguratorValidatorRulePlugin | Validates `promotion` of a discount with the `promotion` strategy: at least one existing abstract product SKU and a quantity of at least `1`. | | Spryker\Zed\DiscountPromotion\Communication\Plugin\Discount |
+| DiscountPromotionDiscountConfiguratorValidatorRulePlugin | Validates `promotion` of a discount the API creates or updates with the `promotion` strategy: at least one existing abstract product SKU and a quantity of at least `1`. The Back Office form validates the same rules through its promotion sub-form. | | Spryker\Zed\DiscountPromotion\Communication\Plugin\Discount |
 | DiscountPromotionDiscountConfiguratorCollectionExpanderPlugin | Adds the stored promotional products and the `promotion` strategy to the discounts the API reads. | | Spryker\Zed\DiscountPromotion\Communication\Plugin\Discount |
 
 **src/Pyz/Zed/Discount/DiscountDependencyProvider.php**
@@ -265,7 +299,7 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 }
 ```
 
-To add a project-specific business rule, implement `Spryker\Zed\DiscountExtension\Dependency\Plugin\DiscountConfiguratorValidatorRulePluginInterface` or `DiscountVoucherValidatorRulePluginInterface` and register the plugin in `Pyz\Zed\Discount\DiscountDependencyProvider`. The rules apply to the API and to the Back Office form alike.
+To add a project-specific business rule, implement `Spryker\Zed\DiscountExtension\Dependency\Plugin\DiscountConfiguratorValidatorRulePluginInterface` or `DiscountVoucherValidatorRulePluginInterface` and register the plugin in `Pyz\Zed\Discount\DiscountDependencyProvider`. The plugins validate the API requests. The Back Office form validates through its form types: to apply the same rule there, add a constraint to the form or to the sub-form your module contributes.
 
 ### 7) Generate the API resources
 
@@ -340,7 +374,7 @@ Both requests return `201 Created`. The first response carries the `uuid` of the
 | --- | --- |
 | `404` with error code `007` while `src/Generated/Api/Backend/DiscountsBackendResource.php` exists | The route is unknown to the API Platform kernel, so the Glue router answered instead. The kernel cache is stale—check that you removed the directory that actually exists under `data/cache/GlueBackend/`, then re-run step 7 in order. See [API Platform troubleshooting](/docs/integrations/spryker-api/api-platform/troubleshooting.html). |
 | `404` on `/discounts` and no generated resource class | The schema was not discovered. Confirm that `spryker/api-platform` is installed, and, if your project overrides `sourceDirectories()`, that it still covers the directory the modules are installed into. |
-| `500` with error code `5790` on discount requests | Either `isDiscountUuidEnabled()` returns `false`, or a discount has no `uuid` yet. The error message says which: complete step 3, or run step 5. |
+| `500` on every discount request | Either `isDiscountUuidEnabled()` returns `false`, or a discount has no `uuid` yet. The client gets a generic error; the exception in the Glue Backend log says which: complete step 3, or run step 5. |
 | `promotion` is ignored in requests and missing in responses | The `getTransferPathByAttribute()` mapping of step 3 is not in place. |
 | `/discount-options` lists `query-string` only, and a discount with the `promotion` strategy is rejected | The `DiscountPromotion` plugins are not registered. Complete step 6. |
 | Errors of promotional products are reported with code `5799` instead of `5730` | The `getResponseCodeByErrorMessage()` mapping of step 3 is not in place. |

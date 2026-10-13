@@ -137,7 +137,7 @@ class DownloadController extends AbstractController
 }
 ```
 
-3. Add the Storefront action. Send the current customer in the criteria: the facade of the module answers nothing for orders the customer did not place, which keeps the access check of the module.
+3. Add the Storefront action. Send the current customer in the criteria: the facade of the module then reads the order with `SalesFacade::getCustomerOrder()`, which throws for orders the customer may not see, so the access check of the module stays.
 
 **src/Pyz/Yves/SalesInvoice/Controller/DownloadController.php**
 

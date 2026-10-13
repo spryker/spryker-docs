@@ -61,12 +61,10 @@ Make sure the following transfer objects have been generated:
 | TRANSFER | TYPE | EVENT | PATH |
 |---|---|---|---|
 | Order.orderInvoice | property | created | src/Generated/Shared/Transfer/OrderTransfer |
-| Customer.customerReference | property | created | src/Generated/Shared/Transfer/CustomerTransfer |
+| Order.fkCustomer | property | created | src/Generated/Shared/Transfer/OrderTransfer |
+| Order.customer | property | created | src/Generated/Shared/Transfer/OrderTransfer |
+| Customer.idCustomer | property | created | src/Generated/Shared/Transfer/CustomerTransfer |
 | OrderInvoiceCriteria.customer | property | created | src/Generated/Shared/Transfer/OrderInvoiceCriteriaTransfer |
-| OrderCriteria.orderConditions | property | created | src/Generated/Shared/Transfer/OrderCriteriaTransfer |
-| OrderConditions.salesOrderIds | property | created | src/Generated/Shared/Transfer/OrderConditionsTransfer |
-| OrderConditions.customerReferences | property | created | src/Generated/Shared/Transfer/OrderConditionsTransfer |
-| OrderCollection.orders | property | created | src/Generated/Shared/Transfer/OrderCollectionTransfer |
 
 {% endinfo_block %}
 

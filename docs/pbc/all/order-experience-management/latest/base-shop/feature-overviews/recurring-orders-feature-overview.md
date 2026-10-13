@@ -253,7 +253,11 @@ On the recurring order detail page, the **Details** sidebar shows a **Price tole
 
 The **Order items** table has a read-only **Price tolerance** column. A cell shows *+5%* for a product with a tolerance above `0`, *Any increase* for a product at `0`, and *Order total* while product price changes are ignored. An information icon in the column header opens a popup that explains the values. When the order total tolerance is above `0`, the footer of the table also shows the highest total that is placed automatically.
 
-The Price tolerances page, `/recurring-orders/{uuid}/price-tolerances`, contains the following:
+The Price tolerances page, `/recurring-orders/{uuid}/price-tolerances`, lets the buyer edit all tolerances of a schedule in one place.
+
+![Price tolerances page with the order total tolerance, the Ignore product price changes checkbox, and the product tolerances](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Recurring%20Orders/ro-price-tolerance-edit.png)
+
+The page contains the following:
 
 | ELEMENT | DESCRIPTION |
 | --- | --- |

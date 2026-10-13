@@ -1,14 +1,27 @@
 ---
 title: Install the Recurring Orders feature
 description: Learn how to install the Recurring Orders feature into your Spryker project.
-last_updated: Aug 17, 2026
+last_updated: Oct 13, 2026
 template: feature-integration-guide-template
 related:
   - title: Recurring Orders feature overview
     link: docs/pbc/all/order-experience-management/latest/base-shop/feature-overviews/recurring-orders-feature-overview.html
 ---
 
-This document describes how to install the Recurring Orders feature.
+This document describes how to install the Recurring Orders feature, including the price tolerances that let buyers accept small price increases without a review.
+
+{% info_block infoBox "Upgrading an existing installation" %}
+
+If the Recurring Orders feature is already installed and you are adding the price tolerances, update `spryker-feature/order-experience-management` and `spryker-shop/shop-ui` to the releases that include them, and then repeat the following steps only:
+
+1. [Set up database schema and transfer objects](#2-set-up-database-schema-and-transfer-objects). The `price_tolerance_percent` and `is_product_price_change_ignored` columns default to `0` and `false`, so existing schedules keep their behavior: any price increase is reviewed.
+2. [Import glossary data](#8-import-glossary-data).
+3. [Warm up the router caches](#1-set-up-routes) to register the Price tolerances route.
+4. [Build the frontend](#7-build-the-frontend). The price tolerances page uses new molecules in the module and in `spryker-shop/shop-ui`, so make sure both packages are updated.
+
+No plugin registration is required: the price checks are part of the module and run with the registered schedule validator plugins.
+
+{% endinfo_block %}
 
 ## Install feature core
 
@@ -112,6 +125,9 @@ Make sure the following changes have been applied in the database:
 | spy_recurring_schedule_item | table | created |
 | spy_recurring_schedule_history | table | created |
 | spy_recurring_schedule_forecast | table | created |
+| spy_recurring_schedule.price_tolerance_percent | column | created |
+| spy_recurring_schedule.is_product_price_change_ignored | column | created |
+| spy_recurring_schedule_item.price_tolerance_percent | column | created |
 
 Make sure the following changes have been applied in transfer objects:
 
@@ -145,6 +161,10 @@ Make sure the following changes have been applied in transfer objects:
 | RecurringOrderQuoteUpdateRequest | class | created | src/Generated/Shared/Transfer/RecurringOrderQuoteUpdateRequestTransfer.php |
 | RecurringOrderQuoteUpdateResponse | class | created | src/Generated/Shared/Transfer/RecurringOrderQuoteUpdateResponseTransfer.php |
 | RecurringOrderReloadResult | class | created | src/Generated/Shared/Transfer/RecurringOrderReloadResultTransfer.php |
+| RecurringScheduleOrderReview | class | created | src/Generated/Shared/Transfer/RecurringScheduleOrderReviewTransfer.php |
+| RecurringSchedule.priceTolerancePercent | property | created | src/Generated/Shared/Transfer/RecurringScheduleTransfer.php |
+| RecurringSchedule.isProductPriceChangeIgnored | property | created | src/Generated/Shared/Transfer/RecurringScheduleTransfer.php |
+| RecurringScheduleItem.priceTolerancePercent | property | created | src/Generated/Shared/Transfer/RecurringScheduleItemTransfer.php |
 | Quote.recurringOrderSettings | property | created | src/Generated/Shared/Transfer/QuoteTransfer.php |
 
 {% endinfo_block %}
@@ -777,7 +797,7 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-In the Back Office, go to **Sales > Recurring Order Schedules**. Make sure the list of recurring order schedules is displayed with the status and cadence filters, and that the **Total Committed Recurring Volume** widget shows the already-placed and still-planned breakdown. Open a schedule and make sure the detail view renders the schedule items with their merchant and configurable bundle names, the customer, and a link to the source order.
+In the Back Office, go to **Sales > Recurring Order Schedules**. Make sure the list of recurring order schedules is displayed with the status and cadence filters, and that the **Total Committed Recurring Volume** widget shows the already-placed and still-planned breakdown. Make sure the list has a **Price Tolerance** column and a **Price Tolerance** filter with the *Any*, *On*, and *Off* options. Open a schedule and make sure the detail view renders the schedule items with their merchant and configurable bundle names, the customer, a link to the source order, the **Order Tolerance** row, and the **Price Tolerance** column in the items table.
 
 {% endinfo_block %}
 
@@ -884,6 +904,9 @@ class OrderExperienceManagementConfig extends SprykerOrderExperienceManagementCo
 | `getSubstitutableReviewReasons()` | `[discontinued, substituted]` | Review reason groups for which a substitute product can be offered on the **Review Required** page. |
 | `getPriceChangeReviewReasons()` | `[price_increased]` | Review reason groups counted as price changes in the **Review Required** summary. |
 | `getUnavailableReviewReasons()` | `[unavailable, out_of_stock]` | Review reason groups counted as unavailable items in the **Review Required** summary. |
+| `getPriceToleranceMaxPercent()` | `'999.99'` | Highest price tolerance in percent that a buyer can set on a schedule or a schedule item. Defined in the shared config. See [Price tolerance limits](#price-tolerance-limits). |
+| `getPriceToleranceScale()` | `2` | Number of decimal places of a price tolerance. Defined in the shared config. See [Price tolerance limits](#price-tolerance-limits). |
+| `getPriceToleranceStep()` | `'0.01'` | Step in percent that a price tolerance moves in. The storefront tolerance fields use it as their step, and a tolerance that is not a multiple of it is rejected. Defined in the shared config. See [Price tolerance limits](#price-tolerance-limits). |
 | `isMeasurementUnitProductAdditionRestricted()` | `true` | Defines whether products sold in measurement units can be added on the **Review Required** page. The picker offers no sales unit selector, so a typed quantity would silently mean N times the store default sales unit instead of N base units. |
 | `isPackagingUnitProductAdditionRestricted()` | `true` | Defines whether products sold in packaging units can be added on the **Review Required** page. The picker offers no amount input, so the resolved item would carry no amount, stay unsplit, and reserve no stock for the lead product. |
 | `getStateMachineName()` | `RecurringOrder` | Name of the state machine. Must match the directory name under `config/Zed/StateMachine`. |
@@ -893,9 +916,46 @@ class OrderExperienceManagementConfig extends SprykerOrderExperienceManagementCo
 | `getRecurringOrderDetailUrlPath()` | `/recurring-orders` | Storefront path used to build the schedule detail link in notification emails. Update it if you change the route patterns. |
 | `getRecurringOrderReviewUrlPath()` | `/recurring-orders/%s/review-required` | Storefront path used to build the review link in notification emails. Update it if you change the route patterns. |
 
+#### Price tolerance limits
+
+The price tolerance limits are defined once in the shared config, and the Zed and Yves configs read them from there. This way, the storefront form and the backend validation always apply the same limits. The defaults let a buyer enter a tolerance from `0` to `999.99` percent with up to two decimals, in steps of `0.01`.
+
+To apply a different limit in Yves and Zed at once, override the method in the shared config of your project. For example, to accept tolerances in steps of `0.25` only:
+
+**src/Pyz/Shared/OrderExperienceManagement/OrderExperienceManagementConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Shared\OrderExperienceManagement;
+
+use SprykerFeature\Shared\OrderExperienceManagement\OrderExperienceManagementConfig as SprykerOrderExperienceManagementConfig;
+
+class OrderExperienceManagementConfig extends SprykerOrderExperienceManagementConfig
+{
+    /**
+     * Specification:
+     * - Returns the step a price tolerance moves in, in percent.
+     * - Must not have more decimal places than `getPriceToleranceScale()`.
+     *
+     * @api
+     */
+    public function getPriceToleranceStep(): string
+    {
+        return '0.25';
+    }
+}
+```
+
+{% info_block warningBox "Changing the maximum or the number of decimals" %}
+
+The `price_tolerance_percent` columns of `spy_recurring_schedule` and `spy_recurring_schedule_item` are `DECIMAL(5,2)`, which stores at most `999.99`. If you raise the maximum or the number of decimals in the shared config, also extend the column size and scale in the Propel schema of your project and run `console propel:install`. Otherwise, the database rounds the stored tolerance, and the price check uses a different value than the one that was validated. The step must not have more decimal places than the number of decimals.
+
+{% endinfo_block %}
+
 ### 6) Import Back Office translations
 
-The module ships Back Office translations at `src/SprykerFeature/OrderExperienceManagement/data/translation/Zed/{locale}.csv`. These cover the **Recurring Order Schedules** page, the table filters, and the Back Office configuration labels.
+The module ships Back Office translations at `src/SprykerFeature/OrderExperienceManagement/data/translation/Zed/{locale}.csv`. These cover the **Recurring Order Schedules** page, including the **Price Tolerance** column and filter, the table filters, and the Back Office configuration labels.
 
 Rebuild the translation cache:
 
@@ -905,7 +965,7 @@ console translator:generate-cache
 
 {% info_block warningBox "Verification" %}
 
-In the Back Office, open **Sales > Recurring Order Schedules**. Make sure the column headers, filter labels, and status badges are translated instead of showing raw glossary keys.
+In the Back Office, open **Sales > Recurring Order Schedules**. Make sure the column headers, including **Price Tolerance**, filter labels, and status badges are translated instead of showing raw glossary keys.
 
 {% endinfo_block %}
 
@@ -919,7 +979,7 @@ Register the following route provider plugin:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| RecurringOrderRouteProviderPlugin | Adds the storefront routes for the recurring order list, detail, edit, review, product search, product offer selection, shipment method, and schedule action pages. | None | SprykerFeature\Yves\OrderExperienceManagement\Plugin\Router |
+| RecurringOrderRouteProviderPlugin | Adds the storefront routes for the recurring order list, detail, edit, review, price tolerances, product search, product offer selection, shipment method, and schedule action pages. | None | SprykerFeature\Yves\OrderExperienceManagement\Plugin\Router |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
@@ -964,6 +1024,7 @@ Make sure the following storefront routes are accessible:
 | recurring-orders/detail | `/recurring-orders/{uuid}` | Recurring order detail page. |
 | recurring-orders/review-required | `/recurring-orders/{uuid}/review-required` | Review required page. |
 | recurring-order/edit | `/recurring-order/{uuid}/edit` | Recurring schedule edit form. |
+| recurring-orders/price-tolerances | `/recurring-orders/{uuid}/price-tolerances` | Page where a buyer sets the order total tolerance, the product tolerances, and the **Ignore product price changes** setting. |
 | recurring-order/form | `/recurring-order-form` | Recurring order setup form rendered at checkout. |
 | recurring-order/save | `/recurring-order/save` | Saves recurring order settings on the quote. |
 | recurring-order/clear | `/recurring-order/clear` | Removes recurring order settings from the quote. |
@@ -1259,6 +1320,8 @@ class OrderExperienceManagementConfig extends SprykerOrderExperienceManagementCo
 
 The module ships its storefront UI as molecules under `src/SprykerFeature/OrderExperienceManagement/src/SprykerFeature/Yves/OrderExperienceManagement/Theme/default/components/molecules`. To adjust the markup, override the molecule in your project at the same relative path under `src/Pyz/Yves/OrderExperienceManagement/Theme/default/components/molecules`. The most commonly customized molecules are `recurring-order-selector`, `recurring-order-list`, `schedule-detail`, `schedule-detail-sidebar`, `schedule-review`, and `recurring-order-edit-form`.
 
+The Price tolerances page is composed of the `price-tolerance`, `price-tolerance-bulk`, `price-tolerance-bulk-bar`, and `price-tolerance-change-confirm` molecules. Its product table is built from the `advanced-table`, `advanced-table-input-cell`, and `advanced-table-checkbox-cell` molecules of the `ShopUi` module, and the information popups use the `tooltip-message` molecule of `ShopUi`.
+
 The **Review Required** page is composed of the `review-` molecules: `review-flagged-items`, `review-unchanged-items`, `review-quantity-control`, `review-substitute`, `review-add-product`, `review-add-product-picker`, `review-shipment-selection`, `review-scope-selector`, `review-change-summary`, `review-summary-banner`, `review-blocking-errors`, and `review-footer`.
 
 The `schedule-detail-sidebar`, `schedule-review`, and `recurring-order-edit-form` molecules embed the `cost-center-detail`, `recurring-order-cost-center-budget`, and `recurring-order-budget-summary` molecules from the `PurchasingControl` module. If your project does not use the Purchasing Control feature, these embeds resolve to nothing and the surrounding markup remains valid.
@@ -1358,8 +1421,10 @@ recurring_orders.detail.cancel.modal.warning,This action is permanent. The sched
 recurring_orders.detail.cancel.modal.warning,Diese Aktion ist dauerhaft. Der Zeitplan wird sofort gestoppt und kann nicht reaktiviert werden.,de_DE
 recurring_orders.detail.error.failed.title,The last order attempt failed for the following reasons:,en_US
 recurring_orders.detail.error.failed.title,Der letzte Bestellversuch ist aus den folgenden Gründen fehlgeschlagen:,de_DE
-recurring_orders.detail.estimated_total.info,Estimated Grand Total displays the sum of order items excl. shipping costs or discounts.,en_US
-recurring_orders.detail.estimated_total.info,Der geschätzte Gesamtbetrag enthält die Summe der Artikel ohne Versandkosten oder Rabatte.,de_DE
+recurring_orders.detail.estimated_total.auto_approved,Auto-approved up to %threshold% (+%tolerance%),en_US
+recurring_orders.detail.estimated_total.auto_approved,Automatisch freigegeben bis %threshold% (+%tolerance%),de_DE
+recurring_orders.detail.estimated_total.info,Excludes shipping costs or discounts,en_US
+recurring_orders.detail.estimated_total.info,Ohne Versandkosten oder Rabatte,de_DE
 recurring_orders.detail.estimated_total.label,Estimated Total,en_US
 recurring_orders.detail.estimated_total.label,Geschätzter Gesamtbetrag,de_DE
 recurring_orders.detail.skip.modal.title,Skip this execution?,en_US
@@ -1668,10 +1733,10 @@ recurring_orders.review.reason.out_of_stock,Out Of Stock,en_US
 recurring_orders.review.reason.out_of_stock,Nicht auf Lager,de_DE
 recurring_orders.review.title,Review Required — %name%,en_US
 recurring_orders.review.title,Überprüfung erforderlich — %name%,de_DE
-recurring_orders.review.unchanged.title,Unchanged items (%count%),en_US
-recurring_orders.review.unchanged.title,Unveränderte Artikel (%count%),de_DE
-recurring_orders.review.unchanged.title.plural,%count% unchanged items,en_US
-recurring_orders.review.unchanged.title.plural,%count% unveränderte Artikel,de_DE
+recurring_orders.review.unchanged.title,Other items (%count%),en_US
+recurring_orders.review.unchanged.title,Weitere Artikel (%count%),de_DE
+recurring_orders.review.unchanged.title.plural,%count% other items,en_US
+recurring_orders.review.unchanged.title.plural,%count% weitere Artikel,de_DE
 recurring_orders.status.active,Active,en_US
 recurring_orders.status.active,Aktiv,de_DE
 recurring_orders.status.cancelled,Cancelled,en_US
@@ -1758,6 +1823,140 @@ recurring_orders.review.product-discontinued.message,"This product is discontinu
 recurring_orders.review.product-discontinued.message,"Dieses Produkt wurde eingestellt. Wählen Sie einen Ersatz aus, damit es in Ihrer Bestellung bleibt.",de_DE
 recurring_orders.review.substitute.sold-by,Sold by,en_US
 recurring_orders.review.substitute.sold-by,Verkauft durch,de_DE
+recurring_orders.review.order_total.rose_beyond_tolerance,"This order's total rose from %previous_total% to %current_total% (+%increase%), above your %tolerance% tolerance.",en_US
+recurring_orders.review.order_total.rose_beyond_tolerance,Die Gesamtsumme dieser Bestellung ist von %previous_total% auf %current_total% gestiegen (+%increase%) und liegt über Ihrer Toleranz von %tolerance%.,de_DE
+recurring_orders.review.order_total.no_single_product,No single product exceeded its own tolerance — it is the order total that rose.,en_US
+recurring_orders.review.order_total.no_single_product,"Kein einzelnes Produkt hat seine eigene Toleranz überschritten – es ist die Gesamtsumme der Bestellung, die gestiegen ist.",de_DE
+recurring_orders.price_tolerance.error.out_of_range,The price tolerance must be between 0% and %max%%.,en_US
+recurring_orders.price_tolerance.error.out_of_range,Die Preistoleranz muss zwischen 0 % und %max% % liegen.,de_DE
+recurring_orders.price_tolerance.error.too_precise,The price tolerance can have at most %decimals% decimal places.,en_US
+recurring_orders.price_tolerance.error.not_in_step,The price tolerance must be a multiple of %step%%.,en_US
+recurring_orders.price_tolerance.error.too_precise,Die Preistoleranz darf höchstens %decimals% Nachkommastellen haben.,de_DE
+recurring_orders.price_tolerance.error.not_in_step,Die Preistoleranz muss ein Vielfaches von %step% % sein.,de_DE
+recurring_orders.detail.sidebar.price_tolerance,Price tolerance,en_US
+recurring_orders.detail.sidebar.price_tolerance,Preistoleranz,de_DE
+recurring_orders.detail.sidebar.price_tolerance.order_total,Order total +%tolerance%,en_US
+recurring_orders.detail.sidebar.price_tolerance.order_total,Gesamtsumme +%tolerance%,de_DE
+recurring_orders.detail.sidebar.price_tolerance.off,Off,en_US
+recurring_orders.detail.sidebar.price_tolerance.off,Aus,de_DE
+recurring_orders.detail.sidebar.price_tolerance.off_note,Every price increase needs review,en_US
+recurring_orders.detail.sidebar.price_tolerance.off_note,Jede Preiserhöhung wird zur Überprüfung vorgelegt,de_DE
+recurring_orders.price_tolerance.title,Edit price tolerance,en_US
+recurring_orders.price_tolerance.title,Preistoleranz bearbeiten,de_DE
+recurring_orders.price_tolerance.intro,Choose how much prices can rise before an order from this schedule waits for your review.,en_US
+recurring_orders.price_tolerance.intro,"Legen Sie fest, wie stark Preise steigen dürfen, bevor eine Bestellung dieses Plans auf Ihre Überprüfung wartet.",de_DE
+recurring_orders.price_tolerance.order_total.title,Order total,en_US
+recurring_orders.price_tolerance.order_total.title,Gesamtsumme der Bestellung,de_DE
+recurring_orders.price_tolerance.order_total.intro,"Checked against the estimated total of one order, separately from the product checks.",en_US
+recurring_orders.price_tolerance.order_total.intro,"Wird mit der geschätzten Gesamtsumme einer Bestellung verglichen, getrennt von den Produktprüfungen.",de_DE
+recurring_orders.price_tolerance.order_total.field_label,Auto-approve increases up to,en_US
+recurring_orders.price_tolerance.order_total.field_label,Erhöhungen automatisch freigeben bis,de_DE
+recurring_orders.price_tolerance.order_total.readout.rise,Estimated total %total% · Orders up to %threshold% are placed automatically.,en_US
+recurring_orders.price_tolerance.order_total.readout.rise,Geschätzte Gesamtsumme %total% · Bestellungen bis %threshold% werden automatisch aufgegeben.,de_DE
+recurring_orders.price_tolerance.order_total.readout.off,Order total check is off. Price increases are reviewed product by product.,en_US
+recurring_orders.price_tolerance.order_total.readout.off,Die Prüfung der Gesamtsumme ist aus. Preiserhöhungen werden produktweise überprüft.,de_DE
+recurring_orders.price_tolerance.back,Back to recurring order,en_US
+recurring_orders.price_tolerance.back,Zurück zur wiederkehrenden Bestellung,de_DE
+recurring_orders.price_tolerance.applies_next,Changes apply from the next order on %date%.,en_US
+recurring_orders.price_tolerance.applies_next,Änderungen gelten ab der nächsten Bestellung am %date%.,de_DE
+recurring_orders.price_tolerance.locked_notice,Tolerances cannot be changed while this order is under review.,en_US
+recurring_orders.price_tolerance.locked_notice,"Toleranzen können nicht geändert werden, solange diese Bestellung überprüft wird.",de_DE
+recurring_orders.price_tolerance.success,Price tolerance saved. Changes apply from the next order.,en_US
+recurring_orders.price_tolerance.success,Preistoleranz gespeichert. Änderungen gelten ab der nächsten Bestellung.,de_DE
+recurring_orders.price_tolerance.error.save,The price tolerances could not be saved.,en_US
+recurring_orders.price_tolerance.error.save,Die Preistoleranzen konnten nicht gespeichert werden.,de_DE
+recurring_orders.price_tolerance.checks_intro,"Two independent checks: the order total and each product. If either limit is exceeded, the order waits for your review.",en_US
+recurring_orders.price_tolerance.checks_intro,"Zwei unabhängige Prüfungen: die Gesamtsumme und jedes Produkt. Wird eine der Grenzen überschritten, wartet die Bestellung auf Ihre Überprüfung.",de_DE
+recurring_orders.price_tolerance.how_it_works,How price checks work,en_US
+recurring_orders.price_tolerance.how_it_works,So funktionieren die Preisprüfungen,de_DE
+recurring_orders.price_tolerance.how_it_works.order_total.title,Order total,en_US
+recurring_orders.price_tolerance.how_it_works.order_total.title,Gesamtsumme,de_DE
+recurring_orders.price_tolerance.how_it_works.order_total.text,Compares the order total with the estimated total of one order.,en_US
+recurring_orders.price_tolerance.how_it_works.order_total.text,Vergleicht die Gesamtsumme mit der geschätzten Gesamtsumme einer Bestellung.,de_DE
+recurring_orders.price_tolerance.how_it_works.product.title,Each product,en_US
+recurring_orders.price_tolerance.how_it_works.product.title,Jedes Produkt,de_DE
+recurring_orders.price_tolerance.how_it_works.product.text,Compares each unit price with its confirmed reference price. Quantity doesn't change the limit.,en_US
+recurring_orders.price_tolerance.how_it_works.product.text,Vergleicht jeden Stückpreis mit seinem bestätigten Referenzpreis. Die Menge ändert die Grenze nicht.,de_DE
+recurring_orders.price_tolerance.how_it_works.independent.title,Checks are independent,en_US
+recurring_orders.price_tolerance.how_it_works.independent.title,Die Prüfungen sind unabhängig,de_DE
+recurring_orders.price_tolerance.how_it_works.independent.text,"If the order total or any product goes over its limit, the order waits for your review.",en_US
+recurring_orders.price_tolerance.how_it_works.independent.text,"Überschreitet die Gesamtsumme oder ein Produkt seine Grenze, wartet die Bestellung auf Ihre Überprüfung.",de_DE
+recurring_orders.price_tolerance.how_it_works.zero.title,0% means off,en_US
+recurring_orders.price_tolerance.how_it_works.zero.title,0 % bedeutet aus,de_DE
+recurring_orders.price_tolerance.how_it_works.zero.text,"With 0%, any price increase sends the order to review.",en_US
+recurring_orders.price_tolerance.how_it_works.zero.text,Bei 0 % führt jede Preiserhöhung zur Überprüfung der Bestellung.,de_DE
+recurring_orders.price_tolerance.form.error.blank,Enter a value. Use 0 to turn off.,en_US
+recurring_orders.price_tolerance.form.error.blank,"Geben Sie einen Wert ein. Verwenden Sie 0, um die Prüfung auszuschalten.",de_DE
+recurring_orders.price_tolerance.form.error.range,Enter 0 to {{ max }}.,en_US
+recurring_orders.price_tolerance.form.error.range,Geben Sie einen Wert von 0 bis {{ max }} ein.,de_DE
+recurring_orders.price_tolerance.form.error.decimals,Use up to {{ decimals }} decimals.,en_US
+recurring_orders.price_tolerance.form.error.step,Use steps of {{ step }}.,en_US
+recurring_orders.price_tolerance.form.error.decimals,Verwenden Sie höchstens {{ decimals }} Nachkommastellen.,de_DE
+recurring_orders.price_tolerance.form.error.step,Verwenden Sie Schritte von {{ step }}.,de_DE
+recurring_orders.price_tolerance.products.title,Products,en_US
+recurring_orders.price_tolerance.products.title,Produkte,de_DE
+recurring_orders.price_tolerance.products.intro,Each product is checked on its own unit price. Quantity doesn't change the limit.,en_US
+recurring_orders.price_tolerance.products.intro,Jedes Produkt wird anhand seines eigenen Stückpreises geprüft. Die Menge ändert die Grenze nicht.,de_DE
+recurring_orders.price_tolerance.products.summary,%with% with a tolerance · %any% reviews any increase,en_US
+recurring_orders.price_tolerance.products.summary,%with% mit Toleranz · %any% mit Prüfung bei jeder Erhöhung,de_DE
+recurring_orders.price_tolerance.products.column.unit_price,Unit price,en_US
+recurring_orders.price_tolerance.products.column.unit_price,Stückpreis,de_DE
+recurring_orders.price_tolerance.products.column.tolerance,Tolerance,en_US
+recurring_orders.price_tolerance.products.column.tolerance,Toleranz,de_DE
+recurring_orders.price_tolerance.products.column.review_above,Review if price is above,en_US
+recurring_orders.price_tolerance.products.column.review_above,"Prüfung, wenn der Preis über … liegt",de_DE
+recurring_orders.price_tolerance.products.any_increase,Any increase,en_US
+recurring_orders.price_tolerance.products.any_increase,Jede Erhöhung,de_DE
+recurring_orders.price_tolerance.products.note,0% means any price increase on that product is reviewed.,en_US
+recurring_orders.price_tolerance.products.note,"0 % bedeutet, dass jede Preiserhöhung dieses Produkts überprüft wird.",de_DE
+recurring_orders.price_tolerance.bulk.selected.one,1 product selected,en_US
+recurring_orders.price_tolerance.bulk.selected.one,1 Produkt ausgewählt,de_DE
+recurring_orders.price_tolerance.bulk.selected.many,%count% products selected,en_US
+recurring_orders.price_tolerance.bulk.selected.many,%count% Produkte ausgewählt,de_DE
+recurring_orders.price_tolerance.bulk.set_to,Set tolerance to,en_US
+recurring_orders.price_tolerance.bulk.set_to,Toleranz setzen auf,de_DE
+recurring_orders.price_tolerance.bulk.turn_off,Turn tolerance off,en_US
+recurring_orders.price_tolerance.bulk.turn_off,Toleranz ausschalten,de_DE
+recurring_orders.price_tolerance.bulk.select_all,Select all products,en_US
+recurring_orders.price_tolerance.bulk.select_all,Alle Produkte auswählen,de_DE
+recurring_orders.price_tolerance.bulk.select_row,Select %product%,en_US
+recurring_orders.price_tolerance.bulk.select_row,%product% auswählen,de_DE
+recurring_orders.price_tolerance.error.item_not_found,This product is not part of the recurring order.,en_US
+recurring_orders.price_tolerance.error.item_not_found,Dieses Produkt gehört nicht zur wiederkehrenden Bestellung.,de_DE
+recurring_orders.review.reason.price_increased_beyond,Price above %tolerance%,en_US
+recurring_orders.review.reason.price_increased_beyond,Preis um mehr als %tolerance% gestiegen,de_DE
+recurring_orders.review.price_note.within_tolerance,within your %tolerance% tolerance,en_US
+recurring_orders.review.price_note.within_tolerance,innerhalb Ihrer Toleranz von %tolerance%,de_DE
+recurring_orders.review.price_note.within_order_tolerance,within your %tolerance% order total tolerance,en_US
+recurring_orders.review.price_note.within_order_tolerance,innerhalb Ihrer Toleranz der Gesamtsumme von %tolerance%,de_DE
+recurring_orders.review.price_note.decreased,price decreased,en_US
+recurring_orders.review.price_note.decreased,Preis gesunken,de_DE
+recurring_orders.detail.sidebar.price_tolerance.products_only,Added to %count% items,en_US
+recurring_orders.detail.sidebar.price_tolerance.products_only,Für %count% Artikel festgelegt,de_DE
+recurring_orders.detail.sidebar.price_tolerance.products_only_one,Added to 1 item,en_US
+recurring_orders.detail.sidebar.price_tolerance.products_only_one,Für 1 Artikel festgelegt,de_DE
+recurring_orders.detail.sidebar.price_tolerance.order_total_and_products,Order total +%tolerance% · %count% products,en_US
+recurring_orders.detail.sidebar.price_tolerance.order_total_and_products,Gesamtsumme +%tolerance% · %count% Produkte,de_DE
+recurring_orders.detail.sidebar.price_tolerance.order_total_and_product,Order total +%tolerance% · 1 product,en_US
+recurring_orders.detail.sidebar.price_tolerance.order_total_and_product,Gesamtsumme +%tolerance% · 1 Produkt,de_DE
+recurring_orders.price_tolerance.ignore_products.label,Ignore product price changes,en_US
+recurring_orders.price_tolerance.ignore_products.label,Preisänderungen einzelner Produkte ignorieren,de_DE
+recurring_orders.price_tolerance.ignore_products.help,"When the order total tolerance is above 0, only the order total is checked and the product tolerances are not applied.",en_US
+recurring_orders.price_tolerance.ignore_products.help,"Ist die Toleranz der Gesamtsumme größer als 0, wird nur die Gesamtsumme geprüft und die Produkttoleranzen werden nicht angewendet.",de_DE
+recurring_orders.price_tolerance.ignore_products.hint_label,About ignoring product price changes,en_US
+recurring_orders.price_tolerance.ignore_products.hint_label,Hinweis zum Ignorieren von Produktpreisänderungen,de_DE
+recurring_orders.price_tolerance.products.ignored_notice,Product price changes are ignored: only the order total is checked.,en_US
+recurring_orders.price_tolerance.products.ignored_notice,Preisänderungen einzelner Produkte werden ignoriert: Es wird nur die Gesamtsumme geprüft.,de_DE
+recurring_orders.price_tolerance.error.ignore_requires_order_tolerance,Set an order total tolerance above 0 to ignore product price changes.,en_US
+recurring_orders.price_tolerance.error.ignore_requires_order_tolerance,"Legen Sie eine Toleranz der Gesamtsumme über 0 fest, um Preisänderungen einzelner Produkte zu ignorieren.",de_DE
+recurring_orders.detail.sidebar.price_tolerance.order_total_ignored,Order total +%tolerance% · product changes ignored,en_US
+recurring_orders.detail.sidebar.price_tolerance.order_total_ignored,Gesamtsumme +%tolerance% · Produktänderungen ignoriert,de_DE
+recurring_orders.detail.order_items.price_tolerance.hint,"How much a product's unit price may rise before the order waits for your review. ""Any increase"" means every rise is reviewed; ""Order total"" means only the order total is checked.",en_US
+recurring_orders.detail.order_items.price_tolerance.hint,"Um wie viel der Stückpreis eines Produkts steigen darf, bevor die Bestellung auf Ihre Überprüfung wartet. „Jede Erhöhung“ bedeutet, dass jeder Anstieg überprüft wird; „Gesamtsumme“ bedeutet, dass nur die Gesamtsumme geprüft wird.",de_DE
+recurring_orders.detail.order_items.price_tolerance.hint_label,About the price tolerance,en_US
+recurring_orders.detail.order_items.price_tolerance.hint_label,Zur Preistoleranz,de_DE
+recurring_orders.detail.sidebar.price_tolerance.locked_label,Why tolerances cannot be changed,en_US
+recurring_orders.detail.sidebar.price_tolerance.locked_label,Warum Toleranzen nicht geändert werden können,de_DE
 ```
 
 Import data:
@@ -1793,5 +1992,22 @@ In the Back Office, go to **Configuration > Recurring Orders > General > Schedul
 | Schedule Grace Period | `grace_period_hours` | `48` | Required, between 1 and 720 | Number of hours before the trigger date when the pre-trigger notification email is sent to the buyer. Per-schedule overrides stored in `spy_recurring_schedule.notification_window_hours` take precedence over this global value. |
 
 The setting is defined at `src/SprykerFeature/OrderExperienceManagement/resources/configuration/recurring_orders.configuration.yml` and applies globally—it has no per-store scope.
+
+{% endinfo_block %}
+
+### 10) Verify the price tolerances
+
+The price tolerances need no additional registration, but verify them end to end after you install the feature or upgrade it:
+
+{% info_block warningBox "Verification" %}
+
+1. Open the detail page of an active recurring schedule on the storefront. Make sure the **Details** sidebar shows the **Price tolerance** row with the value *Off* and an **Edit** link, and that the **Order items** table has a **Price tolerance** column showing *Any increase*.
+2. Select **Edit**. Make sure the page `/recurring-orders/{uuid}/price-tolerances` opens with the **Order total** card, the **Ignore product price changes** checkbox, and one row per product.
+3. Clear the order total field and save. Make sure the error *Enter a value. Use 0 to turn off.* is displayed. Enter `1.234` and make sure the error *Use up to 2 decimals.* is displayed.
+4. Select **Ignore product price changes** while the order total tolerance is `0` and save. Make sure the error *Set an order total tolerance above 0 to ignore product price changes.* is displayed.
+5. Set the order total tolerance to `3`, select two products in the products table, apply the tolerance `0.5` in the bulk bar, and save. Make sure you return to the detail page with a success message, and the sidebar shows *Order total +3% · 2 products*.
+6. Raise the price of one of the products in the Back Office by less than `0.5%`, then run `console recurring-orders:trigger-placement {id} --validate`. Make sure validation passes and the order is placed without review. Raise the price by more than `0.5%` and trigger it again. Make sure the schedule moves to **Review Required** and the product reason reads *Price above 0.5%*.
+7. With the schedule in **Review Required**, open the Price tolerances page. Make sure the values are read-only, the page shows *Tolerances cannot be changed while this order is under review.*, and no **Save** button is displayed.
+8. In the Back Office, open **Sales > Recurring Order Schedules**. Make sure the schedule shows *On* in the **Price Tolerance** column, and the **Price Tolerance** filter set to *On* keeps it in the list.
 
 {% endinfo_block %}

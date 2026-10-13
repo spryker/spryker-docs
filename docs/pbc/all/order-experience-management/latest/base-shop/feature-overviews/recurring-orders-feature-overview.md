@@ -233,7 +233,7 @@ The **Ignore product price changes** setting hands the whole decision to the ord
 
 | ORDER TOTAL TOLERANCE | IGNORE PRODUCT PRICE CHANGES | WHAT IS CHECKED |
 | --- | --- | --- |
-| Off (`0`) | No effect | Products only, each against its own tolerance. A product at `0` reviews any increase. |
+| Off (`0`) | Off | Products only, each against its own tolerance. A product at `0` reviews any increase. |
 | On (above `0`) | Off | Both. Each product against its own tolerance and the order total against the order total tolerance. Any breach moves the schedule to **Review Required**, and the review page shows the product reasons, the order total reason, or both. |
 | On (above `0`) | On | The order total only. The product checks are not executed. |
 

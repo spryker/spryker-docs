@@ -22,7 +22,7 @@ record_stale() {
   fi
 }
 
-echo "Lookging for files with at least $lines_changed_limit line(s) changed and last_updated older than $lines_changed_day_limit days "
+echo "Looking for files with at least $lines_changed_limit line(s) changed and last_updated older than $lines_changed_day_limit days "
 echo ""
 
 changed_md_files=$(git diff --name-only "$BASE_SHA"..."$HEAD_SHA" -- | grep '\.md$' || true)

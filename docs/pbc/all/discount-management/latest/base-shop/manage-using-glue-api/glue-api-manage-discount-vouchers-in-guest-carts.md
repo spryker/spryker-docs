@@ -14,6 +14,8 @@ redirect_from:
   - /docs/pbc/all/discount-management/202311.0/manage-via-glue-api/manage-discount-vouchers-in-guest-carts.html
   - /docs/pbc/all/discount-management/202311.0/base-shop/manage-via-glue-api/manage-discount-vouchers-in-guest-carts.html
   - /docs/pbc/all/discount-management/202204.0/base-shop/manage-using-glue-api/glue-api-manage-discount-vouchers-in-guest-carts.html
+  - /docs/pbc/all/discount-management/202204.0/manage-via-glue-api/manage-discount-vouchers-in-guest-carts.html
+  - /docs/scos/dev/glue-api-guides/202204.0/managing-carts/guest-carts/managing-discount-vouchers-in-guest-carts.html
 related:
   - title: Manage guest cart items
     link: docs/pbc/all/cart-and-checkout/latest/marketplace/manage-using-glue-api/guest-carts/manage-guest-cart-items.html

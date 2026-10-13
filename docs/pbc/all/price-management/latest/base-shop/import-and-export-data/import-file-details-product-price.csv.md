@@ -8,6 +8,8 @@ redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html
   - /docs/pbc/all/price-management/202311.0/base-shop/import-and-export-data/file-details-product-price.csv.html
   - /docs/pbc/all/price-management/202204.0/base-shop/import-and-export-data/import-file-details-product-price.csv.html
+  - /docs/pbc/all/price-management/202307.0/base-shop/import-and-export-data/import-file-details-product-price.csv.html
+  - /docs/pbc/all/price-management/202212.0/base-shop/import-and-export-data/import-file-details-product-price.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html

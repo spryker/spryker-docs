@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/managing-product-ratings-and-reviews.html  
   - /docs/pbc/all/ratings-reviews/202311.0/manage-using-glue-api/manage-product-reviews-using-glue-api.html
   - /docs/pbc/all/ratings-reviews/202204.0/manage-using-glue-api/glue-api-manage-product-reviews.html
+  - /docs/pbc/all/ratings-reviews/202307.0/manage-using-glue-api/glue-api-manage-product-reviews.html
 related:
   - title: Product Rating and Reviews feature overview
     link: docs/pbc/all/ratings-reviews/latest/ratings-and-reviews.html

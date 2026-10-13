@@ -14,6 +14,8 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/prices-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/prices-feature-integration.html
   - /docs/pbc/all/price-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html
+  - /docs/pbc/all/price-management/202204.0/install-and-upgrade/install-features/install-the-prices-feature.html
+  - /docs/pbc/all/price-management/202212.0/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html
 related:
   - title: Install the Configurable Bundle feature
     link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html

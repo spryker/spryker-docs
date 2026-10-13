@@ -15,6 +15,8 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productsearch.html
   - /docs/scos/dev/module-migration-guides/migration-guide-productsearch.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productsearch-module.html
+  - /docs/pbc/all/product-information-management/202307.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productsearch-module.html
+  - /docs/pbc/all/product-information-management/202212.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productsearch-module.html
 related:
   - title: Upgrade the Product module
     link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html

@@ -5,6 +5,10 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202311.0/marketplace-promotions-discounts-feature-integration.html
+  - /docs/discounts-and-promotions
+  - /docs/marketplace/dev/feature-integration-guides/202204.0/marketplace-promotions-discounts-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202001.0/glue-api/glue-api-promotions-and-discounts-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202009.0/promotions-and-discounts-feature-integration.html
 related:
   - title: Marketplace Promotions and Discounts feature walkthrough
     link: docs/pbc/all/discount-management/latest/marketplace/marketplace-promotions-discounts-feature-overview.html

@@ -3,6 +3,8 @@ title: Running commands with the Docker SDK
 description: Learn how to use Docker SDK command line interface to run commands for your Spryker based project.
 last_updated: Jan 16, 2024
 template: howto-guide-template
+redirect_from:
+  - /docs/dg/dev/set-up-spryker-locally/docker-sdk/docker-sdk.html
 ---
 
 This document describes how to run console commands in a local Spryker environment with the Docker SDK.

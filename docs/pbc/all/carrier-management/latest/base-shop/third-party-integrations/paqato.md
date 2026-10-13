@@ -8,6 +8,9 @@ originalArticleId: a08912d4-c05c-498a-867b-b4e1d04bd30f
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/shipment/paqato.html
   - /docs/pbc/all/carrier-management/202204.0/base-shop/third-party-integrations/paqato.html  
+  - /docs/pbc/all/carrier-management/202204.0/third-party-integrations/paqato.html
+  - /docs/pbc/all/carrier-management/202212.0/third-party-integrations/paqato.html
+  - /docs/scos/user/technology-partners/202108.0/shipment/paqato.html
 ---
 
 ## Partner Information

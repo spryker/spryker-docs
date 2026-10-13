@@ -17,6 +17,7 @@ redirect_from:
   - /docs/packaging-units-overview
   - /docs/pbc/all/product-information-management/202311.0/feature-overviews/packaging-units-feature-overview.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/packaging-units-feature-overview.html
+  - /docs/scos/user/features/201907.0/packaging-units-feature-overview.html
 ---
 
 {% info_block infoBox "Terminology used throughout the article" %}

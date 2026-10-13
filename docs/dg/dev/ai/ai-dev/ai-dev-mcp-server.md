@@ -5,6 +5,8 @@ last_updated: Sep 7, 2026
 label: early-access
 keywords: ai, mcp, model context protocol, claude, copilot, ai-dev, tools, extension
 template: concept-topic-template
+redirect_from:
+  - /docs/sdk/dev/ai-dev-sdk/ai-dev-sdk-mcp-server.html
 ---
 
 The AiDev module ships an MCP server that gives AI assistants live access to your running Spryker application: transfer objects, module interfaces, order management system (OMS) state machines, CSV data, and read-only database queries. This page describes what the server exposes, how to extend it, and how to debug it.

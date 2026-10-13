@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/dev/back-end-development/client/use-and-configure-redis-as-a-key-value-storage.html
   - /docs/scos/dev/back-end-development/client/using-and-configuring-redis-as-a-key-value-storage.html
   - /docs/dg/dev/backend-development/client/use-and-configure-redis-as-a-key-value-storage.html
+  - /docs/redis-as-kv
 related:
   - title: Client
     link: docs/scos/dev/back-end-development/client/client.html

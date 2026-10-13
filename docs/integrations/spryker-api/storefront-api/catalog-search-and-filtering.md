@@ -5,6 +5,8 @@ last_updated: July 30, 2026
 template: default
 redirect_from:
   - /docs/integrations/spryker-glue-api/storefront-api/catalog-search-and-filtering.html
+  - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/catalog-search-api-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/catalog-search-api-feature-integration.html
 ---
 
 The Storefront API provides powerful catalog search capabilities through the `/catalog-search` endpoint. This endpoint supports various filtering options, faceted search, and advanced query parameters to help users find products efficiently.

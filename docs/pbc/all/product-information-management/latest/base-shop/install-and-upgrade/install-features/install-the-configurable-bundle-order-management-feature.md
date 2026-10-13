@@ -11,6 +11,7 @@ redirect_from:
   - /docs/configurable-bundle-order-management-feature-integration
   - /docs/en/configurable-bundle-order-management-feature-integration
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-order-management-feature.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/configurable-bundle-order-management-feature-integration.html
 ---
 
 {% include pbc/all/install-features/latest/install-the-configurable-bundle-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-configurable-bundle-order-management-feature.md -->

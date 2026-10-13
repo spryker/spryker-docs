@@ -12,6 +12,8 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202404.0/configure-cross-origin-resource-sharing-for-glue-api.html
   - /docs/dg/dev/glue-api/latest/configure-cross-origin-resource-sharing-for-glue-api.html
   - /docs/integrations/spryker-glue-api/authenticating-and-authorization/configure-cross-origin-resource-sharing-for-glue-api.html
+  - /docs/dg/dev/glue-api/202307.0/configure-cross-origin-resource-sharing-for-glue-api.html
+  - /docs/scos/dev/feature-integration-guides/202005.0/resource-sharing-feature-integration.html
 ---
 
 By default, Storefront API is configured to run using the [same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy), which remains the recommended default security level for web applications. However, if requests to Storefront API originate from touchpoints located across multiple domains, you can enable *Cross-Origin Resource Sharing* (CORS). When CORS is enabled, Storefront API can accept requests from a list of allowed origins or any origin, depending on the configuration.

@@ -5,6 +5,8 @@ template: concept-topic-template
 last_updated: Nov 21, 2023
 redirect_from:
   - /docs/marketplace/user/features/202311.0/marketplace-merchant-custom-prices-feature-overview.html
+  - /docs/marketplace/user/features/202204.0/marketplace-merchant-custom-prices-feature-overview.html
+  - /docs/pbc/all/price-management/202212.0/merchant-custom-prices-feature-overview.html
 related:
   - title: Managing marketplace abstract product prices
     link: docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-prices.html

@@ -11,6 +11,7 @@ redirect_from:
   - /docs/iadvize
   - /docs/en/iadvize
   - /docs/scos/user/technology-partners/202200.0/customer-service/iadvize.html
+  - /docs/pbc/all/miscellaneous/202212.0/third-party-integrations/customer-service/iadvize.html
 ---
 
 ## Partner Information

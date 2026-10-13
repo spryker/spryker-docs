@@ -79,7 +79,7 @@ composer update \
   spryker-shop/customer-page:"^2.80.0" \
   spryker-shop/merchant-product-offer-widget:"^2.0.0" \
   spryker-shop/product-search-widget:"^3.9.0" \
-  spryker-shop/shop-ui:"^2.0.0" \
+  spryker-shop/shop-ui:"^2.5.0" \
   --with-dependencies
 ```
 

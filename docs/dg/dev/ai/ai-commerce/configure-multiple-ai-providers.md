@@ -36,10 +36,15 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
 
     // Smart PIM
     AiCommerceConstants::AI_CONFIGURATION_SMART_PIM_OPENAI => [
-        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
         'provider_config' => [
             'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
             'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_PIM_OPENAI_MODEL,
+            'parameters' => [
+                'reasoning' => [
+                    'effort' => 'minimal',
+                ],
+            ],
         ],
     ],
     AiCommerceConstants::AI_CONFIGURATION_SMART_PIM_AWS => [
@@ -62,10 +67,15 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
 
     // Quick Order Image-to-Cart (Visual Add to Cart)
     AiCommerceConstants::AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_OPENAI => [
-        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
         'provider_config' => [
             'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
             'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_QUICK_ORDER_IMAGE_TO_CART_OPENAI_MODEL,
+            'parameters' => [
+                'reasoning' => [
+                    'effort' => 'minimal',
+                ],
+            ],
         ],
     ],
     AiCommerceConstants::AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_AWS => [
@@ -88,10 +98,15 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
 
     // Search by Image
     AiCommerceConstants::AI_CONFIGURATION_SEARCH_BY_IMAGE_OPENAI => [
-        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
         'provider_config' => [
             'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
             'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SEARCH_BY_IMAGE_OPENAI_MODEL,
+            'parameters' => [
+                'reasoning' => [
+                    'effort' => 'minimal',
+                ],
+            ],
         ],
     ],
     AiCommerceConstants::AI_CONFIGURATION_SEARCH_BY_IMAGE_AWS => [
@@ -114,10 +129,15 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
 
     // Back Office Assistant (Intent Router, General, Order Management, Discount Management, Form Fill)
     AiCommerceConstants::AI_CONFIGURATION_INTENT_ROUTER_OPENAI => [
-        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
         'provider_config' => [
             'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
             'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL,
+            'parameters' => [
+                'reasoning' => [
+                    'effort' => 'none',
+                ],
+            ],
         ],
     ],
     AiCommerceConstants::AI_CONFIGURATION_INTENT_ROUTER_AWS => [
@@ -138,10 +158,15 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
         ],
     ],
     AiCommerceConstants::AI_CONFIGURATION_GENERAL_AGENT_OPENAI => [
-        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
         'provider_config' => [
             'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
             'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL,
+            'parameters' => [
+                'reasoning' => [
+                    'effort' => 'none',
+                ],
+            ],
         ],
         'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_GENERAL_PURPOSE_SYSTEM_PROMPT,
     ],
@@ -165,10 +190,15 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
         'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_GENERAL_PURPOSE_SYSTEM_PROMPT,
     ],
     AiCommerceConstants::AI_CONFIGURATION_ORDER_MANAGEMENT_OPENAI => [
-        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
         'provider_config' => [
             'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
             'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL,
+            'parameters' => [
+                'reasoning' => [
+                    'effort' => 'none',
+                ],
+            ],
         ],
         'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_ORDER_MANAGEMENT_SYSTEM_PROMPT,
     ],
@@ -192,10 +222,15 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
         'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_ORDER_MANAGEMENT_SYSTEM_PROMPT,
     ],
     AiCommerceConstants::AI_CONFIGURATION_DISCOUNT_MANAGEMENT_OPENAI => [
-        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
         'provider_config' => [
             'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
             'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL,
+            'parameters' => [
+                'reasoning' => [
+                    'effort' => 'none',
+                ],
+            ],
         ],
         'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_DISCOUNT_MANAGEMENT_SYSTEM_PROMPT,
     ],
@@ -219,10 +254,15 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
         'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_DISCOUNT_MANAGEMENT_SYSTEM_PROMPT,
     ],
     AiCommerceConstants::AI_CONFIGURATION_FORM_FILL_OPENAI => [
-        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
         'provider_config' => [
             'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
             'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL,
+            'parameters' => [
+                'reasoning' => [
+                    'effort' => 'none',
+                ],
+            ],
         ],
         'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_FORM_FILL_SYSTEM_PROMPT,
     ],

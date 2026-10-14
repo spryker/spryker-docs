@@ -75,10 +75,15 @@ use Pyz\Shared\AiCommerce\AiCommerceConstants;
 use Spryker\Shared\AiFoundation\AiFoundationConstants;
 
 $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_SMART_PIM_OPENAI] = [
-    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
     'provider_config' => [
         'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
         'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_PIM_OPENAI_MODEL,
+        'parameters' => [
+            'reasoning' => [
+                'effort' => 'minimal',
+            ],
+        ],
     ],
 ];
 ```

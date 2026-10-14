@@ -75,45 +75,70 @@ use Pyz\Shared\AiCommerce\AiCommerceConstants;
 use Spryker\Shared\AiFoundation\AiFoundationConstants;
 
 $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_INTENT_ROUTER_OPENAI] = [
-    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
     'provider_config' => [
         'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
         'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL,
+        'parameters' => [
+            'reasoning' => [
+                'effort' => 'none',
+            ],
+        ],
     ],
 ];
 
 $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_GENERAL_AGENT_OPENAI] = [
-    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
     'provider_config' => [
         'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
         'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL,
+        'parameters' => [
+            'reasoning' => [
+                'effort' => 'none',
+            ],
+        ],
     ],
     'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_GENERAL_PURPOSE_SYSTEM_PROMPT,
 ];
 
 $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_ORDER_MANAGEMENT_OPENAI] = [
-    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
     'provider_config' => [
         'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
         'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL,
+        'parameters' => [
+            'reasoning' => [
+                'effort' => 'none',
+            ],
+        ],
     ],
     'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_ORDER_MANAGEMENT_SYSTEM_PROMPT,
 ];
 
 $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_DISCOUNT_MANAGEMENT_OPENAI] = [
-    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
     'provider_config' => [
         'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
         'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL,
+        'parameters' => [
+            'reasoning' => [
+                'effort' => 'none',
+            ],
+        ],
     ],
     'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_DISCOUNT_MANAGEMENT_SYSTEM_PROMPT,
 ];
 
 $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_FORM_FILL_OPENAI] = [
-    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
     'provider_config' => [
         'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
         'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL,
+        'parameters' => [
+            'reasoning' => [
+                'effort' => 'none',
+            ],
+        ],
     ],
     'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_FORM_FILL_SYSTEM_PROMPT,
 ];

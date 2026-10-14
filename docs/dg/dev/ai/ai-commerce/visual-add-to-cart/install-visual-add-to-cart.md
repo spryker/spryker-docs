@@ -137,10 +137,15 @@ interface AiCommerceConstants extends SprykerFeatureAiCommerceConstants
 
 ```php
 $config[\Spryker\Shared\AiFoundation\AiFoundationConstants::AI_CONFIGURATIONS][\Pyz\Shared\AiCommerce\AiCommerceConstants::AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_OPENAI] = [
-    'provider_name' => \Spryker\Shared\AiFoundation\AiFoundationConstants::PROVIDER_OPENAI,
+    'provider_name' => \Spryker\Shared\AiFoundation\AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
     'provider_config' => [
         'key' => \Spryker\Shared\AiFoundation\AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \Pyz\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
         'model' => \Spryker\Shared\AiFoundation\AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \Pyz\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_QUICK_ORDER_IMAGE_TO_CART_OPENAI_MODEL,
+        'parameters' => [
+            'reasoning' => [
+                'effort' => 'minimal',
+            ],
+        ],
     ],
 ];
 ```
@@ -201,7 +206,7 @@ features:
                         default_value: 'AI_COMMERCE:AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_OPENAI'
                         enabled: true
                         secret: false
-                        storefront: false
+                        storefront: true
                         order: 1
                         scopes:
                             - global

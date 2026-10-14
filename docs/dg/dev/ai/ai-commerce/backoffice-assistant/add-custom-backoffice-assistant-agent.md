@@ -1,7 +1,7 @@
 ---
 title: Add a custom Back Office Assistant agent
 description: Learn how to implement and register a custom agent and toolset for the Back Office Assistant feature, including a dedicated AI configuration and SSE streaming.
-last_updated: Aug 13, 2026
+last_updated: Oct 14, 2026
 template: concept-topic-template
 ---
 
@@ -264,10 +264,15 @@ use Pyz\Shared\AiCommerce\AiCommerceConstants;
 use Spryker\Shared\AiFoundation\AiFoundationConstants;
 
 $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_CUSTOMER_MANAGEMENT_OPENAI] = [
-    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
     'provider_config' => [
         'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
         'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL,
+        'parameters' => [
+            'reasoning' => [
+                'effort' => 'none',
+            ],
+        ],
     ],
 ];
 

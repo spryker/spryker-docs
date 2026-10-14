@@ -1,7 +1,7 @@
 ---
 title: Recurring Orders feature overview
 description: Learn how the Recurring Orders feature lets B2B buyers automate repeat purchases on a configurable schedule.
-last_updated: Oct 13, 2026
+last_updated: Oct 14, 2026
 template: concept-topic-template
 ---
 
@@ -86,6 +86,24 @@ The recurring schedule moves through states managed by the `RecurringOrder` stat
 | `paused` | The buyer manually paused the schedule. No orders are placed until it is resumed. |
 | `failed` | The last order placement attempt failed. The buyer can retry, which moves the schedule to `review_required`. |
 | `cancelled` | The schedule has been permanently stopped. This is a terminal state. |
+
+### Schedule status
+
+Buyers and Back Office users see a schedule status instead of the state machine state. The status is derived from the state:
+
+- A *stable* state is a state the schedule rests in and the buyer can act on. Each stable state has its own status: `active`, `paused`, `review_required`, `failed`, `cancelled`, and `draft`. The `pre_trigger_notified` state is shown as `active`.
+- A *transient* state is a state the schedule passes through while the system notifies the buyer, validates the schedule, or places the order: `notifying`, `validation`, `confirmed`, `order_placed`, `completing`, and `skipped`. All transient states are shown as `processing`.
+
+While a schedule is `processing`, the storefront shows the **Processing** badge and hides the Pause, Cancel, and Skip actions and the next execution date. The buyer can act on the schedule again once it settles in a stable state.
+
+### Recovery of stuck schedules
+
+If a state machine run is interrupted—for example, because the process is killed during a deployment—a schedule can stay in a transient state with nothing to move it on. A scheduled job checks every 5 minutes for schedules that have stayed in a transient state for at least 15 minutes:
+
+- A schedule stuck in `notifying` or `order_placed` for up to 6 hours is moved on automatically, because repeating these steps cannot place a duplicate order. If the interrupted run already sent the upcoming order email, the buyer receives it a second time.
+- A schedule stuck in `confirmed`, `completing`, or `skipped`, or stuck in any transient state for more than 6 hours, is logged for manual attention, because repeating these steps could place a duplicate order or advance the schedule twice.
+
+For details, see [Recover stuck schedules](/docs/pbc/all/order-experience-management/latest/base-shop/install-and-upgrade/install-features/install-the-recurring-orders-feature.html#recover-stuck-schedules).
 
 ### Buyer actions
 
@@ -342,7 +360,7 @@ The following filters are available:
 | --- | --- |
 | Company | Restricts the list to schedules belonging to a company. |
 | Business unit | Restricts the list to schedules belonging to a company business unit. Depends on the selected company. |
-| Statuses | Multi-select filter over active, paused, review required, cancelled, and failed. |
+| Statuses | Multi-select filter over active, paused, review required, cancelled, failed, and processing. |
 | Cadence types | Multi-select filter over weekly, bi-weekly, monthly, every N weeks, and on specific days. |
 | Cycle total from/to | Restricts the list by the estimated total of one execution. |
 | Next trigger date from/to | Restricts the list by the next trigger date. |
@@ -355,7 +373,7 @@ Above the list, the **Total Committed Recurring Volume** widget shows the recurr
 | INPUT | DESCRIPTION |
 | --- | --- |
 | Already placed | The sum of the totals of the orders that recurring schedules have already placed within the period, together with the number of those orders. |
-| Still planned | The sum of the estimated totals of the active schedules still due to run within the period. Each schedule is weighted by how often it runs in the period, so a weekly schedule contributes several executions, not one. |
+| Still planned | The sum of the estimated totals of the active and processing schedules still due to run within the period. Each schedule is weighted by how often it runs in the period, so a weekly schedule contributes several executions, not one. |
 
 Below the figures, a run-rate line summarizes the split—for example, how many orders have already been placed and how many active schedules are still due. When neither input returns anything, the widget reports that there is no recurring order activity for the month.
 

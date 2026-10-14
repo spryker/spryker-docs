@@ -395,7 +395,7 @@ features:
                         name: OpenAI Model
                         description: The OpenAI model used for the Backoffice Assistant AI configuration. Model must support image input and structured output.
                         type: string
-                        default_value: 'gpt-4.1'
+                        default_value: 'gpt-6-luna'
                         enabled: true
                         secret: false
                         storefront: false

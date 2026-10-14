@@ -285,10 +285,16 @@ Default models per feature and provider:
 
 | FEATURE | OPENAI | AWS BEDROCK | ANTHROPIC |
 |---------|--------|-------------|-----------|
-| Smart PIM | `gpt-4o-mini` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
-| Quick Order Image-to-Cart | `gpt-4o-mini` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
-| Search by Image | `gpt-4o-mini` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
-| Back Office Assistant | `gpt-4.1` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
+| Smart PIM | `gpt-5-nano` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
+| Quick Order Image-to-Cart | `gpt-5-nano` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
+| Search by Image | `gpt-5-nano` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
+| Back Office Assistant | `gpt-6-luna` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
+
+{% info_block infoBox "Default model selection" %}
+
+Spryker selects these default models because they give the best balance of cost and reliability for each feature. Spryker has not tested other models for these features. If you choose a different model, verify that it meets the requirements in this document and test it for your use case before you use it in production.
+
+{% endinfo_block %}
 
 {% info_block infoBox "Model requirements" %}
 

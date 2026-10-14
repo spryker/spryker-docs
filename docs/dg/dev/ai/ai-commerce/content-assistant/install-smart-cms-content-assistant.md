@@ -108,7 +108,7 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIG
 The model configured for Smart CMS Content Assistant must support both image input and structured output.
 
 Default model values:
-- OpenAI: `gpt-4.1`
+- OpenAI: `gpt-5-nano`
 - AWS Bedrock: `eu.anthropic.claude-haiku-5-5`
 - Anthropic: `claude-haiku-5-5`
 
@@ -396,7 +396,7 @@ features:
                         name: OpenAI Model
                         description: The OpenAI model used for the Smart CMS AI configuration. Model must support image input and structured output.
                         type: string
-                        default_value: 'gpt-4.1'
+                        default_value: 'gpt-5-nano'
                         enabled: true
                         secret: false
                         storefront: false

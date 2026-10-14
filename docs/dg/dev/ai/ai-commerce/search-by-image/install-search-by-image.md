@@ -268,7 +268,7 @@ features:
                         name: OpenAI Model
                         description: The OpenAI model used for the Search by Image AI configuration. Model must support image input and structured output.
                         type: string
-                        default_value: 'gpt-4o-mini'
+                        default_value: 'gpt-5-nano'
                         enabled: true
                         secret: false
                         storefront: false

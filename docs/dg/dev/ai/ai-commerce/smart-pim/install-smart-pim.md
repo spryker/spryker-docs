@@ -1,7 +1,7 @@
 ---
 title: Install Smart PIM
 description: Learn how to install the Smart PIM feature that provides AI-powered content improvement, image alt text generation, category suggestions, and translation on Back Office product pages.
-last_updated: Jul 16, 2026
+last_updated: Oct 14, 2026
 template: feature-integration-guide-template
 ---
 
@@ -384,7 +384,7 @@ features:
                         name: AWS Bedrock Model
                         description: The AWS Bedrock model identifier used for the Smart PIM AI configuration. Model must support image input and structured output.
                         type: string
-                        default_value: 'eu.anthropic.claude-haiku-4-5-20251001-v1:0'
+                        default_value: 'eu.anthropic.claude-haiku-5-5'
                         enabled: true
                         secret: false
                         storefront: false
@@ -401,7 +401,7 @@ features:
                         name: Anthropic Model
                         description: The Anthropic model used for the Smart PIM AI configuration. Model must support image input and structured output.
                         type: string
-                        default_value: 'claude-haiku-4-5'
+                        default_value: 'claude-haiku-5-5'
                         enabled: true
                         secret: false
                         storefront: false

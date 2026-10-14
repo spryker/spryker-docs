@@ -1,7 +1,7 @@
 ---
 title: Configure multiple AI providers for AI Commerce
 description: Learn how to configure OpenAI, AWS Bedrock, and Anthropic providers independently for each AI Commerce feature.
-last_updated: Jul 16, 2026
+last_updated: Oct 14, 2026
 template: howto-guide-template
 ---
 
@@ -285,10 +285,10 @@ Default models per feature and provider:
 
 | FEATURE | OPENAI | AWS BEDROCK | ANTHROPIC |
 |---------|--------|-------------|-----------|
-| Smart PIM | `gpt-4o-mini` | `eu.anthropic.claude-haiku-4-5-20251001-v1:0` | `claude-haiku-4-5` |
-| Quick Order Image-to-Cart | `gpt-4o-mini` | `eu.anthropic.claude-haiku-4-5-20251001-v1:0` | `claude-haiku-4-5` |
-| Search by Image | `gpt-4o-mini` | `eu.anthropic.claude-haiku-4-5-20251001-v1:0` | `claude-haiku-4-5` |
-| Back Office Assistant | `gpt-4.1` | `eu.anthropic.claude-sonnet-4-5-20250929-v1:0` | `claude-sonnet-4-5` |
+| Smart PIM | `gpt-4o-mini` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
+| Quick Order Image-to-Cart | `gpt-4o-mini` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
+| Search by Image | `gpt-4o-mini` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
+| Back Office Assistant | `gpt-4.1` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
 
 {% info_block infoBox "Model requirements" %}
 

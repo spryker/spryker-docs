@@ -1,7 +1,7 @@
 ---
 title: Install Search by Image
 description: Learn how to install the Search by Image feature that lets customers upload a photo to search for products using AI-powered image analysis.
-last_updated: Jul 16, 2026
+last_updated: Oct 14, 2026
 template: feature-integration-guide-template
 ---
 
@@ -285,7 +285,7 @@ features:
                         name: AWS Bedrock Model
                         description: The AWS Bedrock model identifier used for the Search by Image AI configuration. Model must support image input and structured output.
                         type: string
-                        default_value: 'eu.anthropic.claude-haiku-4-5-20251001-v1:0'
+                        default_value: 'eu.anthropic.claude-haiku-5-5'
                         enabled: true
                         secret: false
                         storefront: false
@@ -302,7 +302,7 @@ features:
                         name: Anthropic Model
                         description: The Anthropic model used for the Search by Image AI configuration. Model must support image input and structured output.
                         type: string
-                        default_value: 'claude-haiku-4-5'
+                        default_value: 'claude-haiku-5-5'
                         enabled: true
                         secret: false
                         storefront: false

@@ -1,7 +1,7 @@
 ---
 title: Install Back Office Assistant
 description: Learn how to install the Back Office Assistant feature that provides an AI-powered chat widget in the Spryker Back Office.
-last_updated: Jul 16, 2026
+last_updated: Oct 14, 2026
 template: feature-integration-guide-template
 ---
 
@@ -412,7 +412,7 @@ features:
                         name: AWS Bedrock Model
                         description: The AWS Bedrock model identifier used for the Backoffice Assistant AI configuration. Model must support image input and structured output.
                         type: string
-                        default_value: 'eu.anthropic.claude-sonnet-4-5-20250929-v1:0'
+                        default_value: 'eu.anthropic.claude-haiku-5-5'
                         enabled: true
                         secret: false
                         storefront: false
@@ -429,7 +429,7 @@ features:
                         name: Anthropic Model
                         description: The Anthropic model used for the Backoffice Assistant AI configuration. Model must support image input and structured output.
                         type: string
-                        default_value: 'claude-sonnet-4-5'
+                        default_value: 'claude-haiku-5-5'
                         enabled: true
                         secret: false
                         storefront: false

@@ -5,7 +5,7 @@ last_updated: Oct 14, 2026
 template: howto-guide-template
 ---
 
-AI Commerce supports three AI providers: OpenAI, AWS Bedrock, and Anthropic. Each feature — Back Office Assistant, Visual Add to Cart (Quick Order), Search by Image, and Smart PIM — can use a different provider independently. This lets you optimize cost, latency, or capability per feature without changing any application code.
+AI Commerce supports three AI providers: OpenAI, AWS Bedrock, and Anthropic. Each feature — Back Office Assistant, Smart CMS Content Assistant, Visual Add to Cart (Quick Order), Search by Image, and Smart PIM — can use a different provider independently. This lets you optimize cost, latency, or capability per feature without changing any application code.
 
 ![Configure multiple AI providers](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-commerce/multiple-provider.png)
 
@@ -285,10 +285,46 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
         ],
         'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_FORM_FILL_SYSTEM_PROMPT,
     ],
+
+    // Smart CMS Content Assistant
+    AiCommerceConstants::AI_CONFIGURATION_SMART_CMS_OPENAI => [
+        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
+        'provider_config' => [
+            'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
+            'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_OPENAI_MODEL,
+            'parameters' => [
+                'reasoning' => [
+                    'effort' => 'minimal',
+                ],
+            ],
+        ],
+        'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_SYSTEM_PROMPT,
+    ],
+    AiCommerceConstants::AI_CONFIGURATION_SMART_CMS_AWS => [
+        'provider_name' => AiFoundationConstants::PROVIDER_BEDROCK,
+        'provider_config' => [
+            'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_AWS_MODEL,
+            'bedrockRuntimeClient' => [
+                'region' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_AWS_REGION,
+                'token' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_AWS_API_TOKEN,
+            ],
+        ],
+        'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_SYSTEM_PROMPT,
+    ],
+    AiCommerceConstants::AI_CONFIGURATION_SMART_CMS_ANTHROPIC => [
+        'provider_name' => AiFoundationConstants::PROVIDER_ANTHROPIC,
+        'provider_config' => [
+            'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_ANTHROPIC_API_TOKEN,
+            'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_ANTHROPIC_MODEL,
+        ],
+        'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_SYSTEM_PROMPT,
+    ],
 ];
 ```
 
 The configuration values that use `CONFIGURATION_REFERENCE_PREFIX` are resolved at runtime from the Back Office configuration database. This means model names and API tokens are managed in the Back Office rather than hardcoded in config files.
+
+The OpenAI entries set `parameters.reasoning.effort`, which tells the model how much to think before it answers. The default is `minimal` for Smart PIM, Smart CMS Content Assistant, Quick Order Image-to-Cart, and Search by Image, and `none` for the Back Office Assistant agents. Supported values depend on the model and can include `none`, `minimal`, `low`, `medium`, `high`, `xhigh`, and `max`. If you change the OpenAI model, make sure that it supports the configured value. For details, see [Reasoning models](https://developers.openai.com/api/docs/guides/reasoning) in the OpenAI documentation.
 
 ## 2) Sync the AI vendor configuration
 
@@ -316,7 +352,7 @@ console configuration:sync
 Each AI Commerce feature has an **AI Configuration** radio selector in the Back Office that controls which provider it uses.
 
 1. In the Back Office, go to **AI Commerce**.
-2. Open the tab for the feature you want to configure (for example, **Smart PIM**, **Quick Order**, **Search by Image**, or **Back Office Assistant**).
+2. Open the tab for the feature you want to configure (for example, **Smart PIM**, **Smart CMS**, **Quick Order**, **Search by Image**, or **Back Office Assistant**).
 3. Under **General**, select the active provider: **OpenAI**, **AWS Bedrock**, or **Anthropic**.
 4. Optionally, update the model name shown for the selected provider. Each provider shows its model field only when selected.
 5. Click **Save**.
@@ -326,6 +362,7 @@ Default models per feature and provider:
 | FEATURE | OPENAI | AWS BEDROCK | ANTHROPIC |
 |---------|--------|-------------|-----------|
 | Smart PIM | `gpt-5-nano` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
+| Smart CMS Content Assistant | `gpt-5-nano` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
 | Quick Order Image-to-Cart | `gpt-5-nano` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
 | Search by Image | `gpt-5-nano` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
 | Back Office Assistant | `gpt-6-luna` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
@@ -349,6 +386,7 @@ The following table maps each feature to its configuration constants and the Bac
 | FEATURE | ACTIVE PROVIDER SETTING KEY | OPENAI CONFIG CONSTANT | AWS CONFIG CONSTANT | ANTHROPIC CONFIG CONSTANT |
 |---------|-----------------------------|------------------------|---------------------|---------------------------|
 | Smart PIM | `ai_commerce:smart_pim:ai_vendor:ai_configuration` | `AI_CONFIGURATION_SMART_PIM_OPENAI` | `AI_CONFIGURATION_SMART_PIM_AWS` | `AI_CONFIGURATION_SMART_PIM_ANTHROPIC` |
+| Smart CMS Content Assistant | `ai_commerce:smart_cms:ai_vendor:ai_configuration` | `AI_CONFIGURATION_SMART_CMS_OPENAI` | `AI_CONFIGURATION_SMART_CMS_AWS` | `AI_CONFIGURATION_SMART_CMS_ANTHROPIC` |
 | Quick Order Image-to-Cart | `ai_commerce:quick_order:ai_vendor:ai_configuration` | `AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_OPENAI` | `AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_AWS` | `AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_ANTHROPIC` |
 | Search by Image | `ai_commerce:search_by_image:ai_vendor:ai_configuration` | `AI_CONFIGURATION_SEARCH_BY_IMAGE_OPENAI` | `AI_CONFIGURATION_SEARCH_BY_IMAGE_AWS` | `AI_CONFIGURATION_SEARCH_BY_IMAGE_ANTHROPIC` |
 | Back Office Assistant | `ai_commerce:backoffice_assistant:ai_vendor:ai_configuration` | `AI_CONFIGURATION_INTENT_ROUTER_OPENAI` (and `_GENERAL_AGENT_OPENAI`, `_ORDER_MANAGEMENT_OPENAI`, `_DISCOUNT_MANAGEMENT_OPENAI`, `_FORM_FILL_OPENAI`) | `AI_CONFIGURATION_INTENT_ROUTER_AWS` (and `_AWS` variants) | `AI_CONFIGURATION_INTENT_ROUTER_ANTHROPIC` (and `_ANTHROPIC` variants) |

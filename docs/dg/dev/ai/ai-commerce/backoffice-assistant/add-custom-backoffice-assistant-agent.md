@@ -296,6 +296,8 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIG
 ];
 ```
 
+The OpenAI entry sets `parameters.reasoning.effort` to `none`, the same value as the built-in agents. This parameter tells the model how much to think before it answers. Supported values depend on the model. For details, see [Reasoning models](https://developers.openai.com/api/docs/guides/reasoning) in the OpenAI documentation.
+
 {% info_block infoBox "Info" %}
 
 If the new agent needs its own model choice independent of the other agents, define dedicated `CONFIGURATION_KEY_CUSTOMER_MANAGEMENT_*_MODEL` constants and Configuration Management settings instead of reusing `CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_*_MODEL`.

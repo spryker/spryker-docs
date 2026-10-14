@@ -1,7 +1,7 @@
 ---
 title: Install the Recurring Orders feature
 description: Learn how to install the Recurring Orders feature into your Spryker project.
-last_updated: Oct 13, 2026
+last_updated: Oct 14, 2026
 template: feature-integration-guide-template
 related:
   - title: Recurring Orders feature overview
@@ -659,6 +659,7 @@ Register the following console commands:
 | --- | --- | --- | --- |
 | `recurring-orders:forecast:refresh` | RecurringOrderForecastRefreshConsole | Recalculates the monthly recurring volume forecast—orders already placed plus schedules still due—and stores it as a snapshot in `spy_recurring_schedule_forecast`. The Back Office **Recurring Order Schedules** page reads the stored snapshot instead of recalculating on each request. | SprykerFeature\Zed\OrderExperienceManagement\Communication\Console |
 | `recurring-orders:trigger-placement` | RecurringOrderTriggerConsole | Manually triggers order placement for a specific recurring schedule. Optional—intended for development and debugging. | SprykerFeature\Zed\OrderExperienceManagement\Communication\Console |
+| `recurring-orders:recover-stuck` | RecurringOrderRecoverStuckConsole | Re-triggers the state machine event of recurring schedules that stayed in a transient state, and logs the ones that need manual attention. See [Recover stuck schedules](#recover-stuck-schedules). | SprykerFeature\Zed\OrderExperienceManagement\Communication\Console |
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
@@ -670,6 +671,7 @@ namespace Pyz\Zed\Console;
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
 use Spryker\Zed\Kernel\Container;
 use SprykerFeature\Zed\OrderExperienceManagement\Communication\Console\RecurringOrderForecastRefreshConsole;
+use SprykerFeature\Zed\OrderExperienceManagement\Communication\Console\RecurringOrderRecoverStuckConsole;
 use SprykerFeature\Zed\OrderExperienceManagement\Communication\Console\RecurringOrderTriggerConsole;
 
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
@@ -685,6 +687,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             // ...
             new RecurringOrderForecastRefreshConsole(), #RecurringOrdersFeature
             new RecurringOrderTriggerConsole(), #RecurringOrdersFeature
+            new RecurringOrderRecoverStuckConsole(), #RecurringOrdersFeature
         ];
     }
 }
@@ -719,7 +722,7 @@ Run `console recurring-orders:forecast:refresh`. Make sure the command completes
 
 #### Set up cron jobs
 
-The recurring orders state machine relies on a cron job to evaluate condition transitions, and the Back Office forecast relies on a cron job to refresh its snapshot. Register the jobs in your Jenkins configuration:
+The recurring orders state machine relies on a cron job to evaluate condition transitions, a second cron job recovers schedules that got stuck in a transient state, and the Back Office forecast relies on a cron job to refresh its snapshot. Register the jobs in your Jenkins configuration:
 
 **config/Zed/cronjobs/jenkins.php**
 
@@ -729,6 +732,13 @@ $jobs[] = [
     'name' => 'recurring-order-check-conditions',
     'command' => '$PHP_BIN vendor/bin/console state-machine:check-condition RecurringOrder',
     'schedule' => '* * * * *',
+    'enable' => true,
+];
+
+$jobs[] = [
+    'name' => 'recurring-orders-recover-stuck',
+    'command' => '$PHP_BIN vendor/bin/console recurring-orders:recover-stuck',
+    'schedule' => '*/5 * * * *',
     'enable' => true,
 ];
 
@@ -747,14 +757,18 @@ To have recurring orders placed before the business day starts, set trigger date
 
 {% endinfo_block %}
 
-If your project uses Symfony Scheduler instead of Jenkins, register the equivalent jobs in your scheduler config:
+If your project uses Symfony Scheduler instead of Jenkins, register the equivalent jobs in your scheduler config. When `config/Zed/cronjobs/jenkins.php` builds the Jenkins jobs from `SymfonySchedulerConfig::getCronJobs()`, register the jobs only here, not in both places:
 
-**src/Pyz/Zed/SymfonyScheduler/SymfonySchedulerConfig.php**
+**src/Pyz/Client/SymfonyScheduler/SymfonySchedulerConfig.php**
 
 ```php
 'recurring-orders-check-condition' => [
     'command' => '$PHP_BIN vendor/bin/console state-machine:check-condition RecurringOrder',
     'schedule' => '* * * * *',
+],
+'recurring-orders-recover-stuck' => [
+    'command' => '$PHP_BIN vendor/bin/console recurring-orders:recover-stuck',
+    'schedule' => '*/5 * * * *',
 ],
 'recurring-orders-clear-locks' => [
     'command' => '$PHP_BIN vendor/bin/console state-machine:clear-locks',
@@ -770,8 +784,32 @@ If your project uses Symfony Scheduler instead of Jenkins, register the equivale
 
 1. Activate a recurring schedule. Make sure the state machine condition check job runs and the schedule transitions from `draft` to `active` within one minute.
 2. Make sure the forecast refresh job runs hourly and updates `calculated_at` in `spy_recurring_schedule_forecast`.
+3. Make sure the `recurring-orders-recover-stuck` job runs every 5 minutes and prints a summary line in the format `Recovered: 0, skipped: 0, failed: 0, needs manual attention: 0.`
 
 {% endinfo_block %}
+
+#### Recover stuck schedules
+
+A schedule can get stuck in a transient state. `state-machine:check-condition RecurringOrder` evaluates only transitions without an event, and an `onEnter` event fires only once, when the schedule enters the state. If the run dies between entering the state and firing the event—for example, because the process is killed during a deployment—nothing moves the schedule on. The `recurring-orders:recover-stuck` command finds such schedules and either re-triggers their event or logs them for manual attention.
+
+The command handles a schedule only when it has stayed in the same transient state for at least 15 minutes. Schedules stuck for longer are handled as follows:
+
+| STATE | STUCK FOR 15 MINUTES TO 6 HOURS | STUCK FOR MORE THAN 6 HOURS |
+| --- | --- | --- |
+| `notifying`, `order_placed` | The `notify-buyer` or `finalise-placement` event is re-triggered. Re-triggering cannot duplicate an order. If the run died right after `notify-buyer` sent the upcoming order email, the buyer receives the email a second time. | Logged at error level for manual attention. |
+| `confirmed`, `completing`, `skipped` | Logged at error level for manual attention. The commands of these states place an order or advance the trigger date, so re-triggering them could duplicate work. | Logged at error level for manual attention. |
+
+To prevent a temporary outage from causing a storm of attempts, the command makes one pass per run and never retries within a run:
+
+- Each run makes at most 50 recovery attempts. Logged schedules and schedules in a cooldown do not count towards the limit, so permanently stuck schedules cannot block recoverable ones.
+- After each attempt or log entry, a schedule enters a cooldown of half the time it has been stuck, but at least 15 minutes. For example, a schedule stuck for a day is logged every 12 hours instead of on every run. The cooldown starts from `spy_recurring_schedule.updated_at`, which the command updates before triggering the event. As a side effect, an unrelated edit of the schedule restarts its cooldown.
+- The run is aborted after 3 consecutive failed attempts. The next run starts over.
+- A schedule whose lock is held by another process is skipped. Any other database error on the lock counts as a failed attempt.
+- A schedule without a state history row—for example, after a manual data fix—is not ignored. Its `created_at` is used as the time it entered the state, and the log entry contains `isStateHistoryMissing`.
+
+The command exits with an error code when the run was aborted or at least one recovery attempt failed, so your scheduler marks the run as failed. Skipped and logged schedules do not affect the exit code. Monitor the error-level log entries of the command to find schedules that need manual attention.
+
+The limits are defined as constants of `SprykerFeature\Zed\OrderExperienceManagement\Business\Schedule\Recovery\StuckScheduleRecoverer`. The 15-minute minimum age protects a slow but still running state machine run from being re-triggered, because the state machine executes `onEnter` events without a lock. If you change `MINIMUM_AGE_IN_SECONDS`, keep it well above the longest run of a transient state's command. To change which states are recovered or only logged, see `getRecoverableStuckScheduleEvents()` and `getReportOnlyStuckScheduleStates()` in [Configure module behavior](#5-configure-module-behavior).
 
 #### Set up the Back Office navigation
 
@@ -904,10 +942,13 @@ class OrderExperienceManagementConfig extends SprykerOrderExperienceManagementCo
 | `getForecastPeriodFrom()` | `FORECAST_PERIOD_FROM_MONTH_START` | Lower bound of the Back Office forecast period. Applies to both forecast inputs: schedules still due to run and orders already placed. Switch to `FORECAST_PERIOD_FROM_TODAY` to cover only the remainder of the current month. |
 | `getForecastPeriodTo()` | `FORECAST_PERIOD_TO_MONTH_END` | Upper bound of the Back Office forecast period. Applies to both forecast inputs. |
 | `getMonthlyForecastKey()` | `monthly` | Key under which the forecast snapshot is stored in `spy_recurring_schedule_forecast`. |
-| `getBackOfficeFilterStatuses()` | Active, Paused, Review required, Cancelled, Failed | Statuses selectable in the Back Office **Recurring Order Schedules** filter. |
+| `getBackOfficeFilterStatuses()` | Active, Paused, Review required, Cancelled, Failed, Processing | Statuses selectable in the Back Office **Recurring Order Schedules** filter. |
 | `getBackOfficeFilterCadenceTypes()` | Weekly, Bi-weekly, Monthly, Every N weeks, By days | Cadence types selectable in the Back Office **Recurring Order Schedules** filter. Extend it when you register a custom cadence type plugin. |
 | `getSupportedWeekDays()` | Monday to Sunday | Days of the week accepted for the *on specific days* cadence, as ISO-8601 weekday numbers. Reads the value from the shared config. To narrow or reorder the days, override `getSupportedWeekDays()` in the shared config to apply it in Yves and Zed at once. |
-| `getSmStateNameToStatusMap()` | See `OrderExperienceManagementConfig` | Maps each state machine state name to the public schedule status it represents. State names that are not in the map resolve to no status. Extend it when you add states to the process XML. |
+| `getSmStateNameToStatusMap()` | See `OrderExperienceManagementConfig` | Maps each stable state machine state name to the public schedule status it represents. A stable state is one the schedule rests in and the buyer can act on—for example, `pre_trigger_notified` maps to `active`. State names that are not in the map are transient and resolve to `getTransitionalScheduleStatus()`. When you add a state to the process XML from which the buyer can trigger an event, add it to the map. |
+| `getTransitionalScheduleStatus()` | `processing` | Status persisted while the schedule passes through a state that is not in `getSmStateNameToStatusMap()`, such as `notifying`, `validation`, `confirmed`, `order_placed`, `completing`, or `skipped`. While a schedule has this status, the storefront hides the Pause, Cancel, and Skip actions and the next execution date. |
+| `getRecoverableStuckScheduleEvents()` | `notifying` → `notify-buyer`, `order_placed` → `finalise-placement` | Transient states in which `recurring-orders:recover-stuck` re-triggers the `onEnter` event of a stuck schedule, as `[state => event]`. Add a state only when re-triggering its event cannot place an order or advance the schedule a second time. See [Recover stuck schedules](#recover-stuck-schedules). |
+| `getReportOnlyStuckScheduleStates()` | `confirmed`, `completing`, `skipped` | Transient states in which `recurring-orders:recover-stuck` only logs a stuck schedule for manual attention, because their command is not idempotent. |
 | `getSupportedAddedItemShipmentTypeKeys()` | `[delivery, on-site-service]` | Shipment type keys accepted for products added on the **Review Required** page, in preference order. When an offer or store exposes several supported types, the first one is used. |
 | `getSubstitutableReviewReasons()` | `[discontinued, substituted]` | Review reason groups for which a substitute product can be offered on the **Review Required** page. |
 | `getPriceChangeReviewReasons()` | `[price_increased]` | Review reason groups counted as price changes in the **Review Required** summary. |

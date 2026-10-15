@@ -911,6 +911,8 @@ entries:
                 nested:
                   - title: Install features
                     nested:
+                      - title: B2B Customer Groups
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-b2b-customer-groups-feature.html
                       - title: Company Account
                         url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html
                       - title: Company Account + Order Management
@@ -1093,6 +1095,8 @@ entries:
                         url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-notes.html
                       - title: Manage customer groups
                         url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-groups.html
+                      - title: Manage companies and business units of customer groups
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/backend-api-manage-companies-and-business-units-of-customer-groups.html
                   - title: Company account
                     nested:
                       - title: Manage companies
@@ -1131,6 +1135,14 @@ entries:
                     url: /docs/pbc/all/customer-relationship-management/base-shop/import-and-export-data/file-details-company.csv.html
                   - title: customer.csv
                     url: /docs/pbc/all/customer-relationship-management/base-shop/import-and-export-data/file-details-customer.csv.html
+                  - title: customer_group.csv
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/import-and-export-data/file-details-customer-group.csv.html
+                  - title: customer_group_to_company.csv
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/import-and-export-data/file-details-customer-group-to-company.csv.html
+                  - title: customer_group_to_company_business_unit.csv
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/import-and-export-data/file-details-customer-group-to-company-business-unit.csv.html
+                  - title: customer_group_to_customer.csv
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/import-and-export-data/file-details-customer-group-to-customer.csv.html
                   - title: Import file details - customer.csv
                     url: /docs/pbc/all/customer-relationship-management/base-shop/import-file-details-customer.csv.html
 

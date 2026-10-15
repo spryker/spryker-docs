@@ -1,21 +1,44 @@
 ---
-title: Test Glue API
-description: Use this guide to Learn how to test Glue API End to end within your Spryker based projects.
+title: Test Glue API with HTTP integration tests
+description: Learn how to write HTTP integration tests that check the Glue API contract over real HTTP requests in your Spryker-based projects.
 template: howto-guide-template
-last_updated: Jul 31, 2026
+last_updated: Sep 29, 2026
 redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-glue-api.html
   - /docs/dg/dev/integrate-and-configure/integrate-apis/glue-api.html
   - /docs/pbc/all/api/glue-api/glue-api.html
 ---
 
-This guide explains how to set up and run Glue API end-to-end (E2E) tests using the `WishlistsRestApi` module as an example and the `Pyz` project namespace. Adjust the module name according to your requirements.
+This guide explains how to set up and run Glue API HTTP integration tests using the `WishlistsRestApi` module as an example and the `Pyz` project namespace. Adjust the module name according to your requirements.
 
 {% info_block infoBox "Applies to both infrastructures" %}
 
-These E2E tests exercise endpoints over HTTP, so they apply regardless of whether an endpoint is served by the legacy Glue infrastructure or by API Platform—the API contract is identical. For API Platform-specific test tooling, such as kernel-based test cases for Providers and Processors, see [Test API Platform resources](/docs/integrations/spryker-api/api-platform/testing.html).
+These tests exercise endpoints over HTTP, so they apply regardless of whether an endpoint is served by the legacy Glue infrastructure or by API Platform — the API contract is identical. For API Platform-specific test tooling, such as kernel-based test cases for Providers and Processors, see [Test API Platform resources](/docs/integrations/spryker-api/api-platform/testing.html).
 
 {% endinfo_block %}
+
+## What an HTTP integration test is
+
+An HTTP integration test is an API contract test that reaches the API over the network instead of booting the application kernel inside the test process. It sends real HTTP requests to a running stack and asserts the API contract: the status code, the response envelope, and the response body validated against the OpenAPI schema.
+
+It belongs to the integration tier, not the end-to-end tier. There is no browser and no customer journey, and nothing of the storefront runs. Do not count these tests as end-to-end coverage.
+
+The actor class `ApiEndToEndTester` and the `@group EndToEnd` annotation in the following examples are the names used in the code. They predate this naming and do not make the tests end-to-end.
+
+### HTTP integration test or in-process API contract test
+
+Both test types check the same contract with the same assertions. They differ in cost:
+
+- **In-process API contract test.** Boots the kernel inside the test process and needs nothing but a database. It runs on a developer machine in seconds, so it is the default for an operation that API Platform serves. See [Test API Platform resources](/docs/integrations/spryker-api/api-platform/testing.html).
+- **HTTP integration test.** Needs the whole stack running, with data synchronized to storage and search, before the first request. Write one when the endpoint is served only by the legacy Glue infrastructure, which has no in-process test harness, or when you extend an existing HTTP suite.
+
+Do not write both for the same operation. The second test proves nothing the first one does not.
+
+### What an HTTP integration test does not prove
+
+The test obtains its access token in-process through a helper, such as `haveAuthorizationToGlue()`, rather than by requesting one over HTTP. Token issuance is therefore never proven. Where the test does exercise the transport, such as sending the token in a header, every operation repeats the same proof at the cost of a running stack.
+
+Token issuance, token introspection, request header expansion, client middleware, and the status a caller receives are owned by the API golden path: a small end-to-end test type that mints a real token against the running application, then calls one secured endpoint with the token and without it. Keep these concerns out of HTTP integration tests.
 
 ## Prerequisites
 
@@ -64,7 +87,7 @@ if (class_exists(TestifyConstants::class)) {
 }
 ```
 
-2. Create `codeception.yml` with the configuration required for your E2E test:
+2. Create `codeception.yml` with the configuration required for your test suite:
 
 <details>
   <summary>tests/PyzTest/Glue/Wishlists/codeception.yml</summary>  

@@ -1158,7 +1158,7 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/integrate-symfony-scheduler.html
     - title: Configuration Management feature
       url: /docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html
-    - title: Configuration Management deployment commands
+    - title: Integrate the Configuration Management deployment commands
       url: /docs/dg/dev/integrate-and-configure/integrate-configuration-deployment-commands.html
     - title: Workflow feature
       url: /docs/dg/dev/integrate-and-configure/integrate-workflow-feature.html

@@ -116,11 +116,11 @@ composer update spryker/multi-factor-auth:"^2.10.0" spryker/multi-factor-auth-me
 
 ## Vulnerability in the @angular/router package of the Merchant Portal
 
-The Merchant Portal frontend is built with Angular. The `@angular/router` package, which handles navigation between Merchant Portal pages, is affected by a known security vulnerability. This issue affects only projects that use the Merchant Portal.
+The Merchant Portal frontend is built with Angular. The `@angular/router` package, which handles navigation between Merchant Portal pages, has a known security vulnerability in versions 22.0.0 to 22.1.x. This issue affects only projects that use the Merchant Portal.
 
 ### Affected packages
 
-- `@angular/router`: < 22.2.0
+- `@angular/router`: >= 22.0.0 < 22.2.0
 
 ### Check if your project is affected
 
@@ -142,33 +142,10 @@ To fix the vulnerability, update the Spryker packages that define the Angular de
 composer update spryker/falcon-ui:"^0.1.5" spryker-shop/date-time-configurator-page-example:"^0.7.5" spryker/zed-ui:"^4.5.1"
 ```
 
-2. In the lockfile, resolve all `@angular/*` packages to 22.2.3. Run the command from the project root, not with the `-w mp-zed-ui` workspace option:
+2. Update the npm packages:
 
 ```bash
-docker/sdk cli "npm install --package-lock-only \
-  @angular/animations@22.2.3 @angular/cdk@22.2.3 @angular/common@22.2.3 \
-  @angular/compiler@22.2.3 @angular/core@22.2.3 @angular/elements@22.2.3 \
-  @angular/forms@22.2.3 @angular/platform-browser@22.2.3 \
-  @angular/platform-browser-dynamic@22.2.3 @angular/router@22.2.3 \
-  @angular/cli@22.2.3 @angular/compiler-cli@22.2.3 @angular/language-service@22.2.3"
-```
-
-3. The previous command adds the `@angular/*` packages to the root `package.json`. Restore the original `package.json`:
-
-```bash
-git checkout package.json
-```
-
-4. Sync the lockfile with the restored `package.json`. npm keeps version 22.2.3 because it satisfies the version range defined by `spryker/zed-ui`:
-
-```bash
-docker/sdk cli "npm install --package-lock-only"
-```
-
-5. Install `node_modules` from the lockfile:
-
-```bash
-docker/sdk cli "npm ci"
+docker/sdk cli "npm update --workspaces"
 ```
 
 {% info_block warningBox "Verification" %}

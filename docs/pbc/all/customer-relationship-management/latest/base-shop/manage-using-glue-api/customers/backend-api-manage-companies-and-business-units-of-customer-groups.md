@@ -1,7 +1,7 @@
 ---
 title: "Backend API: Manage companies and business units of customer groups"
 description: Learn how to retrieve, add, replace, and remove the companies and business units that belong to a customer group in your Spryker shop using the Spryker Backend API.
-last_updated: Oct 14, 2026
+last_updated: Oct 19, 2026
 template: glue-api-backend-guide-template
 ---
 
@@ -102,9 +102,6 @@ Sorting by any other field returns `400` with the error code `1203`, and the err
             "attributes": {
                 "companyUuid": "59b6c025-cc00-54ca-b101-191391adf2af",
                 "companyName": "BoB-Hotel Jim"
-            },
-            "links": {
-                "self": "https://glue-backend.mysprykershop.com/customer-groups/d01a3f13-7687-50d0-8aac-2cac53ff7a61/companies/59b6c025-cc00-54ca-b101-191391adf2af"
             }
         },
         {
@@ -113,9 +110,6 @@ Sorting by any other field returns `400` with the error code `1203`, and the err
             "attributes": {
                 "companyUuid": "94f34a90-4217-5165-8a92-1332e4dd011b",
                 "companyName": "BoB-Hotel Ku'damm"
-            },
-            "links": {
-                "self": "https://glue-backend.mysprykershop.com/customer-groups/d01a3f13-7687-50d0-8aac-2cac53ff7a61/companies/94f34a90-4217-5165-8a92-1332e4dd011b"
             }
         }
     ]
@@ -126,7 +120,7 @@ Sorting by any other field returns `400` with the error code `1203`, and the err
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| companyUuid | String | UUID of the member company. It is also the `id` of the membership, so it addresses the membership when you retrieve it or remove it from the group. |
+| companyUuid | String | UUID of the member company. It is also the `id` of the membership, so it addresses the membership when you remove it from the group. |
 | companyName | String | Name of the member company. |
 
 Both attributes are read-only. Without `include`, a membership has no `relationships`. To change company data, see [Backend API: Manage companies](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/backend-api-manage-companies.html).
@@ -134,86 +128,6 @@ Both attributes are read-only. Without `include`, a membership has no `relations
 {% include pbc/all/glue-api-guides/latest/customer-backend-api-pagination-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/latest/customer-backend-api-pagination-attributes.md -->
 
 If no group matches the UUID, the endpoint returns `404` with the error code `1222`.
-
-## Retrieve a company of a customer group
-
-To retrieve one company membership of a group, send the request:
-
-***
-`GET` {% raw %}**/customer-groups/*{{customer_group_uuid}}*/companies/*{{company_uuid}}***{% endraw %}
-***
-
-| PATH PARAMETER | DESCRIPTION |
-| --- | --- |
-| {% raw %}***{{customer_group_uuid}}***{% endraw %} | UUID of the customer group. To get it, [retrieve customer groups](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-groups.html#retrieve-customer-groups). |
-| {% raw %}***{{company_uuid}}***{% endraw %} | UUID of the company. To get it, [retrieve the companies of a customer group](#retrieve-the-companies-of-a-customer-group). |
-
-### Request
-
-| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
-| --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html). |
-
-| QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
-| --- | --- | --- |
-| include | Adds the `companies` relationship to the membership and returns the company in `included`. | companies |
-
-| REQUEST | USAGE |
-| --- | --- |
-| `GET https://glue-backend.mysprykershop.com/customer-groups/d01a3f13-7687-50d0-8aac-2cac53ff7a61/companies/88efe8fb-98bd-5423-a041-a8f866c0f913` | Retrieve the membership of the company in the group. |
-| `GET https://glue-backend.mysprykershop.com/customer-groups/d01a3f13-7687-50d0-8aac-2cac53ff7a61/companies/88efe8fb-98bd-5423-a041-a8f866c0f913?include=companies` | Retrieve the membership, with the full company resource in `included`. |
-
-### Response
-
-<details>
-  <summary>Response sample: retrieve a company of a customer group with the company included</summary>
-
-```json
-{
-    "data": {
-        "id": "88efe8fb-98bd-5423-a041-a8f866c0f913",
-        "type": "customer-group-companies",
-        "attributes": {
-            "companyUuid": "88efe8fb-98bd-5423-a041-a8f866c0f913",
-            "companyName": "BoB-Hotel Mitte"
-        },
-        "links": {
-            "self": "https://glue-backend.mysprykershop.com/customer-groups/d01a3f13-7687-50d0-8aac-2cac53ff7a61/companies/88efe8fb-98bd-5423-a041-a8f866c0f913?include=companies"
-        },
-        "relationships": {
-            "companies": {
-                "data": [
-                    {
-                        "type": "companies",
-                        "id": "88efe8fb-98bd-5423-a041-a8f866c0f913"
-                    }
-                ]
-            }
-        }
-    },
-    "included": [
-        {
-            "id": "88efe8fb-98bd-5423-a041-a8f866c0f913",
-            "type": "companies",
-            "attributes": {
-                "uuid": "88efe8fb-98bd-5423-a041-a8f866c0f913",
-                "name": "BoB-Hotel Mitte",
-                "status": "approved",
-                "isActive": true
-            },
-            "links": {
-                "self": "/companies/88efe8fb-98bd-5423-a041-a8f866c0f913"
-            }
-        }
-    ]
-}
-```
-
-</details>
-
-The membership has the same attributes as in [Retrieve the companies of a customer group](#retrieve-the-companies-of-a-customer-group). An included company has the attributes that [Backend API: Manage companies](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/backend-api-manage-companies.html) describes.
-
-If no group matches the UUID, the endpoint returns `404` with the error code `1222`. If the company is not a member of the group, the endpoint returns `404` with the error code `1237`, whether or not the company exists.
 
 ## Add companies to a customer group
 
@@ -427,9 +341,6 @@ Sorting by any other field returns `400` with the error code `1203`, and the err
                 "companyBusinessUnitName": "Acme Corporation",
                 "companyUuid": "62de4ab6-b768-5c21-8835-455d9f341625",
                 "companyName": "Acme Corporation"
-            },
-            "links": {
-                "self": "https://glue-backend.mysprykershop.com/customer-groups/d01a3f13-7687-50d0-8aac-2cac53ff7a61/company-business-units/ff1c18c9-fb5d-514d-9358-79887ed6d5c6"
             }
         },
         {
@@ -440,9 +351,6 @@ Sorting by any other field returns `400` with the error code `1203`, and the err
                 "companyBusinessUnitName": "Acme Corporation Barcelona",
                 "companyUuid": "62de4ab6-b768-5c21-8835-455d9f341625",
                 "companyName": "Acme Corporation"
-            },
-            "links": {
-                "self": "https://glue-backend.mysprykershop.com/customer-groups/d01a3f13-7687-50d0-8aac-2cac53ff7a61/company-business-units/d8943c86-4481-5c2a-b5f6-28c8dbdf1a23"
             }
         }
     ]
@@ -453,7 +361,7 @@ Sorting by any other field returns `400` with the error code `1203`, and the err
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| companyBusinessUnitUuid | String | UUID of the member business unit. It is also the `id` of the membership, so it addresses the membership when you retrieve it or remove it from the group. |
+| companyBusinessUnitUuid | String | UUID of the member business unit. It is also the `id` of the membership, so it addresses the membership when you remove it from the group. |
 | companyBusinessUnitName | String | Name of the member business unit. |
 | companyUuid | String | UUID of the company the business unit belongs to. |
 | companyName | String | Name of the company the business unit belongs to. |
@@ -463,115 +371,6 @@ All four attributes are read-only. Without `include`, a membership has no `relat
 {% include pbc/all/glue-api-guides/latest/customer-backend-api-pagination-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/latest/customer-backend-api-pagination-attributes.md -->
 
 If no group matches the UUID, the endpoint returns `404` with the error code `1222`.
-
-## Retrieve a business unit of a customer group
-
-To retrieve one business unit membership of a group, send the request:
-
-***
-`GET` {% raw %}**/customer-groups/*{{customer_group_uuid}}*/company-business-units/*{{company_business_unit_uuid}}***{% endraw %}
-***
-
-| PATH PARAMETER | DESCRIPTION |
-| --- | --- |
-| {% raw %}***{{customer_group_uuid}}***{% endraw %} | UUID of the customer group. To get it, [retrieve customer groups](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-groups.html#retrieve-customer-groups). |
-| {% raw %}***{{company_business_unit_uuid}}***{% endraw %} | UUID of the business unit. To get it, [retrieve the business units of a customer group](#retrieve-the-business-units-of-a-customer-group). |
-
-### Request
-
-| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
-| --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html). |
-
-| QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
-| --- | --- | --- |
-| include | Adds the `company-business-units` relationship, the `companies` relationship, or both to the membership, and returns the business unit and its company in `included`. Separate several values with a comma. | company-business-units, companies |
-
-| REQUEST | USAGE |
-| --- | --- |
-| `GET https://glue-backend.mysprykershop.com/customer-groups/d01a3f13-7687-50d0-8aac-2cac53ff7a61/company-business-units/073389b6-9ee8-5c90-a8a7-a830aab6a330` | Retrieve the membership of the business unit in the group. |
-| `GET https://glue-backend.mysprykershop.com/customer-groups/d01a3f13-7687-50d0-8aac-2cac53ff7a61/company-business-units/073389b6-9ee8-5c90-a8a7-a830aab6a330?include=company-business-units,companies` | Retrieve the membership, with the full business unit and company resources in `included`. |
-
-### Response
-
-<details>
-  <summary>Response sample: retrieve a business unit of a customer group with the business unit and its company included</summary>
-
-```json
-{
-    "data": {
-        "id": "073389b6-9ee8-5c90-a8a7-a830aab6a330",
-        "type": "customer-group-company-business-units",
-        "attributes": {
-            "companyBusinessUnitUuid": "073389b6-9ee8-5c90-a8a7-a830aab6a330",
-            "companyBusinessUnitName": "Acme Corporation Berlin",
-            "companyUuid": "62de4ab6-b768-5c21-8835-455d9f341625",
-            "companyName": "Acme Corporation"
-        },
-        "links": {
-            "self": "https://glue-backend.mysprykershop.com/customer-groups/d01a3f13-7687-50d0-8aac-2cac53ff7a61/company-business-units/073389b6-9ee8-5c90-a8a7-a830aab6a330?include=company-business-units,companies"
-        },
-        "relationships": {
-            "company-business-units": {
-                "data": [
-                    {
-                        "type": "company-business-units",
-                        "id": "073389b6-9ee8-5c90-a8a7-a830aab6a330"
-                    }
-                ]
-            },
-            "companies": {
-                "data": [
-                    {
-                        "type": "companies",
-                        "id": "62de4ab6-b768-5c21-8835-455d9f341625"
-                    }
-                ]
-            }
-        }
-    },
-    "included": [
-        {
-            "id": "62de4ab6-b768-5c21-8835-455d9f341625",
-            "type": "companies",
-            "attributes": {
-                "uuid": "62de4ab6-b768-5c21-8835-455d9f341625",
-                "name": "Acme Corporation",
-                "status": "approved",
-                "isActive": true
-            },
-            "links": {
-                "self": "/companies/62de4ab6-b768-5c21-8835-455d9f341625"
-            }
-        },
-        {
-            "id": "073389b6-9ee8-5c90-a8a7-a830aab6a330",
-            "type": "company-business-units",
-            "attributes": {
-                "uuid": "073389b6-9ee8-5c90-a8a7-a830aab6a330",
-                "name": "Acme Corporation Berlin",
-                "companyUuid": "62de4ab6-b768-5c21-8835-455d9f341625",
-                "parentBusinessUnitUuid": "ff1c18c9-fb5d-514d-9358-79887ed6d5c6",
-                "iban": "",
-                "bic": "",
-                "phone": "4902890021",
-                "addressUuids": [
-                    "1d65a9de-b308-504a-9582-6d955237906f"
-                ]
-            },
-            "links": {
-                "self": "/company-business-units/073389b6-9ee8-5c90-a8a7-a830aab6a330"
-            }
-        }
-    ]
-}
-```
-
-</details>
-
-The membership has the same attributes as in [Retrieve the business units of a customer group](#retrieve-the-business-units-of-a-customer-group). An included business unit has the attributes that [Backend API: Manage company business units](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/backend-api-manage-company-business-units.html) describes, and an included company has the attributes that [Backend API: Manage companies](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/backend-api-manage-companies.html) describes.
-
-If no group matches the UUID, the endpoint returns `404` with the error code `1222`. If the business unit is not a member of the group, the endpoint returns `404` with the error code `1239`, whether or not the business unit exists.
 
 ## Add business units to a customer group
 

@@ -1,7 +1,7 @@
 ---
 title: Manage customer groups
 description: Learn how to create, edit and manage customer groups in the Spryker Back Office.
-last_updated: Oct 14, 2026
+last_updated: Oct 19, 2026
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-groups
 originalArticleId: 3540b410-11bf-4d1f-a9f6-306009db8740
@@ -52,7 +52,9 @@ The **Companies** and **Business Units** tabs are displayed only if the B2B Cust
 3. Update the **DESCRIPTION**.
 4. Click the **Customers** tab.
 5. On the **Available customers** subtab, select the checkboxes next to the customers you want to add to the group.
-6. On the **Assigned customers** subtab, clear the checkboxes next to the customers you want to remove from the group.
+    The selected customers are listed on the **Selected customers to assign** subtab.
+6. On the **Assigned customers** subtab, select the checkboxes next to the customers you want to remove from the group. To select all the customers on the page, click **Select all**.
+    The selected customers are listed on the **Selected customers to de-assign** subtab.
 7. Optional: Click the **Companies** tab and do any of the following:
     - To add companies, on the **Available companies** subtab, select the checkboxes next to the companies you want to add. The selected companies are listed on the **Companies to be assigned** subtab.
     - To remove companies, on the **Assigned companies** subtab, select the checkboxes next to the companies you want to remove. The selected companies are listed on the **Companies to be de-assigned** subtab.

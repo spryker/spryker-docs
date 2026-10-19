@@ -1,7 +1,7 @@
 ---
 title: Customer Groups overview
-description: The Customer Groups feature lets you organize customers into groups to target them with discounts and promotions, and record which companies and business units belong to each group.
-last_updated: Oct 14, 2026
+description: The Customer Groups feature lets you organize customers into groups, and record which companies and business units belong to each group.
+last_updated: Oct 19, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-groups-overview
 originalArticleId: 046cf042-1c53-4c82-8498-21ec52d2e51f
@@ -91,7 +91,6 @@ The feature has the following functional constraints:
 
 - Company and business unit memberships do not affect discounts, prices, or any other rule that targets a customer group.
 - In the Back Office tables, you select companies and business units one at a time. There is no option to select all rows.
-- After a save fails validation, the **Companies** and **Business Units** tabs keep their selections, but the **Customers** tab does not.
 - A Backend API request that replaces the members of a customer group accepts up to 1,000 companies or business units. To change a larger set, add and remove members individually.
 
 ## Related Business User documents

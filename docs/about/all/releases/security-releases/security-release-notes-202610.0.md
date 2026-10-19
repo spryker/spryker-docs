@@ -84,9 +84,9 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
 
 ## Session fixation on login
 
-A session ID is the value stored in the session cookie that identifies a visitor's browser to the application. On the Storefront, Back Office, and Merchant Portal, the application kept the same session ID before and after a user logged in, including after the multi-factor authentication (MFA) step.
+A session ID is the value stored in the session cookie that identifies a user to the application. Storefront, Back Office and Merchant Portal applications did not regenerate the session ID when a user logged in, including after completing the multi-factor authentication (MFA) step.
 
-Because the session ID did not change, an attacker could use a session fixation attack: if the attacker planted a known session ID in a victim's browser before the victim logged in, the attacker's session became authenticated as soon as the victim logged in. The attacker could then act as the victim without knowing their credentials.
+Because the session ID remained unchanged, the application was vulnerable to session fixation attacks. An attacker who could set a known session ID in a victim's browser before the victim logged in could gain authenticated access once the victim completed login. The attacker could then act on behalf of the victim without knowing their credentials.
 
 ### Affected modules
 
@@ -116,11 +116,11 @@ composer update spryker/multi-factor-auth:"^2.10.0" spryker/multi-factor-auth-me
 
 ## Vulnerability in the @angular/router package of the Merchant Portal
 
-The Merchant Portal frontend is built with Angular. The `@angular/router` package, which handles navigation between Merchant Portal pages, has a known security vulnerability in versions 22.0.0 to 22.1.x. This issue affects only projects that use the Merchant Portal.
+The Merchant Portal frontend is built with Angular. The `@angular/router` package, which handles navigation between Merchant Portal pages, is affected by a known security vulnerability. This issue affects only projects that use the Merchant Portal.
 
 ### Affected packages
 
-- `@angular/router`: >= 22.0.0 < 22.2.0
+- `@angular/router`: < 22.2.0
 
 ### Check if your project is affected
 
@@ -179,7 +179,7 @@ docker/sdk cli "npm ci"
 npm ls | grep -E '@angular/[a-z-]+@'
 ```
 
-2. Make sure that the packages are hoisted to the project root: the `node_modules/@angular/core` directory exists, and the following command returns `0`:
+2. Make sure that the packages are hosted to the project root: the `node_modules/@angular/core` directory exists, and the following command returns `0`:
 
 ```bash
 grep -c 'zed-ui/node_modules/@angular/' package-lock.json

@@ -307,7 +307,7 @@ To continue the deployment even if one of these commands fails, set `breakOnFail
 | Symptom | Cause | Solution |
 | --- | --- | --- |
 | `Nothing stored for key "..."` during export | No value is stored for the setting | This is expected on the first deployment if the setting has not been saved. `configuration:sync` generates the settings map but does not create configuration values. |
-| `Could not import secret setting "...": TypeError` | The encryption key or initialization vector is missing or invalid | Configure `SPRYKER_CONFIGURATION_ENCRYPTION_KEY` and `SPRYKER_CONFIGURATION_ENCRYPTION_INIT_VECTOR` with the required values. The command suppresses detailed errors for secret settings, so the message might not identify the exact cause. |
+| `Could not import "..." (scope: ...): TypeError` for a secret setting | The encryption key or initialization vector is missing or invalid | Configure `SPRYKER_CONFIGURATION_ENCRYPTION_KEY` and `SPRYKER_CONFIGURATION_ENCRYPTION_INIT_VECTOR` with the required values. The commands never print configuration values, so they don't print exception or validation details either, and the message might not identify the exact cause. |
 | `ConfigurationConfig::getExportFile() has to be redefined` | The project-level path is missing | Redefine `getExportFile()` in `src/Pyz/Shared/Configuration/ConfigurationConfig.php`. |
 | `The configuration schema holds no settings` | The settings map has not been generated or contains no settings | Run `configuration:sync` before running the commands. |
 | `No export at "...", nothing to restore.` | No file exists at the configured path | Make sure `getExportFile()` returns the path where the file was written, and that the file is readable by the current user. |

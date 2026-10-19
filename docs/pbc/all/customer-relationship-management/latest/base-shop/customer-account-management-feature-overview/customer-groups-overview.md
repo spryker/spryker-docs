@@ -48,7 +48,13 @@ In the Back Office, the pages that create and edit a customer group have a **Com
 - An *available* table that lists the companies or business units that are not assigned to the group. You select the ones to assign.
 - An *assigned* table that lists the members of the group. You select the ones to remove.
 
+![Companies tab of the Edit customer group page](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/base-shop/customer-account-management-feature-overview/customer-groups-overview.md/edit-customer-group-companies-tab.png)
+
+![Business Units tab of the Edit customer group page](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/base-shop/customer-account-management-feature-overview/customer-groups-overview.md/edit-customer-group-business-units-tab.png)
+
 The selections are saved together with the customer group. The page that shows a customer group displays the **Companies** and **Business Units** panels, with an **Edit** button that opens the edit page of each company or business unit.
+
+![View customer group page with the Companies and Business Units panels](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/base-shop/customer-account-management-feature-overview/customer-groups-overview.md/view-customer-group.png)
 
 The **Customers** column of the tables counts company users:
 

@@ -288,6 +288,12 @@ All sections in a single `vendor/bin/install` run must have access to the same e
 
 {% endinfo_block %}
 
+{% info_block infoBox "Spryker Cloud" %}
+
+In Spryker Cloud, the install stage runs the whole `SPRYKER_HOOK_DESTRUCTIVE_INSTALL` command in one job, so all sections of the recipe share the same filesystem and you don't need a shared volume. The export file exists only while that job runs: if `configuration:restore` fails, the file isn't available for a later run, and you need to set the affected values in the Back Office again. Set the variables for `configuration:import-environment` in the Parameter Store. For details, see [Deployment pipelines](/docs/ca/dev/configure-deployment-pipelines/deployment-pipelines.html#install-stage) and [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html).
+
+{% endinfo_block %}
+
 ### Exit codes
 
 The commands exit with code `1` when they fail, so the deployment stops at that section. For example, a command fails when the export file path is not configured, the export file can't be written or read, a value can't be restored or imported, a mapping is invalid, or the settings map is missing.

@@ -16,8 +16,8 @@ This document explains how to integrate three console commands that keep configu
 | Command | Use it to |
 | --- | --- |
 | `configuration:export` | Save the values that Back Office users entered to a file before the deployment drops the database tables. |
-| `configuration:restore` | Write the values from that file back to the database after the database is rebuilt. |
-| `configuration:import-environment` | Write values from environment variables to the database on each deployment, including values that must not be stored in a file or in the repository, such as credentials. |
+| `configuration:restore` | Write exported configuration values to the database after the database is rebuilt. |
+| `configuration:import-environment` | Write values from environment variables to the database on deployment, including values that must not be stored in a file or in the repository, such as credentials. |
 
 Each command is independent. Integrate only the ones your project needs, then see [Use the commands together](#use-the-commands-together) for the case they were designed for.
 

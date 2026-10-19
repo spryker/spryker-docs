@@ -1,7 +1,7 @@
 ---
 title: Flysystem
 description: The Flysystem module integrates Spryker with the thephpleague flysystem vendor package
-last_updated: Jul 27, 2026
+last_updated: Oct 19, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/flysystem
 originalArticleId: b68c1798-4db1-4a2b-87bf-b54d4052a741
@@ -80,6 +80,16 @@ Or to read file content from the `customerDocument` store.
 public function read($filesystemName, $path);
 
 $invoiceDocument = $flysystemService->read('customerData', 'invoices/2017/05/123.pdf');
+```
+
+Or to generate a temporary URL that gives access to a file in a private AWS S3 bucket for 10 minutes. Unlike `FileSystemService::getTemporaryUrl()`, which accepts the expiration time as a string, this method takes a `DateTimeInterface` object. For details about temporary URLs, see [Generate temporary URLs](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/file-system.html#generate-temporary-urls).
+
+```php
+$temporaryUrl = $flysystemService->getTemporaryUrl(
+    'customerData',
+    'invoices/2017/05/123.pdf',
+    new DateTimeImmutable('+10 minutes'),
+);
 ```
 
 ## Flysystem filesystem adapter modules

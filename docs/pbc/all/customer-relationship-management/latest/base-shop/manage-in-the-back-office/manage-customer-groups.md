@@ -66,7 +66,7 @@ The **Companies** and **Business Units** tabs are displayed only if the B2B Cust
 
 Adding or removing a company does not add or remove its business units, and the other way around. To change both, select them on both tabs.
 
-If the save fails validation, for example, because another customer group already has the name, the page shows the error. The **Companies** and **Business Units** tabs keep your selections, so you can fix the error and save again. The **Customers** tab does not keep its selection, so select the customers again.
+If the save fails validation, for example, because another customer group already has the name, the page shows the error. The **Companies** and **Business Units** tabs keep your selections.
 
 ## View a customer group
 

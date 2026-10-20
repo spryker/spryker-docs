@@ -91,7 +91,9 @@ The command skips the following settings and reports each of them:
 
 ### Configure the export file path
 
-Define the path of the export file by redefining `ConfigurationConfig::getExportFile()` on the project level. Both `configuration:export` and `configuration:restore` use this path.
+Both `configuration:export` and `configuration:restore` use the path that `ConfigurationConfig::getExportFile()` returns. By default, this is `data/export/configuration-values.json` in the application root directory, for example, `/data/data/export/configuration-values.json` in the Docker SDK containers.
+
+The default works when both commands run on the same filesystem, as in a local Docker SDK environment and in Spryker Cloud. If your deployment runs `configuration:export` and `configuration:restore` on filesystems that don't share this directory, for example, in separate containers, redefine the path on the project level to a location that both commands can access:
 
 **src/Pyz/Shared/Configuration/ConfigurationConfig.php**
 
@@ -106,16 +108,14 @@ class ConfigurationConfig extends SprykerConfigurationConfig
 {
     public function getExportFile(): string
     {
-        return APPLICATION_ROOT_DIR . '/data/export/configuration-values.json';
+        return '/mnt/shared/configuration-values.json';
     }
 }
 ```
 
-The path refers to the filesystem of the container that runs the command, both locally and in production. Choose a location that exists at both points of the deployment where the file is written and read; see [Use the commands together](#use-the-commands-together).
+The path refers to the filesystem of the container that runs the command, both locally and in production; see [Use the commands together](#use-the-commands-together).
 
 If the directory does not exist, the command creates it. The directory is created with `0700` permissions and the file with `0600` permissions, so only the user that runs the command can read the file.
-
-The module doesn't provide a default path, because where the file can live depends on your deployment. Until you redefine `getExportFile()`, both commands report an error and don't change anything.
 
 ### Export file format
 
@@ -314,7 +314,6 @@ To continue the deployment even if one of these commands fails, set `breakOnFail
 | --- | --- | --- |
 | `Nothing stored for key "..."` during export | No value is stored for the setting | This is expected on the first deployment if the setting has not been saved. `configuration:sync` generates the settings map but does not create configuration values. |
 | `Could not import "..." (scope: ...): TypeError` for a secret setting | The encryption key or initialization vector is missing or invalid | Configure `SPRYKER_CONFIGURATION_ENCRYPTION_KEY` and `SPRYKER_CONFIGURATION_ENCRYPTION_INIT_VECTOR` with the required values. The commands never print configuration values, so they don't print exception or validation details either, and the message might not identify the exact cause. |
-| `ConfigurationConfig::getExportFile() has to be redefined` | The project-level path is missing | Redefine `getExportFile()` in `src/Pyz/Shared/Configuration/ConfigurationConfig.php`. |
 | `The configuration schema holds no settings` | The settings map has not been generated or contains no settings | Run `configuration:sync` before running the commands. |
 | `No export at "...", nothing to restore.` | No file exists at the configured path | Make sure `getExportFile()` returns the path where the file was written, and that the file is readable by the current user. |
 | `Could not import mapping #...: expected "<setting key>=<VARIABLE>"` | The argument is not a mapping, or the part after `=` is not a valid variable name | Pass `<setting key>=<VARIABLE>`, with the name of the environment variable after `=`, not its value. |

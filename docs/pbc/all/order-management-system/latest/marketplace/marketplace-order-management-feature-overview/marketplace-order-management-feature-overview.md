@@ -2,7 +2,7 @@
 title: Marketplace Order Management feature overview
 description: This article explains all about the Spryker Marketplace order feature in the Spryker Cloud Commerce OS.
 template: concept-topic-template
-last_updated: Nov 21, 2023
+last_updated: Oct 20, 2026
 related:
   - title: Marketplace order overview
     link: docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-overview.html
@@ -14,6 +14,8 @@ related:
     link: docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
   - title: Managing marketplace orders
     link: docs/pbc/all/order-management-system/latest/marketplace/manage-in-the-back-office/manage-marketplace-orders.html
+  - title: Marketplace order invoice documents feature overview
+    link: docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-invoice-documents-overview.html
 ---
 
 When a customer places an order on the Marketplace, the *Marketplace order* is created in the system. Compared to a regular order in Spryker Commerce OS, the Marketplace order contains information about merchants and one or several [merchant orders](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html). Thus, the Marketplace order represents a list of items a customer has bought from one or multiple merchants in a single order.
@@ -97,6 +99,7 @@ The information in the Merchant Portal is limited and includes:
 - Shipment address
 - Merchant order overview
 - Totals
+- Documents: the invoices issued for the merchant order, with the [Marketplace order invoice documents](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-invoice-documents-overview.html) feature
 
 Merchant order uses its own totals based on order totals, restricted by the Merchant Order Item:
 - refundTotal
@@ -113,6 +116,7 @@ The *merchant order total* is the sum of the totals of items of an order relatin
 
 - [Learn about the merchant orders](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html)
 - [Learn about the Marketplace and merchant state machines](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html)
+- [Learn about the invoices of merchant orders](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-invoice-documents-overview.html)
 
 ## Related Business User documents
 
@@ -121,6 +125,7 @@ The *merchant order total* is the sum of the totals of items of an order relatin
 |[Merchant order overview](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html) |[Managing merchant orders](/docs/pbc/all/order-management-system/latest/marketplace/manage-merchant-orders.html)  | <!---LINK TO BO ORDER MANAGEMENT-->|
 |[Marketplace and merchant state machines overview](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html) | | |
 |[Marketplace and merchant state machines interaction](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html) | | |
+|[Marketplace order invoice documents feature overview](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-invoice-documents-overview.html) | [View merchant order invoice documents in the Merchant Portal](/docs/pbc/all/order-management-system/latest/marketplace/view-merchant-order-invoice-documents.html) | [View order invoice documents](/docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/view-order-invoice-documents.html) |
 
 ## Related Developer documents
 
@@ -128,3 +133,4 @@ The *merchant order total* is the sum of the totals of items of an order relatin
 |---------|---------|---------|--------|
 | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/latest/marketplace/install-features/install-the-marketplace-order-management-feature.html)    | [Retrieving Marketplace orders](/docs/pbc/all/order-management-system/latest/marketplace/glue-api-retrieve-marketplace-orders.html)        | [File details: merchant_oms_process.csv](/docs/pbc/all/order-management-system/latest/marketplace/import-and-export-data/import-file-details-merchant-oms-process.csv.html)        |  [MerchantOms](/docs/pbc/all/order-management-system/latest/marketplace/merchant-oms.html)  |
 | [Install the Marketplace Order Management + Order Threshold feature](/docs/pbc/all/order-management-system/latest/marketplace/install-features/install-the-marketplace-order-management-order-threshold-feature.html)    |         | [File details: merchant-order-status.csv](/docs/pbc/all/order-management-system/latest/marketplace/import-and-export-data/import-file-details-merchant-order-status.csv.html)        |  [Create MerchantOms flows](/docs/pbc/all/order-management-system/latest/marketplace/create-merchant-oms-flows.html)   |
+| [Install the Marketplace Order Invoice Documents feature](/docs/pbc/all/order-management-system/latest/marketplace/install-features/install-the-marketplace-order-invoice-documents-feature.html)    |         |         | [Customize the order invoice document](/docs/pbc/all/order-management-system/latest/base-shop/customize-the-order-invoice-document.html)   |

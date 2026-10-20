@@ -10,6 +10,8 @@ related:
     link: docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
   - title: Marketplace and merchant state machines interaction
     link: docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
+  - title: View merchant order invoice documents in the Merchant Portal
+    link: docs/pbc/all/order-management-system/latest/marketplace/view-merchant-order-invoice-documents.html
 ---
 
 This document describes the actions a merchant can do in the Orders section of the Merchant Portal.

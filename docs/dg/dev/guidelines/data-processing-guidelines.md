@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/data-processing-gui
 originalArticleId: 5db3896c-3085-4056-870c-2c28cd0fe62b
 redirect_from:
   - /docs/scos/dev/guidelines/data-processing-guidelines.html
+  - /2021080/docs/data-processing-guidelines
 related:
   - title: Making your Spryker shop secure
     link: docs/dg/dev/guidelines/security-guidelines.html

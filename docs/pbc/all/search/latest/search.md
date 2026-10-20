@@ -3,6 +3,8 @@ title: Search
 description: Learn everything you need to know about the Spryker Search Feature for your Spryker Cloud Commerce OS or Spryker Marketplace shop.
 template: concept-topic-template
 last_updated: Nov 21, 2023
+redirect_from:
+  - /docs/pbc/all/search/
 ---
 
 Merchant Management lets you manage the search on the Storefront and Glue API search.

@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-a
 originalArticleId: 4fe6c88f-3879-4f9f-bb91-c6a867d120fa
 redirect_from:
 - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-manage-customer-authentication-tokens-via-oauth-2.0.html
+- /docs/scos/dev/glue-api-guides/202108.0/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html
 related:
   - title: Searching by company users
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html

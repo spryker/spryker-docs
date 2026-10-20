@@ -5,6 +5,7 @@ description: This document describes how to create marketplace abstract products
 template: back-office-user-guide-template
 redirect_from:
   - /docs/marketplace/user/merchant-portal-user-guides/202311.0/products/abstract-products/creating-marketplace-abstract-product.html
+  - /docs/marketplace/user/merchant-portal-user-guides/202204.0/products/abstract-products/managing-marketplace-abstract-product.html
 related:
   - title: Marketplace Product feature overview
     link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html

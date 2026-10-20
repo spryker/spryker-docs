@@ -2,7 +2,7 @@
 title: Frontend builder for the Merchant Portal v2
 description: Learn about the Angular frontend builder that ships with the ZedUi module and builds the Merchant Portal assets for core and project modules.
 keywords: ZedUi, zed-ui, frontend builder, Merchant Portal, Angular, webpack, jest, build, live reload
-last_updated: Sep 29, 2026
+last_updated: Oct 7, 2026
 template: howto-guide-template
 related:
   - title: Building the Merchant Portal frontend
@@ -30,8 +30,7 @@ For the upgrade steps, see [Upgrade to frontend builder v2 for the Merchant Port
 | Angular | 20 | 22 — 20 still supported |
 | TypeScript | 5 | 6 |
 | Seeing a change in the browser | rebuild + manual page reload | reloaded automatically in watch mode |
-| Sources that lint and tests report on | core and project alike | only what the repository owns |
-| Switching between the monorepo and a project | different configuration | detected automatically, no configuration |
+| Sources that lint and tests report on | core and project alike | only the project modules |
 | Project namespaces other than `Pyz` | `angular.json` and the build files edited by hand | one optional `frontend/merchant-portal.settings.mts` |
 
 ## What's new
@@ -58,15 +57,15 @@ The builder runs on Angular 22 and TypeScript 6, and keeps accepting Angular and
 
 ### Automatic source layout detection
 
-Nothing configures the difference between the Spryker monorepo and a project: the builder detects the layout from a marker directory and resolves the core and project module paths from it. The same commands work in both. See [Source layout detection](#source-layout-detection).
+Nothing configures the module paths: the builder finds the project root and resolves the core and project module paths from it. See [Source layout detection](#source-layout-detection).
 
-### Lint and tests scoped to what the repository owns
+### Lint and tests scoped to the project modules
 
-`mp:lint`, `mp:stylelint`, and `mp:test` no longer report on installed code. In a project they cover the modules in `src/Pyz`; in the monorepo, where the core modules are sources of the repository, they cover those as well. See [What lint and tests cover](#what-lint-and-tests-cover).
+`mp:lint`, `mp:stylelint`, and `mp:test` no longer report on installed code. They cover the modules in `src/Pyz` and in every project namespace you register. See [What lint and tests cover](#what-lint-and-tests-cover).
 
 ### Errors that name the file and the next step
 
-Every error the builder raises names the offending path, states the reason in plain language, and says what to do next. An undetectable source layout, for example, names both marker directories it looked for and tells you to run the command from the project root.
+Every error the builder raises names the offending path, states the reason in plain language, and says what to do next. An undetectable source layout, for example, names the directory it looked for and tells you to run the command from the project root.
 
 ## Requirements
 
@@ -107,7 +106,7 @@ For the mechanics of that split, see [Where the npm dependencies come from](/doc
 
 ## Generated configuration
 
-`angular.json`, `tsconfig.mp.json`, `tsconfig.mp.spec.json`, and `tsconfig.mp.lint.json` contain values that depend on where the core modules are installed — `vendor/spryker/zed-ui` in a project, `src/Spryker/ZedUi` in the Spryker monorepo — so ZedUi cannot ship them ready-made. `npm run mp:update:config` generates those values instead.
+`angular.json`, `tsconfig.mp.json`, `tsconfig.mp.spec.json`, and `tsconfig.mp.lint.json` contain values that depend on which core modules are installed and on the project module directories, so ZedUi cannot ship them ready-made. `npm run mp:update:config` generates those values instead.
 
 `angular.json` stays at the project root, because the Angular CLI finds it by walking up from the working directory. The three `tsconfig.mp*.json` files are written inside the builder directory, unless the project already keeps a file of that name in its root — in that case the reconciliation works on that file and writes no second copy.
 
@@ -134,22 +133,35 @@ Because the reconciliation happens in place rather than as a rewrite, whatever `
 
 Your Merchant Portal project in `angular.json` has to be named `merchant-portal`, unless it is the only project in the file.
 
+## Build configuration from the backend
+
+`vendor/bin/console frontend:mp:build` writes `data/cache/MerchantPortal/frontend/build-config.json` with the backend's `CORE_NAMESPACES` and `PROJECT_NAMESPACES`, then runs the npm build. The builder reads that file on every run and scans the Merchant Portal modules of every namespace in it. It scans `CORE_NAMESPACES` in reverse order, then `PROJECT_NAMESPACES` in reverse order; the namespace scanned last wins, so the same namespace wins as on the backend, and the project always wins over core. A namespace maps to `src/<Namespace>` when that directory exists, otherwise to `vendor/<namespace-in-kebab-case>`; a project namespace is scanned as `src/<Namespace>/Zed` and `src/<Namespace>/*/src/<Namespace>/Zed`. The Angular application files are taken from the strongest project namespace that has `ZedUi/Presentation/Components`. `Spryker` has to be among the core namespaces, because ZedUi lives there.
+
+The file is written by `spryker/setup-frontend` 1.9.0 or later; with an older version the builder keeps its packaged layout, so require that version when the build has to follow the backend. So a project namespace is changed in `config_default.php` and nowhere else. Every run prints which configuration it uses: `Build configuration: generated (…)`, or `built-in defaults (…)` when the console command has not run yet and the packaged layout below applies. After the file changes, run `npm run mp:update:config` so that `angular.json` and the TypeScript configurations follow; `postinstall` does it on `npm install`.
+
+To override, use `frontend/merchant-portal.settings.mts`, which is applied on top: a new `paths.projectModulesDirectories` entry adds a directory scanned after all generated ones, `pyz` replaces the `Pyz` directory, and `paths.projectApplicationDirectory` wins over the derived one. See [Project-level builder settings](#project-level-builder-settings).
+
 ## Source layout detection
 
-The builder resolves every path from the project root, which it finds by walking up from the working directory until it sees `package-lock.json`. It then detects the layout from a marker directory:
+The builder resolves every path from the project root, which it finds by walking up from the working directory until it sees `package-lock.json`. It then checks that the Spryker modules are installed in `vendor/spryker` and resolves the module paths:
 
-| Layout | Marker | Core modules | Project modules |
-| --- | --- | --- | --- |
-| Project | `vendor/spryker` | `vendor/spryker` | `src/Pyz/Zed` |
-| Spryker monorepo | `src/Spryker` | `src/Spryker` | `src/Pyz/*/src/Pyz/Zed` |
+| Modules | Path |
+| --- | --- |
+| Core modules | `vendor/spryker` |
+| Project modules | `src/Pyz/Zed` |
 
-Nothing has to be configured for this: the same commands work in both layouts, and the detected layout decides which modules are built, linted, and tested. A project whose modules live outside `src/Pyz` registers them in the [project-level builder settings](#project-level-builder-settings).
+Nothing has to be configured for this. A project whose modules live outside `src/Pyz` registers them in the [project-level builder settings](#project-level-builder-settings).
 
 ## Project-level builder settings
 
 The legacy builder was configured by editing `angular.json` and the files under `frontend/merchant-portal/`, which the project owned entirely. In v2, project overrides live in a single optional file, `frontend/merchant-portal.settings.mts`. When the file exists, the builder loads it automatically; when it does not, the defaults apply.
 
-The file exports the result of `defineConfig()`, which merges your overrides into the packaged defaults:
+The file exports the result of `defineConfig()`, which merges your overrides into the packaged defaults.
+
+If your project keeps Merchant Portal modules in a namespace other than `Pyz`, register the namespace in `paths.projectModulesDirectories`. You can use the custom namespace together with `Pyz` or instead of it:
+
+- To keep `src/Pyz/Zed` and add the custom namespace, add an entry with a new name, such as `acme`. The builder scans the custom namespace after `src/Pyz/Zed`, and builds, lints, and tests both. When both contain a module with the same entry point name, the entry point of the custom namespace wins.
+- To use only the custom namespace, set the `pyz` entry to it. The custom namespace then replaces `src/Pyz/Zed`.
 
 ```ts
 // frontend/merchant-portal.settings.mts
@@ -158,18 +170,20 @@ import { defineConfig } from '../vendor/spryker/zed-ui/src/Spryker/Zed/ZedUi/Fro
 export default defineConfig({
     paths: {
         projectModulesDirectories: {
-            // A further project namespace, scanned for Merchant Portal modules after src/Pyz/Zed.
+            // Adds the custom namespace; src/Pyz/Zed stays a project modules directory.
             acme: './src/Acme/Zed',
+            // Alternatively, replace src/Pyz/Zed with the custom namespace:
+            // pyz: './src/Acme/Zed',
         },
-        // Where main.ts, polyfills.ts, styles.less and the environments live, if not in the Pyz ZedUi module.
-        projectApplicationDirectory: './src/Acme/Zed/ZedUi/Presentation/Components',
     },
 });
 ```
 
+Registering a namespace does not move the Angular application files: `main.ts`, `polyfills.ts`, `styles.less`, and the environments stay in `src/Pyz/Zed/ZedUi/Presentation/Components`. If you replace `src/Pyz/Zed`, or keep the ZedUi module in the custom namespace, also set `paths.projectApplicationDirectory`, for example, to `./src/Acme/Zed/ZedUi/Presentation/Components`.
+
 Projects may override:
 
-- `paths.projectModulesDirectories` — the directories the builder scans for project modules: their `entry.ts` files, `mp.public-api.ts` aliases, assets, stylesheets, and specs. An entry named `pyz` replaces the default directory; a new name adds a directory, scanned after the default one. When two directories contain a module of the same name, the later one wins.
+- `paths.projectModulesDirectories` — the directories the builder scans for project modules: their `entry.ts` files, assets, stylesheets, and specs. An entry named `pyz` replaces the default directory; a new name adds a directory, scanned after the default one. When two directories contain an entry point of the same name, the later one wins.
 - `paths.projectApplicationDirectory` — the directory holding the Angular application files (`index.html`, `main.ts`, `polyfills.ts`, `styles.less`, `environments/`), `src/Pyz/Zed/ZedUi/Presentation/Components` by default.
 
 All other settings are fixed and inherited from the packaged defaults.
@@ -184,10 +198,7 @@ The registered directories flow into everything the builder generates: `angular.
 
 ## What lint and tests cover
 
-`mp:lint`, `mp:stylelint`, and `mp:test` report on the modules the running repository owns:
-
-- In a project, the core modules arrive in `vendor/`. They are installed code, not the project's to report on, so only `src/Pyz` is covered.
-- In the Spryker monorepo, the core modules are sources of the repository, so they are covered together with the project modules.
+`mp:lint`, `mp:stylelint`, and `mp:test` report on the project modules. The core modules arrive in `vendor/`. They are installed code, not the project's to report on, so only `src/Pyz` and the directories registered in `paths.projectModulesDirectories` are covered.
 
 Project-level lint configuration is picked up from the project root when present: `eslint.config.mp.mjs` replaces the packaged ESLint configuration, and `.stylelintrc.mp.js` replaces the packaged Stylelint configuration. Without them, the configurations shipped in the module are used.
 
@@ -199,7 +210,7 @@ Twig templates are *not* watched: Zed caches them server-side, so a browser relo
 
 ## Module entry points and path aliases
 
-Every Merchant Portal module has an `entry.ts` in `Presentation/Components/`, which the builder collects as a webpack entry, and an `mp.public-api.ts` in the module root, which is what other modules import. The builder generates a `@mp/<module>` path alias per module out of these, plus `@mp/polyfills` for the polyfills file — so a module imports its neighbours as `@mp/zed-ui` or `@mp/gui-table` rather than by path.
+Every Merchant Portal module has an `entry.ts` in `Presentation/Components/`, which the builder collects as a webpack entry, and an `mp.public-api.ts` in the module root, which is what other modules import. The builder generates a `@mp/<module>` path alias per core module out of these, plus `@mp/polyfills` for the polyfills file — so a module imports its neighbours as `@mp/zed-ui` or `@mp/gui-table` rather than by path.
 
 ## Angular 20 projects
 

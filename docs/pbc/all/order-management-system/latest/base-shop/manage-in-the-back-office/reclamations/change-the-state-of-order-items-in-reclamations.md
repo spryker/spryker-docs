@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/sales/reclamations/changing-the-state-of-order-items-in-reclamations.html
   - /docs/scos/user/back-office-user-guides/202204.0/sales/reclamations/changing-the-state-of-order-items-in-reclamations.html
+  - /docs/pbc/all/order-management-system/202212.0/base-shop/manage-in-the-back-office/reclamations/change-the-state-of-order-items-in-reclamations.html
 related:
   - title: Creating reclamations
     link: docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/reclamations/create-reclamations.html

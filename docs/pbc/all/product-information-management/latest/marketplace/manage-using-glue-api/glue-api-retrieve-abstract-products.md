@@ -6,6 +6,7 @@ last_updated: Jul 30, 2026
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202005.0/managing-products/retrieving-product-information.html
   - /docs/pbc/all/product-information-management/202311.0/marketplace/manage-using-glue-api/retrieve-abstract-products.html
+  - /docs/pbc/all/product-information-management/202212.0/marketplace/manage-using-glue-api/retrieve-abstract-products.html
 related:
   - title: Retrieving abstract products in abstract product lists
     link: docs/pbc/all/content-management-system/latest/marketplace/glue-api-retrieve-abstract-products-in-abstract-product-lists.html

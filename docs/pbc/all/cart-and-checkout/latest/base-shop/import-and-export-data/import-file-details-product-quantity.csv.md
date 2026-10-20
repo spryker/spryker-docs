@@ -11,6 +11,9 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202311.0/import-and-export-data/file-details-product-quantity.csv.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/import-and-export-data/file-details-product-quantity.csv.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/import-and-export-data/import-file-details-product-quantity.csv.html
+  - /docs/pbc/all/cart-and-checkout/latest/base-shop/product-quantity-restrictions-feature-overview
+  - /docs/scos/dev/feature-integration-guides/202001.0/product-cart-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202005.0/product-cart-feature-integration.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html

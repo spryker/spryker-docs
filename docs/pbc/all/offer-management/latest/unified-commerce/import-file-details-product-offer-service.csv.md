@@ -3,6 +3,8 @@ title: "Import file details: product_offer_service.csv"
 description: Learn how to assign services to product offers through the product offer service csv file for your Spryker Unified Commerce Project.
 last_updated: Nov 23, 2023
 template: data-import-template
+redirect_from:
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/commerce-setup/commerce-setup.html
 ---
 
 This document describes the `product_offer_service.csv` file to configure the assignment of services to product offers.

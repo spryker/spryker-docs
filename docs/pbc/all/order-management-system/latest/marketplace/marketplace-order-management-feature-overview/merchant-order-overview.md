@@ -14,6 +14,8 @@ related:
     link: docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
   - title: Managing merchant orders
     link: docs/pbc/all/order-management-system/latest/marketplace/manage-merchant-orders.html
+redirect_from:
+  - /docs/pbc/all/order-management-system/202212.0/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html
 ---
 
 In the marketplace, when a buyer goes through checkout, the [Marketplace order](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html) is created. Such an order can contain offers and products from different merchants. The part of the order that belongs to a certain merchant is called *merchant order*. The merchant order created in the system after the Marketplace order has been placed. Thus, each merchant order contains at least one item from the Marketplace order.

@@ -2,7 +2,7 @@
 title: Upgrade to frontend builder v2 for the Back Office
 description: Learn how to move your project from the oryx-for-zed npm package to the Back Office frontend builder shipped with the Gui module.
 keywords: Gui, spryker-zed-gui, frontend builder, Back Office, Zed, oryx-for-zed, migration, upgrade, webpack, TypeScript
-last_updated: Sep 29, 2026
+last_updated: Oct 1, 2026
 template: concept-topic-template
 related:
   - title: Frontend builder for the Back Office v2
@@ -167,7 +167,7 @@ npm run zed:lint
 npm run zed:stylelint
 ```
 
-In a project, both cover `src/Pyz/Zed` only: the core modules arrive in `vendor/` and are not the project's to report on. `zed:lint` reports that type checking is off — it is off by default in a project, see [TypeScript](/docs/dg/dev/frontend-development/latest/zed/frontend-builder-for-back-office-v2.html#typescript).
+Both cover the project modules — `src/Pyz/Zed` and every namespace registered in `paths.sources` of `frontend/backoffice.settings.mts`. The core modules arrive in `vendor/` and are not the project's to report on. `zed:lint` reports that type checking is off — it is off by default, see [TypeScript](/docs/dg/dev/frontend-development/latest/zed/frontend-builder-for-back-office-v2.html#typescript).
 
 Finally, check the Back Office in the browser. Every entry point still produces `js/<name>.js` and `css/<name>.css` under the same names, so the templates need no change. The only new files are the hashed chunks under `js/chunks/` and `css/chunks/`.
 
@@ -330,5 +330,5 @@ The patch releases change no behavior of their own: the entry point files keep t
 
 - **Live reload.** `npm run zed:watch` now reloads the open Back Office page after a `.js`, `.ts`, `.scss`, or `.twig` change; a CSS-only change is applied without a reload. No extra setup is needed. Set `SPRYKER_FRONTEND_RELOAD=0` to turn it off. A Twig change shows up after the reload only when `ApplicationConstants::ENABLE_APPLICATION_DEBUG` is on, which is the default in a Docker SDK development environment; otherwise run `docker/sdk console twig:cache:warmer` — see [Live reload](/docs/dg/dev/frontend-development/latest/zed/frontend-builder-for-back-office-v2.html#live-reload).
 - **TypeScript.** Back Office modules can ship `.entry.ts` and `.ts` files. To type-check the project's own TypeScript, set `typecheck: true` in `frontend/backoffice.settings.mts`.
-- **Lint scope.** `npm run zed:lint` and `npm run zed:stylelint` report on `src/Pyz/Zed` only. Project-level lint configuration lives at the project root: `eslint.config.backoffice.mjs` and `stylelint.config.backoffice.mjs`. Without them, the configurations shipped in Gui are used.
+- **Lint scope.** `npm run zed:lint` and `npm run zed:stylelint` report on the project modules — `src/Pyz/Zed` and every namespace registered in `paths.sources` — and not on the modules in `vendor/`. Project-level lint configuration lives at the project root: `eslint.config.backoffice.mjs` and `stylelint.config.backoffice.mjs`. Without them, the configurations shipped in Gui are used.
 - **A core module added to or removed from the project** changes the generated `@zed/*` aliases and `include` globs. `postinstall` regenerates them on the next `npm install`.

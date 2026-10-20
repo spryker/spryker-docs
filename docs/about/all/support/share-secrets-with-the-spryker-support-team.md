@@ -8,6 +8,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/how-to-share-secret
 originalArticleId: a52e18a4-1aee-4f08-a132-82940f1f207e
 redirect_from:
 - /docs/scos/user/intro-to-spryker/support/share-secrets-with-the-spryker-support-team.html
+- /docs/scos/user/intro-to-spryker/support/how-to-share-secrets-with-the-spryker-support-team.html
 ---
 
 This document explains how to securely share secrets and credentials with the [Spryker Support Team](/docs/about/all/support/getting-support.html). We recommend avoiding sharing secrets whenever possible. If you have to share them, do it only as described in this document.

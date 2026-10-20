@@ -2,13 +2,15 @@
 title: Upgrade to frontend builder v2 for the Merchant Portal
 description: Learn how to move your project from the Merchant Portal build tooling in the frontend directory to the builder shipped with the ZedUi module, and how to update Angular and TypeScript along the way.
 keywords: ZedUi, zed-ui, frontend builder, Merchant Portal, migration, upgrade, Angular, TypeScript, webpack
-last_updated: Sep 29, 2026
+last_updated: Oct 1, 2026
 template: concept-topic-template
 related:
   - title: Frontend builder for the Merchant Portal v2
     link: docs/dg/dev/frontend-development/latest/marketplace/frontend-builder-for-merchant-portal-v2.html
   - title: Building the Merchant Portal frontend
     link: docs/dg/dev/frontend-development/latest/marketplace/building-the-merchant-portal-frontend.html
+redirect_from:
+  - /docs/pbc/all/merchant-management/latest/marketplace/merchant-portal/merchant-portal.html
 ---
 
 This document provides instructions for moving a project from the Merchant Portal build tooling in its `frontend/merchant-portal/` directory — builder v1 — to builder v2, which ships inside the ZedUi module.
@@ -190,7 +192,7 @@ npm run mp:lint
 npm run mp:stylelint
 ```
 
-In a project, all three cover the project modules only — `src/Pyz/Zed` and any directory registered in `frontend/merchant-portal.settings.mts`: the core modules arrive in `vendor/` and are not the project's to report on.
+All three cover the project modules only — `src/Pyz/Zed` and any directory registered in `frontend/merchant-portal.settings.mts`: the core modules arrive in `vendor/` and are not the project's to report on.
 
 Finally, check the Merchant Portal in the browser at `$[local_domain]/security-merchant-portal-gui/login`.
 

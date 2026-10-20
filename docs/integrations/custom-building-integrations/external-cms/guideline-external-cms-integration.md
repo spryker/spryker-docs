@@ -3,6 +3,14 @@ title: Integrating an external CMS with Spryker
 description: Learn how an external CMS and Spryker fit together, which integration strategies are available, and which boundaries never move.
 last_updated: Sep 7, 2026
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-integration-guides/202001.0/cms-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202005.0/cms-catalog-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202005.0/cms-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202009.0/cms-catalog-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202009.0/cms-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202108.0/cms-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202108.0/glue-api/glue-api-cms-feature-integration.html
 ---
 
 You already run a CMS. There is content in it, editors trained on it, workflows built around it, and a license paid for.

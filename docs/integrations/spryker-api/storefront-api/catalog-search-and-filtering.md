@@ -1,10 +1,12 @@
 ---
 title: Catalog search and filtering
-description: Learn how to use the catalog search API with various filtering options including multiple labels, price ranges, brands, colors, and ratings.
-last_updated: July 30, 2026
+description: Learn how to use the catalog search API with various filtering options including categories, multiple labels, price ranges, brands, colors, and ratings.
+last_updated: October 20, 2026
 template: default
 redirect_from:
   - /docs/integrations/spryker-glue-api/storefront-api/catalog-search-and-filtering.html
+  - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/catalog-search-api-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/catalog-search-api-feature-integration.html
 ---
 
 The Storefront API provides powerful catalog search capabilities through the `/catalog-search` endpoint. This endpoint supports various filtering options, faceted search, and advanced query parameters to help users find products efficiently.
@@ -192,6 +194,31 @@ Key characteristics:
 - Integer values, 1-5 typically
 - Multi-valued: `false`
 
+### Category filtering
+
+Category filtering restricts the results to the products of one category node and all of its subcategories. Unlike the other filters, it takes the category node ID, not the category name.
+
+Products of a category:
+
+```http
+GET /catalog-search?q=&category=6
+```
+
+Products of a category with their details included:
+
+```http
+GET /catalog-search?q=&category=6&include=abstract-products
+```
+
+To get the category node IDs, retrieve the category tree with `GET /category-trees` and use the `nodeId` of the needed node. For details, see [Retrieve category trees](/docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html). The `categoryTreeFilter` section of every catalog search response also lists the available nodes with the number of matching products per node.
+
+Key characteristics:
+- Parameter name: `category`
+- Value: category node ID (`nodeId`), integer; a non-integer value returns `400`
+- Includes the products of all subcategories of the node
+- Multi-valued: `false`
+- The active node is returned in `valueFacets` as the `category` facet with `activeValue` set
+
 ## Facet types
 
 Facets are aggregated data that provide filtering options and statistics about search results. They enable users to refine their search by showing available filter values and the number of products matching each filter.
@@ -226,7 +253,7 @@ Value facets represent categorical filters with discrete values:
 ```
 
 Common value facets:
-- `category`: Product category IDs
+- `category`: Category node IDs; see [Category filtering](#category-filtering)
 - `label`: Product labels
 - `color`: Product colors
 - `brand`: Product brands
@@ -236,7 +263,7 @@ Common value facets:
 
 {% info_block infobox %}
 
-Category filtering is different from other filters because it uses category IDs rather than human-readable names. Other filters, like brand, color, and label, use their respective names as filter values.
+Category filtering is different from other filters because it uses category node IDs (`nodeId` from `GET /category-trees`) rather than human-readable names. Other filters, like brand, color, and label, use their respective names as filter values.
 
 {% endinfo_block %}
 
@@ -271,11 +298,12 @@ Common range facets:
 Multiple filters can be combined in a single request:
 
 ```http
-GET /catalog-search?q=Sony&brand=Sony&color[]=Black&color[]=White&price[min]=50&price[max]=200&label[]=SALE%20%
+GET /catalog-search?q=Sony&category=5&brand=Sony&color[]=Black&color[]=White&price[min]=50&price[max]=200&label[]=SALE%20%
 ```
 
 This request searches for the following:
 - Products matching "Sony" in search
+- Category: node `5` and its subcategories
 - Brand: Sony
 - Colors: Black OR White
 - Price range: €50 to €200

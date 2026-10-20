@@ -2,7 +2,7 @@
 title: Install the Basic Shop Theme feature
 description: Learn how to integrate the Basic Shop Theme feature to configure logos, colors, and custom CSS from the Back Office without code changes.
 template: howto-guide-template
-last_updated: Jul 27, 2026
+last_updated: Oct 20, 2026
 related:
   - title: Basic Shop Theme feature overview
     link: docs/pbc/all/back-office/latest/base-shop/basic-shop-theme-feature-overview.html

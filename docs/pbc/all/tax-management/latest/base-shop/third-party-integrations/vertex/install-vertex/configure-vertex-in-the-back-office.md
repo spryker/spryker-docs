@@ -1,7 +1,7 @@
 ---
 title: Configure Vertex in the Back Office
 description: Learn how to manage Vertex settings and choose the tax provider from Back Office Configuration instead of environment variables.
-last_updated: Jul 23, 2026
+last_updated: Oct 20, 2026
 template: howto-guide-template
 related:
   - title: Integrate Vertex

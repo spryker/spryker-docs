@@ -6,7 +6,7 @@ template: howto-guide-template
 
 related:
   - title: Integrate the Configuration Management feature
-    link: docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html
+    link: docs/dg/dev/integrate-and-configure/integrate-configuration-feature.html
   - title: Configuration Management feature
     link: docs/dg/dev/backend-development/configuration-management.html
 ---
@@ -23,7 +23,7 @@ Each command is independent. Integrate only the ones your project needs, then se
 
 ## Prerequisites
 
-Install the [Configuration Management feature](/docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html).
+Install the [Configuration Management feature](/docs/dg/dev/integrate-and-configure/integrate-configuration-feature.html).
 
 The commands require the following package version:
 

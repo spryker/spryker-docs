@@ -9,7 +9,7 @@ related:
   - title: Configuration Management feature
     link: /docs/dg/dev/backend-development/configuration-management.html
   - title: Install the Configuration Management feature
-    link: /docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html
+    link: /docs/dg/dev/integrate-and-configure/integrate-configuration-feature.html
 ---
 
 This document describes how to install the Basic Shop Theme feature.
@@ -22,7 +22,7 @@ Before installing this feature, install and configure the following:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |------|---------|-------------------|
-| Configuration Management feature | ^0.1.0 | [Install the Configuration Management feature](/docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html) |
+| Configuration Management feature | ^0.1.0 | [Install the Configuration Management feature](/docs/dg/dev/integrate-and-configure/integrate-configuration-feature.html) |
 | Spryker Core | ^3.82 | — |
 
 ## Install feature core

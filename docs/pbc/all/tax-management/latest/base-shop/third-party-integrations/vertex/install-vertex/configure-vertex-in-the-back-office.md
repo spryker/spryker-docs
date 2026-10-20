@@ -24,7 +24,7 @@ This feature is opt-in and backward compatible. Until you [enable it](#1-enable-
 
 - Use `spryker-eco/vertex` version `1.5.0` or later.
 - [Integrate Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html) into your Spryker shop.
-- Install the Configuration Management feature. The Vertex module depends on `spryker/configuration-extension`, but it does not require the `spryker/configuration` module that provides the Back Office UI and stores the values. If the Configuration Management feature is not installed yet, install it first. For details, see [Install the Configuration Management feature](/docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html).
+- Install the Configuration Management feature. The Vertex module depends on `spryker/configuration-extension`, but it does not require the `spryker/configuration` module that provides the Back Office UI and stores the values. If the Configuration Management feature is not installed yet, install it first. For details, see [Install the Configuration Management feature](/docs/dg/dev/integrate-and-configure/integrate-configuration-feature.html).
 
 ## 1. Enable the configuration source
 

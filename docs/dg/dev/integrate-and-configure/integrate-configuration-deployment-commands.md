@@ -91,7 +91,7 @@ The command skips the following settings and reports each of them:
 
 ### Configure the export file path
 
-Both `configuration:export` and `configuration:restore` use the path that `ConfigurationConfig::getExportFile()` returns. By default, this is `data/export/configuration-values.json` in the application root directory, for example, `/data/data/export/configuration-values.json` in the Docker SDK containers.
+Both `configuration:export` and `configuration:restore` use the path that `ConfigurationConfig::getExportFile()` returns. By default, this is `APPLICATION_ROOT_DIR . '/data/export/configuration-values.json'`.
 
 The default works when both commands run on the same filesystem, as in a local Docker SDK environment and in Spryker Cloud. If your deployment runs `configuration:export` and `configuration:restore` on filesystems that don't share this directory, for example, in separate containers, redefine the path on the project level to a location that both commands can access:
 

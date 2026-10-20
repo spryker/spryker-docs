@@ -112,12 +112,6 @@ Merchant order uses its own totals based on order totals, restricted by the Merc
 
 The *merchant order total* is the sum of the totals of items of an order relating to the merchant order.
 
-## Next steps
-
-- [Learn about the merchant orders](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html)
-- [Learn about the Marketplace and merchant state machines](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html)
-- [Learn about the invoices of merchant orders](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-invoice-documents-overview.html)
-
 ## Related Business User documents
 
 |FEATURE OVERVIEWS  |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |

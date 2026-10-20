@@ -64,7 +64,7 @@ Make sure the following changes have been applied to the database:
 | DATABASE ENTITY | TYPE | EVENT |
 |---|---|---|
 | spy_sales_order_invoice.merchant_reference | column | created |
-| spy_sales_order_invoice-unique-fk_sales_order-merchant_reference | unique key | created |
+| spy_sales_order_invoice-unique-sales_order-merchant_reference | unique key | created |
 
 Make sure the following transfer objects have been generated:
 

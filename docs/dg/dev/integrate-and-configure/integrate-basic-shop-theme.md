@@ -5,11 +5,11 @@ template: howto-guide-template
 last_updated: Jul 27, 2026
 related:
   - title: Basic Shop Theme feature overview
-    link: /docs/pbc/all/back-office/latest/base-shop/basic-shop-theme-feature-overview.html
+    link: docs/pbc/all/back-office/latest/base-shop/basic-shop-theme-feature-overview.html
   - title: Configuration Management feature
-    link: /docs/dg/dev/backend-development/configuration-management.html
+    link: docs/dg/dev/backend-development/configuration-management.html
   - title: Install the Configuration Management feature
-    link: /docs/dg/dev/integrate-and-configure/integrate-configuration-feature.html
+    link: docs/dg/dev/integrate-and-configure/integrate-configuration-feature.html
 ---
 
 This document describes how to install the Basic Shop Theme feature.

@@ -8,6 +8,8 @@ related:
     link: docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html
   - title: Vertex
     link: docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/vertex.html
+  - title: Verify Vertex connection
+    link: docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/verify-vertex-connection.html
 ---
 
 This document describes how to manage Vertex settings from **Back Office** > **Configuration** and how to select the tax provider per scope `store`.
@@ -133,7 +135,3 @@ When you save a configuration, the following changes are blocked to prevent leav
 2. **Breaking an active configuration:** you cannot clear or remove a credential that would leave Vertex incomplete while Vertex is the selected provider for that scope. This applies to both edits and deletions.
 3. **Cross-scope breakage:** a change to the **global** scope that would break any **store** that has Vertex selected and inherits the global values is blocked. The error names the affected store.
 4. **Invalid URLs:** the Security URI, Transaction calls URI, and Taxamo API URL must be valid URLs, even when Vertex is not the selected provider.
-
-## Next steps
-
-[Verify Vertex connection](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/verify-vertex-connection.html)

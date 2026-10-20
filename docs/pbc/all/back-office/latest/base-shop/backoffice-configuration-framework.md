@@ -5,7 +5,7 @@ template: concept-topic-template
 last_updated: Oct 19, 2026
 related:
   - title: Installation guide
-    link: docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html
+    link: docs/dg/dev/integrate-and-configure/integrate-configuration-feature.html
 ---
 
 The Back Office Configuration Framework is a structured approach to exposing business-relevant configuration options directly in the Spryker Back Office. Instead of defining configuration in code or YAML files that require redeployment, businesses can manage defined behaviors through structured UI pages. Developers define configuration options once in YAML, and the framework automatically renders them as configurable Back Office interfaces.

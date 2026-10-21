@@ -1,7 +1,7 @@
 ---
 title: Integrate the Configuration Management deployment commands
 description: Learn how to integrate the configuration export, restore, and environment import console commands in a Spryker project.
-last_updated: Oct 19, 2026
+last_updated: Oct 21, 2026
 template: howto-guide-template
 
 related:
@@ -29,10 +29,10 @@ The commands require the following package version:
 
 | Package | Version |
 | --- | --- |
-| spryker/configuration | ^1.6.0 |
+| spryker/configuration | ^1.7.0 |
 
 ```bash
-composer require spryker/configuration:"^1.6.0" --update-with-dependencies
+composer require spryker/configuration:"^1.7.0" --update-with-dependencies
 ```
 
 All three commands read the settings map that `configuration:sync` generates. Run `configuration:sync` before running any of them.
@@ -168,12 +168,12 @@ Place an export file at the configured path, run the command for a setting key i
 ## Import values from environment variables: configuration:import-environment
 
 ```bash
-vendor/bin/console configuration:import-environment <setting key>=<VARIABLE> [<setting key>=<VARIABLE> ...] [--scope=<scope> --scope-identifier=<identifier>]
+vendor/bin/console configuration:import-environment <setting key>=<VARIABLE_NAME> [<setting key>=<VARIABLE_NAME> ...] [--scope=<scope> --scope-identifier=<identifier>]
 ```
 
 Saves the value of each mapped environment variable as the value of the setting. Use this command for values that must not be written to the export file or committed to the repository, such as credentials, and for values that differ per environment. It also saves you from setting the same values in the Back Office after every deployment, for example, on demo or testing environments: set an environment variable once, and the command imports its value on each deployment. Settings declared with `secret: true` in the schema are encrypted when saved.
 
-Each argument maps a setting key to the name of the environment variable that holds its value. Pass the variable name, not the value. The command reads each value from the environment, so secret values don't appear in the command arguments or the deployment recipe.
+Each argument maps a setting key to the name of the environment variable that holds its value. **Pass the variable name, not the value**. The command reads each value from the environment, so secret values don't appear in the command arguments or the deployment recipe.
 
 For example, the following command imports the Google Analytics measurement ID and service account credentials in the global scope:
 
@@ -182,8 +182,6 @@ vendor/bin/console configuration:import-environment \
     integrations:google_analytics:tracking:measurement_id=GA_MEASUREMENT_ID \
     integrations:google_analytics:connection:service_account_credentials_json=GA_SERVICE_ACCOUNT_JSON
 ```
-
-You choose the variable names. A variable name can contain only letters, digits, and underscores, and must not start with a digit.
 
 ### Import values for a scope
 
@@ -198,9 +196,9 @@ The `global` scope doesn't take an identifier; every other scope requires one. T
 
 If an environment variable is not set or is empty, the command skips the setting and reports it. This way, you can use the same recipe in environments that don't define every variable, for example, in an environment without the `AT` store.
 
-{% info_block warningBox "Do not commit values" %}
+{% info_block warningBox "Do not commit secret values" %}
 
-Set the values in the environment configuration of your hosting provider, not in a deploy file that is committed to the repository.
+Never put a secret value in a deploy file or any other file that is committed to the repository. Store it with the tools of your hosting provider: AWS Parameter Store for Spryker Cloud, or the equivalent service of another provider. Pass only the variable name to the command.
 
 {% endinfo_block %}
 

@@ -1,16 +1,6 @@
 This document describes how to install the [Marketplace order invoice documents](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-invoice-documents-overview.html) feature.
 
-{% info_block infoBox "Liability" %}
-
-Spryker does not generate, validate, or assume legal responsibility for invoices or credit notes. The seller remains the invoice issuer and is responsible for the document's tax and legal compliance, including its format under applicable national e-invoicing mandates.
-
-Spryker's role is limited to forwarding the document links from the seller, making it available to the correct buyer/seller.
-
-Spryker does not transmit documents to national e-invoicing or clearance networks such as Peppol, KSeF, or SdI. Transmission remains the responsibility of the seller or their e-invoicing provider.
-
-The [Order confirmation / invoice notification email feature](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/invoice-generation-overview.html) is non compliant with the latest EU e-invoicing requirements.
-
-{% endinfo_block %}
+{% include pbc/all/order-management-system/order-invoice-liability.md %} <!-- To edit, see /_includes/pbc/all/order-management-system/order-invoice-liability.md -->
 
 ## Install feature core
 
@@ -33,7 +23,7 @@ Install the required features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker/merchant-sales-invoice:"^1.0.0" spryker/sales-invoice:"^1.7.0" spryker/sales-invoice-extension:"^1.1.0" --update-with-dependencies
+composer require spryker/merchant-sales-invoice:"^1.0.0" spryker/sales-invoice:"^1.7.0" spryker/sales-invoice-extension:"^1.1.0" spryker/sales-merchant-portal-gui:"^4.3.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -45,6 +35,7 @@ Make sure the following modules have been installed:
 | MerchantSalesInvoice | vendor/spryker/merchant-sales-invoice |
 | SalesInvoice | vendor/spryker/sales-invoice |
 | SalesInvoiceExtension | vendor/spryker/sales-invoice-extension |
+| SalesMerchantPortalGui | vendor/spryker/sales-merchant-portal-gui |
 
 {% endinfo_block %}
 
@@ -334,7 +325,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 }
 ```
 
-2. Allow the Merchant Portal firewall to serve the invoice page. The default pattern of the Merchant Portal firewall covers only the `*-merchant-portal-gui` bundles; without the `merchant-sales-invoice` bundle in it, the Back Office firewall redirects the page to the Back Office login:
+2. Allow the Merchant Portal firewall to serve the invoice page. The default pattern of the Merchant Portal firewall covers only the `*-merchant-portal-gui` bundles; without the `merchant-sales-invoice` bundle in it, the Back Office firewall redirects the page to the Back Office login. Add `merchant-sales-invoice` as an alternative to the `MERCHANT_PORTAL_ROUTE_PATTERN` your project already has; with the core default, the result is:
 
 **src/Pyz/Zed/SecurityMerchantPortalGui/SecurityMerchantPortalGuiConfig.php**
 
@@ -350,7 +341,7 @@ class SecurityMerchantPortalGuiConfig extends SprykerSecurityMerchantPortalGuiCo
     /**
      * @var string
      */
-    protected const MERCHANT_PORTAL_ROUTE_PATTERN = '^/((.+)-merchant-portal-gui|multi-factor-auth-merchant-portal/(merchant-user|user-management)|_profiler|security-oauth-knpu/oauth-merchant-user-initiate|merchant-sales-invoice)/';
+    protected const MERCHANT_PORTAL_ROUTE_PATTERN = '^/((.+)-merchant-portal-gui|merchant-sales-invoice)/';
 }
 ```
 
@@ -469,6 +460,6 @@ console twig:cache:warmer
 
 {% info_block warningBox "Verification" %}
 
-Log in as the customer of a marketplace order with generated invoices and open the order in **My Account > Orders**. Make sure the **Documents** section lists one row per invoice and every row of a merchant's invoice shows the merchant's name.
+Log in as the customer of a marketplace order with generated invoices and open the order in **Customer Account&nbsp;<span aria-label="and then">></span> Order History**. Make sure the **Documents** section lists one row per invoice and every row of a merchant's invoice shows the merchant's name.
 
 {% endinfo_block %}

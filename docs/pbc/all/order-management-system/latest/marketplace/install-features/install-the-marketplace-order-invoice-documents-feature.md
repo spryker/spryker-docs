@@ -1,7 +1,7 @@
 ---
 title: Install the Marketplace Order Invoice Documents feature
 description: Learn how to integrate the Marketplace Order Invoice Documents feature into a Spryker Marketplace project.
-last_updated: Oct 20, 2026
+last_updated: Oct 21, 2026
 template: feature-integration-guide-template
 related:
   - title: Marketplace order invoice documents feature overview

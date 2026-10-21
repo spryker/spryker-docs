@@ -1,7 +1,7 @@
 ---
 title: Order invoice documents feature overview
 description: Learn how buyers on the Storefront and Back Office users open the invoice of an order as a page they can save as PDF, and what the feature does not do.
-last_updated: Oct 20, 2026
+last_updated: Oct 21, 2026
 template: concept-topic-template
 related:
   - title: Install the Order Invoice Documents feature
@@ -14,17 +14,7 @@ related:
     link: docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-invoice-documents-overview.html
 ---
 
-{% info_block infoBox "Liability" %}
-
-Spryker does not generate, validate, or assume legal responsibility for invoices or credit notes. The seller remains the invoice issuer and is responsible for the document's tax and legal compliance, including its format under applicable national e-invoicing mandates.
-
-Spryker's role is limited to forwarding the document links from the seller, making it available to the correct buyer/seller.
-
-Spryker does not transmit documents to national e-invoicing or clearance networks such as Peppol, KSeF, or SdI. Transmission remains the responsibility of the seller or their e-invoicing provider.
-
-The [Order confirmation / invoice notification email feature](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/invoice-generation-overview.html) is non compliant with the latest EU e-invoicing requirements.
-
-{% endinfo_block %}
+{% include pbc/all/order-management-system/order-invoice-liability.md %} <!-- To edit, see /_includes/pbc/all/order-management-system/order-invoice-liability.md -->
 
 The *Order invoice documents* feature makes the invoice of an order visible in two places:
 
@@ -41,13 +31,13 @@ Both places list the invoices of the order with a **PDF** link. The link opens t
 
 ## Storefront
 
-Below the order totals, the **Documents** section lists the invoices of the order: the reference, the issue date, and the **PDF** link. In marketplace shops, the row also names the merchant of the invoice through the `SoldByMerchantWidget` of the `MerchantWidget` module; see [Marketplace order invoice documents feature overview](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-invoice-documents-overview.html). Orders without an invoice show *No documents*.
+Below the order totals, the **Documents** section lists the invoices of the order: the reference, the issue date, and the **PDF** link. If the [Marketplace order invoice documents](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-invoice-documents-overview.html) feature is installed, the rows also show the merchant of each invoice. Orders without an invoice show *No documents*.
 
 The invoice can be opened by every customer who may open the order details page: `SalesInvoiceFacade::getOrderInvoices()` reads the order through `SalesFacade::getCustomerOrder()`, the method behind the order details page, which accepts the customer who placed the order and every customer a `CustomerOrderAccessCheckPluginInterface` plugin of the Sales module accepts. With the business-unit and company plugins of your project, a company user with the **See business unit orders** or **See company orders** permission opens the invoices of those orders too. For an order the customer may not see, `SalesFacade::getCustomerOrder()` throws `InvalidSalesOrderException`; the module does not catch it, so the Storefront shows an error page. This case is not reachable through the links the shop renders. A request for an unknown invoice of an accessible order answers with a 404 page. Anonymous visitors are redirected to the login page by the customer firewall.
 
 ## Back Office
 
-The order page shows a **Documents** block with the columns **Reference No.**, **Date**, and **Files**. In marketplace shops, the block of the `MerchantSalesInvoice` module adds a **Merchant** column. The **PDF** link opens the invoice page in a new tab. Access follows the existing Back Office permissions of the `SalesInvoice` module; no new ACL rules are added. Orders without an invoice show *No documents for this order*. For details, see [View order invoice documents](/docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/view-order-invoice-documents.html).
+The order page shows a **Documents** block with the columns **Reference No.**, **Date**, and **Files**. If the [Marketplace order invoice documents](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-invoice-documents-overview.html) feature is installed, the block also shows the merchant of each invoice. The **PDF** link opens the invoice page in a new tab. Access follows the existing Back Office permissions of the `SalesInvoice` module; no new ACL rules are added. Orders without an invoice show *No documents for this order*. For details, see [View order invoice documents](/docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/view-order-invoice-documents.html).
 
 ## The document
 

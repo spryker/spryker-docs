@@ -1,7 +1,7 @@
 ---
 title: Customize the order invoice document
 description: Learn how to change the content and the look of the order invoice document with your own template, add data with an expander plugin, set the reference or the template per invoice with a before-save plugin, and serve your own file format such as a generated PDF with your own download actions.
-last_updated: Oct 20, 2026
+last_updated: Oct 21, 2026
 template: howto-guide-template
 related:
   - title: Order invoice documents feature overview
@@ -12,17 +12,7 @@ related:
     link: docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/view-order-invoice-documents.html
 ---
 
-{% info_block infoBox "Liability" %}
-
-Spryker does not generate, validate, or assume legal responsibility for invoices or credit notes. The seller remains the invoice issuer and is responsible for the document's tax and legal compliance, including its format under applicable national e-invoicing mandates.
-
-Spryker's role is limited to forwarding the document links from the seller, making it available to the correct buyer/seller.
-
-Spryker does not transmit documents to national e-invoicing or clearance networks such as Peppol, KSeF, or SdI. Transmission remains the responsibility of the seller or their e-invoicing provider.
-
-The [Order confirmation / invoice notification email feature](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/invoice-generation-overview.html) is non compliant with the latest EU e-invoicing requirements.
-
-{% endinfo_block %}
+{% include pbc/all/order-management-system/order-invoice-liability.md %} <!-- To edit, see /_includes/pbc/all/order-management-system/order-invoice-liability.md -->
 
 The [Order invoice documents](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/order-invoice-documents-overview.html) feature shows the invoice that the `SalesInvoice` module renders from a Twig template. The same rendered document goes into the invoice email and onto the invoice page. The module itself ships no extension point for other file formats: by default the feature shows the rendered HTML, and a PDF is produced by the browser's print dialog. This document describes the places where a project changes what the document contains, how it looks, and how it is delivered:
 

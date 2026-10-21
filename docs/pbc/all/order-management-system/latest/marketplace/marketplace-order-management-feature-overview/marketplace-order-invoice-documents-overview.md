@@ -1,7 +1,7 @@
 ---
 title: Marketplace order invoice documents feature overview
 description: Learn how a marketplace order gets one invoice per merchant plus one for the items sold by the operator, and how merchants open their invoices in the Merchant Portal.
-last_updated: Oct 20, 2026
+last_updated: Oct 21, 2026
 template: concept-topic-template
 related:
   - title: Order invoice documents feature overview
@@ -14,17 +14,7 @@ related:
     link: docs/pbc/all/order-management-system/latest/base-shop/customize-the-order-invoice-document.html
 ---
 
-{% info_block infoBox "Liability" %}
-
-Spryker does not generate, validate, or assume legal responsibility for invoices or credit notes. The seller remains the invoice issuer and is responsible for the document's tax and legal compliance, including its format under applicable national e-invoicing mandates.
-
-Spryker's role is limited to forwarding the document links from the seller, making it available to the correct buyer/seller.
-
-Spryker does not transmit documents to national e-invoicing or clearance networks such as Peppol, KSeF, or SdI. Transmission remains the responsibility of the seller or their e-invoicing provider.
-
-The [Order confirmation / invoice notification email feature](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/invoice-generation-overview.html) is non compliant with the latest EU e-invoicing requirements.
-
-{% endinfo_block %}
+{% include pbc/all/order-management-system/order-invoice-liability.md %} <!-- To edit, see /_includes/pbc/all/order-management-system/order-invoice-liability.md -->
 
 The *Marketplace order invoice documents* feature extends the [Order invoice documents](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/order-invoice-documents-overview.html) feature for marketplace shops. A marketplace order contains items of one or several merchants and, optionally, items the marketplace operator sells. Instead of one invoice for the whole order, the feature creates one invoice per merchant plus one invoice for the items without a merchant. Each invoice shows only the items, expenses, and totals of its merchant, together with the merchant's requisites, and merchants open their invoices in the Merchant Portal.
 
@@ -64,6 +54,6 @@ Each invoice renders the invoice template of your project. The template receives
 
 - One invoice per merchant order, created with the merchant's first shipment, plus one invoice for the items without a merchant. Shipments and partial deliveries do not get separate invoices.
 - Invoice references stay in one sequence for all merchants, for example `Invoice-12`, `Invoice-13`.
-- The invoice email goes to the customer only; merchants receive no email.
+- Every invoice is sent as its own invoice email, so the customer gets one email per merchant and one for the items without a merchant. The BCC recipients configured in `SalesInvoiceConfig::getOrderInvoiceBcc()` receive each email too; merchants receive no email.
 - Credit notes and delivery notes are not supported.
 - The unique key on the order and the merchant reference does not cover the operator's invoice, whose merchant reference is `NULL`, which matches the base shop behavior for all invoices.

@@ -22,6 +22,11 @@ By default, merchant relationship prices are published per store, product, and c
 
 For large B2B catalogs, this multiplies the number of rows in the `spy_price_product_abstract_merchant_relationship_storage` and `spy_price_product_concrete_merchant_relationship_storage` tables, and the number of keys in the key-value storage, by the number of business units per merchant relationship. For example, a merchant relationship with 50 business units and 100,000 prices produces 5,000,000 storage rows and keys instead of 100,000.
 
+## When to enable the optimization
+
+- **Enable it** when your merchant relationships include many company business units. The number of storage rows and keys drops by the number of business units per merchant relationship.
+- **Skip it** when your project has a one-to-one relation between company business units and merchant relationships, so each merchant relationship includes only one company business unit. In this case, the optimization does not reduce the number of rows and keys, and each price read requires one additional lookup read. You do not need to follow this document.
+
 ## How the optimization works
 
 With the optimization enabled, prices are published per store, product, and merchant relationship. An additional lookup key per company business unit maps the business unit to its merchant relationships.
@@ -34,11 +39,6 @@ With the optimization enabled, prices are published per store, product, and merc
 | Storefront read | One `get()` call per business unit key | One `get()` call for the lookup key, then one `getMulti()` call for the price keys of all merchant relationships of the business unit |
 
 The client merges the prices of all merchant relationships of the business unit. When two merchant relationships of one business unit have a price for the same product, currency, and price type, the price of the last merchant relationship is used.
-
-### When to enable the optimization
-
-- **Enable it** when your merchant relationships include many company business units. The number of storage rows and keys drops by the number of business units per merchant relationship.
-- **Keep it disabled** when each merchant relationship includes only one company business unit. In this case, there is no reduction, and each price read requires one additional lookup read.
 
 ## Prerequisites
 

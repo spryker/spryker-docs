@@ -49,7 +49,7 @@ $config[AlgoliaConstants::SEARCH_ONLY_API_KEY] = getenv('ALGOLIA_SEARCH_API_KEY'
 
 ### Option B: Back Office configuration
 
-This option requires the [Spryker Configuration feature](/docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html) to be installed.
+This option requires the [Spryker Configuration feature](/docs/dg/dev/integrate-and-configure/integrate-configuration-feature.html) to be installed.
 
 1. Enable the Configuration module for this module by creating `src/Pyz/Shared/Algolia/AlgoliaConfig.php`:
 

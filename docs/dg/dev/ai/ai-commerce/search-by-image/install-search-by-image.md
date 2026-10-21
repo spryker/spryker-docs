@@ -18,7 +18,7 @@ Install the required features:
 | NAME | VERSION | INSTALLATION GUIDE |
 |------|---------|-------------------|
 | AI Commerce | {{page.release_tag}} | [Install AI Commerce](/docs/dg/dev/ai/ai-commerce/install-ai-commerce.html) |
-| Configuration Management | {{page.release_tag}} | [Install the Configuration Management feature](/docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html) |
+| Configuration Management | {{page.release_tag}} | [Install the Configuration Management feature](/docs/dg/dev/integrate-and-configure/integrate-configuration-feature.html) |
 | Catalog | {{page.release_tag}} | |
 
 ### 1) Add translations

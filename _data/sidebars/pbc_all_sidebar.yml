@@ -2903,6 +2903,8 @@ entries:
                     url: /docs/pbc/all/price-management/base-shop/tutorials-and-howtos/handle-twenty-five-million-prices-in-spryker-commerce-os.html
                   - title: Manage business unit specific prices via data import
                     url: /docs/pbc/all/price-management/base-shop/tutorials-and-howtos/manage-business-unit-specific-prices-via-data-import.html
+                  - title: Optimize merchant relationship price storage
+                    url: /docs/pbc/all/price-management/base-shop/tutorials-and-howtos/optimize-merchant-relationship-price-storage.html
                   - title: Schedule cron job for scheduled prices
                     url: /docs/pbc/all/price-management/base-shop/tutorials-and-howtos/schedule-cron-job-for-scheduled-prices.html
 

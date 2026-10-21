@@ -38,7 +38,7 @@ With the optimization enabled, prices are published per store, product, and merc
 | Lookup key | None | `mrbu:<idCompanyBusinessUnit>` with the data `{"idmr": [<idMerchantRelationship>, ...]}` |
 | Storefront read | One `get()` call per business unit key | One `get()` call for the lookup key, then one `getMulti()` call for the price keys of all merchant relationships of the business unit |
 
-The client merges the prices of all merchant relationships of the business unit. When two merchant relationships of one business unit have a price for the same product, currency, and price type, the price of the last merchant relationship is used.
+The client reads the prices of all merchant relationships of the business unit and returns one price per merchant relationship, currency, and price type, the same as with the optimization disabled. The price resolver then selects the price to show; by default, it selects the lowest price. The optimization does not change which price a customer sees.
 
 ## Prerequisites
 

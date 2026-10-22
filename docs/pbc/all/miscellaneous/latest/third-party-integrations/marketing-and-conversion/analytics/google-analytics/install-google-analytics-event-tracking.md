@@ -1,7 +1,7 @@
 ---
 title: Install Google Analytics Event Tracking
 description: Learn how to install Google Analytics Event Tracking, which lets Back Office users choose the storefront events sent to Google Analytics 4.
-last_updated: Oct 21, 2026
+last_updated: Oct 22, 2026
 template: howto-guide-template
 related:
   - title: Google Analytics Event Tracking
@@ -18,7 +18,7 @@ Install the required features:
 
 | NAME | INSTALLATION GUIDE |
 | --- | --- |
-| Configuration Management | [Install the Configuration Management feature](/docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html) |
+| Configuration Management | [Install the Configuration Management feature](/docs/dg/dev/integrate-and-configure/integrate-configuration-feature.html) |
 | Search Statistics | [Install Search Statistics](/docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/google-analytics/install-search-statistics.html) |
 
 Search Statistics installs the `spryker-eco/google-analytics` module and the storefront Google tag that sends the events.
@@ -31,7 +31,7 @@ In `spryker-eco/google-analytics` 1.4.0 and later, every event setting is off by
 
 ### 1) Install the required modules
 
-The event settings are declared in the module configuration schema, which needs `spryker/configuration` 1.6.0 or later to render them as collapsible groups under a shared heading.
+The event settings are defined in the module configuration schema. To display them as collapsible groups under a shared heading, use `spryker/configuration` version 1.6.0 or later.
 
 ```bash
 composer require spryker-eco/google-analytics:"^1.4.0" spryker/configuration:"^1.6.0" --update-with-dependencies
@@ -41,12 +41,12 @@ composer require spryker-eco/google-analytics:"^1.4.0" spryker/configuration:"^1
 
 Make sure the following modules have been installed:
 
-| MODULE | VERSION | EXPECTED DIRECTORY |
+| Module | Required version | Package directory |
 | --- | --- | --- |
-| GoogleAnalytics | 1.4.0 or later | vendor/spryker-eco/google-analytics |
-| Configuration | 1.6.0 or later | vendor/spryker/configuration |
-| ShopUi | 1.105.0 or later | vendor/spryker-shop/shop-ui |
-| TraceableEventWidget | 1.2.0 or later | vendor/spryker-shop/traceable-event-widget |
+| `GoogleAnalytics` | 1.4.0 or later | `vendor/spryker-eco/google-analytics` |
+| `Configuration` | 1.6.0 or later | `vendor/spryker/configuration` |
+| `ShopUi` | 1.105.0 or later | `vendor/spryker-shop/shop-ui` |
+| `TraceableEventWidget` | 1.2.0 or later | `vendor/spryker-shop/traceable-event-widget` |
 
 {% endinfo_block %}
 
@@ -69,7 +69,7 @@ vendor/bin/console configuration:sync
 
 ### 3) Add translations
 
-Generate the translation cache to show the event names and descriptions in the Back Office locales:
+Generate the translation cache to make the event names and descriptions available in the Back Office:
 
 ```bash
 vendor/bin/console translator:generate-cache
@@ -77,7 +77,7 @@ vendor/bin/console translator:generate-cache
 
 ### 4) Build the frontend
 
-The storefront component that sends the events and the Back Office styles of the event groups changed, so rebuild both frontends:
+Rebuild the Yves and Zed frontends to include the storefront event-tracking component and the updated Back Office styles:
 
 ```bash
 npm run yves
@@ -90,10 +90,10 @@ Turn on the events you want to send to GA4. For the available events and the Bac
 
 {% info_block warningBox "Verification" %}
 
-1. Turn on the **Search** event for a store and wait until the **Waiting for synchronisation** badge disappears.
-2. In that store, open the storefront and run a search.
-3. In the GA4 DebugView of the configured property, make sure a `search_results` event is received. To enable and use DebugView, see [Monitor events with DebugView](https://support.google.com/analytics/answer/7201382) in the Google Analytics Help Center.
-4. Turn off the **Search** event for the same store, wait for the synchronization, and run another search.
-5. Make sure no new `search_results` event is received in DebugView.
+1. Enable the **Search** event for a store and wait until the **Waiting for synchronisation** badge disappears.
+2. Open that store's storefront and run a search that returns products.
+3. In DebugView for the configured GA4 property, verify that the `search_results` event appears. For instructions, see [Monitor events with DebugView](https://support.google.com/analytics/answer/7201382) in the Google Analytics Help Center.
+4. Disable the **Search** event for the same store and wait until synchronization completes.
+5. Run another search and verify that no new `search_results` event appears in DebugView.
 
 {% endinfo_block %}

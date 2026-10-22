@@ -14,11 +14,11 @@ related:
 
 Google Analytics Event Tracking lets Back Office users decide which storefront events the shop sends to Google Analytics 4 (GA4). Each event has its own on/off setting, so you send GA4 only the data you need, without changing code or redeploying.
 
-The storefront sends events to GA4 through the Google tag (gtag.js), which loads when a Measurement ID is configured. When an event is turned off, the storefront does not send it to GA4 at all: the data is not collected, rather than collected and then filtered out in GA4.
+The storefront sends events to GA4 through the Google tag (`gtag.js`), which loads when you configure a Measurement ID. When you turn off an event, the storefront does not send that event to GA4. GA4 therefore does not receive the event through this integration.
 
 {% info_block warningBox "Legal compliance" %}
 
-Turning an event on starts collecting the related customer behavior in GA4. Before you turn on an event, make sure that your cookie consent banner and privacy policy cover that data, and that you obtain customer consent where it is required.
+Enabling an event allows the storefront to send the related customer behavior data to GA4. Before enabling an event, verify that your cookie consent mechanism and privacy policy cover the data being collected. Obtain customer consent where required by applicable law.
 
 {% endinfo_block %}
 
@@ -30,18 +30,18 @@ Turning an event on starts collecting the related customer behavior in GA4. Befo
 
 The following table lists the storefront events you can turn on and off, and the GA4 events each of them sends.
 
-| SETTING | TRIGGER | GA4 EVENTS |
+| Setting | Trigger | GA4 events |
 | --- | --- | --- |
-| Search | A customer runs a storefront search. | `search_results` when the search returns products. `zero_search_results` when the search returns no products. |
+| Search | A customer submits a search on the storefront. | `search_results` when the search returns products; `zero_search_results` when it returns no products. |
 
-The search events carry the following parameters:
+Both search events include the following parameters:
 
 | PARAMETER | DESCRIPTION |
 | --- | --- |
 | `search_term` | The query the customer entered. |
 | `results_count` | The number of products the search returned. |
 | `event_category` | Always `Search results`. |
-| `event_label` | `Search results`, or `No results` for a `zero_search_results` event. |
+| `event_label` | `Search results` for `search_results`; `No results` for `zero_search_results`. |
 | `store` | The store in which the customer searched, for example `DE`. |
 | `locale` | The locale in which the customer searched, for example `en_US`. |
 
@@ -53,17 +53,17 @@ The event settings are in the Back Office under **Configuration > Integrations >
 
 To turn events on or off:
 
-1. In the scope selector, select where the change applies:
-    - **Default (All Stores)**: the value applies to every store that does not have its own value.
-    - A store, for example **DE**: the value applies to that store only and takes precedence over the default value.
+1. In the scope selector, select the configuration scope:
+    - **Default (All Stores)**: Applies to all stores that do not have a store-specific value.
+    - A specific store, such as **DE**: Applies only to that store and overrides the default value.
 2. Select or clear the checkbox of an event. To turn all events of a group on or off at once, use the checkbox in the group header.
 3. Click **Save Configuration**.
 
-The storefront reads the event settings from storage. Until a saved change is synchronized to storage, the Back Office shows a **Waiting for synchronisation** badge next to the event and its group, and the storefront keeps using the previous value.
+The storefront reads event settings from storage. After you save a change, the Back Office displays a **Waiting for synchronisation** badge next to the affected event and its group until synchronization completes. During this time, the storefront continues to use the previous value.
 
 ### Default values
 
-All events are off by default. When you upgrade from a version of the `spryker-eco/google-analytics` module that sent search events unconditionally, the storefront stops sending search events until you turn on **Search**. To keep Search Statistics receiving data, turn on **Search** right after the upgrade.
+All events are disabled by default. If your previous version of `spryker-eco/google-analytics` sent search events without event-level configuration, the upgrade disables search event tracking until you enable **Search**. To continue collecting data in Search Statistics, enable **Search** after the upgrade.
 
 To set event values during deployment instead of in the Back Office, use the Configuration data import. For the file format and the setting keys, see [Data Import](/docs/dg/dev/backend-development/configuration-management.html#data-import). The setting key of the Search event is `integrations:google_analytics:product_events:search_event_enabled`.
 

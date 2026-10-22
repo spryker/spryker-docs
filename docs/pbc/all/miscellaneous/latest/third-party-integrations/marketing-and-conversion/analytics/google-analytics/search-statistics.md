@@ -108,5 +108,5 @@ On the detail page, you can:
 ### Limitations
 
 - **Data delay**: Search events collected on the storefront appear in the dashboard after up to 48 hours of GA4 processing time.
-- **Search event setting**: The storefront sends search events only while the **Search** event is turned on for the store. While it is off, the dashboard receives no new data for that store. For details, see [Google Analytics Event Tracking](/docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/google-analytics/google-analytics-event-tracking.html).
+- **Search event setting**: The storefront sends search events only while **Search** is enabled for the store. When the event is disabled, Search Statistics receives no new data for that store. For details, see [Google Analytics Event Tracking](/docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/google-analytics/google-analytics-event-tracking.html).
 - **Ad blockers**: Customers with ad blockers installed may not send events to GA4. This can cause search data to be underreported by an estimated 10–25%.

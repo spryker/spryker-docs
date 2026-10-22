@@ -152,7 +152,7 @@ console configuration:sync
 
 1. Log in to the Back Office.
 2. Navigate to **Configuration**.
-3. In the sidebar, select **Integrations**, and verify that the **Google Analytics** tab contains the **Storefront Tracking** and **Data API Connection** groups.
+3. In the sidebar, select **Integrations** and open the **Google Analytics** tab. Verify that it contains the **Storefront Tracking** and **Data API Connection** groups.
 
 {% endinfo_block %}
 
@@ -166,10 +166,10 @@ Before you configure the Back Office, obtain the following parameters from Googl
 
 Configure the Google Analytics 4 connection in the Back Office:
 
-1. Navigate to **Configuration**, select **Integrations** in the sidebar, and open the **Google Analytics** tab.
-2. In the **Storefront Tracking** group, set the **Measurement ID** (format: `G-XXXXXXXXXX`).
-3. In the **Data API Connection** group, set the **Property ID** and paste the full JSON content of a Google Cloud service account key into **Service Account Credentials JSON**.
-4. Under **Event Tracking**, in the **Product Events** group, turn on the **Search** event. The storefront sends search events to GA4 only while this event is on. For details, see [Google Analytics Event Tracking](/docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/google-analytics/google-analytics-event-tracking.html).
+1. In the Back Office, go to **Configuration**, select **Integrations** in the sidebar, and open the **Google Analytics** tab.
+2. In **Storefront Tracking**, set the **Measurement ID** (for example, `G-XXXXXXXXXX`).
+3. In **Data API Connection**, set the **Property ID** and paste the complete JSON content of your Google Cloud service account key into **Service Account Credentials JSON**.
+4. In **Event Tracking** > **Product Events**, enable **Search**. The storefront sends search events to GA4 only when this event is enabled. For details, see [Google Analytics Event Tracking](/docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/google-analytics/google-analytics-event-tracking.html).
 
 {% info_block warningBox "Verification" %}
 

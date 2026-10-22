@@ -39,14 +39,14 @@ composer require spryker-eco/google-analytics:"^1.4.0" spryker/configuration:"^1
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following modules have been installed:
+Make sure the following packages have been installed with the required versions:
 
-| Module | Required version | Package directory |
-| --- | --- | --- |
-| `GoogleAnalytics` | 1.4.0 or later | `vendor/spryker-eco/google-analytics` |
-| `Configuration` | 1.6.0 or later | `vendor/spryker/configuration` |
-| `ShopUi` | 1.105.0 or later | `vendor/spryker-shop/shop-ui` |
-| `TraceableEventWidget` | 1.2.0 or later | `vendor/spryker-shop/traceable-event-widget` |
+| PACKAGE | VERSION |
+| --- | --- |
+| `spryker-eco/google-analytics` | 1.4.0 or later |
+| `spryker/configuration` | 1.6.0 or later |
+| `spryker-shop/shop-ui` | 1.105.0 or later |
+| `spryker-shop/traceable-event-widget` | 1.2.0 or later |
 
 {% endinfo_block %}
 

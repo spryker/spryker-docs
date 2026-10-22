@@ -1,15 +1,17 @@
 ---
 title: Install the Workflows feature
 description: Learn how to integrate and configure the Workflows feature in a Spryker project.
-last_updated: Aug 17, 2026
+last_updated: Oct 22, 2026
 template: howto-guide-template
 
 related:
   - title: Workflows feature overview
     link: docs/pbc/all/back-office/latest/base-shop/workflows-feature-overview.html
+  - title: Add a subject type to the Workflows feature
+    link: docs/dg/dev/integrate-and-configure/add-a-subject-type-to-the-workflows-feature.html
 ---
 
-This document describes how to install the Workflow feature.
+This document describes how to install the Workflows feature.
 
 ## Prerequisites
 
@@ -17,11 +19,12 @@ Install the required modules:
 
 | MODULE | VERSION |
 |--------|---------|
-| spryker/workflow | ^1.0.0 |
+| spryker/workflow | ^0.4.0 |
 | spryker/state-machine | ^2.26.0 |
 | spryker/data-import | ^1.27.1 |
-| spryker/gui | ^5.3.2 |
+| spryker/gui | ^5.11.0 |
 | spryker/kernel | ^3.84.0 |
+| spryker/user | ^3.17.0 |
 
 ## Install feature core
 
@@ -30,7 +33,7 @@ Install the required modules:
 Install the Workflow module and update its dependencies to the required versions:
 
 ```bash
-composer require spryker/workflow:"^1.0.0" --update-with-dependencies
+composer require spryker/workflow:"^0.4.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -43,6 +46,7 @@ Make sure the following modules are available in `vendor/spryker/`:
 | spryker/state-machine |
 | spryker/data-import |
 | spryker/gui |
+| spryker/user |
 
 {% endinfo_block %}
 
@@ -97,15 +101,18 @@ In the Back Office, go to **Administration > Workflows** and make sure the page 
 
 ### 4) Create a workflow in the Back Office
 
-Once the feature is installed, a Back Office user can author a workflow through the UI:
+Once the feature is installed, a Back Office user can author a workflow through the UI. The **Subject type** and **Triggers** fields list only the subject types and events provided by registered trigger plugins, so register at least one trigger plugin first. For details, see [Register command, condition, and trigger plugins](#5-register-command-condition-and-trigger-plugins).
 
-1. Go to **Administration > Workflows** and create a process. Give it a name and a subject type (for example `Company`).
-2. Open the process's **Workflow Versions**, then **Create Version**: paste the definition XML (in the `state-machine-01` format) and set the initial state, which is the process's entry point. Save the version.
-3. **Activate** the version.
-4. Open the process's **Workflow Triggers**. The page lists the trigger events registered for the process's subject type ("Select events that start this workflow"). Select one or more and **Save Triggers**.
-5. **Activate** the process.
+1. Go to **Administration > Workflows** and click **Create Workflow**.
+2. Enter a **Name** and, optionally, a **Description**.
+3. Select a **Subject type**, then select one or more **Triggers** of that subject type. Triggers apply to all versions of the workflow.
+4. In **Version 1**, draw the states and transitions in the visual builder and mark the initial state. To check the definition before saving, click **Validate**.
+5. Click **Create workflow**. The workflow and its first version are created inactive.
+6. Activate the version and the workflow. Each activation asks for confirmation.
 
 The workflow is now live: whenever a selected trigger event fires for a subject of the configured type, a new instance starts on the active version.
+
+To change the description or triggers later, open the workflow and click **Edit description and triggers**. To change the definition, click **New version**, then **Save as new version**.
 
 {% info_block infoBox "Provisioning instead of manual authoring" %}
 
@@ -161,6 +168,8 @@ class WorkflowDependencyProvider extends SprykerWorkflowDependencyProvider
 ```
 
 For the plugin interfaces and how the engine resolves them, see [Extending a workflow](/docs/pbc/all/back-office/latest/base-shop/workflows-feature-overview.html#extending-a-workflow).
+
+A trigger plugin only makes an event selectable in the Back Office. To start an instance when the event fires, your project also needs an event listener. For a complete example, see [Add a subject type to the Workflows feature](/docs/dg/dev/integrate-and-configure/add-a-subject-type-to-the-workflows-feature.html).
 
 ### 6) Register the data importer
 

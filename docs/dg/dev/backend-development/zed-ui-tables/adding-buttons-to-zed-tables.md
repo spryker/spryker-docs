@@ -1,7 +1,7 @@
 ---
 title: Adding buttons to Zed tables
 description: Enhance Zed tables by adding custom buttons with this guide. Learn how to configure button actions and integrate them seamlessly into your backend UI.
-last_updated: Jun 16, 2021
+last_updated: Oct 22, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-add-button-table
 originalArticleId: a4d8ebed-1c73-47d6-9dad-fc3672736cf6
@@ -50,3 +50,52 @@ $buttonOptions = [
     'icon' => 'button-icon'
 ];
 ```
+
+## Ask for confirmation before an action
+
+To prevent a user from running a destructive or important action by mistake, open a confirmation modal before the action runs. The modal is available in `spryker/gui` 5.11.0 and later, and it opens for any link or submit button in the Back Office that has the `data-confirm` attribute. The modal is rendered by the core `@Gui/Layout/layout.twig`. If your project overrides this layout, add `{% raw %}{% include '@Gui/Modal/action-confirmation-modal.twig' %}{% endraw %}` to it.
+
+In a table, build the attributes with `buildConfirmationAttributes()` and pass them as button options to `generateFormButton()`:
+
+```php
+<?php
+
+use Generated\Shared\Transfer\ActionConfirmationTransfer;
+use Spryker\Zed\Gui\Communication\Form\DeleteForm;
+
+$this->generateFormButton('/category/delete?id-category=1', 'Delete', DeleteForm::class, [
+    static::BUTTON_CLASS => 'btn-danger',
+    static::BUTTON_ICON => 'fa-trash',
+] + $this->buildConfirmationAttributes(
+    (new ActionConfirmationTransfer())
+        ->setTitle('Delete %name%?')
+        ->setMessage('The category will be deleted permanently.')
+        ->setConfirmButtonLabel('Delete')
+        ->setType(static::CONFIRMATION_TYPE_DANGER)
+        ->setTranslationParameters(['%name%' => 'Cameras']),
+));
+```
+
+`buildConfirmationAttributes()` translates the title, message, and button label, and escapes them for HTML. The `ActionConfirmationTransfer` properties are as follows:
+
+| PROPERTY | REQUIRED | DESCRIPTION |
+|----------|----------|-------------|
+| title | yes | Modal title. |
+| message | yes | Modal text. |
+| confirmButtonLabel | yes | Label of the button that runs the action. |
+| type | no | Style of the confirm button: `static::CONFIRMATION_TYPE_DANGER` (default) or `static::CONFIRMATION_TYPE_PRIMARY`. |
+| translationParameters | no | Placeholders to replace in the title and message. |
+
+Outside a table, add the attributes directly in Twig:
+
+```twig
+{% raw %}<a href="/category/delete?id-category=1"
+   class="btn btn-danger"
+   data-confirm="1"
+   data-confirm-title="{{ 'Delete category?' | trans }}"
+   data-confirm-message="{{ 'The category will be deleted permanently.' | trans }}"
+   data-confirm-button="{{ 'Delete' | trans }}"
+   data-confirm-type="danger">{{ 'Delete' | trans }}</a>{% endraw %}
+```
+
+If an attribute is omitted, the modal shows a default title, message, or button label.

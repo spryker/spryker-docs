@@ -1166,8 +1166,10 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/integrate-configuration-feature.html
     - title: Integrate the Configuration Management deployment commands
       url: /docs/dg/dev/integrate-and-configure/integrate-configuration-deployment-commands.html
-    - title: Workflow feature
+    - title: Install the Workflows feature
       url: /docs/dg/dev/integrate-and-configure/integrate-workflow-feature.html
+    - title: Add a subject type to the Workflows feature
+      url: /docs/dg/dev/integrate-and-configure/add-a-subject-type-to-the-workflows-feature.html
     - title: Basic Shop Theme feature
       url: /docs/dg/dev/integrate-and-configure/integrate-basic-shop-theme.html
 

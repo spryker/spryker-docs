@@ -1,16 +1,6 @@
 This document describes how to install the [Order invoice documents](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/order-invoice-documents-overview.html) feature.
 
-{% info_block infoBox "Liability" %}
-
-Spryker does not generate, validate, or assume legal responsibility for invoices or credit notes. The seller remains the invoice issuer and is responsible for the document's tax and legal compliance, including its format under applicable national e-invoicing mandates.
-
-Spryker's role is limited to forwarding the document links from the seller, making it available to the correct buyer/seller.
-
-Spryker does not transmit documents to national e-invoicing or clearance networks such as Peppol, KSeF, or SdI. Transmission remains the responsibility of the seller or their e-invoicing provider.
-
-The [Order confirmation / invoice notification email feature](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/invoice-generation-overview.html) is non compliant with the latest EU e-invoicing requirements.
-
-{% endinfo_block %}
+{% include pbc/all/order-management-system/order-invoice-liability.md %} <!-- To edit, see /_includes/pbc/all/order-management-system/order-invoice-liability.md -->
 
 ## Install feature core
 
@@ -279,6 +269,6 @@ console twig:cache:warmer
 
 {% info_block warningBox "Verification" %}
 
-Log in as the customer of an order with a generated invoice and open the order in **My Account > Orders**. Make sure the **Documents** section lists the invoice and the **PDF** link opens the invoice page in a new tab. Open the same URL as another customer and make sure it answers with a 404 page.
+Log in as the customer of an order with a generated invoice and open the order in **Customer Account&nbsp;<span aria-label="and then">></span> Order History**. Make sure the **Documents** section lists the invoice and the **PDF** link opens the invoice page in a new tab. Open the same URL as another customer and make sure it answers with a 404 page.
 
 {% endinfo_block %}

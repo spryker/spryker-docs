@@ -1,7 +1,7 @@
 ---
 title: Customize the order invoice document
 description: Learn how to change the content and the look of the order invoice document with your own template, add data with an expander plugin, set the reference or the template per invoice with a before-save plugin, and serve your own file format such as a generated PDF with your own download actions.
-last_updated: Oct 06, 2026
+last_updated: Oct 21, 2026
 template: howto-guide-template
 related:
   - title: Order invoice documents feature overview
@@ -12,23 +12,14 @@ related:
     link: docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/view-order-invoice-documents.html
 ---
 
-{% info_block infoBox "Liability" %}
-
-Spryker does not generate, validate, or assume legal responsibility for invoices or credit notes. The seller remains the invoice issuer and is responsible for the document's tax and legal compliance, including its format under applicable national e-invoicing mandates.
-
-Spryker's role is limited to forwarding the document links from the seller, making it available to the correct buyer/seller.
-
-Spryker does not transmit documents to national e-invoicing or clearance networks such as Peppol, KSeF, or SdI. Transmission remains the responsibility of the seller or their e-invoicing provider.
-
-The [Order confirmation / invoice notification email feature](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/invoice-generation-overview.html) is non compliant with the latest EU e-invoicing requirements.
-
-{% endinfo_block %}
+{% include pbc/all/order-management-system/order-invoice-liability.md %} <!-- To edit, see /_includes/pbc/all/order-management-system/order-invoice-liability.md -->
 
 The [Order invoice documents](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/order-invoice-documents-overview.html) feature shows the invoice that the `SalesInvoice` module renders from a Twig template. The same rendered document goes into the invoice email and onto the invoice page. The module itself ships no extension point for other file formats: by default the feature shows the rendered HTML, and a PDF is produced by the browser's print dialog. This document describes the places where a project changes what the document contains, how it looks, and how it is delivered:
 
 - The invoice template: content, layout, and styles of the document.
 - An expander plugin: data that the template can use but the invoice does not store.
 - A before-save plugin: the reference and the template path of every new invoice.
+- An existence-check plugin and a render expander plugin: how many invoices an order gets and which part of the order each document covers.
 - Your own download actions: another file format, for example a PDF generated on the project side, or a link to the document of an external system, with the module's links pointing to them.
 
 ## Prerequisites
@@ -64,8 +55,8 @@ The template lives in `src/Pyz/Zed/SalesInvoice/Presentation/Invoice/invoice.twi
 
 | Variable | Transfer | Contains |
 |---|---|---|
-| `invoice` | `OrderInvoiceTransfer` | `reference`, `issueDate`, `templatePath`, and the properties your expander plugins add. |
-| `order` | `OrderTransfer` | The fully loaded order: `items`, `expenses`, `totals`, `billingAddress`, `currencyIsoCode`, `locale`, `merchants`. |
+| `invoice` | `OrderInvoiceTransfer` | `reference`, `issueDate`, `templatePath`, and the properties your expander plugins add. In marketplace shops with the `MerchantSalesInvoice` module, `merchantReference` and `merchant` of the invoice. |
+| `order` | `OrderTransfer` | The fully loaded order: `items`, `expenses`, `totals`, `billingAddress`, `currencyIsoCode`, `locale`, `merchants`. A render expander plugin can replace it with a narrowed copy, see [Decide how many invoices an order gets and what each document covers](#decide-how-many-invoices-an-order-gets-and-what-each-document-covers). |
 
 Edit the template to change the content, the layout, or the styles. Keep the following in mind:
 
@@ -349,6 +340,84 @@ Register it in the same dependency provider:
 ```
 
 The reference set by the plugin must stay unique: the module generates it from the `SalesInvoiceConfig::getOrderInvoiceReferenceSequence()` sequence, and a plugin that replaces it is responsible for its uniqueness.
+
+## Decide how many invoices an order gets and what each document covers
+
+By default, `SalesInvoiceFacade::generateOrderInvoice()` creates one invoice per order and skips the call when the order already has one, and the document renders the whole order. Two plugin interfaces of the `SalesInvoiceExtension` module change this. They were introduced for the [Marketplace order invoice documents](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-invoice-documents-overview.html) feature, whose `MerchantSalesInvoice` module is the reference implementation, and a project can use them for its own split, for example one invoice per shipment or per business unit.
+
+`OrderInvoiceExistenceCheckStrategyPluginInterface` replaces the per-order check. `generateOrderInvoice()` passes the items of the OMS event in `OrderTransfer.items`; the first applicable plugin decides whether an invoice already exists for them. Without an applicable plugin, the module checks the order as before:
+
+**src/Pyz/Zed/SalesInvoice/Communication/Plugin/SalesInvoice/ShipmentOrderInvoiceExistenceCheckStrategyPlugin.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\SalesInvoice\Communication\Plugin\SalesInvoice;
+
+use Generated\Shared\Transfer\OrderTransfer;
+use Spryker\Zed\Kernel\Communication\AbstractPlugin;
+use Spryker\Zed\SalesInvoiceExtension\Dependency\Plugin\OrderInvoiceExistenceCheckStrategyPluginInterface;
+
+class ShipmentOrderInvoiceExistenceCheckStrategyPlugin extends AbstractPlugin implements OrderInvoiceExistenceCheckStrategyPluginInterface
+{
+    public function isApplicable(OrderTransfer $orderTransfer): bool
+    {
+        return $orderTransfer->getItems()->count() > 0;
+    }
+
+    public function hasOrderInvoice(OrderTransfer $orderTransfer): bool
+    {
+        return $this->getFactory()->createShipmentInvoiceChecker()->hasInvoiceForItems($orderTransfer);
+    }
+}
+```
+
+`OrderInvoiceRenderOrderExpanderPluginInterface` runs before the document is rendered, in the email, on the Storefront, in the Back Office, and in the Merchant Portal. It receives the invoice and the fully loaded order and returns the order to render. Return a narrowed copy to make the document cover only part of the order, and recalculate its totals, for example with `CalculationFacade::recalculateOrder()`:
+
+```php
+<?php
+
+namespace Pyz\Zed\SalesInvoice\Communication\Plugin\SalesInvoice;
+
+use Generated\Shared\Transfer\OrderInvoiceTransfer;
+use Generated\Shared\Transfer\OrderTransfer;
+use Spryker\Zed\Kernel\Communication\AbstractPlugin;
+use Spryker\Zed\SalesInvoiceExtension\Dependency\Plugin\OrderInvoiceRenderOrderExpanderPluginInterface;
+
+class ShipmentOrderInvoiceRenderOrderExpanderPlugin extends AbstractPlugin implements OrderInvoiceRenderOrderExpanderPluginInterface
+{
+    public function expand(OrderInvoiceTransfer $orderInvoiceTransfer, OrderTransfer $orderTransfer): OrderTransfer
+    {
+        return $this->getFactory()->createShipmentOrderExpander()->narrowOrderToInvoiceShipment($orderInvoiceTransfer, $orderTransfer);
+    }
+}
+```
+
+Register both in the same dependency provider:
+
+```php
+    /**
+     * @return array<\Spryker\Zed\SalesInvoiceExtension\Dependency\Plugin\OrderInvoiceExistenceCheckStrategyPluginInterface>
+     */
+    protected function getOrderInvoiceExistenceCheckStrategyPlugins(): array
+    {
+        return [
+            new ShipmentOrderInvoiceExistenceCheckStrategyPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\SalesInvoiceExtension\Dependency\Plugin\OrderInvoiceRenderOrderExpanderPluginInterface>
+     */
+    protected function getOrderInvoiceRenderOrderExpanderPlugins(): array
+    {
+        return [
+            new ShipmentOrderInvoiceRenderOrderExpanderPlugin(),
+        ];
+    }
+```
+
+The invoice stores no link to its items, so a project that splits invoices stores the split itself, for example as a property set by an `OrderInvoiceBeforeSavePluginInterface` plugin. `MerchantSalesInvoice` stores the merchant reference of the invoice this way and uses it in both plugins.
 
 ## Verify the changes
 

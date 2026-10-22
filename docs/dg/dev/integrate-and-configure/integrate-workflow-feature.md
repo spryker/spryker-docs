@@ -101,7 +101,7 @@ In the Back Office, go to **Administration > Workflows** and make sure the page 
 
 ### 4) Create a workflow in the Back Office
 
-Once the feature is installed, a Back Office user can author a workflow through the UI. The **Subject type** and **Triggers** fields list only the subject types and events provided by registered trigger plugins, so register at least one trigger plugin first. For details, see [Register command, condition, and trigger plugins](#5-register-command-condition-and-trigger-plugins).
+Once the feature is installed, a Back Office user can author a workflow through the UI. The **Subject type** and **Triggers** fields list only the subject types and events provided by registered trigger plugins, so register at least one trigger plugin first. For details, see [Register command, condition, and trigger plugins](#register-command-condition-and-trigger-plugins).
 
 1. Go to **Administration > Workflows** and click **Create Workflow**.
 2. Enter a **Name** and, optionally, a **Description**.

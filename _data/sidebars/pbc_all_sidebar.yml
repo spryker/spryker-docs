@@ -1930,7 +1930,7 @@ entries:
                       - title: Install Search Statistics
                         url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/google-analytics/install-search-statistics.html
                   - title: Google Analytics Event Tracking
-                    url: /docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/google-analytics/google-analytics-event-tracking.html
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/google-analytics/google-analytics-event-tracking.html
                     nested:
                       - title: Install Google Analytics Event Tracking
                         url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/google-analytics/install-google-analytics-event-tracking.html

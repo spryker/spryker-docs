@@ -1929,6 +1929,11 @@ entries:
                     nested:
                       - title: Install Search Statistics
                         url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/google-analytics/install-search-statistics.html
+                  - title: Google Analytics Event Tracking
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/google-analytics/google-analytics-event-tracking.html
+                    nested:
+                      - title: Install Google Analytics Event Tracking
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/google-analytics/install-google-analytics-event-tracking.html
 
               - title: OpenAI
                 url: /docs/pbc/all/miscellaneous/third-party-integrations/open-ai/integrate-openai.html

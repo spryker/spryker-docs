@@ -53,4 +53,4 @@ A refresh never overwrites a rule file that you changed. Commit the rule files, 
 | `yves-frontend.md` | Yves storefront Twig, SCSS, and TypeScript: project-level overrides of core components, BEM and JavaScript hook conventions, and validation with the project's npm lint scripts |
 | `zed-backoffice-frontend.md` | Back Office Twig, JavaScript, SCSS, and navigation: overrides that extend core blocks, Bootstrap 5 markup, no new jQuery, translated text, safe escaping, and server-side ACL |
 
-The frontend rules — `yves-frontend.md`, `zed-backoffice-frontend.md`, and `merchant-portal-angular.md` — are scoped by file path, so the coding agent loads each one only when you work on files of that frontend.
+Every rule is scoped by file path: the coding agent loads a rule only when you work on a file that the rule applies to.

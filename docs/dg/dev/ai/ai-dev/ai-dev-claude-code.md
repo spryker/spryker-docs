@@ -24,7 +24,7 @@ The `spryker-ai-dev-sdk` Claude Code plugin closes this gap. It gives Claude Cod
 
 **What it does for you:**
 
-- **No more explaining Spryker basics.** 23 rule files with Spryker architectural patterns and conventions are automatically loaded into every session. Claude Code knows about factories, dependency providers, expanders, mappers, and more without you having to explain them.
+- **No more explaining Spryker basics.** 23 rule files with Spryker architectural patterns and conventions load automatically when you work on the files they apply to. Claude Code knows about factories, dependency providers, expanders, mappers, and more without you having to explain them.
 - **Correct code on the first attempt.** Skills for common Spryker tasks — Propel schema changes, data importers, functional tests, payment integrations, atomic frontend components — follow the exact conventions your project expects.
 - **Live project context.** The MCP server runs inside your Docker container and gives Claude Code real-time access to your transfer objects, module interfaces, and OMS configuration. The AI works with your actual project data, not guesses.
 - **Consistent code reviews.** The `spryker-code-reviewer` subagent checks your changes against Spryker's coding standards and architectural rules, catching issues before they reach a PR.

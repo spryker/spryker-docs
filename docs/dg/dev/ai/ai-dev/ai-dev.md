@@ -23,14 +23,14 @@ When you use AI tools to write code, they rely on general patterns, which leads 
 The AI Dev SDK makes your AI assistant Spryker-aware. It ships:
 
 - **Skills and agents** — packaged workflows for Spryker work: project setup, demo preparation, feature customization, bugfixing, upgrades, testing, and code review. See [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html).
-- **Rules and a project context file** — Spryker's coding conventions and your project's specifics, loaded into every session.
+- **Rules and a project context file** — Spryker's coding conventions, loaded when you work on the files they apply to, and your project's specifics, loaded into every session.
 - **An MCP server** (MCP — Model Context Protocol, a standard that lets AI tools query external systems) — live access to your running application: transfer objects, module interfaces, order management system (OMS) state machines, and read-only database queries. See [AI Dev MCP Server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html).
 
 The SDK is delivered by the `spryker-sdk/ai-dev` module and, for Claude Code and GitHub Copilot CLI, by the `spryker-ai-dev-sdk` plugin. To set either of them up, see [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html).
 
 ## How it works
 
-The skills, agents, and rules are files installed into your AI tool's directories — through the plugin (for Claude Code and GitHub Copilot CLI) or the `ai-dev:setup` console command (for other assistants). The assistant loads the rules and the context file into every session, and when you describe a task, it picks the matching skill and follows a tested Spryker workflow instead of improvising.
+The skills, agents, and rules are files installed into your AI tool's directories — through the plugin (for Claude Code and GitHub Copilot CLI) or the `ai-dev:setup` console command (for other assistants). The assistant loads the context file into every session and each rule when you work on a file that the rule applies to. When you describe a task, it picks the matching skill and follows a tested Spryker workflow instead of improvising.
 
 The MCP server covers what static files cannot: facts about your running application. It runs as a console command inside your project's Docker container; when the assistant needs a transfer structure, an OMS transition, or a data check, it queries the server and works with your actual project state instead of assumptions.
 

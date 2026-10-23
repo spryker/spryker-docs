@@ -22,7 +22,7 @@ To update the plugin, run `/plugin` in Claude Code and update `spryker-ai-dev-sd
 
 ## What the skill does
 
-![profiler](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/profiler.png)
+![profiler](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/profiler-v2.png)
 
 `spryker-profiler` turns the Spryker and Symfony WebProfiler into performance numbers you can act on, and explains how to switch profiling on when there is nothing to read.
 

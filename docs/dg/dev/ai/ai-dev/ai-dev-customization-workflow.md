@@ -32,7 +32,7 @@ For the full flow, the design decisions, and the known limits, see the [`spryker
 
 ## Workflow at a glance
 
-![AI Dev SDK customization workflow](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/customization.png)
+![AI Dev SDK customization workflow](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/customization-v2.png)
 
 Each phase delegates to specific skills (pale yellow) and agents (deep amber) — for example, the `spryker-feature-expert` agent researches the relevant Spryker domain during planning, and the `spryker-verifier` agent drives the running storefront and back office to confirm the feature actually works.
 

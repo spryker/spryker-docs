@@ -22,7 +22,7 @@ To update the plugin, run `/plugin` in Claude Code and update `spryker-ai-dev-sd
 
 ## What the skill does
 
-![bugfix](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/bugfix.png)
+![bugfix](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/bugfix-v2.png)
 
 `spryker-bugfix` takes a bug and drives it to a committed, validated, QA-accepted fix on a `bugfix/*` branch. In Autonomous mode it goes all the way to a pushed draft pull request with a remote CI watch loop.
 

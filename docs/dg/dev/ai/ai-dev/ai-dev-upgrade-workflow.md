@@ -16,13 +16,13 @@ related:
 
 ## Availability
 
-The `spryker-upgrade` skill is available from `spryker-sdk/ai-dev` version 0.6.4, which ships version 0.4.0 of the `spryker-ai-dev-sdk` plugin. Plugin version 0.7.0 adds the tooling alignment, the performance fixes, and the Back Office crawl. Plugin version 0.8.0 adds the security fixes, the release steps check, and the handover report, and supports GitHub Copilot.
+The `spryker-upgrade` skill is available from `spryker-sdk/ai-dev` version 0.6.4, which ships version 0.4.0 of the `spryker-ai-dev-sdk` plugin. Plugin version 0.7.0 adds the tooling alignment and the performance fixes. Plugin version 0.8.0 adds the security fixes, the release steps check, and the handover report, and supports GitHub Copilot.
 
 To update the plugin, run `/plugin` in Claude Code and update `spryker-ai-dev-sdk` from the `spryker-plugins-official` marketplace. In GitHub Copilot, run `copilot plugin update spryker-ai-dev-sdk@spryker-plugins-official`. For installation instructions, see [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html).
 
 ## What the skill does
 
-![upgrade](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/upgrade.png)
+![upgrade](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/upgrade-v2.png)
 
 `spryker-upgrade` upgrades your project's modules and features to a newer Spryker release. It is built for projects with heavy `src/Pyz` customization, where the dangerous part of an upgrade is not the code that stops compiling but the code that keeps running while doing nothing.
 
@@ -51,7 +51,7 @@ The workflow therefore starts with a different question than "which modules chan
 9. **Boot and verify** — boots the upgraded project, compares the storage and search tables with the baseline, regenerates the artifacts, and runs the full test suite in the booted environment.
 10. **New features** — lists the new packages and the new capabilities of existing modules. You decide for each one: integrate now, defer, or never.
 11. **Performance fixes** — checks the project against Spryker's performance guidelines. See [Performance fixes](#performance-fixes).
-12. **Back Office crawl and browser checks** — opens every Back Office navigation page and every table data endpoint, then checks the pages in the browser.
+12. **Page checks** — checks the pages of the upgraded project in the browser.
 13. **Release steps** — finds the commands that staging and production must run after the normal deployment. See [Release steps](#release-steps).
 14. **Reports** — writes a report for the developer and a handover report for the development team. See [Reports](#reports).
 

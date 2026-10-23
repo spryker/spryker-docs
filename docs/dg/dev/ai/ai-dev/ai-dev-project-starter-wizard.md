@@ -18,7 +18,7 @@ Every Spryker project starts from a demoshop — a complete, working reference s
 
 ## What the skill does
 
-![starter](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/setup.png)
+![starter](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/setup-v2.png)
 
 `project-starter-wizard` turns a fresh, un-booted clone of the Spryker B2B Marketplace demoshop into your customer project. It collects everything once up front — in a developer interview, or from a setup questionnaire you fill instead. Either way, the answers land in a resumable state file, and the wizard then drives nine specialist skills in the one order that works.
 

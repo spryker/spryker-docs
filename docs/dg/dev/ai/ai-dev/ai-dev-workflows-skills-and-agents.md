@@ -52,7 +52,7 @@ The first five are orchestrators: they own a full workflow and delegate each sta
 
 ## Composable by design
 
-![composable-skills](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/skills.png)
+![composable-skills](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/skills-v2.png)
 
 Each skill covers one stage of work and nothing more — research a feature, seed test data, run static validation, drive the running app, capture screenshots. Nothing is bundled into a single monolithic assistant, so you compose the stages into whatever long-running workflow your team actually runs.
 

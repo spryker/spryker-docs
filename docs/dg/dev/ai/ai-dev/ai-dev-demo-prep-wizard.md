@@ -18,6 +18,8 @@ The wizard asks only about content, look, and story. It makes the technical deci
 
 ## What the skill does
 
+![demo-prep](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/demo-prep.png)
+
 The wizard is an orchestrator. It does not harvest, design or import data itself. Each phase goes to a named skill:
 
 | Phase | Skill | What happens |

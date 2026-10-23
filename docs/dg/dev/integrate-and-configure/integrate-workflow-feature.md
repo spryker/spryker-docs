@@ -99,7 +99,22 @@ In the Back Office, go to **Administration > Workflows** and make sure the page 
 
 {% endinfo_block %}
 
-### 4) Create a workflow in the Back Office
+### 4) Build the Back Office assets and translations
+
+The workflow builder and the action confirmation modal are part of the Back Office frontend assets, and the Workflow and Gui modules ship Back Office translations. Build the assets and generate the translation cache:
+
+```bash
+docker/sdk cli console frontend:zed:build
+docker/sdk cli console translator:generate-cache
+```
+
+{% info_block warningBox "Verification" %}
+
+In the Back Office, go to **Administration > Workflows** and click **Create Workflow**. Make sure the visual builder is displayed and the page labels are translated.
+
+{% endinfo_block %}
+
+### 5) Create a workflow in the Back Office
 
 Once the feature is installed, a Back Office user can author a workflow through the UI. The **Subject type** and **Triggers** fields list only the subject types and events provided by registered trigger plugins, so register at least one trigger plugin first. For details, see [Register command, condition, and trigger plugins](#register-command-condition-and-trigger-plugins).
 
@@ -120,7 +135,7 @@ To ship a ready-made workflow with your project instead of creating it by hand, 
 
 {% endinfo_block %}
 
-### 5) Register command, condition, and trigger plugins
+### 6) Register command, condition, and trigger plugins
 
 Register your project's commands, conditions, and start triggers by extending the core `WorkflowDependencyProvider`.
 
@@ -171,7 +186,7 @@ For the plugin interfaces and how the engine resolves them, see [Extending a wor
 
 A trigger plugin only makes an event selectable in the Back Office. To start an instance when the event fires, your project also needs an event listener. For a complete example, see [Add a subject type to the Workflows feature](/docs/dg/dev/integrate-and-configure/add-a-subject-type-to-the-workflows-feature.html).
 
-### 6) Register the data importer
+### 7) Register the data importer
 
 Register the Workflow data import plugin so workflows can be provisioned from CSV.
 
@@ -191,7 +206,7 @@ protected function getDataImporterPlugins(): array
 }
 ```
 
-### 7) Provide the import data
+### 8) Provide the import data
 
 The import uses two files: a definition XML file that describes the state machine (its states, transitions, and events, in the same `state-machine-01` format used by the OMS), and a CSV that provisions the workflow and points at that XML file. Storing the definition in its own file keeps the CSV readable and lets you edit the state machine like any other XML process.
 
@@ -236,7 +251,7 @@ Run the importer directly to verify:
 docker/sdk cli console data:import workflow
 ```
 
-### 8) Add the importer to the install recipe
+### 9) Add the importer to the install recipe
 
 Register the workflow importer in the data import configuration so it runs during deployment. Add it to the region import config that the install recipes invoke through `data:import`.
 
@@ -257,7 +272,7 @@ Run the install recipe and make sure the workflow with its versions appears unde
 
 {% endinfo_block %}
 
-### 9) Schedule the condition and timeout jobs
+### 10) Schedule the condition and timeout jobs
 
 Condition and timeout transitions have no event, so they must be advanced by two console commands: `workflow:check-condition` and `workflow:check-timeout`. These commands are **not** scheduled out of the box — register them as recurring jobs the same way the OMS and state machine checks are scheduled. Add the following jobs to `config/Zed/cronjobs/jenkins.php`:
 

@@ -53,7 +53,7 @@ $buttonOptions = [
 
 ## Ask for confirmation before an action
 
-To prevent a user from running a destructive or important action by mistake, open a confirmation modal before the action runs. The modal is available in `spryker/gui` 5.11.0 and later, and it opens for any link or submit button in the Back Office that has the `data-confirm` attribute. The modal is rendered by the core `@Gui/Layout/layout.twig`. If your project overrides this layout, add `{% raw %}{% include '@Gui/Modal/action-confirmation-modal.twig' %}{% endraw %}` to it.
+To prevent a user from running a destructive or important action by mistake, open a confirmation modal before the action runs. The modal is available in `spryker/gui` 5.11.0 and later, and it opens for any link or submit button in the Back Office that has the `data-confirm` attribute. The modal is rendered by the core `@Gui/Layout/layout.twig`. A project layout that extends `@Spryker:Gui/Layout/layout.twig` keeps the modal. If your project replaces the layout without extending it, add `{% raw %}{% include '@Gui/Modal/action-confirmation-modal.twig' %}{% endraw %}` to it.
 
 In a table, build the attributes with `buildConfirmationAttributes()` and pass them as button options to `generateFormButton()`:
 

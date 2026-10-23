@@ -142,7 +142,60 @@ class WorkflowDependencyProvider extends SprykerWorkflowDependencyProvider
 
 ## 4) Add the event listener
 
-The listener receives the event and starts the workflow instance. The subject identifier is the ID of the created entity. The listener gets `WorkflowFacadeInterface` from the module's communication factory, which receives it through the module's dependency provider.
+The listener receives the event and starts the workflow instance. The subject identifier is the ID of the created entity.
+
+The listener needs `WorkflowFacadeInterface`. Provide the facade in the module's dependency provider:
+
+**src/Pyz/Zed/ExampleWorkflow/ExampleWorkflowDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ExampleWorkflow;
+
+use Spryker\Zed\Kernel\AbstractBundleDependencyProvider;
+use Spryker\Zed\Kernel\Container;
+
+class ExampleWorkflowDependencyProvider extends AbstractBundleDependencyProvider
+{
+    public const FACADE_WORKFLOW = 'FACADE_WORKFLOW';
+
+    public function provideCommunicationLayerDependencies(Container $container): Container
+    {
+        $container = parent::provideCommunicationLayerDependencies($container);
+
+        $container->set(static::FACADE_WORKFLOW, static function (Container $container) {
+            return $container->getLocator()->workflow()->facade();
+        });
+
+        return $container;
+    }
+}
+```
+
+Expose it through the module's communication factory:
+
+**src/Pyz/Zed/ExampleWorkflow/Communication/ExampleWorkflowCommunicationFactory.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ExampleWorkflow\Communication;
+
+use Pyz\Zed\ExampleWorkflow\ExampleWorkflowDependencyProvider;
+use Spryker\Zed\Kernel\Communication\AbstractCommunicationFactory;
+use Spryker\Zed\Workflow\Business\WorkflowFacadeInterface;
+
+class ExampleWorkflowCommunicationFactory extends AbstractCommunicationFactory
+{
+    public function getWorkflowFacade(): WorkflowFacadeInterface
+    {
+        return $this->getProvidedDependency(ExampleWorkflowDependencyProvider::FACADE_WORKFLOW);
+    }
+}
+```
+
+Add the listener:
 
 **src/Pyz/Zed/ExampleWorkflow/Communication/Plugin/Event/Listener/StateMachineMerchantRelationshipEventListenerPlugin.php**
 

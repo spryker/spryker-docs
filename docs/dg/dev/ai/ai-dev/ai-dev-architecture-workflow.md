@@ -3,37 +3,38 @@ title: Architecture Workflow
 description: Turn project discovery into a filled architecture/ folder — arc42 sections, C4 diagrams, and a shareable HTML document — driven by the architecture-prep skill
 last_updated: Oct 23, 2026
 label: early-access
-keywords: ai, ai-dev, claude, claude code, architecture-prep, architecture as code, arc42, C4, documentation
+keywords: ai, ai-dev, claude, claude code, copilot, architecture-prep, architecture as code, arc42, C4, documentation
 template: concept-topic-template
 related:
   - title: Architecture as Code
     link: docs/dg/dev/architecture/architecture-as-code.html
   - title: Workflows, Skills, and Agents
     link: docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html
-  - title: Claude Code
-    link: docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html
+  - title: Installation
+    link: docs/dg/dev/ai/ai-dev/ai-dev-installation.html
 ---
 
 ## Availability
 
-The `architecture-prep` skill ships in the `spryker-architecture` Claude Code plugin, which is separate from `spryker-ai-dev-sdk`. Install it from the same marketplace:
-
-```text
-/plugin marketplace add spryker-sdk/ai-dev
-/plugin install spryker-architecture@spryker-plugins-official
-```
-
-Restart your Claude Code session after installing. For general installation instructions, see [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html).
+The `architecture-prep` skill ships in the `spryker-architecture` plugin, which is separate from `spryker-ai-dev-sdk`. Install it the same way, and alongside it — the architecture skill uses skills from the SDK plugin where they are available. For installation steps, including setup with assistants other than Claude Code, see [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html).
 
 ## What the skill does
 
-Every Spryker project carries an `architecture/` folder: the project's architecture as version-controlled Markdown and diagrams-as-code, following the arc42 template and the C4 model. For the standard itself, see [Architecture as Code](/docs/dg/dev/architecture/architecture-as-code.html).
+[Architecture as Code](/docs/dg/dev/architecture/architecture-as-code.html) keeps a project's architecture in version control next to the code it describes, so it stays current instead of aging in a slide deck. Spryker ships the `architecture/` folder with its demoshop as the reference structure: arc42 sections and C4 diagrams as Markdown and Mermaid.
 
-Filling that folder by hand is slow, and the result depends on who does it. The `architecture-prep` skill interviews you about the project, grounds what it learns in Spryker documentation, and writes the folder for you.
+The `architecture-prep` skill fills that folder. It interviews you about the project, reads any documents you already have, and writes the sections and diagrams.
 
-Run it from the root of any Spryker project or demoshop. If the project has no `architecture/` folder yet, the skill creates one from the standard template before it starts.
+## Why run it
+
+Filling the folder by hand is a multi-day job for an experienced architect, and most of it is not architecture work — it is deciding which of the 12 sections your project needs, what belongs in each one, which diagrams to draw, and then writing it all up consistently. That is why the folder often stays empty.
+
+The skill removes that part. You answer questions about your project; it handles the structure, the notation, and the writing. A first pass takes an interview and a review rather than a week.
+
+It also asks things that are easy to defer and expensive to discover late — which system masters which data, what happens when an integration is unavailable, how a second market gets added. Where you do not have an answer, it records the gap with an owner instead of inventing one, so the document doubles as the list of what still needs deciding.
 
 ## How to invoke
+
+Run it from the root of your Spryker project. If the project has no `architecture/` folder yet, the skill creates one from the reference structure before it starts.
 
 Describe what you want in your own words:
 

@@ -1,17 +1,24 @@
 ---
 title: Profiler Workflow
 description: Read the Spryker WebProfiler as hard performance numbers — driven by the spryker-profiler skill
-last_updated: Aug 24, 2026
+last_updated: Oct 23, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, spryker-profiler, performance, webprofiler, n+1, sql
 template: concept-topic-template
+related:
+  - title: WebProfiler
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/web-profiler.html
+  - title: Workflows, Skills, and Agents
+    link: docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html
+  - title: Installation
+    link: docs/dg/dev/ai/ai-dev/ai-dev-installation.html
 ---
 
 ## Availability
 
-The `spryker-profiler` skill is available from `spryker-sdk/ai-dev` version 0.6.4, which ships version 0.4.0 of the `spryker-ai-dev-sdk` Claude Code plugin.
+The `spryker-profiler` skill is available from `spryker-sdk/ai-dev` version 0.6.4, which ships version 0.4.0 of the `spryker-ai-dev-sdk` plugin.
 
-To update the Claude Code plugin, run `/plugin` in Claude Code and update `spryker-ai-dev-sdk` from the `spryker-plugins-official` marketplace to version 0.4.0 or later. For installation instructions, see [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html).
+To update the plugin, run `/plugin` in Claude Code and update `spryker-ai-dev-sdk` from the `spryker-plugins-official` marketplace to version 0.4.0 or later. In GitHub Copilot, run `copilot plugin update spryker-ai-dev-sdk@spryker-plugins-official`. For installation instructions, see [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html).
 
 ## What the skill does
 
@@ -22,6 +29,8 @@ To update the Claude Code plugin, run `/plugin` in Claude Code and update `spryk
 Spryker records every web request automatically. That history is the cheapest source of truth for performance work: instead of guessing which code is slow, the skill reads what actually ran. It reduces a stored profile to the metrics that matter and prints JSON, so nobody has to scrape the profiler's HTML or open a browser.
 
 Invoke it when you ask why a page, endpoint, or Back Office screen is slow, want the heaviest request, suspect an N+1 query, need before-and-after evidence that a performance fix worked, or want to know what a request logged, threw, or which controller handled it. It also covers profiler setup — a missing toolbar, a collector showing no data, or enabling profiling for a specific application.
+
+For the full flow, the design decisions, and the known limits, see the [`spryker-profiler` README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-profiler/README.md) in the plugin repository.
 
 ## What it can tell you
 
@@ -115,11 +124,4 @@ After changing any of these, empty the cache and reproduce the request.
 ## Requirements
 
 - A running Spryker project (Docker SDK up) with the web profiler enabled
-- An AI tool with the SDK's skills loaded — either through the [Claude Code plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html) or via `ai-dev:setup` for another supported tool
-
-## Related
-
-- [WebProfiler](/docs/dg/dev/integrate-and-configure/integrate-development-tools/web-profiler.html) — why the profiler matters and how to integrate it per application
-- [`spryker-profiler` README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/spryker-profiler/README.md) — the skill's own reference in the plugin repository
-- [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html) — the full reference of every skill and agent
-- [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html) — install the SDK and generate your project's rules, context file, and skills
+- An AI tool with the SDK's skills loaded — either through the plugin in Claude Code or GitHub Copilot CLI, or via `ai-dev:setup` for another supported tool. See [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html).

@@ -1,17 +1,24 @@
 ---
 title: Bugfix Workflow
 description: Drive a bug from a ticket or a plain description to a committed, validated, QA-accepted fix — driven by the spryker-bugfix orchestrator
-last_updated: Aug 24, 2026
+last_updated: Oct 23, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, spryker-bugfix, bugfix, workflow, qa, automation
 template: concept-topic-template
+related:
+  - title: Workflows, Skills, and Agents
+    link: docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html
+  - title: Customization Workflow
+    link: docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html
+  - title: Installation
+    link: docs/dg/dev/ai/ai-dev/ai-dev-installation.html
 ---
 
 ## Availability
 
-The `spryker-bugfix` skill is available from `spryker-sdk/ai-dev` version 0.6.4, which ships version 0.4.0 of the `spryker-ai-dev-sdk` Claude Code plugin. Version 0.6.4 also adds the conditional Cypress end-to-end phase described on this page.
+The `spryker-bugfix` skill is available from `spryker-sdk/ai-dev` version 0.6.4, which ships version 0.4.0 of the `spryker-ai-dev-sdk` plugin. Version 0.6.4 also adds the conditional Cypress end-to-end phase described on this page.
 
-To update the Claude Code plugin, run `/plugin` in Claude Code and update `spryker-ai-dev-sdk` from the `spryker-plugins-official` marketplace to version 0.4.0 or later. For installation instructions, see [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html).
+To update the plugin, run `/plugin` in Claude Code and update `spryker-ai-dev-sdk` from the `spryker-plugins-official` marketplace to version 0.4.0 or later. In GitHub Copilot, run `copilot plugin update spryker-ai-dev-sdk@spryker-plugins-official`. For installation instructions, see [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html).
 
 ## What the skill does
 
@@ -22,6 +29,8 @@ To update the Claude Code plugin, run `/plugin` in Claude Code and update `spryk
 The skill is an orchestrator. It runs a fixed sequence of stages and delegates the work of each stage to another SDK skill or agent — it writes no product code itself.
 
 Invoke it whenever you have a bug symptom and expect a delivered fix: *"fix this bug"*, *"fix ticket XY-1122"*, *"this is broken, reproduce and fix it"*. It is not the right skill for a single isolated step, a new feature, a refactor without a symptom, or an investigation-only request.
+
+For the full flow, the design decisions, and the known limits, see the [`spryker-bugfix` README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-bugfix/README.md) in the plugin repository.
 
 ## Two ways in — the ticket is optional
 
@@ -89,11 +98,4 @@ Every file the run produces lives in one folder per bug under `.ai-dev/spryker-b
 ## Requirements
 
 - A running Spryker project (Docker SDK up) with the [AI Dev SDK](/docs/dg/dev/ai/ai-dev/ai-dev.html) installed
-- An AI tool with the SDK's skills loaded — either through the [Claude Code plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html) or via `ai-dev:setup` for another supported tool
-
-## Related
-
-- [`spryker-bugfix` README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/spryker-bugfix/README.md) — the skill's own reference in the plugin repository
-- [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html) — the full reference of every skill and agent this orchestrator composes
-- [Customization Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html) — the same orchestration shape for building new features
-- [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html) — install the SDK and generate your project's rules, context file, and skills
+- An AI tool with the SDK's skills loaded — either through the plugin in Claude Code or GitHub Copilot CLI, or via `ai-dev:setup` for another supported tool. See [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html).

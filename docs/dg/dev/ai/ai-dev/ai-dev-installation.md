@@ -1,7 +1,7 @@
 ---
 title: Installation
-description: Install the Spryker AI Dev SDK — skills, agents, rules, and the MCP server — in Claude Code or in another AI assistant
-last_updated: Aug 24, 2026
+description: Install the Spryker AI Dev SDK — skills, agents, rules, and the MCP server — in Claude Code, GitHub Copilot, or another AI assistant
+last_updated: Oct 23, 2026
 label: early-access
 keywords: ai, ai-dev, installation, install, setup, claude, claude code, cursor, windsurf, copilot, mcp, skills, agents
 template: howto-guide-template
@@ -17,7 +17,10 @@ This page is the single installation reference for the AI Dev SDK. It covers eve
 
 ## Prerequisites
 
-- [Claude Code](https://code.claude.com/docs/en/overview) is installed and you have a Claude account — a Pro or Max plan, or an API key. Claude Code has the most complete Spryker support; for Cursor, Windsurf, GitHub Copilot, OpenCode, or Codex CLI, see [Set up with another assistant](#set-up-with-another-assistant).
+- One of these coding agents:
+  - [Claude Code](https://code.claude.com/docs/en/overview) with a Claude account — a Pro or Max plan, or an API key. See [Set up with Claude Code](#set-up-with-claude-code).
+  - [GitHub Copilot CLI](https://docs.github.com/copilot/concepts/agents/copilot-cli) with a GitHub Copilot subscription. See [Set up with GitHub Copilot](#set-up-with-github-copilot).
+  - Cursor, Windsurf, OpenCode, Codex CLI, or GitHub Copilot in an IDE. See [Set up with another assistant](#set-up-with-another-assistant).
 - Your project uses `docker/sdk` version 1.71.0 or later. Make sure your development environment is up to date before you install the AiDev module.
 
 ## Set up with Claude Code
@@ -139,6 +142,66 @@ Agents and memory files:
 MCP tools:
 
 ![The context output listing the MCP tools](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/claude-install-2.png)
+
+### Coding rules without the setup
+
+When you start a session in a Spryker project without the coding rules, the plugin offers once to install them. To install only the rules, without Docker and Composer, run `/spryker-ai-dev-sdk:ai-dev-setup` and ask for *"only the rules"*. For details, see [How the rules reach your project](/docs/dg/dev/ai/ai-dev/ai-dev-rules.html#how-the-rules-reach-your-project).
+
+## Set up with GitHub Copilot
+
+Plugin version 0.8.0 or later supports GitHub Copilot CLI. The same plugin gives GitHub Copilot the skills, the agents, and the coding rules — without the Composer package and the `ai-dev:setup` console command.
+
+### Step 1: Install the plugin
+
+In your terminal, add the Spryker marketplace and install the plugin:
+
+```bash
+copilot plugin marketplace add spryker-sdk/ai-dev
+```
+
+```bash
+copilot plugin install spryker-ai-dev-sdk@spryker-plugins-official
+```
+
+The plugin installs into GitHub Copilot itself, not into the project, so this step works on a fresh clone too.
+
+{% info_block infoBox "Verify" %}
+
+Check that the plugin is installed and enabled:
+
+```bash
+copilot plugin list
+```
+
+The list shows `spryker-ai-dev-sdk@spryker-plugins-official` as enabled. Then start `copilot` in your project and type `/spryker`: the command list shows the Spryker skills, such as `/spryker-ai-dev-sdk:ai-dev-setup`.
+
+{% endinfo_block %}
+
+To update the plugin later, run `copilot plugin update spryker-ai-dev-sdk@spryker-plugins-official`.
+
+### Step 2: Add your project's context
+
+At the Copilot prompt, run:
+
+```text
+/spryker-ai-dev-sdk:ai-dev-setup
+```
+
+The skill detects that it runs in GitHub Copilot and writes the files that GitHub Copilot reads:
+
+- The project context file: `.github/copilot-instructions.md`.
+- The coding rules: `.github/instructions/<rule>.instructions.md`, each scoped to its files with `applyTo`.
+- The MCP server registration — see [Register the MCP server](#register-the-mcp-server).
+
+The conditions are the same as in Claude Code: the Docker environment must run, and on a fresh clone you skip this step until the first boot. The plugin also offers the coding rules when a session starts, as described in [Coding rules without the setup](#coding-rules-without-the-setup); for GitHub Copilot, the rules go to `.github/instructions/`.
+
+Start a new Copilot session after the setup, so that it loads the new files.
+
+{% info_block infoBox "Agent names in GitHub Copilot" %}
+
+GitHub Copilot registers the plugin's agents with a slash as the separator, for example `spryker-ai-dev-sdk/spryker-verifier`. Claude Code uses a colon: `spryker-ai-dev-sdk:spryker-verifier`. Skills use the colon in both tools: `/spryker-ai-dev-sdk:spryker-upgrade`.
+
+{% endinfo_block %}
 
 ## Permission requests
 
@@ -274,6 +337,34 @@ Claude Code now has access to Spryker-specific tools through the MCP server.
 
 ![The mcp command listing the tools of the registered server](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/mcp-tool-claude-code.png)
 
+### GitHub Copilot CLI
+
+If you set up your project with the `ai-dev-setup` skill, the MCP server is already registered — skip this section.
+
+Otherwise, go to your Spryker project directory and run:
+
+```bash
+copilot mcp add "$(basename "$(pwd)")" -- "$(pwd)/docker/sdk" console ai-dev:mcp-server -q
+```
+
+### Project-scoped registration for the team
+
+Claude Code and GitHub Copilot CLI both read an `.mcp.json` file at the project root. When you commit this file, every developer on the team gets the MCP server without a registration of their own:
+
+```json
+{
+  "mcpServers": {
+    "spryker-project": {
+      "type": "stdio",
+      "command": "docker/sdk",
+      "args": ["console", "ai-dev:mcp-server", "-q"]
+    }
+  }
+}
+```
+
+The relative `command` works when the coding agent starts in the project root. If it does not, use the absolute path to `docker/sdk`. The `ai-dev-setup` skill offers to write this file. VS Code does not read `.mcp.json`: it reads `.vscode/mcp.json`, with the `servers` key instead of `mcpServers`.
+
 ### Claude Desktop
 
 1. Open Claude Desktop settings.
@@ -344,4 +435,5 @@ You do not need to learn commands — describe what you want in your own words, 
 
 - [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html) — everything the SDK ships and what each piece does
 - [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html) — the plugin in detail, slash commands, and optional enhancements
+- [Demo Preparation Wizard](/docs/dg/dev/ai/ai-dev/ai-dev-demo-prep-wizard.html) — prepare a customer demo from a briefing
 - [AI Dev MCP Server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html) — the available MCP tools, extension points, and debugging

@@ -1,9 +1,9 @@
 ---
 title: Project Starter Wizard
 description: Turn a fresh clone of a Spryker demoshop into a customer project — one developer interview, then nine orchestrated steps to a verified running shop
-last_updated: Aug 24, 2026
+last_updated: Oct 23, 2026
 label: early-access
-keywords: ai, ai-dev, claude, claude code, project-starter-wizard, project setup, onboarding, demoshop
+keywords: ai, ai-dev, claude, claude code, copilot, project-starter-wizard, project setup, onboarding, demoshop
 template: concept-topic-template
 ---
 
@@ -23,9 +23,9 @@ It is also the resume entry point — if a previous run left a state file, invok
 
 The wizard needs the SDK's skills loaded into your AI tool. If you have not done that yet, [install the AI Dev SDK](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html) first.
 
-For this wizard, use the Claude Code plugin: it installs into Claude Code itself and needs nothing from the project, so your tooling is ready on a fresh clone. The `ai-dev:setup` console command is the alternative for other assistants, but it requires an installed project — which a fresh clone is not yet.
+For this wizard, use the AI Dev SDK plugin in Claude Code or GitHub Copilot: it installs into the coding agent itself and needs nothing from the project, so your tooling is ready on a fresh clone. The `ai-dev:setup` console command is the alternative for other assistants, but it requires an installed project — which a fresh clone is not yet.
 
-The wizard requires plugin version 0.4.0 or later. If the plugin is already installed, run `/plugin` and update it.
+The wizard requires plugin version 0.4.0 or later. The demo fast path requires version 0.7.0 or later, and GitHub Copilot requires version 0.8.0 or later. If the plugin is already installed, update it: run `/plugin` in Claude Code, or `copilot plugin update spryker-ai-dev-sdk@spryker-plugins-official` for GitHub Copilot.
 
 {% info_block infoBox "Verify the installation" %}
 
@@ -86,6 +86,18 @@ The wizard asks nine short questions and needs no further configuration decision
 
 The wizard summarizes the configuration and asks for confirmation before making any changes. After you confirm, the setup runs without further configuration questions.
 
+### Demo fast path
+
+When the project is for a demo, the person who prepares it is usually not a developer. The wizard then asks at most five plain questions, each with a recommended option from the brief:
+
+- Is this for a demo? The wizard skips this question when the brief already says so.
+- What should the shop be called?
+- Which countries, languages, and currencies should the demo show?
+- What should happen to the sample products: keep them, replace them with the customer's products, or keep only some categories?
+- Should the wizard run through and report when the shop is ready, or check in after each step?
+
+The wizard derives every technical value — namespace, services, region, domain, brand color, and logo — and shows it in the confirmation. When the [Demo Preparation Wizard](/docs/dg/dev/ai/ai-dev/ai-dev-demo-prep-wizard.html) runs the setup, the wizard asks nothing: it takes the answers that the demo preparation already confirmed.
+
 ## The nine steps
 
 Steps 1 to 7 run before the first boot, because each one changes files the boot reads.
@@ -108,6 +120,8 @@ You choose the run mode in the interview, and the wizard honors it again on resu
 
 - **Autonomous** — steps 1 to 9 run as one continuous pass. At a reversible decision point the wizard picks the best option and records it in a decision log.
 - **Supervised** — the wizard reports a one-line result and asks *"Continue to the next step?"* at each step boundary. A good choice for your first run.
+
+In an autonomous run, a plugin hook keeps the run going until all steps are done. When the coding agent tries to end its turn while the state file still has open steps, the hook refuses and names the next step. The hook lets the turn end when the message asks a question that only you can answer, or starts with `NEEDS YOU:`. After three refusals in a row, the hook lets the turn end. The hook needs `php` on the host; without it, the hook does nothing. Each refusal is written to `.ai-dev/hooks.log`.
 
 ## When the wizard stops for you
 

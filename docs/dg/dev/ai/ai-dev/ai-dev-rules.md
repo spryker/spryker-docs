@@ -1,13 +1,31 @@
 ---
 title: Rules
-description: Full reference of the Spryker-specific coding rules written into your project by the AI Dev SDK ai-dev-setup skill.
-last_updated: Oct 6, 2026
+description: Full reference of the Spryker-specific coding rules that the AI Dev SDK plugin and the ai-dev-setup skill install into your project.
+last_updated: Oct 23, 2026
 label: early-access
-keywords: ai, ai-dev, claude, claude code, rules, spryker
+keywords: ai, ai-dev, claude, claude code, copilot, github copilot, rules, spryker
 template: concept-topic-template
 ---
 
-The `ai-dev-setup` skill writes a set of [Spryker-specific coding rules](https://github.com/spryker-sdk/ai-dev/tree/master/data/rules) into your project. These rules guide the AI to follow Spryker conventions automatically, without requiring you to explain them in every prompt.
+The AI Dev SDK installs a set of [Spryker-specific coding rules](https://github.com/spryker-sdk/ai-dev/tree/master/plugins/spryker-ai-dev-sdk/rules) into your project. These rules guide the AI to follow Spryker conventions automatically, without requiring you to explain them in every prompt.
+
+## How the rules reach your project
+
+- **When a session starts** — in a Spryker project without the rules, the plugin offers once to install them. If you accept, the coding agent installs them. The offer does not show in CI, outside a Spryker project, or when the project has a `.ai-dev/no-rules-sync` file.
+- **With the `ai-dev-setup` skill** — the full setup installs the rules together with the project context file and the MCP server. Ask for *"only the rules"* to install only the rules; this flow needs no Docker environment and no Composer.
+- **With the `ai-dev:setup` console command** — for assistants without the plugin. See [Set up with another assistant](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html#set-up-with-another-assistant).
+
+The rules go to the folder that your coding agent reads:
+
+| Coding agent | Rules folder | Scope by file path |
+|--------------|--------------|--------------------|
+| Claude Code | `.claude/rules/<rule>.md` | `paths` |
+| GitHub Copilot | `.github/instructions/<rule>.instructions.md` | `applyTo` |
+
+A refresh never overwrites a rule file that you changed. Commit the rule files, so that the whole team works with the same rules.
+
+## Rule files
+
 
 | Rule file | What it enforces |
 |-----------|-----------------|
@@ -35,4 +53,4 @@ The `ai-dev-setup` skill writes a set of [Spryker-specific coding rules](https:/
 | `yves-frontend.md` | Yves storefront Twig, SCSS, and TypeScript: project-level overrides of core components, BEM and JavaScript hook conventions, and validation with the project's npm lint scripts |
 | `zed-backoffice-frontend.md` | Back Office Twig, JavaScript, SCSS, and navigation: overrides that extend core blocks, Bootstrap 5 markup, no new jQuery, translated text, safe escaping, and server-side ACL |
 
-The frontend rules — `yves-frontend.md`, `zed-backoffice-frontend.md`, and `merchant-portal-angular.md` — are scoped by file path, so Claude Code loads each one only when you work on files of that frontend.
+The frontend rules — `yves-frontend.md`, `zed-backoffice-frontend.md`, and `merchant-portal-angular.md` — are scoped by file path, so the coding agent loads each one only when you work on files of that frontend.

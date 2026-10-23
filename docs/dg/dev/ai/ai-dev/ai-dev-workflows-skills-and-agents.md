@@ -1,7 +1,7 @@
 ---
 title: Workflows, Skills, and Agents
 description: Reference of the workflows, skills, and agents shipped with the AI Dev SDK
-last_updated: Oct 6, 2026
+last_updated: Oct 23, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, windsurf, copilot, workflows, wizards, skills, agents, subagents, spryker
 template: concept-topic-template
@@ -37,7 +37,7 @@ You do not need to remember the names — the assistant picks the right skill or
 
 ## Available workflows and wizards
 
-Five shipped workflows cover the work most projects need on day one, so you get value before you write anything of your own. Each has its own page, listed under this one in the sidebar:
+Six shipped workflows cover the work most projects need on day one, so you get value before you write anything of your own. Each has its own page, listed under this one in the sidebar:
 
 | Workflow | Skill | What it does |
 |----------|-------|--------------|
@@ -46,8 +46,9 @@ Five shipped workflows cover the work most projects need on day one, so you get 
 | [Bugfix Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html) | `spryker-bugfix` | Drives a bug to a validated, QA-accepted fix |
 | [Upgrade Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html) | `spryker-upgrade` | Upgrades a customized project to a newer Spryker release |
 | [Profiler Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-profiler-workflow.html) | `spryker-profiler` | Reads the Spryker WebProfiler as hard performance numbers |
+| [Architecture Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-architecture-workflow.html) | `architecture-prep` | Turns project discovery into a filled `architecture/` folder |
 
-The first four are orchestrators: they own a full workflow and delegate each stage to the specialist skills and agents listed below. Alongside them, `product-requirement-document` turns a feature idea into a research-grounded spec, so you can go from idea to specification to implementation without leaving your assistant.
+All but the Profiler Workflow are orchestrators: they own a full workflow and delegate each stage to the specialist skills and agents listed below. Alongside them, `product-requirement-document` turns a feature idea into a research-grounded spec, so you can go from idea to specification to implementation without leaving your assistant.
 
 ## Composable by design
 
@@ -86,6 +87,7 @@ These skills own a full workflow and delegate each stage to the specialist skill
 | [`project-starter-wizard`](/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html) | `/spryker-ai-dev-sdk:project-starter-wizard` | Turn a fresh clone of a demoshop into the customer's project | One developer interview up front, then nine orchestrated steps to a verified running shop; a resumable state file survives interruptions | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/project-starter-wizard/README.md) |
 | [`spryker-customization`](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html) | `/spryker-ai-dev-sdk:spryker-customization` | Walk a product requirement document or set of acceptance criteria through to a committed branch | One workflow drives the full build; quality bar (PoC or MVP) chosen up-front; never auto-commits | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-customization/README.md) |
 | [`spryker-bugfix`](/docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html) | `/spryker-ai-dev-sdk:spryker-bugfix` | Drive a bug from an optional tracker ticket or a plain description through to a committed, validated, QA-accepted fix | Orchestrates reproduce, root cause, minimal fix, functional test, static validation, review, QA, and final verification; a shared attempt budget loops back on any failed gate; Autonomous mode adds a pushed draft PR with a remote CI watch loop | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-bugfix/README.md) |
+| [`architecture-prep`](/docs/dg/dev/ai/ai-dev/ai-dev-architecture-workflow.html) | `/spryker-architecture:architecture-prep` | Turn project discovery into a filled `architecture/` folder of arc42 sections and C4 diagrams | Progressive questionnaire that asks only what the project's shape requires; mines documents you already have before asking; writes what the answers support and names the rest as owned gaps | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-architecture/skills/architecture-prep/README.md) |
 | [`spryker-upgrade`](/docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html) | `/spryker-ai-dev-sdk:spryker-upgrade` | Upgrade the project's modules and features to a newer Spryker release | Checks first whether the customizations are covered by tests at all, resolves the constraint blockers that stop a release-group bump, then detects the silent damage a heavily customized project would otherwise ship | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-upgrade/README.md) |
 
 ### Project setup skills

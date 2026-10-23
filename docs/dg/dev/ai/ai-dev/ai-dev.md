@@ -1,7 +1,7 @@
 ---
 title: AI Dev SDK
 description: Make your AI coding assistant Spryker-aware with skills, agents, rules, and an MCP server
-last_updated: Sep 7, 2026
+last_updated: Oct 23, 2026
 label: early-access
 template: concept-topic-template
 redirect_from:
@@ -40,13 +40,14 @@ The result: the generated code fits your project from the start, and you spend l
 
 ### Ready-made workflows
 
-Four orchestrated workflows drive multi-step work end to end, and the profiler workflow turns the WebProfiler into hard numbers. They are all documented under [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html):
+Five orchestrated workflows drive multi-step work end to end, and the profiler workflow turns the WebProfiler into hard numbers. They are all documented under [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html):
 
 - [Project Starter Wizard](/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html) — turn a fresh demoshop clone into your project
 - [Customization Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html) — build a feature from a product requirement document to a committed branch
 - [Bugfix Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html) — drive a bug to a validated, QA-accepted fix
 - [Upgrade Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html) — upgrade a customized project to a newer Spryker release
 - [Profiler Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-profiler-workflow.html) — read the Spryker WebProfiler as hard performance numbers
+- [Architecture Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-architecture-workflow.html) — turn project discovery into a filled `architecture/` folder of arc42 sections and C4 diagrams
 
 ### Spryker-aware code review
 

@@ -5,6 +5,13 @@ last_updated: Oct 23, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, architecture-prep, architecture as code, arc42, C4, documentation
 template: concept-topic-template
+related:
+  - title: Architecture as Code
+    link: docs/dg/dev/architecture/architecture-as-code.html
+  - title: Workflows, Skills, and Agents
+    link: docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html
+  - title: Claude Code
+    link: docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html
 ---
 
 ## Availability
@@ -97,9 +104,3 @@ A document full of named gaps is the expected outcome of an early interview, and
 |---|---|
 | Gated | Confirms with you before writing each batch of sections |
 | Autonomous | Interviews once, then writes everything and logs its decisions |
-
-## Related
-
-- [Architecture as Code](/docs/dg/dev/architecture/architecture-as-code.html)
-- [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html)
-- [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html)

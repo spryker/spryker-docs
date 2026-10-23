@@ -14,7 +14,7 @@ related:
 
 The `demo-prep-wizard` skill prepares a customer demo on a clone of the Spryker B2B Marketplace demoshop. It starts from the briefing, builds the demo, checks every demo point in the browser, and writes a handover report for the presenter.
 
-The person who runs it is usually a solution consultant or a member of a presales team, not a developer. The wizard asks only about content, look and story. It makes the technical decisions itself and records each one in a decision log.
+The wizard asks only about content, look, and story. It makes the technical decisions itself and records each one in a decision log.
 
 ## What the skill does
 

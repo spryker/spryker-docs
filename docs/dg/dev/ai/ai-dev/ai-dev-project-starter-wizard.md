@@ -97,7 +97,7 @@ The wizard summarizes the configuration and asks for confirmation before making 
 
 ### Demo fast path
 
-When the project is for a demo, the person who prepares it is usually not a developer. The wizard then asks at most five plain questions, each with a recommended option from the brief:
+When the project is for a demo, the wizard asks at most five questions without technical terms. Each question shows a recommended option. When the brief answers a question, the recommended option comes from the brief:
 
 - Is this for a demo? The wizard skips this question when the brief already says so.
 - What should the shop be called?

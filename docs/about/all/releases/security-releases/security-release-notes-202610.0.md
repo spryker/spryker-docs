@@ -176,11 +176,20 @@ docker/sdk cli "npm run mp:build"
 
 {% endinfo_block %}
 
-## Rate limiting for email change requests on the Storefront
+## Rate limiting protection for email change on the StoreFront
 
-This is a security improvement, not a fix for a vulnerability. It adds protection against misuse of an existing feature.
+The StoreFront email-change function had no rate limit, which allowed an authenticated user to send unlimited confirmation emails to any address. Confirmation emails are now rate-limited per customer and per recipient address.
 
-### Apply the improvement
+### Affected modules
+
+- `spryker/customer`: < 7.88.0
+- `spryker/customer-data-change-request`: < 1.4.0
+- `spryker/redis`: < 2.15.0
+- `spryker/security-blocker`: < 1.4.0
+- `spryker-shop/customer-page`: < 2.88.1
+- `spryker/storage-redis`: < 1.10.1
+
+### Fix the vulnerability
 
 When a customer changes their email address on the Storefront profile page, the application sends a verification email to the new address. After the update, the application limits email change requests per customer and per target email address. By default, a customer can request an email change up to 3 times within 15 minutes, and a target email address can receive up to 3 verification emails within 15 minutes, regardless of which customer requests them. When the limit is reached, the email address is not changed, no verification email is sent, and the customer sees an error message on the profile page.
 

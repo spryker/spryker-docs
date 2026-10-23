@@ -5,6 +5,13 @@ last_updated: Oct 23, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, copilot, project-starter-wizard, project setup, onboarding, demoshop
 template: concept-topic-template
+related:
+  - title: Workflows, Skills, and Agents
+    link: docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html
+  - title: Customization Workflow
+    link: docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html
+  - title: Installation
+    link: docs/dg/dev/ai/ai-dev/ai-dev-installation.html
 ---
 
 Every Spryker project starts from a demoshop — a complete, working reference shop that you reshape into your customer's project. Doing that by hand means changes across CI configuration, namespaces, deploy files, stores, and demo data, in an order that is easy to get wrong. The `project-starter-wizard` skill handles it for you: one developer interview, then a single orchestrated run that ends in a booted shop, verified store by store.
@@ -18,6 +25,8 @@ Every Spryker project starts from a demoshop — a complete, working reference s
 The wizard owns the conversation and the flow — it writes almost nothing itself. Each step delegates to a sibling skill that does the transformation work.
 
 It is also the resume entry point — if a previous run left a state file, invoking the skill again skips the interview and continues from the first unfinished step.
+
+For the full flow, the design decisions, and the known limits, see the [`project-starter-wizard` README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/project-starter-wizard/README.md) in the plugin repository.
 
 ## Before you start
 
@@ -176,10 +185,3 @@ The closing summary flags what still needs a human before go-live, such as a git
 
 - A fresh, un-booted clone of the [Spryker B2B Marketplace demoshop](/docs/about/all/spryker-marketplace/marketplace-b2b-suite.html)
 - An AI tool with the SDK's skills loaded — see [Before you start](#before-you-start)
-
-## Related
-
-- [`project-starter-wizard` README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/project-starter-wizard/README.md) — the skill's own reference in the plugin repository
-- [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html) — the full reference of every skill and agent this wizard composes
-- [Customization Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html) — build features on the project once it runs
-- [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html) — install the SDK and generate your project's rules, context file, and skills

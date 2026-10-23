@@ -5,6 +5,13 @@ last_updated: Oct 23, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, spryker-bugfix, bugfix, workflow, qa, automation
 template: concept-topic-template
+related:
+  - title: Workflows, Skills, and Agents
+    link: docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html
+  - title: Customization Workflow
+    link: docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html
+  - title: Installation
+    link: docs/dg/dev/ai/ai-dev/ai-dev-installation.html
 ---
 
 ## Availability
@@ -22,6 +29,8 @@ To update the plugin, run `/plugin` in Claude Code and update `spryker-ai-dev-sd
 The skill is an orchestrator. It runs a fixed sequence of stages and delegates the work of each stage to another SDK skill or agent — it writes no product code itself.
 
 Invoke it whenever you have a bug symptom and expect a delivered fix: *"fix this bug"*, *"fix ticket XY-1122"*, *"this is broken, reproduce and fix it"*. It is not the right skill for a single isolated step, a new feature, a refactor without a symptom, or an investigation-only request.
+
+For the full flow, the design decisions, and the known limits, see the [`spryker-bugfix` README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-bugfix/README.md) in the plugin repository.
 
 ## Two ways in — the ticket is optional
 
@@ -90,10 +99,3 @@ Every file the run produces lives in one folder per bug under `.ai-dev/spryker-b
 
 - A running Spryker project (Docker SDK up) with the [AI Dev SDK](/docs/dg/dev/ai/ai-dev/ai-dev.html) installed
 - An AI tool with the SDK's skills loaded — either through the plugin in Claude Code or GitHub Copilot CLI, or via `ai-dev:setup` for another supported tool. See [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html).
-
-## Related
-
-- [`spryker-bugfix` README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-bugfix/README.md) — the skill's own reference in the plugin repository
-- [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html) — the full reference of every skill and agent this orchestrator composes
-- [Customization Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html) — the same orchestration shape for building new features
-- [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html) — install the SDK and generate your project's rules, context file, and skills

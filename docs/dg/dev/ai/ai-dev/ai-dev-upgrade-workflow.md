@@ -5,6 +5,13 @@ last_updated: Oct 23, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, copilot, spryker-upgrade, upgrade, migration, composer, release, security fixes, performance, release steps
 template: concept-topic-template
+related:
+  - title: Workflows, Skills, and Agents
+    link: docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html
+  - title: Upgrade and migrate
+    link: docs/dg/dev/upgrade-and-migrate/upgrade-and-migrate.html
+  - title: Installation
+    link: docs/dg/dev/ai/ai-dev/ai-dev-installation.html
 ---
 
 ## Availability
@@ -22,6 +29,8 @@ To update the plugin, run `/plugin` in Claude Code and update `spryker-ai-dev-sd
 The skill combines an orchestrated workflow with a set of deterministic detector scripts. Each script is a standalone CLI that runs on host PHP using reflection or static parsing only, with no Spryker bootstrap — so they also work in CI.
 
 Invoke it with *"upgrade the project"*, *"update to the latest release"*, or any request to bump `spryker-feature/*` or `spryker/*` packages.
+
+For the full flow, the design decisions, and the known limits, see the [`spryker-upgrade` README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-upgrade/README.md) in the plugin repository.
 
 ## Why silent damage is the real problem
 
@@ -145,10 +154,3 @@ Published migration guides are also sometimes stale or absent, so the skill trea
 - A Spryker project with Composer installed, and host PHP available to run the detector scripts
 - A running Docker environment of the project (`docker/sdk`)
 - An AI tool with the SDK's skills loaded — either through the plugin in Claude Code or GitHub Copilot CLI, or via `ai-dev:setup` for another supported tool. See [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html).
-
-## Related
-
-- [`spryker-upgrade` README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-upgrade/README.md) — the skill's own reference in the plugin repository
-- [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html) — the full reference of every skill and agent
-- [Upgrade and migrate](/docs/dg/dev/upgrade-and-migrate/upgrade-and-migrate.html) — the manual upgrade and migration guides
-- [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html) — install the SDK and generate your project's rules, context file, and skills

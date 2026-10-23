@@ -6,8 +6,12 @@ label: early-access
 keywords: ai, ai-dev, claude, claude code, spryker-customization, workflow, prd, customization, automation, cypress
 template: concept-topic-template
 related:
-  - title: spryker-customization README
-    link: https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-customization/README.md
+  - title: Workflows, Skills, and Agents
+    link: docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html
+  - title: Bugfix Workflow
+    link: docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html
+  - title: Installation
+    link: docs/dg/dev/ai/ai-dev/ai-dev-installation.html
 ---
 
 ## Availability
@@ -23,6 +27,8 @@ To update the plugin, run `/plugin` in Claude Code and update `spryker-ai-dev-sd
 You describe what you want in one sentence. From there, `spryker-customization` invokes the right specialist at each step — for example, `spryker-feature-expert` to research which Spryker primitives apply, `product-requirement-document` to write the spec, `spryker-refresher` to run the post-change commands, `spryker-verifier` to check the feature against the running app. It stops at a commit gate where you approve the diff before it is saved to git.
 
 You do not write code during the run. You make three decisions: what quality bar you want, whether the plan looks right, and whether the final diff goes in.
+
+For the full flow, the design decisions, and the known limits, see the [`spryker-customization` README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-customization/README.md) in the plugin repository.
 
 ## Workflow at a glance
 

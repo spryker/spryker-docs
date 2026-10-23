@@ -1,7 +1,7 @@
 ---
 title: Install the Workflows feature
 description: Learn how to integrate and configure the Workflows feature in a Spryker project.
-last_updated: Oct 22, 2026
+last_updated: Oct 23, 2026
 template: howto-guide-template
 
 related:
@@ -297,5 +297,27 @@ $jobs[] = [
 {% info_block warningBox "Verification" %}
 
 Start an instance, then run `docker/sdk cli console workflow:check-condition` and confirm the instance advances in `spy_state_machine_process_definition_instance`.
+
+{% endinfo_block %}
+
+## Remove the demo workflow
+
+The [B2B Demo Marketplace](/docs/about/all/spryker-marketplace/marketplace-b2b-suite.html) ships with the Workflows feature installed and with a demo `ExampleWorkflow` module. The module provides the `CompanyOnboarding` workflow and example triggers for the `Company`, `Merchant`, `MerchantRelationship`, and `MerchantProduct` subject types. If you start your project from the demo shop, remove the demo workflow so it does not start instances for your real companies and merchants. Keep the feature installation itself.
+
+1. Delete the `src/Pyz/Zed/ExampleWorkflow/` directory.
+2. In `src/Pyz/Zed/Workflow/WorkflowDependencyProvider.php`, remove the `ExampleWorkflow` plugins from `getCommandPlugins()`, `getConditionPlugins()`, and `getTriggerPlugins()`. Add your own plugins instead.
+3. In `src/Pyz/Zed/Event/EventDependencyProvider.php`, remove the `StateMachineCompanyEventSubscriber`, `StateMachineMerchantEventSubscriberPlugin`, `StateMachineMerchantRelationshipEventSubscriberPlugin`, and `StateMachineMerchantProductEventSubscriberPlugin` subscribers.
+4. Remove the demo workflow data: the `workflow.csv` files and the `workflow/company_onboarding.xml` definitions in `data/import/common/common/`, `data/import/b2b_common/common/`, and `data/import/b2b_robot/common/`. To provision your own workflows, replace them with your files as described in [Provide the import data](#provide-the-import-data).
+5. If you do not provision workflows through data import, remove the `workflow` entry from the `data/import/local/*.yml` and `data/import/production/*.yml` import configurations.
+6. In `phpmd.xml`, remove the exclusion for `ExampleWorkflow`.
+
+The Propel `event` behavior on `spy_merchant_relationship` can stay: it only publishes entity events and does not depend on the demo module.
+
+{% info_block warningBox "Verification" %}
+
+Run the install recipe and make sure the following applies:
+
+- **Administration > Workflows** does not list the `CompanyOnboarding` workflow.
+- On the **Create workflow** page, **Subject type** lists only the subject types of your own trigger plugins.
 
 {% endinfo_block %}

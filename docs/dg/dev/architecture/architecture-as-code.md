@@ -201,11 +201,9 @@ Pre-structured table for capacity planning covering:
 
 ## Generating the architecture folder
 
-You can fill and maintain the `architecture/` folder with the `architecture-prep` skill from the AI Dev SDK, instead of writing every section by hand.
+You can fill the `architecture/` folder with the `architecture-prep` skill from the AI Dev SDK, instead of writing every section by hand. It maps what you already know about the project — from documents you have, or from what it asks you — onto the structure described on this page, and marks the gaps and risks that are still open.
 
-The skill interviews you about the project, reads any requirements documents or target architecture write-ups you already have, and writes the arc42 sections and C4 diagrams described on this page. It asks progressively, so a straightforward project answers fewer questions than a complex one, and it records what you do not know as named gaps rather than filling them in.
-
-For what the skill produces and how to run it, see [Architecture Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-architecture-workflow.html).
+See [Architecture Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-architecture-workflow.html).
 
 ## Getting Help
 

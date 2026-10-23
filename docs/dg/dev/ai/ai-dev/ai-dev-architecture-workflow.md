@@ -20,17 +20,15 @@ The `architecture-prep` skill ships in the `spryker-architecture` plugin, which 
 
 ## What the skill does
 
-[Architecture as Code](/docs/dg/dev/architecture/architecture-as-code.html) keeps a project's architecture in version control next to the code it describes, so it stays current instead of aging in a slide deck. Spryker ships the `architecture/` folder with its demoshop as the reference structure: arc42 sections and C4 diagrams as Markdown and Mermaid.
+[Architecture as Code](/docs/dg/dev/architecture/architecture-as-code.html) applies the idea behind Infrastructure as Code to architecture: it lives in your project as code, built on proven industry standards — arc42 for the structure, the C4 model for the views, and Mermaid for diagrams as code — instead of in a slide deck or a wiki page. Spryker ships it as the `architecture/` folder.
 
-The `architecture-prep` skill fills that folder. It interviews you about the project, reads any documents you already have, and writes the sections and diagrams.
+The `architecture-prep` skill maps your project's architecture knowledge onto that standard.
 
 ## Why run it
 
-Filling the folder by hand is a multi-day job for an experienced architect, and most of it is not architecture work — it is deciding which of the 12 sections your project needs, what belongs in each one, which diagrams to draw, and then writing it all up consistently. That is why the folder often stays empty.
+**It gets you to a shareable architecture record fast.** You do not have to work out where to start, learn what each section is for, or decide where a given fact belongs. Bring what you already have — a wiki page, a PDF, a requirements document — or nothing at all, and the skill asks you instead. Either way you end up with a consistent, readable `architecture/` folder you can take to your architecture stakeholders.
 
-The skill removes that part. You answer questions about your project; it handles the structure, the notation, and the writing. A first pass takes an interview and a review rather than a week.
-
-It also asks things that are easy to defer and expensive to discover late — which system masters which data, what happens when an integration is unavailable, how a second market gets added. Where you do not have an answer, it records the gap with an owner instead of inventing one, so the document doubles as the list of what still needs deciding.
+**It tells you what to work on next.** The skill is built for Spryker commerce projects, so it knows the areas every project has to settle. As it maps your knowledge onto the structure, it marks what is still open: the gaps you need answers to, the architectural risks your requirements already imply, and the topics that need their own solution design. You come away with a draft and a clear view of where to deep dive to keep the architecture under control.
 
 ## How to invoke
 
@@ -95,9 +93,9 @@ Solution Designs and architecture decision records are identified, never authore
 
 ## Honest gaps over invented content
 
-Where you do not have an answer, the document says so: a single line naming what is missing and who can answer it. The skill does not derive missing figures, size tests against numbers you did not give, or fill a section with plausible content.
+A gap is one line naming what is missing and who can answer it. The skill does not derive missing figures, size anything against numbers you did not give, or fill a section with plausible content.
 
-A document full of named gaps is the expected outcome of an early interview, and it is more useful than one that reads as complete but is not.
+Expect plenty of them on a first pass. A record full of named gaps is more useful than one that reads as complete but is not.
 
 ## Modes
 

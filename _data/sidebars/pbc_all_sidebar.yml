@@ -1929,6 +1929,11 @@ entries:
                     nested:
                       - title: Install Search Statistics
                         url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/google-analytics/install-search-statistics.html
+                  - title: Google Analytics Event Tracking
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/google-analytics/google-analytics-event-tracking.html
+                    nested:
+                      - title: Install Google Analytics Event Tracking
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/google-analytics/install-google-analytics-event-tracking.html
 
               - title: OpenAI
                 url: /docs/pbc/all/miscellaneous/third-party-integrations/open-ai/integrate-openai.html
@@ -2344,6 +2349,8 @@ entries:
                     url: /docs/pbc/all/order-management-system/marketplace/marketplace-order-management-feature-overview/marketplace-order-overview.html
                   - title: Merchant Order overview
                     url: /docs/pbc/all/order-management-system/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html
+                  - title: Marketplace order invoice documents feature overview
+                    url: /docs/pbc/all/order-management-system/marketplace/marketplace-order-management-feature-overview/marketplace-order-invoice-documents-overview.html
                   - title: Marketplace and merchant state machines overview
                     url: /docs/pbc/all/order-management-system/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
                     nested:
@@ -2358,6 +2365,8 @@ entries:
                     url: /docs/pbc/all/order-management-system/marketplace/install-features/install-the-marketplace-order-management-merchant-portal-feature.html
                   - title: Marketplace Order Management + Order Threshold
                     url: /docs/pbc/all/order-management-system/marketplace/install-features/install-the-marketplace-order-management-order-threshold-feature.html
+                  - title: Marketplace Order Invoice Documents
+                    url: /docs/pbc/all/order-management-system/marketplace/install-features/install-the-marketplace-order-invoice-documents-feature.html
 
 
               - title: Import and export data
@@ -2384,6 +2393,8 @@ entries:
 
               - title: Manage merchant orders in the Merchant Portal
                 url: /docs/pbc/all/order-management-system/marketplace/manage-merchant-orders.html
+              - title: View merchant order invoice documents in the Merchant Portal
+                url: /docs/pbc/all/order-management-system/marketplace/view-merchant-order-invoice-documents.html
               - title: Retrieve Marketplace orders
                 url: /docs/pbc/all/order-management-system/marketplace/glue-api-retrieve-marketplace-orders.html
               - title: Merchant OMS

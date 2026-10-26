@@ -114,6 +114,8 @@ entries:
             nested:
               - title: Project Starter Wizard
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html
+              - title: Demo Preparation Wizard
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-demo-prep-wizard.html
               - title: Customization Workflow
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html
               - title: Bugfix Workflow
@@ -122,6 +124,8 @@ entries:
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html
               - title: Profiler Workflow
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-profiler-workflow.html
+              - title: Architecture Workflow
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-architecture-workflow.html
           - title: Rules
             url: /docs/dg/dev/ai/ai-dev/ai-dev-rules.html
           - title: Claude Code

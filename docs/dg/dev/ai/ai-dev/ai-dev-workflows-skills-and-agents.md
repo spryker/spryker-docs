@@ -1,7 +1,7 @@
 ---
 title: Workflows, Skills, and Agents
 description: Reference of the workflows, skills, and agents shipped with the AI Dev SDK
-last_updated: Oct 6, 2026
+last_updated: Oct 26, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, windsurf, copilot, workflows, wizards, skills, agents, subagents, spryker
 template: concept-topic-template
@@ -16,7 +16,7 @@ redirect_from:
 
 ## Overview
 
-The AI Dev SDK ships five ready-made workflows, more than 30 skills, and six agents that codify common Spryker practice — from turning a demoshop clone into a customer project,
+The AI Dev SDK ships seven ready-made workflows, more than 30 skills, and six agents that codify common Spryker practice — from turning a demoshop clone into a customer project and preparing a customer demo,
 to building features, fixing bugs, and upgrading releases.
 Instead of teaching your AI assistant Spryker's conventions prompt by prompt, you install workflows that already know them.
 
@@ -24,7 +24,7 @@ The skills and agents reach your project in two ways:
 
 - **Via the `ai-dev:setup` console command** — copies the skills and agents into your project's AI-tool directories (`.claude/skills/` + `.claude/agents/`, `.windsurf/skills/` + `.windsurf/agents/`, and so on) 
 - for every AI tool listed under [Generated files per AI tool](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html#generated-files-per-ai-tool). Codex CLI has no agents directory, so agents are skipped for that tool.
-- **Via the Claude Code plugin** — for Claude Code users, the [Claude Code plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html) installs the same skills and agents through the official marketplace, no console command required.
+- **Via the `spryker-ai-dev-sdk` plugin** — for Claude Code and GitHub Copilot CLI users, the plugin installs the same skills and agents through the `spryker-plugins-official` marketplace, no console command required. Both coding agents install the same plugin. See [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html).
 
 Both delivery paths read from the same source files — the plugin just packages them for marketplace installation.
 
@@ -37,27 +37,29 @@ You do not need to remember the names — the assistant picks the right skill or
 
 ## Available workflows and wizards
 
-Five shipped workflows cover the work most projects need on day one, so you get value before you write anything of your own. Each has its own page, listed under this one in the sidebar:
+Seven shipped workflows cover the work most projects need on day one, so you get value before you write anything of your own. Each has its own page, listed under this one in the sidebar:
 
 | Workflow | Skill | What it does |
 |----------|-------|--------------|
 | [Project Starter Wizard](/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html) | `project-starter-wizard` | Turns a fresh demoshop clone into your project |
+| [Demo Preparation Wizard](/docs/dg/dev/ai/ai-dev/ai-dev-demo-prep-wizard.html) | `demo-prep-wizard` | Prepares a customer demo from the briefing to a handover report for the presenter |
 | [Customization Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html) | `spryker-customization` | Builds a feature from a product requirement document to a committed branch |
 | [Bugfix Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html) | `spryker-bugfix` | Drives a bug to a validated, QA-accepted fix |
 | [Upgrade Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html) | `spryker-upgrade` | Upgrades a customized project to a newer Spryker release |
 | [Profiler Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-profiler-workflow.html) | `spryker-profiler` | Reads the Spryker WebProfiler as hard performance numbers |
+| [Architecture Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-architecture-workflow.html) | `architecture-prep` | Turns project discovery into a filled `architecture/` folder |
 
-The first four are orchestrators: they own a full workflow and delegate each stage to the specialist skills and agents listed below. Alongside them, `product-requirement-document` turns a feature idea into a research-grounded spec, so you can go from idea to specification to implementation without leaving your assistant.
+All but the Profiler Workflow are orchestrators: they own a full workflow and delegate each stage to the specialist skills and agents listed below. Alongside them, `product-requirement-document` turns a feature idea into a research-grounded spec, so you can go from idea to specification to implementation without leaving your assistant.
 
 ## Composable by design
 
-![composable-skills](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/skills.png)
+![composable-skills](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/skills-v2.png)
 
 Each skill covers one stage of work and nothing more — research a feature, seed test data, run static validation, drive the running app, capture screenshots. Nothing is bundled into a single monolithic assistant, so you compose the stages into whatever long-running workflow your team actually runs.
 
 This is how the orchestrator skills themselves are built. `spryker-bugfix` does not reimplement testing or validation — it calls `codecept-functional`, `static-validation`, `code-review`, and `spryker-qa-coverage` in sequence, and delegates isolated work to the agents. Your own workflows compose the same building blocks the same way.
 
-**Adapt the shipped workflows to your process.** The four orchestrators are a baseline, not a prescription. Every team runs a different process — different review gates, different definition of done, different tracker. Because the stages are separate, you can reorder them, skip the ones you do not need, or drop your own stage in between. Ask for the workflow you want in your own words and the assistant assembles it from the installed skills.
+**Adapt the shipped workflows to your process.** The six orchestrators are a baseline, not a prescription. Every team runs a different process — different review gates, different definition of done, different tracker. Because the stages are separate, you can reorder them, skip the ones you do not need, or drop your own stage in between. Ask for the workflow you want in your own words and the assistant assembles it from the installed skills.
 
 **Use the shipped skills as a template for your own.** Every skill is plain Markdown with frontmatter, and every one ships a README documenting its flow, design decisions, and limits — linked in the **Reference** column of the tables below. Read the skill closest to what you need, then write your own the same way: your team's release checklist, your onboarding walkthrough, your project-specific conventions. The result is AI-assisted development shaped by how your team works rather than by a fixed set of commands.
 
@@ -67,13 +69,13 @@ In most cases you do not need to call a skill or agent by name. Describe what yo
 
 If you want to invoke one explicitly:
 
-- **Claude Code plugin** — every skill is also available as a slash command, shown in the **Command** column below. Type the command (for example `/spryker-ai-dev-sdk:spryker-customization`) and the skill loads into the current chat.
-- **Other AI tools** — invocation follows the tool's own convention for skills and agents. In Cursor, Windsurf, Copilot, OpenCode, and Codex CLI, the skills and agents land in the tool-specific directories (`.cursor/`, `.windsurf/`, etc.) and are picked up automatically by your assistant. [Generated files per AI tool](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html#generated-files-per-ai-tool) lists the output paths per tool.
-- **Agents (subagents)** are not invoked by the user directly — they are spawned by the assistant or by a parent skill when the work calls for an isolated context. You can suggest one by name in your prompt (*"use the spryker-verifier to..."*), but the assistant decides when to spawn.
+- **Plugin (Claude Code and GitHub Copilot CLI)** — every skill is also available as a slash command, shown in the **Command** column below. Type the command (for example `/spryker-ai-dev-sdk:spryker-customization`) and the skill loads into the current chat.
+- **Other AI tools** — invocation follows the tool's own convention for skills and agents. In Cursor, Windsurf, GitHub Copilot in an IDE, OpenCode, and Codex CLI, the skills and agents land in the tool-specific directories (`.cursor/`, `.windsurf/`, etc.) and are picked up automatically by your assistant. [Generated files per AI tool](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html#generated-files-per-ai-tool) lists the output paths per tool.
+- **Agents (subagents)** are not invoked by the user directly — they are spawned by the assistant or by a parent skill when the work calls for an isolated context. You can suggest one by name in your prompt (*"use the spryker-verifier to..."*), but the assistant decides when to spawn. On a plugin install, the agent name carries the plugin prefix: `spryker-ai-dev-sdk:spryker-verifier` in Claude Code, `spryker-ai-dev-sdk/spryker-verifier` in GitHub Copilot.
 
 ## Skills
 
-Skills are delivered through `ai-dev:setup` (all supported AI tools) or the Claude Code plugin.
+Skills are delivered through `ai-dev:setup` (all supported AI tools) or the plugin (Claude Code and GitHub Copilot CLI).
 
 Every skill ships a README in its own directory in the plugin repository, covering its full flow, design decisions, and known limits. The **Reference** column links to it — use it when the summary here is not enough.
 
@@ -84,9 +86,11 @@ These skills own a full workflow and delegate each stage to the specialist skill
 | Skill | Command | Purpose | Benefits | Reference |
 |-------|---------|---------|----------|---------|
 | [`project-starter-wizard`](/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html) | `/spryker-ai-dev-sdk:project-starter-wizard` | Turn a fresh clone of a demoshop into the customer's project | One developer interview up front, then nine orchestrated steps to a verified running shop; a resumable state file survives interruptions | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/project-starter-wizard/README.md) |
+| [`demo-prep-wizard`](/docs/dg/dev/ai/ai-dev/ai-dev-demo-prep-wizard.html) | `/spryker-ai-dev-sdk:demo-prep-wizard` | Prepare a customer demo on a demoshop clone: intake, requirements, design reference, harvest, build, check, and handover report | The preparer confirms the scope once and answers all questions in one sitting; every demo point is checked in the browser; the handover report has one row per requirement of the brief, with its status | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/demo-prep-wizard/README.md) |
 | [`spryker-customization`](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html) | `/spryker-ai-dev-sdk:spryker-customization` | Walk a product requirement document or set of acceptance criteria through to a committed branch | One workflow drives the full build; quality bar (PoC or MVP) chosen up-front; never auto-commits | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-customization/README.md) |
 | [`spryker-bugfix`](/docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html) | `/spryker-ai-dev-sdk:spryker-bugfix` | Drive a bug from an optional tracker ticket or a plain description through to a committed, validated, QA-accepted fix | Orchestrates reproduce, root cause, minimal fix, functional test, static validation, review, QA, and final verification; a shared attempt budget loops back on any failed gate; Autonomous mode adds a pushed draft PR with a remote CI watch loop | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-bugfix/README.md) |
-| [`spryker-upgrade`](/docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html) | `/spryker-ai-dev-sdk:spryker-upgrade` | Upgrade the project's modules and features to a newer Spryker release | Checks first whether the customizations are covered by tests at all, resolves the constraint blockers that stop a release-group bump, then detects the silent damage a heavily customized project would otherwise ship | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-upgrade/README.md) |
+| [`architecture-prep`](/docs/dg/dev/ai/ai-dev/ai-dev-architecture-workflow.html) | `/spryker-architecture:architecture-prep` | Turn project discovery into a filled `architecture/` folder of arc42 sections and C4 diagrams | Progressive questionnaire that asks only what the project's shape requires; mines documents you already have before asking; writes what the answers support and names the rest as owned gaps | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-architecture/skills/architecture-prep/README.md) |
+| [`spryker-upgrade`](/docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html) | `/spryker-ai-dev-sdk:spryker-upgrade` | Upgrade the project's modules and features to a newer Spryker release | Checks first whether the customizations are covered by tests at all, resolves the constraint blockers that stop a release-group bump, then detects the silent damage a heavily customized project would otherwise ship; also updates the Docker SDK, the deploy files, and the developer tools, applies security and performance fixes, finds the release steps, and writes a report of the upgrade | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-upgrade/README.md) |
 
 ### Project setup skills
 
@@ -100,16 +104,27 @@ The `project-starter-wizard` runs these as its steps, and each also works standa
 | `configure-services` | `/spryker-ai-dev-sdk:configure-services` | Change what infrastructure the project runs on, or build a new environment deploy file | Surgical edits to the keys it owns; neighboring deploy-file blocks stay untouched | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/configure-services/README.md) |
 | `define-stores` | `/spryker-ai-dev-sdk:define-stores` | Create or redefine a DMS project's stores and region before the first boot | Clears the hardcoded store and locale literals that otherwise abort the boot | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/define-stores/README.md) |
 | `project-data` | `/spryker-ai-dev-sdk:project-data` | Populate, reshape, reduce, clean up, or remove the project's import data | One skill for every `data/import` change — adapt the demo shop to your stores, generate a catalog from images, or start with no demo data at all | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/project-data/README.md) |
-| `spryker-import-tools` | `/spryker-ai-dev-sdk:spryker-import-tools` | Read, filter, edit, and validate data import CSV files and manifests | Reliable where shell tools corrupt multi-line quoted fields; static validation catches boot-aborting data in seconds | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-import-tools/README.md) |
+| `spryker-import-tools` | `/spryker-ai-dev-sdk:spryker-import-tools` | Read, filter, edit, and validate data import CSV files and manifests | Reliable where shell tools corrupt multi-line quoted fields; the `validate.php gate` command runs all data checks in one call and catches boot-aborting data in seconds | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-import-tools/README.md) |
 | `boot-and-verify` | `/spryker-ai-dev-sdk:boot-and-verify` | Take a transformed project from "files written" to "verified running" | Per-store verification of storefront, Back Office, search, and queues; an independent verifier agent gives the verdict | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/boot-and-verify/README.md) |
 | `curate-golive-data` | `/spryker-ai-dev-sdk:curate-golive-data` | Make the data the project keeps production-safe before go-live | Resolves the go-live warnings the data and boot steps surface — placeholder tax rates, Spryker CDN imagery, demo accounts | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/curate-golive-data/README.md) |
 | `translate-content` | `/spryker-ai-dev-sdk:translate-content` | Translate storefront content into a project locale | Strictly per-locale and opt-in; covers glossary as well as catalog, CMS, navigation, and labels | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/translate-content/README.md) |
+
+### Demo preparation skills
+
+The `demo-prep-wizard` runs these as its phases, and each also works standalone.
+
+| Skill | Command | Purpose | Benefits | Reference |
+|-------|---------|---------|----------|---------|
+| `demo-intake` | `/spryker-ai-dev-sdk:demo-intake` | Turn a customer briefing — a `.docx`, `.pdf` or `.txt` brief, a demo script, a reference URL, or a verbal brief — into structured input | Read-only on the source; states what is known, names where the data is, and marks every unanswered question | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/demo-intake/README.md) |
+| `harvest-source-materials` | `/spryker-ai-dev-sdk:harvest-source-materials` | Collect product data, product images, editorial images, and brand assets from the customer's public site or a supplied export | Collects only what the demo needs, into a folder beside the project; records every limit of the collection | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/harvest-source-materials/README.md) |
+| `match-reference-design` | `/spryker-ai-dev-sdk:match-reference-design` | Make the storefront look like a reference site — homepage composition, navigation, and CMS blocks | One change per cycle, each with a screenshot before and after; every step is reversible | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/match-reference-design/README.md) |
+| `demo-run-sheet` | `/spryker-ai-dev-sdk:demo-run-sheet` | Write the demo handover report: environment, demo accounts, products, categories, demo points, what to watch out for, and how each part is built | Every link, login, price, and facet is read from the running shop and tested; HTML that keeps its format when pasted into a document, or Markdown | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/demo-run-sheet/README.md) |
 
 ### Development skills
 
 | Skill | Command | Purpose | Benefits | Reference |
 |-------|---------|---------|----------|---------|
-| `ai-dev-setup` | `/spryker-ai-dev-sdk:ai-dev-setup` | Generate rules, an agents/context file, and skills for the project and the chosen AI tool | One command sets up consistent AI tooling for the whole team; also refreshes the rules and context file from the latest upstream content | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/ai-dev-setup/README.md) |
+| `ai-dev-setup` | `/spryker-ai-dev-sdk:ai-dev-setup` | Generate rules, an agents/context file, and skills for the project and the chosen AI tool | One command sets up consistent AI tooling for the whole team; detects the coding agent (Claude Code, GitHub Copilot CLI, VS Code) and writes the files it reads; also refreshes the rules and context file from the latest upstream content, or installs only the rules without Docker and Composer | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/ai-dev-setup/README.md) |
 | `code-review` | `/spryker-ai-dev-sdk:code-review` | Review staged or PR changes against Spryker coding standards | Catches Spryker-specific issues before they reach a pull request | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/code-review/README.md) |
 | `propel-schema` | `/spryker-ai-dev-sdk:propel-schema` | Create and modify Propel ORM schema files | Follows Spryker schema conventions automatically | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/propel-schema/README.md) |
 | `data-import` | `/spryker-ai-dev-sdk:data-import` | Create and modify data import CSV files and importers | Generates importers that fit Spryker's data-import path | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/data-import/README.md) |
@@ -135,7 +150,7 @@ The `project-starter-wizard` runs these as its steps, and each also works standa
 
 ## Agents
 
-Agents are delivered through `ai-dev:setup` (every supported AI tool with an agents directory) or the Claude Code plugin.
+Agents are delivered through `ai-dev:setup` (every supported AI tool with an agents directory) or the plugin (Claude Code and GitHub Copilot CLI).
 
 Each agent does one narrowly defined job in its own context and reports back — the "never" boundaries in the table are what make the results trustworthy.
 

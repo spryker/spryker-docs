@@ -1,7 +1,7 @@
 ---
 title: Add a custom Storefront Assistant agent
 description: Learn how to add a custom agent with its own system prompt, tools, and Back Office toggle to the Storefront Assistant.
-last_updated: Oct 9, 2026
+last_updated: Oct 26, 2026
 template: howto-guide-template
 related:
   - title: Storefront Assistant
@@ -489,6 +489,6 @@ The example agent uses the same AI vendor and model as the **Product Discovery**
 1. Create a class that implements `Spryker\Client\AiFoundation\Dependency\Tools\ToolPluginInterface` and has a `TOOL_NAME` constant.
 2. Register the tool in the Client `AiFoundationDependencyProvider::getAiToolPlugins()`.
 3. Add the tool name to the tool list of the agent, for example `getGiftAdvisorAgentToolNames()`.
-4. If the customer must see the result, add the tool name to `getStorefrontAssistantCustomerFacingToolNames()`, and add a frontend renderer for the result. For details, see the component README: `vendor/spryker-feature/ai-commerce/src/SprykerFeature/Yves/AiCommerce/Theme/default/components/organisms/storefront-assistant/README.md`.
+4. If the customer must see the result, add the tool name to `getStorefrontAssistantCustomerFacingToolNames()`, and add a frontend renderer for the result. For details, see the tool renderer contract in the README of the shared chat: `vendor/spryker-feature/ai-commerce/src/SprykerFeature/Shared/AiCommerce/Theme/default/Chat/README.md`.
 5. Add the `ai_commerce.storefront_assistant.tool.<tool_name>` glossary key for each locale. Without it, the progress label shows the raw glossary key.
 6. Add the tool name to the tool list of the widget. `StorefrontAssistantWidget::addToolNamesParameter()` contains a fixed list. Create `Pyz\Yves\AiCommerce\StorefrontAssistant\Widget\StorefrontAssistantWidget` that extends the module widget and overrides this protected method. Then register the project widget in `ShopApplicationDependencyProvider::getGlobalWidgets()` instead of the module widget.

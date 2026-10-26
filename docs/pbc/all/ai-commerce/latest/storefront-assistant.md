@@ -1,7 +1,7 @@
 ---
 title: Storefront Assistant
 description: An AI shopping assistant on the Storefront that answers product questions, shows matching products, compares them, and builds product setups using only your own catalog.
-last_updated: Oct 9, 2026
+last_updated: Oct 26, 2026
 template: concept-topic-template
 related:
   - title: Storefront Assistant technical overview
@@ -100,6 +100,8 @@ To set the API credentials of the AI vendor, go to **AI Vendor** in the Back Off
 
 Suggested prompts are the clickable questions that customers see when they open the chat. Separate the prompts with a pipe character (`|`). The chat shows a maximum of four prompts for each page type. To show no prompts on a page type, leave the value empty.
 
+To show the prompts in titled sections, separate the sections with a double pipe (`||`), and start each section with its title and a colon. The chat shows a maximum of four sections for each page type, with a maximum of four prompts in each section. The chat shows the titles as you enter them, so the titles are not translated for each locale.
+
 You can use the following placeholders. The assistant replaces them with the data of the current page:
 
 | PLACEHOLDER | REPLACED WITH | AVAILABLE IN |
@@ -113,6 +115,12 @@ Example of **Product Page Prompts**:
 
 ```text
 Show me cheaper alternatives to {productName}|Show me similar products|Compare {productName} with similar models
+```
+
+Example of **Default Prompts** with sections:
+
+```text
+Learn more: What is new?|What is on sale? || Get recommendations: What do you recommend?
 ```
 
 ## Data privacy

@@ -1,7 +1,7 @@
 ---
 title: Storefront Assistant
 description: Technical overview of the Storefront Assistant feature — architecture, agents, tools, the streaming protocol, endpoints, and configuration options.
-last_updated: Oct 9, 2026
+last_updated: Oct 26, 2026
 template: concept-topic-template
 related:
   - title: Install Storefront Assistant
@@ -22,8 +22,8 @@ Storefront Assistant runs in the Yves application. The chat logic, the agents, a
 
 | PART | IMPLEMENTATION | LAYER |
 |------|----------------|-------|
-| Chat widget | `StorefrontAssistantWidget`, which renders the `storefront-assistant` organism (Twig, TypeScript, SCSS) | Yves |
-| Header button | The `storefront-assistant-launcher` molecule, included by the project `header` organism | Yves |
+| Chat widget | `StorefrontAssistantWidget`, which renders the `storefront-assistant` organism. The organism embeds the shared chat of the module. | Yves |
+| Header button | The `storefront-assistant-trigger` molecule, included by the project `header` organism | Yves |
 | Endpoints | `StorefrontAssistantController`, registered by `StorefrontAssistantRouteProviderPlugin` | Yves |
 | Agents, tools, and SSE plugins | `SprykerFeature\Client\AiCommerce\Plugin\...` | Client |
 | Streaming, tool loop, and chat history | `AiFoundationClientInterface::streamPrompt()` | Client and Zed |
@@ -362,7 +362,7 @@ Storefront Assistant reads its settings from the **Storefront Assistant** tab of
 | `ai_commerce:storefront_assistant:system_prompts:product_discovery_system_prompt` | text | The system prompt of the **Product Discovery** agent. A blank value uses the default prompt of the module. |
 | `ai_commerce:storefront_assistant:ai_vendor:ai_configuration` | radio | The name of the AI configuration in `config_ai.php`. |
 | `ai_commerce:storefront_assistant:ai_vendor:openai_model`, `aws_model`, `anthropic_model` | string | The model of each AI vendor. |
-| `ai_commerce:storefront_assistant:suggested_prompts:*` | text | The suggested prompts for each page type and under the product cards. |
+| `ai_commerce:storefront_assistant:suggested_prompts:*` | text | The suggested prompts for each page type and under the product cards. Separate the prompts with `\|`. To show titled sections, separate the sections with `\|\|` and start each section with its title and a colon. |
 
 The Client runs in the Yves process and reads only Storefront settings. Every setting that the Client or Yves reads must have `storefront: true`. The model settings must have `storefront: false`, because Zed resolves them.
 
@@ -397,35 +397,56 @@ Do not add a `system_prompt` entry to these AI configurations. The agent compose
 
 ## Frontend
 
-The `storefront-assistant` organism and the `storefront-assistant-launcher` molecule are in the theme folder of the module: `vendor/spryker-feature/ai-commerce/src/SprykerFeature/Yves/AiCommerce/Theme/default/components/`. The Yves build finds them automatically.
+The Storefront Assistant and the Back Office Assistant use one shared chat frontend: the `<spryker-chat>` custom element and its features, such as chat history, attachments, suggested prompts, and the agent selector. The module ships the shared chat in `vendor/spryker-feature/ai-commerce/src/SprykerFeature/Shared/AiCommerce/Theme/default/Chat/`.
 
-The organism activates every element with the `js-storefront-assistant-trigger` class as a button that opens the chat. The `storefront-assistant-launcher` molecule is one such trigger. To add a trigger in another place, include the molecule there, or add the `js-storefront-assistant-trigger` class to any element.
+The Storefront loads the shared chat as follows:
 
-The component README describes the frontend extension points, such as a new stream event type, a custom tool result renderer, and additional request data: `vendor/spryker-feature/ai-commerce/src/SprykerFeature/Yves/AiCommerce/Theme/default/components/organisms/storefront-assistant/README.md`.
+- `SharedThemeTwigLoaderPlugin` makes the shared Twig templates available as `@AiCommerce/Chat/...`.
+- The `@shared/ai-commerce/*` alias of the Yves frontend builder resolves the shared TypeScript and SCSS files.
+- The `storefront-assistant` organism embeds `@AiCommerce/Chat/core/chat.twig` with the Storefront URLs, limits, and texts. It loads the chat lazily into the `storefront-assistant` chunk.
+- The Storefront features are ShopUi molecules in `vendor/spryker-feature/ai-commerce/src/SprykerFeature/Yves/AiCommerce/Theme/default/components/molecules/`: `chat-page-context`, `chat-tool-products`, `chat-tool-compare`, `chat-offer-choices`, and `chat-display-setup`.
+- The `storefront-assistant-trigger` molecule renders a header button that opens and closes the chat.
+
+Project files replace core files with the same path:
+
+| TO CHANGE | DO THIS |
+|-----------|---------|
+| A Storefront feature | Override the molecule in the project Yves theme and extend `molecule('<molecule>', '@SprykerFeature:AiCommerce')`. To change only its settings, override the `data` of the molecule. |
+| A shared chat template on all hosts | Put a Twig file with the same path in `src/Pyz/Shared/AiCommerce/Theme/default/Chat/`. To extend the core template instead of copying it, use the `@SprykerFeature:AiCommerce/Chat/...` path. |
+| A shared chat feature script | Put an `index.ts` file with the same path in `src/Pyz/Shared/AiCommerce/Theme/default/Chat/features/<feature>/` and register a subclass of the core class. |
+
+The module README describes the blocks, the events, the style tokens, the tool renderer contract, and the other extension points of the shared chat: `vendor/spryker-feature/ai-commerce/src/SprykerFeature/Shared/AiCommerce/Theme/default/Chat/README.md`.
 
 ### Page context
 
 The frontend reads the page context from the DOM and sends it with each prompt. This lets the agent know the current product, category, or search query.
 
-| CONTEXT | SELECTOR |
-|---------|----------|
-| Catalog or search page | `.js-catalog__form` |
-| Product page | `.product-detail`, `[itemtype="https://schema.org/Product"]` |
-| Product name and SKU | `meta[itemprop="name"]`, `meta[itemprop="abstractSku"]` |
-| Search query | `input[name="q"]` |
-| Category name | `h1` |
-| Active filters | Checked checkboxes and radio buttons in `.js-catalog__form` |
+The `chat-page-context` molecule defines the page context as a list of rules in its `data.rules`. The first rule that matches the page wins:
 
-If your theme changes this markup, the page context and the page-specific suggested prompts do not work. In this case, override `STOREFRONT_ASSISTANT_PAGE_CONTEXT_SELECTORS` in a project-level component. For details, see the component README.
+| PAGE TYPE | MATCHES WHEN THE PAGE HAS | READS |
+|-----------|---------------------------|-------|
+| `search` | `.js-catalog__form` and a value in `input[name="q"]` | The search query and the active filters |
+| `category` | `.js-catalog__form` | The category name from `h1` and the active filters |
+| `product` | `.product-detail` | The product name and SKU from `meta[itemprop="name"]` and `meta[itemprop="abstractSku"]` inside `[itemtype="https://schema.org/Product"]` |
+| `category` | `[itemtype="https://schema.org/Product"]` without `.js-catalog__form` and `.product-detail`, with at least three URL path segments | The category name from `h1` |
+
+The active filters are the checked checkboxes and radio buttons in `.js-catalog__form`.
+
+If your theme changes this markup, the page context and the page-specific suggested prompts do not work. In this case, override the `chat-page-context` molecule at the project level and change its `data.rules`. The project list replaces the core list, so list all rules that you need.
 
 ### Theming
 
-The chat uses the `ShopUi` theme of the shop. All colors come from the `$setting-color-*` variables and the `helper-color-light()` and `helper-color-dark()` functions, so the chat uses the brand color of the shop automatically.
+The chat takes all colors, fonts, and sizes from `--chat-*` CSS custom properties. The `storefront-assistant` organism maps these properties to the `ShopUi` theme, so the chat uses the brand color of the shop automatically. The panel width is `clamp(400px, 28vw, 480px)`. On small screens, the panel uses the full width.
 
-To change the chat only, use one of these methods:
+To change the chat, set the properties in a project stylesheet for both selectors. The trigger button is outside the chat element, so it needs the second selector:
 
-- Set a `!default` variable before the component styles load, for example `$storefront-assistant-panel-width`, `$storefront-assistant-accent`, `$storefront-assistant-z-index`, or `$storefront-assistant-launcher-bg`.
-- Define a hook mixin. The component includes it if it exists: `ai-commerce-storefront-assistant-base-hook` for the organism, or `ai-commerce-storefront-assistant-launcher-base-hook` for the header button.
+```scss
+storefront-assistant spryker-chat,
+.chat-trigger {
+    --chat-color-accent: #{$setting-color-main};
+    --chat-size-panel-width: clamp(400px, 28vw, 480px);
+}
+```
 
 {% info_block warningBox "Brand color" %}
 
@@ -433,14 +454,14 @@ Do not use `rgba()` or `color.adjust()` on `$setting-color-main`. This value is 
 
 {% endinfo_block %}
 
-The docked panel changes the page layout with these `body` classes:
+When the panel is open, the chat changes the page layout with these attributes on the `<html>` element:
 
-| CLASS | EFFECT |
-|-------|--------|
-| `storefront-assistant-docked` | From the `md` breakpoint, adds `padding-right: var(--storefront-assistant-panel-width)` to the `body`, so the page moves to the left. The panel width is `clamp(400px, 28vw, 480px)`. |
-| `storefront-assistant-expanded` | The panel uses the full screen, and the `body` gets `overflow: hidden`. |
+| ATTRIBUTE | EFFECT |
+|-----------|--------|
+| `data-chat-docked` | The panel is open and narrower than the screen. The `body` gets a right padding equal to the `--chat-dock-width` custom property, so the page moves to the left. |
+| `data-chat-expanded` | The panel uses the full width, and the page does not scroll. |
 
-The `body` padding does not move elements with `position: fixed` or `position: sticky`, such as a sticky header or a cookie banner. If such elements cover the panel, add `padding-right` or `right: var(--storefront-assistant-panel-width)` to them under `body.storefront-assistant-docked`.
+The `body` padding does not move elements with `position: fixed` or `position: sticky`, such as a sticky header or a cookie banner. If such elements cover the panel, add `right: var(--chat-dock-width)` to them under `:root[data-chat-docked]`.
 
 ## Extension points
 

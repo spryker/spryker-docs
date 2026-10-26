@@ -1,7 +1,7 @@
 ---
 title: Install Storefront Assistant
 description: Learn how to install the Storefront Assistant feature that adds an AI shopping chat to the Spryker Storefront.
-last_updated: Oct 9, 2026
+last_updated: Oct 26, 2026
 template: feature-integration-guide-template
 related:
   - title: Storefront Assistant
@@ -48,7 +48,12 @@ The chat is available only to logged-in customers. For guests, the widget render
 composer require spryker-feature/ai-commerce spryker/router --update-with-dependencies
 ```
 
-`spryker-feature/ai-commerce` requires `spryker/ai-foundation` version `^0.9.0` or higher. `spryker/router` is an optional dependency of `spryker-feature/ai-commerce`, but the Storefront Assistant routes need it.
+Consider the following dependencies of `spryker-feature/ai-commerce`:
+
+- It requires `spryker/ai-foundation` version `^0.9.0` or higher.
+- It requires `spryker-shop/shop-ui` version `^2.7.0` or higher. The Yves frontend builder of this version resolves the `@shared/ai-commerce/*` alias, which loads the shared chat frontend of the module.
+- It requires `spryker/twig` version `^3.13.0` or higher.
+- `spryker/router` is an optional dependency, but the Storefront Assistant routes need it.
 
 {% info_block warningBox "Verification" %}
 
@@ -59,6 +64,8 @@ Make sure the following modules have been installed:
 | AiCommerce | vendor/spryker-feature/ai-commerce |
 | AiFoundation | vendor/spryker/ai-foundation |
 | Router | vendor/spryker/router |
+| ShopUi | vendor/spryker-shop/shop-ui |
+| Twig | vendor/spryker/twig |
 
 {% endinfo_block %}
 
@@ -449,7 +456,7 @@ features:
                                         value: 'AI_COMMERCE:AI_CONFIGURATION_STOREFRONT_ASSISTANT_ANTHROPIC'
                 - key: suggested_prompts
                   name: Suggested Prompts
-                  description: Starter prompts offered to the customer as clickable chips, per storefront page type. Separate the prompts with a pipe character. Use {productName}, {categoryName} and {searchQuery} to insert what the customer is currently looking at. Leave a value empty to show no chips on that page type.
+                  description: 'Starter prompts offered to the customer as clickable chips, per storefront page type. Separate the prompts with a pipe character. To show the prompts in titled sections, separate the sections with a double pipe and start each section with its title and a colon, for example "Learn more: What is new?|What is on sale? || Get recommendations: What do you recommend?". Use {productName}, {categoryName} and {searchQuery} to insert what the customer is currently looking at. Leave a value empty to show no chips on that page type.'
                   enabled: true
                   order: 3
                   scopes:
@@ -565,6 +572,10 @@ ai_commerce.storefront_assistant.error.tool_failed,Product information could not
 ai_commerce.storefront_assistant.error.tool_failed,"Produktinformationen konnten nicht abgerufen werden. Die Antwort ist möglicherweise unvollständig.",de_DE
 ai_commerce.storefront_assistant.title,Shopping Assistant,en_US
 ai_commerce.storefront_assistant.title,Einkaufsassistent,de_DE
+ai_commerce.storefront_assistant.reasoning.title,Reasoning,en_US
+ai_commerce.storefront_assistant.reasoning.title,Überlegungen,de_DE
+ai_commerce.storefront_assistant.action.copied,Copied,en_US
+ai_commerce.storefront_assistant.action.copied,Kopiert,de_DE
 ai_commerce.storefront_assistant.error.conversation_not_found,"This conversation is no longer available.",en_US
 ai_commerce.storefront_assistant.error.conversation_not_found,"Diese Unterhaltung ist nicht mehr verfügbar.",de_DE
 ai_commerce.storefront_assistant.error.conversation_delete_failed,"This conversation could not be deleted. Please try again.",en_US
@@ -591,6 +602,10 @@ ai_commerce.storefront_assistant.activity.tool_result,Tool result,en_US
 ai_commerce.storefront_assistant.activity.tool_result,Werkzeugergebnis,de_DE
 ai_commerce.storefront_assistant.activity.products_found,Products found,en_US
 ai_commerce.storefront_assistant.activity.products_found,Gefundene Produkte,de_DE
+ai_commerce.storefront_assistant.activity.answering,The assistant is answering…,en_US
+ai_commerce.storefront_assistant.activity.answering,Der Assistent antwortet …,de_DE
+ai_commerce.storefront_assistant.page_context.attach,Use this page in the next message,en_US
+ai_commerce.storefront_assistant.page_context.attach,Diese Seite in der nächsten Nachricht verwenden,de_DE
 ai_commerce.storefront_assistant.page_context.remove,Do not use this page,en_US
 ai_commerce.storefront_assistant.page_context.remove,Diese Seite nicht verwenden,de_DE
 ai_commerce.storefront_assistant.suggestions.label,Suggested questions,en_US
@@ -619,6 +634,8 @@ ai_commerce.storefront_assistant.attachment.too_large,"File is too large. Maximu
 ai_commerce.storefront_assistant.attachment.too_large,"Datei ist zu groß. Maximale Größe: %maxBytes% Bytes.",de_DE
 ai_commerce.storefront_assistant.attachment.too_many,"Too many attachments. Maximum is %maxCount% files.",en_US
 ai_commerce.storefront_assistant.attachment.too_many,"Zu viele Anhänge. Maximal %maxCount% Dateien erlaubt.",de_DE
+ai_commerce.storefront_assistant.attachment.read_failed,The file %name% could not be read.,en_US
+ai_commerce.storefront_assistant.attachment.read_failed,Die Datei %name% konnte nicht gelesen werden.,de_DE
 ai_commerce.storefront_assistant.validation.feature_disabled,"The shopping assistant is not available.",en_US
 ai_commerce.storefront_assistant.validation.feature_disabled,"Der Einkaufsassistent ist nicht verfügbar.",de_DE
 ai_commerce.storefront_assistant.validation.customer_reference_required,"Please sign in to use the shopping assistant.",en_US
@@ -663,8 +680,6 @@ ai_commerce.storefront_assistant.tool.display_setup,Putting your setup together,
 ai_commerce.storefront_assistant.tool.display_setup,Ihr Set wird zusammengestellt,de_DE
 ai_commerce.storefront_assistant.comparison.title,Product comparison,en_US
 ai_commerce.storefront_assistant.comparison.title,Produktvergleich,de_DE
-ai_commerce.storefront_assistant.comparison.price,Price,en_US
-ai_commerce.storefront_assistant.comparison.price,Preis,de_DE
 ai_commerce.storefront_assistant.comparison.rating,Rating,en_US
 ai_commerce.storefront_assistant.comparison.rating,Bewertung,de_DE
 ai_commerce.storefront_assistant.comparison.availability,Availability,en_US
@@ -689,6 +704,8 @@ ai_commerce.storefront_assistant.product.price_outlier,Price looks unusual,en_US
 ai_commerce.storefront_assistant.product.price_outlier,Preis wirkt ungewöhnlich,de_DE
 ai_commerce.storefront_assistant.setup.total,Total %total% of your %budget% budget,en_US
 ai_commerce.storefront_assistant.setup.total,Gesamt %total% von Ihrem Budget %budget%,de_DE
+ai_commerce.storefront_assistant.setup.total_without_budget,Total %total%,en_US
+ai_commerce.storefront_assistant.setup.total_without_budget,Gesamt %total%,de_DE
 ai_commerce.storefront_assistant.action.more_options,More options,en_US
 ai_commerce.storefront_assistant.action.more_options,Weitere Optionen,de_DE
 ai_commerce.storefront_assistant.action.expand,Expand assistant,en_US
@@ -761,6 +778,8 @@ ai_commerce.storefront_assistant.comparison.not_provided,Not provided,en_US
 ai_commerce.storefront_assistant.comparison.not_provided,Nicht angegeben,de_DE
 ai_commerce.storefront_assistant.composer.hint,Enter to send · Shift + Enter for a new line,en_US
 ai_commerce.storefront_assistant.composer.hint,Enter zum Senden · Umschalt + Enter für eine neue Zeile,de_DE
+ai_commerce.storefront_assistant.composer.ai_disclosure,AI-generated responses. Review before acting.,en_US
+ai_commerce.storefront_assistant.composer.ai_disclosure,KI-generierte Antworten. Vor dem Handeln prüfen.,de_DE
 ai_commerce.storefront_assistant.attachment.remove,Remove attachment,en_US
 ai_commerce.storefront_assistant.attachment.remove,Anhang entfernen,de_DE
 ```
@@ -1014,6 +1033,39 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
+4. Register the Twig loader plugin of the shared chat:
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+|--------|---------------|---------------|-----------|
+| SharedThemeTwigLoaderPlugin | Makes the templates of the shared chat available as `@AiCommerce/Chat/...`. Project templates in `src/Pyz/Shared/AiCommerce/Theme/default/` replace the core templates. | Register it after `FilesystemTwigLoaderPlugin`. | SprykerFeature\Yves\AiCommerce\Plugin\Twig |
+
+**src/Pyz/Yves/Twig/TwigDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\Twig;
+
+use Spryker\Yves\Twig\Plugin\FilesystemTwigLoaderPlugin;
+use Spryker\Yves\Twig\TwigDependencyProvider as SprykerTwigDependencyProvider;
+use SprykerFeature\Yves\AiCommerce\Plugin\Twig\SharedThemeTwigLoaderPlugin;
+
+class TwigDependencyProvider extends SprykerTwigDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Shared\TwigExtension\Dependency\Plugin\TwigLoaderPluginInterface>
+     */
+    protected function getTwigLoaderPlugins(): array
+    {
+        return [
+            new FilesystemTwigLoaderPlugin(),
+            // ... other loader plugins
+            new SharedThemeTwigLoaderPlugin(),
+        ];
+    }
+}
+```
+
 Build the class resolver cache, warm up the router cache, and clear the application caches:
 
 ```bash
@@ -1095,33 +1147,99 @@ The `page-layout-main` template covers the home, catalog, search, product, and C
 
 This step is optional but recommended. Without it, customers open the chat only with the floating button at the bottom of the page. With it, a **Shopping Assistant** button appears in the header on desktop screens.
 
-In the project `header` organism, include the `storefront-assistant-launcher` molecule next to the desktop search form:
+In the project `header` organism, include the `storefront-assistant-trigger` molecule next to the desktop search form. The core `header` organism has no block around the search form, so the project override copies the core `body` block. To show the search form and the button in one row, put both elements in a `grid grid--middle is-hidden-sm-md` container, and give the search form the `col col--expand` class.
+
+The following example shows the `header` organism of the demo shop. It also passes `byImage: true` to the search form for [Search by image](/docs/dg/dev/ai/ai-commerce/search-by-image/install-search-by-image.html). Remove this option if you do not use that feature.
 
 **src/Pyz/Yves/ShopUi/Theme/default/components/organisms/header/header.twig**
 
 ```twig
 {% raw %}
-{% if widgetGlobalExists('StorefrontAssistantWidget') %}
-    {% include molecule('storefront-assistant-launcher', 'AiCommerce') with {
-        class: 'col col--sm-auto-width spacing-left',
-    } only %}
-{% endif %}
+{% extends organism('header', '@SprykerShop:ShopUi') %}
+
+{% block body %}
+    <div class="container">
+        <div class="{{config.name}}__row {{config.name}}__navigation-top">
+            {% include organism('navigation-top') with {
+                class: 'is-hidden-sm-md text-right',
+                data: {
+                    isAjaxMode: data.isAjaxMode,
+                    ajaxCartUrl: data.ajaxCartUrl,
+                },
+            } only %}
+        </div>
+
+        <div class="{{config.name}}__row {{config.name}}__row--middle grid grid--middle">
+            {% set logoUrl = configurationValue('theme:logos:logos:yves_logo_url') %}
+
+            {% include molecule('logo') with {
+                class: 'col col--sm-8 col--lg-4',
+                attributes: logoUrl is not empty ? { src: logoUrl } : {}
+            } only %}
+
+            <div class="col col--sm-4 col--lg-8">
+                <div class="grid grid--middle is-hidden-sm-md">
+                    {% if data.showSearchForm %}
+                        {% include molecule('search-form') with {
+                            class: config.name ~ '__search-form col col--expand',
+                            data: {
+                                byImage: true,
+                            },
+                            attributes: {
+                                'data-search-id': 'desktop'
+                            }
+                        } only %}
+                    {% endif %}
+
+                    {% if widgetGlobalExists('StorefrontAssistantWidget') %}
+                        {% include molecule('storefront-assistant-trigger', 'AiCommerce') with {
+                            class: 'col col--sm-auto-width spacing-left',
+                        } only %}
+                    {% endif %}
+                </div>
+
+                <div class="is-hidden-lg-xl text-right">
+                    {% block mobile %}{% endblock %}
+                </div>
+            </div>
+        </div>
+
+        {% if data.showNavigation %}
+            <div class="{{config.name}}__row {{config.name}}__navigation-main is-hidden-sm-md" id="{{ attributes.navigationId }}">
+                {% block mainNavigation %}
+                    {% widget 'NavigationWidget' args ['MAIN_NAVIGATION', 'navigation-main'] %}{% endwidget %}
+                {% endblock %}
+            </div>
+        {% endif %}
+
+        {% if data.showSearchForm %}
+            {% include molecule('search-form') with {
+                class: config.name ~ '__row ' ~ config.name ~ '__search-form is-hidden-lg-xl',
+                data: {
+                    byImage: true,
+                },
+                attributes: {
+                    'data-search-id': 'mobile'
+                }
+            } only %}
+        {% endif %}
+    </div>
+{% endblock %}
 {% endraw %}
 ```
 
-To show the search form and the button in one row, put both elements in a `grid grid--middle is-hidden-sm-md` container, and give the search form the `col col--expand` class. If your project does not override the `header` organism yet, create the override first. The core `header` organism has no block around the search form, so the override must copy the core `body` block.
-
 The button works as follows:
 
-- The molecule renders a `<button>` with the `is-hidden` and `js-storefront-assistant-trigger` classes. It has no JavaScript of its own.
-- The `storefront-assistant` organism finds every element with the `js-storefront-assistant-trigger` class, removes `is-hidden`, and makes the element open and close the chat.
-- For guests, the widget renders no organism, so the button stays hidden.
-- While a header button is visible, the floating button is hidden.
+- The `storefront-assistant-trigger` molecule renders the trigger button of the shared chat with the `data-chat-trigger` attribute. The button is hidden at first.
+- When the chat starts, the chat finds every button with the `data-chat-trigger` attribute, shows it, and makes it open and close the chat.
+- For guests, the widget renders no chat, so the button stays hidden.
+- While a header button is in view, the floating button is hidden.
 - On small screens, the `is-hidden-sm-md` row hides the header button, and only the floating button is visible.
+- The molecule accepts two data values: `label`, the text of the button, and `placement`, which is `static` or `fixed`.
 
 {% info_block infoBox "Other trigger places" %}
 
-To open the chat from another place, such as the mobile header or a CMS block, include the molecule there, or add the `js-storefront-assistant-trigger` class to any element.
+To open the chat from another place, such as the mobile header, include the `storefront-assistant-trigger` molecule there. The chat binds only the buttons that are on the page when the chat starts. A button that a script adds later stays hidden.
 
 {% endinfo_block %}
 
@@ -1133,13 +1251,41 @@ A project override of the `header` organism copies the core `body` block. After 
 
 ### 3) Adjust fixed page elements
 
-When the chat panel is docked, the `body` gets a right padding, and the page moves to the left. The padding does not move elements with `position: fixed` or `position: sticky`, such as a sticky header or a cookie banner.
+When the chat panel is open, the docking feature of the chat adds a right padding to the `body`, and the page moves to the left. On the `<html>` element, the chat sets the `data-chat-docked` attribute and the `--chat-dock-width` custom property, which is the panel width in pixels. When the customer expands the panel to the full width, the chat sets the `data-chat-expanded` attribute instead.
 
-If such elements cover the panel, add `padding-right` or `right: var(--storefront-assistant-panel-width)` to them under `body.storefront-assistant-docked`. To change the look of the chat itself, see [Theming](/docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant.html#theming).
+The `body` padding does not move elements with `position: fixed` or `position: sticky`, such as a sticky header or a cookie banner. If such elements cover the panel, move them with the same attribute:
 
-### 4) Apply the frontend changes
+```scss
+:root[data-chat-docked] .cookie-banner {
+    right: var(--chat-dock-width);
+}
+```
 
-The `storefront-assistant` organism and the `storefront-assistant-launcher` molecule are in the theme folder of the module, and the Yves build finds them automatically. No project-level TypeScript or SCSS is necessary.
+To change the look of the chat itself, see [Theming](/docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant.html#theming).
+
+### 4) Install the frontend dependencies
+
+The shared chat needs the `marked`, `dompurify`, and `eventsource-parser` npm packages to render Markdown, sanitize HTML, and read the response stream. The `package.json` file of the module declares these packages, so you do not add them to the project `package.json`.
+
+npm installs the packages of the module only if the `workspaces` list of the project `package.json` contains the folder of the module. Make sure the list contains `vendor/spryker-feature/*`:
+
+**package.json**
+
+```json
+{
+    "workspaces": [
+        "vendor/spryker/*",
+        "vendor/spryker/*/assets/Zed",
+        "vendor/spryker-feature/*",
+        "vendor/spryker-feature/*/assets/Zed",
+        "vendor/spryker-shop/*"
+    ]
+}
+```
+
+### 5) Apply the frontend changes
+
+The `storefront-assistant` organism, the `storefront-assistant-trigger` molecule, and the Storefront chat features, such as `chat-tool-products`, are in the theme folder of the module. The Yves build finds them automatically. The organism loads the shared chat lazily into the `storefront-assistant` chunk, so the chat does not increase the size of the page bundles. No project-level TypeScript or SCSS is necessary.
 
 Warm up the Twig cache and build the Yves frontend:
 
@@ -1174,7 +1320,10 @@ Make sure the following applies:
 | A logged-in customer sees no chat button. | **Enable Storefront Assistant** is off, the setting does not have `storefront: true`, or the value is not published. | Check step 4, then run `console configuration:sync` and `console queue:worker:start --stop-when-empty`. |
 | A logged-in customer sees no chat button, and the setting is correct. | The widget is not registered, or the layout does not render it. | Check step 6 and the [Render the widget in the page layout](#1-render-the-widget-in-the-page-layout) step, then run `console cache:empty-all` and `console twig:cache:warmer`. |
 | The chat button is displayed, but the chat has no styles or does not respond. | The Yves assets are outdated. | Build the Yves frontend and clear the browser cache. |
-| The header button has no icon. | The page does not render the organism, which contains the SVG sprite. | Render the widget on the same layout. |
+| Twig cannot find the `@AiCommerce/Chat/core/chat.twig` template. | `SharedThemeTwigLoaderPlugin` is not registered. | Check step 6, then run `console cache:empty-all` and `console twig:cache:warmer`. |
+| The Yves build fails with `Module not found` for `@shared/ai-commerce/Chat`. | The installed `spryker-shop/shop-ui` version does not resolve the `@shared/*` alias. | Update `spryker-shop/shop-ui` to version `^2.7.0` or higher. |
+| The Yves build fails with `Module not found` for `marked`, `dompurify`, or `eventsource-parser`. | npm did not install the packages of the module. | Check the [Install the frontend dependencies](#4-install-the-frontend-dependencies) step, then run `npm install`. |
+| The header button is not displayed for a logged-in customer. | The button was added to the page after the chat started, or the page does not render the widget. | Render the button in Twig on the same layout as the widget. |
 | Texts are displayed as glossary keys, such as `ai_commerce.storefront_assistant.compare.submit`. | The glossary keys are not imported or not published. | Check step 5. |
 | `POST /shopping-assistant/prompt` returns `404` while the feature is on. | The route is not registered, or the router cache is outdated. | Check step 6, then run `console router:cache:warm-up`. |
 | `POST /shopping-assistant/prompt` returns `403`. | No customer is logged in, or the `X-CSRF-Token` header is not valid. | Log in. Make sure that the frontend sends the token from the widget. |

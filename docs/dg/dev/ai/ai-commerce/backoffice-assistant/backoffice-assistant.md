@@ -1,7 +1,7 @@
 ---
 title: Back Office Assistant
 description: Technical overview of the Back Office Assistant feature — architecture, agents, AiFoundation integration, and configuration options.
-last_updated: Jul 16, 2026
+last_updated: Oct 26, 2026
 template: concept-topic-template
 ---
 
@@ -16,6 +16,8 @@ Back Office Assistant is built on the `AiFoundation` abstraction layer and runs 
 Each conversation is routed through an intent router that selects the most appropriate specialized agent. Each agent has its own system prompt, named AI configuration, and toolset — so they can be configured, observed, and scaled independently.
 
 Streaming responses are delivered to the browser using Server-Sent Events (SSE), which are triggered by pre- and post-tool-call plugins registered in `AiFoundationDependencyProvider`.
+
+The chat widget uses the shared chat frontend of the `AiCommerce` module, which Storefront Assistant also uses. For details, see [Chat frontend](#chat-frontend).
 
 ## Agents
 
@@ -50,6 +52,36 @@ Tool call progress is streamed to the browser in real time using Server-Sent Eve
 |--------|-------------|
 | `BackofficeAssistantSsePreToolCallPlugin` | Sends a streaming event before each tool call. |
 | `BackofficeAssistantSsePostToolCallPlugin` | Sends a streaming event after each tool call. |
+
+The stream uses the same protocol as Storefront Assistant: the AI SDK UI Message Stream Protocol. Before each tool call, the stream contains the `tool-input-start` and `tool-input-available` events. After each tool call, the stream contains the `tool-output-available` event. For the event format, see [Stream protocol](/docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant.html#stream-protocol).
+
+## Endpoints
+
+`BackofficeAssistantChatController` handles all requests of the chat widget:
+
+| ENDPOINT | METHOD | DESCRIPTION |
+|----------|--------|-------------|
+| `/ai-commerce/backoffice-assistant-chat/prompt` | `POST` | Sends a message and returns the answer as an SSE stream. |
+| `/ai-commerce/backoffice-assistant-chat/conversations` | `GET` | Returns the conversations of the user, the available agents, and the agent that the user selected. |
+| `/ai-commerce/backoffice-assistant-chat/conversation-messages` | `GET` | Returns the messages of the conversation in the `conversationReference` query parameter. |
+| `/ai-commerce/backoffice-assistant-chat/delete-conversation` | `DELETE` | Deletes the conversations in the `conversationReferences` list. |
+
+Each request must have the `X-CSRF-Token` header with the `backoffice-assistant` CSRF token.
+
+## Chat frontend
+
+The Back Office chat widget and the Storefront Assistant use one shared chat frontend. The shared chat is the `<spryker-chat>` custom element and its features, such as chat history, attachments, and the agent selector. The module ships it in `vendor/spryker-feature/ai-commerce/src/SprykerFeature/Shared/AiCommerce/Theme/default/Chat/`.
+
+The Back Office loads the shared chat as follows:
+
+- `SharedThemeTwigLoaderPlugin` makes the shared Twig templates available as `@AiCommerce/Chat/...`.
+- The `@shared/ai-commerce/*` alias of the Back Office frontend builder resolves the shared TypeScript and SCSS files.
+- `@AiCommerce/Partials/chat-widget.twig` renders the chat and the **Back Office Assistant** button in the bottom-right corner.
+- The Back Office features `chat-form-fill` and `chat-form-context` are in `src/SprykerFeature/Zed/AiCommerce/assets/Zed/chat/features/`. Their Twig templates are in `src/SprykerFeature/Zed/AiCommerce/Presentation/Partials/Chat/`.
+
+To change a Back Office feature, put a template with the same name in `src/Pyz/Zed/AiCommerce/Presentation/Partials/Chat/` and extend the core template, for example `@SprykerFeature:AiCommerce/Partials/Chat/page-context.twig`. To change the chat on all hosts, put a file with the same path in `src/Pyz/Shared/AiCommerce/Theme/default/Chat/`. The project file replaces the core file.
+
+The module README describes the blocks, the events, the style tokens, and the extension points of the shared chat: `vendor/spryker-feature/ai-commerce/src/SprykerFeature/Shared/AiCommerce/Theme/default/Chat/README.md`.
 
 ## AI configuration
 

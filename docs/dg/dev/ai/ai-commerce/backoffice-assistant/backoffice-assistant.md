@@ -66,7 +66,7 @@ The stream uses the same protocol as Storefront Assistant: the AI SDK UI Message
 | `/ai-commerce/backoffice-assistant-chat/conversation-messages` | `GET` | Returns the messages of the conversation in the `conversationReference` query parameter. |
 | `/ai-commerce/backoffice-assistant-chat/delete-conversation` | `DELETE` | Deletes the conversations in the `conversationReferences` list. |
 
-Each request must have the `X-CSRF-Token` header with the `backoffice-assistant` CSRF token.
+The `prompt` and `delete-conversation` requests must have the `X-CSRF-Token` header with the `backoffice-assistant` CSRF token.
 
 ## Chat frontend
 
@@ -76,7 +76,7 @@ The Back Office loads the shared chat as follows:
 
 - `SharedThemeTwigLoaderPlugin` makes the shared Twig templates available as `@AiCommerce/Chat/...`.
 - The `@shared/ai-commerce/*` alias of the Back Office frontend builder resolves the shared TypeScript and SCSS files.
-- `@AiCommerce/Partials/chat-widget.twig` renders the chat and the **Back Office Assistant** button in the bottom-right corner.
+- `@AiCommerce/Partials/chat-widget.twig` renders the chat and a floating button in the bottom-right corner that opens and closes the chat.
 - The Back Office features `chat-form-fill` and `chat-form-context` are in `src/SprykerFeature/Zed/AiCommerce/assets/Zed/chat/features/`. Their Twig templates are in `src/SprykerFeature/Zed/AiCommerce/Presentation/Partials/Chat/`.
 
 To change a Back Office feature, put a template with the same name in `src/Pyz/Zed/AiCommerce/Presentation/Partials/Chat/` and extend the core template, for example `@SprykerFeature:AiCommerce/Partials/Chat/page-context.twig`. To change the chat on all hosts, put a file with the same path in `src/Pyz/Shared/AiCommerce/Theme/default/Chat/`. The project file replaces the core file.

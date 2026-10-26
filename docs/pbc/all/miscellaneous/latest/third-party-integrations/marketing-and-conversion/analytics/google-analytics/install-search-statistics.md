@@ -1,7 +1,7 @@
 ---
 title: Install Search Statistics
 description: Learn how to install and configure the Search Statistics feature in a Spryker project.
-last_updated: Jul 7, 2026
+last_updated: Oct 22, 2026
 template: howto-guide-template
 ---
 
@@ -152,7 +152,7 @@ console configuration:sync
 
 1. Log in to the Back Office.
 2. Navigate to **Configuration**.
-3. Verify that a **Google Analytics** feature entry appears with the **Storefront** and **Data API** tabs.
+3. In the sidebar, select **Integrations** and open the **Google Analytics** tab. Verify that it contains the **Storefront Tracking** and **Data API Connection** groups.
 
 {% endinfo_block %}
 
@@ -166,9 +166,10 @@ Before you configure the Back Office, obtain the following parameters from Googl
 
 Configure the Google Analytics 4 connection in the Back Office:
 
-1. Navigate to **Configuration > Google Analytics**.
-2. Under the **Storefront** tab, enable tracking and set the **Measurement ID** (format: `G-XXXXXXXXXX`).
-3. Under the **Data API** tab, set the **Property ID** and paste the full JSON content of a Google Cloud service account key into **Service Account Credentials JSON**.
+1. In the Back Office, go to **Configuration**, select **Integrations** in the sidebar, and open the **Google Analytics** tab.
+2. In **Storefront Tracking**, set the **Measurement ID** (for example, `G-XXXXXXXXXX`).
+3. In **Data API Connection**, set the **Property ID** and paste the complete JSON content of your Google Cloud service account key into **Service Account Credentials JSON**.
+4. In **Event Tracking** > **Product Events**, enable **Search**. The storefront sends search events to GA4 only when this event is enabled. For details, see [Google Analytics Event Tracking](/docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/google-analytics/google-analytics-event-tracking.html).
 
 {% info_block warningBox "Verification" %}
 

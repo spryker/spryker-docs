@@ -1,7 +1,7 @@
 ---
 title: "Backend API: Manage customer groups"
 description: Learn how to retrieve, create, update, and delete customer groups, and how to manage their members, in your Spryker shop using the Spryker Backend API.
-last_updated: Sep 24, 2026
+last_updated: Oct 14, 2026
 template: glue-api-backend-guide-template
 ---
 
@@ -11,7 +11,7 @@ A customer group is a named segment of customers. Discounts and other shop rules
 
 Customer groups are addressed by `uuid`. The internal database identifier is never exposed. The UUID is derived from the group id, so it is stable for the lifetime of the group — renaming the group does not change it.
 
-The group itself and its members are managed through two resources: `/customer-groups` carries the name and description, and `/customer-groups/{uuid}/customers` carries the members.
+The group itself and its members are managed through two resources: `/customer-groups` carries the name and description, and `/customer-groups/{uuid}/customers` carries the members. To manage the companies and business units that belong to a group, see [Backend API: Manage companies and business units of customer groups](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/backend-api-manage-companies-and-business-units-of-customer-groups.html).
 
 ## Installation
 
@@ -341,7 +341,7 @@ Request sample: `DELETE https://glue-backend.mysprykershop.com/customer-groups/4
 
 A successful request returns the `204 No Content` status code with an empty body.
 
-The assignments of the group go with it. The customers themselves are kept, along with every other group they belong to.
+The assignments of the group go with it, including its company and business unit memberships. The customers, companies, and business units themselves are kept, along with every other group they belong to.
 
 {% info_block warningBox "Review the discounts that target the group" %}
 

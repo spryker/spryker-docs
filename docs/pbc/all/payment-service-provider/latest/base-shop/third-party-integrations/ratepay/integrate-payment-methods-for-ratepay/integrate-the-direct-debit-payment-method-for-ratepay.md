@@ -9,6 +9,9 @@ redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-direct-debit-payment-method-for-ratepay.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-direct-debit-payment-method-for-ratepay.html
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-direct-debit-payment-method-for-ratepay.html
+  - /docs/pbc/all/payment-service-provider/202307.0/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-direct-debit-payment-method-for-ratepay.html
+  - /docs/scos/dev/technology-partner-guides/201907.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-direct-debit-payment-method-for-ratepay.html
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html
 related:
   - title: RatePay
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/ratepay.html

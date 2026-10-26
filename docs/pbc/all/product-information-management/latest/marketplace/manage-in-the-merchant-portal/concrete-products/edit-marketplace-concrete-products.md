@@ -5,6 +5,8 @@ description: Learn how to edit concrete products in the Merchant Portal for your
 template: back-office-user-guide-template
 redirect_from:
   - /docs/pbc/all/product-information-management/202404.0/marketplace/manage-in-the-merchant-portal/concrete-products/edit-marketplace-concrete-products.html
+  - /docs/marketplace/user/merchant-portal-user-guides/202108.0/products/concrete-products/managing-marketplace-concrete-product.html
+  - /docs/pbc/all/product-information-management/202307.0/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-products.html
 related:
   - title: Marketplace Product feature overview
     link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html

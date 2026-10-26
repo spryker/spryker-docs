@@ -10,6 +10,8 @@ related:
     link: docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
   - title: Main Merchant concept
     link: docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/main-merchant.html
+redirect_from:
+  - /docs/pbc/all/order-management-system/202212.0/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html
 ---
 
 *My Orders* is a dedicated page for managing the orders that customers completed from the [main merchant](/docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/main-merchant.html) (Marketplace owner) within the Marketplace.

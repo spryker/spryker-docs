@@ -1,7 +1,7 @@
 ---
 title: Stream AI responses with the AiFoundation module
 description: Use AiFoundationClient::streamPrompt() to send AI responses to the browser chunk by chunk, with tool calls, conversation history, and audit logs.
-last_updated: Oct 9, 2026
+last_updated: Oct 12, 2026
 keywords: foundation, ai, stream, streaming, streamPrompt, sse, server-sent events, chat, tools, conversation history, audit, client
 template: howto-guide-template
 related:
@@ -48,7 +48,57 @@ The text chunks never go through Zed. They go from the AI provider to your strea
 
 In the following diagram, `NeuronVendorAiAdapter` is the part of `AiFoundationClient` that runs in your application, for example, Yves. The **Zed gateway** column shows the only calls that go to Zed.
 
-![streamPrompt() lifecycle](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-foundation/streamPrompt.png)
+![streamPrompt() lifecycle](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-foundation/stream-prompt-2.png)
+
+{% comment %}
+Mermaid source for the diagram above. Edit here, re-render, and re-upload the PNG to the same S3 path.
+
+Render with:
+  npx @mermaid-js/mermaid-cli -i stream-prompt.mmd -o stream-prompt-2.png -b white
+
+sequenceDiagram
+  participant Code as Your code
+  participant Adapter as NeuronVendorAiAdapter
+  participant Zed as AiFoundationStub<br/>(Zed Gateway)
+  participant Provider as AIProviderInterface<br/>(OpenAI, Anthropic, etc.)
+  participant Stream as StreamEvent<br/>PluginInterface
+  participant PreTool as PreToolCall<br/>PluginInterface
+  participant Tool as ToolPlugin<br/>Interface
+  participant PostTool as PostToolCall<br/>PluginInterface
+  participant PostPrompt as PostPrompt<br/>PluginInterface
+
+  Code->>Adapter: streamPrompt(<br/>PromptRequestTransfer)
+
+  rect rgb(230, 240, 253)
+  Note over Adapter,Zed: 1 - Start the session
+  Adapter->>Zed: initChatSession(<br/>ChatSessionRequestTransfer):<br/>ChatSessionResponseTransfer<br/>(AI configuration + history)
+  end
+
+  rect rgb(235, 245, 235)
+  Note over Adapter,PostTool: 2 - Stream and run tools - runToolLoop()
+  Adapter->>Provider: stream(Message ...$messages) = chat history<br/>from round 2 also ToolCallMessage + ToolResultMessage
+  loop
+  Provider-->>Adapter: text or reasoning chunk
+  Adapter->>Stream: onStreamEvent(PromptStreamChunkTransfer,<br/>PromptRequestTransfer) - for each chunk
+  Provider-->>Adapter: AssistantMessage (answer)<br/>or ToolCallMessage (tool request)
+  Adapter->>PreTool: preToolCall(AiToolCallTransfer) - for each tool
+  Adapter->>Tool: execute(...$arguments) - for each allowed tool
+  Adapter->>PostTool: postToolCall(AiToolCallTransfer)<br/>with toolResult - for each tool
+  end
+  end
+
+  rect rgb(230, 240, 253)
+  Note over Adapter,Zed: 3 - Save the conversation (core code)
+  Adapter->>Zed: saveConversationHistoryCollection(<br/>ConversationHistoryCollectionRequestTransfer):<br/>ConversationHistoryCollectionResponseTransfer
+  end
+
+  rect rgb(235, 245, 235)
+  Note over Adapter,PostPrompt: 4 - Run PostPrompt plugins
+  Adapter->>PostPrompt: postPrompt(PromptRequestTransfer,<br/>PromptResponseTransfer)
+  end
+
+  Adapter-->>Code: PromptResponseTransfer
+{% endcomment %}
 
 A *turn* is one user message and the full model response to it, including all tool calls. One call of `streamPrompt()` processes one turn. Each turn has four steps:
 
@@ -136,19 +186,15 @@ If the configuration name is not in this list, `streamPrompt()` returns `isSucce
 
 ### 2. Create a stream event plugin
 
-A stream event plugin receives each chunk and writes it to the HTTP response. Implement `Spryker\Client\AiFoundation\Dependency\Plugin\StreamEventPluginInterface`:
+A stream event plugin receives each chunk and writes it to the HTTP response.
+Implement `Spryker\Client\AiFoundation\Dependency\Plugin\StreamEventPluginInterface`:
+
+**src/Pyz/Yves/ProductAssistant/Plugin/AiFoundation/ProductAssistantSseStreamEventPlugin.php**
 
 ```php
 <?php
 
-namespace Pyz\Yves\ProductAssistant\Plugin\AiFoundation;
-
-use Generated\Shared\Transfer\PromptRequestTransfer;
-use Generated\Shared\Transfer\PromptStreamChunkTransfer;
-use Pyz\Shared\ProductAssistant\ProductAssistantConstants;
-use Spryker\Client\AiFoundation\Dependency\Plugin\StreamEventPluginInterface;
-use Spryker\Yves\Kernel\AbstractPlugin;
-
+// Example only, not production-ready code. Add the namespace and use statements for your project.
 class ProductAssistantSseStreamEventPlugin extends AbstractPlugin implements StreamEventPluginInterface
 {
     public function onStreamEvent(
@@ -159,12 +205,11 @@ class ProductAssistantSseStreamEventPlugin extends AbstractPlugin implements Str
             return;
         }
 
-        echo sprintf(
-            "event: %s\ndata: %s\n\n",
-            $promptStreamChunkTransfer->getType(), // text or reasoning
-            json_encode(['content' => $promptStreamChunkTransfer->getContent()]),
-        );
+        // Example SSE event format. Use the format your frontend expects.
+        $type = $promptStreamChunkTransfer->getType(); // text or reasoning
+        $data = json_encode(['content' => $promptStreamChunkTransfer->getContent()]);
 
+        echo "event: {$type}\ndata: {$data}\n\n";
         flush();
     }
 }
@@ -204,7 +249,7 @@ class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvid
 
 ### 4. Call streamPrompt() in a controller
 
-Call `streamPrompt()` inside a `StreamedResponse` with server-sent events (SSE) headers. In this example, the conversation reference is bound to the customer session, so each customer continues their own conversation:
+Call `streamPrompt()` inside a `StreamedResponse` with server-sent events (SSE) headers. The following controller is one example of a streaming setup, not the only way to call `streamPrompt()`. To save the conversation history, set `PromptRequestTransfer.conversationReference`. For details, see [Conversation History](/docs/dg/dev/ai/ai-foundation/ai-foundation-conversation-history.html):
 
 **src/Pyz/Yves/ProductAssistant/Controller/PromptController.php**
 
@@ -213,38 +258,16 @@ Call `streamPrompt()` inside a `StreamedResponse` with server-sent events (SSE) 
 
 namespace Pyz\Yves\ProductAssistant\Controller;
 
-use Generated\Shared\Transfer\PromptMessageTransfer;
-use Generated\Shared\Transfer\PromptRequestTransfer;
-use Pyz\Shared\ProductAssistant\ProductAssistantConstants;
-use Spryker\Yves\Kernel\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\StreamedResponse;
-
-/**
- * @method \Pyz\Yves\ProductAssistant\ProductAssistantFactory getFactory()
- */
+// Example only, not production-ready code. Add the use statements for your project.
 class PromptController extends AbstractController
 {
     public function indexAction(Request $request): StreamedResponse
     {
-        $promptRequestTransfer = (new PromptRequestTransfer())
-            ->setAiConfigurationName(ProductAssistantConstants::AI_CONFIGURATION_PRODUCT_ASSISTANT)
-            ->setPromptMessage((new PromptMessageTransfer())->setContent((string)$request->request->get('message')))
-            ->setConversationReference('product-assistant-' . $request->getSession()->getId()) // omit it to not save the conversation history in Zed
-            ->setToolNames(['search_products', 'get_product_availability']);
-
-        ignore_user_abort(true); // the turn continues and is saved when the browser disconnects
-        set_time_limit(120);
+        // Build $promptRequestTransfer here, for example with aiConfigurationName and promptMessage.
 
         return new StreamedResponse(
             function () use ($promptRequestTransfer): void {
-                $promptResponseTransfer = $this->getFactory()->getAiFoundationClient()->streamPrompt($promptRequestTransfer);
-
-                // Send the final status to the browser. The text chunks are already sent.
-                echo sprintf("event: done\ndata: %s\n\n", json_encode([
-                    'isSuccessful' => $promptResponseTransfer->getIsSuccessful(),
-                ]));
-                flush();
+                $this->getFactory()->getAiFoundationClient()->streamPrompt($promptRequestTransfer);
             },
             200,
             ['Content-Type' => 'text/event-stream', 'Cache-Control' => 'no-cache', 'X-Accel-Buffering' => 'no'],
@@ -253,24 +276,13 @@ class PromptController extends AbstractController
 }
 ```
 
-`PromptResponseTransfer` contains the following data:
-
-- `isSuccessful` and `errors`: the status of the turn.
-- `streamedContent`: all text of the turn. When the stream fails, it contains the text that arrived before the failure.
-
-To override the system prompt of the AI configuration for one turn, set `PromptRequestTransfer.systemPrompt`.
-
 ## Use tools
 
 Tools let the model get data or run actions during the turn. For streaming, register tools in the Client, not in Zed.
 
 1. Create a tool plugin that implements `Spryker\Client\AiFoundation\Dependency\Tools\ToolPluginInterface`. For details about tool plugins, see [Use AI tools with the AiFoundation module](/docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html).
 2. Register the tool plugin in `getAiToolPlugins()` of the Client `AiFoundationDependencyProvider`.
-3. Add the tool names to the request. The tool name is the value that `ToolPluginInterface::getName()` returns:
-
-    ```php
-    $promptRequestTransfer->setToolNames(['search_products', 'get_product_availability']);
-    ```
+3. Add the tool names to `PromptRequestTransfer.toolNames`. The tool name is the value that `ToolPluginInterface::getName()` returns.
 
 Note the following behavior:
 
@@ -282,6 +294,8 @@ Note the following behavior:
 The audit log stores each prompt and each tool call of the turn in the `spy_ai_interaction_log` table. The Client collects all entries of the turn and sends them to Zed in one call at the end of the turn.
 
 1. Register both audit plugins in the Client `AiFoundationDependencyProvider`:
+
+    **src/Pyz/Client/AiFoundation/AiFoundationDependencyProvider.php**
 
     ```php
     use Spryker\Client\AiFoundation\Plugin\AuditLog\AiInteractionAuditLogPostPromptPlugin;
@@ -309,6 +323,8 @@ The audit log stores each prompt and each tool call of the turn in the `spy_ai_i
     {% endinfo_block %}
 
 2. In `config/Shared/config_default.php`, add the Client audit logger config plugin for the application that calls `streamPrompt()`:
+
+    **config/Shared/config_default.php**
 
     ```php
     use Spryker\Client\AiFoundation\Plugin\Log\AiInteractionAuditLoggerConfigPlugin as ClientAiInteractionAuditLoggerConfigPlugin;

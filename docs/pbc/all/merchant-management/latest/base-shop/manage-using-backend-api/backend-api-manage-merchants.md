@@ -3,6 +3,8 @@ title: "Backend API: Manage merchants"
 description: Learn how to install and extend the merchants Backend API endpoint in your Spryker shop.
 last_updated: Sep 25, 2026
 template: glue-api-backend-guide-template
+redirect_from:
+  - /docs/pbc/all/merchant-management/202212.0/marketplace/manage-in-the-back-office/manage-merchants.html
 ---
 
 The `merchants` Backend API resource lets you retrieve, create, and update merchants (`GET /merchants`, `GET /merchants/{merchantReference}`, `POST /merchants`, `PATCH /merchants/{merchantReference}`). You can use it to build Back Office extensions, ERP and PIM integrations, and merchant onboarding automation.

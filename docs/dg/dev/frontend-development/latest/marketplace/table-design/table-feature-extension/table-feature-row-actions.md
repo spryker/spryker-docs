@@ -7,6 +7,7 @@ redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-features/table-feature-row-actions.html
   - /docs/scos/dev/front-end-development/202204.0/marketplace/table-design/table-feature-extension/table-feature-row-actions.html
   - /docs/scos/dev/front-end-development/202404.0/marketplace/table-design/table-feature-extension/table-feature-row-actions.html
+  - /docs/marketplace/dev/front-end/table-design/table-features/table-feature-row-actions.html
 
 related:
   - title: Table Feature extension

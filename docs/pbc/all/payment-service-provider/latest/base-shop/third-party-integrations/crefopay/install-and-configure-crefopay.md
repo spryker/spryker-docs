@@ -15,6 +15,8 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/crefopay/installing-and-configuring-crefopay.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/crefopay/install-and-configure-crefopay.html
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/crefopay/installing-and-configuring-crefopay.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/crefopay/install-and-configure-crefopay.html
+  - /docs/pbc/all/payment-service-provider/202307.0/base-shop/third-party-integrations/crefopay/install-and-configure-crefopay.html
 related:
   - title: Integrating CrefoPay
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/integrate-crefopay.html

@@ -12,6 +12,7 @@ redirect_from:
   - /docs/integrations/spryker-glue-api/backend-api/developing-apis/create-api-applications.md
   - /docs/dg/dev/glue-api/latest/create-glue-api-applications.html
   - /docs/integrations/spryker-glue-api/backend-api/developing-apis/create-api-applications.html
+  - /docs/integrations/spryker-glue-api/create-glue-api-applications/create-glue-api-applications
 ---
 
 Spryker's Backend API is a powerful tool for building custom front end applications, integrating with third-party services, and creating unique customer experiences. This guide provides a high level overview of the process for creating a new API application.

@@ -14,6 +14,7 @@ redirect_from:
   - docs/pbc/all/warehouse-management-system/202311.0/base-shop/import-data/file-details-product-stock.csv.html
   - /docs/pbc/all/warehouse-management-system/202311.0/base-shop/import-and-export-data/file-details-product-stock.csv.html
   - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/import-and-export-data/import-file-details-product-stock.csv.html
+  - /docs/scos/dev/data-import/202108.0/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html

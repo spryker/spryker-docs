@@ -7,6 +7,9 @@ originalLink: https://documentation.spryker.com/2021080/docs/proclane
 originalArticleId: c61f1780-f44c-4641-a68f-c0d0fb29ad47
 redirect_from:
   - docs/scos/user/technology-partners/202200.0/operational-tools-monitoring-legal-etc/proclane.html
+  - /docs/pbc/all/miscellaneous/202212.0/third-party-integrations/operational-tools-monitoring-legal/proclane.html
+  - /docs/scos/user/technology-partners/202001.0/operational-tools-monitoring-legal-etc/proclane.html
+  - /docs/scos/user/technology-partners/201907.0/operational-tools-monitoring-legal-etc/proclane.html
 ---
 
 ## Partner Information

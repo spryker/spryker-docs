@@ -53,6 +53,8 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-elasticsearch.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-elasticsearch.html
   - /docs/pbc/all/search/202311.0/tutorials-and-howtos/configure-elasticsearch.html
+  - /docs/pbc/all/search/202212.0/base-shop/tutorials-and-howtos/configure-elasticsearch.html
+  - /docs/pbc/all/search/202212.0/tutorials-and-howtos/configure-search-featureshtml
 ---
 
 Elasticsearch is a NoSQL data store that lets you predefine the structure of the data you store in it.

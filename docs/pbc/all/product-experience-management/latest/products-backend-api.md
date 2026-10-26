@@ -3,6 +3,8 @@ title: Products Backend API
 description: Manage products programmatically through the Glue Backend API, running the same business rules as the Back Office.
 last_updated: Sep 7, 2026
 template: default
+redirect_from:
+  - /docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/glue-backend-api-manage-products
 ---
 
 The Products Backend API lets external systems create, read, and update products in your shop over HTTP. It covers the product data a Back Office user works with — names and descriptions per locale, prices, stock, images, categories, and store assignments — and presents it as a single `products` resource on the Glue Backend API.

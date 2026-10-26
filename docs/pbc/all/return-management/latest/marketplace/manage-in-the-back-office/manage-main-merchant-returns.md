@@ -8,6 +8,8 @@ related:
     link: docs/pbc/all/order-management-system/latest/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html
   - title: Marketplace Return Management feature overview
     link: docs/pbc/all/return-management/latest/marketplace/marketplace-return-management-feature-overview.html
+redirect_from:
+  - /docs/pbc/all/return-management/202307.0/marketplace/manage-in-the-back-office/manage-main-merchant-returns.html
 ---
 
 **My Returns** lets you manage the returns as follows:

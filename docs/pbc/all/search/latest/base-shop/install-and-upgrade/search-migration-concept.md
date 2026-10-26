@@ -17,6 +17,10 @@ redirect_from:
   - /v4/docs/search-migration-concept
   - /v4/docs/en/search-migration-concept
   - /docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html
+  - /docs/pbc/all/search/202212.0/install-and-upgrade/search-migration-concept.html
+  - /docs/pbc/all/search/base-shop/install-and-upgrade/https://docs.spryker.com/docs/pbc/all/search/base-shop/install-and-upgrade/search-migration-concept.html
+  - /docs/pbc/all/search/base-shop/install-and-upgrade/search-migration-concept.html
+  - /docs/pbc/all/search/base-shop/install-and-upgrade
 ---
 
 Previously, out of the box, Spryker provided support only for Elasticsearch 5 as the search provider. It was impossible to use major versions of Elasticsearch later because of the breaking changes introduced in its version 6 - primarily because of the removal of mapping types. From the very beginning, Spryker's search setup included one index per store, which was logically divided into several mapping types to support different types of resources. Besides, there was no easy way to substitute Elasticsearch with alternative search providers.

@@ -5,6 +5,10 @@ template: concept-topic-template
 last_updated: Nov 21, 2023
 redirect_from:
   - /docs/marketplace/user/features/202200.0/marketplace-inventory-management-feature-overview.html
+  - /docs/pbc/all/inventory-management/latest/marketplace/marketplace-inventory-management-feature-overview.html
+  - /docs/marketplace/dev/feature-integration-guides/202108.0/glue/marketplace-inventory-management-feature-integration.html
+  - /docs/marketplace/dev/feature-integration-guides/202204.0/marketplace-inventory-management-feature-integration.html
+  - /docs/marketplace/dev/feature-walkthroughs/202212.0/marketplace-inventory-management-feature-walkthrough.html
 ---
 
 The *Marketplace Inventory Management* feature enables maintaining stock and availability of merchant products and product offers that are sold in the Marketplace.

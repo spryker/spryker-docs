@@ -10,6 +10,13 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/computop/installing-and-configuring-computop.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/computop/install-and-configure-computop.html
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/computop/installing-and-configuring-computop.html
+  - /docs/pbc/all/payment-service-provider/202307.0/base-shop/third-party-integrations/computop/install-and-configure-computop.html
+  - /docs/scos/user/technology-partners/202204.0/payment-partners/computop.html
+  - /v4/docs/computop
+  - /docs/scos/user/technology-partners/201907.0/payment-partners/computop.html
+  - /docs/scos/user/technology-partners/201903.0/payment-partners/computop.html
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/computop.html
+  - /docs/scos/user/technology-partners/201811.0/payment-partners/computop.html
 ---
 
 This topic describes how to integrate Computop into a Spryker project by installing and configuring the Computop module.

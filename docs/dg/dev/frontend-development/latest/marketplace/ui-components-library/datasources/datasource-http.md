@@ -7,6 +7,8 @@ redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/datasources/datasource-http.html
   - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/datasources/datasource-http.html
   - /docs/scos/dev/front-end-development/202404.0/marketplace/ui-components-library/datasources/datasource-http.html
+  - /docs/dg/dev/frontend-development/202307.0/marketplace/ui-components-library/datasources/datasource-http.html
+  - /docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-http.html
 
 related:
   - title: Datasources

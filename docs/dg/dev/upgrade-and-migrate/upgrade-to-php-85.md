@@ -3,6 +3,8 @@ title: 'Upgrade to PHP 8.5'
 description: Upgrade PHP to version 8.5 in your Docker environment and composer.json. Check code and dependencies for compatibility, update configurations, and test your application to ensure a smooth upgrade.
 template: concept-topic-template
 last_updated: Sep 3, 2026
+redirect_from:
+  - /docs/dg/dev/upgrade-and-migrate/upgrade-to-php-82.html
 ---
 
 This document describes how to upgrade PHP to version 8.5. This upgrades the version in Docker environment and `composer.json`.

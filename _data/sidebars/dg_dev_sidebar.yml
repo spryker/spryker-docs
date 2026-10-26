@@ -114,6 +114,8 @@ entries:
             nested:
               - title: Project Starter Wizard
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html
+              - title: Demo Preparation Wizard
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-demo-prep-wizard.html
               - title: Customization Workflow
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html
               - title: Bugfix Workflow

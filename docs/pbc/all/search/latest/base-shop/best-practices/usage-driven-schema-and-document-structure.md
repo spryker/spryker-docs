@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/usage-driven-schema-structure  
   - /v1/docs/usage-driven-schema-structure
   - /v1/docs/en/usage-driven-schema-structure
+  - /docs/pbc/all/search/202307.0/base-shop/best-practices/usage-driven-schema-and-document-structure.html
 related:
   - title: Data-driven ranking
     link: docs/pbc/all/search/latest/base-shop/best-practices/data-driven-ranking.html

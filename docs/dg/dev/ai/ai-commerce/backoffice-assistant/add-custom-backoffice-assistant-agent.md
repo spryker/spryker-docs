@@ -1,7 +1,7 @@
 ---
 title: Add a custom Back Office Assistant agent
 description: Learn how to implement and register a custom agent and toolset for the Back Office Assistant feature, including a dedicated AI configuration and SSE streaming.
-last_updated: Aug 13, 2026
+last_updated: Oct 14, 2026
 template: concept-topic-template
 ---
 
@@ -264,10 +264,15 @@ use Pyz\Shared\AiCommerce\AiCommerceConstants;
 use Spryker\Shared\AiFoundation\AiFoundationConstants;
 
 $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_CUSTOMER_MANAGEMENT_OPENAI] = [
-    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
     'provider_config' => [
         'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
         'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL,
+        'parameters' => [
+            'reasoning' => [
+                'effort' => 'none',
+            ],
+        ],
     ],
 ];
 
@@ -290,6 +295,8 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIG
     ],
 ];
 ```
+
+The OpenAI entry sets `parameters.reasoning.effort` to `none`, the same value as the built-in agents. This parameter tells the model how much to think before it answers. Supported values depend on the model. For details, see [Reasoning models](https://developers.openai.com/api/docs/guides/reasoning) in the OpenAI documentation.
 
 {% info_block infoBox "Info" %}
 

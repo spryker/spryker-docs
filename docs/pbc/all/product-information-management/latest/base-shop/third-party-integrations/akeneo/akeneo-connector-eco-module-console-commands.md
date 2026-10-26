@@ -13,6 +13,8 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/product-information-pimerp/akeneo/akeneo-console-commands.html
   - /docs/pbc/all/product-information-management/202311.0/base-shop/third-party-integrations/akeneo/akeneo-console-commands.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/third-party-integrations/akeneo/akeneo-connector-eco-module-console-commands.html
+  - /docs/pbc/all/product-information-management/202212.0/base-shop/third-party-integrations/akeneo/akeneo-console-commands.html
+  - /docs/pbc/all/product-information-management/202307.0/base-shop/third-party-integrations/akeneo/akeneo-console-commands.html
 ---
 
 The following console commands are available in your project after successful [installation](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo-eco-module.html) of the Akeneo Connector Eco module. Run them one by one.

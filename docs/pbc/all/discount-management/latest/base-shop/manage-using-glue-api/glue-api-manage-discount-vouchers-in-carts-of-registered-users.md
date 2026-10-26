@@ -10,6 +10,9 @@ redirect_from:
   - /docs/pbc/all/discount-management/202311.0/manage-via-glue-api/manage-discount-vouchers-in-carts-of-registered-users.html
   - /docs/pbc/all/discount-management/202311.0/base-shop/manage-via-glue-api/manage-discount-vouchers-in-carts-of-registered-users.html
   - /docs/pbc/all/discount-management/202204.0/base-shop/manage-using-glue-api/glue-api-manage-discount-vouchers-in-carts-of-registered-users.html
+  - /docs/pbc/all/discount-management/202212.0/base-shop/manage-using-glue-api/glue-api-manage-discount-vouchers-in-carts-of-registered-users.html
+  - /docs/pbc/all/discount-management/202212.0/base-shop/manage-via-glue-api/manage-discount-vouchers-in-carts-of-registered-users.html
+  - /2021080/docs/managing-discount-vouchers-in-carts-of-registered-users
 related:
   - title: Manage carts of registered users
     link: docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html

@@ -11,6 +11,7 @@ redirect_from:
   - /docs/scos/dev/the-docker-sdk/202204.0/docker-environment-infrastructure.html
   - /docs/scos/dev/the-docker-sdk/202307.0/docker-environment-infrastructure.html
   - /docs/scos/dev/the-docker-sdk/202212.0/docker-environment-infrastructure.html
+  - /docs/dg/dev/sdks/sdk/
 
 related:
   - title: The Docker SDK

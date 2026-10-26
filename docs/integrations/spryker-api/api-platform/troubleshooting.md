@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting API Platform
 description: Common issues and solutions when working with API Platform in Spryker.
-last_updated: Sep 10, 2026
+last_updated: Sep 14, 2026
 template: troubleshooting-guide-template
 related:
   - title: Integrate API Platform
@@ -352,6 +352,33 @@ The `assets:install` command must be run after integrating API Platform and when
    ```bash
    ❌ /api/v1/customers
    ✅ /customers
+   ```
+
+### Every request answers 404 with code 007 or a bare 500, and nothing is logged
+
+**Symptom:** A resource that used to work suddenly answers `404` with `{"errors":[{"message":"Not found","status":404,"code":"007"}]}` or a plain `500 Internal Server Error`, the response carries no exception details, and `data/logs` stays empty.
+
+**Cause:**
+
+The Glue application routes a request to the API Platform kernel only after its own router answered `404`. If the kernel then throws before the router resolved an operation, for example in a `kernel.request` subscriber, an authenticator, or while instantiating one of their dependencies, no exception listener can build a response and the original Glue `404` is sent instead. An exception inside a provider or processor is caught by the API Platform stack and becomes a `500`.
+
+In both cases the exception is logged to the container's standard error stream, not to a file. In debug mode the response also carries the exception class, message, file, line, and trace.
+
+**Solution:**
+
+1. Read the log of the Glue container, for example:
+
+   ```bash
+   docker logs spryker_glue_backend_eu_1 --since 5m 2>&1 | grep -i "exception"
+   ```
+
+2. Enable debug mode for local development. `SPRYKER_DEBUG_ENABLED=1` switches the Glue, Glue Backend, and Glue Storefront kernels into debug mode: the Symfony container is rebuilt when code changes, and exception details are rendered in the response. See [Enable debug mode for the Glue kernels](/docs/integrations/spryker-api/api-platform/configuration.html#enable-debug-mode-for-the-glue-kernels).
+
+3. If the `404` persists in debug mode, the route really is unknown to the API Platform kernel. Regenerate the resources and clear the kernel cache:
+
+   ```bash
+   docker/sdk cli "GLUE_APPLICATION=GLUE_BACKEND vendor/bin/glue api:generate"
+   rm -rf data/cache/GlueBackend/<environment>
    ```
 
 ### Requests without an `Accept` header are rejected or return the wrong format

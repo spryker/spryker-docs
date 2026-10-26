@@ -8,6 +8,9 @@ originalArticleId: d9f739fa-6b6a-45d7-8d3e-4ba793809910
 redirect_from:
   - /docs/scos/dev/front-end-development/202404.0/yves/frontend-assets-building-and-loading.html
   - /docs/scos/dev/front-end-development/yves/frontend-assets-building-and-loading.html
+  - /docs/about/all/frontend-assets-building-and-loading
+  - /docs/about/all/releases/frontend-assets-building-and-loading
+  - /docs/about/all/rfrontend-assets-building-and-loading
 ---
 
 Spryker assets are split into critical and non-critical CSS chunks. Their main purpose is to provide loading of the critical CSS at the start of the page loading and load the non-critical CSS only after the full page is loaded.

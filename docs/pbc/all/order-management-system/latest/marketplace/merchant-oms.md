@@ -3,6 +3,8 @@ title: Merchant OMS
 description: Merchant Oms provides a dedicated Oms flow for Merchant Orders and their Merchants.
 template: concept-topic-template
 last_updated: Nov 21, 2023
+redirect_from:
+  - /docs/marketplace/dev/feature-walkthroughs/202204.0/marketplace-order-management-feature-walkthrough/merchant-oms.html
 ---
 
 Merchant Oms provides a dedicated Oms flow for merchant orders and their merchants.

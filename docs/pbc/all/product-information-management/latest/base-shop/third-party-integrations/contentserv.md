@@ -12,6 +12,7 @@ redirect_from:
   - /docs/scos/user/technology-partners/202200.0/product-information-pimerp/contentserv.html
   - /docs/scos/user/technology-partners/202311.0/product-information-pimerp/contentserv.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/third-party-integrations/contentserv.html
+  - /docs/scos/user/technology-partners/201907.0/marketing-and-conversion/personalization-and-cross-selling/contentserv.html
 ---
 
 ## Copyright and Disclaimer

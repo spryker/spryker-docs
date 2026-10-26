@@ -1,7 +1,7 @@
 ---
 title: Install Back Office Assistant
 description: Learn how to install the Back Office Assistant feature that provides an AI-powered chat widget in the Spryker Back Office.
-last_updated: Jul 16, 2026
+last_updated: Oct 14, 2026
 template: feature-integration-guide-template
 ---
 
@@ -75,45 +75,70 @@ use Pyz\Shared\AiCommerce\AiCommerceConstants;
 use Spryker\Shared\AiFoundation\AiFoundationConstants;
 
 $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_INTENT_ROUTER_OPENAI] = [
-    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
     'provider_config' => [
         'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
         'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL,
+        'parameters' => [
+            'reasoning' => [
+                'effort' => 'none',
+            ],
+        ],
     ],
 ];
 
 $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_GENERAL_AGENT_OPENAI] = [
-    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
     'provider_config' => [
         'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
         'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL,
+        'parameters' => [
+            'reasoning' => [
+                'effort' => 'none',
+            ],
+        ],
     ],
     'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_GENERAL_PURPOSE_SYSTEM_PROMPT,
 ];
 
 $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_ORDER_MANAGEMENT_OPENAI] = [
-    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
     'provider_config' => [
         'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
         'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL,
+        'parameters' => [
+            'reasoning' => [
+                'effort' => 'none',
+            ],
+        ],
     ],
     'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_ORDER_MANAGEMENT_SYSTEM_PROMPT,
 ];
 
 $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_DISCOUNT_MANAGEMENT_OPENAI] = [
-    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
     'provider_config' => [
         'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
         'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL,
+        'parameters' => [
+            'reasoning' => [
+                'effort' => 'none',
+            ],
+        ],
     ],
     'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_DISCOUNT_MANAGEMENT_SYSTEM_PROMPT,
 ];
 
 $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_FORM_FILL_OPENAI] = [
-    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
     'provider_config' => [
         'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
         'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL,
+        'parameters' => [
+            'reasoning' => [
+                'effort' => 'none',
+            ],
+        ],
     ],
     'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_FORM_FILL_SYSTEM_PROMPT,
 ];
@@ -395,7 +420,7 @@ features:
                         name: OpenAI Model
                         description: The OpenAI model used for the Backoffice Assistant AI configuration. Model must support image input and structured output.
                         type: string
-                        default_value: 'gpt-4.1'
+                        default_value: 'gpt-6-luna'
                         enabled: true
                         secret: false
                         storefront: false
@@ -412,7 +437,7 @@ features:
                         name: AWS Bedrock Model
                         description: The AWS Bedrock model identifier used for the Backoffice Assistant AI configuration. Model must support image input and structured output.
                         type: string
-                        default_value: 'eu.anthropic.claude-sonnet-4-5-20250929-v1:0'
+                        default_value: 'eu.anthropic.claude-haiku-5-5'
                         enabled: true
                         secret: false
                         storefront: false
@@ -429,7 +454,7 @@ features:
                         name: Anthropic Model
                         description: The Anthropic model used for the Backoffice Assistant AI configuration. Model must support image input and structured output.
                         type: string
-                        default_value: 'claude-sonnet-4-5'
+                        default_value: 'claude-haiku-5-5'
                         enabled: true
                         secret: false
                         storefront: false

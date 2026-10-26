@@ -6,6 +6,7 @@ last_updated: Dec 4, 2023
 redirect_from:
   - /docs/marketplace/user/intro-to-spryker-marketplace/merchant-portal.html
   - /docs/scos/user/intro-to-spryker/spryker-marketplace/merchant-portal.html
+  - /docs/marketplace/dev/feature-integration-guides/202108.0/merchant-portal-marketplace-merchant-feature-integration.html
 
 ---
 

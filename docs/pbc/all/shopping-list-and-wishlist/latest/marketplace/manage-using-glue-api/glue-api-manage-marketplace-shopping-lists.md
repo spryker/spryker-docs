@@ -10,6 +10,9 @@ related:
     link: docs/pbc/all/shopping-list-and-wishlist/latest/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-shopping-lists-glue-api.html
   - title: Managing shopping list items
     link: docs/pbc/all/shopping-list-and-wishlist/latest/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-list-items.html
+redirect_from:
+  - /docs/pbc/all/shopping-list-and-wishlist/202212.0/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-lists.html
+  - /docs/pbc/all/shopping-list-and-wishlist/202307.0/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-lists.html
 ---
 
 The Marketplace Shopping Lists API feature lets you manage shopping lists in the Marketplace, as well as managing the items in them.

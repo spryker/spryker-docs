@@ -3,6 +3,13 @@ title: Shopping List and Wishlist
 description: This document contains concept information for the  Spryker Cloud Commerce OS and Spryker Marketplace Shopping list and Wishlist feature
 template: concept-topic-template
 last_updated: Nov 21, 2023
+redirect_from:
+  - /docs/pbc/all/shopping-list-and-wishlist
+  - /docs/pbc/all/shopping-list-and-wishlist/202307.0/shopping-list-and-wishlist.html
+  - /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
+  - /docs/pbc/all/shopping-list-and-wishlist/
+  - /docs/pbc/all/shopping-list-and-wishlist/202204.0/whats-changed-in-shopping-list-and-wishlist.html
+  - /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist-overview.html
 ---
 
 The *Shopping List and Wishlist* capability lets your customers create and manage shopping lists and wishlists on the Storefront.

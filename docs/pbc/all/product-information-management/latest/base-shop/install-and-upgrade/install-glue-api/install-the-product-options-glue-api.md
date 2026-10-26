@@ -16,6 +16,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-options-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-product-options-feature-integration.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html
+  - /docs/pbc/all/product-information-management/202212.0/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html
 related:
   - title: "Glue API: Retrieve abstract products"
     link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html

@@ -9,6 +9,10 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/checking-out/checkout-workflow.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/manage-using-glue-api/check-out/checkout-workflow.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/check-out/glue-api-checkout-workflow.html
+  - /docs/scos/dev/glue-api-guides/202108.0/checking-out/checkout-workflow.html
+  - /docs/scos/dev/feature-integration-guides/201903.0/checkout-workflow-integration-guide.html
+  - /docs/scos/dev/feature-integration-guides/202001.0/checkout-workflow-integration-guide.html
+  - /docs/scos/dev/feature-integration-guides/202005.0/checkout-workflow-integration-guide.html
 related:
   - title: Check out purchases
     link: docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html

@@ -11,6 +11,9 @@ redirect_from:
   - /docs/nitrobox
   - /docs/en/nitrobox
   - /docs/scos/user/technology-partners/202200.0/finance-and-accounting/nitrobox.html
+  - /docs/scos/user/technology-partners/202001.0/finance-and-accounting/nitrobox.html
+  - /docs/scos/user/technology-partners/202005.0/finance-and-accounting/nitrobox.html
+  - /docs/scos/user/technology-partners/202108.0/finance-and-accounting/nitrobox.html
 ---
 
 ## Partner Information

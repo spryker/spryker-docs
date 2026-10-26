@@ -5,6 +5,11 @@ template: glue-api-storefront-guide-template
 last_updated: Jul 30, 2026
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202311.0/carts-of-registered-users/managing-carts-of-registered-users.html
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html
+  - /docs/pbc/all/cart-and-checkout/202212.0/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html
+  - /docs/pbc/all/cart-and-checkout/202212.0/marketplace/manage-using-glue-api/carts-of-registered-users/manage-carts-of-registered-users.html
+  - /docs/pbc/all/cart-and-checkout/202307.0/marketplace/manage-using-glue-api/carts-of-registered-users/manage-carts-of-registered-users.html
+  - /docs/pbc/all/cart-and-checkout/202212.0/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html
 related:
   - title: Managing items in carts of registered users
     link: docs/pbc/all/cart-and-checkout/latest/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html

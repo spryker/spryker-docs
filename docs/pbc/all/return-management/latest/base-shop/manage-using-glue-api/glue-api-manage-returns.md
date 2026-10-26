@@ -8,6 +8,9 @@ originalArticleId: bbe2ab03-1413-46f5-858a-9ca6c0bdb531
 redirect_from:
   - /docs/pbc/all/return-management/202311.0/manage-using-glue-api/glue-api-manage-returns.html
   - /docs/pbc/all/return-management/202204.0/base-shop/manage-using-glue-api/glue-api-manage-returns.html
+  - /docs/pbc/all/return-management/202204.0/manage-using-glue-api/glue-api-manage-returns.html
+  - /docs/pbc/all/return-management/202212.0/base-shop/manage-using-glue-api/glue-api-manage-returns.html
+  - /docs/pbc/all/return-management/202307.0/base-shop/manage-using-glue-api/glue-api-manage-returns.html
 related:
   - title: Retrieving the return reasons
     link: docs/pbc/all/return-management/latest/base-shop/manage-using-glue-api/glue-api-retrieve-return-reasons.html

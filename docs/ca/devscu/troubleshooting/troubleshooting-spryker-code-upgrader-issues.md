@@ -3,6 +3,9 @@ title: Troubleshooting Spryker Code Upgrader issues
 description: Learn how to troubleshoot common Spryker Code Upgrader issues, such as missing PHP extensions, transport errors, and timeout problems, with solutions for smooth project upgrades.
 last_updated: Feb 24, 2024
 template: troubleshooting-guide-template
+redirect_from:
+  - /docs/troubleshooting-spryker-in-docker-issues
+  - /docs/troubleshooting-spryker-in-vagrant-installation-issues
 ---
 
 This section describes common issues and solutions related to running Spryker Code Upgrader.

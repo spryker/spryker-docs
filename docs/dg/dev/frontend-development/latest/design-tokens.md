@@ -1,6 +1,6 @@
 ---
 title: Design tokens
-last_updated: August 6, 2026
+last_updated: Sep 29, 2026
 description: Learn how design tokens work in Spryker, where they are configured, and how they are compiled into CSS custom properties during the frontend build.
 template: concept-topic-template
 ---
@@ -17,19 +17,21 @@ design-tokens.json  ──►  style-dictionary  ──►  design-tokens.css  �
 ```
 
 1. Tokens are authored in a single JSON file.
-2. During the frontend build, [Style Dictionary](https://amzn.github.io/style-dictionary/) reads the JSON and generates a CSS file with custom properties.
+2. During the frontend build, [Style Dictionary](https://amzn.github.io/style-dictionary/) reads the JSON and generates a CSS file with custom properties. The step is built into [frontend builder v2](/docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves-v2.html#built-in-design-tokens-step) and switches on by the presence of the JSON file; from ShopUi 2.3.0, `style-dictionary` ships with the ShopUi module, so the project installs nothing for it.
 3. Webpack includes the generated CSS in the `critical` entry point, so all variables are available on every page.
 
 ## File locations
 
-| File                                                              | Purpose                                                           |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| `frontend/assets/global/default/design-tokens/design-tokens.json` | Source of truth. This is the only file you edit.                  |
-| `frontend/libs/design-tokens.js`                                  | Build script that runs Style Dictionary.                          |
-| `src/Pyz/Yves/ShopUi/Theme/{theme}/styles/design-tokens.css`      | Generated output. Do not edit — the build overwrites it on every run. |
+| File | Purpose |
+| --- | --- |
+| `frontend/assets/global/{theme}/design-tokens/design-tokens.json` | Source of truth. This is the only file you edit. |
+| `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/FrontendBuilder/libs/webpack/design-tokens.mts` | The builder step that runs Style Dictionary. It ships with the ShopUi module; the project has no build script of its own. |
+| `src/Pyz/Yves/ShopUi/Theme/{theme}/styles/design-tokens.css` | Generated output. Do not edit — the build overwrites it on every run. |
 
 {% info_block warningBox "Important" %}
-The `.gitignore` file lists the generated `design-tokens.css` files. Only the source `design-tokens.json` stays in version control.
+
+List the generated `design-tokens.css` files in `.gitignore`, so that only the source `design-tokens.json` stays in version control. The step runs once per namespace and theme, and a theme without a tokens source keeps serving a committed `design-tokens.css` when one exists.
+
 {% endinfo_block %}
 
 ## Token categories

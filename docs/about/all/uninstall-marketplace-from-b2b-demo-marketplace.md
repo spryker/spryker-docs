@@ -1,7 +1,7 @@
 ---
 title: Uninstall the Marketplace from B2B Demo Marketplace
 description: Learn how to transform your B2B Demo Marketplace into a standard B2B Demo Shop by removing all marketplace-specific features using the provided uninstallation scripts.
-last_updated: Feb 9, 2026
+last_updated: Sep 30, 2026
 template: concept-topic-template
 related:
   - title: B2B Suite
@@ -13,6 +13,12 @@ related:
 This document describes how to uninstall marketplace features from
 the [B2B Demo Marketplace](https://github.com/spryker-shop/b2b-demo-marketplace) to transform it into a standard B2B
 Demo Shop.
+
+{% info_block infoBox "Info" %}
+
+These instructions are one-time use only, you don't need to run these scripts after the project was started.
+
+{% endinfo_block %}
 
 ## Overview
 

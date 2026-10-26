@@ -1,7 +1,7 @@
 ---
 title: Claude Code
 description: Install and use the Spryker AI Dev SDK in Claude Code to get Spryker-aware skills, code review, and project setup directly in your AI coding assistant.
-last_updated: Oct 23, 2026
+last_updated: Oct 26, 2026
 label: early-access
 keywords: ai, claude, claude code, plugin, marketplace, skills, spryker, ai-dev, code review, ci
 template: howto-guide-template
@@ -29,7 +29,7 @@ The `spryker-ai-dev-sdk` Claude Code plugin closes this gap. It gives Claude Cod
 - **Live project context.** The MCP server runs inside your Docker container and gives Claude Code real-time access to your transfer objects, module interfaces, and OMS configuration. The AI works with your actual project data, not guesses.
 - **Consistent code reviews.** The `spryker-code-reviewer` subagent checks your changes against Spryker's coding standards and architectural rules, catching issues before they reach a PR.
 - **Team-wide consistency.** Generated rules and context files are committed to your repository, so every developer on the team works with the same AI configuration.
-- **Workflows you compose yourself.** Each skill covers one stage of work, so you combine them into the long-running workflow your team actually runs. Five ready-made workflows — project setup, demo preparation, customization, bugfix, and upgrade — get you started on day one, and the skills themselves are a template for writing your own. See [Composable by design](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html#composable-by-design).
+- **Workflows you compose yourself.** Each skill covers one stage of work, so you combine them into the long-running workflow your team actually runs. Six ready-made workflows — project setup, demo preparation, customization, bugfix, upgrade, and architecture — get you started on day one, and the skills themselves are a template for writing your own. See [Composable by design](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html#composable-by-design).
 
 The plugin is distributed through the `spryker-plugins-official` marketplace and installed directly inside Claude Code. GitHub Copilot CLI installs the same plugin — see [Set up with GitHub Copilot](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html#set-up-with-github-copilot).
 
@@ -41,13 +41,14 @@ The plugin installs from the `spryker-plugins-official` marketplace inside Claud
 
 For a one-page reference of every skill and agent — what each does, when to use it, and the value it adds — see [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html).
 
-Five skills own a full workflow and delegate each stage to the others. Each has its own page:
+Six skills own a full workflow and delegate each stage to the others. Each has its own page:
 
 - [Project Starter Wizard](/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html) — turn a fresh demoshop clone into your project
 - [Demo Preparation Wizard](/docs/dg/dev/ai/ai-dev/ai-dev-demo-prep-wizard.html) — prepare a customer demo from the briefing to a handover report
 - [Customization Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html) — build a feature from a product requirement document to a committed branch
 - [Bugfix Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html) — drive a bug to a validated, QA-accepted fix
 - [Upgrade Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html) — upgrade a customized project to a newer Spryker release
+- [Architecture Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-architecture-workflow.html) — turn project discovery into a filled `architecture/` folder; ships in the separate `spryker-architecture` plugin
 
 ### Skills and subagents
 

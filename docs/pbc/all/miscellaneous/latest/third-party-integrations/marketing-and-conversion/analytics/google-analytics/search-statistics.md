@@ -1,11 +1,13 @@
 ---
 title: Search Statistics
 description: Use Search Statistics in the Spryker Back Office to analyze search behavior and identify zero-result searches powered by Google Analytics 4.
-last_updated: July 10, 2026
+last_updated: Oct 21, 2026
 template: concept-topic-template
 related:
   - title: Install Search Statistics
     link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/google-analytics/install-search-statistics.html
+  - title: Google Analytics Event Tracking
+    link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/google-analytics/google-analytics-event-tracking.html
 ---
 
 Search Statistics is a Back Office feature that gives business operators visibility into storefront search behavior. It uses Google Analytics 4 (GA4) as the underlying data collection and reporting layer, eliminating the need for custom per-project analytics implementations.
@@ -106,4 +108,5 @@ On the detail page, you can:
 ### Limitations
 
 - **Data delay**: Search events collected on the storefront appear in the dashboard after up to 48 hours of GA4 processing time.
+- **Search event setting**: The storefront sends search events only while **Search** is enabled for the store. When the event is disabled, Search Statistics receives no new data for that store. For details, see [Google Analytics Event Tracking](/docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/google-analytics/google-analytics-event-tracking.html).
 - **Ad blockers**: Customers with ad blockers installed may not send events to GA4. This can cause search data to be underreported by an estimated 10–25%.

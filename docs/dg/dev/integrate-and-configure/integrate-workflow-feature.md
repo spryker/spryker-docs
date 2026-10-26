@@ -1,7 +1,7 @@
 ---
 title: Install the Workflows feature
 description: Learn how to integrate and configure the Workflows feature in a Spryker project.
-last_updated: Oct 23, 2026
+last_updated: Oct 26, 2026
 template: howto-guide-template
 
 related:
@@ -302,7 +302,7 @@ Start an instance, then run `docker/sdk cli console workflow:check-condition` an
 
 ## Remove the demo workflow
 
-The [B2B Demo Marketplace](/docs/about/all/spryker-marketplace/marketplace-b2b-suite.html) ships with the Workflows feature installed and with a demo `ExampleWorkflow` module. The module provides the `CompanyOnboarding` workflow and example triggers for the `Company`, `Merchant`, `MerchantRelationship`, and `MerchantProduct` subject types. If you start your project from the demo shop, remove the demo workflow so it does not start instances for your real companies and merchants. Keep the feature installation itself.
+The [B2B Demo Marketplace](/docs/about/all/spryker-marketplace/marketplace-b2b-suite.html) ships with the Workflows feature installed and with a demo `ExampleWorkflow` module. The module provides the `CompanyOnboarding` workflow and example triggers for the `Company`, `Merchant`, `MerchantRelationship`, and `MerchantProduct` subject types. If your project does not need the demo workflow or the example triggers, remove them as follows. The Workflows feature itself stays installed.
 
 1. Delete the `src/Pyz/Zed/ExampleWorkflow/` directory.
 2. In `src/Pyz/Zed/Workflow/WorkflowDependencyProvider.php`, remove the `ExampleWorkflow` plugins from `getCommandPlugins()`, `getConditionPlugins()`, and `getTriggerPlugins()`. Add your own plugins instead.

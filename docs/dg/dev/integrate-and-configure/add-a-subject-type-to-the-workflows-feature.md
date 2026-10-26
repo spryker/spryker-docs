@@ -1,7 +1,7 @@
 ---
 title: Add a subject type to the Workflows feature
 description: Learn how to start a workflow for a new subject type, such as a merchant relationship, by adding a trigger plugin and an event listener in your Spryker project.
-last_updated: Oct 22, 2026
+last_updated: Oct 26, 2026
 template: howto-guide-template
 label: early-access
 related:
@@ -11,7 +11,9 @@ related:
     link: docs/dg/dev/integrate-and-configure/integrate-workflow-feature.html
 ---
 
-A workflow runs for one *subject type* — for example `Company` or `Merchant`. The Workflows feature does not ship subject types of its own: a Back Office user can select a subject type on the **Create workflow** page only after your project registers at least one trigger plugin for it. This document describes how to add a subject type and start a workflow instance whenever an application event fires for it.
+A workflow runs for one *subject type*, such as `Company` or `Merchant`. Subject types come from your project code: the **Subject type** field on the **Create workflow** page lists a subject type only after your project registers at least one trigger plugin for it.
+
+This document describes how to add a subject type and start a workflow instance whenever an application event fires for it.
 
 The steps use the `MerchantRelationship` subject type as an example. The same pattern applies to any entity in your project.
 

@@ -5,6 +5,7 @@ template: howto-guide-template
 last_updated: Aug 30, 2023
 redirect_from:
 - /docs/acp/user/intro-to-acp/aop-security-assessment.html
+- /docs/dg/dev/acp/aop-security-assessment.html
 ---
 
 This document outlines the threat modeling and security assessment requirements and process for apps listed on the Spryker's app catalog or the app store. It covers the following app types:
@@ -166,7 +167,7 @@ The diagram below demonstrates the security assessment procedure:
 
 ## Communication channels
 
-- For the app developers to ask questions related to security, Spryker will create a (private) subforum in our [CommerceQuest](https://commercequest.space/) community platform. Security experts will monitor this channel and respond to the questions.
+- For the app developers to ask questions related to security, contact your CSM or report a ticket at the [Spryker Portal](https://portal.spryker.com). Security experts will respond to the questions.
 - Communication during individual assessments would be handled through emails.
 - In cases where a discussion is needed to resolve open questions, a call can be set up between the developer and Spryker security experts.
 

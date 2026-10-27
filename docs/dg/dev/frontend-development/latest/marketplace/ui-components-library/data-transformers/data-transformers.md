@@ -7,6 +7,7 @@ redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/data-transformers/
   - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/data-transformers/data-transformers.html
   - /docs/scos/dev/front-end-development/202404.0/marketplace/ui-components-library/data-transformers/data-transformers.html
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/ui-components-library/data-transformers/data-transformers.html
 
 related:
   - title: Data Transformer Array-map

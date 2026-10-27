@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/v5/docs/docker-installation-prer
 redirect_from:
 - /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl1.html  
 - /docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html
+- /v5/docs/docker-installation-prerequisites-windows
 
 related:
   - title: Install Docker prerequisites on Linux

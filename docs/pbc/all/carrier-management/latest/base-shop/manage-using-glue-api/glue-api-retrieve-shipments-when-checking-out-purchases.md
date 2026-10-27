@@ -7,6 +7,10 @@ redirect_from:
   - /docs/pbc/all/carrier-management/manage-via-glue-api/retrieve-shipments-when-checking-out-purchases.html
   - /docs/pbc/all/carrier-management/202311.0/base-shop/manage-via-glue-api/retrieve-shipments-when-checking-out-purchases.html
   - /docs/pbc/all/carrier-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-shipments-when-checking-out-purchases.html
+  - /docs/pbc/all/carrier-management/202204.0/base-shop/manage-via-glue-api/retrieve-shipments-when-checking-out-purchases.html
+  - /docs/scos/dev/glue-api-guides/201907.0/checking-out/checking-out-purchases.html
+  - /docs/scos/dev/glue-api-guides/202005.0/checking-out/checking-out-purchases.html
+  - /docs/pbc/all/carrier-management/202212.0/base-shop/manage-via-glue-api/retrieve-shipments-when-checking-out-purchases.html
 ---
 
 This document describes how to retrieve order shipments when checking out through the Glue API. For full information about the endpoint, see [Check out purchases](/docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html)

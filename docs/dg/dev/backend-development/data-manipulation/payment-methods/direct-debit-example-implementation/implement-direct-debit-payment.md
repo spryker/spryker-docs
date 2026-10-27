@@ -8,6 +8,7 @@ originalArticleId: c3e9b05a-7256-425f-9418-df4486c8461f
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-payment.html
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementing-direct-debit-payment.html
+  - /docs/dg/dev/backend-development/data-manipulation/payment-methods/direct-debit-example-implementation/
 related:
   - title: Implement Direct Debit in Yves
     link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-yves.html

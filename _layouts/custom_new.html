@@ -99,7 +99,12 @@ layout: default
             <aside class="related">
             <h3 class="related__title" data-toc-skip>Related articles</h3>
             {% for relatedPage in page.related %}
-                {% assign link = relatedPage.link | prepend: '/' %}
+                {% assign linkProtocol = relatedPage.link | slice: 0, 8 %}
+                {% if linkProtocol == 'https://' %}
+                    {% assign link = relatedPage.link %}
+                {% else %}
+                    {% assign link = relatedPage.link | prepend: '/' %}
+                {% endif %}
                 {% assign version = page.version | default: site.version %}
 
                 <a href="{{link | replace_first: "page.version", version }}" class="related__link">

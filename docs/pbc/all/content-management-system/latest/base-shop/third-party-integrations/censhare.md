@@ -14,6 +14,7 @@ redirect_from:
   - /docs/scos/user/technology-partners/202311.0/content-management/censhare.html
   - /docs/pbc/all/content-management-system/202311.0/third-party-integrations/censhare.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/third-party-integrations/censhare.html
+  - /docs/scos/user/technology-partners/202005.0/content-management/censhare.html
 ---
 
 ## Partner Information

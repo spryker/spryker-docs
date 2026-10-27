@@ -16,6 +16,9 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202311.0/cart-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/cart-integration.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html
+  - /docs/pbc/all/cart-and-checkout/202212.0/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html
+  - /docs/pbc/all/cart-and-checkout/202212.0/install-and-upgrade/install-features/install-the-cart-feature.html
+  - /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-cart-feature.html
 related:
   - title: Install the Cart Glue API
     link: docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html

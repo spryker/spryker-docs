@@ -15,6 +15,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productoptioncartconnector.html
   - /module_migration_guides/mg-product-option-cart-connector.htm
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoptioncartconnector-module.html
+  - /docs/pbc/all/product-information-management/202212.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoptioncartconnector-module.html
 related:
   - title: Upgrade the ProductOption module
     link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoption-module.html

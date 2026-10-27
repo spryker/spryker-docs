@@ -1,7 +1,7 @@
 ---
 title: Handle twenty five million prices in Spryker Commerce OS
 description: Learn how we enabled Spryker to handle 25 million of prices.
-last_updated: Jun 16, 2021
+last_updated: Sep 8, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-handle-twenty-five-million-prices-in-spryker-commerce-os
 originalArticleId: f6f42291-bbf4-4fd1-b506-131fafcd0257
@@ -9,6 +9,8 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-twenty-five-million-prices-in-spryker-commerce-os.html
   - /docs/pbc/all/price-management/202311.0/base-shop/tutorials-and-howtos/howto-handle-twenty-five-million-prices-in-spryker-commerce-os.html
   - /docs/pbc/all/price-management/202204.0/base-shop/tutorials-and-howtos/howto-handle-twenty-five-million-prices-in-spryker-commerce-os.html
+  - /docs/pbc/all/price-management/202212.0/base-shop/tutorials-and-howtos/howto-handle-twenty-five-million-prices-in-spryker-commerce-os.html
+  - /docs/pbc/all/price-management/202212.0/tutorials-and-howtos/howto-handle-twenty-five-million-prices-in-spryker-commerce-os.html
 ---
 
 B2B business model usually challenges any software with higher requirements to amounts of data and business complexity.
@@ -23,6 +25,12 @@ Price import flow:
 
 ![price import flow ](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+handle+25+million+prices+in+Spryker+Commerce+OS/price-import-flow.jpg)
 
+
+{% info_block infoBox "Choose an architecture before you optimize" %}
+
+This document is an implementation case study of one architecture. To decide which pricing architecture fits your project — synced, cached, live, or hybrid — first read [Handle price explosion and ERP-owned pricing in B2B](/docs/pbc/all/price-management/latest/base-shop/tutorials-and-howtos/handle-price-explosion-and-erp-owned-pricing-in-b2b.html).
+
+{% endinfo_block %}
 
 ## Challenges
 

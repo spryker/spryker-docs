@@ -11,6 +11,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-api-tutorials/implement-versioning-for-rest-api-resources.html
   - /docs/dg/dev/glue-api/latest/glue-api-tutorials/implement-versioning-for-rest-api-resources.html
   - /docs/integrations/spryker-glue-api/storefront-api/developing-apis/implement-versioning-for-rest-api-resources.html
+  - /docs/dg/dev/glue-api/202307.0/glue-api-tutorials/implement-versioning-for-rest-api-resources.html
 ---
 
 {% info_block warningBox "Deprecation warning" %}

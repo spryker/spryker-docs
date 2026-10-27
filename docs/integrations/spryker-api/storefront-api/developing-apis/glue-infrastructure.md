@@ -12,6 +12,9 @@ redirect_from:
   - /docs/dg/dev/glue-api/latest/rest-api/glue-infrastructure.html
   - /docs/integrations/spryker-glue-api/storefront-api/developing-apis/storefront-infrastructure.html
   - /docs/integrations/spryker-api/storefront-api/developing-apis/storefront-infrastructure.html
+  - /docs/scos/dev/glue-api-guides/202009.0/glue-infrastructure.html
+  - /v6/docs/en/glue-infrastructure
+  - /glue_rest_api/glue_api_developer_guides/glue-infrastructure.htm?Highlight=Accept-language
 ---
 
 {% info_block warningBox "Deprecation warning" %}

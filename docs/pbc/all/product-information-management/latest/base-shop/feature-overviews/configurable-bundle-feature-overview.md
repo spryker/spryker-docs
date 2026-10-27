@@ -13,6 +13,10 @@ redirect_from:
   - /docs/configurable-bundle
   - /docs/pbc/all/product-information-management/202311.0/feature-overviews/configurable-bundle-feature-overview.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/configurable-bundle-feature-overview.html
+  - /docs/scos/user/features/202005.0/configurable-bundle-feature-overview.html
+  - /docs/pbc/all/product-information-management/202212.0/base-shop/feature-overviews/configurable-bundle-feature-overview.html
+  - /docs/scos/user/features/202009.0/configurable-bundle-feature-overview.html
+  - /docs/pbc/all/product-information-management/product-bundle-feature
 ---
 
 A *configurable bundle* is a [product bundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-bundles-feature-overview.html) for which a Storefront User selects products on the Storefront.

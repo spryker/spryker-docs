@@ -11,6 +11,11 @@ redirect_from:
   - /docs/collect-ai
   - /docs/en/collect-ai
   - /docs/scos/user/technology-partners/202200.0/finance-and-accounting/collectai.html
+  - /docs/scos/user/technology-partners/202001.0/finance-and-accounting/collectai.html
+  - /docs/scos/user/technology-partners/201907.0/finance-and-accounting/collectai.html
+  - /docs/scos/user/technology-partners/202005.0/finance-and-accounting/collectai.html
+  - /docs/scos/user/technology-partners/202009.0/finance-and-accounting/collectai.html
+  - /docs/scos/user/technology-partners/201903.0/finance-and-accounting/collectai.html
 ---
 
 ## Partner Information

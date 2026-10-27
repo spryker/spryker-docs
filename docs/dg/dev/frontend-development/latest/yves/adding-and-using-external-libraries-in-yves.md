@@ -8,6 +8,7 @@ originalArticleId: 12d72e9e-2c7c-467f-9aaf-2d96a34d9b42
 redirect_from:
   - /docs/scos/dev/front-end-development/202404.0/yves/adding-and-using-external-libraries-in-yves.html
   - /docs/scos/dev/front-end-development/yves/adding-and-using-external-libraries-in-yves.html
+  - /docs/dg/dev/frontend-development/202212.0/yves/adding-and-using-external-libraries-in-yves.html
 ---
 
 This document describes how to use external libraries in Yves with and without npm.

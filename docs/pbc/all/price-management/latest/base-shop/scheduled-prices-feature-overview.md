@@ -9,6 +9,13 @@ redirect_from:
   - /docs/scos/user/features/202108.0/scheduled-prices-feature-overview.html
   - /docs/scos/user/features/202311.0/scheduled-prices-feature-overview.html
   - /docs/pbc/all/price-management/202204.0/base-shop/scheduled-prices-feature-overview.html
+  - /v3/docs/scheduled-prices-feature-overview
+  - /docs/pbc/all/price-management/202212.0/base-shop/scheduled-prices-feature-overview.html
+  - /docs/pbc/all/price-management/scheduled-prices-feature-overview.html
+  - /docs/pbc/all/price-management/202212.0/scheduled-prices-feature-overview
+  - /docs/pbc/all/price-management/202212.0/scheduled-prices-feature-overview.html
+  - /docs/pbc/all/price-management/202204.0/scheduled-prices-feature-overview.html
+  - /docs/pbc/all/price-management/latest/base-shop/prices-feature-overview/scheduled-prices-overview
 ---
 
 The *Scheduled Prices* feature lets shop administrators schedule price changes, which are to happen in the future for multiple products simultaneously.

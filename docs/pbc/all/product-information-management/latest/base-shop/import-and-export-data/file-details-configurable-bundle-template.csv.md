@@ -6,6 +6,8 @@ last_updated: Jun 1, 2023
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
+redirect_from:
+  - /docs/pbc/all/product-information-management/202212.0/base-shop/import-and-export-data/file-details-configurable-bundle-template.csv.html
 ---
 
 This document describes the `configurable_bundle_template.csv` file to configure information about [configurable bundle](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/configurable-bundle-feature-overview.html) templates in your Spryker shop.

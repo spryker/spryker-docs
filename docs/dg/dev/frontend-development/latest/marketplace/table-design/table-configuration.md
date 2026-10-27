@@ -7,6 +7,7 @@ redirect_from:
 - /docs/scos/dev/front-end-development/202204.0/marketplace/table-design/table-configuration.html
 - /docs/scos/dev/front-end-development/202404.0/marketplace/table-design/table-configuration.html
 - /docs/marketplace/dev/front-end/202212.0/table-design/table-configuration.html
+- /docs/marketplace/dev/front-end/table-design/table-configuration.html
 
 ---
 

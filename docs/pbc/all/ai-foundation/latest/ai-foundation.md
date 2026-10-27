@@ -2,11 +2,11 @@
 title: AI Foundation
 description: Provider-agnostic AI connectivity layer for commerce
 template: concept-topic-template
-last_updated: Jun 15, 2026
+last_updated: Sep 7, 2026
 label: early-access
 related:
   - title: Install the AI Foundation module
-    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-module
+    link: docs/dg/dev/ai/ai-foundation/ai-foundation-module.html
 
 ---
 

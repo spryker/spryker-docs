@@ -7,6 +7,30 @@ template: concept-topic-template
 
 ## B2B Business-Ready Commerce Experiences
 
+### Recurring Orders: general availability {% include badge.html type="feature" %}
+
+Recurring Orders is now generally available. This release gives buyers real control over an upcoming order before it is placed. They can handle the exceptions that used to break a schedule f.e. swapping in a replacement when a product is discontinued, adjusting quantities, adding products that were missed and decide whether each change applies once or permanently. Budget problems can be corrected by the buyer directly rather than raised as a ticket
+
+**Key capabilities:**
+- Adjust an upcoming order before it is placed: replace an item that is no longer available, add or remove lines, and change quantities.
+- Choose whether a change applies to the next delivery only or to every delivery from now on.
+- Move an order to a different budget or cost center without cancelling the schedule.
+- Resolve an order that is in review because of an exceeded budget.
+- Proactively editing for Schedule Name, Frequency, Budget & Cost Center, Next Execution date
+- Run schedules with up to 200 line items, at the speed buyers expect across list, overview, and review screens.
+
+**Business benefits:**
+- Supply continuity. A missed replenishment can stop a production line. Schedules that survive real-world exceptions keep materials arriving without anyone watching the calendar.
+- Procurement capacity freed up. Repeat orders are already-made decisions. Automating them lets buyers spend their time on sourcing, not re-keying the same basket.
+- Spend stays inside the guardrails. Budget and cost center governance travels with every scheduled order, so automation never becomes a route around approval control.
+- Stickier customers. A buyer who runs replenishment through your storefront has embedded you in their production workflow, switching becomes a procurement project, not a price comparison.
+
+
+**Documentation:**
+- [Recurring Orders feature overview](https://docs.spryker.com/docs/pbc/all/order-experience-management/latest/base-shop/feature-overviews/recurring-orders-feature-overview)
+- [Install the Recurring Orders feature](https://docs.spryker.com/docs/pbc/all/order-experience-management/latest/base-shop/install-and-upgrade/install-features/install-the-recurring-orders-feature)
+- [Recurring Orders GA release](https://api.release.spryker.com/release-group/6689)
+
 ### Workflows {% include badge.html type="feature,early-access" %}
 
 This release introduces a workflows infrastructure that lets teams model and manage workflows for different business entities directly in the Back Office, without requiring code changes or deployment. It provides a reusable, auditable, and versioned workflows foundation built on top of the existing state machine engine.
@@ -14,7 +38,8 @@ This release introduces a workflows infrastructure that lets teams model and man
 {% include carousel.html
 images="
 https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-202608.0.md/workflows_1.jpg||::
-https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-202608.0.md/workflows_2.jpg||"
+https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-202608.0.md/workflows_2.jpg||::
+https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-202608.0.md/workflows_now_next.gif||"
 %}
 
 **Key capabilities:**
@@ -49,30 +74,6 @@ https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-2026
 - Improves product discovery with a more consistent and efficient browsing experience
 - Increases storefront visual consistency for B2B buyers
 - Reduces future design and development effort through reusable page structures
-
-### Recurring Orders: general availability {% include badge.html type="feature" %}
-
-Recurring Orders is now generally available. This release gives buyers real control over an upcoming order before it is placed. They can handle the exceptions that used to break a schedule f.e. swapping in a replacement when a product is discontinued, adjusting quantities, adding products that were missed and decide whether each change applies once or permanently. Budget problems can be corrected by the buyer directly rather than raised as a ticket
-
-**Key capabilities:**
-- Adjust an upcoming order before it is placed: replace an item that is no longer available, add or remove lines, and change quantities.
-- Choose whether a change applies to the next delivery only or to every delivery from now on.
-- Move an order to a different budget or cost center without cancelling the schedule.
-- Resolve an order that is in review because of an exceeded budget.
-- Proactively editing for Schedule Name, Frequency, Budget & Cost Center, Next Execution date
-- Run schedules with up to 200 line items, at the speed buyers expect across list, overview, and review screens.
-
-**Business benefits:**
-- Supply continuity. A missed replenishment can stop a production line. Schedules that survive real-world exceptions keep materials arriving without anyone watching the calendar.
-- Procurement capacity freed up. Repeat orders are already-made decisions. Automating them lets buyers spend their time on sourcing, not re-keying the same basket.
-- Spend stays inside the guardrails. Budget and cost center governance travels with every scheduled order, so automation never becomes a route around approval control.
-- Stickier customers. A buyer who runs replenishment through your storefront has embedded you in their production workflow, switching becomes a procurement project, not a price comparison.
-
-
-**Documentation:**
-- [Recurring Orders feature overview](https://docs.spryker.com/docs/pbc/all/order-experience-management/latest/base-shop/feature-overviews/recurring-orders-feature-overview)
-- [Install the Recurring Orders feature](https://docs.spryker.com/docs/pbc/all/order-experience-management/latest/base-shop/install-and-upgrade/install-features/install-the-recurring-orders-feature)
-- [Recurring Orders GA release](https://api.release.spryker.com/release-group/6689)
 
 ### Algolia API update {% include badge.html type="improvement" %}
 
@@ -217,6 +218,10 @@ https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-
 
 **Release:**
 - [Enhancements to Symfony Scheduler](https://api.release.spryker.com/release-group/6718)
+
+**Documentation:**
+- [Integrate Symfony Messenger](https://docs.spryker.com/docs/dg/dev/integrate-and-configure/integrate-symfony-messenger)
+- [Integrate Symfony Scheduler](https://docs.spryker.com/docs/dg/dev/integrate-and-configure/integrate-symfony-scheduler)
 
 ### Maintenance and Service Updates {% include badge.html type="improvement" %}
 

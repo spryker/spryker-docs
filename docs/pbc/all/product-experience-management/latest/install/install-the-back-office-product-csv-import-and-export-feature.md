@@ -1,8 +1,11 @@
 ---
-title: Install the Product Experience Management feature
-description: Learn how to install the Product Experience Management feature into your Spryker project.
-last_updated: Aug 18 2026
+title: Install the Back Office Product CSV Import and Export feature
+description: Learn how to install the Back Office Product CSV Import and Export feature into your Spryker project.
+last_updated: Sep 7, 2026
 template: feature-integration-guide-template
+redirect_from:
+  - /docs/pbc/all/product-experience-management/latest/install-the-product-experience-management-feature.html
+  - /docs/pbc/all/product-experience-management/latest/install-the-product-experience-management-feature
 ---
 
 ## Prerequisites

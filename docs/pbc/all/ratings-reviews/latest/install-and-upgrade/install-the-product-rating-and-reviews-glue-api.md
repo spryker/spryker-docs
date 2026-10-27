@@ -15,6 +15,12 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-product-rating-and-reviews-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-product-rating-and-reviews-feature-integration.html
   - /docs/pbc/all/ratings-reviews/202204.0/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html
+  - /docs/pbc/all/ratings-reviews/202212.0/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html
+  - /docs/pbc/all/ratings-reviews/202307.0/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html
+  - /docs/scos/dev/feature-walkthroughs/201811.0/product-rating-reviews-feature-walkthrough.html
+  - /docs/scos/dev/feature-walkthroughs/202001.0/product-rating-reviews-feature-walkthrough.html
+  - /docs/scos/dev/feature-walkthroughs/202005.0/product-rating-reviews-feature-walkthrough.html
+  - /docs/scos/user/features/202005.0/product-rating-and-reviews-feature-overview.html
 
 related:
   - title: Product Rating and Reviews feature integration

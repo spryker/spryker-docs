@@ -23,6 +23,7 @@ redirect_from:
   - /v1/docs/multi-term-auto-completion
   - /v1/docs/en/multi-term-auto-completion
   - /docs/scos/dev/best-practices/search-best-practices/multi-term-auto-completion.html
+  - /docs/pbc/all/search/202307.0/base-shop/best-practices/multi-term-auto-completion.html
 related:
   - title: Data-driven ranking
     link: docs/pbc/all/search/latest/base-shop/best-practices/data-driven-ranking.html

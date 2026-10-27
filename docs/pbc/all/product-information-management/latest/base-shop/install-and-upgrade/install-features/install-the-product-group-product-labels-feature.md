@@ -12,6 +12,8 @@ redirect_from:
   - /docs/en/product-group-product-labels-feature-integration
   - /docs/scos/dev/feature-integration-guides/202311.0/product-group-product-labels-feature-integration.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-group-product-labels-feature.html
+  - /docs/pbc/all/product-information-management/202212.0/base-shop/install-and-upgrade/install-features/install-the-product-group-product-labels-feature.html
+  - /docs/scos/dev/feature-integration-guides/202005.0/product-group-product-labels-feature-integration.html
 ---
 
 {% include pbc/all/install-features/latest/install-the-product-group-product-labels-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-group-product-labels-feature.md -->

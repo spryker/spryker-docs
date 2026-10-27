@@ -13,6 +13,11 @@ redirect_from:
   - /docs/scos/user/technology-partners/202311.0/content-management/magnolia.html
   - /docs/pbc/all/content-management-system/202311.0/third-party-integrations/magnolia.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/third-party-integrations/magnolia.html
+  - /docs/pbc/all/content-management-system/202307.0/base-shop/third-party-integrations/magnolia.html
+  - /docs/pbc/all/content-management-system/202212.0/third-party-integrations/magnolia.html
+  - /docs/scos/user/technology-partners/201903.0/content-management/magnolia.html
+  - /docs/scos/user/technology-partners/201907.0/content-management/magnolia.html
+  - /docs/scos/user/technology-partners/202005.0/content-management/magnolia.html
 ---
 
 ## Partner Information

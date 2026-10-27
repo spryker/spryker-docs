@@ -1,7 +1,7 @@
 ---
 title: Keeping dependencies updated for performance
 description: Guidelines for keeping Spryker module dependencies up to date to maintain optimal performance and security.
-last_updated: May 29, 2026
+last_updated: Oct 22, 2026
 template: concept-topic-template
 related:
   - title: General performance guidelines
@@ -95,6 +95,30 @@ The following sections list important module updates that include performance im
 - [spryker/product-offer-storage:^1.8.0](https://github.com/spryker/product-offer-storage/releases/tag/1.8.0)
 - [spryker/propel:^3.45.0](https://github.com/spryker/propel/releases/tag/3.45.0)
 
+### Publish and synchronization (merchant relationship prices)
+
+- [spryker/merchant:^3.21.0](https://github.com/spryker/merchant/releases/tag/3.21.0)
+- [spryker/price-product-merchant-relationship:^1.13.0](https://github.com/spryker/price-product-merchant-relationship/releases/tag/1.13.0)
+- [spryker/price-product-merchant-relationship-storage:^1.22.0](https://github.com/spryker/price-product-merchant-relationship-storage/releases/tag/1.22.0)
+
+Additionally, index the `fk_company_business_unit` column of both storage tables. Create `src/Pyz/Zed/PriceProductMerchantRelationshipStorage/Persistence/Propel/Schema/spy_price_product_merchant_relationship_storage.schema.xml` and run `vendor/bin/console propel:install`:
+
+```xml
+<!--//-->
+    <table name="spy_price_product_abstract_merchant_relationship_storage">
+        <index name="spy_price_product_ab_m_r_storage-fk_company_business_unit">
+            <index-column name="fk_company_business_unit"/>
+        </index>
+    </table>
+
+    <table name="spy_price_product_concrete_merchant_relationship_storage">
+        <index name="spy_price_product_con_m_r_storage-fk_company_business_unit">
+            <index-column name="fk_company_business_unit"/>
+        </index>
+    </table>
+<!--//-->
+```
+
 ### Publish and synchronization (product-related)
 
 - [spryker/price-product:^4.48.0](https://github.com/spryker/price-product/releases/tag/4.48.0)
@@ -125,12 +149,12 @@ The following sections list important module updates that include performance im
 To update all required modules at once:
 
 ```bash
-composer update spryker/rabbit-mq:"^2.25.0" spryker/availability-storage:"^2.11.0" spryker/event:"^2.17.1" spryker/glossary-storage:"^1.14.0" spryker/merchant-product:"^1.12.0" spryker/merchant-product-offer:"^1.12.0" spryker/merchant-product-offer-search:"^1.9.0" spryker/merchant-product-search:"^1.6.0" spryker/merchant-product-storage:"^1.7.0" spryker/price-product:"^4.51.0" spryker/price-product-merchant-relationship-storage:"^1.21.0" spryker/price-product-offer-storage:"^1.8.0" spryker/price-product-storage:"^4.16.0" spryker/product:"^6.54.0" spryker/product-category-search:"^1.3.0" spryker/product-category-storage:"^2.13.0" spryker/product-group-storage:"^1.9.0" spryker/product-image:"^3.21.0" spryker/product-image-storage:"^1.21.0" spryker/product-list:"^1.10.0" spryker/product-list-search:"^2.11.0" spryker/product-list-storage:"^1.21.0" spryker/product-offer:"^1.17.0" spryker/product-offer-availability-storage:"^1.6.0" spryker/product-offer-stock:"^1.7.0" spryker/product-page-search:"^3.47.0" spryker/product-page-search-extension:"^1.7.0" spryker/propel:"^3.50.0" spryker/queue:"^1.28.0" spryker/symfony-messenger:"^1.6.0" spryker/tax-product-storage:"^1.8.0" spryker/url-storage:"^1.23.0" spryker/synchronization-behavior:"^1.14.0"
+composer update spryker/rabbit-mq:"^2.25.0" spryker/availability-storage:"^2.11.0" spryker/event:"^2.19.0" spryker/glossary-storage:"^1.14.0" spryker/merchant-product:"^1.12.0" spryker/merchant-product-offer:"^1.12.0" spryker/merchant-product-offer-search:"^1.9.0" spryker/merchant-product-search:"^1.6.0" spryker/merchant-product-storage:"^1.7.0" spryker/price-product:"^4.51.0" spryker/price-product-merchant-relationship-storage:"^1.21.0" spryker/price-product-offer-storage:"^1.8.0" spryker/price-product-storage:"^4.16.0" spryker/product:"^6.54.0" spryker/product-category-search:"^1.3.0" spryker/product-category-storage:"^2.13.0" spryker/product-group-storage:"^1.9.0" spryker/product-image:"^3.21.0" spryker/product-image-storage:"^1.21.0" spryker/product-list:"^1.10.0" spryker/product-list-search:"^2.11.0" spryker/product-list-storage:"^1.21.0" spryker/product-offer:"^1.17.0" spryker/product-offer-availability-storage:"^1.6.0" spryker/product-offer-stock:"^1.7.0" spryker/product-page-search:"^3.47.0" spryker/product-page-search-extension:"^1.7.0" spryker/propel:"^3.50.0" spryker/queue:"^1.28.0" spryker/symfony-messenger:"^1.6.0" spryker/tax-product-storage:"^1.8.0" spryker/url-storage:"^1.23.0" spryker/synchronization-behavior:"^1.14.0"
 ```
 
 - [spryker/rabbit-mq:^2.25.0](https://github.com/spryker/rabbit-mq/releases/tag/2.25.0)
 - [spryker/availability-storage:^2.11.0](https://github.com/spryker/availability-storage/releases/tag/2.11.0)
-- [spryker/event:^2.17.1](https://github.com/spryker/event/releases/tag/2.17.1)
+- [spryker/event:^2.19.0](https://github.com/spryker/event/releases/tag/2.19.0)
 - [spryker/event-behavior:^1.35.0](https://github.com/spryker/event-behavior/releases/tag/1.35.0)
 - [spryker/glossary-storage:^1.14.0](https://github.com/spryker/glossary-storage/releases/tag/1.14.0)
 - [spryker/merchant-product:^1.12.0](https://github.com/spryker/merchant-product/releases/tag/1.12.0)
@@ -182,6 +206,38 @@ For comprehensive guidance on optimizing cart performance, see [Cart page perfor
 
 - [spryker-shop/checkout-page:^3.41.0](https://github.com/spryker-shop/checkout-page/releases/tag/3.41.0)
 - [spryker-shop/session-customer-validation-page:^1.4.0](https://github.com/spryker-shop/session-customer-validation-page/releases/tag/1.4.0)
+
+### Back Office product abstract list page performance
+
+- [spryker/product-management:^0.20.17](https://github.com/spryker/product-management/releases/tag/0.20.17)
+
+### Product detail page performance on Yves
+
+- [spryker/currency:^4.9.0](https://github.com/spryker/currency/releases/tag/4.9.0)
+- [spryker/glossary-storage:^1.15.0](https://github.com/spryker/glossary-storage/releases/tag/1.15.0)
+- [spryker/kernel:^3.87.0](https://github.com/spryker/kernel/releases/tag/3.87.0)
+- [spryker/price-product:^4.55.0](https://github.com/spryker/price-product/releases/tag/4.55.0)
+- [spryker/price-product-storage:^4.18.0](https://github.com/spryker/price-product-storage/releases/tag/4.18.0)
+- [spryker/product-image-storage:^1.22.0](https://github.com/spryker/product-image-storage/releases/tag/1.22.0)
+- [spryker/product-storage:^1.58.0](https://github.com/spryker/product-storage/releases/tag/1.58.0)
+- [spryker/quote:^2.27.0](https://github.com/spryker/quote/releases/tag/2.27.0)
+- [spryker/redis:^2.14.0](https://github.com/spryker/redis/releases/tag/2.14.0)
+- [spryker/router:^1.27.0](https://github.com/spryker/router/releases/tag/1.27.0)
+- [spryker-shop/product-group-widget:^1.14.0](https://github.com/spryker-shop/product-group-widget/releases/tag/1.14.0)
+- [spryker-shop/product-review-widget:^1.21.0](https://github.com/spryker-shop/product-review-widget/releases/tag/1.21.0)
+- [spryker-shop/shop-ui:^2.2.0](https://github.com/spryker-shop/shop-ui/releases/tag/2.2.0)
+- [spryker-shop/store-widget:^1.6.0](https://github.com/spryker-shop/store-widget/releases/tag/1.6.0)
+- [spryker/store:^1.39.0](https://github.com/spryker/store/releases/tag/1.39.0)
+- [spryker/synchronization:^1.20.0](https://github.com/spryker/synchronization/releases/tag/1.20.0)
+- [spryker/url-storage:^1.26.0](https://github.com/spryker/url-storage/releases/tag/1.26.0)
+
+### Merchant profile page and merchant ACL performance optimization
+
+- [spryker/acl-entity:^1.19.1](https://github.com/spryker/acl-entity/releases/tag/1.19.1)
+- [spryker/country:^4.10.0](https://github.com/spryker/country/releases/tag/4.10.0)
+- [spryker/merchant-profile-merchant-portal-gui:^4.6.0](https://github.com/spryker/merchant-profile-merchant-portal-gui/releases/tag/4.6.0)
+- [spryker/translator:^1.15.2](https://github.com/spryker/translator/releases/tag/1.15.2)
+- [spryker/zed-ui:^4.4.1](https://github.com/spryker/zed-ui/releases/tag/4.4.1)
 
 ## Update strategy
 

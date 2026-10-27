@@ -2,13 +2,8 @@
 title: Architecture as Code
 description: Learn how to implement Architecture as Code in your Spryker project using industry standards like arc42, C4 Model, and diagrams-as-code to maintain living, version-controlled documentation.
 keywords: Architecture as Code,arc42,C4 Model,diagrams-as-code,diagram
-last_updated: Jun 5, 2026
+last_updated: Oct 23, 2026
 template: concept-topic-template
-related:
-  - title: Architectural Convention
-    link: docs/dg/dev/architecture/architectural-convention.html
-  - title: Modules and Application Layers
-    link: docs/dg/dev/architecture/modules-and-application-layers.html
 ---
 
 Well-documented project architecture enables faster internal and external onboarding, passes audits cleanly and aligns teams on requirements. Without it, your system becomes a black box that only the original developers understand.
@@ -203,6 +198,12 @@ Pre-structured table for capacity planning covering:
 - Marketplace metrics
 - Internationalization requirements
 - Orders and infrastructure
+
+## Generating the architecture folder
+
+You can fill the `architecture/` folder with the `architecture-prep` skill from the AI Dev SDK, instead of writing every section by hand. It maps what you already know about the project — from documents you have, or from what it asks you — onto the structure described on this page, and marks the gaps and risks that are still open.
+
+See [Architecture Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-architecture-workflow.html).
 
 ## Getting Help
 

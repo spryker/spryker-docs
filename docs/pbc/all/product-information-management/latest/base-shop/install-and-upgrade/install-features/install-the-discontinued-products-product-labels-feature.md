@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/discontinued-products-product-labels-feature-integration
   - /docs/scos/dev/feature-integration-guides/202311.0/discontinued-products-product-labels-feature-integration.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-discontinued-products-product-labels-feature.html
+  - /docs/pbc/all/product-information-management/202212.0/base-shop/install-and-upgrade/install-features/install-the-discontinued-products-product-labels-feature.html
 related:
   - title: Install the Discontinued Products feature
     link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-labels-feature.html

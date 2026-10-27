@@ -1,7 +1,7 @@
 ---
 title: "Quickstart guide: Install Spryker on Windows"
 description: A quickstart guide to get you up and running installing Spryker in a local environment on Windows.
-last_updated: Feb 19, 2026
+last_updated: Sep 4, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/setup/quick-installation-guides/quick-installation-guide-windows.html
@@ -9,7 +9,7 @@ redirect_from:
 
 ---
 
-This document describes how to quickly install Spryker on Windows in Development mode. If you are installing Spryker for the first time or need detailed instructions, we recommend starting with [Installing Spryker with Docker](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html).
+This document describes how to quickly install Spryker on Windows in Development mode. If you are installing Spryker for the first time or need detailed instructions, we recommend starting with [Install Spryker](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-spryker.html).
 
 To install Spryker on Windows, follow these steps:
 
@@ -25,14 +25,14 @@ Install the following applications:
 
 {% info_block warningBox %}
 
-Product images, product data, other images or fonts displaced in a demo shop are examples, and you may need to purchase your own licenses to use any of them.
+Product images, product data, other images or fonts displayed in a demo shop are examples, and you may need to purchase your own licenses to use any of them.
 
 {% endinfo_block %}
 
 ```shell
-git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b {{page.release_tag}} --single-branch ./b2b-demo-marketplace && \
+git clone https://github.com/spryker-shop/b2b-demo-marketplace -b {{page.release_tag}} --single-branch ./b2b-demo-marketplace && \
 cd b2b-demo-marketplace && \
-git clone https://github.com/spryker/docker-sdk.git --single-branch docker && \
+git clone https://github.com/spryker/docker-sdk --single-branch docker && \
 docker/sdk bootstrap deploy.dev.yml
 ```
 
@@ -49,5 +49,3 @@ docker/sdk up
 ```
 
 The project is now running. For the full list of the project's endpoints, see `http://spryker.local`.
-
-For detailed installation instructions, start with [Install Spryker](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-spryker.html).

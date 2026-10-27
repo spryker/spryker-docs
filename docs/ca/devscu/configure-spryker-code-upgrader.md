@@ -5,6 +5,7 @@ template: concept-topic-template
 last_updated: Aug 15, 2023
 redirect_from:
   - /docs/paas-plus/dev/configure-spryker-code-upgrader.html
+  - /docs/scu/dev/configure-spryker-code-upgrader.html
 ---
 
 Spryker Code Upgrader offers customization options to tailor the upgrading process to your project requirements. The Upgrader is customized by running a dedicated pipeline with configuration variables.

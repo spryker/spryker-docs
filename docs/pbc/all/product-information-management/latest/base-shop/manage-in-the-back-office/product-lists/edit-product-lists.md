@@ -10,6 +10,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/product-lists/managing-product-lists.html
   - /docs/scos/user/back-office-user-guides/202311.0/catalog/product-lists/managing-product-lists.html 
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/product-lists/edit-product-lists.html 
+  - /docs/pbc/all/product-information-management/202307.0/base-shop/manage-in-the-back-office/product-lists/edit-product-lists.html
 ---
 
 This doc describes how to edit product lists in the Back Office.

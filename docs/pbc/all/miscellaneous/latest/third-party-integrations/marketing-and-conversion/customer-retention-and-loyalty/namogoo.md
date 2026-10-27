@@ -7,6 +7,10 @@ originalLink: https://documentation.spryker.com/2021080/docs/namogoo
 originalArticleId: 69018fe0-c91f-48d1-be86-6fa06334ea76
 redirect_from:
   - /docs/scos/user/technology-partners/202212.0/customer-retention-and-loyalty/namogoo.html  
+  - /docs/pbc/all/miscellaneous/202212.0/third-party-integrations/marketing-and-conversion/customer-retention-and-loyalty/namogoo.html
+  - /docs/scos/user/technology-partners/202108.0/marketing-and-conversion/customer-retention-and-loyalty/namogoo.html
+  - /docs/scos/user/technology-partners/201903.0/marketing-and-conversion/customer-retention-and-loyalty/namogoo.html
+  - /docs/scos/user/technology-partners/202001.0/marketing-and-conversion/customer-retention-and-loyalty/namogoo.html
 ---
 
 ## Partner Information

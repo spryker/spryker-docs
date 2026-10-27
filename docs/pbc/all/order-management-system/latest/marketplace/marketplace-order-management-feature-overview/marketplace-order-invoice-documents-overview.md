@@ -1,7 +1,7 @@
 ---
 title: Marketplace order invoice documents feature overview
 description: Learn how a marketplace order gets one invoice per merchant plus one for the items sold by the operator, and how merchants open their invoices in the Merchant Portal.
-last_updated: Oct 21, 2026
+last_updated: Oct 27, 2026
 template: concept-topic-template
 related:
   - title: Order invoice documents feature overview
@@ -23,7 +23,7 @@ The feature is provided by the `MerchantSalesInvoice` module. The `SalesInvoice`
 ## How it works
 
 1. A merchant ships items in the Merchant Portal. The merchant state machine runs the `ship` event, which moves the items of the marketplace order into the `shipped by merchant` state of the marketplace state machine.
-2. Entering `shipped by merchant` triggers the `invoice-generate` event with the `MerchantInvoice/Generate` OMS command (`GenerateMerchantOrderInvoicesCommandPlugin`). The command groups the items of the event by merchant reference and asks `SalesInvoice` to generate one invoice per group. Items without a merchant reference form the operator's group.
+2. Entering `shipped by merchant` triggers the `invoice-generate` event with the `MerchantInvoice/Generate` OMS command (`GenerateMerchantOrderInvoicesCommandPlugin`). The command groups the items of the event by merchant reference and asks `SalesInvoice` to generate one invoice per group. Items without a merchant reference form the operator's group. The `deliver` event of the subprocess then moves the items from `invoice generated` to `delivered`, and the `MarketplaceReturn` subprocess accepts `start-return` from `invoice generated` as well as from `shipped by merchant` and `delivered`.
 3. `MerchantReferenceOrderInvoiceBeforeSavePlugin` stores the merchant reference of the group in the invoice. `MerchantOrderInvoiceExistenceCheckStrategyPlugin` makes sure that an order gets at most one invoice per merchant: a unique key on the order and the merchant reference backs the check.
 4. When the invoice is rendered, in the email, on the Storefront, in the Back Office, or in the Merchant Portal, `MerchantOrderInvoiceRenderOrderExpanderPlugin` replaces the order in the template with a copy that contains only the items and expenses of the invoice's merchant and the totals of the [merchant order](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html). It also adds the merchant to the invoice, so the template prints the merchant's name, registration number, and address. For the operator's invoice, the copy keeps the items and expenses without a merchant and recalculates the totals.
 5. `MerchantOrderInvoicesExpanderPlugin` adds the merchant to every loaded invoice, so the Back Office **Documents** block shows a **Merchant** column, and the Storefront row shows the merchant through the `SoldByMerchantWidget`.
@@ -36,7 +36,7 @@ The `MerchantInvoice/Generate` command also runs the manual `invoice-generate` e
 
 ## Merchant Portal
 
-The order details page of the Merchant Portal shows a **Documents** card with the invoices issued for the merchant's part of the order: the reference, the issue date, and a **PDF** link. The link opens the invoice page in a new tab, in the Merchant Portal layout, with a **Save as PDF** button and the document in a frame. The page answers with a 404 page unless the merchant order belongs to the merchant of the logged in merchant user and the invoice belongs to that merchant order's merchant. Merchant users receive access to the page through the `merchant-sales-invoice` ACL bundle, which `MerchantSalesInvoiceMerchantAclRuleExpanderPlugin` adds to every merchant. For details, see [View merchant order invoice documents in the Merchant Portal](/docs/pbc/all/order-management-system/latest/marketplace/view-merchant-order-invoice-documents.html).
+The order details page of the Merchant Portal shows a **Documents** card with the invoices issued for the merchant's part of the order: the reference, the issue date, and a **PDF** link. The link opens the invoice page in a new tab, in the Merchant Portal layout, with a **Save as PDF** button and the document in a frame. The page answers with a 404 page unless the merchant order belongs to the merchant of the logged in merchant user and the invoice belongs to that merchant order's merchant. Merchant users receive access to the page through the `merchant-sales-invoice` ACL bundle, which `MerchantSalesInvoiceMerchantAclRuleExpanderPlugin` adds to every merchant. Because the invoice is generated inside the Merchant Portal request that ships the items, `MerchantSalesInvoiceMerchantAclEntityRuleExpanderPlugin` grants merchant users the ACL entity rule to create, read, and update the invoices of their orders, and `MerchantSalesInvoiceAclEntityConfigurationExpanderPlugin` registers the invoice as a child of the order and allows the sequence number entity, so that the invoice reference can be generated. For details, see [View merchant order invoice documents in the Merchant Portal](/docs/pbc/all/order-management-system/latest/marketplace/view-merchant-order-invoice-documents.html).
 
 ## Back Office
 

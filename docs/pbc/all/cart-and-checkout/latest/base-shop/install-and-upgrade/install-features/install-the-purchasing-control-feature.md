@@ -1,7 +1,7 @@
 ---
 title: Install the Purchasing Control feature
 description: Learn how to install the Purchasing Control feature into your Spryker project.
-last_updated: Aug 21, 2026
+last_updated: Oct 27, 2026
 template: feature-integration-guide-template
 related:
   - title: Purchasing Control feature overview
@@ -199,6 +199,7 @@ Enable the following behaviors by registering the plugins.
 | CostCenterQuoteFieldsAllowedForSavingProviderPlugin | Adds `idCostCenter` and `idBudget` to the list of quote fields persisted to the database. | None | SprykerFeature\Zed\PurchasingControl\Communication\Plugin\Quote |
 | RestoreBudgetOnCancelOmsCommandPlugin | Restores the budget balance by deducting the amount of the canceled order items. Also deducts the shipment group total if all items in the group are canceled. | None | SprykerFeature\Zed\PurchasingControl\Communication\Plugin\Oms |
 | RestoreBudgetOnRefundOmsCommandPlugin | Restores the budget balance by deducting the refundable amount of the refunded order items. When refund with shipment is enabled, also deducts the shipment group expense refundable amount if all items in the group are refunded. | None | SprykerFeature\Zed\PurchasingControl\Communication\Plugin\Oms |
+| PurchasingControlAclEntityConfigurationExpanderPlugin | Grants global read, update, and delete access to `SpyBudgetConsumption` in the Merchant Portal ACL configuration. This lets the budget restore OMS commands adjust budget consumption when a merchant user triggers them. Required only for marketplace projects with the Merchant Portal. | None | SprykerFeature\Zed\PurchasingControl\Communication\Plugin\AclMerchantPortal |
 | CostCenterOrderExpanderPlugin | Expands `OrderTransfer` with the assigned cost center and company name, and with the assigned budget when present. Does nothing when no cost center is assigned to the order. | None | SprykerFeature\Zed\PurchasingControl\Communication\Plugin\Sales |
 | CostCenterSearchOrderExpanderPlugin | Expands each `OrderTransfer` in a list with `CostCenterTransfer` and `BudgetTransfer` when assigned. Used for order search results. | None | SprykerFeature\Zed\PurchasingControl\Communication\Plugin\Sales |
 | CostCenterOrderSearchQueryExpanderPlugin | Expands `QueryJoinCollectionTransfer` with `WHERE` conditions for `fk_cost_center` and `fk_budget` when filter fields of type `costCenter` or `budget` are present. | None | SprykerFeature\Zed\PurchasingControl\Communication\Plugin\Sales |
@@ -661,6 +662,35 @@ Add the `CostCenter/RestoreBudgetOnCancel` and `CostCenter/RestoreBudgetOnRefund
 </events>
 ```
 
+#### Grant Merchant Portal access to budget consumption
+
+In a marketplace, merchant users can cancel and refund order items from the Merchant Portal. The Merchant Portal applies ACL entity rules to every database query, so without explicit access, the `CostCenter/RestoreBudgetOnCancel` and `CostCenter/RestoreBudgetOnRefund` commands cannot update `spy_budget_consumption` and the budget is not restored. If your project does not use the Merchant Portal, skip this step.
+
+**src/Pyz/Zed/AclMerchantPortal/AclMerchantPortalDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\AclMerchantPortal;
+
+use Spryker\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider as SprykerAclMerchantPortalDependencyProvider;
+use SprykerFeature\Zed\PurchasingControl\Communication\Plugin\AclMerchantPortal\PurchasingControlAclEntityConfigurationExpanderPlugin;
+
+class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\AclMerchantPortalExtension\Dependency\Plugin\AclEntityConfigurationExpanderPluginInterface>
+     */
+    protected function getAclEntityConfigurationExpanderPlugins(): array
+    {
+        return [
+            // ...
+            new PurchasingControlAclEntityConfigurationExpanderPlugin(), #PurchasingControlFeature
+        ];
+    }
+}
+```
+
 #### Configure budget restoration behavior
 
 By default, shipment costs are not included when restoring the budget on refund. To include shipment costs, override `isRefundWithShipmentEnabled()` in your project config:
@@ -685,6 +715,7 @@ class PurchasingControlConfig extends SprykerPurchasingControlConfig
 - Place an order with a budget selected. Cancel one item (partial cancel). Make sure the budget balance is increased by the amount of the canceled item only, not the full order total.
 - Cancel all items of an order. Make sure the full consumed amount is restored to the budget balance.
 - Trigger a refund on an order. Make sure the refunded items' amounts are restored to the budget balance.
+- Marketplace only: In the Merchant Portal, cancel or refund an item of an order placed with a budget. Make sure the budget balance is restored and the item moves to the `refunded` state after a refund.
 
 {% endinfo_block %}
 

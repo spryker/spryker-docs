@@ -1,7 +1,7 @@
 ---
 title: Security release notes 202610.0
 description: Security updates released for version 202610.0
-last_updated: Oct 19, 2026
+last_updated: Oct 23, 2026
 template: concept-topic-template
 publish_date: "2026-10-13"
 ---
@@ -173,5 +173,74 @@ docker/sdk cli "npm audit | grep -A3 '@angular/router'"
 ```bash
 docker/sdk cli "npm run mp:build"
 ```
+
+{% endinfo_block %}
+
+## Rate limiting protection for email change on the StoreFront
+
+The StoreFront email-change function had no rate limit, which allowed an authenticated user to send unlimited confirmation emails to any address. Confirmation emails are now rate-limited per customer and per recipient address.
+
+### Affected modules
+
+- `spryker/customer`: < 7.88.0
+- `spryker/customer-data-change-request`: < 1.4.0
+- `spryker/redis`: < 2.15.0
+- `spryker/security-blocker`: < 1.4.0
+- `spryker-shop/customer-page`: < 2.88.1
+- `spryker/storage-redis`: < 1.10.1
+
+### Fix the vulnerability
+
+When a customer changes their email address on the Storefront profile page, the application sends a verification email to the new address. After the update, the application limits email change requests per customer and per target email address. By default, a customer can request an email change up to 3 times within 15 minutes, and a target email address can receive up to 3 verification emails within 15 minutes, regardless of which customer requests them. When the limit is reached, the email address is not changed, no verification email is sent, and the customer sees an error message on the profile page.
+
+1. Update the affected packages:
+
+```bash
+composer update spryker/customer:"^7.88.0" spryker/customer-data-change-request:"^1.4.0" spryker/redis:"^2.15.0" spryker/security-blocker:"^1.4.0" spryker-shop/customer-page:"^2.88.1" spryker/storage-redis:"^1.10.1"
+```
+
+2. Generate the transfers:
+
+```bash
+console transfer:generate
+```
+
+3. To show the error message when the limit is reached, add the following translations to `data/import/common/common/glossary.csv`:
+
+```csv
+customer.change_customer_email_limit_exceeded,"You reached the limit of email change requests. Please try again later.",en_US
+customer.change_customer_email_limit_exceeded,"Sie haben das Limit für Anfragen zur Änderung der E-Mail-Adresse erreicht. Bitte versuchen Sie es später erneut.",de_DE
+```
+
+4. Import the glossary:
+
+```bash
+console data:import:glossary
+```
+
+5. Optional: To change the default limit, override the `EMAIL_CHANGE_REQUEST_LIMIT` and `EMAIL_CHANGE_REQUEST_LIMIT_TTL_SECONDS` constants on the project level. To disable the limit, set `EMAIL_CHANGE_REQUEST_LIMIT` to `0`.
+
+**src/Pyz/Zed/CustomerDataChangeRequest/CustomerDataChangeRequestConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\CustomerDataChangeRequest;
+
+use Spryker\Zed\CustomerDataChangeRequest\CustomerDataChangeRequestConfig as SprykerCustomerDataChangeRequestConfig;
+
+class CustomerDataChangeRequestConfig extends SprykerCustomerDataChangeRequestConfig
+{
+    protected const int EMAIL_CHANGE_REQUEST_LIMIT = 3;
+
+    protected const int EMAIL_CHANGE_REQUEST_LIMIT_TTL_SECONDS = 900;
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+1. On the Storefront, log in as a customer and go to the profile page.
+2. Change the email address and save the form. Repeat 3 times. Make sure each submission sends a verification email to the new address.
+3. Submit the form with a new email address for the 4th time within 15 minutes. Make sure an error message about the reached limit is displayed and no verification email is sent.
 
 {% endinfo_block %}

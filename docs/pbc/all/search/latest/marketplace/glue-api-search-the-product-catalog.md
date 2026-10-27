@@ -2,7 +2,7 @@
 title: "Glue API: Search the product catalog"
 description: Learn how you can Search the product catalog via Glue API within your Spryker based projects.
 template: glue-api-storefront-guide-template
-last_updated: Nov 21, 2023
+last_updated: Oct 20, 2026
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202311.0/searching-the-product-catalog.html
   - /docs/scos/dev/glue-api-guides/202001.0/searching-the-product-catalog.html
@@ -47,12 +47,12 @@ To search by products, send the request:
 | color  | Specifies the product color  | {% raw %}{{color}}{% endraw %}     |
 | storage_capacity[]  | Specifies the storage capacity of a product  |{% raw %}{{storage_capacity}}{% endraw %}   |
 | rating[min]   | Specifies the minimum rating of a product   | {% raw %}{{rating}}{% endraw %}   |
-| category  | Specifies the category to search the products in  | {% raw %}{{category_node_id}}{% endraw %}For the category node IDs, retrieve the category tree. |
+| category  | Specifies the category node to search the products in; the products of all subcategories are included  | {% raw %}{{category_node_id}}{% endraw %}<br>For the category node IDs, [retrieve the category tree](/docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html). |
 | currency   | Sets a currency    | {% raw %}{{currency}}{% endraw %}    |
-| sort  | Sorts the search results   | For the list of possible values, run the [catalog search request and find the list under sortParamNames in the response. For the default Spryker Demo Shop sorting parameters, see [Sorting parameters](#sorting). |
+| sort  | Sorts the search results   | For the list of possible values, run the catalog search request and find the list under `sortParamNames` in the response. For the default Spryker Demo Shop sorting parameters, see [Sorting parameters](#sorting). |
 | page  | Sets the number of the search results page from which the results are retrieved | {% raw %}{{page_number}}{% endraw %}    |
 | ipp   | Sets the number of products per page  | {% raw %}{{number_of_products}}{% endraw %}  |
-| merchant_name | Filters the results by a merchant name.  | {% raw %}{{merchnat_name}}{% endraw %}  |
+| merchant_name | Filters the results by a merchant name.  | {% raw %}{{merchant_name}}{% endraw %}  |
 
 
 | REQUEST   | USAGE     |

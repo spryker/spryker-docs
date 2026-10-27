@@ -1,13 +1,15 @@
 ---
 title: Configure Vertex in the Back Office
 description: Learn how to manage Vertex settings and choose the tax provider from Back Office Configuration instead of environment variables.
-last_updated: Jul 23, 2026
+last_updated: Oct 20, 2026
 template: howto-guide-template
 related:
   - title: Integrate Vertex
     link: docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html
   - title: Vertex
     link: docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/vertex.html
+  - title: Verify Vertex connection
+    link: docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/verify-vertex-connection.html
 ---
 
 This document describes how to manage Vertex settings from **Back Office** > **Configuration** and how to select the tax provider per scope `store`.
@@ -24,7 +26,7 @@ This feature is opt-in and backward compatible. Until you [enable it](#1-enable-
 
 - Use `spryker-eco/vertex` version `1.5.0` or later.
 - [Integrate Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html) into your Spryker shop.
-- Install the Configuration Management feature. The Vertex module depends on `spryker/configuration-extension`, but it does not require the `spryker/configuration` module that provides the Back Office UI and stores the values. If the Configuration Management feature is not installed yet, install it first. For details, see [Install the Configuration Management feature](/docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html).
+- Install the Configuration Management feature. The Vertex module depends on `spryker/configuration-extension`, but it does not require the `spryker/configuration` module that provides the Back Office UI and stores the values. If the Configuration Management feature is not installed yet, install it first. For details, see [Install the Configuration Management feature](/docs/dg/dev/integrate-and-configure/integrate-configuration-feature.html).
 
 ## 1. Enable the configuration source
 
@@ -133,7 +135,3 @@ When you save a configuration, the following changes are blocked to prevent leav
 2. **Breaking an active configuration:** you cannot clear or remove a credential that would leave Vertex incomplete while Vertex is the selected provider for that scope. This applies to both edits and deletions.
 3. **Cross-scope breakage:** a change to the **global** scope that would break any **store** that has Vertex selected and inherits the global values is blocked. The error names the affected store.
 4. **Invalid URLs:** the Security URI, Transaction calls URI, and Taxamo API URL must be valid URLs, even when Vertex is not the selected provider.
-
-## Next steps
-
-[Verify Vertex connection](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/verify-vertex-connection.html)

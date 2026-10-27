@@ -114,6 +114,8 @@ entries:
             nested:
               - title: Project Starter Wizard
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html
+              - title: Demo Preparation Wizard
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-demo-prep-wizard.html
               - title: Customization Workflow
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html
               - title: Bugfix Workflow
@@ -122,6 +124,8 @@ entries:
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html
               - title: Profiler Workflow
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-profiler-workflow.html
+              - title: Architecture Workflow
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-architecture-workflow.html
           - title: Rules
             url: /docs/dg/dev/ai/ai-dev/ai-dev-rules.html
           - title: Claude Code
@@ -1163,9 +1167,13 @@ entries:
     - title: Symfony Scheduler
       url: /docs/dg/dev/integrate-and-configure/integrate-symfony-scheduler.html
     - title: Configuration Management feature
-      url: /docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html
-    - title: Workflow feature
+      url: /docs/dg/dev/integrate-and-configure/integrate-configuration-feature.html
+    - title: Integrate the Configuration Management deployment commands
+      url: /docs/dg/dev/integrate-and-configure/integrate-configuration-deployment-commands.html
+    - title: Install the Workflows feature
       url: /docs/dg/dev/integrate-and-configure/integrate-workflow-feature.html
+    - title: Add a subject type to the Workflows feature
+      url: /docs/dg/dev/integrate-and-configure/add-a-subject-type-to-the-workflows-feature.html
     - title: Basic Shop Theme feature
       url: /docs/dg/dev/integrate-and-configure/integrate-basic-shop-theme.html
 

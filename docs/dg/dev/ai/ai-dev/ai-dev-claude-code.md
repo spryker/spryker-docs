@@ -1,7 +1,7 @@
 ---
 title: Claude Code
 description: Install and use the Spryker AI Dev SDK in Claude Code to get Spryker-aware skills, code review, and project setup directly in your AI coding assistant.
-last_updated: Oct 6, 2026
+last_updated: Oct 26, 2026
 label: early-access
 keywords: ai, claude, claude code, plugin, marketplace, skills, spryker, ai-dev, code review, ci
 template: howto-guide-template
@@ -24,14 +24,14 @@ The `spryker-ai-dev-sdk` Claude Code plugin closes this gap. It gives Claude Cod
 
 **What it does for you:**
 
-- **No more explaining Spryker basics.** Rules covering 20 Spryker architectural patterns are automatically loaded into every session. Claude Code knows about factories, dependency providers, expanders, mappers, and more without you having to explain them.
+- **No more explaining Spryker basics.** 23 rule files with Spryker architectural patterns and conventions load automatically when you work on the files they apply to. Claude Code knows about factories, dependency providers, expanders, mappers, and more without you having to explain them.
 - **Correct code on the first attempt.** Skills for common Spryker tasks — Propel schema changes, data importers, functional tests, payment integrations, atomic frontend components — follow the exact conventions your project expects.
 - **Live project context.** The MCP server runs inside your Docker container and gives Claude Code real-time access to your transfer objects, module interfaces, and OMS configuration. The AI works with your actual project data, not guesses.
 - **Consistent code reviews.** The `spryker-code-reviewer` subagent checks your changes against Spryker's coding standards and architectural rules, catching issues before they reach a PR.
 - **Team-wide consistency.** Generated rules and context files are committed to your repository, so every developer on the team works with the same AI configuration.
-- **Workflows you compose yourself.** Each skill covers one stage of work, so you combine them into the long-running workflow your team actually runs. Four ready-made workflows — project setup, customization, bugfix, and upgrade — get you started on day one, and the skills themselves are a template for writing your own. See [Composable by design](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html#composable-by-design).
+- **Workflows you compose yourself.** Each skill covers one stage of work, so you combine them into the long-running workflow your team actually runs. Six ready-made workflows — project setup, demo preparation, customization, bugfix, upgrade, and architecture — get you started on day one, and the skills themselves are a template for writing your own. See [Composable by design](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html#composable-by-design).
 
-The plugin is distributed through the `spryker-plugins-official` marketplace and installed directly inside Claude Code.
+The plugin is distributed through the `spryker-plugins-official` marketplace and installed directly inside Claude Code. GitHub Copilot CLI installs the same plugin — see [Set up with GitHub Copilot](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html#set-up-with-github-copilot).
 
 ## Install the plugin
 
@@ -41,12 +41,14 @@ The plugin installs from the `spryker-plugins-official` marketplace inside Claud
 
 For a one-page reference of every skill and agent — what each does, when to use it, and the value it adds — see [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html).
 
-Four skills own a full workflow and delegate each stage to the others. Each has its own page:
+Six skills own a full workflow and delegate each stage to the others. Each has its own page:
 
 - [Project Starter Wizard](/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html) — turn a fresh demoshop clone into your project
+- [Demo Preparation Wizard](/docs/dg/dev/ai/ai-dev/ai-dev-demo-prep-wizard.html) — prepare a customer demo from the briefing to a handover report
 - [Customization Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html) — build a feature from a product requirement document to a committed branch
 - [Bugfix Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html) — drive a bug to a validated, QA-accepted fix
 - [Upgrade Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html) — upgrade a customized project to a newer Spryker release
+- [Architecture Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-architecture-workflow.html) — turn project discovery into a filled `architecture/` folder; ships in the separate `spryker-architecture` plugin
 
 ### Skills and subagents
 
@@ -54,7 +56,7 @@ The plugin bundles Spryker-aware skills, invoked in Claude Code with the `/` pre
 
 ### Rules
 
-The `ai-dev-setup` skill writes a set of Spryker-specific coding rules into your project so the AI follows Spryker conventions automatically. See [Rules](/docs/dg/dev/ai/ai-dev/ai-dev-rules.html) for the full list of rule files and what each one enforces.
+The plugin offers the Spryker-specific coding rules when a session starts, and the `ai-dev-setup` skill writes them as part of the setup, so the AI follows Spryker conventions automatically. See [Rules](/docs/dg/dev/ai/ai-dev/ai-dev-rules.html) for the full list of rule files and what each one enforces.
 
 ### Context file
 
@@ -71,6 +73,15 @@ The `ai-dev-setup` skill generates a `CLAUDE.md` context file based on the [AGEN
 The files generated by `ai-dev-setup` are a baseline derived from Spryker defaults. They cover general Spryker conventions but do not include anything specific to your project — custom modules, third-party integrations, team conventions, or environment details. Treat the generated `CLAUDE.md` and rules as a starting point and extend them with your project-specific requirements.
 
 {% endinfo_block %}
+
+### Hooks
+
+The plugin ships two hooks. Claude Code and GitHub Copilot run both of them:
+
+| Hook | When it runs | What it does |
+|------|--------------|--------------|
+| `sync-rules.sh` | When a session starts | In a Spryker project without the coding rules, offers once to install them. It writes no file itself; it does nothing in CI, outside a Spryker project, or when the project has a `.ai-dev/no-rules-sync` file. |
+| `guard-stop.php` | When the agent ends its turn | Keeps an autonomous run of the [Project Starter Wizard](/docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html#run-modes) or the [Demo Preparation Wizard](/docs/dg/dev/ai/ai-dev/ai-dev-demo-prep-wizard.html) going while steps are open. It needs `php` on the host. |
 
 ## Optional enhancements
 

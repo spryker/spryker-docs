@@ -53,7 +53,7 @@ Both Purchasing Control and SSP Service Management are optional:
 {% info_block infoBox "Required modules" %}
 
 ```bash
-composer require spryker-feature/order-experience-management:"^1.0.0" --update-with-dependencies
+composer require spryker-feature/order-experience-management:"^4.0.0" --update-with-dependencies
 composer update \
   spryker/availability:"^9.32.0" \
   spryker/merchant:"^3.20.0" \
@@ -79,7 +79,7 @@ composer update \
   spryker-shop/customer-page:"^2.80.0" \
   spryker-shop/merchant-product-offer-widget:"^2.0.0" \
   spryker-shop/product-search-widget:"^3.9.0" \
-  spryker-shop/shop-ui:"^2.5.0" \
+  spryker-shop/shop-ui:"^2.6.0" \
   --with-dependencies
 ```
 

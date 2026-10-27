@@ -69,7 +69,7 @@ Make sure the following transfer objects have been generated:
 
 ### 3) Set up the OMS process
 
-The invoice of a merchant is generated when the merchant's items enter the `shipped by merchant` state. Add the `MarketplaceInvoice` subprocess to the marketplace state machine and replace the direct transition from `shipped by merchant` to `delivered` with the transition through the new `invoice generated` state.
+The invoice of a merchant is generated when the merchant's items enter the `shipped by merchant` state. Add the `MarketplaceInvoice` subprocess to the marketplace state machine and replace the direct transition from `shipped by merchant` to `delivered` with the transition through the new `invoice generated` state. The subprocess also declares the `deliver` event, so the items are delivered from `invoice generated`.
 
 1. Create the subprocess:
 
@@ -104,13 +104,14 @@ The invoice of a merchant is generated when the merchant's items enter the `ship
 
         <events>
             <event name="invoice-generate" onEnter="true" command="MerchantInvoice/Generate"/>
+            <event name="deliver"/>
         </events>
     </process>
 
 </statemachine>
 ```
 
-2. Include the subprocess in the marketplace process and remove the direct `shipped by merchant` → `delivered` transition:
+2. Include the subprocess in the marketplace process, remove the direct `shipped by merchant` → `delivered` transition, and remove the `<event name="deliver"/>` declaration from the events of the main process, because the subprocess now declares it:
 
 **config/Zed/oms/MarketplacePayment01.xml**
 
@@ -132,7 +133,42 @@ The invoice of a merchant is generated when the merchant's items enter the `ship
 <event name="invoice-generate" manual="true" command="MerchantInvoice/Generate"/>
 ```
 
-4. Register the OMS command:
+4. If the [Marketplace Return Management](/docs/pbc/all/return-management/latest/marketplace/install-and-upgrade/install-the-marketplace-return-management-feature.html) feature is installed, let returns start while the items are in `invoice generated`. Add the transition to the `MarketplaceReturn` subprocess and the state to the returnable states:
+
+**config/Zed/oms/MarketplaceSubprocess/MarketplaceReturn01.xml**
+
+```xml
+<transition>
+    <source>invoice generated</source>
+    <target>waiting for return</target>
+    <event>start-return</event>
+</transition>
+```
+
+**src/Pyz/Zed/SalesReturn/SalesReturnConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\SalesReturn;
+
+use Spryker\Zed\SalesReturn\SalesReturnConfig as SprykerSalesReturnConfig;
+
+class SalesReturnConfig extends SprykerSalesReturnConfig
+{
+    /**
+     * @var array<string>
+     */
+    protected const RETURNABLE_STATE_NAMES = [
+        'shipped',
+        'delivered',
+        'shipped by merchant',
+        'invoice generated',
+    ];
+}
+```
+
+5. Register the OMS command:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
@@ -170,7 +206,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 }
 ```
 
-5. Rebuild the OMS process cache:
+6. Rebuild the OMS process cache:
 
 ```bash
 console oms:process-cache:warm-up
@@ -178,7 +214,7 @@ console oms:process-cache:warm-up
 
 {% info_block warningBox "Verification" %}
 
-Open **Administration&nbsp;<span aria-label="and then">></span> OMS** in the Back Office and make sure the `MarketplacePayment01` process shows the `invoice generated` state between `shipped by merchant` and `delivered`.
+Open **Administration&nbsp;<span aria-label="and then">></span> OMS** in the Back Office and make sure the `MarketplacePayment01` process shows the `invoice generated` state between `shipped by merchant` and `delivered`, with the `deliver` event leaving `invoice generated`. With the Marketplace Return Management feature, make sure the `start-return` event is available from `invoice generated` too.
 
 {% endinfo_block %}
 
@@ -194,6 +230,8 @@ Open **Administration&nbsp;<span aria-label="and then">></span> OMS** in the Bac
 | MerchantOrderInvoicesExpanderPlugin | Adds `OrderInvoice.merchant` to every loaded invoice with a merchant reference. |  | Spryker\Zed\MerchantSalesInvoice\Communication\Plugin\SalesInvoice |
 | OrderInvoicesMerchantOrderExpanderPlugin | Adds the invoices of the merchant to `MerchantOrder.orderInvoices` for the Merchant Portal order page. |  | Spryker\Zed\MerchantSalesInvoice\Communication\Plugin\MerchantSalesOrder |
 | MerchantSalesInvoiceMerchantAclRuleExpanderPlugin | Grants merchant users access to the `merchant-sales-invoice` bundle. |  | Spryker\Zed\MerchantSalesInvoice\Communication\Plugin\AclMerchantPortal |
+| MerchantSalesInvoiceMerchantAclEntityRuleExpanderPlugin | Expands the `AclEntityRule` transfer objects of a merchant with the rule that lets merchant users create, read, and update the `SpySalesOrderInvoice` entities of their orders. Required because the invoice is generated inside the Merchant Portal request that ships the items. |  | Spryker\Zed\MerchantSalesInvoice\Communication\Plugin\AclMerchantPortal |
+| MerchantSalesInvoiceAclEntityConfigurationExpanderPlugin | Registers `SpySalesOrderInvoice` as a regular child of `SpySalesOrder`, so that the merchant rule for invoices applies instead of the `create` permission of `SpySalesOrder`, and adds `SpySequenceNumber` to the ACL entity allow list, so that invoice references can be generated from the Merchant Portal. | Expects `SalesInvoiceAclEntityConfigurationExpanderPlugin` to be registered before it. | Spryker\Zed\MerchantSalesInvoice\Communication\Plugin\AclMerchantPortal |
 | MerchantOrderInvoiceSalesListBlockRendererPlugin | Renders the **Documents** block of the Back Office order page with a **Merchant** column; replaces `OrderInvoiceSalesListBlockRendererPlugin`. |  | Spryker\Zed\MerchantSalesInvoice\Communication\Plugin\Sales |
 
 **src/Pyz/Zed/SalesInvoice/SalesInvoiceDependencyProvider.php**
@@ -285,7 +323,10 @@ class MerchantSalesOrderDependencyProvider extends SprykerMerchantSalesOrderDepe
 namespace Pyz\Zed\AclMerchantPortal;
 
 use Spryker\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider as SprykerAclMerchantPortalDependencyProvider;
+use Spryker\Zed\MerchantSalesInvoice\Communication\Plugin\AclMerchantPortal\MerchantSalesInvoiceAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\MerchantSalesInvoice\Communication\Plugin\AclMerchantPortal\MerchantSalesInvoiceMerchantAclEntityRuleExpanderPlugin;
 use Spryker\Zed\MerchantSalesInvoice\Communication\Plugin\AclMerchantPortal\MerchantSalesInvoiceMerchantAclRuleExpanderPlugin;
+use Spryker\Zed\SalesInvoice\Communication\Plugin\AclMerchantPortal\SalesInvoiceAclEntityConfigurationExpanderPlugin;
 
 class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDependencyProvider
 {
@@ -296,6 +337,27 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
     {
         return [
             new MerchantSalesInvoiceMerchantAclRuleExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\AclMerchantPortalExtension\Dependency\Plugin\MerchantAclEntityRuleExpanderPluginInterface>
+     */
+    protected function getMerchantAclEntityRuleExpanderPlugins(): array
+    {
+        return [
+            new MerchantSalesInvoiceMerchantAclEntityRuleExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\AclMerchantPortalExtension\Dependency\Plugin\AclEntityConfigurationExpanderPluginInterface>
+     */
+    protected function getAclEntityConfigurationExpanderPlugins(): array
+    {
+        return [
+            new SalesInvoiceAclEntityConfigurationExpanderPlugin(),
+            new MerchantSalesInvoiceAclEntityConfigurationExpanderPlugin(),
         ];
     }
 }
@@ -345,7 +407,7 @@ class SecurityMerchantPortalGuiConfig extends SprykerSecurityMerchantPortalGuiCo
 }
 ```
 
-3. Rebuild the caches and synchronize the ACL entities, so that existing merchant users get the new bundle rule:
+3. Rebuild the caches and synchronize the ACL entities, so that existing merchant users get the new bundle rule and the ACL entity rule for invoices:
 
 ```bash
 console cache:class-resolver:build
@@ -357,7 +419,7 @@ console cache:empty-all
 
 {% info_block warningBox "Verification" %}
 
-Place a marketplace order with items of two merchants, ship the items of one merchant in the Merchant Portal, and open the order in the Back Office. Make sure the **Documents** block lists one invoice for that merchant with the merchant's name in the **Merchant** column. Ship the items of the second merchant and make sure a second invoice appears. Open the merchant order in the Merchant Portal and make sure the **Documents** card lists only the invoice of that merchant and its **PDF** link opens the invoice page with the merchant's items and totals.
+Place a marketplace order with items of two merchants, ship the items of one merchant in the Merchant Portal as a merchant user, and open the order in the Back Office. Make sure the **Documents** block lists one invoice for that merchant with the merchant's name in the **Merchant** column. Ship the items of the second merchant and make sure a second invoice appears. Open the merchant order in the Merchant Portal and make sure the **Documents** card lists only the invoice of that merchant and its **PDF** link opens the invoice page with the merchant's items and totals.
 
 {% endinfo_block %}
 

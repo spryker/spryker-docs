@@ -1,7 +1,7 @@
 ---
 title: Security release notes 202610.0
 description: Security updates released for version 202610.0
-last_updated: Oct 23, 2026
+last_updated: Oct 28, 2026
 template: concept-topic-template
 publish_date: "2026-10-13"
 ---
@@ -242,5 +242,88 @@ class CustomerDataChangeRequestConfig extends SprykerCustomerDataChangeRequestCo
 1. On the Storefront, log in as a customer and go to the profile page.
 2. Change the email address and save the form. Repeat 3 times. Make sure each submission sends a verification email to the new address.
 3. Submit the form with a new email address for the 4th time within 15 minutes. Make sure an error message about the reached limit is displayed and no verification email is sent.
+
+{% endinfo_block %}
+
+## SQL injection in the content item list of the Back Office
+
+When you add a content item to a CMS page or block in the Back Office, the CMS editor shows a list of available content items. The endpoint that returns this list did not escape a request parameter before using it in a database query. As a result, an authenticated Back Office user could run arbitrary SQL queries against the application database.
+
+### Affected modules
+
+- `spryker/content-gui`: < 3.2.2
+
+### Fix the vulnerability
+
+Update the affected package:
+
+```bash
+composer update spryker/content-gui:"^3.2.2"
+```
+
+{% info_block warningBox "Verification" %}
+
+1. In the Back Office, open a CMS page or block for editing.
+2. In the content editor, add a content item, for example a banner. Make sure the list of content items is displayed and you can select an item.
+
+{% endinfo_block %}
+
+## Company user takeover through the Add company user form
+
+On the Storefront, a company administrator can add users to their company on the **Add company user** page. The form submission was not validated correctly, so a company administrator could overwrite a company user that belongs to another company. As a result, the affected user was moved to the attacker's company and lost access to their own company, and data linked to that user, such as shared carts and shopping lists, became available in the attacker's company.
+
+### Affected modules
+
+- `spryker/company-user`: < 2.25.0
+- `spryker-shop/company-page`: < 2.39.0
+
+### Fix the vulnerability
+
+Update the affected packages:
+
+```bash
+composer update spryker/company-user:"^2.25.0" spryker-shop/company-page:"^2.39.0"
+```
+
+## Cross-merchant price disclosure in the Merchant Portal
+
+In the Merchant Portal, the price tables on the abstract and concrete product edit pages load their data from separate endpoints. These endpoints did not check whether the requested product belongs to the merchant of the current user. As a result, an authenticated merchant user could read the prices of another merchant's products, including prices negotiated with specific business customers through merchant relations.
+
+### Affected modules
+
+- `spryker/product-merchant-portal-gui`: < 5.6.0
+
+### Fix the vulnerability
+
+Update the affected package:
+
+```bash
+composer update spryker/product-merchant-portal-gui:"^5.6.0"
+```
+
+## Missing CSRF token validation on login
+
+A cross-site request forgery (CSRF) token is a random value that a form submits to prove that the request comes from the application's own page. The login forms of the Storefront, Back Office, Merchant Portal, and Agent Assist rendered a CSRF token but did not validate it. As a result, a malicious website could silently log a victim in to an account controlled by the attacker. The attacker could then see the actions that the victim performed in that account, for example, the addresses or payment details they entered.
+
+### Affected modules
+
+- `spryker/agent-security-merchant-portal-gui`: < 2.5.0
+- `spryker/security`: < 1.13.0
+- `spryker/security-gui`: < 2.11.0
+- `spryker/security-merchant-portal-gui`: < 4.8.0
+- `spryker-shop/agent-page`: < 1.28.0
+- `spryker-shop/customer-page`: < 2.89.0
+
+### Fix the vulnerability
+
+Update the affected packages:
+
+```bash
+composer update spryker/agent-security-merchant-portal-gui:"^2.5.0" spryker/security:"^1.13.0" spryker/security-gui:"^2.11.0" spryker/security-merchant-portal-gui:"^4.8.0" spryker-shop/agent-page:"^1.28.0" spryker-shop/customer-page:"^2.89.0"
+```
+
+{% info_block warningBox "Login templates overridden on the project level" %}
+
+After the update, the application rejects every login request without a valid CSRF token. If your project overrides a login form template, make sure the template renders the `_token` field of the form. Otherwise, no user can log in.
 
 {% endinfo_block %}

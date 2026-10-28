@@ -1,7 +1,7 @@
 ---
 title: Security release notes 202610.0
 description: Security updates released for version 202610.0
-last_updated: Oct 23, 2026
+last_updated: Oct 28, 2026
 template: concept-topic-template
 publish_date: "2026-10-13"
 ---
@@ -244,3 +244,43 @@ class CustomerDataChangeRequestConfig extends SprykerCustomerDataChangeRequestCo
 3. Submit the form with a new email address for the 4th time within 15 minutes. Make sure an error message about the reached limit is displayed and no verification email is sent.
 
 {% endinfo_block %}
+
+## SQL injection in the content item list of the Back Office
+
+When you add a content item to a CMS page or block in the Back Office, the CMS editor shows a list of available content items. The endpoint that returns this list did not escape a request parameter before using it in a database query. As a result, an authenticated Back Office user could run arbitrary SQL queries against the application database.
+
+### Affected modules
+
+- `spryker/content-gui`: < 3.2.2
+
+### Fix the vulnerability
+
+Update the affected package:
+
+```bash
+composer update spryker/content-gui:"^3.2.2"
+```
+
+{% info_block warningBox "Verification" %}
+
+1. In the Back Office, open a CMS page or block for editing.
+2. In the content editor, add a content item, for example a banner. Make sure the list of content items is displayed and you can select an item.
+
+{% endinfo_block %}
+
+## Company user takeover through the Add company user form
+
+On the Storefront, a company administrator can add users to their company on the **Add company user** page. The form submission was not validated correctly, so a company administrator could overwrite a company user that belongs to another company. As a result, the affected user was moved to the attacker's company and lost access to their own company, and data linked to that user, such as shared carts and shopping lists, became available in the attacker's company.
+
+### Affected modules
+
+- `spryker/company-user`: < 2.25.0
+- `spryker-shop/company-page`: < 2.39.0
+
+### Fix the vulnerability
+
+Update the affected packages:
+
+```bash
+composer update spryker/company-user:"^2.25.0" spryker-shop/company-page:"^2.39.0"
+```

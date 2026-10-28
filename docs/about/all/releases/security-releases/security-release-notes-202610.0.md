@@ -284,3 +284,19 @@ Update the affected packages:
 ```bash
 composer update spryker/company-user:"^2.25.0" spryker-shop/company-page:"^2.39.0"
 ```
+
+## Cross-merchant price disclosure in the Merchant Portal
+
+In the Merchant Portal, the price tables on the abstract and concrete product edit pages load their data from separate endpoints. These endpoints did not check whether the requested product belongs to the merchant of the current user. As a result, an authenticated merchant user could read the prices of another merchant's products, including prices negotiated with specific business customers through merchant relations.
+
+### Affected modules
+
+- `spryker/product-merchant-portal-gui`: < 5.6.0
+
+### Fix the vulnerability
+
+Update the affected package:
+
+```bash
+composer update spryker/product-merchant-portal-gui:"^5.6.0"
+```

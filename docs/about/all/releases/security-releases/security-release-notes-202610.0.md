@@ -300,3 +300,30 @@ Update the affected package:
 ```bash
 composer update spryker/product-merchant-portal-gui:"^5.6.0"
 ```
+
+## Missing CSRF token validation on login
+
+A cross-site request forgery (CSRF) token is a random value that a form submits to prove that the request comes from the application's own page. The login forms of the Storefront, Back Office, Merchant Portal, and Agent Assist rendered a CSRF token but did not validate it. As a result, a malicious website could silently log a victim in to an account controlled by the attacker. The attacker could then see the actions that the victim performed in that account, for example, the addresses or payment details they entered.
+
+### Affected modules
+
+- `spryker/agent-security-merchant-portal-gui`: < 2.5.0
+- `spryker/security`: < 1.13.0
+- `spryker/security-gui`: < 2.11.0
+- `spryker/security-merchant-portal-gui`: < 4.8.0
+- `spryker-shop/agent-page`: < 1.28.0
+- `spryker-shop/customer-page`: < 2.89.0
+
+### Fix the vulnerability
+
+Update the affected packages:
+
+```bash
+composer update spryker/agent-security-merchant-portal-gui:"^2.5.0" spryker/security:"^1.13.0" spryker/security-gui:"^2.11.0" spryker/security-merchant-portal-gui:"^4.8.0" spryker-shop/agent-page:"^1.28.0" spryker-shop/customer-page:"^2.89.0"
+```
+
+{% info_block warningBox "Login templates overridden on the project level" %}
+
+After the update, the application rejects every login request without a valid CSRF token. If your project overrides a login form template, make sure the template renders the `_token` field of the form. Otherwise, no user can log in.
+
+{% endinfo_block %}

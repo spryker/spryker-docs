@@ -6,6 +6,8 @@ last_updated: Nov 17, 2023
 redirect_from:
   - /docs/marketplace/user/features/202311.0/marketplace-shipment-feature-overview.html
   - /docs/marketplace/dev/feature-walkthroughs/202311.0/marketplace-shipment-feature-walkthrough.html
+  - /docs/marketplace/user/features/202204.0/marketplace-shipment-feature-overview.html
+  - /docs/pbc/all/shipment/latest/marketplace/marketplace-shipment-feature-overview.html
 ---
 
 The *Marketplace Shipment* feature allows splitting the [marketplace order](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html) into different shipments based on merchants who will process them.

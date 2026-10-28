@@ -523,52 +523,64 @@ class SalesInvoiceConfig extends SprykerSalesInvoiceConfig
         {% set linenumber = 0 %}
         {% set renderedBundles = [] %}
         {% set taxes = {} %}
-        {% set itemSumByTaxes = {} %}
 
         {% for item in order.items %}
             {# @var item \Generated\Shared\Transfer\ItemTransfer #}
-
             {% set taxRate = item.taxRate %}
-            {% set rateSum = taxes[item.taxRate] | default(0) + item.sumTaxAmountFullAggregation %}
-            {% set taxes = taxes | merge({ (taxRate): rateSum }) %}
-            {% set rateItemSum = itemSumByTaxes[taxRate] | default(0) + item.sumPriceToPayAggregation %}
-            {% set itemSumByTaxes = itemSumByTaxes | merge({ (taxRate): rateItemSum }) %}
+            {% set taxes = taxes | merge({ (taxRate): (taxes[taxRate] | default(0)) + item.sumTaxAmountFullAggregation }) %}
 
             {% if item.productBundle is not defined or item.productBundle is null %}
                 {% set linenumber = linenumber + 1 %}
 
                 <tr>
                     <td class="text-center">{{ linenumber }}</td>
-                    <td class="text-center">{{ item.quantity }}</td>
+                    <td class="text-center">{{ item.quantity | executeFilterIfExists('formatInt', app.locale) }}</td>
                     <td>{{ item.name }}</td>
                     <td class="text-center">{{ item.taxRate | number_format }}%</td>
-                    <td class="text-center">{{ item.sumPriceToPayAggregation | money(true, order.currencyIsoCode) }}</td>
+                    <td class="text-center">{{ item.sumPrice | money(true, order.currencyIsoCode) }}</td>
                 </tr>
+            {% endif %}
+
+            {% if item.productOptions | length %}
+                <tr class="product-option">
+                    <td colspan="2"></td>
+                    <td colspan="3">{{ 'product.product_options' | trans }}:</td>
+                </tr>
+
+                {% for productOption in item.productOptions %}
+                    {# @var productOption \Generated\Shared\Transfer\ProductOptionTransfer #}
+                    <tr class="product-option">
+                        <td></td>
+                        <td class="text-center">{{ productOption.quantity | executeFilterIfExists('formatInt', app.locale) }}</td>
+                        <td>{{ productOption.value }}</td>
+                        <td class="text-center">{{ productOption.taxRate | number_format }}%</td>
+                        <td class="text-center">{{ productOption.sumPrice | money(true, order.currencyIsoCode) }}</td>
+                    </tr>
+                {% endfor %}
             {% endif %}
 
             {% if item.productBundle is defined and item.productBundle is not null %}
                 {% if item.relatedBundleItemIdentifier not in renderedBundles %}
                     {# @var productBundle \Generated\Shared\Transfer\ItemTransfer #}
-
                     {% set linenumber = linenumber + 1 %}
                     {% set productBundle = item.productBundle %}
 
                     <tr>
                         <td class="text-center">{{ linenumber }}</td>
-                        <td class="text-center">{{ productBundle.quantity }}</td>
+                        <td class="text-center">{{ productBundle.quantity | executeFilterIfExists('formatInt', app.locale) }}</td>
                         <td>{{ productBundle.name }}</td>
                         <td class="text-center">{{ productBundle.taxRate | number_format }}%</td>
-                        <td class="text-center">{{ productBundle.sumPriceToPayAggregation | money(true, order.currencyIsoCode) }}</td>
+                        <td class="text-center">{{ productBundle.sumPrice | money(true, order.currencyIsoCode) }}</td>
                     </tr>
 
                     {% for bundleditem in order.items %}
                         {% if item.relatedBundleItemIdentifier == bundleditem.relatedBundleItemIdentifier %}
                             <tr>
                                 <td></td>
-                                <td class="text-center">{{ bundleditem.quantity }}</td>
+                                <td class="text-center">{{ bundleditem.quantity | executeFilterIfExists('formatInt', app.locale) }}</td>
                                 <td>{{ bundleditem.name }}</td>
                                 <td class="text-center">{{ bundleditem.taxRate | number_format }}%</td>
-                                <td class="text-center">{{ bundleditem.sumPriceToPayAggregation | money(true, order.currencyIsoCode) }}</td>
+                                <td class="text-center">{{ bundleditem.sumPrice | money(true, order.currencyIsoCode) }}</td>
                             </tr>
                         {% endif %}
                     {% endfor %}
@@ -578,18 +590,20 @@ class SalesInvoiceConfig extends SprykerSalesInvoiceConfig
             {% endif %}
         {% endfor %}
 
+        <tr class="background-gray">
+            <td colspan="3"></td>
+            <td>{{ 'order_invoice.invoice_template.table.subtotal' | trans }}</td>
+            <td class="text-center">{{ order.totals.subtotal | money(true, order.currencyIsoCode) }}</td>
+        </tr>
+
         {% for expense in order.expenses %}
-            {% set linenumber = linenumber + 1 %}
+            {# @var expense \Generated\Shared\Transfer\ExpenseTransfer #}
             {% set taxRate = expense.taxRate %}
-            {% set rateSum = taxes[expense.taxRate] | default(0) + expense.sumTaxAmount %}
-            {% set taxes = taxes | merge({ (taxRate): rateSum }) %}
-            {% set rateItemSum = itemSumByTaxes[taxRate] | default(0) + expense.sumPriceToPayAggregation %}
-            {% set itemSumByTaxes = itemSumByTaxes | merge({ (taxRate): rateItemSum }) %}
+            {% set taxes = taxes | merge({ (taxRate): (taxes[taxRate] | default(0)) + expense.sumTaxAmount }) %}
 
             <tr>
-                <td class="text-center">{{ linenumber }}</td>
-                <td></td>
-                <td>{{ expense.name }}</td>
+                <td colspan="2"></td>
+                <td>{{ 'order_invoice.invoice_template.table.shipment' | trans({ '%name%': expense.name }) }}</td>
                 <td class="text-center">{{ expense.taxRate | number_format }}%</td>
                 <td class="text-center">{{ expense.sumPrice | money(true, order.currencyIsoCode) }}</td>
             </tr>
@@ -597,29 +611,24 @@ class SalesInvoiceConfig extends SprykerSalesInvoiceConfig
 
         <tr class="background-gray">
             <td colspan="3"></td>
-            <td>{{ 'order_invoice.invoice_template.table.subtotal' | trans }}</td>
-            <td class="text-center">{{ order.totals.subtotal | money(true, order.currencyIsoCode) }}</td>
-        </tr>
-        <tr class="background-gray">
-            <td colspan="3"></td>
             <td>{{ 'order_invoice.invoice_template.table.discount' | trans }}</td>
-            <td class="text-center">{{ order.totals.discountTotal | money(true, order.currencyIsoCode) }}</td>
+            <td class="text-center">{{ (0 - order.totals.discountTotal) | money(true, order.currencyIsoCode) }}</td>
         </tr>
 
         {% for rate, tax in taxes %}
             <tr>
+                <td colspan="2"></td>
                 <td colspan="2">{{ 'order_invoice.invoice_template.table.tax.included' | trans({ '%tax_rate%': rate | number_format }) }}</td>
-                <td class="text-center">{{ (itemSumByTaxes[rate] - tax) | money(true, order.currencyIsoCode) }}</td>
-                <td class="text-center">{{ 'order_invoice.invoice_template.table.tax.name' | trans }}</td>
                 <td class="text-center">{{ tax | money(true, order.currencyIsoCode) }}</td>
             </tr>
         {% endfor %}
 
         <tr>
+            <td colspan="2"></td>
             <td colspan="2">{{ 'order_invoice.invoice_template.table.total.net' | trans }}</td>
             <td class="text-center">{{ (order.totals.grandTotal - order.totals.taxTotal.amount) | money(true, order.currencyIsoCode) }}</td>
-            <td colspan="2"></td>
         </tr>
+
         <tr class="background-gray">
             <td colspan="3"></td>
             <td><strong>{{ 'order_invoice.invoice_template.table.grandtotal' | trans }}</strong></td>
@@ -633,6 +642,19 @@ class SalesInvoiceConfig extends SprykerSalesInvoiceConfig
 ```
 
 </details>
+
+The totals rows of the template use the following glossary keys. Append them to the glossary according to your configuration:
+
+**data/import/common/common/glossary.csv**
+
+```csv
+order_invoice.invoice_template.table.shipment,Shipment: %name%,en_US
+order_invoice.invoice_template.table.shipment,Versand: %name%,de_DE
+order_invoice.invoice_template.table.tax.included,this includes %tax_rate%% VAT,en_US
+order_invoice.invoice_template.table.tax.included,darin enthalten %tax_rate%% MwSt.,de_DE
+order_invoice.invoice_template.table.total.net,Total net amount,en_US
+order_invoice.invoice_template.table.total.net,Nettobetrag gesamt,de_DE
+```
 
 {% info_block warningBox "Verification" %}
 

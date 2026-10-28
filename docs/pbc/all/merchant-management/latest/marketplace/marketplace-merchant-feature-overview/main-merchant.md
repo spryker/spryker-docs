@@ -5,6 +5,7 @@ template: concept-topic-template
 last_updated: Nov 17, 2023
 redirect_from:
   - /docs/marketplace/user/features/202311.0/marketplace-merchant-feature-overview/main-merchant-concept.html
+  - /docs/marketplace/user/features/202204.0/marketplace-merchant-feature-overview/main-merchant-concept.html
 related:
   - title: Managing main merchant orders
     link: docs/pbc/all/order-management-system/latest/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html

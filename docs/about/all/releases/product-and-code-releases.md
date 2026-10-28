@@ -1,7 +1,7 @@
 ---
 title: Product and code releases
 description: An introduction to the Spryker product and atomic code releases and how Spryker releases new updates and features.
-last_updated: Mar 4, 2024
+last_updated: Sep 9, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/spryker-release-process
 originalArticleId: 3195aac4-0b8e-43a7-b540-0222f567c9fc
@@ -33,6 +33,16 @@ redirect_from:
 - /docs/scos/user/intro-to-spryker/whats-new/security-updates.html
 - /docs/scos/user/intro-to-spryker/spryker-release-process.html
 - /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html
+- /about_spryker/releases/release_notes/release-notes-201907-0.htm
+- /about_spryker/releases/release_notes/release-notes.htm
+- /docs/about/all/releases/release-notes
+- /docs/about/all/releases/release-notes-202307.0/release-notes-202307.0.html
+- /docs/about/all/releases/release-notes-202607.0
+- /docs/about/all/releases/release-notes.html
+- /docs/about/all/releases/release-notes-list.html
+- /docs/about/all/releases/release-notes-overview
+- /docs/ca/dev/release-notes
+- /docs/ca/dev/release-notes.html
 
 ---
 
@@ -76,3 +86,4 @@ To receive the security updates, request a subscription at [support@spryker.com]
 ## Next steps
 
 - [Release notes](/docs/about/all/releases/product-and-code-releases.html)
+- [Release documentation archive](/docs/about/all/releases/releases-archive.html)

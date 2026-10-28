@@ -6,6 +6,8 @@ template: glue-api-storefront-guide-template
 redirect_from:
   - /docs/integrations/api-references/spryker-backend-api/backend-api-b2c-demo-shop-reference.html
   - /docs/integrations/spryker-glue-api/backend-api/api-references/backend-api-b2c-demo-shop-reference.html
+  - /docs/integrations/spryker-api/api-references/backend-api/backend-api-b2c-demo-shop-reference.html
+  - /docs/integrations/spryker-glue-api/api-references/backend-api/backend-api-b2c-demo-shop-reference
 swagger_url: "https://spryker.s3.eu-central-1.amazonaws.com/docs/api-specs/b2c_backend_api.json"
 ---
 

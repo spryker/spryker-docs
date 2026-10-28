@@ -8,6 +8,7 @@ originalArticleId: 3e6be679-774f-46f8-8287-39256d5ebe6f
 redirect_from:
   - /docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/docker-daemon-is-not-running.html
   - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html
+  - /docs/docker-installation-prerequisites
 related:
   - title: An error during front end setups
     link: docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/an-error-during-front-end-setup.html

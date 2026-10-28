@@ -16,6 +16,9 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202005.0/product-options-order-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202004.0/product-options-order-management-feature-integration.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-options-order-management-feature.html
+  - /docs/pbc/all/product-information-management/202212.0/base-shop/install-and-upgrade/install-features/install-the-product-options-order-management-feature.html
+  - /docs/pbc/all/product-information-management/202307.0/base-shop/install-and-upgrade/install-features/install-the-product-options-order-management-feature.html
+  - /docs/scos/dev/feature-integration-guides/202009.0/product-options-order-management-feature-integration.html
 related:
   - title: Install the Product Options Glue API
     link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html

@@ -13,6 +13,8 @@ redirect_from:
   - /docs/scos/user/technology-partners/202311.0/content-management/e-spirit.html
   - /docs/pbc/all/content-management-system/202311.0/third-party-integrations/e-spirit.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/third-party-integrations/e-spirit.html
+  - /docs/scos/user/technology-partners/202001.0/content-management/e-spirit.html
+  - /docs/pbc/all/content-management-system/202307.0/base-shop/third-party-integrations/e-spirit.html
 ---
 
 ## Partner Information

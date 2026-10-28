@@ -13,6 +13,8 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/administration/thresholds/managing-global-thresholds.html
   - /docs/scos/user/back-office-user-guides/202311.0/administration/thresholds/managing-global-thresholds.html  
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-in-the-back-office/define-global-thresholds.html
+  - /docs/scos/user/back-office-user-guides/202204.0/administration/define-global-thresholds.html
+  - /docs/pbc/all/cart-and-checkout/202212.0/manage-in-the-back-office/define-global-thresholds.html
 related:
   - title: Managing Merchant Order Thresholds
     link: docs/pbc/all/cart-and-checkout/latest/base-shop/manage-in-the-back-office/define-merchant-order-thresholds.html

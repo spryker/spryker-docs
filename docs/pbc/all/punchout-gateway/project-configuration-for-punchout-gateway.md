@@ -3,6 +3,8 @@ title: Project configuration for PunchOut Gateway
 description: Project guidelines for running a shop that handles eProcurement systems via PunchOut flow.
 template: concept-topic-template
 last_updated: June 24, 2026
+redirect_from:
+  - /docs/punchout-feature-overview
 ---
 
 This document describes the project configuration to enable eProcurement systems support via PunchOut flow.

@@ -4,6 +4,8 @@ description: This document describes the changes that have been recently release
 last_updated: May 20, 2026
 template: concept-topic-template
 publish_date: "2026-05-20"
+redirect_from:
+  - /docs/about/all/releases/image-releases/jenkins/release-notes-spryker-jenkins.html
 ---
 
 This document describes the changes that have been recently released.

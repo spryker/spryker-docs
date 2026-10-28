@@ -10,6 +10,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202404.0/use-glue-api-authorization-scopes.html
   - /docs/dg/dev/glue-api/latest/use-glue-api-authorization-scopes.html
   - /docs/integrations/spryker-glue-api/authenticating-and-authorization/backend-api/use-backend-api-authorization-scopes.html
+  - /docs/integrations/spryker-glue-api/authenticating-and-authorization/use-glue-api-authorization-scopes
 ---
 
 This guide describes how to add scopes to the resource and custom route for the Backend API application.

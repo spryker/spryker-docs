@@ -10,6 +10,7 @@ related:
     link: docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html
 redirect_from:
 - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/install-features/install-the-cart-product-bundles-feature.html
+- /docs/pbc/all/cart-and-checkout/202212.0/install-and-upgrade/install-features/install-the-cart-product-bundles-feature.html
 ---
 
 {% include pbc/all/install-features/latest/install-the-product-bundles-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-bundles-cart-feature.md -->

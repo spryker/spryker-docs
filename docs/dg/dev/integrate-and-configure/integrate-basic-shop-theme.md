@@ -2,14 +2,14 @@
 title: Install the Basic Shop Theme feature
 description: Learn how to integrate the Basic Shop Theme feature to configure logos, colors, and custom CSS from the Back Office without code changes.
 template: howto-guide-template
-last_updated: Jul 27, 2026
+last_updated: Oct 20, 2026
 related:
   - title: Basic Shop Theme feature overview
-    link: /docs/pbc/all/back-office/latest/base-shop/basic-shop-theme-feature-overview.html
+    link: docs/pbc/all/back-office/latest/base-shop/basic-shop-theme-feature-overview.html
   - title: Configuration Management feature
-    link: /docs/dg/dev/backend-development/configuration-management.html
+    link: docs/dg/dev/backend-development/configuration-management.html
   - title: Install the Configuration Management feature
-    link: /docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html
+    link: docs/dg/dev/integrate-and-configure/integrate-configuration-feature.html
 ---
 
 This document describes how to install the Basic Shop Theme feature.
@@ -22,7 +22,7 @@ Before installing this feature, install and configure the following:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |------|---------|-------------------|
-| Configuration Management feature | ^0.1.0 | [Install the Configuration Management feature](/docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html) |
+| Configuration Management feature | ^0.1.0 | [Install the Configuration Management feature](/docs/dg/dev/integrate-and-configure/integrate-configuration-feature.html) |
 | Spryker Core | ^3.82 | — |
 
 ## Install feature core

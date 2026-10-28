@@ -6,6 +6,11 @@ template: concept-topic-template
 redirect_from:
 - /docs/scos/dev/feature-walkthroughs/202311.0/alternative-products-feature-walkthrough.html
 - /docs/pbc/all/product-information-management/202204.0/base-shop/domain-model-and-relationships/alternative-products-feature-database-schema.html
+- /docs/scos/dev/feature-integration-guides/201903.0/alternative-products-product-label-feature-integration.html
+- /docs/scos/dev/feature-integration-guides/201907.0/alternative-products-feature-integration.html
+- /docs/scos/dev/feature-integration-guides/202001.0/alternative-products-feature-integration.html
+- /docs/scos/dev/feature-integration-guides/202005.0/alternative-products-feature-integration.html
+- /docs/scos/dev/feature-integration-guides/202108.0/alternative-products-product-label-feature-integration.html
 ---
 
 

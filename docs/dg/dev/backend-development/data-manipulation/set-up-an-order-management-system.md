@@ -9,6 +9,9 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/create-an-order-management-system-spryker-commerce-os.html
   - /docs/scos/dev/back-end-development/data-manipulation/creating-an-order-management-system-spryker-commerce-os.html
   - /docs/dg/dev/backend-development/data-manipulation/create-an-order-management-system-spryker-commerce-os.html
+  - /docs/dg/dev/backend-development/data-manipulation/data-enrichment.html
+  - /docs/dg/dev/backend-development/data-manipulation/event/event-system.html
+  - /docs/dg/dev/backend-development/data-manipulation/storage-system/product-storage.html
 related:
   - title: Order management system multi-thread
     link: docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/state-machine/order-management-system-multi-thread.html

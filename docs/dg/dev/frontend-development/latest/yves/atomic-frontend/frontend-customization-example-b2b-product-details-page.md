@@ -8,6 +8,7 @@ originalArticleId: cd11eca9-4f82-41cf-9518-37b17b2b484d
 redirect_from:
   - /docs/scos/dev/front-end-development/202404.0/yves/atomic-frontend/customization-example-b2b-product-details-page.html
   - /docs/scos/dev/front-end-development/yves/atomic-frontend/customization-example-b2b-product-details-page.html
+  - /docs/scos/dev/front-end-development/202307.0/yves/atomic-frontend/customization-example-b2b-product-details-page.html
 related:
   - title: Customization example - Suite Product Details page
     link: docs/dg/dev/frontend-development/latest/yves/atomic-frontend/frontend-customization-example-suite-product-details-page.html

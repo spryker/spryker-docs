@@ -1,6 +1,7 @@
 ---
 title: Performance guidelines
 description: This guidelines explains how to optimize the performance of your website for your Spryker based Projects.
+last_updated: Oct 21, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/tuning-up-performance/202204.0/performance-guidelines.html
@@ -32,3 +33,4 @@ These performance guidelines originate from Spryker's years of experience across
 - [Order details page performance guidance](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/order-details-page-performance-overview.html) to optimize the order detail page in the Back Office
 - [KV storage deduplication](/docs/dg/dev/guidelines/performance-guidelines/kv-storage-deduplication.html) to reduce Redis/ValKey memory usage by eliminating duplicated URL and product abstract data.
 - [Search index deduplication](/docs/dg/dev/guidelines/performance-guidelines/search-index-deduplication.html) to reduce search index size and improve Publish and Sync performance by removing product concrete documents from OpenSearch and Elasticsearch.
+- [Optimize merchant relationship price storage](/docs/pbc/all/price-management/latest/base-shop/tutorials-and-howtos/optimize-merchant-relationship-price-storage.html) to reduce the number of merchant relationship price rows and key-value storage keys by storing prices per merchant relationship instead of per company business unit.

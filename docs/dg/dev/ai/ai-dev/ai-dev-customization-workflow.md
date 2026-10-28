@@ -1,17 +1,24 @@
 ---
 title: Customization Workflow
 description: Turn a feature idea into a working, reviewed Spryker feature on a committed branch — driven by the spryker-customization orchestrator
-last_updated: Aug 24, 2026
+last_updated: Oct 23, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, spryker-customization, workflow, prd, customization, automation, cypress
 template: concept-topic-template
+related:
+  - title: Workflows, Skills, and Agents
+    link: docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html
+  - title: Bugfix Workflow
+    link: docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html
+  - title: Installation
+    link: docs/dg/dev/ai/ai-dev/ai-dev-installation.html
 ---
 
 ## Availability
 
-The `spryker-customization` skill ships with the `spryker-ai-dev-sdk` Claude Code plugin. Version 0.6.4 of `spryker-sdk/ai-dev`, which ships plugin version 0.4.0, adds the conditional Cypress end-to-end phase described on this page.
+The `spryker-customization` skill ships with the `spryker-ai-dev-sdk` plugin. Version 0.6.4 of `spryker-sdk/ai-dev`, which ships plugin version 0.4.0, adds the conditional Cypress end-to-end phase described on this page.
 
-To update the Claude Code plugin, run `/plugin` in Claude Code and update `spryker-ai-dev-sdk` from the `spryker-plugins-official` marketplace to version 0.4.0 or later. For installation instructions, see [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html).
+To update the plugin, run `/plugin` in Claude Code and update `spryker-ai-dev-sdk` from the `spryker-plugins-official` marketplace to the latest version. In GitHub Copilot, run `copilot plugin update spryker-ai-dev-sdk@spryker-plugins-official`. For installation instructions, see [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html).
 
 ## What the skill does
 
@@ -21,9 +28,11 @@ You describe what you want in one sentence. From there, `spryker-customization` 
 
 You do not write code during the run. You make three decisions: what quality bar you want, whether the plan looks right, and whether the final diff goes in.
 
+For the full flow, the design decisions, and the known limits, see the [`spryker-customization` README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-customization/README.md) in the plugin repository.
+
 ## Workflow at a glance
 
-![AI Dev SDK customization workflow](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/customization.png)
+![AI Dev SDK customization workflow](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/customization-v2.png)
 
 Each phase delegates to specific skills (pale yellow) and agents (deep amber) — for example, the `spryker-feature-expert` agent researches the relevant Spryker domain during planning, and the `spryker-verifier` agent drives the running storefront and back office to confirm the feature actually works.
 
@@ -64,6 +73,15 @@ The phase is on by default for the MVP bar and off for PoC, and you can switch i
 
 The phase deliberately runs last, after the self-correction loop has converged, so no spec is written against an implementation still in flux. If a spec goes red because the feature is wrong rather than the test, that is treated as a missed acceptance criterion and feeds back into the self-correction loop.
 
+## Demo preset
+
+When the [Demo Preparation Wizard](/docs/dg/dev/ai/ai-dev/ai-dev-demo-prep-wizard.html) hands over a requirement that the preparer confirmed as "a small working version", the skill runs with the demo preset (plugin version 0.7.0 or later):
+
+- The quality bar is PoC, with the full visual fit.
+- The skill asks no Step 0 questions and creates the branch without asking.
+- The skill asks nothing during the run; at each choice it takes the recommended option and logs it.
+- The visual sign-off waits for the final review of the Demo Preparation Wizard.
+
 ## Where you decide
 
 The skill runs autonomously between three decision points where it pauses for you:
@@ -77,11 +95,4 @@ If verification fails on an acceptance criterion and the skill cannot fix it aft
 ## Requirements
 
 - A running Spryker project (Docker SDK up) with the [AI Dev SDK](/docs/dg/dev/ai/ai-dev/ai-dev.html) installed
-- An AI tool with the SDK's skills loaded — either through the [Claude Code plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html) or via `ai-dev:setup` for another supported tool
-
-## Related
-
-- [`spryker-customization` README](https://github.com/spryker-sdk/ai-dev/blob/project-setup-wizard/plugins/spryker-ai-dev-sdk/skills/spryker-customization/README.md) — the skill's own reference in the plugin repository
-- [Workflows, Skills, and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html) — the full reference of every skill and agent this orchestrator composes
-- [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html) — install the SDK and generate your project's rules, context file, and skills
-- [Claude Code](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html) — how to install the SDK for Claude Code
+- An AI tool with the SDK's skills loaded — either through the plugin in Claude Code or GitHub Copilot CLI, or via `ai-dev:setup` for another supported tool. See [Installation](/docs/dg/dev/ai/ai-dev/ai-dev-installation.html).

@@ -1,7 +1,7 @@
 ---
 title: Integrate Symfony Messenger
 description: Learn how to integrate and configure Symfony Messenger module in a Spryker project.
-last_updated: August 6, 2026
+last_updated: October 5, 2026
 template: howto-guide-template
 ---
 
@@ -311,7 +311,7 @@ class FooBarAsyncTransportConfigProviderPlugin extends AbstractPlugin implements
 }
 ```
 
-The `priority` defines the transport consumption order within a worker: the higher the number, the earlier the transport is polled. When omitted, priority defaults to `0`. Make sure the DSN uses a valid transport protocol (for example `amqp://` for AMQP, `redis://` for Redis, `schedule://` for the scheduler transport).
+The `priority` defines the transport consumption order within a worker: the higher the number, the earlier the transport is polled. When omitted, priority defaults to `0`. Make sure the DSN uses a valid transport protocol (for example `amqp://` for AMQP, `redis://` for Redis, `schedule://` for the scheduler transport). A transport factory may also claim a scheme of its own: the Symfony Scheduler module registers `scheduler-amqp://` for its job queue, so that it can build the connection and serializer itself rather than taking the shared ones.
 
 Wire it in the dependency provider of Symfony Messenger module:
 
@@ -469,7 +469,7 @@ console symfonymessenger:consume foo_bar_async --time-limit=100
 
 ### Consume transports in parallel
 
-By default a single worker process polls the given transports one after another. To process a heavy workload faster, use the `--parallel` (`-p`) option to run several competing consumers. When the value is greater than `1`, the command spawns that many child processes of itself, each consuming the same transports:
+By default a single worker process polls the given transports one after another. To process a heavy workload faster, use the `--parallel` (`-p`) option to run several competing consumers. When more than one process is required, the command spawns child processes of itself instead of consuming directly:
 
 ```shell
 console symfonymessenger:consume foo_bar_async --parallel=4
@@ -479,9 +479,25 @@ Each child process is a full worker; the output of every worker is streamed back
 
 {% info_block warningBox "When parallel consumption is safe" %}
 
-Parallel consumption is only safe for transports where competing consumers do not process the same message twice — for example, AMQP work queues. The scheduler transport is also safe to run in parallel: each scheduled job is guarded by a lock that the cron jobs builder creates through the Lock client, so the same schedule is never executed by more than one worker at the same time. The exception is a job configured with `no_lock` set to `true`, which is not guarded and can therefore be executed by several parallel workers at once — only enable it for jobs that are safe to run concurrently.
+Parallel consumption is only safe for transports where competing consumers do not process the same message twice — for example, AMQP work queues.
+
+It gains little on scheduler (`schedule://`) transports: each schedule is guarded by a lock that the worker holding it keeps for its lifetime, so the schedules are statically split across the children rather than balanced, and a child that loses every race does nothing.
 
 {% endinfo_block %}
+
+### Dedicate a worker to specific transports
+
+By default every child consumes the same transports. Use `--worker-receivers` (`-w`) to give one child a receiver list of its own, as a comma-separated set of names:
+
+```shell
+console symfonymessenger:consume foo_bar_async --worker-receivers=slow_transport --parallel=3
+```
+
+The two options are additive: each `--worker-receivers` list gets a child of its own, and `--parallel` adds that many further children consuming the receivers passed as arguments. The command above therefore runs four processes — one on `slow_transport`, three competing on `foo_bar_async`. Repeat the option to dedicate further children.
+
+Because a dedicated list can only be honored by a child process, passing `--worker-receivers` always spawns a pool, even when it resolves to a single pair of workers.
+
+This is how the Symfony Scheduler module separates triggering a scheduled job from running it. See [Integrate Symfony Scheduler](/docs/dg/dev/integrate-and-configure/integrate-symfony-scheduler.html#run-scheduled-jobs-asynchronously).
 
 ### Pause a transport at runtime
 
@@ -526,7 +542,13 @@ class SymfonyMessengerDependencyProvider extends SprykerSymfonyMessengerDependen
 }
 ```
 
-The Symfony Scheduler module ships `\Spryker\Client\SymfonyScheduler\Plugin\SymfonyMessenger\DisabledSchedulerJobTransportGuardPlugin`, which uses this extension point to pause the transport of a scheduled job that has been disabled from the Back Office. See [Integrate Symfony Scheduler](/docs/dg/dev/integrate-and-configure/integrate-symfony-scheduler.html).
+{% info_block warningBox "Pausing a scheduler transport freezes its schedule" %}
+
+Do not use this extension point to pause a `schedule://` transport. A paused transport never advances its schedule, so the stored position stays where it was and re-enabling the job replays every occurrence it missed in the meantime.
+
+The Symfony Scheduler module used to ship `DisabledSchedulerJobTransportGuardPlugin` for exactly that purpose. It is deprecated and must no longer be wired — a disabled job is now skipped by the handler instead, which leaves its schedule advancing. See [Integrate Symfony Scheduler](/docs/dg/dev/integrate-and-configure/integrate-symfony-scheduler.html#monitor-and-control-scheduled-jobs-in-the-back-office).
+
+{% endinfo_block %}
 
 ## Additional information
 

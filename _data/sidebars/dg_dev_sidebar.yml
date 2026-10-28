@@ -45,6 +45,8 @@ entries:
         url: /docs/dg/dev/ci.html
       - title: Post-Installation Configuration
         url: /docs/dg/dev/post-installation-configuration.html
+      - title: Spryker GitHub organizations and repositories
+        url: /docs/dg/dev/spryker-github-organizations-and-repositories.html
   - title: AI
     nested:
       - title: AI Foundation
@@ -57,6 +59,8 @@ entries:
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html
           - title: Conversation History
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-conversation-history.html
+          - title: Stream AI responses
+            url: /docs/dg/dev/ai/ai-foundation/ai-foundation-stream-prompt.html
           - title: Workflow orchestration with state machines
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
           - title: AI Interaction Audit Logs
@@ -110,6 +114,8 @@ entries:
             nested:
               - title: Project Starter Wizard
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html
+              - title: Demo Preparation Wizard
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-demo-prep-wizard.html
               - title: Customization Workflow
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html
               - title: Bugfix Workflow
@@ -118,6 +124,10 @@ entries:
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html
               - title: Profiler Workflow
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-profiler-workflow.html
+              - title: Architecture Workflow
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-architecture-workflow.html
+          - title: Rules
+            url: /docs/dg/dev/ai/ai-dev/ai-dev-rules.html
           - title: Claude Code
             url: /docs/dg/dev/ai/ai-dev/ai-dev-claude-code.html
             nested:
@@ -135,7 +145,7 @@ entries:
     - title: "Quickstart guides: Install Spryker"
       url: /docs/dg/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guides-install-spryker.html
       nested:
-      - title: "Quickstart guide: Install Spryker on MacOS and Linux"
+      - title: "Quickstart guide: Install Spryker on macOS and Linux"
         url: /docs/dg/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux.html
       - title: "Quickstart guide: Install Spryker on Windows"
         url: /docs/dg/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-windows.html
@@ -531,9 +541,13 @@ entries:
   - title: Frontend development
     url: /docs/dg/dev/frontend-development/frontend-development.html
     nested:
+    - title: npm workspaces for the frontend builders
+      url: /docs/dg/dev/frontend-development/npm-workspaces-for-frontend-builders.html
     - title: Zed
       url: /docs/dg/dev/frontend-development/zed/zed-frontend.html
       nested:
+      - title: Frontend builder for the Back Office v2
+        url: /docs/dg/dev/frontend-development/zed/frontend-builder-for-back-office-v2.html
       - title: Custom twig functions for Zed
         url: /docs/dg/dev/frontend-development/zed/custom-twig-functions-for-zed.html
       - title: Overriding Webpack, JS, SCSS for ZED on project level
@@ -875,6 +889,8 @@ entries:
           url: /docs/dg/dev/frontend-development/marketplace/angular-services.html
         - title: "Building the Merchant Portal frontend"
           url: /docs/dg/dev/frontend-development/marketplace/building-the-merchant-portal-frontend.html
+        - title: "Frontend builder for the Merchant Portal v2"
+          url: /docs/dg/dev/frontend-development/marketplace/frontend-builder-for-merchant-portal-v2.html
         - title: "Project structure"
           url: /docs/dg/dev/frontend-development/marketplace/marketplace-frontend-project-and-module-structure.html
         - title: "Set up the Merchant Portal"
@@ -963,9 +979,15 @@ entries:
           url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-18.html
         - title: Upgrade to Angular 20
           url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-20.html
+        - title: Upgrade to Angular 22 and later
+          url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-22.html
 
     - title: Upgrade to frontend builder v2 for Yves
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-frontend-builder-v2-for-yves.html
+    - title: Upgrade to frontend builder v2 for the Merchant Portal
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-frontend-builder-v2-for-merchant-portal.html
+    - title: Upgrade to frontend builder v2 for the Back Office
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-frontend-builder-v2-for-back-office.html
     - title: Upgrade to Webpack v5
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-webpack-v5.html
     - title: Upgrade to Stylelint 16 and css-loader 6
@@ -987,10 +1009,10 @@ entries:
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-php-85.html
     - title: Upgrade to PHPUnit 11
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-phpunit-11.html
-    - title: Upgrade to Symfony 5
-      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-5.html
     - title: Upgrade to Symfony 6
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-6.html
+    - title: Upgrade to Symfony 7
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-7.html
 
     - title: Upgrade Publish and Sync
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-publish-and-sync.html
@@ -1145,9 +1167,13 @@ entries:
     - title: Symfony Scheduler
       url: /docs/dg/dev/integrate-and-configure/integrate-symfony-scheduler.html
     - title: Configuration Management feature
-      url: /docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html
-    - title: Workflow feature
+      url: /docs/dg/dev/integrate-and-configure/integrate-configuration-feature.html
+    - title: Integrate the Configuration Management deployment commands
+      url: /docs/dg/dev/integrate-and-configure/integrate-configuration-deployment-commands.html
+    - title: Install the Workflows feature
       url: /docs/dg/dev/integrate-and-configure/integrate-workflow-feature.html
+    - title: Add a subject type to the Workflows feature
+      url: /docs/dg/dev/integrate-and-configure/add-a-subject-type-to-the-workflows-feature.html
     - title: Basic Shop Theme feature
       url: /docs/dg/dev/integrate-and-configure/integrate-basic-shop-theme.html
 

@@ -1,17 +1,9 @@
 ---
 title: API Platform configuration
 description: Configure API Platform in Spryker using PHP-based configuration files with environment-specific settings.
-last_updated: Jul 31, 2026
+last_updated: Sep 14, 2026
 template: howto-guide-template
 related:
-  - title: API Platform
-    link: docs/integrations/spryker-api/api-platform/api-platform.html
-  - title: Implement an API Platform resource
-    link: docs/integrations/spryker-api/api-platform/enablement.html
-  - title: Resource schemas
-    link: docs/integrations/spryker-api/api-platform/resource-schemas.html
-  - title: Native API Platform resources
-    link: docs/integrations/spryker-api/api-platform/native-api-platform-resources.html
   - title: Security
     link: docs/integrations/spryker-api/authenticating-and-authorization/security.html
 redirect_from:
@@ -125,6 +117,20 @@ return static function (ApiPlatformConfig $apiPlatform, string $env): void {
     }
 };
 ```
+
+#### Enable debug mode for the Glue kernels
+
+The Symfony kernel of each Glue application takes its debug flag from the application's own configuration constant, not from `APPLICATION_ENV`. The Docker dev configuration wires all three to the `SPRYKER_DEBUG_ENABLED` environment variable:
+
+```php
+// config/Shared/config_default-docker.dev.php
+$config[GlueApplicationConstants::ENABLE_APPLICATION_DEBUG]
+    = $config[GlueBackendApiApplicationConstants::ENABLE_APPLICATION_DEBUG]
+    = $config[GlueStorefrontApiApplicationConstants::ENABLE_APPLICATION_DEBUG]
+    = (bool)getenv('SPRYKER_DEBUG_ENABLED');
+```
+
+With debug enabled, the Symfony container is rebuilt when a resource, provider, or configuration file changes, the API Platform error renderer includes the exception message and trace in error responses, and `spryker_api_platform.debug` follows `%kernel.debug%`. With debug disabled, uncaught exceptions are reduced to a generic `500` and are only visible in the container log.
 
 #### Disable Doctrine integration
 

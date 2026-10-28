@@ -8,6 +8,8 @@ originalArticleId: ea89b3d3-30a2-41b6-8af7-cbd890ff5d18
 redirect_from:
 - /docs/scos/dev/set-up-spryker-locally/redis-configuration.html
 - /docs/dg/dev/set-up-spryker-locally/redis-configuration
+- /docs/scos/dev/glue-api-guides/201903.0/retrieving-store-configuration.html
+- /docs/scos/dev/glue-api-guides/201907.0/retrieving-store-configuration.html
 related:
   - title: Install module structure and configuration
     link: docs/scos/dev/set-up-spryker-locally/install-module-structure-and-configuration.html

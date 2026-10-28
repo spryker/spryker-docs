@@ -7,6 +7,8 @@ redirect_from:
 - /docs/pbc/all/warehouse-management-system/latest/manage-using-glue-api/glue-api-retrieve-availability-when-retrieving-concrete-products.html
 - /docs/pbc/all/warehouse-management-system/202311.0/base-shop/manage-using-glue-api/retrieve-availability-when-retrieving-concrete-products.html
 - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-availability-when-retrieving-concrete-products.html
+- /docs/pbc/all/warehouse-management-system/202307.0/base-shop/manage-using-glue-api/glue-api-retrieve-availability-when-retrieving-concrete-products.html
+- /docs/pbc/all/warehouse-management-system/202212.0/manage-using-glue-api/retrieve-availability-when-retrieving-concrete-products.html
 ---
 
 This endpoint allows retrieving general information about concrete products.

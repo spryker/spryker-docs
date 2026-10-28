@@ -333,7 +333,7 @@ class ZedNavigationDependencyProvider extends SprykerZedNavigationDependencyProv
 
 ### 5) Configure firewalls for a dedicated Merchant Portal login
 
-1. [Upgrade to Symfony 5](/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-5.html).
+1. [Upgrade to Symfony 7.4](/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-7.html).
 
 2. Install the required modules using Composer:
 

@@ -6,6 +6,8 @@ description: Learn how to use Jenkins for automating data exchange tasks in Spry
 last_updated: July 9, 2025
 template: default
 
+redirect_from:
+  - /docs/integrations
 ---
 
 Spryker uses Jenkins primarily for running scheduled or event-based console commands that handle data exchange tasks. This is especially useful for batch operations, such as importing or exporting data between Spryker and third-party systems, such as ERP, PIM, or CRM.

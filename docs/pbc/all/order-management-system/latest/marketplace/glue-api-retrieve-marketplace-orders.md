@@ -6,6 +6,9 @@ last_updated: June 9, 2026
 related:
   - title: Managing the returns
     link: docs/pbc/all/return-management/latest/marketplace/glue-api-manage-marketplace-returns.html
+redirect_from:
+  - /docs/pbc/all/order-management-system/202212.0/marketplace/glue-api-retrieve-marketplace-orders.html
+  - /docs/marketplace/dev/feature-integration-guides/202212.0/marketplace-order-management-feature-integration.html
 ---
 
 Every registered customer can retrieve the list of orders for their account, as well as the detailed order information, including every step of the calculation and addresses used in the orders.

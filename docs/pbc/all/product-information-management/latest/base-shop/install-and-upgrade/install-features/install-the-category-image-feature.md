@@ -11,6 +11,9 @@ redirect_from:
   - /docs/category-image-feature-integration
   - /docs/en/category-image-feature-integration
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-category-image-feature.html
+  - /docs/pbc/all/product-information-management/202307.0/base-shop/install-and-upgrade/install-features/install-the-category-image-feature.html
+  - /docs/pbc/all/product-information-management/202212.0/install-and-upgrade/install-features/install-the-category-image-feature.html
+  - /docs/scos/dev/feature-integration-guides/202005.0/category-image-feature-integration.html
 related:
   - title: Product image management
     link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-images-overview.html

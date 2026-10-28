@@ -7,6 +7,8 @@ related:
   - title: Marketplace Product feature walkthrough
     link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html
   - /docs/pbc/all/tax-management/202311.0/spryker-tax/marketplace/install-the-tax-merchant-portal-marketplace-product-feature.html
+redirect_from:
+  - /docs/marketplace/dev/feature-integration-guides/202108.0/merchant-portal-marketplace-product-tax-feature-integration.html
 ---
 
 {% include pbc/all/install-features/latest/marketplace/install-the-merchant-portal-marketplace-product-tax-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-merchant-portal-marketplace-product-tax-feature.md -->

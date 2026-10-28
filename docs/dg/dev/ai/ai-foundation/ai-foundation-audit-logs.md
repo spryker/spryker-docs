@@ -1,7 +1,7 @@
 ---
 title: AI Foundation Audit Logs
 description: Track and audit AI interactions with the AiFoundation module audit logging feature, including estimated cost per interaction.
-last_updated: Jun 15, 2026
+last_updated: Oct 14, 2026
 keywords: audit, logging, ai, foundation, tracking, compliance, ai interactions, monitoring, cost estimation, ai pricing
 template: howto-guide-template
 label: early-access
@@ -198,9 +198,9 @@ The module ships with default prices for common models. Verify these against cur
 
 | Provider | Default models included |
 |----------|------------------------|
-| OpenAI | `gpt-4.1`, `gpt-4.1-mini`, `gpt-4o`, `gpt-4o-mini` |
-| Anthropic | `claude-opus-4`, `claude-sonnet-4-5`, `claude-haiku-4-5` |
-| AWS Bedrock | `eu.anthropic.claude-sonnet-4-5-20250929-v1:0`, `eu.anthropic.claude-haiku-4-5-20251001-v1:0` |
+| OpenAI | `gpt-4.1`, `gpt-4.1-mini`, `gpt-4o`, `gpt-4o-mini`, `gpt-5-nano`, `gpt-6-luna` |
+| Anthropic | `claude-opus-4`, `claude-sonnet-4-5`, `claude-haiku-4-5`, `claude-haiku-5-5` |
+| AWS Bedrock | `eu.anthropic.claude-sonnet-4-5-20250929-v1:0`, `eu.anthropic.claude-haiku-4-5-20251001-v1:0`, `eu.anthropic.claude-haiku-5-5` |
 
 Models not listed in the configuration are shown as **N/A** in the Audit Logs and are excluded from cost totals.
 

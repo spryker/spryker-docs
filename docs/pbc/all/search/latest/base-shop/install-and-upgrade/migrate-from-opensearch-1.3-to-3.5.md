@@ -3,6 +3,8 @@ title: Migrate from OpenSearch 1.3 to 3.5
 description: Learn how to migrate your Spryker project's OpenSearch cluster from version 1.3 to 3.5 by upgrading through intermediate major versions and reindexing incompatible indexes.
 last_updated: Aug 26, 2026
 template: howto-guide-template
+redirect_from:
+  - /docs/pbc/all/search/base-shop/install-and-upgrade/migrate-from-opensearch-1.3-to-3.5.html
 ---
 
 This document describes how to migrate an OpenSearch cluster used by a Spryker project from version 1.3 to 3.5.
@@ -40,7 +42,7 @@ If your project overrides the search schema of these modules, apply the equivale
 
 Consult the breaking changes and deprecation notices for OpenSearch 2.19, and check your indexes and cluster settings against them to determine whether the cluster is eligible for the upgrade.
 
-- If the cluster is eligible, upgrade it to 2.19 and continue to [4. Check the upgrade eligibility for 3.5](#4-check-the-upgrade-eligibility-for-35).
+- If the cluster is eligible, upgrade it to 2.19 and continue to [Check the upgrade eligibility for 3.5](#check-the-upgrade-eligibility-for-35).
 - If the cluster is not eligible, one or more incompatibilities block the upgrade.
   - For an index with an incompatible index format, unblock the upgrade by reindexing it as described in the following section.
   - For any other incompatibility, for example a deprecated index setting or a breaking plugin change, fix it first. Only continue with the upgrade after all the incompatibilities are resolved.

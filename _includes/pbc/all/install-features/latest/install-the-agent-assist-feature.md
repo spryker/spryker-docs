@@ -340,6 +340,9 @@ Enable the following behaviors by registering the plugins:
 |---------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
 | YvesAgentPageSecurityPlugin                             | Registers security firewalls, access rules, impersonate rules, login and logout handlers for agent users. |           | SprykerShop\Yves\AgentPage\Plugin\Security                           |
 | AgentSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with agent settings.                                      |           | Spryker\Client\SecurityBlockerStorefrontAgent\Plugin\SecurityBlocker |
+| AgentLoginFormCaptchaExpanderPlugin                     | Adds the CAPTCHA field to the agent login form when the login protection requires a CAPTCHA for the account, the IP address, or the whole `user` login realm. | The CAPTCHA step-up and the `ip-and-account` login protection strategy are set up as described in [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html). | SprykerShop\Yves\SecurityBlockerPage\Plugin\AgentPage |
+
+Agents are users, so the agent login counts attempts in the `user` login realm. All logins of a user share one account counter: the agent login, the Back Office, the Merchant Portal, the Glue API `POST /agent-access-tokens` endpoint, and the Backend API `POST /token` endpoint. The thresholds of the realm are provided by `UserSecurityBlockerLoginRealmConfigurationExpanderPlugin`, which you register as described in [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-spryker-core-back-office-feature.html).
 
 **src/Pyz/Yves/Security/SecurityDependencyProvider.php**
 
@@ -389,6 +392,30 @@ class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependency
 }
 ```
 
+**src/Pyz/Yves/AgentPage/AgentPageDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\AgentPage;
+
+use SprykerShop\Yves\AgentPage\AgentPageDependencyProvider as SprykerAgentPageDependencyProvider;
+use SprykerShop\Yves\SecurityBlockerPage\Plugin\AgentPage\AgentLoginFormCaptchaExpanderPlugin;
+
+class AgentPageDependencyProvider extends SprykerAgentPageDependencyProvider
+{
+    /**
+     * @return list<\SprykerShop\Yves\AgentPageExtension\Dependency\Plugin\AgentLoginFormExpanderPluginInterface>
+     */
+    protected function getAgentLoginFormExpanderPlugins(): array
+    {
+        return [
+            new AgentLoginFormCaptchaExpanderPlugin(),
+        ];
+    }
+}
+```
+
 {% info_block warningBox "Verification" %}
 
 1. Go to `https://mysprykershop.com/agent/login`.
@@ -396,6 +423,10 @@ class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependency
 3. Go to `https://mysprykershop.com/agent/overview`.
 4. Ensure that only the user with the agent role can access the page.
 5. Ensure that the agent can log out.
+6. On the agent login page, enter a wrong password for an agent account three times.
+    Make sure the login form shows a security check with a checkbox.
+7. Complete the security check and enter the correct password.
+    Make sure the agent is logged in.
 
 {% endinfo_block %}
 

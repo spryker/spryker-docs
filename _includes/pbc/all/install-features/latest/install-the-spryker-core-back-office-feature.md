@@ -4,6 +4,7 @@ This feature installation guide expects the basic feature to be in place. This g
 - Translation
 - Security
 - OAuth 2.0/Open ID Connect Support for Zed login
+- Per-account login protection with a CAPTCHA step-up for the Back Office login
 - Audit logging
 
 {% endinfo_block %}
@@ -148,6 +149,91 @@ After finishing the installation, make sure the following applies:
 
 {% endinfo_block %}
 
+### Configure the per-account login protection for users
+
+The `BACKOFFICE_USER_*` settings count failed logins per IP address. The following settings count login attempts per user account, regardless of the IP address, and define when a login requires a CAPTCHA. They apply to the `user` login realm, so one account counter is shared by every login of a user: the Back Office, the Merchant Portal, the Merchant Portal agent login, the Storefront agent login, the Glue API `POST /agent-access-tokens` endpoint, and the Backend API `POST /token` endpoint.
+
+The settings work like their customer counterparts. For the counters and the processing of a login request, see [Configure SecurityBlocker](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html#configure-securityblocker) and [Set up SecurityBlocker](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html#set-up-securityblocker) in the Spryker Core feature installation guide.
+
+| CONFIGURATION | SPECIFICATION | NAMESPACE |
+|---|---|---|
+| SecurityBlockerBackofficeConstants::USER_ACCOUNT_BLOCKING_NUMBER_OF_ATTEMPTS | Defines the number of login attempts per user account within the `USER_ACCOUNT_BLOCKING_TTL` time period before the account is blocked. `0` disables the account block. | Spryker\Shared\SecurityBlockerBackoffice |
+| SecurityBlockerBackofficeConstants::USER_ACCOUNT_BLOCKING_TTL | Defines the time period in seconds within which the login attempts of a user account are counted. | Spryker\Shared\SecurityBlockerBackoffice |
+| SecurityBlockerBackofficeConstants::USER_ACCOUNT_BLOCK_FOR_SECONDS | Defines the time period in seconds for which a blocked user account stays blocked. | Spryker\Shared\SecurityBlockerBackoffice |
+| SecurityBlockerBackofficeConstants::USER_ACCOUNT_CHALLENGE_NUMBER_OF_ATTEMPTS | Defines the number of login attempts per user account after which the login form requires a CAPTCHA. `0` disables this trigger. | Spryker\Shared\SecurityBlockerBackoffice |
+| SecurityBlockerBackofficeConstants::USER_IP_CHALLENGE_NUMBER_OF_ATTEMPTS | Defines the number of failed logins per IP address after which the login form requires a CAPTCHA. `0` disables this trigger. | Spryker\Shared\SecurityBlockerBackoffice |
+| SecurityBlockerBackofficeConstants::USER_GLOBAL_CHALLENGE_NUMBER_OF_ATTEMPTS | Defines the number of failed user logins within the `USER_GLOBAL_CHALLENGE_TTL` time period after which every user login requires a CAPTCHA. `0` disables this trigger. | Spryker\Shared\SecurityBlockerBackoffice |
+| SecurityBlockerBackofficeConstants::USER_GLOBAL_CHALLENGE_TTL | Defines the time period in seconds within which the failed user logins are counted for the realm-wide counter. | Spryker\Shared\SecurityBlockerBackoffice |
+
+**config/Shared/config_default.php**
+
+```php
+use Spryker\Shared\SecurityBlockerBackoffice\SecurityBlockerBackofficeConstants;
+
+$config[SecurityBlockerBackofficeConstants::USER_ACCOUNT_BLOCKING_NUMBER_OF_ATTEMPTS] = 9;
+$config[SecurityBlockerBackofficeConstants::USER_ACCOUNT_BLOCKING_TTL] = 900;
+$config[SecurityBlockerBackofficeConstants::USER_ACCOUNT_BLOCK_FOR_SECONDS] = 360;
+$config[SecurityBlockerBackofficeConstants::USER_ACCOUNT_CHALLENGE_NUMBER_OF_ATTEMPTS] = 3;
+$config[SecurityBlockerBackofficeConstants::USER_IP_CHALLENGE_NUMBER_OF_ATTEMPTS] = 5;
+$config[SecurityBlockerBackofficeConstants::USER_GLOBAL_CHALLENGE_NUMBER_OF_ATTEMPTS] = 30;
+$config[SecurityBlockerBackofficeConstants::USER_GLOBAL_CHALLENGE_TTL] = 300;
+```
+
+In test environments that send many failed logins from one IP address, lift the account block and switch the CAPTCHA off: set `USER_ACCOUNT_BLOCKING_NUMBER_OF_ATTEMPTS` to `1000` and the three `USER_*_CHALLENGE_NUMBER_OF_ATTEMPTS` settings to `0`.
+
+### Select the login protection strategy
+
+To count Back Office login attempts per account and require a CAPTCHA, select the `ip-and-account` login protection strategy. The default `ip` strategy counts failed logins per IP address only. For the difference between the strategies, see [Set up SecurityBlocker](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html#set-up-securityblocker).
+
+**src/Pyz/Zed/SecurityBlockerBackofficeGui/SecurityBlockerBackofficeGuiConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\SecurityBlockerBackofficeGui;
+
+use Spryker\Zed\SecurityBlockerBackofficeGui\SecurityBlockerBackofficeGuiConfig as SprykerSecurityBlockerBackofficeGuiConfig;
+
+class SecurityBlockerBackofficeGuiConfig extends SprykerSecurityBlockerBackofficeGuiConfig
+{
+    protected const string LOGIN_PROTECTION_STRATEGY = self::LOGIN_PROTECTION_STRATEGY_IP_AND_ACCOUNT;
+}
+```
+
+Register `UserLoginFormCaptchaExpanderPlugin` as described in [Set up the admin user login to the Back Office](#41-set-up-the-admin-user-login-to-the-back-office) before you select this strategy. Otherwise, the login form cannot show the CAPTCHA, and logins that require a CAPTCHA are rejected.
+
+### Configure the CAPTCHA form theme
+
+To render the CAPTCHA widget in Back Office and Merchant Portal forms, register the Zed form theme of the CAPTCHA module:
+
+**src/Pyz/Zed/Gui/GuiConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Gui;
+
+use Spryker\Zed\Gui\GuiConfig as SprykerGuiConfig;
+
+class GuiConfig extends SprykerGuiConfig
+{
+    public function getDefaultTemplateFileNames(): array
+    {
+        return array_merge(parent::getDefaultTemplateFileNames(), [
+            '@Captcha/Form/Type/captcha.twig',
+        ]);
+    }
+}
+```
+
+Rebuild the Back Office assets, so that they include the ALTCHA widget:
+
+```bash
+npm run zed
+```
+
+In deployment pipelines, use `npm run zed:production`.
+
 ### Set up an authentication strategy
 
 The following authentication strategies are available by default:
@@ -256,6 +342,8 @@ Set up the following behaviors.
 | ZedOauthUserSecurityPlugin                                       | Extends the `User` firewall with an authenticator and user provider if exists;  otherwise, introduces the `OauthUser` firewall in the security service.                                                                  | Must be connected after or instead of `ZedUserSecurityPlugin`.                                                                 | \Spryker\Zed\SecurityOauthUser\Communication\Plugin\Security                    |
 | BackofficeUserSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with the Back Office user security configuration.                                                                                                           |                                                                                                                          | \Spryker\Client\SecurityBlockerBackoffice\Plugin\SecurityBlocker                |
 | SecurityBlockerBackofficeUserEventDispatcherPlugin               | Adds a listener to log failed Back Office login attempts. Denies access in case of exceeding the limit of failed login attempts.                                                                                         |                                                                                                                          | \Spryker\Zed\SecurityBlockerBackofficeGui\Communication\Plugin\EventDispatcher  |
+| UserSecurityBlockerLoginRealmConfigurationExpanderPlugin         | Provides the per-account and CAPTCHA thresholds of the `user` login realm, which is shared by all user logins. |  | \Spryker\Client\SecurityBlockerBackoffice\Plugin\SecurityBlocker |
+| UserLoginFormCaptchaExpanderPlugin                               | Adds the CAPTCHA field to the Back Office login form when the login protection requires a CAPTCHA for the account, the IP address, or the whole `user` login realm. | The CAPTCHA step-up is set up as described in [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html#configure-the-captcha-step-up). | \Spryker\Zed\SecurityBlockerBackofficeGui\Communication\Plugin\SecurityGui |
 
 <details>
   <summary>src/Pyz/Zed/Application/ApplicationDependencyProvider.php</summary>
@@ -349,6 +437,7 @@ namespace Pyz\Client\SecurityBlocker;
 
 use Spryker\Client\SecurityBlocker\SecurityBlockerDependencyProvider as SprykerSecurityBlockerDependencyProvider;
 use Spryker\Client\SecurityBlockerBackoffice\Plugin\SecurityBlocker\BackofficeUserSecurityBlockerConfigurationSettingsExpanderPlugin;
+use Spryker\Client\SecurityBlockerBackoffice\Plugin\SecurityBlocker\UserSecurityBlockerLoginRealmConfigurationExpanderPlugin;
 
 class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependencyProvider
 {
@@ -359,6 +448,16 @@ class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependency
     {
         return [
             new BackofficeUserSecurityBlockerConfigurationSettingsExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Client\SecurityBlockerExtension\Dependency\Plugin\SecurityBlockerLoginRealmConfigurationExpanderPluginInterface>
+     */
+    protected function getSecurityBlockerLoginRealmConfigurationExpanderPlugins(): array
+    {
+        return [
+            new UserSecurityBlockerLoginRealmConfigurationExpanderPlugin(),
         ];
     }
 }
@@ -391,6 +490,47 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 {% info_block warningBox "Verification" %}
 
 Ensure that `https://mysprykershop.com/security-oauth-user/login` redirects you to the login page with the *Authentication failed!* message displayed.
+
+{% endinfo_block %}
+
+**src/Pyz/Zed/SecurityGui/SecurityGuiDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\SecurityGui;
+
+use Spryker\Zed\SecurityBlockerBackofficeGui\Communication\Plugin\SecurityGui\UserLoginFormCaptchaExpanderPlugin;
+use Spryker\Zed\SecurityGui\SecurityGuiDependencyProvider as SprykerSecurityGuiDependencyProvider;
+
+class SecurityGuiDependencyProvider extends SprykerSecurityGuiDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\SecurityGuiExtension\Dependency\Plugin\UserLoginFormExpanderPluginInterface>
+     */
+    protected function getUserLoginFormExpanderPlugins(): array
+    {
+        return [
+            new UserLoginFormCaptchaExpanderPlugin(),
+        ];
+    }
+}
+```
+
+The default Back Office login template renders the CAPTCHA field before the submit button. If your project overrides `@SecurityGui/Login/index.twig`, add the field to your template:
+
+```twig
+{% raw %}{% if form.captcha is defined %}{{ form_row(form.captcha) }}{% endif %}{% endraw %}
+```
+
+{% info_block warningBox "Verification" %}
+
+1. On the Back Office login page, enter a wrong password for a user three times.
+    Make sure the login form shows a security check with a checkbox.
+2. Complete the security check and enter the correct password.
+    Make sure you are logged in to the Back Office.
+3. Log out. Complete the security check and enter a wrong password for the same user until the login is rejected with the `Too many login attempts. Please wait 6 minutes before trying again.` message.
+    Make sure a login with the correct password is rejected with the same message.
 
 {% endinfo_block %}
 
@@ -634,8 +774,14 @@ Append the glossary according to your configuration:
 data/import/common/common/glossary.csv
 
 ```yaml
-security_blocker_backoffice_gui.error.account_blocked,"Too many log in attempts from your address. Please wait %minutes% minutes before trying again.",en_US
-security_blocker_backoffice_gui.error.account_blocked,"Warten Sie bitte %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE
+security_blocker_backoffice_gui.error.account_blocked,"Too many login attempts. Please wait %minutes% minutes before trying again.",en_US
+security_blocker_backoffice_gui.error.account_blocked,"Zu viele Anmeldeversuche. Bitte warten Sie %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE
+```
+
+The CAPTCHA messages of the Back Office and the Merchant Portal are shipped as Zed translation files of the CAPTCHA module. To use them, regenerate the translation cache:
+
+```bash
+console translator:generate-cache
 ```
 
 ### 4.4 Set up audit logging

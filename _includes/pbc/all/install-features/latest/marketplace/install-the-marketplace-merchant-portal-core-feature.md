@@ -579,6 +579,156 @@ class SecurityMerchantPortalGuiDependencyProvider extends SprykerSecurityMerchan
 }
 ```
 
+#### Set up the Merchant Portal login protection
+
+The login protection blocks a merchant user who makes too many failed login attempts and asks for a CAPTCHA before the block. Merchant users are users, so their attempts are counted in the `user` login realm, together with their Back Office logins. The per-account thresholds of the realm and the CAPTCHA step-up are configured in [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html#configure-the-captcha-step-up) and [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-spryker-core-back-office-feature.html#configure-the-per-account-login-protection-for-users).
+
+1. Install the security blocker modules of the Merchant Portal:
+
+```bash
+composer require spryker/security-blocker-merchant-portal spryker/security-blocker-merchant-portal-gui --update-with-dependencies
+```
+
+2. Add the configuration that counts failed Merchant Portal logins per IP address:
+
+| CONFIGURATION | SPECIFICATION | NAMESPACE |
+|---|---|---|
+| SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCK_FOR_SECONDS | Defines the time period in seconds for which an IP address is blocked after too many failed Merchant Portal logins. | Spryker\Shared\SecurityBlockerMerchantPortal |
+| SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCKING_TTL | Defines the time period in seconds within which the failed logins of an IP address are counted. | Spryker\Shared\SecurityBlockerMerchantPortal |
+| SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCKING_NUMBER_OF_ATTEMPTS | Defines the number of failed logins of an IP address within the `MERCHANT_PORTAL_USER_BLOCKING_TTL` time period before the IP address is blocked. | Spryker\Shared\SecurityBlockerMerchantPortal |
+
+**config/Shared/config_default.php**
+
+```php
+use Spryker\Shared\SecurityBlockerMerchantPortal\SecurityBlockerMerchantPortalConstants;
+
+$config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCK_FOR_SECONDS] = 360;
+$config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCKING_TTL] = 900;
+$config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCKING_NUMBER_OF_ATTEMPTS] = 9;
+```
+
+3. Select the `ip-and-account` login protection strategy, so that Merchant Portal logins are counted per account and can require a CAPTCHA. For the difference between the strategies, see [Set up SecurityBlocker](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html#set-up-securityblocker).
+
+**src/Pyz/Zed/SecurityBlockerMerchantPortalGui/SecurityBlockerMerchantPortalGuiConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\SecurityBlockerMerchantPortalGui;
+
+use Spryker\Zed\SecurityBlockerMerchantPortalGui\SecurityBlockerMerchantPortalGuiConfig as SprykerSecurityBlockerMerchantPortalGuiConfig;
+
+class SecurityBlockerMerchantPortalGuiConfig extends SprykerSecurityBlockerMerchantPortalGuiConfig
+{
+    protected const string LOGIN_PROTECTION_STRATEGY = self::LOGIN_PROTECTION_STRATEGY_IP_AND_ACCOUNT;
+}
+```
+
+4. Register the following plugins:
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+|---|---|---|---|
+| MerchantPortalUserSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with the Merchant Portal user settings. |  | Spryker\Client\SecurityBlockerMerchantPortal\Plugin\SecurityBlocker |
+| SecurityBlockerMerchantPortalUserEventDispatcherPlugin | Checks, counts, and blocks Merchant Portal login attempts according to the selected login protection strategy. |  | Spryker\Zed\SecurityBlockerMerchantPortalGui\Communication\Plugin\EventDispatcher |
+| MerchantPortalLoginFormCaptchaExpanderPlugin | Adds the CAPTCHA field to the Merchant Portal login form when the login protection requires a CAPTCHA for the account, the IP address, or the whole `user` login realm. | The CAPTCHA step-up and the Zed CAPTCHA form theme are set up. | Spryker\Zed\SecurityBlockerMerchantPortalGui\Communication\Plugin\SecurityMerchantPortalGui |
+
+**src/Pyz/Client/SecurityBlocker/SecurityBlockerDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Client\SecurityBlocker;
+
+use Spryker\Client\SecurityBlocker\SecurityBlockerDependencyProvider as SprykerSecurityBlockerDependencyProvider;
+use Spryker\Client\SecurityBlockerMerchantPortal\Plugin\SecurityBlocker\MerchantPortalUserSecurityBlockerConfigurationSettingsExpanderPlugin;
+
+class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Client\SecurityBlockerExtension\Dependency\Plugin\SecurityBlockerConfigurationSettingsExpanderPluginInterface>
+     */
+    protected function getSecurityBlockerConfigurationSettingsExpanderPlugins(): array
+    {
+        return [
+            new MerchantPortalUserSecurityBlockerConfigurationSettingsExpanderPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\EventDispatcher;
+
+use Spryker\Zed\EventDispatcher\EventDispatcherDependencyProvider as SprykerEventDispatcherDependencyProvider;
+use Spryker\Zed\SecurityBlockerMerchantPortalGui\Communication\Plugin\EventDispatcher\SecurityBlockerMerchantPortalUserEventDispatcherPlugin;
+
+class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Shared\EventDispatcherExtension\Dependency\Plugin\EventDispatcherPluginInterface>
+     */
+    protected function getEventDispatcherPlugins(): array
+    {
+        return [
+            new SecurityBlockerMerchantPortalUserEventDispatcherPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/SecurityMerchantPortalGui/SecurityMerchantPortalGuiDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\SecurityMerchantPortalGui;
+
+use Spryker\Zed\SecurityBlockerMerchantPortalGui\Communication\Plugin\SecurityMerchantPortalGui\MerchantPortalLoginFormCaptchaExpanderPlugin;
+use Spryker\Zed\SecurityMerchantPortalGui\SecurityMerchantPortalGuiDependencyProvider as SprykerSecurityMerchantPortalGuiDependencyProvider;
+
+class SecurityMerchantPortalGuiDependencyProvider extends SprykerSecurityMerchantPortalGuiDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\SecurityMerchantPortalGuiExtension\Dependency\Plugin\MerchantPortalLoginFormExpanderPluginInterface>
+     */
+    protected function getMerchantPortalLoginFormExpanderPlugins(): array
+    {
+        return [
+            new MerchantPortalLoginFormCaptchaExpanderPlugin(),
+        ];
+    }
+}
+```
+
+The default Merchant Portal login template renders the CAPTCHA field before the submit button. If your project overrides `@SecurityMerchantPortalGui/Login/index.twig`, add the field to your template with `form_widget`. Do not use `form_row`, because the Merchant Portal form item does not render the CAPTCHA widget.
+
+```twig
+{% raw %}{% if form.captcha is defined %}{{ form_widget(form.captcha) }}{% endif %}{% endraw %}
+```
+
+The Merchant Portal login form is submitted asynchronously. When a login is blocked or the CAPTCHA is rejected, the response redirects to the login page and shows the reason as a notification.
+
+Rebuild the Merchant Portal assets, so that they include the ALTCHA widget:
+
+```bash
+npm run mp:build
+```
+
+{% info_block warningBox "Verification" %}
+
+1. On the Merchant Portal login page, enter a wrong password for a merchant user three times.
+    Make sure the login form shows a security check with a checkbox.
+2. Complete the security check and enter the correct password.
+    Make sure you are logged in to the Merchant Portal.
+3. Log out. Complete the security check and enter a wrong password for the same merchant user until the login is rejected with the `Too many login attempts. Please wait 6 minutes before trying again.` notification.
+    Make sure a login with the correct password is rejected with the same notification.
+
+{% endinfo_block %}
+
 #### Enable Merchant Portal infrastructural plugins
 
 1. Enable the following infrastructural plugins:
@@ -745,6 +895,8 @@ mail.trans.merchant.restore_password.subtitle,"Somebody has requested a new pass
 mail.trans.merchant.restore_password.subtitle,"Es wurde ein neues Passwort für dein Merchant Portal-Konto angefordert. Wenn du es nicht warst, kannst du diese E-Mail ignorieren. Wenn du es warst, klicke bitte den Knopf unten an:",de_DE
 mail.trans.merchant.restore_password.title,New password for your Spryker Merchant Portal account,en_US
 mail.trans.merchant.restore_password.title,Neues Passwort für dein Spryker Merchant Portal-Konto,de_DE
+security_blocker_merchant_portal_gui.error.account_blocked,"Too many login attempts. Please wait %minutes% minutes before trying again.",en_US
+security_blocker_merchant_portal_gui.error.account_blocked,"Zu viele Anmeldeversuche. Bitte warten Sie %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE
 ```
 
 2. Import data:

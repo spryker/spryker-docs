@@ -11,6 +11,7 @@ This guide expects the basic feature to be installed. This guide adds the follow
 - Redis Session
 - Store GUI
 - Blocking too many failed login attempts
+- Per-account login protection with a CAPTCHA step-up
 - Audit logging
 - Rule engine
 
@@ -22,9 +23,20 @@ Follow the steps below to install the Spryker Core feature core.
 
 ### 1) Install the required modules
 
+1. Install the Spryker Core feature:
+
 ```bash
 composer require "spryker-feature/spryker-core":"{{page.release_tag}}" --update-with-dependencies
 ```
+
+2. The per-account login protection asks the browser to solve a CAPTCHA after repeated failed logins, and it needs a CAPTCHA provider for that. Install the CAPTCHA module and the ALTCHA provider. ALTCHA is a proof-of-work CAPTCHA: the browser solves it after the user selects a checkbox, without images or calls to third-party services.
+
+```bash
+composer require spryker/captcha spryker-eco/captcha-altcha --update-with-dependencies
+npm install altcha@~3.2.0
+```
+
+The `altcha` npm package is the browser widget. Add it to the project `package.json`, because `spryker-eco/captcha-altcha` does not declare it as an npm dependency.
 
 {% info_block warningBox "Verification" %}
 
@@ -32,6 +44,9 @@ Make sure the following modules have been installed:
 
 | MODULE                            | EXPECTED DIRECTORY                                  |
 |-----------------------------------|-----------------------------------------------------|
+| Captcha                           | vendor/spryker/captcha                              |
+| CaptchaExtension                  | vendor/spryker/captcha-extension                    |
+| CaptchaAltcha                     | vendor/spryker-eco/captcha-altcha                   |
 | Log                               | vendor/spryker/log                                  |
 | LogExtension                      | vendor/spryker/log-extension                        |
 | UtilEncryption                    | vendor/spryker/util-encryption                      |
@@ -344,6 +359,128 @@ $config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_BLOCKING_TTL] = 900
 $config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_BLOCKING_NUMBER_OF_ATTEMPTS] = 9;
 ```
 
+3. Add the per-account configuration for customers.
+
+The settings from the previous step count failed logins per IP address, so an attacker who switches IP addresses is never blocked. The following settings count login attempts per customer account, regardless of the IP address, and define when a CAPTCHA is required. They apply to the `customer` login realm: one counter per account is shared by every login surface of the realm, which are the Storefront login, the Glue API `POST /access-tokens` endpoint, and the Storefront API `POST /token` endpoint.
+
+The protection uses three counters:
+
+- Account counter: counts every login attempt for one account in the time window. It is reset when the account logs in successfully.
+- IP counter: counts failed logins from one IP address, as configured in the previous step.
+- Realm-wide counter: counts failed logins for all accounts of the realm. When it reaches its threshold, every login of the realm requires a CAPTCHA. This counter never blocks a login, and it protects against password spraying, which tries one password against many accounts.
+
+| CONFIGURATION | SPECIFICATION | NAMESPACE |
+|---|---|---|
+| SecurityBlockerStorefrontCustomerConstants::CUSTOMER_ACCOUNT_BLOCKING_NUMBER_OF_ATTEMPTS | Defines the number of login attempts per account within the `CUSTOMER_ACCOUNT_BLOCKING_TTL` time period before the account is blocked. `0` disables the account block. | Spryker\Shared\SecurityBlockerStorefrontCustomer |
+| SecurityBlockerStorefrontCustomerConstants::CUSTOMER_ACCOUNT_BLOCKING_TTL | Defines the time period in seconds within which the login attempts of an account are counted. | Spryker\Shared\SecurityBlockerStorefrontCustomer |
+| SecurityBlockerStorefrontCustomerConstants::CUSTOMER_ACCOUNT_BLOCK_FOR_SECONDS | Defines the time period in seconds for which a blocked account stays blocked. The block is not extended by further attempts. | Spryker\Shared\SecurityBlockerStorefrontCustomer |
+| SecurityBlockerStorefrontCustomerConstants::CUSTOMER_ACCOUNT_CHALLENGE_NUMBER_OF_ATTEMPTS | Defines the number of login attempts per account after which the login form requires a CAPTCHA. `0` disables this trigger. | Spryker\Shared\SecurityBlockerStorefrontCustomer |
+| SecurityBlockerStorefrontCustomerConstants::CUSTOMER_IP_CHALLENGE_NUMBER_OF_ATTEMPTS | Defines the number of failed logins per IP address after which the login form requires a CAPTCHA. `0` disables this trigger. | Spryker\Shared\SecurityBlockerStorefrontCustomer |
+| SecurityBlockerStorefrontCustomerConstants::CUSTOMER_GLOBAL_CHALLENGE_NUMBER_OF_ATTEMPTS | Defines the number of failed customer logins within the `CUSTOMER_GLOBAL_CHALLENGE_TTL` time period after which every customer login requires a CAPTCHA. `0` disables this trigger. | Spryker\Shared\SecurityBlockerStorefrontCustomer |
+| SecurityBlockerStorefrontCustomerConstants::CUSTOMER_GLOBAL_CHALLENGE_TTL | Defines the time period in seconds within which the failed customer logins are counted for the realm-wide counter. | Spryker\Shared\SecurityBlockerStorefrontCustomer |
+
+**config/Shared/config_default.php**
+
+```php
+use Spryker\Shared\SecurityBlockerStorefrontCustomer\SecurityBlockerStorefrontCustomerConstants;
+
+$config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_ACCOUNT_BLOCKING_NUMBER_OF_ATTEMPTS] = 9;
+$config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_ACCOUNT_BLOCKING_TTL] = 900;
+$config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_ACCOUNT_BLOCK_FOR_SECONDS] = 360;
+$config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_ACCOUNT_CHALLENGE_NUMBER_OF_ATTEMPTS] = 3;
+$config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_IP_CHALLENGE_NUMBER_OF_ATTEMPTS] = 5;
+$config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_GLOBAL_CHALLENGE_NUMBER_OF_ATTEMPTS] = 100;
+$config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_GLOBAL_CHALLENGE_TTL] = 300;
+```
+
+{% info_block infoBox "Test environments" %}
+
+End-to-end tests usually send many failed logins from one IP address with the same test accounts. In the configuration of such an environment, for example `config/Shared/config_default-ci.php`, lift the account block and switch the CAPTCHA off:
+
+```php
+$config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_ACCOUNT_BLOCKING_NUMBER_OF_ATTEMPTS] = 1000;
+$config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_ACCOUNT_CHALLENGE_NUMBER_OF_ATTEMPTS] = 0;
+$config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_IP_CHALLENGE_NUMBER_OF_ATTEMPTS] = 0;
+$config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_GLOBAL_CHALLENGE_NUMBER_OF_ATTEMPTS] = 0;
+```
+
+{% endinfo_block %}
+
+4. Optional: To write account blocks to the audit log, enable the security audit log of the SecurityBlocker client. When enabled, a blocked account is logged with the `login_account_locked` tag, and a reached realm-wide threshold is logged with the `login_global_challenge_threshold_reached` tag. The log entries contain neither the login identifier in clear text nor the IP address.
+
+**src/Pyz/Client/SecurityBlocker/SecurityBlockerConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Client\SecurityBlocker;
+
+use Spryker\Client\SecurityBlocker\SecurityBlockerConfig as SprykerSecurityBlockerConfig;
+
+class SecurityBlockerConfig extends SprykerSecurityBlockerConfig
+{
+    protected const bool IS_SECURITY_AUDIT_LOG_ENABLED = true;
+}
+```
+
+#### Configure the CAPTCHA step-up
+
+A login form requires a CAPTCHA when one of the challenge thresholds from [Configure SecurityBlocker](#configure-securityblocker) is reached. The CAPTCHA module renders and verifies the challenge, and the ALTCHA provider creates it. ALTCHA signs every challenge with an HMAC secret, so each environment needs its own secret.
+
+1. Add the CAPTCHA configuration:
+
+| CONFIGURATION | SPECIFICATION | NAMESPACE |
+|---|---|---|
+| CaptchaConstants::IS_CAPTCHA_ENABLED | Enables the CAPTCHA step-up. If `false`, no login requires a CAPTCHA, and the account block still applies. | Spryker\Shared\Captcha |
+| CaptchaAltchaConstants::HMAC_SECRET | Defines the secret that signs and verifies the ALTCHA challenges. | SprykerEco\Shared\CaptchaAltcha |
+| CaptchaAltchaConstants::COST | Defines the proof-of-work cost of a challenge. A higher value makes a challenge slower to solve. Default: `1000`. | SprykerEco\Shared\CaptchaAltcha |
+| CaptchaAltchaConstants::CHALLENGE_TTL | Defines the time in seconds during which a challenge can be solved and submitted. Default: `1200`. | SprykerEco\Shared\CaptchaAltcha |
+| CaptchaAltchaConstants::REDIS_* | Define the key-value storage (Redis or Valkey) connection that stores solved challenges, so that each solution is accepted only once. | SprykerEco\Shared\CaptchaAltcha |
+
+**config/Shared/config_default.php**
+
+```php
+use Spryker\Shared\Captcha\CaptchaConstants;
+use SprykerEco\Shared\CaptchaAltcha\CaptchaAltchaConstants;
+
+$config[CaptchaConstants::IS_CAPTCHA_ENABLED] = true;
+$config[CaptchaAltchaConstants::HMAC_SECRET] = getenv('SPRYKER_CAPTCHA_ALTCHA_HMAC_SECRET') ?: '';
+$config[CaptchaAltchaConstants::COST] = 1000;
+$config[CaptchaAltchaConstants::CHALLENGE_TTL] = 1200;
+$config[CaptchaAltchaConstants::REDIS_PERSISTENT_CONNECTION] = true;
+$config[CaptchaAltchaConstants::REDIS_SCHEME] = getenv('SPRYKER_KEY_VALUE_STORE_PROTOCOL') ?: 'tcp';
+$config[CaptchaAltchaConstants::REDIS_HOST] = getenv('SPRYKER_KEY_VALUE_STORE_HOST');
+$config[CaptchaAltchaConstants::REDIS_PORT] = getenv('SPRYKER_KEY_VALUE_STORE_PORT');
+$config[CaptchaAltchaConstants::REDIS_USER] = getenv('SPRYKER_KEY_VALUE_USERNAME');
+$config[CaptchaAltchaConstants::REDIS_PASSWORD] = getenv('SPRYKER_KEY_VALUE_PASSWORD');
+$config[CaptchaAltchaConstants::REDIS_DATABASE] = 7;
+```
+
+2. Provide the HMAC secret in every environment that serves logins. For a local development environment, add a placeholder to the deploy file:
+
+**deploy.dev.yml**
+
+```yaml
+image:
+    environment:
+        SPRYKER_CAPTCHA_ALTCHA_HMAC_SECRET: 'development-captcha-secret-change-me'
+```
+
+For staging and production environments, generate a random secret, for example with `openssl rand -hex 32`, and store it in your secrets management system, such as the [Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html).
+
+{% info_block warningBox "Missing secret" %}
+
+Without a secret, no challenge can be created: every login that requires a CAPTCHA is rejected, and an error is logged. Logins below the challenge thresholds keep working. Because anyone can push the realm-wide counter over its threshold with failed logins, a missing secret lets an attacker block all logins of a realm until the time window ends.
+
+{% endinfo_block %}
+
+3. Make sure your infrastructure meets the following requirements:
+
+- Serve the shop over HTTPS. The ALTCHA widget uses the Web Crypto API, which browsers provide only in secure contexts. Over plain HTTP, the widget shows *Verification failed*.
+- If you use a Content Security Policy, allow `worker-src blob:`, because the widget solves challenges in web workers.
+- Configure trusted proxies, for example `HttpConstants::YVES_TRUSTED_PROXIES` and `HttpConstants::ZED_TRUSTED_PROXIES`, with the addresses of your load balancers. Otherwise, all clients share the IP address of the load balancer, or a client can choose its IP address with a spoofed `X-Forwarded-For` header. The account counter does not depend on the IP address.
+- Run the key-value storage that holds the counters with `maxmemory-policy volatile-ttl`. All counters have a time to live, so this policy evicts the shortest-lived counters first under memory pressure.
+
 #### Configure audit logging
 
 1. Add the configuration:
@@ -534,6 +671,8 @@ Ensure that, in the database, the configured data has been added to the `spy_glo
 | ZedSystemUserSecurityPlugin | Sets security firewalls, such as rules and handlers, for system users; provides Yves access to Zed. |  | Spryker\Zed\SecurityGui\Communication\Plugin\Security                    |
 | ZedSessionRedisLockReleaserPlugin | Removes a session lock from key-value storage (Redis or Valkey) by session ID for Zed sessions. It's used for removing previously created locks by running `session:lock:remove`. |  | Spryker\Zed\SessionRedis\Communication\Plugin\Session                    |
 | CustomerSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with customer settings. |  | Spryker\Client\SecurityBlockerStorefrontCustomer\Plugin\SecurityBlocker\CustomerSecurityBlockerConfigurationSettingsExpanderPlugin |
+| CustomerSecurityBlockerLoginRealmConfigurationExpanderPlugin | Provides the per-account and CAPTCHA thresholds of the `customer` login realm. If no plugin provides a realm, the realm uses the module defaults, and a warning is logged. |  | Spryker\Client\SecurityBlockerStorefrontCustomer\Plugin\SecurityBlocker |
+| AltchaCaptchaProviderPlugin | Creates and verifies ALTCHA challenges. Accepts each solved challenge only once. If no CAPTCHA provider plugin is registered, no login requires a CAPTCHA, the account block still applies, and a warning is logged. |  | SprykerEco\Client\CaptchaAltcha\Plugin\Captcha |
 | AuditLogTagFilterBufferedStreamHandlerPlugin               | Provides the Monolog handler.                                                                                                                                                  |  | Spryker\Glue\Log\Plugin\Log                                                                                                        |
 | PsrLogMessageProcessorPlugin                               | Processes a record's message according to PSR-3 rules.                                                                                                                     |  | Spryker\Glue\Log\Plugin\Processor                                                                                                  |
 | EnvironmentProcessorPlugin                                 | Adds environment related data to the log data.                                                                                                                             |  | Spryker\Glue\Log\Plugin\Processor                                                                                                  |
@@ -668,6 +807,7 @@ namespace Pyz\Client\SecurityBlocker;
 
 use Spryker\Client\SecurityBlocker\SecurityBlockerDependencyProvider as SprykerSecurityBlockerDependencyProvider;
 use Spryker\Client\SecurityBlockerStorefrontCustomer\Plugin\SecurityBlocker\CustomerSecurityBlockerConfigurationSettingsExpanderPlugin;
+use Spryker\Client\SecurityBlockerStorefrontCustomer\Plugin\SecurityBlocker\CustomerSecurityBlockerLoginRealmConfigurationExpanderPlugin;
 
 class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependencyProvider
 {
@@ -679,6 +819,36 @@ class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependency
         return [
             new CustomerSecurityBlockerConfigurationSettingsExpanderPlugin(),
         ];
+    }
+
+    /**
+     * @return list<\Spryker\Client\SecurityBlockerExtension\Dependency\Plugin\SecurityBlockerLoginRealmConfigurationExpanderPluginInterface>
+     */
+    protected function getSecurityBlockerLoginRealmConfigurationExpanderPlugins(): array
+    {
+        return [
+            new CustomerSecurityBlockerLoginRealmConfigurationExpanderPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Client/Captcha/CaptchaDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Client\Captcha;
+
+use Spryker\Client\Captcha\CaptchaDependencyProvider as SprykerCaptchaDependencyProvider;
+use Spryker\Client\CaptchaExtension\Dependency\Plugin\CaptchaProviderPluginInterface;
+use SprykerEco\Client\CaptchaAltcha\Plugin\Captcha\AltchaCaptchaProviderPlugin;
+
+class CaptchaDependencyProvider extends SprykerCaptchaDependencyProvider
+{
+    protected function getCaptchaProviderPlugin(): ?CaptchaProviderPluginInterface
+    {
+        return new AltchaCaptchaProviderPlugin();
     }
 }
 ```
@@ -1151,7 +1321,7 @@ $config[SessionFileConstants::YVES_SESSION_FILE_PATH] = session_save_path();
 
 #### Set up SecurityBlocker
 
-Pass the locale used in the login check path to `SecurityBlocker`:
+Pass the locale used in the login check path to `SecurityBlocker`, and select the login protection strategy of the Storefront customer and agent logins:
 
 **src/Pyz/Yves/SecurityBlockerPage/SecurityBlockerPageConfig.php**
 
@@ -1168,6 +1338,8 @@ class SecurityBlockerPageConfig extends SprykerSecurityBlockerPageConfig
      * @var bool
      */
     protected const USE_EMAIL_CONTEXT_FOR_LOGIN_SECURITY_BLOCKER = false;
+
+    protected const string LOGIN_PROTECTION_STRATEGY = self::LOGIN_PROTECTION_STRATEGY_IP_AND_ACCOUNT;
 
     /**
      * @return bool
@@ -1186,6 +1358,28 @@ class SecurityBlockerPageConfig extends SprykerSecurityBlockerPageConfig
     }
 }
 ```
+
+The login protection strategy defines how a login form is protected. The same strategy constants exist in the configuration of every module that protects a login: `SecurityBlockerBackofficeGuiConfig`, `SecurityBlockerMerchantPortalGuiConfig`, `AgentSecurityBlockerMerchantPortalGuiConfig`, and `SecurityBlockerRestApiConfig`.
+
+| STRATEGY | BEHAVIOR |
+|---|---|
+| `LOGIN_PROTECTION_STRATEGY_IP` (`ip`), default | Failed logins are counted and blocked per IP address only. The login form never requires a CAPTCHA. |
+| `LOGIN_PROTECTION_STRATEGY_IP_AND_ACCOUNT` (`ip-and-account`) | Adds the per-account counter and the CAPTCHA step-up. You configure both in [Configure SecurityBlocker](#configure-securityblocker) and [Configure the CAPTCHA step-up](#configure-the-captcha-step-up). |
+
+With the `ip-and-account` strategy, each login request is processed as follows:
+
+1. If the account or the IP address is blocked, the request is rejected with the `429 Too Many Requests` status.
+2. If a CAPTCHA is required, the submitted solution is verified. A missing, invalid, expired, or reused solution rejects the request with an error message. The password is not checked, and the attempt is not counted.
+3. The attempt is counted against the account before the password is checked, so that parallel requests cannot exceed the limit of the account.
+4. A successful login resets the account counter. A failed login increases the IP counter and the realm-wide counter.
+
+The block messages are the same for existing and unknown accounts, so they do not reveal which accounts exist.
+
+{% info_block warningBox "Add the CAPTCHA field before you select the strategy" %}
+
+With the `ip-and-account` strategy, a login that requires a CAPTCHA is rejected when the request contains no solution. Before you select this strategy for a login, register the plugin that adds the CAPTCHA field to its login form. Otherwise, once a challenge threshold is reached, every login of the account is rejected with the `Please complete the security check.` message until the time window of the counter ends. For the Storefront customer login, register `CustomerLoginFormCaptchaExpanderPlugin` as described in [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html). For the agent login, register `AgentLoginFormCaptchaExpanderPlugin` as described in [Install the Agent Assist feature](/docs/pbc/all/user-management/latest/base-shop/install-and-upgrade/install-the-agent-assist-feature.html).
+
+{% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
@@ -1315,18 +1509,61 @@ class SessionRedisConfig extends SprykerSessionRedisConfig
 
 </details>
 
+#### Set up the CAPTCHA form theme
+
+To render the CAPTCHA widget in Storefront forms, register the form theme of the CAPTCHA module:
+
+**src/Pyz/Yves/ShopApplication/ShopApplicationConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\ShopApplication;
+
+use SprykerShop\Yves\ShopApplication\ShopApplicationConfig as SprykerShopApplicationConfig;
+
+class ShopApplicationConfig extends SprykerShopApplicationConfig
+{
+    public function getFormThemes(): array
+    {
+        return array_merge(parent::getFormThemes(), [
+            '@Captcha/resources/form/captcha.twig',
+        ]);
+    }
+}
+```
+
+The Storefront login forms render the CAPTCHA field through the `form` molecule, so the login templates need no changes.
+
+Rebuild the Storefront assets, so that they include the ALTCHA widget:
+
+```bash
+npm run yves
+```
+
+In deployment pipelines, use `npm run yves:production`.
 
 ### 3) Add translations
 
-1. Append the glossary according to your configuration:
+1. Append the glossary according to your configuration. The `account_blocked` message does not mention the IP address, because the block can also apply to the account. The `captcha.*` keys are the messages of the CAPTCHA step-up.
 
 **src/data/import/glossary.csv**
 
 ```yaml
 error.429,Zu viele Anfragen,de_DE
 error.429,Too Many Requests,en_US
-security_blocker_page.error.account_blocked,"Too many log in attempts from your address. Please wait %minutes% minutes before trying again.",en_US
-security_blocker_page.error.account_blocked,"Warten Sie bitte %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE
+security_blocker_page.error.account_blocked,"Too many login attempts. Please wait %minutes% minutes before trying again.",en_US
+security_blocker_page.error.account_blocked,"Zu viele Anmeldeversuche. Bitte warten Sie %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE
+captcha.error.required,"Please complete the security check.",en_US
+captcha.error.required,"Bitte schließen Sie die Sicherheitsprüfung ab.",de_DE
+captcha.error.invalid,"The security check could not be verified. Please try again.",en_US
+captcha.error.invalid,"Die Sicherheitsprüfung konnte nicht bestätigt werden. Bitte versuchen Sie es erneut.",de_DE
+captcha.error.expired,"The security check has expired. Please try again.",en_US
+captcha.error.expired,"Die Sicherheitsprüfung ist abgelaufen. Bitte versuchen Sie es erneut.",de_DE
+captcha.error.unavailable,"The security check is currently unavailable. Please try again later.",en_US
+captcha.error.unavailable,"Die Sicherheitsprüfung ist derzeit nicht verfügbar. Bitte versuchen Sie es später erneut.",de_DE
+captcha.noscript,"Please enable JavaScript to complete the security check.",en_US
+captcha.noscript,"Bitte aktivieren Sie JavaScript, um die Sicherheitsprüfung abzuschließen.",de_DE
 ```
 
 2. Add the glossary keys:
@@ -1442,18 +1679,14 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 }
 ```
 
-{% info_block warningBox "Validation" %}
+{% info_block warningBox "Verification" %}
 
-1. Make sure  is activated by
-
-2. To verify ,
-
-
-| Plugin | Verification |
+| PLUGIN | VERIFICATION |
 |------|-------------|
-| `SecurityBlockerCustomerEventDispatcherPlugin` | Attempt to sign in as a customer with incorrect credentials. After making the number of attempts specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS`, the account should get blocked for the period of time specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR`. Consequent login attempts should return the `429 Too many requests` error. |
-| `SecurityBlockerAgentEventDispatcherPlugin` | Repeat the prior verification using an agent agent account. The security behavior should match the configuration you've set up in [Set up configuration](#set-up-configuration). |
+| `SecurityBlockerCustomerEventDispatcherPlugin` | 1. On the Storefront login page, enter a wrong password for a customer account as many times as `CUSTOMER_ACCOUNT_CHALLENGE_NUMBER_OF_ATTEMPTS` defines. <br>2. Reload the login page. <br>If `CustomerLoginFormCaptchaExpanderPlugin` is registered, make sure the login form shows the CAPTCHA widget. Otherwise, make sure a login with the correct password is rejected with the `Please complete the security check.` message. |
+| `SecurityBlockerAgentEventDispatcherPlugin` | Repeat the previous verification on the agent login page, `https://mysprykershop.com/agent/login`, with an agent account. For agents, the threshold is `SecurityBlockerBackofficeConstants::USER_ACCOUNT_CHALLENGE_NUMBER_OF_ATTEMPTS`, and the CAPTCHA field is added by `AgentLoginFormCaptchaExpanderPlugin`. |
 
+To verify the CAPTCHA widget and the account block in the browser, follow the verification steps of the login form plugins in [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) and [Install the Agent Assist feature](/docs/pbc/all/user-management/latest/base-shop/install-and-upgrade/install-the-agent-assist-feature.html).
 
 {% endinfo_block %}
 

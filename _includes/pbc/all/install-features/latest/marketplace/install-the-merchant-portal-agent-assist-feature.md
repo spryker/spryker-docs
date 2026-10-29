@@ -66,6 +66,23 @@ $config[AgentSecurityBlockerMerchantPortalConstants::AGENT_MERCHANT_PORTAL_BLOCK
 
 ```
 
+The `AGENT_MERCHANT_PORTAL_*` settings count failed logins per IP address. To also count the login attempts of a merchant agent per account and require a CAPTCHA, select the `ip-and-account` login protection strategy. The attempts are counted in the `user` login realm, together with all other logins of the user. For the realm thresholds and the difference between the strategies, see [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-spryker-core-back-office-feature.html#configure-the-per-account-login-protection-for-users) and [Set up SecurityBlocker](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html#set-up-securityblocker).
+
+**src/Pyz/Zed/AgentSecurityBlockerMerchantPortalGui/AgentSecurityBlockerMerchantPortalGuiConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\AgentSecurityBlockerMerchantPortalGui;
+
+use Spryker\Zed\AgentSecurityBlockerMerchantPortalGui\AgentSecurityBlockerMerchantPortalGuiConfig as SprykerAgentSecurityBlockerMerchantPortalGuiConfig;
+
+class AgentSecurityBlockerMerchantPortalGuiConfig extends SprykerAgentSecurityBlockerMerchantPortalGuiConfig
+{
+    protected const string LOGIN_PROTECTION_STRATEGY = self::LOGIN_PROTECTION_STRATEGY_IP_AND_ACCOUNT;
+}
+```
+
 <details>
 <summary>src/Pyz/Zed/Acl/AclConfig.php</summary>
 
@@ -264,8 +281,8 @@ Make sure the following changes have been triggered in transfer objects:
 1. Append the glossary:
 
 ```csv
-agent_security_blocker_merchant_portal_gui.error.account_blocked,"Too many log in attempts from your address. Please wait %minutes% minutes before trying again.",en_US
-agent_security_blocker_merchant_portal_gui.error.account_blocked,"Warten Sie bitte %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE
+agent_security_blocker_merchant_portal_gui.error.account_blocked,"Too many login attempts. Please wait %minutes% minutes before trying again.",en_US
+agent_security_blocker_merchant_portal_gui.error.account_blocked,"Zu viele Anmeldeversuche. Bitte warten Sie %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE
 ```
 
 2. Import data:
@@ -288,6 +305,7 @@ Make sure that the configured data has been added to the `spy_glossary_key` and 
 | AgentMerchantPortalSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with agent merchant portal settings.                                    |               | Spryker\Client\AgentSecurityBlockerMerchantPortal\Plugin\SecurityBlocker                  |
 | ZedAgentMerchantUserSecurityPlugin                                    | Extends the security service with the AgentMerchantUser firewall.                                                       |               | Spryker\Zed\AgentSecurityMerchantPortalGui\Communication\Plugin\Security                  |
 | SecurityBlockerAgentMerchantPortalEventDispatcherPlugin               | Denies access to an agent after exceeding the limit of failed merchant portal agent login attempts.                        |               | Spryker\Zed\AgentSecurityBlockerMerchantPortalGui\Communication\Plugin\EventDispatcher    |
+| AgentMerchantPortalLoginFormCaptchaExpanderPlugin                     | Adds the CAPTCHA field to the Merchant Portal agent login form when the login protection requires a CAPTCHA for the account, the IP address, or the whole `user` login realm. | The CAPTCHA step-up and the Zed CAPTCHA form theme are set up. | Spryker\Zed\AgentSecurityBlockerMerchantPortalGui\Communication\Plugin\SecurityMerchantPortalGui |
 | MerchantAgentAclAccessCheckerStrategyPlugin                           | Checks if the merchant agent ACL access checker strategy is applicable for a given user and rule.                     |               | Spryker\Zed\AclMerchantAgent\Communication\Plugin\Acl                                     |
 | AgentMerchantUserCriteriaExpanderPlugin                               | Sets `null` for `MerchantUserCriteria.status` and `MerchantUserCriteria.merchantStatus` for Merchant agents.            |               | Spryker\Zed\AgentSecurityMerchantPortalGui\Communication\Plugin\SecurityMerchantPortalGui |
 | MerchantAgentUserQueryCriteriaExpanderPlugin                          | Expands a user's table query criteria with the `isMerchantAgent` condition.                                           |               | Spryker\Zed\MerchantAgent\Communication\Plugin\User                                       |
@@ -318,7 +336,7 @@ class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependency
      */
     protected function getSecurityBlockerConfigurationSettingsExpanderPlugins(): array
     {
-        return
+        return [
             new AgentMerchantPortalSecurityBlockerConfigurationSettingsExpanderPlugin(),
         ];
     }
@@ -425,6 +443,32 @@ class SecurityMerchantPortalGuiDependencyProvider extends SprykerSecurityMerchan
     }
 }
 ```
+
+**src/Pyz/Zed/AgentSecurityMerchantPortalGui/AgentSecurityMerchantPortalGuiDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\AgentSecurityMerchantPortalGui;
+
+use Spryker\Zed\AgentSecurityBlockerMerchantPortalGui\Communication\Plugin\SecurityMerchantPortalGui\AgentMerchantPortalLoginFormCaptchaExpanderPlugin;
+use Spryker\Zed\AgentSecurityMerchantPortalGui\AgentSecurityMerchantPortalGuiDependencyProvider as SprykerAgentSecurityMerchantPortalGuiDependencyProvider;
+
+class AgentSecurityMerchantPortalGuiDependencyProvider extends SprykerAgentSecurityMerchantPortalGuiDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\SecurityMerchantPortalGuiExtension\Dependency\Plugin\MerchantPortalLoginFormExpanderPluginInterface>
+     */
+    protected function getMerchantPortalAgentLoginFormExpanderPlugins(): array
+    {
+        return [
+            new AgentMerchantPortalLoginFormCaptchaExpanderPlugin(),
+        ];
+    }
+}
+```
+
+If your project overrides `@AgentSecurityMerchantPortalGui/Login/index.twig`, add the CAPTCHA field before the submit button with `form_widget`, as described for the Merchant Portal login in [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html#set-up-the-merchant-portal-login-protection).
 
 <details>
 <summary>src/Pyz/Zed/User/UserDependencyProvider.php</summary>
@@ -585,9 +629,11 @@ class UserMerchantPortalGuiDependencyProvider extends SprykerUserMerchantPortalG
 {% info_block warningBox "Verification" %}
 
 
-1. Go to `htpps://mp.mysprykershop.com/agent-security-merchant-portal-gui/login`.
-2. Enter incorrect login details for more than nine times within 900 seconds.
-    Make sure you get locked out of the login page for 360 seconds.
+1. Go to `https://mp.mysprykershop.com/agent-security-merchant-portal-gui/login`.
+2. Enter a wrong password for a merchant agent three times.
+    Make sure the login form shows a security check with a checkbox.
+3. Complete the security check and enter a wrong password until the login is rejected with the `Too many login attempts. Please wait 6 minutes before trying again.` notification.
+    Make sure a login with the correct password is rejected with the same notification for 360 seconds.
 
 {% endinfo_block %}
 

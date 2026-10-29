@@ -23,6 +23,8 @@ For the base `AiFoundation` setup, see [Install AI Commerce](/docs/dg/dev/ai/ai-
 
 ## Available features
 
+<div class="width-100">
+
 | FEATURE | DESCRIPTION |
 |---------|-------------|
 | [Visual Add to Cart](/docs/dg/dev/ai/ai-commerce/visual-add-to-cart/visual-add-to-cart.html) | Lets buyers upload a product image on the Quick Order page. AI recognizes products and quantities in the image and pre-fills the quick order form with matching SKUs. |
@@ -30,6 +32,8 @@ For the base `AiFoundation` setup, see [Install AI Commerce](/docs/dg/dev/ai/ai-
 | [Storefront Assistant](/docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant.html) | An AI shopping chat on the Storefront for logged-in customers. Agents search the catalog with Client-layer tools and stream the answer, product cards, and comparisons to the browser. |
 | [Smart PIM](/docs/dg/dev/ai/ai-commerce/smart-pim/smart-pim.html) | An AI assistant embedded in the Back Office product creation and editing pages. Helps catalog managers fill in product attributes, descriptions, and metadata through a conversational interface. |
 | [Smart CMS Content Assistant](/docs/dg/dev/ai/ai-commerce/content-assistant/smart-cms-content-assistant.html) | An AI-powered panel in the Back Office CMS Page and CMS Block glossary editors. Lets Back Office users generate and refine placeholder content per locale through a conversational AI interface. |
+
+</div>
 
 ## Installation
 

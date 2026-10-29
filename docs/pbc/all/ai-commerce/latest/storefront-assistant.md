@@ -12,6 +12,14 @@ related:
     link: docs/dg/dev/ai/ai-commerce/storefront-assistant/add-custom-storefront-assistant-agent.html
 ---
 
+<style>
+  .post-content pre {
+    white-space: pre;
+    word-break: normal;
+    overflow-x: auto;
+  }
+</style>
+
 Storefront Assistant is an AI chat on the Storefront that helps logged-in customers find, compare, and choose products. Customers describe what they need in their own words, and the assistant searches your catalog, shows matching products as cards, and explains how the results fit the request.
 
 The assistant answers only from your shop data. Every product, price, link, and rating that the assistant shows comes from your catalog at the time of the question. If nothing fits, the assistant says so and offers to broaden the search instead of showing a weak match.
@@ -25,6 +33,8 @@ Large or technical catalogs are hard to browse with filters and keywords only. C
 Because the assistant knows the page that the customer is on, it can answer questions about the current product, category, or search results without the customer repeating the context.
 
 ## Capabilities
+
+<div class="width-100">
 
 | CAPABILITY | DESCRIPTION |
 |------------|-------------|
@@ -40,6 +50,8 @@ Because the assistant knows the page that the customer is on, it can answer ques
 | Attachments | Accepts images and PDF files, for example a photo of a product that the customer wants to find. |
 | Chat history | Keeps the conversations of each customer for 30 days by default. Customers can reopen, delete, or bulk-delete conversations. |
 | Agent selection | Routes each question to the most suitable agent automatically. Customers can also select an agent manually. The feature ships with the **Product Discovery** agent, and developers can add more agents. |
+
+</div>
 
 ## How customers use Storefront Assistant
 
@@ -86,6 +98,8 @@ The assistant needs the API credentials of an AI vendor. For details, see [Confi
 
 You can configure the following settings in the Back Office under **AI Commerce&nbsp;<span aria-label="and then">></span>&nbsp;Storefront Assistant**:
 
+<div class="width-100">
+
 | SETTINGS GROUP | SETTING | DESCRIPTION |
 |----------------|---------|-------------|
 | General | Enable Storefront Assistant | Shows or hides the chat on the Storefront. |
@@ -95,6 +109,8 @@ You can configure the following settings in the Back Office under **AI Commerce&
 | AI Vendor | OpenAI Model, AWS Bedrock Model, Anthropic Model | The model of the selected vendor. The Back Office shows only the field of the selected vendor. The model must support streaming and tool calls. |
 | Suggested Prompts | Product Page Prompts, Category Page Prompts, Search Results Prompts, Default Prompts | The starter questions for each page type. |
 | Suggested Prompts | Product Results Prompts | The follow-up questions under the product cards in the chat. |
+
+</div>
 
 To set the API credentials of the AI vendor, go to **AI Vendor** in the Back Office. For details, see [Set credentials in the Back Office](/docs/dg/dev/ai/ai-commerce/configure-multiple-ai-providers.html#3-set-credentials-in-the-back-office).
 
@@ -106,12 +122,16 @@ To show the prompts in titled sections, separate the sections with a double pipe
 
 You can use the following placeholders. The assistant replaces them with the data of the current page:
 
+<div class="width-100">
+
 | PLACEHOLDER | REPLACED WITH | AVAILABLE IN |
 |-------------|---------------|--------------|
 | `{productName}` | The name of the current product, or of the first product in the chat results | Product Page Prompts, Product Results Prompts |
 | `{categoryName}` | The name of the current category | Category Page Prompts |
 | `{searchQuery}` | The search query of the customer | Search Results Prompts |
 | `{productCount}` | The number of products in the chat results | Product Results Prompts |
+
+</div>
 
 Example of **Product Page Prompts**:
 
@@ -131,8 +151,12 @@ Storefront Assistant sends the messages and attachments of the customer, and the
 
 ## Developer resources
 
+<div class="width-100">
+
 | RESOURCE | DESCRIPTION |
 |----------|-------------|
 | [Storefront Assistant](/docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant.html) | Technical overview: architecture, agents, tools, the stream protocol, and configuration options. |
 | [Install Storefront Assistant](/docs/dg/dev/ai/ai-commerce/storefront-assistant/install-storefront-assistant.html) | Step-by-step installation guide. |
 | [Add a custom Storefront Assistant agent](/docs/dg/dev/ai/ai-commerce/storefront-assistant/add-custom-storefront-assistant-agent.html) | How to add your own agent to the assistant. |
+
+</div>

@@ -23,6 +23,8 @@ The chat widget uses the shared chat frontend of the `AiCommerce` module, which 
 
 Back Office Assistant ships with four built-in agents:
 
+<div class="width-100">
+
 | AGENT | PLUGIN | DESCRIPTION |
 |-------|--------|-------------|
 | General Purpose | `GeneralAgentPlugin` | Answers general Spryker Back Office questions and provides navigation guidance. |
@@ -30,11 +32,15 @@ Back Office Assistant ships with four built-in agents:
 | Discount Management | `DiscountManagementAgentPlugin` | Creates and updates discounts through the Back Office API. |
 | Form Fill | `FormFillAgentPlugin` | Fills Back Office forms using natural language instructions. |
 
+</div>
+
 Agents are registered in `AiCommerceDependencyProvider::getBackofficeAssistantAgentPlugins()`. To implement and register a custom agent, see [Add a custom Back Office Assistant agent](/docs/dg/dev/ai/ai-commerce/backoffice-assistant/add-custom-backoffice-assistant-agent.html).
 
 ## Toolsets
 
 Each agent uses a set of tools registered in `AiFoundationDependencyProvider::getAiToolSetPlugins()`:
+
+<div class="width-100">
 
 | PLUGIN | DESCRIPTION |
 |--------|-------------|
@@ -44,14 +50,20 @@ Each agent uses a set of tools registered in `AiFoundationDependencyProvider::ge
 | `DiscountManagementToolSetPlugin` | Provides tools for reading, creating, and updating discounts. |
 | `FormFillToolSetPlugin` | Provides tools for filling Back Office form fields with values derived from natural language instructions. |
 
+</div>
+
 ## SSE streaming
 
 Tool call progress is streamed to the browser in real time using Server-Sent Events:
+
+<div class="width-100">
 
 | PLUGIN | DESCRIPTION |
 |--------|-------------|
 | `BackofficeAssistantSsePreToolCallPlugin` | Sends a streaming event before each tool call. |
 | `BackofficeAssistantSsePostToolCallPlugin` | Sends a streaming event after each tool call. |
+
+</div>
 
 The stream uses the same protocol as Storefront Assistant: the AI SDK UI Message Stream Protocol. Before each tool call, the stream contains the `tool-input-start` and `tool-input-available` events. After each tool call, the stream contains the `tool-output-available` event. For the event format, see [Stream protocol](/docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant.html#stream-protocol).
 
@@ -59,12 +71,16 @@ The stream uses the same protocol as Storefront Assistant: the AI SDK UI Message
 
 `BackofficeAssistantChatController` handles all requests of the chat widget:
 
+<div class="width-100">
+
 | ENDPOINT | METHOD | DESCRIPTION |
 |----------|--------|-------------|
 | `/ai-commerce/backoffice-assistant-chat/prompt` | `POST` | Sends a message and returns the answer as an SSE stream. |
 | `/ai-commerce/backoffice-assistant-chat/conversations` | `GET` | Returns the conversations of the user, the available agents, and the agent that the user selected. |
 | `/ai-commerce/backoffice-assistant-chat/conversation-messages` | `GET` | Returns the messages of the conversation in the `conversationReference` query parameter. |
 | `/ai-commerce/backoffice-assistant-chat/delete-conversation` | `DELETE` | Deletes the conversations in the `conversationReferences` list. |
+
+</div>
 
 The `prompt` and `delete-conversation` requests must have the `X-CSRF-Token` header with the `backoffice-assistant` CSRF token.
 
@@ -89,6 +105,8 @@ Each agent uses a dedicated named AI configuration entry in `AiFoundation`. This
 
 The following `AiCommerceConfig` methods return the AI configuration name for the intent router and each agent. Each method returns `null` by default to use the `AiFoundation` default configuration, and you override it to return a named configuration entry:
 
+<div class="width-100">
+
 | METHOD | DESCRIPTION |
 |--------|-------------|
 | `AiCommerceConfig::getIntentRouterAiConfigurationName()` | Configuration for the intent routing model. |
@@ -96,6 +114,8 @@ The following `AiCommerceConfig` methods return the AI configuration name for th
 | `AiCommerceConfig::getOrderManagementAgentAiConfigurationName()` | Configuration for the Order Management agent. |
 | `AiCommerceConfig::getDiscountManagementAgentAiConfigurationName()` | Configuration for the Discount Management agent. |
 | `AiCommerceConfig::getFormFillAgentAiConfigurationName()` | Configuration for the Form Fill agent. |
+
+</div>
 
 ## System prompts
 
@@ -105,12 +125,16 @@ System prompts for each agent are managed in the Back Office under **AI Commerce
 
 The feature and individual agents can be enabled or disabled from the Back Office under **AI Commerce > Back Office Assistant > General**:
 
+<div class="width-100">
+
 | SETTING | DEFAULT | DESCRIPTION |
 |---------|---------|-------------|
 | `is_enabled` | `false` | Enables or disables the Back Office Assistant chat widget. |
 | `is_order_management_agent_enabled` | `true` | Enables or disables the Order Management Agent. |
 | `is_discount_management_agent_enabled` | `true` | Enables or disables the Discount Management Agent. |
 | `is_form_fill_agent_enabled` | `true` | Enables or disables the Form Fill Agent. |
+
+</div>
 
 ## Install
 

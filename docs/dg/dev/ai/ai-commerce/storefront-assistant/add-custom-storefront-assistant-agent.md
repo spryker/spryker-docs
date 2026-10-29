@@ -12,6 +12,14 @@ related:
     link: docs/dg/dev/ai/ai-foundation/ai-foundation-stream-prompt.html
 ---
 
+<style>
+  .post-content pre {
+    white-space: pre;
+    word-break: normal;
+    overflow-x: auto;
+  }
+</style>
+
 Storefront Assistant ships with the **Product Discovery** agent. You can add your own agents to handle specific kinds of questions with a dedicated system prompt and tool list. Each agent has its own toggle in the Back Office, and customers can select it in the chat.
 
 This document shows how to add a **Gift Advisor** agent that helps customers find a gift with a subset of the existing catalog tools.
@@ -39,6 +47,8 @@ Register a specialized agent before `ProductDiscoveryAgentPlugin`, and make its 
 
 An agent implements `SprykerFeature\Client\AiCommerce\Dependency\StorefrontAssistant\StorefrontAssistantAgentPluginInterface`:
 
+<div class="width-100">
+
 | METHOD | DESCRIPTION |
 |--------|-------------|
 | `getName(): string` | Returns a unique name, for example `gift_advisor`. Use lowercase letters and underscores. The name is also part of the glossary keys of the agent. |
@@ -47,7 +57,11 @@ An agent implements `SprykerFeature\Client\AiCommerce\Dependency\StorefrontAssis
 | `getEnabledConfigurationKey(): string` | Returns the Configuration Management key of the agent toggle. |
 | `executeAgent(StorefrontAssistantChatRequestTransfer): PromptResponseTransfer` | Builds the prompt request, calls `AiFoundationClientInterface::streamPrompt()`, and returns the response. For details on `streamPrompt()`, see [Stream AI responses with the AiFoundation module](/docs/dg/dev/ai/ai-foundation/ai-foundation-stream-prompt.html). |
 
+</div>
+
 `StorefrontAssistantChatRequestTransfer` gives the agent the following data:
+
+<div class="width-100">
 
 | PROPERTY | CONTENT |
 |----------|---------|
@@ -59,7 +73,11 @@ An agent implements `SprykerFeature\Client\AiCommerce\Dependency\StorefrontAssis
 | `selectedAgent` | The agent that the customer selected, or an empty value for **Auto**. |
 | `storefrontAssistantPageContext` | The product, category, or search context of the current page. |
 
+</div>
+
 The `PromptRequestTransfer` that the agent sends must contain the following fields:
+
+<div class="width-100">
 
 | FIELD | VALUE |
 |-------|-------|
@@ -68,6 +86,8 @@ The `PromptRequestTransfer` that the agent sends must contain the following fiel
 | `toolNames` | The tool names of the agent. Each name must belong to a plugin in the Client `AiFoundationDependencyProvider::getAiToolPlugins()`. |
 | `systemPrompt` | The configured system prompt with the page context. |
 | `promptMessage` | The customer message with the attachments. |
+
+</div>
 
 `StorefrontAssistantRequestMapperInterface::mapStorefrontAssistantChatRequestToPromptRequest()` sets all of these fields. Use this mapper instead of building the transfer manually.
 
@@ -400,12 +420,16 @@ A tool is either *research* or *customer-facing*. The result of a research tool 
 
 The tool plugin implements `Spryker\Client\AiFoundation\Dependency\Tools\ToolPluginInterface`:
 
+<div class="width-100">
+
 | METHOD | DESCRIPTION |
 |--------|-------------|
 | `getName(): string` | Returns the unique tool name that the model calls. Use lowercase letters and underscores. |
 | `getDescription(): string` | Returns the instruction for the model. It must say what the tool returns and when to call it. The model decides from this text whether to call the tool. |
 | `getParameters(): array` | Returns the `ToolParameterInterface` list of the arguments that the model sends. Use `SprykerFeature\Client\AiCommerce\StorefrontAssistant\Tool\ToolParameter`, which takes the name, the `ToolParameterType`, a description, and a flag for a required argument. |
 | `execute(...$arguments): mixed` | Runs the tool. The arguments are the values of the parameters, by name. Return an array. The array is encoded to JSON and sent to the model. |
+
+</div>
 
 **src/Pyz/Client/AiCommerce/Plugin/StorefrontAssistant/Tool/GiftOccasionGuideToolPlugin.php**
 

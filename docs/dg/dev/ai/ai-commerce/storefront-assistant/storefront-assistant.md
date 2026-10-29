@@ -14,6 +14,14 @@ related:
     link: docs/dg/dev/ai/ai-foundation/ai-foundation-stream-prompt.html
 ---
 
+<style>
+  .post-content pre {
+    white-space: pre;
+    word-break: normal;
+    overflow-x: auto;
+  }
+</style>
+
 Storefront Assistant is an AI chat for logged-in Storefront customers. It answers shopping questions only from the shop catalog and streams each answer to the browser as Server-Sent Events (SSE).
 
 For the business overview, see [Storefront Assistant](/docs/pbc/all/ai-commerce/latest/storefront-assistant.html).
@@ -24,6 +32,8 @@ For the business overview, see [Storefront Assistant](/docs/pbc/all/ai-commerce/
 
 Storefront Assistant runs in the Yves application. The chat logic, the agents, the tools, and the call to the AI provider run in the Client layer, inside the Yves process. Zed does not call the AI provider. Zed only loads the AI configuration and the conversation history, saves the conversation, and writes the audit log.
 
+<div class="width-100">
+
 | PART | IMPLEMENTATION | LAYER |
 |------|----------------|-------|
 | Chat widget | `StorefrontAssistantWidget`, which renders the `storefront-assistant` organism. The organism embeds the shared chat of the module. | Yves |
@@ -33,6 +43,8 @@ Storefront Assistant runs in the Yves application. The chat logic, the agents, t
 | Streaming, tool loop, and call to the AI provider | `AiFoundationClientInterface::streamPrompt()` | Client |
 | AI configuration, chat history storage, and audit log | The Zed gateway of the `AiFoundation` module and its `spy_ai_conversation_history` table | Zed |
 | Conversation list and index | Key-value storage (Redis) with a time to live (TTL) | Client |
+
+</div>
 
 For each chat turn, the following happens:
 
@@ -57,11 +69,15 @@ An agent is a plugin that has its own system prompt, tool list, and Back Office 
 
 The following Client plugins write the stream events. They are registered in the Client `AiFoundationDependencyProvider`:
 
+<div class="width-100">
+
 | PLUGIN | STACK | DESCRIPTION |
 |--------|-------|-------------|
 | `StorefrontAssistantSsePreToolCallPlugin` | `getPreToolCallPlugins()` | Sends `tool-input-start` and `tool-input-available` before each tool call. |
 | `StorefrontAssistantSsePostToolCallPlugin` | `getPostToolCallPlugins()` | Sends `tool-output-available` or `tool-output-denied` after each customer-facing tool call. |
 | `StorefrontAssistantSseStreamEventPlugin` | `getStreamEventPlugins()` | Sends the text and reasoning deltas of the model. |
+
+</div>
 
 These plugins implement the `AiFoundation` streaming plugin interfaces. For the plugin contract, see [Stream AI responses with the AiFoundation module](/docs/dg/dev/ai/ai-foundation/ai-foundation-stream-prompt.html#plugin-reference).
 
@@ -71,12 +87,16 @@ The SSE plugins send events only for the AI configurations that `AiCommerceConfi
 
 `StorefrontAssistantRouteProviderPlugin` adds the following routes:
 
+<div class="width-100">
+
 | METHOD | PATH | ROUTE NAME | CSRF HEADER | RESPONSE |
 |--------|------|------------|-------------|----------|
 | `POST` | `/shopping-assistant/prompt` | `shopping-assistant/prompt` | Yes | SSE stream |
 | `GET` | `/shopping-assistant/conversations` | `shopping-assistant/conversations` | No | JSON |
 | `GET` | `/shopping-assistant/conversations/messages` | `shopping-assistant/conversations/messages` | No | JSON |
 | `DELETE` | `/shopping-assistant/conversations` | `shopping-assistant/conversations/delete` | Yes | JSON |
+
+</div>
 
 Requests with a CSRF header must send the `X-CSRF-Token` header with a token for the `storefront_assistant` token ID. The widget reads the token from the page.
 
@@ -96,6 +116,8 @@ The body of `POST /shopping-assistant/prompt` is a JSON object:
 }
 ```
 
+<div class="width-100">
+
 | FIELD | REQUIRED | RULE |
 |-------|----------|------|
 | `message` | Yes | Must not be empty. The maximum length comes from `getStorefrontAssistantMaxMessageLengthCharacters()`, which is calculated from the conversation history context window of `AiFoundation`. |
@@ -104,9 +126,13 @@ The body of `POST /shopping-assistant/prompt` is a JSON object:
 | `pageContext` | No | `pageType` is `product`, `category`, or `search`. The server removes the context for other values. |
 | `attachments` | No | A maximum of five files of 5&nbsp;MiB each. Allowed types: JPEG, PNG, WebP, GIF, and PDF. The server checks the binary signature of each file. |
 
+</div>
+
 ## Stream protocol
 
 The prompt endpoint follows the [AI SDK UI Message Stream Protocol](https://ai-sdk.dev/docs/ai-sdk-ui/stream-protocol). This lets you replace the shipped widget with any client that understands this protocol.
+
+<div class="width-100">
 
 | ELEMENT | VALUE |
 |---------|-------|
@@ -116,13 +142,19 @@ The prompt endpoint follows the [AI SDK UI Message Stream Protocol](https://ai-s
 | End of stream | `data: [DONE]\n\n` |
 | Writer | `SprykerFeature\Shared\AiCommerce\Stream\StreamEventEmitter`, which flushes the output after each frame |
 
+</div>
+
 A successful stream has the following response headers:
+
+<div class="width-100">
 
 | HEADER | VALUE | PURPOSE |
 |--------|-------|---------|
 | `Content-Type` | `text/event-stream` | Marks the response as SSE. |
 | `Cache-Control` | `no-cache` | Prevents caching of the stream. |
 | `X-Accel-Buffering` | `no` | Disables nginx buffering, so each frame reaches the browser immediately. |
+
+</div>
 
 {% info_block infoBox "Protocol header" %}
 
@@ -131,6 +163,8 @@ The protocol recommends the `x-vercel-ai-ui-message-stream: v1` response header 
 {% endinfo_block %}
 
 ### Part types
+
+<div class="width-100">
 
 | PART TYPE | FIELDS | WHEN |
 |-----------|--------|------|
@@ -148,6 +182,8 @@ The protocol recommends the `x-vercel-ai-ui-message-stream: v1` response header 
 | `tool-output-denied` | `toolCallId` | When a customer-facing tool was not allowed to run. |
 | `error` | `errorText` | On a validation error, when no agent is enabled, on a vendor failure, or on an exception. The server closes the open text or reasoning block first. |
 | `finish` | — | Always, as the last part, also after an `error`. |
+
+</div>
 
 The server follows these rules:
 
@@ -219,6 +255,8 @@ The `errorText` value is a glossary translation in the locale of the request. Th
 
 The `output.result` value is a JSON-encoded string, not a JSON object. Decode it a second time. The content depends on the tool:
 
+<div class="width-100">
+
 | TOOL | KEYS OF THE DECODED RESULT |
 |------|---------------------------|
 | `display_products` | `products[]`, `displayedCount`, and optionally `unknownIdProductAbstracts[]` and `alreadyShown`. When the products come from a `catalog_search` call of the same turn, also `refinementChips[]`, `activeFilters[]`, and `seeAll`. |
@@ -226,22 +264,32 @@ The `output.result` value is a JSON-encoded string, not a JSON object. Decode it
 | `offer_choices` | `question`, `choices[]`, and `nextStep`. On failure, `error`. |
 | `display_setup` | `products[]`, `totalFormatted`, and `budgetFormatted`. On failure, `error`, and `items[]` when the setup exceeds the budget. |
 
+</div>
+
 A product card has the following fields: `idProductAbstract`, `name`, `sku`, `url`, `imageUrl`, `description`, `price`, `priceFormatted`, `originalPrice`, `originalPriceFormatted`, `currencyIsoCode`, `priceMode`, `rating`, `reviewCount`, `labelIds`, `labels`, `attributes`, `variants`, `variantCount`, `reason`, and `isPriceOutlier`. Plugins in `getStorefrontAssistantProductCollectionExpanderPlugins()` can add more fields.
+
+<div class="width-100">
 
 | OBJECT | FIELDS |
 |--------|--------|
 | Refinement chip in `refinementChips[]` and `activeFilters[]` | `label`, `filterArgument`, `value`, `matchCount` |
 | `seeAll` | `totalResults`, `queryString`, and `categoryUrl` when the search had a category. Sent only when more products match than the chat shows. |
 
+</div>
+
 ### Conversation history endpoints
 
 The history endpoints return plain JSON:
+
+<div class="width-100">
 
 | METHOD AND PATH | REQUEST | RESPONSE |
 |-----------------|---------|----------|
 | `GET /shopping-assistant/conversations` | Optional query parameter `conversationReference` or `conversationReferences[]` | `{"conversations":[{"conversationReference","name","updatedAt"}]}`, newest first |
 | `GET /shopping-assistant/conversations/messages` | Query parameter `conversationReference` | `{"conversationReference","messages":[{"role","content","attachments":[{"name"}],"toolInvocations":[{"name","result"}]}]}` |
 | `DELETE /shopping-assistant/conversations` | `X-CSRF-Token` header and a JSON body with `conversationReference` or `conversationReferences` | `{"deletedCount": N}` |
+
+</div>
 
 `toolInvocations[].result` has the same format as `output.result` in the stream, with two differences:
 
@@ -254,6 +302,8 @@ The history endpoints return plain JSON:
 
 Storefront Assistant reads its settings from the **Storefront Assistant** tab of the `ai_commerce` feature in Configuration Management. All values are read on each request, so changes apply without a deployment.
 
+<div class="width-100">
+
 | SETTING KEY | TYPE | DESCRIPTION |
 |-------------|------|-------------|
 | `ai_commerce:storefront_assistant:general:is_enabled` | boolean | Enables the chat widget and the endpoints. |
@@ -263,11 +313,15 @@ Storefront Assistant reads its settings from the **Storefront Assistant** tab of
 | `ai_commerce:storefront_assistant:ai_vendor:openai_model`, `aws_model`, `anthropic_model` | string | The model of each AI vendor. |
 | `ai_commerce:storefront_assistant:suggested_prompts:*` | text | The suggested prompts for each page type and under the product cards. Separate the prompts with `\|`. To show titled sections, separate the sections with `\|\|` and start each section with its title and a colon. |
 
+</div>
+
 The Client runs in the Yves process and reads only Storefront settings. Every setting that the Client or Yves reads must have `storefront: true`. The model settings must have `storefront: false`, because Zed resolves them.
 
 ### Client configuration
 
 You can override the following methods in the Client `AiCommerceConfig`:
+
+<div class="width-100">
 
 | METHOD | DEFAULT | DESCRIPTION |
 |--------|---------|-------------|
@@ -283,6 +337,8 @@ You can override the following methods in the Client `AiCommerceConfig`:
 | `getStorefrontAssistantInlineCategoryTreeLimit()` | `200` | The maximum number of category lines that the system prompt of the **Product Discovery** agent contains. A larger category tree is not added to the prompt, and the agent uses `category_tree` instead. |
 | `getStorefrontAssistantMaxRefinementChips()` | `6` | The maximum number of refinement chips under the product cards. |
 | `getStorefrontAssistantPriceOutlierFactor()` | `5.0` | A product price that is this many times higher than the median price of the other products with the same name is marked as unusual. |
+
+</div>
 
 The attachment limits come from the Shared `AiCommerceConfig`: `getStorefrontAssistantSupportedAttachmentMimeTypes()`, `getStorefrontAssistantMaxAttachmentSizeBytes()`, and `getStorefrontAssistantMaxAttachmentCount()`.
 
@@ -304,11 +360,15 @@ The Storefront loads the shared chat as follows:
 
 Project files replace core files with the same path:
 
+<div class="width-100">
+
 | TO CHANGE | DO THIS |
 |-----------|---------|
 | A Storefront feature | Override the molecule in the project Yves theme and extend `molecule('<molecule>', '@SprykerFeature:AiCommerce')`. To change only its settings, override the `data` of the molecule. |
 | A shared chat template on all hosts | Put a Twig file with the same path in `src/Pyz/Shared/AiCommerce/Theme/default/Chat/`. To extend the core template instead of copying it, use the `@SprykerFeature:AiCommerce/Chat/...` path. |
 | A shared chat feature script | Put an `index.ts` file with the same path in `src/Pyz/Shared/AiCommerce/Theme/default/Chat/features/<feature>/` and register a subclass of the core class. |
+
+</div>
 
 The module README describes the blocks, the events, the style tokens, the tool renderer contract, and the other extension points of the shared chat: `vendor/spryker-feature/ai-commerce/src/SprykerFeature/Shared/AiCommerce/Theme/default/Chat/README.md`.
 
@@ -318,12 +378,16 @@ The frontend reads the page context from the DOM and sends it with each prompt. 
 
 The `chat-page-context` molecule defines the page context as a list of rules in its `data.rules`. The first rule that matches the page wins:
 
+<div class="width-100">
+
 | PAGE TYPE | MATCHES WHEN THE PAGE HAS | READS |
 |-----------|---------------------------|-------|
 | `search` | `.js-catalog__form` and a value in `input[name="q"]` | The search query and the active filters |
 | `category` | `.js-catalog__form` | The category name from `h1` and the active filters |
 | `product` | `.product-detail` | The product name and SKU from `meta[itemprop="name"]` and `meta[itemprop="abstractSku"]` inside `[itemtype="https://schema.org/Product"]` |
 | `category` | `[itemtype="https://schema.org/Product"]` without `.js-catalog__form` and `.product-detail`, with at least three URL path segments | The category name from `h1` |
+
+</div>
 
 The active filters are the checked checkboxes and radio buttons in `.js-catalog__form`.
 
@@ -351,14 +415,20 @@ Do not use `rgba()` or `color.adjust()` on `$setting-color-main`. This value is 
 
 When the panel is open, the chat changes the page layout with these attributes on the `<html>` element:
 
+<div class="width-100">
+
 | ATTRIBUTE | EFFECT |
 |-----------|--------|
 | `data-chat-docked` | The panel is open and narrower than the screen. The `body` gets a right padding equal to the `--chat-dock-width` custom property, so the page moves to the left. |
 | `data-chat-expanded` | The panel uses the full width, and the page does not scroll. |
 
+</div>
+
 The `body` padding does not move elements with `position: fixed` or `position: sticky`, such as a sticky header or a cookie banner. If such elements cover the panel, add `right: var(--chat-dock-width)` to them under `:root[data-chat-docked]`.
 
 ## Extension points
+
+<div class="width-100">
 
 | INTERFACE | STACK | PURPOSE |
 |-----------|-------|---------|
@@ -366,6 +436,8 @@ The `body` padding does not move elements with `position: fixed` or `position: s
 | `SprykerFeature\Client\AiCommerce\Dependency\StorefrontAssistant\StorefrontAssistantProductCollectionExpanderPluginInterface` | Client `AiCommerceDependencyProvider::getStorefrontAssistantProductCollectionExpanderPlugins()` | Adds data to the product cards. A plugin must not throw an exception, because an exception stops the turn. |
 | `Spryker\Client\AiFoundation\Dependency\Tools\ToolPluginInterface` | Client `AiFoundationDependencyProvider::getAiToolPlugins()` | Adds a tool. Also add the tool name to the tool list of an agent. |
 | `Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigExpanderPluginInterface` | Client `AiCommerceDependencyProvider::getSearchConfigExpanderPlugins()` | Adds facets to `catalog_search`. |
+
+</div>
 
 ## Install
 

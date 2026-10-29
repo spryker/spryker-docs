@@ -9,6 +9,8 @@ AI Commerce brings AI-powered capabilities to your Spryker storefront and back o
 
 ## Features
 
+<div class="width-100">
+
 | FEATURE                                                                             | DESCRIPTION                                                                                                                                                                                                                                                    |
 |---------|-------------|
 | [Smart PIM](/docs/pbc/all/ai-commerce/latest/smart-pim.html)                        | Help catalog managers enrich product information directly in the Back Office PIM. Get guided suggestions to speed up day-to-day catalog work, improve consistency across markets and languages, and keep full control through human review and auditability.    |
@@ -17,6 +19,8 @@ AI Commerce brings AI-powered capabilities to your Spryker storefront and back o
 | [Storefront Assistant](/docs/pbc/all/ai-commerce/latest/storefront-assistant.html) | An AI shopping chat on the Storefront. Logged-in customers describe what they need in their own words, and the assistant finds, compares, and combines products from your catalog. |
 | [Search by Image](/docs/pbc/all/ai-commerce/latest/search-by-image.html)            | Lets customers upload a photo to search for products. AI analyzes the image, identifies a search term, and redirects to search results or the first matching product page.                                                                                     |
 | [Smart CMS Content Assistant](/docs/pbc/all/ai-commerce/latest/smart-cms-content-assistant.html) | An AI-powered panel in the Back Office CMS Page and CMS Block glossary editors. Back Office users can generate and refine placeholder content per locale through a conversational AI interface. |
+
+</div>
 
 ![Smart CMS Content Assistant](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-commerce/smart-cms.png)
 
@@ -28,8 +32,12 @@ All AI Commerce features are provider-agnostic. You can configure OpenAI, AWS Be
 
 ## Who benefits
 
+<div class="width-100">
+
 | ROLE | BENEFIT |
 |------|---------|
 | B2B buyers | Faster reordering from photos of shelves, product lists, or packaging. Find products by uploading a photo instead of searching by name. Find and compare products by describing the need in a chat. |
 | Store operators | Reduced support requests caused by manual order entry errors. Faster Back Office workflows through conversational AI assistance. |
 | Developers | AI provider-agnostic integration — swap or configure models per feature via configuration. |
+
+</div>

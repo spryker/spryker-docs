@@ -5,6 +5,14 @@ last_updated: Oct 29, 2026
 template: howto-guide-template
 ---
 
+<style>
+  .post-content pre {
+    white-space: pre;
+    word-break: normal;
+    overflow-x: auto;
+  }
+</style>
+
 AI Commerce supports three AI providers: OpenAI, AWS Bedrock, and Anthropic. Each feature — Back Office Assistant, Smart CMS Content Assistant, Visual Add to Cart (Quick Order), Search by Image, and Smart PIM — can use a different provider independently. This lets you optimize cost, latency, or capability per feature without changing any application code.
 
 ![Configure multiple AI providers](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-commerce/multiple-provider.png)
@@ -339,11 +347,15 @@ console configuration:sync
 1. In the Back Office, go to **AI Vendor**.
 2. For each provider you want to use, open its tab (OpenAI, Anthropic, or AWS Bedrock) and enter the credentials:
 
+<div class="width-100">
+
 | PROVIDER | REQUIRED CREDENTIALS |
 |----------|---------------------|
 | OpenAI | API token |
 | Anthropic | API key |
 | AWS Bedrock | API token, AWS region |
+
+</div>
 
 3. Click **Save**.
 
@@ -359,6 +371,8 @@ Each AI Commerce feature has an **AI Configuration** radio selector in the Back 
 
 Default models per feature and provider:
 
+<div class="width-100">
+
 | FEATURE | OPENAI | AWS BEDROCK | ANTHROPIC |
 |---------|--------|-------------|-----------|
 | Smart PIM | `gpt-5-nano` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
@@ -367,6 +381,8 @@ Default models per feature and provider:
 | Search by Image | `gpt-5-nano` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
 | Back Office Assistant | `gpt-6-luna` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
 | Storefront Assistant | `gpt-6-luna` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
+
+</div>
 
 {% info_block infoBox "Default model selection" %}
 
@@ -384,6 +400,8 @@ All AI Commerce features require a model that supports image input and structure
 
 The following table maps each feature to its configuration constants and the Back Office setting key that controls the active provider.
 
+<div class="width-100">
+
 | FEATURE | ACTIVE PROVIDER SETTING KEY | OPENAI CONFIG CONSTANT | AWS CONFIG CONSTANT | ANTHROPIC CONFIG CONSTANT |
 |---------|-----------------------------|------------------------|---------------------|---------------------------|
 | Smart PIM | `ai_commerce:smart_pim:ai_vendor:ai_configuration` | `AI_CONFIGURATION_SMART_PIM_OPENAI` | `AI_CONFIGURATION_SMART_PIM_AWS` | `AI_CONFIGURATION_SMART_PIM_ANTHROPIC` |
@@ -392,5 +410,7 @@ The following table maps each feature to its configuration constants and the Bac
 | Search by Image | `ai_commerce:search_by_image:ai_vendor:ai_configuration` | `AI_CONFIGURATION_SEARCH_BY_IMAGE_OPENAI` | `AI_CONFIGURATION_SEARCH_BY_IMAGE_AWS` | `AI_CONFIGURATION_SEARCH_BY_IMAGE_ANTHROPIC` |
 | Back Office Assistant | `ai_commerce:backoffice_assistant:ai_vendor:ai_configuration` | `AI_CONFIGURATION_INTENT_ROUTER_OPENAI` (and `_GENERAL_AGENT_OPENAI`, `_ORDER_MANAGEMENT_OPENAI`, `_DISCOUNT_MANAGEMENT_OPENAI`, `_FORM_FILL_OPENAI`) | `AI_CONFIGURATION_INTENT_ROUTER_AWS` (and `_AWS` variants) | `AI_CONFIGURATION_INTENT_ROUTER_ANTHROPIC` (and `_ANTHROPIC` variants) |
 | Storefront Assistant | `ai_commerce:storefront_assistant:ai_vendor:ai_configuration` | `AI_CONFIGURATION_STOREFRONT_ASSISTANT_OPENAI` | `AI_CONFIGURATION_STOREFRONT_ASSISTANT_AWS` | `AI_CONFIGURATION_STOREFRONT_ASSISTANT_ANTHROPIC` |
+
+</div>
 
 All constants are in your project's `Pyz\Shared\AiCommerce\AiCommerceConstants`.

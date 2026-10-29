@@ -5,15 +5,27 @@ last_updated: Oct 29, 2026
 template: feature-integration-guide-template
 ---
 
+<style>
+  .post-content pre {
+    white-space: pre;
+    word-break: normal;
+    overflow-x: auto;
+  }
+</style>
+
 This document describes how to install the AI Commerce base package. Individual AI Commerce features require additional installation steps — see their respective installation guides.
 
 ## Prerequisites
 
 Install the required features:
 
+<div class="width-100">
+
 | NAME | VERSION | INSTALLATION GUIDE |
 |------|---------|-------------------|
 | AiFoundation | {{page.release_tag}} | |
+
+</div>
 
 ## 1) Install the required modules
 

@@ -12,6 +12,14 @@ related:
     link: docs/dg/dev/ai/ai-commerce/configure-multiple-ai-providers.html
 ---
 
+<style>
+  .post-content pre {
+    white-space: pre;
+    word-break: normal;
+    overflow-x: auto;
+  }
+</style>
+
 Storefront Assistant is an AI chat for logged-in Storefront customers. It answers shopping questions from the shop catalog and streams each answer to the browser. This document describes how to install the Storefront Assistant feature.
 
 For the architecture and the configuration options, see [Storefront Assistant](/docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant.html).
@@ -24,10 +32,14 @@ Follow the steps in the following sections to install the Storefront Assistant f
 
 Install the required features:
 
+<div class="width-100">
+
 | NAME | VERSION | INSTALLATION GUIDE |
 |------|---------|-------------------|
 | AI Commerce | {{page.release_tag}} | [Install AI Commerce](/docs/dg/dev/ai/ai-commerce/install-ai-commerce.html) |
 | Configuration Management | {{page.release_tag}} | [Install the Configuration Management feature](/docs/dg/dev/integrate-and-configure/integrate-configuration-feature.html) |
+
+</div>
 
 {% info_block infoBox "Logged-in customers only" %}
 
@@ -60,11 +72,15 @@ console transfer:generate
 
 Make sure the following changes have been applied:
 
+<div class="width-100">
+
 | ENTITY | TYPE | EVENT |
 |--------|------|-------|
 | spy_ai_conversation_history | table | created |
 | StorefrontAssistantChatRequestTransfer | class | created |
 | StorefrontAssistantPageContextTransfer | class | created |
+
+</div>
 
 {% endinfo_block %}
 
@@ -211,11 +227,15 @@ If you already return other names from this method, add the Storefront Assistant
 
 4. Configure the Client `AiCommerceConfig`. The module returns empty values for these three methods, so the project must override them:
 
+<div class="width-100">
+
 | METHOD | EFFECT WITHOUT AN OVERRIDE |
 |--------|----------------------------|
 | `getStorefrontAssistantAiConfigurationName()` | Zed cannot resolve the AI configuration, and every turn fails. |
 | `getProductDiscoveryAgentToolNames()` | The agent has no tools and cannot search the catalog. |
 | `getStorefrontAssistantCustomerFacingToolNames()` | The chat shows no product cards, comparison tables, choices, or setups. |
+
+</div>
 
 **src/Pyz/Client/AiCommerce/AiCommerceConfig.php**
 
@@ -784,6 +804,8 @@ Make sure that the configured data has been added to the `spy_glossary_key` and 
 
 1. Register the tool plugins and the SSE plugins in the Client `AiFoundationDependencyProvider`. The chat runs in the Client layer, not in Zed.
 
+<div class="width-100">
+
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |--------|---------------|---------------|-----------|
 | CatalogSearchToolPlugin | Searches the catalog with a query, filters, and a price range. | | SprykerFeature\Client\AiCommerce\Plugin\StorefrontAssistant\Tool |
@@ -802,6 +824,8 @@ Make sure that the configured data has been added to the `spy_glossary_key` and 
 | StorefrontAssistantSseStreamEventPlugin | Sends the text and reasoning stream events. | | SprykerFeature\Client\AiCommerce\Plugin\AiFoundation |
 | AiInteractionAuditLogPostToolCallPlugin | Optional: writes each tool call to the AI interaction audit log. | | Spryker\Client\AiFoundation\Plugin\AuditLog |
 | AiInteractionAuditLogPostPromptPlugin | Optional: writes each prompt to the AI interaction audit log. | | Spryker\Client\AiFoundation\Plugin\AuditLog |
+
+</div>
 
 **src/Pyz/Client/AiFoundation/AiFoundationDependencyProvider.php**
 
@@ -897,11 +921,15 @@ class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvid
 
 2. Register the agent and the search configuration plugins in the Client `AiCommerceDependencyProvider`:
 
+<div class="width-100">
+
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |--------|---------------|---------------|-----------|
 | ProductDiscoveryAgentPlugin | Registers the **Product Discovery** agent. Without an agent, every turn ends with the "no agent available" error. | | SprykerFeature\Client\AiCommerce\Plugin\StorefrontAssistant |
 | ProductSearchConfigExpanderPlugin | Adds the shop facets to `catalog_search`, which the chat shows as refinement chips. | | Spryker\Client\ProductSearchConfigStorage\Plugin\Config |
 | MerchantNameSearchConfigExpanderPlugin | Adds the merchant facet to `catalog_search`. Register it only in a marketplace project. | | Spryker\Client\MerchantProductOfferSearch\Plugin\Search |
+
+</div>
 
 **src/Pyz/Client/AiCommerce/AiCommerceDependencyProvider.php**
 
@@ -944,10 +972,14 @@ class AiCommerceDependencyProvider extends SprykerFeatureAiCommerceDependencyPro
 
 3. Register the routes and the widget:
 
+<div class="width-100">
+
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |--------|---------------|---------------|-----------|
 | StorefrontAssistantRouteProviderPlugin | Adds the `/shopping-assistant/*` routes for the prompt, the conversation list, the messages, and the delete action. | | SprykerFeature\Yves\AiCommerce\StorefrontAssistant\Plugin\Router |
 | StorefrontAssistantWidget | Renders the chat for a logged-in customer when the feature is enabled. | | SprykerFeature\Yves\AiCommerce\StorefrontAssistant\Widget |
+
+</div>
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
@@ -1001,9 +1033,13 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 4. Register the Twig loader plugin of the shared chat:
 
+<div class="width-100">
+
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |--------|---------------|---------------|-----------|
 | SharedThemeTwigLoaderPlugin | Makes the templates of the shared chat available as `@AiCommerce/Chat/...`. Project templates in `src/Pyz/Shared/AiCommerce/Theme/default/` replace the core templates. | Register it after `FilesystemTwigLoaderPlugin`. | Spryker\Yves\Twig\Plugin |
+
+</div>
 
 **src/Pyz/Yves/Twig/TwigDependencyProvider.php**
 
@@ -1258,6 +1294,8 @@ Make sure the following applies:
 
 ## Troubleshooting
 
+<div class="width-100">
+
 | SYMPTOM | CAUSE | SOLUTION |
 |---------|-------|----------|
 | A logged-in customer sees no chat button. | **Enable Storefront Assistant** is off, the setting does not have `storefront: true`, or the value is not published. | Check step 4, then run `console configuration:sync` and `console queue:worker:start --stop-when-empty`. |
@@ -1278,3 +1316,5 @@ Make sure the following applies:
 | The chat shows no refinement chips. | `ProductSearchConfigExpanderPlugin` is not registered. | Check step 6. |
 | The answer arrives in one block, not as a stream. | A reverse proxy or PHP output buffering holds the response. | The controller sends `X-Accel-Buffering: no` for nginx. Disable response buffering for `/shopping-assistant/prompt` on other proxies and load balancers. |
 | A project-level override has no effect. | The class resolver cache is outdated. | Run `console cache:class-resolver:build` and `console cache:empty-all`. |
+
+</div>

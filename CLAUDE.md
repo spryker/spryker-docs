@@ -110,6 +110,36 @@ Analyze the overall tone to align with technical documentation styles (Google De
 - **info_block usage:** Use callouts sparingly. If a callout's content duplicates the surrounding body text, merge it into the body instead of boxing it separately. Match the severity to the actual risk — do not use `errorBox` for a low-risk or already-enforced condition; use `warningBox` or `infoBox` instead.
 - Ensure output renders correctly in Jekyll but remains readable in raw Markdown
 
+### Tables
+
+The site renders tables with fewer than three columns at 50% width, and long code names break mid-word. To make a table full width, wrap it in `<div class="width-100">` with a blank line after the opening tag and before the closing tag:
+
+```markdown
+<div class="width-100">
+
+| PLUGIN | DESCRIPTION |
+|--------|-------------|
+| `NavigationToolSetPlugin` | Provides tools for resolving Back Office navigation paths. |
+
+</div>
+```
+
+Do not edit global files (`css/`, `js/`, `_layouts/`) for the look of a single page. Use an existing class from `css/pages/_content.scss`.
+
+### Code blocks
+
+The site wraps long lines in code blocks. To keep each source line on one line and make the block scroll horizontally, add this block on the page, directly after the front matter:
+
+```html
+<style>
+  .post-content pre {
+    white-space: pre;
+    word-break: normal;
+    overflow-x: auto;
+  }
+</style>
+```
+
 ### Presenting Suggestions
 
 Present all suggestions in a numbered list. Each item must have:

@@ -1,7 +1,7 @@
 ---
 title: Install Back Office Assistant
 description: Learn how to install the Back Office Assistant feature that provides an AI-powered chat widget in the Spryker Back Office.
-last_updated: Oct 26, 2026
+last_updated: Oct 29, 2026
 template: feature-integration-guide-template
 ---
 
@@ -25,7 +25,7 @@ Install the required features:
 composer require spryker-feature/ai-commerce spryker/gui --update-with-dependencies
 ```
 
-The chat widget uses the shared chat frontend of the `AiCommerce` module. The Back Office frontend builder of `spryker/gui` resolves the `@shared/ai-commerce/*` alias of the shared chat and lets Back Office TypeScript import stylesheets, so update `spryker/gui` together with the feature.
+The chat widget uses the shared chat frontend of the `AiCommerce` module. The feature requires `spryker/gui` version `^5.12.0` or higher and `spryker/twig` version `^3.34.0` or higher. The Back Office frontend builder of `spryker/gui` resolves the `@shared/ai-commerce/*` alias, and `spryker/twig` provides `SharedThemeTwigLoaderPlugin`.
 
 {% info_block warningBox "Verification" %}
 
@@ -359,7 +359,7 @@ Register the Twig plugins to inject the chat widget into the Back Office layout:
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |--------|---------------|---------------|-----------|
 | `AiCommerceTwigPlugin` | Registers Twig functions and variables required by the Back Office Assistant chat widget. | | `SprykerFeature\Zed\AiCommerce\Communication\Plugin\Twig` |
-| `SharedThemeTwigLoaderPlugin` | Makes the templates of the shared chat available as `@AiCommerce/Chat/...`. Project templates in `src/Pyz/Shared/AiCommerce/Theme/default/` replace the core templates. | Register it after `FilesystemTwigLoaderPlugin`. | `SprykerFeature\Zed\AiCommerce\Communication\Plugin\Twig` |
+| `SharedThemeTwigLoaderPlugin` | Makes the templates of the shared chat available as `@AiCommerce/Chat/...`. Project templates in `src/Pyz/Shared/AiCommerce/Theme/default/` replace the core templates. | Register it after `FilesystemTwigLoaderPlugin`. | `Spryker\Zed\Twig\Communication\Plugin` |
 
 **src/Pyz/Zed/Twig/TwigDependencyProvider.php**
 
@@ -369,9 +369,9 @@ Register the Twig plugins to inject the chat widget into the Back Office layout:
 namespace Pyz\Zed\Twig;
 
 use Spryker\Zed\Twig\Communication\Plugin\FilesystemTwigLoaderPlugin;
+use Spryker\Zed\Twig\Communication\Plugin\SharedThemeTwigLoaderPlugin;
 use Spryker\Zed\Twig\TwigDependencyProvider as SprykerTwigDependencyProvider;
 use SprykerFeature\Zed\AiCommerce\Communication\Plugin\Twig\AiCommerceTwigPlugin;
-use SprykerFeature\Zed\AiCommerce\Communication\Plugin\Twig\SharedThemeTwigLoaderPlugin;
 
 class TwigDependencyProvider extends SprykerTwigDependencyProvider
 {

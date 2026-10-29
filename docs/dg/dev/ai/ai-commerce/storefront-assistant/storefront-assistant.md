@@ -1,7 +1,7 @@
 ---
 title: Storefront Assistant
 description: Technical overview of the Storefront Assistant feature — architecture, agents, tools, the streaming protocol, endpoints, and configuration options.
-last_updated: Oct 26, 2026
+last_updated: Oct 29, 2026
 template: concept-topic-template
 related:
   - title: Install Storefront Assistant
@@ -389,11 +389,7 @@ The attachment limits come from the Shared `AiCommerceConfig`: `getStorefrontAss
 
 ### AI configuration
 
-Storefront Assistant needs one AI configuration in `config/Shared/config_ai.php` for each AI vendor that you offer in the Back Office. The Client sends the name of the AI configuration to Zed with each turn. Zed accepts only the names that the Zed `AiFoundationConfig::getClientResolvableAiConfigurationNames()` returns.
-
-For OpenAI, use the `AiFoundationConstants::PROVIDER_OPENAI_RESPONSES` provider. The OpenAI Responses API streams the reasoning summary that the chat shows.
-
-Do not add a `system_prompt` entry to these AI configurations. The agent composes its own system prompt from the configured prompt, the search guidance, and the page context. A `system_prompt` entry adds a second system prompt.
+Storefront Assistant needs one AI configuration in `config/Shared/config_ai.php` for each AI vendor that you offer in the Back Office. The Client sends the name of the AI configuration to Zed with each turn. Zed accepts only the names that the Zed `AiFoundationConfig::getClientResolvableAiConfigurationNames()` returns. For the configuration examples and rules, see [Set up configuration](/docs/dg/dev/ai/ai-commerce/storefront-assistant/install-storefront-assistant.html#3-set-up-configuration).
 
 ## Frontend
 

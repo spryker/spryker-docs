@@ -1,7 +1,7 @@
 ---
 title: Install AI Commerce
 description: Learn how to install the AI Commerce package, which is the base for AI-powered storefront features like Visual Add to Cart.
-last_updated: Oct 9, 2026
+last_updated: Oct 29, 2026
 template: feature-integration-guide-template
 ---
 

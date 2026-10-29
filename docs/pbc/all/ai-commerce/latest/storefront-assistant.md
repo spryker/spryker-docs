@@ -1,7 +1,7 @@
 ---
 title: Storefront Assistant
 description: An AI shopping assistant on the Storefront that answers product questions, shows matching products, compares them, and builds product setups using only your own catalog.
-last_updated: Oct 26, 2026
+last_updated: Oct 29, 2026
 template: concept-topic-template
 related:
   - title: Storefront Assistant technical overview
@@ -53,6 +53,8 @@ Storefront Assistant is available only to logged-in customers. Guests do not see
 6. Optional: to continue an earlier conversation, open **More options**&nbsp;<span aria-label="and then">></span>&nbsp;**Chat history**.
 
 Customers can expand the panel to full screen, copy an answer, or regenerate the last answer.
+
+![Storefront Assistant chat panel with product cards, suggested prompts, and the Compare selected button](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-commerce/storefront-assistant-chat.png)
 
 **Example questions:**
 

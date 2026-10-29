@@ -1,7 +1,7 @@
 ---
 title: AI Commerce
 description: AI Commerce brings AI-powered capabilities to your Spryker storefront, helping buyers find and order products faster with less manual effort.
-last_updated: Oct 9, 2026
+last_updated: Oct 29, 2026
 template: concept-topic-template
 ---
 

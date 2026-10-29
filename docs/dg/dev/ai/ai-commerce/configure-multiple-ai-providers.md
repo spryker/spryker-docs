@@ -1,7 +1,7 @@
 ---
 title: Configure multiple AI providers for AI Commerce
 description: Learn how to configure OpenAI, AWS Bedrock, and Anthropic providers independently for each AI Commerce feature.
-last_updated: Oct 26, 2026
+last_updated: Oct 29, 2026
 template: howto-guide-template
 ---
 

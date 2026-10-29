@@ -6,6 +6,8 @@ template: concept-topic-template
 related:
   - title: Install Storefront Assistant
     link: docs/dg/dev/ai/ai-commerce/storefront-assistant/install-storefront-assistant.html
+  - title: Storefront Assistant agents
+    link: docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant-agents.html
   - title: Add a custom Storefront Assistant agent
     link: docs/dg/dev/ai/ai-commerce/storefront-assistant/add-custom-storefront-assistant-agent.html
   - title: Stream AI responses with the AiFoundation module
@@ -18,7 +20,9 @@ For the business overview, see [Storefront Assistant](/docs/pbc/all/ai-commerce/
 
 ## Architecture
 
-Storefront Assistant runs in the Yves application. The chat logic, the agents, and the tools run in the Client layer, inside the Yves process. Zed resolves the AI configuration and calls the AI vendor through the `AiFoundation` gateway.
+![Storefront Assistant architecture: the browser, Yves with the Client layer, Zed, and the AI providers](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-commerce/storefront-assistant-architecture.png)
+
+Storefront Assistant runs in the Yves application. The chat logic, the agents, the tools, and the call to the AI provider run in the Client layer, inside the Yves process. Zed does not call the AI provider. Zed only loads the AI configuration and the conversation history, saves the conversation, and writes the audit log.
 
 | PART | IMPLEMENTATION | LAYER |
 |------|----------------|-------|
@@ -26,18 +30,20 @@ Storefront Assistant runs in the Yves application. The chat logic, the agents, a
 | Header button | The `storefront-assistant-trigger` molecule, included by the project `header` organism | Yves |
 | Endpoints | `StorefrontAssistantController`, registered by `StorefrontAssistantRouteProviderPlugin` | Yves |
 | Agents, tools, and SSE plugins | `SprykerFeature\Client\AiCommerce\Plugin\...` | Client |
-| Streaming, tool loop, and chat history | `AiFoundationClientInterface::streamPrompt()` | Client and Zed |
-| Chat history storage | The `spy_ai_conversation_history` table of the `AiFoundation` module | Zed |
+| Streaming, tool loop, and call to the AI provider | `AiFoundationClientInterface::streamPrompt()` | Client |
+| AI configuration, chat history storage, and audit log | The Zed gateway of the `AiFoundation` module and its `spy_ai_conversation_history` table | Zed |
 | Conversation list and index | Key-value storage (Redis) with a time to live (TTL) | Client |
 
 For each chat turn, the following happens:
 
 1. The browser sends `POST /shopping-assistant/prompt` with the message, the conversation reference, and the page context.
 2. The controller validates the request and opens an SSE stream.
-3. The agent selector picks one agent for the turn. For details, see [Agent selection](#agent-selection).
+3. The agent selector picks one agent for the turn. For details, see [Agent selection](/docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant-agents.html#agent-selection).
 4. The agent calls `AiFoundationClientInterface::streamPrompt()` with its system prompt and tool names.
-5. While the model answers, the SSE plugins write the text, the reasoning, and the tool events to the stream.
-6. `AiFoundation` saves the turn in the chat history.
+5. `streamPrompt()` asks Zed for the AI configuration and the conversation history.
+6. The Client calls the AI provider directly and runs the tools of the model in the Yves process.
+7. While the model answers, the SSE plugins write the text, the reasoning, and the tool events to the stream.
+8. The Client saves the turn in the chat history through Zed.
 
 For details on how `streamPrompt()` sends the model output, the tool calls, and the conversation history, see [Stream AI responses with the AiFoundation module](/docs/dg/dev/ai/ai-foundation/ai-foundation-stream-prompt.html).
 
@@ -45,50 +51,7 @@ The browser keeps only a small state in `localStorage` under the `storefront_ass
 
 ## Agents
 
-An agent is a plugin that has its own system prompt, tool list, and Back Office toggle. Storefront Assistant ships with one agent:
-
-| AGENT | PLUGIN | DESCRIPTION |
-|-------|--------|-------------|
-| Product Discovery | `ProductDiscoveryAgentPlugin` | Answers shopping questions only from the shop catalog. It searches products, categories, product relations, product sets, and CMS pages. |
-
-Agents are registered in the Client `AiCommerceDependencyProvider::getStorefrontAssistantAgentPlugins()`. To add an agent, see [Add a custom Storefront Assistant agent](/docs/dg/dev/ai/ai-commerce/storefront-assistant/add-custom-storefront-assistant-agent.html).
-
-### Agent selection
-
-`AgentSelector` selects one agent for each chat turn:
-
-1. It skips each agent whose Back Office toggle is off.
-2. If the customer selected an agent in the chat, the enabled agent with this name handles the turn.
-3. If the customer selected **Auto**, the first enabled agent in the plugin stack whose `isApplicable()` method returns `true` handles the turn.
-4. If no agent is found, the turn ends with the `ai_commerce.storefront_assistant.error.no_agent_available` error.
-
-The `data-agent` stream event tells the browser which agent answered. The chat shows this agent in the agent badge.
-
-## Tools
-
-Each agent can call the tools that are in its tool list. Some tools are research for the agent, and their results stay on the server. Other tools are *customer-facing*: their results go to the browser and render as UI blocks.
-
-| TOOL | PLUGIN | CUSTOMER-FACING | DESCRIPTION |
-|------|--------|-----------------|-------------|
-| `catalog_search` | `CatalogSearchToolPlugin` | No | Searches the catalog with a query, filters, and a price range. Returns facets for refinement chips. |
-| `catalog_suggest` | `CatalogSuggestToolPlugin` | No | Looks up terms, categories, CMS pages, and product sets that the shop publishes. |
-| `category_tree` | `CategoryTreeToolPlugin` | No | Returns the category tree of the shop. |
-| `product_details` | `ProductDetailsToolPlugin` | No | Returns the details of a product, including offers and options. |
-| `product_relations` | `ProductRelationsToolPlugin` | No | Returns related products, such as alternatives and accessories. |
-| `product_sets` | `ProductSetsToolPlugin` | No | Returns product sets. |
-| `read_shop_page` | `ReadShopPageToolPlugin` | No | Reads the text of a CMS page, such as returns or delivery information. |
-| `display_products` | `DisplayProductsToolPlugin` | Yes | Shows product cards. |
-| `compare_products` | `CompareProductsToolPlugin` | Yes | Shows a comparison table. |
-| `offer_choices` | `OfferChoicesToolPlugin` | Yes | Shows a clarifying question with answer chips. |
-| `display_setup` | `DisplaySetupToolPlugin` | Yes | Shows two to four products that work together, with their total against a budget. |
-
-The tool plugins are registered in the Client `AiFoundationDependencyProvider::getAiToolPlugins()`. Three lists in the project must stay aligned:
-
-- The tool plugins in `AiFoundationDependencyProvider::getAiToolPlugins()`.
-- The tool names of the agent in `AiCommerceConfig::getProductDiscoveryAgentToolNames()`.
-- The customer-facing tool names in `AiCommerceConfig::getStorefrontAssistantCustomerFacingToolNames()`.
-
-A customer-facing tool must also be an agent tool.
+An agent is a plugin that has its own system prompt, tool list, and Back Office toggle. For the shipped agents, their tools, the registration, and the agent selection rules, see [Storefront Assistant agents](/docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant-agents.html).
 
 ## SSE plugins
 
@@ -140,18 +103,6 @@ The body of `POST /shopping-assistant/prompt` is a JSON object:
 | `selectedAgent` | No | The agent name. An empty or missing value means **Auto**. |
 | `pageContext` | No | `pageType` is `product`, `category`, or `search`. The server removes the context for other values. |
 | `attachments` | No | A maximum of five files of 5&nbsp;MiB each. Allowed types: JPEG, PNG, WebP, GIF, and PDF. The server checks the binary signature of each file. |
-
-### Errors before the stream starts
-
-The controller validates the request before it opens the stream. If a check fails, the response is plain JSON, not SSE:
-
-| STATUS | BODY | CAUSE |
-|--------|------|-------|
-| `404` | Empty | **Enable Storefront Assistant** is off. |
-| `403` | `{"error": "<translated text>"}` | No customer is logged in, or the `X-CSRF-Token` header is not valid. |
-| `400` | `{"error": "<translated text>"}` | The body is not valid JSON, is empty, or is too large, or the message, reference, or attachments fail validation. |
-
-A client must read the `Content-Type` header of the response before it parses the body. Parse the body as SSE only when the type is `text/event-stream`.
 
 ## Stream protocol
 
@@ -296,58 +247,6 @@ The history endpoints return plain JSON:
 
 - The history returns only customer-facing tools.
 - The product cards are refreshed with current data, but `refinementChips`, `activeFilters`, and `seeAll` are not included. They exist only in the live stream.
-
-### Read the stream in a custom client
-
-Use `fetch()` instead of `EventSource`. `EventSource` sends only `GET` requests and cannot send a request body or the CSRF header.
-
-```ts
-const response = await fetch('/shopping-assistant/prompt', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'X-CSRF-Token': csrfToken },
-    body: JSON.stringify({ message, conversationReference }),
-});
-
-if (!response.headers.get('Content-Type')?.startsWith('text/event-stream')) {
-    const { error } = await response.json().catch(() => ({ error: '' }));
-    throw new Error(error || `HTTP ${response.status}`);
-}
-
-const reader = response.body!.pipeThrough(new TextDecoderStream()).getReader();
-let buffer = '';
-
-for (;;) {
-    const { value, done } = await reader.read();
-    if (done) break;
-    buffer += value;
-
-    const frames = buffer.split('\n\n');
-    buffer = frames.pop() ?? '';
-
-    for (const frame of frames) {
-        if (!frame.startsWith('data: ')) continue;
-        const data = frame.slice('data: '.length);
-        if (data === '[DONE]') return;
-
-        const part = JSON.parse(data);
-        switch (part.type) {
-            case 'text-delta': appendText(part.id, part.delta); break;
-            case 'reasoning-delta': appendReasoning(part.id, part.delta); break;
-            case 'tool-input-available': showProgress(part.toolCallId, part.toolName); break;
-            case 'tool-output-available': render(part.toolCallId, JSON.parse(part.output.result)); break;
-            case 'data-agent': showAgent(part.data.name); break;
-            case 'error': showError(part.errorText); break;
-        }
-    }
-}
-```
-
-Follow these rules in a custom client:
-
-- Keep a map of `toolCallId` to `toolName` from the `tool-input-available` parts. The `tool-output-*` parts do not contain the tool name.
-- Ignore unknown part types. A later version can add new types.
-- Do not close the stream on an `error` part. Wait for `finish` and `[DONE]`.
-- If the browser disconnects, the server continues the turn and saves it. To get the answer, reload the conversation history.
 
 ## Configuration
 

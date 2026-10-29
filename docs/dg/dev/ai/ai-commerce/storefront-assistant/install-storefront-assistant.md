@@ -27,14 +27,7 @@ Install the required features:
 | NAME | VERSION | INSTALLATION GUIDE |
 |------|---------|-------------------|
 | AI Commerce | {{page.release_tag}} | [Install AI Commerce](/docs/dg/dev/ai/ai-commerce/install-ai-commerce.html) |
-| Configuration Management | {{page.release_tag}} | [Install the Configuration Management feature](/docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html) |
-| Catalog | {{page.release_tag}} | |
-| Customer Account Management | {{page.release_tag}} | |
-
-Make sure that your project also has the following:
-
-- A key-value storage (Redis). The conversation index uses it.
-- The API credentials of at least one AI vendor: OpenAI, Anthropic, or AWS Bedrock. The model must support streaming and tool calls.
+| Configuration Management | {{page.release_tag}} | [Install the Configuration Management feature](/docs/dg/dev/integrate-and-configure/integrate-configuration-feature.html) |
 
 {% info_block infoBox "Logged-in customers only" %}
 
@@ -45,7 +38,7 @@ The chat is available only to logged-in customers. For guests, the widget render
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/ai-commerce spryker/router --update-with-dependencies
+composer require spryker-feature/ai-commerce --update-with-dependencies
 ```
 
 Consider the following dependencies of `spryker-feature/ai-commerce`:
@@ -56,23 +49,7 @@ Consider the following dependencies of `spryker-feature/ai-commerce`:
 - It requires `spryker/gui` version `^5.12.0` or higher.
 - `spryker/router` is an optional dependency, but the Storefront Assistant routes need it.
 
-{% info_block warningBox "Verification" %}
-
-Make sure the following modules have been installed:
-
-| MODULE | EXPECTED DIRECTORY |
-|--------|--------------------|
-| AiCommerce | vendor/spryker-feature/ai-commerce |
-| AiFoundation | vendor/spryker/ai-foundation |
-| Router | vendor/spryker/router |
-| ShopUi | vendor/spryker-shop/shop-ui |
-| Twig | vendor/spryker/twig |
-
-{% endinfo_block %}
-
 ### 2) Set up database schema and transfer objects
-
-The chat history uses the `spy_ai_conversation_history` table of the `AiFoundation` module. Apply the database changes and generate the transfer changes:
 
 ```bash
 console propel:install
@@ -319,8 +296,7 @@ The module configuration ships the **Storefront Assistant** tab disabled. To ena
 
 Set `storefront: true` on every setting that Yves or the Client reads. The Client runs in the Yves process and reads only Storefront settings. Keep `storefront: false` on the model settings, because Zed resolves them.
 
-<details>
-<summary>data/configuration/ai_commerce.configuration.yml</summary>
+**data/configuration/ai_commerce.configuration.yml**
 
 ```yaml
 features:
@@ -520,8 +496,6 @@ features:
                             - global
 ```
 
-</details>
-
 The API tokens and the AWS region are in the shared `ai_vendor` feature in `data/configuration/ai_vendor.configuration.yml`. Other AI Commerce features use the same settings. If your project does not have these settings yet, add them as described in [Configure multiple AI providers](/docs/dg/dev/ai/ai-commerce/configure-multiple-ai-providers.html).
 
 {% info_block warningBox "API tokens" %}
@@ -549,8 +523,7 @@ The chat UI, the tool progress labels, the comparison table, the refinement chip
 
 Append the glossary according to your configuration:
 
-<details>
-<summary>data/import/common/common/glossary.csv</summary>
+**data/import/common/common/glossary.csv**
 
 ```csv
 ai_commerce.storefront_assistant.action.open,Chat with shopping assistant,en_US
@@ -785,8 +758,6 @@ ai_commerce.storefront_assistant.attachment.remove,Remove attachment,en_US
 ai_commerce.storefront_assistant.attachment.remove,Anhang entfernen,de_DE
 ```
 
-</details>
-
 For each additional store locale, add one line for each key.
 
 When you translate the keys, consider the following:
@@ -923,12 +894,6 @@ class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvid
     }
 }
 ```
-
-{% info_block infoBox "Zed AiFoundation plugins" %}
-
-Storefront Assistant needs no change in the Zed `AiFoundationDependencyProvider`. The Zed tool set plugins, such as `NavigationToolSetPlugin`, are for Back Office Assistant only.
-
-{% endinfo_block %}
 
 2. Register the agent and the search configuration plugins in the Client `AiCommerceDependencyProvider`:
 
@@ -1103,8 +1068,6 @@ The output shows four routes: `shopping-assistant/prompt`, `shopping-assistant/c
 ```bash
 console queue:worker:start --stop-when-empty
 ```
-
-All values are read on each request, so changes apply without a deployment.
 
 {% info_block warningBox "API token" %}
 

@@ -1,7 +1,7 @@
 ---
 title: Add a custom Storefront Assistant agent
 description: Learn how to add a custom agent with its own system prompt, tools, and Back Office toggle to the Storefront Assistant.
-last_updated: Oct 26, 2026
+last_updated: Oct 29, 2026
 template: howto-guide-template
 related:
   - title: Storefront Assistant
@@ -178,119 +178,7 @@ Add the getters for the configuration keys and the tool list of the agent:
 
 Each tool in this list must be registered in the Client `AiFoundationDependencyProvider::getAiToolPlugins()`. A customer-facing tool must also be in `getStorefrontAssistantCustomerFacingToolNames()`.
 
-## 4) Add the prompt request builder
-
-The builder derives the scoped conversation reference, composes the system prompt with the page context, and maps the chat request to a prompt request.
-
-**src/Pyz/Client/AiCommerce/StorefrontAssistant/Prompt/GiftAdvisorPromptRequestBuilderInterface.php**
-
-```php
-<?php
-
-declare(strict_types = 1);
-
-namespace Pyz\Client\AiCommerce\StorefrontAssistant\Prompt;
-
-use Generated\Shared\Transfer\PromptRequestTransfer;
-use Generated\Shared\Transfer\StorefrontAssistantChatRequestTransfer;
-
-interface GiftAdvisorPromptRequestBuilderInterface
-{
-    public function buildPromptRequest(
-        StorefrontAssistantChatRequestTransfer $storefrontAssistantChatRequestTransfer
-    ): PromptRequestTransfer;
-}
-```
-
-**src/Pyz/Client/AiCommerce/StorefrontAssistant/Prompt/GiftAdvisorPromptRequestBuilder.php**
-
-```php
-<?php
-
-declare(strict_types = 1);
-
-namespace Pyz\Client\AiCommerce\StorefrontAssistant\Prompt;
-
-use Generated\Shared\Transfer\PromptRequestTransfer;
-use Generated\Shared\Transfer\StorefrontAssistantChatRequestTransfer;
-use Pyz\Client\AiCommerce\AiCommerceConfig;
-use SprykerFeature\Client\AiCommerce\StorefrontAssistant\Conversation\ConversationReferenceDeriverInterface;
-use SprykerFeature\Client\AiCommerce\StorefrontAssistant\Mapper\StorefrontAssistantRequestMapperInterface;
-use SprykerFeature\Client\AiCommerce\StorefrontAssistant\Prompt\PageContextSystemPromptComposerInterface;
-
-class GiftAdvisorPromptRequestBuilder implements GiftAdvisorPromptRequestBuilderInterface
-{
-    public function __construct(
-        protected ConversationReferenceDeriverInterface $conversationReferenceDeriver,
-        protected StorefrontAssistantRequestMapperInterface $storefrontAssistantRequestMapper,
-        protected PageContextSystemPromptComposerInterface $pageContextSystemPromptComposer,
-        protected AiCommerceConfig $aiCommerceConfig
-    ) {
-    }
-
-    public function buildPromptRequest(
-        StorefrontAssistantChatRequestTransfer $storefrontAssistantChatRequestTransfer
-    ): PromptRequestTransfer {
-        $scopedConversationReference = $this->conversationReferenceDeriver->deriveConversationReference(
-            (string)$storefrontAssistantChatRequestTransfer->getCustomerReference(),
-            (string)$storefrontAssistantChatRequestTransfer->getConversationReference(),
-        );
-
-        $systemPrompt = $this->pageContextSystemPromptComposer->composeSystemPrompt(
-            $this->aiCommerceConfig->getStorefrontAssistantSystemPrompt(
-                $this->aiCommerceConfig->getGiftAdvisorSystemPromptKey(),
-            ),
-            $storefrontAssistantChatRequestTransfer,
-        );
-
-        return $this->storefrontAssistantRequestMapper->mapStorefrontAssistantChatRequestToPromptRequest(
-            $storefrontAssistantChatRequestTransfer,
-            $this->aiCommerceConfig->getStorefrontAssistantAiConfigurationName(),
-            $scopedConversationReference,
-            $this->aiCommerceConfig->getGiftAdvisorAgentToolNames(),
-            $systemPrompt,
-        );
-    }
-}
-```
-
-## 5) Add the factory method
-
-Create a project-level Client factory that extends the module factory. The module factory already provides the helper `create*()` methods and `getAiFoundationClient()`.
-
-**src/Pyz/Client/AiCommerce/AiCommerceFactory.php**
-
-```php
-<?php
-
-declare(strict_types = 1);
-
-namespace Pyz\Client\AiCommerce;
-
-use Pyz\Client\AiCommerce\StorefrontAssistant\Prompt\GiftAdvisorPromptRequestBuilder;
-use Pyz\Client\AiCommerce\StorefrontAssistant\Prompt\GiftAdvisorPromptRequestBuilderInterface;
-use SprykerFeature\Client\AiCommerce\AiCommerceFactory as SprykerFeatureAiCommerceFactory;
-
-/**
- * @method \Pyz\Client\AiCommerce\AiCommerceConfig getConfig()
- */
-class AiCommerceFactory extends SprykerFeatureAiCommerceFactory
-{
-    public function createGiftAdvisorPromptRequestBuilder(): GiftAdvisorPromptRequestBuilderInterface
-    {
-        return new GiftAdvisorPromptRequestBuilder(
-            $this->createConversationReferenceDeriver(),
-            $this->createStorefrontAssistantRequestMapper(),
-            $this->createPageContextSystemPromptComposer(),
-            $this->getConfig(),
-        );
-    }
-}
-```
-
-If your project already has a Client `AiCommerceFactory`, add the method to it.
-
-## 6) Add the agent plugin
+## 4) Add the agent plugin
 
 **src/Pyz/Client/AiCommerce/Plugin/StorefrontAssistant/GiftAdvisorAgentPlugin.php**
 
@@ -308,7 +196,7 @@ use Spryker\Client\Kernel\BundleConfigResolverAwareTrait;
 use SprykerFeature\Client\AiCommerce\Dependency\StorefrontAssistant\StorefrontAssistantAgentPluginInterface;
 
 /**
- * @method \Pyz\Client\AiCommerce\AiCommerceFactory getFactory()
+ * @method \SprykerFeature\Client\AiCommerce\AiCommerceFactory getFactory()
  * @method \Pyz\Client\AiCommerce\AiCommerceConfig getConfig()
  */
 class GiftAdvisorAgentPlugin extends AbstractPlugin implements StorefrontAssistantAgentPluginInterface
@@ -378,18 +266,36 @@ class GiftAdvisorAgentPlugin extends AbstractPlugin implements StorefrontAssista
     public function executeAgent(
         StorefrontAssistantChatRequestTransfer $storefrontAssistantChatRequestTransfer
     ): PromptResponseTransfer {
-        $promptRequestTransfer = $this->getFactory()
-            ->createGiftAdvisorPromptRequestBuilder()
-            ->buildPromptRequest($storefrontAssistantChatRequestTransfer);
+        $factory = $this->getFactory();
+        $config = $this->getConfig();
 
-        return $this->getFactory()
-            ->getAiFoundationClient()
-            ->streamPrompt($promptRequestTransfer);
+        $scopedConversationReference = $factory->createConversationReferenceDeriver()->deriveConversationReference(
+            (string)$storefrontAssistantChatRequestTransfer->getCustomerReference(),
+            (string)$storefrontAssistantChatRequestTransfer->getConversationReference(),
+        );
+
+        $systemPrompt = $factory->createPageContextSystemPromptComposer()->composeSystemPrompt(
+            $config->getStorefrontAssistantSystemPrompt($config->getGiftAdvisorSystemPromptKey()),
+            $storefrontAssistantChatRequestTransfer,
+        );
+
+        $promptRequestTransfer = $factory->createStorefrontAssistantRequestMapper()
+            ->mapStorefrontAssistantChatRequestToPromptRequest(
+                $storefrontAssistantChatRequestTransfer,
+                $config->getStorefrontAssistantAiConfigurationName(),
+                $scopedConversationReference,
+                $config->getGiftAdvisorAgentToolNames(),
+                $systemPrompt,
+            );
+
+        return $factory->getAiFoundationClient()->streamPrompt($promptRequestTransfer);
     }
 }
 ```
 
 The Client `AbstractPlugin` has no `getConfig()` method. To read the configuration, add `BundleConfigResolverAwareTrait`, as `ProductDiscoveryAgentPlugin` does.
+
+The `executeAgent()` method uses the `create*()` methods of the module factory, so the agent needs no project-level factory. It derives the scoped conversation reference, composes the system prompt with the page context, and maps the chat request to a prompt request.
 
 In this example, `isApplicable()` checks keywords to keep the example short. A production agent can use the page context, the attachments, or a short classification prompt.
 
@@ -399,7 +305,7 @@ Follow these rules in `executeAgent()`:
 - Do not write to the output. The SSE plugins stream the text, the reasoning, and the tool events.
 - Do not throw an exception for an expected failure. Return an unsuccessful response instead.
 
-## 7) Register the agent
+## 5) Register the agent
 
 Add the plugin to the agent stack before `ProductDiscoveryAgentPlugin`:
 
@@ -421,7 +327,7 @@ use SprykerFeature\Client\AiCommerce\Plugin\StorefrontAssistant\ProductDiscovery
     }
 ```
 
-## 8) Add translations
+## 6) Add translations
 
 Add the label and the description of the agent for each store locale:
 
@@ -436,7 +342,7 @@ ai_commerce.storefront_assistant.agent.gift_advisor.description,"Hilft Ihnen, ei
 
 If these keys are missing, the chat shows the agent name in a readable form, such as `Gift Advisor`, and the English text of `getDescription()`.
 
-## 9) Apply the changes
+## 7) Apply the changes
 
 ```bash
 console cache:class-resolver:build
@@ -467,7 +373,7 @@ The example agent uses the same AI vendor and model as the **Product Discovery**
 2. Add the AI configuration to `config/Shared/config_ai.php`.
 3. Add the AI configuration name to `getClientResolvableAiConfigurationNames()` in the Zed `AiFoundationConfig`. Without it, Zed rejects the turn.
 4. Add the AI configuration name to `getStorefrontAssistantSseAiConfigurationNames()` in the Client `AiCommerceConfig`. Without it, the SSE plugins ignore the turn: the model runs, but the customer sees no text and no tool events.
-5. In the prompt request builder, pass the new AI configuration name to `mapStorefrontAssistantChatRequestToPromptRequest()`.
+5. In `executeAgent()`, pass the new AI configuration name to `mapStorefrontAssistantChatRequestToPromptRequest()`.
 
 **src/Pyz/Client/AiCommerce/AiCommerceConfig.php**
 
@@ -484,11 +390,222 @@ The example agent uses the same AI vendor and model as the **Product Discovery**
     }
 ```
 
-## Optional: Add a new tool for the agent
+## Optional: Add a custom tool for the agent
 
-1. Create a class that implements `Spryker\Client\AiFoundation\Dependency\Tools\ToolPluginInterface` and has a `TOOL_NAME` constant.
-2. Register the tool in the Client `AiFoundationDependencyProvider::getAiToolPlugins()`.
-3. Add the tool name to the tool list of the agent, for example `getGiftAdvisorAgentToolNames()`.
-4. If the customer must see the result, add the tool name to `getStorefrontAssistantCustomerFacingToolNames()`, and add a frontend renderer for the result. For details, see the tool renderer contract in the README of the shared chat: `vendor/spryker-feature/ai-commerce/src/SprykerFeature/Shared/AiCommerce/Theme/default/Chat/README.md`.
-5. Add the `ai_commerce.storefront_assistant.tool.<tool_name>` glossary key for each locale. Without it, the progress label shows the raw glossary key.
-6. Add the tool name to the tool list of the widget. `StorefrontAssistantWidget::addToolNamesParameter()` contains a fixed list. Create `Pyz\Yves\AiCommerce\StorefrontAssistant\Widget\StorefrontAssistantWidget` that extends the module widget and overrides this protected method. Then register the project widget in `ShopApplicationDependencyProvider::getGlobalWidgets()` instead of the module widget.
+A tool is a function that the model can call during a chat turn. The agent in this guide uses only the tools of the module. To give the **Gift Advisor** agent its own data or logic, add a custom tool. This example adds the `gift_occasion_guide` tool. The tool returns a suggested budget range and gift ideas for an occasion, so the agent does not guess them.
+
+A tool is either *research* or *customer-facing*. The result of a research tool stays on the server, and the model uses it to write the answer. The result of a customer-facing tool also goes to the browser and renders as a UI block. The example tool is a research tool. For the customer-facing tools, see [Storefront Assistant agents](/docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant-agents.html#tools).
+
+### 1) Add the tool plugin
+
+The tool plugin implements `Spryker\Client\AiFoundation\Dependency\Tools\ToolPluginInterface`:
+
+| METHOD | DESCRIPTION |
+|--------|-------------|
+| `getName(): string` | Returns the unique tool name that the model calls. Use lowercase letters and underscores. |
+| `getDescription(): string` | Returns the instruction for the model. It must say what the tool returns and when to call it. The model decides from this text whether to call the tool. |
+| `getParameters(): array` | Returns the `ToolParameterInterface` list of the arguments that the model sends. Use `SprykerFeature\Client\AiCommerce\StorefrontAssistant\Tool\ToolParameter`, which takes the name, the `ToolParameterType`, a description, and a flag for a required argument. |
+| `execute(...$arguments): mixed` | Runs the tool. The arguments are the values of the parameters, by name. Return an array. The array is encoded to JSON and sent to the model. |
+
+**src/Pyz/Client/AiCommerce/Plugin/StorefrontAssistant/Tool/GiftOccasionGuideToolPlugin.php**
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Client\AiCommerce\Plugin\StorefrontAssistant\Tool;
+
+use Spryker\Client\AiFoundation\Dependency\Tools\ToolPluginInterface;
+use Spryker\Client\Kernel\AbstractPlugin;
+use Spryker\Shared\AiFoundation\Tools\ToolParameterType;
+use SprykerFeature\Client\AiCommerce\StorefrontAssistant\Tool\ToolParameter;
+
+class GiftOccasionGuideToolPlugin extends AbstractPlugin implements ToolPluginInterface
+{
+    public const string TOOL_NAME = 'gift_occasion_guide';
+
+    protected const string TOOL_DESCRIPTION = <<<'DESCRIPTION'
+        Returns the suggested budget range in euros and gift ideas for one occasion. Call it when the customer names an occasion and has not given a budget, then use the result to search the catalog with `catalog_search`.
+        - `occasion` must be one of the listed values.
+        - If the result contains `error`, correct the request as the error says.
+        DESCRIPTION;
+
+    protected const string PARAMETER_OCCASION = 'occasion';
+
+    protected const array OCCASION_GUIDES = [
+        'birthday' => ['budgetMin' => 20, 'budgetMax' => 100, 'ideas' => ['camera', 'headphones', 'smartwatch']],
+        'wedding' => ['budgetMin' => 50, 'budgetMax' => 250, 'ideas' => ['tablet', 'speaker', 'photo frame']],
+        'housewarming' => ['budgetMin' => 15, 'budgetMax' => 60, 'ideas' => ['lamp', 'smart plug', 'speaker']],
+    ];
+
+    /**
+     * {@inheritDoc}
+     *
+     * @api
+     */
+    public function getName(): string
+    {
+        return static::TOOL_NAME;
+    }
+
+    /**
+     * {@inheritDoc}
+     *
+     * @api
+     */
+    public function getDescription(): string
+    {
+        return static::TOOL_DESCRIPTION;
+    }
+
+    /**
+     * {@inheritDoc}
+     *
+     * @api
+     *
+     * @return array<\Spryker\Client\AiFoundation\Dependency\Tools\ToolParameterInterface>
+     */
+    public function getParameters(): array
+    {
+        return [
+            new ToolParameter(
+                static::PARAMETER_OCCASION,
+                ToolParameterType::String,
+                sprintf('One of: %s.', implode(', ', array_keys(static::OCCASION_GUIDES))),
+                true,
+            ),
+        ];
+    }
+
+    /**
+     * {@inheritDoc}
+     *
+     * @api
+     *
+     * @param mixed ...$arguments
+     *
+     * @return array<string, mixed>
+     */
+    public function execute(...$arguments): mixed
+    {
+        $occasion = (string)($arguments[static::PARAMETER_OCCASION] ?? '');
+
+        if (!isset(static::OCCASION_GUIDES[$occasion])) {
+            return ['error' => sprintf('Unknown occasion. Use one of: %s.', implode(', ', array_keys(static::OCCASION_GUIDES)))];
+        }
+
+        return static::OCCASION_GUIDES[$occasion];
+    }
+}
+```
+
+Follow these rules in a tool:
+
+- Do not throw an exception for an expected failure. Return an array with an `error` key, and describe in the tool description how the model must react to it.
+- Return only data that the customer may see. The model can repeat any value of the result in its answer.
+- To use a Client or a service, add the `create*()` method to the project `AiCommerceFactory` and call it with `$this->getFactory()`, as the tools of the module do.
+
+### 2) Register the tool
+
+Add the plugin to the Client `AiFoundationDependencyProvider::getAiToolPlugins()`. Keep the tool plugins that are already there:
+
+**src/Pyz/Client/AiFoundation/AiFoundationDependencyProvider.php**
+
+```php
+use Pyz\Client\AiCommerce\Plugin\StorefrontAssistant\Tool\GiftOccasionGuideToolPlugin;
+
+    protected function getAiToolPlugins(): array
+    {
+        return [
+            // ... the tool plugins of Storefront Assistant
+            new GiftOccasionGuideToolPlugin(),
+        ];
+    }
+```
+
+### 3) Add the tool to the agent
+
+Add the tool name to the tool list of the agent in the Client `AiCommerceConfig`:
+
+**src/Pyz/Client/AiCommerce/AiCommerceConfig.php**
+
+```php
+    public function getGiftAdvisorAgentToolNames(): array
+    {
+        return [
+            CatalogSearchToolPlugin::TOOL_NAME,
+            CategoryTreeToolPlugin::TOOL_NAME,
+            ProductDetailsToolPlugin::TOOL_NAME,
+            DisplayProductsToolPlugin::TOOL_NAME,
+            OfferChoicesToolPlugin::TOOL_NAME,
+            GiftOccasionGuideToolPlugin::TOOL_NAME,
+        ];
+    }
+```
+
+A tool that is not in this list is not sent to the model, even if the plugin is registered. If the customer must see the result of the tool, also add the tool name to `getStorefrontAssistantCustomerFacingToolNames()` and add a frontend renderer. For details, see the tool renderer contract in `vendor/spryker-feature/ai-commerce/src/SprykerFeature/Shared/AiCommerce/Theme/default/Chat/README.md`.
+
+### 4) Add the progress label
+
+While the tool runs, the chat shows a progress label, such as "Searching the catalog". Add the glossary key for each locale:
+
+**data/import/common/common/glossary.csv**
+
+```csv
+ai_commerce.storefront_assistant.tool.gift_occasion_guide,Looking up gift ideas,en_US
+ai_commerce.storefront_assistant.tool.gift_occasion_guide,Geschenkideen werden gesucht,de_DE
+```
+
+Without the key, the progress label shows the raw glossary key.
+
+### 5) Add the tool to the widget
+
+The widget publishes the list of tool names to the frontend, which translates each name into the progress label. `StorefrontAssistantWidget::addToolNamesParameter()` contains a fixed list, so add the new name to it. Create a project widget that extends the module widget and overrides the protected method:
+
+**src/Pyz/Yves/AiCommerce/StorefrontAssistant/Widget/StorefrontAssistantWidget.php**
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Yves\AiCommerce\StorefrontAssistant\Widget;
+
+use Pyz\Client\AiCommerce\Plugin\StorefrontAssistant\Tool\GiftOccasionGuideToolPlugin;
+use SprykerFeature\Client\AiCommerce\Plugin\StorefrontAssistant\Tool\CatalogSearchToolPlugin;
+use SprykerFeature\Yves\AiCommerce\StorefrontAssistant\Widget\StorefrontAssistantWidget as SprykerFeatureStorefrontAssistantWidget;
+
+class StorefrontAssistantWidget extends SprykerFeatureStorefrontAssistantWidget
+{
+    protected function addToolNamesParameter(): void
+    {
+        $this->addParameter(static::PARAMETER_TOOL_NAMES, [
+            CatalogSearchToolPlugin::TOOL_NAME,
+            // ... all other tool names of the module widget
+            GiftOccasionGuideToolPlugin::TOOL_NAME,
+        ]);
+    }
+}
+```
+
+Copy the full list of the tool names from `addToolNamesParameter()` of the module widget. Then register the project widget in `ShopApplicationDependencyProvider::getGlobalWidgets()` instead of the module widget, and update the `widgetGlobalExists()` and `{% raw %}{% widget %}{% endraw %}` calls of your templates to use the same widget name.
+
+### 6) Apply the changes
+
+```bash
+console cache:class-resolver:build
+console data:import glossary
+console queue:worker:start --stop-when-empty
+console cache:empty-all
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure the following applies:
+
+1. Select **Gift Advisor** and send "I need a birthday gift". The progress label "Looking up gift ideas" is displayed.
+2. The answer uses the budget range and the ideas of the `birthday` entry.
+3. Send "I need a gift for a graduation". The tool returns the `error` value, and the agent asks which of the listed occasions fits.
+
+{% endinfo_block %}

@@ -164,8 +164,10 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIG
         ],
         'additionalModelRequestFields' => [
             'thinking' => [
-                'type' => 'enabled',
-                'budget_tokens' => 2048,
+                'type' => 'adaptive',
+            ],
+            'output_config' => [
+                'effort' => 'low',
             ],
         ],
     ],
@@ -179,8 +181,10 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIG
         'max_tokens' => 8192,
         'parameters' => [
             'thinking' => [
-                'type' => 'enabled',
-                'budget_tokens' => 2048,
+                'type' => 'adaptive',
+            ],
+            'output_config' => [
+                'effort' => 'low',
             ],
         ],
     ],
@@ -190,6 +194,7 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIG
 Consider the following when you add the AI configurations:
 
 - For OpenAI, use `PROVIDER_OPENAI_RESPONSES`, not `PROVIDER_OPENAI`. The OpenAI Responses API streams the reasoning summary that the chat shows.
+- For AWS Bedrock and Anthropic, the `adaptive` thinking type lets the model decide how long to reason, and `effort` limits the reasoning. The values are `low`, `medium`, and `high`.
 - Do not add a `system_prompt` entry. The agent composes its own system prompt. A `system_prompt` entry adds a second system prompt.
 - To hide the reasoning of the model, remove the `reasoning` and `thinking` blocks, or override `isStorefrontAssistantReasoningStreamed()` to return `false` in the Client `AiCommerceConfig`.
 - Optional: to change the size of the conversation history that the model receives, set `$config[AiFoundationConstants::CONVERSATION_HISTORY_CONTEXT_WINDOW]`. The maximum message length of the chat is calculated from this value.

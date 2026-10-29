@@ -1,9 +1,17 @@
 ---
 title: Add a custom Back Office Assistant agent
 description: Learn how to implement and register a custom agent and toolset for the Back Office Assistant feature, including a dedicated AI configuration and SSE streaming.
-last_updated: Oct 14, 2026
+last_updated: Oct 29, 2026
 template: concept-topic-template
 ---
+
+<style>
+  .post-content pre {
+    white-space: pre;
+    word-break: normal;
+    overflow-x: auto;
+  }
+</style>
 
 Back Office Assistant routes each conversation to the most appropriate agent through its intent router. To handle a new domain—for example, managing customers or CMS content—implement a custom agent and register it alongside the built-in agents described in [Back Office Assistant](/docs/dg/dev/ai/ai-commerce/backoffice-assistant/backoffice-assistant.html).
 
@@ -13,12 +21,16 @@ To add tools to an agent or feature that already exists instead of creating a ne
 
 Create a plugin that implements `BackofficeAssistantAgentPluginInterface` from `SprykerFeature\Zed\AiCommerce\Dependency\BackofficeAssistant`:
 
+<div class="width-100">
+
 | METHOD | PURPOSE |
 |--------|---------|
 | `getName()` | Returns the unique agent name used for routing. This value is matched against the intent router's response. |
 | `getDescription()` | Describes what the agent handles. The intent router AI uses this description to decide which agent matches the user's request, so make it specific about the agent's domain and capabilities. |
 | `isApplicable()` | Returns whether the agent is available for routing. Use this to gate the agent behind a configuration flag, similar to the built-in agents. |
 | `executeAgent()` | Builds a `PromptRequestTransfer`, calls `AiFoundationFacade::prompt()`, and maps the result into a `BackofficeAssistantPromptResponseTransfer`. |
+
+</div>
 
 ```php
 <?php

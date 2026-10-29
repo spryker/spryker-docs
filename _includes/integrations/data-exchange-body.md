@@ -2,8 +2,17 @@ Data Exchange refers to the process of transferring data between Spryker and thi
 
 Spryker offers the following options to import and export data:
 
+- Data Exchange Jobs: available in SCCOS by default
 - Data Exchange API: available in SCCOS by default
 - Data Importers and Data Exporters: available in Spryker Cloud Commerce OS (SCCOS) by default
+
+## Data Exchange Jobs
+
+Data Exchange Jobs let business users move data into and out of SCCOS in bulk through files, without development effort per file. A job defines the data type and the columns of the file, every uploaded file is processed asynchronously as a run, and every rejected row is reported with its row number and reason. Jobs, runs, exports, and CSV templates are managed in the Back Office under **Import & Export**.
+
+The engine is independent of the data it moves. Products are available out of the box through the [Product Experience Management](/docs/pbc/all/product-experience-management/latest/product-experience-management.html) capability, and developers add further data types with one schema plugin per type.
+
+For details, see [Data Exchange Jobs feature overview](/docs/pbc/all/data-exchange/latest/data-exchange-jobs/data-exchange-jobs-feature-overview.html) and [Install the Data Exchange Jobs feature](/docs/pbc/all/data-exchange/latest/data-exchange-jobs/install/install-the-data-exchange-jobs-feature.html).
 
 ## Data Exchange API
 

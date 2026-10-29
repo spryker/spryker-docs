@@ -1155,6 +1155,16 @@ entries:
 
       - title: Data Exchange
         url: /docs/pbc/all/data-exchange/data-exchange.html
+        nested:
+          - title: Data Exchange Jobs
+            url: /docs/pbc/all/data-exchange/latest/data-exchange-jobs/data-exchange-jobs-feature-overview.html
+            nested:
+              - title: Install the Data Exchange Jobs feature
+                url: /docs/pbc/all/data-exchange/latest/data-exchange-jobs/install/install-the-data-exchange-jobs-feature.html
+              - title: Tutorials and HowTos
+                nested:
+                  - title: Add a custom data type to Data Exchange Jobs
+                    url: /docs/pbc/all/data-exchange/latest/data-exchange-jobs/tutorials-and-howtos/add-a-custom-data-type-to-data-exchange-jobs.html
 
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
@@ -2989,6 +2999,8 @@ entries:
                 url: /docs/pbc/all/product-experience-management/latest/glue-api-manage-products.html
           - title: Install the Back Office Product CSV Import and Export feature
             url: /docs/pbc/all/product-experience-management/latest/install/install-the-back-office-product-csv-import-and-export-feature.html
+          - title: Upgrade the ProductExperienceManagement module
+            url: /docs/pbc/all/product-experience-management/latest/install/upgrade-the-productexperiencemanagement-module.html
           - title: Install the Products Backend API
             url: /docs/pbc/all/product-experience-management/latest/install/install-the-products-backend-api.html
           - title: Install the Product Attribute Visibility feature

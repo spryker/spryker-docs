@@ -59,6 +59,7 @@ Consider the following dependencies of `spryker-feature/ai-commerce`:
 - It requires `spryker-shop/shop-ui` version `^2.7.0` or higher. The Yves frontend builder of this version resolves the `@shared/ai-commerce/*` alias, which loads the shared chat frontend of the module.
 - It requires `spryker/twig` version `^3.34.0` or higher. This version provides `SharedThemeTwigLoaderPlugin`.
 - It requires `spryker/gui` version `^5.12.0` or higher.
+- It requires `spryker/price-product` version `^4.48.0` or higher. The assistant uses it to show the abstract price of a product that has several variants.
 - `spryker/router` is an optional dependency, but the Storefront Assistant routes need it.
 
 ### 2) Set up database schema and transfer objects
@@ -163,8 +164,10 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIG
         ],
         'additionalModelRequestFields' => [
             'thinking' => [
-                'type' => 'enabled',
-                'budget_tokens' => 2048,
+                'type' => 'adaptive',
+            ],
+            'output_config' => [
+                'effort' => 'low',
             ],
         ],
     ],
@@ -178,8 +181,10 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIG
         'max_tokens' => 8192,
         'parameters' => [
             'thinking' => [
-                'type' => 'enabled',
-                'budget_tokens' => 2048,
+                'type' => 'adaptive',
+            ],
+            'output_config' => [
+                'effort' => 'low',
             ],
         ],
     ],
@@ -189,6 +194,7 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIG
 Consider the following when you add the AI configurations:
 
 - For OpenAI, use `PROVIDER_OPENAI_RESPONSES`, not `PROVIDER_OPENAI`. The OpenAI Responses API streams the reasoning summary that the chat shows.
+- For AWS Bedrock and Anthropic, the `adaptive` thinking type lets the model decide how long to reason, and `effort` sets how much it reasons.
 - Do not add a `system_prompt` entry. The agent composes its own system prompt. A `system_prompt` entry adds a second system prompt.
 - To hide the reasoning of the model, remove the `reasoning` and `thinking` blocks, or override `isStorefrontAssistantReasoningStreamed()` to return `false` in the Client `AiCommerceConfig`.
 - Optional: to change the size of the conversation history that the model receives, set `$config[AiFoundationConstants::CONVERSATION_HISTORY_CONTEXT_WINDOW]`. The maximum message length of the chat is calculated from this value.
@@ -300,6 +306,12 @@ class AiCommerceConfig extends SprykerFeatureAiCommerceConfig
         ];
     }
 }
+```
+
+If the shop has the product comparison page (`/product-comparison`), also set the following constant in the Client `AiCommerceConfig`. The default is `false`, so a comparison table has no **Full comparison** link:
+
+```php
+protected const bool IS_STOREFRONT_ASSISTANT_PRODUCT_COMPARISON_PAGE_ENABLED = true;
 ```
 
 For the other Client configuration methods that you can override, see [Client configuration](/docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant.html#client-configuration).
@@ -626,6 +638,8 @@ ai_commerce.storefront_assistant.attachment.unsupported_type,"Unsupported file t
 ai_commerce.storefront_assistant.attachment.unsupported_type,"Nicht unterstützter Dateityp. Unterstützte Typen: %types%.",de_DE
 ai_commerce.storefront_assistant.attachment.too_large,"File is too large. Maximum size is %maxBytes% bytes.",en_US
 ai_commerce.storefront_assistant.attachment.too_large,"Datei ist zu groß. Maximale Größe: %maxBytes% Bytes.",de_DE
+ai_commerce.storefront_assistant.attachment.too_large_size,"File is too large. Maximum size is %maxSize%.",en_US
+ai_commerce.storefront_assistant.attachment.too_large_size,"Datei ist zu groß. Maximale Größe: %maxSize%.",de_DE
 ai_commerce.storefront_assistant.attachment.too_many,"Too many attachments. Maximum is %maxCount% files.",en_US
 ai_commerce.storefront_assistant.attachment.too_many,"Zu viele Anhänge. Maximal %maxCount% Dateien erlaubt.",de_DE
 ai_commerce.storefront_assistant.attachment.read_failed,The file %name% could not be read.,en_US
@@ -1315,6 +1329,7 @@ Make sure the following applies:
 | The assistant never calls a tool. | The tool plugin is not in `getAiToolPlugins()`. | Check step 6. |
 | The chat shows no refinement chips. | `ProductSearchConfigExpanderPlugin` is not registered. | Check step 6. |
 | The answer arrives in one block, not as a stream. | A reverse proxy or PHP output buffering holds the response. | The controller sends `X-Accel-Buffering: no` for nginx. Disable response buffering for `/shopping-assistant/prompt` on other proxies and load balancers. |
+| The **Full comparison** link of a comparison table returns `404`. | The shop has no product comparison page, but `IS_STOREFRONT_ASSISTANT_PRODUCT_COMPARISON_PAGE_ENABLED` is `true`. | Set the constant to `false`, which is the default. |
 | A project-level override has no effect. | The class resolver cache is outdated. | Run `console cache:class-resolver:build` and `console cache:empty-all`. |
 
 </div>

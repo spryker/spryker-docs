@@ -102,6 +102,8 @@ Requests with a CSRF header must send the `X-CSRF-Token` header with a token for
 
 All endpoints require a logged-in customer. When the **Enable Storefront Assistant** setting is off, all endpoints return `404`.
 
+`POST /shopping-assistant/prompt` returns `400` when `selectedAgent` is not the name of an enabled agent or when `attachments` is not an array. `DELETE /shopping-assistant/conversations` returns `400` when the body has no valid `conversationReference` or `conversationReferences`.
+
 ### Prompt request
 
 The body of `POST /shopping-assistant/prompt` is a JSON object:
@@ -260,7 +262,7 @@ The `output.result` value is a JSON-encoded string, not a JSON object. Decode it
 | TOOL | KEYS OF THE DECODED RESULT |
 |------|---------------------------|
 | `display_products` | `products[]`, `displayedCount`, and optionally `unknownIdProductAbstracts[]` and `alreadyShown`. When the products come from a `catalog_search` call of the same turn, also `refinementChips[]`, `activeFilters[]`, and `seeAll`. |
-| `compare_products` | `comparedProducts[]`, `attributeRows[]` with `attribute`, `values[]`, and `isDifferent`, and optionally `comparisonUrl`, `ignoredIdProductAbstracts[]`, and `unknownIdProductAbstracts[]`. On failure, `error` or `alreadyShown`. |
+| `compare_products` | `comparedProducts[]`, `attributeRows[]` with `attribute`, `values[]`, and `isDifferent`, and optionally `comparisonUrl` (sent only when `isStorefrontAssistantProductComparisonPageEnabled()` returns `true`), `ignoredIdProductAbstracts[]`, and `unknownIdProductAbstracts[]`. On failure, `error` or `alreadyShown`. |
 | `offer_choices` | `question`, `choices[]`, and `nextStep`. On failure, `error`. |
 | `display_setup` | `products[]`, `totalFormatted`, and `budgetFormatted`. On failure, `error`, and `items[]` when the setup exceeds the budget. |
 
@@ -336,6 +338,8 @@ You can override the following methods in the Client `AiCommerceConfig`:
 | `getStorefrontAssistantCategoryTreeLimit()` | `200` | The maximum number of categories that `category_tree` returns. |
 | `getStorefrontAssistantInlineCategoryTreeLimit()` | `200` | The maximum number of category lines that the system prompt of the **Product Discovery** agent contains. A larger category tree is not added to the prompt, and the agent uses `category_tree` instead. |
 | `getStorefrontAssistantMaxRefinementChips()` | `6` | The maximum number of refinement chips under the product cards. |
+| `isStorefrontAssistantProductComparisonPageEnabled()` | `false` | Adds the **Full comparison** link to a comparison table. Set `IS_STOREFRONT_ASSISTANT_PRODUCT_COMPARISON_PAGE_ENABLED` to `true` in the project `AiCommerceConfig` only when the shop has the product comparison page (`/product-comparison`). Otherwise, the link returns `404`. |
+| `isStorefrontAssistantStoreRoutingEnabled()` | The value of `LocaleConstants::IS_STORE_ROUTING_ENABLED` | When `true`, the assistant adds the store prefix, for example `/DE`, to the product, CMS, category, product set, and comparison links. |
 | `getStorefrontAssistantPriceOutlierFactor()` | `5.0` | A product price that is this many times higher than the median price of the other products with the same name is marked as unusual. |
 
 </div>
@@ -355,8 +359,9 @@ The Storefront loads the shared chat as follows:
 - `SharedThemeTwigLoaderPlugin` makes the shared Twig templates available as `@AiCommerce/Chat/...`.
 - The `@shared/ai-commerce/*` alias of the Yves frontend builder resolves the shared TypeScript and SCSS files.
 - The `storefront-assistant` organism embeds `@AiCommerce/Chat/core/chat.twig` with the Storefront URLs, limits, and texts. It loads the chat lazily into the `storefront-assistant` chunk.
-- The Storefront features are ShopUi molecules in `vendor/spryker-feature/ai-commerce/src/SprykerFeature/Yves/AiCommerce/Theme/default/components/molecules/`: `chat-page-context`, `chat-tool-products`, `chat-tool-compare`, `chat-offer-choices`, and `chat-display-setup`.
+- The Storefront features are ShopUi molecules in `vendor/spryker-feature/ai-commerce/src/SprykerFeature/Yves/AiCommerce/Theme/default/components/molecules/`: `chat-page-context`, `chat-tool-products`, `chat-tool-compare`, `chat-offer-choices`, `chat-display-setup`, and `chat-storage-cleaner`. The `chat-storage-cleaner` molecule clears the chat session that the browser stores, when a guest opens a page.
 - The `storefront-assistant-trigger` molecule renders a header button that opens and closes the chat.
+- The browser binds the stored chat session to a hash of the customer reference. After a logout or a login of another customer, the chat does not restore the session.
 
 Project files replace core files with the same path:
 

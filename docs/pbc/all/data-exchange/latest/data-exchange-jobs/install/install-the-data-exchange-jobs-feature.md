@@ -55,13 +55,13 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
     // ... existing entries ...
     'data-exchange-imports' => [
         'sprykerAdapterClass' => IamAws3v3FilesystemBuilderPlugin::class,
-        'bucket' => getenv('SPRYKER_S3_PEM_IMPORT_BUCKET') ?: '',
+        'bucket' => getenv('SPRYKER_S3_DATA_EXCHANGE_IMPORT_BUCKET') ?: '',
         'region' => getenv('AWS_REGION') ?: '',
         'path' => 'data-exchange-imports/',
     ],
     'data-exchange-exports' => [
         'sprykerAdapterClass' => IamAws3v3FilesystemBuilderPlugin::class,
-        'bucket' => getenv('SPRYKER_S3_PEM_EXPORT_BUCKET') ?: '',
+        'bucket' => getenv('SPRYKER_S3_DATA_EXCHANGE_EXPORT_BUCKET') ?: '',
         'region' => getenv('AWS_REGION') ?: '',
         'path' => 'data-exchange-exports/',
     ],
@@ -70,7 +70,7 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
 
 {% info_block warningBox "IAM authentication required" %}
 
-These filesystems authenticate through the IAM role attached to the workload, which resolves AWS credentials automatically. Access keys (`key` and `secret`) are not supported. The environment variable names keep the `SPRYKER_S3_PEM_` prefix of the module the engine was extracted from, so existing cloud environments need no changes. For more details, see [AWS S3 filesystem builder plugins](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html#aws-s3-filesystem-builder-plugins).
+These filesystems authenticate through the IAM role attached to the workload, which resolves AWS credentials automatically. Access keys (`key` and `secret`) are not supported. For more details, see [AWS S3 filesystem builder plugins](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html#aws-s3-filesystem-builder-plugins).
 
 {% endinfo_block %}
 

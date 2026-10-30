@@ -5,17 +5,17 @@ last_updated: Oct 29, 2026
 template: module-upgrade-guide-template
 ---
 
-## Upgrade from version 4.0.* to version 4.1.0
+## Upgrade from version 4.0.* to version 5.0.0
 
 *Estimated migration time: 1 hour*
 
-Up to version 4.0.*, the `ProductExperienceManagement` module contained both the product CSV import and the engine that runs any CSV import: the `spy_import_job*` tables, the Back Office *Import & Export* pages, the `import:job:run` console command, and the plugin interfaces for import steps. From version 4.1.0, the engine lives in the new `spryker/data-exchange` module and the plugin interfaces in `spryker/data-exchange-extension`; together they form the [Data Exchange Jobs](/docs/pbc/all/data-exchange/latest/data-exchange-jobs/data-exchange-jobs-feature-overview.html) feature. `ProductExperienceManagement` keeps only the product plugin: `ProductCsvImportSchemaPlugin`, the product import and export steps, and `ProductCsvExportPlaceholderProvider`.
+Up to version 4.0.*, the `ProductExperienceManagement` module contained both the product CSV import and the engine that runs any CSV import: the `spy_import_job*` tables, the Back Office *Import & Export* pages, the `import:job:run` console command, and the plugin interfaces for import steps. From version 5.0.0, the engine lives in the new `spryker/data-exchange` module and the plugin interfaces in `spryker/data-exchange-extension`; together they form the [Data Exchange Jobs](/docs/pbc/all/data-exchange/latest/data-exchange-jobs/data-exchange-jobs-feature-overview.html) feature. `ProductExperienceManagement` keeps only the product plugin: `ProductCsvImportSchemaPlugin`, the product import and export steps, and `ProductCsvExportPlaceholderProvider`.
 
 The database tables, the transfer objects, the console command name, and the Back Office menu are unchanged. The following table lists what moved and what the project has to adjust.
 
 <div class="width-100">
 
-| BEFORE 4.1.0 | FROM 4.1.0 |
+| BEFORE 5.0.0 | FROM 5.0.0 |
 | --- | --- |
 | `SprykerFeature\Zed\ProductExperienceManagement\Business\Dependency\Plugin\*` interfaces | `Spryker\Zed\DataExchangeExtension\Dependency\Plugin\*` interfaces |
 | `SprykerFeature\Zed\ProductExperienceManagement\Business\Export\PlaceholderProvider\ExportPlaceholderProviderInterface` | `Spryker\Zed\DataExchangeExtension\Dependency\Plugin\ColumnPlaceholderProviderInterface`, returned by `ImportSchemaPluginInterface::getPlaceholderProvider()` |
@@ -35,14 +35,14 @@ To upgrade, follow the steps below.
 ### 1) Update the module
 
 ```bash
-composer require spryker/data-exchange:"^0.1.0" spryker-feature/product-experience-management:"^4.1.0" --update-with-dependencies
+composer require spryker/data-exchange:"^0.1.0" spryker-feature/product-experience-management:"^5.0.0" --update-with-dependencies
 ```
 
 The module requires `spryker/data-exchange-extension` only; the engine `spryker/data-exchange` is required by the project, as in the command above.
 
 ### 2) Register the product schema plugin
 
-Before 4.1.0, the product plugin was registered in the module's own dependency provider. The engine now reads its plugins from the `DataExchange` dependency provider:
+Before 5.0.0, the product plugin was registered in the module's own dependency provider. The engine now reads its plugins from the `DataExchange` dependency provider:
 
 **src/Pyz/Zed/DataExchange/DataExchangeDependencyProvider.php**
 
@@ -89,7 +89,7 @@ Rename the two entries under `FileSystemConstants::FILESYSTEM_SERVICE` in every 
 | `product-experience-management-imports` | `data-exchange-imports` |
 | `product-experience-management-exports` | `data-exchange-exports` |
 
-Keep the adapter, bucket, and path settings of each entry. The engine reads the files of existing import runs from the renamed entries, so the files remain accessible as long as the new entries point at the same storage. If you prefer to keep the old names, override `getImportFileSystemName()` and `getExportFileSystemName()` in `Pyz\Zed\DataExchange\DataExchangeConfig` instead.
+Keep the adapter, bucket, and path settings of each entry. If the entries read the bucket from environment variables, rename `SPRYKER_S3_PEM_IMPORT_BUCKET` and `SPRYKER_S3_PEM_EXPORT_BUCKET` to `SPRYKER_S3_DATA_EXCHANGE_IMPORT_BUCKET` and `SPRYKER_S3_DATA_EXCHANGE_EXPORT_BUCKET` in the configuration and in every environment that sets them; the `key` and `secret` settings are not used by the IAM adapter and can be dropped. The engine reads the files of existing import runs from the renamed entries, so the files remain accessible as long as the new entries point at the same storage. If you prefer to keep the old names, override `getImportFileSystemName()` and `getExportFileSystemName()` in `Pyz\Zed\DataExchange\DataExchangeConfig` instead.
 
 ### 4) Update the navigation
 
@@ -130,7 +130,7 @@ If your project contains its own import steps or schema plugins, update them as 
 
 - Replace `implements \SprykerFeature\Zed\ProductExperienceManagement\Business\Dependency\Plugin\ImportStepInterface` with `implements \Spryker\Zed\DataExchangeExtension\Dependency\Plugin\ImportStepInterface`. Steps that extend `AbstractProductCsvImportStep` need no change; its `createImportStepError()` and `createImportPublishEvent()` helpers are unchanged. In `ProductCsvImportSearchStep`, `ProductCsvImportPriceStep`, and `ProductCsvImportPriceStoreStep`, the nullable helpers `resolveAbstractSku()` and `resolveConcreteSku()` were renamed to `findAbstractSku()` and `findConcreteSku()`; update subclasses that call them.
 - Replace the imports of `ImportSchemaPluginInterface`, `ExportSchemaPluginInterface`, `ExportStepInterface`, `ExportDataProviderInterface`, `ImportPreProcessorPluginInterface`, and `ImportPostProcessorPluginInterface` with the interfaces of the same names in `Spryker\Zed\DataExchangeExtension\Dependency\Plugin`.
-- Implement the new `getPlaceholderProvider()` method in every schema plugin. `getType()`, `getSchema()`, and `getPlaceholderProvider()` now live in `SchemaPluginInterface`, the parent of `ImportSchemaPluginInterface` and `ExportSchemaPluginInterface`; a plugin that implements the export side must also be registered in `getExportSchemaPlugins()`. It returns a `ColumnPlaceholderProviderInterface` with the values of the placeholders used in the plugin's schema. Before 4.1.0, the engine used the product placeholder provider for every job type.
+- Implement the new `getPlaceholderProvider()` method in every schema plugin. `getType()`, `getSchema()`, and `getPlaceholderProvider()` now live in `SchemaPluginInterface`, the parent of `ImportSchemaPluginInterface` and `ExportSchemaPluginInterface`; a plugin that implements the export side must also be registered in `getExportSchemaPlugins()`. It returns a `ColumnPlaceholderProviderInterface` with the values of the placeholders used in the plugin's schema. Before 5.0.0, the engine used the product placeholder provider for every job type.
 
 ### 8) Update Back Office ACL rules
 

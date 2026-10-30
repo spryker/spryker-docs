@@ -13,6 +13,10 @@ For information about installing Spryker, see [Getting started guide](/docs/dg/d
 
 Recurring Orders now support more flexible scheduling and fewer unnecessary interruptions. Buyers can define multi-day delivery patterns in a single recurring order and set price tolerances so small expected price changes do not automatically stop the schedule for review.
 
+{% include carousel.html
+images="https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-202610.0.md/recurring_orders.mp4::"
+%}
+
 **Key capabilities:**
 - Create one recurring order with multi-day schedules, such as deliveries every Tuesday and Thursday
 - Define independent price tolerances for order totals and individual products
@@ -51,13 +55,18 @@ Flexible automation: marketplace operators can model processes such as merchant 
 
 **Documentation:**
 - [Workflows feature overview](/docs/pbc/all/back-office/latest/base-shop/workflows-feature-overview#business-problems-it-solves)
-- [Install the workflows feature](/docs/dg/dev/integrate-and-configure/integrate-workflow-feature)
+- [Install the workflows feature](/docs/dg/dev/integrate-and-configure/integrate-workflow-feature)git
 - [Extend workflows to new entities](https://docs.spryker.com/docs/dg/dev/integrate-and-configure/add-a-subject-type-to-the-workflows-feature)
 
 
 ### Service Points BO UI {% include badge.html type="improvement" %}
 
 The Back Office now includes a dedicated Service Points interface for viewing service points in one place. Business users can access key service point information directly in the Back Office without relying on database or API access.
+
+{% include carousel.html
+images="https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-202610.0.md/service_points.jpeg::"
+%}
+
 
 **Key capabilities:**
 - View a list of service points with key details such as name, status, assigned stores, and location

@@ -244,14 +244,20 @@ The AI Dev SDK has been extended to support more developer workflows and tools. 
 **Key capabilities:**
 - Adds plugin support for GitHub Copilot alongside Claude Code.
 - Introduces a demo preparation wizard that guides teams from briefing to build validation and presenter report.
-- Expands upgrade support with tooling updates, performance and security checks, release steps, reporting, and frontend-focused rules for Yves, the Back Office, and the Merchant Portal.
+- Expands upgrade support with tooling updates, performance and security checks, release steps, and reporting.
+- Adds frontend-focused rules and skills for Yves, the Back Office, and the Merchant Portal.
 
 **Business benefits:**
 - Lowers onboarding effort for teams using different AI coding assistants.
-- Speeds up demo preparation with a more structured and repeatable process.
-- Improves upgrade readiness and frontend code quality with broader automation and guidance.
+- Speeds up demo preparation with step-by-step guidance that works the same way for every demo.
+- Each upgrade brings the latest security and performance fixes, and gives the business a clear report of the changes and the release steps.
+- Improves frontend code quality with project-specific rules and skills for Yves, the Back Office, and the Merchant Portal.
 
 **Documentation:**
+- [Install the AI Dev SDK](/docs/dg/dev/ai/ai-dev/ai-dev-installation#set-up-with-github-copilot)
+- [Demo Preparation Wizard](/docs/dg/dev/ai/ai-dev/ai-dev-demo-prep-wizard)
+- [Upgrade workflow](/docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow)
+- [AI Dev SDK rules](/docs/dg/dev/ai/ai-dev/ai-dev-rules)
 
 ## Efficient and Flexible Cloud Foundation
 

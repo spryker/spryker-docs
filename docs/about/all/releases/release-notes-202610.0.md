@@ -262,7 +262,7 @@ The AI Dev SDK has been extended to support more developer workflows and tools. 
 
 ### Symfony 7.4 LTS Compatibility {% include badge.html type="improvement" %}
 
-Spryker now supports Symfony 7.4 LTS. This gives customers an early path toward the next long-term support release while keeping Symfony 6.4 support in place. The update helps customers plan migrations ahead of time and remain aligned with supported framework versions.
+Spryker now supports [Symfony 7.4 LTS](https://symfony.com/releases/7.4). This gives customers an early path toward the next long-term support release while keeping Symfony 6.4 support in place. The update helps customers plan migrations ahead of time and remain aligned with supported framework versions.
 
 **Key capabilities:**
 - Adds support for Symfony 7.4 and preserves Symfony 6.4 compatibility during the transition period

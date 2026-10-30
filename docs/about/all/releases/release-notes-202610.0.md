@@ -1,7 +1,7 @@
 ---
 title: Release notes 202610.0
 description: Release notes for Spryker Cloud Commerce OS version 202610.0
-last_updated: October 29, 2026
+last_updated: October 30, 2026
 template: concept-topic-template
 ---
 
@@ -337,7 +337,7 @@ Multiple improvements to performance and reliability of ACL, Merchant-Relationsh
 
 **Documentation & Releases:**
 - [Bulk delete makes use of Persistence ACL impossible](https://api.release.spryker.com/release-group/6910)
-- [Performance issue with MerchantRelationshipListener](https://api.release.spryker.com/release-group/6772)
+- [Performance issue with MerchantRelationshipListener](/docs/pbc/all/price-management/latest/base-shop/tutorials-and-howtos/optimize-merchant-relationship-price-storage.html)
 - [Keeping dependencies updated for performance](/docs/dg/dev/guidelines/performance-guidelines/keeping-dependencies-updated.html#publish-and-synchronization-1)
 - [SanitizeXssListener sanitises submitted form data twice](https://api.release.spryker.com/release-group/6780)
 - [WebProfiler Doesnt work if xdebug enabled](https://api.release.spryker.com/release-group/6845)

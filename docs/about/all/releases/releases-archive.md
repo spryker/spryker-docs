@@ -13,7 +13,4 @@ When a release tag is no longer covered by the current documentation, its conten
 |---|---|
 | 202507.0, 202512.0, 202604.0, 202602.0 | [docs-archive.spryker.com](https://docs-archive.spryker.com/docs/pbc/all/ai-commerce/202604.0/smart-pim) |
 | 202606.0 | [docs-archive-202606.spryker.com](https://docs-archive-202606.spryker.com/) |
-
-## Next steps
-
-- [Product and code releases](/docs/about/all/releases/product-and-code-releases.html)
+| 202608.0 | [docs-archive-202608.spryker.com](https://docs-archive-202608.spryker.com/) |

@@ -1,7 +1,7 @@
 ---
 title: File system
 description: The FileSystem Service provides an abstraction for file systems. It uses the same interface to access different types of file systems, regardless of their location or protocol.
-last_updated: Jun 16, 2021
+last_updated: Oct 19, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/filesystem
 originalArticleId: 7fa39597-bd42-4582-af4a-9114ad7611c8
@@ -25,7 +25,8 @@ The `FileSystem` module uses `FileSystemReaderPluginInterface` to execute read o
 | --- | --- |
 | FileSystemReaderPluginInterface | Reading operations |
 | FileSystemWriterPluginInterface | Writing operations |
-| FileSystemWriterPluginInterface | Stream handling operations |
+| FileSystemStreamPluginInterface | Stream handling operations |
+| FileSystemTemporaryUrlGeneratorPluginInterface | Generating temporary URLs. Implemented by the reader plugin. For details, see [Generate temporary URLs](#generate-temporary-urls). |
 
 ## Plugin configuration
 
@@ -179,3 +180,59 @@ Define the `FileSystem` name provided in the configuration and set the path to t
 The read methods use mostly `FileSystemQueryTransfer`, the write methods use mostly `FileSystemContentTransfer`, and stream methods use `FileSystemStreamTransfer`.
 
 {% endinfo_block %}
+
+## Generate temporary URLs
+
+Files in private storage, such as a private AWS S3 bucket, have no public URL. To let a customer or an external system download such a file without making it public and without streaming it through your application, generate a temporary URL for it.
+
+A temporary URL is a signed link that grants read access to a single file and stops working at an expiration time that you set. For AWS S3, a temporary URL is a [presigned URL](https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html).
+
+### Prerequisites
+
+To generate temporary URLs for a filesystem, the following conditions must be met:
+
+- The reader plugin registered in `FileSystemDependencyProvider::addFileSystemReaderPlugin()` implements `FileSystemTemporaryUrlGeneratorPluginInterface`. `Spryker\Service\Flysystem\Plugin\FileSystem\FileSystemReaderPlugin` implements it.
+- The filesystem uses an adapter that supports temporary URLs. With the `Flysystem` module, the adapter must implement `League\Flysystem\UrlGeneration\TemporaryUrlGenerator`, which requires `league/flysystem` 3.10.2 or later. The AWS S3 adapter used by `Aws3v3FilesystemBuilderPlugin` and `IamAws3v3FilesystemBuilderPlugin` supports temporary URLs. The local and FTP adapters do not. For the AWS S3 configuration, see [AWS S3 filesystem builder plugins](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html#aws-s3-filesystem-builder-plugins).
+
+### Generate a temporary URL
+
+To generate a temporary URL, pass `FileSystemTemporaryUrlQueryTransfer` to `FileSystemService::getTemporaryUrl()`:
+
+| PROPERTY | REQUIRED | DESCRIPTION |
+| --- | --- | --- |
+| `fileSystemName` | Yes | Name of a filesystem defined in `FileSystemConstants::FILESYSTEM_SERVICE`. |
+| `path` | Yes | Path to the file inside the filesystem. |
+| `expiresAt` | Yes | Time when the URL stops working. Accepts any value that `DateTimeImmutable` can parse, for example `+10 minutes` or `2026-10-20 12:00:00`. The maximum lifetime depends on the adapter. For AWS S3, it is 7 days. |
+| `config` | No | Options that are passed to the filesystem adapter. For AWS S3, use `get_object_options` to add parameters to the `GetObject` request, such as `ResponseContentDisposition`, and `presigned_request_options` to pass options to the AWS SDK `S3Client::createPresignedRequest()` method. |
+
+The following example generates a URL that is valid for 10 minutes for an invoice stored in the `customer-documents` filesystem, which uses an AWS S3 builder plugin. The `ResponseContentDisposition` option makes the browser download the file as `invoice-123.pdf` instead of displaying it.
+
+```php
+<?php
+
+use Generated\Shared\Transfer\FileSystemTemporaryUrlQueryTransfer;
+
+$fileSystemTemporaryUrlQueryTransfer = (new FileSystemTemporaryUrlQueryTransfer())
+    ->setFileSystemName('customer-documents')
+    ->setPath('invoices/2026/10/123.pdf')
+    ->setExpiresAt('+10 minutes')
+    ->setConfig([
+        'get_object_options' => [
+            'ResponseContentDisposition' => 'attachment; filename="invoice-123.pdf"',
+        ],
+    ]);
+
+$temporaryUrl = $fileSystemService->getTemporaryUrl($fileSystemTemporaryUrlQueryTransfer);
+```
+
+`getTemporaryUrl()` throws `FileSystemReadException` in the following cases:
+
+- The reader plugin does not implement `FileSystemTemporaryUrlGeneratorPluginInterface`.
+- The filesystem adapter does not support temporary URLs.
+- `expiresAt` cannot be parsed into a date.
+
+### Considerations for temporary URLs
+
+- Anyone who has a temporary URL can download the file until the URL expires. Set `expiresAt` to the shortest time that covers your use case.
+- `getTemporaryUrl()` does not check whether the file exists. For a path that does not exist, it returns a URL, and a request to this URL fails. To check that the file exists before generating the URL, use `FileSystemService::has()`.
+- If the filesystem authenticates with temporary credentials, such as the IAM role used by `IamAws3v3FilesystemBuilderPlugin`, the URL stops working when these credentials expire, even if `expiresAt` is later.

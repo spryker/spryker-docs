@@ -1,9 +1,17 @@
 ---
 title: Install Back Office Assistant
 description: Learn how to install the Back Office Assistant feature that provides an AI-powered chat widget in the Spryker Back Office.
-last_updated: Oct 14, 2026
+last_updated: Oct 29, 2026
 template: feature-integration-guide-template
 ---
+
+<style>
+  .post-content pre {
+    white-space: pre;
+    word-break: normal;
+    overflow-x: auto;
+  }
+</style>
 
 Back Office Assistant is an AI-powered chat widget embedded in the Back Office. It lets admin users ask natural language questions, navigate the Back Office, manage orders, and create or update discounts through a conversational interface. This document describes how to install the Back Office Assistant feature.
 
@@ -15,15 +23,37 @@ Follow the steps in the following sections to install the Back Office Assistant 
 
 Install the required features:
 
+<div class="width-100">
+
 | NAME | VERSION | INSTALLATION GUIDE |
 |------|---------|-------------------|
 | AI Commerce | {{page.release_tag}} | [Install AI Commerce](/docs/dg/dev/ai/ai-commerce/install-ai-commerce.html) |
 
+</div>
+
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/ai-commerce
+composer require spryker-feature/ai-commerce spryker/gui --update-with-dependencies
 ```
+
+The chat widget uses the shared chat frontend of the `AiCommerce` module. The feature requires `spryker/gui` version `^5.12.0` or higher and `spryker/twig` version `^3.34.0` or higher. The Back Office frontend builder of `spryker/gui` resolves the `@shared/ai-commerce/*` alias, and `spryker/twig` provides `SharedThemeTwigLoaderPlugin`.
+
+{% info_block warningBox "Verification" %}
+
+Make sure the following modules have been installed:
+
+<div class="width-100">
+
+| MODULE | EXPECTED DIRECTORY |
+|--------|--------------------|
+| AiCommerce | vendor/spryker-feature/ai-commerce |
+| Gui | vendor/spryker/gui |
+| Twig | vendor/spryker/twig |
+
+</div>
+
+{% endinfo_block %}
 
 ### 2) Generate transfers and run database migration
 
@@ -212,12 +242,16 @@ class AiCommerceConfig extends SprykerFeatureAiCommerceConfig
 
 Register the following plugins to integrate the Back Office Assistant agents. To add a new agent instead of, or in addition to, the built-in ones, see [Add a custom Back Office Assistant agent](/docs/dg/dev/ai/ai-commerce/backoffice-assistant/add-custom-backoffice-assistant-agent.html).
 
+<div class="width-100">
+
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |--------|---------------|---------------|-----------|
 | `GeneralAgentPlugin` | Registers the General Purpose agent that answers Back Office navigation and how-to questions. | | `SprykerFeature\Zed\AiCommerce\Communication\Plugin\Agent` |
 | `OrderManagementAgentPlugin` | Registers the Order Management agent that provides read-only access to order and OMS data. | | `SprykerFeature\Zed\AiCommerce\Communication\Plugin\Agent` |
 | `DiscountManagementAgentPlugin` | Registers the Discount Management agent that can create and update discounts. | | `SprykerFeature\Zed\AiCommerce\Communication\Plugin\Agent` |
 | `FormFillAgentPlugin` | Registers the Form Fill agent that fills Back Office forms using natural language instructions. | | `SprykerFeature\Zed\AiCommerce\Communication\Plugin\Agent` |
+
+</div>
 
 **src/Pyz/Zed/AiCommerce/AiCommerceDependencyProvider.php**
 
@@ -251,6 +285,8 @@ class AiCommerceDependencyProvider extends SprykerFeatureAiCommerceDependencyPro
 
 Register the following plugins in `AiFoundationDependencyProvider`:
 
+<div class="width-100">
+
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |--------|---------------|---------------|-----------|
 | `BackofficeAssistantSsePreToolCallPlugin` | Streams a Server-Sent Event to the browser before each tool call. | | `SprykerFeature\Zed\AiCommerce\Communication\Plugin\AiFoundation` |
@@ -261,6 +297,8 @@ Register the following plugins in `AiFoundationDependencyProvider`:
 | `OrderDetailsToolSetPlugin` | Registers tools for fetching detailed order data by reference or ID. | | `SprykerFeature\Zed\AiCommerce\Communication\Plugin\AiFoundation` |
 | `DiscountManagementToolSetPlugin` | Registers tools for reading, creating, and updating discounts. | | `SprykerFeature\Zed\AiCommerce\Communication\Plugin\AiFoundation` |
 | `FormFillToolSetPlugin` | Registers tools for filling Back Office form fields. | | `SprykerFeature\Zed\AiCommerce\Communication\Plugin\AiFoundation` |
+
+</div>
 
 **src/Pyz/Zed/AiFoundation/AiFoundationDependencyProvider.php**
 
@@ -340,11 +378,16 @@ class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvid
 }
 ```
 
-Register the Twig plugin to inject the chat widget into the Back Office layout:
+Register the Twig plugins to inject the chat widget into the Back Office layout:
+
+<div class="width-100">
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |--------|---------------|---------------|-----------|
 | `AiCommerceTwigPlugin` | Registers Twig functions and variables required by the Back Office Assistant chat widget. | | `SprykerFeature\Zed\AiCommerce\Communication\Plugin\Twig` |
+| `SharedThemeTwigLoaderPlugin` | Makes the templates of the shared chat available as `@AiCommerce/Chat/...`. Project templates in `src/Pyz/Shared/AiCommerce/Theme/default/` replace the core templates. | Register it after `FilesystemTwigLoaderPlugin`. | `Spryker\Zed\Twig\Communication\Plugin` |
+
+</div>
 
 **src/Pyz/Zed/Twig/TwigDependencyProvider.php**
 
@@ -353,8 +396,10 @@ Register the Twig plugin to inject the chat widget into the Back Office layout:
 
 namespace Pyz\Zed\Twig;
 
-use SprykerFeature\Zed\AiCommerce\Communication\Plugin\Twig\AiCommerceTwigPlugin;
+use Spryker\Zed\Twig\Communication\Plugin\FilesystemTwigLoaderPlugin;
+use Spryker\Zed\Twig\Communication\Plugin\SharedThemeTwigLoaderPlugin;
 use Spryker\Zed\Twig\TwigDependencyProvider as SprykerTwigDependencyProvider;
+use SprykerFeature\Zed\AiCommerce\Communication\Plugin\Twig\AiCommerceTwigPlugin;
 
 class TwigDependencyProvider extends SprykerTwigDependencyProvider
 {
@@ -368,6 +413,18 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
             new AiCommerceTwigPlugin(),
         ];
     }
+
+    /**
+     * @return array<\Spryker\Shared\TwigExtension\Dependency\Plugin\TwigLoaderPluginInterface>
+     */
+    protected function getTwigLoaderPlugins(): array
+    {
+        return [
+            new FilesystemTwigLoaderPlugin(),
+            // ... other loader plugins
+            new SharedThemeTwigLoaderPlugin(),
+        ];
+    }
 }
 ```
 
@@ -377,7 +434,21 @@ In the Back Office, make sure the chat widget icon is visible in the Back Office
 
 {% endinfo_block %}
 
-### 5) Sync configuration
+### 5) Add translations
+
+The chat widget uses the `ai_commerce.backoffice_assistant.*` and `ai_commerce.storefront_assistant.*` Zed translation keys. The module ships these keys in `vendor/spryker-feature/ai-commerce/data/translation/Zed/`, so you do not import them. Generate the Zed translation cache:
+
+```bash
+console translator:generate-cache
+```
+
+{% info_block warningBox "Verification" %}
+
+In the Back Office, open the chat widget. Make sure the texts of the widget are displayed as translations, not as keys such as `ai_commerce.storefront_assistant.action.send`.
+
+{% endinfo_block %}
+
+### 6) Sync configuration
 
 Define the AI configuration and model settings for the Back Office Assistant in `data/configuration/ai_commerce.configuration.yml`. These settings back the `configuration::` references registered in `config/Shared/config_ai.php`, so they must exist before syncing:
 
@@ -475,7 +546,7 @@ Sync the Back Office Assistant configuration to the database:
 console configuration:sync
 ```
 
-### 6) Enable the feature
+### 7) Enable the feature
 
 Enable the feature in the Back Office:
 
@@ -526,20 +597,35 @@ console router:cache:warm-up:backoffice
 
 ### 2) Install frontend dependencies
 
-The chat widget requires the `marked` and `dompurify` npm packages for rendering and sanitizing Markdown responses.
+The shared chat needs the `marked`, `dompurify`, and `eventsource-parser` npm packages to render Markdown, sanitize HTML, and read the response stream. The `package.json` file of the module declares these packages, so you do not add them to the project `package.json`.
 
-Install the required npm packages:
+npm installs the packages of the module only if the `workspaces` list of the project `package.json` contains the folder of the module. Make sure the list contains `vendor/spryker-feature/*`:
 
-```bash
-npm install marked@^15.0.0 dompurify@^3.2.0
+**package.json**
+
+```json
+{
+    "workspaces": [
+        "vendor/spryker/*",
+        "vendor/spryker/*/assets/Zed",
+        "vendor/spryker-feature/*",
+        "vendor/spryker-feature/*/assets/Zed",
+        "vendor/spryker-shop/*"
+    ]
+}
 ```
+
+If you added the `marked` and `dompurify` packages to the project `package.json` for an earlier version of the feature, remove them.
 
 ### 3) Apply the frontend changes
 
 ```bash
+docker/sdk cli npm install
 docker/sdk cli console frontend:project:install-dependencies
 docker/sdk cli console frontend:zed:build
 ```
+
+The build creates `spryker-zed-ai-commerce.js` and `spryker-zed-ai-commerce.css`, which `chat-widget.twig` loads.
 
 {% info_block warningBox "Verification" %}
 
@@ -548,3 +634,11 @@ In the Back Office, open the Back Office Assistant chat widget and send a messag
 ![Back Office Assistant chat](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-commerce/backoffice-assistant-chat.png)
 
 {% endinfo_block %}
+
+## Upgrade from an earlier version
+
+The Back Office chat widget now uses the shared chat frontend. If you installed an earlier version of the feature, check the following:
+
+- The controllers `BackofficeAssistantPromptController` and `BackofficeAssistantConversationController` are replaced by `BackofficeAssistantChatController`. The URLs of the chat start with `/ai-commerce/backoffice-assistant-chat/`. Update project code that uses the earlier URLs.
+- The `BackofficeAssistantEventType` enum and the earlier JavaScript and SCSS files of the widget are removed. Move project changes of these files to the shared chat. For the extension points, see [Chat frontend](/docs/dg/dev/ai/ai-commerce/backoffice-assistant/backoffice-assistant.html#chat-frontend).
+- The plain-text Zed translation keys of the widget, such as `Open AI Assistant`, are replaced by `ai_commerce.backoffice_assistant.*` and `ai_commerce.storefront_assistant.*` keys. Move project translations to the new keys.

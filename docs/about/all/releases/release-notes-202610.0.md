@@ -30,6 +30,14 @@ Recurring Orders now support more flexible scheduling and fewer unnecessary inte
 
 Back Office users can now create, review, and activate workflows visually, instead of writing XML by hand, and see everything about a workflow on a single page. This release also lets you model more business processes with workflows, including marketplace processes such as merchant onboarding
 
+{% include carousel.html
+images="
+https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-202610.0.md/workflows_1.jpeg||::
+https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-202610.0.md/workflows_2.jpeg||::
+https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-202610.0.md/workflows_3.jpg||::
+https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-202610.0.md/workflows_4.jpeg||::"
+%}
+
 **Key capabilities:**
 - Visual authoring: build and edit workflows on a diagram instead of in XML, with clearer labels and more intuitive controls.
 - Validation: workflows are checked for configuration errors, and a workflow with errors can't be activated.

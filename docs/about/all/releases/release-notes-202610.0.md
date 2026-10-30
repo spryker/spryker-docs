@@ -9,7 +9,7 @@ For information about installing Spryker, see [Getting started guide](/docs/dg/d
 
 ## B2B Business-Ready Commerce Experiences
 
-### Recurring Orders Improvements
+### Recurring Orders Improvements {% include badge.html type="improvement" %}
 
 Recurring Orders now support more flexible scheduling and fewer unnecessary interruptions. Buyers can define multi-day delivery patterns in a single recurring order and set price tolerances so small expected price changes do not automatically stop the schedule for review.
 
@@ -26,7 +26,7 @@ Recurring Orders now support more flexible scheduling and fewer unnecessary inte
 **Documentation:**
 - [Recurring Orders - Price tolerances](/docs/pbc/all/order-experience-management/latest/base-shop/feature-overviews/recurring-orders-feature-overview#price-tolerances)
 
-### Workflows — Visual authoring, validation, and a consolidated view {% include badge.html type="early-access" %}
+### Workflows — Visual authoring, validation, and a consolidated view {% include badge.html type="early-access,improvement" %}
 
 Back Office users can now create, review, and activate workflows visually, instead of writing XML by hand, and see everything about a workflow on a single page. This release also lets you model more business processes with workflows, including marketplace processes such as merchant onboarding
 
@@ -131,7 +131,7 @@ Not included in this release: native EDI transport and partner-specific mappings
 - [Backend API: Create an order comment](/docs/pbc/all/order-experience-management/latest/base-shop/manage-using-backend-api/orders/backend-api-create-an-order-comment)
 - [Install the Orders Backend API feature](/docs/pbc/all/order-experience-management/latest/base-shop/install-and-upgrade/install-features/install-the-orders-backend-api-feature)
 
-### the Back Office API for commerce and B2B entities {% include badge.html type="feature" %}
+### Back Office API for commerce and B2B entities {% include badge.html type="feature" %}
 
 The the Back Office API now lets ERP, CRM, PIM, and other source systems maintain commerce data and B2B accounts in Spryker directly, with the same business rules and validation the Back Office applies. This release covers the catalog, discounts, translations, customers, B2B company accounts, and merchants. Further domains such as prices, stock, CMS, returns, shipment, payment, and tax follow in later releases.
 
@@ -159,7 +159,7 @@ The the Back Office API now lets ERP, CRM, PIM, and other source systems maintai
 - [Backend API: Manage companies](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/backend-api-manage-companies)
 - [Backend API: Manage merchants](/docs/pbc/all/merchant-management/latest/base-shop/manage-using-backend-api/backend-api-manage-merchants)
 
-### Backend API login for merchant users and Back Office users {% include badge.html type="feature" %}
+### Backend API authentication for merchant and Back Office users {% include badge.html type="feature" %}
 
 Back Office users and merchant users can now sign in to the Backend API with their own credentials. Each user gets a token that carries their role, so an endpoint can serve the marketplace operator and merchants at the same time. Merchant users see and change only their own merchant's data, with the same access rules that protect the Merchant Portal.
 
@@ -219,7 +219,7 @@ Spryker introduced an early access capability in the AI Dev SDK that helps teams
 
 **Documentation:**
 
-### AI Commerce — Cost-efficient default models {% include badge.html type="improvement" %}
+### AI Commerce — Cost-efficient default models {% include badge.html type="early-access,improvement" %}
 
 New AI Commerce installations now use more cost-efficient AI models by default, lowering operating costs from day one. Existing projects keep their current configuration and can switch to the new models in the Back Office.
 

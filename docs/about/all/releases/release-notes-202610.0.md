@@ -249,9 +249,8 @@ The AI Dev SDK has been extended to support more developer workflows and tools. 
 
 **Business benefits:**
 - Lowers onboarding effort for teams using different AI coding assistants.
-- Speeds up demo preparation with step-by-step guidance that works the same way for every demo.
 - Each upgrade brings the latest security and performance fixes, and gives the business a clear report of the changes and the release steps.
-- Improves frontend code quality with project-specific rules and skills for Yves, the Back Office, and the Merchant Portal.
+- Improves frontend code quality with project-specific rules and skills for Yves Storefront, the Back Office, and the Merchant Portal.
 
 **Documentation:**
 - [Install the AI Dev SDK](/docs/dg/dev/ai/ai-dev/ai-dev-installation#set-up-with-github-copilot)

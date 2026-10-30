@@ -14,7 +14,7 @@ For information about installing Spryker, see [Getting started guide](/docs/dg/d
 Recurring Orders now support more flexible scheduling and fewer unnecessary interruptions. Buyers can define multi-day delivery patterns in a single recurring order and set price tolerances so small expected price changes do not automatically stop the schedule for review.
 
 {% include carousel.html
-images="https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-202610.0.md/recurring_orders.mp4::"
+images="https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-202610.0.md/recurring_orders.mp4||"
 %}
 
 **Key capabilities:**
@@ -64,7 +64,7 @@ Flexible automation: marketplace operators can model processes such as merchant 
 The Back Office now includes a dedicated Service Points interface for viewing service points in one place. Business users can access key service point information directly in the Back Office without relying on database or API access.
 
 {% include carousel.html
-images="https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-202610.0.md/service_points.jpeg::"
+images="https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-202610.0.md/service_points.jpeg||"
 %}
 
 
@@ -107,6 +107,10 @@ Buyers can now access invoice and credit note documents directly from their orde
 ### B2B Customer Groups - Membership [Phase 1] {% include badge.html type="improvement" %}
 
 Customer groups can now be built using companies and business units, not only individual users. This makes segmentation better aligned with real B2B account structures and easier to maintain across commercial use cases. We will continue to build B2B Customer Groups, reach out if you are interested.
+
+{% include carousel.html
+images="https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-202610.0.md/customer_groups.mp4||"
+%}
 
 **Key capabilities:**
 - Add companies, business units, and individual customers to the same customer group

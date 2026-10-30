@@ -1,3 +1,10 @@
+---
+title: SSO Access: Spryker's idP integration process
+description: The process of integrating Spryker's IdP with an external IdP
+template: howto-guide-template
+last_updated: Jul 10, 2026
+---
+
 # Connecting Your Identity Provider to Spryker Keycloak
 
 ## Overview

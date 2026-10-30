@@ -35,10 +35,10 @@ To upgrade, follow the steps below.
 ### 1) Update the module
 
 ```bash
-composer require spryker-feature/product-experience-management:"^4.1.0" --update-with-dependencies
+composer require spryker/data-exchange:"^0.1.0" spryker-feature/product-experience-management:"^4.1.0" --update-with-dependencies
 ```
 
-The module requires `spryker/data-exchange` and `spryker/data-exchange-extension`, so Composer installs both.
+The module requires `spryker/data-exchange-extension` only; the engine `spryker/data-exchange` is required by the project, as in the command above.
 
 ### 2) Register the product schema plugin
 
@@ -65,10 +65,20 @@ class DataExchangeDependencyProvider extends SprykerDataExchangeDependencyProvid
             new ProductCsvImportSchemaPlugin(),
         ];
     }
+
+    /**
+     * @return array<\Spryker\Zed\DataExchangeExtension\Dependency\Plugin\ExportSchemaPluginInterface>
+     */
+    protected function getExportSchemaPlugins(): array
+    {
+        return [
+            new ProductCsvImportSchemaPlugin(),
+        ];
+    }
 }
 ```
 
-If your project overrides `getImportSchemaPlugins()`, `getImportPreProcessorPlugins()`, or `getImportPostProcessorPlugins()` in `Pyz\Zed\ProductExperienceManagement\ProductExperienceManagementDependencyProvider`, move the overrides to the class above and remove them from the old provider.
+The engine resolves the import, the template download, and the job creation through `getImportSchemaPlugins()`, and the export with data through `getExportSchemaPlugins()`; the product plugin implements both sides, so it is registered in both stacks. If your project overrides `getImportSchemaPlugins()`, `getImportPreProcessorPlugins()`, or `getImportPostProcessorPlugins()` in `Pyz\Zed\ProductExperienceManagement\ProductExperienceManagementDependencyProvider`, move the overrides to the class above and remove them from the old provider.
 
 ### 3) Rename the filesystem entries
 
@@ -118,11 +128,15 @@ If your project overrides engine settings in `Pyz\Zed\ProductExperienceManagemen
 
 If your project contains its own import steps or schema plugins, update them as follows:
 
-- Replace `implements \SprykerFeature\Zed\ProductExperienceManagement\Business\Dependency\Plugin\ImportStepInterface` with `extends \Spryker\Zed\DataExchange\Business\ImportStep\AbstractImportStep`. The base class provides `createImportStepError()` and `createImportPublishEvent()` for building the row error and publish event transfers. Steps that extend `AbstractProductCsvImportStep` need no change.
+- Replace `implements \SprykerFeature\Zed\ProductExperienceManagement\Business\Dependency\Plugin\ImportStepInterface` with `implements \Spryker\Zed\DataExchangeExtension\Dependency\Plugin\ImportStepInterface`. Steps that extend `AbstractProductCsvImportStep` need no change; its `createImportStepError()` and `createImportPublishEvent()` helpers are unchanged. In `ProductCsvImportSearchStep`, `ProductCsvImportPriceStep`, and `ProductCsvImportPriceStoreStep`, the nullable helpers `resolveAbstractSku()` and `resolveConcreteSku()` were renamed to `findAbstractSku()` and `findConcreteSku()`; update subclasses that call them.
 - Replace the imports of `ImportSchemaPluginInterface`, `ExportSchemaPluginInterface`, `ExportStepInterface`, `ExportDataProviderInterface`, `ImportPreProcessorPluginInterface`, and `ImportPostProcessorPluginInterface` with the interfaces of the same names in `Spryker\Zed\DataExchangeExtension\Dependency\Plugin`.
-- Implement the new `ImportSchemaPluginInterface::getPlaceholderProvider()` method in every schema plugin. It returns a `ColumnPlaceholderProviderInterface` with the values of the placeholders used in the plugin's schema. Before 4.1.0, the engine used the product placeholder provider for every job type.
+- Implement the new `getPlaceholderProvider()` method in every schema plugin. `getType()`, `getSchema()`, and `getPlaceholderProvider()` now live in `SchemaPluginInterface`, the parent of `ImportSchemaPluginInterface` and `ExportSchemaPluginInterface`; a plugin that implements the export side must also be registered in `getExportSchemaPlugins()`. It returns a `ColumnPlaceholderProviderInterface` with the values of the placeholders used in the plugin's schema. Before 4.1.0, the engine used the product placeholder provider for every job type.
 
-### 8) Update facade and entity references
+### 8) Update Back Office ACL rules
+
+Back Office ACL rules and group rules are defined by bundle, controller, and action. Rules that grant the Import & Export pages through the `product-experience-management` bundle no longer match the moved pages, so the affected users lose access after the upgrade. Add rules for the `data-exchange` bundle with the controllers `job`, `run`, `export`, and `template` to the same groups, or widen the existing rules, before the upgrade is deployed.
+
+### 9) Update facade and entity references
 
 - Replace calls to the removed `ProductExperienceManagementFacadeInterface` methods listed in the table above with the same methods on `DataExchangeFacadeInterface`, available through `$container->getLocator()->dataExchange()->facade()`.
 - Replace references to `Orm\Zed\ProductExperienceManagement\Persistence\SpyImportJob*` classes with `Orm\Zed\DataExchange\Persistence\SpyImportJob*`.

@@ -37,10 +37,16 @@ Back Office users manage jobs, runs, exports, and templates under **Import & Exp
 3. The `import:job:run` console command, scheduled to run every minute, picks up the oldest pending run and marks it as *processing*.
 4. The engine reads the file in batches of 1000 rows. The headers are mapped to system property names using the job's schema; columns that are not part of the schema are ignored, and rows whose number of columns differs from the header row are recorded as errors.
 5. Each batch passes through the import steps of the schema plugin in order. A step validates and persists its part of the row and reports an error for every row it rejects.
-6. After the last row, the engine triggers the publish events reported by the steps, so that Storefront data is updated once per entity.
-7. The run is marked as *done* with the number of processed, successful, and failed rows. The run is marked as *failed* when no row was processed, when every row failed, or when a step threw an exception; the exception message is recorded as a run error.
+6. After the last row, the engine triggers the publish events reported by the steps, so that Storefront data is updated once per entity. The rows themselves are committed as each step persists them; there is no transaction around the run.
+7. The run is marked as *done* with the number of processed, successful, and failed rows. The run is marked as *failed* when no row was processed, when every row failed, or when a step threw an exception; the exception message is recorded as a run error. In that case the rows of the batches processed before the failure stay in the database, and the publish events collected so far are not triggered.
 
 A row is counted as failed when at least one step rejected it. The other steps still process the row, so a data type should validate before it persists.
+
+## Limits and performance
+
+- The `import:job:run` command processes one run per call. With the one-minute schedule, one consumer processes about one run per minute; a pending run waits until the runs queued before it are done.
+- The import reads the file in batches; the batch size is `getImportCsvBatchSize()` in `DataExchangeConfig` (default 1000 rows). The maximum upload size is `getImportMaxFileSizeString()` (default 50 MB).
+- The export runs synchronously inside the HTTP request of the **Export** page and pages through the data with `getExportCsvBatchSize()` (default 1000 rows). A very large export can hit the web server timeout or the PHP memory limit; split such data sets by job or raise the limits for the Back Office.
 
 ## Export workflow
 
@@ -49,7 +55,7 @@ A row is counted as failed when at least one step rejected it. The other steps s
 3. The export data provider of the schema plugin returns the rows in batches of 1000, and the export steps fill the columns.
 4. The resulting CSV file is stored in the export filesystem and streamed to the user.
 
-A job type is exportable only if its schema plugin provides export steps. The **Export** page lists only exportable jobs.
+A job type is exportable only if a plugin implementing `ExportSchemaPluginInterface` is registered for it in `getExportSchemaPlugins()`. The **Export** page lists every import job; exporting a job whose type has no export plugin is rejected with an error.
 
 ## Template download
 

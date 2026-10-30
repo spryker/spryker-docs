@@ -107,16 +107,37 @@ class LocalePlaceholderProvider implements ColumnPlaceholderProviderInterface
 }
 ```
 
-A placeholder with no values removes every column that uses it. If the schema has no placeholders, as in the customer example, return an empty array.
+A placeholder with no values removes every column that uses it. If the schema has no placeholders, as in the customer example, return an empty array:
+
+**src/Pyz/Zed/CustomerDataExchange/Business/PlaceholderProvider/EmptyPlaceholderProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\CustomerDataExchange\Business\PlaceholderProvider;
+
+use Spryker\Zed\DataExchangeExtension\Dependency\Plugin\ColumnPlaceholderProviderInterface;
+
+class EmptyPlaceholderProvider implements ColumnPlaceholderProviderInterface
+{
+    /**
+     * @return array<string, array<string>>
+     */
+    public function getPlaceholderValues(): array
+    {
+        return [];
+    }
+}
+```
 
 ## 2. Implement the import step
 
-An import step implements `ImportStepInterface` and receives every batch of rows of a run, in the order the steps are returned by `getImportSteps()`. Extend `AbstractImportStep` of the `DataExchange` module to get the helpers that build the two transfers a step reports:
+An import step implements `ImportStepInterface` and receives every batch of rows of a run, in the order the steps are returned by `getImportSteps()`. The engine ships no base class, so your module depends on `spryker/data-exchange-extension` only; the step builds the two transfers it reports itself:
 
-| HELPER | PURPOSE |
+| TRANSFER | PURPOSE |
 | --- | --- |
-| `createImportStepError(int $csvRowNumber, string $errorMessage)` | Reports that a row failed. The engine stores the error with the row number and counts the row as failed. |
-| `createImportPublishEvent(string $eventName, int $entityId)` | Asks the engine to trigger a publish event for an entity after the whole file has been processed. |
+| `ImportStepErrorTransfer` (`csvRowNumber`, `errorMessage`) | Reports that a row failed. The engine stores the error with the row number and counts the row as failed. |
+| `ImportPublishEventTransfer` (`eventName`, `entityId`) | Asks the engine to trigger a publish event for an entity after the whole file has been processed. |
 
 The `$rows` argument is indexed by the row number in the file, and each row is indexed by the system property names of the schema. The `$propertyNamesInFile` argument maps every system property name back to the header in the file, so that error messages can name the column the user sees.
 
@@ -128,11 +149,13 @@ The `$rows` argument is indexed by the row number in the file, and each row is i
 namespace Pyz\Zed\CustomerDataExchange\Business\ImportStep;
 
 use Generated\Shared\Transfer\CustomerTransfer;
+use Generated\Shared\Transfer\ImportPublishEventTransfer;
+use Generated\Shared\Transfer\ImportStepErrorTransfer;
 use Generated\Shared\Transfer\ImportStepResponseTransfer;
 use Spryker\Zed\Customer\Business\CustomerFacadeInterface;
-use Spryker\Zed\DataExchange\Business\ImportStep\AbstractImportStep;
+use Spryker\Zed\DataExchangeExtension\Dependency\Plugin\ImportStepInterface;
 
-class CustomerCsvImportStep extends AbstractImportStep
+class CustomerCsvImportStep implements ImportStepInterface
 {
     protected const string EVENT_CUSTOMER_PUBLISH = 'Customer.customer.publish';
 
@@ -151,10 +174,9 @@ class CustomerCsvImportStep extends AbstractImportStep
         foreach ($rows as $rowNumber => $row) {
             if ($row['email'] === '') {
                 $response->setIsSuccessful(false);
-                $response->addError($this->createImportStepError(
-                    $rowNumber,
-                    sprintf('Column "%s" must not be empty.', $propertyNamesInFile['email'] ?? 'email'),
-                ));
+                $response->addError((new ImportStepErrorTransfer())
+                    ->setCsvRowNumber($rowNumber)
+                    ->setErrorMessage(sprintf('Column "%s" must not be empty.', $propertyNamesInFile['email'] ?? 'email')));
 
                 continue;
             }
@@ -171,16 +193,17 @@ class CustomerCsvImportStep extends AbstractImportStep
                 $response->setIsSuccessful(false);
 
                 foreach ($customerResponseTransfer->getErrors() as $customerErrorTransfer) {
-                    $response->addError($this->createImportStepError($rowNumber, $customerErrorTransfer->getMessageOrFail()));
+                    $response->addError((new ImportStepErrorTransfer())
+                        ->setCsvRowNumber($rowNumber)
+                        ->setErrorMessage($customerErrorTransfer->getMessageOrFail()));
                 }
 
                 continue;
             }
 
-            $response->addPublishEvent($this->createImportPublishEvent(
-                static::EVENT_CUSTOMER_PUBLISH,
-                $customerResponseTransfer->getCustomerTransferOrFail()->getIdCustomerOrFail(),
-            ));
+            $response->addPublishEvent((new ImportPublishEventTransfer())
+                ->setEventName(static::EVENT_CUSTOMER_PUBLISH)
+                ->setEntityId($customerResponseTransfer->getCustomerTransferOrFail()->getIdCustomerOrFail()));
         }
 
         return $response;
@@ -190,19 +213,21 @@ class CustomerCsvImportStep extends AbstractImportStep
 
 Keep the following engine rules in mind when writing a step:
 
+- **Steps run in the order of `getImportSteps()`.** A step that needs entities another step creates, for example the address step after the customer step, must be registered after it.
 - **Every step sees every batch.** Split the work by concern, for example one step for the customer and one for its addresses, and let each step read only the columns it needs.
 - **A row fails as soon as one step reports an error for it**, but the remaining steps still receive the row. Validate before you persist.
 - **Steps are stateless.** A step must not depend on data from a previous batch or from another step.
-- **Entity events are off while rows are written.** The engine disables the `EventBehavior` events for the duration of the run and triggers the publish events the steps returned once, after the last row. Report a publish event for every entity you create or change, or Storefront data is not updated.
+- **Entity events are off while rows are written.** The engine disables the `EventBehavior` events for the duration of the run and triggers the publish events the steps returned once, after the last row. A step must not call `EventBehaviorConfig::enableEvent()` itself. Report a publish event for every entity you create or change, or Storefront data is not updated.
+- **There is no per-run setup or tear-down hook on a step.** Work that runs once per run, before or after the rows, goes into an `ImportPreProcessorPluginInterface` or `ImportPostProcessorPluginInterface` plugin (section 4).
 - **An exception fails the run.** If a step throws, the engine marks the run as *failed*, records the exception message as a run error, and re-enables the entity events.
 
 ## 3. Optional: Make the type exportable
 
-A job type is exportable when its schema plugin also implements `ExportSchemaPluginInterface`. The Back Office **Export** page then offers the type, and the engine writes a CSV file with the same columns as the import file. The export needs two more classes:
+A job type is exportable when its schema plugin also implements `ExportSchemaPluginInterface` and is registered in `getExportSchemaPlugins()` (section 4). Both interfaces extend `SchemaPluginInterface`, so one class provides `getType()`, `getSchema()`, and `getPlaceholderProvider()` for both sides, and the engine writes a CSV file with the same columns as the import file. The export needs two more classes:
 
 | INTERFACE | PURPOSE |
 | --- | --- |
-| `ExportDataProviderInterface` | Returns the rows to export in batches. `getBatch(array $columns, int $limit, int $lastId)` returns up to `$limit` rows whose primary key is greater than `$lastId`, each with the key `ExportDataProviderInterface::INTERNAL_COLUMN_CURSOR_ID` set to the primary key. The engine passes the last cursor back on the next call and stops when the provider returns an empty array. |
+| `ExportDataProviderInterface` | Returns the rows to export in batches. `getBatch(array $columns, int $limit, int $lastId)` returns up to `$limit` rows whose primary key is greater than `$lastId`, sorted by the primary key in ascending order, each with the key `ExportDataProviderInterface::INTERNAL_COLUMN_CURSOR_ID` set to the primary key. The engine takes the cursor of the last row of a batch as the `$lastId` of the next call, so an unsorted batch skips rows; it stops at the first empty array, so the provider must return an empty array at the end. The cursor key never reaches the file: the engine writes only the requested `$columns` of every row. |
 | `ExportStepInterface` | Fills the columns of its concern. `exportRows(array $rows, array $columns)` receives the batch and the resolved column headers and returns the rows with the columns filled. The first step initializes the row structure. |
 
 ```php
@@ -222,7 +247,7 @@ A job type is exportable when its schema plugin also implements `ExportSchemaPlu
     }
 ```
 
-If the type is not exportable, the **Export** page does not offer it, and the CSV template is still available for its import jobs.
+If the type is not exportable, register the plugin in `getImportSchemaPlugins()` only. The CSV template is still available for its import jobs; an export of such a job is rejected with an error.
 
 ## 4. Register the schema plugin
 
@@ -251,16 +276,29 @@ class DataExchangeDependencyProvider extends SprykerDataExchangeDependencyProvid
             new CustomerCsvImportSchemaPlugin(),
         ];
     }
+
+    /**
+     * @return array<\Spryker\Zed\DataExchangeExtension\Dependency\Plugin\ExportSchemaPluginInterface>
+     */
+    protected function getExportSchemaPlugins(): array
+    {
+        return [
+            new ProductCsvImportSchemaPlugin(),
+            new CustomerCsvImportSchemaPlugin(),
+        ];
+    }
 }
 ```
+
+Register the plugin in `getExportSchemaPlugins()` only if it implements `ExportSchemaPluginInterface` (section 3).
 
 The same dependency provider offers two optional hooks that run once per import run, before and after the rows are processed: `getImportPreProcessorPlugins()` with `ImportPreProcessorPluginInterface` and `getImportPostProcessorPlugins()` with `ImportPostProcessorPluginInterface`. Both receive the `ImportJobRunTransfer` of the run.
 
 ## 5. Verify the new type
 
 1. In the Back Office, go to **Import & Export&nbsp;> Import** and click **Create Import Job**. Make sure that **customers-csv-import** is offered in the **Type** field, and create a job with it.
-2. Open the job and click **Download Template**. The file contains one header row with the columns of `getSchema()`.
-3. Fill in a few rows, upload the file with **Create Run**, and process the run:
+2. In the job row, click **Create Run**. Under *Step 1: Download Template*, click **Download CSV Template**. The file contains one header row with the columns of `getSchema()`.
+3. Fill in a few rows, upload the file under *Step 2: Upload Filled CSV* with **Upload & Queue Import**, and process the run:
 
 ```bash
 console import:job:run

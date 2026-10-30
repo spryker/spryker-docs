@@ -70,7 +70,7 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
 
 {% info_block warningBox "IAM authentication required" %}
 
-These filesystems authenticate through the IAM role attached to the workload, which resolves AWS credentials automatically. Access keys (`key` and `secret`) are not supported. For more details, see [AWS S3 filesystem builder plugins](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html#aws-s3-filesystem-builder-plugins).
+These filesystems authenticate through the IAM role attached to the workload, which resolves AWS credentials automatically. Access keys (`key` and `secret`) are not supported. The environment variable names keep the `SPRYKER_S3_PEM_` prefix of the module the engine was extracted from, so existing cloud environments need no changes. For more details, see [AWS S3 filesystem builder plugins](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html#aws-s3-filesystem-builder-plugins).
 
 {% endinfo_block %}
 
@@ -214,10 +214,20 @@ class DataExchangeDependencyProvider extends SprykerDataExchangeDependencyProvid
             new ProductCsvImportSchemaPlugin(),
         ];
     }
+
+    /**
+     * @return array<\Spryker\Zed\DataExchangeExtension\Dependency\Plugin\ExportSchemaPluginInterface>
+     */
+    protected function getExportSchemaPlugins(): array
+    {
+        return [
+            new ProductCsvImportSchemaPlugin(),
+        ];
+    }
 }
 ```
 
-The same dependency provider offers `getImportPreProcessorPlugins()` and `getImportPostProcessorPlugins()` for plugins that run once before and once after the rows of a run are processed.
+`getImportSchemaPlugins()` serves the import, the template download, and the job creation; `getExportSchemaPlugins()` serves the export with data. A type that is not exportable is registered in the import stack only. The same dependency provider offers `getImportPreProcessorPlugins()` and `getImportPostProcessorPlugins()` for plugins that run once before and once after the rows of a run are processed.
 
 {% info_block warningBox "Verification" %}
 
@@ -292,7 +302,7 @@ Execute the following and verify it completes without errors:
 console import:job:run
 ```
 
-The command processes the oldest pending import job run, or exits without output when no run is pending.
+The command prints `Processing next pending import job run...` and `Done.` and exits with code 0. It processes the oldest pending import job run; when no run is pending, nothing is processed.
 
 {% endinfo_block %}
 
@@ -300,14 +310,16 @@ The command processes the oldest pending import job run, or exits without output
 
 Register the command to run on a schedule so that pending runs are picked up automatically:
 
-**src/Pyz/Zed/SymfonyScheduler/SymfonySchedulerConfig.php**
+**src/Pyz/SymfonyScheduler/src/Pyz/Client/SymfonyScheduler/SymfonySchedulerConfig.php**
 
 ```php
 'import-job-run' => [
-    'command' => $logger . '$PHP_BIN vendor/bin/console import:job:run',
+    'command' => '$PHP_BIN vendor/bin/console import:job:run',
     'schedule' => '* * * * *',
 ],
 ```
+
+Add the entry to the array that `getJobs()` returns. If the other entries in your file prefix the command with the `$logger` variable to redirect the output to the scheduler log, prefix this one in the same way.
 
 {% info_block warningBox "Verification" %}
 

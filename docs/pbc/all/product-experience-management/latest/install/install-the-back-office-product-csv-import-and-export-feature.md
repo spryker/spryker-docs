@@ -140,6 +140,16 @@ class DataExchangeDependencyProvider extends SprykerDataExchangeDependencyProvid
             new ProductCsvImportSchemaPlugin(),
         ];
     }
+
+    /**
+     * @return array<\Spryker\Zed\DataExchangeExtension\Dependency\Plugin\ExportSchemaPluginInterface>
+     */
+    protected function getExportSchemaPlugins(): array
+    {
+        return [
+            new ProductCsvImportSchemaPlugin(),
+        ];
+    }
 }
 ```
 

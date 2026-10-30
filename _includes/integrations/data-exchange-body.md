@@ -2,7 +2,7 @@ Data Exchange refers to the process of transferring data between Spryker and thi
 
 Spryker offers the following options to import and export data:
 
-- Data Exchange Jobs: available in SCCOS by default
+- Data Exchange Jobs: an installable SCCOS feature, see [Install the Data Exchange Jobs feature](/docs/pbc/all/data-exchange/latest/data-exchange-jobs/install/install-the-data-exchange-jobs-feature.html)
 - Data Exchange API: available in SCCOS by default
 - Data Importers and Data Exporters: available in Spryker Cloud Commerce OS (SCCOS) by default
 

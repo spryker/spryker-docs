@@ -1157,14 +1157,14 @@ entries:
         url: /docs/pbc/all/data-exchange/data-exchange.html
         nested:
           - title: Data Exchange Jobs
-            url: /docs/pbc/all/data-exchange/data-exchange-jobs/data-exchange-jobs-feature-overview.html
+            url: /docs/pbc/all/data-exchange/latest/data-exchange-jobs/data-exchange-jobs-feature-overview.html
             nested:
               - title: Install the Data Exchange Jobs feature
-                url: /docs/pbc/all/data-exchange/data-exchange-jobs/install/install-the-data-exchange-jobs-feature.html
+                url: /docs/pbc/all/data-exchange/latest/data-exchange-jobs/install/install-the-data-exchange-jobs-feature.html
               - title: Tutorials and HowTos
                 nested:
                   - title: Add a custom data type to Data Exchange Jobs
-                    url: /docs/pbc/all/data-exchange/data-exchange-jobs/tutorials-and-howtos/add-a-custom-data-type-to-data-exchange-jobs.html
+                    url: /docs/pbc/all/data-exchange/latest/data-exchange-jobs/tutorials-and-howtos/add-a-custom-data-type-to-data-exchange-jobs.html
 
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html

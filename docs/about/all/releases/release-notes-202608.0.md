@@ -1,7 +1,7 @@
 ---
 title: Release notes 202608.0
 description: Release notes for Spryker Cloud Commerce OS version 202608.0
-last_updated: August 29, 2026
+last_updated: Oct 30, 2026
 template: concept-topic-template
 ---
 

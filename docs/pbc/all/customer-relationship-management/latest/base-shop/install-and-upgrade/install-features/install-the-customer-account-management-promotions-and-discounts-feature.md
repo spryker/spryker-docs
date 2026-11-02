@@ -1,7 +1,7 @@
 ---
 title: Install the Customer Account Management + Promotions & Discounts feature
 description: Learn how to integrate the Customer Account Management + Promotions & Discounts feature into a Spryker project.
-last_updated: Jun 19, 2025
+last_updated: Nov 2, 2026
 template: feature-integration-guide-template  
 ---
 

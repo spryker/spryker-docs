@@ -109,12 +109,6 @@
                     </div>
 
 
-                    {% if page.url != "/index.html" and page.url != "/search/" %}
-                        <div class="search-section-panel search-section-panel--secondary main-header__search">
-                            {% include search/{{ site.search | default "default" }}-quicksearch.html %}
-                        </div>
-                    {% endif %}
-
                 </div>
                 <div class="main-header__right">
                     <div class="header-switcher">

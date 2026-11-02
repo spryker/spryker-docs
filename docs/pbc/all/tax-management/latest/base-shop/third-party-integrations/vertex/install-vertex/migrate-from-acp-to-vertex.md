@@ -1,7 +1,7 @@
 ---
 title: Migrate from the ACP Vertex app
 description: Learn how to migrate from the ACP-based Vertex tax app to the direct spryker-eco/vertex module.
-last_updated: Mar 25, 2026
+last_updated: Oct 20, 2026
 template: howto-guide-template
 related:
   - title: Integrate Vertex
@@ -210,12 +210,12 @@ class VertexConfig extends SprykerEcoVertexConfig
         return true;
     }
 
-    public function isTaxAssistEnabled(): bool
+    public function isTaxAssistEnabled(array $configurationScopeTransfers = []): bool
     {
         return true;
     }
 
-    public function isInvoicingEnabled(): bool
+    public function isInvoicingEnabled(array $configurationScopeTransfers = []): bool
     {
         return true;
     }

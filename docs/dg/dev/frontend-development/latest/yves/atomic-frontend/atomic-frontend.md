@@ -11,6 +11,7 @@ redirect_from:
   - /docs/en/atomic-frontend
   - /docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-frontend-general-overview.html
   - /docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html
+  - /docs/dg/dev/frontend-development/202307.0/yves/atomic-frontend/atomic-frontend.html
 related:
   - title: Customizing Spryker Frontend
     link: docs/dg/dev/frontend-development/latest/yves/atomic-frontend/customizing-spryker-frontend.html

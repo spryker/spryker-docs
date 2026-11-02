@@ -8,6 +8,8 @@ originalArticleId: a2aeed1c-8613-43f2-9141-abb20c9aedb1
 redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/catalog-setup/products/products.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/products-data-import/products-data-import.html
+  - /docs/pbc/all/product-information-management/202212.0/import-and-export-data/products-data-import/products-data-import.html
+  - /docs/pbc/all/product-information-management/202307.0/base-shop/import-and-export-data/products-data-import/products-data-import.html
 ---
 
 To learn how data import works and about different ways of importing data, see [Data import](/docs/dg/dev/data-import/latest/data-import.html). This section describes the data import files that are used to import data related to products:

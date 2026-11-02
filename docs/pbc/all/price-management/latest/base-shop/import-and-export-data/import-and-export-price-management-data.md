@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/catalog-setup/pricing/pricing.html
   - /docs/pbc/all/price-management/202311.0/base-shop/import-and-export-data/import-of-prices.html
   - /docs/pbc/all/price-management/202204.0/base-shop/import-and-export-data/import-and-export-price-management-data.html
+  - /docs/pbc/all/price-management/202307.0/base-shop/import-and-export-data/import-and-export-price-management-data.html
 ---
 
 To learn how data import works and about different ways of importing data, see [Data import](/docs/dg/dev/data-import/latest/data-import.html). This section describes the data import files that are used to import data related to the Price Management PBC:

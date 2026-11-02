@@ -8,6 +8,10 @@ related:
     link: docs/pbc/all/offer-management/latest/marketplace/manage-merchant-product-offers.html
   - title: Managing merchant product offers
     link: docs/pbc/all/offer-management/latest/marketplace/manage-merchant-product-offers.html
+redirect_from:
+  - /docs/marketplace/user/features/202204.0/marketplace-product-offer-feature-overview.html
+  - /docs/marketplace/dev/feature-integration-guides/202108.0/marketplace-product-offer-feature-integration.html
+  - /docs/marketplace/dev/feature-walkthroughs/202108.0/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
 ---
 
 The *Product Offer* entity is created when multiple merchants need to sell the same product on the Marketplace.

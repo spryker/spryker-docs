@@ -12,6 +12,11 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-api-tutorials/implement-a-rest-api-resource.html
   - /docs/dg/dev/glue-api/latest/glue-api-tutorials/implement-a-rest-api-resource.html
   - /docs/integrations/spryker-glue-api/storefront-api/developing-apis/implement-a-rest-api-resource.html
+  - /docs/glue-rest-api
+  - /docs/rest-api-reference
+  - /docs/scos/dev/glue-api-guides/202005.0/glue-rest-api.html
+  - /docs/scos/dev/glue-api-guides/202005.0/rest-api-reference.html
+  - /glue_rest_api/rest-api-reference.htm
 ---
 
 {% info_block warningBox "Deprecation warning" %}

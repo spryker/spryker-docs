@@ -13,6 +13,7 @@ redirect_from:
 - /docs/scos/dev/the-docker-sdk/202311.0/deploy-file/deploy-file-inheritance-common-use-cases.html
 - /docs/scos/dev/the-docker-sdk/202307.0/deploy-file/deploy-file-inheritance-common-use-cases.html
 - /docs/scos/dev/the-docker-sdk/202212.0/deploy-file/deploy-file-inheritance-common-use-cases.html
+- /docs/scos/dev/the-docker-sdk/202108.0/deploy-file/deploy-file-inheritance-common-use-cases.html
 
 ---
 

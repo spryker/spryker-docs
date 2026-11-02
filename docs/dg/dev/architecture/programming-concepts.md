@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/programming-concept
 originalArticleId: e72b4d76-638f-414d-8577-729b26de5909
 redirect_from:
   - /docs/scos/dev/architecture/programming-concepts.html
+  - /docs/programming-concepts
 related:
   - title: Conceptual overview
     link: docs/dg/dev/architecture/conceptual-overview.html

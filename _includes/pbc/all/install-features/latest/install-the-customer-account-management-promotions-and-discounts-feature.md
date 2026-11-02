@@ -119,91 +119,55 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 
 {% endinfo_block %}
 
-## Optional: Apply customer-group discounts to companies and business units
 
-By default, the `customer-group` discount condition matches only the customer groups a customer is assigned to directly. To offer a discount to all users of a B2B company or business unit without assigning each customer to the group individually, let the condition also match the customer groups assigned to the customer's company and business units. For details on how business unit assignments are inherited, see [Customer Groups overview](/docs/pbc/all/customer-relationship-management/latest/base-shop/customer-account-management-feature-overview/customer-groups-overview.html#how-business-unit-assignments-are-inherited).
 
-### Prerequisites
 
-- `spryker-feature/customer-experience-management` is installed.
-- `CustomerGroupDecisionRulePlugin` from `spryker/customer-group-discount-connector` is registered in `DiscountDependencyProvider::getDecisionRulePlugins()`.
 
-### 1) Install the required modules
 
-```bash
-composer require spryker/customer-group:"^2.16.0" spryker/customer-group-extension:"^1.1.0" --update-with-dependencies
-```
 
-{% info_block warningBox "Verification" %}
 
-Make sure the following modules have been installed:
 
-| MODULE                 | EXPECTED DIRECTORY                        |
-|------------------------|-------------------------------------------|
-| CustomerGroup          | vendor/spryker/customer-group             |
-| CustomerGroupExtension | vendor/spryker/customer-group-extension   |
 
-{% endinfo_block %}
 
-### 2) Set up transfer objects
 
-Generate transfer changes:
 
-```bash
-console transfer:generate
-```
 
-{% info_block warningBox "Verification" %}
 
-Make sure the following changes have been applied in transfer objects:
 
-| TRANSFER                | TYPE     | EVENT   | PATH                                                          |
-|-------------------------|----------|---------|---------------------------------------------------------------|
-| CustomerGroupCollection | class    | created | src/Generated/Shared/Transfer/CustomerGroupCollectionTransfer |
-| CompanyUser             | class    | created | src/Generated/Shared/Transfer/CompanyUserTransfer             |
-| Customer.companyUserTransfer | property | created | src/Generated/Shared/Transfer/CustomerTransfer           |
 
-{% endinfo_block %}
 
-### 3) Set up behavior
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-|---|---|---|---|
-| CompanyUserCustomerGroupProviderPlugin | Provides the customer groups assigned to the company and business unit of the company user the customer currently shops as, including the ancestor business units. | | SprykerFeature\Zed\CustomerExperienceManagement\Communication\Plugin\CustomerGroup |
 
-**src/Pyz/Zed/CustomerGroup/CustomerGroupDependencyProvider.php**
 
-```php
-<?php
 
-namespace Pyz\Zed\CustomerGroup;
 
-use Spryker\Zed\CustomerGroup\CustomerGroupDependencyProvider as SprykerCustomerGroupDependencyProvider;
-use SprykerFeature\Zed\CustomerExperienceManagement\Communication\Plugin\CustomerGroup\CompanyUserCustomerGroupProviderPlugin;
 
-class CustomerGroupDependencyProvider extends SprykerCustomerGroupDependencyProvider
-{
-    /**
-     * @return list<\Spryker\Zed\CustomerGroupExtension\Dependency\Plugin\CustomerGroupProviderPluginInterface>
-     */
-    protected function getCustomerGroupProviderPlugins(): array
-    {
-        return [
-            new CompanyUserCustomerGroupProviderPlugin(),
-        ];
-    }
-}
-```
 
-To provide customer groups from another source, implement `Spryker\Zed\CustomerGroupExtension\Dependency\Plugin\CustomerGroupProviderPluginInterface` and register your plugin in the same stack.
 
-{% info_block warningBox "Verification" %}
 
-1. In the Back Office, assign a business unit to a customer group.
-2. [Create a discount](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/create-discounts.html) with the condition `customer-group = "{CUSTOMER_GROUP_NAME}"`.
-3. On the Storefront, log in as a company user of a child business unit of the assigned business unit, and add a product to the cart.
-4. Make sure the discount is applied.
-5. Log in as a company user of the parent business unit of the assigned business unit, and add a product to the cart.
-6. Make sure the discount is not applied.
 
-{% endinfo_block %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

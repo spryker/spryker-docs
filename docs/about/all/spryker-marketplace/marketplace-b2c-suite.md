@@ -6,6 +6,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/marketplace/user/intro-to-spryker-marketplace/marketplace-b2c-demo-shop.html
   - /docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-b2c-suite.html
+  - /2021080/docs/b2c-suite
 
 ---
 

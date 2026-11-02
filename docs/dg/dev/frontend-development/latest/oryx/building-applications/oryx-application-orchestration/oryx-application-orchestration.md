@@ -6,6 +6,8 @@ last_updated: Oct 24, 2023
 redirect_from:
   - /docs/scos/dev/front-end-development/202404.0/oryx/oryx-application-orchestration/oryx-application-orchestration.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/building-applications/oryx-application-orchestration/oryx-application-orchestration.html
+  - /docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application-orchestration.html
+  - /docs/dg/dev/frontend-development/202307.0/oryx/building-applications/oryx-application-orchestration/oryx-application-orchestration.html
 
 ---
 

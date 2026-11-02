@@ -3,6 +3,11 @@ title: Using Algolia search with custom indexes
 description: Learn how to enable Algolia search for custom entities, such as Docs, in your Spryker-based project.
 last_updated: Feb 20, 2026
 template: howto-guide-template
+redirect_from:
+  - /docs/marketplace/dev/architecture-overview/index.html
+  - /docs/marketplace/dev/front-end/202204.0/ui-components-library/datasources/index.html
+  - /docs/marketplace/dev/feature-integration-guides/202212.0/index.html
+  - /docs/scos/dev/data-export/202204.0/index.html
 ---
 
 The Algolia Eco module supports searching custom entities that are already indexed in Algolia but are not natively supported by the Spryker eco module—like products or CMS pages.

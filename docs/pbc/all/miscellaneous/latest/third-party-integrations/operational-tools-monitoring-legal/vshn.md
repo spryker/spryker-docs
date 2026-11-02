@@ -7,6 +7,9 @@ originalLink: https://documentation.spryker.com/2021080/docs/vshn
 originalArticleId: 69bd6ace-b4a2-4fe2-9102-b12669b3d4b9
 redirect_from:
   - /docs/scos/user/technology-partners/202200.0/operational-tools-monitoring-legal-etc/vshn.html
+  - /docs/scos/user/technology-partners/202204.0/operational-tools-monitoring-legal-etc/vshn.html
+  - /docs/scos/user/technology-partners/202005.0/operational-tools-monitoring-legal-etc/vshn.html
+  - /docs/scos/user/technology-partners/202009.0/operational-tools-monitoring-legal-etc/vshn.html
 ---
 
 ## Partner Information

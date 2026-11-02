@@ -6,6 +6,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/pbc/all/warehouse-management-system/warehouse-management-system.html
   - /docs/pbc/all/warehouse-management-system/202204.0/warehouse-management-system.html
+  - /docs/pbc/all/warehouse-management-system/202307.0/warehouse-management-system.html
 ---
 
 The *Warehouse Management System* capability lets you create and manage warehouses and their stock.

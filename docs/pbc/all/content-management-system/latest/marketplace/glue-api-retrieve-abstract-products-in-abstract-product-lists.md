@@ -5,6 +5,8 @@ template: glue-api-storefront-guide-template
 last_updated: Nov 17, 2023
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202311.0/content-items/retrieving-abstract-products-in-abstract-product-lists.html
+  - /docs/pbc/all/content-management-system/202307.0/marketplace/glue-api-retrieve-abstract-products-in-abstract-product-lists.html
+  - /docs/marketplace/dev/glue-api-guides/202212.0/content-items/retrieving-abstract-products-in-abstract-product-lists.html
 related:
   - title: Retrieving abstract products
     link: docs/pbc/all/product-information-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html

@@ -18,6 +18,7 @@ related:
     link: https://api-platform.com/docs/symfony/
 redirect_from:
   - /docs/dg/dev/architecture/api-platform.html
+  - /docs/dg/dev/glue-api/api-platform/api-platform.html
 ---
 
 Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation. This allows you to define your API resources using YAML schemas and automatically generate fully functional API endpoints with validation, pagination, and [serialization](/docs/integrations/spryker-api/api-platform/serialization.html).

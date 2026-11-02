@@ -5,6 +5,8 @@ last_updated: Jan 17, 2023
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/user/back-office-user-guides/202311.0/catalog/products/products.html
+  - /docs/marketplace/user/merchant-portal-user-guides/202204.0/products/products.html
+  - /docs/pbc/all/product-information-management/202307.0/marketplace/manage-in-the-back-office/products/products.html
 ---
 This section describes how to manage your products:
 - [Manage abstract products](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-back-office/products/abstract-products/abstract-products.html)

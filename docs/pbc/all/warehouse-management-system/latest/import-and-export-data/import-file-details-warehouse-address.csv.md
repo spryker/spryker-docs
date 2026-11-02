@@ -10,6 +10,8 @@ redirect_from:
   - /docs/pbc/all/warehouse-management-system/202311.0/base-shop/import-data/file-details-warehouse-address.csv.html
   - /docs/pbc/all/warehouse-management-system/202311.0/base-shop/import-and-export-data/file-details-warehouse-address.csv.html
   - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/import-and-export-data/import-file-details-warehouse-address.csv.html
+  - /docs/pbc/all/warehouse-management-system/202204.0/import-and-export-data/file-details-warehouse-address.csv.html
+  - /docs/pbc/all/warehouse-management-system/202212.0/import-and-export-data/file-details-warehouse-address.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html

@@ -1,9 +1,17 @@
 ---
 title: Install AI Commerce
 description: Learn how to install the AI Commerce package, which is the base for AI-powered storefront features like Visual Add to Cart.
-last_updated: Jul 16, 2026
+last_updated: Oct 29, 2026
 template: feature-integration-guide-template
 ---
+
+<style>
+  .post-content pre {
+    white-space: pre;
+    word-break: normal;
+    overflow-x: auto;
+  }
+</style>
 
 This document describes how to install the AI Commerce base package. Individual AI Commerce features require additional installation steps — see their respective installation guides.
 
@@ -11,9 +19,13 @@ This document describes how to install the AI Commerce base package. Individual 
 
 Install the required features:
 
+<div class="width-100">
+
 | NAME | VERSION | INSTALLATION GUIDE |
 |------|---------|-------------------|
 | AiFoundation | {{page.release_tag}} | |
+
+</div>
 
 ## 1) Install the required modules
 
@@ -66,6 +78,8 @@ features:
             enabled: true
           - key: search_by_image
             enabled: true
+          - key: storefront_assistant
+            enabled: true
 ```
 
 Set `enabled: true` only for the features you want to activate. You can omit tabs you do not want to enable.
@@ -79,6 +93,7 @@ This file enables the feature tabs only. Each feature also requires an `ai_vendo
 - [Install Smart CMS Content Assistant](/docs/dg/dev/ai/ai-commerce/content-assistant/install-smart-cms-content-assistant.html)
 - [Install Search by Image](/docs/dg/dev/ai/ai-commerce/search-by-image/install-search-by-image.html)
 - [Install Visual Add to Cart](/docs/dg/dev/ai/ai-commerce/visual-add-to-cart/install-visual-add-to-cart.html)
+- [Install Storefront Assistant](/docs/dg/dev/ai/ai-commerce/storefront-assistant/install-storefront-assistant.html)
 
 {% endinfo_block %}
 

@@ -3,6 +3,8 @@ title: Enable Click & Collect
 description: Learn how to enable the Spryker Click&Collect feature in to your Spryker unified commerce project.
 last_updated: Nov 23, 2023
 template: howto-guide-template
+redirect_from:
+  - /docs/pbc/all/checkout/latest/base-shop/checkout-feature-overview/click-and-collect.html
 ---
 
 To enable the default implementation of Click & Collect, follow the steps.

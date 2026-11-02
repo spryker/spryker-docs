@@ -8,6 +8,8 @@ redirect_from:
 - /docs/scos/dev/the-docker-sdk/202311.0/installation-recipes-of-deployment-pipelines.html
 - /docs/scos/dev/the-docker-sdk/202307.0/installation-recipes-of-deployment-pipelines.html
 - /docs/scos/dev/the-docker-sdk/202212.0/installation-recipes-of-deployment-pipelines.html
+- /docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/installation-recipes-of-deployment-pipelines.html
+- /docs/scos/dev/sdk/docker-sdk/deployment-process.html
 
 
 ---

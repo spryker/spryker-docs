@@ -10,6 +10,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-api-tutorials/b2c-api-react-example/b2c-api-react-example.html
   - /docs/dg/dev/glue-api/latest/glue-api-tutorials/b2c-api-react-example/b2c-api-react-example.html
   - /docs/integrations/spryker-glue-api/storefront-api/developing-apis/b2c-api-react-example/b2c-api-react-example.html
+  - /docs/dg/dev/glue-api/latest/rest-api/b2c-api-react-example/b2c-api-react-example.html
 ---
 
 {% info_block warningBox "Deprecation warning" %}

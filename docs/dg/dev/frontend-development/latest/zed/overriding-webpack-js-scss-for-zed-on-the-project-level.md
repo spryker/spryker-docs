@@ -8,6 +8,7 @@ originalArticleId: 3b57ce80-48b2-47b1-afd0-cd14bf6e07fb
 redirect_from:
   - /docs/scos/dev/front-end-development/202404.0/zed/overriding-webpack-js-scss-for-zed-on-project-level.html
   - /docs/scos/dev/front-end-development/zed/overriding-webpack-js-scss-for-zed-on-project-level.html
+  - /docs/scos/dev/sdk/zed-api/zed-api-project-implementation.html
 ---
 
 {% info_block warningBox "Deprecation notice" %}

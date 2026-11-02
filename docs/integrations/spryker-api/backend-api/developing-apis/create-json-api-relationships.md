@@ -11,6 +11,8 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202404.0/create-json-api-relationships.html
   - /docs/dg/dev/glue-api/latest/create-json-api-relationships.html
   - /docs/integrations/spryker-glue-api/backend-api/developing-apis/create-json-api-relationships.html
+  - /docs/scos/dev/glue-api-guides/202307.0/create-json-api-relationships.html
+  - /docs/dg/dev/glue-api/202307.0/create-json-api-relationships.html
 ---
 
 Some modules represent relationships between two different resources. Their task is to extend the response of one of the resources with the data of related resources.

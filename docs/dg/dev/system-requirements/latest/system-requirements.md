@@ -13,6 +13,10 @@ redirect_from:
 - /docs/marketplace/dev/setup/202307.0/system-requirements.html
 - /docs/scos/dev/system-requirements/202204.0/system-requirements.html
 - /docs/scos/dev/system-requirements/202311.0/system-requirements.html
+- /docs/dg/dev/getting-started/system-requirements
+- /docs/scos/dev/system-requirements/202108.0/system-requirements.html
+- /docs/scos/dev/system-requirements/202307.0/system-requirements.html
+- /docs/system-requirements
 ---
 
 ## System requirements (apps based on Spryker Framework)

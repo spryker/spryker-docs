@@ -8,6 +8,7 @@ originalArticleId: 7bb2b280-f309-4bd4-b7cd-d5c30b345cc0
 redirect_from:
   - /docs/scos/dev/front-end-development/202404.0/zed/oryx-for-zed.html
   - /docs/scos/dev/front-end-development/zed/oryx-for-zed.html
+  - /docs/scos/dev/front-end-development/202304.0/zed/oryx-for-zed.html
 ---
 
 

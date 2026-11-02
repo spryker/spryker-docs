@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/queue
 originalArticleId: c9916ed4-acec-43d0-8a68-0e9805ce8c15
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/queue/queue.html
+  - /docs/dg/dev/backend-development/data-manipulation/event/queue.html
 related:
   - title: Queue pool
     link: docs/dg/dev/backend-development/data-manipulation/queue/queue-pool.html

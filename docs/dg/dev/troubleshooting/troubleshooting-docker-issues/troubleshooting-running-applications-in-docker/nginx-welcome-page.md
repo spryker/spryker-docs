@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/nginx-welcome-page
 originalArticleId: 27e0d295-8262-41c9-affb-f2339556ef1c
 redirect_from:
 - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-running-applications-in-docker/nginx-welcome-page.html
+- /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/nginx-welcome-page.html
 
 ---
 

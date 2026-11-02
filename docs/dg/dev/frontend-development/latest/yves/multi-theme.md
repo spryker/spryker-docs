@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/dev/front-end-development/yves/multi-theme.html
   - /docs/scos/user/features/202009.0/multi-channel/multi-theme/multi-theme-feature-overview.html
   - /docs/scos/dev/front-end-development/202404.0/yves/multi-theme.html
+  - /docs/scos/user/features/201907.0/multi-channel/multi-theme/multi-theme-feature-overview.html
 related:
   - title: Yves multi-themes
     link: docs/dg/dev/frontend-development/latest/yves/yves-multi-themes.html

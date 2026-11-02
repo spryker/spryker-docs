@@ -3,6 +3,12 @@ title: Marketplace Wishlist feature overview
 description: Learn about the Spryker Marketplace Wishlist Feature with this overview, helping your shoppers save time by having their favourite items in one place.
 template: concept-topic-template
 last_updated: Nov 21, 2023
+redirect_from:
+  - /docs/scos/user/features/201907.0/wishlist-feature-overview.html
+  - /docs/marketplace/user/features/202204.0/marketplace-wishlist-feature-overview.html
+  - /docs/marketplace/user/features/202212.0/marketplace-wishlist-feature-overview.html
+  - /docs/scos/user/features/202005.0/wishlist-feature-overview.html
+  - /docs/scos/user/features/202009.0/wishlist-feature-overview.html
 ---
 
 Wishlists are collections of products that a customer saves for further reference.

@@ -3,6 +3,8 @@ title: Release notes 202507.0
 description: Release notes for Spryker Cloud Commerce OS version 202507.0
 last_updated: Feb 26, 2026
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202507.0/release-notes-202507.0.html
 ---
 
 Spryker Cloud Commerce OS is an end-to-end solution for digital commerce. This document contains a business-level description of new features and improvements.

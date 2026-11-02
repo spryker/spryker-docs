@@ -6,6 +6,8 @@ template: back-office-user-guide-template
 related:
   - title: Marketplace Product Offer feature overview
     link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html
+redirect_from:
+  - /docs/pbc/all/offer-management/202212.0/marketplace/manage-product-offers.html
 ---
 
 This document describes how to view and manage [merchant product offers](/docs/pbc/all/offer-management/latest/marketplace/marketplace-product-offer-feature-overview.html) in the Back Office.

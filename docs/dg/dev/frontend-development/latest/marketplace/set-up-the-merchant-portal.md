@@ -7,6 +7,7 @@ redirect_from:
   - /docs/marketplace/dev/front-end/202304.0/setting-up-the-merchant-portal.html
   - /docs/scos/dev/front-end-development/202204.0/marketplace/set-up-the-merchant-portal.html
   - /docs/scos/dev/front-end-development/202404.0/marketplace/set-up-the-merchant-portal.html
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/set-up-the-merchant-portal.html
 
 related:
   - title: Building the project

@@ -5,6 +5,7 @@ description: This section describes how to manage abstract and concrete products
 template: back-office-user-guide-template
 redirect_from:
   - /docs/marketplace/user/merchant-portal-user-guides/202311.0/products/products.html
+  - /docs/pbc/all/product-information-management/202307.0/marketplace/manage-in-the-merchant-portal/manage-products-in-the-merchant-portal.html
 ---
 
 This section contains guides on managing product in the Merchant Portal:

@@ -6,6 +6,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/front-end-development/202404.0/oryx/styling/oryx-typography.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/building-applications/styling/oryx-typography.html
+  - /docs/scos/dev/front-end-development/202307.0/oryx/building-applications/styling/oryx-typography.html
 
 ---
 

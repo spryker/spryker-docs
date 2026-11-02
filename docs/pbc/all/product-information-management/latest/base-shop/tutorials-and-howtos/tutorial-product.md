@@ -24,6 +24,7 @@ redirect_from:
   - /v1/docs/en/t-product-challenge
   - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-product.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/tutorials-and-howtos/tutorial-product.html
+  - /docs/pbc/all/product-information-management/202212.0/base-shop/tutorials-and-howtos/tutorial-product.html
 related:
   - title: Extend the core
     link: docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html

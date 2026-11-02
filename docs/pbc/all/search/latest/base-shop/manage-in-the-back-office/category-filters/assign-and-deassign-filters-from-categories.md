@@ -9,6 +9,8 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/search-and-filters/managing-category-filters.html
   - /docs/pbc/all/search/202311.0/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/category-filters/assign-and-deassign-filters-from-categories.html
+  - /docs/scos/user/back-office-user-guides/202108.0/merchandising/category-filters/assign-and-deassign-filters-from-categories.html
+  - /docs/pbc/all/search/202307.0/base-shop/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html
 related:
   - title: Reorder category filters
     link: docs/pbc/all/search/latest/base-shop/manage-in-the-back-office/category-filters/reorder-category-filters.html

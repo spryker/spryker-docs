@@ -1,7 +1,7 @@
 ---
 title: Yves multi-themes
 description: Manage multiple themes for Yves by extending them.
-last_updated: Jun 16, 2021
+last_updated: Oct 7, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/yves-multi-themes
 originalArticleId: c892648b-6bdb-499c-af5a-eefa10fbb45d
@@ -90,6 +90,12 @@ Extend SCSS from the core level as follows:
     // new-theme styles
 }
 ```
+
+{% info_block infoBox "Frontend builder v2" %}
+
+With [frontend builder v2](/docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves-v2.html#component-overrides-and-themes) (`spryker-shop/shop-ui` 2.4.0 or later), the theme's component owns its styles: the `@include` resolves to the mixin of the current theme when the theme defines one, and the default theme's version of the component contributes nothing to the bundle. The `@import` of the default-theme file above remains the way to reuse the default theme's mixin inside the new theme.
+
+{% endinfo_block %}
 
 ### Extending TS
 

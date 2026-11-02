@@ -6,6 +6,9 @@ template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/front-end-development/202404.0/oryx/styling/oryx-design-tokens.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/building-applications/styling/oryx-design-tokens.html
+  - /docs/scos/dev/front-end-development/202307.0/oryx/building-applications/styling/oryx-design-tokens.html
+  - /docs/dg/dev/frontend-development/202307.0/oryx/building-applications/styling/oryx-design-tokens.html
+  - /docs/dg/dev/frontend-development/design-tokens.html
 
 ---
 

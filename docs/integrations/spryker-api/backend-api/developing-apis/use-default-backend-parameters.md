@@ -11,6 +11,9 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202404.0/use-default-glue-parameters.html
   - /docs/dg/dev/glue-api/latest/use-default-storefront-parameters.html
   - /docs/integrations/spryker-glue-api/backend-api/developing-apis/use-default-backend-parameters.html
+  - /docs/dg/dev/glue-api/latest/use-default-glue-parameters
+  - /docs/dg/dev/glue-api/latest/use-default-glue-parameters.html
+  - /docs/scos/dev/glue-api-guides/202212.0/use-default-glue-parameters.html
 ---
 
 This document explains how to pass the parameters and how to use them in Backend API code.

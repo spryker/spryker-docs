@@ -1,8 +1,11 @@
 ---
 title: Install Visual Add to Cart
 description: Learn how to install the Visual Add to Cart feature that lets buyers upload a product image on the Quick Order page to automatically populate the order form.
-last_updated: Jul 16, 2026
+last_updated: Oct 14, 2026
 template: feature-integration-guide-template
+redirect_from:
+  - /docs/en/cart
+  - /2021080/docs/cart
 ---
 
 Visual Add to Cart lets storefront users upload a product image on the Quick Order page to automatically recognize products and populate the order form. This document describes how to install the Visual Add to Cart feature.
@@ -134,10 +137,15 @@ interface AiCommerceConstants extends SprykerFeatureAiCommerceConstants
 
 ```php
 $config[\Spryker\Shared\AiFoundation\AiFoundationConstants::AI_CONFIGURATIONS][\Pyz\Shared\AiCommerce\AiCommerceConstants::AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_OPENAI] = [
-    'provider_name' => \Spryker\Shared\AiFoundation\AiFoundationConstants::PROVIDER_OPENAI,
+    'provider_name' => \Spryker\Shared\AiFoundation\AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
     'provider_config' => [
         'key' => \Spryker\Shared\AiFoundation\AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \Pyz\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
         'model' => \Spryker\Shared\AiFoundation\AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \Pyz\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_QUICK_ORDER_IMAGE_TO_CART_OPENAI_MODEL,
+        'parameters' => [
+            'reasoning' => [
+                'effort' => 'minimal',
+            ],
+        ],
     ],
 ];
 ```
@@ -198,7 +206,7 @@ features:
                         default_value: 'AI_COMMERCE:AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_OPENAI'
                         enabled: true
                         secret: false
-                        storefront: false
+                        storefront: true
                         order: 1
                         scopes:
                             - global
@@ -213,7 +221,7 @@ features:
                         name: OpenAI Model
                         description: The OpenAI model used for the Quick Order Image-to-Cart AI configuration. Model must support image input and structured output.
                         type: string
-                        default_value: 'gpt-4o-mini'
+                        default_value: 'gpt-5-nano'
                         enabled: true
                         secret: false
                         storefront: false
@@ -230,7 +238,7 @@ features:
                         name: AWS Bedrock Model
                         description: The AWS Bedrock model identifier used for the Quick Order Image-to-Cart AI configuration. Model must support image input and structured output.
                         type: string
-                        default_value: 'eu.anthropic.claude-haiku-4-5-20251001-v1:0'
+                        default_value: 'eu.anthropic.claude-haiku-5-5'
                         enabled: true
                         secret: false
                         storefront: false
@@ -247,7 +255,7 @@ features:
                         name: Anthropic Model
                         description: The Anthropic model used for the Quick Order Image-to-Cart AI configuration. Model must support image input and structured output.
                         type: string
-                        default_value: 'claude-haiku-4-5'
+                        default_value: 'claude-haiku-5-5'
                         enabled: true
                         secret: false
                         storefront: false

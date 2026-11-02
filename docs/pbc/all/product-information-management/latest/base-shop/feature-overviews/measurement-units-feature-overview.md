@@ -14,6 +14,10 @@ redirect_from:
   - /docs/scos/user/features/202311.0/measurement-units-feature-overview.html
   - /docs/pbc/all/product-information-management/202311.0/feature-overviews/measurement-units-feature-overview.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/measurement-units-feature-overview.html
+  - /docs/pbc/all/product-information-management/202204.0/measurement-units-feature-overview.html
+  - /docs/scos/dev/feature-integration-guides/202009.0/glue-api/glue-api-measurement-units-feature-integration.html
+  - /docs/scos/dev/glue-api-guides/202005.0/retrieving-measurement-units.html
+  - /docs/scos/dev/glue-api-guides/202108.0/retrieving-measurement-units.html
 ---
 
 The *Measurement Units* feature lets you sell products by any unit of measure defined by the shop administrator. For example, apples can be offered in "Item" or "Kilogram", cables can be offered in "Centimeter", "Meter" or "Feet". To support alternate units of measure, there must be a base unit value relative to which all the internal conversions and calculations will be made. Such value is referred to as a base unit. The base unit is assigned to abstract products, and by default, it's "item"; however, it can be changed to any other unit.

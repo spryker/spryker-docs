@@ -3,6 +3,8 @@ title: "Marketplace Merchant Portal Product Management feature: Domain model and
 description: This document provides reference information about product in the Merchant Portal.
 template: feature-walkthrough-template
 last_updated: Nov 21, 2023
+redirect_from:
+  - /docs/pbc/all/product-information-management/202212.0/marketplace/domain-model-and-relationships/marketplace-merchant-portal-product-management-feature-domain-model-and-relationships.html
 ---
 
 

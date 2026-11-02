@@ -10,6 +10,8 @@ related:
     link: docs/integrations/spryker-api/api-platform/enablement.html
   - title: Create a Composable UI module
     link: docs/dg/dev/backend-development/composable-ui/create-a-composable-ui-module.html
+redirect_from:
+  - /docs/dg/dev/best-practices
 ---
 
 {% info_block warningBox "Beta" %}

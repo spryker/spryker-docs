@@ -23,6 +23,7 @@ redirect_from:
   - /v1/docs/data-driven-ranking
   - /v1/docs/en/data-driven-ranking
   - /docs/scos/dev/best-practices/search-best-practices/data-driven-ranking.html
+  - /docs/pbc/all/search/202212.0/base-shop/best-practices/data-driven-ranking.html
 related:
   - title: Full-text search
     link: docs/pbc/all/search/latest/base-shop/best-practices/full-text-search.html

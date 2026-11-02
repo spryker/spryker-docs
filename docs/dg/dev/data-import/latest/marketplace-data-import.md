@@ -6,6 +6,10 @@ template: import-file-template
 redirect_from:
   - /docs/marketplace/dev/data-import/202404.0/marketplace-setup.html
   - /docs/scos/dev/data-import/202404.0/marketplace-data-import.html
+  - /docs/dg/dev/data-import/data-import.html
+  - /docs/dg/dev/backend-development/data-import
+  - /docs/dg/dev/data-import
+  - /docs/marketplace/dev/data-import/202204.0/data-import.html
 
 ---
 

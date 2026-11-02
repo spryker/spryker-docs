@@ -5,6 +5,7 @@ last_updated: August 28, 2026
 template: concept-topic-template
 redirect_from:
 - /docs/pbc/all/content-management-system/202204.0/content-management-system.html
+- /docs/scos/user/back-office-user-guides/201903.0/content/content-management-system.html
 related:
   - title: Integrating an external CMS with Spryker
     link: /docs/integrations/custom-building-integrations/external-cms/guideline-external-cms-integration.html

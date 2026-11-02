@@ -12,6 +12,8 @@ redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/catalog-setup/categories/file-details-category-template.csv.html
   - /docs/pbc/all/product-information-management/202311.0/base-shop/import-and-export-data/categories-data-import/file-details-category-template.csv.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/categories-data-import/import-file-details-category-template.csv.html
+  - /docs/scos/dev/data-import/202108.0/data-import-categories/about-data-import-categories.html
+  - /docs/scos/dev/data-import/data-import-categories
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html

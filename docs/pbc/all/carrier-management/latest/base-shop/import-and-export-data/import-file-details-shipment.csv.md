@@ -13,6 +13,7 @@ redirect_from:
   - /docs/pbc/all/carrier-management/202311.0/import-and-export-data/file-details-shipment.csv.html
   - /docs/pbc/all/carrier-management/202311.0/base-shop/import-and-export-data/file-details-shipment.csv.html
   - /docs/pbc/all/carrier-management/202204.0/base-shop/import-and-export-data/import-file-details-shipment.csv.html
+  - /docs/pbc/all/carrier-management/202212.0/base-shop/import-and-export-data/file-details-shipment.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html

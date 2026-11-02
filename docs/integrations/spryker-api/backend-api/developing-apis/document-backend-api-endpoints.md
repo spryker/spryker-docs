@@ -11,6 +11,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202404.0/document-glue-api-endpoints.html
   - /docs/dg/dev/glue-api/latest/document-glue-api-endpoints.html
   - /docs/integrations/spryker-glue-api/backend-api/developing-apis/document-backend-api-endpoints.html
+  - /docs/dg/dev/glue-api/202307.0/document-glue-api-endpoints.html
 ---
 
 This document shows how to document Backend API endpoints.

@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/entity
 originalArticleId: 768b00eb-1182-4cf3-8c6c-1fbfb294a3b2
 redirect_from:
   - /docs/scos/dev/back-end-development/zed/persistence-layer/entity.html
+  - /zed/persistence_layer/entity.htm
 related:
   - title: Database overview
     link: docs/dg/dev/backend-development/zed/persistence-layer/database-overview.html

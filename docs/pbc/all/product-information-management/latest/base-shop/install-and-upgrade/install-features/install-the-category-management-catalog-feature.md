@@ -4,6 +4,8 @@ description: Learn how to install the category management t+ Catalog feature in 
 last_updated: Jul 6, 2021
 template: feature-integration-guide-template
 originalArticleId: c0523c5a-4440-4d20-9a92-6d446b613a37
+redirect_from:
+  - /docs/pbc/all/product-information-management/202212.0/base-shop/install-and-upgrade/install-features/install-the-category-management-catalog-feature.html
 ---
 
 {% include pbc/all/install-features/latest/install-the-catalog-category-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-catalog-category-management-feature.md -->

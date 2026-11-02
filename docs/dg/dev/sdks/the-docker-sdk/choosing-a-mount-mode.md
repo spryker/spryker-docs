@@ -10,6 +10,7 @@ redirect_from:
   - /docs/scos/dev/the-docker-sdk/202204.0/choosing-a-mount-mode.html
   - /docs/scos/dev/the-docker-sdk/202307.0/choosing-a-mount-mode.html
   - /docs/scos/dev/the-docker-sdk/202212.0/choosing-a-mount-mode.html
+  - /docs/scos/dev/the-docker-sdk/202009.0/configuring-a-mount-mode.html
 
 related:
   - title: The Docker SDK

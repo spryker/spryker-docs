@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/customer/customer-customer-access-customer-groups/managing-customers.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/managing-customers.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-customers/managing-customers.html
+  - /docs/pbc/all/customer-relationship-management/202212.0/base-shop/manage-using-glue-api/customers/glue-api-manage-customers.html
 related:
   - title: Searching by company users
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html

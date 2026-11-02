@@ -7,6 +7,9 @@ originalLink: https://documentation.spryker.com/2021080/docs/database-access-cre
 originalArticleId: 1e227c7f-f4f2-4c7e-b5c4-5ed1d9174ec7
 redirect_from:
 - /docs/scos/dev/set-up-spryker-locally/database-access-credentials.html
+- /docs/database-access-credentials
+- /docs/scos/dev/setup/installing-spryker-with-docker/database-access-credentials.html
+- /docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-deve…
 ---
 
 In this document, you can find credentials for accessing your database. By default, you can access a database only in [Development mode](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html#development-mode).

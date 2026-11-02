@@ -59,6 +59,8 @@ entries:
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html
           - title: Conversation History
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-conversation-history.html
+          - title: Stream AI responses
+            url: /docs/dg/dev/ai/ai-foundation/ai-foundation-stream-prompt.html
           - title: Workflow orchestration with state machines
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
           - title: AI Interaction Audit Logs
@@ -85,6 +87,15 @@ entries:
                 url: /docs/dg/dev/ai/ai-commerce/backoffice-assistant/install-backoffice-assistant.html
               - title: Add a custom Back Office Assistant agent
                 url: /docs/dg/dev/ai/ai-commerce/backoffice-assistant/add-custom-backoffice-assistant-agent.html
+          - title: Storefront Assistant
+            url: /docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant.html
+            nested:
+              - title: Install Storefront Assistant
+                url: /docs/dg/dev/ai/ai-commerce/storefront-assistant/install-storefront-assistant.html
+              - title: Storefront Assistant agents
+                url: /docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant-agents.html
+              - title: Add a custom Storefront Assistant agent
+                url: /docs/dg/dev/ai/ai-commerce/storefront-assistant/add-custom-storefront-assistant-agent.html
           - title: Search by Image
             url: /docs/dg/dev/ai/ai-commerce/search-by-image/search-by-image.html
             nested:
@@ -112,6 +123,8 @@ entries:
             nested:
               - title: Project Starter Wizard
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-project-starter-wizard.html
+              - title: Demo Preparation Wizard
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-demo-prep-wizard.html
               - title: Customization Workflow
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html
               - title: Bugfix Workflow
@@ -120,6 +133,8 @@ entries:
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html
               - title: Profiler Workflow
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-profiler-workflow.html
+              - title: Architecture Workflow
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-architecture-workflow.html
           - title: Rules
             url: /docs/dg/dev/ai/ai-dev/ai-dev-rules.html
           - title: Claude Code
@@ -1161,9 +1176,13 @@ entries:
     - title: Symfony Scheduler
       url: /docs/dg/dev/integrate-and-configure/integrate-symfony-scheduler.html
     - title: Configuration Management feature
-      url: /docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html
-    - title: Workflow feature
+      url: /docs/dg/dev/integrate-and-configure/integrate-configuration-feature.html
+    - title: Integrate the Configuration Management deployment commands
+      url: /docs/dg/dev/integrate-and-configure/integrate-configuration-deployment-commands.html
+    - title: Install the Workflows feature
       url: /docs/dg/dev/integrate-and-configure/integrate-workflow-feature.html
+    - title: Add a subject type to the Workflows feature
+      url: /docs/dg/dev/integrate-and-configure/add-a-subject-type-to-the-workflows-feature.html
     - title: Basic Shop Theme feature
       url: /docs/dg/dev/integrate-and-configure/integrate-basic-shop-theme.html
 

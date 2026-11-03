@@ -1,7 +1,7 @@
 ---
 title: Create and configure Zed tables
 description: Learn how to create and configure Zed tables. This guide details steps for building custom tables, defining data sources, and enhancing backend user interfaces.
-last_updated: Nov 03, 2026
+last_updated: Jan 02, 2023
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-and-configuring-zed-tables
 originalArticleId: e8fc8c5a-88fa-41f8-8d2b-de028e7c4165
@@ -132,45 +132,6 @@ We recommend using search by columns for tables with large numbers of rows.
 Measurable performance checks show the execution time got faster.
 For example, getting the results using search by columns for tables with ~200k rows improved speed from 0,031s to 0,003s.
 
-Starting from `spryker/gui` 5.7.0, `setSearchable()` also accepts an associative `[headerKey => sqlExpression]` array, which enables both the global search and per-column search without a separate `setSearchableColumns()` call.
-
-### Configure performance options for large tables
-
-On very large tables, the `COUNT(*)` queries for pagination, the `LOWER(column) LIKE '%term%'` search, and the default `ORDER BY` slow down every request. Starting from `spryker/gui` 5.7.0, you can switch them off in `configure()`:
-
-<div class="width-100">
-
-| METHOD | EFFECT |
-|---|---|
-| `setUseSimplePagination(true)` | Skips the `COUNT(*)` queries. Pagination shows only **Previous** and **Next**. |
-| `setUseCaseSensitiveSearch(true)` | The global search uses an exact, case-sensitive comparison that can use indexes. |
-| `setUseSorting(false)` | Skips the default `ORDER BY`. Sorting by a clicked column header still works. |
-
-</div>
-
-To set project-wide defaults, override `isSimplePaginationEnabledByDefault()`, `isCaseSensitiveSearchEnabledByDefault()`, and `isSortingEnabledByDefault()` in `\Pyz\Zed\Gui\GuiConfig`.
-
-To enable the options only for large tables, set a row count threshold:
-
-```php
-<?php
-
-namespace Pyz\Zed\Gui;
-
-use Spryker\Zed\Gui\GuiConfig as SprykerGuiConfig;
-
-class GuiConfig extends SprykerGuiConfig
-{
-    public function getLargeTableRowCountThreshold(): ?int
-    {
-        return 1_000_000;
-    }
-}
-```
-
-If the approximate row count of the query's main table, read from the database statistics, reaches the threshold, the options are enabled and the Back Office shows a hint above the table. By default, the threshold is `null`, and the detection is disabled.
-
-A value set in `configure()` overrides the `GuiConfig` default, which overrides the automatic detection.
 
 ## 3. Prepare the data
 
@@ -220,17 +181,6 @@ public function indexAction(Request $request)
     ];
 }
 ```
-
-### Front-end initialization
-
-Starting from `spryker/gui` 5.7.0, all Back Office tables are created by the shared library in `Gui/assets/Zed/js/modules/libs/table/`. It picks up every table with an `id` and the `gui-table-data` class, which `AbstractTable` renders by default. Tables in hidden tabs or dialogs are created when they become visible.
-
-Do not call `$(element).DataTable()` in module code. Instead, do the following:
-
-- To add a feature, declare it with `setTableAttributes()`: `data-selectable`, `data-assignable`, `data-master-detail`, `data-filterable`, or `data-uploader`.
-- To work with a table from JavaScript, get a handle with `require('ZedGuiModules/libs/table/table-access').requestTable(element, callback)`.
-
-For details, see `libs/table/README.md` in the `Gui` module.
 
 ## 5. Download the table
 

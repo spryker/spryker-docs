@@ -1,7 +1,7 @@
 ---
 title: Install the Data Exchange Jobs feature
 description: Learn how to install the Data Exchange Jobs feature, the engine behind the Back Office Import & Export pages, into your Spryker project.
-last_updated: Oct 29, 2026
+last_updated: Nov 3, 2026
 template: feature-integration-guide-template
 ---
 
@@ -110,6 +110,7 @@ The following settings are defined in `Spryker\Zed\DataExchange\DataExchangeConf
 | `IMPORT_CSV_BATCH_SIZE` | `1000` | Number of CSV rows handed to the import steps at once. |
 | `EXPORT_CSV_BATCH_SIZE` | `1000` | Number of rows the export data provider returns at once. |
 | `IMPORT_MAX_FILE_SIZE_MB` | `50` | Maximum size of an uploaded CSV file in megabytes. |
+| `IMPORT_JOB_RUNS_PER_INVOCATION` | `1` | Number of pending import job runs one `import:job:run` invocation processes, oldest first, before the process exits. The invocation stops earlier when no pending run is left. |
 | `IMPORT_ERROR_DISPLAY_THRESHOLD` | `10` | Maximum number of import errors displayed inline on the import job run detail page. When a run produces more errors than this threshold, the errors are offered as a downloadable summary instead. |
 | `getAllowedMimeTypesWithExtensions()` | `text/csv`, `text/plain` | MIME types accepted by the upload form. |
 
@@ -127,6 +128,8 @@ use Spryker\Zed\DataExchange\DataExchangeConfig as SprykerDataExchangeConfig;
 class DataExchangeConfig extends SprykerDataExchangeConfig
 {
     protected const int IMPORT_ERROR_DISPLAY_THRESHOLD = 20;
+
+    protected const int IMPORT_JOB_RUNS_PER_INVOCATION = 5;
 }
 ```
 
@@ -302,7 +305,7 @@ Execute the following and verify it completes without errors:
 console import:job:run
 ```
 
-The command prints `Processing next pending import job run...` and `Done.` and exits with code 0. It processes the oldest pending import job run; when no run is pending, nothing is processed.
+The command prints `Processing next pending import job run...` for every run it picks up, `No pending import job run left.` when the queue is empty, and `Done. Processed N import job run(s).`, and exits with code 0. It processes up to `IMPORT_JOB_RUNS_PER_INVOCATION` pending runs (default 1), oldest first; when no run is pending, nothing is processed.
 
 {% endinfo_block %}
 
@@ -320,6 +323,8 @@ Register the command to run on a schedule so that pending runs are picked up aut
 ```
 
 Add the entry to the array that `getJobs()` returns. If the other entries in your file prefix the command with the `$logger` variable to redirect the output to the scheduler log, prefix this one in the same way.
+
+Every invocation processes up to `getImportJobRunsPerInvocation()` pending runs (default 1) and exits; the next scheduled invocation continues the queue. With the default, runs that are queued faster than one per minute wait for a later invocation. To drain the queue faster, raise `IMPORT_JOB_RUNS_PER_INVOCATION` in the project configuration as shown in [Engine limits and error display](#engine-limits-and-error-display).
 
 {% info_block warningBox "Verification" %}
 

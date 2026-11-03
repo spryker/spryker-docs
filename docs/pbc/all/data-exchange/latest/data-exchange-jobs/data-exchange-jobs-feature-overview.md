@@ -1,7 +1,7 @@
 ---
 title: Data Exchange Jobs feature overview
 description: Import and export data in bulk with schema-driven jobs, asynchronous runs, batch processing, and per-row error reporting, independent of the data type.
-last_updated: Oct 29, 2026
+last_updated: Nov 3, 2026
 template: concept-topic-template
 ---
 
@@ -34,9 +34,9 @@ Back Office users manage jobs, runs, exports, and templates under **Import & Exp
 
 1. A Back Office user creates an import job that defines the job type. The engine copies the schema of the matching schema plugin to the job.
 2. The user uploads a CSV file against the import job. The engine stores the file and creates an import job run with the *pending* status.
-3. The `import:job:run` console command, scheduled to run every minute, picks up the oldest pending run and marks it as *processing*.
+3. The `import:job:run` console command, scheduled to run every minute, picks up the oldest pending run and marks it as *processing*. One invocation processes up to `getImportJobRunsPerInvocation()` runs (default 1) and exits; the next scheduled invocation continues with the runs still pending.
 4. The engine reads the file in batches of 1000 rows. The headers are mapped to system property names using the job's schema; columns that are not part of the schema are ignored, and rows whose number of columns differs from the header row are recorded as errors.
-5. Each batch passes through the import steps of the schema plugin in order. A step validates and persists its part of the row and reports an error for every row it rejects.
+5. Each batch passes through the import steps of the schema plugin in order. A step validates and persists its part of the row and reports an error for every row it rejects. After the batch has passed through all steps, the engine calls `resetCache()` on every step that implements `CacheResettableImportStepInterface`, so lookup caches live for one batch only.
 6. After the last row, the engine triggers the publish events reported by the steps, so that Storefront data is updated once per entity. The rows themselves are committed as each step persists them; there is no transaction around the run.
 7. The run is marked as *done* with the number of processed, successful, and failed rows. The run is marked as *failed* when no row was processed, when every row failed, or when a step threw an exception; the exception message is recorded as a run error. In that case the rows of the batches processed before the failure stay in the database, and the publish events collected so far are not triggered.
 
@@ -44,7 +44,8 @@ A row is counted as failed when at least one step rejected it. The other steps s
 
 ## Limits and performance
 
-- The `import:job:run` command processes one run per call. With the one-minute schedule, one consumer processes about one run per minute; a pending run waits until the runs queued before it are done.
+- The `import:job:run` command processes up to `getImportJobRunsPerInvocation()` pending runs per invocation, oldest first (default 1 in `DataExchangeConfig`), and exits; the next scheduled invocation continues the queue. With the default and the one-minute schedule, one consumer processes about one run per minute; a pending run waits until the runs queued before it are done.
+- The engine calls `resetCache()` after each batch on every import step that implements `CacheResettableImportStepInterface` and disables Propel instance pooling for the duration of the run, so the lookup caches of the steps and the ORM instance pool do not grow with the number of rows. The publish events reported by the steps are collected until the end of the run.
 - The import reads the file in batches; the batch size is `getImportCsvBatchSize()` in `DataExchangeConfig` (default 1000 rows). The maximum upload size is `getImportMaxFileSizeString()` (default 50 MB).
 - The export runs synchronously inside the HTTP request of the **Export** page and pages through the data with `getExportCsvBatchSize()` (default 1000 rows). A very large export can hit the web server timeout or the PHP memory limit; split such data sets by job or raise the limits for the Back Office.
 

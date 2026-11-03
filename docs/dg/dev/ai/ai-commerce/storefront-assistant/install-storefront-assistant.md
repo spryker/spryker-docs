@@ -1,7 +1,7 @@
 ---
 title: Install Storefront Assistant
 description: Learn how to install the Storefront Assistant feature that adds an AI shopping chat to the Spryker Storefront.
-last_updated: Oct 29, 2026
+last_updated: Nov 3, 2026
 template: feature-integration-guide-template
 related:
   - title: Storefront Assistant
@@ -59,7 +59,7 @@ Consider the following dependencies of `spryker-feature/ai-commerce`:
 - It requires `spryker-shop/shop-ui` version `^2.7.0` or higher. The Yves frontend builder of this version resolves the `@shared/ai-commerce/*` alias, which loads the shared chat frontend of the module.
 - It requires `spryker/twig` version `^3.34.0` or higher. This version provides `SharedThemeTwigLoaderPlugin`.
 - It requires `spryker/gui` version `^5.12.0` or higher.
-- It requires `spryker/price-product` version `^4.48.0` or higher. The assistant uses it to show the abstract price of a product that has several variants.
+- It requires `spryker/price-product` version `^4.40.0` or higher. The assistant uses it to show the abstract price of a product that has several variants.
 - `spryker/router` is an optional dependency, but the Storefront Assistant routes need it.
 
 ### 2) Set up database schema and transfer objects

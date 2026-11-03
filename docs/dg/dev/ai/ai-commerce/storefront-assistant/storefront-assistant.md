@@ -1,7 +1,7 @@
 ---
 title: Storefront Assistant
 description: Technical overview of the Storefront Assistant feature — architecture, agents, tools, the streaming protocol, endpoints, and configuration options.
-last_updated: Oct 29, 2026
+last_updated: Nov 3, 2026
 template: concept-topic-template
 related:
   - title: Install Storefront Assistant
@@ -59,7 +59,7 @@ For each chat turn, the following happens:
 
 For details on how `streamPrompt()` sends the model output, the tool calls, and the conversation history, see [Stream AI responses with the AiFoundation module](/docs/dg/dev/ai/ai-foundation/ai-foundation-stream-prompt.html).
 
-The browser keeps only a small state in `localStorage` under the `storefront_assistant_state` key: `isOpen`, `isExpanded`, `conversationReference`, `userSelectedAgent`, and `activeAgent`. The browser does not keep the messages. It loads them from the server on each page load.
+The browser keeps only a small state in `localStorage` under two keys. The `spryker-chat-session` key holds `owner`, `conversationReference`, `isOpen`, and `isExpanded`. The `spryker-chat-agent` key holds `conversationReference`, `selectedAgent`, and `activeAgent`. The browser does not keep the messages. It loads them from the server on each page load.
 
 ## Agents
 

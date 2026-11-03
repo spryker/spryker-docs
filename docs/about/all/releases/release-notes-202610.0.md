@@ -239,6 +239,7 @@ Spryker introduced an early access capability in the AI Dev SDK that helps teams
 - Enables downstream AI-supported development and guardrails with a stronger architectural source of truth
 
 **Documentation:**
+- [Architecture Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-architecture-workflow)
 
 ### AI Commerce — Cost-efficient default models {% include badge.html type="early-access,improvement" %}
 

@@ -1,7 +1,7 @@
 ---
 title: Release notes 202610.0
 description: Release notes for Spryker Cloud Commerce OS version 202610.0
-last_updated: October 30, 2026
+last_updated: November 3, 2026
 template: concept-topic-template
 ---
 
@@ -363,4 +363,4 @@ Multiple improvements to performance and reliability of ACL, Merchant-Relationsh
 - [SanitizeXssListener sanitises submitted form data twice](https://api.release.spryker.com/release-group/6780)
 - [WebProfiler Doesnt work if xdebug enabled](https://api.release.spryker.com/release-group/6845)
 - [Fixed profiler page on YVES](https://api.release.spryker.com/release-group/6839)
-- [Adjusted performance for login and zed tables](https://api.release.spryker.com/release-group/6761)
+- [Adjusted performance for login and Zed tables](/docs/dg/dev/backend-development/zed-ui-tables/create-and-configure-zed-tables.html#configure-performance-options-for-large-tables)

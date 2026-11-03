@@ -33,10 +33,25 @@ composer require "spryker-feature/spryker-core":"{{page.release_tag}}" --update-
 
 ```bash
 composer require spryker/captcha spryker-eco/captcha-altcha --update-with-dependencies
+```
+
+The ALTCHA provider needs the `sodium` PHP extension.
+
+The `altcha` npm package is the browser widget, declared in the `package.json` of `spryker-eco/captcha-altcha`. Add the package to the npm workspaces of the project `package.json`:
+
+```json
+"workspaces": [
+    "vendor/spryker-eco/captcha-altcha"
+]
+```
+
+If your project does not use npm workspaces, add the widget to the project `package.json` instead:
+
+```bash
 npm install altcha@~3.2.0
 ```
 
-The `altcha` npm package is the browser widget. Add it to the project `package.json`, because `spryker-eco/captcha-altcha` does not declare it as an npm dependency.
+To use Google reCAPTCHA instead of ALTCHA, install `spryker-eco/captcha-google-recaptcha` instead of `spryker-eco/captcha-altcha`, and skip the `sodium` extension and the `altcha` npm package. For details, see [Use Google reCAPTCHA as the CAPTCHA provider](#use-google-recaptcha-as-the-captcha-provider).
 
 {% info_block warningBox "Verification" %}
 
@@ -367,7 +382,7 @@ The protection uses three counters:
 
 - Account counter: counts every login attempt for one account in the time window. It is reset when the account logs in successfully.
 - IP counter: counts failed logins from one IP address, as configured in the previous step.
-- Realm-wide counter: counts failed logins for all accounts of the realm. When it reaches its threshold, every login of the realm requires a CAPTCHA. This counter never blocks a login, and it protects against password spraying, which tries one password against many accounts.
+- Realm-wide counter: counts failed logins for all accounts of the realm. When it reaches its threshold, every login of the realm requires a CAPTCHA. This counter never blocks a login, and it protects against password spraying, which tries one password against many accounts. Each IP address adds at most as many failed logins to this counter as `CUSTOMER_IP_CHALLENGE_NUMBER_OF_ATTEMPTS` defines, so one IP address cannot require a CAPTCHA for the whole realm. If `CUSTOMER_IP_CHALLENGE_NUMBER_OF_ATTEMPTS` is `0`, the failed logins of an IP address are not limited.
 
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
 |---|---|---|
@@ -431,29 +446,37 @@ A login form requires a CAPTCHA when one of the challenge thresholds from [Confi
 
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
 |---|---|---|
-| CaptchaConstants::IS_CAPTCHA_ENABLED | Enables the CAPTCHA step-up. If `false`, no login requires a CAPTCHA, and the account block still applies. | Spryker\Shared\Captcha |
-| CaptchaAltchaConstants::HMAC_SECRET | Defines the secret that signs and verifies the ALTCHA challenges. | SprykerEco\Shared\CaptchaAltcha |
-| CaptchaAltchaConstants::COST | Defines the proof-of-work cost of a challenge. A higher value makes a challenge slower to solve. Default: `1000`. | SprykerEco\Shared\CaptchaAltcha |
-| CaptchaAltchaConstants::CHALLENGE_TTL | Defines the time in seconds during which a challenge can be solved and submitted. Default: `1200`. | SprykerEco\Shared\CaptchaAltcha |
-| CaptchaAltchaConstants::REDIS_* | Define the key-value storage (Redis or Valkey) connection that stores solved challenges, so that each solution is accepted only once. | SprykerEco\Shared\CaptchaAltcha |
+| CaptchaConstants::IS_CAPTCHA_ENABLED | Enables the CAPTCHA step-up. If `false`, no login requires a CAPTCHA, and the account block still applies. If `true` and no CAPTCHA provider is wired, or the provider cannot be reached, every login that requires a CAPTCHA is rejected. Default: `false`. | Spryker\Shared\Captcha |
+| CaptchaConstants::REDIS_* | Define the key-value storage (Redis or Valkey) connection that stores solved challenges, so that each solution is accepted only once. | Spryker\Shared\Captcha |
+| CaptchaAltchaConstants::HMAC_SECRET | Defines the secret that signs and verifies the ALTCHA challenges. Must be at least 32 bytes long. | SprykerEco\Shared\CaptchaAltcha |
+| CaptchaAltchaConstants::KEY_DERIVATION_ALGORITHM | Defines the proof-of-work algorithm: `ARGON2ID` or `PBKDF2/SHA-256`. Argon2id is memory-hard, which limits the speed-up of GPU solvers. Default: `ARGON2ID`. | SprykerEco\Shared\CaptchaAltcha |
+| CaptchaAltchaConstants::COST | Defines the iterations of one key derivation. Default: `2` for Argon2id, `1000` for PBKDF2. | SprykerEco\Shared\CaptchaAltcha |
+| CaptchaAltchaConstants::MEMORY_COST | Defines the memory of one Argon2id key derivation in KiB. Default: `16384` (16 MiB). | SprykerEco\Shared\CaptchaAltcha |
+| CaptchaAltchaConstants::MINIMUM_COUNTER | Defines the minimum number of key derivations the browser performs to solve a challenge; the actual number is between the minimum and twice the minimum. A higher value makes a challenge slower to solve. Default: `20` for Argon2id, `1000` for PBKDF2. | SprykerEco\Shared\CaptchaAltcha |
+| CaptchaAltchaConstants::CHALLENGE_TTL | Defines the time in seconds during which a challenge can be solved and submitted. Default: `300`. | SprykerEco\Shared\CaptchaAltcha |
 
 **config/Shared/config_default.php**
 
 ```php
 use Spryker\Shared\Captcha\CaptchaConstants;
+use SprykerEco\Client\CaptchaAltcha\CaptchaAltchaConfig;
 use SprykerEco\Shared\CaptchaAltcha\CaptchaAltchaConstants;
 
 $config[CaptchaConstants::IS_CAPTCHA_ENABLED] = true;
+$config[CaptchaConstants::REDIS_PERSISTENT_CONNECTION] = true;
+$config[CaptchaConstants::REDIS_SCHEME] = getenv('SPRYKER_KEY_VALUE_STORE_PROTOCOL') ?: 'tcp';
+$config[CaptchaConstants::REDIS_HOST] = getenv('SPRYKER_KEY_VALUE_STORE_HOST');
+$config[CaptchaConstants::REDIS_PORT] = getenv('SPRYKER_KEY_VALUE_STORE_PORT');
+$config[CaptchaConstants::REDIS_USER] = getenv('SPRYKER_KEY_VALUE_USERNAME');
+$config[CaptchaConstants::REDIS_PASSWORD] = getenv('SPRYKER_KEY_VALUE_PASSWORD');
+$config[CaptchaConstants::REDIS_DATABASE] = 7;
+
 $config[CaptchaAltchaConstants::HMAC_SECRET] = getenv('SPRYKER_CAPTCHA_ALTCHA_HMAC_SECRET') ?: '';
-$config[CaptchaAltchaConstants::COST] = 1000;
-$config[CaptchaAltchaConstants::CHALLENGE_TTL] = 1200;
-$config[CaptchaAltchaConstants::REDIS_PERSISTENT_CONNECTION] = true;
-$config[CaptchaAltchaConstants::REDIS_SCHEME] = getenv('SPRYKER_KEY_VALUE_STORE_PROTOCOL') ?: 'tcp';
-$config[CaptchaAltchaConstants::REDIS_HOST] = getenv('SPRYKER_KEY_VALUE_STORE_HOST');
-$config[CaptchaAltchaConstants::REDIS_PORT] = getenv('SPRYKER_KEY_VALUE_STORE_PORT');
-$config[CaptchaAltchaConstants::REDIS_USER] = getenv('SPRYKER_KEY_VALUE_USERNAME');
-$config[CaptchaAltchaConstants::REDIS_PASSWORD] = getenv('SPRYKER_KEY_VALUE_PASSWORD');
-$config[CaptchaAltchaConstants::REDIS_DATABASE] = 7;
+$config[CaptchaAltchaConstants::KEY_DERIVATION_ALGORITHM] = CaptchaAltchaConfig::KEY_DERIVATION_ALGORITHM_ARGON2ID;
+$config[CaptchaAltchaConstants::COST] = 2;
+$config[CaptchaAltchaConstants::MEMORY_COST] = 16384;
+$config[CaptchaAltchaConstants::MINIMUM_COUNTER] = 20;
+$config[CaptchaAltchaConstants::CHALLENGE_TTL] = 300;
 ```
 
 2. Provide the HMAC secret in every environment that serves logins. For a local development environment, add a placeholder to the deploy file:
@@ -470,16 +493,131 @@ For staging and production environments, generate a random secret, for example w
 
 {% info_block warningBox "Missing secret" %}
 
-Without a secret, no challenge can be created: every login that requires a CAPTCHA is rejected, and an error is logged. Logins below the challenge thresholds keep working. Because anyone can push the realm-wide counter over its threshold with failed logins, a missing secret lets an attacker block all logins of a realm until the time window ends.
+Without a secret, or with a secret shorter than 32 bytes, no challenge can be created: every login that requires a CAPTCHA is rejected, and an error is logged. Logins below the challenge thresholds keep working. Because failed logins from enough IP addresses push the realm-wide counter over its threshold, a missing secret lets an attacker block all logins of a realm until the time window ends.
 
 {% endinfo_block %}
 
 3. Make sure your infrastructure meets the following requirements:
 
 - Serve the shop over HTTPS. The ALTCHA widget uses the Web Crypto API, which browsers provide only in secure contexts. Over plain HTTP, the widget shows *Verification failed*.
-- If you use a Content Security Policy, allow `worker-src blob:`, because the widget solves challenges in web workers.
+- Serve the frontend assets from the shop's own host, not from a CDN on another origin. The widget solves Argon2id challenges in a web worker that is a script of the frontend build, and browsers start a worker only from a script of the page's origin.
+- If you use a Content Security Policy that sets `script-src`, allow `'wasm-unsafe-eval'`, because the Argon2id worker runs WebAssembly. If it sets `worker-src`, allow `'self'`. With `PBKDF2/SHA-256`, the widget starts its workers from `blob:` URLs, so `worker-src` must allow `blob:`.
 - Configure trusted proxies, for example `HttpConstants::YVES_TRUSTED_PROXIES` and `HttpConstants::ZED_TRUSTED_PROXIES`, with the addresses of your load balancers. Otherwise, all clients share the IP address of the load balancer, or a client can choose its IP address with a spoofed `X-Forwarded-For` header. The account counter does not depend on the IP address.
 - Run the key-value storage that holds the counters with `maxmemory-policy volatile-ttl`. All counters have a time to live, so this policy evicts the shortest-lived counters first under memory pressure.
+
+#### Use Google reCAPTCHA as the CAPTCHA provider
+
+Instead of ALTCHA, you can use [Google reCAPTCHA](https://developers.google.com/recaptcha), for example, if your project already uses reCAPTCHA on other pages. The `spryker-eco/captcha-google-recaptcha` provider supports two versions:
+
+- reCAPTCHA v2: the user selects the *I'm not a robot* checkbox and sometimes solves an image challenge.
+- reCAPTCHA v3: the browser requests a score in the background when the user submits the login form. The user sees no challenge, and the provider rejects a score below the configured minimum.
+
+Google verifies each token and accepts it only once, so this provider needs no HMAC secret, no `sodium` PHP extension, and no `altcha` npm package. Keep `CaptchaConstants::IS_CAPTCHA_ENABLED` and the `CaptchaConstants::REDIS_*` settings from [Configure the CAPTCHA step-up](#configure-the-captcha-step-up), and skip the `CaptchaAltchaConstants` settings and the HMAC secret.
+
+The provider stores its keys as settings of the Configuration Management feature, so you can manage them in the Back Office. Install the feature, including the encryption of secret settings, as described in [Install the Configuration Management feature](/docs/dg/dev/integrate-and-configure/integrate-configuration-feature.html).
+
+1. Install the provider:
+
+```bash
+composer require spryker/captcha spryker-eco/captcha-google-recaptcha --update-with-dependencies
+```
+
+The provider verifies tokens with the `google/recaptcha` PHP library. On PHP 8.4 or later, Composer installs version 2.x of the library; on PHP 8.3, it installs version 1.3.1.
+
+2. In the [Google Cloud console](https://console.cloud.google.com/security/recaptcha), create a reCAPTCHA key:
+
+- Select the v2 checkbox type or the v3 type.
+- Add every host that shows a login form: the Storefront, Back Office, and Merchant Portal hosts. The provider uses one key for all applications. Keep the domain verification of the key enabled: without it, any website can use your key, because the provider does not check the host name of a token.
+- For production traffic, link a billing account to the Google Cloud project. Without billing, Google answers every token with `success` after the free quota of 10,000 verifications per month is used up. The provider rejects these answers, so the logins that require a CAPTCHA are rejected until the quota resets.
+
+3. Register the settings of the provider:
+
+```bash
+console configuration:sync
+```
+
+4. In the Back Office, go to **Configuration**, open **Integrations** > **Google reCAPTCHA**, and enter the key:
+
+| SETTING | DESCRIPTION |
+|---|---|
+| reCAPTCHA Version | `v2_checkbox` or `v3`. Must match the type of the key. Default: `v2_checkbox`. |
+| Site Key | The public key of the widget. It is published to the Storefront. |
+| Secret Key | The key that verifies tokens with Google. It is a secret setting: it is stored encrypted and is never published to the Storefront. |
+| Minimum Score (v3) | The lowest score of a v3 token that passes the check, from `0.1` to `1.0`. Default: `0.5`. |
+
+To provide the keys during deployment instead, import them from environment variables:
+
+```bash
+console configuration:import-environment \
+    integrations:google_recaptcha:credentials:site_key=RECAPTCHA_SITE_KEY \
+    integrations:google_recaptcha:credentials:secret_key=RECAPTCHA_SECRET_KEY
+```
+
+For details about the command, see [Integrate configuration deployment commands](/docs/dg/dev/integrate-and-configure/integrate-configuration-deployment-commands.html). The Storefront reads the version and the site key from the key-value storage, so it uses a changed setting after the `sync.storage.configuration` queue has been processed.
+
+5. Register the provider instead of `AltchaCaptchaProviderPlugin`. A project uses one CAPTCHA provider.
+
+**src/Pyz/Client/Captcha/CaptchaDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Client\Captcha;
+
+use Spryker\Client\Captcha\CaptchaDependencyProvider as SprykerCaptchaDependencyProvider;
+use Spryker\Client\CaptchaExtension\Dependency\Plugin\CaptchaProviderPluginInterface;
+use SprykerEco\Client\CaptchaGoogleRecaptcha\Plugin\Captcha\GoogleRecaptchaCaptchaProviderPlugin;
+
+class CaptchaDependencyProvider extends SprykerCaptchaDependencyProvider
+{
+    protected function getCaptchaProviderPlugin(): ?CaptchaProviderPluginInterface
+    {
+        return new GoogleRecaptchaCaptchaProviderPlugin();
+    }
+}
+```
+
+6. Only an application that registers `ConfigurationApplicationPlugin` can read the secret key. The Back Office and the Backend Gateway register it when you install the Configuration Management feature. The Back Office and the Merchant Portal verify tokens themselves, so register the plugin in the Merchant Portal application as well. The Storefront sends tokens to the Backend Gateway for verification and needs no changes.
+
+**src/Pyz/Zed/MerchantPortalApplication/MerchantPortalApplicationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantPortalApplication;
+
+use Spryker\Zed\Configuration\Communication\Plugin\Application\ConfigurationApplicationPlugin;
+use Spryker\Zed\MerchantPortalApplication\MerchantPortalApplicationDependencyProvider as SprykerMerchantPortalApplicationDependencyProvider;
+
+class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalApplicationDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface>
+     */
+    protected function getMerchantPortalApplicationPlugins(): array
+    {
+        return [
+            // ...
+            new ConfigurationApplicationPlugin(),
+        ];
+    }
+}
+```
+
+7. Rebuild the frontend assets of the Storefront, the Back Office, and the Merchant Portal, as described in the installation guides of these applications. With v2, the script of Google renders the checkbox. With v3, the scripts of the provider request a token when the user submits a login form, with the login realm, `customer` or `user`, as the action.
+
+8. Make sure your infrastructure meets the following requirements:
+
+- If you use a Content Security Policy, allow the origins of Google:
+  - `script-src`: `https://www.google.com/recaptcha/` and `https://www.gstatic.com/recaptcha/`
+  - `frame-src`: `https://www.google.com/recaptcha/` and `https://recaptcha.google.com/recaptcha/`
+  - `connect-src`: `https://www.google.com/recaptcha/`
+- Allow outgoing HTTPS requests from the Back Office, the Merchant Portal, and the Backend Gateway to `https://www.google.com/recaptcha/api/siteverify`. If Google cannot be reached within 5 seconds, the logins that require a CAPTCHA are rejected.
+- reCAPTCHA sends the IP address and browser signals of a visitor to Google and sets the `_GRECAPTCHA` cookie. The widget loads only on a login that requires a CAPTCHA. Cover reCAPTCHA in your privacy policy and cookie notice.
+- reCAPTCHA v3 shows the reCAPTCHA badge of Google on the pages that load it. If you hide the badge, show the text "This site is protected by reCAPTCHA" in the form.
+- The trusted proxies and the key-value storage requirements from [Configure the CAPTCHA step-up](#configure-the-captcha-step-up) apply as well.
+
+With reCAPTCHA v3, the login forms show no checkbox. The verification steps of the installation guides that mention a checkbox apply to ALTCHA and to reCAPTCHA v2.
 
 #### Configure audit logging
 
@@ -672,7 +810,7 @@ Ensure that, in the database, the configured data has been added to the `spy_glo
 | ZedSessionRedisLockReleaserPlugin | Removes a session lock from key-value storage (Redis or Valkey) by session ID for Zed sessions. It's used for removing previously created locks by running `session:lock:remove`. |  | Spryker\Zed\SessionRedis\Communication\Plugin\Session                    |
 | CustomerSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with customer settings. |  | Spryker\Client\SecurityBlockerStorefrontCustomer\Plugin\SecurityBlocker\CustomerSecurityBlockerConfigurationSettingsExpanderPlugin |
 | CustomerSecurityBlockerLoginRealmConfigurationExpanderPlugin | Provides the per-account and CAPTCHA thresholds of the `customer` login realm. If no plugin provides a realm, the realm uses the module defaults, and a warning is logged. |  | Spryker\Client\SecurityBlockerStorefrontCustomer\Plugin\SecurityBlocker |
-| AltchaCaptchaProviderPlugin | Creates and verifies ALTCHA challenges. Accepts each solved challenge only once. If no CAPTCHA provider plugin is registered, no login requires a CAPTCHA, the account block still applies, and a warning is logged. |  | SprykerEco\Client\CaptchaAltcha\Plugin\Captcha |
+| AltchaCaptchaProviderPlugin | Creates and verifies ALTCHA challenges. The CAPTCHA module accepts each solved challenge only once. If CAPTCHA is enabled and no CAPTCHA provider plugin is registered, every login that requires a CAPTCHA is rejected and an error is logged. |  | SprykerEco\Client\CaptchaAltcha\Plugin\Captcha |
 | AuditLogTagFilterBufferedStreamHandlerPlugin               | Provides the Monolog handler.                                                                                                                                                  |  | Spryker\Glue\Log\Plugin\Log                                                                                                        |
 | PsrLogMessageProcessorPlugin                               | Processes a record's message according to PSR-3 rules.                                                                                                                     |  | Spryker\Glue\Log\Plugin\Processor                                                                                                  |
 | EnvironmentProcessorPlugin                                 | Adds environment related data to the log data.                                                                                                                             |  | Spryker\Glue\Log\Plugin\Processor                                                                                                  |
@@ -1535,7 +1673,7 @@ class ShopApplicationConfig extends SprykerShopApplicationConfig
 
 The Storefront login forms render the CAPTCHA field through the `form` molecule, so the login templates need no changes.
 
-Rebuild the Storefront assets, so that they include the ALTCHA widget:
+Rebuild the Storefront assets, so that they include the widget of the CAPTCHA provider:
 
 ```bash
 npm run yves

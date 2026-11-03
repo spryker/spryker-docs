@@ -226,7 +226,7 @@ class GuiConfig extends SprykerGuiConfig
 }
 ```
 
-Rebuild the Back Office assets, so that they include the ALTCHA widget:
+Rebuild the Back Office assets, so that they include the widget of the CAPTCHA provider:
 
 ```bash
 npm run zed

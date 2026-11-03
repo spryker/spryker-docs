@@ -707,16 +707,32 @@ class SecurityMerchantPortalGuiDependencyProvider extends SprykerSecurityMerchan
 The default Merchant Portal login template renders the CAPTCHA field before the submit button. If your project overrides `@SecurityMerchantPortalGui/Login/index.twig`, add the field to your template with `form_widget`. Do not use `form_row`, because the Merchant Portal form item does not render the CAPTCHA widget.
 
 ```twig
-{% raw %}{% if form.captcha is defined %}{{ form_widget(form.captcha) }}{% endif %}{% endraw %}
+{% raw %}{% if form.captcha is defined %}<div class="ant-form-item">{{ form_widget(form.captcha) }}</div>{% endif %}{% endraw %}
 ```
 
 The Merchant Portal login form is submitted asynchronously. When a login is blocked or the CAPTCHA is rejected, the response redirects to the login page and shows the reason as a notification.
 
-Rebuild the Merchant Portal assets, so that they include the ALTCHA widget:
+The ALTCHA widget solves the challenge in an Argon2id web worker, which the build emits as a separate chunk. The webpack configuration of `spryker/zed-ui` enables this. If your project builds the Merchant Portal with its own webpack configuration, enable the worker parsing in it, because Angular turns it off by default:
+
+```ts
+config.module = {
+    ...config.module,
+    parser: {
+        ...config.module?.parser,
+        javascript: { ...config.module?.parser?.javascript, worker: ['...'] },
+    },
+};
+```
+
+The Merchant Portal builder finds the widget of a CAPTCHA provider from `vendor/spryker-eco` only through the build configuration that the backend generates, `data/cache/MerchantPortal/frontend/build-config.json`. This file lists the namespaces of `KernelConstants::CORE_NAMESPACES`, so make sure that `SprykerEco` is in this list. To generate the file and rebuild the Merchant Portal assets, so that they include the widget, run the console command instead of `npm run mp:build`:
 
 ```bash
-npm run mp:build
+console frontend:mp:build
 ```
+
+In deployment pipelines, use `console frontend:mp:build --environment production`. Without the generated file, the builder scans only the core modules of `vendor/spryker`, and the login form shows no CAPTCHA widget.
+
+If you use Google reCAPTCHA as the CAPTCHA provider, register `ConfigurationApplicationPlugin` in the Merchant Portal application, as described in [Use Google reCAPTCHA as the CAPTCHA provider](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html#use-google-recaptcha-as-the-captcha-provider). The Merchant Portal verifies reCAPTCHA tokens itself and needs this plugin to read the secret key.
 
 {% info_block warningBox "Verification" %}
 

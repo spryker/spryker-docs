@@ -732,7 +732,7 @@ console frontend:mp:build
 
 In deployment pipelines, use `console frontend:mp:build --environment production`. Without the generated file, the builder scans only the core modules of `vendor/spryker`, and the login form shows no CAPTCHA widget.
 
-If you use Google reCAPTCHA as the CAPTCHA provider, register `ConfigurationApplicationPlugin` in the Merchant Portal application, as described in [Use Google reCAPTCHA as the CAPTCHA provider](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html#use-google-recaptcha-as-the-captcha-provider). The Merchant Portal verifies reCAPTCHA tokens itself and needs this plugin to read the secret key.
+If you use Google reCAPTCHA as the CAPTCHA provider, register `ConfigurationApplicationPlugin` in the Merchant Portal application, as described in [Install Google reCAPTCHA](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-google-recaptcha.html#6-set-up-behavior). The Merchant Portal verifies reCAPTCHA tokens itself and needs this plugin to read the secret key.
 
 {% info_block warningBox "Verification" %}
 

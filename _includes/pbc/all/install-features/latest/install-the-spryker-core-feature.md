@@ -51,7 +51,7 @@ If your project does not use npm workspaces, add the widget to the project `pack
 npm install altcha@~3.2.0
 ```
 
-To use Google reCAPTCHA instead of ALTCHA, install `spryker-eco/captcha-google-recaptcha` instead of `spryker-eco/captcha-altcha`, and skip the `sodium` extension and the `altcha` npm package. For details, see [Use Google reCAPTCHA as the CAPTCHA provider](#use-google-recaptcha-as-the-captcha-provider).
+To use Google reCAPTCHA instead of ALTCHA, skip this step and follow [Install Google reCAPTCHA](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-google-recaptcha.html).
 
 {% info_block warningBox "Verification" %}
 
@@ -440,7 +440,7 @@ class SecurityBlockerConfig extends SprykerSecurityBlockerConfig
 
 #### Configure the CAPTCHA step-up
 
-A login form requires a CAPTCHA when one of the challenge thresholds from [Configure SecurityBlocker](#configure-securityblocker) is reached. The CAPTCHA module renders and verifies the challenge, and the ALTCHA provider creates it. ALTCHA signs every challenge with an HMAC secret, so each environment needs its own secret.
+A login form requires a CAPTCHA when one of the challenge thresholds from [Configure SecurityBlocker](#configure-securityblocker) is reached. The CAPTCHA module renders and verifies the challenge, and the ALTCHA provider creates it. ALTCHA signs every challenge with an HMAC secret, so each environment needs its own secret. To use Google reCAPTCHA as the CAPTCHA provider instead, see [Install Google reCAPTCHA](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-google-recaptcha.html).
 
 1. Add the CAPTCHA configuration:
 
@@ -504,120 +504,6 @@ Without a secret, or with a secret shorter than 32 bytes, no challenge can be cr
 - If you use a Content Security Policy that sets `script-src`, allow `'wasm-unsafe-eval'`, because the Argon2id worker runs WebAssembly. If it sets `worker-src`, allow `'self'`. With `PBKDF2/SHA-256`, the widget starts its workers from `blob:` URLs, so `worker-src` must allow `blob:`.
 - Configure trusted proxies, for example `HttpConstants::YVES_TRUSTED_PROXIES` and `HttpConstants::ZED_TRUSTED_PROXIES`, with the addresses of your load balancers. Otherwise, all clients share the IP address of the load balancer, or a client can choose its IP address with a spoofed `X-Forwarded-For` header. The account counter does not depend on the IP address.
 - Run the key-value storage that holds the counters with `maxmemory-policy volatile-ttl`. All counters have a time to live, so this policy evicts the shortest-lived counters first under memory pressure.
-
-#### Use Google reCAPTCHA as the CAPTCHA provider
-
-Instead of ALTCHA, you can use [Google reCAPTCHA](https://developers.google.com/recaptcha), for example, if your project already uses reCAPTCHA on other pages. The `spryker-eco/captcha-google-recaptcha` provider supports two versions:
-
-- reCAPTCHA v2: the user selects the *I'm not a robot* checkbox and sometimes solves an image challenge.
-- reCAPTCHA v3: the browser requests a score in the background when the user submits the login form. The user sees no challenge, and the provider rejects a score below the configured minimum.
-
-Google verifies each token and accepts it only once, so this provider needs no HMAC secret, no `sodium` PHP extension, and no `altcha` npm package. Keep `CaptchaConstants::IS_CAPTCHA_ENABLED` and the `CaptchaConstants::REDIS_*` settings from [Configure the CAPTCHA step-up](#configure-the-captcha-step-up), and skip the `CaptchaAltchaConstants` settings and the HMAC secret.
-
-The provider stores its keys as settings of the Configuration Management feature, so you can manage them in the Back Office. Install the feature, including the encryption of secret settings, as described in [Install the Configuration Management feature](/docs/dg/dev/integrate-and-configure/integrate-configuration-feature.html).
-
-1. Install the provider:
-
-```bash
-composer require spryker/captcha spryker-eco/captcha-google-recaptcha --update-with-dependencies
-```
-
-The provider verifies tokens with the `google/recaptcha` PHP library. On PHP 8.4 or later, Composer installs version 2.x of the library; on PHP 8.3, it installs version 1.3.1.
-
-2. In the [Google Cloud console](https://console.cloud.google.com/security/recaptcha), create a reCAPTCHA key:
-
-- Select the v2 checkbox type or the v3 type.
-- Add every host that shows a login form: the Storefront, Back Office, and Merchant Portal hosts. The provider uses one key for all applications. Keep the domain verification of the key enabled: without it, any website can use your key, because the provider does not check the host name of a token.
-- For production traffic, link a billing account to the Google Cloud project. Without billing, Google answers every token with `success` after the free quota of 10,000 verifications per month is used up. The provider rejects these answers, so the logins that require a CAPTCHA are rejected until the quota resets.
-
-3. Register the settings of the provider:
-
-```bash
-console configuration:sync
-```
-
-4. In the Back Office, go to **Configuration**, open **Integrations** > **Google reCAPTCHA**, and enter the key:
-
-| SETTING | DESCRIPTION |
-|---|---|
-| reCAPTCHA Version | `v2_checkbox` or `v3`. Must match the type of the key. Default: `v2_checkbox`. |
-| Site Key | The public key of the widget. It is published to the Storefront. |
-| Secret Key | The key that verifies tokens with Google. It is a secret setting: it is stored encrypted and is never published to the Storefront. |
-| Minimum Score (v3) | The lowest score of a v3 token that passes the check, from `0.1` to `1.0`. Default: `0.5`. |
-
-To provide the keys during deployment instead, import them from environment variables:
-
-```bash
-console configuration:import-environment \
-    integrations:google_recaptcha:credentials:site_key=RECAPTCHA_SITE_KEY \
-    integrations:google_recaptcha:credentials:secret_key=RECAPTCHA_SECRET_KEY
-```
-
-For details about the command, see [Integrate configuration deployment commands](/docs/dg/dev/integrate-and-configure/integrate-configuration-deployment-commands.html). The Storefront reads the version and the site key from the key-value storage, so it uses a changed setting after the `sync.storage.configuration` queue has been processed.
-
-5. Register the provider instead of `AltchaCaptchaProviderPlugin`. A project uses one CAPTCHA provider.
-
-**src/Pyz/Client/Captcha/CaptchaDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Client\Captcha;
-
-use Spryker\Client\Captcha\CaptchaDependencyProvider as SprykerCaptchaDependencyProvider;
-use Spryker\Client\CaptchaExtension\Dependency\Plugin\CaptchaProviderPluginInterface;
-use SprykerEco\Client\CaptchaGoogleRecaptcha\Plugin\Captcha\GoogleRecaptchaCaptchaProviderPlugin;
-
-class CaptchaDependencyProvider extends SprykerCaptchaDependencyProvider
-{
-    protected function getCaptchaProviderPlugin(): ?CaptchaProviderPluginInterface
-    {
-        return new GoogleRecaptchaCaptchaProviderPlugin();
-    }
-}
-```
-
-6. Only an application that registers `ConfigurationApplicationPlugin` can read the secret key. The Back Office and the Backend Gateway register it when you install the Configuration Management feature. The Back Office and the Merchant Portal verify tokens themselves, so register the plugin in the Merchant Portal application as well. The Storefront sends tokens to the Backend Gateway for verification and needs no changes.
-
-**src/Pyz/Zed/MerchantPortalApplication/MerchantPortalApplicationDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\MerchantPortalApplication;
-
-use Spryker\Zed\Configuration\Communication\Plugin\Application\ConfigurationApplicationPlugin;
-use Spryker\Zed\MerchantPortalApplication\MerchantPortalApplicationDependencyProvider as SprykerMerchantPortalApplicationDependencyProvider;
-
-class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalApplicationDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface>
-     */
-    protected function getMerchantPortalApplicationPlugins(): array
-    {
-        return [
-            // ...
-            new ConfigurationApplicationPlugin(),
-        ];
-    }
-}
-```
-
-7. Rebuild the frontend assets of the Storefront, the Back Office, and the Merchant Portal, as described in the installation guides of these applications. With v2, the script of Google renders the checkbox. With v3, the scripts of the provider request a token when the user submits a login form, with the login realm, `customer` or `user`, as the action.
-
-8. Make sure your infrastructure meets the following requirements:
-
-- If you use a Content Security Policy, allow the origins of Google:
-  - `script-src`: `https://www.google.com/recaptcha/` and `https://www.gstatic.com/recaptcha/`
-  - `frame-src`: `https://www.google.com/recaptcha/` and `https://recaptcha.google.com/recaptcha/`
-  - `connect-src`: `https://www.google.com/recaptcha/`
-- Allow outgoing HTTPS requests from the Back Office, the Merchant Portal, and the Backend Gateway to `https://www.google.com/recaptcha/api/siteverify`. If Google cannot be reached within 5 seconds, the logins that require a CAPTCHA are rejected.
-- reCAPTCHA sends the IP address and browser signals of a visitor to Google and sets the `_GRECAPTCHA` cookie. The widget loads only on a login that requires a CAPTCHA. Cover reCAPTCHA in your privacy policy and cookie notice.
-- reCAPTCHA v3 shows the reCAPTCHA badge of Google on the pages that load it. If you hide the badge, show the text "This site is protected by reCAPTCHA" in the form.
-- The trusted proxies and the key-value storage requirements from [Configure the CAPTCHA step-up](#configure-the-captcha-step-up) apply as well.
-
-With reCAPTCHA v3, the login forms show no checkbox. The verification steps of the installation guides that mention a checkbox apply to ALTCHA and to reCAPTCHA v2.
 
 #### Configure audit logging
 

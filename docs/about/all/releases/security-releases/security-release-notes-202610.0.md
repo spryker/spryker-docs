@@ -1,7 +1,7 @@
 ---
 title: Security release notes 202610.0
 description: Security updates released for version 202610.0
-last_updated: Oct 28, 2026
+last_updated: Nov 2, 2026
 template: concept-topic-template
 publish_date: "2026-10-13"
 ---
@@ -244,6 +244,40 @@ class CustomerDataChangeRequestConfig extends SprykerCustomerDataChangeRequestCo
 3. Submit the form with a new email address for the 4th time within 15 minutes. Make sure an error message about the reached limit is displayed and no verification email is sent.
 
 {% endinfo_block %}
+
+## Rate limiting protection for password change
+
+On the Storefront, Back Office, and Merchant Portal, a logged-in user can change their password by entering their current password, a new password, and a confirmation of the new password. The password change forms did not limit the number of attempts. As a result, anyone who gained access to a logged-in session without knowing the account password, for example through a stolen session cookie or an unlocked device, could guess the current password an unlimited number of times. After guessing it, they could set a new password and lock the account owner out. The number of password change attempts is now limited per user.
+
+### Affected modules
+
+- `spryker/customer`: < 7.89.0
+- `spryker/customers-rest-api`: < 1.36.0
+- `spryker/user`: < 3.36.0
+- `spryker/user-merchant-portal-gui`: < 4.5.0
+
+### Fix the vulnerability
+
+After the update, when a user reaches the limit of password change attempts, the password is not changed and the user sees an error message.
+
+1. Update the affected packages:
+
+```bash
+composer update spryker/customer:"^7.89.0" spryker/customers-rest-api:"^1.36.0" spryker/user:"^3.36.0" spryker/user-merchant-portal-gui:"^4.5.0"
+```
+
+2. To show the error message on the Storefront when the limit is reached, add the following translations to `data/import/common/common/glossary.csv`:
+
+```csv
+customer.password.change_limit_exceeded,"You reached the limit of password change attempts. Please try again later.",en_US
+customer.password.change_limit_exceeded,"Sie haben das Limit für Versuche zur Änderung des Passworts erreicht. Bitte versuchen Sie es später erneut.",de_DE
+```
+
+3. Import the glossary:
+
+```bash
+console data:import:glossary
+```
 
 ## SQL injection in the content item list of the Back Office
 

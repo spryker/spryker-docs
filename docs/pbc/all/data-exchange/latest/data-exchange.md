@@ -2,7 +2,7 @@
 title: Data Exchange
 description: Learn all about Spryker's data exchange options that you can use within your Spryker project.
 template: concept-topic-template
-last_updated: Dec 18, 2023
+last_updated: Oct 29, 2026
 redirect_from:
   - /spryker-middleware.htm
   - /docs/pbc/all/data-exchange/latest/spryker-middleware-powered-by-alumio/spryker-middleware-powered-by-alumio.html

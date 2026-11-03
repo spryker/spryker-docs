@@ -56,7 +56,7 @@ The provider needs a reCAPTCHA key from Google: the site key is used by the widg
 
 1. In the [Google Cloud console](https://console.cloud.google.com/security/recaptcha), create a reCAPTCHA key of the v2 checkbox type or of the v3 type.
 2. Add every host that shows a login form: the Storefront, Back Office, and Merchant Portal hosts. The provider uses one key for all applications.
-3. Keep the domain verification of the key enabled. Without it, any website can use your key, because the provider does not check the host name of a token.
+3. Keep the domain verification of the key enabled. If you turn it off, for example because the key serves many domains, enter your hosts in the **Allowed Hostnames** setting, as described in [Enter the reCAPTCHA key](#5-enter-the-recaptcha-key). Otherwise, any website can use your key.
 4. Copy the site key and the secret key of the key.
 5. For production traffic, link a billing account to the Google Cloud project. Without billing, Google answers every token with `success` after the free quota of 10,000 verifications per month is used up. The provider rejects these answers, so the logins that require a CAPTCHA are rejected until the quota resets.
 
@@ -72,7 +72,7 @@ vendor/bin/console configuration:sync
 
 1. In the Back Office, go to **Configuration**.
 2. In the sidebar, select **Integrations**, then open the **Google reCAPTCHA** tab.
-3. Make sure the **reCAPTCHA Key** group contains the **reCAPTCHA Version**, **Site Key**, **Secret Key**, and **Minimum Score (v3)** settings.
+3. Make sure the **reCAPTCHA Key** group contains the **reCAPTCHA Version**, **Site Key**, **Secret Key**, and **Minimum Score (v3)** settings, and the **Token Verification** group contains the **Allowed Hostnames** setting.
 
 {% endinfo_block %}
 
@@ -95,6 +95,8 @@ In the Back Office, go to **Configuration** > **Integrations** > **Google reCAPT
 | Secret Key | The key that verifies tokens with Google. It is a secret setting: it is stored encrypted and is never published to the Storefront. |
 | Minimum Score (v3) | The lowest score of a v3 token that passes the check, from `0.1` to `1.0`. Default: `0.5`. |
 
+Optional: To accept only tokens solved on your own hosts, open the **Token Verification** group and enter the hosts in **Allowed Hostnames**, separated by commas, for example `shop.example.com, backoffice.example.com, mp.example.com`. A token solved on another host is then rejected, even if the domain verification of the key is turned off. If the setting is empty, the provider accepts every host that Google accepts for the key.
+
 To provide the key during deployment instead, import it from environment variables:
 
 ```bash
@@ -107,7 +109,7 @@ For details about the command, see [Integrate configuration deployment commands]
 
 ### 6) Set up behavior
 
-Only an application that registers `ConfigurationApplicationPlugin` can read the secret key. The Back Office and the Merchant Portal verify tokens themselves. The Storefront cannot read the secret key, so it sends tokens to the Backend Gateway for verification. The Back Office and the Backend Gateway register `ConfigurationApplicationPlugin` when you install the Configuration Management feature, so register it only in the Merchant Portal application.
+Only an application that registers `ConfigurationApplicationPlugin` can read the secret key. The Back Office and the Merchant Portal verify tokens themselves. The Storefront cannot read the secret key, so it sends tokens to the Backend Gateway for verification. The Back Office and the Backend Gateway register `ConfigurationApplicationPlugin` when you install the Configuration Management feature, so register it only in the Merchant Portal application. Without the plugin, the Merchant Portal sends its tokens to the Backend Gateway and logs a warning for every token.
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -199,10 +201,13 @@ The requirements for trusted proxies and for the key-value storage from [Install
 
 ## How the provider verifies tokens
 
-The provider sends each token to the `siteverify` endpoint of Google and maps the answer as follows. Every answer except a valid token rejects the login that requires a CAPTCHA, and the account block of the login protection applies in every case.
+A reCAPTCHA token is a base64url string. The provider rejects a token that is not a base64url string of 20 to 4096 characters as invalid, without a request to Google, so that malformed tokens do not cost a request.
+
+The provider sends every other token to the `siteverify` endpoint of Google and maps the answer as follows. Every answer except a valid token rejects the login that requires a CAPTCHA, and the account block of the login protection applies in every case.
 
 | ANSWER OF GOOGLE | RESULT |
 | --- | --- |
+| Success for a host that is not in **Allowed Hostnames** | The token is invalid, and a warning is logged. |
 | v2: success | The token is valid. |
 | v3: success, the action matches the login realm, and the score reaches the minimum | The token is valid. |
 | v3: success with another action or with a score below the minimum | The token is invalid. |

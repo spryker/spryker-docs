@@ -1,7 +1,7 @@
 ---
 title: Commerce MCP Server
 description: Technical overview of the Commerce MCP Server — architecture, transports, available tools and prompts, and configuration for connecting AI assistants to the Spryker storefront.
-last_updated: Jun 22, 2026
+last_updated: Nov 3, 2026
 template: concept-topic-template
 label: early-access
 keywords: ai, mcp, model context protocol, agentic commerce, storefront, glue api, tools, prompts
@@ -19,7 +19,7 @@ This is an early-access preview intended for demonstration, evaluation, and prot
 
 {% info_block infoBox "Related MCP server" %}
 
-The Commerce MCP Server connects AI assistants to the *storefront* (the Storefront API). It is distinct from the [AI Dev MCP Server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html), which exposes *developer* tooling such as transfer structures and OMS transitions to AI assistants working on a Spryker project.
+The Commerce MCP Server connects AI assistants to the *storefront* (the Storefront API). It is distinct from the [AI Dev MCP Server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html), which exposes *developer* tooling such as transfer structures and OMS transitions to AI assistants working on a Spryker project. To expose tools from inside the Storefront API application instead of a standalone server, see [Storefront MCP endpoint](/docs/dg/dev/ai/ai-commerce/commerce-mcp-server/storefront-mcp-endpoint.html).
 
 {% endinfo_block %}
 

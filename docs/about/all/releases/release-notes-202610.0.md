@@ -104,7 +104,7 @@ Buyers can now access invoice and credit note documents directly from their orde
 - [User guide - Order Invoice](/docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/view-order-invoice-documents)
 - [User guide - Marketplace Order Invoice](/docs/pbc/all/order-management-system/latest/marketplace/view-merchant-order-invoice-documents)
 
-### B2B Customer Groups - Membership [Phase 1] {% include badge.html type="improvement" %}
+### B2B Customer Groups - Membership {% include badge.html type="improvement" %}
 
 Customer groups can now be built using companies and business units, not only individual users. This makes segmentation better aligned with real B2B account structures and easier to maintain across commercial use cases. We will continue to build B2B Customer Groups, reach out if you are interested.
 

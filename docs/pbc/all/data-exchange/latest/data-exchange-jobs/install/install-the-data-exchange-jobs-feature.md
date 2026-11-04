@@ -110,7 +110,7 @@ The following settings are defined in `Spryker\Zed\DataExchange\DataExchangeConf
 | `IMPORT_CSV_BATCH_SIZE` | `1000` | Number of CSV rows handed to the import steps at once. |
 | `EXPORT_CSV_BATCH_SIZE` | `1000` | Number of rows the export data provider returns at once. |
 | `IMPORT_MAX_FILE_SIZE_MB` | `50` | Maximum size of an uploaded CSV file in megabytes. |
-| `IMPORT_JOB_RUNS_PER_INVOCATION` | `1` | Number of pending import job runs one `import:job:run` invocation processes, oldest first, before the process exits. The invocation stops earlier when no pending run is left. |
+| `IMPORT_JOB_RUNS_PER_INVOCATION` | `1` | Number of pending import job runs one `import:job:run` invocation processes, oldest first, before the process exits. The invocation stops earlier when no pending run is left. Must be `1` or greater; the command throws an exception otherwise. |
 | `IMPORT_ERROR_DISPLAY_THRESHOLD` | `10` | Maximum number of import errors displayed inline on the import job run detail page. When a run produces more errors than this threshold, the errors are offered as a downloadable summary instead. |
 | `getAllowedMimeTypesWithExtensions()` | `text/csv`, `text/plain` | MIME types accepted by the upload form. |
 
@@ -325,6 +325,8 @@ Register the command to run on a schedule so that pending runs are picked up aut
 Add the entry to the array that `getJobs()` returns. If the other entries in your file prefix the command with the `$logger` variable to redirect the output to the scheduler log, prefix this one in the same way.
 
 Every invocation processes up to `getImportJobRunsPerInvocation()` pending runs (default 1) and exits; the next scheduled invocation continues the queue. With the default, runs that are queued faster than one per minute wait for a later invocation. To drain the queue faster, raise `IMPORT_JOB_RUNS_PER_INVOCATION` in the project configuration as shown in [Engine limits and error display](#engine-limits-and-error-display).
+
+The bound exists because PHP releases the memory a run leaves behind only when the process exits: the publish events collected during a run, and anything a third-party step keeps, stay in the process until then. Keep the value small enough that the runs of one invocation fit into the `memory_limit` of the CLI process. A larger value also makes an invocation last longer than the one-minute schedule, and the engine does not yet claim runs atomically, so two overlapping invocations can pick up the same pending run. Either keep the value conservative or schedule the command so that invocations do not overlap. A value below `1` is a configuration error: the command throws an exception and processes nothing.
 
 {% info_block warningBox "Verification" %}
 

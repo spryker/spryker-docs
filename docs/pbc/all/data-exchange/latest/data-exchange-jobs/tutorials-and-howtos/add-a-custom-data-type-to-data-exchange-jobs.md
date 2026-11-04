@@ -242,7 +242,7 @@ class CustomerCsvImportStep implements ImportStepInterface, CacheResettableImpor
 }
 ```
 
-This keeps the lookup caches from growing with the file, and it prevents a value cached as *missing* in one batch from shadowing an entity that another step creates in a later batch. A step without caches implements `ImportStepInterface` only, as in the example above; the engine skips it when resetting caches. The product steps of the `ProductExperienceManagement` module inherit a no-op `resetCache()` from their base class, `AbstractProductCsvImportStep`, and the steps that cache override it.
+This keeps the lookup caches from growing with the file, and it prevents a value cached as *missing* in one batch from shadowing an entity that another step creates in a later batch. The engine also calls `resetCache()` when a run fails with an exception, so the cache of a failed run does not survive into the next run the same process picks up. Cache plain values such as IDs, never Propel entities or transfers: an entity holds its whole row and its relations, which defeats the memory goal (the engine disables Propel instance pooling for the duration of the run for the same reason). A step without caches implements `ImportStepInterface` only, as in the example above; the engine skips it when resetting caches. The product steps of the `ProductExperienceManagement` module inherit a no-op `resetCache()` from their base class, `AbstractProductCsvImportStep`, and the steps that cache override it.
 
 ## 3. Optional: Make the type exportable
 

@@ -1,7 +1,7 @@
 ---
 title: Release notes 202610.0
 description: Release notes for Spryker Cloud Commerce OS version 202610.0
-last_updated: October 30, 2026
+last_updated: November 4, 2026
 template: concept-topic-template
 ---
 
@@ -128,7 +128,7 @@ images="https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-no
 
 ### Unified Order Intake via the Back Office API {% include badge.html type="feature" %}
 
-External systems such as ERP, OMS, POS, marketplaces, and AI tools can now create orders in Spryker through the the Back Office API and move them through the order lifecycle. An order placed through the API runs through the same checkout rules, price calculation, order process, and confirmation mail as a storefront order, so no storefront buyer has to be simulated.
+External systems such as ERP, OMS, POS, marketplaces, and AI tools can now create orders in Spryker through the Back Office API and move them through the order lifecycle. An order placed through the API runs through the same checkout rules, price calculation, order process, and confirmation mail as a storefront order, so no storefront buyer has to be simulated.
 
 **Key capabilities:**
 - Create an order for an existing customer with line items, product options, shipment, billing address, and payment method.
@@ -154,7 +154,7 @@ Not included in this release: native EDI transport and partner-specific mappings
 
 ### Back Office API for commerce and B2B entities {% include badge.html type="feature" %}
 
-The the Back Office API now lets ERP, CRM, PIM, and other source systems maintain commerce data and B2B accounts in Spryker directly, with the same business rules and validation the Back Office applies. This release covers the catalog, discounts, translations, customers, B2B company accounts, and merchants. Further domains such as prices, stock, CMS, returns, shipment, payment, and tax follow in later releases.
+The Back Office API now lets ERP, CRM, PIM, and other source systems maintain commerce data and B2B accounts in Spryker directly, with the same business rules and validation the Back Office applies. This release covers the catalog, discounts, translations, customers, B2B company accounts, and merchants. Further domains such as prices, stock, CMS, returns, shipment, payment, and tax follow in later releases.
 
 **Key capabilities:**
 - **Catalog:** manage products, including prices, stock, images, categories, stores, and tax, through one product endpoint. Create, update, and delete categories, and assign products to a category in bulk.
@@ -296,7 +296,7 @@ Spryker now supports [Symfony 7.4 LTS](https://symfony.com/releases/7.4). This g
 **Documentation:**
 - [Upgrade to Symfony 7.4](/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-7)
 
-### OpenSearch 3.x Support in Sprkyer PaaS {% include badge.html type="improvement" %}
+### OpenSearch 3.x Support in Spryker PaaS {% include badge.html type="improvement" %}
 
 Spryker is advancing support for OpenSearch 3.x to provide a clear path beyond OpenSearch 1.x. This work prepares the platform to provision, maintain, and monitor newer OpenSearch versions while supporting application compatibility and customer migration planning.
 

@@ -49,13 +49,13 @@ https://d2s0ynfc62ej12.cloudfront.net/docs/About/all/releases/release-notes-2026
 - More building blocks: new subject types and triggers so you can build workflows for marketplace processes such as merchant onboarding and merchant product onboarding.
 
 **Business benefits:**
-Faster changes: operations teams can update routine workflows themselves, without waiting for a development cycle.
-Lower risk: validation stops misconfigured workflows from going live, reducing errors in business-critical processes.
-Flexible automation: marketplace operators can model processes such as merchant onboarding and merchant product onboarding to match their own requirements, with less custom code.
+- Faster changes: operations teams can update routine workflows themselves, without waiting for a development cycle.
+-Lower risk: validation stops misconfigured workflows from going live, reducing errors in business-critical processes.
+- Flexible automation: marketplace operators can model processes such as merchant onboarding and merchant product onboarding to match their own requirements, with less custom code.
 
 **Documentation:**
 - [Workflows feature overview](/docs/pbc/all/back-office/latest/base-shop/workflows-feature-overview#business-problems-it-solves)
-- [Install the workflows feature](/docs/dg/dev/integrate-and-configure/integrate-workflow-feature)git
+- [Install the workflows feature](/docs/dg/dev/integrate-and-configure/integrate-workflow-feature)
 - [Extend workflows to new entities](https://docs.spryker.com/docs/dg/dev/integrate-and-configure/add-a-subject-type-to-the-workflows-feature)
 
 

@@ -1,8 +1,9 @@
 ---
 title: Storefront Assistant
 description: Technical overview of the Storefront Assistant feature — architecture, agents, tools, the streaming protocol, endpoints, and configuration options.
-last_updated: Oct 29, 2026
+last_updated: Nov 5, 2026
 template: concept-topic-template
+label: early-access
 related:
   - title: Install Storefront Assistant
     link: docs/dg/dev/ai/ai-commerce/storefront-assistant/install-storefront-assistant.html

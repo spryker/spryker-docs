@@ -1,8 +1,9 @@
 ---
 title: Install Storefront Assistant
 description: Learn how to install the Storefront Assistant feature that adds an AI shopping chat to the Spryker Storefront.
-last_updated: Oct 29, 2026
+last_updated: Nov 5, 2026
 template: feature-integration-guide-template
+label: early-access
 related:
   - title: Storefront Assistant
     link: docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant.html
@@ -24,22 +25,15 @@ Storefront Assistant is an AI chat for logged-in Storefront customers. It answer
 
 For the architecture and the configuration options, see [Storefront Assistant](/docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant.html).
 
+{% info_block warningBox "Early access preview" %}
+
+Storefront Assistant is an early-access preview. It is not part of any Spryker product release. Spryker publishes it only in the [`spryker-feature/ai-commerce`](https://github.com/spryker-feature/ai-commerce/releases) package, and it can change or be discontinued before general availability. For more information, see [Early Access Program](/docs/about/all/releases/early-access-program.html).
+
+{% endinfo_block %}
+
 ## Install the feature core
 
 Follow the steps in the following sections to install the Storefront Assistant feature core.
-
-### Prerequisites
-
-Install the required features:
-
-<div class="width-100">
-
-| NAME | VERSION | INSTALLATION GUIDE |
-|------|---------|-------------------|
-| AI Commerce | {{page.release_tag}} | [Install AI Commerce](/docs/dg/dev/ai/ai-commerce/install-ai-commerce.html) |
-| Configuration Management | {{page.release_tag}} | [Install the Configuration Management feature](/docs/dg/dev/integrate-and-configure/integrate-configuration-feature.html) |
-
-</div>
 
 {% info_block infoBox "Logged-in customers only" %}
 
@@ -50,7 +44,7 @@ The chat is available only to logged-in customers. For guests, the widget render
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/ai-commerce --update-with-dependencies
+composer require spryker-feature/ai-commerce:^0.11.0 --update-with-dependencies
 ```
 
 Consider the following dependencies of `spryker-feature/ai-commerce`:

@@ -57,6 +57,8 @@ entries:
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/upgrade-the-chart-module.html
                   - title: Upgrade the Back Office to Bootstrap 5
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/upgrade-the-back-office-to-bootstrap-5.html
+                  - title: Upgrade the Back Office rich-text editor to Tiptap
+                    url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/upgrade-the-back-office-rich-text-editor-to-tiptap.html
                   - title: Install Back Office accessibility improvements
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-back-office-accessibility-improvements.html
                   - title: Install Back Office dropdown navigation

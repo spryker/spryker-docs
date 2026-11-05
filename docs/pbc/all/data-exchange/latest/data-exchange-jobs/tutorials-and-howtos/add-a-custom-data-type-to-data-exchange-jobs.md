@@ -1,7 +1,7 @@
 ---
 title: Add a custom data type to Data Exchange Jobs
 description: Learn how to import and export your own data with Data Exchange Jobs by implementing a schema plugin for the DataExchange engine.
-last_updated: Oct 29, 2026
+last_updated: Nov 3, 2026
 template: howto-guide-template
 ---
 
@@ -132,7 +132,7 @@ class EmptyPlaceholderProvider implements ColumnPlaceholderProviderInterface
 
 ## 2. Implement the import step
 
-An import step implements `ImportStepInterface` and receives every batch of rows of a run, in the order the steps are returned by `getImportSteps()`. The engine ships no base class, so your module depends on `spryker/data-exchange-extension` only; the step builds the two transfers it reports itself:
+An import step implements `ImportStepInterface`: `executeBatch()` receives every batch of rows of a run, in the order the steps are returned by `getImportSteps()`. A step that caches lookups also implements the optional `CacheResettableImportStepInterface`; see [Lookup caches](#lookup-caches). The engine ships no base class, so your module depends on `spryker/data-exchange-extension` only; the step builds the two transfers it reports itself:
 
 | TRANSFER | PURPOSE |
 | --- | --- |
@@ -216,10 +216,33 @@ Keep the following engine rules in mind when writing a step:
 - **Steps run in the order of `getImportSteps()`.** A step that needs entities another step creates, for example the address step after the customer step, must be registered after it.
 - **Every step sees every batch.** Split the work by concern, for example one step for the customer and one for its addresses, and let each step read only the columns it needs.
 - **A row fails as soon as one step reports an error for it**, but the remaining steps still receive the row. Validate before you persist.
-- **Steps are stateless.** A step must not depend on data from a previous batch or from another step.
+- **Steps are stateless.** A step must not depend on data from a previous batch or from another step. The only state a step may keep is a lookup cache that lives for one batch; see [Lookup caches](#lookup-caches).
 - **Entity events are off while rows are written.** The engine disables the `EventBehavior` events for the duration of the run and triggers the publish events the steps returned once, after the last row. A step must not call `EventBehaviorConfig::enableEvent()` itself. Report a publish event for every entity you create or change, or Storefront data is not updated.
 - **There is no per-run setup or tear-down hook on a step.** Work that runs once per run, before or after the rows, goes into an `ImportPreProcessorPluginInterface` or `ImportPostProcessorPluginInterface` plugin (section 4).
 - **An exception fails the run.** If a step throws, the engine marks the run as *failed*, records the exception message as a run error, and re-enables the entity events.
+
+### Lookup caches
+
+A step that resolves the same values for many rows, for example an `sku => id` map or the IDs of locales and stores, can cache them to save a query per row. Such a cache must be batch-scoped. A step that keeps one implements `Spryker\Zed\DataExchangeExtension\Dependency\Plugin\CacheResettableImportStepInterface` next to `ImportStepInterface`; the engine calls its `resetCache()` once after each batch has passed through all steps, and the step clears every cache it keeps there:
+
+```php
+class CustomerCsvImportStep implements ImportStepInterface, CacheResettableImportStepInterface
+{
+    /**
+     * @var array<string, int|null>
+     */
+    protected static array $customerIdCache = [];
+
+    public function resetCache(): void
+    {
+        static::$customerIdCache = [];
+    }
+
+    // executeBatch() as above, reading and filling static::$customerIdCache
+}
+```
+
+This keeps the lookup caches from growing with the file, and it prevents a value cached as *missing* in one batch from shadowing an entity that another step creates in a later batch. The engine also calls `resetCache()` when a run fails with an exception, so the cache of a failed run does not survive into the next run the same process picks up. Cache plain values such as IDs, never Propel entities or transfers: an entity holds its whole row and its relations, which defeats the memory goal (the engine disables Propel instance pooling for the duration of the run for the same reason). A step without caches implements `ImportStepInterface` only, as in the example above; the engine skips it when resetting caches. The product steps of the `ProductExperienceManagement` module inherit a no-op `resetCache()` from their base class, `AbstractProductCsvImportStep`, and the steps that cache override it.
 
 ## 3. Optional: Make the type exportable
 

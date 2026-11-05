@@ -1,7 +1,7 @@
 ---
 title: Install the Data Exchange Jobs feature
 description: Learn how to install the Data Exchange Jobs feature, the engine behind the Back Office Import & Export pages, into your Spryker project.
-last_updated: Nov 3, 2026
+last_updated: Nov 5, 2026
 template: feature-integration-guide-template
 ---
 
@@ -101,7 +101,7 @@ Make sure the filesystem directories exist and are writable by the application. 
 
 {% endinfo_block %}
 
-#### Engine limits and error display
+#### Engine limits, run processing, and error display
 
 The following settings are defined in `Spryker\Zed\DataExchange\DataExchangeConfig`:
 
@@ -113,6 +113,9 @@ The following settings are defined in `Spryker\Zed\DataExchange\DataExchangeConf
 | `IMPORT_JOB_RUNS_PER_INVOCATION` | `1` | Number of pending import job runs one `import:job:run` invocation processes, oldest first, before the process exits. The invocation stops earlier when no pending run is left. Must be `1` or greater; the command throws an exception otherwise. |
 | `IMPORT_ERROR_DISPLAY_THRESHOLD` | `10` | Maximum number of import errors displayed inline on the import job run detail page. When a run produces more errors than this threshold, the errors are offered as a downloadable summary instead. |
 | `getAllowedMimeTypesWithExtensions()` | `text/csv`, `text/plain` | MIME types accepted by the upload form. |
+| `IMPORT_JOB_RUN_LEASE_DURATION_IN_MINUTES` | `5` | How long a worker holds an import job run after claiming it. The lease is renewed after every batch; once it expires, another worker can reclaim the run. Must exceed the longest time between two renewals: the pre-processors plus the first batch, or any later batch. If one batch can take longer, raise the lease or lower `IMPORT_CSV_BATCH_SIZE`. |
+| `IMPORT_JOB_RUN_MAX_ATTEMPTS` | `3` | How many times an import job run can be claimed. A run that reached this number of attempts is not claimed again. |
+| `IMPORT_JOB_RUN_LEASE_TIME_ZONE` | `UTC` | Time zone in which lease timestamps are written and compared. Every worker uses it regardless of its PHP default time zone. |
 
 To change the defaults, extend the module configuration on the project level:
 
@@ -151,6 +154,10 @@ Make sure that the following changes have been applied by checking your database
 | spy_import_job | table | created |
 | spy_import_job_run | table | created |
 | spy_import_job_run_error | table | created |
+| spy_import_job_run.claimed_by | column | created |
+| spy_import_job_run.lease_expires_at | column | created |
+| spy_import_job_run.attempt_count | column | created |
+| spy_import_job_run.number_of_processed_bytes | column | created |
 
 {% endinfo_block %}
 
@@ -162,6 +169,11 @@ Make sure the following changes in transfer objects have been applied:
 | --- | --- | --- | --- |
 | ImportJob | class | created | src/Generated/Shared/Transfer/ImportJobTransfer |
 | ImportJobRun | class | created | src/Generated/Shared/Transfer/ImportJobRunTransfer |
+| ImportJobRun.numberOfProcessedBytes | property | created | src/Generated/Shared/Transfer/ImportJobRunTransfer |
+| ImportJobRun.progressPercentage | property | created | src/Generated/Shared/Transfer/ImportJobRunTransfer |
+| ImportJobRun.claimedBy | property | created | src/Generated/Shared/Transfer/ImportJobRunTransfer |
+| ImportJobRun.leaseExpiresAt | property | created | src/Generated/Shared/Transfer/ImportJobRunTransfer |
+| ImportJobRun.attemptCount | property | created | src/Generated/Shared/Transfer/ImportJobRunTransfer |
 | ImportJobRunFileInfo | class | created | src/Generated/Shared/Transfer/ImportJobRunFileInfoTransfer |
 | ImportJobRunError | class | created | src/Generated/Shared/Transfer/ImportJobRunErrorTransfer |
 | ImportJobCollection | class | created | src/Generated/Shared/Transfer/ImportJobCollectionTransfer |
@@ -305,7 +317,7 @@ Execute the following and verify it completes without errors:
 console import:job:run
 ```
 
-The command prints `Processing next pending import job run...` for every run it picks up, `No pending import job run left.` when the queue is empty, and `Done. Processed N import job run(s).`, and exits with code 0. It processes up to `IMPORT_JOB_RUNS_PER_INVOCATION` pending runs (default 1), oldest first; when no run is pending, nothing is processed.
+The command prints `Processing next pending import job run...` for every run it picks up, `No pending import job run left.` when the queue is empty, and `Done. Processed N import job run(s).`, and exits with code 0. It claims and processes up to `IMPORT_JOB_RUNS_PER_INVOCATION` claimable runs (default 1), oldest first; when no run is claimable, nothing is processed. After a run, the `claimed_by`, `lease_expires_at`, and `attempt_count` columns of the run are filled in `spy_import_job_run`.
 
 {% endinfo_block %}
 
@@ -322,11 +334,13 @@ Register the command to run on a schedule so that pending runs are picked up aut
 ],
 ```
 
-Add the entry to the array that `getJobs()` returns. If the other entries in your file prefix the command with the `$logger` variable to redirect the output to the scheduler log, prefix this one in the same way.
+Add the entry to the array that `getCronJobs()` returns. If the other entries in your file prefix the command with the `$logger` variable to redirect the output to the scheduler log, prefix this one in the same way.
 
-Every invocation processes up to `getImportJobRunsPerInvocation()` pending runs (default 1) and exits; the next scheduled invocation continues the queue. With the default, runs that are queued faster than one per minute wait for a later invocation. To drain the queue faster, raise `IMPORT_JOB_RUNS_PER_INVOCATION` in the project configuration as shown in [Engine limits and error display](#engine-limits-and-error-display).
+Each run is claimed by one worker at a time, so you can run the command from several workers in parallel. For how runs are claimed, leased, and reclaimed, see [Import run processing](/docs/pbc/all/data-exchange/latest/data-exchange-jobs/data-exchange-jobs-feature-overview.html#import-run-processing).
 
-The bound exists because PHP releases the memory a run leaves behind only when the process exits: the publish events collected during a run, and anything a third-party step keeps, stay in the process until then. Keep the value small enough that the runs of one invocation fit into the `memory_limit` of the CLI process. A larger value also makes an invocation last longer than the one-minute schedule, and the engine does not yet claim runs atomically, so two overlapping invocations can pick up the same pending run. Either keep the value conservative or schedule the command so that invocations do not overlap. A value below `1` is a configuration error: the command throws an exception and processes nothing.
+Every invocation processes up to `getImportJobRunsPerInvocation()` claimable runs (default 1) and exits; the next scheduled invocation continues the queue. With the default, runs that are queued faster than one per minute wait for a later invocation. To drain the queue faster, raise `IMPORT_JOB_RUNS_PER_INVOCATION` in the project configuration as shown in [Engine limits and error display](#engine-limits-run-processing-and-error-display).
+
+The bound exists because PHP releases the memory a run leaves behind only when the process exits: the publish events collected during a run, and anything a third-party step keeps, stay in the process until then. Keep the value small enough that the runs of one invocation fit into the `memory_limit` of the CLI process. A larger value also makes an invocation last longer than the one-minute schedule. Overlapping invocations do not process the same run, because each run is claimed by one worker at a time. A value below `1` is a configuration error: the command throws an exception and processes nothing.
 
 {% info_block warningBox "Verification" %}
 

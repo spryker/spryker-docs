@@ -111,10 +111,14 @@ entries:
             nested:
               - title: Install Smart CMS Content Assistant
                 url: /docs/dg/dev/ai/ai-commerce/content-assistant/install-smart-cms-content-assistant.html
-          - title: Storefront MCP endpoint
+          - title: Storefront MCP server
             url: /docs/dg/dev/ai/ai-commerce/commerce-mcp-server/storefront-mcp-endpoint.html
             nested:
-              - title: Commerce MCP Server
+              - title: Install the Storefront MCP server
+                url: /docs/dg/dev/ai/ai-commerce/commerce-mcp-server/install-storefront-mcp-endpoint.html
+              - title: Add tools to the Storefront MCP server
+                url: /docs/dg/dev/ai/ai-commerce/commerce-mcp-server/add-tools-to-storefront-mcp-endpoint.html
+              - title: Commerce MCP Server (outdated)
                 url: /docs/dg/dev/ai/ai-commerce/commerce-mcp-server/commerce-mcp-server.html
       - title: AI Dev SDK
         url: /docs/dg/dev/ai/ai-dev/ai-dev.html

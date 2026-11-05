@@ -7,14 +7,14 @@ label: early-access
 keywords: ai, mcp, model context protocol, storefront api, glue storefront, api platform, tools, security
 related:
   - title: Storefront MCP server
-    link: docs/dg/dev/ai/ai-commerce/commerce-mcp-server/storefront-mcp-endpoint.html
+    link: docs/dg/dev/ai/ai-commerce/storefront-mcp-server/storefront-mcp-server.html
   - title: Install the Storefront MCP server
-    link: docs/dg/dev/ai/ai-commerce/commerce-mcp-server/install-storefront-mcp-endpoint.html
+    link: docs/dg/dev/ai/ai-commerce/storefront-mcp-server/install-storefront-mcp-server.html
 ---
 
-This document describes how to add a tool to the [Storefront MCP server](/docs/dg/dev/ai/ai-commerce/commerce-mcp-server/storefront-mcp-endpoint.html). A tool is an existing `Get` or `GetCollection` operation of an API Platform resource. The generator builds the tool and its input class from the operation, so a tool needs no extra PHP code.
+This document describes how to add a tool to the [Storefront MCP server](/docs/dg/dev/ai/ai-commerce/storefront-mcp-server/storefront-mcp-server.html). A tool is an existing `Get` or `GetCollection` operation of an API Platform resource. The generator builds the tool and its input class from the operation, so a tool needs no extra PHP code.
 
-Before you start, [install the Storefront MCP server](/docs/dg/dev/ai/ai-commerce/commerce-mcp-server/install-storefront-mcp-endpoint.html).
+Before you start, [install the Storefront MCP server](/docs/dg/dev/ai/ai-commerce/storefront-mcp-server/install-storefront-mcp-server.html).
 
 {% info_block warningBox "Early access" %}
 
@@ -49,7 +49,7 @@ To add a tool, do the following:
    vendor/bin/glue api:generate storefront
    ```
 
-3. Send a `tools/list` request to the server. For the request, see [Verify the installation](/docs/dg/dev/ai/ai-commerce/commerce-mcp-server/install-storefront-mcp-endpoint.html#verify-the-installation). Make sure the response lists the new tool.
+3. Send a `tools/list` request to the server. For the request, see [Verify the installation](/docs/dg/dev/ai/ai-commerce/storefront-mcp-server/install-storefront-mcp-server.html#verify-the-installation). Make sure the response lists the new tool.
 
 ## What the generator builds
 
@@ -91,7 +91,7 @@ The `mcp` map supports the following keys:
 
 To change a tool that a module provides, declare the same operation again in the project schema of the resource with your own `mcp` values. Operations are replaced per operation key.
 
-`api-platform/mcp` needs `api-platform/metadata` 4.3.5 or later and the `jsonld` format in `api_platform.formats` of the application that loads the resource.
+The `jsonld` format must be in `api_platform.formats` of the application that loads the resource.
 
 ## Protect a tool
 

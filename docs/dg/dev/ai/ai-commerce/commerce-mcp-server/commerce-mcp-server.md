@@ -13,7 +13,7 @@ For the business overview, use cases, and capability scope, see [Commerce MCP Se
 
 {% info_block errorBox "Outdated" %}
 
-This page describes the standalone Commerce MCP Server, which is outdated. Use the [Storefront MCP server](/docs/dg/dev/ai/ai-commerce/commerce-mcp-server/storefront-mcp-endpoint.html) instead. It runs inside the Storefront API and uses the official MCP packages. To enable it, see [Install the Storefront MCP server](/docs/dg/dev/ai/ai-commerce/commerce-mcp-server/install-storefront-mcp-endpoint.html).
+This page describes the standalone Commerce MCP Server, which is outdated. Use the [Storefront MCP server](/docs/dg/dev/ai/ai-commerce/storefront-mcp-server/storefront-mcp-server.html) instead. It runs inside the Storefront API and uses the official MCP packages. To enable it, see [Install the Storefront MCP server](/docs/dg/dev/ai/ai-commerce/storefront-mcp-server/install-storefront-mcp-server.html).
 
 {% endinfo_block %}
 
@@ -25,7 +25,7 @@ This is an early-access preview intended for demonstration, evaluation, and prot
 
 {% info_block infoBox "Related MCP server" %}
 
-The Commerce MCP Server connects AI assistants to the *storefront* (the Storefront API). It is distinct from the [AI Dev MCP Server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html), which exposes *developer* tooling such as transfer structures and OMS transitions to AI assistants working on a Spryker project. To expose tools from inside the Storefront API application instead of a standalone server, see [Storefront MCP server](/docs/dg/dev/ai/ai-commerce/commerce-mcp-server/storefront-mcp-endpoint.html).
+The Commerce MCP Server connects AI assistants to the *storefront* (the Storefront API). It is distinct from the [AI Dev MCP Server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html), which exposes *developer* tooling such as transfer structures and OMS transitions to AI assistants working on a Spryker project. To expose tools from inside the Storefront API application instead of a standalone server, see [Storefront MCP server](/docs/dg/dev/ai/ai-commerce/storefront-mcp-server/storefront-mcp-server.html).
 
 {% endinfo_block %}
 

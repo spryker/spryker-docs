@@ -7,9 +7,9 @@ label: early-access
 keywords: ai, mcp, model context protocol, storefront api, glue storefront, api platform, tools, server card, api catalog
 related:
   - title: Install the Storefront MCP server
-    link: docs/dg/dev/ai/ai-commerce/commerce-mcp-server/install-storefront-mcp-endpoint.html
+    link: docs/dg/dev/ai/ai-commerce/storefront-mcp-server/install-storefront-mcp-server.html
   - title: Add tools to the Storefront MCP server
-    link: docs/dg/dev/ai/ai-commerce/commerce-mcp-server/add-tools-to-storefront-mcp-endpoint.html
+    link: docs/dg/dev/ai/ai-commerce/storefront-mcp-server/add-tools-to-storefront-mcp-server.html
   - title: Commerce MCP Server
     link: docs/dg/dev/ai/ai-commerce/commerce-mcp-server/commerce-mcp-server.html
 ---
@@ -36,8 +36,8 @@ The Storefront MCP server runs inside the Storefront API application. The [Comme
 
 To get started, see the following pages:
 
-- [Install the Storefront MCP server](/docs/dg/dev/ai/ai-commerce/commerce-mcp-server/install-storefront-mcp-endpoint.html)
-- [Add tools to the Storefront MCP server](/docs/dg/dev/ai/ai-commerce/commerce-mcp-server/add-tools-to-storefront-mcp-endpoint.html)
+- [Install the Storefront MCP server](/docs/dg/dev/ai/ai-commerce/storefront-mcp-server/install-storefront-mcp-server.html)
+- [Add tools to the Storefront MCP server](/docs/dg/dev/ai/ai-commerce/storefront-mcp-server/add-tools-to-storefront-mcp-server.html)
 
 ## Endpoints
 
@@ -90,6 +90,6 @@ To change the name, version, title, or description of the MCP server, edit the `
 - The server itself needs no token. Only tools with `security` need one.
 - The server supports only the `2026-07-28` protocol version. A client that supports only `2025-11-25` or earlier gets `400`.
 - The server has no rate limit. Put a rate limit in front of `/mcp`, for example in a gateway or a WAF.
-- `api-platform/mcp` requires `mcp/sdk` ^0.8, so the server runs `mcp/sdk` 0.8.1 and `symfony/mcp-bundle` 0.14.1. Compared with `mcp/sdk` 0.9, this combination has no argument validation. For example, `{"services":42}` is mapped to `"42"` and gives a `400` tool result instead of the JSON-RPC error `-32602`.
+- `api-platform/mcp` requires `mcp/sdk` ^0.8, so the server runs `mcp/sdk` 0.8.1 and `symfony/mcp-bundle` 0.14.1. Compared with `mcp/sdk` 0.9, this combination has no argument validation. For example, if a client sends the number `42` for a string argument, the server converts it to the string `"42"` instead of returning the JSON-RPC error `-32602`.
 - Only `Get` and `GetCollection` operations can be tools. Write operations need request body deserialization and validation in the tool call, which this version does not provide.
 - A tool has no `outputSchema` by default. The API Platform MCP schema does not describe the plain `json` result. The result still carries `structuredContent`.

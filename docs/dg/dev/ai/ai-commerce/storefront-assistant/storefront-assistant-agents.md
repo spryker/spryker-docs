@@ -1,8 +1,9 @@
 ---
 title: Storefront Assistant agents
 description: Learn which agents and tools Storefront Assistant ships with, how they are registered, and how the assistant selects an agent for each chat turn.
-last_updated: Oct 29, 2026
+last_updated: Nov 5, 2026
 template: concept-topic-template
+label: early-access
 related:
   - title: Storefront Assistant
     link: docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant.html

@@ -1,8 +1,9 @@
 ---
 title: Add a custom Storefront Assistant agent
 description: Learn how to add a custom agent with its own system prompt, tools, and Back Office toggle to the Storefront Assistant.
-last_updated: Oct 29, 2026
+last_updated: Nov 5, 2026
 template: howto-guide-template
+label: early-access
 related:
   - title: Storefront Assistant
     link: docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant.html

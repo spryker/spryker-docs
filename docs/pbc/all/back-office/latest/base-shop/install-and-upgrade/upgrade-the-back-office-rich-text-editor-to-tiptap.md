@@ -38,35 +38,18 @@ This upgrade has no breaking changes. The following are deprecated:
 
 ### 1. Update the Composer packages
 
-The Tiptap editor requires the following minimum module versions:
-
-<div class="width-100">
-
-| MODULE | MINIMUM VERSION |
-|--------|-----------------|
-| `spryker/gui` | 5.14.0 |
-| `spryker/cms` | 7.23.0 |
-| `spryker/cms-gui` | 5.22.0 |
-| `spryker/cms-block-gui` | 2.19.0 |
-| `spryker/cms-content-widget` | 1.14.0 |
-| `spryker/content-gui` | 3.3.0 |
-| `spryker/merchant-profile-gui` | 1.7.0 |
-| `spryker/zed-ui` | 4.6.2 |
-
-</div>
-
-The existing caret constraints in the feature packages allow Composer to install these versions without changes to `composer.json`.
+The Tiptap editor requires minimum versions of the following modules. The existing caret constraints in the feature packages allow Composer to install these versions without changes to `composer.json`.
 
 ```bash
 composer update \
-    spryker/gui \
-    spryker/cms \
-    spryker/cms-gui \
-    spryker/cms-block-gui \
-    spryker/cms-content-widget \
-    spryker/content-gui \
-    spryker/merchant-profile-gui \
-    spryker/zed-ui \
+    "spryker/gui:^5.14.0" \
+    "spryker/cms:^7.23.0" \
+    "spryker/cms-gui:^5.22.0" \
+    "spryker/cms-block-gui:^2.19.0" \
+    "spryker/cms-content-widget:^1.14.0" \
+    "spryker/content-gui:^3.3.0" \
+    "spryker/merchant-profile-gui:^1.7.0" \
+    "spryker/zed-ui:^4.6.2" \
     spryker-feature/cms \
     spryker-feature/ai-commerce \
     --ignore-platform-req=ext-redis --ignore-platform-req=ext-grpc --ignore-platform-req=ext-amqp
@@ -105,7 +88,7 @@ spryker-zed-gui-rich-text-editor.js is not on the page
 
 {% info_block warningBox "Verification" %}
 
-1. In the Back Office, open a CMS page placeholder, a CMS block placeholder, and the **Legal information** tab for a merchant.
+1. In the Back Office, open a CMS page placeholder and a CMS block placeholder.
 2. Verify that each field displays the new toolbar and preserves its HTML content after you save it.
 3. Check the browser console for the following deprecation warning: `Summernote fields (textarea.html-editor) are deprecated`. If you see this warning, a project form still uses a Summernote textarea. Replace it with `RichTextEditorType`.
 

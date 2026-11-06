@@ -1,7 +1,7 @@
 ---
 title: Upgrade the Back Office rich-text editor to Tiptap
 description: Learn how to migrate from Summernote to Tiptap in the Spryker Back Office and configure and extend the new rich-text editor.
-last_updated: Nov 5, 2026
+last_updated: Nov 6, 2026
 template: howto-guide-template
 ---
 
@@ -17,24 +17,6 @@ The new editor maintains compatibility with Summernote toolbar items and stored 
 - **Clean extension model.** Summernote customizations were global `window.editorConfiguration.<config>` objects. Tiptap features are registered per editor profile through one registry and receive the Tiptap API of the page, so a project bundle never ships its own copy.
 - **New capabilities.** The editor adds features that the Back Office Summernote toolbar did not have: a text style menu with headings, quote, and code block; full screen mode; HTML source with search; image resize handles; contextual menus for links, images, and tables; and a content guard that never silently changes HTML the editor cannot represent.
 - **Backward-compatible content.** The editor reads and writes Summernote markup, such as image width, float, and the `note-float-left` class, so existing CMS content keeps its layout.
-
-## Changed modules
-
-| MODULE | RELEASE | CHANGES |
-|---|---|---|
-| `spryker/gui` | Minor (5.14.0) | `RichTextEditorType`, the editor, the `window.SprykerRichTextEditor` registry, labels and dialog templates in `layout.twig`, `@tiptap/*` and `@codemirror/*` npm dependencies, `--bs-*` theme properties replaced with `--ins-*` |
-| `spryker/cms` | Minor (7.23.0) | The `/cms/glossary` form uses `RichTextEditorType`. |
-| `spryker/cms-gui` | Minor (5.22.0) | CMS page placeholders use `RichTextEditorType` (`editor_config: cms`). Glossary autocomplete writes through the registry. |
-| `spryker/cms-block-gui` | Minor (2.19.0) | CMS block placeholders use `RichTextEditorType` (`editor_config: cms`). |
-| `spryker/cms-content-widget` | Minor (1.14.0) | Content widget menu and Twig `<div>` block node for `cms` fields. |
-| `spryker/content-gui` | Minor (3.3.0) | Content Item button, node, and menu for `cms` fields. |
-| `spryker/merchant-profile-gui` | Minor (1.7.0) | Merchant legal information fields use `RichTextEditorType`. |
-| `spryker/ai-foundation` | Patch (0.9.6) | Uses `--ins-*` theme properties. |
-| `spryker/state-machine-visualizer` | Patch (0.1.5) | Removed the `chevrotain` npm dependency. |
-| `spryker/zed-ui` | Patch (4.6.2) | Jest `testMatch` is limited to Merchant Portal components. |
-| `spryker-feature/ai-commerce` | Patch | The Smart CMS content panel reads and writes fields through the registry. |
-
-Every core form checks whether `RichTextEditorType::class` exists by using `class_exists()`. If you use an older version of `spryker/gui`, the form continues to use the Summernote textarea.
 
 ## New dependencies
 
@@ -54,11 +36,26 @@ This upgrade has no breaking changes. The following are deprecated:
 
 ## Upgrade to the Tiptap rich-text editor
 
-To upgrade, follow the steps in this section.
-
 ### 1. Update the Composer packages
 
-All modules are available in released versions. The existing caret constraints in the feature packages allow Composer to install the new versions without changes to `composer.json`.
+The Tiptap editor requires the following minimum module versions:
+
+<div class="width-100">
+
+| MODULE | MINIMUM VERSION |
+|--------|-----------------|
+| `spryker/gui` | 5.14.0 |
+| `spryker/cms` | 7.23.0 |
+| `spryker/cms-gui` | 5.22.0 |
+| `spryker/cms-block-gui` | 2.19.0 |
+| `spryker/cms-content-widget` | 1.14.0 |
+| `spryker/content-gui` | 3.3.0 |
+| `spryker/merchant-profile-gui` | 1.7.0 |
+| `spryker/zed-ui` | 4.6.2 |
+
+</div>
+
+The existing caret constraints in the feature packages allow Composer to install these versions without changes to `composer.json`.
 
 ```bash
 composer update \
@@ -69,20 +66,10 @@ composer update \
     spryker/cms-content-widget \
     spryker/content-gui \
     spryker/merchant-profile-gui \
-    spryker/ai-foundation \
-    spryker/state-machine-visualizer \
     spryker/zed-ui \
     spryker-feature/cms \
     spryker-feature/ai-commerce \
-    spryker-feature/marketplace-merchant \
-    spryker-feature/marketplace-merchantportal-core \
     --ignore-platform-req=ext-redis --ignore-platform-req=ext-grpc --ignore-platform-req=ext-amqp
-```
-
-Make sure that the `composer.lock` diff contains only these packages:
-
-```bash
-git diff composer.lock | grep '"name":' | sort -u
 ```
 
 ### 2. Install the npm dependencies and build the Back Office assets
@@ -156,6 +143,7 @@ The form type renders the field configuration as JSON in the textarea's `data-sp
 | `toolbar` | `RichTextEditorType::SUPPORTED_TOOLBAR_ITEMS` | Built-in toolbar items to show. |
 
 To display placeholder text in an empty editor, set the `placeholder` attribute through the `attr` option:
+
 ```php
 'attr' => ['placeholder' => 'Write a description'],
 ```
@@ -263,12 +251,10 @@ class CmsGlossaryTranslationFormType extends SprykerCmsGlossaryTranslationFormTy
     {
         $options = parent::getTranslationFieldOptions($options);
 
-        if ($this->isGuiRichTextEditorTypeAvailable()) {
-            $options['toolbar'] = array_values(array_diff(
-                RichTextEditorType::SUPPORTED_TOOLBAR_ITEMS,
-                [RichTextEditorType::TOOLBAR_ITEM_FONT_SIZE, RichTextEditorType::TOOLBAR_ITEM_VIDEO],
-            ));
-        }
+        $options['toolbar'] = array_values(array_diff(
+            RichTextEditorType::SUPPORTED_TOOLBAR_ITEMS,
+            [RichTextEditorType::TOOLBAR_ITEM_FONT_SIZE, RichTextEditorType::TOOLBAR_ITEM_VIDEO],
+        ));
 
         return $options;
     }

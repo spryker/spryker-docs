@@ -35,10 +35,10 @@ To upgrade, follow the steps below.
 ### 1) Update the module
 
 ```bash
-composer require spryker/data-exchange:"^0.3.0" spryker-feature/product-experience-management:"^5.0.0" --update-with-dependencies
+composer require spryker/data-exchange:"^0.1.0" spryker-feature/product-experience-management:"^5.0.0" --update-with-dependencies
 ```
 
-The module requires `spryker/data-exchange-extension` only; the engine `spryker/data-exchange` is required by the project, as in the command above. `spryker/data-exchange-extension` is installed as a dependency of both.
+The module requires `spryker/data-exchange-extension` only; the engine `spryker/data-exchange` is required by the project, as in the command above.
 
 ### 2) Register the product schema plugin
 
@@ -122,7 +122,7 @@ The command name `import:job:run` and the scheduler entry `import-job-run` are u
 
 ### 6) Move engine configuration overrides
 
-If your project overrides engine settings in `Pyz\Zed\ProductExperienceManagement\ProductExperienceManagementConfig`, move them to `Pyz\Zed\DataExchange\DataExchangeConfig`. This applies to `IMPORT_ERROR_DISPLAY_THRESHOLD`, `getImportCsvBatchSize()`, `getExportCsvBatchSize()`, `getImportMaxFileSizeString()`, `getAllowedMimeTypesWithExtensions()`, `getImportFileSystemName()`, and `getExportFileSystemName()`. The product-specific settings `getProductConcreteStatuses()` and `getProductConcreteStatusActive()` stay in `ProductExperienceManagementConfig`. The settings the engine gained after the move, such as the number of runs per invocation, the lease duration, and the error row limit, are listed with their defaults in [Install the Data Exchange Jobs feature](/docs/pbc/all/data-exchange/latest/data-exchange-jobs/install/install-the-data-exchange-jobs-feature.html#engine-limits-run-processing-and-error-display); they keep their defaults unless you override them.
+If your project overrides engine settings in `Pyz\Zed\ProductExperienceManagement\ProductExperienceManagementConfig`, move them to `Pyz\Zed\DataExchange\DataExchangeConfig`. This applies to `IMPORT_ERROR_DISPLAY_THRESHOLD`, `getImportCsvBatchSize()`, `getExportCsvBatchSize()`, `getImportMaxFileSizeString()`, `getAllowedMimeTypesWithExtensions()`, `getImportFileSystemName()`, and `getExportFileSystemName()`. The product-specific settings `getProductConcreteStatuses()` and `getProductConcreteStatusActive()` stay in `ProductExperienceManagementConfig`.
 
 ### 7) Update custom import steps and schema plugins
 
@@ -130,7 +130,6 @@ If your project contains its own import steps or schema plugins, update them as 
 
 - Replace `implements \SprykerFeature\Zed\ProductExperienceManagement\Business\Dependency\Plugin\ImportStepInterface` with `implements \Spryker\Zed\DataExchangeExtension\Dependency\Plugin\ImportStepInterface`. Steps that extend `AbstractProductCsvImportStep` need no change; its `createImportStepError()` and `createImportPublishEvent()` helpers are unchanged. In `ProductCsvImportSearchStep`, `ProductCsvImportPriceStep`, and `ProductCsvImportPriceStoreStep`, the nullable helpers `resolveAbstractSku()` and `resolveConcreteSku()` were renamed to `findAbstractSku()` and `findConcreteSku()`; update subclasses that call them.
 - Replace the imports of `ImportSchemaPluginInterface`, `ExportSchemaPluginInterface`, `ExportStepInterface`, `ExportDataProviderInterface`, `ImportPreProcessorPluginInterface`, and `ImportPostProcessorPluginInterface` with the interfaces of the same names in `Spryker\Zed\DataExchangeExtension\Dependency\Plugin`.
-- Implement `Spryker\Zed\DataExchangeExtension\Dependency\Plugin\CacheResettableImportStepInterface` in every custom step that keeps a lookup cache, for example a static `sku => id` map, and clear the cache in `resetCache()`. The engine calls the method after every batch and once more when a run fails with an exception, so the caches stay bounded per batch and a value cached as missing cannot shadow an entity a later batch created. A step without caches does not implement the interface and runs unchanged. From version 5.1.0, the product steps implement it and clear their static caches after every batch; a subclass that adds its own static cache overrides `resetCache()`, clears the cache, and calls the parent method.
 - Implement the new `getPlaceholderProvider()` method in every schema plugin. `getType()`, `getSchema()`, and `getPlaceholderProvider()` now live in `SchemaPluginInterface`, the parent of `ImportSchemaPluginInterface` and `ExportSchemaPluginInterface`; a plugin that implements the export side must also be registered in `getExportSchemaPlugins()`. It returns a `ColumnPlaceholderProviderInterface` with the values of the placeholders used in the plugin's schema. Before 5.0.0, the engine used the product placeholder provider for every job type.
 
 ### 8) Update Back Office ACL rules

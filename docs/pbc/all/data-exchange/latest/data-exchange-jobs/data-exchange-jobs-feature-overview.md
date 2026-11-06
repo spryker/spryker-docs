@@ -1,7 +1,7 @@
 ---
 title: Data Exchange Jobs feature overview
 description: Import and export data in bulk with schema-driven jobs, asynchronous runs, batch processing, and per-row error reporting, independent of the data type.
-last_updated: Oct 29, 2026
+last_updated: Nov 5, 2026
 template: concept-topic-template
 ---
 
@@ -34,17 +34,32 @@ Back Office users manage jobs, runs, exports, and templates under **Import & Exp
 
 1. A Back Office user creates an import job that defines the job type. The engine copies the schema of the matching schema plugin to the job.
 2. The user uploads a CSV file against the import job. The engine stores the file and creates an import job run with the *pending* status.
-3. The `import:job:run` console command, scheduled to run every minute, picks up the oldest pending run and marks it as *processing*.
+3. The `import:job:run` console command, scheduled to run every minute, claims the oldest claimable run and marks it as *processing*. One invocation processes up to `getImportJobRunsPerInvocation()` runs (default 1) and exits; the next scheduled invocation continues with the runs still claimable. For details, see [Import run processing](#import-run-processing).
 4. The engine reads the file in batches of 1000 rows. The headers are mapped to system property names using the job's schema; columns that are not part of the schema are ignored, and rows whose number of columns differs from the header row are recorded as errors.
-5. Each batch passes through the import steps of the schema plugin in order. A step validates and persists its part of the row and reports an error for every row it rejects.
+5. Each batch passes through the import steps of the schema plugin in order. A step validates and persists its part of the row and reports an error for every row it rejects. After the batch has passed through all steps, the engine calls `resetCache()` on every step that implements `CacheResettableImportStepInterface`, so lookup caches live for one batch only.
 6. After the last row, the engine triggers the publish events reported by the steps, so that Storefront data is updated once per entity. The rows themselves are committed as each step persists them; there is no transaction around the run.
 7. The run is marked as *done* with the number of processed, successful, and failed rows. The run is marked as *failed* when no row was processed, when every row failed, or when a step threw an exception; the exception message is recorded as a run error. In that case the rows of the batches processed before the failure stay in the database, and the publish events collected so far are not triggered.
 
 A row is counted as failed when at least one step rejected it. The other steps still process the row, so a data type should validate before it persists.
 
+The post-processor plugins run after a completed import. An exception thrown by a post-processor is recorded as a run error and keeps the status of the run.
+
+## Import run processing
+
+Before processing a run, `import:job:run` claims it and holds it with a time-limited lease, so several workers can run the command in parallel without processing the same run twice. When an invocation processes several runs, it claims each run separately.
+
+- **Claim:** The worker picks the oldest claimable run: a *pending* run, or a *processing* run whose lease is not set or has expired because its worker stopped. The claim is a conditional update: if another worker claims the same run first, the update affects no row and the worker does nothing. A successful claim sets `claimed_by` to a unique worker token and `lease_expires_at` to now plus `getImportJobRunLeaseDurationInMinutes()` (default 5 minutes), increments `attempt_count`, records `import_started_at`, and resets the counters of a previous attempt.
+- **Progress:** After every batch, the worker writes the processed, successful, and failed line counters and `number_of_processed_bytes`, and renews the lease. Each write applies only while `claimed_by` still holds the token of the worker.
+- **Progress percentage:** `ImportJobRunTransfer.progressPercentage` is the number of processed bytes divided by the file size, capped at 100. It is `null` when the processed bytes or the file size are unknown, for example, for an empty file.
+- **Retries:** A run whose worker stopped is reclaimed by the next worker once the lease expires, and the import of the file starts again from the first row. A run is claimed at most `getImportJobRunMaxAttempts()` times (default 3); a run that reached this number is not claimed again. Runs marked as *failed* are not retried.
+- **Lost claim:** When another worker has taken over the run, the progress write of the original worker affects no row. The original worker stops before the next batch without an error. The final *done* or *failed* status is written under the same condition: when the claim is lost, the worker doesn't overwrite the result of the other worker, records no error, and doesn't execute the post-processor plugins. The publish events collected from the batches processed so far are still triggered.
+
+The lease is renewed after every batch, so it must exceed the longest time between two renewals: the pre-processors plus the first batch, or any later batch. Otherwise, a run that is still being processed is reclaimed by another worker. If one batch can take longer than the lease, increase the lease duration or decrease `getImportCsvBatchSize()` (default 1000 rows). Lease timestamps are written and compared in the time zone returned by `getImportJobRunLeaseTimeZone()` (default UTC), regardless of the PHP default time zone of the worker.
+
 ## Limits and performance
 
-- The `import:job:run` command processes one run per call. With the one-minute schedule, one consumer processes about one run per minute; a pending run waits until the runs queued before it are done.
+- The `import:job:run` command processes up to `getImportJobRunsPerInvocation()` claimable runs per invocation, oldest first (default 1 in `DataExchangeConfig`), and exits; the next scheduled invocation continues the queue. With the default and the one-minute schedule, one worker processes about one run per minute; a pending run waits until the runs queued before it are done. To process several runs in parallel, run the command from several workers.
+- The engine calls `resetCache()` after each batch, and once more when a run fails with an exception, on every import step that implements `CacheResettableImportStepInterface`, and disables Propel instance pooling for the duration of the run, so the lookup caches of the steps and the ORM instance pool do not grow with the number of rows. The publish events reported by the steps are collected until the end of the run.
 - The import reads the file in batches; the batch size is `getImportCsvBatchSize()` in `DataExchangeConfig` (default 1000 rows). The maximum upload size is `getImportMaxFileSizeString()` (default 50 MB).
 - The export runs synchronously inside the HTTP request of the **Export** page and pages through the data with `getExportCsvBatchSize()` (default 1000 rows). A very large export can hit the web server timeout or the PHP memory limit; split such data sets by job or raise the limits for the Back Office.
 

@@ -1,7 +1,7 @@
 ---
 title: Migrate to API Platform
 description: This document describes how to migrate existing Glue API resources to API Platform.
-last_updated: Jul 31, 2026
+last_updated: Oct 2, 2026
 template: howto-guide-template
 related:
   - title: Integrate API Platform
@@ -10,6 +10,12 @@ related:
     link: docs/integrations/spryker-api/api-platform/api-platform.html
   - title: Implement an API Platform resource
     link: docs/integrations/spryker-api/api-platform/enablement.html
+  - title: Resource schemas
+    link: docs/integrations/spryker-api/api-platform/resource-schemas.html
+  - title: Validation schemas
+    link: docs/integrations/spryker-api/api-platform/validation-schemas.html
+  - title: Troubleshooting API Platform
+    link: docs/integrations/spryker-api/api-platform/troubleshooting.html
 redirect_from:
   - /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform.html
 ---
@@ -34,6 +40,14 @@ Migrating from Glue API to API Platform provides several benefits:
 - **Better maintainability**: Clearer separation of concerns with providers and processors
 
 The recommended default is **batch migration** — migrating a group of related modules together, as described in the [API Platform migration overview](/docs/integrations/spryker-api/migrate-from-glue-to-api-platform/migrate-to-api-platform-overview.html). The per-resource steps below are the mechanics you apply to each resource *within* a batch; none of it breaks existing API consumers.
+
+{% info_block warningBox "Migrating changes your monitoring transaction names" %}
+
+Switching a module to API Platform changes the transaction names that New Relic, Dynatrace, or any other Application Performance Monitoring (APM) tool shows for its endpoints, for example from `CustomersRestApi/customer-resource/get` to `_api_/customers/{customerReference}{._format}_get`. Dashboards, alerts, Service Level Objectives (SLOs), and grouping rules that match the old names stop matching on the day you deploy the switch.
+
+Updating packages alone doesn't change any name: the names change only for modules you switch yourself in [Step 8](#step-8-switch-routing-to-api-platform). Before you switch a module in production, agree with whoever owns your monitoring setup whether to update it to the new names or to keep the legacy names with a route name mapping. For examples of the new names and both options, see [Monitoring and APM impact](#monitoring-and-application-performance-monitoring-apm-impact).
+
+{% endinfo_block %}
 
 ## Prerequisites
 
@@ -384,6 +398,12 @@ Clear caches after unregistering the plugin:
 console cache:clear
 ```
 
+{% info_block warningBox "Monitoring names change with the switch" %}
+
+From the moment you remove the plugin, the endpoints of this module report new transaction names to your APM tool, and dashboards and alerts that match the legacy names stop matching. Before you remove the plugin in production, either update your monitoring setup or generate the route name mapping that keeps the legacy names. See [Monitoring and APM impact](#monitoring-and-application-performance-monitoring-apm-impact).
+
+{% endinfo_block %}
+
 ### Step 9: Test the API Platform endpoint
 
 With the route plugin unregistered, the Glue router no longer matches the URL, and the request falls through to API Platform. Test that the endpoint works correctly. Customer endpoints are protected, so retrieve an access token first:
@@ -476,6 +496,155 @@ Repeat steps 2-12 for each resource in your migration checklist:
 [ ] Wishlist resource
 ...
 ```
+
+## Monitoring and Application Performance Monitoring (APM) impact
+
+The migration doesn't change URLs or responses, but it changes the names that your APM tool, such as New Relic or Dynatrace through OpenTelemetry, shows for API endpoints. Dashboards, alerts, and endpoint grouping rules that match the old names stop matching.
+
+### What changes and when
+
+The monitoring integration takes the transaction name from the Symfony route name of the request (the `_route` request attribute). With OpenTelemetry, the same name is also used for the root span name and the `http.route` attribute. The two infrastructures name their routes differently:
+
+| Infrastructure | Route name pattern |
+|---|---|
+| Legacy Glue REST | `Module/controller/action` |
+| API Platform, default | `_api_{uriTemplate}_{method}`, with the `_collection` suffix for collection operations. `{._format}` is part of the name when the URI template of the resource includes it. |
+| API Platform, named operation | The operation `name` from the resource schema, such as `getAbstractProduct` |
+
+A route name is built from the URI template, so it contains placeholders such as `{customerReference}`, never the values of a request. A transaction name never contains a customer reference, cart ID, or SKU, and every request to an endpoint reports the same name, as with legacy Glue REST.
+
+The following examples are taken from the suite. The legacy name is what the endpoint reports while it's served by Glue REST, and the API Platform name is what it reports after you switch the module without a route name mapping:
+
+| Request | Legacy Glue REST name | API Platform name |
+|---|---|---|
+| `POST /access-tokens` | `AuthRestApi/access-tokens-resource/post` | `_api_/access-tokens_post` |
+| `GET /customers/{customerReference}` | `CustomersRestApi/customer-resource/get` | `_api_/customers/{customerReference}{._format}_get` |
+| `GET /customers/{customerReference}/addresses` | `CustomersRestApi/address-resource/get` | `_api_/customers/{customerReference}/addresses_get_collection` |
+| `POST /carts` | `CartsRestApi/carts-resource/post` | `_api_/carts{._format}_post` |
+| `PATCH /carts/{cartId}/items/{groupKey}` | `CartsRestApi/cart-items-resource/patch` | `_api_/carts/{cartId}/items/{groupKey}_patch` |
+| `GET /catalog-search` | `CatalogSearchRestApi/catalog-search-resource/get` | `_api_/catalog-search_get_collection` |
+| `POST /checkout` | `CheckoutRestApi/checkout-resource/post` | `_api_/checkout_post` |
+| `GET /abstract-products/{sku}` | `ProductsRestApi/abstract-products-resource/get` | `getAbstractProduct` |
+| `POST /shopping-lists` | `ShoppingListsRestApi/shopping-lists-resource/post` | `createShoppingList` |
+
+Legacy Glue REST reported one name per resource and HTTP method, so the item request and the collection request of a resource shared a name. API Platform reports a separate name for each, for example `_api_/customers/{customerReference}/addresses/{uuid}_get` and `_api_/customers/{customerReference}/addresses_get_collection`.
+
+Some endpoints exist only in API Platform and never had a legacy name, for example `GET /carts/{cartId}/items/{groupKey}` reports `_api_/carts/{cartId}/items/{groupKey}_get`, and `GET /shopping-lists/{shoppingListUuid}/shopping-list-items` reports `getShoppingListItems`. They report their API Platform name with or without a route name mapping.
+
+To list the route names of your project, run `vendor/bin/glue debug:router`. To find the name for a single URL, run `vendor/bin/glue router:match /customers/DE--21`.
+
+The change happens per endpoint, at the moment you remove the module's `*ResourceRoutePlugin` in [Step 8](#step-8-switch-routing-to-api-platform). Upgrading modules doesn't change any name, and modules that are still on Glue keep reporting their legacy names. An endpoint whose module never registered a `*ResourceRoutePlugin` reports its API Platform name from the beginning. This is how the migration works, not a defect.
+
+### Recommended: update your monitoring setup
+
+Accept the new API Platform names and update your dashboards, alerts, and grouping rules to match them. This is the forward path: endpoints that exist only in API Platform never had a legacy name, and every endpoint reports an API Platform name after the migration is complete.
+
+Use the route name mapping described in the next section only if you can't or don't want to update your monitoring setup yet.
+
+### Optional: keep reporting the legacy names
+
+To keep reporting the legacy names for migrated endpoints, generate a route name mapping file and register a plugin that applies it. The best time to do this is right before or right after you switch a module. It also works if you switched modules earlier, because the legacy `spryker/*-rest-api` packages and their `*ResourceRoutePlugin` classes stay installed.
+
+1. Upgrade the modules that provide the tooling:
+
+   ```bash
+   composer require spryker/api-platform:"^1.43.0" spryker/monitoring:"^2.12.0" --update-with-dependencies
+   ```
+
+2. Generate the mapping file:
+
+   ```bash
+   docker/sdk cli glue api:generate-legacy-route-names
+   ```
+
+   The command finds every legacy resource route plugin installed in the project, in core and in project code, including plugins that are no longer registered. It recognizes them by the `ResourceRoutePluginInterface` they implement, so their class names don't matter. It rebuilds each legacy route name, matches it to an API Platform route by URL path and HTTP method, and writes the result to `config/Glue/monitoring-route-names.php`. If a project-level plugin extends a core plugin for the same resource, the project-level plugin wins. If two unrelated plugins declare the same resource, the command uses the first one and prints a warning, so check those entries in the file.
+
+   | Option | Description |
+   |---|---|
+   | `--output=<path>` | Writes the file to a different location. |
+   | `--force` | Overwrites an existing file without asking. |
+
+   Run the command once. If the file already exists, the command asks for confirmation before it overwrites the file, and the default answer is no. In non-interactive runs, such as continuous integration (CI) jobs or install scripts, the command fails without `--force` and leaves the existing file untouched.
+
+3. Review the generated file and commit it. The keys are API Platform route names, and the values are the names reported to monitoring. The command writes API Platform routes without a legacy equivalent as commented-out lines that you can fill in by hand:
+
+   ```php
+   <?php
+
+   // Generated by `vendor/bin/glue api:generate-legacy-route-names` on 2026-10-01.
+   // Keys: API Platform route names. Values: the name reported to monitoring instead.
+   // Delete an entry, or leave its value empty, to report the API Platform route name.
+
+   return [
+       '_api_/customers/{customerReference}/addresses/{uuid}_get' => 'CustomersRestApi/address-resource/get',
+       '_api_/customers/{customerReference}/addresses_get_collection' => 'CustomersRestApi/address-resource/get',
+       '_api_/customers/{customerReference}{._format}_get' => 'CustomersRestApi/customer-resource/get',
+       '_api_/customers{._format}_post' => 'CustomersRestApi/customer-resource/post',
+       // No legacy route found:
+       // '_api_/customer-passwords/{customerReference}{._format}_get' => '',
+   ];
+   ```
+
+   Legacy Glue REST reported the same name for the item and the collection request of a resource, so both API Platform routes map to it.
+
+   Your project owns this file, so you can edit it freely:
+
+   - Change a value to report a different name.
+   - Delete an entry to report the API Platform name for that route.
+   - Add an entry for any other API Platform route.
+
+4. Register the plugin in the Glue event dispatcher plugin stack, in addition to the existing monitoring request transaction plugin:
+
+   **src/Pyz/Glue/EventDispatcher/EventDispatcherDependencyProvider.php**
+
+   ```php
+   <?php
+
+   namespace Pyz\Glue\EventDispatcher;
+
+   use Spryker\Glue\EventDispatcher\EventDispatcherDependencyProvider as SprykerEventDispatcherDependencyProvider;
+   use Spryker\Glue\Monitoring\Plugin\EventDispatcher\RouteNameMappingMonitoringEventDispatcherPlugin;
+   use Spryker\Glue\Monitoring\Plugin\EventDispatcher\StorefrontMonitoringRequestTransactionEventDispatcherPlugin;
+
+   class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider
+   {
+       /**
+        * @return array<\Spryker\Shared\EventDispatcherExtension\Dependency\Plugin\EventDispatcherPluginInterface>
+        */
+       protected function getEventDispatcherPlugins(): array
+       {
+           return [
+               // ... other plugins
+               new StorefrontMonitoringRequestTransactionEventDispatcherPlugin(),
+               new RouteNameMappingMonitoringEventDispatcherPlugin(),
+           ];
+       }
+   }
+   ```
+
+   For every request whose route name has an entry in the mapping file, the plugin reports the mapped name as the transaction name and as `http.route`. If the file doesn't exist, is unreadable, or has no entry for the route, the plugin changes nothing. Requests themselves are never affected.
+
+5. Optional: if you used `--output` to write the file to a different location, point the plugin to it by overriding `getRouteNameMappingFilePath()` at the project level:
+
+   **src/Pyz/Glue/Monitoring/MonitoringConfig.php**
+
+   ```php
+   <?php
+
+   namespace Pyz\Glue\Monitoring;
+
+   use Spryker\Glue\Monitoring\MonitoringConfig as SprykerMonitoringConfig;
+
+   class MonitoringConfig extends SprykerMonitoringConfig
+   {
+       public function getRouteNameMappingFilePath(): string
+       {
+           return APPLICATION_ROOT_DIR . '/config/Glue/monitoring/route-names.php';
+       }
+   }
+   ```
+
+6. Deploy and check in your APM tool that the migrated endpoints report the legacy names again.
 
 ## Migration comparison
 
@@ -653,7 +822,7 @@ $resource->fromArray($customerTransfer->toArray());
 - Run all existing tests
 - Perform manual testing
 - Check with API consumers
-- Monitor production traffic
+- Monitor production traffic, and update your APM dashboards and alerts for the new route names. See [Monitoring and APM impact](#monitoring-and-application-performance-monitoring-apm-impact).
 
 ### 5. Document breaking changes
 
@@ -673,11 +842,3 @@ The `/{resource}` endpoint is being migrated to API-Platform.
 - New endpoint: Available now
 - Deprecation: Old endpoint will return deprecation headers starting 2026-09-01
 ```
-
-## Next steps
-
-- [API Platform](/docs/integrations/spryker-api/api-platform/api-platform.html) - Architecture overview
-- [Implement an API Platform resource](/docs/integrations/spryker-api/api-platform/enablement.html) - Creating resources
-- [Resource schemas](/docs/integrations/spryker-api/api-platform/resource-schemas.html) - Resource schemas
-- [Validation schemas](/docs/integrations/spryker-api/api-platform/validation-schemas.html) - Validation schemas
-- [Troubleshooting](/docs/integrations/spryker-api/api-platform/troubleshooting.html) - Common issues

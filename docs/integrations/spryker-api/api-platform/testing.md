@@ -1,7 +1,7 @@
 ---
 title: Test API Platform resources
 description: Learn how to write and run tests for your API Platform resources in Spryker.
-last_updated: Sep 23, 2026
+last_updated: Sep 29, 2026
 template: howto-guide-template
 related:
   - title: Prove API Platform contract coverage
@@ -728,7 +728,7 @@ protected function tearDown(): void
 ### JSON-LD (default)
 
 ```php
-public function testJsonLdFormat(): void
+public function testGivenJsonLdAcceptHeaderWhenRetrievingCollectionThenJsonLdIsReturned(): void
 {
     static::createClient()->request('GET', '/customers', [
         'headers' => [
@@ -744,7 +744,7 @@ public function testJsonLdFormat(): void
 ### JSON:API
 
 ```php
-public function testJsonApiFormat(): void
+public function testGivenJsonApiAcceptHeaderWhenRetrievingCollectionThenJsonApiIsReturned(): void
 {
     static::createClient()->request('GET', '/customers', [
         'headers' => [
@@ -760,7 +760,7 @@ public function testJsonApiFormat(): void
 ### HAL+JSON
 
 ```php
-public function testHalJsonFormat(): void
+public function testGivenHalJsonAcceptHeaderWhenRetrievingCollectionThenHalJsonIsReturned(): void
 {
     static::createClient()->request('GET', '/customers', [
         'headers' => [
@@ -1111,33 +1111,11 @@ class CustomerHelper extends Module
 
 ## Best practices
 
-### 1. Use descriptive test method names
+### 1. Follow the shared test naming and structure convention
 
-```php
-// ✅ Good
-public function testGivenInvalidEmailWhenCreatingCustomerViaPostThenValidationErrorIsReturned(): void
+Name test methods Given-When-Then and structure their bodies as Arrange, Act, Assert. The convention and its adoption rule are defined in [Test naming and structure](/docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/best-practices-for-effective-testing.html#test-naming-and-structure).
 
-// ❌ Bad
-public function testCreate(): void
-```
-
-### 2. Follow Arrange-Act-Assert pattern
-
-```php
-public function testExample(): void
-{
-    // Arrange - Set up test data and preconditions
-    $data = ['email' => 'test@example.com'];
-
-    // Act - Execute the operation being tested
-    static::createClient()->request('POST', '/customers', ['json' => $data]);
-
-    // Assert - Verify the results
-    $this->assertResponseIsSuccessful();
-}
-```
-
-### 3. Test one thing per test
+### 2. Test one thing per test
 
 ```php
 // ✅ Good - Tests one specific validation rule
@@ -1154,7 +1132,7 @@ public function testCustomerCreation(): void
 }
 ```
 
-### 4. Use meaningful test data
+### 3. Use meaningful test data
 
 ```php
 // ✅ Good
@@ -1172,7 +1150,7 @@ $customerData = [
 ];
 ```
 
-### 5. Clean up test data appropriately
+### 4. Clean up test data appropriately
 
 ```php
 // For Backend API tests - use tester helpers for setup
@@ -1181,17 +1159,17 @@ $customer = $this->tester->haveCustomer(['email' => 'test@example.com']);
 // Cleanup happens automatically via test kernel shutdown
 ```
 
-### 6. Test error cases
+### 5. Test error cases
 
 ```php
 // Always test both success and failure scenarios
-public function testSuccessfulCreation(): void { /* ... */ }
-public function testValidationErrors(): void { /* ... */ }
-public function testDuplicateEmail(): void { /* ... */ }
-public function testNotFound(): void { /* ... */ }
+public function testGivenValidDataWhenCreatingCustomerThenCustomerIsCreated(): void { /* ... */ }
+public function testGivenInvalidDataWhenCreatingCustomerThenValidationErrorIsReturned(): void { /* ... */ }
+public function testGivenDuplicateEmailWhenCreatingCustomerThenErrorIsReturned(): void { /* ... */ }
+public function testGivenNonExistentCustomerWhenRetrievingCustomerThen404IsReturned(): void { /* ... */ }
 ```
 
-### 7. Use constants for repeated values
+### 6. Use constants for repeated values
 
 ```php
 class CustomersBackendApiTest extends BackendApiTestCase
@@ -1199,7 +1177,7 @@ class CustomersBackendApiTest extends BackendApiTestCase
     private const TEST_EMAIL = 'test@example.com';
     private const TEST_FIRST_NAME = 'John';
 
-    public function testExample(): void
+    public function testGivenValidDataWhenCreatingCustomerThenCustomerIsCreated(): void
     {
         $data = [
             'email' => self::TEST_EMAIL,
@@ -1210,7 +1188,7 @@ class CustomersBackendApiTest extends BackendApiTestCase
 }
 ```
 
-### 8. Group related tests
+### 7. Group related tests
 
 ```php
 /**
@@ -1228,7 +1206,7 @@ class CustomersBackendApiTest extends BackendApiTestCase
 }
 ```
 
-### 9. Provision fixtures through data helpers
+### 8. Provision fixtures through data helpers
 
 Build transfers through data builders, reached through a module's own helper. Never hand-roll a transfer in a test, and never let a test carry its own UUIDs, names, or counts.
 

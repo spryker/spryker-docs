@@ -1,12 +1,21 @@
 ---
 title: Running tests with Robot Framework
 description: Learn how to run tests with the Robot Framework in the command line for your Spryker based projects.
-last_updated: March 02, 2026
+last_updated: Sep 29, 2026
 template: howto-guide-template
 related:
   - title: Running tests with the Docker SDK
     link: docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html
 ---
+
+{% info_block warningBox "Deprecation notice" %}
+
+Robot Framework tests are being retired. Do not write new tests with Robot Framework, and move existing ones to the replacement for the case they cover:
+
+- **UI tests**: use Cypress. See [E2E Testing with Cypress](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing.html). The `cypress-migration` skill replaces the demo shop test suites with a project-owned Cypress suite. For details, see [Cypress skills in the AI Dev SDK](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing.html#cypress-skills-in-the-ai-dev-sdk).
+- **API tests**: use Codeception Glue API tests. See [Test Glue API](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-glue-api.html) for the Storefront API and [Test Glue Backend API](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-glue-backend-api.html) for the Backend API.
+
+{% endinfo_block %}
 
 This document describes how to run tests with Robot Framework.
 

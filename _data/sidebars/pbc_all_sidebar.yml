@@ -1388,6 +1388,8 @@ entries:
                 url: /docs/pbc/all/identity-access-management/install-and-upgrade/install-the-customer-account-management-glue-api.html
               - title: Install Microsoft Azure Active Directory
                 url: /docs/pbc/all/identity-access-management/install-and-upgrade/install-microsoft-azure-active-directory.html
+              - title: Install Google reCAPTCHA
+                url: /docs/pbc/all/identity-access-management/install-and-upgrade/install-google-recaptcha.html
               - title: Upgrade the Oauth module
                 url: /docs/pbc/all/identity-access-management/install-and-upgrade/upgrade-the-oauth-module.html
               - title: Upgrade the OauthCompanyUser module

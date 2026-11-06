@@ -1,7 +1,7 @@
 ---
 title: Install the Customer Account Management feature
 description: The guide walks you through the process of adding Redirect support for Customer login functionality to your project.
-last_updated: Feb 10, 2023
+last_updated: Oct 29, 2026
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-account-management-feature-integration
 originalArticleId: 859d5c6d-7ca6-4cca-ae87-66f2951c2e96

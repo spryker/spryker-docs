@@ -1070,6 +1070,7 @@ Enable the following behaviors by registering the plugins:
 | RedisCustomerSessionValidatorPlugin                          | Validates a customer's session data in the key-value store (Redis or Valkey).                                          | Session data is stored in the key-value store (Redis or Valkey).  | Spryker\Yves\SessionRedis\Plugin\SessionCustomerValidationPage  |
 | FileCustomerSessionSaverPlugin                               | Saves a customer's session data to a file.                                                     | Session data is stored in a file. | Spryker\Yves\SessionFile\Plugin\SessionCustomerValidationPage   |
 | FileCustomerSessionValidatorPlugin                           | Validates a customer's session data in a file.                                                 | Session data is stored in a file. | Spryker\Yves\SessionFile\Plugin\SessionCustomerValidationPage   |
+| CustomerLoginFormCaptchaExpanderPlugin                       | Adds the CAPTCHA field to the customer login form when the login protection requires a CAPTCHA for the account, the IP address, or the whole `customer` login realm. | The CAPTCHA step-up and the `ip-and-account` login protection strategy are set up as described in [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html). | SprykerShop\Yves\SecurityBlockerPage\Plugin\CustomerPage |
 
 **src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php**
 
@@ -1080,6 +1081,7 @@ namespace Pyz\Yves\CustomerPage;
 
 use SprykerShop\Yves\CustomerPage\CustomerPageDependencyProvider as SprykerShopCustomerPageDependencyProvider;
 use SprykerShop\Yves\CustomerPage\Plugin\CustomerPage\RedirectUriCustomerRedirectStrategyPlugin;
+use SprykerShop\Yves\SecurityBlockerPage\Plugin\CustomerPage\CustomerLoginFormCaptchaExpanderPlugin;
 
 class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyProvider
 {
@@ -1092,12 +1094,39 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
             new RedirectUriCustomerRedirectStrategyPlugin(),
         ];
     }
+
+    /**
+     * @return list<\SprykerShop\Yves\CustomerPageExtension\Dependency\Plugin\CustomerLoginFormExpanderPluginInterface>
+     */
+    protected function getCustomerLoginFormExpanderPlugins(): array
+    {
+        return [
+            new CustomerLoginFormCaptchaExpanderPlugin(),
+        ];
+    }
 }
 ```
 
 {% info_block warningBox "Verification" %}
 
 Make sure that, when you open `https://mysprykershop.com/login?redirectUri=/cart`, you are redirected to the *Cart* page after login.
+
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
+Make sure the customer login is protected per account:
+
+1. On the Storefront login page, enter a wrong password for a customer account three times.
+    Make sure the login form shows a security check with a checkbox.
+2. Enter the correct password, but do not complete the security check.
+    Make sure the form cannot be submitted.
+3. Complete the security check and enter a wrong password.
+    Make sure the login fails with the regular authentication error, and the security check is shown again.
+4. Repeat step 3 until the account has made nine attempts.
+    Make sure the next login attempt, even with the correct password, shows the `Too many login attempts. Please wait 6 minutes before trying again.` message.
+
+The numbers in these steps are the defaults from [Configure SecurityBlocker](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html#configure-securityblocker).
 
 {% endinfo_block %}
 

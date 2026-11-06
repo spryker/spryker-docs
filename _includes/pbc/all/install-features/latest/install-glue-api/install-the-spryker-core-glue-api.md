@@ -136,6 +136,40 @@ Set the value of `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled()` a
 | false | If the `include` query parameter is not passed, no resource relationships are returned. If particular relationships are requested thorough the `include` parameter, only those relationships are returned. For example: `/abstract-products?include=abstract-product-prices` |
 | true | If the `include` query parameter is not passed, all resource relationships are returned. If an empty include query parameter is passed, no relationships are returned: `/abstract-products?include=`. If particular relationships are requested thorough the `include` parameter, only those relationships are returned. |
 
+### Configure login protection
+
+By default, the Glue API counts failed logins per IP address and username, so an attacker who switches IP addresses is never blocked. With the `ip-and-account` login protection strategy, login attempts are also counted per account, regardless of the IP address, and every password endpoint is protected:
+
+- Glue API `POST /access-tokens` and Storefront API `POST /token` with the `password` grant type: counted in the `customer` login realm.
+- Glue API `POST /agent-access-tokens` and Backend API `POST /token`: counted in the `user` login realm.
+
+Each realm shares one account counter between its API endpoints and its UI logins. The thresholds of the realms are configured in [Configure SecurityBlocker](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html#configure-securityblocker) for customers and in [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-spryker-core-back-office-feature.html#configure-the-per-account-login-protection-for-users) for users. The API endpoints do not show a CAPTCHA: the account block and the IP block apply, and failed API logins increase the realm-wide counter, which can require a CAPTCHA on the UI logins.
+
+1. Select the `ip-and-account` login protection strategy:
+
+**src/Pyz/Glue/SecurityBlockerRestApi/SecurityBlockerRestApiConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Glue\SecurityBlockerRestApi;
+
+use Spryker\Glue\SecurityBlockerRestApi\SecurityBlockerRestApiConfig as SprykerSecurityBlockerRestApiConfig;
+
+class SecurityBlockerRestApiConfig extends SprykerSecurityBlockerRestApiConfig
+{
+    protected const string LOGIN_PROTECTION_STRATEGY = self::LOGIN_PROTECTION_STRATEGY_IP_AND_ACCOUNT;
+}
+```
+
+The Storefront API and Backend API `POST /token` endpoints are protected by event subscribers of the `SecurityBlockerRestApi` module. API Platform registers them automatically, so they need no plugin registration. They protect the endpoints only with the `ip-and-account` strategy.
+
+2. Update `spryker/glue-application` together with `spryker/security-blocker-rest-api`. The updated compatibility bridge of API Platform passes the HTTP status of a response to the security blocker plugins of the `access-tokens` and `agent-access-tokens` resources. With an older version, successful API logins are not registered, so the account counter of an API client is never reset, and the client is blocked after nine logins within the time window.
+
+```bash
+composer update spryker/glue-application spryker/security-blocker-rest-api --with-dependencies
+```
+
 
 ## 3) Set up transfer objects
 
@@ -562,5 +596,18 @@ Make sure the response contains the correct resource identifier.
 
 - To verify `SecurityBlockerAgentRestRequestValidatorPlugin` and `SecurityBlockerAgentControllerAfterActionPlugin`, [authenticate as an agent assist](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html#authenticate-as-an-agent-assist) with incorrect credentials.
     The agent account should get blocked according to the configured you've set up.
+
+- To verify the `ip-and-account` login protection strategy, authenticate as a customer with incorrect credentials as many times as `SecurityBlockerStorefrontCustomerConstants::CUSTOMER_ACCOUNT_BLOCKING_NUMBER_OF_ATTEMPTS` defines.
+    Make sure the next request for the same customer, even with the correct password, returns the `429 Too Many Requests` status with the `4401` error code.
+
+- To verify the protection of the Storefront API `POST /token` endpoint, request a token with the `password` grant type and a wrong password for the same number of times.
+    Make sure the next request returns the `429 Too Many Requests` status with the following body:
+
+```json
+{
+    "error": "temporarily_unavailable",
+    "error_description": "Too many login attempts. Please try again later."
+}
+```
 
 {% endinfo_block %}

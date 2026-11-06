@@ -1,6 +1,6 @@
 ---
 title: Install the Merchant Portal Agent Assist feature
-last_updated: Mar 7, 2022
+last_updated: Oct 29, 2026
 description: This document describes the process how to integrate the Merchant Portal Agent Assist feature into a Spryker project.
 template: feature-integration-guide-template
 redirect_from: /docs/pbc/all/user-management/202403.0/marketplace/install-the-merchant-portal-agent-assist-feature.html

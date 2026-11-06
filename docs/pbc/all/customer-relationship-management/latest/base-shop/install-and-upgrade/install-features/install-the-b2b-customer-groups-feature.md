@@ -1,7 +1,7 @@
 ---
 title: Install the B2B Customer Groups feature
 description: Learn how to let customer groups hold companies and business units, and how to import customer groups and their memberships in your Spryker project.
-last_updated: Oct 14, 2026
+last_updated: Nov 2, 2026
 template: feature-integration-guide-template
 related:
   - title: Customer Groups overview
@@ -17,8 +17,9 @@ This document describes how to install the B2B Customer Groups feature. The feat
 - The **Companies** and **Business Units** tabs on the Back Office pages that create and edit a customer group, and the matching panels on the page that shows a customer group.
 - Two Backend API resources that list, add, replace, and remove the companies and business units of a customer group.
 - Four data importers that create customer groups and assign companies, business units, and customers to them.
+- Optional: The `customer-group` discount condition that also matches the customer groups of the customer's company and business units.
 
-Discounts and other rules that target a customer group evaluate only its customers: company and business unit memberships do not affect them. For how the memberships behave, see [Customer Groups overview](/docs/pbc/all/customer-relationship-management/latest/base-shop/customer-account-management-feature-overview/customer-groups-overview.html).
+Other rules that target a customer group evaluate only its customers: company and business unit memberships do not affect them. For how the memberships behave, see [Customer Groups overview](/docs/pbc/all/customer-relationship-management/latest/base-shop/customer-account-management-feature-overview/customer-groups-overview.html).
 
 ## Prerequisites
 
@@ -443,6 +444,79 @@ docker/sdk console data:import --config=data/import/local/full_EU.yml customer-g
 {% endinfo_block %}
 
 A membership row whose customer group, key, or customer reference does not exist is rejected. The other rows are still imported, the run is reported as failed, and the import command exits with code `1`. Because a deployment stops at a failed import, make sure every customer group that a membership file names is in `customer_group.csv` or exists before the import.
+
+### Optional: Apply customer-group discounts to companies and business units
+
+By default, the `customer-group` discount condition matches only the customer groups a customer is assigned to directly. To offer a discount to all users of a B2B company or business unit without assigning each customer to the group individually, let the condition also match the customer groups of the company and business units of the company user the customer currently shops as. A business unit membership also applies to the company users of its child business units. For details, see [Customer groups in discount conditions](/docs/pbc/all/customer-relationship-management/latest/base-shop/customer-account-management-feature-overview/customer-groups-overview.html#customer-groups-in-discount-conditions).
+
+Prerequisites:
+
+- `spryker/customer-group` 2.16.0 or later and `spryker/customer-group-extension` 1.1.0 or later. If needed, update them:
+
+  ```bash
+  composer require spryker/customer-group:"^2.16.0" spryker/customer-group-extension:"^1.1.0" --update-with-dependencies
+  ```
+
+- `CustomerGroupDecisionRulePlugin` of `spryker/customer-group-discount-connector` is registered in `DiscountDependencyProvider::getDecisionRulePlugins()`.
+
+1. Generate the transfer objects:
+
+    ```bash
+    docker/sdk console transfer:generate
+    ```
+
+    {% info_block warningBox "Verification" %}
+
+    Make sure the following changes have been applied in transfer objects:
+
+    | TRANSFER | TYPE | EVENT | PATH |
+    | --- | --- | --- | --- |
+    | CustomerGroupCollection | class | created | src/Generated/Shared/Transfer/CustomerGroupCollectionTransfer |
+    | CompanyUser | class | created | src/Generated/Shared/Transfer/CompanyUserTransfer |
+    | Customer.companyUserTransfer | property | created | src/Generated/Shared/Transfer/CustomerTransfer |
+
+    {% endinfo_block %}
+
+2. Register the plugin:
+
+    | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+    | --- | --- | --- | --- |
+    | CompanyUserCustomerGroupProviderPlugin | Provides the customer groups of the company and business unit of the company user the customer currently shops as, including the parent business units. | | SprykerFeature\Zed\CustomerExperienceManagement\Communication\Plugin\CustomerGroup |
+
+    **src/Pyz/Zed/CustomerGroup/CustomerGroupDependencyProvider.php**
+
+    ```php
+    <?php
+
+    namespace Pyz\Zed\CustomerGroup;
+
+    use Spryker\Zed\CustomerGroup\CustomerGroupDependencyProvider as SprykerCustomerGroupDependencyProvider;
+    use SprykerFeature\Zed\CustomerExperienceManagement\Communication\Plugin\CustomerGroup\CompanyUserCustomerGroupProviderPlugin;
+
+    class CustomerGroupDependencyProvider extends SprykerCustomerGroupDependencyProvider
+    {
+        /**
+         * @return list<\Spryker\Zed\CustomerGroupExtension\Dependency\Plugin\CustomerGroupProviderPluginInterface>
+         */
+        protected function getCustomerGroupProviderPlugins(): array
+        {
+            return [
+                new CompanyUserCustomerGroupProviderPlugin(),
+            ];
+        }
+    }
+    ```
+
+    To provide customer groups from another source, implement `Spryker\Zed\CustomerGroupExtension\Dependency\Plugin\CustomerGroupProviderPluginInterface` and register your plugin in the same stack.
+
+{% info_block warningBox "Verification" %}
+
+1. In the Back Office, assign a business unit to a customer group.
+2. [Create a discount](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/create-discounts.html) with the condition `customer-group = "{CUSTOMER_GROUP_NAME}"`.
+3. On the Storefront, log in as a company user of a child business unit of the assigned business unit, and add a product to the cart. Make sure the discount is applied.
+4. Log in as a company user of the parent business unit of the assigned business unit, and add a product to the cart. Make sure the discount is not applied.
+
+{% endinfo_block %}
 
 ### Optional: Adjust the limits
 

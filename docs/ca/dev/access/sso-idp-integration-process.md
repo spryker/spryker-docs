@@ -257,6 +257,8 @@ Send us the approximate time of the attempt, the test user's email address, and 
 | User is created without an email or name | The IdP does not send the claim or attribute, or it has a different name. See Attribute and role mappers. |
 | User signs in but sees no access | The groups claim is missing or the group mapping does not match your values. |
 | Login suddenly stops after months of working | An expired client secret or a rotated signing certificate. |
+| User can't log in to a specific service | User must log in again after group assignment. |
+| User didn't receive a VPN certificate | User must log in again after VPN group assignment. |
 
 ## Useful links
 

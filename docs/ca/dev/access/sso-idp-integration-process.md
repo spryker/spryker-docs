@@ -18,7 +18,7 @@ This guide explains what you need to set up on your side and which information w
 | You send us | Endpoint URLs, client ID and client secret | Metadata URL or file, or the individual parameters, and the signing certificate |
 | Choose it when | Your IdP supports OIDC and you have no SAML requirement | Your security policy requires SAML, or your IdP only supports SAML |
 
-If your IdP supports both protocols and you have no preference, we recommend OIDC: it needs fewer values and is simpler to troubleshoot.
+If your IdP supports both protocols and you have no preference, we recommend OIDC: it is easier to configure and troubleshoot.
 
 Sign-in then works like this: the user enters their work email, Keycloak recognizes the email domain, redirects the user to your IdP, and your IdP sends the user back with a signed confirmation of their identity.
 
@@ -47,7 +47,7 @@ A client secret is a credential. Never send it in plain text in a ticket, email,
 1. You tell us which protocol you want to use and send the common information listed in the previous section.
 2. We send you the Spryker-side values for your realm: the redirect URI (OIDC) or the Assertion Consumer Service URL, entity ID and metadata (SAML).
 3. You create the application in your IdP using these values.
-4. You send us the values from your IdP, using a secure channel for any secret.
+4. You send us the configuration from your IdP, using a secure channel for any secret.
 5. We configure the connection in Keycloak and tell you when it is ready.
 6. You test with a few users, then we agree on the go-live date.
 
@@ -227,6 +227,7 @@ The available Spryker groups depend on your setup. We currently support the foll
 - `jenkins_admin`, `jenkins_developer`, `jenkins_viewer`: Jenkins access.
 - `open_vpn`: VPN access.
 - `BaseRole`: the AWS base role.
+- `CustomRoles`: Custom AWS roles are supported and can be enabled upon request.
 
 This list is not exhaustive and can change over time. For the complete, current list, contact Spryker support.
 
@@ -262,7 +263,7 @@ Send us the approximate time of the attempt, the test user's email address, and 
 | User signs in but sees no access | The groups claim is missing or the group mapping does not match your values. |
 | Login suddenly stops after months of working | An expired client secret or a rotated signing certificate. |
 | User can't log in to a specific service | User must log in again after group assignment. |
-| User didn't receive a VPN certificate | User must log in again after VPN group assignment. |
+| User didn't receive a VPN certificate | User must log in to AWS or Realm again after VPN group assignment. |
 
 ## Useful links
 

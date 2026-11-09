@@ -1,5 +1,5 @@
 ---
-title: Spryker's idP integration process
+title: Integrate your identity provider with Spryker SSO
 description: The process of integrating Spryker's IdP with an external IdP
 template: howto-guide-template
 last_updated: Oct 30, 2026

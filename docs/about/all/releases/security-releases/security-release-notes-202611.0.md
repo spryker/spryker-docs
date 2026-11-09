@@ -1,9 +1,11 @@
 ---
-title: Security release notes 202610.0
-description: Security updates released for version 202610.0
-last_updated: Oct 28, 2026
+title: Security release notes 202611.0
+description: Security updates released for version 202611.0
+last_updated: Nov 4, 2026
 template: concept-topic-template
 publish_date: "2026-10-13"
+redirect_from:
+- /docs/about/all/releases/security-releases/security-release-notes-202610.0.html
 ---
 
 This document describes the security-related issues that have been recently resolved.
@@ -82,6 +84,46 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
 
 {% endinfo_block %}
 
+## SQL injection in the content item list of the Back Office
+
+When you add a content item to a CMS page or block in the Back Office, the CMS editor shows a list of available content items. The endpoint that returns this list did not escape a request parameter before using it in a database query. As a result, an authenticated Back Office user could run arbitrary SQL queries against the application database.
+
+### Affected modules
+
+- `spryker/content-gui`: < 3.2.2
+
+### Fix the vulnerability
+
+Update the affected package:
+
+```bash
+composer update spryker/content-gui:"^3.2.2"
+```
+
+{% info_block warningBox "Verification" %}
+
+1. In the Back Office, open a CMS page or block for editing.
+2. In the content editor, add a content item, for example a banner. Make sure the list of content items is displayed and you can select an item.
+
+{% endinfo_block %}
+
+## Company user takeover through the Add company user form
+
+On the Storefront, a company administrator can add users to their company on the **Add company user** page. The form submission was not validated correctly, so a company administrator could overwrite a company user that belongs to another company. As a result, the affected user was moved to the attacker's company and lost access to their own company, and data linked to that user, such as shared carts and shopping lists, became available in the attacker's company.
+
+### Affected modules
+
+- `spryker/company-user`: < 2.25.0
+- `spryker-shop/company-page`: < 2.39.0
+
+### Fix the vulnerability
+
+Update the affected packages:
+
+```bash
+composer update spryker/company-user:"^2.25.0" spryker-shop/company-page:"^2.39.0"
+```
+
 ## Session fixation on login
 
 A session ID is the value stored in the session cookie that identifies a user to the application. Storefront, Back Office and Merchant Portal applications did not regenerate the session ID when a user logged in, including after completing the multi-factor authentication (MFA) step.
@@ -111,68 +153,6 @@ composer update spryker/multi-factor-auth:"^2.10.0" spryker/multi-factor-auth-me
 2. Log in. If MFA is enabled, complete the MFA step.
 3. Make sure the value of the session cookie differs from the value you noted before login.
 4. Repeat the steps in the Back Office and Merchant Portal.
-
-{% endinfo_block %}
-
-## Vulnerability in the @angular/router package of the Merchant Portal
-
-The Merchant Portal frontend is built with Angular. The `@angular/router` package, which handles navigation between Merchant Portal pages, has a known security vulnerability in versions 22.0.0 to 22.1.x. This issue affects only projects that use the Merchant Portal.
-
-### Affected packages
-
-- `@angular/router`: >= 22.0.0 < 22.2.0
-
-### Check if your project is affected
-
-To check if your project uses a vulnerable version of `@angular/router`, run an npm audit:
-
-```bash
-docker/sdk cli "npm audit"
-```
-
-If the output reports `@angular/router`, apply the fix.
-
-### Fix the vulnerability
-
-To fix the vulnerability, update the Spryker packages that define the Angular dependencies of the Merchant Portal, and then update all `@angular/*` packages to 22.2.3. All `@angular/*` packages must have the same version to work together.
-
-1. Update the Spryker packages:
-
-```bash
-composer update spryker/falcon-ui:"^0.1.5" spryker-shop/date-time-configurator-page-example:"^0.7.5" spryker/zed-ui:"^4.5.1"
-```
-
-2. Update the npm packages:
-
-```bash
-docker/sdk cli "npm update --workspaces"
-```
-
-{% info_block warningBox "Verification" %}
-
-1. Make sure that all `@angular/*` packages are on version 22.2.3 and that each package is installed only once:
-
-```bash
-npm ls | grep -E '@angular/[a-z-]+@'
-```
-
-2. Make sure that the packages are hosted to the project root: the `node_modules/@angular/core` directory exists, and the following command returns `0`:
-
-```bash
-grep -c 'zed-ui/node_modules/@angular/' package-lock.json
-```
-
-3. Make sure that the audit no longer reports `@angular/router`:
-
-```bash
-docker/sdk cli "npm audit | grep -A3 '@angular/router'"
-```
-
-4. Build the Merchant Portal and make sure the build succeeds:
-
-```bash
-docker/sdk cli "npm run mp:build"
-```
 
 {% endinfo_block %}
 
@@ -245,45 +225,101 @@ class CustomerDataChangeRequestConfig extends SprykerCustomerDataChangeRequestCo
 
 {% endinfo_block %}
 
-## SQL injection in the content item list of the Back Office
+## Rate limiting protection for password change
 
-When you add a content item to a CMS page or block in the Back Office, the CMS editor shows a list of available content items. The endpoint that returns this list did not escape a request parameter before using it in a database query. As a result, an authenticated Back Office user could run arbitrary SQL queries against the application database.
+On the Storefront, Back Office, and Merchant Portal, a logged-in user can change their password by entering their current password, a new password, and a confirmation of the new password. The password change forms did not limit the number of attempts. The number of password change attempts is now limited per user.
 
 ### Affected modules
 
-- `spryker/content-gui`: < 3.2.2
+- `spryker/customer`: < 7.89.0
+- `spryker/customers-rest-api`: < 1.36.0
+- `spryker/user`: < 3.36.0
+- `spryker/user-merchant-portal-gui`: < 4.5.0
 
 ### Fix the vulnerability
 
-Update the affected package:
+After the update, when a user reaches the limit of password change attempts, the password is not changed and the user sees an error message.
+
+1. Update the affected packages:
 
 ```bash
-composer update spryker/content-gui:"^3.2.2"
+composer update spryker/customer:"^7.89.0" spryker/customers-rest-api:"^1.36.0" spryker/user:"^3.36.0" spryker/user-merchant-portal-gui:"^4.5.0"
+```
+
+2. To show the error message on the Storefront when the limit is reached, add the following translations to `data/import/common/common/glossary.csv`:
+
+```csv
+customer.password.change_limit_exceeded,"You reached the limit of password change attempts. Please try again later.",en_US
+customer.password.change_limit_exceeded,"Sie haben das Limit für Versuche zur Änderung des Passworts erreicht. Bitte versuchen Sie es später erneut.",de_DE
+```
+
+3. Import the glossary:
+
+```bash
+console data:import:glossary
+```
+
+## Vulnerability in the @angular/router package of the Merchant Portal
+
+The Merchant Portal frontend is built with Angular. The `@angular/router` package, which handles navigation between Merchant Portal pages, has a known security vulnerability in versions 22.0.0 to 22.1.x. This issue affects only projects that use the Merchant Portal.
+
+### Affected packages
+
+- `@angular/router`: >= 22.0.0 < 22.2.0
+
+### Check if your project is affected
+
+To check if your project uses a vulnerable version of `@angular/router`, run an npm audit:
+
+```bash
+docker/sdk cli "npm audit"
+```
+
+If the output reports `@angular/router`, apply the fix.
+
+### Fix the vulnerability
+
+To fix the vulnerability, update the Spryker packages that define the Angular dependencies of the Merchant Portal, and then update all `@angular/*` packages to 22.2.3. All `@angular/*` packages must have the same version to work together.
+
+1. Update the Spryker packages:
+
+```bash
+composer update spryker/falcon-ui:"^0.1.5" spryker-shop/date-time-configurator-page-example:"^0.7.5" spryker/zed-ui:"^4.5.1"
+```
+
+2. Update the npm packages:
+
+```bash
+docker/sdk cli "npm update --workspaces"
 ```
 
 {% info_block warningBox "Verification" %}
 
-1. In the Back Office, open a CMS page or block for editing.
-2. In the content editor, add a content item, for example a banner. Make sure the list of content items is displayed and you can select an item.
-
-{% endinfo_block %}
-
-## Company user takeover through the Add company user form
-
-On the Storefront, a company administrator can add users to their company on the **Add company user** page. The form submission was not validated correctly, so a company administrator could overwrite a company user that belongs to another company. As a result, the affected user was moved to the attacker's company and lost access to their own company, and data linked to that user, such as shared carts and shopping lists, became available in the attacker's company.
-
-### Affected modules
-
-- `spryker/company-user`: < 2.25.0
-- `spryker-shop/company-page`: < 2.39.0
-
-### Fix the vulnerability
-
-Update the affected packages:
+1. Make sure that all `@angular/*` packages are on version 22.2.3 and that each package is installed only once:
 
 ```bash
-composer update spryker/company-user:"^2.25.0" spryker-shop/company-page:"^2.39.0"
+npm ls | grep -E '@angular/[a-z-]+@'
 ```
+
+2. Make sure that the packages are hosted to the project root: the `node_modules/@angular/core` directory exists, and the following command returns `0`:
+
+```bash
+grep -c 'zed-ui/node_modules/@angular/' package-lock.json
+```
+
+3. Make sure that the audit no longer reports `@angular/router`:
+
+```bash
+docker/sdk cli "npm audit | grep -A3 '@angular/router'"
+```
+
+4. Build the Merchant Portal and make sure the build succeeds:
+
+```bash
+docker/sdk cli "npm run mp:build"
+```
+
+{% endinfo_block %}
 
 ## Cross-merchant price disclosure in the Merchant Portal
 

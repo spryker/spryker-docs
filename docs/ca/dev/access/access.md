@@ -11,8 +11,10 @@ This section describes how to access AWS Management Console as an Identity and A
 
 - [SSO Access](/docs/ca/dev/access/sso-access.html)
 - [SSO Security Options](/docs/ca/dev/access/sso-security-options.html)
+- [Integrate your identity provider with Spryker SSO](/docs/ca/dev/access/sso-idp-integration-process.html)
 - [Connecting to AWS Console and CLI with an IAM user](/docs/ca/dev/access/connecting-to-aws-console-and-cli-with-an-iam-user.html)
 - [Connecting to AWS CLI with an SSO user](/docs/ca/dev/access/connecting-to-aws-cli-with-an-sso-user.html)
 - [Locating service credentials](/docs/ca/dev/access/locate-service-credentials.html)
 - [Connecting to services via SSH](/docs/ca/dev/access/connect-to-services-via-ssh.html)
 - [AWS permissions](/docs/ca/dev/access/aws-permissions.html)
+

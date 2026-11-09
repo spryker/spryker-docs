@@ -38,7 +38,7 @@ Regardless of the protocol, send us the following.
 
 ### Sharing secrets
 
-A client secret and a private key are credentials. Never send them in a ticket, email, or chat message in plain text. We will agree on a secure transfer method with you before you send them. Public values such as URLs, entity IDs, metadata and signing certificates (public part only) are not secret.
+A client secret is a credential. Never send it in plain text in a ticket, email, or chat message. Share it as described in [Share secrets with the Spryker Support Team](/docs/about/all/support/share-secrets-with-the-spryker-support-team.html). Public values, such as URLs, entity IDs, metadata, and the public part of signing certificates, are not secret.
 
 {% info_block warningBox "Warning" %}Client secrets and signing certificates expire. Plan the renewal before the expiry date, or sign-in stops.{% endinfo_block %}
 

@@ -194,7 +194,7 @@ To prevent this, select the `ip-and-username` IP counter key strategy. It counts
 | IP COUNTER KEY STRATEGY | COUNTER KEY |
 |---|---|
 | `IP_COUNTER_KEY_STRATEGY_IP` (`ip`), default | The IP address. All users behind one IP address share one counter. |
-| `IP_COUNTER_KEY_STRATEGY_IP_AND_USERNAME` (`ip-and-username`) | The IP address and a SHA-256 hash of the submitted username, lowercased and trimmed. A login without a username uses the IP address only. |
+| `IP_COUNTER_KEY_STRATEGY_IP_AND_USERNAME` (`ip-and-username`) | The IP address and a SHA-256 hash of the submitted username. The SecurityBlocker client normalizes the username the same way as for the account counter: it trims the username, folds its case, and strips accents. A login without a username uses the IP address only. |
 
 The key strategy applies to both login protection strategies and to the IP challenge threshold that `SecurityBlockerBackofficeUserCaptchaRequirementPlugin` checks. The same strategy constants exist in `SecurityBlockerMerchantPortalGuiConfig` and `AgentSecurityBlockerMerchantPortalGuiConfig`.
 

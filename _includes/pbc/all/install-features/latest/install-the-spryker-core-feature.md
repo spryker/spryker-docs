@@ -539,7 +539,8 @@ ALTCHA signs every challenge with an HMAC secret and checks the signature when t
 The `captcha-altcha:hmac-secret:generate` console command stores a secret, so that a new environment never runs without one:
 
 - If no secret is stored, the command generates a random 64-character secret and stores it.
-- If a secret is stored, the command keeps it. So you can run the command on every deployment, and a secret that an administrator changed in the Back Office stays in place.
+- If the stored secret is shorter than 32 characters, the command replaces it the same way, because ALTCHA rejects such a secret.
+- If a secret of 32 characters or more is stored, the command keeps it. So you can run the command on every deployment, and a secret that an administrator changed in the Back Office stays in place.
 - The command never prints or logs the secret. If the secret cannot be saved, the command exits with an error code and shows the reason.
 
 Register the console command:
@@ -612,7 +613,7 @@ An administrator can change the secret in the Back Office at any time. Challenge
 
 {% info_block warningBox "Missing secret" %}
 
-Without a secret, or with a secret shorter than 32 characters, ALTCHA cannot create or verify challenges, and an error is logged: every login that requires a CAPTCHA is rejected with the `The security check is currently unavailable. Please try again later.` message. In the default `always` mode, this blocks every login form, including the Back Office login, so you cannot log in to the Back Office to enter a secret. The install step prevents this. To recover an environment without a secret, run `console captcha-altcha:hmac-secret:generate`, or switch the CAPTCHA off temporarily with `$config[CaptchaConstants::IS_CAPTCHA_ENABLED] = false;`.
+Without a secret, or with a secret shorter than 32 characters, ALTCHA cannot create or verify challenges, and an error is logged: every login that requires a CAPTCHA is rejected with the `The security check is currently unavailable. Please try again later.` message. In the default `always` mode, this blocks every login form, including the Back Office login, so you cannot log in to the Back Office to enter a secret. The install step prevents this. To recover an environment without a valid secret, run `console captcha-altcha:hmac-secret:generate`, or switch the CAPTCHA off temporarily with `$config[CaptchaConstants::IS_CAPTCHA_ENABLED] = false;`.
 
 {% endinfo_block %}
 

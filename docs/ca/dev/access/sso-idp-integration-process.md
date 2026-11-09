@@ -259,7 +259,7 @@ Send us the approximate time of the attempt, the test user's email address, and 
 | Error about an invalid redirect URI at your IdP | The redirect URI or ACS URL in your IdP is not exactly the value we sent. |
 | Your IdP says the user is not assigned to the application | The user or their group is not assigned to the app in your IdP. |
 | Login works at the IdP but fails when returning to Keycloak | Wrong issuer or entity ID, an outdated certificate, or a wrong client secret. |
-| User is created without an email or name | The IdP does not send the claim or attribute, or it has a different name. See Attribute and role mappers. |
+| User is created without an email or name | The IdP does not send the claim or attribute, or it has a different name. See [Attribute and role mappers](#attribute-and-role-mappers). |
 | User signs in but sees no access | The groups claim is missing or the group mapping does not match your values. |
 | Login suddenly stops after months of working | An expired client secret or a rotated signing certificate. |
 | User can't log in to a specific service | User must log in again after group assignment. |

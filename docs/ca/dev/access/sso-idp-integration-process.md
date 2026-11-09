@@ -31,7 +31,7 @@ Regardless of the protocol, send us the following.
 | Protocol: OIDC or SAML 2.0 | Decides which Keycloak connection type we create. | Yes |
 | Email domains of your users, for example example.com / test-example.com | We link the connection to your organization in Keycloak by email domain. Users who enter an address on this domain are sent to your IdP automatically. If you have several domains, list all of them. | Yes |
 | Confirmation that email addresses in your IdP are verified and owned by your company | If yes, we can trust the email from your IdP and skip a separate email verification step for your users. | Yes |
-| Which user attributes your IdP will send | An email address is mandatory because Spryker uses the email as the username. Group or role values are also required, because service access depends on them (see Attribute and role mappers). | Yes |
+| Which user attributes your IdP will send | An email address is mandatory because Spryker uses the email as the username. Group or role values are also required, because service access depends on them (see [Attribute and role mappers](#attribute-and-role-mappers)). | Yes |
 | Technical contact and a backup contact | We need someone who can change the IdP configuration and join a short call if sign-in fails. | Yes |
 | Two test users | A user who should be able to sign in, and ideally one who should not, to verify that access control behaves as expected. | No |
 | Preferred date for the change | We agree the activation date with you so that real users are not affected by test activity. | Yes |

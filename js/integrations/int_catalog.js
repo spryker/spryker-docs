@@ -182,14 +182,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.getElementById('modal').style.display = 'flex';
 
-        gtag('event', 'vendor_card_click', {
-            event_category: 'vendor_catalog',
-            event_label: partner.Partner,
-            vendor_name: partner.Partner,
-            vendor_tp: partner.tp_partner,
-            vendor_cat: partner.category,
-            vendor_method: partner.method.join(',')
-        });
+        if (typeof gtag === 'function') {
+            gtag('event', 'vendor_card_click', {
+                event_category: 'vendor_catalog',
+                event_label: partner.Partner,
+                vendor_name: partner.Partner,
+                vendor_tp: partner.tp_partner,
+                vendor_cat: partner.category,
+                vendor_method: partner.method.join(',')
+            });
+        }
 
         const key = 'vendors_viewed';
             let viewedVendors = JSON.parse(localStorage.getItem(key)) || [];

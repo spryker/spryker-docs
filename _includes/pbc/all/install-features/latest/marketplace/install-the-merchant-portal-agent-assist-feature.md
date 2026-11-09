@@ -66,7 +66,11 @@ $config[AgentSecurityBlockerMerchantPortalConstants::AGENT_MERCHANT_PORTAL_BLOCK
 
 ```
 
-The `AGENT_MERCHANT_PORTAL_*` settings count failed logins per IP address. To also count the login attempts of a merchant agent per account and require a CAPTCHA, select the `ip-and-account` login protection strategy. The attempts are counted in the `user` login realm, together with all other logins of the user. For the realm thresholds and the difference between the strategies, see [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-spryker-core-back-office-feature.html#configure-the-per-account-login-protection-for-users) and [Set up SecurityBlocker](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html#set-up-securityblocker).
+The `AGENT_MERCHANT_PORTAL_*` settings count failed logins per IP address. To also count the login attempts of a merchant agent per account, select the `ip-and-account` login protection strategy. The attempts are counted in the `user` login realm, together with all other logins of the user. To keep a load balancer IP address from blocking the login of every merchant agent, select the `ip-and-username` IP counter key strategy. For the realm thresholds and the strategies, see the following documents:
+
+- [Configure the per-account login protection for users](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-spryker-core-back-office-feature.html#configure-the-per-account-login-protection-for-users)
+- [Select the IP counter key strategy](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-spryker-core-back-office-feature.html#select-the-ip-counter-key-strategy)
+- [Set up SecurityBlocker](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html#set-up-securityblocker)
 
 **src/Pyz/Zed/AgentSecurityBlockerMerchantPortalGui/AgentSecurityBlockerMerchantPortalGuiConfig.php**
 
@@ -80,6 +84,8 @@ use Spryker\Zed\AgentSecurityBlockerMerchantPortalGui\AgentSecurityBlockerMercha
 class AgentSecurityBlockerMerchantPortalGuiConfig extends SprykerAgentSecurityBlockerMerchantPortalGuiConfig
 {
     protected const string LOGIN_PROTECTION_STRATEGY = self::LOGIN_PROTECTION_STRATEGY_IP_AND_ACCOUNT;
+
+    protected const string IP_COUNTER_KEY_STRATEGY = self::IP_COUNTER_KEY_STRATEGY_IP_AND_USERNAME;
 }
 ```
 
@@ -305,7 +311,8 @@ Make sure that the configured data has been added to the `spy_glossary_key` and 
 | AgentMerchantPortalSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with agent merchant portal settings.                                    |               | Spryker\Client\AgentSecurityBlockerMerchantPortal\Plugin\SecurityBlocker                  |
 | ZedAgentMerchantUserSecurityPlugin                                    | Extends the security service with the AgentMerchantUser firewall.                                                       |               | Spryker\Zed\AgentSecurityMerchantPortalGui\Communication\Plugin\Security                  |
 | SecurityBlockerAgentMerchantPortalEventDispatcherPlugin               | Denies access to an agent after exceeding the limit of failed merchant portal agent login attempts.                        |               | Spryker\Zed\AgentSecurityBlockerMerchantPortalGui\Communication\Plugin\EventDispatcher    |
-| AgentMerchantPortalLoginFormCaptchaExpanderPlugin                     | Adds the CAPTCHA field to the Merchant Portal agent login form when the login protection requires a CAPTCHA for the account, the IP address, or the whole `user` login realm. | The CAPTCHA step-up and the Zed CAPTCHA form theme are set up. | Spryker\Zed\AgentSecurityBlockerMerchantPortalGui\Communication\Plugin\SecurityMerchantPortalGui |
+| AgentMerchantPortalLoginFormCaptchaExpanderPlugin                     | Adds the CAPTCHA field with the `merchant_portal_agent_login` context to the Merchant Portal agent login form. In the `always` CAPTCHA mode, adds the field every time the form is rendered. In the `after_failed_attempts` CAPTCHA mode, adds the field only while a CAPTCHA requirement plugin requires it. Adds nothing if `CaptchaConstants::IS_CAPTCHA_ENABLED` is `false`. The Merchant Portal frontend build loads the widget scripts. | The login CAPTCHA, the Zed CAPTCHA form theme, and `LoginCaptchaEventDispatcherPlugin` are set up as described in [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html#set-up-the-merchant-portal-login-protection). | Spryker\Zed\Captcha\Communication\Plugin\AgentSecurityMerchantPortalGui |
+| SecurityBlockerAgentMerchantPortalCaptchaRequirementPlugin            | Requires a CAPTCHA for the `merchant_portal_agent_login` context while a challenge threshold of the `user` login realm is reached for the IP address, the account, or the whole realm. Uses the same IP counter key as the counted failed logins. Requires a CAPTCHA and logs an error if the counters cannot be read. Used only in the `after_failed_attempts` CAPTCHA mode. |               | Spryker\Zed\AgentSecurityBlockerMerchantPortalGui\Communication\Plugin\Captcha |
 | MerchantAgentAclAccessCheckerStrategyPlugin                           | Checks if the merchant agent ACL access checker strategy is applicable for a given user and rule.                     |               | Spryker\Zed\AclMerchantAgent\Communication\Plugin\Acl                                     |
 | AgentMerchantUserCriteriaExpanderPlugin                               | Sets `null` for `MerchantUserCriteria.status` and `MerchantUserCriteria.merchantStatus` for Merchant agents.            |               | Spryker\Zed\AgentSecurityMerchantPortalGui\Communication\Plugin\SecurityMerchantPortalGui |
 | MerchantAgentUserQueryCriteriaExpanderPlugin                          | Expands a user's table query criteria with the `isMerchantAgent` condition.                                           |               | Spryker\Zed\MerchantAgent\Communication\Plugin\User                                       |
@@ -451,8 +458,8 @@ class SecurityMerchantPortalGuiDependencyProvider extends SprykerSecurityMerchan
 
 namespace Pyz\Zed\AgentSecurityMerchantPortalGui;
 
-use Spryker\Zed\AgentSecurityBlockerMerchantPortalGui\Communication\Plugin\SecurityMerchantPortalGui\AgentMerchantPortalLoginFormCaptchaExpanderPlugin;
 use Spryker\Zed\AgentSecurityMerchantPortalGui\AgentSecurityMerchantPortalGuiDependencyProvider as SprykerAgentSecurityMerchantPortalGuiDependencyProvider;
+use Spryker\Zed\Captcha\Communication\Plugin\AgentSecurityMerchantPortalGui\AgentMerchantPortalLoginFormCaptchaExpanderPlugin;
 
 class AgentSecurityMerchantPortalGuiDependencyProvider extends SprykerAgentSecurityMerchantPortalGuiDependencyProvider
 {
@@ -467,6 +474,32 @@ class AgentSecurityMerchantPortalGuiDependencyProvider extends SprykerAgentSecur
     }
 }
 ```
+
+**src/Pyz/Zed/Captcha/CaptchaDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Captcha;
+
+use Spryker\Zed\AgentSecurityBlockerMerchantPortalGui\Communication\Plugin\Captcha\SecurityBlockerAgentMerchantPortalCaptchaRequirementPlugin;
+use Spryker\Zed\Captcha\CaptchaDependencyProvider as SprykerCaptchaDependencyProvider;
+
+class CaptchaDependencyProvider extends SprykerCaptchaDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Shared\CaptchaExtension\Dependency\Plugin\CaptchaRequirementPluginInterface>
+     */
+    protected function getCaptchaRequirementPlugins(): array
+    {
+        return [
+            new SecurityBlockerAgentMerchantPortalCaptchaRequirementPlugin(),
+        ];
+    }
+}
+```
+
+`LoginCaptchaEventDispatcherPlugin` checks the CAPTCHA of the Merchant Portal agent login form, so register `AgentMerchantPortalLoginFormCaptchaExpanderPlugin` whenever `LoginCaptchaEventDispatcherPlugin` is registered. Otherwise, every merchant agent login is rejected with the `Please complete the security check.` message.
 
 If your project overrides `@AgentSecurityMerchantPortalGui/Login/index.twig`, add the CAPTCHA field before the submit button with `form_widget`, as described for the Merchant Portal login in [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html#set-up-the-merchant-portal-login-protection).
 
@@ -630,8 +663,8 @@ class UserMerchantPortalGuiDependencyProvider extends SprykerUserMerchantPortalG
 
 
 1. Go to `https://mp.mysprykershop.com/agent-security-merchant-portal-gui/login`.
-2. Enter a wrong password for a merchant agent three times.
-    Make sure the login form shows a security check with a checkbox.
+2. With the default `always` CAPTCHA mode, make sure the login form shows a security check with a checkbox.
+    With the `after_failed_attempts` CAPTCHA mode, enter a wrong password for a merchant agent three times, and make sure the login form then shows the security check.
 3. Complete the security check and enter a wrong password until the login is rejected with the `Too many login attempts. Please wait 6 minutes before trying again.` notification.
     Make sure a login with the correct password is rejected with the same notification for 360 seconds.
 

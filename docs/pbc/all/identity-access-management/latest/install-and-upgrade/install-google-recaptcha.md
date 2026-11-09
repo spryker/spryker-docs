@@ -1,7 +1,7 @@
 ---
 title: Install Google reCAPTCHA
 description: Learn how to use Google reCAPTCHA v2 or v3 as the CAPTCHA provider of the login protection on the Storefront, in the Back Office, and in the Merchant Portal.
-last_updated: Nov 3, 2026
+last_updated: Nov 9, 2026
 template: howto-guide-template
 related:
   - title: Install the Spryker Core feature
@@ -10,7 +10,7 @@ related:
     link: docs/dg/dev/integrate-and-configure/integrate-configuration-feature.html
 ---
 
-This document describes how to install [Google reCAPTCHA](https://developers.google.com/recaptcha) as the CAPTCHA provider of the login protection. After repeated failed logins, the login protection requires a CAPTCHA before it checks the password, so that automated password guessing is slowed down. The default CAPTCHA provider is ALTCHA, which works without third-party services. Use reCAPTCHA instead, for example, if your project already uses reCAPTCHA on other pages.
+This document describes how to install [Google reCAPTCHA](https://developers.google.com/recaptcha) as the CAPTCHA provider of the login forms. The login forms require a CAPTCHA before the password is checked, so that automated password guessing is slowed down: on every login in the default `always` CAPTCHA mode, or after repeated failed logins in the `after_failed_attempts` CAPTCHA mode. The default CAPTCHA provider is ALTCHA, which works without third-party services. Use reCAPTCHA instead, for example, if your project already uses reCAPTCHA on other pages.
 
 The `spryker-eco/captcha-google-recaptcha` module supports two versions of reCAPTCHA:
 
@@ -23,10 +23,10 @@ Install the required features:
 
 | NAME | INSTALLATION GUIDE |
 | --- | --- |
-| Spryker Core with the CAPTCHA step-up | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html#configure-the-captcha-step-up) |
+| Spryker Core with the login CAPTCHA | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html#configure-the-login-captcha) |
 | Configuration Management | [Install the Configuration Management feature](/docs/dg/dev/integrate-and-configure/integrate-configuration-feature.html) |
 
-When you set up the CAPTCHA step-up of the Spryker Core feature, skip the parts that only ALTCHA needs: the `spryker-eco/captcha-altcha` module, the `sodium` PHP extension, the `altcha` npm package, the `CaptchaAltchaConstants` settings, and the HMAC secret. Google verifies each token and accepts it only once, so reCAPTCHA needs none of them. Keep `CaptchaConstants::IS_CAPTCHA_ENABLED` and the `CaptchaConstants::REDIS_*` settings.
+When you set up the login CAPTCHA of the Spryker Core feature, skip the parts that only ALTCHA needs: the `spryker-eco/captcha-altcha` module, the `sodium` PHP extension, the `altcha` npm package, the `CaptchaAltchaConstants` settings, and the HMAC secret with its `captcha-altcha:hmac-secret:generate` console command. Google verifies each token and accepts it only once, so reCAPTCHA needs none of them. Keep `CaptchaConstants::IS_CAPTCHA_ENABLED`, the `CaptchaConstants::REDIS_*` settings, the CAPTCHA mode, and `CaptchaRouteProviderPlugin`, because the Storefront login forms log an error when its route is missing. Google issues the reCAPTCHA challenges itself, and the provider does not implement `CaptchaChallengeUrlProviderPluginInterface`. So each login form renders the reCAPTCHA widget together with the page, and the widget requests its challenge from Google.
 
 The provider stores the reCAPTCHA key as settings of the Configuration Management feature. The secret key is a secret setting, so set up the encryption of secret settings when you install the feature.
 
@@ -109,7 +109,7 @@ For details about the command, see [Integrate configuration deployment commands]
 
 ### 6) Set up behavior
 
-Only an application that registers `ConfigurationApplicationPlugin` can read the secret key. The Back Office and the Merchant Portal verify tokens themselves. The Storefront cannot read the secret key, so it sends tokens to the Backend Gateway for verification. The Back Office and the Backend Gateway register `ConfigurationApplicationPlugin` when you install the Configuration Management feature, so register it only in the Merchant Portal application. Without the plugin, the Merchant Portal sends its tokens to the Backend Gateway and logs a warning for every token.
+Only an application that registers `ConfigurationApplicationPlugin` can read the secret key. The Back Office and the Merchant Portal verify tokens themselves. The Storefront cannot read the secret key, so it sends tokens to the Backend Gateway for verification. The Back Office and the Backend Gateway register `ConfigurationApplicationPlugin` when you install the Configuration Management feature, so register it only in the Merchant Portal application. If you already registered it as described in [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html#enable-merchant-portal-infrastructural-plugins), skip it. Without the plugin, the Merchant Portal sends its tokens to the Backend Gateway and logs a warning for every token.
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -163,7 +163,7 @@ class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalA
 
 ### 7) Build the frontend
 
-Rebuild the Storefront, Back Office, and Merchant Portal frontends to include the scripts of the provider. With v2, the script of Google renders the checkbox. With v3, the scripts of the provider request a token when the user submits a login form, with the login realm, `customer` or `user`, as the action.
+Rebuild the Storefront, Back Office, and Merchant Portal frontends to include the scripts of the provider. With v2, the script of Google renders the checkbox. With v3, the scripts of the provider request a token when the user submits a login form, with the CAPTCHA context of the form as the action: `storefront_customer_login`, `storefront_agent_login`, `backoffice_user_login`, `merchant_portal_user_login`, or `merchant_portal_agent_login`.
 
 ```bash
 npm run yves
@@ -175,13 +175,13 @@ The console command generates the build configuration of the Merchant Portal bef
 
 {% info_block warningBox "Verification" %}
 
-1. On the Back Office login page, enter a wrong password for a user three times.
-2. Reload the login page. With v2, make sure the login form shows the reCAPTCHA checkbox. With v3, make sure the page shows the reCAPTCHA badge.
+1. Go to the Back Office login page. With the `after_failed_attempts` CAPTCHA mode, first enter a wrong password for a user three times, and reload the login page.
+2. With v2, make sure the login form shows the reCAPTCHA checkbox. With v3, make sure the page shows the reCAPTCHA badge.
 3. With v2, select the checkbox. Enter the correct password and submit the form.
     Make sure you are logged in to the Back Office.
 4. Repeat the previous steps on the Storefront login page with a customer account and, in a marketplace, on the Merchant Portal login page with a merchant user.
 
-The number of failed logins is the default of the `*_ACCOUNT_CHALLENGE_NUMBER_OF_ATTEMPTS` settings from [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html#configure-securityblocker).
+In the default `always` CAPTCHA mode, the login forms show reCAPTCHA right away. The number of failed logins for the `after_failed_attempts` CAPTCHA mode is the default of the `*_ACCOUNT_CHALLENGE_NUMBER_OF_ATTEMPTS` settings from [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html#configure-securityblocker).
 
 {% endinfo_block %}
 
@@ -194,10 +194,10 @@ Make sure your infrastructure meets the following requirements:
   - `frame-src`: `https://www.google.com/recaptcha/` and `https://recaptcha.google.com/recaptcha/`
   - `connect-src`: `https://www.google.com/recaptcha/`
 - Allow outgoing HTTPS requests from the Back Office, the Merchant Portal, and the Backend Gateway to `https://www.google.com/recaptcha/api/siteverify`. If Google cannot be reached within 5 seconds, the logins that require a CAPTCHA are rejected.
-- reCAPTCHA sends the IP address and browser signals of a visitor to Google and sets the `_GRECAPTCHA` cookie. The widget loads only on a login that requires a CAPTCHA. Cover reCAPTCHA in your privacy policy and cookie notice.
+- reCAPTCHA sends the IP address and browser signals of a visitor to Google and sets the `_GRECAPTCHA` cookie. The widget loads only on a login form that requires a CAPTCHA, which is every login form in the default `always` CAPTCHA mode. Cover reCAPTCHA in your privacy policy and cookie notice.
 - reCAPTCHA v3 shows the reCAPTCHA badge of Google on the pages that load it. If you hide the badge, show the text "This site is protected by reCAPTCHA" in the form.
 
-The requirements for trusted proxies and for the key-value storage from [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html#configure-the-captcha-step-up) apply as well.
+The requirements for trusted proxies and for the key-value storage from [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html#configure-the-login-captcha) apply as well.
 
 ## How the provider verifies tokens
 
@@ -209,7 +209,7 @@ The provider sends every other token to the `siteverify` endpoint of Google and 
 | --- | --- |
 | Success for a host that is not in **Allowed Hostnames** | The token is invalid, and a warning is logged. |
 | v2: success | The token is valid. |
-| v3: success, the action matches the login realm, and the score reaches the minimum | The token is valid. |
+| v3: success, the action matches the CAPTCHA context of the login form, and the score reaches the minimum | The token is valid. |
 | v3: success with another action or with a score below the minimum | The token is invalid. |
 | `timeout-or-duplicate` | The token has expired or has already been used. The user is asked to repeat the check. |
 | Any other error code | The token is invalid. |

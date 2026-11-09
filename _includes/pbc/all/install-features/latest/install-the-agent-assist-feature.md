@@ -340,7 +340,7 @@ Enable the following behaviors by registering the plugins:
 |---------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
 | YvesAgentPageSecurityPlugin                             | Registers security firewalls, access rules, impersonate rules, login and logout handlers for agent users. |           | SprykerShop\Yves\AgentPage\Plugin\Security                           |
 | AgentSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with agent settings.                                      |           | Spryker\Client\SecurityBlockerStorefrontAgent\Plugin\SecurityBlocker |
-| AgentLoginFormCaptchaExpanderPlugin                     | Adds the CAPTCHA field to the agent login form when the login protection requires a CAPTCHA for the account, the IP address, or the whole `user` login realm. | The CAPTCHA step-up and the `ip-and-account` login protection strategy are set up as described in [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html). | SprykerShop\Yves\SecurityBlockerPage\Plugin\AgentPage |
+| AgentLoginFormCaptchaExpanderPlugin                     | Adds the CAPTCHA field with the `storefront_agent_login` context to the agent login form. In the `always` CAPTCHA mode, adds the field every time the form is rendered. In the `after_failed_attempts` CAPTCHA mode, adds the field only while a CAPTCHA requirement plugin requires it. Adds nothing if `CaptchaConstants::IS_CAPTCHA_ENABLED` is `false`. | The login CAPTCHA is set up, and `LoginCaptchaEventDispatcherPlugin` is registered as described in [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html#configure-the-login-captcha). | Spryker\Yves\Captcha\Plugin\AgentPage |
 
 Agents are users, so the agent login counts attempts in the `user` login realm. All logins of a user share one account counter: the agent login, the Back Office, the Merchant Portal, the Glue API `POST /agent-access-tokens` endpoint, and the Backend API `POST /token` endpoint. The thresholds of the realm are provided by `UserSecurityBlockerLoginRealmConfigurationExpanderPlugin`, which you register as described in [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-spryker-core-back-office-feature.html).
 
@@ -399,8 +399,8 @@ class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependency
 
 namespace Pyz\Yves\AgentPage;
 
+use Spryker\Yves\Captcha\Plugin\AgentPage\AgentLoginFormCaptchaExpanderPlugin;
 use SprykerShop\Yves\AgentPage\AgentPageDependencyProvider as SprykerAgentPageDependencyProvider;
-use SprykerShop\Yves\SecurityBlockerPage\Plugin\AgentPage\AgentLoginFormCaptchaExpanderPlugin;
 
 class AgentPageDependencyProvider extends SprykerAgentPageDependencyProvider
 {
@@ -423,8 +423,9 @@ class AgentPageDependencyProvider extends SprykerAgentPageDependencyProvider
 3. Go to `https://mysprykershop.com/agent/overview`.
 4. Ensure that only the user with the agent role can access the page.
 5. Ensure that the agent can log out.
-6. On the agent login page, enter a wrong password for an agent account three times.
-    Make sure the login form shows a security check with a checkbox.
+6. Go to the agent login page.
+    With the default `always` CAPTCHA mode, make sure the login form shows a security check with a checkbox.
+    With the `after_failed_attempts` CAPTCHA mode, enter a wrong password for an agent account three times, and make sure the login form then shows the security check.
 7. Complete the security check and enter the correct password.
     Make sure the agent is logged in.
 

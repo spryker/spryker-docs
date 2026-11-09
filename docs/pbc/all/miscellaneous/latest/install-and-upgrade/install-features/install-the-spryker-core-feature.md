@@ -1,7 +1,7 @@
 ---
 title: Install the Spryker Core feature
 description: The procedure to integrate Spryker Core feature into your Spryker Cloud Commerce OS project.
-last_updated: Nov 3, 2026
+last_updated: Nov 9, 2026
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/spryker-core-feature-integration
 originalArticleId: f99d3cf9-e933-4a3b-888e-72cf8f4ea31b

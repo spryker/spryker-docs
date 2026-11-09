@@ -1070,7 +1070,7 @@ Enable the following behaviors by registering the plugins:
 | RedisCustomerSessionValidatorPlugin                          | Validates a customer's session data in the key-value store (Redis or Valkey).                                          | Session data is stored in the key-value store (Redis or Valkey).  | Spryker\Yves\SessionRedis\Plugin\SessionCustomerValidationPage  |
 | FileCustomerSessionSaverPlugin                               | Saves a customer's session data to a file.                                                     | Session data is stored in a file. | Spryker\Yves\SessionFile\Plugin\SessionCustomerValidationPage   |
 | FileCustomerSessionValidatorPlugin                           | Validates a customer's session data in a file.                                                 | Session data is stored in a file. | Spryker\Yves\SessionFile\Plugin\SessionCustomerValidationPage   |
-| CustomerLoginFormCaptchaExpanderPlugin                       | Adds the CAPTCHA field to the customer login form when the login protection requires a CAPTCHA for the account, the IP address, or the whole `customer` login realm. | The CAPTCHA step-up and the `ip-and-account` login protection strategy are set up as described in [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html). | SprykerShop\Yves\SecurityBlockerPage\Plugin\CustomerPage |
+| CustomerLoginFormCaptchaExpanderPlugin                       | Adds the CAPTCHA field with the `storefront_customer_login` context to the customer login form, including the login step of the checkout. In the `always` CAPTCHA mode, adds the field every time the form is rendered. In the `after_failed_attempts` CAPTCHA mode, adds the field only while a CAPTCHA requirement plugin requires it. Adds nothing if `CaptchaConstants::IS_CAPTCHA_ENABLED` is `false`. | The login CAPTCHA is set up, and `LoginCaptchaEventDispatcherPlugin` is registered as described in [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html#configure-the-login-captcha). | Spryker\Yves\Captcha\Plugin\CustomerPage |
 
 **src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php**
 
@@ -1079,9 +1079,9 @@ Enable the following behaviors by registering the plugins:
 
 namespace Pyz\Yves\CustomerPage;
 
+use Spryker\Yves\Captcha\Plugin\CustomerPage\CustomerLoginFormCaptchaExpanderPlugin;
 use SprykerShop\Yves\CustomerPage\CustomerPageDependencyProvider as SprykerShopCustomerPageDependencyProvider;
 use SprykerShop\Yves\CustomerPage\Plugin\CustomerPage\RedirectUriCustomerRedirectStrategyPlugin;
-use SprykerShop\Yves\SecurityBlockerPage\Plugin\CustomerPage\CustomerLoginFormCaptchaExpanderPlugin;
 
 class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyProvider
 {
@@ -1115,10 +1115,11 @@ Make sure that, when you open `https://mysprykershop.com/login?redirectUri=/cart
 
 {% info_block warningBox "Verification" %}
 
-Make sure the customer login is protected per account:
+Make sure the customer login is protected by the CAPTCHA and per account:
 
-1. On the Storefront login page, enter a wrong password for a customer account three times.
-    Make sure the login form shows a security check with a checkbox.
+1. Go to the Storefront login page.
+    With the default `always` CAPTCHA mode, make sure the login form shows a security check with a checkbox.
+    With the `after_failed_attempts` CAPTCHA mode, enter a wrong password for a customer account three times, and make sure the login form then shows the security check.
 2. Enter the correct password, but do not complete the security check.
     Make sure the form cannot be submitted.
 3. Complete the security check and enter a wrong password.
@@ -1126,7 +1127,7 @@ Make sure the customer login is protected per account:
 4. Repeat step 3 until the account has made nine attempts.
     Make sure the next login attempt, even with the correct password, shows the `Too many login attempts. Please wait 6 minutes before trying again.` message.
 
-The numbers in these steps are the defaults from [Configure SecurityBlocker](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html#configure-securityblocker).
+The numbers in these steps are the defaults from [Configure SecurityBlocker](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html#configure-securityblocker). For the CAPTCHA modes, see [Configure the login CAPTCHA](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html#configure-the-login-captcha).
 
 {% endinfo_block %}
 

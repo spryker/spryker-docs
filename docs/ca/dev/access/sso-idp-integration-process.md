@@ -60,7 +60,7 @@ With OIDC you register Spryker Keycloak as an application (client) in your IdP. 
 1. Create a new application of type **Web application** (a confidential client that can keep a secret). In some IdPs this is called "Regular Web App" or "Web".
 2. Enable the **Authorization Code** flow. Other flows (implicit, device) are not needed.
 3. Register the **redirect URI** (also called callback URL or sign-in redirect URI) that we send you. It has the form `https://<our Keycloak host>/realms/<your realm>/broker/<alias>/endpoint`. It must match exactly, including the full path and lowercase letters.
-4. Allow the scopes `openid`, `email`, and `profile`. If group-based access is needed, also make your IdP include groups (roles) in the token (see Attribute and role mappers).
+4. Allow the scopes `openid`, `email`, and `profile`. If group-based access is needed, also make your IdP include groups (roles) in the token (see [Attribute and role mappers](#attribute-and-role-mappers)).
 5. Use **client secret** authentication (`client_secret_post` or `client_secret_basic`).
 6. Assign the application to the users or groups who should be allowed to sign in. Most IdPs deny everyone by default.
 7. Make sure that every user has an email address and that your IdP includes it in the ID token. Some IdPs omit it by default, so see Provider-specific notes.

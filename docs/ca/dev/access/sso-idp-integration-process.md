@@ -235,7 +235,7 @@ This list is not exhaustive and can change over time. For the complete, current 
 1. We confirm that the connection is configured and give you the sign-in URL for testing.
 2. A test user opens the AWS access realm client (we provide the URL after the connection is configured), enters their work email, and is redirected to your IdP. After signing in at your IdP, they land back in the AWS console.
 3. Test one user who must have access and one who must not.
-4. We agree the go-live date and tell your users which address to use.
+4. We agree on the go-live date with you, and you tell your users which sign-in URL to use.
 
 ### Go-live checklist
 

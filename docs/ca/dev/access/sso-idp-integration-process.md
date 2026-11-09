@@ -140,7 +140,11 @@ When your IdP signing certificate is about to expire or be replaced, contact us 
 
 The general steps above apply to every IdP. These are the points where the popular providers most often cause problems. Field names in vendor consoles change from time to time, so treat the vendor documentation as the final reference.
 
-{% info_block infoBox "Info" %}These notes describe the main principles that we currently know of. IdP products and their defaults differ between versions and tenants, so the provider-specific steps might not work in every case. If something does not work, tell us, and we will help you with the configuration.{% endinfo_block %}
+  {% info_block infoBox "Info" %}
+
+These notes are based on each provider's documentation and default settings at the time of writing. IdP products and their defaults differ between versions and tenants, so these steps might not work for every setup. If something does not work, tell us, and we help you with the configuration.
+
+  {% endinfo_block %}
 
 ### Okta
 

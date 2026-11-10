@@ -1,7 +1,7 @@
 ---
 title: Storefront Assistant agents
 description: Learn which agents and tools Storefront Assistant ships with, how they are registered, and how the assistant selects an agent for each chat turn.
-last_updated: Nov 5, 2026
+last_updated: Nov 10, 2026
 template: concept-topic-template
 label: early-access
 related:
@@ -51,6 +51,9 @@ Each agent can call the tools that are in its tool list. Some tools are research
 | `product_relations` | `ProductRelationsToolPlugin` | No | Returns related products, such as alternatives and accessories. |
 | `product_sets` | `ProductSetsToolPlugin` | No | Returns product sets. |
 | `read_shop_page` | `ReadShopPageToolPlugin` | No | Reads the text of a CMS page, such as returns or delivery information. |
+| `search_documents` | `SearchDocumentsToolPlugin` | No | Searches the documents of the products that the assistant names, such as manuals, and returns the best matching passages. For details, see [Storefront Assistant document knowledge](/docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant-document-knowledge.html). |
+| `ssp_asset_details` | `SspAssetDetailsToolPlugin` | No | Returns the data of a Self-Service Portal asset that the asset details page shows: reference, name, serial number, status, note, owner, assigned business units, asset models, and booked services. |
+| `ssp_asset_compatible_products` | `SspAssetCompatibleProductsToolPlugin` | No | Searches the catalog for the spare parts or services that are compatible with a Self-Service Portal asset. Returns the same products as the **Shop Spare Parts** and **Search services** actions of the asset details page. |
 | `display_products` | `DisplayProductsToolPlugin` | Yes | Shows product cards. |
 | `compare_products` | `CompareProductsToolPlugin` | Yes | Shows a comparison table. |
 | `offer_choices` | `OfferChoicesToolPlugin` | Yes | Shows a clarifying question with answer chips. |
@@ -65,3 +68,23 @@ The tool plugins are registered in the Client `AiFoundationDependencyProvider::g
 - The customer-facing tool names in `AiCommerceConfig::getStorefrontAssistantCustomerFacingToolNames()`.
 
 A customer-facing tool must also be an agent tool.
+
+### Self-Service Portal asset tools
+
+`SspAssetDetailsToolPlugin` and `SspAssetCompatibleProductsToolPlugin` come from the `spryker-feature/self-service-portal` package, namespace `SprykerFeature\Client\SelfServicePortal\Plugin\AiFoundation`. They need the `spryker/ai-foundation` module. On the asset details page, the assistant uses them to answer questions about the asset and to find compatible spare parts and services. The assistant reads the asset reference from the page context of the `asset` page type.
+
+Both tools check that the current company user can see the asset, and return no data otherwise. `ssp_asset_compatible_products` accepts the following arguments:
+
+<div class="width-100">
+
+| ARGUMENT | REQUIRED | DESCRIPTION |
+|----------|----------|-------------|
+| `asset_reference` | Yes | The asset reference, for example `AST--3`. |
+| `product_kind` | Yes | `spare_parts` or `services`. |
+| `query` | No | The part or the service in two to four words, for example `ink cartridge`. When you omit it, the tool lists all compatible products of the kind. |
+| `page` | No | The page number, starting with `1`. |
+| `limit` | No | The number of products, from `1` to `12`. The default is `5`. |
+
+</div>
+
+To enable the tools, register them in the Client `AiFoundationDependencyProvider::getAiToolPlugins()`, and add `SspAssetDetailsToolPlugin::TOOL_NAME` and `SspAssetCompatibleProductsToolPlugin::TOOL_NAME` to `AiCommerceConfig::getProductDiscoveryAgentToolNames()`.

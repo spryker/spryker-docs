@@ -65,6 +65,8 @@ entries:
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
           - title: AI Interaction Audit Logs
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html
+          - title: Vector store
+            url: /docs/dg/dev/ai/ai-foundation/ai-foundation-vector-store.html
       - title: AI Commerce
         nested:
           - title: AI Commerce overview
@@ -94,6 +96,10 @@ entries:
                 url: /docs/dg/dev/ai/ai-commerce/storefront-assistant/install-storefront-assistant.html
               - title: Storefront Assistant agents
                 url: /docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant-agents.html
+              - title: Storefront Assistant document knowledge
+                url: /docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant-document-knowledge.html
+              - title: Install Storefront Assistant document knowledge
+                url: /docs/dg/dev/ai/ai-commerce/storefront-assistant/install-storefront-assistant-document-knowledge.html
               - title: Add a custom Storefront Assistant agent
                 url: /docs/dg/dev/ai/ai-commerce/storefront-assistant/add-custom-storefront-assistant-agent.html
           - title: Search by Image

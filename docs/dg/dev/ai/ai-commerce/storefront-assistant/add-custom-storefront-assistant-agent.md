@@ -1,7 +1,7 @@
 ---
 title: Add a custom Storefront Assistant agent
 description: Learn how to add a custom agent with its own system prompt, tools, and Back Office toggle to the Storefront Assistant.
-last_updated: Nov 5, 2026
+last_updated: Nov 10, 2026
 template: howto-guide-template
 label: early-access
 related:
@@ -72,7 +72,7 @@ An agent implements `SprykerFeature\Client\AiCommerce\Dependency\StorefrontAssis
 | `localeName` | The locale of the current request. |
 | `attachments` | The validated attachments. |
 | `selectedAgent` | The agent that the customer selected, or an empty value for **Auto**. |
-| `storefrontAssistantPageContext` | The product, category, or search context of the current page. |
+| `storefrontAssistantPageContext` | The product, category, search, or asset context of the current page. |
 
 </div>
 

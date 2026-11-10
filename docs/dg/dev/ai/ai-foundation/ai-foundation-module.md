@@ -1,7 +1,7 @@
 ---
 title: AiFoundation module Overview
 description: Integrate AI foundation providers into the Spryker application
-last_updated: May 5, 2026
+last_updated: Nov 10, 2026
 keywords: foundation, ai, neuron, prompt, aiconfiguration, openai, anthropic, bedrock, aws, ollama, gemini, deepseek, huggingface, mistral, grok, azure-openai, agent, chat history, conversation, audit, logging, tracking
 template: howto-guide-template
 label: early-access
@@ -16,6 +16,8 @@ related:
     link: docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
   - title: AI Interaction Audit Logs
     link: docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html
+  - title: Store and search documents with the AiFoundation module
+    link: docs/dg/dev/ai/ai-foundation/ai-foundation-vector-store.html
 ---
 
 This document describes how to integrate and use the AiFoundation module to interact with various AI providers in your Spryker application. The AiFoundation module provides a unified interface for working with multiple AI providers, such as OpenAI, Anthropic Claude, AWS Bedrock, and others.
@@ -487,6 +489,10 @@ Define the expected structure (`structuredMessage` property) of the AI response 
 ### Conversation History
 
 Conversation history is created by `conversationReference` and persisted in the database using the `spy_ai_conversation_history` table. When you provide a `conversationReference` in a prompt request, all messages are automatically stored and previous messages are retrieved to maintain conversation context. For complete details, see [Manage conversation history with the AiFoundation module](/docs/dg/dev/ai/ai-foundation/ai-foundation-conversation-history.html). 
+
+## Vector store
+
+The AiFoundation module can save text documents in a vector store and search them by meaning. For details, see [Store and search documents with the AiFoundation module](/docs/dg/dev/ai/ai-foundation/ai-foundation-vector-store.html).
 
 ## About NeuronAI framework
 

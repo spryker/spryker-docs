@@ -1,7 +1,7 @@
 ---
 title: Install Storefront Assistant
 description: Learn how to install the Storefront Assistant feature that adds an AI shopping chat to the Spryker Storefront.
-last_updated: Nov 5, 2026
+last_updated: Nov 10, 2026
 template: feature-integration-guide-template
 label: early-access
 related:
@@ -21,7 +21,7 @@ related:
   }
 </style>
 
-Storefront Assistant is an AI chat for logged-in Storefront customers. It answers shopping questions from the shop catalog and streams each answer to the browser. This document describes how to install the Storefront Assistant feature.
+Storefront Assistant is an AI chat for logged-in Storefront customers. It answers shopping questions from the shop catalog and streams each answer to the browser. This document describes how to install the Storefront Assistant feature. To let the assistant also answer from product documents, such as manuals, see [Install Storefront Assistant document knowledge](/docs/dg/dev/ai/ai-commerce/storefront-assistant/install-storefront-assistant-document-knowledge.html).
 
 For the architecture and the configuration options, see [Storefront Assistant](/docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant.html).
 
@@ -498,6 +498,17 @@ features:
                         order: 2
                         scopes:
                             - global
+                      - key: asset_page_prompts
+                        name: Asset Page Prompts
+                        description: Prompts offered while the customer is viewing the details page of a Self-Service Portal asset. {assetName} is replaced with the asset name.
+                        type: text
+                        default_value: 'Show me spare parts for {assetName}|Which services can I book for this asset?|What is the status of this asset?'
+                        enabled: true
+                        secret: false
+                        storefront: true
+                        order: 3
+                        scopes:
+                            - global
                       - key: default_prompts
                         name: Default Prompts
                         description: Prompts offered on every other page, the storefront home page included.
@@ -506,7 +517,7 @@ features:
                         enabled: true
                         secret: false
                         storefront: true
-                        order: 3
+                        order: 4
                         scopes:
                             - global
                       - key: product_results_prompts
@@ -517,7 +528,7 @@ features:
                         enabled: true
                         secret: false
                         storefront: true
-                        order: 4
+                        order: 5
                         scopes:
                             - global
 ```

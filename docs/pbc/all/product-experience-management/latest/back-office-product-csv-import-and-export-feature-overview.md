@@ -1,17 +1,17 @@
 ---
 title: Back Office product CSV import and export feature overview
 description: Import and export product data in bulk through the Back Office using CSV files with schema-driven column mapping.
-last_updated: Oct 29, 2026
+last_updated: Nov 10, 2026
 template: concept-topic-template
 ---
 
-The *Back Office Product CSV Import and Export* feature lets Back Office users import and export product data in bulk through CSV files. It is the product data type of the [Data Exchange Jobs](/docs/pbc/all/data-exchange/latest/data-exchange-jobs/data-exchange-jobs-feature-overview.html) feature: the engine stores import jobs and runs, processes uploaded files in batches, records per-row errors, and provides the Back Office **Import & Export** pages, while this feature contributes the *products-csv-import* job type with its column schema, import steps, and export steps through `ProductCsvImportSchemaPlugin` of the `ProductExperienceManagement` module.
+The *Back Office Product CSV Import and Export* feature lets Back Office users import and export product data in bulk through CSV files. It is the product data type of the [Data Exchange Jobs](/docs/pbc/all/data-exchange/latest/data-exchange-jobs/data-exchange-jobs-feature-overview.html) feature: the engine stores import jobs and runs, processes uploaded files in batches, records per-row errors, and provides the Back Office **Import & Export** pages, while this feature contributes two job types through the `ProductExperienceManagement` module: *products-csv-import* with one row per abstract or concrete product, provided by `ProductCsvImportSchemaPlugin`, and *simple-product-csv-import* with one row per simple product, provided by `SimpleProductCsvImportSchemaPlugin`. Both types share the column schema, the import steps, and the export steps; see [Simple product CSV](#simple-product-csv) for the differences.
 
 For the import and export workflow, the template download, and the error handling, see [Data Exchange Jobs feature overview](/docs/pbc/all/data-exchange/latest/data-exchange-jobs/data-exchange-jobs-feature-overview.html). To manage products programmatically instead of through files, see [Products Backend API](/docs/pbc/all/product-experience-management/latest/products-backend-api.html).
 
 ## Supported product data
 
-For the *products-csv-import* schema, the following data is imported and exported:
+For both schemas, the following data is imported and exported:
 
 | DATA | IMPORT | EXPORT | SCOPE |
 | --- | --- | --- | --- |
@@ -80,9 +80,39 @@ The values accepted in the *Product Status* column depend on the row type. Value
 
 The approval statuses of abstract products come from the [Product Approval Process](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-approval-process-feature.html) feature, which the Product Experience Management feature requires. The statuses accepted for concrete products, and the one that activates a concrete product, are defined by `getProductConcreteStatuses()` and `getProductConcreteStatusActive()` in the module's `ProductExperienceManagementConfig`.
 
+## Simple product CSV
+
+A *simple product* is an abstract product with exactly one concrete product. For catalogs that consist of simple products, the *simple-product-csv-import* job type describes each product in one row instead of an abstract product row followed by a concrete product row. The row is imported as both the abstract product and its concrete product, so a value in a column applies to both: the name, the description, the attributes, the prices, and the images are written to the abstract and the concrete product, while the columns processed in one row type only are written to the product they belong to.
+
+The schema has the same columns as *products-csv-import*, with the following differences:
+
+| COLUMN | MEANING IN SIMPLE PRODUCT CSV |
+| --- | --- |
+| *Abstract SKU* | Required. The SKU of the simple product. |
+| *Concrete SKU* | Optional. When empty, the concrete product gets the SKU of the abstract product on creation, and the existing concrete product of the abstract product is updated otherwise. When filled in, the value must match the SKU of the existing concrete product; on creation, it is used as the SKU of the new concrete product. |
+| *Approval Status* | Required. The approval status of the abstract product: `draft`, `waiting_for_approval`, `approved`, or `denied`. |
+| *Product Status* | Required. The status of the concrete product: `active` or `inactive`. |
+
+The following file creates one simple product, which is sold as `simple-001` on both levels, and updates another one whose concrete product keeps its existing SKU:
+
+| ABSTRACT SKU | CONCRETE SKU | APPROVAL STATUS | PRODUCT STATUS | STORES | TAX SET NAME | PRICE (DEFAULT-DE-EUR-GROSS) |
+| --- | --- | --- | --- | --- | --- | --- |
+| simple-001 |  | approved | active | DE;AT | Standard Taxes | 2490 |
+| simple-002 |  | approved | active | DE | Standard Taxes | 1990 |
+
+A row is skipped and reported as an error in the following cases:
+
+- *Abstract SKU* is empty.
+- The same abstract SKU is used in another row of the same file.
+- The abstract product already has two or more concrete products. Such products are not simple products; import them with the *products-csv-import* type.
+- *Concrete SKU* is filled in but differs from the SKU of the existing concrete product of the abstract product.
+- *Concrete SKU* is filled in but belongs to another abstract product.
+
+The export of the *simple-product-csv-import* type contains only the abstract products with exactly one concrete product, one row per product, with *Approval Status* taken from the abstract product and *Product Status* from the concrete product. Abstract products with several concrete products are left out; export them with the *products-csv-import* type.
+
 ## Placeholders in the product schema
 
-The product schema uses placeholders in its column headers. The values come from `ProductCsvExportPlaceholderProvider` of the `ProductExperienceManagement` module and reflect the data of the shop at the time the template or the export is generated.
+Both product schemas use placeholders in their column headers. The values come from `ProductCsvExportPlaceholderProvider` of the `ProductExperienceManagement` module and reflect the data of the shop at the time the template or the export is generated.
 
 <div class="width-100">
 

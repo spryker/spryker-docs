@@ -1,7 +1,7 @@
 ---
 title: Add a custom data type to Data Exchange Jobs
 description: Learn how to import and export your own data with Data Exchange Jobs by implementing a schema plugin for the DataExchange engine.
-last_updated: Nov 3, 2026
+last_updated: Nov 10, 2026
 template: howto-guide-template
 ---
 
@@ -319,7 +319,7 @@ The same dependency provider offers two optional hooks that run once per import 
 
 ## 5. Verify the new type
 
-1. In the Back Office, go to **Import & Export&nbsp;> Import** and click **Create Import Job**. Make sure that **customers-csv-import** is offered in the **Type** field, and create a job with it.
+1. In the Back Office, go to **Import & Export&nbsp;> Import** and click **Create Import Job**. Make sure that **customers-csv-import** is offered in the **Type** field, and create a job with it. If `DataExchangeInstallerPlugin` is registered, `console setup:init-db` creates a job with the reference `customers-csv-import` instead; see [Install the Data Exchange Jobs feature](/docs/pbc/all/data-exchange/latest/data-exchange-jobs/install/install-the-data-exchange-jobs-feature.html#5-register-the-installer-plugin).
 2. In the job row, click **Create Run**. Under *Step 1: Download Template*, click **Download CSV Template**. The file contains one header row with the columns of `getSchema()`.
 3. Fill in a few rows, upload the file under *Step 2: Upload Filled CSV* with **Upload & Queue Import**, and process the run:
 

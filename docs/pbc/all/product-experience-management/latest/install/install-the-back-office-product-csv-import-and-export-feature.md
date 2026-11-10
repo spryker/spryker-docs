@@ -1,7 +1,7 @@
 ---
 title: Install the Back Office Product CSV Import and Export feature
 description: Learn how to install the Back Office Product CSV Import and Export feature into your Spryker project.
-last_updated: Oct 29, 2026
+last_updated: Nov 10, 2026
 template: feature-integration-guide-template
 redirect_from:
   - /docs/pbc/all/product-experience-management/latest/install-the-product-experience-management-feature.html
@@ -107,15 +107,16 @@ Make sure the following changes in transfer objects have been applied:
 
 {% endinfo_block %}
 
-### 4) Register the product schema plugin
+### 4) Register the product schema plugins
 
-The engine learns about the *products-csv-import* job type from the schema plugin registered in the `DataExchange` dependency provider. Without this registration, the type is not offered when creating an import job.
+The engine learns about the *products-csv-import* and *simple-product-csv-import* job types from the schema plugins registered in the `DataExchange` dependency provider. Without this registration, the types are not offered when creating an import job. Register only the types your project needs.
 
 <div class="width-100">
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ProductCsvImportSchemaPlugin | Provides the *products-csv-import* job type: its column schema, import steps, export steps, and placeholder values. | None | SprykerFeature\Zed\ProductExperienceManagement\Communication\Plugin |
+| ProductCsvImportSchemaPlugin | Provides the *products-csv-import* job type: its column schema, import steps, export steps, and placeholder values. One row per abstract or concrete product. | None | SprykerFeature\Zed\ProductExperienceManagement\Communication\Plugin |
+| SimpleProductCsvImportSchemaPlugin | Provides the *simple-product-csv-import* job type: one row per simple product, imported as the abstract product and its single concrete product with the same steps. The export contains only products with exactly one concrete product. | None | SprykerFeature\Zed\ProductExperienceManagement\Communication\Plugin |
 
 </div>
 
@@ -128,6 +129,7 @@ namespace Pyz\Zed\DataExchange;
 
 use Spryker\Zed\DataExchange\DataExchangeDependencyProvider as SprykerDataExchangeDependencyProvider;
 use SprykerFeature\Zed\ProductExperienceManagement\Communication\Plugin\ProductCsvImportSchemaPlugin;
+use SprykerFeature\Zed\ProductExperienceManagement\Communication\Plugin\SimpleProductCsvImportSchemaPlugin;
 
 class DataExchangeDependencyProvider extends SprykerDataExchangeDependencyProvider
 {
@@ -138,6 +140,7 @@ class DataExchangeDependencyProvider extends SprykerDataExchangeDependencyProvid
     {
         return [
             new ProductCsvImportSchemaPlugin(),
+            new SimpleProductCsvImportSchemaPlugin(),
         ];
     }
 
@@ -148,20 +151,25 @@ class DataExchangeDependencyProvider extends SprykerDataExchangeDependencyProvid
     {
         return [
             new ProductCsvImportSchemaPlugin(),
+            new SimpleProductCsvImportSchemaPlugin(),
         ];
     }
 }
 ```
 
+If the Data Exchange Jobs feature is installed with its installer plugin, `console setup:init-db` creates one import job per registered type; see [Install the Data Exchange Jobs feature](/docs/pbc/all/data-exchange/latest/data-exchange-jobs/install/install-the-data-exchange-jobs-feature.html#5-register-the-installer-plugin).
+
 {% info_block warningBox "Verification" %}
 
-Log in to the Back Office, go to **Import & Export&nbsp;> Import**, and click **Create Import Job**. Make sure that **products-csv-import** is offered in the **Type** field.
+Log in to the Back Office, go to **Import & Export&nbsp;> Import**, and click **Create Import Job**. Make sure that **products-csv-import** and **simple-product-csv-import** are offered in the **Type** field.
 
-Create a job with this type, download its template, and make sure that the header row contains the product columns, for example *Abstract SKU*, *Concrete SKU*, and one *Name (…)* column per locale.
+Create a job with the *products-csv-import* type, download its template, and make sure that the header row contains the product columns, for example *Abstract SKU*, *Concrete SKU*, and one *Name (…)* column per locale.
 
 Import a CSV file with a concrete product row and verify the following:
 
 - A row with the status returned by `getProductConcreteStatusActive()` activates the concrete product.
 - A row with a status that is not in `getProductConcreteStatuses()` is skipped and reported as an error.
+
+Create a job with the *simple-product-csv-import* type, download its template, and make sure that the header row contains the *Approval Status* and *Product Status* columns. Import a CSV file with one row that has *Abstract SKU* filled in and *Concrete SKU* empty, and verify that an abstract product and a concrete product with the same SKU are created.
 
 {% endinfo_block %}

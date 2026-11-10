@@ -1,7 +1,7 @@
 ---
 title: Data Exchange Jobs feature overview
 description: Import and export data in bulk with schema-driven jobs, asynchronous runs, batch processing, and per-row error reporting, independent of the data type.
-last_updated: Nov 5, 2026
+last_updated: Nov 10, 2026
 template: concept-topic-template
 ---
 
@@ -28,11 +28,15 @@ Back Office users manage jobs, runs, exports, and templates under **Import & Exp
 | --- | --- |
 | `spryker/data-exchange` | The engine: import jobs, job runs, run errors, the Back Office **Import & Export** pages, the `import:job:run` console command, batch processing, and file storage. |
 | `spryker/data-exchange-extension` | The plugin interfaces a data type implements to plug into the engine. |
-| `spryker-feature/product-experience-management` | The product data type: `ProductCsvImportSchemaPlugin` with the *products-csv-import* schema and the product import and export steps. See [Back Office product CSV import and export feature overview](/docs/pbc/all/product-experience-management/latest/back-office-product-csv-import-and-export-feature-overview.html). |
+| `spryker-feature/product-experience-management` | The product data types: `ProductCsvImportSchemaPlugin` with the *products-csv-import* schema and the product import and export steps, and `SimpleProductCsvImportSchemaPlugin` with the *simple-product-csv-import* schema that describes an abstract product and its single concrete product in one row. See [Back Office product CSV import and export feature overview](/docs/pbc/all/product-experience-management/latest/back-office-product-csv-import-and-export-feature-overview.html). |
+
+## Seeded import jobs
+
+An import job for every registered job type is created when the project is installed. `DataExchangeInstallerPlugin`, registered in the project's `Installer` dependency provider, runs with `console setup:init-db` and creates one import job per plugin in `getImportSchemaPlugins()` that has no job yet. The job gets the type key as its reference (for example, `products-csv-import`) and a name derived from it (`Products Csv Import`). The plugin only adds the jobs that are missing, so running the command again changes nothing, and jobs created in the Back Office are kept. Users can still create further jobs of the same type in the Back Office.
 
 ## Import workflow
 
-1. A Back Office user creates an import job that defines the job type. The engine copies the schema of the matching schema plugin to the job.
+1. A Back Office user creates an import job that defines the job type, or uses one of the [seeded import jobs](#seeded-import-jobs). The engine copies the schema of the matching schema plugin to the job.
 2. The user uploads a CSV file against the import job. The engine stores the file and creates an import job run with the *pending* status.
 3. The `import:job:run` console command, scheduled to run every minute, claims the oldest claimable run and marks it as *processing*. One invocation processes up to `getImportJobRunsPerInvocation()` runs (default 1) and exits; the next scheduled invocation continues with the runs still claimable. For details, see [Import run processing](#import-run-processing).
 4. The engine reads the file in batches of 1000 rows. The headers are mapped to system property names using the job's schema; columns that are not part of the schema are ignored, and rows whose number of columns differs from the header row are recorded as errors.

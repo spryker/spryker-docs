@@ -1,7 +1,7 @@
 ---
 title: Install the Data Exchange Jobs feature
 description: Learn how to install the Data Exchange Jobs feature, the engine behind the Back Office Import & Export pages, into your Spryker project.
-last_updated: Nov 5, 2026
+last_updated: Nov 10, 2026
 template: feature-integration-guide-template
 ---
 
@@ -205,6 +205,7 @@ The engine learns about job types from the schema plugins registered in the `Dat
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ProductCsvImportSchemaPlugin | Provides the *products-csv-import* job type: its column schema, import steps, export steps, and placeholder values. | Product Experience Management feature | SprykerFeature\Zed\ProductExperienceManagement\Communication\Plugin |
+| SimpleProductCsvImportSchemaPlugin | Provides the *simple-product-csv-import* job type: one row per simple product, imported as the abstract product and its single concrete product. | Product Experience Management feature | SprykerFeature\Zed\ProductExperienceManagement\Communication\Plugin |
 
 </div>
 
@@ -217,6 +218,7 @@ namespace Pyz\Zed\DataExchange;
 
 use Spryker\Zed\DataExchange\DataExchangeDependencyProvider as SprykerDataExchangeDependencyProvider;
 use SprykerFeature\Zed\ProductExperienceManagement\Communication\Plugin\ProductCsvImportSchemaPlugin;
+use SprykerFeature\Zed\ProductExperienceManagement\Communication\Plugin\SimpleProductCsvImportSchemaPlugin;
 
 class DataExchangeDependencyProvider extends SprykerDataExchangeDependencyProvider
 {
@@ -227,6 +229,7 @@ class DataExchangeDependencyProvider extends SprykerDataExchangeDependencyProvid
     {
         return [
             new ProductCsvImportSchemaPlugin(),
+            new SimpleProductCsvImportSchemaPlugin(),
         ];
     }
 
@@ -237,6 +240,7 @@ class DataExchangeDependencyProvider extends SprykerDataExchangeDependencyProvid
     {
         return [
             new ProductCsvImportSchemaPlugin(),
+            new SimpleProductCsvImportSchemaPlugin(),
         ];
     }
 }
@@ -250,7 +254,55 @@ Log in to the Back Office, go to **Import & Export&nbsp;> Import**, and click **
 
 {% endinfo_block %}
 
-### 5) Configure navigation
+### 5) Register the installer plugin
+
+The installer plugin creates one import job per registered job type when the database is initialized, so the jobs are available in the Back Office without creating them by hand.
+
+<div class="width-100">
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+| DataExchangeInstallerPlugin | Creates an import job for every plugin in `getImportSchemaPlugins()` that has no job yet. The reference of the job is the type key, the name is derived from it. Existing jobs are kept. | Schema plugins registered | Spryker\Zed\DataExchange\Communication\Plugin\Installer |
+
+</div>
+
+**src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Installer;
+
+use Spryker\Zed\DataExchange\Communication\Plugin\Installer\DataExchangeInstallerPlugin;
+use Spryker\Zed\Installer\InstallerDependencyProvider as SprykerInstallerDependencyProvider;
+
+class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\InstallerExtension\Dependency\Plugin\InstallerPluginInterface>
+     */
+    public function getInstallerPlugins(): array
+    {
+        return [
+            new DataExchangeInstallerPlugin(),
+        ];
+    }
+}
+```
+
+Create the jobs:
+
+```bash
+console setup:init-db
+```
+
+{% info_block warningBox "Verification" %}
+
+Log in to the Back Office, go to **Import & Export&nbsp;> Import**, and make sure that the list contains one job per registered type, for example a job with the reference `products-csv-import`. Run `console setup:init-db` again and make sure that no second job is created.
+
+{% endinfo_block %}
+
+### 6) Configure navigation
 
 Add the following entry to the Back Office navigation:
 
@@ -294,7 +346,7 @@ Log in to the Back Office and verify that the **Import & Export** section appear
 
 {% endinfo_block %}
 
-### 6) Set up console
+### 7) Set up console
 
 #### Register the console command
 
@@ -354,7 +406,7 @@ Check that `import-job-run` appears in the list of scheduled jobs.
 
 {% endinfo_block %}
 
-### 7) Build the Back Office frontend
+### 8) Build the Back Office frontend
 
 The **Export** page ships a JavaScript entry point. Build the Back Office frontend to publish it:
 

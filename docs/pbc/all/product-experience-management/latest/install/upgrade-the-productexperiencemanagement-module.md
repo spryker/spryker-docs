@@ -1,8 +1,8 @@
 ---
 title: Upgrade the ProductExperienceManagement module
 description: Learn how to upgrade the ProductExperienceManagement module to the version that moves the Back Office CSV import and export engine to the DataExchange module.
-last_updated: Oct 29, 2026
-template: module-upgrade-guide-template
+last_updated: Nov 6, 2026
+template: module-migration-guide-template
 ---
 
 ## Upgrade from version 4.0.* to version 5.0.0
@@ -141,8 +141,9 @@ Back Office ACL rules and group rules are defined by bundle, controller, and act
 - Replace calls to the removed `ProductExperienceManagementFacadeInterface` methods listed in the table above with the same methods on `DataExchangeFacadeInterface`, available through `$container->getLocator()->dataExchange()->facade()`.
 - Replace references to `Orm\Zed\ProductExperienceManagement\Persistence\SpyImportJob*` classes with `Orm\Zed\DataExchange\Persistence\SpyImportJob*`.
 - Replace links to `/product-experience-management/job`, `/product-experience-management/run`, `/product-experience-management/export`, and `/product-experience-management/template` with the `/data-exchange/` counterparts, including in end-to-end tests.
+- Move project-level overrides of the engine from the `ProductExperienceManagement` module directory to the `DataExchange` module directory: a Propel schema that extends the `spy_import_job*` tables goes from `src/Pyz/Zed/ProductExperienceManagement/Persistence/Propel/Schema/` to `src/Pyz/Zed/DataExchange/Persistence/Propel/Schema/` with the namespace `Orm\Zed\DataExchange\Persistence` and the package `src.Orm.Zed.DataExchange.Persistence`; Twig overrides of the Import & Export pages go from `src/Pyz/Zed/ProductExperienceManagement/Presentation/` to `src/Pyz/Zed/DataExchange/Presentation/`. Transfer definitions and Back Office translations need no move: transfers are merged by name across modules, and the translation keys of the pages are unchanged.
 
-### 9) Regenerate the code and the caches
+### 10) Regenerate the code and the caches
 
 ```bash
 console transfer:generate

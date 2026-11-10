@@ -1,7 +1,7 @@
 ---
 title: Commerce MCP Server
 description: Expose your Spryker storefront to AI assistants through the Model Context Protocol, so AI agents can search products, manage carts, and complete checkout on behalf of customers.
-last_updated: Jun 22, 2026
+last_updated: Nov 5, 2026
 template: concept-topic-template
 label: early-access
 keywords: ai, mcp, model context protocol, agentic commerce, conversational commerce, storefront, checkout
@@ -10,6 +10,12 @@ keywords: ai, mcp, model context protocol, agentic commerce, conversational comm
 The Commerce MCP Server connects AI assistants to your Spryker storefront through the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro), an open standard for connecting AI applications to external systems. It turns core commerce operations — product discovery, cart management, and checkout — into a set of standardized tools that any MCP-compatible AI agent, such as Claude, ChatGPT, or Perplexity, can call directly.
 
 The result is *agentic commerce*: a shopper describes what they want in natural language, and the AI assistant searches the catalog, builds a cart, and completes the order using your existing Spryker Storefront API — without a person navigating the storefront manually.
+
+{% info_block errorBox "Outdated" %}
+
+This page describes the standalone Commerce MCP Server, which is outdated. Use the [Storefront MCP server](/docs/dg/dev/ai/ai-commerce/storefront-mcp-server/storefront-mcp-server.html) instead. It runs inside the Storefront API and uses the official MCP packages.
+
+{% endinfo_block %}
 
 {% info_block warningBox "Preview capability" %}
 

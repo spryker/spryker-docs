@@ -1,7 +1,7 @@
 ---
 title: Stream AI responses with the AiFoundation module
 description: Use AiFoundationClient::streamPrompt() to send AI responses to the browser chunk by chunk, with tool calls, conversation history, and audit logs.
-last_updated: Oct 12, 2026
+last_updated: Nov 10, 2026
 keywords: foundation, ai, stream, streaming, streamPrompt, sse, server-sent events, chat, tools, conversation history, audit, client
 template: howto-guide-template
 related:
@@ -30,10 +30,10 @@ related:
 ## Prerequisites
 
 - Install and configure the AiFoundation module. For instructions, see [AiFoundation module Overview](/docs/dg/dev/ai/ai-foundation/ai-foundation-module.html).
-- Update the AiFoundation module to version [0.9.0](https://github.com/spryker/ai-foundation/releases/tag/0.9.0) or later:
+- Update the AiFoundation module to version 0.10.0 or later. This version moves the plugin interfaces that this document uses to the `spryker/ai-foundation-extension` module:
 
     ```bash
-    composer require spryker/ai-foundation:"^0.9.0" --update-with-dependencies
+    composer require spryker/ai-foundation:"^0.10.0" --update-with-dependencies
     ```
 
 ## How streaming works
@@ -187,7 +187,7 @@ If the configuration name is not in this list, `streamPrompt()` returns `isSucce
 ### 2. Create a stream event plugin
 
 A stream event plugin receives each chunk and writes it to the HTTP response.
-Implement `Spryker\Client\AiFoundation\Dependency\Plugin\StreamEventPluginInterface`:
+Implement `Spryker\Client\AiFoundationExtension\Dependency\Plugin\StreamEventPluginInterface`:
 
 **src/Pyz/Yves/ProductAssistant/Plugin/AiFoundation/ProductAssistantSseStreamEventPlugin.php**
 
@@ -236,7 +236,7 @@ use Spryker\Client\AiFoundation\AiFoundationDependencyProvider as SprykerAiFound
 class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvider
 {
     /**
-     * @return array<\Spryker\Client\AiFoundation\Dependency\Plugin\StreamEventPluginInterface>
+     * @return array<\Spryker\Client\AiFoundationExtension\Dependency\Plugin\StreamEventPluginInterface>
      */
     protected function getStreamEventPlugins(): array
     {
@@ -280,7 +280,7 @@ class PromptController extends AbstractController
 
 Tools let the model get data or run actions during the turn. For streaming, register tools in the Client, not in Zed.
 
-1. Create a tool plugin that implements `Spryker\Client\AiFoundation\Dependency\Tools\ToolPluginInterface`. For details about tool plugins, see [Use AI tools with the AiFoundation module](/docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html).
+1. Create a tool plugin that implements `Spryker\Client\AiFoundationExtension\Dependency\Tools\ToolPluginInterface`. For details about tool plugins, see [Use AI tools with the AiFoundation module](/docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html).
 2. Register the tool plugin in `getAiToolPlugins()` of the Client `AiFoundationDependencyProvider`.
 3. Add the tool names to `PromptRequestTransfer.toolNames`. The tool name is the value that `ToolPluginInterface::getName()` returns.
 
@@ -346,8 +346,8 @@ All plugin stacks are in the Client `AiFoundationDependencyProvider`.
 
 | Method | Plugin interface | When it runs | Exceptions |
 |---|---|---|---|
-| `getStreamEventPlugins()` | `Spryker\Client\AiFoundation\Dependency\Plugin\StreamEventPluginInterface` | For each chunk of every turn | Caught and logged |
-| `getAiToolPlugins()` | `Spryker\Client\AiFoundation\Dependency\Tools\ToolPluginInterface` | When the model requests the tool, and the tool name is in `toolNames` | Caught, the model gets a failure message |
-| `getPreToolCallPlugins()` | `Spryker\Client\AiFoundation\Dependency\Plugin\PreToolCallPluginInterface` | Before each tool | Not caught, the turn fails |
-| `getPostToolCallPlugins()` | `Spryker\Client\AiFoundation\Dependency\Plugin\PostToolCallPluginInterface` | After each tool | Not caught, the turn fails |
-| `getPostPromptPlugins()` | `Spryker\Client\AiFoundation\Dependency\Plugin\PostPromptPluginInterface` | Once, at the end of the turn | Caught and logged |
+| `getStreamEventPlugins()` | `Spryker\Client\AiFoundationExtension\Dependency\Plugin\StreamEventPluginInterface` | For each chunk of every turn | Caught and logged |
+| `getAiToolPlugins()` | `Spryker\Client\AiFoundationExtension\Dependency\Tools\ToolPluginInterface` | When the model requests the tool, and the tool name is in `toolNames` | Caught, the model gets a failure message |
+| `getPreToolCallPlugins()` | `Spryker\Client\AiFoundationExtension\Dependency\Plugin\PreToolCallPluginInterface` | Before each tool | Not caught, the turn fails |
+| `getPostToolCallPlugins()` | `Spryker\Client\AiFoundationExtension\Dependency\Plugin\PostToolCallPluginInterface` | After each tool | Not caught, the turn fails |
+| `getPostPromptPlugins()` | `Spryker\Client\AiFoundationExtension\Dependency\Plugin\PostPromptPluginInterface` | Once, at the end of the turn | Caught and logged |

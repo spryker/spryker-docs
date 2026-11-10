@@ -1,7 +1,7 @@
 ---
 title: Add a custom Storefront Assistant agent
 description: Learn how to add a custom agent with its own system prompt, tools, and Back Office toggle to the Storefront Assistant.
-last_updated: Nov 5, 2026
+last_updated: Nov 10, 2026
 template: howto-guide-template
 label: early-access
 related:
@@ -419,7 +419,7 @@ A tool is either *research* or *customer-facing*. The result of a research tool 
 
 ### 1) Add the tool plugin
 
-The tool plugin implements `Spryker\Client\AiFoundation\Dependency\Tools\ToolPluginInterface`:
+The tool plugin implements `Spryker\Client\AiFoundationExtension\Dependency\Tools\ToolPluginInterface`:
 
 <div class="width-100">
 
@@ -441,9 +441,9 @@ declare(strict_types = 1);
 
 namespace Pyz\Client\AiCommerce\Plugin\StorefrontAssistant\Tool;
 
-use Spryker\Client\AiFoundation\Dependency\Tools\ToolPluginInterface;
+use Spryker\Client\AiFoundationExtension\Dependency\Tools\ToolPluginInterface;
 use Spryker\Client\Kernel\AbstractPlugin;
-use Spryker\Shared\AiFoundation\Tools\ToolParameterType;
+use Spryker\Shared\AiFoundationExtension\Tools\ToolParameterType;
 use SprykerFeature\Client\AiCommerce\StorefrontAssistant\Tool\ToolParameter;
 
 class GiftOccasionGuideToolPlugin extends AbstractPlugin implements ToolPluginInterface
@@ -489,7 +489,7 @@ class GiftOccasionGuideToolPlugin extends AbstractPlugin implements ToolPluginIn
      *
      * @api
      *
-     * @return array<\Spryker\Client\AiFoundation\Dependency\Tools\ToolParameterInterface>
+     * @return array<\Spryker\Client\AiFoundationExtension\Dependency\Tools\ToolParameterInterface>
      */
     public function getParameters(): array
     {

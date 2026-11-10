@@ -1,7 +1,7 @@
 ---
 title: Extend AI Commerce agents with custom toolsets
 description: Learn how to add project-level tools and toolsets that let AI Commerce agents read and change your own data, and how to do it safely.
-last_updated: Aug 13, 2026
+last_updated: Nov 10, 2026
 template: howto-guide-template
 ---
 
@@ -42,7 +42,7 @@ A tool is executable code that the AI model decides when to call, based on a mod
 
 ## 1) Implement the tool plugin
 
-Create a plugin that implements `ToolPluginInterface` from `Spryker\Zed\AiFoundation\Dependency\Tools`:
+Create a plugin that implements `ToolPluginInterface` from `Spryker\Zed\AiFoundationExtension\Dependency\Tools`:
 
 | METHOD | PURPOSE |
 |--------|---------|
@@ -62,7 +62,7 @@ namespace Pyz\Zed\AiCommerce\Communication\Plugin\AiFoundation\Tool;
 
 use Spryker\Shared\Log\LoggerTrait;
 use Spryker\Zed\AiFoundation\Dependency\Tools\ToolParameter;
-use Spryker\Zed\AiFoundation\Dependency\Tools\ToolPluginInterface;
+use Spryker\Zed\AiFoundationExtension\Dependency\Tools\ToolPluginInterface;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 use Throwable;
 
@@ -88,7 +88,7 @@ class GetProductToolPlugin extends AbstractPlugin implements ToolPluginInterface
     }
 
     /**
-     * @return array<\Spryker\Zed\AiFoundation\Dependency\Tools\ToolParameterInterface>
+     * @return array<\Spryker\Zed\AiFoundationExtension\Dependency\Tools\ToolParameterInterface>
      */
     public function getParameters(): array
     {
@@ -136,7 +136,7 @@ If you expose write operations — creating, updating, or deleting data — the 
 
 ## 2) Implement the toolset plugin
 
-Group the tools in a toolset by implementing `ToolSetPluginInterface` from `Spryker\Zed\AiFoundation\Dependency\Tools`. Group tools that belong to the same domain, so an agent can enable them together:
+Group the tools in a toolset by implementing `ToolSetPluginInterface` from `Spryker\Zed\AiFoundationExtension\Dependency\Tools`. Group tools that belong to the same domain, so an agent can enable them together:
 
 **src/Pyz/Zed/AiCommerce/Communication/Plugin/AiFoundation/ProductInfoToolSetPlugin.php**
 
@@ -146,7 +146,7 @@ Group the tools in a toolset by implementing `ToolSetPluginInterface` from `Spry
 namespace Pyz\Zed\AiCommerce\Communication\Plugin\AiFoundation;
 
 use Pyz\Zed\AiCommerce\Communication\Plugin\AiFoundation\Tool\GetProductToolPlugin;
-use Spryker\Zed\AiFoundation\Dependency\Tools\ToolSetPluginInterface;
+use Spryker\Zed\AiFoundationExtension\Dependency\Tools\ToolSetPluginInterface;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 
 class ProductInfoToolSetPlugin extends AbstractPlugin implements ToolSetPluginInterface
@@ -159,7 +159,7 @@ class ProductInfoToolSetPlugin extends AbstractPlugin implements ToolSetPluginIn
     }
 
     /**
-     * @return array<\Spryker\Zed\AiFoundation\Dependency\Tools\ToolPluginInterface>
+     * @return array<\Spryker\Zed\AiFoundationExtension\Dependency\Tools\ToolPluginInterface>
      */
     public function getTools(): array
     {
@@ -187,7 +187,7 @@ use Spryker\Zed\AiFoundation\AiFoundationDependencyProvider as SprykerAiFoundati
 class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\AiFoundation\Dependency\Tools\ToolSetPluginInterface>
+     * @return array<\Spryker\Zed\AiFoundationExtension\Dependency\Tools\ToolSetPluginInterface>
      */
     protected function getAiToolSetPlugins(): array
     {

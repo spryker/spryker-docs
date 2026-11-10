@@ -1,12 +1,14 @@
 ---
 title: Install the Back Office Product CSV Import and Export feature
 description: Learn how to install the Back Office Product CSV Import and Export feature into your Spryker project.
-last_updated: Sep 7, 2026
+last_updated: Oct 29, 2026
 template: feature-integration-guide-template
 redirect_from:
   - /docs/pbc/all/product-experience-management/latest/install-the-product-experience-management-feature.html
   - /docs/pbc/all/product-experience-management/latest/install-the-product-experience-management-feature
 ---
+
+The Back Office Product CSV Import and Export feature is the product data type of the [Data Exchange Jobs](/docs/pbc/all/data-exchange/latest/data-exchange-jobs/data-exchange-jobs-feature-overview.html) feature. The engine that stores jobs and runs, processes files, and provides the Back Office **Import & Export** pages is installed separately; this document installs the product plugin on top of it.
 
 ## Prerequisites
 
@@ -15,6 +17,7 @@ Install the required features:
 | NAME | VERSION | REQUIRED |
 | --- | --- | --- |
 | Spryker Core | {{page.release_tag}} | Required |
+| Data Exchange Jobs | {{page.release_tag}} | Required |
 | Product | {{page.release_tag}} | Required |
 | Product Image | {{page.release_tag}} | Required |
 | Price Product | {{page.release_tag}} | Required |
@@ -26,13 +29,12 @@ Install the required features:
 | Merchant | {{page.release_tag}} | Required |
 | Product Approval Process | {{page.release_tag}} | Required |
 | Shipment Type | {{page.release_tag}} | Required |
-| File System | {{page.release_tag}} | Required |
+
+For the Data Exchange Jobs feature, see [Install the Data Exchange Jobs feature](/docs/pbc/all/data-exchange/latest/data-exchange-jobs/install/install-the-data-exchange-jobs-feature.html).
 
 ## Install feature core
 
 ### 1) Install the required modules
-
-Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/product-experience-management:"{{page.release_tag}}" --update-with-dependencies
@@ -50,77 +52,12 @@ Make sure the following modules have been installed:
 
 ### 2) Set up configuration
 
-Configure the filesystem storage for import and export files. The feature requires two named filesystem entries: `product-experience-management-imports` and `product-experience-management-exports`.
+The product plugin reads the *Product Status* column of the imported CSV file and relies on `spryker/product-approval` for the approval statuses of abstract products. The following settings are defined in `SprykerFeature\Zed\ProductExperienceManagement\ProductExperienceManagementConfig`:
 
-#### Production (S3)
-
-**config/Shared/config_default.php**
-
-To enable an IAM role configuration, use `IamAws3v3FilesystemBuilderPlugin`:
-
-```php
-use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\IamAws3v3FilesystemBuilderPlugin;
-use Spryker\Shared\FileSystem\FileSystemConstants;
-
-$config[FileSystemConstants::FILESYSTEM_SERVICE] = [
-    // ... existing entries ...
-    'product-experience-management-imports' => [
-        'sprykerAdapterClass' => IamAws3v3FilesystemBuilderPlugin::class,
-        'bucket' => getenv('SPRYKER_S3_PEM_IMPORT_BUCKET') ?: '',
-        'region' => getenv('AWS_REGION') ?: '',
-        'path' => 'pem-imports/',
-    ],
-    'product-experience-management-exports' => [
-        'sprykerAdapterClass' => IamAws3v3FilesystemBuilderPlugin::class,
-        'bucket' => getenv('SPRYKER_S3_PEM_EXPORT_BUCKET') ?: '',
-        'region' => getenv('AWS_REGION') ?: '',
-        'path' => 'pem-exports/',
-    ],
-];
-```
-
-{% info_block warningBox "IAM authentication required" %}
-
-These filesystems authenticate through the IAM role attached to the workload, which resolves AWS credentials automatically. Access keys (`key` and `secret`) are not supported. If your project was set up from older documentation using access keys, migrate to this configuration. For more details, see [AWS S3 filesystem builder plugins](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html#aws-s3-filesystem-builder-plugins).
-
-{% endinfo_block %}
-
-#### Development (local filesystem)
-
-**config/Shared/config_default-docker.dev.php**
-
-```php
-use Spryker\Service\FlysystemLocalFileSystem\Plugin\Flysystem\LocalFilesystemBuilderPlugin;
-use Spryker\Shared\FileSystem\FileSystemConstants;
-
-$config[FileSystemConstants::FILESYSTEM_SERVICE]['product-experience-management-imports'] = [
-    'sprykerAdapterClass' => LocalFilesystemBuilderPlugin::class,
-    'root' => '/data',
-    'path' => '/data/pem-imports',
-];
-
-$config[FileSystemConstants::FILESYSTEM_SERVICE]['product-experience-management-exports'] = [
-    'sprykerAdapterClass' => LocalFilesystemBuilderPlugin::class,
-    'root' => '/data',
-    'path' => '/data/pem-exports',
-];
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure the filesystem directories exist and are writable by the application. For local development, verify that `/data/pem-imports` and `/data/pem-exports` directories are created inside the Docker container.
-
-{% endinfo_block %}
-
-#### Product statuses and error display
-
-The feature reads the *Product Status* column of the imported CSV file and relies on `spryker/product-approval` for the approval statuses of abstract products. The following settings are defined in `SprykerFeature\Zed\ProductExperienceManagement\ProductExperienceManagementConfig`:
-
-| SETTING | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| `IMPORT_ERROR_DISPLAY_THRESHOLD` | Constant | Maximum number of import errors displayed inline on the import job run detail page. When a run produces more errors than this threshold, the errors are offered as a downloadable summary instead. |
-| `getProductConcreteStatuses()` | Method | Statuses accepted in the *Product Status* column of concrete product rows. Rows with any other value are skipped and reported as errors. |
-| `getProductConcreteStatusActive()` | Method | Status that activates a concrete product. Every other status from `getProductConcreteStatuses()` deactivates it. |
+| SETTING | DESCRIPTION |
+| --- | --- |
+| `getProductConcreteStatuses()` | Statuses accepted in the *Product Status* column of concrete product rows. Rows with any other value are skipped and reported as errors. |
+| `getProductConcreteStatusActive()` | Status that activates a concrete product. Every other status from `getProductConcreteStatuses()` deactivates it. |
 
 To change the defaults, extend the module configuration on the project level:
 
@@ -136,11 +73,6 @@ use SprykerFeature\Zed\ProductExperienceManagement\ProductExperienceManagementCo
 class ProductExperienceManagementConfig extends SprykerProductExperienceManagementConfig
 {
     /**
-     * @var int
-     */
-    protected const IMPORT_ERROR_DISPLAY_THRESHOLD = 20;
-
-    /**
      * @return list<string>
      */
     public function getProductConcreteStatuses(): array
@@ -148,9 +80,6 @@ class ProductExperienceManagementConfig extends SprykerProductExperienceManageme
         return ['active', 'inactive'];
     }
 
-    /**
-     * @return string
-     */
     public function getProductConcreteStatusActive(): string
     {
         return 'active';
@@ -158,35 +87,15 @@ class ProductExperienceManagementConfig extends SprykerProductExperienceManageme
 }
 ```
 
-{% info_block warningBox "Verification" %}
+The engine settings, such as the batch size, the maximum upload size, and the number of errors shown inline, are defined in `DataExchangeConfig`; see [Install the Data Exchange Jobs feature](/docs/pbc/all/data-exchange/latest/data-exchange-jobs/install/install-the-data-exchange-jobs-feature.html#2-set-up-configuration).
 
-Import a CSV file with a concrete product row and verify the following:
+### 3) Set up transfer objects
 
-- A row with the status returned by `getProductConcreteStatusActive()` activates the concrete product.
-- A row with a status that is not in `getProductConcreteStatuses()` is skipped and reported as an error.
-
-{% endinfo_block %}
-
-### 3) Set up the database schema and transfer objects
-
-Apply database changes and generate entity and transfer changes:
+Generate the transfer objects of the product plugin:
 
 ```bash
-console propel:install
 console transfer:generate
 ```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the following changes have been applied by checking your database:
-
-| DATABASE ENTITY | TYPE | EVENT |
-| --- | --- | --- |
-| spy_import_job | table | created |
-| spy_import_job_run | table | created |
-| spy_import_job_run_error | table | created |
-
-{% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
@@ -194,123 +103,65 @@ Make sure the following changes in transfer objects have been applied:
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
-| ImportJob | class | created | src/Generated/Shared/Transfer/ImportJobTransfer |
-| ImportJobRun | class | created | src/Generated/Shared/Transfer/ImportJobRunTransfer |
-| ImportJobRunFileInfo | class | created | src/Generated/Shared/Transfer/ImportJobRunFileInfoTransfer |
-| ImportJobRunError | class | created | src/Generated/Shared/Transfer/ImportJobRunErrorTransfer |
-| ImportJobCollection | class | created | src/Generated/Shared/Transfer/ImportJobCollectionTransfer |
-| ImportJobRunCollection | class | created | src/Generated/Shared/Transfer/ImportJobRunCollectionTransfer |
-| ImportJobRunErrorCollection | class | created | src/Generated/Shared/Transfer/ImportJobRunErrorCollectionTransfer |
-| ImportJobRunCollectionRequest | class | created | src/Generated/Shared/Transfer/ImportJobRunCollectionRequestTransfer |
-| ImportJobRunCollectionResponse | class | created | src/Generated/Shared/Transfer/ImportJobRunCollectionResponseTransfer |
-| ImportJobCollectionRequest | class | created | src/Generated/Shared/Transfer/ImportJobCollectionRequestTransfer |
-| ImportJobCollectionResponse | class | created | src/Generated/Shared/Transfer/ImportJobCollectionResponseTransfer |
-| ImportJobCriteria | class | created | src/Generated/Shared/Transfer/ImportJobCriteriaTransfer |
-| ImportJobConditions | class | created | src/Generated/Shared/Transfer/ImportJobConditionsTransfer |
-| ImportJobRunCriteria | class | created | src/Generated/Shared/Transfer/ImportJobRunCriteriaTransfer |
-| ImportJobRunConditions | class | created | src/Generated/Shared/Transfer/ImportJobRunConditionsTransfer |
-| ImportJobRunErrorCriteria | class | created | src/Generated/Shared/Transfer/ImportJobRunErrorCriteriaTransfer |
-| ImportJobRunErrorConditions | class | created | src/Generated/Shared/Transfer/ImportJobRunErrorConditionsTransfer |
-| ImportJobExportResult | class | created | src/Generated/Shared/Transfer/ImportJobExportResultTransfer |
-| ImportStepResponse | class | created | src/Generated/Shared/Transfer/ImportStepResponseTransfer |
-| ImportStepError | class | created | src/Generated/Shared/Transfer/ImportStepErrorTransfer |
 | ImportRowValidationCollection | class | created | src/Generated/Shared/Transfer/ImportRowValidationCollectionTransfer |
-| ImportPublishEvent | class | created | src/Generated/Shared/Transfer/ImportPublishEventTransfer |
 
 {% endinfo_block %}
 
-### 4) Configure navigation
+### 4) Register the product schema plugin
 
-Add the following entry to the Back Office navigation:
+The engine learns about the *products-csv-import* job type from the schema plugin registered in the `DataExchange` dependency provider. Without this registration, the type is not offered when creating an import job.
 
-**config/Zed/navigation.xml**
+<div class="width-100">
 
-```xml
-<import-export>
-    <label>Import &amp; Export</label>
-    <title>Import &amp; Export</title>
-    <icon>swap_vert</icon>
-    <pages>
-        <import>
-            <label>Import</label>
-            <title>Import</title>
-            <bundle>product-experience-management</bundle>
-            <controller>job</controller>
-            <action>index</action>
-            <visible>1</visible>
-        </import>
-        <export>
-            <label>Export</label>
-            <title>Export</title>
-            <bundle>product-experience-management</bundle>
-            <controller>export</controller>
-            <action>index</action>
-            <visible>1</visible>
-        </export>
-    </pages>
-</import-export>
-```
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+| ProductCsvImportSchemaPlugin | Provides the *products-csv-import* job type: its column schema, import steps, export steps, and placeholder values. | None | SprykerFeature\Zed\ProductExperienceManagement\Communication\Plugin |
 
-Build the navigation cache:
+</div>
 
-```bash
-console navigation:cache:remove
-```
-
-{% info_block warningBox "Verification" %}
-
-Log in to the Back Office and verify that the **Import & Export** section appears in the main navigation with **Import** and **Export** sub-items.
-
-{% endinfo_block %}
-
-### 5) Set up console
-
-#### Register the console command
-
-Register the `import:job:run` console command that processes pending import job runs:
-
-**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+**src/Pyz/Zed/DataExchange/DataExchangeDependencyProvider.php**
 
 ```php
-use SprykerFeature\Zed\ProductExperienceManagement\Communication\Console\ImportJobRunConsole;
+<?php
 
-// In getConsoleCommands():
-new ImportJobRunConsole(),
+namespace Pyz\Zed\DataExchange;
+
+use Spryker\Zed\DataExchange\DataExchangeDependencyProvider as SprykerDataExchangeDependencyProvider;
+use SprykerFeature\Zed\ProductExperienceManagement\Communication\Plugin\ProductCsvImportSchemaPlugin;
+
+class DataExchangeDependencyProvider extends SprykerDataExchangeDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\DataExchangeExtension\Dependency\Plugin\ImportSchemaPluginInterface>
+     */
+    protected function getImportSchemaPlugins(): array
+    {
+        return [
+            new ProductCsvImportSchemaPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\DataExchangeExtension\Dependency\Plugin\ExportSchemaPluginInterface>
+     */
+    protected function getExportSchemaPlugins(): array
+    {
+        return [
+            new ProductCsvImportSchemaPlugin(),
+        ];
+    }
+}
 ```
 
 {% info_block warningBox "Verification" %}
 
-Execute the following and verify it completes without errors:
+Log in to the Back Office, go to **Import & Export&nbsp;> Import**, and click **Create Import Job**. Make sure that **products-csv-import** is offered in the **Type** field.
 
-```bash
-console import:job:run
-```
+Create a job with this type, download its template, and make sure that the header row contains the product columns, for example *Abstract SKU*, *Concrete SKU*, and one *Name (…)* column per locale.
 
-The output should indicate that it processed the next pending import job run, or that no pending runs are available.
+Import a CSV file with a concrete product row and verify the following:
 
-{% endinfo_block %}
-
-#### Configure the scheduler
-
-Register the import job run processor to run on a schedule so pending imports are picked up automatically:
-
-**src/Pyz/Zed/SymfonyScheduler/SymfonySchedulerConfig.php**
-
-```php
-'import-job-run' => [
-    'command' => $logger . '$PHP_BIN vendor/bin/console import:job:run',
-    'schedule' => '* * * * *',
-],
-```
-
-{% info_block warningBox "Verification" %}
-
-Verify that the scheduler configuration is loaded:
-
-```bash
-console scheduler:setup
-```
-
-Check that `import-job-run` appears in the list of scheduled jobs.
+- A row with the status returned by `getProductConcreteStatusActive()` activates the concrete product.
+- A row with a status that is not in `getProductConcreteStatuses()` is skipped and reported as an error.
 
 {% endinfo_block %}

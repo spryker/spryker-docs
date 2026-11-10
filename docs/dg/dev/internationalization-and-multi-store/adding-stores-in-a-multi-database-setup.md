@@ -1,5 +1,5 @@
 ---
-title: "Adding stores in a multi-datatabse setup"
+title: "Adding stores in a multi-database setup"
 description: Adding and deploying a new store in multi-db store setup requires additional steps and preparation. This guideline contains all the best practices you need to know.
 last_updated: Nov 10, 2026
 template: howto-guide-template
@@ -52,7 +52,7 @@ This section describes parts of the application you need to take into account wh
 
 ### Code buckets
 
-If code buckets are used, investigate and adjust their configurations, making sure code buckets keeps working properly after the stored is introduced. Thoroughly document the steps for adjusting the code buckets configuration.
+If code buckets are used, investigate and adjust their configurations, making sure code buckets keep working properly after the store is introduced. Thoroughly document the steps for adjusting the code buckets configuration.
 
 ### Cloud environment and monitoring
 
@@ -67,7 +67,7 @@ Every store you add usually adds environment variables or makes existing ones lo
 
 | LIMIT | VALUE | WHAT IT AFFECTS |
 |-------|-------|-----------------|
-| Maximum size of an ECS task definition | 64 KiB (65,536 bytes) | All environment variables of a service together, because each task definition includes the names and values of its environment variables. |
+| Maximum size of an ECS task definition | 64 KiB (65,536 bytes) | All environment variables of a service together, because each environment variable adds an entry to the task definition. |
 | Maximum size of a Parameter Store parameter value, Standard tier | 4 KB | The value of a single environment variable. |
 | Maximum size of a Parameter Store parameter value, Advanced tier | 8 KB | The value of a single environment variable. |
 
@@ -173,9 +173,7 @@ env:
   NEW_RELIC_ENABLED: 0
 command-timeout: 7200
 stores:
-  - { STORE-1 }
-  - { STORE-2 }
-  ...
+  - PL # the new store
 sections:
   init-storage:
     setup-search-create-sources:
@@ -232,41 +230,42 @@ The recipe does not create the DB itself. In Spryker Cloud Commerce OS, the depl
 The `propel:diff` step is required if your project does not commit migration files, which is the default in the Spryker demo shops. Without it, `propel:migrate` reports that there is nothing to migrate, the DB of the new store stays empty, and `setup:init-db` fails.
 
 A minimal recipe for removing a store:
+
 **config/install/EU/delete-store.yml**
 
 ```yml
 env:
-    NEW_RELIC_ENABLED: 0
+  NEW_RELIC_ENABLED: 0
 command-timeout: 7200
 stores:
-  - { STORE-1 }
-  - { STORE-2 }
-  ...
+  - PL # the store to remove
 sections:
+  scheduler-clean:
     scheduler-clean:
-        scheduler-clean:
-            command: "vendor/bin/console scheduler:clean -vvv --no-ansi || true"
-            stores: true
+      command: "vendor/bin/console scheduler:clean -vvv --no-ansi || true"
+      stores: true
+  clean-storage:
     clean-storage:
-        clean-storage:
-            command: "vendor/bin/console storage:delete -vvv --no-ansi"
-            stores: true
-    ...
+      command: "vendor/bin/console storage:delete -vvv --no-ansi"
+      stores: true
+  # ...
 ```
 
-You can use these custom recipes for the deployment of the application by adding them to your main deployment file. Examples:
+You can use these custom recipes for the deployment of the application by adding them to the `image.environment` section of your deploy file. In the following examples, `PL` is the store to add or remove:
 
-```json
-...
-SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "vendor/bin/install {STORES_GO_HERE} -r EU/setup-store --no-ansi -vvv"
-...
+```yml
+SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "vendor/bin/install PL -r EU/setup-store --no-ansi -vvv"
 ```
 
-```json
-...
-SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "vendor/bin/install {STORES_GO_HERE} -r EU/delete-store --no-ansi -vvv"
-...
+```yml
+SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "vendor/bin/install PL -r EU/delete-store --no-ansi -vvv"
 ```
+
+{% info_block warningBox "Hooks run one command" %}
+
+The deployment pipeline runs the value of a hook variable as a single command, without a shell. Shell operators, such as `&&`, `;`, or `|`, are passed to the command as arguments and do not work. To run several commands, put them into a script in your repository and call the script from the hook.
+
+{% endinfo_block %}
 
 The following sections describe how custom recipes are used in a store rollout.
 
@@ -280,16 +279,34 @@ In Spryker Cloud Commerce OS, you can add a store with a destructive or a normal
 | RabbitMQ vhosts in the `Build_and_Prepare` step | Creates missing vhosts and keeps existing ones | Deletes and re-creates the vhosts of all stores |
 | Install hook in the `Run_install` step | `SPRYKER_HOOK_INSTALL` | `SPRYKER_HOOK_DESTRUCTIVE_INSTALL` |
 
+{% info_block warningBox "Default destructive install" %}
+
+If `SPRYKER_HOOK_DESTRUCTIVE_INSTALL` is not set, the destructive pipeline runs `vendor/bin/install -r destructive --no-ansi -vvv`. In the Spryker demo shops, this recipe deletes the DB tables, the key-value store data, and the search indexes of all stores. Before you run a destructive deployment, make sure that the hook runs only the recipe for the new store, and create a DB backup.
+
+{% endinfo_block %}
+
 Because a normal deployment keeps the vhosts and messages of existing stores, we recommend using it to add a store. To add a store with a normal deployment, do the following:
 
-1. For one deployment, set `SPRYKER_HOOK_INSTALL` to run the recipe for the new store first, and then your regular install recipe:
+1. Create a script that runs the recipe for the new store first, and then your regular install recipe. Replace `EU/production` with the recipe that `SPRYKER_HOOK_INSTALL` runs in your project.
 
-    ```yml
-    SPRYKER_HOOK_INSTALL: "vendor/bin/install {STORES_GO_HERE} -r EU/setup-store --no-ansi -vvv && vendor/bin/install -r EU/production --no-ansi -vvv"
+    **config/install/add-store.sh**
+
+    ```bash
+    #!/usr/bin/env bash
+    set -euo pipefail
+
+    vendor/bin/install "$1" -r EU/setup-store --no-ansi -vvv
+    vendor/bin/install -r EU/production --no-ansi -vvv
     ```
 
-2. Run a normal deployment.
-3. Revert `SPRYKER_HOOK_INSTALL` to its original value.
+2. For one deployment, set `SPRYKER_HOOK_INSTALL` to run the script for the new store:
+
+    ```yml
+    SPRYKER_HOOK_INSTALL: "bash config/install/add-store.sh PL"
+    ```
+
+3. Run a normal deployment.
+4. Revert `SPRYKER_HOOK_INSTALL` to its original value.
 
 Make sure that the recipe for adding a store can run more than once without side effects. A normal deployment has no manual approval step, and if it fails, you need to run it again.
 
@@ -328,9 +345,9 @@ If runtime setup is disabled in your project, do the following:
     env:
       NEW_RELIC_ENABLED: 0
     stores:
-      - { STORE-1 }
-      - { STORE-2 }
-      - { NEW-STORE }
+      - DE
+      - AT
+      - PL # the new store
     sections:
       queue-setup:
         queue-setup:
@@ -338,10 +355,20 @@ If runtime setup is disabled in your project, do the following:
           stores: true
     ```
 
-2. In `SPRYKER_HOOK_DESTRUCTIVE_INSTALL`, run this recipe before the recipe for the new store:
+2. Create a script that runs this recipe before the recipe for the new store, and call it from `SPRYKER_HOOK_DESTRUCTIVE_INSTALL`:
+
+    **config/install/add-store-destructive.sh**
+
+    ```bash
+    #!/usr/bin/env bash
+    set -euo pipefail
+
+    vendor/bin/install -r EU/queue-setup --no-ansi -vvv
+    vendor/bin/install "$1" -r EU/setup-store --no-ansi -vvv
+    ```
 
     ```yml
-    SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "vendor/bin/install -r EU/queue-setup --no-ansi -vvv && vendor/bin/install {STORES_GO_HERE} -r EU/setup-store --no-ansi -vvv"
+    SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "bash config/install/add-store-destructive.sh PL"
     ```
 
 3. In the recipe for adding a store, run `queue:setup` with `stores: true` after the DB is initialized and migrated, and before any data import or publish command that writes to queues.
@@ -350,7 +377,7 @@ If runtime setup is disabled in your project, do the following:
 
 {% info_block warningBox "Do not delete data of existing stores" %}
 
-Do not add commands that purge or delete data to the recipe for adding a store, such as `queue:queue:purge-all`, `storage:delete`, `search:delete`, or `scheduler:clean` without store scoping. These commands remove data of existing stores.
+Do not add commands that purge or delete data to the recipe for adding a store, such as `queue:queue:purge-all`, `propel:tables:drop`, `storage:delete`, `elasticsearch:index:delete`, or `scheduler:clean` without store scoping. These commands remove data of existing stores.
 
 {% endinfo_block %}
 
@@ -367,9 +394,7 @@ Add the configuration for the new store to the staging environment's configurati
 To initialize the new store's DB, run a normal or a destructive deployment, as described in [Choose the deployment pipeline](#choose-the-deployment-pipeline). For a destructive deployment, in the `image.environment` section of the deployment file, define only the new store in `SPRYKER_HOOK_DESTRUCTIVE_INSTALL`. In the following example, new PL and AT stores are introduced:
 
 ```yml
-...
-SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "vendor/bin/install PL,AT -r EU/destructive --no-ansi -vvv"
-...
+SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "vendor/bin/install PL,AT -r EU/setup-store --no-ansi -vvv"
 ```
 
 We also recommend using a custom recipe for this deployment as described in [Setting up additional deployment recipes](#setting-up-additional-deployment-recipes).
@@ -423,7 +448,7 @@ Prepare and test the configuration for *all* the stores you want to release.
 #### 2. Staging setup
 
 1. Prepare a staging deploy file, containing all the stores you want to release.
-2. Open a support request an describe the end result. Attach the deploy file and optionally provide a rollout schedule for all the stores.
+2. Open a support request and describe the end result. Attach the deploy file and optionally provide a rollout schedule for all the stores.
 3. Save the configuration you've prepared separately.
 4. Update the configuration to contain only the first store you want to release.
 5. Run a normal or destructive deployment, as described in [Choose the deployment pipeline](#choose-the-deployment-pipeline).

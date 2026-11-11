@@ -1,6 +1,6 @@
 ---
 title: Access
-last_updated: Jul 22, 2026
+last_updated: Nov 11, 2026
 description: Describes how to access AWS Management Console, locate credentials for Spryker Cloud Commerce OS services, and connect to services
 template: concept-topic-template
 redirect_from:

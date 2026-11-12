@@ -40,7 +40,7 @@ image:
 
 {% info_block warningBox "Conflicting extensions" %}
 
-The `opentelemetry` extension does not work alongside some other PHP extensions. For example, it does not work with SourceGuardian, and it disables itself when the `blackfire` extension is loaded. For the list of known conflicts, see [Conflicting extensions](https://github.com/open-telemetry/opentelemetry-php-instrumentation?tab=readme-ov-file#conflicting-extensions). For more information about OpenTelemetry in Spryker, see [OpenTelemetry instrumentation](/docs/ca/dev/monitoring/spryker-monitoring-integration/opentelemetry-instrumentation.html).
+The `opentelemetry` extension is known not to work alongside SourceGuardian. If your project uses SourceGuardian, do not enable `otel`. For details, see [Conflicting extensions](https://github.com/open-telemetry/opentelemetry-php-instrumentation?tab=readme-ov-file#conflicting-extensions). For more information about OpenTelemetry in Spryker, see [OpenTelemetry instrumentation](/docs/ca/dev/monitoring/spryker-monitoring-integration/opentelemetry-instrumentation.html).
 
 {% endinfo_block %}
 

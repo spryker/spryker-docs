@@ -1,7 +1,7 @@
 ---
 title: Install Search Statistics
 description: Learn how to install and configure the Search Statistics feature in a Spryker project.
-last_updated: Oct 22, 2026
+last_updated: Nov 12, 2026
 template: howto-guide-template
 ---
 
@@ -24,21 +24,51 @@ Install the required features:
 composer require spryker-eco/google-analytics:"^1.0.0" --update-with-dependencies
 ```
 
-{% info_block infoBox "Info" %}
+### 2) Enable the `protobuf` PHP extension
 
-If your project uses [spryker/php](https://hub.docker.com/r/spryker/php) Docker image from before September 2025, you may need to update it.
+Search Statistics requires the `protobuf` PHP extension. The [spryker/php](https://hub.docker.com/r/spryker/php) Docker image includes the extension but does not load it by default, so you must enable it in the deploy file.
 
-Check whether the required PHP module is installed:
+The Docker SDK has no separate switch for `protobuf`. Use one of the following options in every deploy file you use, such as local, staging, and production.
 
-```bash
-docker/sdk cli php -m | grep protobuf
+**Option 1: Enable the `otel` extension**
+
+The `otel` extension loads `opentelemetry`, `grpc`, and `protobuf` together. To enable it, add `otel` to `image: php: enabled-extensions`:
+
+```yaml
+image:
+    tag: spryker/php:8.3
+    php:
+        enabled-extensions:
+            - otel
 ```
 
-If the command returns no output, refresh the image by running:
+**Option 2: Load only the `protobuf` extension**
+
+If your project uses New Relic or otherwise does not need `opentelemetry` and `grpc`, load only `protobuf` through the `php.ini` configuration of the deploy file:
+
+```yaml
+image:
+    tag: spryker/php:8.3
+    php:
+        ini:
+            extension: protobuf
+```
+
+After you choose an option, rebuild the images and restart the application:
 
 ```bash
 docker/sdk boot your_deploy_file.yml && docker/sdk up
 ```
+
+{% info_block warningBox "Verification" %}
+
+Make sure the `protobuf` extension is loaded:
+
+```bash
+docker/sdk cli php --ri protobuf
+```
+
+The command must return the extension information, including its version, instead of `Extension 'protobuf' not present.`
 
 {% endinfo_block %}
 
@@ -52,7 +82,7 @@ Make sure the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Generate transfer objects
+### 3) Generate transfer objects
 
 ```bash
 console transfer:generate
@@ -71,13 +101,13 @@ Verify that the following transfer objects have been generated:
 
 {% endinfo_block %}
 
-### 3) Generate translations
+### 4) Generate translations
 
 ```bash
 console translator:generate-cache
 ```
 
-### 4) Configure navigation
+### 5) Configure navigation
 
 Update the `analytics` navigation entry in `config/Zed/navigation.xml` to add **Search Statistics** as a sub-page. Replace the existing `<analytics>` entry with the following:
 
@@ -120,7 +150,7 @@ Log in to the Back Office and verify that **Analytics > Search Statistics** appe
 
 {% endinfo_block %}
 
-### 5) Configure TypeScript paths
+### 6) Configure TypeScript paths
 
 In `tsconfig.yves.json`, add the `TraceableEventWidget` path alias to `compilerOptions.paths`:
 
@@ -138,9 +168,9 @@ In `tsconfig.yves.json`, add the `TraceableEventWidget` path alias to `compilerO
 }
 ```
 
-### 6) Set up behavior
+### 7) Set up behavior
 
-#### 6.1) Synchronize configuration definitions
+#### 7.1) Synchronize configuration definitions
 
 Import the Search Statistics configuration schema into the Configuration module:
 
@@ -156,7 +186,7 @@ console configuration:sync
 
 {% endinfo_block %}
 
-#### 6.2) Configure Google Analytics 4 credentials
+#### 7.2) Configure Google Analytics 4 credentials
 
 Before you configure the Back Office, obtain the following parameters from Google:
 

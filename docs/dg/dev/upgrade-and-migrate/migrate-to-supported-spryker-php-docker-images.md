@@ -23,7 +23,10 @@ Spryker maintains semantic tags directly. Each semantic tag automatically receiv
 
 ## Image tags to avoid
 
-Do not pin an environment to an implementation-specific image tag, such as `spryker/php:8.x-alpineX.Y`. Use the corresponding semantic tag instead — for example, replace `spryker/php:8.4-alpine3.22` with `spryker/php:8.4`.
+To keep receiving updates automatically, do not pin an environment to either of the following:
+
+- An implementation-specific image tag, such as `spryker/php:8.x-alpineX.Y`. Use the corresponding semantic tag instead — for example, replace `spryker/php:8.4-alpine3.22` with `spryker/php:8.4`.
+- An image digest, such as `spryker/php:8.3-alpine3.24@sha256:abc123...`. A digest is a SHA-256 hash that identifies one exact image build, so an environment pinned to a digest never receives further security or maintenance updates automatically. This also applies when a digest follows a semantic tag, such as `spryker/php:8.3@sha256:abc123...`: the digest takes precedence over the tag. Use the semantic tag without a digest instead, such as `spryker/php:8.3`.
 
 ## Custom and third-party images
 

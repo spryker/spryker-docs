@@ -1,7 +1,7 @@
 ---
 title: Install Google reCAPTCHA
 description: Learn how to use Google reCAPTCHA v2 or v3 as the CAPTCHA provider of the CAPTCHA feature.
-last_updated: Nov 10, 2026
+last_updated: Nov 11, 2026
 template: howto-guide-template
 related:
   - title: Install the CAPTCHA feature
@@ -177,7 +177,7 @@ In deployment pipelines, use `npm run yves:production`, `npm run zed:production`
 
 {% info_block warningBox "Verification" %}
 
-1. Go to the Back Office login page. In the default `always` CAPTCHA mode, the login form shows reCAPTCHA right away. In the `after_failed_attempts` CAPTCHA mode, first enter a wrong password for a user as many times as `SecurityBlockerBackofficeConstants::USER_ACCOUNT_CHALLENGE_NUMBER_OF_ATTEMPTS` defines, and reload the login page. For this setting, see [Install the login brute-force protection](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-login-brute-force-protection.html#2-set-up-the-configuration).
+1. Go to the Back Office login page. In the default `after_failed_attempts` CAPTCHA mode, first enter a wrong password for a user as many times as the **User Failed Attempts** Back Office setting defines, three times by default, and reload the login page. In the `always` CAPTCHA mode, the login form shows reCAPTCHA right away. For these settings, see [Install the CAPTCHA feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-captcha-feature.html#2-set-up-the-configuration).
 2. With v2, make sure the login form shows the reCAPTCHA checkbox. With v3, make sure the page shows the reCAPTCHA badge.
 3. With v2, select the checkbox. Enter the correct password and submit the form.
     Make sure you are logged in to the Back Office.
@@ -196,7 +196,7 @@ Make sure your infrastructure meets the following requirements:
 
   For the default security headers and where to change them, see [Security guidelines](/docs/dg/dev/guidelines/security-guidelines.html#security-headers).
 - Allow outgoing HTTPS requests from the Back Office, the Merchant Portal, and the Backend Gateway to `https://www.google.com/recaptcha/api/siteverify`. If Google cannot be reached within 5 seconds, the logins that require a CAPTCHA are rejected. On Spryker Cloud, the network of an environment is managed by Spryker: if outgoing requests to Google are blocked, create a [support case](https://support.spryker.com).
-- reCAPTCHA sends the IP address and browser signals of a visitor to Google and sets the `_GRECAPTCHA` cookie. The widget loads only on a login form that requires a CAPTCHA, which is every login form in the default `always` CAPTCHA mode. Cover reCAPTCHA in your privacy policy and cookie notice.
+- reCAPTCHA sends the IP address and browser signals of a visitor to Google and sets the `_GRECAPTCHA` cookie. The widget loads only on a login form that requires a CAPTCHA: after failed logins in the default `after_failed_attempts` CAPTCHA mode, and on every login form in the `always` CAPTCHA mode. Cover reCAPTCHA in your privacy policy and cookie notice.
 - reCAPTCHA v3 shows the reCAPTCHA badge of Google on the pages that load it. If you hide the badge, show the text "This site is protected by reCAPTCHA" in the form.
 
 If you installed the login brute-force protection, its infrastructure requirements apply as well. For details, see [Install the login brute-force protection](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-login-brute-force-protection.html#5-prepare-the-infrastructure).

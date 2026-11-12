@@ -1,7 +1,7 @@
 ---
 title: Install the CAPTCHA feature
 description: Learn how to protect the login forms of the Storefront, the Back Office, and the Merchant Portal with a CAPTCHA.
-last_updated: Nov 10, 2026
+last_updated: Nov 12, 2026
 template: feature-integration-guide-template
 related:
   - title: Install ALTCHA
@@ -65,6 +65,12 @@ composer require spryker-shop/agent-page:"^1.29.0" --update-with-dependencies
 composer require spryker/security-merchant-portal-gui:"^4.9.0" spryker/agent-security-merchant-portal-gui:"^2.6.0" --update-with-dependencies
 ```
 
+If you installed the multi-factor authentication of the Merchant Portal, update its login handler too. With this version, the Merchant Portal login forms are sent only once:
+
+```bash
+composer require spryker/multi-factor-auth-merchant-portal:"^2.6.0" --update-with-dependencies
+```
+
 4. Install a CAPTCHA provider as described in [Install ALTCHA](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-altcha.html) or [Install Google reCAPTCHA](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-google-recaptcha.html).
 
 {% info_block warningBox "Verification" %}
@@ -110,10 +116,19 @@ The CAPTCHA mode defines when the login forms require a CAPTCHA. It is a Back Of
 
 | CAPTCHA MODE | BEHAVIOR |
 | --- | --- |
-| `always` (**Always**), default | Every login form shows the CAPTCHA every time it is rendered, and every login submission is checked. |
-| `after_failed_attempts` (**After Failed Attempts**) | A login form shows and checks the CAPTCHA only after repeated failed logins. The CAPTCHA requirement plugins of the login brute-force protection decide when a CAPTCHA is required. Without these plugins, no login requires a CAPTCHA in this mode. For the plugins and their thresholds, see [Install the login brute-force protection](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-login-brute-force-protection.html#require-a-captcha-after-failed-logins). |
+| `after_failed_attempts` (**After Failed Attempts**), default | A login form shows and checks the CAPTCHA only after repeated failed logins. The CAPTCHA requirement plugins of the login brute-force protection decide when a CAPTCHA is required. Without these plugins, every login form shows the CAPTCHA, and an error is logged. For the plugins and their thresholds, see [Install the login brute-force protection](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-login-brute-force-protection.html#require-a-captcha-after-failed-logins). |
+| `always` (**Always**) | Every login form shows the CAPTCHA every time it is rendered, and every login submission is checked. |
 
 `CaptchaConstants::IS_CAPTCHA_ENABLED` and the CAPTCHA mode work together: `IS_CAPTCHA_ENABLED` switches the CAPTCHA on or off for an environment, and the mode defines when a login requires the CAPTCHA while it is switched on. An unknown mode value is treated as `always`.
+
+In the `after_failed_attempts` mode, two more settings define after how many failed logins to one account its login form requires a CAPTCHA. The Back Office shows them only while **After Failed Attempts** is selected:
+
+| SETTING | KEY | LOGIN FORMS | VALUE |
+| --- | --- | --- | --- |
+| **Customer Failed Attempts** | `security:captcha:login:customer_number_of_failed_attempts` | Storefront customer login | A whole number from 1 to 10. Default: 3. |
+| **User Failed Attempts** | `security:captcha:login:user_number_of_failed_attempts` | Back Office, Merchant Portal, Merchant Portal agent, and Storefront agent logins | A whole number from 1 to 10. Default: 3. |
+
+The login brute-force protection reads these settings when its login protection strategy is `ip-and-account`; the default `ip` strategy counts failed logins per IP address only. A value that reaches the number of attempts after which the login brute-force protection locks an account means that the account is locked before its login form requires a CAPTCHA.
 
 The Back Office and the Merchant Portal read the mode from the database, so they apply a changed mode at once. The Storefront reads the mode from the key-value storage, so it applies a changed mode after the `sync.storage.configuration` queue has been processed.
 
@@ -123,24 +138,29 @@ Register the setting in the Back Office by synchronizing the configuration schem
 console configuration:sync
 ```
 
-To change the mode, in the Back Office, go to **Configuration**, select **Security** in the sidebar, and open the **CAPTCHA** tab. In the **Login Forms** group, select the **CAPTCHA Mode**. The key of the setting is `security:captcha:login:mode`, and its scope is global.
+To change the mode, in the Back Office, go to **Configuration**, select **Security** in the sidebar, and open the **CAPTCHA** tab. In the **Login Forms** group, select the **CAPTCHA Mode**, and, for **After Failed Attempts**, set **Customer Failed Attempts** and **User Failed Attempts**. The key of the mode setting is `security:captcha:login:mode`. All three settings have the global scope.
 
-To set the mode during deployment, for example, in a test environment, import it with the `configuration-value` data importer, as described in [Configuration Management](/docs/dg/dev/backend-development/configuration-management.html#data-import):
+To set the settings during deployment, for example, in a test environment, import them with the `configuration-value` data importer, as described in [Configuration Management](/docs/dg/dev/backend-development/configuration-management.html#data-import). The data importer does not validate the values, so import only whole numbers from 1 to 10:
 
 ```csv
 setting_key,scope,scope_identifier,value
 security:captcha:login:mode,global,,after_failed_attempts
+security:captcha:login:customer_number_of_failed_attempts,global,,2
+security:captcha:login:user_number_of_failed_attempts,global,,2
 ```
 
 {% info_block warningBox "Verification" %}
 
-In the Back Office, go to **Configuration** > **Security** > **CAPTCHA**. Make sure the **Login Forms** group contains the **CAPTCHA Mode** setting with the **Always** and **After Failed Attempts** options.
+In the Back Office, go to **Configuration** > **Security** > **CAPTCHA**. Make sure the following applies:
+- The **Login Forms** group contains the **CAPTCHA Mode** setting with the **After Failed Attempts** and **Always** options, and **After Failed Attempts** is selected.
+- The **Customer Failed Attempts** and **User Failed Attempts** settings show `3`. When you select **Always**, they are hidden.
+- When you enter `11` or `2.5` in **Customer Failed Attempts** and save, the Back Office shows the `Enter a whole number from 1 to 10.` error.
 
 {% endinfo_block %}
 
 {% info_block infoBox "Test environments" %}
 
-End-to-end tests cannot solve a CAPTCHA. In the configuration of such an environment, for example, `config/Shared/config_default-ci.php`, switch the CAPTCHA off with `$config[CaptchaConstants::IS_CAPTCHA_ENABLED] = false;`. To test the CAPTCHA itself, keep it switched on, and set the CAPTCHA mode of the environment to `after_failed_attempts`. Then only the tests that make failed logins have to solve a CAPTCHA.
+End-to-end tests cannot solve a CAPTCHA. In the configuration of such an environment, for example, `config/Shared/config_default-ci.php`, switch the CAPTCHA off with `$config[CaptchaConstants::IS_CAPTCHA_ENABLED] = false;`. To test the CAPTCHA itself, keep it switched on, and keep the default `after_failed_attempts` CAPTCHA mode. Then only the tests that make failed logins have to solve a CAPTCHA. To make these tests shorter, import a lower number of failed attempts, as shown in the previous example.
 
 {% endinfo_block %}
 
@@ -374,13 +394,14 @@ The Storefront login forms render the CAPTCHA field through the `form` molecule,
 
 {% info_block warningBox "Verification" %}
 
-1. In the default `always` CAPTCHA mode, go to the Storefront login page. Make sure the login form shows the CAPTCHA widget.
+1. In the Back Office, set the CAPTCHA mode to **Always**. Go to the Storefront login page. Make sure the login form shows the CAPTCHA widget.
 2. Enter the email address and the correct password of a customer, but do not complete the CAPTCHA. Submit the form.
     Make sure the login is rejected with the `Please complete the security check.` message.
 3. Complete the CAPTCHA, enter the correct password, and submit the form.
     Make sure the customer is logged in.
 4. Make sure the log contains no error that names `CaptchaRouteProviderPlugin`.
 5. If you installed the Agent Assist feature, repeat the previous steps on the agent login page, `https://mysprykershop.com/agent/login`, with an agent account.
+6. Set the CAPTCHA mode back to the mode you use, for example, **After Failed Attempts**.
 
 {% endinfo_block %}
 
@@ -550,9 +571,10 @@ Without anonymous access, the challenge endpoints redirect to the login page ins
 
 {% info_block warningBox "Verification" %}
 
-1. In the default `always` CAPTCHA mode, go to the Back Office login page. Make sure the login form shows the CAPTCHA widget.
+1. In the Back Office, set the CAPTCHA mode to **Always**, and log out. Make sure the login form shows the CAPTCHA widget.
 2. Complete the CAPTCHA, enter the correct password of a user, and submit the form.
     Make sure you are logged in to the Back Office.
+3. Set the CAPTCHA mode back to the mode you use, for example, **After Failed Attempts**.
 
 {% endinfo_block %}
 
@@ -647,6 +669,16 @@ The default Merchant Portal login templates render the CAPTCHA field before the 
 
 The Merchant Portal login form is submitted asynchronously. When the CAPTCHA is rejected, the response redirects to the login page and shows the reason as a notification.
 
+A CAPTCHA solution and the CSRF token of the login form can be used only once. If the login form were sent a second time, for example after a double-click on the login button, the second request would fail and show an error message after the first request has logged the user in. The multi-factor authentication handler of the Merchant Portal sends a login form only once when the template marks the form as a login form. If your project overrides one of the Merchant Portal login templates, pass `isLogin: true` to the handler:
+
+```twig
+{% raw %}{% include '@MultiFactorAuthMerchantPortal/Partials/mp-mfa-handler.twig' ignore missing with {
+    formSelector: "form[name=#{form.vars.name}]",
+    url: form.vars.action,
+    isLogin: true,
+} %}{% endraw %}
+```
+
 The challenge endpoint of the Merchant Portal must allow anonymous access. The Back Office firewall covers every path of the Merchant Portal application, so add `captcha/merchant-portal-challenge$` to the paths that the Merchant Portal firewall ignores. Do not add it to `MERCHANT_PORTAL_ROUTE_PATTERN`: this pattern also defines the firewall of the multi-factor authentication of the Merchant Portal, which runs without security. If your project already overrides the pattern, add `captcha/merchant-portal-challenge$` to its alternatives:
 
 **src/Pyz/Zed/SecurityMerchantPortalGui/SecurityMerchantPortalGuiConfig.php**
@@ -671,10 +703,13 @@ The access control rule of the Merchant Portal endpoint is part of the `AclConfi
 
 {% info_block warningBox "Verification" %}
 
-1. In the default `always` CAPTCHA mode, go to the Merchant Portal login page. Make sure the login form shows the CAPTCHA widget.
+1. In the Back Office, set the CAPTCHA mode to **Always**. Go to the Merchant Portal login page. Make sure the login form shows the CAPTCHA widget.
 2. Complete the CAPTCHA, enter the correct password of a merchant user, and submit the form.
     Make sure you are logged in to the Merchant Portal.
-3. If you installed the Merchant Portal Agent Assist feature, repeat the previous steps on `https://mp.mysprykershop.com/agent-security-merchant-portal-gui/login` with a merchant agent.
+3. Log out. Complete the CAPTCHA, enter the correct password, and double-click the login button.
+    Make sure you are logged in to the Merchant Portal and no error message is shown.
+4. If you installed the Merchant Portal Agent Assist feature, repeat the previous steps on `https://mp.mysprykershop.com/agent-security-merchant-portal-gui/login` with a merchant agent.
+5. Set the CAPTCHA mode back to the mode you use, for example, **After Failed Attempts**.
 
 {% endinfo_block %}
 

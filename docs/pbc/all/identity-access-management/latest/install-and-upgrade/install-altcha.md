@@ -1,7 +1,7 @@
 ---
 title: Install ALTCHA
 description: Learn how to use ALTCHA, a proof-of-work CAPTCHA without third-party services, as the CAPTCHA provider of the login forms.
-last_updated: Nov 10, 2026
+last_updated: Nov 11, 2026
 template: howto-guide-template
 related:
   - title: Install the CAPTCHA feature
@@ -212,7 +212,7 @@ An administrator can change the secret in the Back Office at any time. Challenge
 
 {% info_block warningBox "Missing secret" %}
 
-Without a secret, or with a secret shorter than 32 characters, ALTCHA cannot create or verify challenges, and an error is logged: every login that requires a CAPTCHA is rejected with the `The security check is currently unavailable. Please try again later.` message. In the default `always` CAPTCHA mode, this blocks every login form, including the Back Office login, so you cannot log in to the Back Office to enter a secret. The install recipes prevent this. To recover an environment without a valid secret, run `console captcha-altcha:hmac-secret:generate`, or switch the CAPTCHA off temporarily with `$config[CaptchaConstants::IS_CAPTCHA_ENABLED] = false;`.
+Without a secret, or with a secret shorter than 32 characters, ALTCHA cannot create or verify challenges, and an error is logged: every login that requires a CAPTCHA is rejected with the `The security check is currently unavailable. Please try again later.` message. In the `always` CAPTCHA mode, this blocks every login form, including the Back Office login, so you cannot log in to the Back Office to enter a secret. In the default `after_failed_attempts` CAPTCHA mode, it blocks a login after the failed logins that require a CAPTCHA. The install recipes prevent this. To recover an environment without a valid secret, run `console captcha-altcha:hmac-secret:generate`, or switch the CAPTCHA off temporarily with `$config[CaptchaConstants::IS_CAPTCHA_ENABLED] = false;`.
 
 {% endinfo_block %}
 
@@ -285,10 +285,11 @@ config.module = {
 
 {% info_block warningBox "Verification" %}
 
-1. In the default `always` CAPTCHA mode, go to the Back Office login page with the **Network** tab of the developer tools of your browser open. Make sure the login form shows the ALTCHA checkbox, and the browser sends no request to `/captcha/challenge` while the page loads.
+1. In the Back Office, set the CAPTCHA mode to **Always**, and log out. Go to the Back Office login page with the **Network** tab of the developer tools of your browser open. Make sure the login form shows the ALTCHA checkbox, and the browser sends no request to `/captcha/challenge` while the page loads.
 2. Select the checkbox. Make sure the browser sends one `GET /captcha/challenge?context=backoffice_user_login` request, the response has the `200` status and a JSON body, and the widget shows the checkbox as selected.
 3. Enter the correct password of a user and submit the form. Make sure you are logged in to the Back Office.
 4. Repeat the previous steps on the Storefront login page with a customer account and, in a marketplace, on the Merchant Portal login page with a merchant user. The request of the Merchant Portal widget is `GET /captcha/merchant-portal-challenge?context=merchant_portal_user_login`.
+5. Set the CAPTCHA mode back to the mode you use, for example, **After Failed Attempts**.
 
 {% endinfo_block %}
 

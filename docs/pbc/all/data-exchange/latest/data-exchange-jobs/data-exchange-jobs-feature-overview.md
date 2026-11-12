@@ -1,7 +1,7 @@
 ---
 title: Data Exchange Jobs feature overview
 description: Import and export data in bulk with schema-driven jobs, asynchronous runs, batch processing, and per-row error reporting, independent of the data type.
-last_updated: Nov 5, 2026
+last_updated: Nov 10, 2026
 template: concept-topic-template
 ---
 
@@ -81,7 +81,7 @@ For every import job, users can download a CSV template that contains the header
 
 When a run rejects a row, the row is skipped and an error is recorded with the row number and a message. The run detail page shows the processed, successful, and failed row counts. Up to 10 errors are displayed inline; larger error sets are offered as a downloadable CSV file. The threshold is defined by `getImportErrorDisplayThreshold()` in `DataExchangeConfig`.
 
-A run stores at most `getImportJobRunErrorRowLimit()` row errors (default 1000 in `DataExchangeConfig`). Every error a step reports and every column count mismatch counts against the limit, so a row that several steps reject takes several slots. A rejected row past the limit is still counted in the failed line counter and in `number_of_omitted_error_rows` of the run, but no error row is written. Errors without a row number, such as an exception thrown by a step or a post-processor, are always stored. When errors were omitted, the run detail page, the errors page, and the downloaded CSV file state how many errors were stored and how many were counted but not stored. The limit must be `1` or greater; a run fails with an exception otherwise.
+A run stores at most `getImportJobRunErrorRowLimit()` row errors (default 1000 in `DataExchangeConfig`; editable in the Back Office under **Configuration&nbsp;> Data Exchange&nbsp;> Import**). Every error a step reports and every column count mismatch counts against the limit, so a row that several steps reject takes several slots. A rejected row past the limit is still counted in the failed line counter and in `number_of_omitted_error_rows` of the run, but no error row is written. Errors without a row number, such as an exception thrown by a step or a post-processor, are always stored. When errors were omitted, the run detail page, the errors page, and the downloaded CSV file state how many errors were stored and how many were counted but not stored. The limit must be `1` or greater; a run fails with an exception otherwise.
 
 ## Related Developer documents
 

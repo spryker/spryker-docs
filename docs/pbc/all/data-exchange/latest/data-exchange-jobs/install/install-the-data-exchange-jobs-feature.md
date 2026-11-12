@@ -1,7 +1,7 @@
 ---
 title: Install the Data Exchange Jobs feature
 description: Learn how to install the Data Exchange Jobs feature, the engine behind the Back Office Import & Export pages, into your Spryker project.
-last_updated: Nov 5, 2026
+last_updated: Nov 10, 2026
 template: feature-integration-guide-template
 ---
 
@@ -111,7 +111,7 @@ The following settings are defined in `Spryker\Zed\DataExchange\DataExchangeConf
 | `EXPORT_CSV_BATCH_SIZE` | `1000` | Number of rows the export data provider returns at once. |
 | `IMPORT_MAX_FILE_SIZE_MB` | `50` | Maximum size of an uploaded CSV file in megabytes. |
 | `IMPORT_JOB_RUNS_PER_INVOCATION` | `1` | Number of pending import job runs one `import:job:run` invocation processes, oldest first, before the process exits. The invocation stops earlier when no pending run is left. Must be `1` or greater; the command throws an exception otherwise. |
-| `IMPORT_JOB_RUN_ERROR_ROW_LIMIT` | `1000` | Maximum number of error rows stored per import job run. Rejected rows past the limit are counted in the failed line counter and in `number_of_omitted_error_rows` of the run but not stored; errors without a row number are always stored. Must be `1` or greater; a run fails with an exception otherwise. |
+| `IMPORT_JOB_RUN_ERROR_ROW_LIMIT` | `1000` | Fallback for the Back Office setting `data_exchange:import:job_runs:error_row_limit`, used until `configuration:sync` has loaded the schema. Maximum number of error rows stored per import job run. Rejected rows past the limit are counted in the failed line counter and in `number_of_omitted_error_rows` of the run but not stored; errors without a row number are always stored. Must be `1` or greater; a run fails with an exception otherwise. |
 | `IMPORT_ERROR_DISPLAY_THRESHOLD` | `10` | Maximum number of import errors displayed inline on the import job run detail page. When a run produces more errors than this threshold, the errors are offered as a downloadable summary instead. |
 | `getAllowedMimeTypesWithExtensions()` | `text/csv`, `text/plain` | MIME types accepted by the upload form. |
 | `IMPORT_JOB_RUN_LEASE_DURATION_IN_MINUTES` | `5` | How long a worker holds an import job run after claiming it. The lease is renewed after every batch; once it expires, another worker can reclaim the run. Must exceed the longest time between two renewals: the pre-processors plus the first batch, or any later batch. If one batch can take longer, raise the lease or lower `IMPORT_CSV_BATCH_SIZE`. |
@@ -138,6 +138,20 @@ class DataExchangeConfig extends SprykerDataExchangeConfig
     protected const int IMPORT_JOB_RUN_ERROR_ROW_LIMIT = 5000;
 }
 ```
+
+#### Error row limit in the Back Office
+
+The error row limit is also a Back Office setting. The module ships the configuration schema `resources/configuration/data_exchange.configuration.yml` with the setting `data_exchange:import:job_runs:error_row_limit` (integer, at least 1, global scope). Load the schema into the database:
+
+```bash
+console configuration:sync
+```
+
+{% info_block warningBox "Verification" %}
+
+Log in to the Back Office, go to **Configuration**, open **Data Exchange&nbsp;> Import**, and make sure that **Import Job Run Error Row Limit** is listed with the default value `1000`. Once the schema is loaded, the value saved there applies, and the schema default `1000` when nothing is saved; `IMPORT_JOB_RUN_ERROR_ROW_LIMIT` is used only until the schema is loaded.
+
+{% endinfo_block %}
 
 ### 3) Set up the database schema and transfer objects
 

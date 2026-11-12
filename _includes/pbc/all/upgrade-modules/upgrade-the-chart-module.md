@@ -116,6 +116,7 @@ Skip this step if your project does not override chart templates or chart config
 - The template no longer receives `layout`. The chart size is defined by CSS: style the `.chart` and `.chart-plot--*` classes instead.
 - `ChartConfig::getDefaultChartLayout()` and `ChartGuiConfig::getDefaultChartLayout()` were removed. Delete their overrides from `src/Pyz/Zed/Chart/ChartConfig.php` and `src/Pyz/Zed/ChartGui/ChartGuiConfig.php`.
 - A project chart plugin can select a view by setting `ChartDataTransfer.view` to `cartesian`, `daily-bar`, `pie`, `order-status` or `ranking`. Without a view, a pie series is drawn with the `pie` view and any other series with the `cartesian` view. `ChartLayoutablePluginInterface::getChartLayout()` is ignored.
+- `TopOrdersChartPlugin` sets the `ranking` view since `spryker/sales-statistics` 1.4.0, the minimum version that ChartGui 2.0.0 allows. If your project overrides `TopOrdersChartPlugin::getChartData()`, call `setView('ranking')` on the returned `ChartDataTransfer`. Without it, the chart shows **No data to display**.
 
 ### 5) Add the removed translations
 

@@ -6,6 +6,9 @@ template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202311.0/mailing-and-notifications-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/mailing-and-notifications-feature-integration.html
+  - /docs/scos/user/features/201907.0/mailing-and-notifications-feature-overview.html
+  - /docs/scos/user/features/202005.0/mailing-and-notifications-feature-overview.html
+  - /docs/scos/user/features/202204.0/mailing-and-notifications-feature-overview.html
 ---
 
 {% info_block errorBox %}

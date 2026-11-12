@@ -1,7 +1,7 @@
 ---
 title: Workflows feature overview
 description: The Workflows feature lets Back Office users design, adjust, and monitor multi-step business processes without a deployment, and lets developers extend them with custom rules and actions.
-last_updated: Sep 14, 2026
+last_updated: Oct 22, 2026
 template: concept-topic-template
 label: early-access
 redirect_from:
@@ -9,6 +9,8 @@ redirect_from:
 related:
   - title: Install the Workflows feature
     link: docs/dg/dev/integrate-and-configure/integrate-workflow-feature.html
+  - title: Add a subject type to the Workflows feature
+    link: docs/dg/dev/integrate-and-configure/add-a-subject-type-to-the-workflows-feature.html
 ---
 
 {% info_block warningBox "Early Access" %}
@@ -19,7 +21,7 @@ This feature is in Early Access. We'd love for you to try it out and share feedb
 
 The Workflows feature lets Back Office users design, adjust, and monitor multi-step business processes — such as B2B company onboarding, order escalations, or approval flows — directly in the Back Office, without a code deployment.
 
-![The Workflows list in the Back Office, showing the 3-step setup guide and the CompanyOnboarding workflow with its status, active version, and triggers](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/back-office/base-shop/workflow-feature-overview/workflows-1.png)
+![The Workflows list in the Back Office, showing the CompanyOnboarding workflow with its subject type, status, active version, and triggers](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/back-office/base-shop/workflow-feature-overview/workflows-1.png)
 
 ## Business problems it solves
 
@@ -88,9 +90,9 @@ A workflow definition is an XML document in the `state-machine-01` format. It ha
 </statemachine>{% endraw %}
 ```
 
-You do not write this XML by hand. On the **Create Version** screen, a visual builder lets you draw the states and transitions on a canvas and set each one's properties in an inspector. The raw XML above is still available through the builder's advanced panel for review or direct editing.
+You do not write this XML by hand. On the **Create workflow** and **New version** pages, a visual builder lets you draw the states and transitions on a canvas and set each one's properties in an inspector. To check the definition before saving, click **Validate**. The raw XML above is still available in the builder's **Advanced: raw XML** panel for review or direct editing.
 
-![The Create Version screen in the Back Office, with the visual builder showing the workflow states on a canvas and the properties inspector on the right](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/back-office/base-shop/workflow-feature-overview/workflows-2.png)
+![The Create workflow page in the Back Office, with the visual builder showing the workflow states on a canvas and the properties inspector on the right](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/back-office/base-shop/workflow-feature-overview/workflows-2.png)
 
 Here is how a company travels through this definition:
 
@@ -102,7 +104,7 @@ Three ideas in that trace do the heavy lifting, and each maps to a piece of proj
 
 | In the definition | What it means | You provide |
 |-------------------|---------------|-------------|
-| `event` | A named step. It can fire automatically (`onEnter`), after a delay (`timeout`), on a user action (`manual`), or from application code. | Nothing — events are declared in the XML. |
+| `event` | A named step. It can fire automatically (`onEnter`), after a delay (`timeout`), on a user action (`manual`), or from application code. A `timeout` must be a positive duration in the `<number> <unit>` format, where the unit is `second`, `minute`, `hour`, `day`, `week`, `month`, or `year` — for example `30 seconds` or `14 days`. | Nothing — events are declared in the XML. |
 | `condition="…"` | A guard that lets a transition fire only when a business rule is true. | A [condition plugin](#conditions). |
 | `command="…"` | Project logic to run during a transition (not shown above — for example, "mark the company approved"). | A [command plugin](#commands). |
 
@@ -123,15 +125,27 @@ Every instance is pinned to the version it started on. When you activate a newer
 
 This is what makes editing a live process safe. You publish an improved version for future subjects, while in-flight subjects complete on the exact rules they started with — no half-migrated instances and no transitions that suddenly point at states that no longer exist.
 
+To change a definition, open the workflow and click **New version**. The builder opens with a copy of the current version, and **Save as new version** saves your changes as a new, inactive version. The active version keeps running until you make the new one active.
+
+The following rules protect running instances:
+
+- Making a version active, and activating or deactivating a workflow, asks for confirmation first.
+- The active version cannot be deleted.
+- A version that has instances cannot be deleted.
+
 ## Subjects
 
-A workflow is attached to a *subject type*, which you choose when you create the process. It is not limited to companies: the subject type is a label you define — `Company`, `Customer`, `Product`, or anything your project needs. The trigger you configure decides which application event starts an instance for that subject.
+A workflow is attached to a *subject type*, which you choose when you create the workflow. It is not limited to companies: the subject type is a label you define — `Company`, `Customer`, `Product`, or anything your project needs. The trigger you configure decides which application event starts an instance for that subject.
+
+The **Subject type** field lists only subject types that have at least one registered trigger plugin. The demo shop provides the `Company`, `Merchant`, `MerchantRelationship`, and `MerchantProduct` subject types. To add your own, see [Add a subject type to the Workflows feature](/docs/dg/dev/integrate-and-configure/add-a-subject-type-to-the-workflows-feature.html).
 
 For example, a process with subject type `Company` and a trigger on company creation starts one instance per created company, and each company then runs its own instance independently.
 
 ## Instances
 
-An *instance* is a single subject running through a workflow — for example one specific company being onboarded. Each instance is pinned to the version it started on and tracks its current state. In the Back Office you can inspect instances, see their current state, and trigger any manual actions the workflow defines (for example, a step that a Back Office user must confirm before the workflow continues).
+An *instance* is a single subject running through a workflow — for example one specific company being onboarded. Each instance is pinned to the version it started on and tracks its current state.
+
+In the Back Office, the instances of a version are listed in **Workflow activity** on the version page. Open an instance to see its current state and **Transition history**, and to trigger any **Manual events** available from its current state — for example, a step that a Back Office user must confirm before the workflow continues.
 
 {% info_block infoBox "Instance history retention" %}
 
@@ -156,7 +170,7 @@ Without them, an instance that reaches a condition or timeout transition waits f
 
 ## Triggers
 
-A *trigger* connects an application event to a workflow so that a new instance starts automatically. For example, creating a company can trigger a new onboarding instance. You select the trigger event in the Back Office when you configure the process; the available events are provided by trigger plugins (see [Extending a workflow](#extending-a-workflow)).
+A *trigger* connects an application event to a workflow so that a new instance starts automatically. For example, creating a company can trigger a new onboarding instance. You select one or more triggers on the **Create workflow** page, and you can change them later with **Edit description and triggers**. Triggers belong to the workflow, not to a version, so they apply to all its versions. Only triggers of the workflow's subject type can be selected; the available triggers are provided by trigger plugins (see [Extending a workflow](#extending-a-workflow)).
 
 ## Extending a workflow
 
@@ -190,7 +204,7 @@ interface WorkflowConditionPluginInterface extends ConditionPluginInterface
 
 ### Trigger plugins
 
-A trigger plugin provides an application event that can start an instance. Unlike commands and conditions — which are named inside the definition XML — a trigger is chosen in the Back Office when you configure the process. A trigger plugin binds an application event (`getEventName()`, for example `Entity.spy_company.create`) to a subject type, so that whenever that event fires for that subject, a new instance starts. Implement `StateMachineProcessTriggerPluginInterface`:
+A trigger plugin provides an application event that can start an instance. Unlike commands and conditions — which are named inside the definition XML — a trigger is chosen in the Back Office when you configure the workflow. A trigger plugin binds an application event (`getEventName()`, for example `Entity.spy_company.create`) to a subject type, so that whenever that event fires for that subject, a new instance starts. Implement `StateMachineProcessTriggerPluginInterface`:
 
 ```php
 interface StateMachineProcessTriggerPluginInterface
@@ -204,6 +218,8 @@ interface StateMachineProcessTriggerPluginInterface
     public function getDescription(): string;
 }
 ```
+
+A trigger plugin only makes the event selectable. To start an instance when the event fires, the project also needs an event listener that calls `WorkflowFacade::startStateMachineInstance()`. For a complete example, see [Add a subject type to the Workflows feature](/docs/dg/dev/integrate-and-configure/add-a-subject-type-to-the-workflows-feature.html).
 
 ## Provisioning workflows on installation
 

@@ -3,6 +3,8 @@ title: Integrating code releases
 description: Automate the integration of code releases in Spryker with the Code Upgrader, handling plugins, configurations, schemas, and more to streamline feature additions.
 template: concept-topic-template
 last_updated: Oct 20, 2023
+redirect_from:
+  - /docs/about/all/releases
 ---
 
 Spryker architecture supports the extensions of modules using extension points in the project code. With Spryker Code Upgrader, the process of integrating plugins, configuration updates, adding new translations, and other code changes is automated. As a result, to add new features, developers don't need to apply code changes manually.

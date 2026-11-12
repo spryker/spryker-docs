@@ -1,7 +1,7 @@
 ---
 title: Release notes 202604.0
 description: Release notes for Spryker Cloud Commerce OS version 202602.0
-last_updated: Jul 30, 2026
+last_updated: Oct 20, 2026
 template: concept-topic-template
 ---
 
@@ -35,7 +35,7 @@ https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-
 **Documentation:**
 - [Back Office Configuration Framework](/docs/pbc/all/back-office/latest/base-shop/backoffice-configuration-framework.html)
 - [Developer Guide Configuration Management](/docs/dg/dev/backend-development/configuration-management)
-- [Install the Back Office Configuration Framework feature](/docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html)
+- [Install the Back Office Configuration Framework feature](/docs/dg/dev/integrate-and-configure/integrate-configuration-feature.html)
 
 ### Basic Shop Theming {% include badge.html type="feature" %}
 

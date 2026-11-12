@@ -9,6 +9,8 @@ related:
     link: docs/dg/dev/frontend-development/latest/marketplace/frontend-builder-for-merchant-portal-v2.html
   - title: Building the Merchant Portal frontend
     link: docs/dg/dev/frontend-development/latest/marketplace/building-the-merchant-portal-frontend.html
+redirect_from:
+  - /docs/pbc/all/merchant-management/latest/marketplace/merchant-portal/merchant-portal.html
 ---
 
 This document provides instructions for moving a project from the Merchant Portal build tooling in its `frontend/merchant-portal/` directory — builder v1 — to builder v2, which ships inside the ZedUi module.

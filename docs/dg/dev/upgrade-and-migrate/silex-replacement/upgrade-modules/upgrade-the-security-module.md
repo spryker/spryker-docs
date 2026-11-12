@@ -11,6 +11,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-salesmerchantconnector.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-salesmerchantconnector.html
   - /docs/scos/dev/module-migration-guides/migration-guide-salesmerchantconnector.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-security.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-security-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-security-module.md -->

@@ -5,6 +5,10 @@ template: feature-walkthrough-template
 redirect_from:
 - /docs/scos/dev/feature-walkthroughs/202204.0/product-relations-feature-walkthrough/product-relations-feature-walkthrough.html
 - /docs/scos/dev/feature-walkthroughs/202204.0/product-relations-feature-walkthrough/product-relations-module-relations.html
+- /docs/pbc/all/product-relationship-management/202307.0/product-relations-module-relations.html
+- /docs/scos/dev/feature-walkthroughs/202009.0/product-relations-feature-walkthrough/product-relations-module-relations.html
+- /docs/scos/dev/feature-walkthroughs/202005.0/product-relations-feature-walkthrough/product-relations-module-relations.html
+- /docs/scos/user/features/202108.0/product-relations-feature-overview.html
 last_updated: Nov 21, 2023
 ---
 

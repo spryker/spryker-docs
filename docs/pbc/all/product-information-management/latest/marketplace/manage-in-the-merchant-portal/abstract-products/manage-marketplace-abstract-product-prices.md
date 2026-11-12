@@ -5,6 +5,9 @@ template: back-office-user-guide-template
 last_updated: Nov 21, 2023
 redirect_from:
   - /docs/marketplace/user/merchant-portal-user-guides/202311.0/products/abstract-products/managing-marketplace-abstract-product-prices.html
+  - /docs/pbc/all/product-information-management/202307.0/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-prices.html
+  - /docs/marketplace/user/merchant-portal-user-guides/202108.0/products/abstract-products/managing-marketplace-abstract-product-prices.html
+  - /docs/marketplace/user/merchant-portal-user-guides/202204.0/products/abstract-products/managing-marketplace-abstract-product-prices.html
 related:
   - title: Marketplace Product feature overview
     link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html

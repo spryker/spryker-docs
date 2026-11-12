@@ -3,6 +3,8 @@ title: Create MerchantOms flows
 description: This articles provides details how to create new MerchantOms flow within your Spryker Marketplace Project.
 template: howto-guide-template
 last_updated: Nov 21, 2023
+redirect_from:
+  - /docs/pbc/all/order-management-system/202307.0/marketplace/create-merchant-oms-flows.html
 ---
 
 This document provides the details about how to create a new MerchantOms flow.

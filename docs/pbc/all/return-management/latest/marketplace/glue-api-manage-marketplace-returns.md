@@ -6,6 +6,8 @@ last_updated: Nov 21, 2023
 related:
   - title: Retrieving Marketplace orders
     link: docs/pbc/all/order-management-system/latest/marketplace/glue-api-retrieve-marketplace-orders.html
+redirect_from:
+  - /docs/marketplace/dev/feature-integration-guides/202204.0/marketplace-return-management-feature-integration.html
 ---
 
 The Return Management API lets developers retrieve return information and create returns. The list of retrievable information includes:

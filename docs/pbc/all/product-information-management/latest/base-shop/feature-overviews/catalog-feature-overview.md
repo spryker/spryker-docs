@@ -13,6 +13,8 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/catalog-feature-walkthrough.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/catalog-feature-overview.html
   - /docs/scos/dev/feature-integration-guides/201903.0/cms-catalog-feature-integration.html
+  - /capabilities/catalog_management/catalog-management.htm
+  - /v1/docs/catalog-management
 ---
 
 Catalogs are used to clearly build and organize your products to meet your and your customer's demands, primarily to make sure everyone can quickly find what they are looking for.

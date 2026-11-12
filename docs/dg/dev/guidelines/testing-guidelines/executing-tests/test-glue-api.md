@@ -5,6 +5,8 @@ template: howto-guide-template
 last_updated: Jul 31, 2026
 redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-glue-api.html
+  - /docs/dg/dev/integrate-and-configure/integrate-apis/glue-api.html
+  - /docs/pbc/all/api/glue-api/glue-api.html
 ---
 
 This guide explains how to set up and run Glue API end-to-end (E2E) tests using the `WishlistsRestApi` module as an example and the `Pyz` project namespace. Adjust the module name according to your requirements.

@@ -18,6 +18,7 @@ redirect_from:
   - /v4/docs/en/updating-a-spryker-based-project
   - /docs/scos/dev/migration-concepts/crud-scheduled-prices-migration-concept.html
   - /docs/pbc/all/price-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
+  - /docs/pbc/all/price-management/202212.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
 related:
   - title: Decimal Stock migration concept
     link: docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html

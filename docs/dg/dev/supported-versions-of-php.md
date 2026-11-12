@@ -1,7 +1,7 @@
 ---
 title: Supported versions of PHP
 description: This document provides information about the PHP versions Spryker supports.
-last_updated: Aug 7, 2026
+last_updated: Oct 23, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/supported-versions-of-php
 originalArticleId: 9eba7382-df72-44fd-b601-a3de5c592455
@@ -18,6 +18,12 @@ More and more libraries deliver releases, including bug fixes and security updat
 
 Before switching PHP versions in production environments, ensure to check this new major version's new features and test it for incompatibilities. For more information, see the following documents:
 
+Upgrading Spryker:
+- [Upgrade to PHP 8.3](/docs/dg/dev/upgrade-and-migrate/upgrade-to-php-83.html)
+- [Upgrade to PHP 8.4](/docs/dg/dev/upgrade-and-migrate/upgrade-to-php-84.html)
+- [Upgrade to PHP 8.5](/docs/dg/dev/upgrade-and-migrate/upgrade-to-php-85.html)
+
+PHP Announcements:
 - [New Features PHP8.3](https://www.php.net/manual/en/migration83.new-features.php)
 - [New Features PHP8.4](https://www.php.net/manual/en/migration84.new-features.php)
 - [New Features PHP8.5](https://www.php.net/manual/en/migration85.new-features.php)

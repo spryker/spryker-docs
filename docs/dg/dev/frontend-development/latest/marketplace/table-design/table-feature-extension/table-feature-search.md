@@ -7,6 +7,10 @@ redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-features/table-feature-search.html
   - /docs/scos/dev/front-end-development/202204.0/marketplace/table-design/table-feature-extension/table-feature-search.html
   - /docs/scos/dev/front-end-development/202404.0/marketplace/table-design/table-feature-extension/table-feature-search.html
+  - /docs/marketplace/dev/front-end/202204.0/table-design/table-features/table-feature-search.html
+  - /search.html
+  - /docs/pbc/all/search
+  - /docs/pbc/all/search/search.html
 
 related:
   - title: Table Feature extension

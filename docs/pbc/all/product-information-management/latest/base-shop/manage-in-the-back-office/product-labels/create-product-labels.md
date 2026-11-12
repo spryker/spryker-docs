@@ -13,6 +13,9 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/merchandising/product-labels/creating-product-labels.html
   - /docs/scos/user/back-office-user-guides/202311.0/merchandising/product-labels/create-product-labels.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/product-labels/create-product-labels.html
+  - /docs/scos/user/back-office-user-guides/202108.0/merchandising/product-labels/create-product-labels.html
+  - /docs/scos/user/back-office-user-guides/202204.0/merchandising/product-labels/create-product-labels.html
+  - /docs/pbc/all/product-information-management/202307.0/base-shop/manage-in-the-back-office/product-labels/create-product-labels.html
 related:
   - title: Edit product labels
     link: docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/product-labels/edit-product-labels.html

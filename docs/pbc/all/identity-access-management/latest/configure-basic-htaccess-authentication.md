@@ -7,6 +7,8 @@ originalLink: https://documentation.spryker.com/2021080/docs/howto-configure-bas
 originalArticleId: 092354ac-2368-4906-a4a7-33e93229bd2c
 redirect_from:
 - /docs/pbc/all/identity-access-management/202204.0/configure-basic-htaccess-authentication.html
+- /docs/pbc/all/identity-access-management/202212.0/configure-basic-htaccess-authentication.html
+- /docs/pbc/all/identity-access-management/202212.0/glue-api-authentication-and-authorization.html
 ---
 
 This document describes how to configure basic `.htaccess` authentication for the Storefront and the Back Office.

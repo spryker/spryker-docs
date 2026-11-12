@@ -14,6 +14,9 @@ redirect_from:
   - /docs/scos/dev/installation/spryker-in-docker/docker-sdk/deploy-file-reference-1.0.html
   - /docs/scos/dev/the-docker-sdk/202307.0/deploy-file/deploy-file-reference-1.0.html
   - /docs/scos/dev/the-docker-sdk/202212.0/deploy-file/deploy-file-reference-1.0.html
+  - /docs/dg/dev/integrate-and-configure/deploy-file-reference.html
+  - /docs/scos/dev/docker-sdk/201907.0/deploy-file-reference-1.0.html
+  - /docs/scos/dev/the-docker-sdk/202009.0/deploy-file-reference-1.0.html
 
 
 related:

@@ -6,6 +6,9 @@ template: howto-guide-template
 redirect_from:
     - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/customer-communication/inxmail/installing-and-configuring-inxmail.html
     - /docs/scos/dev/technology-partner-guides/202204.0/marketing-and-conversion/customer-communication/inxmail/installing-and-configuring-inxmail.html
+    - /industry_partners/performance/inxmail.htm
+    - /docs/scos/user/technology-partners/201907.0/marketing-and-conversion/customer-communication/inxmail.html
+    - /docs/scos/user/technology-partners/202204.0/marketing-and-conversion/customer-communication/inxmail.html
 ---
 
 This document describes how to install and configure Inxmail.

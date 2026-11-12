@@ -1,7 +1,7 @@
 ---
 title: Configure and disconnect flows for payment service providers
 description: Overview of configuration and disconnect flow
-last_updated: Now 08, 2024
+last_updated: Nov 08, 2024
 template: concept-topic-template
 related:
   - title: Asynchronous API for payment service providers
@@ -16,6 +16,8 @@ related:
     link: docs/dg/dev/acp/apis-and-flows-for-payment-service-providers/oms-payment-flow-for-payment-service-providers.html
   - title: Synchronous API for payment service providers
     link: docs/dg/dev/acp/apis-and-flows-for-payment-service-providers/synchronous-api-for-payment-service-providers.html
+redirect_from:
+  - /docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers.html
 ---
 
 The following diagram explains the configuration and disconnect flows for a payment app.

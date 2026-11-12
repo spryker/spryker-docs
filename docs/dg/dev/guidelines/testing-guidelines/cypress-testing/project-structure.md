@@ -10,6 +10,8 @@ related:
     link: docs/dg/dev/guidelines/testing-guidelines/cypress-testing/getting-started.html
   - title: Naming conventions
     link: docs/dg/dev/guidelines/testing-guidelines/cypress-testing/naming-conventions.html
+redirect_from:
+  - /docs/marketplace/dev/front-end/202108.0/project-structure.html
 ---
 
 This document describes the directory structure of the cypress-boilerplate part and the purpose of each file and folder.

@@ -12,6 +12,10 @@ related:
     link: docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-overview.html
   - title: Merchant order overview
     link: docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html
+redirect_from:
+  - /docs/marketplace/user/features/202212.0/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
+  - /docs/pbc/all/order-management-system/202307.0/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
+  - /marketplace/docs/marketplace-and-merchant-state-machines-feature-overview
 ---
 
 When viewed independently of each other, the Marketplace and Merchant State Machines workflows look like this:

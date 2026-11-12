@@ -18,6 +18,13 @@ redirect_from:
   - /docs/pbc/all/back-office/202311.0/spryker-core-back-office-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html
   - /docs/scos/user/features/202204.0/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html
+  - /docs/scos/user/features/202001.0/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html
+  - /docs/pbc/all/back-office/202307.0/base-shop/spryker-core-back-office-feature-overview.html
+  - /docs/pbc/all/back-office/202307.0/spryker-core-back-office-feature-overview.html
+  - /docs/scos/user/features/201907.0/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html
+  - /docs/scos/user/features/202009.0/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html
+  - /docs/pbc/all/back-office/202212.0/spryker-core-back-office-feature-overview.html
+  - /docs/scos/dev/feature-walkthroughs/202005.0/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html
 
 ---
 

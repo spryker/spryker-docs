@@ -1,11 +1,19 @@
 ---
 title: Configure multiple AI providers for AI Commerce
 description: Learn how to configure OpenAI, AWS Bedrock, and Anthropic providers independently for each AI Commerce feature.
-last_updated: Jul 16, 2026
+last_updated: Oct 29, 2026
 template: howto-guide-template
 ---
 
-AI Commerce supports three AI providers: OpenAI, AWS Bedrock, and Anthropic. Each feature — Back Office Assistant, Visual Add to Cart (Quick Order), Search by Image, and Smart PIM — can use a different provider independently. This lets you optimize cost, latency, or capability per feature without changing any application code.
+<style>
+  .post-content pre {
+    white-space: pre;
+    word-break: normal;
+    overflow-x: auto;
+  }
+</style>
+
+AI Commerce supports three AI providers: OpenAI, AWS Bedrock, and Anthropic. Each feature — Back Office Assistant, Smart CMS Content Assistant, Visual Add to Cart (Quick Order), Search by Image, and Smart PIM — can use a different provider independently. This lets you optimize cost, latency, or capability per feature without changing any application code.
 
 ![Configure multiple AI providers](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-commerce/multiple-provider.png)
 
@@ -36,10 +44,15 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
 
     // Smart PIM
     AiCommerceConstants::AI_CONFIGURATION_SMART_PIM_OPENAI => [
-        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
         'provider_config' => [
             'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
             'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_PIM_OPENAI_MODEL,
+            'parameters' => [
+                'reasoning' => [
+                    'effort' => 'minimal',
+                ],
+            ],
         ],
     ],
     AiCommerceConstants::AI_CONFIGURATION_SMART_PIM_AWS => [
@@ -62,10 +75,15 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
 
     // Quick Order Image-to-Cart (Visual Add to Cart)
     AiCommerceConstants::AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_OPENAI => [
-        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
         'provider_config' => [
             'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
             'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_QUICK_ORDER_IMAGE_TO_CART_OPENAI_MODEL,
+            'parameters' => [
+                'reasoning' => [
+                    'effort' => 'minimal',
+                ],
+            ],
         ],
     ],
     AiCommerceConstants::AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_AWS => [
@@ -88,10 +106,15 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
 
     // Search by Image
     AiCommerceConstants::AI_CONFIGURATION_SEARCH_BY_IMAGE_OPENAI => [
-        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
         'provider_config' => [
             'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
             'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SEARCH_BY_IMAGE_OPENAI_MODEL,
+            'parameters' => [
+                'reasoning' => [
+                    'effort' => 'minimal',
+                ],
+            ],
         ],
     ],
     AiCommerceConstants::AI_CONFIGURATION_SEARCH_BY_IMAGE_AWS => [
@@ -114,10 +137,15 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
 
     // Back Office Assistant (Intent Router, General, Order Management, Discount Management, Form Fill)
     AiCommerceConstants::AI_CONFIGURATION_INTENT_ROUTER_OPENAI => [
-        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
         'provider_config' => [
             'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
             'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL,
+            'parameters' => [
+                'reasoning' => [
+                    'effort' => 'none',
+                ],
+            ],
         ],
     ],
     AiCommerceConstants::AI_CONFIGURATION_INTENT_ROUTER_AWS => [
@@ -138,10 +166,15 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
         ],
     ],
     AiCommerceConstants::AI_CONFIGURATION_GENERAL_AGENT_OPENAI => [
-        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
         'provider_config' => [
             'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
             'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL,
+            'parameters' => [
+                'reasoning' => [
+                    'effort' => 'none',
+                ],
+            ],
         ],
         'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_GENERAL_PURPOSE_SYSTEM_PROMPT,
     ],
@@ -165,10 +198,15 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
         'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_GENERAL_PURPOSE_SYSTEM_PROMPT,
     ],
     AiCommerceConstants::AI_CONFIGURATION_ORDER_MANAGEMENT_OPENAI => [
-        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
         'provider_config' => [
             'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
             'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL,
+            'parameters' => [
+                'reasoning' => [
+                    'effort' => 'none',
+                ],
+            ],
         ],
         'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_ORDER_MANAGEMENT_SYSTEM_PROMPT,
     ],
@@ -192,10 +230,15 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
         'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_ORDER_MANAGEMENT_SYSTEM_PROMPT,
     ],
     AiCommerceConstants::AI_CONFIGURATION_DISCOUNT_MANAGEMENT_OPENAI => [
-        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
         'provider_config' => [
             'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
             'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL,
+            'parameters' => [
+                'reasoning' => [
+                    'effort' => 'none',
+                ],
+            ],
         ],
         'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_DISCOUNT_MANAGEMENT_SYSTEM_PROMPT,
     ],
@@ -219,10 +262,15 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
         'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_DISCOUNT_MANAGEMENT_SYSTEM_PROMPT,
     ],
     AiCommerceConstants::AI_CONFIGURATION_FORM_FILL_OPENAI => [
-        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
         'provider_config' => [
             'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
             'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_BACKOFFICE_ASSISTANT_OPENAI_MODEL,
+            'parameters' => [
+                'reasoning' => [
+                    'effort' => 'none',
+                ],
+            ],
         ],
         'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_FORM_FILL_SYSTEM_PROMPT,
     ],
@@ -245,10 +293,46 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
         ],
         'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_FORM_FILL_SYSTEM_PROMPT,
     ],
+
+    // Smart CMS Content Assistant
+    AiCommerceConstants::AI_CONFIGURATION_SMART_CMS_OPENAI => [
+        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
+        'provider_config' => [
+            'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
+            'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_OPENAI_MODEL,
+            'parameters' => [
+                'reasoning' => [
+                    'effort' => 'minimal',
+                ],
+            ],
+        ],
+        'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_SYSTEM_PROMPT,
+    ],
+    AiCommerceConstants::AI_CONFIGURATION_SMART_CMS_AWS => [
+        'provider_name' => AiFoundationConstants::PROVIDER_BEDROCK,
+        'provider_config' => [
+            'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_AWS_MODEL,
+            'bedrockRuntimeClient' => [
+                'region' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_AWS_REGION,
+                'token' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_AWS_API_TOKEN,
+            ],
+        ],
+        'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_SYSTEM_PROMPT,
+    ],
+    AiCommerceConstants::AI_CONFIGURATION_SMART_CMS_ANTHROPIC => [
+        'provider_name' => AiFoundationConstants::PROVIDER_ANTHROPIC,
+        'provider_config' => [
+            'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_ANTHROPIC_API_TOKEN,
+            'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_ANTHROPIC_MODEL,
+        ],
+        'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_SYSTEM_PROMPT,
+    ],
 ];
 ```
 
 The configuration values that use `CONFIGURATION_REFERENCE_PREFIX` are resolved at runtime from the Back Office configuration database. This means model names and API tokens are managed in the Back Office rather than hardcoded in config files.
+
+The OpenAI entries set `parameters.reasoning.effort`, which tells the model how much to think before it answers. The default is `minimal` for Smart PIM, Smart CMS Content Assistant, Quick Order Image-to-Cart, and Search by Image, and `none` for the Back Office Assistant agents. Supported values depend on the model and can include `none`, `minimal`, `low`, `medium`, `high`, `xhigh`, and `max`. If you change the OpenAI model, make sure that it supports the configured value. For details, see [Reasoning models](https://developers.openai.com/api/docs/guides/reasoning) in the OpenAI documentation.
 
 ## 2) Sync the AI vendor configuration
 
@@ -263,11 +347,15 @@ console configuration:sync
 1. In the Back Office, go to **AI Vendor**.
 2. For each provider you want to use, open its tab (OpenAI, Anthropic, or AWS Bedrock) and enter the credentials:
 
+<div class="width-100">
+
 | PROVIDER | REQUIRED CREDENTIALS |
 |----------|---------------------|
 | OpenAI | API token |
 | Anthropic | API key |
 | AWS Bedrock | API token, AWS region |
+
+</div>
 
 3. Click **Save**.
 
@@ -276,23 +364,35 @@ console configuration:sync
 Each AI Commerce feature has an **AI Configuration** radio selector in the Back Office that controls which provider it uses.
 
 1. In the Back Office, go to **AI Commerce**.
-2. Open the tab for the feature you want to configure (for example, **Smart PIM**, **Quick Order**, **Search by Image**, or **Back Office Assistant**).
+2. Open the tab for the feature you want to configure (for example, **Smart PIM**, **Smart CMS**, **Quick Order**, **Search by Image**, **Back Office Assistant**, or **Storefront Assistant**).
 3. Under **General**, select the active provider: **OpenAI**, **AWS Bedrock**, or **Anthropic**.
 4. Optionally, update the model name shown for the selected provider. Each provider shows its model field only when selected.
 5. Click **Save**.
 
 Default models per feature and provider:
 
+<div class="width-100">
+
 | FEATURE | OPENAI | AWS BEDROCK | ANTHROPIC |
 |---------|--------|-------------|-----------|
-| Smart PIM | `gpt-4o-mini` | `eu.anthropic.claude-haiku-4-5-20251001-v1:0` | `claude-haiku-4-5` |
-| Quick Order Image-to-Cart | `gpt-4o-mini` | `eu.anthropic.claude-haiku-4-5-20251001-v1:0` | `claude-haiku-4-5` |
-| Search by Image | `gpt-4o-mini` | `eu.anthropic.claude-haiku-4-5-20251001-v1:0` | `claude-haiku-4-5` |
-| Back Office Assistant | `gpt-4.1` | `eu.anthropic.claude-sonnet-4-5-20250929-v1:0` | `claude-sonnet-4-5` |
+| Smart PIM | `gpt-5-nano` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
+| Smart CMS Content Assistant | `gpt-5-nano` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
+| Quick Order Image-to-Cart | `gpt-5-nano` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
+| Search by Image | `gpt-5-nano` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
+| Back Office Assistant | `gpt-6-luna` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
+| Storefront Assistant | `gpt-6-luna` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
+
+</div>
+
+{% info_block infoBox "Default model selection" %}
+
+Spryker selects these default models because they give the best balance of cost and reliability for each feature. Spryker has not tested other models for these features. If you choose a different model, verify that it meets the requirements in this document and test it for your use case before you use it in production.
+
+{% endinfo_block %}
 
 {% info_block infoBox "Model requirements" %}
 
-All AI Commerce features require a model that supports image input and structured output. Verify that the model you select meets these requirements for the provider you use.
+All AI Commerce features require a model that supports image input and structured output. Storefront Assistant also requires a model that supports streaming and tool calls. Verify that the model you select meets these requirements for the provider you use.
 
 {% endinfo_block %}
 
@@ -300,11 +400,17 @@ All AI Commerce features require a model that supports image input and structure
 
 The following table maps each feature to its configuration constants and the Back Office setting key that controls the active provider.
 
+<div class="width-100">
+
 | FEATURE | ACTIVE PROVIDER SETTING KEY | OPENAI CONFIG CONSTANT | AWS CONFIG CONSTANT | ANTHROPIC CONFIG CONSTANT |
 |---------|-----------------------------|------------------------|---------------------|---------------------------|
 | Smart PIM | `ai_commerce:smart_pim:ai_vendor:ai_configuration` | `AI_CONFIGURATION_SMART_PIM_OPENAI` | `AI_CONFIGURATION_SMART_PIM_AWS` | `AI_CONFIGURATION_SMART_PIM_ANTHROPIC` |
+| Smart CMS Content Assistant | `ai_commerce:smart_cms:ai_vendor:ai_configuration` | `AI_CONFIGURATION_SMART_CMS_OPENAI` | `AI_CONFIGURATION_SMART_CMS_AWS` | `AI_CONFIGURATION_SMART_CMS_ANTHROPIC` |
 | Quick Order Image-to-Cart | `ai_commerce:quick_order:ai_vendor:ai_configuration` | `AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_OPENAI` | `AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_AWS` | `AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_ANTHROPIC` |
 | Search by Image | `ai_commerce:search_by_image:ai_vendor:ai_configuration` | `AI_CONFIGURATION_SEARCH_BY_IMAGE_OPENAI` | `AI_CONFIGURATION_SEARCH_BY_IMAGE_AWS` | `AI_CONFIGURATION_SEARCH_BY_IMAGE_ANTHROPIC` |
 | Back Office Assistant | `ai_commerce:backoffice_assistant:ai_vendor:ai_configuration` | `AI_CONFIGURATION_INTENT_ROUTER_OPENAI` (and `_GENERAL_AGENT_OPENAI`, `_ORDER_MANAGEMENT_OPENAI`, `_DISCOUNT_MANAGEMENT_OPENAI`, `_FORM_FILL_OPENAI`) | `AI_CONFIGURATION_INTENT_ROUTER_AWS` (and `_AWS` variants) | `AI_CONFIGURATION_INTENT_ROUTER_ANTHROPIC` (and `_ANTHROPIC` variants) |
+| Storefront Assistant | `ai_commerce:storefront_assistant:ai_vendor:ai_configuration` | `AI_CONFIGURATION_STOREFRONT_ASSISTANT_OPENAI` | `AI_CONFIGURATION_STOREFRONT_ASSISTANT_AWS` | `AI_CONFIGURATION_STOREFRONT_ASSISTANT_ANTHROPIC` |
+
+</div>
 
 All constants are in your project's `Pyz\Shared\AiCommerce\AiCommerceConstants`.

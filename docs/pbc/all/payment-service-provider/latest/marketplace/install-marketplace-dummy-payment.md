@@ -5,6 +5,8 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 redirect_from:
     - /docs/marketplace/dev/feature-integration-guides/202311.0/marketplace-dummy-payment-feature-integration.html
+    - /docs/pbc/all/payment-service-provider/202307.0/spryker-pay/marketplace/install-marketplace-dummy-payment.html
+    - /docs/marketplace/dev/feature-integration-guides/202212.0/marketplace-dummy-payment-feature-integration.html
 ---
 
 This document describes how to integrate the Marketplace Dummy Payment into a Spryker project.

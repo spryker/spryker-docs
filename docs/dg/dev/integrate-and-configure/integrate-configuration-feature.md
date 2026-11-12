@@ -3,6 +3,8 @@ title: Install the Configuration Management feature
 description: Learn how to integrate and configure Configuration Management feature in a Spryker project.
 last_updated: Sep 23, 2026
 template: howto-guide-template
+redirect_from:
+  - /docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html
 
 related:
   - title: Configuration Management feature

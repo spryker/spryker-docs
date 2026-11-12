@@ -9,6 +9,10 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/ratepay/ratepay-state-machine-commands-and-conditions.html
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/ratepay/ratepay-state-machine-commands-and-conditions.html
+  - /docs/pbc/all/payment-service-provider/202212.0/base-shop/third-party-integrations/ratepay/ratepay-state-machine-commands-and-conditions.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/ratepay/ratepay-state-machine-commands-and-conditions.html
+  - /docs/scos/dev/technology-partner-guides/202108.0/payment-partners/ratepay/ratepay-state-machine-commands-and-conditions.html
+  - /docs/scos/dev/technology-partner-guides/201811.0/payment-partners/ratepay/ratepay-state-machine-commands-and-conditions.html
 related:
   - title: RatePay facade methods
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/ratepay-facade-methods.html

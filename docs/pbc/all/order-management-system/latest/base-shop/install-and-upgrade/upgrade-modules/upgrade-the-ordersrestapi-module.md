@@ -20,11 +20,11 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/glue-api/migration-guide-ordersrestapi.html
   - /docs/scos/dev/module-migration-guides/202009.0/glue-api/migration-guide-ordersrestapi.html
   - /docs/scos/dev/module-migration-guides/202108.0/glue-api/migration-guide-ordersrestapi.html
-  - /docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-ordersrestapi-module.html
   - /module_migration_guides/glue_api/ordersrestapi-migration-guide.html
   - /docs/pbc/all/order-management-system/202311.0/base-shop/install-and-update/upgrade-modules/upgrade-the-ordersrestapi-module.html
   - /docs/pbc/all/order-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-ordersrestapi-module.html
   - /docs/pbc/all/order-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-ordersrestapi-module.html
+  - /docs/pbc/all/order-management-system/202307.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-ordersrestapi-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-ordersrestapi-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-ordersrestapi-module.md -->

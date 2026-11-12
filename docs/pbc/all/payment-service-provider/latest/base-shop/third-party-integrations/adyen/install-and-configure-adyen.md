@@ -9,6 +9,12 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/adyen/installing-and-configuring-adyen.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/adyen/install-and-configure-adyen.html
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/adyen/installing-and-configuring-adyen.html
+  - /docs/scos/user/technology-partners/202001.0/payment-partners/adyen.html
+  - /marketplace/en
+  - /v2/en
+  - /v4/en
+  - /v5/en
+  - /v1/en
 related:
   - title: Integrating Adyen
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/integrate-adyen.html

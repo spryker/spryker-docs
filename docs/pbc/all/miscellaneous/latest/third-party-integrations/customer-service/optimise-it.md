@@ -7,6 +7,9 @@ originalLink: https://documentation.spryker.com/2021080/docs/optimise-it
 originalArticleId: 06bc548f-802c-42e2-926c-be4fdec1e622
 redirect_from:
   - /docs/scos/user/technology-partners/202200.0/customer-service/optimise-it.html
+  - /docs/scos/user/technology-partners/202108.0/customer-service/optimise-it.html
+  - /docs/scos/user/technology-partners/202001.0/customer-service/optimise-it.html
+  - /docs/scos/user/technology-partners/202204.0/customer-service/optimise-it.html
 ---
 
 ## Partner Information

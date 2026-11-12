@@ -5,6 +5,7 @@ template: howto-guide-template
 last_updated: Jul 4, 2023
 redirect_from:
   - /docs/paas-plus/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-gitlab-managed-project.html
+  - /docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-github-managed-project.html
 ---
 
 There are two options for connecting the Upgrader to your repository: using the native integration or an access token.

@@ -15,6 +15,7 @@ redirect_from:
   - /docs/pbc/all/tax-management/202311.0/manage-in-the-back-office/create-tax-sets.html
   - /docs/pbc/all/tax-management/202311.0/base-shop/manage-in-the-back-office/create-tax-sets.html
   - /docs/pbc/all/tax-management/202204.0/base-shop/manage-in-the-back-office/create-tax-sets.html
+  - /docs/pbc/all/tax-management/202204.0/manage-in-the-back-office/create-tax-sets.html
 related:
   - title: Tax feature overview
     link: docs/pbc/all/tax-management/latest/base-shop/tax-feature-overview.html

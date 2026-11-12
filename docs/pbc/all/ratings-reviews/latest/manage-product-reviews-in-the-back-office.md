@@ -14,6 +14,8 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/catalog/product-reviews/managing-product-reviews.html
   - /docs/scos/user/back-office-user-guides/202311.0/catalog/manage-product-reviews.html
   - /docs/pbc/all/ratings-reviews/202204.0/manage-in-the-back-office/manage-product-reviews-in-the-back-office.html
+  - /docs/pbc/all/ratings-reviews/202212.0/manage-in-the-back-office/manage-product-reviews-in-the-back-office.html
+  - /docs/pbc/all/ratings-reviews/202307.0/manage-product-reviews-in-the-back-office.html
 related:
   - title: Product Rating & Reviews feature overview
     link: docs/pbc/all/ratings-reviews/latest/ratings-and-reviews.html

@@ -5,6 +5,8 @@ description: This document describes the product_price.csv file to configure  pr
 template: import-file-template
 redirect_from:
   - /docs/marketplace/dev/data-import/202311.0/file-details-product-price.csv.html
+  - /docs/scos/dev/data-import/202108.0/data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html
+  - /docs/scos/dev/data-import/data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html
 related:
   - title: Marketplace Product feature walkthrough
     link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html

@@ -8,6 +8,11 @@ originalArticleId: 0636967e-995e-4f57-b980-eac1b4bcda3e
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/amazon-pay.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/amazon-pay/amazon-pay.html
+  - /docs/scos/user/technology-partners/202001.0/payment-partners/amazon-pay.html
+  - /docs/scos/user/technology-partners/202204.0/payment-partners/amazon-pay.html
+  - /industry_partners/payment/amazonpay/amazon-pay.htm
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/amazon-pay/amazon-pay.html
+  - /docs/scos/user/technology-partners/201903.0/payment-partners/amazon-pay.html
 related:
   - title: Obtaining an Amazon Order Reference and information about shipping addresses
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/amazon-pay/obtain-an-amazon-order-reference-and-information-about-shipping-addresses.html

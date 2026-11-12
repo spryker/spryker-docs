@@ -4,6 +4,10 @@ description: This document describes the changes that have been recently release
 last_updated: Aug 6, 2026
 template: concept-topic-template
 publish_date: "2026-02-04"
+redirect_from:
+  - /docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-2022040.html
+  - /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202001.0/release-notes-202001.0.html
+  - /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html
 ---
 
 This document describes the changes that have been recently released.

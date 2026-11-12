@@ -13,6 +13,11 @@ redirect_from:
   - /docs/scos/user/features/202311.0/prices-feature-overview/volume-prices-overview.html
   - /docs/pbc/all/price-management/prices-feature-overview/volume-prices-overview.html
   - /docs/pbc/all/price-management/202204.0/base-shop/prices-feature-overview/volume-prices-overview.html
+  - /docs/scos/user/features/201907.0/prices-feature-overview/volume-prices-overview.html
+  - /docs/pbc/all/price-management/202204.0/prices-feature-overview/volume-prices-overview.html
+  - /docs/pbc/all/price-management/202212.0/prices-feature-overview/volume-prices-overview.html
+  - /docs/pbc/all/price-management/202307.0/base-shop/prices-feature-overview/volume-prices-overview.html
+  - /docs/scos/dev/feature-integration-guides/202001.0/volume-prices-feature-integration.html
 ---
 
 In highly competitive markets, the business tactic is made compelling by issuing drastic discounts when buying products in large quantities or volumes.

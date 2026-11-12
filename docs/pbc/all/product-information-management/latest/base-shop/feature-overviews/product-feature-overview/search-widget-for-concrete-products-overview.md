@@ -13,6 +13,11 @@ redirect_from:
   - /docs/scos/user/features/201811.0/product-feature-overview/search-widget-for-concrete-products-overview.html
   - /docs/scos/user/features/202311.0/product-feature-overview/search-widget-for-concrete-products-overview.html  
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-feature-overview/search-widget-for-concrete-products-overview.html
+  - /docs/pbc/all/product-information-management/202212.0/product-feature-overview/search-widget-for-concrete-products-overview.html
+  - /docs/scos/user/features/201907.0/product-feature-overview/search-widget-for-concrete-products-overview.html
+  - /docs/scos/user/features/202108.0/product-feature-overview/search-widget-for-concrete-products-overview.html
+  - /docs/scos/dev/feature-integration-guides/201903.0/search-widget-for-concrete-products-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202005.0/search-widget-for-concrete-products-feature-integration.html
 
 ---
 

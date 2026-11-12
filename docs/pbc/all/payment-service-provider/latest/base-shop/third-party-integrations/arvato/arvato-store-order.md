@@ -10,6 +10,8 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/arvato/arvato-store-order.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/arvato/arvato-store-order.html
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/arvato/arvato-store-order.html
+  - /docs/pbc/all/payment-service-provider/202307.0/base-shop/third-party-integrations/arvato/arvato-store-order.html
+  - /docs/scos/dev/technology-partner-guides/201811.0/payment-partners/arvato/arvato-store-order.html
 related:
 related:
   - title: Arvato

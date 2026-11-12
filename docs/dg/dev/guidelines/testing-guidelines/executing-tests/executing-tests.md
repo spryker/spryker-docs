@@ -5,6 +5,7 @@ last_updated: Aug 28, 2023
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
+  - /docs/executing-tests
 ---
 
 This section guides you through yhe execution of tests in your Spryker-based project. Specifically, it focuses on the following topics:

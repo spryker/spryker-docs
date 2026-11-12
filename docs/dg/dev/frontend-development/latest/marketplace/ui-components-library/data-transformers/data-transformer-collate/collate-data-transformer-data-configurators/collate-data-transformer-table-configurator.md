@@ -7,6 +7,7 @@ redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/data-transformers/collate/data-configurators/table.html
   - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/data-transformers/collate/data-configurators/table.html
   - /docs/scos/dev/front-end-development/202404.0/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/collate-data-transformer-table-configurator.html
+  - /docs/scos/dev/front-end-development/202307.0/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/collate-data-transformer-table-configurator.html
 
 related:
   - title: Data Transformer Data Configurators

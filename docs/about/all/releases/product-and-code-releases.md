@@ -33,6 +33,16 @@ redirect_from:
 - /docs/scos/user/intro-to-spryker/whats-new/security-updates.html
 - /docs/scos/user/intro-to-spryker/spryker-release-process.html
 - /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html
+- /about_spryker/releases/release_notes/release-notes-201907-0.htm
+- /about_spryker/releases/release_notes/release-notes.htm
+- /docs/about/all/releases/release-notes
+- /docs/about/all/releases/release-notes-202307.0/release-notes-202307.0.html
+- /docs/about/all/releases/release-notes-202607.0
+- /docs/about/all/releases/release-notes.html
+- /docs/about/all/releases/release-notes-list.html
+- /docs/about/all/releases/release-notes-overview
+- /docs/ca/dev/release-notes
+- /docs/ca/dev/release-notes.html
 
 ---
 

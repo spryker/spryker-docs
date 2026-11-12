@@ -6,6 +6,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/architecture-overview/architecture-overview.html
   - /docs/scos/dev/architecture/marketplace-architecture/marketplace-architecture.html
+  - /docs/dg/dev/architecture
 ---
 
 This section provides an overview of the Marketplace architecture. It includes the following topics:

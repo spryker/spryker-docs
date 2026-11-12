@@ -15,6 +15,14 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/customer-access-feature-walkthrough.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/customer-access-feature-walkthrough.html
   - /docs/scos/user/features/202204.0/customer-access-feature-overview.html
+  - /docs/scos/user/features/201903.0/customer-access-feature-overview.html
+  - /docs/scos/user/features/202212.0/customer-access-feature-overview.html
+  - /docs/pbc/all/customer-relationship-management/202307.0/base-shop/customer-access-feature-overview.html
+  - /docs/scos/user/features/202001.0/customer-access-feature-overview.html
+  - /docs/scos/dev/feature-integration-guides/202001.0/glue-api/glue-api-customer-access-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202009.0/customer-access-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202009.0/glue-api/glue-api-customer-access-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202108.0/customer-access-feature-integration.html
 ---
 
 *Customer Access* lets store administrators define whether certain information is visible to logged-out users.

@@ -7,6 +7,8 @@ redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/project-structure.html
   - /docs/scos/dev/front-end-development/202204.0/marketplace/project-structure.html
   - /docs/scos/dev/front-end-development/202404.0/marketplace/project-structure.html
+  - /docs/dg/dev/backend-development/module-structure.html
+  - /docs/dg/dev/backend-development/module-structure
 
 related:
   - title: Building the project

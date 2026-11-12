@@ -1,14 +1,27 @@
 ---
 title: Install the Recurring Orders feature
 description: Learn how to install the Recurring Orders feature into your Spryker project.
-last_updated: Aug 17, 2026
+last_updated: Oct 14, 2026
 template: feature-integration-guide-template
 related:
   - title: Recurring Orders feature overview
     link: docs/pbc/all/order-experience-management/latest/base-shop/feature-overviews/recurring-orders-feature-overview.html
 ---
 
-This document describes how to install the Recurring Orders feature.
+This document describes how to install the Recurring Orders feature, including the price tolerances that let buyers accept small price increases without a review.
+
+{% info_block infoBox "Upgrading an existing installation" %}
+
+If the Recurring Orders feature is already installed and you are adding the price tolerances, update `spryker-feature/order-experience-management` and `spryker-shop/shop-ui` to the releases that include them, and then repeat the following steps only:
+
+1. [Set up database schema and transfer objects](#2-set-up-database-schema-and-transfer-objects). The `price_tolerance_percent` and `is_product_price_change_ignored` columns default to `0` and `false`, so existing schedules keep their behavior: any price increase is reviewed.
+2. [Import glossary data](#8-import-glossary-data).
+3. [Warm up the router caches](#1-set-up-routes) to register the Price tolerances route.
+4. [Build the frontend](#7-build-the-frontend). The price tolerances page uses new molecules in the module and in `spryker-shop/shop-ui`, so make sure both packages are updated.
+
+No plugin registration is required: the price checks are part of the module and run with the registered schedule validator plugins.
+
+{% endinfo_block %}
 
 ## Install feature core
 
@@ -40,7 +53,7 @@ Both Purchasing Control and SSP Service Management are optional:
 {% info_block infoBox "Required modules" %}
 
 ```bash
-composer require spryker-feature/order-experience-management:"^1.0.0" --update-with-dependencies
+composer require spryker-feature/order-experience-management:"^4.0.0" --update-with-dependencies
 composer update \
   spryker/availability:"^9.32.0" \
   spryker/merchant:"^3.20.0" \
@@ -66,7 +79,7 @@ composer update \
   spryker-shop/customer-page:"^2.80.0" \
   spryker-shop/merchant-product-offer-widget:"^2.0.0" \
   spryker-shop/product-search-widget:"^3.9.0" \
-  spryker-shop/shop-ui:"^2.0.0" \
+  spryker-shop/shop-ui:"^2.6.0" \
   --with-dependencies
 ```
 
@@ -109,9 +122,13 @@ Make sure the following changes have been applied in the database:
 | DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
 | spy_recurring_schedule | table | created |
+| spy_recurring_schedule.cadence_options | column | created |
 | spy_recurring_schedule_item | table | created |
 | spy_recurring_schedule_history | table | created |
 | spy_recurring_schedule_forecast | table | created |
+| spy_recurring_schedule.price_tolerance_percent | column | created |
+| spy_recurring_schedule.is_product_price_change_ignored | column | created |
+| spy_recurring_schedule_item.price_tolerance_percent | column | created |
 
 Make sure the following changes have been applied in transfer objects:
 
@@ -141,10 +158,15 @@ Make sure the following changes have been applied in transfer objects:
 | RecurringScheduleTableFilter | class | created | src/Generated/Shared/Transfer/RecurringScheduleTableFilterTransfer.php |
 | RecurringScheduleDueData | class | created | src/Generated/Shared/Transfer/RecurringScheduleDueDataTransfer.php |
 | RecurringScheduleError | class | created | src/Generated/Shared/Transfer/RecurringScheduleErrorTransfer.php |
+| CadenceValidationResponse | class | created | src/Generated/Shared/Transfer/CadenceValidationResponseTransfer.php |
 | RecurringOrderSettings | class | created | src/Generated/Shared/Transfer/RecurringOrderSettingsTransfer.php |
 | RecurringOrderQuoteUpdateRequest | class | created | src/Generated/Shared/Transfer/RecurringOrderQuoteUpdateRequestTransfer.php |
 | RecurringOrderQuoteUpdateResponse | class | created | src/Generated/Shared/Transfer/RecurringOrderQuoteUpdateResponseTransfer.php |
 | RecurringOrderReloadResult | class | created | src/Generated/Shared/Transfer/RecurringOrderReloadResultTransfer.php |
+| RecurringScheduleOrderReview | class | created | src/Generated/Shared/Transfer/RecurringScheduleOrderReviewTransfer.php |
+| RecurringSchedule.priceTolerancePercent | property | created | src/Generated/Shared/Transfer/RecurringScheduleTransfer.php |
+| RecurringSchedule.isProductPriceChangeIgnored | property | created | src/Generated/Shared/Transfer/RecurringScheduleTransfer.php |
+| RecurringScheduleItem.priceTolerancePercent | property | created | src/Generated/Shared/Transfer/RecurringScheduleItemTransfer.php |
 | Quote.recurringOrderSettings | property | created | src/Generated/Shared/Transfer/QuoteTransfer.php |
 
 {% endinfo_block %}
@@ -241,6 +263,7 @@ Register the built-in cadence type and schedule validator plugins:
 | BiWeeklyCadenceTypePlugin | Calculates the next trigger date 14 days after the current trigger date. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence |
 | MonthlyCadenceTypePlugin | Calculates the next trigger date on the same day of the following month. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence |
 | EveryNWeeksCadenceTypePlugin | Calculates the next trigger date every N weeks. Requires `cadenceValue` to be set on the schedule. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence |
+| ByDaysCadenceTypePlugin | Calculates the next trigger date as the next selected day of the week after the current trigger date. Requires `cadenceOptions` to contain at least one ISO-8601 weekday number, from `1` (Monday) to `7` (Sunday). | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence |
 | PriceScheduleValidatorPlugin | Detects price increases on recurring schedule items compared to their stored reference prices before order placement. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\ScheduleValidator |
 | CheckoutPlaceabilityScheduleValidatorPlugin | Simulates a checkout to detect availability, discontinuation, or product approval issues on recurring schedule items before order placement. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\ScheduleValidator |
 
@@ -252,6 +275,7 @@ Register the built-in cadence type and schedule validator plugins:
 namespace Pyz\Zed\OrderExperienceManagement;
 
 use SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence\BiWeeklyCadenceTypePlugin;
+use SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence\ByDaysCadenceTypePlugin;
 use SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence\EveryNWeeksCadenceTypePlugin;
 use SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence\MonthlyCadenceTypePlugin;
 use SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence\WeeklyCadenceTypePlugin;
@@ -271,6 +295,7 @@ class OrderExperienceManagementDependencyProvider extends SprykerOrderExperience
             new BiWeeklyCadenceTypePlugin(), #RecurringOrdersFeature
             new MonthlyCadenceTypePlugin(), #RecurringOrdersFeature
             new EveryNWeeksCadenceTypePlugin(), #RecurringOrdersFeature
+            new ByDaysCadenceTypePlugin(), #RecurringOrdersFeature
         ];
     }
 
@@ -289,9 +314,11 @@ class OrderExperienceManagementDependencyProvider extends SprykerOrderExperience
 
 {% info_block warningBox "Verification" %}
 
-Make sure all four cadence types (weekly, bi-weekly, monthly, every N weeks) are available when setting up a recurring order on the storefront.
+Make sure all five cadence types (weekly, bi-weekly, monthly, every N weeks, on specific days) are available when setting up a recurring order on the storefront. When you select **On specific days**, make sure a day picker is displayed and checkout is blocked if no day is selected.
 
 {% endinfo_block %}
+
+To add a project-specific cadence type, implement `SprykerFeature\Zed\OrderExperienceManagement\Dependency\Plugin\CadenceTypePluginInterface` and register the plugin in `getCadenceTypePlugins()`. Besides `getNextTriggerDate()`, the plugin must implement `isCadenceValid()`, which validates the cadence value and cadence options of the schedule. On failure, return a `CadenceValidationResponseTransfer` with `isSuccess` set to `false` and a glossary key in `message`. Checkout and schedule updates are rejected when the cadence fails this validation. To offer the cadence type in the forms and filters, also extend `getSupportedCadenceTypes()` in the Yves config and `getBackOfficeFilterCadenceTypes()` in the Zed config.
 
 #### Set up recurring order checkout validator plugins
 
@@ -632,6 +659,7 @@ Register the following console commands:
 | --- | --- | --- | --- |
 | `recurring-orders:forecast:refresh` | RecurringOrderForecastRefreshConsole | Recalculates the monthly recurring volume forecast—orders already placed plus schedules still due—and stores it as a snapshot in `spy_recurring_schedule_forecast`. The Back Office **Recurring Order Schedules** page reads the stored snapshot instead of recalculating on each request. | SprykerFeature\Zed\OrderExperienceManagement\Communication\Console |
 | `recurring-orders:trigger-placement` | RecurringOrderTriggerConsole | Manually triggers order placement for a specific recurring schedule. Optional—intended for development and debugging. | SprykerFeature\Zed\OrderExperienceManagement\Communication\Console |
+| `recurring-orders:recover-stuck` | RecurringOrderRecoverStuckConsole | Re-triggers the state machine event of recurring schedules that stayed in a transient state, and logs the ones that need manual attention. See [Recover stuck schedules](#recover-stuck-schedules). | SprykerFeature\Zed\OrderExperienceManagement\Communication\Console |
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
@@ -643,6 +671,7 @@ namespace Pyz\Zed\Console;
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
 use Spryker\Zed\Kernel\Container;
 use SprykerFeature\Zed\OrderExperienceManagement\Communication\Console\RecurringOrderForecastRefreshConsole;
+use SprykerFeature\Zed\OrderExperienceManagement\Communication\Console\RecurringOrderRecoverStuckConsole;
 use SprykerFeature\Zed\OrderExperienceManagement\Communication\Console\RecurringOrderTriggerConsole;
 
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
@@ -658,6 +687,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             // ...
             new RecurringOrderForecastRefreshConsole(), #RecurringOrdersFeature
             new RecurringOrderTriggerConsole(), #RecurringOrdersFeature
+            new RecurringOrderRecoverStuckConsole(), #RecurringOrdersFeature
         ];
     }
 }
@@ -692,7 +722,7 @@ Run `console recurring-orders:forecast:refresh`. Make sure the command completes
 
 #### Set up cron jobs
 
-The recurring orders state machine relies on a cron job to evaluate condition transitions, and the Back Office forecast relies on a cron job to refresh its snapshot. Register the jobs in your Jenkins configuration:
+The recurring orders state machine relies on a cron job to evaluate condition transitions, a second cron job recovers schedules that got stuck in a transient state, and the Back Office forecast relies on a cron job to refresh its snapshot. Register the jobs in your Jenkins configuration:
 
 **config/Zed/cronjobs/jenkins.php**
 
@@ -702,6 +732,13 @@ $jobs[] = [
     'name' => 'recurring-order-check-conditions',
     'command' => '$PHP_BIN vendor/bin/console state-machine:check-condition RecurringOrder',
     'schedule' => '* * * * *',
+    'enable' => true,
+];
+
+$jobs[] = [
+    'name' => 'recurring-orders-recover-stuck',
+    'command' => '$PHP_BIN vendor/bin/console recurring-orders:recover-stuck',
+    'schedule' => '*/5 * * * *',
     'enable' => true,
 ];
 
@@ -720,14 +757,18 @@ To have recurring orders placed before the business day starts, set trigger date
 
 {% endinfo_block %}
 
-If your project uses Symfony Scheduler instead of Jenkins, register the equivalent jobs in your scheduler config:
+If your project uses Symfony Scheduler instead of Jenkins, register the equivalent jobs in your scheduler config. When `config/Zed/cronjobs/jenkins.php` builds the Jenkins jobs from `SymfonySchedulerConfig::getCronJobs()`, register the jobs only here, not in both places:
 
-**src/Pyz/Zed/SymfonyScheduler/SymfonySchedulerConfig.php**
+**src/Pyz/Client/SymfonyScheduler/SymfonySchedulerConfig.php**
 
 ```php
 'recurring-orders-check-condition' => [
     'command' => '$PHP_BIN vendor/bin/console state-machine:check-condition RecurringOrder',
     'schedule' => '* * * * *',
+],
+'recurring-orders-recover-stuck' => [
+    'command' => '$PHP_BIN vendor/bin/console recurring-orders:recover-stuck',
+    'schedule' => '*/5 * * * *',
 ],
 'recurring-orders-clear-locks' => [
     'command' => '$PHP_BIN vendor/bin/console state-machine:clear-locks',
@@ -743,8 +784,32 @@ If your project uses Symfony Scheduler instead of Jenkins, register the equivale
 
 1. Activate a recurring schedule. Make sure the state machine condition check job runs and the schedule transitions from `draft` to `active` within one minute.
 2. Make sure the forecast refresh job runs hourly and updates `calculated_at` in `spy_recurring_schedule_forecast`.
+3. Make sure the `recurring-orders-recover-stuck` job runs every 5 minutes and prints a summary line in the format `Recovered: 0, skipped: 0, failed: 0, needs manual attention: 0.`
 
 {% endinfo_block %}
+
+#### Recover stuck schedules
+
+A schedule can get stuck in a transient state. `state-machine:check-condition RecurringOrder` evaluates only transitions without an event, and an `onEnter` event fires only once, when the schedule enters the state. If the run dies between entering the state and firing the event—for example, because the process is killed during a deployment—nothing moves the schedule on. The `recurring-orders:recover-stuck` command finds such schedules and either re-triggers their event or logs them for manual attention.
+
+The command handles a schedule only when it has stayed in the same transient state for at least 15 minutes. Schedules stuck for longer are handled as follows:
+
+| STATE | STUCK FOR 15 MINUTES TO 6 HOURS | STUCK FOR MORE THAN 6 HOURS |
+| --- | --- | --- |
+| `notifying`, `order_placed` | The `notify-buyer` or `finalise-placement` event is re-triggered. Re-triggering cannot duplicate an order. If the run died right after `notify-buyer` sent the upcoming order email, the buyer receives the email a second time. | Logged at error level for manual attention. |
+| `confirmed`, `completing`, `skipped` | Logged at error level for manual attention. The commands of these states place an order or advance the trigger date, so re-triggering them could duplicate work. | Logged at error level for manual attention. |
+
+To prevent a temporary outage from causing a storm of attempts, the command makes one pass per run and never retries within a run:
+
+- Each run makes at most 50 recovery attempts. Logged schedules and schedules in a cooldown do not count towards the limit, so permanently stuck schedules cannot block recoverable ones.
+- After each attempt or log entry, a schedule enters a cooldown of half the time it has been stuck, but at least 15 minutes. For example, a schedule stuck for a day is logged every 12 hours instead of on every run. The cooldown starts from `spy_recurring_schedule.updated_at`, which the command updates before triggering the event. As a side effect, an unrelated edit of the schedule restarts its cooldown.
+- The run is aborted after 3 consecutive failed attempts. The next run starts over.
+- A schedule whose lock is held by another process is skipped. Any other database error on the lock counts as a failed attempt.
+- A schedule without a state history row—for example, after a manual data fix—is not ignored. Its `created_at` is used as the time it entered the state, and the log entry contains `isStateHistoryMissing`.
+
+The command exits with an error code when the run was aborted or at least one recovery attempt failed, so your scheduler marks the run as failed. Skipped and logged schedules do not affect the exit code. Monitor the error-level log entries of the command to find schedules that need manual attention.
+
+The limits are defined as constants of `SprykerFeature\Zed\OrderExperienceManagement\Business\Schedule\Recovery\StuckScheduleRecoverer`. The 15-minute minimum age protects a slow but still running state machine run from being re-triggered, because the state machine executes `onEnter` events without a lock. If you change `MINIMUM_AGE_IN_SECONDS`, keep it well above the longest run of a transient state's command. To change which states are recovered or only logged, see `getRecoverableStuckScheduleEvents()` and `getReportOnlyStuckScheduleStates()` in [Configure module behavior](#5-configure-module-behavior).
 
 #### Set up the Back Office navigation
 
@@ -777,7 +842,7 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-In the Back Office, go to **Sales > Recurring Order Schedules**. Make sure the list of recurring order schedules is displayed with the status and cadence filters, and that the **Total Committed Recurring Volume** widget shows the already-placed and still-planned breakdown. Open a schedule and make sure the detail view renders the schedule items with their merchant and configurable bundle names, the customer, and a link to the source order.
+In the Back Office, go to **Sales > Recurring Order Schedules**. Make sure the list of recurring order schedules is displayed with the status and cadence filters, and that the **Total Committed Recurring Volume** widget shows the already-placed and still-planned breakdown. Make sure the list has a **Price Tolerance** column and a **Price Tolerance** filter with the *Any*, *On*, and *Off* options. Open a schedule and make sure the detail view renders the schedule items with their merchant and configurable bundle names, the customer, a link to the source order, the **Order Tolerance** row, and the **Price Tolerance** column in the items table.
 
 {% endinfo_block %}
 
@@ -877,13 +942,20 @@ class OrderExperienceManagementConfig extends SprykerOrderExperienceManagementCo
 | `getForecastPeriodFrom()` | `FORECAST_PERIOD_FROM_MONTH_START` | Lower bound of the Back Office forecast period. Applies to both forecast inputs: schedules still due to run and orders already placed. Switch to `FORECAST_PERIOD_FROM_TODAY` to cover only the remainder of the current month. |
 | `getForecastPeriodTo()` | `FORECAST_PERIOD_TO_MONTH_END` | Upper bound of the Back Office forecast period. Applies to both forecast inputs. |
 | `getMonthlyForecastKey()` | `monthly` | Key under which the forecast snapshot is stored in `spy_recurring_schedule_forecast`. |
-| `getBackOfficeFilterStatuses()` | Active, Paused, Review required, Cancelled, Failed | Statuses selectable in the Back Office **Recurring Order Schedules** filter. |
-| `getBackOfficeFilterCadenceTypes()` | Weekly, Bi-weekly, Monthly, Every N weeks | Cadence types selectable in the Back Office **Recurring Order Schedules** filter. Extend it when you register a custom cadence type plugin. |
-| `getSmStateNameToStatusMap()` | See `OrderExperienceManagementConfig` | Maps each state machine state name to the public schedule status it represents. State names that are not in the map resolve to no status. Extend it when you add states to the process XML. |
+| `getBackOfficeFilterStatuses()` | Active, Paused, Review required, Cancelled, Failed, Processing | Statuses selectable in the Back Office **Recurring Order Schedules** filter. |
+| `getBackOfficeFilterCadenceTypes()` | Weekly, Bi-weekly, Monthly, Every N weeks, By days | Cadence types selectable in the Back Office **Recurring Order Schedules** filter. Extend it when you register a custom cadence type plugin. |
+| `getSupportedWeekDays()` | Monday to Sunday | Days of the week accepted for the *on specific days* cadence, as ISO-8601 weekday numbers. Reads the value from the shared config. To narrow or reorder the days, override `getSupportedWeekDays()` in the shared config to apply it in Yves and Zed at once. |
+| `getSmStateNameToStatusMap()` | See `OrderExperienceManagementConfig` | Maps each stable state machine state name to the public schedule status it represents. A stable state is one the schedule rests in and the buyer can act on—for example, `pre_trigger_notified` maps to `active`. State names that are not in the map are transient and resolve to `getTransitionalScheduleStatus()`. When you add a state to the process XML from which the buyer can trigger an event, add it to the map. |
+| `getTransitionalScheduleStatus()` | `processing` | Status persisted while the schedule passes through a state that is not in `getSmStateNameToStatusMap()`, such as `notifying`, `validation`, `confirmed`, `order_placed`, `completing`, or `skipped`. While a schedule has this status, the storefront hides the Pause, Cancel, and Skip actions and the next execution date. |
+| `getRecoverableStuckScheduleEvents()` | `notifying` → `notify-buyer`, `order_placed` → `finalise-placement` | Transient states in which `recurring-orders:recover-stuck` re-triggers the `onEnter` event of a stuck schedule, as `[state => event]`. Add a state only when re-triggering its event cannot place an order or advance the schedule a second time. See [Recover stuck schedules](#recover-stuck-schedules). |
+| `getReportOnlyStuckScheduleStates()` | `confirmed`, `completing`, `skipped` | Transient states in which `recurring-orders:recover-stuck` only logs a stuck schedule for manual attention, because their command is not idempotent. |
 | `getSupportedAddedItemShipmentTypeKeys()` | `[delivery, on-site-service]` | Shipment type keys accepted for products added on the **Review Required** page, in preference order. When an offer or store exposes several supported types, the first one is used. |
 | `getSubstitutableReviewReasons()` | `[discontinued, substituted]` | Review reason groups for which a substitute product can be offered on the **Review Required** page. |
 | `getPriceChangeReviewReasons()` | `[price_increased]` | Review reason groups counted as price changes in the **Review Required** summary. |
 | `getUnavailableReviewReasons()` | `[unavailable, out_of_stock]` | Review reason groups counted as unavailable items in the **Review Required** summary. |
+| `getPriceToleranceMaxPercent()` | `'999.99'` | Highest price tolerance in percent that a buyer can set on a schedule or a schedule item. Defined in the shared config. See [Price tolerance limits](#price-tolerance-limits). |
+| `getPriceToleranceScale()` | `2` | Number of decimal places of a price tolerance. Defined in the shared config. See [Price tolerance limits](#price-tolerance-limits). |
+| `getPriceToleranceStep()` | `'0.01'` | Step in percent that a price tolerance moves in. The storefront tolerance fields use it as their step, and a tolerance that is not a multiple of it is rejected. Defined in the shared config. See [Price tolerance limits](#price-tolerance-limits). |
 | `isMeasurementUnitProductAdditionRestricted()` | `true` | Defines whether products sold in measurement units can be added on the **Review Required** page. The picker offers no sales unit selector, so a typed quantity would silently mean N times the store default sales unit instead of N base units. |
 | `isPackagingUnitProductAdditionRestricted()` | `true` | Defines whether products sold in packaging units can be added on the **Review Required** page. The picker offers no amount input, so the resolved item would carry no amount, stay unsplit, and reserve no stock for the lead product. |
 | `getStateMachineName()` | `RecurringOrder` | Name of the state machine. Must match the directory name under `config/Zed/StateMachine`. |
@@ -893,9 +965,46 @@ class OrderExperienceManagementConfig extends SprykerOrderExperienceManagementCo
 | `getRecurringOrderDetailUrlPath()` | `/recurring-orders` | Storefront path used to build the schedule detail link in notification emails. Update it if you change the route patterns. |
 | `getRecurringOrderReviewUrlPath()` | `/recurring-orders/%s/review-required` | Storefront path used to build the review link in notification emails. Update it if you change the route patterns. |
 
+#### Price tolerance limits
+
+The price tolerance limits are defined once in the shared config, and the Zed and Yves configs read them from there. This way, the storefront form and the backend validation always apply the same limits. The defaults let a buyer enter a tolerance from `0` to `999.99` percent with up to two decimals, in steps of `0.01`.
+
+To apply a different limit in Yves and Zed at once, override the method in the shared config of your project. For example, to accept tolerances in steps of `0.25` only:
+
+**src/Pyz/Shared/OrderExperienceManagement/OrderExperienceManagementConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Shared\OrderExperienceManagement;
+
+use SprykerFeature\Shared\OrderExperienceManagement\OrderExperienceManagementConfig as SprykerOrderExperienceManagementConfig;
+
+class OrderExperienceManagementConfig extends SprykerOrderExperienceManagementConfig
+{
+    /**
+     * Specification:
+     * - Returns the step a price tolerance moves in, in percent.
+     * - Must not have more decimal places than `getPriceToleranceScale()`.
+     *
+     * @api
+     */
+    public function getPriceToleranceStep(): string
+    {
+        return '0.25';
+    }
+}
+```
+
+{% info_block warningBox "Changing the maximum or the number of decimals" %}
+
+The `price_tolerance_percent` columns of `spy_recurring_schedule` and `spy_recurring_schedule_item` are `DECIMAL(5,2)`, which stores at most `999.99`. If you raise the maximum or the number of decimals in the shared config, also extend the column size and scale in the Propel schema of your project and run `console propel:install`. Otherwise, the database rounds the stored tolerance, and the price check uses a different value than the one that was validated. The step must not have more decimal places than the number of decimals.
+
+{% endinfo_block %}
+
 ### 6) Import Back Office translations
 
-The module ships Back Office translations at `src/SprykerFeature/OrderExperienceManagement/data/translation/Zed/{locale}.csv`. These cover the **Recurring Order Schedules** page, the table filters, and the Back Office configuration labels.
+The module ships Back Office translations at `src/SprykerFeature/OrderExperienceManagement/data/translation/Zed/{locale}.csv`. These cover the **Recurring Order Schedules** page, including the **Price Tolerance** column and filter, the table filters, and the Back Office configuration labels.
 
 Rebuild the translation cache:
 
@@ -905,7 +1014,7 @@ console translator:generate-cache
 
 {% info_block warningBox "Verification" %}
 
-In the Back Office, open **Sales > Recurring Order Schedules**. Make sure the column headers, filter labels, and status badges are translated instead of showing raw glossary keys.
+In the Back Office, open **Sales > Recurring Order Schedules**. Make sure the column headers, including **Price Tolerance**, filter labels, and status badges are translated instead of showing raw glossary keys.
 
 {% endinfo_block %}
 
@@ -919,7 +1028,7 @@ Register the following route provider plugin:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| RecurringOrderRouteProviderPlugin | Adds the storefront routes for the recurring order list, detail, edit, review, product search, product offer selection, shipment method, and schedule action pages. | None | SprykerFeature\Yves\OrderExperienceManagement\Plugin\Router |
+| RecurringOrderRouteProviderPlugin | Adds the storefront routes for the recurring order list, detail, edit, review, price tolerances, product search, product offer selection, shipment method, and schedule action pages. | None | SprykerFeature\Yves\OrderExperienceManagement\Plugin\Router |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
@@ -964,6 +1073,7 @@ Make sure the following storefront routes are accessible:
 | recurring-orders/detail | `/recurring-orders/{uuid}` | Recurring order detail page. |
 | recurring-orders/review-required | `/recurring-orders/{uuid}/review-required` | Review required page. |
 | recurring-order/edit | `/recurring-order/{uuid}/edit` | Recurring schedule edit form. |
+| recurring-orders/price-tolerances | `/recurring-orders/{uuid}/price-tolerances` | Page where a buyer sets the order total tolerance, the product tolerances, and the **Ignore product price changes** setting. |
 | recurring-order/form | `/recurring-order-form` | Recurring order setup form rendered at checkout. |
 | recurring-order/save | `/recurring-order/save` | Saves recurring order settings on the quote. |
 | recurring-order/clear | `/recurring-order/clear` | Removes recurring order settings from the quote. |
@@ -1239,8 +1349,10 @@ class OrderExperienceManagementConfig extends SprykerOrderExperienceManagementCo
 
 | CONFIGURATION METHOD | DEFAULT | DESCRIPTION |
 | --- | --- | --- |
-| `getSupportedCadenceTypes()` | Weekly, bi-weekly, monthly, every N weeks | Cadence types offered in the storefront recurring order forms, as `[glossary key => cadence value]`. Extend it when you register a custom cadence type plugin. |
+| `getSupportedCadenceTypes()` | Weekly, bi-weekly, monthly, every N weeks, on specific days | Cadence types offered in the storefront recurring order forms, as `[glossary key => cadence value]`. Extend it when you register a custom cadence type plugin. |
 | `getCadenceTypeEveryNWeeks()` | `every_n_weeks` | Cadence type that requires an additional numeric interval. |
+| `getCadenceTypeByDays()` | `by_days` | Cadence type that requires a set of days of the week. |
+| `getSupportedWeekDays()` | Monday to Sunday | Days of the week offered in the day picker of the *on specific days* cadence, in display order. Days outside this list are rejected. Reads the value from the shared config. |
 | `getInvoicePaymentMethodKeys()` | `[invoice, purchaseOnAccount, dummyMarketplacePaymentInvoice]` | Payment method keys that qualify as invoice-based. Only quotes with a matching payment method can generate a recurring schedule. Override this in the shared config to apply it in Yves and Zed at once. |
 | `getBusinessUnitChoicesLimit()` | `100` | Maximum number of company business units loaded into the recurring order search scope dropdown. Projects with more business units should raise this value or switch to an async autocomplete widget. |
 | `getRecurringScheduleListItemsPerPage()` | `10` | Number of recurring schedules shown per page on the list page. |
@@ -1258,6 +1370,8 @@ class OrderExperienceManagementConfig extends SprykerOrderExperienceManagementCo
 {% info_block infoBox "Overriding storefront molecules" %}
 
 The module ships its storefront UI as molecules under `src/SprykerFeature/OrderExperienceManagement/src/SprykerFeature/Yves/OrderExperienceManagement/Theme/default/components/molecules`. To adjust the markup, override the molecule in your project at the same relative path under `src/Pyz/Yves/OrderExperienceManagement/Theme/default/components/molecules`. The most commonly customized molecules are `recurring-order-selector`, `recurring-order-list`, `schedule-detail`, `schedule-detail-sidebar`, `schedule-review`, and `recurring-order-edit-form`.
+
+The Price tolerances page is composed of the `price-tolerance`, `price-tolerance-bulk`, `price-tolerance-bulk-bar`, and `price-tolerance-change-confirm` molecules. Its product table is built from the `advanced-table`, `advanced-table-input-cell`, and `advanced-table-checkbox-cell` molecules of the `ShopUi` module, and the information popups use the `tooltip-message` molecule of `ShopUi`.
 
 The **Review Required** page is composed of the `review-` molecules: `review-flagged-items`, `review-unchanged-items`, `review-quantity-control`, `review-substitute`, `review-add-product`, `review-add-product-picker`, `review-shipment-selection`, `review-scope-selector`, `review-change-summary`, `review-summary-banner`, `review-blocking-errors`, and `review-footer`.
 
@@ -1281,484 +1395,9 @@ Reload the checkout summary page and make sure the recurring order selector rend
 
 ### 8) Import glossary data
 
-Import the following glossary keys for Storefront translations:
+The module provides the Storefront translations for the English and German locales in `src/SprykerFeature/OrderExperienceManagement/data/import/glossary.csv`. The file is the source of truth for the glossary keys of the feature, so use it as is instead of copying keys from this document.
 
-**data/import/common/common/glossary.csv**
-
-```csv
-recurring_orders.attention_banner.link.failed,View Failed,en_US
-recurring_orders.attention_banner.link.failed,Fehlgeschlagene anzeigen,de_DE
-recurring_orders.attention_banner.link.paused,View Paused,en_US
-recurring_orders.attention_banner.link.paused,Pausierte anzeigen,de_DE
-recurring_orders.attention_banner.link.review_required,View Review Required,en_US
-recurring_orders.attention_banner.link.review_required,Zu prüfende anzeigen,de_DE
-recurring_orders.attention_banner.message,You have %count% recurring schedule(s) that require your attention.,en_US
-recurring_orders.attention_banner.message,"Sie haben %count% wiederkehrende(n) Zeitplan/Zeitpläne, die Ihre Aufmerksamkeit erfordern.",de_DE
-recurring_orders.cadence.bi_weekly,Bi-weekly,en_US
-recurring_orders.cadence.bi_weekly,Zweiwöchentlich,de_DE
-recurring_orders.cadence.every_n_weeks,Every N weeks,en_US
-recurring_orders.cadence.every_n_weeks,Alle N Wochen,de_DE
-recurring_orders.cadence.monthly,Monthly,en_US
-recurring_orders.cadence.monthly,Monatlich,de_DE
-recurring_orders.cadence.weekly,Weekly,en_US
-recurring_orders.cadence.weekly,Wöchentlich,de_DE
-recurring_orders.checkout.cadence_label,Frequency,en_US
-recurring_orders.checkout.cadence_label,Häufigkeit,de_DE
-recurring_orders.checkout.cadence_placeholder,Select frequency,en_US
-recurring_orders.checkout.cadence_placeholder,Häufigkeit auswählen,de_DE
-recurring_orders.checkout.cadence_value_label,Interval (weeks),en_US
-recurring_orders.checkout.cadence_value_label,Intervall (Wochen),de_DE
-recurring_orders.checkout.confirm_button,Confirm,en_US
-recurring_orders.checkout.confirm_button,Bestätigen,de_DE
-recurring_orders.checkout.enable_description,"Get this order delivered automatically on your schedule. Skip and cancel anytime.",en_US
-recurring_orders.checkout.enable_description,"Lassen Sie sich diese Bestellung automatisch nach Ihrem Zeitplan liefern. Jederzeit überspringen und stornieren.",de_DE
-recurring_orders.checkout.enable_label,Set up as recurring order,en_US
-recurring_orders.checkout.enable_label,Als wiederkehrende Bestellung einrichten,de_DE
-recurring_orders.checkout.remove_button,Remove,en_US
-recurring_orders.checkout.remove_button,Entfernen,de_DE
-recurring_orders.checkout.schedule_name_label,Schedule name,en_US
-recurring_orders.checkout.schedule_name_label,Name des Zeitplans,de_DE
-recurring_orders.checkout.section_title,Recurring Order,en_US
-recurring_orders.checkout.section_title,Wiederkehrende Bestellung,de_DE
-recurring_orders.checkout.start_date_label,Start date,en_US
-recurring_orders.checkout.start_date_label,Startdatum,de_DE
-recurring_orders.checkout.start_date_tooltip,"The date your first recurring delivery is placed. Today's order is placed as normal, recurring deliveries then repeat on your selected frequency from this date.",en_US
-recurring_orders.checkout.start_date_tooltip,"Das Datum, an dem Ihre erste wiederkehrende Lieferung erfolgt. Die heutige Bestellung wird wie gewohnt aufgegeben, wiederkehrende Lieferungen wiederholen sich danach ab diesem Datum in der von Ihnen gewählten Häufigkeit.",de_DE
-recurring_orders.checkout.start_date_tooltip_label,More information about the start date,en_US
-recurring_orders.checkout.start_date_tooltip_label,Weitere Informationen zum Startdatum,de_DE
-recurring_orders.checkout.first_order_notice,Your first recurring order starts on %date%,en_US
-recurring_orders.checkout.first_order_notice,Ihre erste wiederkehrende Bestellung beginnt am %date%,de_DE
-recurring_orders.checkout.validation.start_date_required,Please choose a start date.,en_US
-recurring_orders.checkout.validation.start_date_required,Bitte wählen Sie ein Startdatum aus.,de_DE
-recurring_orders.checkout.validation.start_date_in_past,The start date cannot be in the past.,en_US
-recurring_orders.checkout.validation.start_date_in_past,Das Startdatum darf nicht in der Vergangenheit liegen.,de_DE
-recurring_orders.checkout.error.start_date_in_past,The recurring order start date cannot be in the past.,en_US
-recurring_orders.checkout.error.start_date_in_past,Das Startdatum der wiederkehrenden Bestellung darf nicht in der Vergangenheit liegen.,de_DE
-recurring_orders.checkout.error.start_date_required,Please choose a start date for the recurring order.,en_US
-recurring_orders.checkout.error.start_date_required,Bitte wählen Sie ein Startdatum für die wiederkehrende Bestellung aus.,de_DE
-recurring_orders.detail.access_denied,You do not have access to this recurring order.,en_US
-recurring_orders.detail.access_denied,Sie haben keinen Zugriff auf diese wiederkehrende Bestellung.,de_DE
-recurring_orders.detail.action.error,An error occurred while processing the action. Please try again.,en_US
-recurring_orders.detail.action.error,Bei der Verarbeitung der Aktion ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.,de_DE
-recurring_orders.detail.actions.cancel,Cancel Schedule,en_US
-recurring_orders.detail.actions.cancel,Zeitplan abbrechen,de_DE
-recurring_orders.detail.actions.pause,Pause,en_US
-recurring_orders.detail.actions.pause,Pausieren,de_DE
-recurring_orders.detail.actions.resume,Resume,en_US
-recurring_orders.detail.actions.resume,Fortsetzen,de_DE
-recurring_orders.detail.actions.retry,Retry Again,en_US
-recurring_orders.detail.actions.retry,Erneut versuchen,de_DE
-recurring_orders.detail.actions.review,Review,en_US
-recurring_orders.detail.actions.review,Überprüfen,de_DE
-recurring_orders.detail.actions.skip,Skip This Execution,en_US
-recurring_orders.detail.actions.skip,Diese Ausführung überspringen,de_DE
-recurring_orders.detail.cancel.modal.title,Cancel Schedule?,en_US
-recurring_orders.detail.cancel.modal.title,Zeitplan abbrechen?,de_DE
-recurring_orders.detail.cancel.modal.warning,This action is permanent. The schedule will stop immediately and cannot be reactivated.,en_US
-recurring_orders.detail.cancel.modal.warning,Diese Aktion ist dauerhaft. Der Zeitplan wird sofort gestoppt und kann nicht reaktiviert werden.,de_DE
-recurring_orders.detail.error.failed.title,The last order attempt failed for the following reasons:,en_US
-recurring_orders.detail.error.failed.title,Der letzte Bestellversuch ist aus den folgenden Gründen fehlgeschlagen:,de_DE
-recurring_orders.detail.estimated_total.info,Estimated Grand Total displays the sum of order items excl. shipping costs or discounts.,en_US
-recurring_orders.detail.estimated_total.info,Der geschätzte Gesamtbetrag enthält die Summe der Artikel ohne Versandkosten oder Rabatte.,de_DE
-recurring_orders.detail.estimated_total.label,Estimated Total,en_US
-recurring_orders.detail.estimated_total.label,Geschätzter Gesamtbetrag,de_DE
-recurring_orders.detail.skip.modal.title,Skip this execution?,en_US
-recurring_orders.detail.skip.modal.title,Diese Ausführung überspringen?,de_DE
-recurring_orders.detail.skip.modal.execution_being_skipped,Execution being skipped,en_US
-recurring_orders.detail.skip.modal.execution_being_skipped,Übersprungene Ausführung,de_DE
-recurring_orders.detail.skip.modal.next_scheduled_execution,Next scheduled execution,en_US
-recurring_orders.detail.skip.modal.next_scheduled_execution,Nächste geplante Ausführung,de_DE
-recurring_orders.detail.skip.modal.summary,The %skippedDate% order will not be placed. The schedule will continue and trigger next on %nextDate%.,en_US
-recurring_orders.detail.skip.modal.summary,Die Bestellung vom %skippedDate% wird nicht aufgegeben. Der Zeitplan läuft weiter und wird als Nächstes am %nextDate% ausgelöst.,de_DE
-recurring_orders.detail.skip.modal.confirm,Skip this execution,en_US
-recurring_orders.detail.skip.modal.confirm,Diese Ausführung überspringen,de_DE
-recurring_orders.detail.history.description,View all past and upcoming executions for this schedule,en_US
-recurring_orders.detail.history.description,Alle vergangenen und bevorstehenden Ausführungen für diesen Zeitplan anzeigen,de_DE
-recurring_orders.detail.history.actions,Actions,en_US
-recurring_orders.detail.history.actions,Aktionen,de_DE
-recurring_orders.detail.history.date,Date,en_US
-recurring_orders.detail.history.date,Datum,de_DE
-recurring_orders.detail.history.empty,No execution history yet.,en_US
-recurring_orders.detail.history.empty,Noch kein Ausführungsverlauf vorhanden.,de_DE
-recurring_orders.detail.history.order_reference,Order Reference,en_US
-recurring_orders.detail.history.order_reference,Bestellreferenz,de_DE
-recurring_orders.detail.history.status,Status,en_US
-recurring_orders.detail.history.status,Status,de_DE
-recurring_orders.detail.history.title,Past scheduled orders,en_US
-recurring_orders.detail.history.title,Ausführungsverlauf,de_DE
-recurring_orders.detail.history.view_order,View Order,en_US
-recurring_orders.detail.history.view_order,Bestellung anzeigen,de_DE
-recurring_orders.detail.next_execution.paused,Schedule is paused. Resume to set next execution date.,en_US
-recurring_orders.detail.next_execution.paused,"Zeitplan ist pausiert. Setzen Sie ihn fort, um das nächste Ausführungsdatum festzulegen.",de_DE
-recurring_orders.detail.next_execution.title,Next Scheduled Execution,en_US
-recurring_orders.detail.next_execution.title,Nächste geplante Ausführung,de_DE
-recurring_orders.detail.order_items.column.product,Product,en_US
-recurring_orders.detail.order_items.column.product,Produkt,de_DE
-recurring_orders.detail.order_items.column.quantity,Qty,en_US
-recurring_orders.detail.order_items.column.quantity,Menge,de_DE
-recurring_orders.detail.order_items.column.total,Total,en_US
-recurring_orders.detail.order_items.column.total,Gesamt,de_DE
-recurring_orders.detail.order_items.empty,No items found.,en_US
-recurring_orders.detail.order_items.empty,Keine Artikel gefunden.,de_DE
-recurring_orders.detail.order_items.label,Order Items,en_US
-recurring_orders.detail.order_items.label,Bestellartikel,de_DE
-recurring_orders.detail.order_items.not_in_next_order_label,Not in next order,en_US
-recurring_orders.detail.order_items.not_in_next_order_label,Nicht in nächster Bestellung,de_DE
-recurring_orders.detail.order_items.one_time_label,Just this order,en_US
-recurring_orders.detail.order_items.one_time_label,Nur diese Bestellung,de_DE
-recurring_orders.detail.order_items.recurring_quantity_label,Recurring: %quantity%,en_US
-recurring_orders.detail.order_items.recurring_quantity_label,Wiederkehrend: %quantity%,de_DE
-recurring_orders.detail.pause.modal.title,Pause Schedule?,en_US
-recurring_orders.detail.pause.modal.title,Pausenplan?,de_DE
-recurring_orders.detail.pause.modal.warning,Do you want to pause the schedule now?,en_US
-recurring_orders.detail.pause.modal.warning,Möchten Sie den Zeitplan jetzt pausieren?,de_DE
-recurring_orders.detail.resume.modal.title,Resume schedule,en_US
-recurring_orders.detail.resume.modal.title,Zeitplan fortsetzen,de_DE
-recurring_orders.detail.edit.title,Edit schedule,en_US
-recurring_orders.detail.edit.title,Zeitplan bearbeiten,de_DE
-recurring_orders.detail.edit.actions.save,Save changes,en_US
-recurring_orders.detail.edit.actions.save,Änderungen speichern,de_DE
-recurring_orders.detail.edit.success,Recurring order updated.,en_US
-recurring_orders.detail.edit.success,Wiederkehrende Bestellung aktualisiert.,de_DE
-recurring_orders.detail.edit.error,Recurring order could not be updated.,en_US
-recurring_orders.detail.edit.error,Wiederkehrende Bestellung konnte nicht aktualisiert werden.,de_DE
-recurring_orders.detail.edit.error.schedule_not_found,Recurring order %uuid% not found or access denied.,en_US
-recurring_orders.detail.edit.error.schedule_not_found,Wiederkehrende Bestellung %uuid% nicht gefunden oder Zugriff verweigert.,de_DE
-recurring_orders.detail.edit.name_label,Name,en_US
-recurring_orders.detail.edit.name_label,Name,de_DE
-recurring_orders.detail.edit.frequency_label,Frequency,en_US
-recurring_orders.detail.edit.frequency_label,Häufigkeit,de_DE
-recurring_orders.detail.edit.cadence_value_label,Interval,en_US
-recurring_orders.detail.edit.cadence_value_label,Intervall,de_DE
-recurring_orders.detail.edit.starting_date_label,Next Execution Date,en_US
-recurring_orders.detail.edit.starting_date_label,Nächstes Ausführungsdatum,de_DE
-recurring_orders.detail.edit.validation.name_required,Please enter a name.,en_US
-recurring_orders.detail.edit.validation.name_required,Bitte geben Sie einen Namen ein.,de_DE
-recurring_orders.detail.edit.validation.starting_date_required,Please select a starting date.,en_US
-recurring_orders.detail.edit.validation.starting_date_required,Bitte wählen Sie ein Startdatum.,de_DE
-recurring_orders.detail.edit.validation.starting_date_in_past,The starting date cannot be in the past.,en_US
-recurring_orders.detail.edit.validation.starting_date_in_past,Das Startdatum darf nicht in der Vergangenheit liegen.,de_DE
-recurring_orders.detail.resume.date_label,Next execution date,en_US
-recurring_orders.detail.resume.date_label,Datum der nächsten Ausführung,de_DE
-recurring_orders.detail.review_required.attention,Recurring order could not be processed automatically and requires your attention.,en_US
-recurring_orders.detail.review_required.attention,Der wiederkehrende Auftrag konnte nicht automatisch verarbeitet werden und erfordert Ihre Aufmerksamkeit.,de_DE
-recurring_orders.detail.sidebar.cadence,Cadence,en_US
-recurring_orders.detail.sidebar.cadence,Häufigkeit,de_DE
-recurring_orders.detail.sidebar.created,Created,en_US
-recurring_orders.detail.sidebar.created,Erstellt,de_DE
-recurring_orders.detail.sidebar.created_by,Created By,en_US
-recurring_orders.detail.sidebar.created_by,Erstellt von,de_DE
-recurring_orders.detail.sidebar.status,Status,en_US
-recurring_orders.detail.sidebar.status,Status,de_DE
-recurring_orders.detail.sidebar.title,Schedule Details,en_US
-recurring_orders.detail.sidebar.title,Zeitplandetails,de_DE
-recurring_orders.detail.source_order,Original order,en_US
-recurring_orders.detail.source_order,Ursprüngliche Bestellung,de_DE
-recurring_orders.detail.title,Recurring Order Details,en_US
-recurring_orders.detail.title,Wiederkehrende Bestellung – Details,de_DE
-recurring_orders.error.items_not_purchasable,The following items can no longer be purchased and the recurring order was not placed: %skus%,en_US
-recurring_orders.error.items_not_purchasable,"Die folgenden Artikel können nicht mehr gekauft werden, und die wiederkehrende Bestellung wurde nicht aufgegeben: %skus%",de_DE
-recurring_orders.history.errors.show,Show errors,en_US
-recurring_orders.history.errors.show,Fehler anzeigen,de_DE
-recurring_orders.history.event.cancelled,Cancelled,en_US
-recurring_orders.history.event.cancelled,Abgebrochen,de_DE
-recurring_orders.history.event.failed,Failed,en_US
-recurring_orders.history.event.failed,Fehlgeschlagen,de_DE
-recurring_orders.history.event.paused,Paused,en_US
-recurring_orders.history.event.paused,Pausiert,de_DE
-recurring_orders.history.event.placed,Completed,en_US
-recurring_orders.history.event.placed,Abgeschlossen,de_DE
-recurring_orders.history.event.resumed,Resumed,en_US
-recurring_orders.history.event.resumed,Fortgesetzt,de_DE
-recurring_orders.history.event.skipped,Skipped,en_US
-recurring_orders.history.event.skipped,Übersprungen,de_DE
-recurring_orders.item.configurable_bundle_label,Bundle: %name%,en_US
-recurring_orders.item.configurable_bundle_label,Bundle: %name%,de_DE
-recurring_orders.list.column.actions,Actions,en_US
-recurring_orders.list.column.actions,Aktionen,de_DE
-recurring_orders.list.column.frequency,Frequency,en_US
-recurring_orders.list.column.frequency,Häufigkeit,de_DE
-recurring_orders.list.column.name,Schedule Name,en_US
-recurring_orders.list.column.name,Zeitplanname,de_DE
-recurring_orders.list.column.next_order_date,Next Order Date,en_US
-recurring_orders.list.column.next_order_date,Nächstes Bestelldatum,de_DE
-recurring_orders.list.column.status,Status,en_US
-recurring_orders.list.column.status,Status,de_DE
-recurring_orders.list.empty,No recurring orders found.,en_US
-recurring_orders.list.empty,Keine wiederkehrenden Bestellungen gefunden.,de_DE
-recurring_orders.list.form.scope,Show schedules for,en_US
-recurring_orders.list.form.scope,Zeitpläne anzeigen für,de_DE
-recurring_orders.list.form.search,Search,en_US
-recurring_orders.list.form.search,Suche,de_DE
-recurring_orders.list.form.search_placeholder,Search schedules...,en_US
-recurring_orders.list.form.search_placeholder,Zeitpläne suchen...,de_DE
-recurring_orders.list.form.status,Status,en_US
-recurring_orders.list.form.status,Status,de_DE
-recurring_orders.list.form.status.all,All statuses,en_US
-recurring_orders.list.form.status.all,Alle Status,de_DE
-recurring_orders.list.scope.company,All Company Schedules,en_US
-recurring_orders.list.scope.company,Alle Unternehmensbestellungen,de_DE
-recurring_orders.list.scope.my_business_unit,My Business Unit,en_US
-recurring_orders.list.scope.my_business_unit,Meine Geschäftseinheit,de_DE
-recurring_orders.list.scope.my_schedules,My Schedules,en_US
-recurring_orders.list.scope.my_schedules,Meine Zeitpläne,de_DE
-recurring_orders.list.title,Recurring Orders,en_US
-recurring_orders.list.title,Wiederkehrende Bestellungen,de_DE
-recurring_orders.mail.notify_buyer_placement_failure.body.cta,Review Order,en_US
-recurring_orders.mail.notify_buyer_placement_failure.body.cta,Bestellung prüfen,de_DE
-recurring_orders.mail.notify_buyer_placement_failure.body.detail,Please review the order details and failure reason in your recurring orders dashboard.,en_US
-recurring_orders.mail.notify_buyer_placement_failure.body.detail,Bitte überprüfen Sie die Bestelldetails und den Fehlergrund in Ihrem Dashboard für Folgebestellungen.,de_DE
-recurring_orders.mail.notify_buyer_placement_failure.body.intro,"We were unable to place your recurring order ""%schedule_name%"" automatically.",en_US
-recurring_orders.mail.notify_buyer_placement_failure.body.intro,"Ihre Folgebestellung ""%schedule_name%"" konnte nicht automatisch aufgegeben werden.",de_DE
-recurring_orders.mail.notify_buyer_placement_failure.body.sign_off,Best regards,en_US
-recurring_orders.mail.notify_buyer_placement_failure.body.sign_off,Mit freundlichen Grüßen,de_DE
-recurring_orders.mail.notify_buyer_placement_failure.salutation,Hello,en_US
-recurring_orders.mail.notify_buyer_placement_failure.salutation,Hallo,de_DE
-recurring_orders.mail.notify_buyer_placement_failure.subject,"Recurring order ""%schedule_name%"" could not be placed",en_US
-recurring_orders.mail.notify_buyer_placement_failure.subject,"Folgebestellung ""%schedule_name%"" konnte nicht aufgegeben werden",de_DE
-recurring_orders.mail.notify_buyer_upcoming_order.body.cta,View Order,en_US
-recurring_orders.mail.notify_buyer_upcoming_order.body.cta,Bestellung ansehen,de_DE
-recurring_orders.mail.notify_buyer_upcoming_order.body.intro,"Your recurring order ""%schedule_name%"" is scheduled for %execution_date%. We will process it automatically on that date.",en_US
-recurring_orders.mail.notify_buyer_upcoming_order.body.intro,"Ihre wiederkehrende Bestellung ""%schedule_name%"" ist für %execution_date% geplant. Wir werden sie automatisch an diesem Datum verarbeiten.",de_DE
-recurring_orders.mail.notify_buyer_upcoming_order.body.review,"If you need to make changes, please review and update your order before %expiry_date%.",en_US
-recurring_orders.mail.notify_buyer_upcoming_order.body.review,"Wenn Sie Änderungen vornehmen möchten, überprüfen und aktualisieren Sie bitte Ihre Bestellung vor dem %expiry_date%.",de_DE
-recurring_orders.mail.notify_buyer_upcoming_order.salutation,Hello,en_US
-recurring_orders.mail.notify_buyer_upcoming_order.salutation,Hallo,de_DE
-recurring_orders.mail.notify_buyer_upcoming_order.subject,"Upcoming recurring order: ""%schedule_name%"" on %execution_date%",en_US
-recurring_orders.mail.notify_buyer_upcoming_order.subject,"Bevorstehende Folgebestellung: ""%schedule_name%"" am %execution_date%",de_DE
-recurring_orders.mail.notify_buyer_validation_failed.body.cta,Review Order,en_US
-recurring_orders.mail.notify_buyer_validation_failed.body.cta,Bestellung überprüfen,de_DE
-recurring_orders.mail.notify_buyer_validation_failed.body.detail,Please review your order details and make any necessary adjustments before the scheduled date.,en_US
-recurring_orders.mail.notify_buyer_validation_failed.body.detail,Bitte überprüfen Sie Ihre Bestelldetails und nehmen Sie gegebenenfalls Anpassungen vor dem geplanten Datum vor.,de_DE
-recurring_orders.mail.notify_buyer_validation_failed.body.intro,"Your recurring order ""%schedule_name%"", scheduled for %execution_date%, could not be processed automatically and requires your attention.",en_US
-recurring_orders.mail.notify_buyer_validation_failed.body.intro,"Ihre wiederkehrende Bestellung ""%schedule_name%"", geplant für %execution_date%, konnte nicht automatisch verarbeitet werden und erfordert Ihre Aufmerksamkeit.",de_DE
-recurring_orders.mail.notify_buyer_validation_failed.salutation,Hello,en_US
-recurring_orders.mail.notify_buyer_validation_failed.salutation,Hallo,de_DE
-recurring_orders.mail.notify_buyer_validation_failed.subject,"Action Required: ""%schedule_name%"" — your order needs attention",en_US
-recurring_orders.mail.notify_buyer_validation_failed.subject,"Handlung erforderlich: ""%schedule_name%"" – Ihre Bestellung erfordert Aufmerksamkeit",de_DE
-recurring_orders.menu_item,Recurring Orders,en_US
-recurring_orders.menu_item,Wiederkehrende Bestellungen,de_DE
-recurring_orders.review_details,Review recurring order,en_US
-recurring_orders.review_details,Wiederkehrende Bestellung prüfen,de_DE
-recurring_orders.sku,SKU: %sku%,en_US
-recurring_orders.sku,SKU: %sku%,de_DE
-recurring_orders.summary_of_changes,Summary of changes,en_US
-recurring_orders.summary_of_changes,Zusammenfassung der Änderungen,de_DE
-recurring_orders.view_details,Schedule Details,en_US
-recurring_orders.view_details,Zeitplandetails,de_DE
-recurring_orders.review.all_items_removed,The order cannot be placed - all items are unavailable and the schedule cannot be executed without items.,en_US
-recurring_orders.review.all_items_removed,Die Bestellung kann nicht aufgegeben werden - alle Artikel sind nicht verfügbar und der Zeitplan kann ohne Artikel nicht ausgeführt werden.,de_DE
-recurring_orders.review.approve_error,The changes could not be applied. Please try again.,en_US
-recurring_orders.review.approve_error,Die Änderungen konnten nicht übernommen werden. Bitte versuchen Sie es erneut.,de_DE
-recurring_orders.review.add_product.error.no_price,No price is available for product %sku%. Please remove it or choose a different product.,en_US
-recurring_orders.review.add_product.error.no_price,Für das Produkt %sku% ist kein Preis verfügbar. Bitte entfernen Sie es oder wählen Sie ein anderes Produkt.,de_DE
-recurring_orders.review.add_product.error.not_available,Product %sku% is not available. Please remove it or choose a different product.,en_US
-recurring_orders.review.add_product.error.not_available,Das Produkt %sku% ist nicht verfügbar. Bitte entfernen Sie es oder wählen Sie ein anderes Produkt.,de_DE
-recurring_orders.review.add_product.error.shipment_unavailable,No shipment method is available for product %sku%. Please remove it or choose a different product.,en_US
-recurring_orders.review.add_product.error.shipment_unavailable,Für das Produkt %sku% ist keine Versandart verfügbar. Bitte entfernen Sie es oder wählen Sie ein anderes Produkt.,de_DE
-recurring_orders.review.add_product.error.measurement_unit_not_supported,Product %sku% is sold in measurement units and cannot be added here. Please choose a different product.,en_US
-recurring_orders.review.add_product.error.measurement_unit_not_supported,Das Produkt %sku% wird in Maßeinheiten verkauft und kann hier nicht hinzugefügt werden. Bitte wählen Sie ein anderes Produkt.,de_DE
-recurring_orders.review.add_product.error.packaging_unit_not_supported,Product %sku% is sold in packaging units and cannot be added here. Please choose a different product.,en_US
-recurring_orders.review.add_product.error.packaging_unit_not_supported,Das Produkt %sku% wird in Verpackungseinheiten verkauft und kann hier nicht hinzugefügt werden. Bitte wählen Sie ein anderes Produkt.,de_DE
-recurring_orders.review.add_product.error.not_placeable,The added products cannot be scheduled. Please review your selection and try again.,en_US
-recurring_orders.review.add_product.error.not_placeable,Die hinzugefügten Produkte können nicht eingeplant werden. Bitte überprüfen Sie Ihre Auswahl und versuchen Sie es erneut.,de_DE
-recurring_orders.review.approve_failed,The changes could not be applied.,en_US
-recurring_orders.review.approve_failed,Die Änderungen konnten nicht übernommen werden.,de_DE
-recurring_orders.review.approve_success,Your changes were applied and the order was placed.,en_US
-recurring_orders.review.approve_success,Ihre Änderungen wurden übernommen und die Bestellung wurde aufgegeben.,de_DE
-recurring_orders.review.back_to_detail,Back to schedule detail,en_US
-recurring_orders.review.back_to_detail,Zurück zur Zeitplanübersicht,de_DE
-recurring_orders.review.banner.price_change,%count% price change,en_US
-recurring_orders.review.banner.price_change,%count% Preisänderung,de_DE
-recurring_orders.review.banner.substituted,%count% product substituted,en_US
-recurring_orders.review.banner.substituted,%count% Produkt ersetzt,de_DE
-recurring_orders.review.banner.unavailable,%count% unavailable,en_US
-recurring_orders.review.banner.unavailable,%count% nicht verfügbar,de_DE
-recurring_orders.review.blocking.title,Cannot proceed — blocking issues,en_US
-recurring_orders.review.blocking.title,Kann nicht fortfahren — blockierende Probleme,de_DE
-recurring_orders.review.column.current_price,Current price,en_US
-recurring_orders.review.column.current_price,Aktueller Preis,de_DE
-recurring_orders.review.column.previous_price,Previous price,en_US
-recurring_orders.review.column.previous_price,Vorheriger Preis,de_DE
-recurring_orders.review.column.reason,Reason,en_US
-recurring_orders.review.column.reason,Grund,de_DE
-recurring_orders.review.cta.accept_and_place,Accept & place order,en_US
-recurring_orders.review.cta.accept_and_place,Bestellung annehmen und aufgeben,de_DE
-recurring_orders.review.execution_scheduled,Execution scheduled for %date%,en_US
-recurring_orders.review.execution_scheduled,Ausführung geplant für %date%,de_DE
-recurring_orders.review.flagged.title,Items requiring your review,en_US
-recurring_orders.review.flagged.title,Zu überprüfende Artikel,de_DE
-recurring_orders.review.footer.helper,Accepting these changes will update this order and future executions of the schedule.,en_US
-recurring_orders.review.footer.helper,"Wenn Sie diese Änderungen akzeptieren, werden diese Bestellung und zukünftige Ausführungen des Zeitplans aktualisiert.",de_DE
-recurring_orders.review.footer.new_total,New total,en_US
-recurring_orders.review.footer.new_total,Neue Summe,de_DE
-recurring_orders.review.footer.summary,Removed products: %removed%,en_US
-recurring_orders.review.footer.summary,Entfernte Produkte: %removed%,de_DE
-recurring_orders.review.invalid_form,The request could not be processed. Please review and try again.,en_US
-recurring_orders.review.invalid_form,Die Anfrage konnte nicht verarbeitet werden. Bitte überprüfen Sie sie und versuchen Sie es erneut.,de_DE
-recurring_orders.review.modal.accepted_prices,Accepted price changes,en_US
-recurring_orders.review.modal.accepted_prices,Akzeptierte Preisänderungen,de_DE
-recurring_orders.review.modal.body,Removing unavailable items and accepting updated prices will affect this order and all future executions of this schedule. These changes will become the new reference state for the recurring order going forward.,en_US
-recurring_orders.review.modal.body,Das Entfernen nicht verfügbarer Artikel und das Akzeptieren aktualisierter Preise wirken sich auf diese Bestellung und alle zukünftigen Ausführungen dieses Zeitplans aus. Diese Änderungen werden zum neuen Referenzzustand der wiederkehrenden Bestellung.,de_DE
-recurring_orders.review.modal.headline,Confirm order and apply changes,en_US
-recurring_orders.review.modal.headline,Bestellung bestätigen und Änderungen übernehmen,de_DE
-recurring_orders.review.modal.new_total,New order total,en_US
-recurring_orders.review.modal.new_total,Neue Bestellsumme,de_DE
-recurring_orders.review.modal.original_total,Original order total,en_US
-recurring_orders.review.modal.original_total,Ursprüngliche Bestellsumme,de_DE
-recurring_orders.review.modal.removed_items,Removed products,en_US
-recurring_orders.review.modal.removed_items,Entfernte Produkte,de_DE
-recurring_orders.review.modal.substituted_items,Substituted products,en_US
-recurring_orders.review.modal.substituted_items,Ersetzte Produkte,de_DE
-recurring_orders.review.modal.added_products,Added products,en_US
-recurring_orders.review.modal.added_products,Hinzugefügte Produkte,de_DE
-recurring_orders.review.quantity_label,Quantity (every future order),en_US
-recurring_orders.review.quantity_label,Menge (jede zukünftige Bestellung),de_DE
-recurring_orders.review.scope.label,Apply these changes to,en_US
-recurring_orders.review.scope.label,Diese Änderungen anwenden auf,de_DE
-recurring_orders.review.scope.this_order,This order only,en_US
-recurring_orders.review.scope.this_order,Nur diese Bestellung,de_DE
-recurring_orders.review.scope.every_future,Update schedule permanently,en_US
-recurring_orders.review.scope.every_future,Zeitplan dauerhaft aktualisieren,de_DE
-recurring_orders.review-scope-selector-option.occurrence.note,"Apply to the %date% execution. Your recurring schedule stays unchanged.",en_US
-recurring_orders.review-scope-selector-option.occurrence.note,"Auf die Ausführung am %date% anwenden. Ihr wiederkehrender Zeitplan bleibt unverändert.",de_DE
-recurring_orders.review-scope-selector-option.standing.note,"Apply to this and all future executions, and update reference prices.",en_US
-recurring_orders.review-scope-selector-option.standing.note,"Wenden Sie dies auf diese und alle zukünftigen Ausführungen an und aktualisieren Sie die Referenzpreise.",de_DE
-recurring_orders.review.remove.label,Remove from schedule,en_US
-recurring_orders.review.remove.label,Aus Zeitplan entfernen,de_DE
-recurring_orders.review.remove.undo,Undo removal,en_US
-recurring_orders.review.remove.undo,Entfernen rückgängig machen,de_DE
-recurring_orders.review.quantity.decrease,Decrease quantity,en_US
-recurring_orders.review.quantity.decrease,Menge verringern,de_DE
-recurring_orders.review.quantity.increase,Increase quantity,en_US
-recurring_orders.review.quantity.increase,Menge erhöhen,de_DE
-recurring_orders.review.scope_required,Please choose whether each quantity change applies to just this order or every future order.,en_US
-recurring_orders.review.scope_required,Bitte wählen Sie ob jede Mengenänderung nur für diese Bestellung oder für jede zukünftige Bestellung gilt.,de_DE
-recurring_orders.review.quantity_invalid,Please enter a quantity of at least 1. To drop an item use the remove action instead.,en_US
-recurring_orders.review.quantity_invalid,Bitte geben Sie eine Menge von mindestens 1 ein. Verwenden Sie zum Entfernen eines Artikels die Entfernen-Aktion.,de_DE
-recurring_orders.review.not_available,This schedule does not require review.,en_US
-recurring_orders.review.not_available,Dieser Zeitplan erfordert keine Überprüfung.,de_DE
-recurring_orders.review.currency_mismatch,This recurring order can only be reviewed in its own currency. Please switch back to it to make changes.,en_US
-recurring_orders.review.currency_mismatch,"Diese wiederkehrende Bestellung kann nur in ihrer eigenen Währung überprüft werden. Bitte wechseln Sie zurück, um Änderungen vorzunehmen.",de_DE
-recurring_orders.review.price_mode_mismatch,This recurring order can only be reviewed in its own price mode (gross/net). Please switch back to it to make changes.,en_US
-recurring_orders.review.price_mode_mismatch,"Diese wiederkehrende Bestellung kann nur in ihrem eigenen Preismodus (brutto/netto) überprüft werden. Bitte wechseln Sie zurück, um Änderungen vorzunehmen.",de_DE
-recurring_orders.review.prices_changed,Prices changed again since you reviewed. Please review the updated order before approving.,en_US
-recurring_orders.review.prices_changed,Die Preise haben sich seit Ihrer Überprüfung erneut geändert. Bitte überprüfen Sie die aktualisierte Bestellung vor der Genehmigung.,de_DE
-recurring_orders.review.reason.discontinued,Discontinued,en_US
-recurring_orders.review.reason.discontinued,Eingestellt,de_DE
-recurring_orders.review.reason.not_approved,Not approved,en_US
-recurring_orders.review.reason.not_approved,Nicht genehmigt,de_DE
-recurring_orders.review.reason.price_increased,Price increased,en_US
-recurring_orders.review.reason.price_increased,Preis erhöht,de_DE
-recurring_orders.review.reason.price_unavailable,Price unavailable,en_US
-recurring_orders.review.reason.price_unavailable,Preis nicht verfügbar,de_DE
-recurring_orders.review.reason.substituted,Substituted,en_US
-recurring_orders.review.reason.substituted,Ersetzt,de_DE
-recurring_orders.review.substitute.label,Substitute,en_US
-recurring_orders.review.substitute.label,Ersatzprodukt,de_DE
-recurring_orders.review.substitute.select,Select Substitute,en_US
-recurring_orders.review.substitute.select,Ersatzprodukt auswählen,de_DE
-recurring_orders.review.substitute.change,Change,en_US
-recurring_orders.review.substitute.change,Ändern,de_DE
-recurring_orders.review.substitute.remove,Remove,en_US
-recurring_orders.review.substitute.remove,Entfernen,de_DE
-recurring_orders.review.reason.unavailable,Unavailable,en_US
-recurring_orders.review.reason.unavailable,Nicht verfügbar,de_DE
-recurring_orders.review.reason.out_of_stock,Out Of Stock,en_US
-recurring_orders.review.reason.out_of_stock,Nicht auf Lager,de_DE
-recurring_orders.review.title,Review Required — %name%,en_US
-recurring_orders.review.title,Überprüfung erforderlich — %name%,de_DE
-recurring_orders.review.unchanged.title,Unchanged items (%count%),en_US
-recurring_orders.review.unchanged.title,Unveränderte Artikel (%count%),de_DE
-recurring_orders.review.unchanged.title.plural,%count% unchanged items,en_US
-recurring_orders.review.unchanged.title.plural,%count% unveränderte Artikel,de_DE
-recurring_orders.status.active,Active,en_US
-recurring_orders.status.active,Aktiv,de_DE
-recurring_orders.status.cancelled,Cancelled,en_US
-recurring_orders.status.cancelled,Abgebrochen,de_DE
-recurring_orders.status.draft,Draft,en_US
-recurring_orders.status.draft,Entwurf,de_DE
-recurring_orders.status.failed,Failed,en_US
-recurring_orders.status.failed,Fehlgeschlagen,de_DE
-recurring_orders.status.paused,Paused,en_US
-recurring_orders.status.paused,Pausiert,de_DE
-recurring_orders.status.review_required,Review Required,en_US
-recurring_orders.status.review_required,Überprüfung erforderlich,de_DE
-recurring_orders.checkout.validation.cadence_required,Please select a frequency.,en_US
-recurring_orders.checkout.validation.cadence_required,Bitte wählen Sie eine Häufigkeit aus.,de_DE
-recurring_orders.checkout.validation.settings_not_confirmed,Please confirm your recurring order settings before submitting.,en_US
-recurring_orders.checkout.validation.settings_not_confirmed,Bitte bestätigen Sie Ihre Einstellungen für die wiederkehrende Bestellung vor dem Absenden.,de_DE
-recurring_orders.detail.resume.validation.date_required,Please select a resume date.,en_US
-recurring_orders.detail.resume.validation.date_required,Bitte wählen Sie ein Fortsetzungsdatum aus.,de_DE
-recurring_orders.detail.resume.validation.date_in_past,The resume date must be in the future.,en_US
-recurring_orders.detail.resume.validation.date_in_past,Das Fortsetzungsdatum muss in der Zukunft liegen.,de_DE
-recurring_orders.scheduled.order.errors.title,Recurring order not placed,en_US
-recurring_orders.scheduled.order.errors.title,Wiederkehrende Bestellung nicht aufgegeben,de_DE
-recurring_orders.review.add_product.add,Add,en_US
-recurring_orders.review.add_product.add,Hinzufügen,de_DE
-recurring_orders.review.add_product.clear,Clear,en_US
-recurring_orders.review.add_product.clear,Zurücksetzen,de_DE
-recurring_orders.review.add_product.label,Add a product — name or SKU,en_US
-recurring_orders.review.add_product.label,Produkt hinzufügen — Name oder SKU,de_DE
-recurring_orders.review.add_product.modal.title,Add a product,en_US
-recurring_orders.review.add_product.modal.title,Produkt hinzufügen,de_DE
-recurring_orders.review.add_product.open_modal,Add product,en_US
-recurring_orders.review.add_product.open_modal,Produkt hinzufügen,de_DE
-recurring_orders.review.add_product.price,Price,en_US
-recurring_orders.review.add_product.price,Preis,de_DE
-recurring_orders.review.add_product.quantity,Quantity,en_US
-recurring_orders.review.add_product.quantity,Menge,de_DE
-recurring_orders.review.add_product.remove,Remove,en_US
-recurring_orders.review.add_product.remove,Entfernen,de_DE
-recurring_orders.review.add_product.shipment_address,Delivery address,en_US
-recurring_orders.review.add_product.shipment_address,Lieferadresse,de_DE
-recurring_orders.review.add_product.shipment_address.group.company_unit_address,Business unit addresses,en_US
-recurring_orders.review.add_product.shipment_address.group.company_unit_address,Adressen der Geschäftseinheit,de_DE
-recurring_orders.review.add_product.shipment_address.group.schedule,Saved with this schedule,en_US
-recurring_orders.review.add_product.shipment_address.group.schedule,Mit diesem Zeitplan gespeichert,de_DE
-recurring_orders.review.add_product.shipment_address.placeholder,Select a delivery address,en_US
-recurring_orders.review.add_product.shipment_address.placeholder,Lieferadresse auswählen,de_DE
-recurring_orders.review.add_product.shipment_method,Shipment method,en_US
-recurring_orders.review.add_product.shipment_method,Versandart,de_DE
-recurring_orders.review.add_product.shipment_method.none,No shipment methods available for this address.,en_US
-recurring_orders.review.add_product.shipment_method.none,Für diese Adresse sind keine Versandarten verfügbar.,de_DE
-recurring_orders.review.add_product.shipment_method.placeholder,Select a shipment method,en_US
-recurring_orders.review.add_product.shipment_method.placeholder,Versandart auswählen,de_DE
-recurring_orders.review.add_product.title,Added products (%count%),en_US
-recurring_orders.review.add_product.title,Hinzugefügte Produkte (%count%),de_DE
-recurring_orders.review.add_product.title.singular,Added product (%count%),en_US
-recurring_orders.review.add_product.title.singular,Hinzugefügtes Produkt (%count%),de_DE
-recurring_orders.review.substitute.delta_higher,Higher price,en_US
-recurring_orders.review.substitute.delta_higher,Höherer Preis,de_DE
-recurring_orders.review.substitute.delta_lower,Lower price,en_US
-recurring_orders.review.substitute.delta_lower,Niedrigerer Preis,de_DE
-recurring_orders.review.substitute.delta_same,Same price,en_US
-recurring_orders.review.substitute.delta_same,Gleicher Preis,de_DE
-recurring_orders.review.substitute.modal.confirm,Use this substitute,en_US
-recurring_orders.review.substitute.modal.confirm,Diesen Ersatz verwenden,de_DE
-recurring_orders.review.substitute.modal.description,%product% is no longer available. Select a replacement to use for this order.,en_US
-recurring_orders.review.substitute.modal.description,%product% ist nicht mehr verfügbar. Wählen Sie einen Ersatz für diese Bestellung.,de_DE
-recurring_orders.review.substitute.modal.title,Choose a substitute,en_US
-recurring_orders.review.substitute.modal.title,Ersatzprodukt wählen,de_DE
-recurring_orders.review.substitute.recommended,recommended,en_US
-recurring_orders.review.substitute.recommended,empfohlen,de_DE
-recurring_orders.review.substitute.removed,Removed,en_US
-recurring_orders.review.substitute.removed,Entfernt,de_DE
-recurring_orders.review.substitute.unavailable,unavailable,en_US
-recurring_orders.review.substitute.unavailable,nicht verfügbar,de_DE
-recurring_orders.checkout.error.not_eligible,This cart cannot be placed as a recurring order.,en_US
-recurring_orders.checkout.error.not_eligible,Dieser Warenkorb kann nicht als wiederkehrende Bestellung aufgegeben werden.,de_DE
-recurring_orders.checkout.error.cadence_value_required,Please choose an interval for the recurring order.,en_US
-recurring_orders.checkout.error.cadence_value_required,Bitte wählen Sie ein Intervall für die wiederkehrende Bestellung aus.,de_DE
-recurring_orders.error.quote_not_found,The cart could not be found or access was denied.,en_US
-recurring_orders.error.quote_not_found,Der Warenkorb wurde nicht gefunden oder der Zugriff wurde verweigert.,de_DE
-recurring_orders.review.reason.configurable_bundle_unavailable,Configurable bundle unavailable,en_US
-recurring_orders.review.reason.configurable_bundle_unavailable,Konfigurierbares Bundle nicht verfügbar,de_DE
-recurring_orders.review.product-discontinued.message,"This product is discontinued. Choose a replacement to keep it in your order.",en_US
-recurring_orders.review.product-discontinued.message,"Dieses Produkt wurde eingestellt. Wählen Sie einen Ersatz aus, damit es in Ihrer Bestellung bleibt.",de_DE
-recurring_orders.review.substitute.sold-by,Sold by,en_US
-recurring_orders.review.substitute.sold-by,Verkauft durch,de_DE
-```
+Copy the contents of that file and add them to **data/import/common/common/glossary.csv**. If you are upgrading, replace the existing `recurring_orders.*` rows with the rows from the module file, because the texts of some keys have changed and some keys have been replaced.
 
 Import data:
 
@@ -1793,5 +1432,22 @@ In the Back Office, go to **Configuration > Recurring Orders > General > Schedul
 | Schedule Grace Period | `grace_period_hours` | `48` | Required, between 1 and 720 | Number of hours before the trigger date when the pre-trigger notification email is sent to the buyer. Per-schedule overrides stored in `spy_recurring_schedule.notification_window_hours` take precedence over this global value. |
 
 The setting is defined at `src/SprykerFeature/OrderExperienceManagement/resources/configuration/recurring_orders.configuration.yml` and applies globally—it has no per-store scope.
+
+{% endinfo_block %}
+
+### 10) Verify the price tolerances
+
+The price tolerances need no additional registration, but verify them end to end after you install the feature or upgrade it:
+
+{% info_block warningBox "Verification" %}
+
+1. Open the detail page of an active recurring schedule on the storefront. Make sure the **Details** sidebar shows the **Price tolerance** row with the value *Off* and an **Edit** link, and that the **Order items** table has a **Price tolerance** column showing *Any increase*.
+2. Select **Edit**. Make sure the page `/recurring-orders/{uuid}/price-tolerances` opens with the **Order total** card, the **Ignore product price changes** checkbox, and one row per product.
+3. Clear the order total field and save. Make sure the error *Enter a value. Use 0 to turn off.* is displayed. Enter `1.234` and make sure the error *Use up to 2 decimals.* is displayed.
+4. Select **Ignore product price changes** while the order total tolerance is `0` and save. Make sure the error *Set an order total tolerance above 0 to ignore product price changes.* is displayed.
+5. Set the order total tolerance to `3`, select two products in the products table, apply the tolerance `0.5` in the bulk bar, and save. Make sure you return to the detail page with a success message, and the sidebar shows *Order total +3% · 2 products*.
+6. Raise the price of one of the products in the Back Office by less than `0.5%`, then run `console recurring-orders:trigger-placement {id} --validate`. Make sure validation passes and the order is placed without review. Raise the price by more than `0.5%` and trigger it again. Make sure the schedule moves to **Review Required** and the product reason reads *Price above 0.5%*.
+7. With the schedule in **Review Required**, open the Price tolerances page. Make sure the values are read-only, the page shows *Tolerances cannot be changed while this order is under review.*, and no **Save** button is displayed.
+8. In the Back Office, open **Sales > Recurring Order Schedules**. Make sure the schedule shows *On* in the **Price Tolerance** column, and the **Price Tolerance** filter set to *On* keeps it in the list.
 
 {% endinfo_block %}

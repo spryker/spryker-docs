@@ -3,6 +3,8 @@ title: "Marketplace Return Management feature: Domain model and relationships"
 description: This document provides technical details about the Marketplace Return Management feature.
 template: feature-walkthrough-template
 last_updated: Nov 21, 2023
+redirect_from:
+  - /docs/pbc/all/return-management/202307.0/marketplace/marketplace-return-management-feature-domain-model-and-relationships.html
 ---
 
 With the *Marketplace Return Management* feature, marketplace merchants can manage their returns.

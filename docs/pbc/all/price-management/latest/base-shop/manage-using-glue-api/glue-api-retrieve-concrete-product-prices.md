@@ -10,6 +10,8 @@ redirect_from:
   - /docs/pbc/all/price-management/manage-using-glue-api/retrieve-concrete-product-prices.html
   - /docs/pbc/all/price-management/202311.0/base-shop/manage-using-glue-api/retrieve-concrete-product-prices.html
   - /docs/pbc/all/price-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-prices.html
+  - /docs/pbc/all/price-management/202212.0/base-shop/manage-using-glue-api/retrieve-concrete-product-prices.html
+  - /docs/pbc/all/price-management/202307.0/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-prices.html
 related:
   - title: "Glue API: Retrieve concrete products"
     link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html

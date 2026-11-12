@@ -14,6 +14,7 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/heidelpay/installing-heidelpay.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/heidelpay/install-heidelpay.html
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/heidelpay/installing-heidelpay.html
+  - /docs/pbc/all/payment-service-provider/202307.0/base-shop/third-party-integrations/heidelpay/install-heidelpay.html
 related:
   - title: Heidelpay
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/heidelpay/heidelpay.html

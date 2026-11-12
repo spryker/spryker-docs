@@ -12,6 +12,8 @@ related:
     link: docs/dg/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
   - title: Bot control
     link: docs/dg/dev/guidelines/performance-guidelines/bot-control.html
+redirect_from:
+  - /industry_partners/performance/akeneo/akeneo-integration.htm
 ---
 
 When a CDN or traffic management solution (for example, Akamai, Cloudflare, or Fastly) sits in front of a Spryker application, HTTP response compression must be correctly coordinated between the CDN and the Spryker frontend container. Misconfiguration can result in responses leaving the infrastructure uncompressed, which significantly increases data transfer volume, response latency, and infrastructure overhead.

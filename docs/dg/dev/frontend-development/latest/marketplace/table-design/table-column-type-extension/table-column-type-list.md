@@ -7,6 +7,7 @@ redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-column-types/table-column-type-list.html
   - /docs/scos/dev/front-end-development/202204.0/marketplace/table-design/table-column-type-extension/table-column-type-list.html
   - /docs/scos/dev/front-end-development/202404.0/marketplace/table-design/table-column-type-extension/table-column-type-list.html
+  - /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-list.html
 
 related:
   - title: Table Column Type extension

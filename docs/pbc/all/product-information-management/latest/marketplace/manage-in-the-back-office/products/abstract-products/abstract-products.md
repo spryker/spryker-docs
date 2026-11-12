@@ -5,6 +5,7 @@ last_updated: Jan 18, 2023
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/user/back-office-user-guides/202311.0/catalog/products/abstract-products/abstract-products.html
+  - /docs/pbc/all/product-information-management/202212.0/marketplace/manage-in-the-back-office/products/abstract-products/abstract-products.html
 ---
 This section explains how to create and edit abstract products:
 - [Creating abstract products](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-back-office/products/abstract-products/create-abstract-products.html)

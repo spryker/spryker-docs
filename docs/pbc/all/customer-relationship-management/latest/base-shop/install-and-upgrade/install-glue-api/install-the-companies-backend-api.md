@@ -3,6 +3,11 @@ title: Install the Companies Backend API
 description: Learn how to install the Companies Backend API into your Spryker project.
 last_updated: Sep 16, 2026
 template: feature-integration-guide-template
+redirect_from:
+  - /docs/pbc/all/customer-relationship-management/base-shop/companies-backend-api.html
+  - /docs/pbc/all/customer-relationship-management/base-shop/companies-backend-api
+  - /docs/pbc/all/customer-relationship-management/latest/base-shop/companies-backend-api.html
+  - /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-glue-api/install-the-companies-backend-api.html
 ---
 
 This document describes how to install the Companies Backend API, which exposes company data at `/companies` through the Glue Backend application. For the endpoint reference, see [Backend API: Manage companies](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/backend-api-manage-companies.html).

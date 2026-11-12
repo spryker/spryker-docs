@@ -14,6 +14,10 @@ redirect_from:
   - /docs/dg/dev/glue-api/latest/old-glue-infrastructure/glue-api-security-and-authentication.html
   - /docs/integrations/spryker-glue-api/storefront-api/developing-apis/storefront-api-security-and-authentication.html
   - /docs/integrations/spryker-api/storefront-api/developing-apis/storefront-api-security-and-authentication.html
+  - /docs/scos/dev/glue-api-guides/201903.0/security-and-authentication.html
+  - /docs/scos/dev/glue-api-guides/202108.0/security-and-authentication.html
+  - /docs/dg/dev/glue-api/202307.0/authentication-and-authorization.html
+  - /docs/scos/dev/glue-api-guides/202108.0/authentication-and-authorization.html
 ---
 
 Spryker Storefront API protects endpoints with the OAuth 2.0 protocol; for the authentication concept, token lifetimes, and error handling, see [Authenticating and authorization](/docs/integrations/spryker-api/authenticating-and-authorization/authenticating-and-authorization.html). This document describes the Glue infrastructure implementation: the modules that provide authentication, user scopes, database tables, and extension points. The OAuth modules, scopes, and tokens described here are shared by both infrastructures; however, for endpoints served by API Platform, the code-level patterns differ—user access and endpoint protection are handled through security expressions and the `ApiUser` object, as described in [API Platform security](/docs/integrations/spryker-api/authenticating-and-authorization/security.html).

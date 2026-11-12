@@ -8,6 +8,9 @@ related:
     link: docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
   - title: Merchant users overview
     link: docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html
+redirect_from:
+  - /docs/pbc/all/merchant-management/202307.0/marketplace/manage-in-the-merchant-portal/manage-merchant-account-details-and-settings.html
+  - /docs/marketplace/user/merchant-portal-user-guides/202204.0/my-account/managing-account-details-and-settings.html
 ---
 
 This document describes how to manage merchant user account details in the Merchant Portal.

@@ -6,6 +6,7 @@ last_updated: Nov 21, 2023
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/sales/orders/viewing-returns-of-an-order.html
   - /docs/scos/user/back-office-user-guides/202204.0/sales/orders/viewing-returns-of-an-order.html
+  - /docs/pbc/all/order-management-system/202307.0/base-shop/manage-in-the-back-office/orders/view-returns-of-an-order.html
 related:
   - title: Creating returns
     link: docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/create-returns.html

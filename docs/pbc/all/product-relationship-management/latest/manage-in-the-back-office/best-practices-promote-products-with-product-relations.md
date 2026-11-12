@@ -8,6 +8,7 @@ related:
     link: docs/pbc/all/product-relationship-management/latest/product-relationship-management.html
 redirect_from:
 - /docs/scos/user/back-office-user-guides/202204.0/merchandising/product-relations/best-practices-promote-products-with-product-relations.html
+- /docs/pbc/all/product-relationship-management/202307.0/manage-in-the-back-office/best-practices-promote-products-with-product-relations.html
 ---
 
 This best practices guide describes how to promote products by configuring product relations.

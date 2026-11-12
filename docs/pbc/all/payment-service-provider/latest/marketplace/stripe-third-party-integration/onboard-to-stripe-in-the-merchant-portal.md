@@ -3,6 +3,8 @@ title: Onboard to Stripe in the Merchant Portal
 description: Learn how to onboard to Stripe in the Merchant Portal for your Spryker Marketplace projects.
 last_updated: Apr 14, 2026
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/marketplace/dev/feature-integration-guides/202108.0/merchant-portal-feature-integration.html
 ---
 
 {% info_block infoBox %}

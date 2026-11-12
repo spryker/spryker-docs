@@ -32,6 +32,8 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202311.0/migration-guide-priceproductvolumegui.html
   - /module_migration_guides/mg-price-product-volume-gui.htm
   - /docs/pbc/all/price-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductvolumegui-module.html
+  - /docs/pbc/all/price-management/202212.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductvolumegui-module.html
+  - /docs/pbc/all/price-management/202204.0/install-and-upgrade/upgrade-modules/upgrade-the-priceproductvolumegui-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-priceproductvolumegui-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-priceproductvolumegui-module.md -->

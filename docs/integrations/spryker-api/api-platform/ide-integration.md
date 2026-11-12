@@ -12,6 +12,7 @@ related:
     link: docs/integrations/spryker-api/api-platform/validation-schemas.html
 redirect_from:
   - /docs/dg/dev/architecture/api-platform/ide-integration.html
+  - /docs/scos/dev/feature-integration-guides/202108.0/glue-api/glue-api-spryker-core-feature-integration.html
 ---
 
 This guide shows how to enable IDE support for the YAML files that define API Platform resources (`*.resource.yml`) and their validation rules (`*.validation.yml`). Once configured, your IDE provides:

@@ -8,6 +8,8 @@ redirect_from:
   - /docs/marketplace/dev/glue-api-guides/201903.0/wishlists/managing-wishlists.html
   - /docs/marketplace/dev/glue-api-guides/201907.0/wishlists/managing-wishlists.html
   - /docs/marketplace/dev/glue-api-guides/202005.0/wishlists/managing-wishlists.html
+  - /docs/pbc/all/shopping-list-and-wishlist/202307.0/marketplace/manage-using-glue-api/glue-api-manage-marketplace-wishlists.html
+  - /docs/pbc/all/shopping-list-and-wishlist/202212.0/marketplace/manage-using-glue-api/glue-api-manage-marketplace-wishlists.html
 related:
   - title: Managing wishlist items
     link: docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/manage-using-glue-api/glue-api-manage-wishlist-items.html

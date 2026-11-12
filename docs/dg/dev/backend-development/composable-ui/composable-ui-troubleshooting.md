@@ -10,6 +10,8 @@ related:
   - title: Composable UI best practices
     link: docs/dg/dev/backend-development/composable-ui/composable-ui-best-practices.html
 last_updated: Jul 30, 2026
+redirect_from:
+  - /content/installation/troubleshooting.htm
 ---
 
 {% info_block warningBox "Beta" %}

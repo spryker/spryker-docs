@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/yves-controllers-ac
 originalArticleId: 807eb310-336a-46d8-8cfc-bcafe4d3a324
 redirect_from:
   - /docs/scos/dev/back-end-development/yves/controllers-and-actions.html
+  - /docs/marketplace/dev/front-end/202204.0/ui-components-library/actions
 related:
   - title: Yves overview
     link: docs/dg/dev/backend-development/yves/yves.html

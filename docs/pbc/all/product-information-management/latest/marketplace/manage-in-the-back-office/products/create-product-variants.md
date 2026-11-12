@@ -5,6 +5,7 @@ description: This guide explains how to create product variants in your Spryker 
 template: back-office-user-guide-template
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/catalog/products/manage-concrete-products/creating-product-variants.html
+  - /docs/pbc/all/product-information-management/202212.0/marketplace/manage-in-the-back-office/products/create-product-variants.html
 related:
   - title: Managing products
     link: docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-back-office/products/manage-products.html

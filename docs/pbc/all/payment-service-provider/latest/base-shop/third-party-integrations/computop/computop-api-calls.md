@@ -10,6 +10,11 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/computop/computop-api-calls.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/computop/computop-api-calls.html
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/computop/computop-api-calls.html
+  - /docs/pbc/all/payment-service-provider/202307.0/base-shop/third-party-integrations/computop/computop-api-calls.html
+  - /docs/scos/dev/technology-partner-guides/202005.0/payment-partners/computop/computop-api-calls.html
+  - /docs/scos/dev/technology-partner-guides/201811.0/payment-partners/computop/computop-api-calls.html
+  - /docs/scos/dev/technology-partner-guides/201907.0/payment-partners/computop/computop-api-calls.html
+  - /docs/scos/dev/technology-partner-guides/202009.0/payment-partners/computop/computop-api-calls.html
 related:
   - title: Computop
     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/computop.html

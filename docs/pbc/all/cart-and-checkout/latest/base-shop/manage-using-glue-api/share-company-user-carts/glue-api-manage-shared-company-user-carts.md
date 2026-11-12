@@ -9,6 +9,9 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-carts/sharing-company-user-carts/managing-shared-company-user-carts.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/manage-using-glue-api/share-company-user-carts/manage-shared-company-user-carts.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-manage-shared-company-user-carts.html
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/share-company-user-carts/manage-shared-company-user-carts.html
+  - /docs/pbc/all/cart-and-checkout/202212.0/base-shop/manage-using-glue-api/share-company-user-carts/manage-shared-company-user-carts.html
+  - /docs/scos/user/shop-user-guides/201907.0/shop-application-guide/cart/shared-cart-feature-overview.html
 related:
   - title: Share company user carts
     link: docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-share-company-user-carts.html

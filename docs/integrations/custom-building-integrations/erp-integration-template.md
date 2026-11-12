@@ -4,6 +4,8 @@ description: Easy starting point for projects to connect to ERP systems.
 keywords: erp, integration, third party, guide, oms, webhook
 last_updated: Aug 6, 2026
 template: default
+redirect_from:
+  - /docs/integrations/erp-integration-template.html
 ---
 
 ## Introduction

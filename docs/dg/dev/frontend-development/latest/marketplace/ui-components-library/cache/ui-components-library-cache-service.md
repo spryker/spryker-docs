@@ -7,6 +7,7 @@ redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/cache/
   - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/cache/cache.html
   - /docs/scos/dev/front-end-development/202404.0/marketplace/ui-components-library/cache/ui-components-library-cache-service.html
+  - /docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/cache/
 
 related:
   - title: Cache Strategy Static

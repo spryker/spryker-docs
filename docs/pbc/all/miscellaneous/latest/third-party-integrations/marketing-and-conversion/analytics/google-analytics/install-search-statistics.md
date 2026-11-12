@@ -28,7 +28,11 @@ composer require spryker-eco/google-analytics:"^1.0.0" --update-with-dependencie
 
 Search Statistics requires the `protobuf` PHP extension. The [spryker/php](https://hub.docker.com/r/spryker/php) Docker image includes the extension but does not load it by default, so you must enable it in the deploy file.
 
-The Docker SDK has no separate switch for `protobuf`. It ships with the `otel` extension, which loads `opentelemetry`, `grpc`, and `protobuf` together. To enable it, add `otel` to `image: php: enabled-extensions` in every deploy file you use, such as local, staging, and production:
+The Docker SDK has no separate switch for `protobuf`. Use one of the following options in every deploy file you use, such as local, staging, and production.
+
+**Option 1: Enable the `otel` extension**
+
+The `otel` extension loads `opentelemetry`, `grpc`, and `protobuf` together. To enable it, add `otel` to `image: php: enabled-extensions`:
 
 ```yaml
 image:
@@ -38,7 +42,19 @@ image:
             - otel
 ```
 
-Rebuild the images and restart the application:
+**Option 2: Load only the `protobuf` extension**
+
+If your project uses New Relic or otherwise does not need `opentelemetry` and `grpc`, load only `protobuf` through the `php.ini` configuration of the deploy file:
+
+```yaml
+image:
+    tag: spryker/php:8.3
+    php:
+        ini:
+            extension: protobuf
+```
+
+After you choose an option, rebuild the images and restart the application:
 
 ```bash
 docker/sdk boot your_deploy_file.yml && docker/sdk up

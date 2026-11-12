@@ -19,7 +19,7 @@ jobs:
     # Snap is not used because the snap store is unreliable on GitHub-hosted runners.
     - name: Install Vale
       env:
-        VALE_VERSION: 3.25.1
+        VALE_VERSION: 3.26.0
       run: |
         curl -fsSL --retry 5 --retry-all-errors -o "${RUNNER_TEMP}/vale.tar.gz" \
           "https://github.com/vale-cli/vale/releases/download/v${VALE_VERSION}/vale_${VALE_VERSION}_Linux_64-bit.tar.gz"

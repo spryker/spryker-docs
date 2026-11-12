@@ -38,12 +38,6 @@ image:
             - otel
 ```
 
-{% info_block warningBox "Conflicting extensions" %}
-
-The `opentelemetry` extension is known not to work alongside SourceGuardian. If your project uses SourceGuardian, do not enable `otel`. For details, see [Conflicting extensions](https://github.com/open-telemetry/opentelemetry-php-instrumentation?tab=readme-ov-file#conflicting-extensions). For more information about OpenTelemetry in Spryker, see [OpenTelemetry instrumentation](/docs/ca/dev/monitoring/spryker-monitoring-integration/opentelemetry-instrumentation.html).
-
-{% endinfo_block %}
-
 Rebuild the images and restart the application:
 
 ```bash

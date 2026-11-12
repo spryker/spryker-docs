@@ -127,13 +127,39 @@ Configuration description can be found below:
 | `getYvesDirectoryPathPatterns` | Defines the path to Twig templates | Yes | No |
 | `getPremissionMode` | Defines permission for created cache files | Yes | Yes |
 | `getTwigOptions` | Here we can define standard options that are available for Twig. Check out [Twig documentation](https://twig.symfony.com/doc/2.x/api.html#environment-options) for more details. | Yes | Yes |
-| `isUndefinedCallableFallbackEnabled` | Defines whether templates keep rendering when they use a Twig function, filter, or test that no registered Twig plugin provides. Returns `false` by default. For details, see [Fall back for unregistered Twig functions, filters, and tests](#fall-back-for-unregistered-twig-functions-filters-and-tests). | Yes | Yes |
+| `isUndefinedCallableFallbackEnabled` | Defines whether templates keep rendering when they use a Twig function, filter, or test that no registered Twig plugin provides. Reads the value from the Shared `TwigConfig`, which returns `false` by default. For details, see [Fall back for unregistered Twig functions, filters, and tests](#fall-back-for-unregistered-twig-functions-filters-and-tests). | Yes | Yes |
 
 ### Fall back for unregistered Twig functions, filters, and tests
 
 Twig functions, filters, and tests are provided by Twig plugins. Twig resolves them when it compiles a template, so if a template uses a function, filter, or test whose plugin isn't registered in your project, the whole template fails with an error like `Unknown "functionName" function`. This happens even when the call is in a branch that's never rendered, and it also breaks every template that includes or extends the failing one.
 
-To keep such templates rendering, enable the fallback by overriding `isUndefinedCallableFallbackEnabled()` in the project-level `TwigConfig`. The setting is separate for Yves and Zed, so enable it in each application you need.
+To keep such templates rendering, enable the fallback by overriding `isUndefinedCallableFallbackEnabled()` in a project-level `TwigConfig`. The fallback is disabled by default. You can enable it for both applications at once or for each application separately.
+
+#### Enable the fallback for Yves and Zed
+
+The Yves and Zed `TwigConfig` classes read the value from the Shared `TwigConfig`. To enable the fallback for both applications, override the method in the project-level Shared `TwigConfig`:
+
+**src/Pyz/Shared/Twig/TwigConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Shared\Twig;
+
+use Spryker\Shared\Twig\TwigConfig as SprykerTwigConfig;
+
+class TwigConfig extends SprykerTwigConfig
+{
+    public function isUndefinedCallableFallbackEnabled(): bool
+    {
+        return true;
+    }
+}
+```
+
+#### Enable the fallback for one application
+
+To enable the fallback only for Yves or only for Zed, override the method in the project-level `TwigConfig` of that application. This value takes precedence over the Shared `TwigConfig` value.
 
 **src/Pyz/Yves/Twig/TwigConfig.php**
 

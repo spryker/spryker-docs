@@ -1,7 +1,7 @@
 ---
 title: Code Sniffer
 description: With the Code Sniffer tool, you can keep your code clean, find issues, and fix them automatically.
-last_updated: Jun 16, 2021
+last_updated: Sep 29, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/code-sniffer
 originalArticleId: 5fd3244a-f387-4188-a8d0-076eb8afe1f1
@@ -34,6 +34,8 @@ related:
     link: docs/dg/dev/sdks/sdk/development-tools/static-security-checker.html
   - title: Tooling config file
     link: docs/dg/dev/sdks/sdk/development-tools/tooling-configuration-file.html
+  - title: What static analysis proves
+    link: docs/dg/dev/guidelines/testing-guidelines/what-static-analysis-proves.html
 ---
 
 To correspond to [PSR-2](http://www.php-fig.org/psr/psr-2/) and additional standards, we integrated the well known [PHPCodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).

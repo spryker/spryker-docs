@@ -1,7 +1,7 @@
 ---
 title: Architecture Sniffer
 description: Use Architecture Sniffer to ensure the quality of Spryker project architecture
-last_updated: Jul 27, 2026
+last_updated: Sep 29, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/architecture-sniffer
 originalArticleId: 33ab1b5b-fce7-4439-8722-87e5ecd9f3c5
@@ -36,6 +36,8 @@ related:
     link: docs/dg/dev/sdks/sdk/development-tools/static-security-checker.html
   - title: Tooling config file
     link: docs/dg/dev/sdks/sdk/development-tools/tooling-configuration-file.html
+  - title: What static analysis proves
+    link: docs/dg/dev/guidelines/testing-guidelines/what-static-analysis-proves.html
 ---
 
 We use our [Architecture Sniffer Tool](https://github.com/spryker/architecture-sniffer) to ensure the quality of Spryker project architecture. The tool builds on [PHP Mess Detector](https://phpmd.org) and ships the project ruleset:

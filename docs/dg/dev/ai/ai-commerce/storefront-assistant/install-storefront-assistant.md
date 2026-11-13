@@ -1373,7 +1373,7 @@ With the asset support, the assistant answers questions about the Self-Service P
 composer update spryker-feature/self-service-portal spryker-feature/ai-commerce --with-dependencies
 ```
 
-The asset tools require `spryker/catalog` version `^5.0.0` or higher and the `spryker/ai-foundation` module.
+The asset tools require `spryker/catalog` version `^5.0.0` or higher and `spryker/ai-foundation-extension` version `^1.0.0` or higher. The tool plugins implement `Spryker\Client\AiFoundationExtension\Dependency\Tools\ToolPluginInterface` from `spryker/ai-foundation-extension`.
 
 ### 2) Register the asset tools
 
@@ -1400,7 +1400,7 @@ use SprykerFeature\Client\SelfServicePortal\Plugin\AiFoundation\SspAssetSearchTo
 class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvider
 {
     /**
-     * @return array<\Spryker\Client\AiFoundation\Dependency\Tools\ToolPluginInterface>
+     * @return array<\Spryker\Client\AiFoundationExtension\Dependency\Tools\ToolPluginInterface>
      */
     protected function getAiToolPlugins(): array
     {
@@ -1598,7 +1598,7 @@ The first rule matches the asset details page. The second rule matches the catal
 
 ### 4) Add the suggested prompts of the asset page
 
-Add the `asset_page_prompts` setting to the `suggested_prompts` group of `data/configuration/ai_commerce.configuration.yml`, before `default_prompts`:
+Add the `asset_page_prompts` setting to the `suggested_prompts` group of `data/configuration/ai_commerce.configuration.yml`, before `default_prompts`. Like the other suggested prompts settings, the value is a JSON object with a locale name as the key and a list of prompts as the value, and `StorefrontAssistantSuggestedPromptsConstraint` validates it:
 
 **data/configuration/ai_commerce.configuration.yml**
 
@@ -1606,14 +1606,26 @@ Add the `asset_page_prompts` setting to the `suggested_prompts` group of `data/c
                       - key: asset_page_prompts
                         name: Asset Page Prompts
                         description: Prompts offered while the customer is viewing the details page of a Self-Service Portal asset. {assetName} is replaced with the asset name.
-                        type: text
-                        default_value: 'Show me spare parts for {assetName}|Which services can I book for this asset?|How do I install a spare part for this asset?|What is the status of this asset?'
+                        type: json
+                        default_value:
+                            en_US:
+                                - 'Show me spare parts for {assetName}'
+                                - 'Which services can I book for this asset?'
+                                - 'How do I install a spare part for this asset?'
+                                - 'What is the status of this asset?'
+                            de_DE:
+                                - 'Zeige mir Ersatzteile für {assetName}'
+                                - 'Welche Services kann ich für dieses Asset buchen?'
+                                - 'Wie installiere ich ein Ersatzteil für dieses Asset?'
+                                - 'Was ist der Status dieses Assets?'
                         enabled: true
                         secret: false
                         storefront: true
                         order: 3
                         scopes:
                             - global
+                        constraints:
+                            - type: 'SprykerFeature\Zed\AiCommerce\Communication\Constraint\StorefrontAssistantSuggestedPromptsConstraint'
 ```
 
 Sync the configuration, build the frontend, and clear the caches:

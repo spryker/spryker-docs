@@ -44,7 +44,7 @@ Install or prepare the following before you start:
 ## 1) Install the required modules
 
 ```bash
-composer require spryker-feature/ai-commerce:^0.12.0 --update-with-dependencies
+composer require spryker-feature/ai-commerce:^0.14.0 --update-with-dependencies
 ```
 
 The package requires the following modules in addition to the modules of Storefront Assistant:
@@ -499,7 +499,7 @@ In the read-only mode, the queue worker cannot index the documents, because the 
     class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvider
     {
         /**
-         * @return array<\Spryker\Client\AiFoundation\Dependency\Tools\ToolPluginInterface>
+         * @return array<\Spryker\Client\AiFoundationExtension\Dependency\Tools\ToolPluginInterface>
          */
         protected function getAiToolPlugins(): array
         {

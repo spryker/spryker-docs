@@ -72,7 +72,7 @@ A customer-facing tool must also be an agent tool.
 
 ### Self-Service Portal asset tools
 
-The asset tools come from the `spryker-feature/self-service-portal` package, namespace `SprykerFeature\Client\SelfServicePortal\Plugin\AiFoundation`. They need the `spryker/ai-foundation` module. With these tools, the assistant answers questions about the assets of a company user, such as "Show me spare parts for my printer", and finds compatible spare parts and services.
+The asset tools come from the `spryker-feature/self-service-portal` package, namespace `SprykerFeature\Client\SelfServicePortal\Plugin\AiFoundation`. They implement `Spryker\Client\AiFoundationExtension\Dependency\Tools\ToolPluginInterface`, so the package requires `spryker/ai-foundation-extension`. With these tools, the assistant answers questions about the assets of a company user, such as "Show me spare parts for my printer", and finds compatible spare parts and services.
 
 On an asset page, the assistant gets the asset reference from the page context of the `asset` page type. On other pages, the assistant finds the asset with `ssp_asset_search` when the customer names it. For a document question about an asset, the assistant gets the compatible products with `ssp_asset_compatible_products` and then searches their documents with `product_knowledge_search`.
 

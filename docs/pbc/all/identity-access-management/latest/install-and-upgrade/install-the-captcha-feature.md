@@ -110,7 +110,7 @@ The example uses the database of the SecurityBlocker module, `SecurityBlockerCon
 
 2. Switch on the CAPTCHA and select the CAPTCHA mode.
 
-The **Enable CAPTCHA** setting, `security:captcha:login:is_enabled`, switches the CAPTCHA of the login forms on or off. It is off by default, so no login form shows or checks a CAPTCHA until you switch it on. Switch it on only after you have set up a CAPTCHA provider: while no provider is registered, or the provider cannot create or verify challenges, every login that requires a CAPTCHA is rejected. While the CAPTCHA is off, the Back Office hides the other settings of the **Login Forms** group.
+The **Enable CAPTCHA** setting, `security:captcha:login:is_enabled`, switches the CAPTCHA of the login forms on or off. It is off by default, so no login form shows or checks a CAPTCHA until you switch it on. Switch it on only after you have set up a CAPTCHA provider: while no provider is registered, or the provider cannot create or verify challenges, every login that requires a CAPTCHA is rejected. The Back Office prevents this: until you register a provider plugin and save its settings, saving **Enable CAPTCHA** in the on state fails with the `Set up the CAPTCHA provider under Integrations before turning on the CAPTCHA.` message. The data import and the configuration console commands run the same check. Switching the CAPTCHA off always succeeds. The Back Office does not stop you from removing the provider settings while the CAPTCHA is on. While the CAPTCHA is off, the Back Office hides the other settings of the **Login Forms** group.
 
 The CAPTCHA mode defines when the login forms require a CAPTCHA. It is a Back Office setting, so you can change it without a deployment, and it applies to all login forms:
 
@@ -153,6 +153,7 @@ In the Back Office, go to **Configuration** > **Security** > **CAPTCHA**. Make s
 - The **Login Forms** group contains the **Enable CAPTCHA** setting, and it is off. The Back Office hides the other settings of the group.
 - When you switch on **Enable CAPTCHA**, the **CAPTCHA Mode** setting appears with the **After Failed Attempts** and **Always** options, and **After Failed Attempts** is selected. The **Open the Login Lock tab** link below its description opens **Configuration** > **Security** > **Login Lock**.
 - The **Login Forms** group contains no other settings. The numbers of failed logins are in **Configuration** > **Security** > **Login Lock**.
+- If you have not set up a CAPTCHA provider, saving **Enable CAPTCHA** in the on state fails with the `Set up the CAPTCHA provider under Integrations before turning on the CAPTCHA.` message below the setting.
 
 {% endinfo_block %}
 

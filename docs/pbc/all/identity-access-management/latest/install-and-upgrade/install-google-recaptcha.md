@@ -109,6 +109,8 @@ vendor/bin/console configuration:import-environment \
 
 For details about the command, see [Integrate configuration deployment commands](/docs/dg/dev/integrate-and-configure/integrate-configuration-deployment-commands.html). The Storefront reads the version and the site key from the key-value storage, so it uses a changed setting after the `sync.storage.configuration` queue has been processed.
 
+Until you save the site key and the secret key, the Back Office does not switch the CAPTCHA on: saving **Enable CAPTCHA** in the on state fails with the `Set up the CAPTCHA provider under Integrations before turning on the CAPTCHA.` message. The check confirms that both keys have values, not that Google accepts them. The Back Office does not stop you from clearing a key while the CAPTCHA is on.
+
 ### 6) Set up behavior
 
 Only an application that registers `ConfigurationApplicationPlugin` can read the secret key. The Back Office and the Merchant Portal verify tokens themselves. The Storefront cannot read the secret key, so it sends tokens to the Backend Gateway for verification. The Back Office and the Backend Gateway register `ConfigurationApplicationPlugin` when you install the Configuration Management feature, so register it only in the Merchant Portal application. If you already registered it as described in [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html#enable-merchant-portal-infrastructural-plugins), skip it. Without the plugin, the Merchant Portal sends its tokens to the Backend Gateway and logs a warning for every token.

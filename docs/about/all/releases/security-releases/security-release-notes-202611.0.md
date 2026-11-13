@@ -1,7 +1,7 @@
 ---
 title: Security release notes 202611.0
 description: Security updates released for version 202611.0
-last_updated: Nov 4, 2026
+last_updated: Nov 13, 2026
 template: concept-topic-template
 publish_date: "2026-10-13"
 redirect_from:
@@ -363,3 +363,29 @@ composer update spryker/agent-security-merchant-portal-gui:"^2.5.0" spryker/secu
 After the update, the application rejects every login request without a valid CSRF token. If your project overrides a login form template, make sure the template renders the `_token` field of the form. Otherwise, no user can log in.
 
 {% endinfo_block %}
+
+## Vulnerabilities in third-party dependencies
+
+Several third-party dependencies were updated to address publicly known vulnerabilities present in earlier versions. The updated dependencies are listed below.
+
+### Affected packages
+
+- `grpc/grpc`: < 1.84.1
+- `phpseclib/phpseclib`: < 1.0.31, >= 2.0.0 < 2.0.56, >= 3.0.0 < 3.0.58, >= 4.0.0 < 4.0.3
+- `symfony/config`: < 7.4.23
+- `symfony/filesystem`: < 7.4.23
+- `symfony/html-sanitizer`: < 7.4.23
+- `symfony/http-client`: < 7.4.23
+- `symfony/http-foundation`: < 7.4.23
+- `symfony/http-kernel`: < 6.4.50
+- `symfony/routing`: < 7.4.23
+- `symfony/security-http`: < 7.4.23
+- `symfony/serializer`: < 7.4.23
+- `symfony/validator`: < 7.4.23
+- `symfony/yaml`: < 7.4.23
+
+### Fix the vulnerability
+
+```bash
+composer update grpc/grpc phpseclib/phpseclib symfony/config symfony/filesystem symfony/html-sanitizer symfony/http-client symfony/http-foundation symfony/http-kernel symfony/routing symfony/security-http symfony/serializer symfony/validator symfony/yaml
+```

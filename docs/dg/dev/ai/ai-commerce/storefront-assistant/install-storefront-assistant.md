@@ -410,7 +410,7 @@ features:
                       - key: openai_model
                         name: OpenAI Model
                         description: The OpenAI model used for the Storefront Assistant AI configuration. Model must support streaming.
-                        type: string
+                        type: select
                         default_value: 'gpt-6-luna'
                         enabled: true
                         secret: false
@@ -418,6 +418,11 @@ features:
                         order: 2
                         scopes:
                             - global
+                        options:
+                            - value: 'gpt-6-luna'
+                              label: GPT-6 Luna
+                            - value: 'gpt-6.1-terra'
+                              label: GPT-6.1 Terra
                         dependencies:
                             - when:
                                   any:
@@ -427,7 +432,7 @@ features:
                       - key: aws_model
                         name: AWS Bedrock Model
                         description: The AWS Bedrock model identifier used for the Storefront Assistant AI configuration. Model must support streaming.
-                        type: string
+                        type: select
                         default_value: 'eu.anthropic.claude-haiku-5-5'
                         enabled: true
                         secret: false
@@ -435,6 +440,11 @@ features:
                         order: 3
                         scopes:
                             - global
+                        options:
+                            - value: 'eu.anthropic.claude-haiku-5-5'
+                              label: Claude Haiku 5.5
+                            - value: 'eu.anthropic.claude-sonnet-5-5'
+                              label: Claude Sonnet 5.5
                         dependencies:
                             - when:
                                   any:
@@ -444,7 +454,7 @@ features:
                       - key: anthropic_model
                         name: Anthropic Model
                         description: The Anthropic model used for the Storefront Assistant AI configuration. Model must support streaming.
-                        type: string
+                        type: select
                         default_value: 'claude-haiku-5-5'
                         enabled: true
                         secret: false
@@ -452,6 +462,11 @@ features:
                         order: 4
                         scopes:
                             - global
+                        options:
+                            - value: 'claude-haiku-5-5'
+                              label: Claude Haiku 5.5
+                            - value: 'claude-sonnet-5-5'
+                              label: Claude Sonnet 5.5
                         dependencies:
                             - when:
                                   any:

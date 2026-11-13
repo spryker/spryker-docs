@@ -410,7 +410,7 @@ features:
                       - key: openai_model
                         name: OpenAI Model
                         description: The OpenAI model used for the Storefront Assistant AI configuration. Model must support streaming.
-                        type: string
+                        type: select
                         default_value: 'gpt-6-luna'
                         enabled: true
                         secret: false
@@ -418,6 +418,11 @@ features:
                         order: 2
                         scopes:
                             - global
+                        options:
+                            - value: 'gpt-6-luna'
+                              label: GPT-6 Luna
+                            - value: 'gpt-6.1-terra'
+                              label: GPT-6.1 Terra
                         dependencies:
                             - when:
                                   any:
@@ -427,7 +432,7 @@ features:
                       - key: aws_model
                         name: AWS Bedrock Model
                         description: The AWS Bedrock model identifier used for the Storefront Assistant AI configuration. Model must support streaming.
-                        type: string
+                        type: select
                         default_value: 'eu.anthropic.claude-haiku-5-5'
                         enabled: true
                         secret: false
@@ -435,6 +440,11 @@ features:
                         order: 3
                         scopes:
                             - global
+                        options:
+                            - value: 'eu.anthropic.claude-haiku-5-5'
+                              label: Claude Haiku 5.5
+                            - value: 'eu.anthropic.claude-sonnet-5-5'
+                              label: Claude Sonnet 5.5
                         dependencies:
                             - when:
                                   any:
@@ -444,7 +454,7 @@ features:
                       - key: anthropic_model
                         name: Anthropic Model
                         description: The Anthropic model used for the Storefront Assistant AI configuration. Model must support streaming.
-                        type: string
+                        type: select
                         default_value: 'claude-haiku-5-5'
                         enabled: true
                         secret: false
@@ -452,6 +462,11 @@ features:
                         order: 4
                         scopes:
                             - global
+                        options:
+                            - value: 'claude-haiku-5-5'
+                              label: Claude Haiku 5.5
+                            - value: 'claude-sonnet-5-5'
+                              label: Claude Sonnet 5.5
                         dependencies:
                             - when:
                                   any:
@@ -1161,7 +1176,7 @@ The output shows four routes: `shopping-assistant/prompt`, `shopping-assistant/c
 4. Go to **AI Commerce&nbsp;<span aria-label="and then">></span>&nbsp;Storefront Assistant**.
 5. In the **General** group, turn on **Enable Storefront Assistant** and **Enable Product Discovery Agent**.
 6. In the **AI Vendor** group, select the AI configuration: **OpenAI**, **AWS Bedrock**, or **Anthropic**.
-7. Enter a model of the selected vendor that supports streaming and tool calls.
+7. Optional: In the model dropdown of the selected vendor, select another supported model. For the supported models, see [Select the active provider per feature](/docs/dg/dev/ai/ai-commerce/configure-multiple-ai-providers.html#4-select-the-active-provider-per-feature).
 8. Optional: Change the system prompt and the suggested prompts.
 9. Click **Save**.
 10. If the scheduler does not run in your environment, publish the settings:

@@ -1,7 +1,7 @@
 ---
 title: Install the login brute-force protection
 description: Learn how to block password guessing per account on the Storefront, the Back Office, the Merchant Portal, and the APIs, regardless of the IP address of the attacker.
-last_updated: Nov 11, 2026
+last_updated: Nov 13, 2026
 template: feature-integration-guide-template
 related:
   - title: Install the CAPTCHA feature
@@ -90,55 +90,24 @@ Make sure the following modules have been installed:
 
 ## 2) Set up the configuration
 
-1. Add the configuration of the `customer` login realm:
+1. Review the account lock of the login realms. The account lock is set in the Back Office, in **Configuration** > **Security** > **Login Lock**, with one group of settings for each realm: **Customer Accounts** for the `customer` realm and **User Accounts** for the `user` realm. The SecurityBlockerStorefrontCustomer and SecurityBlockerBackoffice modules define these settings and read them with version 3.84.0 or later of `spryker/kernel`. `console configuration:sync` registers them, and the defaults apply until an administrator changes them.
 
-| CONFIGURATION | SPECIFICATION | NAMESPACE |
-| --- | --- | --- |
-| SecurityBlockerStorefrontCustomerConstants::CUSTOMER_ACCOUNT_BLOCKING_NUMBER_OF_ATTEMPTS | Defines the number of login attempts per account within the `CUSTOMER_ACCOUNT_BLOCKING_TTL` time period before the account is blocked. `0` disables the account block. | Spryker\Shared\SecurityBlockerStorefrontCustomer |
-| SecurityBlockerStorefrontCustomerConstants::CUSTOMER_ACCOUNT_BLOCKING_TTL | Defines the time period in seconds within which the login attempts of an account are counted. | Spryker\Shared\SecurityBlockerStorefrontCustomer |
-| SecurityBlockerStorefrontCustomerConstants::CUSTOMER_ACCOUNT_BLOCK_FOR_SECONDS | Defines the time period in seconds for which a blocked account stays blocked. Further attempts do not extend the block. | Spryker\Shared\SecurityBlockerStorefrontCustomer |
-| SecurityBlockerStorefrontCustomerConstants::CUSTOMER_IP_CHALLENGE_NUMBER_OF_ATTEMPTS | Defines the number of failed logins per IP address after which the login form requires a CAPTCHA in the `after_failed_attempts` CAPTCHA mode. `0` disables this trigger, and the failed logins that an IP address adds to the realm-wide counter are then not limited. | Spryker\Shared\SecurityBlockerStorefrontCustomer |
-| SecurityBlockerStorefrontCustomerConstants::CUSTOMER_GLOBAL_CHALLENGE_NUMBER_OF_ATTEMPTS | Defines the number of failed customer logins within the `CUSTOMER_GLOBAL_CHALLENGE_TTL` time period after which every customer login requires a CAPTCHA in the `after_failed_attempts` CAPTCHA mode. `0` disables this trigger. | Spryker\Shared\SecurityBlockerStorefrontCustomer |
-| SecurityBlockerStorefrontCustomerConstants::CUSTOMER_GLOBAL_CHALLENGE_TTL | Defines the time period in seconds within which the failed customer logins are counted for the realm-wide counter. | Spryker\Shared\SecurityBlockerStorefrontCustomer |
+| SETTING | KEY | DEFAULT | SPECIFICATION |
+| --- | --- | --- | --- |
+| Failed Attempts | `security:login_lock:customer:number_of_failed_attempts`, `security:login_lock:user:number_of_failed_attempts` | 9 | Defines the number of login attempts to one account, from any IP address, within the counting window before the account is locked. A whole number from 1 to 100. |
+| Counting Window (Minutes) | `security:login_lock:customer:counting_window`, `security:login_lock:user:counting_window` | 15 | Defines the time period in minutes, starting with the first failed login, within which the login attempts of an account are counted. A whole number from 1 to 1440. |
+| Lock Duration (Minutes) | `security:login_lock:customer:lock_duration`, `security:login_lock:user:lock_duration` | 6 | Defines the time period in minutes for which a locked account stays locked. Further attempts do not extend the lock. A whole number from 1 to 1440. |
 
-**config/Shared/config_default.php**
+2. Review the CAPTCHA thresholds of the login realms. They are settings of the CAPTCHA feature in **Configuration** > **Security** > **CAPTCHA**, which the Back Office shows while the CAPTCHA is switched on and the **After Failed Attempts** mode is selected. They apply with the `ip-and-account` login protection strategy of step 4. For details, see [Install the CAPTCHA feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-captcha-feature.html).
 
-```php
-use Spryker\Shared\SecurityBlockerStorefrontCustomer\SecurityBlockerStorefrontCustomerConstants;
+| SETTING | KEY | DEFAULT (CUSTOMER / USER) | SPECIFICATION |
+| --- | --- | --- | --- |
+| Failed Attempts per Account | `security:captcha:login:customer_number_of_failed_attempts`, `security:captcha:login:user_number_of_failed_attempts` | 3 / 3 | Defines the number of failed logins to one account after which its login form requires a CAPTCHA. A whole number from 1 to 10. |
+| Failed Attempts per IP Address | `security:captcha:login:customer_ip_number_of_failed_attempts`, `security:captcha:login:user_ip_number_of_failed_attempts` | 5 / 5 | Defines the number of failed logins from one IP address after which the login form requires a CAPTCHA. `0` disables this trigger, and the failed logins that an IP address adds to the realm-wide counter are then not limited. A whole number from 0 to 1000. |
+| Failed Attempts across All Accounts | `security:captcha:login:customer_all_accounts_number_of_failed_attempts`, `security:captcha:login:user_all_accounts_number_of_failed_attempts` | 100 / 30 | Defines the number of failed logins across all accounts within the time window after which every login of the realm requires a CAPTCHA. `0` disables this trigger. A whole number from 0 to 100000. |
+| Time Window across All Accounts (Minutes) | `security:captcha:login:customer_all_accounts_time_window`, `security:captcha:login:user_all_accounts_time_window` | 5 / 5 | Defines the time period in minutes, starting with the first failed login, within which the failed logins across all accounts are counted. A whole number from 1 to 60. |
 
-$config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_ACCOUNT_BLOCKING_NUMBER_OF_ATTEMPTS] = 9;
-$config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_ACCOUNT_BLOCKING_TTL] = 900;
-$config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_ACCOUNT_BLOCK_FOR_SECONDS] = 360;
-$config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_IP_CHALLENGE_NUMBER_OF_ATTEMPTS] = 5;
-$config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_GLOBAL_CHALLENGE_NUMBER_OF_ATTEMPTS] = 100;
-$config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_GLOBAL_CHALLENGE_TTL] = 300;
-```
-
-2. Add the configuration of the `user` login realm. The settings work like their customer counterparts:
-
-| CONFIGURATION | SPECIFICATION | NAMESPACE |
-| --- | --- | --- |
-| SecurityBlockerBackofficeConstants::USER_ACCOUNT_BLOCKING_NUMBER_OF_ATTEMPTS | Defines the number of login attempts per user account within the `USER_ACCOUNT_BLOCKING_TTL` time period before the account is blocked. `0` disables the account block. | Spryker\Shared\SecurityBlockerBackoffice |
-| SecurityBlockerBackofficeConstants::USER_ACCOUNT_BLOCKING_TTL | Defines the time period in seconds within which the login attempts of a user account are counted. | Spryker\Shared\SecurityBlockerBackoffice |
-| SecurityBlockerBackofficeConstants::USER_ACCOUNT_BLOCK_FOR_SECONDS | Defines the time period in seconds for which a blocked user account stays blocked. | Spryker\Shared\SecurityBlockerBackoffice |
-| SecurityBlockerBackofficeConstants::USER_IP_CHALLENGE_NUMBER_OF_ATTEMPTS | Defines the number of failed logins per IP address after which the login form requires a CAPTCHA in the `after_failed_attempts` CAPTCHA mode. `0` disables this trigger. | Spryker\Shared\SecurityBlockerBackoffice |
-| SecurityBlockerBackofficeConstants::USER_GLOBAL_CHALLENGE_NUMBER_OF_ATTEMPTS | Defines the number of failed user logins within the `USER_GLOBAL_CHALLENGE_TTL` time period after which every user login requires a CAPTCHA in the `after_failed_attempts` CAPTCHA mode. `0` disables this trigger. | Spryker\Shared\SecurityBlockerBackoffice |
-| SecurityBlockerBackofficeConstants::USER_GLOBAL_CHALLENGE_TTL | Defines the time period in seconds within which the failed user logins are counted for the realm-wide counter. | Spryker\Shared\SecurityBlockerBackoffice |
-
-**config/Shared/config_default.php**
-
-```php
-use Spryker\Shared\SecurityBlockerBackoffice\SecurityBlockerBackofficeConstants;
-
-$config[SecurityBlockerBackofficeConstants::USER_ACCOUNT_BLOCKING_NUMBER_OF_ATTEMPTS] = 9;
-$config[SecurityBlockerBackofficeConstants::USER_ACCOUNT_BLOCKING_TTL] = 900;
-$config[SecurityBlockerBackofficeConstants::USER_ACCOUNT_BLOCK_FOR_SECONDS] = 360;
-$config[SecurityBlockerBackofficeConstants::USER_IP_CHALLENGE_NUMBER_OF_ATTEMPTS] = 5;
-$config[SecurityBlockerBackofficeConstants::USER_GLOBAL_CHALLENGE_NUMBER_OF_ATTEMPTS] = 30;
-$config[SecurityBlockerBackofficeConstants::USER_GLOBAL_CHALLENGE_TTL] = 300;
-```
-
-The number of failed logins to one account after which its login form requires a CAPTCHA is not a constant. It is a Back Office setting of the CAPTCHA feature, one for each realm: **Customer Failed Attempts** for the `customer` realm and **User Failed Attempts** for the `user` realm. Both are whole numbers from 1 to 10, with a default of 3, and they apply with the `ip-and-account` login protection strategy of step 4. For details, see [Install the CAPTCHA feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-captcha-feature.html). The SecurityBlockerStorefrontCustomer and SecurityBlockerBackoffice modules read these settings with version 3.84.0 or later of `spryker/kernel`.
+If a CAPTCHA threshold is not lower than the lock that counts the same failed logins, the login form requires the CAPTCHA one login before that lock: the per-account threshold before the account lock, and the per-IP threshold before the IP lock of the login form.
 
 3. In a marketplace, add the configuration that counts failed Merchant Portal logins per IP address:
 
@@ -160,14 +129,16 @@ $config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCKING_NU
 
 {% info_block infoBox "Test environments" %}
 
-End-to-end tests usually send many failed logins from one IP address with the same test accounts. In the configuration of such an environment, for example, `config/Shared/config_default-ci.php`, lift the account blocks:
+End-to-end tests usually send many failed logins from one IP address with the same test accounts. Import the settings of such an environment with the `configuration-value` data import. The following example raises the account lock to its maximum and switches off the per-IP and all-accounts CAPTCHA triggers:
 
-```php
-use Spryker\Shared\SecurityBlockerBackoffice\SecurityBlockerBackofficeConstants;
-use Spryker\Shared\SecurityBlockerStorefrontCustomer\SecurityBlockerStorefrontCustomerConstants;
-
-$config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_ACCOUNT_BLOCKING_NUMBER_OF_ATTEMPTS] = 1000;
-$config[SecurityBlockerBackofficeConstants::USER_ACCOUNT_BLOCKING_NUMBER_OF_ATTEMPTS] = 1000;
+```csv
+setting_key,scope,scope_identifier,value
+security:login_lock:customer:number_of_failed_attempts,global,,100
+security:login_lock:user:number_of_failed_attempts,global,,100
+security:captcha:login:customer_ip_number_of_failed_attempts,global,,0
+security:captcha:login:customer_all_accounts_number_of_failed_attempts,global,,0
+security:captcha:login:user_ip_number_of_failed_attempts,global,,0
+security:captcha:login:user_all_accounts_number_of_failed_attempts,global,,0
 ```
 
 For the CAPTCHA in test environments, see [Install the CAPTCHA feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-captcha-feature.html#2-set-up-the-configuration).
@@ -427,7 +398,7 @@ The strategy of all API endpoints is the strategy of `SecurityBlockerRestApiConf
 
 ### Require a CAPTCHA after failed logins
 
-Follow this section if you installed the CAPTCHA feature. In its default `after_failed_attempts` CAPTCHA mode, a login form requires a CAPTCHA only while a CAPTCHA requirement plugin requires it, that is, after a challenge threshold is reached for the account, the IP address, or the login realm. The threshold of the account is the **Customer Failed Attempts** or **User Failed Attempts** Back Office setting of the CAPTCHA feature. Without these plugins, every login form requires a CAPTCHA in this mode, and an error is logged.
+Follow this section if you installed the CAPTCHA feature. In its default `after_failed_attempts` CAPTCHA mode, a login form requires a CAPTCHA only while a CAPTCHA requirement plugin requires it, that is, after a challenge threshold is reached for the account, the IP address, or the login realm. The thresholds are the **Failed Attempts per Account**, **Failed Attempts per IP Address**, and **Failed Attempts across All Accounts** Back Office settings of the CAPTCHA feature, one set for each realm, as described in [Set up the configuration](#2-set-up-the-configuration). Without these plugins, every login form requires a CAPTCHA in this mode, and an error is logged.
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -511,7 +482,7 @@ Make sure the login protection works on every login surface that you installed. 
     }
     ```
 
-6. If you installed the CAPTCHA feature and use its default `after_failed_attempts` CAPTCHA mode, go to the Storefront login page and enter a wrong password for a customer account as many times as the **Customer Failed Attempts** Back Office setting defines, three times by default.
+6. If you installed the CAPTCHA feature and use its default `after_failed_attempts` CAPTCHA mode, go to the Storefront login page and enter a wrong password for a customer account as many times as the **Customer Failed Attempts per Account** Back Office setting defines, three times by default.
     Make sure the login form then shows the CAPTCHA.
 7. Solve the CAPTCHA and log in with the correct password. Log out, and go to the login page again.
     Make sure the login form does not show the CAPTCHA, and the login with the correct password succeeds without a CAPTCHA. Repeat the last two steps on the Back Office login page with a user account.

@@ -1,7 +1,7 @@
 ---
 title: Install ALTCHA
 description: Learn how to use ALTCHA, a proof-of-work CAPTCHA without third-party services, as the CAPTCHA provider of the login forms.
-last_updated: Nov 11, 2026
+last_updated: Nov 13, 2026
 template: howto-guide-template
 related:
   - title: Install the CAPTCHA feature
@@ -212,7 +212,7 @@ An administrator can change the secret in the Back Office at any time. Challenge
 
 {% info_block warningBox "Missing secret" %}
 
-Without a secret, or with a secret shorter than 32 characters, ALTCHA cannot create or verify challenges, and an error is logged: every login that requires a CAPTCHA is rejected with the `The security check is currently unavailable. Please try again later.` message. In the `always` CAPTCHA mode, this blocks every login form, including the Back Office login, so you cannot log in to the Back Office to enter a secret. In the default `after_failed_attempts` CAPTCHA mode, it blocks a login after the failed logins that require a CAPTCHA. The install recipes prevent this. To recover an environment without a valid secret, run `console captcha-altcha:hmac-secret:generate`, or switch the CAPTCHA off temporarily with `$config[CaptchaConstants::IS_CAPTCHA_ENABLED] = false;`.
+Without a secret, or with a secret shorter than 32 characters, ALTCHA cannot create or verify challenges, and an error is logged: every login that requires a CAPTCHA is rejected with the `The security check is currently unavailable. Please try again later.` message. In the `always` CAPTCHA mode, this blocks every login form, including the Back Office login, so you cannot log in to the Back Office to enter a secret. In the default `after_failed_attempts` CAPTCHA mode, it blocks a login after the failed logins that require a CAPTCHA. The install recipes prevent this. To recover an environment without a valid secret, run `console captcha-altcha:hmac-secret:generate`, or switch the CAPTCHA off temporarily without the Back Office: `CAPTCHA_ENABLED=false console configuration:import-environment security:captcha:login:is_enabled=CAPTCHA_ENABLED`.
 
 {% endinfo_block %}
 

@@ -1,7 +1,7 @@
 ---
 title: Install the CAPTCHA feature
 description: Learn how to protect the login forms of the Storefront, the Back Office, and the Merchant Portal with a CAPTCHA.
-last_updated: Nov 12, 2026
+last_updated: Nov 13, 2026
 template: feature-integration-guide-template
 related:
   - title: Install ALTCHA
@@ -90,7 +90,6 @@ Make sure the following modules have been installed:
 
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
-| CaptchaConstants::IS_CAPTCHA_ENABLED | Switches the CAPTCHA of the login forms on or off for an environment. If `false`, no login form shows or checks a CAPTCHA, regardless of the CAPTCHA mode. If `true` and no CAPTCHA provider is registered, or the provider cannot create or verify challenges, every login that requires a CAPTCHA is rejected. Default: `false`. | Spryker\Shared\Captcha |
 | CaptchaConstants::REDIS_* | Define the key-value storage (Redis or Valkey) connection that holds the solved challenges, so that each solution is accepted only once, and the counters of the challenge rate limit. | Spryker\Shared\Captcha |
 
 **config/Shared/config_default.php**
@@ -98,7 +97,6 @@ Make sure the following modules have been installed:
 ```php
 use Spryker\Shared\Captcha\CaptchaConstants;
 
-$config[CaptchaConstants::IS_CAPTCHA_ENABLED] = true;
 $config[CaptchaConstants::REDIS_PERSISTENT_CONNECTION] = true;
 $config[CaptchaConstants::REDIS_SCHEME] = getenv('SPRYKER_KEY_VALUE_STORE_PROTOCOL') ?: 'tcp';
 $config[CaptchaConstants::REDIS_HOST] = getenv('SPRYKER_KEY_VALUE_STORE_HOST');
@@ -110,7 +108,9 @@ $config[CaptchaConstants::REDIS_DATABASE] = 7;
 
 The example uses the database of the SecurityBlocker module, `SecurityBlockerConstants::SECURITY_BLOCKER_REDIS_DATABASE`. Both modules store short-lived keys with a time to live, so keep them apart from the storage database, which holds the published data. Run this database with the `volatile-ttl` eviction policy: under memory pressure, the shortest-lived keys are evicted first.
 
-2. Select the CAPTCHA mode.
+2. Switch on the CAPTCHA and select the CAPTCHA mode.
+
+The **Enable CAPTCHA** setting, `security:captcha:login:is_enabled`, switches the CAPTCHA of the login forms on or off. It is off by default, so no login form shows or checks a CAPTCHA until you switch it on. Switch it on only after you have set up a CAPTCHA provider: while no provider is registered, or the provider cannot create or verify challenges, every login that requires a CAPTCHA is rejected. While the CAPTCHA is off, the Back Office hides the other settings of the **Login Forms** group.
 
 The CAPTCHA mode defines when the login forms require a CAPTCHA. It is a Back Office setting, so you can change it without a deployment, and it applies to all login forms:
 
@@ -119,48 +119,56 @@ The CAPTCHA mode defines when the login forms require a CAPTCHA. It is a Back Of
 | `after_failed_attempts` (**After Failed Attempts**), default | A login form shows and checks the CAPTCHA only after repeated failed logins. The CAPTCHA requirement plugins of the login brute-force protection decide when a CAPTCHA is required. Without these plugins, every login form shows the CAPTCHA, and an error is logged. For the plugins and their thresholds, see [Install the login brute-force protection](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-login-brute-force-protection.html#require-a-captcha-after-failed-logins). |
 | `always` (**Always**) | Every login form shows the CAPTCHA every time it is rendered, and every login submission is checked. |
 
-`CaptchaConstants::IS_CAPTCHA_ENABLED` and the CAPTCHA mode work together: `IS_CAPTCHA_ENABLED` switches the CAPTCHA on or off for an environment, and the mode defines when a login requires the CAPTCHA while it is switched on. An unknown mode value is treated as `always`.
+**Enable CAPTCHA** and the CAPTCHA mode work together. **Enable CAPTCHA** switches the CAPTCHA on or off, and the mode defines when a login requires the CAPTCHA while it is switched on. An unknown mode value is treated as `always`.
 
-In the `after_failed_attempts` mode, two more settings define after how many failed logins to one account its login form requires a CAPTCHA. The Back Office shows them only while **After Failed Attempts** is selected:
+In the `after_failed_attempts` mode, the following settings define when a login form requires a CAPTCHA. Each setting exists once for customers, with the `Customer` prefix and the `customer_` key prefix, for the Storefront customer login, and once for users, with the `User` prefix and the `user_` key prefix, for the Back Office, Merchant Portal, Merchant Portal agent, and Storefront agent logins. The Back Office shows them only while **After Failed Attempts** is selected:
 
-| SETTING | KEY | LOGIN FORMS | VALUE |
-| --- | --- | --- | --- |
-| **Customer Failed Attempts** | `security:captcha:login:customer_number_of_failed_attempts` | Storefront customer login | A whole number from 1 to 10. Default: 3. |
-| **User Failed Attempts** | `security:captcha:login:user_number_of_failed_attempts` | Back Office, Merchant Portal, Merchant Portal agent, and Storefront agent logins | A whole number from 1 to 10. Default: 3. |
+| SETTING | KEY | VALUE |
+| --- | --- | --- |
+| **Failed Attempts per Account** | `security:captcha:login:customer_number_of_failed_attempts`, `security:captcha:login:user_number_of_failed_attempts` | The number of failed logins to one account after which its login form requires a CAPTCHA. A whole number from 1 to 10. Default: 3. |
+| **Failed Attempts per IP Address** | `security:captcha:login:customer_ip_number_of_failed_attempts`, `security:captcha:login:user_ip_number_of_failed_attempts` | The number of failed logins from one IP address after which the login form requires a CAPTCHA. A whole number from 0 to 1000, where `0` switches this trigger off. Default: 5. |
+| **Failed Attempts across All Accounts** | `security:captcha:login:customer_all_accounts_number_of_failed_attempts`, `security:captcha:login:user_all_accounts_number_of_failed_attempts` | The number of failed logins across all accounts within the time window after which every login form of the realm requires a CAPTCHA. A whole number from 0 to 100000, where `0` switches this trigger off. Default: 100 for customers, 30 for users. |
+| **Time Window across All Accounts (Minutes)** | `security:captcha:login:customer_all_accounts_time_window`, `security:captcha:login:user_all_accounts_time_window` | The time period in minutes, starting with the first failed login, within which the failed logins across all accounts are counted. A whole number from 1 to 60. Default: 5. |
 
-The login brute-force protection reads these settings when its login protection strategy is `ip-and-account`; the default `ip` strategy counts failed logins per IP address only. A value that reaches the number of attempts after which the login brute-force protection locks an account means that the account is locked before its login form requires a CAPTCHA.
+The login brute-force protection reads these settings when its login protection strategy is `ip-and-account`; the default `ip` strategy counts failed logins per IP address only. If a threshold is not lower than the lock that counts the same failed logins, the login form requires the CAPTCHA one login before that lock. The account lock is set in **Configuration** > **Security** > **Login Lock**. For details, see [Install the login brute-force protection](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-login-brute-force-protection.html#2-set-up-the-configuration).
 
-The Back Office and the Merchant Portal read the mode from the database, so they apply a changed mode at once. The Storefront reads the mode from the key-value storage, so it applies a changed mode after the `sync.storage.configuration` queue has been processed.
+The Back Office and the Merchant Portal read these settings from the database, so they apply a change at once. The Storefront reads them from the key-value storage, so it applies a change after the `sync.storage.configuration` queue has been processed.
 
-Register the setting in the Back Office by synchronizing the configuration schema:
+Register the settings in the Back Office by synchronizing the configuration schema:
 
 ```bash
 console configuration:sync
 ```
 
-To change the mode, in the Back Office, go to **Configuration**, select **Security** in the sidebar, and open the **CAPTCHA** tab. In the **Login Forms** group, select the **CAPTCHA Mode**, and, for **After Failed Attempts**, set **Customer Failed Attempts** and **User Failed Attempts**. The key of the mode setting is `security:captcha:login:mode`. All three settings have the global scope.
+To change the mode, in the Back Office, go to **Configuration**, select **Security** in the sidebar, and open the **CAPTCHA** tab. In the **Login Forms** group, switch on **Enable CAPTCHA**, select the **CAPTCHA Mode**, and, for **After Failed Attempts**, set the thresholds. The key of the mode setting is `security:captcha:login:mode`. All settings have the global scope.
 
-To set the settings during deployment, for example, in a test environment, import them with the `configuration-value` data importer, as described in [Configuration Management](/docs/dg/dev/backend-development/configuration-management.html#data-import). The data importer does not validate the values, so import only whole numbers from 1 to 10:
+To set the settings during deployment, for example, in a test environment, import them with the `configuration-value` data importer, as described in [Configuration Management](/docs/dg/dev/backend-development/configuration-management.html#data-import). The data importer validates each value against the range of its setting, as the Back Office does, and rejects any other value. The following example switches the CAPTCHA on, lowers the number of failed attempts per account, and switches off the per-IP address and all-accounts triggers, because all tests log in from one IP address:
 
 ```csv
 setting_key,scope,scope_identifier,value
+security:captcha:login:is_enabled,global,,true
 security:captcha:login:mode,global,,after_failed_attempts
 security:captcha:login:customer_number_of_failed_attempts,global,,2
 security:captcha:login:user_number_of_failed_attempts,global,,2
+security:captcha:login:customer_ip_number_of_failed_attempts,global,,0
+security:captcha:login:customer_all_accounts_number_of_failed_attempts,global,,0
+security:captcha:login:user_ip_number_of_failed_attempts,global,,0
+security:captcha:login:user_all_accounts_number_of_failed_attempts,global,,0
 ```
 
 {% info_block warningBox "Verification" %}
 
 In the Back Office, go to **Configuration** > **Security** > **CAPTCHA**. Make sure the following applies:
-- The **Login Forms** group contains the **CAPTCHA Mode** setting with the **After Failed Attempts** and **Always** options, and **After Failed Attempts** is selected.
-- The **Customer Failed Attempts** and **User Failed Attempts** settings show `3`. When you select **Always**, they are hidden.
-- When you enter `11` or `2.5` in **Customer Failed Attempts** and save, the Back Office shows the `Enter a whole number from 1 to 10.` error.
+- The **Login Forms** group contains the **Enable CAPTCHA** setting, and it is off. The Back Office hides the other settings of the group.
+- When you switch on **Enable CAPTCHA**, the **CAPTCHA Mode** setting appears with the **After Failed Attempts** and **Always** options, and **After Failed Attempts** is selected.
+- The **Customer Failed Attempts per Account** and **User Failed Attempts per Account** settings show `3`, and the **Customer Failed Attempts per IP Address** and **User Failed Attempts per IP Address** settings show `5`. When you select **Always**, the threshold settings are hidden.
+- When you enter `11` or `2.5` in **Customer Failed Attempts per Account** and save, the Back Office shows the `Enter a whole number from 1 to 10.` error.
 
 {% endinfo_block %}
 
 {% info_block infoBox "Test environments" %}
 
-End-to-end tests cannot solve a CAPTCHA. In the configuration of such an environment, for example, `config/Shared/config_default-ci.php`, switch the CAPTCHA off with `$config[CaptchaConstants::IS_CAPTCHA_ENABLED] = false;`. To test the CAPTCHA itself, keep it switched on, and keep the default `after_failed_attempts` CAPTCHA mode. Then only the tests that make failed logins have to solve a CAPTCHA. To make these tests shorter, import a lower number of failed attempts, as shown in the previous example.
+End-to-end tests cannot solve a CAPTCHA. Keep the CAPTCHA switched off in such an environment, which is the default. To test the CAPTCHA itself, switch it on by importing `true` for `security:captcha:login:is_enabled`, and keep the default `after_failed_attempts` CAPTCHA mode. Then only the tests that make failed logins have to solve a CAPTCHA. To make these tests shorter, import a lower number of failed attempts, as shown in the previous example.
 
 {% endinfo_block %}
 
@@ -263,9 +271,9 @@ Make sure that, in the database, the configured data has been added to the `spy_
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| LoginCaptchaEventDispatcherPlugin | Checks the CAPTCHA of a submitted customer or agent login form. Tells the forms apart by the login check route. A submission without a valid solution is rejected: the customer or agent is redirected to the login page with an error message, or the multi-factor authentication script receives a JSON response. Does nothing if `CaptchaConstants::IS_CAPTCHA_ENABLED` is `false`, or in the `after_failed_attempts` CAPTCHA mode while no CAPTCHA is required. | Register it before `SecurityBlockerCustomerEventDispatcherPlugin` and `SecurityBlockerAgentEventDispatcherPlugin`. | Spryker\Yves\Captcha\Plugin\EventDispatcher |
+| LoginCaptchaEventDispatcherPlugin | Checks the CAPTCHA of a submitted customer or agent login form. Tells the forms apart by the login check route. A submission without a valid solution is rejected: the customer or agent is redirected to the login page with an error message, or the multi-factor authentication script receives a JSON response. Does nothing while the **Enable CAPTCHA** setting is off, or in the `after_failed_attempts` CAPTCHA mode while no CAPTCHA is required. | Register it before `SecurityBlockerCustomerEventDispatcherPlugin` and `SecurityBlockerAgentEventDispatcherPlugin`. | Spryker\Yves\Captcha\Plugin\EventDispatcher |
 | CaptchaRouteProviderPlugin | Adds the `captcha-challenge` route, `/captcha/challenge`, from which the widget of the Storefront login forms fetches its challenge. Without the route, the login forms create their challenge while the page renders and log an error that names `CaptchaRouteProviderPlugin`. |  | Spryker\Yves\Captcha\Plugin\Router |
-| CustomerLoginFormCaptchaExpanderPlugin | Adds the CAPTCHA field with the `storefront_customer_login` context to the customer login form, including the login step of the checkout. In the `always` CAPTCHA mode, adds the field every time the form is rendered. In the `after_failed_attempts` CAPTCHA mode, adds the field only while a CAPTCHA is required. Adds nothing if `CaptchaConstants::IS_CAPTCHA_ENABLED` is `false`. |  | Spryker\Yves\Captcha\Plugin\CustomerPage |
+| CustomerLoginFormCaptchaExpanderPlugin | Adds the CAPTCHA field with the `storefront_customer_login` context to the customer login form, including the login step of the checkout. In the `always` CAPTCHA mode, adds the field every time the form is rendered. In the `after_failed_attempts` CAPTCHA mode, adds the field only while a CAPTCHA is required. Adds nothing while the **Enable CAPTCHA** setting is off. |  | Spryker\Yves\Captcha\Plugin\CustomerPage |
 | AgentLoginFormCaptchaExpanderPlugin | Adds the CAPTCHA field with the `storefront_agent_login` context to the agent login form, in the same way as `CustomerLoginFormCaptchaExpanderPlugin`. | The Agent Assist feature is installed. | Spryker\Yves\Captcha\Plugin\AgentPage |
 
 **src/Pyz/Yves/EventDispatcher/EventDispatcherDependencyProvider.php**
@@ -409,8 +417,8 @@ The Storefront login forms render the CAPTCHA field through the `form` molecule,
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| LoginCaptchaEventDispatcherPlugin | Checks the CAPTCHA of a submitted Back Office, Merchant Portal, or Merchant Portal agent login form. Recognizes the forms by their names: `auth`, `security-merchant-portal-gui`, and `agent-security-merchant-portal-gui`. A submission without a valid solution is rejected: the user is redirected to the login page with an error message. An asynchronous submission, such as one by the multi-factor authentication script of the Back Office or by the Merchant Portal login form, receives a JSON response instead. A request that contains two login forms is rejected. Does nothing if `CaptchaConstants::IS_CAPTCHA_ENABLED` is `false`, or in the `after_failed_attempts` CAPTCHA mode while no CAPTCHA is required. | Register it before the event dispatcher plugins of the SecurityBlocker modules. | Spryker\Zed\Captcha\Communication\Plugin\EventDispatcher |
-| UserLoginFormCaptchaExpanderPlugin | Adds the CAPTCHA field with the `backoffice_user_login` context to the Back Office login form. In the `always` CAPTCHA mode, adds the field every time the form is rendered. In the `after_failed_attempts` CAPTCHA mode, adds the field only while a CAPTCHA is required. Adds nothing if `CaptchaConstants::IS_CAPTCHA_ENABLED` is `false`. |  | Spryker\Zed\Captcha\Communication\Plugin\SecurityGui |
+| LoginCaptchaEventDispatcherPlugin | Checks the CAPTCHA of a submitted Back Office, Merchant Portal, or Merchant Portal agent login form. Recognizes the forms by their names: `auth`, `security-merchant-portal-gui`, and `agent-security-merchant-portal-gui`. A submission without a valid solution is rejected: the user is redirected to the login page with an error message. An asynchronous submission, such as one by the multi-factor authentication script of the Back Office or by the Merchant Portal login form, receives a JSON response instead. A request that contains two login forms is rejected. Does nothing while the **Enable CAPTCHA** setting is off, or in the `after_failed_attempts` CAPTCHA mode while no CAPTCHA is required. | Register it before the event dispatcher plugins of the SecurityBlocker modules. | Spryker\Zed\Captcha\Communication\Plugin\EventDispatcher |
+| UserLoginFormCaptchaExpanderPlugin | Adds the CAPTCHA field with the `backoffice_user_login` context to the Back Office login form. In the `always` CAPTCHA mode, adds the field every time the form is rendered. In the `after_failed_attempts` CAPTCHA mode, adds the field only while a CAPTCHA is required. Adds nothing while the **Enable CAPTCHA** setting is off. |  | Spryker\Zed\Captcha\Communication\Plugin\SecurityGui |
 
 **src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php**
 
@@ -584,7 +592,7 @@ Follow this section if you installed the Marketplace Merchant Portal Core featur
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| MerchantPortalLoginFormCaptchaExpanderPlugin | Adds the CAPTCHA field with the `merchant_portal_user_login` context to the Merchant Portal login form. In the `always` CAPTCHA mode, adds the field every time the form is rendered. In the `after_failed_attempts` CAPTCHA mode, adds the field only while a CAPTCHA is required. Adds nothing if `CaptchaConstants::IS_CAPTCHA_ENABLED` is `false`. |  | Spryker\Zed\Captcha\Communication\Plugin\SecurityMerchantPortalGui |
+| MerchantPortalLoginFormCaptchaExpanderPlugin | Adds the CAPTCHA field with the `merchant_portal_user_login` context to the Merchant Portal login form. In the `always` CAPTCHA mode, adds the field every time the form is rendered. In the `after_failed_attempts` CAPTCHA mode, adds the field only while a CAPTCHA is required. Adds nothing while the **Enable CAPTCHA** setting is off. |  | Spryker\Zed\Captcha\Communication\Plugin\SecurityMerchantPortalGui |
 | AgentMerchantPortalLoginFormCaptchaExpanderPlugin | Adds the CAPTCHA field with the `merchant_portal_agent_login` context to the Merchant Portal agent login form, in the same way as `MerchantPortalLoginFormCaptchaExpanderPlugin`. | The Merchant Portal Agent Assist feature is installed. | Spryker\Zed\Captcha\Communication\Plugin\AgentSecurityMerchantPortalGui |
 | ConfigurationApplicationPlugin | Provides the settings of the Configuration Management feature, including the secret settings, to the Merchant Portal. The CAPTCHA provider reads its secret with it. Without the plugin, the Merchant Portal sends every CAPTCHA challenge and solution to the Backend Gateway and logs a warning. | If you already registered it as described in [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html#enable-merchant-portal-infrastructural-plugins), skip it. | Spryker\Zed\Configuration\Communication\Plugin\Application |
 

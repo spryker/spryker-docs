@@ -116,7 +116,7 @@ The engine learns about the *products-csv-import* and *simple-product-csv-import
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ProductCsvImportSchemaPlugin | Provides the *products-csv-import* job type: its column schema, import steps, export steps, and placeholder values. One row per abstract or concrete product. | None | SprykerFeature\Zed\ProductExperienceManagement\Communication\Plugin |
-| SimpleProductCsvImportSchemaPlugin | Provides the *simple-product-csv-import* job type: one row per simple product, imported as the abstract product and its single concrete product with the same steps. The export contains only products with exactly one concrete product. | None | SprykerFeature\Zed\ProductExperienceManagement\Communication\Plugin |
+| SimpleProductCsvImportSchemaPlugin | Provides the *simple-product-csv-import* job type: one row per product, imported as the abstract product and its concrete product with the same steps. The export contains only products with exactly one concrete product. | None | SprykerFeature\Zed\ProductExperienceManagement\Communication\Plugin |
 
 </div>
 
@@ -170,6 +170,6 @@ Import a CSV file with a concrete product row and verify the following:
 - A row with the status returned by `getProductConcreteStatusActive()` activates the concrete product.
 - A row with a status that is not in `getProductConcreteStatuses()` is skipped and reported as an error.
 
-Create a job with the *simple-product-csv-import* type, download its template, and make sure that the header row contains the *Approval Status* and *Product Status* columns. Import a CSV file with one row that has *Abstract SKU* filled in and *Concrete SKU* empty, and verify that an abstract product and a concrete product with the same SKU are created.
+Create a job with the *simple-product-csv-import* type, download its template, and make sure that the header row contains the *Approval Status* and *Product Status* columns. Import a CSV file with one row that has *Abstract SKU* and *Concrete SKU* filled in, and verify that the abstract product and the concrete product are created from that row.
 
 {% endinfo_block %}

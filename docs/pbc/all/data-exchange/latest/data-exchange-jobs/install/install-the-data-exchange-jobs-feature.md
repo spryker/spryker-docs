@@ -205,7 +205,7 @@ The engine learns about job types from the schema plugins registered in the `Dat
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ProductCsvImportSchemaPlugin | Provides the *products-csv-import* job type: its column schema, import steps, export steps, and placeholder values. | Product Experience Management feature | SprykerFeature\Zed\ProductExperienceManagement\Communication\Plugin |
-| SimpleProductCsvImportSchemaPlugin | Provides the *simple-product-csv-import* job type: one row per simple product, imported as the abstract product and its single concrete product. | Product Experience Management feature | SprykerFeature\Zed\ProductExperienceManagement\Communication\Plugin |
+| SimpleProductCsvImportSchemaPlugin | Provides the *simple-product-csv-import* job type: one row per product, imported as the abstract product and its concrete product. | Product Experience Management feature | SprykerFeature\Zed\ProductExperienceManagement\Communication\Plugin |
 
 </div>
 

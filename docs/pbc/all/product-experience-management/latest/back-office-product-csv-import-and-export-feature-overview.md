@@ -82,31 +82,25 @@ The approval statuses of abstract products come from the [Product Approval Proce
 
 ## Simple product CSV
 
-A *simple product* is an abstract product with exactly one concrete product. For catalogs that consist of simple products, the *simple-product-csv-import* job type describes each product in one row instead of an abstract product row followed by a concrete product row. The row is imported as both the abstract product and its concrete product, so a value in a column applies to both: the name, the description, the attributes, the prices, and the images are written to the abstract and the concrete product, while the columns processed in one row type only are written to the product they belong to.
+A *simple product* is an abstract product with one concrete product. For catalogs that consist of simple products, the *simple-product-csv-import* job type describes each product in one row instead of an abstract product row followed by a concrete product row. The row is imported as both the abstract product and its concrete product, so a value in a column applies to both: the name, the description, the attributes, the prices, and the images are written to the abstract and the concrete product, while the columns processed in one row type only are written to the product they belong to. The SKUs follow the rules of *products-csv-import*: a new SKU creates the product, an existing SKU updates it. An abstract product with several concrete products takes one row per concrete product with the abstract values repeated.
 
 The schema has the same columns as *products-csv-import*, with the following differences:
 
 | COLUMN | MEANING IN SIMPLE PRODUCT CSV |
 | --- | --- |
-| *Abstract SKU* | Required. The SKU of the simple product. |
-| *Concrete SKU* | Optional. When empty, the concrete product gets the SKU of the abstract product on creation, and the existing concrete product of the abstract product is updated otherwise. When filled in, the value must match the SKU of the existing concrete product; on creation, it is used as the SKU of the new concrete product. |
+| *Abstract SKU* | Required. The SKU of the abstract product. |
+| *Concrete SKU* | Required. The SKU of the concrete product that the row creates or updates; it is assigned to the abstract product of the row. |
 | *Approval Status* | Required. The approval status of the abstract product: `draft`, `waiting_for_approval`, `approved`, or `denied`. |
 | *Product Status* | Required. The status of the concrete product: `active` or `inactive`. |
 
-The following file creates one simple product, which is sold as `simple-001` on both levels, and updates another one whose concrete product keeps its existing SKU:
+The following file creates one simple product and updates the price and the stock of another one:
 
 | ABSTRACT SKU | CONCRETE SKU | APPROVAL STATUS | PRODUCT STATUS | STORES | TAX SET NAME | PRICE (DEFAULT-DE-EUR-GROSS) |
 | --- | --- | --- | --- | --- | --- | --- |
-| simple-001 |  | approved | active | DE;AT | Standard Taxes | 2490 |
-| simple-002 |  | approved | active | DE | Standard Taxes | 1990 |
+| simple-001 | simple-001-1 | approved | active | DE;AT | Standard Taxes | 2490 |
+| simple-002 | simple-002-1 | approved | active | DE | Standard Taxes | 1990 |
 
-A row is skipped and reported as an error in the following cases:
-
-- *Abstract SKU* is empty.
-- The same abstract SKU is used in another row of the same file.
-- The abstract product already has two or more concrete products. Such products are not simple products; import them with the *products-csv-import* type.
-- *Concrete SKU* is filled in but differs from the SKU of the existing concrete product of the abstract product.
-- *Concrete SKU* is filled in but belongs to another abstract product.
+A row with an empty *Abstract SKU* or an empty *Concrete SKU* is skipped and reported as an error. Every other value is validated by the same rules as in *products-csv-import*; the abstract status errors name the *Approval Status* column.
 
 The export of the *simple-product-csv-import* type contains only the abstract products with exactly one concrete product, one row per product, with *Approval Status* taken from the abstract product and *Product Status* from the concrete product. Abstract products with several concrete products are left out; export them with the *products-csv-import* type.
 

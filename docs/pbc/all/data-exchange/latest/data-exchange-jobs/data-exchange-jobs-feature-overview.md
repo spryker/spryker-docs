@@ -28,7 +28,7 @@ Back Office users manage jobs, runs, exports, and templates under **Import & Exp
 | --- | --- |
 | `spryker/data-exchange` | The engine: import jobs, job runs, run errors, the Back Office **Import & Export** pages, the `import:job:run` console command, batch processing, and file storage. |
 | `spryker/data-exchange-extension` | The plugin interfaces a data type implements to plug into the engine. |
-| `spryker-feature/product-experience-management` | The product data types: `ProductCsvImportSchemaPlugin` with the *products-csv-import* schema and the product import and export steps, and `SimpleProductCsvImportSchemaPlugin` with the *simple-product-csv-import* schema that describes an abstract product and its single concrete product in one row. See [Back Office product CSV import and export feature overview](/docs/pbc/all/product-experience-management/latest/back-office-product-csv-import-and-export-feature-overview.html). |
+| `spryker-feature/product-experience-management` | The product data types: `ProductCsvImportSchemaPlugin` with the *products-csv-import* schema and the product import and export steps, and `SimpleProductCsvImportSchemaPlugin` with the *simple-product-csv-import* schema that describes an abstract product and its concrete product in one row. See [Back Office product CSV import and export feature overview](/docs/pbc/all/product-experience-management/latest/back-office-product-csv-import-and-export-feature-overview.html). |
 
 ## Seeded import jobs
 

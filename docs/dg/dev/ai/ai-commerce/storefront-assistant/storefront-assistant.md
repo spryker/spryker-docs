@@ -314,7 +314,7 @@ Storefront Assistant reads its settings from the **Storefront Assistant** tab of
 | `ai_commerce:storefront_assistant:system_prompts:product_discovery_system_prompt` | text | The system prompt of the **Product Discovery** agent. A blank value uses the default prompt of the module. |
 | `ai_commerce:storefront_assistant:ai_vendor:ai_configuration` | radio | The name of the AI configuration in `config_ai.php`. |
 | `ai_commerce:storefront_assistant:ai_vendor:openai_model`, `aws_model`, `anthropic_model` | string | The model of each AI vendor. |
-| `ai_commerce:storefront_assistant:suggested_prompts:*` | text | The suggested prompts for each page type and under the product cards. Separate the prompts with `\|`. To show titled sections, separate the sections with `\|\|` and start each section with its title and a colon. |
+| `ai_commerce:storefront_assistant:suggested_prompts:*` | json | The suggested prompts for each page type and under the product cards. Each value is a JSON object with a locale name as the key and a list of prompts as the value. The `StorefrontAssistantSuggestedPromptsConstraint` constraint rejects a value that is not such an object, a locale that no store uses, and prompts that are not a list of text values. |
 
 </div>
 

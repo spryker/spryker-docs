@@ -1,7 +1,7 @@
 ---
 title: Install Storefront Assistant
 description: Learn how to install the Storefront Assistant feature that adds an AI shopping chat to the Spryker Storefront.
-last_updated: Nov 10, 2026
+last_updated: Nov 13, 2026
 template: feature-integration-guide-template
 label: early-access
 related:
@@ -21,7 +21,7 @@ related:
   }
 </style>
 
-Storefront Assistant is an AI chat for logged-in Storefront customers. It answers shopping questions from the shop catalog and streams each answer to the browser. This document describes how to install the Storefront Assistant feature. To let the assistant also answer from product documents, such as manuals, see [Install Storefront Assistant document knowledge](/docs/dg/dev/ai/ai-commerce/storefront-assistant/install-storefront-assistant-document-knowledge.html).
+Storefront Assistant is an AI chat for logged-in Storefront customers. It answers shopping questions from the shop catalog and streams each answer to the browser. This document describes how to install the Storefront Assistant feature. To let the assistant also answer from product documents, such as manuals, see [Install Storefront Assistant document semantic search](/docs/dg/dev/ai/ai-commerce/storefront-assistant/document-semantic-search/install-storefront-assistant-document-semantic-search.html).
 
 For the architecture and the configuration options, see [Storefront Assistant](/docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant.html).
 
@@ -496,17 +496,6 @@ features:
                         secret: false
                         storefront: true
                         order: 2
-                        scopes:
-                            - global
-                      - key: asset_page_prompts
-                        name: Asset Page Prompts
-                        description: Prompts offered while the customer is viewing the details page of a Self-Service Portal asset. {assetName} is replaced with the asset name.
-                        type: text
-                        default_value: 'Show me spare parts for {assetName}|Which services can I book for this asset?|What is the status of this asset?'
-                        enabled: true
-                        secret: false
-                        storefront: true
-                        order: 3
                         scopes:
                             - global
                       - key: default_prompts
@@ -1308,6 +1297,283 @@ Make sure the following applies:
 6. When you click **Compare** on two product cards and then **Compare selected**, the assistant answers with a comparison.
 7. After you reload the page, **More options**&nbsp;<span aria-label="and then">></span>&nbsp;**Chat history** shows the conversation, and the messages and product cards are restored.
 8. When you turn off **Enable Storefront Assistant** in the Back Office, the chat buttons disappear, and `POST /shopping-assistant/prompt` returns `404`.
+
+{% endinfo_block %}
+
+## Install the Self-Service Portal asset support
+
+With the asset support, the assistant answers questions about the Self-Service Portal assets of a company user, finds compatible spare parts and services, and searches the documents of these products. Follow the steps in this section if your shop has the Self-Service Portal feature.
+
+### Prerequisites
+
+- The Self-Service Portal feature with assets, asset models, and the product classes of spare parts and services.
+- `SspAssetQueryExpanderPlugin` in `Pyz\Client\Catalog\CatalogDependencyProvider`. The `ssp_asset_compatible_products` tool needs it to filter the catalog by the compatibility with the asset. Without it, the tool returns every product of the product class.
+- Optional: [Storefront Assistant document semantic search](/docs/dg/dev/ai/ai-commerce/storefront-assistant/document-semantic-search/install-storefront-assistant-document-semantic-search.html), so that the assistant can answer document questions about the compatible products of an asset.
+
+### 1) Install the required modules
+
+```bash
+composer update spryker-feature/self-service-portal spryker-feature/ai-commerce --with-dependencies
+```
+
+The asset tools require `spryker/catalog` version `^5.0.0` or higher and the `spryker/ai-foundation` module.
+
+### 2) Register the asset tools
+
+1. Register the tool plugins in the Client `AiFoundationDependencyProvider`:
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+|--------|---------------|---------------|-----------|
+| SspAssetSearchToolPlugin | Finds the assets of the company user by name, serial number, or reference. | | SprykerFeature\Client\SelfServicePortal\Plugin\AiFoundation |
+| SspAssetDetailsToolPlugin | Returns the data that the asset details page shows. | | SprykerFeature\Client\SelfServicePortal\Plugin\AiFoundation |
+| SspAssetCompatibleProductsToolPlugin | Returns the spare parts or services that are compatible with an asset. | `SspAssetQueryExpanderPlugin` is registered in the catalog. | SprykerFeature\Client\SelfServicePortal\Plugin\AiFoundation |
+
+**src/Pyz/Client/AiFoundation/AiFoundationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Client\AiFoundation;
+
+use Spryker\Client\AiFoundation\AiFoundationDependencyProvider as SprykerAiFoundationDependencyProvider;
+use SprykerFeature\Client\SelfServicePortal\Plugin\AiFoundation\SspAssetCompatibleProductsToolPlugin;
+use SprykerFeature\Client\SelfServicePortal\Plugin\AiFoundation\SspAssetDetailsToolPlugin;
+use SprykerFeature\Client\SelfServicePortal\Plugin\AiFoundation\SspAssetSearchToolPlugin;
+
+class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Client\AiFoundation\Dependency\Tools\ToolPluginInterface>
+     */
+    protected function getAiToolPlugins(): array
+    {
+        return [
+            // ...
+            new SspAssetSearchToolPlugin(),
+            new SspAssetDetailsToolPlugin(),
+            new SspAssetCompatibleProductsToolPlugin(),
+        ];
+    }
+}
+```
+
+2. Add the tool names to the tools of the **Product Discovery** agent:
+
+**src/Pyz/Client/AiCommerce/AiCommerceConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Client\AiCommerce;
+
+use SprykerFeature\Client\AiCommerce\AiCommerceConfig as SprykerFeatureAiCommerceConfig;
+use SprykerFeature\Client\SelfServicePortal\Plugin\AiFoundation\SspAssetCompatibleProductsToolPlugin;
+use SprykerFeature\Client\SelfServicePortal\Plugin\AiFoundation\SspAssetDetailsToolPlugin;
+use SprykerFeature\Client\SelfServicePortal\Plugin\AiFoundation\SspAssetSearchToolPlugin;
+
+class AiCommerceConfig extends SprykerFeatureAiCommerceConfig
+{
+    /**
+     * @return list<string>
+     */
+    public function getProductDiscoveryAgentToolNames(): array
+    {
+        return [
+            // ...
+            SspAssetSearchToolPlugin::TOOL_NAME,
+            SspAssetDetailsToolPlugin::TOOL_NAME,
+            SspAssetCompatibleProductsToolPlugin::TOOL_NAME,
+        ];
+    }
+}
+```
+
+### 3) Add the asset page type
+
+The core page context knows only the product, category, and search pages. To let the assistant know the current asset, add the `asset` page type at the project level. A project page type needs four parts: the constants, the fields that the server accepts, the system prompt lines, and the frontend rules that read the fields from the page.
+
+1. Define the constants:
+
+**src/Pyz/Shared/AiCommerce/AiCommerceConstants.php**
+
+```php
+<?php
+
+namespace Pyz\Shared\AiCommerce;
+
+use SprykerFeature\Shared\AiCommerce\AiCommerceConstants as SprykerFeatureAiCommerceConstants;
+
+interface AiCommerceConstants extends SprykerFeatureAiCommerceConstants
+{
+    public const string STOREFRONT_ASSISTANT_PAGE_TYPE_ASSET = 'asset';
+
+    public const string STOREFRONT_ASSISTANT_PAGE_CONTEXT_FIELD_ASSET_REFERENCE = 'assetReference';
+
+    public const string STOREFRONT_ASSISTANT_PAGE_CONTEXT_FIELD_ASSET_NAME = 'assetName';
+
+    public const string CONFIGURATION_KEY_STOREFRONT_ASSISTANT_ASSET_PAGE_PROMPTS = 'ai_commerce:storefront_assistant:suggested_prompts:asset_page_prompts';
+}
+```
+
+2. Allow the fields of the page type and register its suggested prompts in the Yves `AiCommerceConfig`. The server keeps only the listed fields, trimmed and cut to 120 characters:
+
+**src/Pyz/Yves/AiCommerce/AiCommerceConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\AiCommerce;
+
+use Pyz\Shared\AiCommerce\AiCommerceConstants;
+use SprykerFeature\Yves\AiCommerce\AiCommerceConfig as SprykerFeatureAiCommerceConfig;
+
+class AiCommerceConfig extends SprykerFeatureAiCommerceConfig
+{
+    /**
+     * @return array<string, list<string>>
+     */
+    public function getStorefrontAssistantCustomPageContextFields(): array
+    {
+        return [
+            AiCommerceConstants::STOREFRONT_ASSISTANT_PAGE_TYPE_ASSET => [
+                AiCommerceConstants::STOREFRONT_ASSISTANT_PAGE_CONTEXT_FIELD_ASSET_REFERENCE,
+                AiCommerceConstants::STOREFRONT_ASSISTANT_PAGE_CONTEXT_FIELD_ASSET_NAME,
+            ],
+        ];
+    }
+
+    /**
+     * @return array<string, string>
+     */
+    protected function getSuggestedPromptConfigurationKeysByGroup(): array
+    {
+        return parent::getSuggestedPromptConfigurationKeysByGroup() + [
+            AiCommerceConstants::STOREFRONT_ASSISTANT_PAGE_TYPE_ASSET => AiCommerceConstants::CONFIGURATION_KEY_STOREFRONT_ASSISTANT_ASSET_PAGE_PROMPTS,
+        ];
+    }
+}
+```
+
+3. Add the system prompt lines of the page type to the Client `AiCommerceConfig`. A `%fieldName%` placeholder inserts the value of a field. The first line whose placeholders all have a value is used, so put the most complete line first:
+
+**src/Pyz/Client/AiCommerce/AiCommerceConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Client\AiCommerce;
+
+use Pyz\Shared\AiCommerce\AiCommerceConstants;
+use SprykerFeature\Client\AiCommerce\AiCommerceConfig as SprykerFeatureAiCommerceConfig;
+
+class AiCommerceConfig extends SprykerFeatureAiCommerceConfig
+{
+    protected const string PAGE_CONTEXT_FIELD_PLACEHOLDER = '%%%s%%';
+
+    protected const string ASSET_PAGE_PROMPT_LINE_WITH_NAME = 'The customer is viewing a page of their asset with the reference %s (shown name %s): its details page or its compatible spare parts or services. "This asset", "it" or "this machine" means this asset. Pass this reference to every tool that takes an asset reference.';
+
+    protected const string ASSET_PAGE_PROMPT_LINE = 'The customer is viewing a page of their asset with the reference %s: its details page or its compatible spare parts or services. "This asset", "it" or "this machine" means this asset. Pass this reference to every tool that takes an asset reference.';
+
+    /**
+     * @return array<string, list<string>>
+     */
+    public function getStorefrontAssistantCustomPageContextPromptLines(): array
+    {
+        return [
+            AiCommerceConstants::STOREFRONT_ASSISTANT_PAGE_TYPE_ASSET => [
+                sprintf(
+                    static::ASSET_PAGE_PROMPT_LINE_WITH_NAME,
+                    $this->createPageContextFieldPlaceholder(AiCommerceConstants::STOREFRONT_ASSISTANT_PAGE_CONTEXT_FIELD_ASSET_REFERENCE),
+                    $this->createPageContextFieldPlaceholder(AiCommerceConstants::STOREFRONT_ASSISTANT_PAGE_CONTEXT_FIELD_ASSET_NAME),
+                ),
+                sprintf(
+                    static::ASSET_PAGE_PROMPT_LINE,
+                    $this->createPageContextFieldPlaceholder(AiCommerceConstants::STOREFRONT_ASSISTANT_PAGE_CONTEXT_FIELD_ASSET_REFERENCE),
+                ),
+            ],
+        ];
+    }
+
+    protected function createPageContextFieldPlaceholder(string $fieldName): string
+    {
+        return sprintf(static::PAGE_CONTEXT_FIELD_PLACEHOLDER, $fieldName);
+    }
+}
+```
+
+4. Extend the `chat-page-context` molecule and add the frontend rules of the page type in `additionalRules`. The frontend tests these rules before the core rules:
+
+**src/Pyz/Yves/AiCommerce/Theme/default/components/molecules/chat-page-context/chat-page-context.twig**
+
+```twig
+{% raw %}
+{% extends molecule('chat-page-context', '@SprykerFeature:AiCommerce') %}
+
+{% set assetReferenceField = constant('Pyz\\Shared\\AiCommerce\\AiCommerceConstants::STOREFRONT_ASSISTANT_PAGE_CONTEXT_FIELD_ASSET_REFERENCE') %}
+{% set assetNameField = constant('Pyz\\Shared\\AiCommerce\\AiCommerceConstants::STOREFRONT_ASSISTANT_PAGE_CONTEXT_FIELD_ASSET_NAME') %}
+
+{% define data = {
+    additionalRules: [
+        {
+            pageType: constant('Pyz\\Shared\\AiCommerce\\AiCommerceConstants::STOREFRONT_ASSISTANT_PAGE_TYPE_ASSET'),
+            label: '%' ~ assetNameField ~ '%',
+            when: '.asset-details-title',
+            fields: {
+                (assetReferenceField): { read: 'queryParameter', parameter: 'reference', required: true },
+                (assetNameField): { read: 'text', selector: '.asset-details-title .title', required: true },
+            },
+        },
+        {
+            pageType: constant('Pyz\\Shared\\AiCommerce\\AiCommerceConstants::STOREFRONT_ASSISTANT_PAGE_TYPE_ASSET'),
+            label: '%' ~ assetNameField ~ '%',
+            when: '.js-asset-filter-name',
+            fields: {
+                (assetReferenceField): { read: 'queryParameter', parameter: 'ssp-asset-reference', required: true },
+                (assetNameField): { read: 'attribute', selector: '.js-asset-filter-name', attribute: 'data-asset-name', required: true },
+            },
+        },
+    ],
+} %}
+{% endraw %}
+```
+
+The first rule matches the asset details page. The second rule matches the catalog pages of the **Shop Spare Parts** and **Search services** actions. On these pages, `SspAssetFilterNameWidget` renders `.js-asset-filter-name` only when the company user can see the asset. For other assets, the core `search` rule applies.
+
+### 4) Add the suggested prompts of the asset page
+
+Add the `asset_page_prompts` setting to the `suggested_prompts` group of `data/configuration/ai_commerce.configuration.yml`, before `default_prompts`:
+
+**data/configuration/ai_commerce.configuration.yml**
+
+```yaml
+                      - key: asset_page_prompts
+                        name: Asset Page Prompts
+                        description: Prompts offered while the customer is viewing the details page of a Self-Service Portal asset. {assetName} is replaced with the asset name.
+                        type: text
+                        default_value: 'Show me spare parts for {assetName}|Which services can I book for this asset?|How do I install a spare part for this asset?|What is the status of this asset?'
+                        enabled: true
+                        secret: false
+                        storefront: true
+                        order: 3
+                        scopes:
+                            - global
+```
+
+Sync the configuration, build the frontend, and clear the caches:
+
+```bash
+console configuration:sync
+console queue:worker:start --stop-when-empty
+console frontend:yves:build
+console cache:empty-all
+```
+
+{% info_block warningBox "Verification" %}
+
+1. Log in to the Storefront as a company user who has assets, and open the details page of an asset. The suggested prompts of the chat contain the asset name.
+2. Ask "Show me spare parts for this asset". The chat shows the compatible spare parts of the asset as product cards.
+3. On another page, ask about one of your assets by its name, for example "Which services can I book for my printer?". The assistant finds the asset and shows the compatible services.
+4. Log in as a company user who cannot see the asset, and open the catalog page of its spare parts with the `ssp-asset-reference` query parameter. The assistant does not show the asset data.
 
 {% endinfo_block %}
 

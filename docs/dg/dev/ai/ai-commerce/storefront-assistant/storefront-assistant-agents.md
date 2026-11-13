@@ -1,7 +1,7 @@
 ---
 title: Storefront Assistant agents
 description: Learn which agents and tools Storefront Assistant ships with, how they are registered, and how the assistant selects an agent for each chat turn.
-last_updated: Nov 10, 2026
+last_updated: Nov 13, 2026
 template: concept-topic-template
 label: early-access
 related:
@@ -51,7 +51,8 @@ Each agent can call the tools that are in its tool list. Some tools are research
 | `product_relations` | `ProductRelationsToolPlugin` | No | Returns related products, such as alternatives and accessories. |
 | `product_sets` | `ProductSetsToolPlugin` | No | Returns product sets. |
 | `read_shop_page` | `ReadShopPageToolPlugin` | No | Reads the text of a CMS page, such as returns or delivery information. |
-| `search_documents` | `SearchDocumentsToolPlugin` | No | Searches the documents of the products that the assistant names, such as manuals, and returns the best matching passages. For details, see [Storefront Assistant document knowledge](/docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant-document-knowledge.html). |
+| `product_knowledge_search` | `ProductKnowledgeSearchToolPlugin` | No | Searches the documents of products, such as manuals and data sheets, and returns the best matching passages with the document name. For details, see [Storefront Assistant document semantic search](/docs/dg/dev/ai/ai-commerce/storefront-assistant/document-semantic-search/storefront-assistant-document-semantic-search.html). |
+| `ssp_asset_search` | `SspAssetSearchToolPlugin` | No | Finds the Self-Service Portal assets of the company user by name, part of the name, serial number, or reference. |
 | `ssp_asset_details` | `SspAssetDetailsToolPlugin` | No | Returns the data of a Self-Service Portal asset that the asset details page shows: reference, name, serial number, status, note, owner, assigned business units, asset models, and booked services. |
 | `ssp_asset_compatible_products` | `SspAssetCompatibleProductsToolPlugin` | No | Searches the catalog for the spare parts or services that are compatible with a Self-Service Portal asset. Returns the same products as the **Shop Spare Parts** and **Search services** actions of the asset details page. |
 | `display_products` | `DisplayProductsToolPlugin` | Yes | Shows product cards. |
@@ -71,20 +72,25 @@ A customer-facing tool must also be an agent tool.
 
 ### Self-Service Portal asset tools
 
-`SspAssetDetailsToolPlugin` and `SspAssetCompatibleProductsToolPlugin` come from the `spryker-feature/self-service-portal` package, namespace `SprykerFeature\Client\SelfServicePortal\Plugin\AiFoundation`. They need the `spryker/ai-foundation` module. On the asset details page, the assistant uses them to answer questions about the asset and to find compatible spare parts and services. The assistant reads the asset reference from the page context of the `asset` page type.
+The asset tools come from the `spryker-feature/self-service-portal` package, namespace `SprykerFeature\Client\SelfServicePortal\Plugin\AiFoundation`. They need the `spryker/ai-foundation` module. With these tools, the assistant answers questions about the assets of a company user, such as "Show me spare parts for my printer", and finds compatible spare parts and services.
 
-Both tools check that the current company user can see the asset, and return no data otherwise. `ssp_asset_compatible_products` accepts the following arguments:
+On an asset page, the assistant gets the asset reference from the page context of the `asset` page type. On other pages, the assistant finds the asset with `ssp_asset_search` when the customer names it. For a document question about an asset, the assistant gets the compatible products with `ssp_asset_compatible_products` and then searches their documents with `product_knowledge_search`.
+
+All asset tools check the asset permissions on the server, with the same rules and statuses as the **My Assets** page. The browser never decides which assets the customer can see. The tools accept the following arguments:
 
 <div class="width-100">
 
-| ARGUMENT | REQUIRED | DESCRIPTION |
-|----------|----------|-------------|
-| `asset_reference` | Yes | The asset reference, for example `AST--3`. |
-| `product_kind` | Yes | `spare_parts` or `services`. |
-| `query` | No | The part or the service in two to four words, for example `ink cartridge`. When you omit it, the tool lists all compatible products of the kind. |
-| `page` | No | The page number, starting with `1`. |
-| `limit` | No | The number of products, from `1` to `12`. The default is `5`. |
+| TOOL | ARGUMENT | REQUIRED | DESCRIPTION |
+|------|----------|----------|-------------|
+| `ssp_asset_search` | `query` | Yes | The asset name or a part of it, the serial number, or the reference. When the whole query matches no asset, the tool searches each word of the query. |
+| `ssp_asset_search` | `limit` | No | The maximum number of assets, up to `10`. The default is `5`. |
+| `ssp_asset_details` | `assetReference` | Yes | The asset reference, for example `AST--3`. |
+| `ssp_asset_compatible_products` | `assetReference` | Yes | The asset reference, for example `AST--3`. |
+| `ssp_asset_compatible_products` | `productKind` | Yes | `spare_parts` or `services`. |
+| `ssp_asset_compatible_products` | `query` | No | The part or the service in two to four words, for example `ink cartridge`. When you omit it, the tool lists all compatible products of the kind. |
+| `ssp_asset_compatible_products` | `page` | No | The page number, starting with `1`. |
+| `ssp_asset_compatible_products` | `limit` | No | The number of products, up to `12`. The default is `5`. |
 
 </div>
 
-To enable the tools, register them in the Client `AiFoundationDependencyProvider::getAiToolPlugins()`, and add `SspAssetDetailsToolPlugin::TOOL_NAME` and `SspAssetCompatibleProductsToolPlugin::TOOL_NAME` to `AiCommerceConfig::getProductDiscoveryAgentToolNames()`.
+To install the tools, see [Install the Self-Service Portal asset support](/docs/dg/dev/ai/ai-commerce/storefront-assistant/install-storefront-assistant.html#install-the-self-service-portal-asset-support).

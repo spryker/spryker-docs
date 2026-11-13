@@ -65,8 +65,6 @@ entries:
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
           - title: AI Interaction Audit Logs
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html
-          - title: Vector store
-            url: /docs/dg/dev/ai/ai-foundation/ai-foundation-vector-store.html
       - title: AI Commerce
         nested:
           - title: AI Commerce overview
@@ -96,10 +94,15 @@ entries:
                 url: /docs/dg/dev/ai/ai-commerce/storefront-assistant/install-storefront-assistant.html
               - title: Storefront Assistant agents
                 url: /docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant-agents.html
-              - title: Storefront Assistant document knowledge
-                url: /docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant-document-knowledge.html
-              - title: Install Storefront Assistant document knowledge
-                url: /docs/dg/dev/ai/ai-commerce/storefront-assistant/install-storefront-assistant-document-knowledge.html
+              - title: Document semantic search
+                url: /docs/dg/dev/ai/ai-commerce/storefront-assistant/document-semantic-search/storefront-assistant-document-semantic-search.html
+                nested:
+                  - title: Install document semantic search
+                    url: /docs/dg/dev/ai/ai-commerce/storefront-assistant/document-semantic-search/install-storefront-assistant-document-semantic-search.html
+                  - title: Add a knowledge document source
+                    url: /docs/dg/dev/ai/ai-commerce/storefront-assistant/document-semantic-search/add-a-knowledge-document-source.html
+                  - title: Use another knowledge store provider
+                    url: /docs/dg/dev/ai/ai-commerce/storefront-assistant/document-semantic-search/use-another-knowledge-store-provider.html
               - title: Add a custom Storefront Assistant agent
                 url: /docs/dg/dev/ai/ai-commerce/storefront-assistant/add-custom-storefront-assistant-agent.html
           - title: Search by Image

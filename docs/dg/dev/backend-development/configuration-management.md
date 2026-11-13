@@ -1,7 +1,7 @@
 ---
 title: Configuration Management feature
 description: Learn how to use the Configuration Management feature in a Spryker project.
-last_updated: Oct 20, 2026
+last_updated: Nov 13, 2026
 template: concept-topic-template
 related:
   - title: Install the Configuration Management feature
@@ -292,6 +292,10 @@ settings:
     note: Changes require cache clear    # Optional. Additional note below description.
     placeholder: Enter your store name   # Optional. Input placeholder text.
     help_text: Appears in page titles    # Optional. Tooltip or help area text.
+    link:                                # Optional. Link to another tab, below the description.
+      label: Open the SEO tab
+      feature: general
+      tab: seo
     template: '@MyModule/Configuration/custom-input.twig'  # Optional. Custom Twig template.
     type: string                         # Required. Data type.
     default_value: My Store              # Optional. Fallback value.
@@ -318,6 +322,7 @@ settings:
 | `note`          | string    | No       | `null`       | max 1000 chars       | Additional note displayed below the description in italic. |
 | `placeholder`   | string    | No       | `null`       | max 255 chars        | Placeholder text inside the input field.             |
 | `help_text`     | string    | No       | `null`       | max 500 chars        | Extended help in tooltip or expandable area.         |
+| `link`          | object    | No       | `null`       | `label`, `feature`, `tab` | Link to another tab of the configuration page, below the description. See [Setting links](#setting-links). |
 | `template`      | string    | No       | `null`       | max 255 chars        | Custom Twig template. Overrides type-based widget.   |
 | `type`          | string    | Yes      | --           | See types table      | Value data type. Determines the Back Office input widget. |
 | `default_value` | mixed     | No       | `null`       | Must match `type`    | Fallback when no value is saved at any scope.        |
@@ -620,6 +625,27 @@ Badges render as colored pills next to item names in both the sidebar navigation
 
 ---
 
+### Setting links
+
+A setting can point to a related tab, for example, when its value only takes effect together with settings on another tab. The page shows the link below the setting description:
+
+```yaml
+- key: mode
+  name: CAPTCHA Mode
+  description: After Failed Attempts asks for a CAPTCHA only after the failed logins reach a Security Check limit on the Login Lock tab.
+  link:
+    label: Open the Login Lock tab   # Translated like the setting name; add it to data/translation/Zed/*.csv.
+    feature: security                # Key of the feature that holds the tab.
+    tab: login_lock                  # Key of the tab.
+```
+
+- The link opens the tab the same way as the sidebar: it asks before discarding unsaved changes and keeps the selected scope. A middle click or a click with a modifier key opens the tab in a new browser tab, with the default scope.
+- The link can only point to a tab of the configuration page. The page builds the URL from the feature and tab keys, so a schema cannot inject a URL or HTML.
+- `configuration:sync` rejects a link without a non-empty `label`, `feature`, and `tab` string, and a link whose `feature` and `tab` do not name an enabled tab of the merged schema. The check skips settings with `enabled: false`.
+- A project override of the setting replaces the whole setting, so the override drops the link unless it repeats it.
+
+---
+
 ## Schema File Locations
 
 | Location                                   | Purpose                              | Loaded By           |
@@ -789,4 +815,5 @@ For setup instructions, see [Install the Configuration Management feature](/docs
 | Changes not visible after YAML edit | Schema not synced | Run `configuration:sync` after YAML changes. |
 | Store-specific value not applied | Missing scope context | Pass `ConfigurationScopeTransfer` in third argument or register request expander plugins. See [Adding Custom Scopes](/docs/dg/dev/backend-development/configuration-management/custom-scopes.html). |
 | Setting visible despite `enabled: false` | Schema not synced | Run `configuration:sync`. The `enabled` flag is evaluated during sync and filtering. |
+| `configuration:sync` fails with `Setting "…" links to "…", which is not an enabled tab` | The `link` of a setting names a tab that does not exist, or the project set `enabled: false` on that tab | Fix the `feature` and `tab` keys of the link. If the project turned the tab off on purpose, override the setting without the `link`. |
 | Override notice on a setting | Project Config class bypasses `getModuleConfig()` | The project-level Config method overrides the core method without calling `getModuleConfig()`. Refactor the method to use `getModuleConfig()` or accept the override. |

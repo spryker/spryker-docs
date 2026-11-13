@@ -66,6 +66,8 @@ $config[AgentSecurityBlockerMerchantPortalConstants::AGENT_MERCHANT_PORTAL_BLOCK
 
 ```
 
+The `AGENT_MERCHANT_PORTAL_*` settings count failed logins per IP address. To also count the login attempts of a merchant agent per account, see [Install the login brute-force protection](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-login-brute-force-protection.html). To protect the Merchant Portal agent login with a CAPTCHA, see [Install the CAPTCHA feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-captcha-feature.html).
+
 <details>
 <summary>src/Pyz/Zed/Acl/AclConfig.php</summary>
 
@@ -585,7 +587,7 @@ class UserMerchantPortalGuiDependencyProvider extends SprykerUserMerchantPortalG
 {% info_block warningBox "Verification" %}
 
 
-1. Go to `htpps://mp.mysprykershop.com/agent-security-merchant-portal-gui/login`.
+1. Go to `https://mp.mysprykershop.com/agent-security-merchant-portal-gui/login`.
 2. Enter incorrect login details for more than nine times within 900 seconds.
     Make sure you get locked out of the login page for 360 seconds.
 

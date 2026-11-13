@@ -1,7 +1,7 @@
 ---
 title: Best practices for effective testing
 description: The article describes how to write and organize your tests efficiently for your Spryker based projects.
-last_updated: Jun 16, 2021
+last_updated: Sep 29, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/testing-best-practices
 originalArticleId: 3bee0606-3660-4935-b990-33cc4adb6d0a
@@ -52,21 +52,42 @@ Each module API method should have at least two test cases: a happy- and an unha
 
 If the arrange section of a module API test becomes too complex, consider adding targeted unit tests to ensure clarity and maintainability.
 
-## Method naming
+## Test naming and structure
 
-A good test starts with a good method name, which may be subjective. At Spryker, we try to use descriptive names that describe a test does. Examples:
-- testDoSomethingShouldReturnTrueWhen...()
-- testDoSomethingShouldReturnFalseWhen...()
+Every Codeception suite follows one convention for naming test methods and structuring their bodies. This section defines the convention, and other pages link here instead of restating it.
 
-## Three-step testing approach
+The convention applies to every test you write or change from now on. Existing tests are brought in line when they are touched; nobody rewrites a green suite to satisfy a naming rule.
 
-A test's method body should follow a three-step testing approach:
+### Method naming
 
-1. // Arrange
-2. // Act
-3. // Assert
+Name test methods Given-When-Then. The name states the precondition, the action, and the observable outcome:
 
-These inline comments give the reader of your test method a clear understanding of what exactly is happening.
+```php
+public function testGivenMissingEmailWhenCreatingCustomerThenValidationErrorIsReturned(): void
+```
+
+Avoid names that describe only the action or say nothing about the outcome, such as `testCreate()` or `testSuccess()`.
+
+### Three-step testing approach
+
+Structure a test method body as Arrange, Act, Assert, marked with those three comments, in that order, once each:
+
+```php
+public function testGivenExistingCustomerWhenRegisteringWithTheSameEmailThenRegistrationFails(): void
+{
+    // Arrange
+    $existingCustomerTransfer = $this->tester->haveCustomer();
+    $customerTransfer = (new CustomerBuilder([CustomerTransfer::EMAIL => $existingCustomerTransfer->getEmail()]))->build();
+
+    // Act
+    $customerResponseTransfer = $this->tester->getCustomerFacade()->registerCustomer($customerTransfer);
+
+    // Assert
+    $this->assertFalse($customerResponseTransfer->getIsSuccess());
+}
+```
+
+The markers are bare section labels, so nothing follows the word on that line. If a test needs an explanation, for example why a fixture value is deliberately wrong, put it in the test method's docblock.
 
 ## Small test methods
 

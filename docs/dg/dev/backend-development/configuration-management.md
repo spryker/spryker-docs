@@ -1,7 +1,7 @@
 ---
 title: Configuration Management feature
 description: Learn how to use the Configuration Management feature in a Spryker project.
-last_updated: Oct 20, 2026
+last_updated: Nov 13, 2026
 template: concept-topic-template
 related:
   - title: Install the Configuration Management feature
@@ -430,6 +430,23 @@ options:
 | `value`       | string | Yes      | min 1 char    | Internal value stored when selected.     |
 | `label`       | string | Yes      | 1-255 chars   | Display label shown in the Back Office.  |
 | `description` | string | No       | max 500 chars | Additional explanation (for radio buttons). |
+
+The options of a `select` or `radio` setting are also its list of allowed values. This lets you limit a setting to a list of values that you tested, so that a Back Office user cannot save a value that your code does not support. For example, the AI Commerce feature uses a `select` setting to limit each AI model setting to the models that Spryker tested. For details, see [Configure multiple AI providers for AI Commerce](/docs/dg/dev/ai/ai-commerce/configure-multiple-ai-providers.html).
+
+The Configuration Management feature enforces the allowed values as follows:
+
+<div class="width-100">
+
+| MOMENT | BEHAVIOR |
+|--------|----------|
+| Save in the Back Office | `ConfigurationFacade::saveConfigurationValues()` rejects a value that is not one of the option values with the message `The value "<value>" is not one of the available options.` The stored value does not change. You do not need a separate `choice` constraint. |
+| `configuration:sync` | The command fails when `default_value` is not one of the option values. The error names the setting key and the default value. Settings that use a `data_object` plugin are not restricted. |
+| Stored value that is not an option | When the stored or inherited value of a `select` setting is not one of the options, for example because you removed an option, the Back Office shows an empty `Select an option` entry and a warning with the stored value. The application keeps using the stored value until a user saves a supported option. |
+| `configuration:restore` and `configuration:import-environment` | Both commands save through the same validation. A backup or an environment variable that holds a value that is not an option is rejected for that setting. |
+
+</div>
+
+The sync writes the option values of `select` and `radio` settings to the settings map under the `options` key. Option values that are not strings are converted to the string that the Back Office posts: `true` becomes `"1"`, `false` becomes `""`, and `10` becomes `"10"`.
 
 #### Secret vs Storefront Behavior
 

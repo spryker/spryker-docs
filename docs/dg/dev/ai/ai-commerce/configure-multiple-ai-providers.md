@@ -1,7 +1,7 @@
 ---
 title: Configure multiple AI providers for AI Commerce
 description: Learn how to configure OpenAI, AWS Bedrock, and Anthropic providers independently for each AI Commerce feature.
-last_updated: Oct 29, 2026
+last_updated: Nov 13, 2026
 template: howto-guide-template
 ---
 
@@ -366,29 +366,61 @@ Each AI Commerce feature has an **AI Configuration** radio selector in the Back 
 1. In the Back Office, go to **AI Commerce**.
 2. Open the tab for the feature you want to configure (for example, **Smart PIM**, **Smart CMS**, **Quick Order**, **Search by Image**, **Back Office Assistant**, or **Storefront Assistant**).
 3. Under **General**, select the active provider: **OpenAI**, **AWS Bedrock**, or **Anthropic**.
-4. Optionally, update the model name shown for the selected provider. Each provider shows its model field only when selected.
+4. Optionally, in the model dropdown of the selected provider, select another supported model. Each provider shows its model dropdown only when selected.
 5. Click **Save**.
 
-Default models per feature and provider:
+The model dropdown lists only the models that Spryker tested with the request of the feature. You cannot enter a free-text model ID. The first model in each list is the default model.
+
+{% info_block warningBox "Test a model before you use it" %}
+
+Each AI Commerce feature sends a fixed request to the AI provider. The request is different for each feature and provider, and includes settings such as reasoning effort, thinking mode, token limits, tools, and streaming. Models do not accept the same request, and the provider rejects an unsupported setting with an HTTP 4xx error. As a result, an AI feature can fail after you change the model, and the error does not always show the cause. For example:
+
+- OpenAI rejects `reasoning.effort` with HTTP 400 on models that do not support reasoning. Of the `gpt-6` models, only `gpt-6-luna` and `gpt-6.1-terra` support the effort `none` that the Back Office Assistant sends.
+- AWS Bedrock and Anthropic reject the old thinking format (`budget_tokens`) on new models. Old models do not support adaptive thinking and effort.
+- New models reject the `temperature` and `top_p` parameters that old models accept.
+- Providers remove old model snapshots on a schedule. For example, OpenAI removes the `gpt-5` family on December 11, 2026.
+
+Spryker cannot test every provider model with the request of every feature. For this reason, the dropdown offers only tested models. Add a model to the list only after you verify it with the request of that feature. Pay attention to response time and token cost, because Claude Sonnet 5.5 always uses adaptive thinking.
+
+{% endinfo_block %}
+
+Supported models per feature and provider. The first model in each cell is the default model.
 
 <div class="width-100">
 
 | FEATURE | OPENAI | AWS BEDROCK | ANTHROPIC |
 |---------|--------|-------------|-----------|
-| Smart PIM | `gpt-5-nano` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
-| Smart CMS Content Assistant | `gpt-5-nano` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
-| Quick Order Image-to-Cart | `gpt-5-nano` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
-| Search by Image | `gpt-5-nano` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
-| Back Office Assistant | `gpt-6-luna` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
-| Storefront Assistant | `gpt-6-luna` | `eu.anthropic.claude-haiku-5-5` | `claude-haiku-5-5` |
+| Smart PIM | `gpt-5-nano`, `gpt-5-mini` | `eu.anthropic.claude-haiku-5-5`, `eu.anthropic.claude-sonnet-5-5` | `claude-haiku-5-5`, `claude-sonnet-5-5` |
+| Smart CMS Content Assistant | `gpt-5-nano`, `gpt-5-mini` | `eu.anthropic.claude-haiku-5-5`, `eu.anthropic.claude-sonnet-5-5` | `claude-haiku-5-5`, `claude-sonnet-5-5` |
+| Quick Order Image-to-Cart | `gpt-5-nano`, `gpt-5-mini` | `eu.anthropic.claude-haiku-5-5`, `eu.anthropic.claude-sonnet-5-5` | `claude-haiku-5-5`, `claude-sonnet-5-5` |
+| Search by Image | `gpt-5-nano`, `gpt-5-mini` | `eu.anthropic.claude-haiku-5-5`, `eu.anthropic.claude-sonnet-5-5` | `claude-haiku-5-5`, `claude-sonnet-5-5` |
+| Back Office Assistant | `gpt-6-luna`, `gpt-6.1-terra` | `eu.anthropic.claude-haiku-5-5`, `eu.anthropic.claude-sonnet-5-5` | `claude-haiku-5-5`, `claude-sonnet-5-5` |
+| Storefront Assistant | `gpt-6-luna`, `gpt-6.1-terra` | `eu.anthropic.claude-haiku-5-5`, `eu.anthropic.claude-sonnet-5-5` | `claude-haiku-5-5`, `claude-sonnet-5-5` |
 
 </div>
 
-{% info_block infoBox "Default model selection" %}
+Spryker selects the default models because they give the best balance of cost and reliability for each feature. The AWS Bedrock model IDs are EU geo inference profiles with the `eu.` prefix.
 
-Spryker selects these default models because they give the best balance of cost and reliability for each feature. Spryker has not tested other models for these features. If you choose a different model, verify that it meets the requirements in this document and test it for your use case before you use it in production.
+### Unsupported stored model
 
-{% endinfo_block %}
+If the stored model of a feature is not in its list anymore, for example after an upgrade removed it, the Back Office shows an empty `Select an option` entry and the warning `The stored value "<model ID>" is not one of the available options. Select a supported option.` The feature keeps using the stored model until you select a supported model and click **Save**.
+
+### Add a supported model
+
+To add a model to a dropdown, add an entry to the `options` list of the model setting in `data/configuration/ai_commerce.configuration.yml`, and run `console configuration:sync`. No code change is needed. The lists are independent for each feature and provider.
+
+```yaml
+- key: openai_model
+  type: select
+  default_value: 'gpt-5-nano'
+  options:
+      - value: 'gpt-5-nano'
+        label: GPT-5 nano
+      - value: 'gpt-5-mini'
+        label: GPT-5 mini
+```
+
+The `default_value` must be one of the `options` values, otherwise `configuration:sync` fails. For details about the validation, see [Options](/docs/dg/dev/backend-development/configuration-management.html#options).
 
 {% info_block infoBox "Model requirements" %}
 

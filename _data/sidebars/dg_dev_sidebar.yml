@@ -1023,6 +1023,8 @@ entries:
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-php-84.html
     - title: Upgrade to PHP 8.5
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-php-85.html
+    - title: Migrate to supported Spryker PHP Docker images
+      url: /docs/dg/dev/upgrade-and-migrate/migrate-to-supported-spryker-php-docker-images.html
     - title: Upgrade to PHPUnit 11
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-phpunit-11.html
     - title: Upgrade to Symfony 6

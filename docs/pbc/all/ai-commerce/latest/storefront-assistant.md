@@ -109,8 +109,8 @@ You can configure the following settings in the Back Office under **AI Commerce&
 | System Prompts | Product Discovery System Prompt | The instructions that the **Product Discovery** agent follows. The default prompt tells the agent to use only catalog data and never to invent products, prices, or links. |
 | AI Vendor | AI Configuration | The AI vendor that the assistant uses: **OpenAI**, **AWS Bedrock**, or **Anthropic**. |
 | AI Vendor | OpenAI Model, AWS Bedrock Model, Anthropic Model | The model of the selected vendor. The Back Office shows only the field of the selected vendor. The model must support streaming and tool calls. |
-| Suggested Prompts | Product Page Prompts, Category Page Prompts, Search Results Prompts, Asset Page Prompts, Default Prompts | The starter questions for each page type. |
-| Suggested Prompts | Product Results Prompts | The follow-up questions under the product cards in the chat. |
+| Suggested Prompts | Product Page Prompts, Category Page Prompts, Search Results Prompts, Asset Page Prompts, Default Prompts | The starter questions for each page type and locale. |
+| Suggested Prompts | Product Results Prompts | The follow-up questions under the product cards in the chat, for each locale. |
 
 </div>
 
@@ -118,9 +118,21 @@ To set the API credentials of the AI vendor, go to **AI Vendor** in the Back Off
 
 ### Write suggested prompts
 
-Suggested prompts are the clickable questions that customers see when they open the chat. Separate the prompts with a pipe character (`|`). The chat shows a maximum of four prompts for each page type. To show no prompts on a page type, leave the value empty.
+Suggested prompts are the clickable questions that customers see when they open the chat. Each customer sees the prompts of the current locale, so you can write the prompts in each language of your shop.
 
-To show the prompts in titled sections, separate the sections with a double pipe (`||`), and start each section with its title and a colon. The chat shows a maximum of four sections for each page type, with a maximum of four prompts in each section. The chat shows the titles as you enter them, so the titles are not translated for each locale.
+Enter each value as a JSON object. Use the locale name as the key, and a list of the prompts of that locale as the value. The chat shows a maximum of four prompts for each page type. To show no prompts on a page type in a locale, leave that locale out of the object.
+
+Configuration Management rejects a value in these cases:
+
+- The value is not a JSON object with locale names as keys.
+- A key is a locale that no store uses.
+- The prompts of a locale are not a list of text values.
+
+{% info_block warningBox "Old text format" %}
+
+The chat does not support the pipe-separated text format and the titled prompt sections. A value saved in the old format shows no prompts. Save the value again as JSON.
+
+{% endinfo_block %}
 
 You can use the following placeholders. The assistant replaces them with the data of the current page:
 
@@ -138,14 +150,19 @@ You can use the following placeholders. The assistant replaces them with the dat
 
 Example of **Product Page Prompts**:
 
-```text
-Show me cheaper alternatives to {productName}|Show me similar products|Compare {productName} with similar models
-```
-
-Example of **Default Prompts** with sections:
-
-```text
-Learn more: What is new?|What is on sale? || Get recommendations: What do you recommend?
+```json
+{
+  "en_US": [
+    "Show me cheaper alternatives to {productName}",
+    "Show me similar products",
+    "Compare {productName} with similar models"
+  ],
+  "de_DE": [
+    "Zeige mir günstigere Alternativen zu {productName}",
+    "Zeige mir ähnliche Produkte",
+    "Vergleiche {productName} mit ähnlichen Modellen"
+  ]
+}
 ```
 
 ## Data privacy

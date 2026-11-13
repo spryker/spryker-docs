@@ -49,7 +49,8 @@ composer require spryker-feature/ai-commerce:^0.11.0 --update-with-dependencies
 
 Consider the following dependencies of `spryker-feature/ai-commerce`:
 
-- It requires `spryker/ai-foundation` version `^0.9.0` or higher.
+- It requires `spryker/ai-foundation` version `^0.10.0` or higher.
+- It requires `spryker/ai-foundation-extension` version `^1.0.0` or higher.
 - It requires `spryker-shop/shop-ui` version `^2.7.0` or higher. The Yves frontend builder of this version resolves the `@shared/ai-commerce/*` alias, which loads the shared chat frontend of the module.
 - It requires `spryker/twig` version `^3.34.0` or higher. This version provides `SharedThemeTwigLoaderPlugin`.
 - It requires `spryker/gui` version `^5.12.0` or higher.
@@ -459,7 +460,7 @@ features:
                                         value: 'AI_COMMERCE:AI_CONFIGURATION_STOREFRONT_ASSISTANT_ANTHROPIC'
                 - key: suggested_prompts
                   name: Suggested Prompts
-                  description: 'Starter prompts offered to the customer as clickable chips, per storefront page type. Separate the prompts with a pipe character. To show the prompts in titled sections, separate the sections with a double pipe and start each section with its title and a colon, for example "Learn more: What is new?|What is on sale? || Get recommendations: What do you recommend?". Use {productName}, {categoryName} and {searchQuery} to insert what the customer is currently looking at. Leave a value empty to show no chips on that page type.'
+                  description: 'Starter prompts offered to the customer as clickable chips, per storefront page type and locale. Enter each value as a JSON object with the locale name as the key and a list of the prompts of that locale as the value, for example {"en_US": ["What is new?", "What is on sale?"], "de_DE": ["Was ist neu?", "Was ist im Angebot?"]}. The assistant shows the first 4 prompts of the list. Use {productName}, {categoryName} and {searchQuery} to insert what the customer is currently looking at. Leave a locale out to show no chips on that page type in that locale.'
                   enabled: true
                   order: 3
                   scopes:
@@ -468,8 +469,18 @@ features:
                       - key: product_page_prompts
                         name: Product Page Prompts
                         description: Prompts offered while the customer is viewing a single product. {productName} is replaced with that product's name.
-                        type: text
-                        default_value: 'Show me cheaper alternatives to {productName}|Show me similar products|Compare {productName} with similar models'
+                        type: json
+                        default_value:
+                            en_US:
+                                - 'Show me cheaper alternatives to {productName}'
+                                - 'Show me similar products'
+                                - 'Compare {productName} with similar models'
+                            de_DE:
+                                - 'Zeige mir günstigere Alternativen zu {productName}'
+                                - 'Zeige mir ähnliche Produkte'
+                                - 'Vergleiche {productName} mit ähnlichen Modellen'
+                        constraints:
+                            - type: 'SprykerFeature\Zed\AiCommerce\Communication\Constraint\StorefrontAssistantSuggestedPromptsConstraint'
                         enabled: true
                         secret: false
                         storefront: true
@@ -479,8 +490,20 @@ features:
                       - key: category_page_prompts
                         name: Category Page Prompts
                         description: Prompts offered while the customer is browsing a category. {categoryName} is replaced with that category's name.
-                        type: text
-                        default_value: 'Which {categoryName} do you recommend?|Compare the top {categoryName}|Help me narrow these down|What should I look for in {categoryName}?'
+                        type: json
+                        default_value:
+                            en_US:
+                                - 'Which {categoryName} do you recommend?'
+                                - 'Compare the top {categoryName}'
+                                - 'Help me narrow these down'
+                                - 'What should I look for in {categoryName}?'
+                            de_DE:
+                                - 'Welche {categoryName} empfiehlst du?'
+                                - 'Vergleiche die besten {categoryName}'
+                                - 'Hilf mir, die Auswahl einzugrenzen'
+                                - 'Worauf sollte ich bei {categoryName} achten?'
+                        constraints:
+                            - type: 'SprykerFeature\Zed\AiCommerce\Communication\Constraint\StorefrontAssistantSuggestedPromptsConstraint'
                         enabled: true
                         secret: false
                         storefront: true
@@ -490,8 +513,20 @@ features:
                       - key: search_page_prompts
                         name: Search Results Prompts
                         description: Prompts offered while the customer is looking at search results. {searchQuery} is replaced with what they searched for.
-                        type: text
-                        default_value: 'Narrow these results for me|Which of these is the best value?|Show me cheaper alternatives|Compare the top matches'
+                        type: json
+                        default_value:
+                            en_US:
+                                - 'Narrow these results for me'
+                                - 'Which of these is the best value?'
+                                - 'Show me cheaper alternatives'
+                                - 'Compare the top matches'
+                            de_DE:
+                                - 'Grenze diese Ergebnisse für mich ein'
+                                - 'Welches davon hat das beste Preis-Leistungs-Verhältnis?'
+                                - 'Zeige mir günstigere Alternativen'
+                                - 'Vergleiche die besten Treffer'
+                        constraints:
+                            - type: 'SprykerFeature\Zed\AiCommerce\Communication\Constraint\StorefrontAssistantSuggestedPromptsConstraint'
                         enabled: true
                         secret: false
                         storefront: true
@@ -501,8 +536,18 @@ features:
                       - key: default_prompts
                         name: Default Prompts
                         description: Prompts offered on every other page, the storefront home page included.
-                        type: text
-                        default_value: 'Help me find a gift|What do you recommend?|Compare products for me'
+                        type: json
+                        default_value:
+                            en_US:
+                                - 'Help me find a gift'
+                                - 'What do you recommend?'
+                                - 'Compare products for me'
+                            de_DE:
+                                - 'Hilf mir, ein Geschenk zu finden'
+                                - 'Was empfiehlst du?'
+                                - 'Vergleiche Produkte für mich'
+                        constraints:
+                            - type: 'SprykerFeature\Zed\AiCommerce\Communication\Constraint\StorefrontAssistantSuggestedPromptsConstraint'
                         enabled: true
                         secret: false
                         storefront: true
@@ -512,8 +557,20 @@ features:
                       - key: product_results_prompts
                         name: Product Results Prompts
                         description: Follow-up prompts offered under the product cards the assistant shows in the chat. {productName} is replaced with the first product's name and {productCount} with how many were shown. Leave a value empty to show no chips under product results.
-                        type: text
-                        default_value: 'Compare these for me|Which of these do you recommend?|Show me cheaper alternatives|Tell me more about {productName}'
+                        type: json
+                        default_value:
+                            en_US:
+                                - 'Compare these for me'
+                                - 'Which of these do you recommend?'
+                                - 'Show me cheaper alternatives'
+                                - 'Tell me more about {productName}'
+                            de_DE:
+                                - 'Vergleiche diese für mich'
+                                - 'Welches davon empfiehlst du?'
+                                - 'Zeige mir günstigere Alternativen'
+                                - 'Erzähl mir mehr über {productName}'
+                        constraints:
+                            - type: 'SprykerFeature\Zed\AiCommerce\Communication\Constraint\StorefrontAssistantSuggestedPromptsConstraint'
                         enabled: true
                         secret: false
                         storefront: true
@@ -865,7 +922,7 @@ use SprykerFeature\Client\AiCommerce\Plugin\StorefrontAssistant\Tool\ReadShopPag
 class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvider
 {
     /**
-     * @return array<\Spryker\Client\AiFoundation\Dependency\Tools\ToolPluginInterface>
+     * @return array<\Spryker\Client\AiFoundationExtension\Dependency\Tools\ToolPluginInterface>
      */
     protected function getAiToolPlugins(): array
     {

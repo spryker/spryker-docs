@@ -316,7 +316,7 @@ Storefront Assistant reads its settings from the **Storefront Assistant** tab of
 | `ai_commerce:storefront_assistant:system_prompts:product_discovery_system_prompt` | text | The system prompt of the **Product Discovery** agent. A blank value uses the default prompt of the module. |
 | `ai_commerce:storefront_assistant:ai_vendor:ai_configuration` | radio | The name of the AI configuration in `config_ai.php`. |
 | `ai_commerce:storefront_assistant:ai_vendor:openai_model`, `aws_model`, `anthropic_model` | string | The model of each AI vendor. |
-| `ai_commerce:storefront_assistant:suggested_prompts:*` | text | The suggested prompts for each page type, including `asset_page_prompts` for the Self-Service Portal asset details page, and under the product cards. Separate the prompts with `\|`. To show titled sections, separate the sections with `\|\|` and start each section with its title and a colon. |
+| `ai_commerce:storefront_assistant:suggested_prompts:*` | json | The suggested prompts for each page type, including the project setting `asset_page_prompts` for the Self-Service Portal asset details page, and under the product cards. Each value is a JSON object with a locale name as the key and a list of prompts as the value. The `StorefrontAssistantSuggestedPromptsConstraint` constraint rejects a value that is not such an object, a locale that no store uses, and prompts that are not a list of text values. |
 
 </div>
 
@@ -454,7 +454,7 @@ The `body` padding does not move elements with `position: fixed` or `position: s
 |-----------|-------|---------|
 | `SprykerFeature\Client\AiCommerce\Dependency\StorefrontAssistant\StorefrontAssistantAgentPluginInterface` | Client `AiCommerceDependencyProvider::getStorefrontAssistantAgentPlugins()` | Adds an agent. The order of the stack sets the priority in **Auto** mode. |
 | `SprykerFeature\Client\AiCommerce\Dependency\StorefrontAssistant\StorefrontAssistantProductCollectionExpanderPluginInterface` | Client `AiCommerceDependencyProvider::getStorefrontAssistantProductCollectionExpanderPlugins()` | Adds data to the product cards. A plugin must not throw an exception, because an exception stops the turn. |
-| `Spryker\Client\AiFoundation\Dependency\Tools\ToolPluginInterface` | Client `AiFoundationDependencyProvider::getAiToolPlugins()` | Adds a tool. Also add the tool name to the tool list of an agent. |
+| `Spryker\Client\AiFoundationExtension\Dependency\Tools\ToolPluginInterface` | Client `AiFoundationDependencyProvider::getAiToolPlugins()` | Adds a tool. Also add the tool name to the tool list of an agent. |
 | `Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigExpanderPluginInterface` | Client `AiCommerceDependencyProvider::getSearchConfigExpanderPlugins()` | Adds facets to `catalog_search`. |
 
 </div>

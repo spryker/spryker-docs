@@ -121,16 +121,7 @@ The CAPTCHA mode defines when the login forms require a CAPTCHA. It is a Back Of
 
 **Enable CAPTCHA** and the CAPTCHA mode work together. **Enable CAPTCHA** switches the CAPTCHA on or off, and the mode defines when a login requires the CAPTCHA while it is switched on. An unknown mode value is treated as `always`.
 
-In the `after_failed_attempts` mode, the following settings define when a login form requires a CAPTCHA. Each setting exists once for customers, with the `Customer` prefix and the `customer_` key prefix, for the Storefront customer login, and once for users, with the `User` prefix and the `user_` key prefix, for the Back Office, Merchant Portal, Merchant Portal agent, and Storefront agent logins. The Back Office shows them only while **After Failed Attempts** is selected:
-
-| SETTING | KEY | VALUE |
-| --- | --- | --- |
-| **Failed Attempts per Account** | `security:captcha:login:customer_number_of_failed_attempts`, `security:captcha:login:user_number_of_failed_attempts` | The number of failed logins to one account after which its login form requires a CAPTCHA. A whole number from 1 to 10. Default: 3. |
-| **Failed Attempts per IP Address** | `security:captcha:login:customer_ip_number_of_failed_attempts`, `security:captcha:login:user_ip_number_of_failed_attempts` | The number of failed logins from one IP address after which the login form requires a CAPTCHA. A whole number from 0 to 1000, where `0` switches this trigger off. Default: 5. |
-| **Failed Attempts across All Accounts** | `security:captcha:login:customer_all_accounts_number_of_failed_attempts`, `security:captcha:login:user_all_accounts_number_of_failed_attempts` | The number of failed logins across all accounts within the time window after which every login form of the realm requires a CAPTCHA. A whole number from 0 to 100000, where `0` switches this trigger off. Default: 100 for customers, 30 for users. |
-| **Time Window across All Accounts (Minutes)** | `security:captcha:login:customer_all_accounts_time_window`, `security:captcha:login:user_all_accounts_time_window` | The time period in minutes, starting with the first failed login, within which the failed logins across all accounts are counted. A whole number from 1 to 60. Default: 5. |
-
-The login brute-force protection reads these settings when its login protection strategy is `ip-and-account`; the default `ip` strategy counts failed logins per IP address only. If a threshold is not lower than the lock that counts the same failed logins, the login form requires the CAPTCHA one login before that lock. The account lock is set in **Configuration** > **Security** > **Login Lock**. For details, see [Install the login brute-force protection](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-login-brute-force-protection.html#2-set-up-the-configuration).
+In the `after_failed_attempts` mode, the login brute-force protection decides when a login form requires a CAPTCHA. The numbers of failed logins after which it requires one, per account, per IP address, and across all accounts, are its **Security Check after Failed Attempts** settings in **Configuration** > **Security** > **Login Lock**, next to the account lock that counts the same failed logins. For these settings, see [Install the login brute-force protection](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-login-brute-force-protection.html#2-set-up-the-configuration).
 
 The Back Office and the Merchant Portal read these settings from the database, so they apply a change at once. The Storefront reads them from the key-value storage, so it applies a change after the `sync.storage.configuration` queue has been processed.
 
@@ -140,29 +131,28 @@ Register the settings in the Back Office by synchronizing the configuration sche
 console configuration:sync
 ```
 
-To change the mode, in the Back Office, go to **Configuration**, select **Security** in the sidebar, and open the **CAPTCHA** tab. In the **Login Forms** group, switch on **Enable CAPTCHA**, select the **CAPTCHA Mode**, and, for **After Failed Attempts**, set the thresholds. The key of the mode setting is `security:captcha:login:mode`. All settings have the global scope.
+To change the mode, in the Back Office, go to **Configuration**, select **Security** in the sidebar, and open the **CAPTCHA** tab. In the **Login Forms** group, switch on **Enable CAPTCHA**, and select the **CAPTCHA Mode**. The key of the mode setting is `security:captcha:login:mode`. Both settings have the global scope.
 
-To set the settings during deployment, for example, in a test environment, import them with the `configuration-value` data importer, as described in [Configuration Management](/docs/dg/dev/backend-development/configuration-management.html#data-import). The data importer validates each value against the range of its setting, as the Back Office does, and rejects any other value. The following example switches the CAPTCHA on, lowers the number of failed attempts per account, and switches off the per-IP address and all-accounts triggers, because all tests log in from one IP address:
+To set the settings during deployment, for example, in a test environment, import them with the `configuration-value` data importer, as described in [Configuration Management](/docs/dg/dev/backend-development/configuration-management.html#data-import). The data importer validates each value against the range of its setting, as the Back Office does, and rejects any other value. The following example switches the CAPTCHA on in the `after_failed_attempts` mode, lowers the number of failed logins to one account after which a login form requires a CAPTCHA, and switches off the per-IP address and all-accounts challenge thresholds of the login brute-force protection, because all tests log in from one IP address:
 
 ```csv
 setting_key,scope,scope_identifier,value
 security:captcha:login:is_enabled,global,,true
 security:captcha:login:mode,global,,after_failed_attempts
-security:captcha:login:customer_number_of_failed_attempts,global,,2
-security:captcha:login:user_number_of_failed_attempts,global,,2
-security:captcha:login:customer_ip_number_of_failed_attempts,global,,0
-security:captcha:login:customer_all_accounts_number_of_failed_attempts,global,,0
-security:captcha:login:user_ip_number_of_failed_attempts,global,,0
-security:captcha:login:user_all_accounts_number_of_failed_attempts,global,,0
+security:login_lock:customer:challenge_account_number_of_failed_attempts,global,,2
+security:login_lock:user:challenge_account_number_of_failed_attempts,global,,2
+security:login_lock:customer:challenge_ip_number_of_failed_attempts,global,,0
+security:login_lock:customer:challenge_all_accounts_number_of_failed_attempts,global,,0
+security:login_lock:user:challenge_ip_number_of_failed_attempts,global,,0
+security:login_lock:user:challenge_all_accounts_number_of_failed_attempts,global,,0
 ```
 
 {% info_block warningBox "Verification" %}
 
 In the Back Office, go to **Configuration** > **Security** > **CAPTCHA**. Make sure the following applies:
 - The **Login Forms** group contains the **Enable CAPTCHA** setting, and it is off. The Back Office hides the other settings of the group.
-- When you switch on **Enable CAPTCHA**, the **CAPTCHA Mode** setting appears with the **After Failed Attempts** and **Always** options, and **After Failed Attempts** is selected.
-- The **Customer Failed Attempts per Account** and **User Failed Attempts per Account** settings show `3`, and the **Customer Failed Attempts per IP Address** and **User Failed Attempts per IP Address** settings show `5`. When you select **Always**, the threshold settings are hidden.
-- When you enter `11` or `2.5` in **Customer Failed Attempts per Account** and save, the Back Office shows the `Enter a whole number from 1 to 10.` error.
+- When you switch on **Enable CAPTCHA**, the **CAPTCHA Mode** setting appears with the **After Failed Attempts** and **Always** options, and **After Failed Attempts** is selected. The **Open the Login Lock tab** link below its description opens **Configuration** > **Security** > **Login Lock**.
+- The **Login Forms** group contains no other settings. The numbers of failed logins are in **Configuration** > **Security** > **Login Lock**.
 
 {% endinfo_block %}
 

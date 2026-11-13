@@ -94,20 +94,20 @@ Make sure the following modules have been installed:
 
 | SETTING | KEY | DEFAULT | SPECIFICATION |
 | --- | --- | --- | --- |
-| Failed Attempts | `security:login_lock:customer:number_of_failed_attempts`, `security:login_lock:user:number_of_failed_attempts` | 9 | Defines the number of login attempts to one account, from any IP address, within the counting window before the account is locked. A whole number from 1 to 100. |
-| Counting Window (Minutes) | `security:login_lock:customer:counting_window`, `security:login_lock:user:counting_window` | 15 | Defines the time period in minutes, starting with the first failed login, within which the login attempts of an account are counted. A whole number from 1 to 1440. |
+| Lock after Failed Attempts | `security:login_lock:customer:number_of_failed_attempts`, `security:login_lock:user:number_of_failed_attempts` | 9 | Defines the number of login attempts to one account, from any IP address, within the counting window before the account is locked. A whole number from 1 to 100. |
+| Counting Window (Minutes) | `security:login_lock:customer:counting_window`, `security:login_lock:user:counting_window` | 15 | Defines the time period in minutes, starting with the first failed login, within which the login attempts of an account are counted for the lock and for the CAPTCHA per account. A whole number from 1 to 1440. |
 | Lock Duration (Minutes) | `security:login_lock:customer:lock_duration`, `security:login_lock:user:lock_duration` | 6 | Defines the time period in minutes for which a locked account stays locked. Further attempts do not extend the lock. A whole number from 1 to 1440. |
 
-2. Review the CAPTCHA thresholds of the login realms. They are settings of the CAPTCHA feature in **Configuration** > **Security** > **CAPTCHA**, which the Back Office shows while the CAPTCHA is switched on and the **After Failed Attempts** mode is selected. They apply with the `ip-and-account` login protection strategy of step 4. For details, see [Install the CAPTCHA feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-captcha-feature.html).
+2. Review the challenge thresholds of the login realms. They are in the same groups of the **Login Lock** tab, next to the lock that counts the same failed logins, and apply with the `ip-and-account` login protection strategy of step 4. When the failed logins reach a threshold, the SecurityBlocker modules require a login challenge. If you installed the CAPTCHA feature, the login forms answer a required challenge with a CAPTCHA while the CAPTCHA is switched on in the **After Failed Attempts** CAPTCHA mode. The Back Office calls the login challenge a security check, the term of the CAPTCHA messages, and shows the thresholds in every CAPTCHA mode, because the settings page holds only the open tab. For the CAPTCHA mode, see [Install the CAPTCHA feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-captcha-feature.html).
 
 | SETTING | KEY | DEFAULT (CUSTOMER / USER) | SPECIFICATION |
 | --- | --- | --- | --- |
-| Failed Attempts per Account | `security:captcha:login:customer_number_of_failed_attempts`, `security:captcha:login:user_number_of_failed_attempts` | 3 / 3 | Defines the number of failed logins to one account after which its login form requires a CAPTCHA. A whole number from 1 to 10. |
-| Failed Attempts per IP Address | `security:captcha:login:customer_ip_number_of_failed_attempts`, `security:captcha:login:user_ip_number_of_failed_attempts` | 5 / 5 | Defines the number of failed logins from one IP address after which the login form requires a CAPTCHA. `0` disables this trigger, and the failed logins that an IP address adds to the realm-wide counter are then not limited. A whole number from 0 to 1000. |
-| Failed Attempts across All Accounts | `security:captcha:login:customer_all_accounts_number_of_failed_attempts`, `security:captcha:login:user_all_accounts_number_of_failed_attempts` | 100 / 30 | Defines the number of failed logins across all accounts within the time window after which every login of the realm requires a CAPTCHA. `0` disables this trigger. A whole number from 0 to 100000. |
-| Time Window across All Accounts (Minutes) | `security:captcha:login:customer_all_accounts_time_window`, `security:captcha:login:user_all_accounts_time_window` | 5 / 5 | Defines the time period in minutes, starting with the first failed login, within which the failed logins across all accounts are counted. A whole number from 1 to 60. |
+| Security Check after Failed Attempts per Account | `security:login_lock:customer:challenge_account_number_of_failed_attempts`, `security:login_lock:user:challenge_account_number_of_failed_attempts` | 3 / 3 | Defines the number of failed logins to one account after which its login form requires a CAPTCHA. A whole number from 1 to 10. |
+| Security Check after Failed Attempts per IP Address | `security:login_lock:customer:challenge_ip_number_of_failed_attempts`, `security:login_lock:user:challenge_ip_number_of_failed_attempts` | 5 / 5 | Defines the number of failed logins from one IP address after which the login form requires a CAPTCHA. With or without the CAPTCHA, it also limits the failed logins that one IP address adds to the realm-wide counter. `0` disables both. A whole number from 0 to 1000. |
+| Security Check after Failed Attempts across All Accounts | `security:login_lock:customer:challenge_all_accounts_number_of_failed_attempts`, `security:login_lock:user:challenge_all_accounts_number_of_failed_attempts` | 100 / 30 | Defines the number of failed logins across all accounts within the time window after which every login of the realm requires a CAPTCHA. With or without the CAPTCHA, reaching it writes the `login_global_challenge_threshold_reached` entry to the security audit log of step 6. `0` disables both. A whole number from 0 to 100000. |
+| Time Window across All Accounts (Minutes) | `security:login_lock:customer:challenge_all_accounts_time_window`, `security:login_lock:user:challenge_all_accounts_time_window` | 5 / 5 | Defines the time period in minutes, starting with the first failed login, within which the failed logins across all accounts are counted. A whole number from 1 to 60. |
 
-If a CAPTCHA threshold is not lower than the lock that counts the same failed logins, the login form requires the CAPTCHA one login before that lock: the per-account threshold before the account lock, and the per-IP threshold before the IP lock of the login form.
+If a challenge threshold is not lower than the lock that counts the same failed logins, the login form requires the CAPTCHA one login before that lock: the per-account threshold before the account lock, and the per-IP threshold before the IP lock of the login form.
 
 3. In a marketplace, add the configuration that counts failed Merchant Portal logins per IP address:
 
@@ -129,16 +129,16 @@ $config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCKING_NU
 
 {% info_block infoBox "Test environments" %}
 
-End-to-end tests usually send many failed logins from one IP address with the same test accounts. Import the settings of such an environment with the `configuration-value` data import. The following example raises the account lock to its maximum and switches off the per-IP and all-accounts CAPTCHA triggers:
+End-to-end tests usually send many failed logins from one IP address with the same test accounts. Import the settings of such an environment with the `configuration-value` data import. The following example raises the account lock to its maximum and switches off the per-IP and all-accounts challenge thresholds:
 
 ```csv
 setting_key,scope,scope_identifier,value
 security:login_lock:customer:number_of_failed_attempts,global,,100
 security:login_lock:user:number_of_failed_attempts,global,,100
-security:captcha:login:customer_ip_number_of_failed_attempts,global,,0
-security:captcha:login:customer_all_accounts_number_of_failed_attempts,global,,0
-security:captcha:login:user_ip_number_of_failed_attempts,global,,0
-security:captcha:login:user_all_accounts_number_of_failed_attempts,global,,0
+security:login_lock:customer:challenge_ip_number_of_failed_attempts,global,,0
+security:login_lock:customer:challenge_all_accounts_number_of_failed_attempts,global,,0
+security:login_lock:user:challenge_ip_number_of_failed_attempts,global,,0
+security:login_lock:user:challenge_all_accounts_number_of_failed_attempts,global,,0
 ```
 
 For the CAPTCHA in test environments, see [Install the CAPTCHA feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-captcha-feature.html#2-set-up-the-configuration).
@@ -305,8 +305,8 @@ Make sure that, in the database, the configured data has been added to the `spy_
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| CustomerSecurityBlockerLoginRealmConfigurationExpanderPlugin | Provides the account and CAPTCHA thresholds of the `customer` login realm. |  | Spryker\Client\SecurityBlockerStorefrontCustomer\Plugin\SecurityBlocker |
-| UserSecurityBlockerLoginRealmConfigurationExpanderPlugin | Provides the account and CAPTCHA thresholds of the `user` login realm. |  | Spryker\Client\SecurityBlockerBackoffice\Plugin\SecurityBlocker |
+| CustomerSecurityBlockerLoginRealmConfigurationExpanderPlugin | Provides the account lock and the challenge thresholds of the `customer` login realm. |  | Spryker\Client\SecurityBlockerStorefrontCustomer\Plugin\SecurityBlocker |
+| UserSecurityBlockerLoginRealmConfigurationExpanderPlugin | Provides the account lock and the challenge thresholds of the `user` login realm. |  | Spryker\Client\SecurityBlockerBackoffice\Plugin\SecurityBlocker |
 | MerchantPortalUserSecurityBlockerConfigurationSettingsExpanderPlugin | Expands the SecurityBlocker configuration settings with the IP settings of the Merchant Portal login. | Marketplace only. | Spryker\Client\SecurityBlockerMerchantPortal\Plugin\SecurityBlocker |
 
 If no plugin provides a realm, the realm uses the module defaults of `Spryker\Client\SecurityBlocker\SecurityBlockerConfig::getDefaultLoginRealmConfiguration()`, and a warning is logged.
@@ -398,7 +398,7 @@ The strategy of all API endpoints is the strategy of `SecurityBlockerRestApiConf
 
 ### Require a CAPTCHA after failed logins
 
-Follow this section if you installed the CAPTCHA feature. In its default `after_failed_attempts` CAPTCHA mode, a login form requires a CAPTCHA only while a CAPTCHA requirement plugin requires it, that is, after a challenge threshold is reached for the account, the IP address, or the login realm. The thresholds are the **Failed Attempts per Account**, **Failed Attempts per IP Address**, and **Failed Attempts across All Accounts** Back Office settings of the CAPTCHA feature, one set for each realm, as described in [Set up the configuration](#2-set-up-the-configuration). Without these plugins, every login form requires a CAPTCHA in this mode, and an error is logged.
+Follow this section if you installed the CAPTCHA feature. In its default `after_failed_attempts` CAPTCHA mode, a login form requires a CAPTCHA only while a CAPTCHA requirement plugin requires it, that is, after a challenge threshold is reached for the account, the IP address, or the login realm. The thresholds are the **Security Check after Failed Attempts per Account**, **Security Check after Failed Attempts per IP Address**, and **Security Check after Failed Attempts across All Accounts** settings of the **Login Lock** tab, one set for each realm, as described in [Set up the configuration](#2-set-up-the-configuration). Without these plugins, every login form requires a CAPTCHA in this mode, and an error is logged.
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -482,7 +482,7 @@ Make sure the login protection works on every login surface that you installed. 
     }
     ```
 
-6. If you installed the CAPTCHA feature and use its default `after_failed_attempts` CAPTCHA mode, go to the Storefront login page and enter a wrong password for a customer account as many times as the **Customer Failed Attempts per Account** Back Office setting defines, three times by default.
+6. If you installed the CAPTCHA feature and use its default `after_failed_attempts` CAPTCHA mode, go to the Storefront login page and enter a wrong password for a customer account as many times as the **Security Check after Failed Attempts per Account** setting of the **Customer Accounts** group defines, three times by default.
     Make sure the login form then shows the CAPTCHA.
 7. Solve the CAPTCHA and log in with the correct password. Log out, and go to the login page again.
     Make sure the login form does not show the CAPTCHA, and the login with the correct password succeeds without a CAPTCHA. Repeat the last two steps on the Back Office login page with a user account.

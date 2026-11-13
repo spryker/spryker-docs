@@ -177,7 +177,7 @@ In deployment pipelines, use `npm run yves:production`, `npm run zed:production`
 
 {% info_block warningBox "Verification" %}
 
-1. Go to the Back Office login page. In the default `after_failed_attempts` CAPTCHA mode, first enter a wrong password for a user as many times as the **User Failed Attempts per Account** Back Office setting defines, three times by default, and reload the login page. In the `always` CAPTCHA mode, the login form shows reCAPTCHA right away. For these settings, see [Install the CAPTCHA feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-captcha-feature.html#2-set-up-the-configuration).
+1. Go to the Back Office login page. In the default `after_failed_attempts` CAPTCHA mode, first enter a wrong password for a user as many times as the **Security Check after Failed Attempts per Account** setting of the **User Accounts** group in **Configuration** > **Security** > **Login Lock** defines, three times by default, and reload the login page. In the `always` CAPTCHA mode, the login form shows reCAPTCHA right away. For these settings, see [Install the CAPTCHA feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-captcha-feature.html#2-set-up-the-configuration) and [Install the login brute-force protection](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-login-brute-force-protection.html#2-set-up-the-configuration).
 2. With v2, make sure the login form shows the reCAPTCHA checkbox. With v3, make sure the page shows the reCAPTCHA badge.
 3. With v2, select the checkbox. Enter the correct password and submit the form.
     Make sure you are logged in to the Back Office.

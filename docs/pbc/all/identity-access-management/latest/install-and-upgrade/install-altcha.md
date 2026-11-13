@@ -57,11 +57,11 @@ npm install altcha@~3.5.0
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following modules have been installed:
+Make sure the following packages have been installed with the required versions:
 
-| MODULE | EXPECTED DIRECTORY |
+| PACKAGE | VERSION |
 | --- | --- |
-| CaptchaAltcha | vendor/spryker-eco/captcha-altcha |
+| `spryker-eco/captcha-altcha` | 1.0.0 or later |
 
 Make sure the `altcha` npm package has been installed in `node_modules/altcha`.
 

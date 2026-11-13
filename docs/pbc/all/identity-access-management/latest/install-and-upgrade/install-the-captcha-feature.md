@@ -75,12 +75,12 @@ composer require spryker/multi-factor-auth-merchant-portal:"^2.6.0" --update-wit
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following modules have been installed:
+Make sure the following packages have been installed with the required versions:
 
-| MODULE | EXPECTED DIRECTORY |
+| PACKAGE | VERSION |
 | --- | --- |
-| Captcha | vendor/spryker/captcha |
-| CaptchaExtension | vendor/spryker/captcha-extension |
+| `spryker/captcha` | 1.0.0 or later |
+| `spryker/captcha-extension` | 1.0.0 or later |
 
 {% endinfo_block %}
 

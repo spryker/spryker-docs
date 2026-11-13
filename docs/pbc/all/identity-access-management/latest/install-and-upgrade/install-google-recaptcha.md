@@ -42,13 +42,13 @@ The provider verifies tokens with the `google/recaptcha` PHP library. On PHP 8.4
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following modules have been installed:
+Make sure the following packages have been installed with the required versions:
 
-| MODULE | EXPECTED DIRECTORY |
+| PACKAGE | VERSION |
 | --- | --- |
-| Captcha | vendor/spryker/captcha |
-| CaptchaExtension | vendor/spryker/captcha-extension |
-| CaptchaGoogleRecaptcha | vendor/spryker-eco/captcha-google-recaptcha |
+| `spryker-eco/captcha-google-recaptcha` | 1.0.0 or later |
+| `spryker/captcha` | 1.0.0 or later |
+| `spryker/captcha-extension` | 1.0.0 or later |
 
 {% endinfo_block %}
 

@@ -71,20 +71,21 @@ composer require spryker/security-blocker-rest-api:"^1.2.0" spryker/glue-applica
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following modules have been installed:
+Make sure the following packages have been installed with the required versions:
 
-| MODULE | EXPECTED DIRECTORY |
+| PACKAGE | VERSION |
 | --- | --- |
-| SecurityBlocker | vendor/spryker/security-blocker |
-| SecurityBlockerExtension | vendor/spryker/security-blocker-extension |
-| SecurityBlockerStorefrontCustomer | vendor/spryker/security-blocker-storefront-customer |
-| SecurityBlockerBackoffice | vendor/spryker/security-blocker-backoffice |
-| SecurityBlockerBackofficeGui | vendor/spryker/security-blocker-backoffice-gui |
-| SecurityBlockerPage | vendor/spryker-shop/security-blocker-page |
-| SecurityBlockerMerchantPortal | vendor/spryker/security-blocker-merchant-portal |
-| SecurityBlockerMerchantPortalGui | vendor/spryker/security-blocker-merchant-portal-gui |
-| AgentSecurityBlockerMerchantPortalGui | vendor/spryker/agent-security-blocker-merchant-portal-gui |
-| SecurityBlockerRestApi | vendor/spryker/security-blocker-rest-api |
+| `spryker/security-blocker` | 1.5.0 or later |
+| `spryker/security-blocker-extension` | 1.1.0 or later |
+| `spryker/security-blocker-storefront-customer` | 1.1.0 or later |
+| `spryker/security-blocker-backoffice` | 1.1.0 or later |
+| `spryker/security-blocker-backoffice-gui` | 1.2.0 or later |
+| `spryker-shop/security-blocker-page` | 1.4.0 or later |
+| `spryker/security-blocker-merchant-portal` | 1.0.0 or later |
+| `spryker/security-blocker-merchant-portal-gui` | 1.2.0 or later |
+| `spryker/agent-security-blocker-merchant-portal-gui` | 1.2.0 or later |
+| `spryker/security-blocker-rest-api` | 1.2.0 or later |
+| `spryker/glue-application` | 1.82.1 or later |
 
 {% endinfo_block %}
 

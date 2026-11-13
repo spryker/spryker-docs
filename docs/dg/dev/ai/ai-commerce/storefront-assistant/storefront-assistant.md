@@ -1,7 +1,7 @@
 ---
 title: Storefront Assistant
 description: Technical overview of the Storefront Assistant feature — architecture, agents, tools, the streaming protocol, endpoints, and configuration options.
-last_updated: Nov 5, 2026
+last_updated: Nov 13, 2026
 template: concept-topic-template
 label: early-access
 related:
@@ -440,7 +440,7 @@ The `body` padding does not move elements with `position: fixed` or `position: s
 |-----------|-------|---------|
 | `SprykerFeature\Client\AiCommerce\Dependency\StorefrontAssistant\StorefrontAssistantAgentPluginInterface` | Client `AiCommerceDependencyProvider::getStorefrontAssistantAgentPlugins()` | Adds an agent. The order of the stack sets the priority in **Auto** mode. |
 | `SprykerFeature\Client\AiCommerce\Dependency\StorefrontAssistant\StorefrontAssistantProductCollectionExpanderPluginInterface` | Client `AiCommerceDependencyProvider::getStorefrontAssistantProductCollectionExpanderPlugins()` | Adds data to the product cards. A plugin must not throw an exception, because an exception stops the turn. |
-| `Spryker\Client\AiFoundation\Dependency\Tools\ToolPluginInterface` | Client `AiFoundationDependencyProvider::getAiToolPlugins()` | Adds a tool. Also add the tool name to the tool list of an agent. |
+| `Spryker\Client\AiFoundationExtension\Dependency\Tools\ToolPluginInterface` | Client `AiFoundationDependencyProvider::getAiToolPlugins()` | Adds a tool. Also add the tool name to the tool list of an agent. |
 | `Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigExpanderPluginInterface` | Client `AiCommerceDependencyProvider::getSearchConfigExpanderPlugins()` | Adds facets to `catalog_search`. |
 
 </div>

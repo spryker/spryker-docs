@@ -1,7 +1,7 @@
 ---
 title: Install Storefront Assistant
 description: Learn how to install the Storefront Assistant feature that adds an AI shopping chat to the Spryker Storefront.
-last_updated: Nov 5, 2026
+last_updated: Nov 13, 2026
 template: feature-integration-guide-template
 label: early-access
 related:
@@ -49,7 +49,8 @@ composer require spryker-feature/ai-commerce:^0.11.0 --update-with-dependencies
 
 Consider the following dependencies of `spryker-feature/ai-commerce`:
 
-- It requires `spryker/ai-foundation` version `^0.9.0` or higher.
+- It requires `spryker/ai-foundation` version `^0.10.0` or higher.
+- It requires `spryker/ai-foundation-extension` version `^1.0.0` or higher.
 - It requires `spryker-shop/shop-ui` version `^2.7.0` or higher. The Yves frontend builder of this version resolves the `@shared/ai-commerce/*` alias, which loads the shared chat frontend of the module.
 - It requires `spryker/twig` version `^3.34.0` or higher. This version provides `SharedThemeTwigLoaderPlugin`.
 - It requires `spryker/gui` version `^5.12.0` or higher.
@@ -865,7 +866,7 @@ use SprykerFeature\Client\AiCommerce\Plugin\StorefrontAssistant\Tool\ReadShopPag
 class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvider
 {
     /**
-     * @return array<\Spryker\Client\AiFoundation\Dependency\Tools\ToolPluginInterface>
+     * @return array<\Spryker\Client\AiFoundationExtension\Dependency\Tools\ToolPluginInterface>
      */
     protected function getAiToolPlugins(): array
     {

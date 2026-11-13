@@ -378,7 +378,6 @@ Each AI Commerce feature sends a fixed request to the AI provider. The request i
 - OpenAI rejects `reasoning.effort` with HTTP 400 on models that do not support reasoning. Of the `gpt-6` models, only `gpt-6-luna` and `gpt-6.1-terra` support the effort `none` that the Back Office Assistant sends.
 - AWS Bedrock and Anthropic reject the old thinking format (`budget_tokens`) on new models. Old models do not support adaptive thinking and effort.
 - New models reject the `temperature` and `top_p` parameters that old models accept.
-- Providers remove old model snapshots on a schedule. For example, OpenAI removes the `gpt-5` family on December 11, 2026.
 
 Spryker cannot test every provider model with the request of every feature. For this reason, the dropdown offers only tested models. Add a model to the list only after you verify it with the request of that feature. Pay attention to response time and token cost, because Claude Sonnet 5.5 always uses adaptive thinking.
 

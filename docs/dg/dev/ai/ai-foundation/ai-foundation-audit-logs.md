@@ -1,7 +1,7 @@
 ---
 title: AI Foundation Audit Logs
 description: Track and audit AI interactions with the AiFoundation module audit logging feature, including estimated cost per interaction.
-last_updated: Nov 10, 2026
+last_updated: Oct 14, 2026
 keywords: audit, logging, ai, foundation, tracking, compliance, ai interactions, monitoring, cost estimation, ai pricing
 template: howto-guide-template
 label: early-access
@@ -98,7 +98,7 @@ use Spryker\Zed\AiFoundation\Communication\Plugin\Log\AiInteractionHandlerPlugin
 class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\AiFoundationExtension\Dependency\Plugin\PostPromptPluginInterface>
+     * @return array<\Spryker\Zed\AiFoundation\Dependency\Plugin\PostPromptPluginInterface>
      */
     protected function getPostPromptPlugins(): array
     {
@@ -108,7 +108,7 @@ class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvid
     }
     
     /**
-     * @return array<\Spryker\Zed\AiFoundationExtension\Dependency\Plugin\PostToolCallPluginInterface>
+     * @return array<\Spryker\Zed\AiFoundation\Dependency\Plugin\PostToolCallPluginInterface>
      */
     protected function getPostToolCallPlugins(): array
     {

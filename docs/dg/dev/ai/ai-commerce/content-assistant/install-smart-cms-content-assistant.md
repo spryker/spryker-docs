@@ -1,7 +1,7 @@
 ---
 title: Install Smart CMS Content Assistant
 description: Learn how to install the Smart CMS Content Assistant feature that provides an AI-powered panel in the Back Office CMS Page and CMS Block glossary editors.
-last_updated: Nov 10, 2026
+last_updated: Oct 14, 2026
 template: feature-integration-guide-template
 ---
 
@@ -169,7 +169,7 @@ use SprykerFeature\Zed\AiCommerce\Communication\Plugin\AiFoundation\SmartCmsCont
 class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\AiFoundationExtension\Dependency\Tools\ToolSetPluginInterface>
+     * @return array<\Spryker\Zed\AiFoundation\Dependency\Tools\ToolSetPluginInterface>
      */
     protected function getAiToolSetPlugins(): array
     {

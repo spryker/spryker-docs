@@ -1,7 +1,7 @@
 ---
 title: Storefront Assistant
 description: Technical overview of the Storefront Assistant feature — architecture, agents, tools, the streaming protocol, endpoints, and configuration options.
-last_updated: Nov 10, 2026
+last_updated: Nov 13, 2026
 template: concept-topic-template
 label: early-access
 related:

@@ -1,7 +1,7 @@
 ---
 title: Install Back Office Assistant
 description: Learn how to install the Back Office Assistant feature that provides an AI-powered chat widget in the Spryker Back Office.
-last_updated: Nov 10, 2026
+last_updated: Oct 29, 2026
 template: feature-integration-guide-template
 ---
 
@@ -322,7 +322,7 @@ use SprykerFeature\Zed\AiCommerce\Communication\Plugin\AiFoundation\OrderManagem
 class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\AiFoundationExtension\Dependency\Plugin\PostPromptPluginInterface>
+     * @return array<\Spryker\Zed\AiFoundation\Dependency\Plugin\PostPromptPluginInterface>
      */
     protected function getPostPromptPlugins(): array
     {
@@ -332,7 +332,7 @@ class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvid
     }
 
     /**
-     * @return array<\Spryker\Zed\AiFoundationExtension\Dependency\Plugin\PreToolCallPluginInterface>
+     * @return array<\Spryker\Zed\AiFoundation\Dependency\Plugin\PreToolCallPluginInterface>
      */
     protected function getPreToolCallPlugins(): array
     {
@@ -342,7 +342,7 @@ class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvid
     }
 
     /**
-     * @return array<\Spryker\Zed\AiFoundationExtension\Dependency\Plugin\PostToolCallPluginInterface>
+     * @return array<\Spryker\Zed\AiFoundation\Dependency\Plugin\PostToolCallPluginInterface>
      */
     protected function getPostToolCallPlugins(): array
     {
@@ -363,7 +363,7 @@ class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvid
     }
 
     /**
-     * @return array<\Spryker\Zed\AiFoundationExtension\Dependency\Tools\ToolSetPluginInterface>
+     * @return array<\Spryker\Zed\AiFoundation\Dependency\Tools\ToolSetPluginInterface>
      */
     protected function getAiToolSetPlugins(): array
     {

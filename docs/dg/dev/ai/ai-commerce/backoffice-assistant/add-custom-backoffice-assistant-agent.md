@@ -1,7 +1,7 @@
 ---
 title: Add a custom Back Office Assistant agent
 description: Learn how to implement and register a custom agent and toolset for the Back Office Assistant feature, including a dedicated AI configuration and SSE streaming.
-last_updated: Nov 10, 2026
+last_updated: Oct 29, 2026
 template: concept-topic-template
 ---
 
@@ -115,14 +115,14 @@ The `CustomerManagementAgentResponseTransfer` structured message transfer, the `
 
 ## 2) Implement the toolset plugin
 
-Each agent resolves its tools through a named toolset. Create a plugin that implements `ToolSetPluginInterface` from `Spryker\Zed\AiFoundationExtension\Dependency\Tools`:
+Each agent resolves its tools through a named toolset. Create a plugin that implements `ToolSetPluginInterface` from `Spryker\Zed\AiFoundation\Dependency\Tools`:
 
 ```php
 <?php
 
 namespace Pyz\Zed\AiCommerce\Communication\Plugin\AiFoundation;
 
-use Spryker\Zed\AiFoundationExtension\Dependency\Tools\ToolSetPluginInterface;
+use Spryker\Zed\AiFoundation\Dependency\Tools\ToolSetPluginInterface;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 
 /**
@@ -138,7 +138,7 @@ class CustomerManagementToolSetPlugin extends AbstractPlugin implements ToolSetP
     }
 
     /**
-     * @return array<\Spryker\Zed\AiFoundationExtension\Dependency\Tools\ToolPluginInterface>
+     * @return array<\Spryker\Zed\AiFoundation\Dependency\Tools\ToolPluginInterface>
      */
     public function getTools(): array
     {
@@ -149,7 +149,7 @@ class CustomerManagementToolSetPlugin extends AbstractPlugin implements ToolSetP
 }
 ```
 
-Each tool referenced in `getTools()` implements `ToolPluginInterface` from `Spryker\Zed\AiFoundationExtension\Dependency\Tools`, exposing `getName()`, `getDescription()`, `getParameters()`, and `execute()`. The AI model uses `getName()` and `getDescription()` to decide when to call the tool, and `getParameters()` to know which arguments to pass.
+Each tool referenced in `getTools()` implements `ToolPluginInterface` from `Spryker\Zed\AiFoundation\Dependency\Tools`, exposing `getName()`, `getDescription()`, `getParameters()`, and `execute()`. The AI model uses `getName()` and `getDescription()` to decide when to call the tool, and `getParameters()` to know which arguments to pass.
 
 For a full tool implementation example and the security rules that apply to every tool you expose, see [Extend AI Commerce agents with custom toolsets](/docs/dg/dev/ai/ai-commerce/extend-ai-commerce-agents-with-toolsets.html).
 
@@ -187,7 +187,7 @@ use Pyz\Zed\AiCommerce\Communication\Plugin\AiFoundation\CustomerManagementToolS
 class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\AiFoundationExtension\Dependency\Tools\ToolSetPluginInterface>
+     * @return array<\Spryker\Zed\AiFoundation\Dependency\Tools\ToolSetPluginInterface>
      */
     protected function getAiToolSetPlugins(): array
     {

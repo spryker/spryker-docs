@@ -1,7 +1,7 @@
 ---
 title: Install Storefront Assistant
 description: Learn how to install the Storefront Assistant feature that adds an AI shopping chat to the Spryker Storefront.
-last_updated: Nov 10, 2026
+last_updated: Nov 13, 2026
 template: feature-integration-guide-template
 label: early-access
 related:
@@ -886,7 +886,7 @@ class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvid
     }
 
     /**
-     * @return array<\Spryker\Client\AiFoundationExtension\Dependency\Plugin\PreToolCallPluginInterface>
+     * @return array<\Spryker\Client\AiFoundation\Dependency\Plugin\PreToolCallPluginInterface>
      */
     protected function getPreToolCallPlugins(): array
     {
@@ -896,7 +896,7 @@ class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvid
     }
 
     /**
-     * @return array<\Spryker\Client\AiFoundationExtension\Dependency\Plugin\PostToolCallPluginInterface>
+     * @return array<\Spryker\Client\AiFoundation\Dependency\Plugin\PostToolCallPluginInterface>
      */
     protected function getPostToolCallPlugins(): array
     {
@@ -907,7 +907,7 @@ class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvid
     }
 
     /**
-     * @return array<\Spryker\Client\AiFoundationExtension\Dependency\Plugin\StreamEventPluginInterface>
+     * @return array<\Spryker\Client\AiFoundation\Dependency\Plugin\StreamEventPluginInterface>
      */
     protected function getStreamEventPlugins(): array
     {
@@ -917,7 +917,7 @@ class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvid
     }
 
     /**
-     * @return array<\Spryker\Client\AiFoundationExtension\Dependency\Plugin\PostPromptPluginInterface>
+     * @return array<\Spryker\Client\AiFoundation\Dependency\Plugin\PostPromptPluginInterface>
      */
     protected function getPostPromptPlugins(): array
     {

@@ -1,7 +1,7 @@
 ---
 title: Use AI tools with the AiFoundation module
 description: Extend AI capabilities by providing custom tools that AI models can invoke during conversations
-last_updated: Nov 10, 2026
+last_updated: Aug 13, 2026
 keywords: foundation, ai, tools, function calling, tool sets, plugins, openai, anthropic, prompt, agent, audit, logging
 template: howto-guide-template
 related:
@@ -29,7 +29,6 @@ The AI model decides when to call tools based on the conversation context. The Z
 
 - AiFoundation module installed and configured. For details, see [AiFoundation module Overview](/docs/dg/dev/ai/ai-foundation/ai-foundation-module.html).
 - Configured AI provider that supports tool calling (OpenAI, Anthropic Claude)
-- `spryker/ai-foundation` version `^0.10.0` or later. The tool, tool set, tool parameter, and hook plugin interfaces live in the `spryker/ai-foundation-extension` module, in the `AiFoundationExtension` namespace. Composer installs this module together with AiFoundation. A module that only provides tools requires `spryker/ai-foundation-extension` and does not depend on `spryker/ai-foundation`.
 
 {% info_block warningBox "Provider compatibility" %}
 
@@ -46,7 +45,7 @@ AI tools are ideal for scenarios where AI needs to interact with your applicatio
 Enable AI to fetch data from your system:
 
 ```php
-use Spryker\Zed\AiFoundationExtension\Dependency\Tools\ToolPluginInterface;
+use Spryker\Zed\AiFoundation\Dependency\Tools\ToolPluginInterface;
 use Spryker\Zed\AiFoundation\Dependency\Tools\ToolParameter;
 
 // AI can call this tool to get product information
@@ -96,7 +95,7 @@ class GetProductInfoTool implements ToolPluginInterface
 Provide specialized calculations:
 
 ```php
-use Spryker\Zed\AiFoundationExtension\Dependency\Tools\ToolPluginInterface;
+use Spryker\Zed\AiFoundation\Dependency\Tools\ToolPluginInterface;
 use Spryker\Zed\AiFoundation\Dependency\Tools\ToolParameter;
 
 // AI can call this tool to calculate shipping costs
@@ -162,7 +161,7 @@ class CalculateShippingTool implements ToolPluginInterface
 Allow AI to trigger business operations:
 
 ```php
-use Spryker\Zed\AiFoundationExtension\Dependency\Tools\ToolPluginInterface;
+use Spryker\Zed\AiFoundation\Dependency\Tools\ToolPluginInterface;
 use Spryker\Zed\AiFoundation\Dependency\Tools\ToolParameter;
 
 // AI can call this tool to create support tickets
@@ -232,7 +231,7 @@ Tool sets group related tools together. Create a tool set class that implements 
 
 namespace Pyz\Zed\YourModule\Communication\Plugin\AiFoundation;
 
-use Spryker\Zed\AiFoundationExtension\Dependency\Tools\ToolSetPluginInterface;
+use Spryker\Zed\AiFoundation\Dependency\Tools\ToolSetPluginInterface;
 
 class CustomerServiceToolSet implements ToolSetPluginInterface
 {
@@ -318,7 +317,7 @@ use Spryker\Zed\AiFoundation\AiFoundationDependencyProvider as SprykerAiFoundati
 class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\AiFoundationExtension\Dependency\Tools\ToolSetPluginInterface>
+     * @return array<\Spryker\Zed\AiFoundation\Dependency\Tools\ToolSetPluginInterface>
      */
     protected function getAiToolSetPlugins(): array
     {

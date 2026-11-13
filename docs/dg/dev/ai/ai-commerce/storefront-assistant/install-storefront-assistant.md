@@ -1176,7 +1176,7 @@ The output shows four routes: `shopping-assistant/prompt`, `shopping-assistant/c
 4. Go to **AI Commerce&nbsp;<span aria-label="and then">></span>&nbsp;Storefront Assistant**.
 5. In the **General** group, turn on **Enable Storefront Assistant** and **Enable Product Discovery Agent**.
 6. In the **AI Vendor** group, select the AI configuration: **OpenAI**, **AWS Bedrock**, or **Anthropic**.
-7. Enter a model of the selected vendor that supports streaming and tool calls.
+7. Optional: In the model dropdown of the selected vendor, select another supported model. For the supported models, see [Select the active provider per feature](/docs/dg/dev/ai/ai-commerce/configure-multiple-ai-providers.html#4-select-the-active-provider-per-feature).
 8. Optional: Change the system prompt and the suggested prompts.
 9. Click **Save**.
 10. If the scheduler does not run in your environment, publish the settings:

@@ -445,14 +445,12 @@ console frontend:zed:build
 console twig:cache:warmer
 ```
 
-### 8) Configure OpenAI settings
+### 8) Configure the AI provider and model
 
-Set the OpenAI API credentials and model settings in the Back Office:
+Smart PIM sends its requests to the AI provider and model that you select in the Back Office. To configure them, do the following:
 
-1. In the Back Office, go to **AI Commerce&nbsp;<span aria-label="and then">></span>&nbsp;Open AI**.
-2. Enter the **OpenAI API Token**.
-3. Set the **OpenAI Default Model** (default: `gpt-4o`) and **OpenAI Smart Model** (default: `gpt-4.1`).
-4. Click **Save**.
+1. Set the API credentials of the AI provider as described in [Set credentials in the Back Office](/docs/dg/dev/ai/ai-commerce/configure-multiple-ai-providers.html#3-set-credentials-in-the-back-office).
+2. In **AI Commerce&nbsp;<span aria-label="and then">></span>&nbsp;Smart PIM&nbsp;<span aria-label="and then">></span>&nbsp;AI Vendor**, select the provider and the model as described in [Select the active provider per feature](/docs/dg/dev/ai/ai-commerce/configure-multiple-ai-providers.html#4-select-the-active-provider-per-feature).
 
 {% info_block warningBox "Verification" %}
 

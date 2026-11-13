@@ -478,7 +478,7 @@ Enable Smart CMS Content Assistant in the Back Office:
 
 1. In the Back Office, go to **AI Commerce&nbsp;<span aria-label="and then">></span>&nbsp;Smart CMS&nbsp;<span aria-label="and then">></span>&nbsp;AI Vendor**.
 2. Select the desired **AI Configuration** (OpenAI, AWS Bedrock, or Anthropic).
-3. Set the model for the selected provider.
+3. Optional: In the model dropdown of the selected provider, select another supported model. For the supported models, see [Select the active provider per feature](/docs/dg/dev/ai/ai-commerce/configure-multiple-ai-providers.html#4-select-the-active-provider-per-feature).
 4. Click **Save**.
 
 {% info_block warningBox "Verification" %}

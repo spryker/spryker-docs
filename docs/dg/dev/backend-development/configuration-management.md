@@ -441,7 +441,7 @@ The Configuration Management feature enforces the allowed values as follows:
 |--------|----------|
 | Save in the Back Office | `ConfigurationFacade::saveConfigurationValues()` rejects a value that is not one of the option values with the message `The value "<value>" is not one of the available options.` The stored value does not change. You do not need a separate `choice` constraint. |
 | `configuration:sync` | The command fails when `default_value` is not one of the option values. The error names the setting key and the default value. Settings that use a `data_object` plugin are not restricted. |
-| Stored value that is not an option | When the stored or inherited value of a `select` setting is not one of the options, for example because you removed an option, the Back Office shows an empty `Select an option` entry and a warning with the stored value. The application keeps using the stored value until a user saves a supported option. |
+| Stored value that is not an option | When the stored or inherited value of a `select` or `radio` setting is not one of the options, for example because you removed an option, the Back Office shows the warning `The stored value "<value>" is not one of the available options. Select a supported option.` A `select` setting also shows an empty `Select an option` entry, and a `radio` setting shows no selected option. The application keeps using the stored value until a user saves a supported option. |
 | `configuration:restore` and `configuration:import-environment` | Both commands save through the same validation. A backup or an environment variable that holds a value that is not an option is rejected for that setting. |
 
 </div>

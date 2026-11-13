@@ -365,7 +365,7 @@ Each AI Commerce feature has an **AI Configuration** radio selector in the Back 
 
 1. In the Back Office, go to **AI Commerce**.
 2. Open the tab for the feature you want to configure (for example, **Smart PIM**, **Smart CMS**, **Quick Order**, **Search by Image**, **Back Office Assistant**, or **Storefront Assistant**).
-3. Under **General**, select the active provider: **OpenAI**, **AWS Bedrock**, or **Anthropic**.
+3. Under **AI Vendor**, in **AI Configuration**, select the active provider: **OpenAI**, **AWS Bedrock**, or **Anthropic**.
 4. Optionally, in the model dropdown of the selected provider, select another supported model. Each provider shows its model dropdown only when selected.
 5. Click **Save**.
 

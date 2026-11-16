@@ -1,7 +1,7 @@
 ---
 title: Install Smart CMS Content Assistant
 description: Learn how to install the Smart CMS Content Assistant feature that provides an AI-powered panel in the Back Office CMS Page and CMS Block glossary editors.
-last_updated: Oct 14, 2026
+last_updated: Nov 13, 2026
 template: feature-integration-guide-template
 ---
 
@@ -400,7 +400,7 @@ features:
                       - key: openai_model
                         name: OpenAI Model
                         description: The OpenAI model used for the Smart CMS AI configuration. Model must support image input and structured output.
-                        type: string
+                        type: select
                         default_value: 'gpt-5-nano'
                         enabled: true
                         secret: false
@@ -408,6 +408,11 @@ features:
                         order: 2
                         scopes:
                             - global
+                        options:
+                            - value: 'gpt-5-nano'
+                              label: GPT-5 nano
+                            - value: 'gpt-5-mini'
+                              label: GPT-5 mini
                         dependencies:
                             - when:
                                   any:
@@ -417,7 +422,7 @@ features:
                       - key: aws_model
                         name: AWS Bedrock Model
                         description: The AWS Bedrock model identifier used for the Smart CMS AI configuration. Model must support image input and structured output.
-                        type: string
+                        type: select
                         default_value: 'eu.anthropic.claude-haiku-5-5'
                         enabled: true
                         secret: false
@@ -425,6 +430,11 @@ features:
                         order: 3
                         scopes:
                             - global
+                        options:
+                            - value: 'eu.anthropic.claude-haiku-5-5'
+                              label: Claude Haiku 5.5
+                            - value: 'eu.anthropic.claude-sonnet-5-5'
+                              label: Claude Sonnet 5.5
                         dependencies:
                             - when:
                                   any:
@@ -434,7 +444,7 @@ features:
                       - key: anthropic_model
                         name: Anthropic Model
                         description: The Anthropic model used for the Smart CMS AI configuration. Model must support image input and structured output.
-                        type: string
+                        type: select
                         default_value: 'claude-haiku-5-5'
                         enabled: true
                         secret: false
@@ -442,6 +452,11 @@ features:
                         order: 4
                         scopes:
                             - global
+                        options:
+                            - value: 'claude-haiku-5-5'
+                              label: Claude Haiku 5.5
+                            - value: 'claude-sonnet-5-5'
+                              label: Claude Sonnet 5.5
                         dependencies:
                             - when:
                                   any:
@@ -463,7 +478,7 @@ Enable Smart CMS Content Assistant in the Back Office:
 
 1. In the Back Office, go to **AI Commerce&nbsp;<span aria-label="and then">></span>&nbsp;Smart CMS&nbsp;<span aria-label="and then">></span>&nbsp;AI Vendor**.
 2. Select the desired **AI Configuration** (OpenAI, AWS Bedrock, or Anthropic).
-3. Set the model for the selected provider.
+3. Optional: In the model dropdown of the selected provider, select another supported model. For the supported models, see [Select the active provider per feature](/docs/dg/dev/ai/ai-commerce/configure-multiple-ai-providers.html#4-select-the-active-provider-per-feature).
 4. Click **Save**.
 
 {% info_block warningBox "Verification" %}

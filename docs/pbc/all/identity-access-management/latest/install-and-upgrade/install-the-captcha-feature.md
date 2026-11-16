@@ -212,7 +212,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following transfer objects have been generated in `src/Generated/Shared/Transfer/`: `CaptchaChallengeDataRequestTransfer`, `CaptchaChallengeDataResponseTransfer`, `CaptchaLoginFormTransfer`, `CaptchaRequirementRequestTransfer`, `CaptchaVerificationRequestTransfer`, `CaptchaVerificationResponseTransfer`, and `CaptchaWidgetTransfer`.
+Make sure the following transfer objects have been generated in `src/Generated/Shared/Transfer/`: `CaptchaChallengeDataRequestTransfer`, `CaptchaChallengeDataResponseTransfer`, `CaptchaChallengeRequestTransfer`, `CaptchaChallengeResponseTransfer`, `CaptchaLoginFormTransfer`, `CaptchaRequirementRequestTransfer`, `CaptchaVerificationRequestTransfer`, `CaptchaVerificationResponseTransfer`, and `CaptchaWidgetTransfer`.
 
 {% endinfo_block %}
 
@@ -398,14 +398,14 @@ The Storefront login forms render the CAPTCHA field through the `form` molecule,
 
 {% info_block warningBox "Verification" %}
 
-1. In the Back Office, set the CAPTCHA mode to **Always**. Go to the Storefront login page. Make sure the login form shows the CAPTCHA widget.
+1. In the Back Office, go to **Configuration** > **Security** > **CAPTCHA**. Switch on **Enable CAPTCHA**, select **Always** as the **CAPTCHA Mode**, and save. Go to the Storefront login page. Make sure the login form shows the CAPTCHA widget.
 2. Enter the email address and the correct password of a customer, but do not complete the CAPTCHA. Submit the form.
     Make sure the login is rejected with the `Please complete the security check.` message.
 3. Complete the CAPTCHA, enter the correct password, and submit the form.
     Make sure the customer is logged in.
 4. Make sure the log contains no error that names `CaptchaRouteProviderPlugin`.
 5. If you installed the Agent Assist feature, repeat the previous steps on the agent login page, `https://mysprykershop.com/agent/login`, with an agent account.
-6. Set the CAPTCHA mode back to the mode you use, for example, **After Failed Attempts**.
+6. Set **Enable CAPTCHA** and **CAPTCHA Mode** back to the values you use.
 
 {% endinfo_block %}
 
@@ -575,10 +575,10 @@ Without anonymous access, the challenge endpoints redirect to the login page ins
 
 {% info_block warningBox "Verification" %}
 
-1. In the Back Office, set the CAPTCHA mode to **Always**, and log out. Make sure the login form shows the CAPTCHA widget.
+1. In the Back Office, go to **Configuration** > **Security** > **CAPTCHA**. Switch on **Enable CAPTCHA**, select **Always** as the **CAPTCHA Mode**, and save. Log out. Make sure the login form shows the CAPTCHA widget.
 2. Complete the CAPTCHA, enter the correct password of a user, and submit the form.
     Make sure you are logged in to the Back Office.
-3. Set the CAPTCHA mode back to the mode you use, for example, **After Failed Attempts**.
+3. Set **Enable CAPTCHA** and **CAPTCHA Mode** back to the values you use.
 
 {% endinfo_block %}
 
@@ -707,13 +707,13 @@ The access control rule of the Merchant Portal endpoint is part of the `AclConfi
 
 {% info_block warningBox "Verification" %}
 
-1. In the Back Office, set the CAPTCHA mode to **Always**. Go to the Merchant Portal login page. Make sure the login form shows the CAPTCHA widget.
+1. In the Back Office, go to **Configuration** > **Security** > **CAPTCHA**. Switch on **Enable CAPTCHA**, select **Always** as the **CAPTCHA Mode**, and save. Go to the Merchant Portal login page. Make sure the login form shows the CAPTCHA widget.
 2. Complete the CAPTCHA, enter the correct password of a merchant user, and submit the form.
     Make sure you are logged in to the Merchant Portal.
 3. Log out. Complete the CAPTCHA, enter the correct password, and double-click the login button.
     Make sure you are logged in to the Merchant Portal and no error message is shown.
 4. If you installed the Merchant Portal Agent Assist feature, repeat the previous steps on `https://mp.mysprykershop.com/agent-security-merchant-portal-gui/login` with a merchant agent.
-5. Set the CAPTCHA mode back to the mode you use, for example, **After Failed Attempts**.
+5. Set **Enable CAPTCHA** and **CAPTCHA Mode** back to the values you use.
 
 {% endinfo_block %}
 
@@ -733,9 +733,9 @@ Each endpoint answers with the `Cache-Control: no-store` header and one of the f
 | --- | --- |
 | `200` | The JSON document of a new challenge. |
 | `404` | `not_found`: the context belongs to the login forms of another endpoint, or the context is unknown. |
-| `405` | `method_not_allowed`: the Back Office and Merchant Portal endpoints accept only `GET` and `HEAD` requests and name them in the `Allow` header. The Storefront route accepts only `GET` requests, and the router answers other methods with its error page. |
+| `405` | `method_not_allowed`: the Back Office and Merchant Portal endpoints accept only `GET` and `HEAD` requests and name them in the `Allow` header. The Storefront route accepts only `GET` and `HEAD` requests, and the router answers other methods with its error page. |
 | `429` | `rate_limited`: the request exceeds the rate limit of its IP address. The `Retry-After` header contains the length of the window in seconds. |
-| `503` | `unavailable`: the endpoint fails to create a challenge, for example, because the key-value storage fails or the CAPTCHA provider does not implement `CaptchaChallengeUrlProviderPluginInterface`. The endpoint logs an error. |
+| `503` | `unavailable`: the endpoint fails to create a challenge, for example, because the key-value storage fails or the CAPTCHA provider does not implement `CaptchaChallengeUrlProviderPluginInterface`. The endpoint logs an error, except when no CAPTCHA provider is registered. |
 
 The Back Office and Merchant Portal endpoints serve the login forms of `Spryker\Zed\Captcha\CaptchaConfig::getLoginForms()`. Each endpoint serves only the contexts of the forms whose challenge URL is its own path. To protect another Back Office or Merchant Portal login form, override `getLoginForms()` and append a `CaptchaLoginFormTransfer` with the following properties:
 

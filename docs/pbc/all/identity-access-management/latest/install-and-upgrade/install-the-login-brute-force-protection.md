@@ -485,7 +485,7 @@ Make sure the login protection works on every login surface that you installed. 
     }
     ```
 
-6. If you installed the CAPTCHA feature and use its default `after_failed_attempts` CAPTCHA mode, go to the Storefront login page and enter a wrong password for a customer account as many times as the **Security Check after Failed Attempts per Account** setting of the **Customer Accounts** group defines, three times by default.
+6. If you installed the CAPTCHA feature, switched on its **Enable CAPTCHA** setting, and use its default `after_failed_attempts` CAPTCHA mode, go to the Storefront login page and enter a wrong password for a customer account as many times as the **Security Check after Failed Attempts per Account** setting of the **Customer Accounts** group defines, three times by default.
     Make sure the login form then shows the CAPTCHA.
 7. Solve the CAPTCHA and log in with the correct password. Log out, and go to the login page again.
     Make sure the login form does not show the CAPTCHA, and the login with the correct password succeeds without a CAPTCHA. Repeat the last two steps on the Back Office login page with a user account.
@@ -496,7 +496,7 @@ Make sure the login protection works on every login surface that you installed. 
 
 Make sure your infrastructure meets the following requirements:
 
-- Configure trusted proxies with the addresses of your load balancers, for example, `HttpConstants::YVES_TRUSTED_PROXIES` and `HttpConstants::ZED_TRUSTED_PROXIES`. Otherwise, all clients share the IP address of the load balancer, or a client can choose its IP address with a spoofed `X-Forwarded-For` header. The account counter does not depend on the IP address.
+- Configure trusted proxies with the addresses of your load balancers, for example, `HttpConstants::YVES_TRUSTED_PROXIES`, `HttpConstants::ZED_TRUSTED_PROXIES`, and, for the Glue API, the Storefront API, and the Backend API, `HttpConstants::GLUE_TRUSTED_PROXIES`. Otherwise, all clients share the IP address of the load balancer, or a client can choose its IP address with a spoofed `X-Forwarded-For` header. The account counter does not depend on the IP address.
 - Configure `real-ip` for the endpoints of all applications in your deploy file, so that every application, including the Back Office and the Merchant Portal, receives the IP address of the client. For details, see [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html).
 
 ```yaml

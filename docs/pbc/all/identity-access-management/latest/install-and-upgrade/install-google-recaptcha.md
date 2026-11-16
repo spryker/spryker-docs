@@ -32,7 +32,7 @@ Google issues the reCAPTCHA challenges, so the provider does not use the challen
 
 The provider stores the reCAPTCHA key as settings of the Configuration Management feature. The secret key is a secret setting, so set up the encryption of secret settings when you install the feature.
 
-### 1) Install the required modules
+## 1) Install the required modules
 
 ```bash
 composer require spryker-eco/captcha-google-recaptcha:"^1.0.0" --update-with-dependencies
@@ -52,7 +52,7 @@ Make sure the following packages have been installed with the required versions:
 
 {% endinfo_block %}
 
-### 2) Create a reCAPTCHA key
+## 2) Create a reCAPTCHA key
 
 The provider needs a reCAPTCHA key from Google: the site key is used by the widget in the browser, and the secret key verifies tokens on the server.
 
@@ -62,7 +62,7 @@ The provider needs a reCAPTCHA key from Google: the site key is used by the widg
 4. Copy the site key and the secret key of the key.
 5. For production traffic, link a billing account to the Google Cloud project. Without billing, Google answers every token with `success` after the free quota of 10,000 verifications per month is used up. The provider rejects these answers, so the logins that require a CAPTCHA are rejected until the quota resets.
 
-### 3) Synchronize the configuration schema
+## 3) Synchronize the configuration schema
 
 The reCAPTCHA settings become available in the Back Office only after the configuration schema is synchronized:
 
@@ -78,33 +78,62 @@ vendor/bin/console configuration:sync
 
 {% endinfo_block %}
 
-### 4) Add translations
+## 4) Add translations
 
-Generate the translation cache to make the names and descriptions of the settings available in the Back Office:
+1. Load the Back Office translations of the `spryker-eco` packages. The names and descriptions of the reCAPTCHA settings are translations of `spryker-eco/captcha-google-recaptcha`, and `Spryker\Zed\Translator\TranslatorConfig::getCoreTranslationFilePathPatterns()` loads only the translations of `vendor/spryker`, `vendor/spryker-shop`, and `vendor/spryker-feature`. If your project does not load the translations of `vendor/spryker-eco` yet, add their path:
+
+**src/Pyz/Zed/Translator/TranslatorConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Translator;
+
+use Spryker\Zed\Translator\TranslatorConfig as SprykerTranslatorConfig;
+
+class TranslatorConfig extends SprykerTranslatorConfig
+{
+    /**
+     * @return array<string>
+     */
+    public function getCoreTranslationFilePathPatterns(): array
+    {
+        $coreTranslationFilePathPatterns = parent::getCoreTranslationFilePathPatterns();
+        $coreTranslationFilePathPatterns[] = APPLICATION_VENDOR_DIR . '/spryker-eco/*/data/translation/Zed/[a-z][a-z]_[A-Z][A-Z].csv';
+
+        return $coreTranslationFilePathPatterns;
+    }
+}
+```
+
+Without this path, the Back Office shows the names and descriptions of the reCAPTCHA settings in English in every interface language.
+
+2. Generate the translation cache to make the names and descriptions of the settings available in the Back Office:
 
 ```bash
 vendor/bin/console translator:generate-cache
 ```
 
-### 5) Enter the reCAPTCHA key
+## 5) Enter the reCAPTCHA key
 
 In the Back Office, go to **Configuration** > **Integrations** > **Google reCAPTCHA**, and enter the key you created in [Create a reCAPTCHA key](#2-create-a-recaptcha-key):
 
 | SETTING | DESCRIPTION |
 | --- | --- |
-| reCAPTCHA Version | `v2_checkbox` or `v3`. Must match the type of the key. Default: `v2_checkbox`. |
+| reCAPTCHA Version | **v2 Checkbox** (`v2_checkbox`) or **v3 Score** (`v3`). Must match the type of the key. Default: **v2 Checkbox**. |
 | Site Key | The public key of the widget. It is published to the Storefront. |
 | Secret Key | The key that verifies tokens with Google. It is a secret setting: it is stored encrypted and is never published to the Storefront. |
-| Minimum Score (v3) | The lowest score of a v3 token that passes the check, from `0.1` to `1.0`. Default: `0.5`. The Back Office shows this setting only when the version is `v3`. |
+| Minimum Score (v3) | The lowest score of a v3 token that passes the check, from `0.1` to `1.0`. Default: `0.5`. The Back Office shows this setting only when **v3 Score** is selected. |
 
 ![The Google reCAPTCHA tab of the Integrations settings with the reCAPTCHA Key and Token Verification groups](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/identity-access-management/install-and-upgrade/install-google-recaptcha.md/google-recaptcha-settings.png)
 
 Optional: To accept only tokens solved on your own hosts, open the **Token Verification** group and enter the hosts in **Allowed Hostnames**, separated by commas, for example `shop.example.com, backoffice.example.com, mp.example.com`. A token solved on another host is then rejected, even if the domain verification of the key is turned off. If the setting is empty, the provider accepts every host that Google accepts for the key.
 
-To provide the key during deployment instead, import it from environment variables:
+To provide the key during deployment instead, import its version, site key, and secret key from environment variables. The version is `v2_checkbox` or `v3`:
 
 ```bash
 vendor/bin/console configuration:import-environment \
+    integrations:google_recaptcha:credentials:version=RECAPTCHA_VERSION \
     integrations:google_recaptcha:credentials:site_key=RECAPTCHA_SITE_KEY \
     integrations:google_recaptcha:credentials:secret_key=RECAPTCHA_SECRET_KEY
 ```
@@ -113,7 +142,7 @@ For details about the command, see [Integrate configuration deployment commands]
 
 Until you save the site key and the secret key, the Back Office does not switch the CAPTCHA on: saving **Enable CAPTCHA** in the on state fails with the `Set up the CAPTCHA provider under Integrations before turning on the CAPTCHA.` message. The check confirms that both keys have values, not that Google accepts them. The Back Office does not stop you from clearing a key while the CAPTCHA is on.
 
-### 6) Set up behavior
+## 6) Set up behavior
 
 Only an application that registers `ConfigurationApplicationPlugin` can read the secret key. The Back Office and the Merchant Portal verify tokens themselves. The Storefront cannot read the secret key, so it sends tokens to the Backend Gateway for verification. The Back Office and the Backend Gateway register `ConfigurationApplicationPlugin` when you install the Configuration Management feature, so register it only in the Merchant Portal application. If you already registered it as described in [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html#enable-merchant-portal-infrastructural-plugins), skip it. Without the plugin, the Merchant Portal sends its tokens to the Backend Gateway and logs a warning for every token.
 
@@ -167,9 +196,15 @@ class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalA
 }
 ```
 
-### 7) Build the frontend
+## 7) Build the frontend
 
-Rebuild the Storefront, Back Office, and Merchant Portal frontends to include the scripts of the provider. With v2, the script of Google renders the checkbox. With v3, the scripts of the provider request a token when the user submits a login form, with the CAPTCHA context of the form as the action: `storefront_customer_login`, `storefront_agent_login`, `backoffice_user_login`, `merchant_portal_user_login`, or `merchant_portal_agent_login`.
+1. Generate transfer changes:
+
+```bash
+vendor/bin/console transfer:generate
+```
+
+2. Rebuild the Storefront, Back Office, and Merchant Portal frontends to include the scripts of the provider. With v2, the script of Google renders the checkbox. With v3, the scripts of the provider request a token when the user submits a login form, with the CAPTCHA context of the form as the action: `storefront_customer_login`, `storefront_agent_login`, `backoffice_user_login`, `merchant_portal_user_login`, or `merchant_portal_agent_login`.
 
 ```bash
 npm run yves
@@ -181,19 +216,20 @@ In deployment pipelines, use `npm run yves:production`, `npm run zed:production`
 
 {% info_block warningBox "Verification" %}
 
-1. Go to the Back Office login page. In the default `after_failed_attempts` CAPTCHA mode, first enter a wrong password for a user as many times as the **Security Check after Failed Attempts per Account** setting of the **User Accounts** group in **Configuration** > **Security** > **Login Lock** defines, three times by default, and reload the login page. In the `always` CAPTCHA mode, the login form shows reCAPTCHA right away. For these settings, see [Install the CAPTCHA feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-captcha-feature.html#2-set-up-the-configuration) and [Install the login brute-force protection](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-login-brute-force-protection.html#2-set-up-the-configuration).
-2. With v2, make sure the login form shows the reCAPTCHA checkbox. With v3, make sure the page shows the reCAPTCHA badge.
-3. With v2, select the checkbox. Enter the correct password and submit the form.
+1. In the Back Office, go to **Configuration** > **Security** > **CAPTCHA**. Switch on **Enable CAPTCHA**, and save.
+2. Go to the Back Office login page. In the default `after_failed_attempts` CAPTCHA mode, first enter a wrong password for a user as many times as the **Security Check after Failed Attempts per Account** setting of the **User Accounts** group in **Configuration** > **Security** > **Login Lock** defines, three times by default, and reload the login page. In the `always` CAPTCHA mode, the login form shows reCAPTCHA right away. For these settings, see [Install the CAPTCHA feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-captcha-feature.html#2-set-up-the-configuration) and [Install the login brute-force protection](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-login-brute-force-protection.html#2-set-up-the-configuration).
+3. With v2, make sure the login form shows the reCAPTCHA checkbox. With v3, make sure the page shows the reCAPTCHA badge.
+4. With v2, select the checkbox. Enter the correct password and submit the form.
     Make sure you are logged in to the Back Office.
-4. Repeat the previous steps on the Storefront login page with a customer account and, in a marketplace, on the Merchant Portal login page with a merchant user.
+5. Repeat steps 2 to 4 on the Storefront login page with a customer account and, in a marketplace, on the Merchant Portal login page with a merchant user.
 
 {% endinfo_block %}
 
-### 8) Prepare the infrastructure
+## 8) Prepare the infrastructure
 
 Make sure your infrastructure meets the following requirements:
 
-- The default Content Security Policy of Spryker needs no change. If your project extends the `Content-Security-Policy` header, for example, by overriding `getSecurityHeaders()` of `Spryker\Yves\Application\ApplicationConfig` or `Spryker\Zed\Application\ApplicationConfig`, allow the origins of Google:
+- The default Content Security Policy of Spryker needs no change. If your project extends the `Content-Security-Policy` header, for example, by overriding `getSecurityHeaders()` of `Spryker\Yves\Application\ApplicationConfig`, `Spryker\Zed\Application\ApplicationConfig`, or `Spryker\Zed\MerchantPortalApplication\MerchantPortalApplicationConfig`, which sends the security headers of the Merchant Portal, allow the origins of Google in the extended policy:
   - `script-src`: `https://www.google.com/recaptcha/` and `https://www.gstatic.com/recaptcha/`
   - `frame-src`: `https://www.google.com/recaptcha/` and `https://recaptcha.google.com/recaptcha/`
   - `connect-src`: `https://www.google.com/recaptcha/`

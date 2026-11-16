@@ -35,7 +35,7 @@ composer require spryker-eco/captcha-altcha:"^1.0.0" --update-with-dependencies
 
 The provider needs the `sodium` PHP extension.
 
-2. Install the browser widget. The `altcha` npm package is declared in the `package.json` of `spryker-eco/captcha-altcha`. Add the package to the npm workspaces of the project `package.json`, and install the npm dependencies:
+2. Install the browser widget. The `altcha` npm package is declared in the `package.json` of `spryker-eco/captcha-altcha`. Append the package to the existing `workspaces` list of the project `package.json`, and install the npm dependencies. If the list already contains the `vendor/spryker-eco/*` entry, this entry covers the package.
 
 **package.json**
 
@@ -92,7 +92,7 @@ $config[CaptchaAltchaConstants::MINIMUM_COUNTER] = 20;
 $config[CaptchaAltchaConstants::CHALLENGE_TTL] = 300;
 ```
 
-Creating an Argon2id challenge with these values costs the server about 9 ms of CPU time and 16 MiB of memory.
+Creating an Argon2id challenge with these values costs the server one key derivation: about 10 to 20 ms of CPU time on one core, depending on the CPU, and 16 MiB of memory.
 
 2. Optional: Select when the widget starts.
 
@@ -105,7 +105,7 @@ The widget fetches its challenge from the [challenge endpoint](/docs/pbc/all/ide
 | `onsubmit` | The widget starts when the user submits the form, and it submits the form after it solves the challenge. |
 | `onload` | The widget starts when the page loads, so every page view creates a challenge. |
 
-With every value, the checkbox is a required field. In the Back Office, the browser asks the user to select the checkbox before it submits the login form. On the Storefront and in the Merchant Portal, the browser sends the login form without it, and the CAPTCHA feature rejects the login with the `Please complete the security check.` message. If the challenge endpoint answers with the `429` or `503` status, the widget shows the `Verification failed. Try again later.` error, and the checkbox stays cleared. In the Merchant Portal, a failed verification is logged to the browser console.
+With every value, the checkbox is a required field. In the Back Office, the browser asks the user to select the checkbox before it submits the login form. On the Storefront and in the Merchant Portal, the browser sends the login form without it, and the CAPTCHA feature rejects the login with the `Please complete the security check.` message. If the challenge endpoint answers with the `429` or `503` status, the widget shows the `Verification failed. Try again later.` error, and the checkbox stays cleared. In the Merchant Portal, with `onfocus` or `onsubmit`, a failed verification is logged to the browser console.
 
 To change the value, override the method:
 
@@ -133,14 +133,42 @@ class CaptchaAltchaConfig extends SprykerEcoCaptchaAltchaConfig
 
 ALTCHA signs every challenge with an HMAC secret and checks the signature when the solution is submitted, so that a client cannot create its own challenges. Each environment needs its own random secret. The secret is a secret setting of the Configuration Management feature: in the Back Office, it is the **HMAC Secret** setting of **Configuration** > **Integrations** > **ALTCHA**, with the `integrations:altcha:credentials:hmac_secret` key. The secret must be at least 32 characters long. It is stored encrypted and is never published to the key-value storage.
 
-1. Register the setting in the Back Office by synchronizing the configuration schema, and generate the translation cache for the names and descriptions of the setting:
+1. Load the Back Office translations of the `spryker-eco` packages. The names and descriptions of the ALTCHA settings are translations of `spryker-eco/captcha-altcha`, and `Spryker\Zed\Translator\TranslatorConfig::getCoreTranslationFilePathPatterns()` loads only the translations of `vendor/spryker`, `vendor/spryker-shop`, and `vendor/spryker-feature`. If your project does not load the translations of `vendor/spryker-eco` yet, add their path:
+
+**src/Pyz/Zed/Translator/TranslatorConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Translator;
+
+use Spryker\Zed\Translator\TranslatorConfig as SprykerTranslatorConfig;
+
+class TranslatorConfig extends SprykerTranslatorConfig
+{
+    /**
+     * @return array<string>
+     */
+    public function getCoreTranslationFilePathPatterns(): array
+    {
+        $coreTranslationFilePathPatterns = parent::getCoreTranslationFilePathPatterns();
+        $coreTranslationFilePathPatterns[] = APPLICATION_VENDOR_DIR . '/spryker-eco/*/data/translation/Zed/[a-z][a-z]_[A-Z][A-Z].csv';
+
+        return $coreTranslationFilePathPatterns;
+    }
+}
+```
+
+Without this path, the Back Office shows the names and descriptions of the ALTCHA settings in English in every interface language.
+
+2. Register the setting in the Back Office by synchronizing the configuration schema, and generate the translation cache for the names and descriptions of the setting:
 
 ```bash
 console configuration:sync
 console translator:generate-cache
 ```
 
-2. Register the console command that stores a secret:
+3. Register the console command that stores a secret:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -173,7 +201,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-3. Run the command in every install recipe that initializes the database, including the recipe of `SPRYKER_HOOK_DESTRUCTIVE_INSTALL`, after the `setup:init-db` step, for example:
+4. Run the command in every install recipe that initializes the database, including the recipe of `SPRYKER_HOOK_DESTRUCTIVE_INSTALL`, after the `setup:init-db` step, for example:
 
 **config/install/docker.yml**
 
@@ -187,7 +215,7 @@ sections:
             command: 'vendor/bin/console captcha-altcha:hmac-secret:generate'
 ```
 
-4. Also run the command in the recipe that runs on every deployment, after the database migrations. This way, an existing environment gets a secret with its first deployment of ALTCHA. On Spryker Cloud, this is the recipe of `SPRYKER_HOOK_INSTALL`, for example:
+5. Also run the command in the recipe that runs on every deployment, after the database migrations. This way, an existing environment gets a secret with its first deployment of ALTCHA. On Spryker Cloud, this is the recipe of `SPRYKER_HOOK_INSTALL`, for example:
 
 **config/install/production.yml**
 
@@ -287,11 +315,11 @@ config.module = {
 
 {% info_block warningBox "Verification" %}
 
-1. In the Back Office, set the CAPTCHA mode to **Always**, and log out. Go to the Back Office login page with the **Network** tab of the developer tools of your browser open. Make sure the login form shows the ALTCHA checkbox, and the browser sends no request to `/captcha/challenge` while the page loads.
+1. In the Back Office, go to **Configuration** > **Security** > **CAPTCHA**. Switch on **Enable CAPTCHA**, select **Always** as the **CAPTCHA Mode**, and save. Log out. Go to the Back Office login page with the **Network** tab of the developer tools of your browser open. Make sure the login form shows the ALTCHA checkbox, and the browser sends no request to `/captcha/challenge` while the page loads.
 2. Select the checkbox. Make sure the browser sends one `GET /captcha/challenge?context=backoffice_user_login` request, the response has the `200` status and a JSON body, and the widget shows the checkbox as selected.
 3. Enter the correct password of a user and submit the form. Make sure you are logged in to the Back Office.
 4. Repeat the previous steps on the Storefront login page with a customer account and, in a marketplace, on the Merchant Portal login page with a merchant user. The request of the Merchant Portal widget is `GET /captcha/merchant-portal-challenge?context=merchant_portal_user_login`.
-5. Set the CAPTCHA mode back to the mode you use, for example, **After Failed Attempts**.
+5. Set **Enable CAPTCHA** and **CAPTCHA Mode** back to the values you use.
 
 {% endinfo_block %}
 
@@ -301,7 +329,7 @@ Make sure your infrastructure meets the following requirements:
 
 - Serve the shop over HTTPS. The widget uses the Web Crypto API, which browsers provide only in secure contexts. Over plain HTTP, the widget shows *Verification failed*.
 - Serve the frontend assets from the host of the application, not from a CDN on another origin. Browsers start the web worker of the widget only from a script of the origin of the page.
-- The default Content Security Policy of Spryker needs no change. If your project extends the `Content-Security-Policy` header, for example, by overriding `getSecurityHeaders()` of `Spryker\Yves\Application\ApplicationConfig` or `Spryker\Zed\Application\ApplicationConfig`, allow the widget:
+- The default Content Security Policy of Spryker needs no change. If your project extends the `Content-Security-Policy` header, for example, by overriding `getSecurityHeaders()` of `Spryker\Yves\Application\ApplicationConfig`, `Spryker\Zed\Application\ApplicationConfig`, or `Spryker\Zed\MerchantPortalApplication\MerchantPortalApplicationConfig`, which sends the security headers of the Merchant Portal, allow the widget in the extended policy:
   - If the policy sets `script-src`, allow `'wasm-unsafe-eval'`, because the Argon2id worker runs WebAssembly.
   - If the policy sets `worker-src`, allow `'self'`. With `PBKDF2/SHA-256`, the widget starts its workers from `blob:` URLs, so also allow `blob:`.
 

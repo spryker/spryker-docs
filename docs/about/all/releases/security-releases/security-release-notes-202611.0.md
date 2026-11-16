@@ -1,7 +1,7 @@
 ---
 title: Security release notes 202611.0
 description: Security updates released for version 202611.0
-last_updated: Nov 13, 2026
+last_updated: Nov 16, 2026
 template: concept-topic-template
 publish_date: "2026-10-13"
 redirect_from:
@@ -361,6 +361,98 @@ composer update spryker/agent-security-merchant-portal-gui:"^2.5.0" spryker/secu
 {% info_block warningBox "Login templates overridden on the project level" %}
 
 After the update, the application rejects every login request without a valid CSRF token. If your project overrides a login form template, make sure the template renders the `_token` field of the form. Otherwise, no user can log in.
+
+{% endinfo_block %}
+
+## Server-side template injection in CMS content
+
+The content of CMS pages and CMS blocks can contain Twig code. The Storefront renders this code when it displays a CMS page or block, and an e-mail renders it when it embeds a CMS block with the `renderCmsBlockAsTwig` Twig function. This content is written in the Back Office, but it was rendered with the same Twig environment as the application templates. As a result, a Back Office user who could edit CMS content could call every Twig function and filter of the application, which holds the application service container. This could expose application configuration and secrets and lead to remote code execution on the server.
+
+### Affected modules
+
+- `spryker/cms-block`: < 3.12.0
+- `spryker/cms-content-widget`: < 1.15.0
+- `spryker/twig`: < 3.36.0
+
+### Fix the vulnerability
+
+The fix adds a Twig sandbox for CMS content. A Twig sandbox is a separate Twig environment that rejects every tag, filter, function, and method call that its security policy does not allow. The sandbox is disabled by default, so CMS content is rendered as before until you enable it.
+
+When the sandbox is enabled, CMS content has the following restrictions:
+
+- The tags, filters, functions, and tests that render other templates, read configuration, environment variables, constants, or enums, or dump variables are not available, for example `include`, `source`, `constant`, `configurationValue`, `getenv`, and `dump`. The `getTwigSandboxRestrictedTags()`, `getTwigSandboxRestrictedFilters()`, `getTwigSandboxRestrictedFunctions()`, and `getTwigSandboxRestrictedTests()` methods of `CmsContentWidgetConfig` and `CmsBlockConfig` return the full lists.
+- Only the methods of transfer objects can be called, except the methods that change data, such as `setName()` and `fromArray()`.
+- The `app` global variable is not available.
+- The `map`, `filter`, `reduce`, and `sort` filters accept only arrow functions, not PHP function names.
+- On the Storefront, `render()` and `controller()` render only application paths and controller actions, for example `{% raw %}{{ render('/en/cart') }}{% endraw %}`. In e-mails, `render()` and `controller()` are not available.
+
+Content widgets, such as `product`, `cms_block`, and `content_banner`, work as before. If content uses a restricted feature, the Storefront logs the error and displays the content as it is stored. With debug mode enabled, the Storefront shows the error instead. An e-mail that embeds such a CMS block fails to render.
+
+1. Update the affected packages and their dependencies:
+
+```bash
+composer update spryker/twig spryker/cms-block spryker/cms-content-widget twig/twig --with-dependencies
+composer show spryker/twig spryker/cms-block spryker/cms-content-widget twig/twig # Verify the versions
+```
+
+Make sure the installed Spryker packages have at least the fixed versions listed in the previous section and that `twig/twig` is 3.29.0 or later. The sandbox requires `twig/twig` 3.29.0 or later. With an earlier version, rendering CMS content in the sandbox throws `TwigSandboxNotSupportedException`.
+
+2. Before you enable the sandbox, check the Twig code of your CMS pages and CMS blocks, including the CMS blocks embedded in e-mails. Replace the code that uses a restricted feature.
+
+3. To render the content of CMS pages and CMS blocks on the Storefront in the sandbox, enable it:
+
+**src/Pyz/Yves/CmsContentWidget/CmsContentWidgetConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\CmsContentWidget;
+
+use Spryker\Yves\CmsContentWidget\CmsContentWidgetConfig as SprykerCmsContentWidgetConfig;
+
+class CmsContentWidgetConfig extends SprykerCmsContentWidgetConfig
+{
+    public function isTwigContentSandboxEnabled(): bool
+    {
+        return true;
+    }
+}
+```
+
+4. To render the CMS blocks embedded in e-mails in the sandbox, enable it:
+
+**src/Pyz/Zed/CmsBlock/CmsBlockConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\CmsBlock;
+
+use Spryker\Zed\CmsBlock\CmsBlockConfig as SprykerCmsBlockConfig;
+
+class CmsBlockConfig extends SprykerCmsBlockConfig
+{
+    public function isPlaceholderTwigSandboxEnabled(): bool
+    {
+        return true;
+    }
+}
+```
+
+5. The sandbox allows every Twig function and filter that is not restricted, including the ones your project adds. If your project adds a Twig function or filter that reads configuration, secrets, or files, or that renders other templates, add it to the restricted list in the same config class. Keep the default restricted names, for example:
+
+```php
+public function getTwigSandboxRestrictedFunctions(): array
+{
+    return array_merge(parent::getTwigSandboxRestrictedFunctions(), ['yourProjectFunction']);
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+1. In the Back Office, go to **Content** > **Pages** and edit a CMS page. Add `{% raw %}{{ constant('PHP_VERSION') }}{% endraw %}` to its content and publish the page.
+2. With debug mode disabled, open the page on the Storefront. Make sure the page shows the code as you entered it instead of the PHP version.
+3. Make sure your CMS pages and CMS blocks that use content widgets are displayed as before.
 
 {% endinfo_block %}
 

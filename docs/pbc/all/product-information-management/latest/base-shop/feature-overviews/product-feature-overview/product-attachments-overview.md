@@ -1,7 +1,7 @@
 ---
 title: Product Attachments overview
 description: Use Product Attachments to manage product-related downloadable resources in the Back Office and display them in the Downloads section on the product details page.
-last_updated: Feb 20, 2026
+last_updated: Nov 16, 2026
 template: concept-topic-template
 ---
 
@@ -23,6 +23,7 @@ For each attachment, you can configure the following fields:
 | **URL** | The external link to the attachment resource—for example, a PDF hosted on a CDN. |
 | **Label** | The display name shown to customers in the Downloads section on the PDP. |
 | **Sort Order** | Determines the display order of attachments. Lower values are displayed first. |
+| **Use for assistant knowledge** | Optional. Lets Storefront Assistant answer customer questions from the attachment. The checkbox is available only when [Storefront Assistant document semantic search](/docs/dg/dev/ai/ai-commerce/storefront-assistant/document-semantic-search/storefront-assistant-document-semantic-search.html) is installed. Clearing the checkbox does not hide the attachment on the PDP. |
 
 ### Default attachments
 

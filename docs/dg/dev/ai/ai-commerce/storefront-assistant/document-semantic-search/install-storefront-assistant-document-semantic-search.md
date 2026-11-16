@@ -1,7 +1,7 @@
 ---
 title: Install Storefront Assistant document semantic search
 description: Learn how to install document semantic search, so that Storefront Assistant answers questions from product documents with an Amazon Bedrock knowledge base.
-last_updated: Nov 13, 2026
+last_updated: Nov 16, 2026
 template: feature-integration-guide-template
 label: early-access
 related:
@@ -51,7 +51,8 @@ The package requires the following modules in addition to the modules of Storefr
 
 - `aws/aws-sdk-php` version `^3.403.0` or higher. The AWS SDK provides the clients of the Bedrock knowledge base APIs.
 - `spryker/http` version `^1.15.0` or higher. Zed downloads the documents with it.
-- `spryker/product-attachment` version `^1.2.0` or higher, and `spryker/product-attachment-storage` version `^1.0.0` or higher.
+- `spryker/product-attachment` version `^1.3.0` or higher, and `spryker/product-attachment-storage` version `^1.0.0` or higher.
+- `spryker/product-attachment-extension` version `^1.0.0` or higher. It provides the plugin interfaces that add the knowledge selection to the product attachments.
 - `spryker/queue` and `spryker/publisher-extension`.
 
 {% info_block warningBox "Verification" %}
@@ -63,6 +64,7 @@ Make sure the following modules are installed:
 | AiCommerce | vendor/spryker-feature/ai-commerce |
 | AWS SDK for PHP | vendor/aws/aws-sdk-php |
 | ProductAttachment | vendor/spryker/product-attachment |
+| ProductAttachmentExtension | vendor/spryker/product-attachment-extension |
 | ProductAttachmentStorage | vendor/spryker/product-attachment-storage |
 
 {% endinfo_block %}
@@ -200,9 +202,11 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure the `spy_knowledge_document` table exists in the database.
+Make sure the `spy_knowledge_document` and `spy_product_attachment_knowledge_selection` tables exist in the database.
 
-Make sure the following transfers exist in `src/Generated/Shared/Transfer/`: `KnowledgeDocumentTransfer`, `KnowledgeDocumentSourceTransfer`, `KnowledgeDocumentContentTransfer`, `KnowledgeStoreSetupRequestTransfer`, `KnowledgeSearchCriteriaTransfer`, and `KnowledgePassageCollectionTransfer`.
+Make sure the following transfers exist in `src/Generated/Shared/Transfer/`: `KnowledgeDocumentTransfer`, `KnowledgeDocumentSourceTransfer`, `KnowledgeDocumentContentTransfer`, `KnowledgeStoreSetupRequestTransfer`, `KnowledgeSearchCriteriaTransfer`, `KnowledgePassageCollectionTransfer`, `ProductAttachmentKnowledgeSelectionTransfer`, and `ProductAttachmentKnowledgeSelectionCollectionTransfer`.
+
+Make sure that `ProductAttachmentTransfer` has the `isAssistantKnowledge` property.
 
 {% endinfo_block %}
 
@@ -396,7 +400,7 @@ Several developers can use one development knowledge base. Each developer who se
 | MODE | CONFIGURATION | AWS CALLS | EFFECT ON THE TEAM |
 |------|---------------|-----------|--------------------|
 | Read only | Set `BEDROCK_KNOWLEDGE_BASE_ID`. Do not set `BEDROCK_KNOWLEDGE_BASE_DATA_SOURCE_IDS`. Do not run the setup and the re-index. | `Retrieve` only. The IAM role needs only `bedrock:Retrieve`. | None |
-| Write | Set `BEDROCK_KNOWLEDGE_BASE_ID` and `BEDROCK_KNOWLEDGE_BASE_DATA_SOURCE_IDS`. Run step 7. | Setup, ingest, delete, and status | Changes the documents of all developers. Agree on it with the team. |
+| Write | Set `BEDROCK_KNOWLEDGE_BASE_ID` and `BEDROCK_KNOWLEDGE_BASE_DATA_SOURCE_IDS`. Run step 8. | Setup, ingest, delete, and status | Changes the documents of all developers. Agree on it with the team. |
 
 </div>
 
@@ -587,6 +591,7 @@ In the read-only mode, the queue worker cannot index the documents, because the 
     | KnowledgeDocumentSetupConsole | Checks and configures the knowledge base: `knowledge-document:setup`. | | SprykerFeature\Zed\AiCommerce\Communication\Console |
     | KnowledgeDocumentReindexConsole | Queues all documents for indexing: `knowledge-document:reindex`. | | SprykerFeature\Zed\AiCommerce\Communication\Console |
     | KnowledgeDocumentStatusRefreshConsole | Saves the knowledge base status of the `processing` documents: `knowledge-document:status:refresh`. | | SprykerFeature\Zed\AiCommerce\Communication\Console |
+    | DataImportConsole | Imports the knowledge selection of product attachments: `data:import:product-attachment-knowledge-selection`. | | Spryker\Zed\DataImport\Communication\Console |
 
     **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
@@ -596,7 +601,9 @@ In the read-only mode, the queue worker cannot index the documents, because the 
     namespace Pyz\Zed\Console;
 
     use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
+    use Spryker\Zed\DataImport\Communication\Console\DataImportConsole;
     use Spryker\Zed\Kernel\Container;
+    use SprykerFeature\Zed\AiCommerce\AiCommerceConfig;
     use SprykerFeature\Zed\AiCommerce\Communication\Console\KnowledgeDocumentReindexConsole;
     use SprykerFeature\Zed\AiCommerce\Communication\Console\KnowledgeDocumentSetupConsole;
     use SprykerFeature\Zed\AiCommerce\Communication\Console\KnowledgeDocumentStatusRefreshConsole;
@@ -613,6 +620,7 @@ In the read-only mode, the queue worker cannot index the documents, because the 
                 new KnowledgeDocumentSetupConsole(),
                 new KnowledgeDocumentReindexConsole(),
                 new KnowledgeDocumentStatusRefreshConsole(),
+                new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . AiCommerceConfig::IMPORT_TYPE_PRODUCT_ATTACHMENT_KNOWLEDGE_SELECTION),
             ];
 
             // ...
@@ -622,7 +630,100 @@ In the read-only mode, the queue worker cannot index the documents, because the 
     }
     ```
 
-6. Build the class resolver cache and clear the application caches:
+6. Register the knowledge selection plugins of the product attachments. Only the product attachments that are selected as assistant knowledge are indexed, so these plugins let a Back Office user select the attachments in the product form:
+
+    | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+    |--------|---------------|---------------|-----------|
+    | KnowledgeSelectionProductAttachmentCollectionExpanderPlugin | Sets `ProductAttachmentTransfer.isAssistantKnowledge` of each read product attachment, so that the product form shows the current selection. | | SprykerFeature\Zed\AiCommerce\Communication\Plugin\ProductAttachment |
+    | KnowledgeSelectionProductAttachmentCollectionPostSavePlugin | Saves the knowledge selection of the product attachments after the product is saved. | Use it together with `KnowledgeSelectionProductAttachmentCollectionExpanderPlugin`. | SprykerFeature\Zed\AiCommerce\Communication\Plugin\ProductAttachment |
+    | KnowledgeSelectionProductAttachmentFormExpanderPlugin | Adds the **Use for assistant knowledge** checkbox to each attachment row of the product form. | | SprykerFeature\Zed\AiCommerce\Communication\Plugin\ProductAttachment |
+
+    **src/Pyz/Zed/ProductAttachment/ProductAttachmentDependencyProvider.php**
+
+    ```php
+    <?php
+
+    namespace Pyz\Zed\ProductAttachment;
+
+    use Spryker\Zed\ProductAttachment\ProductAttachmentDependencyProvider as SprykerProductAttachmentDependencyProvider;
+    use SprykerFeature\Zed\AiCommerce\Communication\Plugin\ProductAttachment\KnowledgeSelectionProductAttachmentCollectionExpanderPlugin;
+    use SprykerFeature\Zed\AiCommerce\Communication\Plugin\ProductAttachment\KnowledgeSelectionProductAttachmentCollectionPostSavePlugin;
+    use SprykerFeature\Zed\AiCommerce\Communication\Plugin\ProductAttachment\KnowledgeSelectionProductAttachmentFormExpanderPlugin;
+
+    class ProductAttachmentDependencyProvider extends SprykerProductAttachmentDependencyProvider
+    {
+        /**
+         * @return list<\Spryker\Zed\ProductAttachmentExtension\Dependency\Plugin\ProductAttachmentCollectionExpanderPluginInterface>
+         */
+        protected function getProductAttachmentCollectionExpanderPlugins(): array
+        {
+            return [
+                new KnowledgeSelectionProductAttachmentCollectionExpanderPlugin(),
+            ];
+        }
+
+        /**
+         * @return list<\Spryker\Zed\ProductAttachmentExtension\Dependency\Plugin\ProductAttachmentCollectionPostSavePluginInterface>
+         */
+        protected function getProductAttachmentCollectionPostSavePlugins(): array
+        {
+            return [
+                new KnowledgeSelectionProductAttachmentCollectionPostSavePlugin(),
+            ];
+        }
+
+        /**
+         * @return list<\Spryker\Zed\ProductAttachmentExtension\Dependency\Plugin\ProductAttachmentFormExpanderPluginInterface>
+         */
+        protected function getProductAttachmentFormExpanderPlugins(): array
+        {
+            return [
+                new KnowledgeSelectionProductAttachmentFormExpanderPlugin(),
+            ];
+        }
+    }
+    ```
+
+    Register the three plugins together. Without the collection expander plugin, the product form shows all checkboxes as cleared, and the next save of the product clears the selection of all its attachments.
+
+    If your project overrides the `ProductAttachment/Presentation/Product/_partials/attachment-form.twig` template, add `{% raw %}{{ form_rest(attachment) }}{% endraw %}` to each attachment row and `{% raw %}{{ form_rest(form[formKey].vars.prototype) }}{% endraw %}` to the prototype row, before the **Remove** button. Without these lines, the Back Office does not show the checkbox.
+
+7. Register the data import plugin of the knowledge selection:
+
+    | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+    |--------|---------------|---------------|-----------|
+    | ProductAttachmentKnowledgeSelectionDataImportPlugin | Imports the knowledge selection of product attachments from a CSV file. | Register it after `ProductAttachmentDataImportPlugin`. | SprykerFeature\Zed\AiCommerce\Communication\Plugin\DataImport |
+
+    **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
+
+    ```php
+    <?php
+
+    namespace Pyz\Zed\DataImport;
+
+    use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
+    use Spryker\Zed\ProductAttachment\Communication\Plugin\DataImport\ProductAttachmentDataImportPlugin;
+    use SprykerFeature\Zed\AiCommerce\Communication\Plugin\DataImport\ProductAttachmentKnowledgeSelectionDataImportPlugin;
+
+    class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
+    {
+        /**
+         * @return array<\Spryker\Zed\DataImport\Dependency\Plugin\DataImportPluginInterface>
+         */
+        protected function getDataImporterPlugins(): array
+        {
+            return [
+                // ...
+                new ProductAttachmentDataImportPlugin(),
+                new ProductAttachmentKnowledgeSelectionDataImportPlugin(),
+            ];
+        }
+    }
+    ```
+
+    You do not need to change the publisher, queue, or event configuration for the knowledge selection. `ProductAttachmentKnowledgeDocumentSourcePlugin` subscribes `KnowledgeDocumentWritePublisherPlugin` to the events of the knowledge selection.
+
+8. Build the class resolver cache and clear the application caches:
 
     ```bash
     console cache:class-resolver:build
@@ -631,13 +732,73 @@ In the read-only mode, the queue worker cannot index the documents, because the 
 
 {% info_block warningBox "Verification" %}
 
-Make sure that `console list knowledge-document` shows the commands `knowledge-document:setup`, `knowledge-document:reindex`, and `knowledge-document:status:refresh`.
+- Make sure that `console list knowledge-document` shows the commands `knowledge-document:setup`, `knowledge-document:reindex`, and `knowledge-document:status:refresh`.
+- Make sure that `console list data:import` shows the `data:import:product-attachment-knowledge-selection` command.
+- In the Back Office, go to **Catalog&nbsp;<span aria-label="and then">></span> Products** and edit a product. On the **Media** tab, make sure that each attachment row has the **Use for assistant knowledge** checkbox. Select the checkbox, save the product, and edit the product again. Make sure that the checkbox stays selected.
 
 {% endinfo_block %}
 
-## 7) Set up the knowledge base and index the documents
+## 7) Import the knowledge selection of product attachments
 
-No installation recipe runs the following commands. Run them one time for each environment, and after you change the knowledge base, the data sources, or the source types. After that, the publisher keeps the documents up to date: each change of a product attachment indexes or deletes its document.
+The indexing is opt-in: only the product attachments that are selected as assistant knowledge are indexed. An attachment without a selection is not indexed, but the product details page continues to show it. You select the attachments in the Back Office or with a data import. Import the selection before you index the documents in step 8.
+
+1. Prepare the data according to your requirements using the following example:
+
+    **data/import/common/common/product_attachment_knowledge_selection.csv**
+
+    ```csv
+    abstract_sku,locale,attachment_url,is_assistant_knowledge
+    001,en_US,https://example.com/manual-en.pdf,1
+    001,de_DE,https://example.com/manual-de.pdf,1
+    001,default,https://example.com/safety.pdf,0
+    ```
+
+    <div class="width-100">
+
+    | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+    |--------|----------|-----------|--------------|------------------|
+    | abstract_sku | ✓ | String | `001` | The SKU of the abstract product that has the attachment. |
+    | locale | | String | `en_US` | The locale of the attachment. `default` or an empty value means an attachment without a locale. |
+    | attachment_url | ✓ | String | `https://example.com/manual-en.pdf` | The URL of the attachment. Together with the SKU and the locale, it identifies the attachment. When two attachments of the product have the same locale and URL, the row changes both. |
+    | is_assistant_knowledge | ✓ | Integer | `1` | `1` selects the attachment as assistant knowledge. `0` clears the selection. Any other value fails the row. |
+
+    </div>
+
+    The import does the following:
+
+    - It imports each row in its own transaction. A failed row, such as a row of an unknown attachment, shows the SKU, the locale, and the URL, and does not roll back the other rows.
+    - It publishes only the attachments whose selection changed. A second import of the same file queues no documents.
+
+2. Add the import configuration after the `product-attachment` entry. The attachments must exist before their selection is imported:
+
+    **data/import/local/full_EU.yml**
+
+    ```yaml
+    - data_entity: product-attachment
+      source: data/import/common/common/product_attachment.csv
+    - data_entity: product-attachment-knowledge-selection
+      source: data/import/common/common/product_attachment_knowledge_selection.csv
+    ```
+
+    | CONFIGURATION | REQUIRED | LOCATION |
+    |---------------|----------|----------|
+    | product-attachment-knowledge-selection | ✓ | data/import/common/common/product_attachment_knowledge_selection.csv |
+
+3. Import the data:
+
+    ```bash
+    console data:import:product-attachment-knowledge-selection
+    ```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the `spy_product_attachment_knowledge_selection` table has one row for each selected attachment. A row means that the attachment is selected. No row means that the attachment is not selected.
+
+{% endinfo_block %}
+
+## 8) Set up the knowledge base and index the documents
+
+No installation recipe runs the following commands. Run them one time for each environment, and after you change the knowledge base, the data sources, or the source types. After that, the publisher keeps the documents up to date: each change of a product attachment or of its knowledge selection indexes or deletes its document.
 
 1. Check the knowledge base and the data source:
 
@@ -647,7 +808,7 @@ No installation recipe runs the following commands. Run them one time for each e
 
     The command waits until the knowledge base is `ACTIVE` and the data source is `AVAILABLE`, and enables the image extraction of the data source when it is off. It creates nothing and stores nothing. When the command says that it skips the store, `BEDROCK_KNOWLEDGE_BASE_ID` is not set. When it fails with `Add the source type product_attachment to BEDROCK_KNOWLEDGE_BASE_DATA_SOURCE_IDS`, the data source ID is not set.
 
-2. Queue all documents. `--force` clears the stored content hash, so that every document is sent to the knowledge base:
+2. Queue all documents. `--force` clears the stored content hash, so that every document is sent to the knowledge base. The re-index queues only the selected product attachments, and queues the removal of the documents of the attachments that are not selected:
 
     ```bash
     console knowledge-document:reindex --force -v
@@ -666,6 +827,12 @@ No installation recipe runs the following commands. Run them one time for each e
     ```
 
     The command shows `Checked N document(s): X indexed, Y failed.`
+
+{% info_block warningBox "Warning" %}
+
+Import the knowledge selection in step 7 before you run `knowledge-document:reindex`. Without a selection, the re-index removes all product attachment documents from the knowledge base. If you indexed the product attachments before you installed the knowledge selection, import the selection, and then run `knowledge-document:reindex` and the queue worker. This removes the documents of the attachments that are not selected.
+
+{% endinfo_block %}
 
 Do not run a forced re-index often. A forced re-index sends all documents to Bedrock again, which uses time and request quota.
 
@@ -702,7 +869,11 @@ Do not run a forced re-index often. A forced re-index sends all documents to Bed
 | The assistant says that the document search is not available. | `BEDROCK_KNOWLEDGE_BASE_ID` is not set, the credentials are wrong, or the role of Yves or Glue has no `bedrock:Retrieve` permission. | Check steps 3 and 5. |
 | The assistant never answers from documents. | `product_knowledge_search` is not in `getAiToolPlugins()` or in `getProductDiscoveryAgentToolNames()`. | Check steps 5 and 6. |
 | The assistant answers that no documents are available for a product that has attachments. | The product attachments are not published to the storage, or the attachment has another locale. | Publish the product attachments, and check the locale of the attachment. |
-| All documents are `failed` with `No Amazon Bedrock data source is configured for the source type product_attachment`. | `BEDROCK_KNOWLEDGE_BASE_DATA_SOURCE_IDS` has no data source for `product_attachment`. In the read-only mode of a local environment, this is expected. | Set the data source ID, then run step 7. |
+| All documents are `failed` with `No Amazon Bedrock data source is configured for the source type product_attachment`. | `BEDROCK_KNOWLEDGE_BASE_DATA_SOURCE_IDS` has no data source for `product_attachment`. In the read-only mode of a local environment, this is expected. | Set the data source ID, then run step 8. |
+| The assistant finds no product attachment documents after a re-index. | No product attachment is selected as assistant knowledge. | Import the knowledge selection, or select the attachments in the Back Office. Then run `knowledge-document:reindex` and the queue worker. See steps 7 and 8. |
+| The Back Office product form has no **Use for assistant knowledge** checkbox. | `KnowledgeSelectionProductAttachmentFormExpanderPlugin` is not registered, or a project override of `attachment-form.twig` has no `form_rest()` call. | Check step 6. |
+| All **Use for assistant knowledge** checkboxes are cleared after a product is saved. | `KnowledgeSelectionProductAttachmentCollectionExpanderPlugin` is not registered. | Register the three knowledge selection plugins together. See step 6. |
+| The knowledge selection import fails with `Product attachment with abstract SKU "…", locale "…" and URL "…" not found.` | The abstract product has no attachment with this locale and URL. | Correct the row, or import the product attachments first. |
 | `knowledge-document:setup` skips the store. | `BEDROCK_KNOWLEDGE_BASE_ID` is not set. | Check step 5. |
 | `ExpiredTokenException` or `UnrecognizedClientException` in the log. | The temporary credentials of a local environment expired or are wrong. | Get new credentials. See [Configure a local environment](#configure-a-local-environment). |
 | `AccessDeniedException` in the log. | The IAM role has no permission for the action. | Check step 3. |

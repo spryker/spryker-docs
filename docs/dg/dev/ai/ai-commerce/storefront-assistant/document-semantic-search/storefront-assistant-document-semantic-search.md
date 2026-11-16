@@ -1,7 +1,7 @@
 ---
 title: Storefront Assistant document semantic search
 description: Learn how Storefront Assistant answers questions from product documents, how Amazon Bedrock Knowledge Bases indexes and searches the documents, and which settings and extension points you can use.
-last_updated: Nov 13, 2026
+last_updated: Nov 16, 2026
 template: concept-topic-template
 label: early-access
 related:
@@ -41,6 +41,54 @@ Document semantic search has two sides. They share only the knowledge store and 
 The knowledge store is the system that splits the documents into passages, turns each passage into a vector, and finds the passages that are closest to a question. By default, the knowledge store is an [Amazon Bedrock knowledge base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html). You can replace it with another vector database or managed search service. For details, see [Use another knowledge store provider](/docs/dg/dev/ai/ai-commerce/storefront-assistant/document-semantic-search/use-another-knowledge-store-provider.html).
 
 Each document has a document key in the format `{sourceType}:{sourceIdentifier}`, for example `product_attachment:12`. The source type tells where the document comes from. The shipped source type is `product_attachment`. To add other documents, such as video transcripts, see [Add a knowledge document source](/docs/dg/dev/ai/ai-commerce/storefront-assistant/document-semantic-search/add-a-knowledge-document-source.html).
+
+Only the product attachments that are selected as assistant knowledge are indexed. For details, see [Knowledge selection of product attachments](#knowledge-selection-of-product-attachments).
+
+## Knowledge selection of product attachments
+
+Not every product attachment is a good source for the assistant. For example, a product can have an internal checklist or an outdated certificate that customers can download, but that the assistant must not use for its answers. The knowledge selection lets you decide which product attachments the assistant uses.
+
+The indexing is opt-in. A product attachment is indexed only when it is selected as assistant knowledge. An attachment without a selection is not indexed. The selection does not change the product details page: it continues to show all attachments.
+
+You select the attachments in one of these ways:
+
+- **Back Office.** In the product form, the **Media** tab shows the **Use for assistant knowledge** checkbox in each attachment row.
+- **Data import.** The `product-attachment-knowledge-selection` import type reads the `abstract_sku`, `locale`, `attachment_url`, and `is_assistant_knowledge` columns. For details about the file, see [Install Storefront Assistant document semantic search](/docs/dg/dev/ai/ai-commerce/storefront-assistant/document-semantic-search/install-storefront-assistant-document-semantic-search.html#7-import-the-knowledge-selection-of-product-attachments).
+
+### Back Office behavior
+
+When you save a product, the selection of its attachments changes as follows:
+
+- **You select the checkbox.** The attachment is indexed in the next queue run.
+- **You clear the checkbox.** The document of the attachment is removed from the knowledge base in the next queue run. The product details page continues to show the attachment.
+- **You remove the attachment row, and no other abstract product uses the attachment.** The attachment and its selection are deleted, and the document is removed from the knowledge base.
+- **You remove the attachment row, and another abstract product still uses the attachment.** The attachment and its selection stay, and the document stays in the knowledge base. To remove the document, clear the checkbox on a product that still has the attachment.
+
+An attachment that is shared by several abstract products has one selection. When you change the selection on one product, the selection also changes on the other products.
+
+### Data model
+
+The `spy_product_attachment_knowledge_selection` table stores the selection. A row means that the attachment is selected. No row means that the attachment is not selected. The table has one row for each product attachment at most, and the database deletes the row together with its product attachment.
+
+In the `ProductAttachmentTransfer` transfer, the `isAssistantKnowledge` property has these values:
+
+- `true` selects the attachment.
+- `false` clears the selection.
+- `null` keeps the selection unchanged when the attachment is saved.
+
+### Product attachment extension points
+
+The Product Attachments feature has no knowledge-specific fields. The `spryker/product-attachment-extension` module provides three plugin interfaces, and AiCommerce adds the knowledge selection through them. You can use the same interfaces to add other data to product attachments:
+
+<div class="width-100">
+
+| INTERFACE | REGISTERED IN | WHEN IT RUNS | SHIPPED PLUGIN |
+|-----------|---------------|--------------|----------------|
+| `ProductAttachmentFormExpanderPluginInterface` | `ProductAttachmentDependencyProvider::getProductAttachmentFormExpanderPlugins()` | When the Back Office builds each attachment row of the product form, including the prototype row. A field name must be the snake case name of a `ProductAttachmentTransfer` property. | `KnowledgeSelectionProductAttachmentFormExpanderPlugin` |
+| `ProductAttachmentCollectionExpanderPluginInterface` | `ProductAttachmentDependencyProvider::getProductAttachmentCollectionExpanderPlugins()` | After `ProductAttachmentFacade::getProductAttachmentCollection()` reads the attachments. The plugin must use a fixed number of queries for the whole collection. | `KnowledgeSelectionProductAttachmentCollectionExpanderPlugin` |
+| `ProductAttachmentCollectionPostSavePluginInterface` | `ProductAttachmentDependencyProvider::getProductAttachmentCollectionPostSavePlugins()` | One time after the attachments of an abstract product are saved, in the same transaction. Each attachment has its `idProductAttachment`. | `KnowledgeSelectionProductAttachmentCollectionPostSavePlugin` |
+
+</div>
 
 ## How the Amazon Bedrock knowledge base works
 
@@ -104,10 +152,10 @@ Both clients use the region from `BEDROCK_KNOWLEDGE_BASE_AWS_REGION`, `eu-centra
 
 Documents are indexed in the background, so a change of an attachment does not slow down the Back Office or the data import:
 
-1. A product attachment is created, changed, or deleted in the Back Office or by a data import. The entity events of `spy_product_attachment` and the `ProductAttachment.product_abstract_attachment.publish` event are triggered.
+1. A product attachment or its knowledge selection is created, changed, or deleted in the Back Office or by a data import. The entity events of `spy_product_attachment` and `spy_product_attachment_knowledge_selection`, the `ProductAttachment.product_abstract_attachment.publish` event, and the `AiCommerce.product_attachment_knowledge_selection.publish` event are triggered.
 2. `KnowledgeDocumentWritePublisherPlugin` handles the events. It saves one row with the status `pending` for each affected document in `spy_knowledge_document` and sends one message for each document to the `knowledge_document.index` queue.
 3. `KnowledgeDocumentIndexQueueMessageProcessorPlugin` handles each message:
-    1. It reads the source through the source plugin of the source type. If the source does not exist anymore, it deletes the document from the knowledge base with `DeleteKnowledgeBaseDocuments` and deletes the row.
+    1. It reads the source through the source plugin of the source type. `ProductAttachmentKnowledgeDocumentSourcePlugin` returns only the product attachments that are selected as assistant knowledge. If the source does not exist anymore or is not selected, it deletes the document from the knowledge base with `DeleteKnowledgeBaseDocuments` and deletes the row.
     2. It downloads the file. It does not download more than the maximum document size of the knowledge store, which is 5&nbsp;MB for Bedrock.
     3. It compares the content hash with the stored hash. When the content did not change, it reads the status of the document from the knowledge base and does not send the file again.
     4. It sends the file to the data source of the source type with `IngestKnowledgeBaseDocuments`. The custom document ID is the document key, so a new version replaces the old one. Text files are sent as inline text. Other files, such as PDF files, are sent as inline bytes with their MIME type.
@@ -284,7 +332,7 @@ You can change the following settings in the Zed `AiCommerceConfig`:
 | COMMAND | OPTIONS | DESCRIPTION |
 |---------|---------|-------------|
 | `knowledge-document:setup` | `--recreate-index` | Checks the knowledge base and each configured data source, waits until they are ready, and enables the image extraction. It creates nothing and stores nothing. With `-v`, the command shows each step. The Bedrock store does not support `--recreate-index` and only reports this. |
-| `knowledge-document:reindex` | `--source-type`, `--force` | Queues all documents for indexing, and queues the documents of deleted sources for deletion. `--source-type` limits the command to one source type. Repeat the option for several source types. `--force` clears the content hash, so that every document is sent to the knowledge base again. With `-v`, the command shows the number of queued documents for each source type. |
+| `knowledge-document:reindex` | `--source-type`, `--force` | Queues all documents for indexing, and queues the documents of deleted sources for deletion. For the `product_attachment` source type, it queues only the selected attachments, and queues the documents of the attachments that are not selected for deletion. `--source-type` limits the command to one source type. Repeat the option for several source types. `--force` clears the content hash, so that every document is sent to the knowledge base again. With `-v`, the command shows the number of queued documents for each source type. |
 | `knowledge-document:status:refresh` | | Reads the knowledge base status of all `processing` documents and saves `indexed` or `failed`. The output is `Checked N document(s): X indexed, Y failed.` |
 
 </div>

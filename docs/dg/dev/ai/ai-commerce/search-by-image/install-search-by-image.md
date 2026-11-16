@@ -1,7 +1,7 @@
 ---
 title: Install Search by Image
 description: Learn how to install the Search by Image feature that lets customers upload a photo to search for products using AI-powered image analysis.
-last_updated: Oct 14, 2026
+last_updated: Nov 13, 2026
 template: feature-integration-guide-template
 ---
 
@@ -272,7 +272,7 @@ features:
                       - key: openai_model
                         name: OpenAI Model
                         description: The OpenAI model used for the Search by Image AI configuration. Model must support image input and structured output.
-                        type: string
+                        type: select
                         default_value: 'gpt-5-nano'
                         enabled: true
                         secret: false
@@ -280,6 +280,11 @@ features:
                         order: 2
                         scopes:
                             - global
+                        options:
+                            - value: 'gpt-5-nano'
+                              label: GPT-5 nano
+                            - value: 'gpt-5-mini'
+                              label: GPT-5 mini
                         dependencies:
                             - when:
                                   any:
@@ -289,7 +294,7 @@ features:
                       - key: aws_model
                         name: AWS Bedrock Model
                         description: The AWS Bedrock model identifier used for the Search by Image AI configuration. Model must support image input and structured output.
-                        type: string
+                        type: select
                         default_value: 'eu.anthropic.claude-haiku-5-5'
                         enabled: true
                         secret: false
@@ -297,6 +302,11 @@ features:
                         order: 3
                         scopes:
                             - global
+                        options:
+                            - value: 'eu.anthropic.claude-haiku-5-5'
+                              label: Claude Haiku 5.5
+                            - value: 'eu.anthropic.claude-sonnet-5-5'
+                              label: Claude Sonnet 5.5
                         dependencies:
                             - when:
                                   any:
@@ -306,7 +316,7 @@ features:
                       - key: anthropic_model
                         name: Anthropic Model
                         description: The Anthropic model used for the Search by Image AI configuration. Model must support image input and structured output.
-                        type: string
+                        type: select
                         default_value: 'claude-haiku-5-5'
                         enabled: true
                         secret: false
@@ -314,6 +324,11 @@ features:
                         order: 4
                         scopes:
                             - global
+                        options:
+                            - value: 'claude-haiku-5-5'
+                              label: Claude Haiku 5.5
+                            - value: 'claude-sonnet-5-5'
+                              label: Claude Sonnet 5.5
                         dependencies:
                             - when:
                                   any:

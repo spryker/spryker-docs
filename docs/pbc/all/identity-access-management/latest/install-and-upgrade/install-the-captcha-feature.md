@@ -1,7 +1,7 @@
 ---
 title: Install the CAPTCHA feature
 description: Learn how to protect the login forms of the Storefront, the Back Office, and the Merchant Portal with a CAPTCHA.
-last_updated: Nov 13, 2026
+last_updated: Nov 16, 2026
 template: feature-integration-guide-template
 related:
   - title: Install ALTCHA
@@ -133,6 +133,8 @@ console configuration:sync
 
 To change the mode, in the Back Office, go to **Configuration**, select **Security** in the sidebar, and open the **CAPTCHA** tab. In the **Login Forms** group, switch on **Enable CAPTCHA**, and select the **CAPTCHA Mode**. The key of the mode setting is `security:captcha:login:mode`. Both settings have the global scope.
 
+![The CAPTCHA tab of the Security settings with Enable CAPTCHA switched on and the CAPTCHA Mode setting](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/identity-access-management/install-and-upgrade/install-the-captcha-feature.md/captcha-settings-enabled.png)
+
 To set the settings during deployment, for example, in a test environment, import them with the `configuration-value` data importer, as described in [Configuration Management](/docs/dg/dev/backend-development/configuration-management.html#data-import). The data importer validates each value against the range of its setting, as the Back Office does, and rejects any other value. The following example switches the CAPTCHA on in the `after_failed_attempts` mode, lowers the number of failed logins to one account after which a login form requires a CAPTCHA, and switches off the per-IP address and all-accounts challenge thresholds of the login brute-force protection, because all tests log in from one IP address:
 
 ```csv
@@ -151,6 +153,9 @@ security:login_lock:user:challenge_all_accounts_number_of_failed_attempts,global
 
 In the Back Office, go to **Configuration** > **Security** > **CAPTCHA**. Make sure the following applies:
 - The **Login Forms** group contains the **Enable CAPTCHA** setting, and it is off. The Back Office hides the other settings of the group.
+
+  ![The CAPTCHA tab of the Security settings with Enable CAPTCHA switched off](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/identity-access-management/install-and-upgrade/install-the-captcha-feature.md/captcha-settings-disabled.png)
+
 - When you switch on **Enable CAPTCHA**, the **CAPTCHA Mode** setting appears with the **After Failed Attempts** and **Always** options, and **After Failed Attempts** is selected. The **Open the Login Lock tab** link below its description opens **Configuration** > **Security** > **Login Lock**.
 - The **Login Forms** group contains no other settings. The numbers of failed logins are in **Configuration** > **Security** > **Login Lock**.
 - If you have not set up a CAPTCHA provider, saving **Enable CAPTCHA** in the on state fails with the `Set up the CAPTCHA provider under Integrations before turning on the CAPTCHA.` message below the setting.

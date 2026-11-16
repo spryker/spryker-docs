@@ -1,7 +1,7 @@
 ---
 title: Install Google reCAPTCHA
 description: Learn how to use Google reCAPTCHA v2 or v3 as the CAPTCHA provider of the CAPTCHA feature.
-last_updated: Nov 13, 2026
+last_updated: Nov 16, 2026
 template: howto-guide-template
 related:
   - title: Install the CAPTCHA feature
@@ -74,7 +74,7 @@ vendor/bin/console configuration:sync
 
 1. In the Back Office, go to **Configuration**.
 2. In the sidebar, select **Integrations**, then open the **Google reCAPTCHA** tab.
-3. Make sure the **reCAPTCHA Key** group contains the **reCAPTCHA Version**, **Site Key**, **Secret Key**, and **Minimum Score (v3)** settings, and the **Token Verification** group contains the **Allowed Hostnames** setting.
+3. Make sure the **reCAPTCHA Key** group contains the **reCAPTCHA Version**, **Site Key**, and **Secret Key** settings, and the **Token Verification** group contains the **Allowed Hostnames** setting. The **Minimum Score (v3)** setting of the **reCAPTCHA Key** group appears when you select **v3 Score** as the **reCAPTCHA Version**.
 
 {% endinfo_block %}
 
@@ -95,7 +95,9 @@ In the Back Office, go to **Configuration** > **Integrations** > **Google reCAPT
 | reCAPTCHA Version | `v2_checkbox` or `v3`. Must match the type of the key. Default: `v2_checkbox`. |
 | Site Key | The public key of the widget. It is published to the Storefront. |
 | Secret Key | The key that verifies tokens with Google. It is a secret setting: it is stored encrypted and is never published to the Storefront. |
-| Minimum Score (v3) | The lowest score of a v3 token that passes the check, from `0.1` to `1.0`. Default: `0.5`. |
+| Minimum Score (v3) | The lowest score of a v3 token that passes the check, from `0.1` to `1.0`. Default: `0.5`. The Back Office shows this setting only when the version is `v3`. |
+
+![The Google reCAPTCHA tab of the Integrations settings with the reCAPTCHA Key and Token Verification groups](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/identity-access-management/install-and-upgrade/install-google-recaptcha.md/google-recaptcha-settings.png)
 
 Optional: To accept only tokens solved on your own hosts, open the **Token Verification** group and enter the hosts in **Allowed Hostnames**, separated by commas, for example `shop.example.com, backoffice.example.com, mp.example.com`. A token solved on another host is then rejected, even if the domain verification of the key is turned off. If the setting is empty, the provider accepts every host that Google accepts for the key.
 

@@ -1,7 +1,7 @@
 ---
 title: Install the login brute-force protection
 description: Learn how to block password guessing per account on the Storefront, the Back Office, the Merchant Portal, and the APIs, regardless of the IP address of the attacker.
-last_updated: Nov 13, 2026
+last_updated: Nov 16, 2026
 template: feature-integration-guide-template
 related:
   - title: Install the CAPTCHA feature
@@ -92,6 +92,8 @@ Make sure the following packages have been installed with the required versions:
 ## 2) Set up the configuration
 
 1. Review the account lock of the login realms. The account lock is set in the Back Office, in **Configuration** > **Security** > **Login Lock**, with one group of settings for each realm: **Customer Accounts** for the `customer` realm and **User Accounts** for the `user` realm. The SecurityBlockerStorefrontCustomer and SecurityBlockerBackoffice modules define these settings and read them with version 3.84.0 or later of `spryker/kernel`. `console configuration:sync` registers them, and the defaults apply until an administrator changes them.
+
+    ![The Login Lock tab of the Security settings with the Customer Accounts group and its default values](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/identity-access-management/install-and-upgrade/install-the-login-brute-force-protection.md/login-lock-settings.png)
 
 | SETTING | KEY | DEFAULT | SPECIFICATION |
 | --- | --- | --- | --- |

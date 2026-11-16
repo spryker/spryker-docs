@@ -1,7 +1,7 @@
 ---
 title: Install ALTCHA
 description: Learn how to use ALTCHA, a proof-of-work CAPTCHA without third-party services, as the CAPTCHA provider of the login forms.
-last_updated: Nov 13, 2026
+last_updated: Nov 16, 2026
 template: howto-guide-template
 related:
   - title: Install the CAPTCHA feature
@@ -219,6 +219,8 @@ Without a secret, or with a secret shorter than 32 characters, ALTCHA cannot cre
 {% info_block warningBox "Verification" %}
 
 In the Back Office, go to **Configuration** > **Integrations** > **ALTCHA**. Make sure the **HMAC Secret** setting has a value.
+
+![The ALTCHA tab of the Integrations settings with the masked value of the HMAC Secret setting](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/identity-access-management/install-and-upgrade/install-altcha.md/altcha-settings.png)
 
 {% endinfo_block %}
 

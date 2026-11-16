@@ -1,7 +1,7 @@
 ---
 title: Configuration Management feature
 description: Learn how to use the Configuration Management feature in a Spryker project.
-last_updated: Nov 13, 2026
+last_updated: Nov 16, 2026
 template: concept-topic-template
 related:
   - title: Install the Configuration Management feature
@@ -638,6 +638,8 @@ A setting can point to a related tab, for example, when its value only takes eff
     feature: security                # Key of the feature that holds the tab.
     tab: login_lock                  # Key of the tab.
 ```
+
+![The CAPTCHA Mode setting with the Open the Login Lock tab link below its description](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/backend-development/configuration-management.md/setting-link.png)
 
 - The link opens the tab the same way as the sidebar: it asks before discarding unsaved changes and keeps the selected scope. A middle click or a click with a modifier key opens the tab in a new browser tab, with the default scope.
 - The link can only point to a tab of the configuration page. The page builds the URL from the feature and tab keys, so a schema cannot inject a URL or HTML.

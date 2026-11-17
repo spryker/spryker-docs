@@ -1,7 +1,7 @@
 ---
 title: Security release notes 202611.0
 description: Security updates released for version 202611.0
-last_updated: Nov 13, 2026
+last_updated: Nov 17, 2026
 template: concept-topic-template
 publish_date: "2026-10-13"
 redirect_from:
@@ -106,6 +106,23 @@ composer update spryker/content-gui:"^3.2.2"
 2. In the content editor, add a content item, for example a banner. Make sure the list of content items is displayed and you can select an item.
 
 {% endinfo_block %}
+
+## SQL injection in the product relation rule builder of the Back Office
+
+When you create or edit a product relation in the Back Office, you use the rule builder to define which products are related. The rule builder converts these rules into a database query. The rules were not escaped before being used in the query. As a result, an authenticated Back Office user could run arbitrary SQL queries against the application database.
+
+### Affected modules
+
+- `spryker/propel-query-builder`: < 0.3.7
+- `spryker/product-relation-gui`: < 2.2.3
+
+### Fix the vulnerability
+
+Update the affected packages:
+
+```bash
+composer update spryker/propel-query-builder:"^0.3.7" spryker/product-relation-gui:"^2.2.3"
+```
 
 ## Company user takeover through the Add company user form
 

@@ -1,7 +1,7 @@
 ---
 title: Install the Back Office Product CSV Import and Export feature
 description: Learn how to install the Back Office Product CSV Import and Export feature into your Spryker project.
-last_updated: Nov 10, 2026
+last_updated: Nov 17, 2026
 template: feature-integration-guide-template
 redirect_from:
   - /docs/pbc/all/product-experience-management/latest/install-the-product-experience-management-feature.html
@@ -52,7 +52,7 @@ Make sure the following modules have been installed:
 
 ### 2) Set up configuration
 
-The product plugin reads the *Product Status* column of the imported CSV file and relies on `spryker/product-approval` for the approval statuses of abstract products. The following settings are defined in `SprykerFeature\Zed\ProductExperienceManagement\ProductExperienceManagementConfig`:
+The product plugin reads the *Approval Status* column of abstract product rows and the *Product Status* column of concrete product rows, and relies on `spryker/product-approval` for the approval statuses of abstract products. The following settings are defined in `SprykerFeature\Zed\ProductExperienceManagement\ProductExperienceManagementConfig`:
 
 | SETTING | DESCRIPTION |
 | --- | --- |
@@ -163,7 +163,7 @@ If the Data Exchange Jobs feature is installed with its installer plugin, `conso
 
 Log in to the Back Office, go to **Import & Export&nbsp;> Import**, and click **Create Import Job**. Make sure that **products-csv-import** and **simple-product-csv-import** are offered in the **Type** field.
 
-Create a job with the *products-csv-import* type, download its template, and make sure that the header row contains the product columns, for example *Abstract SKU*, *Concrete SKU*, and one *Name (…)* column per locale.
+Create a job with the *products-csv-import* type, download its template, and make sure that the header row contains the product columns, for example *Abstract SKU*, *Concrete SKU*, *Approval Status*, *Product Status*, and one *Name (…)* column per locale.
 
 Import a CSV file with a concrete product row and verify the following:
 

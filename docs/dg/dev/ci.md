@@ -1,7 +1,7 @@
 ---
 title: Continuous Integration
 description: Continuous Integration setup for Spryker projects—pipeline structure, validation stages, and the AI Dev SDK skills that generate a project CI pipeline and a Cypress end-to-end baseline.
-last_updated: Aug 20, 2026
+last_updated: Nov 17, 2026
 template: concept-topic-template
 keywords: CI, continuous integration, automated testing, code quality, GitHub Actions, project stability, upgradability, validation, static analysis, cypress, end-to-end
 ---
@@ -18,6 +18,8 @@ All CI checks are mandatory for:
 - **Early issue detection**: Catches bugs, security vulnerabilities, and violations before deployment
 
 Skipping CI checks leads to technical debt, integration issues, and costly refactoring.
+
+Strict CI checks and tests are also what make a project safe for AI-driven development and upgrades. To find out where your project stands and how to close the gaps, see [AI-ready quality gates](/docs/dg/dev/ai-ready-quality-gates.html).
 
 ## Reference CI implementation
 

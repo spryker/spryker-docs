@@ -1,0 +1,41 @@
+<svg viewBox="0 0 800 310" width="100%" role="img" aria-labelledby="multiplier-title" xmlns="http://www.w3.org/2000/svg" style="max-width:800px;font-family:inherit;">
+<title id="multiplier-title">Time for a new feature, a bugfix or hotfix, and an upgrade, today and with AI and quality gates: 3 to 5 times shorter</title>
+<rect x="20" y="6" width="12" height="12" rx="2" fill="#8a93a3"/>
+<text x="38" y="16" font-size="11" fill="#3b4352">Write the change</text>
+<rect x="160" y="6" width="12" height="12" rx="2" fill="#f0b45c"/>
+<text x="178" y="16" font-size="11" fill="#3b4352">Verify by hand</text>
+<rect x="290" y="6" width="12" height="12" rx="2" fill="#e8878a"/>
+<text x="308" y="16" font-size="11" fill="#3b4352">Fix after release</text>
+<rect x="430" y="6" width="12" height="12" rx="2" fill="#9fe0cf"/>
+<text x="448" y="16" font-size="11" fill="#3b4352">AI writes the change</text>
+<rect x="590" y="6" width="12" height="12" rx="2" fill="#11a585"/>
+<text x="608" y="16" font-size="11" fill="#3b4352">Gates verify</text>
+<text x="20" y="81" font-size="14" font-weight="700" fill="#1d2433">New feature</text>
+<text x="200" y="66" font-size="11" text-anchor="end" fill="#5b6575">Today</text>
+<rect x="210" y="50" width="200" height="22" fill="#8a93a3"/>
+<rect x="410" y="50" width="160" height="22" fill="#f0b45c"/>
+<rect x="570" y="50" width="100" height="22" fill="#e8878a"/>
+<text x="200" y="96" font-size="11" text-anchor="end" fill="#0e6b57">AI + gates</text>
+<rect x="210" y="80" width="50" height="22" fill="#9fe0cf"/>
+<rect x="260" y="80" width="50" height="22" fill="#11a585"/>
+<text x="322" y="96" font-size="13" font-weight="700" fill="#0e8a6f">3–5× faster</text>
+<text x="20" y="166" font-size="14" font-weight="700" fill="#1d2433">Bugfix or hotfix</text>
+<text x="200" y="151" font-size="11" text-anchor="end" fill="#5b6575">Today</text>
+<rect x="210" y="135" width="160" height="22" fill="#8a93a3"/>
+<rect x="370" y="135" width="180" height="22" fill="#f0b45c"/>
+<rect x="550" y="135" width="120" height="22" fill="#e8878a"/>
+<text x="200" y="181" font-size="11" text-anchor="end" fill="#0e6b57">AI + gates</text>
+<rect x="210" y="165" width="60" height="22" fill="#9fe0cf"/>
+<rect x="270" y="165" width="50" height="22" fill="#11a585"/>
+<text x="332" y="181" font-size="13" font-weight="700" fill="#0e8a6f">3–5× faster</text>
+<text x="20" y="251" font-size="14" font-weight="700" fill="#1d2433">Upgrade</text>
+<text x="200" y="236" font-size="11" text-anchor="end" fill="#5b6575">Today</text>
+<rect x="210" y="220" width="180" height="22" fill="#8a93a3"/>
+<rect x="390" y="220" width="200" height="22" fill="#f0b45c"/>
+<rect x="590" y="220" width="80" height="22" fill="#e8878a"/>
+<text x="200" y="266" font-size="11" text-anchor="end" fill="#0e6b57">AI + gates</text>
+<rect x="210" y="250" width="70" height="22" fill="#9fe0cf"/>
+<rect x="280" y="250" width="60" height="22" fill="#11a585"/>
+<text x="352" y="266" font-size="13" font-weight="700" fill="#0e8a6f">3–5× faster</text>
+<text x="20" y="302" font-size="11" fill="#5b6575">Illustration. The real gain depends on the project and on the task.</text>
+</svg>

@@ -1,7 +1,7 @@
 ---
 title: "Adding stores in a multi-database setup"
 description: Adding and deploying a new store in multi-db store setup requires additional steps and preparation. This guideline contains all the best practices you need to know.
-last_updated: Nov 10, 2026
+last_updated: Nov 17, 2026
 template: howto-guide-template
 ---
 
@@ -49,6 +49,7 @@ This section describes parts of the application you need to take into account wh
 - Handle the data import process carefully, breaking it down into specific tasks such as configuring DBs and adjusting the data import setup to work with the new store.
 - Make sure existing DBs, for example–a DB from another country, are correctly renamed or adjusted to fit the multi-DB structure.
 - Anticipate and plan for potential updates that may arise after end-to-end testing of the project data migration.
+- With one DB per store, the import of each store must contain only the data of this store. Import files with rows of other stores fail with an error like `Store not found: AT`, because the other stores do not exist in this DB. This also applies to import files shipped in vendor packages and to console commands that create data for a fixed store.
 
 ### Code buckets
 
@@ -58,6 +59,12 @@ If code buckets are used, investigate and adjust their configurations, making su
 
 - Consider and adjust application performance monitoring tools, such as NewRelic and CloudWatch, to accommodate the new store. Check that all alerts and metrics are correctly configured to monitor the health and performance of the new store.
 - Consider adjusting AWS services, for example–introduce S3 buckets for the new store.
+
+### Scheduler capacity
+
+Each store has its own scheduler jobs, for example, `DE_consume-queue` and `AT_consume-queue` in Jenkins. The queue worker jobs run for several minutes each, and Jenkins runs only as many jobs at the same time as it has executors. If there are fewer executors than long-running jobs, the jobs of some stores wait, and the queues of these stores are not processed until an executor is free.
+
+Before you add a store, check how many executors your scheduler has, and make sure there are enough for the jobs of all stores. To change the number of executors in Spryker Cloud Commerce OS, contact support.
 
 ### Environment variables and AWS limits
 
@@ -141,6 +148,14 @@ This section describes how to add the configuration and deployment recipes for a
 | Domains  | `groups.<region_name>.applications`  |
 
 - In `stores.php`, add the configuration for the new store. For instructions, see [Integrate multi-DB logic](/docs/dg/dev/integrate-and-configure/integrate-multi-database-logic.html).
+
+{% info_block warningBox "Name the DB after the store" %}
+
+In Spryker Cloud Commerce OS, the deployment pipeline creates the DB of each store and adds its connection data to the `SPRYKER_PAAS_SERVICES` environment variable. The entries are keyed by the DB name in upper case: the DB `de` gets the key `DE`, and the DB `de_database` gets the key `DE_DATABASE`. The application looks up the entry by store or code bucket. If the key does not match, the application falls back to the default DB connection, which is not set when the region has no `database` section, and commands fail with `Database is not reachable`.
+
+Give each DB the lower-case name of its store, or make your configuration map the store to the DB name. Define the DBs only in `regions.<region_name>.services.databases`. If the region also has a `database` section, the pipeline does not create the DBs of the stores.
+
+{% endinfo_block %}
 - Prepare data import configurations and data files for the new store.
 - Adjust the local environment setup as needed, including configurations and environment variables. Examples:
   - Frontend router configuration
@@ -285,7 +300,75 @@ If `SPRYKER_HOOK_DESTRUCTIVE_INSTALL` is not set, the destructive pipeline runs 
 
 {% endinfo_block %}
 
-Because a normal deployment keeps the vhosts and messages of existing stores, we recommend using it to add a store. To add a store with a normal deployment, do the following:
+Because a normal deployment keeps the vhosts and messages of existing stores, we recommend using it to add a store.
+
+##### Add a store with a normal deployment and a one-time setup
+
+We tested the following procedure in Spryker Cloud Commerce OS with stores that have one DB each. While a normal deployment added a store, the following was true for the existing stores:
+
+- No queue was deleted or re-created, and the messages that were waiting in the queues were kept.
+- The queue workers continued to process messages after the deployment.
+- The storefronts answered without errors during the whole deployment.
+
+To add a store this way, do the following:
+
+1. Make sure that the recipe for normal deployments, defined in `SPRYKER_HOOK_INSTALL`, runs only commands that are safe to repeat, runs them for each store, and runs the DB migration first. Add the new store to its `stores` list. Example:
+
+    **config/install/EU/production.yml**
+
+    ```yml
+    env:
+      NEW_RELIC_ENABLED: 0
+    command-timeout: 1200
+    stores:
+      - DE
+      - AT
+      - PL # the new store
+    sections:
+      diff:
+        propel-migration-delete:
+          command: "vendor/bin/console propel:migration:delete -vvv --no-ansi"
+        propel-diff-and-migrate:
+          command: "vendor/bin/console propel:diff -vvv --no-ansi && vendor/bin/console propel:migrate -vvv --no-ansi && vendor/bin/console propel:migration:delete -vvv --no-ansi"
+          stores: true
+      clean-oms:
+        clear-oms-locks:
+          command: "vendor/bin/console oms:clear-locks -vvv --no-ansi"
+          stores: true
+      queues-and-search:
+        queue-setup:
+          command: "vendor/bin/console queue:setup -vvv --no-ansi"
+          stores: true
+        setup-search-create-sources:
+          command: "vendor/bin/console search:setup:sources -vvv --no-ansi"
+          stores: true
+      scheduler-start:
+        scheduler-setup:
+          command: "vendor/bin/console scheduler:setup -vvv --no-ansi"
+          stores: true
+    ```
+
+2. Add the new store to the `stores` list of the other recipes that run for each store, for example, the recipe in `SPRYKER_HOOK_BEFORE_DEPLOY`.
+3. Run a normal deployment. The pipeline creates the DB and the RabbitMQ vhost of the new store. The install recipe creates the tables, queues, search indexes, and scheduler jobs of the new store. The new store has no data yet.
+4. Run the recipe for adding a store once, only for the new store, for example, from a one-time Jenkins job:
+
+    ```bash
+    vendor/bin/install PL -r EU/setup-store --no-ansi -vvv
+    ```
+
+    The data import of the new store runs outside the deployment. It is not limited by the time limit of the install step, and you do not need to change `SPRYKER_HOOK_INSTALL` and revert it with another deployment.
+
+5. Verify all stores as described in [Post-deployment](#post-deployment).
+
+{% info_block warningBox "Migrate first" %}
+
+The DB of a store that is added in this deployment is empty. Every command that uses the DB, such as `oms:clear-locks`, fails for the new store until `propel:migrate` has created the tables. In the recipe for normal deployments, run the migration before all other commands that use the DB.
+
+{% endinfo_block %}
+
+##### Add a store within the normal deployment
+
+Alternatively, you can run the recipe for adding a store as part of the deployment:
 
 1. Create a script that runs the recipe for the new store first, and then your regular install recipe. Replace `EU/production` with the recipe that `SPRYKER_HOOK_INSTALL` runs in your project.
 

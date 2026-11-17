@@ -10,6 +10,16 @@ The docker file is preconfigured, so you can pull and run Spryker docs locally:
 docker compose up
 ```
 
+To build only the sections you work on, pass the folder names from `docs/`. A build of one section takes seconds instead of minutes:
+
+```bash
+npm run docs:serve -- pbc        # only docs/pbc
+npm run docs:serve -- pbc dg     # docs/pbc and docs/dg
+npm run docs:serve               # full site
+```
+
+Available sections: `about`, `ca`, `dg`, `integrations`, `pbc`. Pages in other sections are not built, so links to them return 404 locally.
+
 For detailed instructions, see [Run the docs locally](https://docs.spryker.com/docs/about/all/about-the-docs/run-the-docs-locally.html).
 
 ## Contribute

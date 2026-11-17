@@ -1,7 +1,7 @@
 ---
 title: Workflows, Skills, and Agents
 description: Reference of the workflows, skills, and agents shipped with the AI Dev SDK
-last_updated: Oct 26, 2026
+last_updated: Nov 17, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, windsurf, copilot, workflows, wizards, skills, agents, subagents, spryker
 template: concept-topic-template
@@ -49,7 +49,7 @@ Seven shipped workflows cover the work most projects need on day one, so you get
 | [Profiler Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-profiler-workflow.html) | `spryker-profiler` | Reads the Spryker WebProfiler as hard performance numbers |
 | [Architecture Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-architecture-workflow.html) | `architecture-prep` | Turns project discovery into a filled `architecture/` folder |
 
-All but the Profiler Workflow are orchestrators: they own a full workflow and delegate each stage to the specialist skills and agents listed below. Alongside them, `product-requirement-document` turns a feature idea into a research-grounded spec, so you can go from idea to specification to implementation without leaving your assistant.
+All but the Profiler Workflow are orchestrators: they own a full workflow and delegate each stage to the specialist skills and agents listed below. Alongside them, `product-requirement-document` turns a feature idea into a research-grounded spec, and `technical-specification` turns that spec into a technical design, so you can go from idea to specification to implementation without leaving your assistant.
 
 ## Composable by design
 
@@ -133,6 +133,7 @@ The `demo-prep-wizard` runs these as its phases, and each also works standalone.
 | `yves-atomic-frontend` | `/spryker-ai-dev-sdk:yves-atomic-frontend` | Create and override atomic design components for the Yves storefront — Twig, SCSS, and TypeScript | Components match the project's atomic conventions; catches project-specific pitfalls such as an `index.ts` that replaces the core entry or a same-name component that silently shadows a core one | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/yves-atomic-frontend/README.md) |
 | `backoffice-frontend` | `/spryker-ai-dev-sdk:backoffice-frontend` | Build or override Back Office pages — Zed Twig templates, navigation and ACL, and Back Office JavaScript and SCSS | Overrides extend core blocks instead of copying them; covers the cache warm-ups a new template, menu entry, or action needs before it shows up | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/backoffice-frontend/README.md) |
 | `product-requirement-document` | `/spryker-ai-dev-sdk:product-requirement-document` | Turn a feature idea into a research-grounded product requirement document before any code is written | Spec-before-code; assigns a real Spryker actor to every story; cuts ambiguity before implementation | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/product-requirement-document/README.md) |
+| `technical-specification` | `/spryker-ai-dev-sdk:technical-specification` | Design, together with you, how a new feature fits into the Spryker architecture — from a product requirement document or your business requirements — before any code is written. Starts only when you run the command; the assistant does not load it on its own | One Markdown file per ticket with Mermaid diagrams — module dependency graph with release types, ERD, transfer model, and flow diagrams — plus module API signatures, a test coverage outline, and risks; no implementation code. Saved to `resources/plan/tech-spec/<Domain>/<TICKET>-<feature-name>-tech-spec.md` by default; your project can use another location | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/technical-specification/README.md) |
 | `spryker-refresher` | `/spryker-ai-dev-sdk:spryker-refresher` | Run the right post-change console and composer commands after edits | Owns the file-to-command mapping (codegen, caches, frontend builds, class-resolver); no missed cache rebuilds | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-refresher/README.md) |
 | `spryker-docs-research` | `/spryker-ai-dev-sdk:spryker-docs-research` | Look up the right answer in official Spryker documentation | Grounds AI work in documented behavior rather than the model's memory; falls back gracefully when MCP tools are unavailable | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-docs-research/README.md) |
 | `spryker-runtime` | `/spryker-ai-dev-sdk:spryker-runtime` | Drive the running Spryker application — Yves, Back Office, Merchant Portal, console, HTTP | Real authenticated sessions; read-only DB, Redis, and queue inspection; reusable building block for higher-level skills and agents | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-runtime/README.md) |

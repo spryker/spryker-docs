@@ -107,6 +107,23 @@ composer update spryker/content-gui:"^3.2.2"
 
 {% endinfo_block %}
 
+## SQL injection in the product relation rule builder of the Back Office
+
+When you create or edit a product relation in the Back Office, you use the rule builder to define which products are related. The rule builder converts these rules into a database query. The rules were not escaped before being used in the query. As a result, an authenticated Back Office user could run arbitrary SQL queries against the application database.
+
+### Affected modules
+
+- `spryker/propel-query-builder`: < 0.3.7
+- `spryker/product-relation-gui`: < 2.2.3
+
+### Fix the vulnerability
+
+Update the affected packages:
+
+```bash
+composer update spryker/propel-query-builder:"^0.3.7" spryker/product-relation-gui:"^2.2.3"
+```
+
 ## Company user takeover through the Add company user form
 
 On the Storefront, a company administrator can add users to their company on the **Add company user** page. The form submission was not validated correctly, so a company administrator could overwrite a company user that belongs to another company. As a result, the affected user was moved to the attacker's company and lost access to their own company, and data linked to that user, such as shared carts and shopping lists, became available in the attacker's company.
@@ -388,21 +405,4 @@ Several third-party dependencies were updated to address publicly known vulnerab
 
 ```bash
 composer update grpc/grpc phpseclib/phpseclib symfony/config symfony/filesystem symfony/html-sanitizer symfony/http-client symfony/http-foundation symfony/http-kernel symfony/routing symfony/security-http symfony/serializer symfony/validator symfony/yaml
-```
-
-## SQL injection in the product relation rule builder of the Back Office
-
-When you create or edit a product relation in the Back Office, you use the rule builder to define which products are related. The rule builder converts these rules into a database query. The rules were not escaped before being used in the query. As a result, an authenticated Back Office user could run arbitrary SQL queries against the application database.
-
-### Affected modules
-
-- `spryker/propel-query-builder`: < 0.3.7
-- `spryker/product-relation-gui`: < 2.2.3
-
-### Fix the vulnerability
-
-Update the affected packages:
-
-```bash
-composer update spryker/propel-query-builder:"^0.3.7" spryker/product-relation-gui:"^2.2.3"
 ```

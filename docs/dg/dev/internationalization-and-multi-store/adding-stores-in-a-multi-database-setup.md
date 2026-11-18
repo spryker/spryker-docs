@@ -302,7 +302,7 @@ If `SPRYKER_HOOK_DESTRUCTIVE_INSTALL` is not set, the destructive pipeline runs 
 
 Because a normal deployment keeps the vhosts and messages of existing stores, we recommend using it to add a store.
 
-##### Add a store with a normal deployment and a one-time setup
+#### Add a store with a normal deployment and a one-time setup
 
 We tested the following procedure in Spryker Cloud Commerce OS with stores that have one DB each. While a normal deployment added a store, the following was true for the existing stores:
 

@@ -1,7 +1,7 @@
 ---
 title: Storefront Assistant document semantic search
 description: Learn how Storefront Assistant answers questions from product documents, how Amazon Bedrock Knowledge Bases indexes and searches the documents, and which settings and extension points you can use.
-last_updated: Nov 13, 2026
+last_updated: Nov 18, 2026
 template: concept-topic-template
 label: early-access
 related:
@@ -114,7 +114,9 @@ Documents are indexed in the background, so a change of an attachment does not s
     5. It saves the status `processing`, because the knowledge base indexes the document later.
 4. The scheduler job `knowledge-document-status-refresh` runs `knowledge-document:status:refresh` every five minutes. The command reads the status of each `processing` document with `GetKnowledgeBaseDocuments` and saves `indexed` or `failed`.
 
-A temporary failure, such as a connection error, an HTTP 5xx response, or a throttling response after all SDK attempts, puts the message back to the queue. After three attempts, the status is `failed`. A permanent failure, such as a file that is too large or a source type without a data source, sets the status `failed` at once.
+A temporary failure, such as a connection error, an HTTP 5xx response, or a throttling response after all SDK attempts, puts the message back to the queue. After three attempts, the status is `failed`. A permanent failure, such as a file that is too large, sets the status `failed` at once.
+
+When the knowledge store is not configured for a source type, for example because the source type has no data source, the documents of the source type are not indexed. The publisher saves no row and sends no message, and the queue worker logs a warning and removes a message of the source type from the queue.
 
 ### Search flow
 
@@ -224,7 +226,7 @@ The tool accepts the following arguments:
 
 </div>
 
-Each identifier list can have a maximum of 10 values. The tool never throws an error for invalid arguments: it returns `isSuccessful = false` and the reason in `messages`. When the knowledge store fails, the tool tells the model that the document search is not available, and the assistant answers from the product data.
+The lists `abstract_skus`, `concrete_skus`, and `product_abstract_ids` can have a maximum of 10 values together. For example, a search with 6 abstract SKUs and 6 concrete SKUs is rejected. `attachment_ids` and `source_types` can each have a maximum of 10 values. The tool never throws an error for invalid arguments: it returns `isSuccessful = false` and the reason in `messages`. When the knowledge store fails, the tool tells the model that the document search is not available, and the assistant answers from the product data.
 
 ### Document scope
 
@@ -247,7 +249,7 @@ You can change the following settings in the Client `AiCommerceConfig`. A change
 | `getKnowledgeDocumentMaxCharacters()` | `5000` | The maximum total number of characters of all returned passages. The content of the passages with the lowest score is cut first. |
 | `getKnowledgeDocumentCandidateMultiplier()` | `2` | The search asks the knowledge store for this number multiplied by the limit, so that the passages that the filter removes are replaced. `1` asks for the limit only. |
 | `getKnowledgeDocumentMinContentLength()` | `30` | The minimum number of characters of a passage after whitespace is collapsed. Shorter passages, such as a chunk with only a heading, are removed. |
-| `getKnowledgeDocumentMaxIdentifiers()` | `10` | The maximum number of values in each identifier list. A search with a longer list is rejected. |
+| `getKnowledgeDocumentMaxIdentifiers()` | `10` | The maximum number of products in total over `abstract_skus`, `concrete_skus`, and `product_abstract_ids`, and the maximum number of values in each other identifier list. A search above a limit is rejected. |
 | `getKnowledgeDocumentMaxQueryLength()` | `1000` | The maximum number of characters of `query`. |
 | `getKnowledgeDocumentMaxDocumentNameLength()` | `255` | The maximum number of characters of `document_name`. |
 

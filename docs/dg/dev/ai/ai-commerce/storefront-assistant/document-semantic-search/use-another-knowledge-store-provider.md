@@ -1,7 +1,7 @@
 ---
 title: Use another knowledge store provider
 description: Learn how to replace the Amazon Bedrock knowledge base of the Storefront Assistant document semantic search with another vector database or managed search service.
-last_updated: Nov 13, 2026
+last_updated: Nov 18, 2026
 template: howto-guide-template
 label: early-access
 related:
@@ -51,7 +51,7 @@ The core sends the raw file and its MIME type to the store. The core has no text
 
 | EXTENSION POINT | LAYER | METHODS | REGISTERED IN |
 |-----------------|-------|---------|---------------|
-| `SprykerFeature\Zed\AiCommerce\Dependency\KnowledgeStore\KnowledgeStorePluginInterface` | Zed | `setupStore()`, `indexDocument()`, `deleteDocuments()`, `refreshDocumentStatuses()`, `getMaxDocumentSize()` | `Pyz\Zed\AiCommerce\AiCommerceDependencyProvider::getKnowledgeStorePlugin()` |
+| `SprykerFeature\Zed\AiCommerce\Dependency\KnowledgeStore\KnowledgeStorePluginInterface` | Zed | `setupStore()`, `indexDocument()`, `deleteDocuments()`, `refreshDocumentStatuses()`, `getMaxDocumentSize()`, `isConfigured()` | `Pyz\Zed\AiCommerce\AiCommerceDependencyProvider::getKnowledgeStorePlugin()` |
 | `SprykerFeature\Client\AiCommerce\Dependency\KnowledgeSearch\KnowledgeSearchPluginInterface` | Client | `searchDocuments()` | `Pyz\Client\AiCommerce\AiCommerceDependencyProvider::getKnowledgeSearchPlugin()` |
 
 </div>
@@ -71,6 +71,7 @@ Implement `KnowledgeStorePluginInterface` in Zed. The following table describes 
 | `deleteDocuments()` | The queue worker, for deleted sources | Delete the documents of `KnowledgeDocumentCollectionTransfer.knowledgeDocuments`. A document that the store does not have is not an error. |
 | `refreshDocumentStatuses()` | `knowledge-document:status:refresh` | Read the store status of each `processing` document. Return each document with the status `indexed`, `processing`, or `failed`, and set `errorMessage` for a `failed` document. A store that indexes synchronously and always returns `indexed` from `indexDocument()` can return the documents unchanged. |
 | `getMaxDocumentSize()` | The queue worker | Return the largest document in bytes that the store accepts. The core does not download more than this size, and a larger document gets the status `failed`. |
+| `isConfigured()` | The publisher, the queue worker, and `knowledge-document:reindex` | Return `true` when the store is configured and can accept the documents of the source type in `$sourceType`. Otherwise, return `false`: the core then does not queue, download, or index the documents of the source type, and `knowledge-document:reindex` reports that the store is not configured. Do not connect to the store in this method, because the core calls it for each batch of events and for each queue message. |
 
 </div>
 
@@ -139,6 +140,11 @@ class AcmeKnowledgeStorePlugin extends AbstractPlugin implements KnowledgeStoreP
     public function getMaxDocumentSize(): int
     {
         return $this->getConfig()->getMaxDocumentSize();
+    }
+
+    public function isConfigured(string $sourceType): bool
+    {
+        return $this->getConfig()->isConfigured($sourceType);
     }
 }
 ```

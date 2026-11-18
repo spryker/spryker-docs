@@ -1,7 +1,7 @@
 ---
 title: Install Storefront Assistant document semantic search
 description: Learn how to install document semantic search, so that Storefront Assistant answers questions from product documents with an Amazon Bedrock knowledge base.
-last_updated: Nov 13, 2026
+last_updated: Nov 18, 2026
 template: feature-integration-guide-template
 label: early-access
 related:
@@ -234,7 +234,7 @@ Make sure the following transfers exist in `src/Generated/Shared/Transfer/`: `Kn
     | ENVIRONMENT VARIABLE | CONSTANT | DEFAULT | DESCRIPTION |
     |----------------------|----------|---------|-------------|
     | `SPRYKER_AI_KNOWLEDGE_BASE_ID` | `BEDROCK_KNOWLEDGE_BASE_ID` | Empty | The ID of the knowledge base. Without it, the setup skips the store, and the assistant says that the document search is not available. |
-    | `SPRYKER_AI_KNOWLEDGE_BASE_DATA_SOURCE_ID` | `BEDROCK_KNOWLEDGE_BASE_DATA_SOURCE_IDS`, key `product_attachment` | Empty | The ID of the data source of the product attachments. Without it, the setup fails, and every product attachment gets the status `failed`. The search does not need it. |
+    | `SPRYKER_AI_KNOWLEDGE_BASE_DATA_SOURCE_ID` | `BEDROCK_KNOWLEDGE_BASE_DATA_SOURCE_IDS`, key `product_attachment` | Empty | The ID of the data source of the product attachments. Without it, the setup fails, and the product attachments are not indexed: they get no row in `spy_knowledge_document`. The search does not need it. |
     | `SPRYKER_AI_KNOWLEDGE_BASE_AWS_REGION` | `BEDROCK_KNOWLEDGE_BASE_AWS_REGION` | `AWS_REGION`, then `eu-central-1` | The region of the knowledge base. |
     | `SPRYKER_AI_KNOWLEDGE_BASE_RERANKING_MODEL_TYPE` | `BEDROCK_KNOWLEDGE_BASE_RERANKING_MODEL_TYPE` | `MANAGED` | `MANAGED`, `CUSTOM`, or `NONE`. Keep `MANAGED`. |
     | `SPRYKER_AI_KNOWLEDGE_BASE_RERANKING_MODEL_ARN` | `BEDROCK_KNOWLEDGE_BASE_RERANKING_MODEL_ARN` | Empty | The ARN of the rerank model for the type `CUSTOM`. |
@@ -400,7 +400,14 @@ Several developers can use one development knowledge base. Each developer who se
 
 </div>
 
-In the read-only mode, the queue worker cannot index the documents, because the configuration has no data source. It saves the status `failed` with the message `No Amazon Bedrock data source is configured for the source type product_attachment` for each document and sends nothing to AWS. This is expected: the search does not read the `spy_knowledge_document` table, so these rows do not change the answers.
+In the read-only mode, the configuration has no data source, so the documents are not indexed. This is expected:
+
+- The publisher writes no row to `spy_knowledge_document` and queues no message.
+- The queue worker logs a warning for a message of the source type `product_attachment` that is already in the queue, and removes the message from the queue.
+- `knowledge-document:reindex` fails with `The knowledge store is not configured for the source type "product_attachment"` and queues no document.
+- Nothing is sent to AWS.
+
+The search does not read the `spy_knowledge_document` table, so the answers do not change.
 
 ## 6) Set up behavior
 
@@ -702,7 +709,7 @@ Do not run a forced re-index often. A forced re-index sends all documents to Bed
 | The assistant says that the document search is not available. | `BEDROCK_KNOWLEDGE_BASE_ID` is not set, the credentials are wrong, or the role of Yves or Glue has no `bedrock:Retrieve` permission. | Check steps 3 and 5. |
 | The assistant never answers from documents. | `product_knowledge_search` is not in `getAiToolPlugins()` or in `getProductDiscoveryAgentToolNames()`. | Check steps 5 and 6. |
 | The assistant answers that no documents are available for a product that has attachments. | The product attachments are not published to the storage, or the attachment has another locale. | Publish the product attachments, and check the locale of the attachment. |
-| All documents are `failed` with `No Amazon Bedrock data source is configured for the source type product_attachment`. | `BEDROCK_KNOWLEDGE_BASE_DATA_SOURCE_IDS` has no data source for `product_attachment`. In the read-only mode of a local environment, this is expected. | Set the data source ID, then run step 7. |
+| No document is indexed, and `knowledge-document:reindex` fails with `The knowledge store is not configured for the source type "product_attachment"`. | `BEDROCK_KNOWLEDGE_BASE_ID` is not set, or `BEDROCK_KNOWLEDGE_BASE_DATA_SOURCE_IDS` has no data source for `product_attachment`. In the read-only mode of a local environment, this is expected. | Set the knowledge base ID and the data source ID, then run step 7. |
 | `knowledge-document:setup` skips the store. | `BEDROCK_KNOWLEDGE_BASE_ID` is not set. | Check step 5. |
 | `ExpiredTokenException` or `UnrecognizedClientException` in the log. | The temporary credentials of a local environment expired or are wrong. | Get new credentials. See [Configure a local environment](#configure-a-local-environment). |
 | `AccessDeniedException` in the log. | The IAM role has no permission for the action. | Check step 3. |

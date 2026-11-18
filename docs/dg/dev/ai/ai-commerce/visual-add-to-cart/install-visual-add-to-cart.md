@@ -1,14 +1,14 @@
 ---
 title: Install Visual Add to Cart
-description: Learn how to install the Visual Add to Cart feature that lets buyers upload a product image on the Quick Order page to automatically populate the order form.
-last_updated: Nov 13, 2026
+description: Learn how to install the Visual Add to Cart feature that lets buyers upload a product image or a PDF order form on the Quick Order page to automatically populate the order form.
+last_updated: Nov 18, 2026
 template: feature-integration-guide-template
 redirect_from:
   - /docs/en/cart
   - /2021080/docs/cart
 ---
 
-Visual Add to Cart lets storefront users upload a product image on the Quick Order page to automatically recognize products and populate the order form. This document describes how to install the Visual Add to Cart feature.
+Visual Add to Cart lets storefront users upload a product image, a screenshot, or a PDF order form on the Quick Order page to automatically recognize products and populate the order form. This document describes how to install the Visual Add to Cart feature.
 
 ## Install the feature core
 
@@ -34,32 +34,34 @@ Append the glossary according to your configuration:
     <summary>data/import/common/common/glossary.csv</summary>
 
 ```csv
-ai-commerce.quick-order-image-to-cart.image-upload.title,Quick order with AI,en_US
-ai-commerce.quick-order-image-to-cart.image-upload.title,Schnellbestellung mit KI,de_DE
-ai-commerce.quick-order-image-to-cart.image-upload.description,"Upload purchase order, invoices or product lists. Supports %formats% formats and Screenshots.",en_US
-ai-commerce.quick-order-image-to-cart.image-upload.description,"Titelliste, Rechnungen oder Produktlisten hochladen. Unterstützt %formats% Formate und Screenshots.",de_DE
-ai-commerce.quick-order-image-to-cart.image-upload.button.upload,Upload,en_US
-ai-commerce.quick-order-image-to-cart.image-upload.button.upload,Uploaden,de_DE
-ai-commerce.quick-order-image-to-cart.image-upload.browse-file,No file selected. Browse file,en_US
-ai-commerce.quick-order-image-to-cart.image-upload.browse-file,Keine Datei ausgewählt. Datei durchsuchen,de_DE
-ai-commerce.quick-order-image-to-cart.image-order.errors.invalid-format,Invalid image format. Please upload a image file.,en_US
-ai-commerce.quick-order-image-to-cart.image-order.errors.invalid-format,Ungültiges Bildformat. Bitte laden Sie eine Bilddatei hoch.,de_DE
-ai-commerce.quick-order-image-to-cart.image-order.errors.invalid-mime-type,Invalid image mime type.,en_US
-ai-commerce.quick-order-image-to-cart.image-order.errors.invalid-mime-type,Ungültiger Bild-MIME-Typ.,de_DE
-ai-commerce.quick-order-image-to-cart.image-order.errors.no-image,No image uploaded.,en_US
-ai-commerce.quick-order-image-to-cart.image-order.errors.no-image,Kein Bild hochgeladen.,de_DE
-ai-commerce.quick-order-image-to-cart.image-order.errors.product-limit-exceeded,"The number of recognized products exceeds the limit. Please upload an image with no more than %maxProducts% products.",en_US
-ai-commerce.quick-order-image-to-cart.image-order.errors.product-limit-exceeded,"Die Anzahl der erkannten Produkte überschreitet das Limit. Bitte laden Sie ein Bild mit nicht mehr als %maxProducts% Produkten hoch.",de_DE
-ai-commerce.quick-order-image-to-cart.image-order.errors.no-products-recognized,"No products were recognized in the uploaded image.",en_US
-ai-commerce.quick-order-image-to-cart.image-order.errors.no-products-recognized,"Es wurden keine Produkte im hochgeladenen Bild erkannt.",de_DE
-ai-commerce.quick-order-image-to-cart.image-order.errors.product-not-found,"Product '%product%' was not found in the catalog.",en_US
-ai-commerce.quick-order-image-to-cart.image-order.errors.product-not-found,"Produkt '%product%' wurde im Katalog nicht gefunden.",de_DE
-ai-commerce.quick-order-image-to-cart.image-order.errors.ai-request-failed,The AI request failed. The image could not be recognized.,en_US
-ai-commerce.quick-order-image-to-cart.image-order.errors.ai-request-failed,Die KI-Anfrage ist fehlgeschlagen. Das Bild konnte nicht erkannt werden.,de_DE
-ai-commerce.quick-order-image-to-cart.image-order.errors.ai-response-invalid,The AI returned an unexpected response. The image could not be recognized.,en_US
-ai-commerce.quick-order-image-to-cart.image-order.errors.ai-response-invalid,Die KI hat eine unerwartete Antwort zurückgegeben. Das Bild konnte nicht erkannt werden.,de_DE
-ai-commerce.quick-order-image-to-cart.image-order.errors.file-too-large,The uploaded image exceeds the maximum allowed file size.,en_US
-ai-commerce.quick-order-image-to-cart.image-order.errors.file-too-large,Das hochgeladene Bild überschreitet die maximal zulässige Dateigröße.,de_DE
+ai-commerce.quick-order-visual-add-to-cart.file-upload.title,Quick order with AI,en_US
+ai-commerce.quick-order-visual-add-to-cart.file-upload.title,Schnellbestellung mit KI,de_DE
+ai-commerce.quick-order-visual-add-to-cart.file-upload.description,"Upload a purchase order, order form, invoice or product list as a file, photo or screenshot. Supported formats: %formats%.",en_US
+ai-commerce.quick-order-visual-add-to-cart.file-upload.description,"Laden Sie eine Bestellung, ein Bestellformular, eine Rechnung oder eine Produktliste als Datei, Foto oder Screenshot hoch. Unterstützte Formate: %formats%.",de_DE
+ai-commerce.quick-order-visual-add-to-cart.file-upload.button.upload,Upload,en_US
+ai-commerce.quick-order-visual-add-to-cart.file-upload.button.upload,Uploaden,de_DE
+ai-commerce.quick-order-visual-add-to-cart.file-upload.browse-file,No file selected. Browse file,en_US
+ai-commerce.quick-order-visual-add-to-cart.file-upload.browse-file,Keine Datei ausgewählt. Datei durchsuchen,de_DE
+ai-commerce.quick-order-visual-add-to-cart.order-file.errors.invalid-format,Invalid file format. Please upload a file in one of the supported formats.,en_US
+ai-commerce.quick-order-visual-add-to-cart.order-file.errors.invalid-format,Ungültiges Dateiformat. Bitte laden Sie eine Datei in einem der unterstützten Formate hoch.,de_DE
+ai-commerce.quick-order-visual-add-to-cart.order-file.errors.invalid-mime-type,Invalid file type.,en_US
+ai-commerce.quick-order-visual-add-to-cart.order-file.errors.invalid-mime-type,Ungültiger Dateityp.,de_DE
+ai-commerce.quick-order-visual-add-to-cart.order-file.errors.no-file,No file uploaded.,en_US
+ai-commerce.quick-order-visual-add-to-cart.order-file.errors.no-file,Keine Datei hochgeladen.,de_DE
+ai-commerce.quick-order-visual-add-to-cart.order-file.errors.product-limit-exceeded,"The number of recognized products exceeds the limit. Please upload a file with no more than %maxProducts% products.",en_US
+ai-commerce.quick-order-visual-add-to-cart.order-file.errors.product-limit-exceeded,"Die Anzahl der erkannten Produkte überschreitet das Limit. Bitte laden Sie eine Datei mit nicht mehr als %maxProducts% Produkten hoch.",de_DE
+ai-commerce.quick-order-visual-add-to-cart.order-file.errors.no-products-recognized,"No products were recognized in the uploaded file.",en_US
+ai-commerce.quick-order-visual-add-to-cart.order-file.errors.no-products-recognized,"Es wurden keine Produkte in der hochgeladenen Datei erkannt.",de_DE
+ai-commerce.quick-order-visual-add-to-cart.order-file.errors.product-not-found,"Product '%product%' was not found in the catalog.",en_US
+ai-commerce.quick-order-visual-add-to-cart.order-file.errors.product-not-found,"Produkt '%product%' wurde im Katalog nicht gefunden.",de_DE
+ai-commerce.quick-order-visual-add-to-cart.order-file.errors.ai-request-failed,The AI request failed. The file could not be recognized.,en_US
+ai-commerce.quick-order-visual-add-to-cart.order-file.errors.ai-request-failed,Die KI-Anfrage ist fehlgeschlagen. Die Datei konnte nicht erkannt werden.,de_DE
+ai-commerce.quick-order-visual-add-to-cart.order-file.errors.file-read-failed,The uploaded file could not be read. Please upload it again.,en_US
+ai-commerce.quick-order-visual-add-to-cart.order-file.errors.file-read-failed,Die hochgeladene Datei konnte nicht gelesen werden. Bitte laden Sie sie erneut hoch.,de_DE
+ai-commerce.quick-order-visual-add-to-cart.order-file.errors.ai-response-invalid,The AI returned an unexpected response. The file could not be recognized.,en_US
+ai-commerce.quick-order-visual-add-to-cart.order-file.errors.ai-response-invalid,Die KI hat eine unerwartete Antwort zurückgegeben. Die Datei konnte nicht erkannt werden.,de_DE
+ai-commerce.quick-order-visual-add-to-cart.order-file.errors.file-too-large,The uploaded file exceeds the maximum allowed file size.,en_US
+ai-commerce.quick-order-visual-add-to-cart.order-file.errors.file-too-large,Die hochgeladene Datei überschreitet die maximal zulässige Dateigröße.,de_DE
 ```
 
 </details>
@@ -70,7 +72,7 @@ Register the following plugin to integrate the feature into the Quick Order page
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |--------|---------------|---------------|-----------|
-| AiCommerceQuickOrderImageToCartFormPlugin | Adds the image upload form to the Quick Order page and handles the image-to-cart workflow. | | SprykerFeature\Yves\AiCommerce\QuickOrderImageToCart\Plugin\QuickOrderPage |
+| AiCommerceQuickOrderVisualAddToCartFormPlugin | Adds the image and PDF upload form to the Quick Order page and handles the Visual Add to Cart workflow. | | SprykerFeature\Yves\AiCommerce\QuickOrderVisualAddToCart\Plugin\QuickOrderPage |
 
 **src/Pyz/Yves/QuickOrderPage/QuickOrderPageDependencyProvider.php**
 
@@ -79,7 +81,7 @@ Register the following plugin to integrate the feature into the Quick Order page
 
 namespace Pyz\Yves\QuickOrderPage;
 
-use SprykerFeature\Yves\AiCommerce\QuickOrderImageToCart\Plugin\QuickOrderPage\AiCommerceQuickOrderImageToCartFormPlugin;
+use SprykerFeature\Yves\AiCommerce\QuickOrderVisualAddToCart\Plugin\QuickOrderPage\AiCommerceQuickOrderVisualAddToCartFormPlugin;
 use SprykerShop\Yves\QuickOrderPage\QuickOrderPageDependencyProvider as SprykerQuickOrderPageDependencyProvider;
 
 class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyProvider
@@ -90,7 +92,7 @@ class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyPr
     protected function getQuickOrderFormPlugins(): array
     {
         return [
-            new AiCommerceQuickOrderImageToCartFormPlugin(),
+            new AiCommerceQuickOrderVisualAddToCartFormPlugin(),
         ];
     }
 }
@@ -98,7 +100,7 @@ class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-On the Storefront Quick Order page, make sure the image upload component is displayed and that uploading a product image populates the order form with recognized products.
+On the Storefront Quick Order page, make sure the upload component is displayed and that uploading a product image or a PDF order form populates the order form with recognized products.
 
 {% endinfo_block %}
 
@@ -106,7 +108,7 @@ On the Storefront Quick Order page, make sure the image upload component is disp
 
 For a base AiFoundation setup, see [Configure AiFoundation](/docs/dg/dev/ai/ai-commerce/install-ai-commerce.html#2-configure-aifoundation).
 
-Using a dedicated AI configuration for Visual Add to Cart is recommended because each named configuration is tracked separately in the AiFoundation audit log. This lets you isolate and review all AI calls made by the image recognition flow independently from other AI features in your project.
+Using a dedicated AI configuration for Visual Add to Cart is recommended because each named configuration is tracked separately in the AiFoundation audit log. This lets you isolate and review all AI calls made by the Visual Add to Cart recognition flow independently from other AI features in your project.
 
 To use a dedicated AI model configuration for Visual Add to Cart instead of the default one, follow these steps:
 
@@ -126,21 +128,23 @@ use SprykerFeature\Shared\AiCommerce\AiCommerceConstants as SprykerFeatureAiComm
 interface AiCommerceConstants extends SprykerFeatureAiCommerceConstants
 {
     public const string CONFIGURATION_KEY_OPENAI_API_TOKEN = 'ai_vendor:openai:general:api_token';
-    public const string CONFIGURATION_KEY_QUICK_ORDER_IMAGE_TO_CART_AI_CONFIGURATION = 'ai_commerce:quick_order:ai_vendor:ai_configuration';
-    public const string CONFIGURATION_KEY_QUICK_ORDER_IMAGE_TO_CART_OPENAI_MODEL = 'ai_commerce:quick_order:ai_vendor:openai_model';
+    public const string CONFIGURATION_KEY_QUICK_ORDER_VISUAL_ADD_TO_CART_AI_CONFIGURATION = 'ai_commerce:quick_order:ai_vendor:ai_configuration';
+    public const string CONFIGURATION_KEY_QUICK_ORDER_VISUAL_ADD_TO_CART_OPENAI_MODEL = 'ai_commerce:quick_order:ai_vendor:openai_model';
 
-    public const string AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_OPENAI = 'AI_COMMERCE:AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_OPENAI';
+    public const string AI_CONFIGURATION_QUICK_ORDER_VISUAL_ADD_TO_CART_OPENAI = 'AI_COMMERCE:AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_OPENAI';
 }
 ```
 
-2. In `config/Shared/config_ai.php`, register a named configuration entry keyed by the `AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_OPENAI` constant:
+The `AI_CONFIGURATION_QUICK_ORDER_VISUAL_ADD_TO_CART_*` values keep the `IMAGE_TO_CART` wording of earlier module versions. Back Office stores this value when the AI configuration is saved, so the old wording keeps saved settings working.
+
+2. In `config/Shared/config_ai.php`, register a named configuration entry keyed by the `AI_CONFIGURATION_QUICK_ORDER_VISUAL_ADD_TO_CART_OPENAI` constant:
 
 ```php
-$config[\Spryker\Shared\AiFoundation\AiFoundationConstants::AI_CONFIGURATIONS][\Pyz\Shared\AiCommerce\AiCommerceConstants::AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_OPENAI] = [
+$config[\Spryker\Shared\AiFoundation\AiFoundationConstants::AI_CONFIGURATIONS][\Pyz\Shared\AiCommerce\AiCommerceConstants::AI_CONFIGURATION_QUICK_ORDER_VISUAL_ADD_TO_CART_OPENAI] = [
     'provider_name' => \Spryker\Shared\AiFoundation\AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
     'provider_config' => [
         'key' => \Spryker\Shared\AiFoundation\AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \Pyz\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
-        'model' => \Spryker\Shared\AiFoundation\AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \Pyz\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_QUICK_ORDER_IMAGE_TO_CART_OPENAI_MODEL,
+        'model' => \Spryker\Shared\AiFoundation\AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \Pyz\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_QUICK_ORDER_VISUAL_ADD_TO_CART_OPENAI_MODEL,
         'parameters' => [
             'reasoning' => [
                 'effort' => 'minimal',
@@ -166,11 +170,11 @@ use SprykerFeature\Yves\AiCommerce\AiCommerceConfig as SprykerFeatureAiCommerceC
 
 class AiCommerceConfig extends SprykerFeatureAiCommerceConfig
 {
-    public function getQuickOrderImageToCartAiConfigurationName(): ?string
+    public function getQuickOrderVisualAddToCartAiConfigurationName(): ?string
     {
         return $this->getModuleConfig(
-            AiCommerceConstants::CONFIGURATION_KEY_QUICK_ORDER_IMAGE_TO_CART_AI_CONFIGURATION,
-            AiCommerceConstants::AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_OPENAI,
+            AiCommerceConstants::CONFIGURATION_KEY_QUICK_ORDER_VISUAL_ADD_TO_CART_AI_CONFIGURATION,
+            AiCommerceConstants::AI_CONFIGURATION_QUICK_ORDER_VISUAL_ADD_TO_CART_OPENAI,
         );
     }
 }
@@ -193,7 +197,7 @@ features:
             groups:
                 - key: ai_vendor
                   name: AI Vendor
-                  description: AI configuration and vendor model used for the Quick Order Image-to-Cart feature. Only the model field matching the selected AI Configuration is shown.
+                  description: AI configuration and vendor model used for the Quick Order Visual add to cart feature. Only the model field matching the selected AI Configuration is shown.
                   enabled: true
                   order: 1
                   scopes:
@@ -201,7 +205,7 @@ features:
                   settings:
                       - key: ai_configuration
                         name: AI Configuration
-                        description: AI configuration used for the Quick Order Image-to-Cart feature.
+                        description: AI configuration used for the Quick Order Visual add to cart feature.
                         type: radio
                         default_value: 'AI_COMMERCE:AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_OPENAI'
                         enabled: true
@@ -219,7 +223,7 @@ features:
                               label: Anthropic
                       - key: openai_model
                         name: OpenAI Model
-                        description: The OpenAI model used for the Quick Order Image-to-Cart AI configuration. Model must support image input and structured output.
+                        description: The OpenAI model used for the Quick Order Visual add to cart AI configuration. Model must support image and PDF input and structured output.
                         type: select
                         default_value: 'gpt-5-nano'
                         enabled: true
@@ -241,7 +245,7 @@ features:
                                         value: 'AI_COMMERCE:AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_OPENAI'
                       - key: aws_model
                         name: AWS Bedrock Model
-                        description: The AWS Bedrock model identifier used for the Quick Order Image-to-Cart AI configuration. Model must support image input and structured output.
+                        description: The AWS Bedrock model identifier used for the Quick Order Visual add to cart AI configuration. Model must support image and PDF input and structured output.
                         type: select
                         default_value: 'eu.anthropic.claude-haiku-5-5'
                         enabled: true
@@ -263,7 +267,7 @@ features:
                                         value: 'AI_COMMERCE:AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_AWS'
                       - key: anthropic_model
                         name: Anthropic Model
-                        description: The Anthropic model used for the Quick Order Image-to-Cart AI configuration. Model must support image input and structured output.
+                        description: The Anthropic model used for the Quick Order Visual add to cart AI configuration. Model must support image and PDF input and structured output.
                         type: select
                         default_value: 'claude-haiku-5-5'
                         enabled: true
@@ -301,7 +305,7 @@ Enable the feature in the Back Office:
 
 {% info_block warningBox "Verification" %}
 
-On the Storefront Quick Order page, make sure the image upload button is visible.
+On the Storefront Quick Order page, make sure the upload button is visible.
 
 {% endinfo_block %}
 
@@ -439,7 +443,7 @@ docker/sdk cli console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-On the Storefront Quick Order page, make sure you can upload a product image and have the recognized products pre-filled in the order form.
+On the Storefront Quick Order page, make sure you can upload a product image or a PDF order form and have the recognized products pre-filled in the order form.
 
 {% endinfo_block %}
 

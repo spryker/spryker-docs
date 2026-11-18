@@ -1,7 +1,7 @@
 ---
 title: Install the B2B Customer Groups feature
 description: Learn how to let customer groups hold companies and business units, and how to import customer groups and their memberships in your Spryker project.
-last_updated: Nov 2, 2026
+last_updated: Nov 18, 2026
 template: feature-integration-guide-template
 related:
   - title: Customer Groups overview
@@ -15,7 +15,8 @@ related:
 This document describes how to install the B2B Customer Groups feature. The feature lets a customer group hold companies and business units in addition to customers. It adds the following:
 
 - The **Companies** and **Business Units** tabs on the Back Office pages that create and edit a customer group, and the matching panels on the page that shows a customer group.
-- Two Backend API resources that list, add, replace, and remove the companies and business units of a customer group.
+- A filter on the Back Office **Customer Groups** page that lists only the groups a specific customer, company, or business unit is assigned to.
+- Two Backend API resources that list, add, replace, and remove the companies and business units of a customer group, and filters of the `customer-groups` resource by customer, company, and business unit.
 - Four data importers that create customer groups and assign companies, business units, and customers to them.
 - Optional: The `customer-group` discount condition that also matches the customer groups of the customer's company and business units.
 
@@ -211,6 +212,77 @@ The view plugins are independent of the others. Without them, the page that show
 
 {% endinfo_block %}
 
+#### Filter the customer group list by assignment
+
+In a project with many customer groups, finding the groups of one customer, company, or business unit requires opening every group. To add an **Assignment type** and **Assigned to** filter to the **Customer Groups** page, register the following plugins:
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+| CustomerCustomerGroupAssignmentFilterPlugin | Adds the **Customer** option to the **Assignment type** filter. Narrows the list to the groups the customer is assigned to directly. | None | SprykerFeature\Zed\CustomerExperienceManagement\Communication\Plugin\CustomerGroup |
+| CompanyCustomerGroupAssignmentFilterPlugin | Adds the **Company** option to the **Assignment type** filter. | `CompanyCustomerGroupQueryExpanderPlugin` is registered. | SprykerFeature\Zed\CustomerExperienceManagement\Communication\Plugin\CustomerGroup |
+| CompanyBusinessUnitCustomerGroupAssignmentFilterPlugin | Adds the **Business Unit** option to the **Assignment type** filter. | `CompanyBusinessUnitCustomerGroupQueryExpanderPlugin` is registered. | SprykerFeature\Zed\CustomerExperienceManagement\Communication\Plugin\CustomerGroup |
+| CompanyCustomerGroupQueryExpanderPlugin | Narrows the customer group list and the `customer-groups` Backend API resource to the groups the given companies are assigned to. Does not include the groups of their business units. | None | SprykerFeature\Zed\CustomerExperienceManagement\Communication\Plugin\CustomerGroup |
+| CompanyBusinessUnitCustomerGroupQueryExpanderPlugin | Narrows the customer group list and the `customer-groups` Backend API resource to the groups the given business units are assigned to. Does not include the groups of their company or parent business units. | None | SprykerFeature\Zed\CustomerExperienceManagement\Communication\Plugin\CustomerGroup |
+
+**src/Pyz/Zed/CustomerGroup/CustomerGroupDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\CustomerGroup;
+
+use Spryker\Zed\CustomerGroup\CustomerGroupDependencyProvider as SprykerCustomerGroupDependencyProvider;
+use SprykerFeature\Zed\CustomerExperienceManagement\Communication\Plugin\CustomerGroup\CompanyBusinessUnitCustomerGroupAssignmentFilterPlugin;
+use SprykerFeature\Zed\CustomerExperienceManagement\Communication\Plugin\CustomerGroup\CompanyBusinessUnitCustomerGroupQueryExpanderPlugin;
+use SprykerFeature\Zed\CustomerExperienceManagement\Communication\Plugin\CustomerGroup\CompanyCustomerGroupAssignmentFilterPlugin;
+use SprykerFeature\Zed\CustomerExperienceManagement\Communication\Plugin\CustomerGroup\CompanyCustomerGroupQueryExpanderPlugin;
+use SprykerFeature\Zed\CustomerExperienceManagement\Communication\Plugin\CustomerGroup\CustomerCustomerGroupAssignmentFilterPlugin;
+
+class CustomerGroupDependencyProvider extends SprykerCustomerGroupDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\CustomerGroupExtension\Dependency\Plugin\CustomerGroupAssignmentFilterPluginInterface>
+     */
+    protected function getCustomerGroupAssignmentFilterPlugins(): array
+    {
+        return [
+            new CustomerCustomerGroupAssignmentFilterPlugin(),
+            new CompanyCustomerGroupAssignmentFilterPlugin(),
+            new CompanyBusinessUnitCustomerGroupAssignmentFilterPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Zed\CustomerGroupExtension\Dependency\Plugin\CustomerGroupQueryExpanderPluginInterface>
+     */
+    protected function getCustomerGroupQueryExpanderPlugins(): array
+    {
+        return [
+            new CompanyCustomerGroupQueryExpanderPlugin(),
+            new CompanyBusinessUnitCustomerGroupQueryExpanderPlugin(),
+        ];
+    }
+}
+```
+
+The two plugin stacks depend on each other as follows:
+
+- If no assignment filter plugin is registered, the **Customer Groups** page shows no filter.
+- An assignment filter plugin for companies or business units without its query expander plugin does not narrow the list: the page shows every group.
+- A query expander plugin works without the assignment filter plugins. The `companyUuid` and `companyBusinessUnitUuid` filters of the `customer-groups` Backend API resource need only the query expander plugins.
+
+The filter needs the `spryker-zed-customer-group-main.js` Back Office script, which you build in [Build Zed UI frontend](#5-build-zed-ui-frontend).
+
+{% info_block warningBox "Verification" %}
+
+1. In the Back Office, go to **Customers&nbsp;<span aria-label="and then">></span> Customer Groups**. Make sure the **Assignment type** and **Assigned to** fields are displayed above the table.
+2. For **Assignment type**, select **Business Unit**. In **Assigned to**, enter at least three characters of the name of the business unit you assigned in the previous verification, and select it.
+3. Click **Apply filters**. Make sure the table lists only the customer groups the business unit is assigned to.
+
+{% endinfo_block %}
+
+To add another kind of filter, implement `Spryker\Zed\CustomerGroupExtension\Dependency\Plugin\CustomerGroupQueryExpanderPluginInterface` for the condition and `Spryker\Zed\CustomerGroupExtension\Dependency\Plugin\CustomerGroupAssignmentFilterPluginInterface` for the filter option. The query expander plugins apply to both the Back Office list and `CustomerGroupFacade::getCustomerGroupCollection()`, so they also apply to the Backend API.
+
 #### Grant access to restricted Back Office roles
 
 The tables of the new tabs and panels load their rows from the `customer-experience-management` module, not from `customer-group`. A Back Office role that has access to every module, such as the root role, needs no changes. A role with restricted access rules shows empty tables until you allow the following:
@@ -223,6 +295,14 @@ The tables of the new tabs and panels load their rows from the `customer-experie
 | customer-experience-management | assigned-company-business-unit-table | selectable-table, table |
 
 The **Edit** buttons of the **Companies** and **Business Units** panels open the edit pages of the company and the business unit, so the role also needs access to `company-gui/edit-company/index` and `company-business-unit-gui/edit-company-business-unit`. To add rules to a role, see [Edit user roles](/docs/pbc/all/user-management/latest/base-shop/manage-in-the-back-office/manage-user-roles/edit-user-roles.html).
+
+The **Assigned to** field of the customer group list filter loads its suggestions from the following Back Office actions. A role needs access to the action of every assignment type it filters by. Without it, the field suggests nothing for that type.
+
+| ASSIGNMENT TYPE | BUNDLE | CONTROLLER | ACTION |
+| --- | --- | --- | --- |
+| Customer | customer | suggest | index |
+| Company | company-gui | suggest | index |
+| Business Unit | company-business-unit-gui | suggest | all-companies |
 
 If your project uses [Persistence ACL](/docs/pbc/all/user-management/latest/marketplace/persistence-acl-feature-overview/persistence-acl-feature-configuration.html) for Back Office users, also allow the `SpyCustomerGroupToCompany` and `SpyCustomerGroupToCompanyBusinessUnit` entities.
 
@@ -290,7 +370,7 @@ Open the page that creates a customer group. Make sure the tabs follow the order
 
 ### 5) Build Zed UI frontend
 
-The feature relies on the Back Office scripts of the `Gui` and `CustomerGroup` modules: the selectable tables of the new tabs restore their selection after a save fails validation, and the edit page reopens on the tab that was open. Rebuild the Back Office assets:
+The feature relies on the Back Office scripts of the `Gui` and `CustomerGroup` modules: the selectable tables of the new tabs restore their selection after a save fails validation, the edit page reopens on the tab that was open, and the **Assigned to** field of the customer group list filter suggests customers, companies, and business units. Rebuild the Back Office assets:
 
 ```bash
 docker/sdk console frontend:zed:build
@@ -314,6 +394,8 @@ Generate the API resources, then clear the Glue Backend kernel cache:
 docker/sdk cli "GLUE_APPLICATION=GLUE_BACKEND vendor/bin/glue api:generate"
 rm -rf data/cache/GlueBackend/*
 ```
+
+The `companyUuid` and `companyBusinessUnitUuid` filters of the `customer-groups` resource rely on the query expander plugins from [Filter the customer group list by assignment](#filter-the-customer-group-list-by-assignment). For the filters, see [Backend API: Manage customer groups](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-groups.html#retrieve-customer-groups).
 
 The resources address a customer group by its UUID. If your project had customer groups before it installed the customer group UUIDs, generate the missing ones as described in [Backend API: Manage customer groups](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-groups.html#installation).
 
@@ -451,13 +533,11 @@ By default, the `customer-group` discount condition matches only the customer gr
 
 Prerequisites:
 
-- `spryker/customer-group` 2.16.0 or later and `spryker/customer-group-extension` 1.1.0 or later. If needed, update them:
+- `spryker/customer-group` 2.16.0 or later, `spryker/customer-group-extension` 1.1.0 or later, `spryker/customer-group-discount-connector` 2.3.0 or later, and `spryker/discount` 9.58.0 or later. If needed, update them:
 
   ```bash
-  composer require spryker/customer-group:"^2.16.0" spryker/customer-group-extension:"^1.1.0" --update-with-dependencies
+  composer require spryker/customer-group:"^2.16.0" spryker/customer-group-extension:"^1.1.0" spryker/customer-group-discount-connector:"^2.3.0" spryker/discount:"^9.58.0" --update-with-dependencies
   ```
-
-- `CustomerGroupDecisionRulePlugin` of `spryker/customer-group-discount-connector` is registered in `DiscountDependencyProvider::getDecisionRulePlugins()`.
 
 1. Generate the transfer objects:
 
@@ -474,14 +554,44 @@ Prerequisites:
     | CustomerGroupCollection | class | created | src/Generated/Shared/Transfer/CustomerGroupCollectionTransfer |
     | CompanyUser | class | created | src/Generated/Shared/Transfer/CompanyUserTransfer |
     | Customer.companyUserTransfer | property | created | src/Generated/Shared/Transfer/CustomerTransfer |
+    | DiscountRuleValueValidationResponse | class | created | src/Generated/Shared/Transfer/DiscountRuleValueValidationResponseTransfer |
 
     {% endinfo_block %}
 
-2. Register the plugin:
+2. Register the plugins:
 
     | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
     | --- | --- | --- | --- |
+    | CustomerGroupSuggestDecisionRulePlugin | Handles the `customer-group` discount rule field. Matches the customer groups the customer is assigned to directly and the groups provided by `CustomerGroupProviderPluginInterface` plugins, comparing group names case-insensitively. Suggests customer group names in the Back Office query builder and rejects a discount save if the condition names a customer group that does not exist. | Replaces `CustomerGroupDecisionRulePlugin`. | Spryker\Zed\CustomerGroupDiscountConnector\Communication\Plugin\Discount |
     | CompanyUserCustomerGroupProviderPlugin | Provides the customer groups of the company and business unit of the company user the customer currently shops as, including the parent business units. | | SprykerFeature\Zed\CustomerExperienceManagement\Communication\Plugin\CustomerGroup |
+
+    `CustomerGroupDecisionRulePlugin` of `Spryker\Zed\CustomerGroupDiscountConnector\Communication\Plugin\DecisionRule` is deprecated. It still matches the provided customer groups, but it offers no suggestions and does not validate the condition on save. Both plugins handle the `customer-group` field, so register only `CustomerGroupSuggestDecisionRulePlugin`:
+
+    **src/Pyz/Zed/Discount/DiscountDependencyProvider.php**
+
+    ```php
+    <?php
+
+    namespace Pyz\Zed\Discount;
+
+    use Spryker\Zed\CustomerGroupDiscountConnector\Communication\Plugin\Discount\CustomerGroupSuggestDecisionRulePlugin;
+    use Spryker\Zed\Discount\DiscountDependencyProvider as SprykerDiscountDependencyProvider;
+
+    class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
+    {
+        /**
+         * @return array<\Spryker\Zed\DiscountExtension\Dependency\Plugin\DecisionRulePluginInterface>
+         */
+        protected function getDecisionRulePlugins(): array
+        {
+            return array_merge(parent::getDecisionRulePlugins(), [
+                new CustomerGroupSuggestDecisionRulePlugin(),
+            ]);
+        }
+    }
+    ```
+
+    The `customer-group` field loads its suggestions from the `customer-group/suggest/index` Back Office action. A restricted Back Office role that manages discounts needs access to this action. Without it, the field suggests nothing, but users can still enter a group name manually.
 
     **src/Pyz/Zed/CustomerGroup/CustomerGroupDependencyProvider.php**
 
@@ -512,9 +622,10 @@ Prerequisites:
 {% info_block warningBox "Verification" %}
 
 1. In the Back Office, assign a business unit to a customer group.
-2. [Create a discount](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/create-discounts.html) with the condition `customer-group = "{CUSTOMER_GROUP_NAME}"`.
+2. [Create a discount](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/create-discounts.html). On the **Conditions** tab, add a `customer-group` rule with the **Equal** operator, and enter the first three characters of the customer group name in the value field. Make sure the field suggests the customer group, select it, and save the discount.
 3. On the Storefront, log in as a company user of a child business unit of the assigned business unit, and add a product to the cart. Make sure the discount is applied.
 4. Log in as a company user of the parent business unit of the assigned business unit, and add a product to the cart. Make sure the discount is not applied.
+5. In the Back Office, edit the discount, change the condition to `customer-group = "{NON_EXISTENT_GROUP_NAME}"`, and save it. Make sure the save is rejected with the `Could not find "{non_existent_group_name}" for field "customer-group".` error.
 
 {% endinfo_block %}
 
@@ -527,3 +638,12 @@ The following methods of `SprykerFeature\Zed\CustomerExperienceManagement\Custom
 | getCustomerGroupAssignmentIdsLimit() | 1000 | Maximum number of companies or business units that one Back Office save can select to be assigned or de-assigned on one tab. A save with more fails validation. |
 | getCustomerGroupRelationChunkSize() | 500 | Number of memberships written in one batch by a customer group save and by the membership importers. Lower values make each query smaller at the cost of more queries. |
 | getCustomerGroupMembershipCollectionMaxLimit() | 1000 | Maximum number of memberships that one read of the company or business unit memberships returns. |
+
+The suggestions of the customer group list filter and of the `customer-group` discount rule field return at most 20 entries each. To change a limit, override the following methods at the project level:
+
+| CONFIG CLASS | METHOD | DEFAULT | DESCRIPTION |
+| --- | --- | --- | --- |
+| `Spryker\Zed\Customer\CustomerConfig` | getCustomerSuggestionLimit() | 20 | Maximum number of customers suggested for the **Customer** assignment type. |
+| `Spryker\Zed\CompanyGui\CompanyGuiConfig` | getCompanySuggestionLimit() | 20 | Maximum number of companies suggested for the **Company** assignment type. |
+| `Spryker\Zed\CompanyBusinessUnitGui\CompanyBusinessUnitGuiConfig` | getCompanyBusinessUnitSuggestionLimit() | 20 | Maximum number of business units suggested for the **Business Unit** assignment type. |
+| `Spryker\Zed\CustomerGroup\CustomerGroupConfig` | getCustomerGroupSuggestionLimit() | 20 | Maximum number of customer groups suggested for the `customer-group` discount rule field. |

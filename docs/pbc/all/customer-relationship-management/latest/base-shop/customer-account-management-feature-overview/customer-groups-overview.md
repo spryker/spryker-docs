@@ -1,7 +1,7 @@
 ---
 title: Customer Groups overview
 description: The Customer Groups feature lets you organize customers into groups to help you target users for discounts and promotions.
-last_updated: Nov 2, 2026
+last_updated: Nov 18, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-groups-overview
 originalArticleId: 046cf042-1c53-4c82-8498-21ec52d2e51f
@@ -65,6 +65,20 @@ The **Customers** column of the tables counts company users:
 
 For instructions, see [Manage customer groups](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/manage-customer-groups.html).
 
+## Find the customer groups of a customer, company, or business unit
+
+With the B2B Customer Groups feature, the **Customer Groups** page in the Back Office has a filter that lists only the groups a specific customer, company, or business unit is assigned to. You select the assignment type, search for the customer, company, or business unit by entering at least three characters, and apply the filter.
+
+The filter returns only direct assignments:
+
+| ASSIGNMENT TYPE | SEARCH BY | GROUPS LISTED |
+| --- | --- | --- |
+| Customer | Email address, first name, last name, or customer reference. | The groups the customer is assigned to directly. The groups of the customer's company or business unit are not listed. |
+| Company | Company name. | The groups the company is assigned to. The groups of its business units are not listed. |
+| Business Unit | Business unit name, across all companies. | The groups the business unit is assigned to. The groups of its company or parent business units are not listed. |
+
+The `customer-groups` Backend API resource accepts the same filters by customer reference, company UUID, and business unit UUID. For details, see [Backend API: Manage customer groups](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-groups.html#retrieve-customer-groups).
+
 ## Manage memberships using the Backend API
 
 The Backend API lets integrations, such as an ERP, a CRM, or a partner administration tool, list, add, replace, and remove the companies and business units of a customer group. A write through the Backend API changes the same memberships as a save in the Back Office.
@@ -107,6 +121,14 @@ When enabled, a customer is in a customer group for the condition in the followi
 
 The group name in the condition is matched case-insensitively.
 
+### Select a customer group in a discount condition
+
+In the query builder of the **Conditions** tab, the value field of the `customer-group` rule suggests the names of existing customer groups after you enter two characters. The suggestions match the name or the description of a group. For the **In** and **Not in** operators, you can select several groups.
+
+When you save a discount, every customer group that the condition names with the **Equal**, **Not equal**, **In**, or **Not in** operator must exist. If a group does not exist, for example, because it was renamed or deleted after the discount was created, the save is rejected with the `Could not find "{group_name}" for field "customer-group".` error. This check also applies to existing discounts, so fix the condition before you save other changes of the discount. The check runs only when a discount is saved: an existing discount with such a condition keeps working in the Storefront, but the condition can no longer be met.
+
+The suggestions and the check on save require `CustomerGroupSuggestDecisionRulePlugin`. For instructions, see [Install the B2B Customer Groups feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-b2b-customer-groups-feature.html#optional-apply-customer-group-discounts-to-companies-and-business-units).
+
 ### How business unit assignments are inherited
 
 A business unit assignment covers the business unit and all its child business units at any depth. It never covers the parent or sibling business units. Only the company user that the customer currently shops as is considered. The customer's other company users do not add any groups.
@@ -140,6 +162,7 @@ The feature has the following functional constraints:
 - Company and business unit memberships affect only the `customer-group` discount condition, and only if it is enabled. They do not affect prices, product lists, content, or any other rule that targets a customer group.
 - In the Back Office tables, you select companies and business units one at a time. There is no option to select all rows.
 - A Backend API request that replaces the members of a customer group accepts up to 1,000 companies or business units. To change a larger set, add and remove members individually.
+- A customer group whose name contains a single quote (`'`), a double quote (`"`), or a semicolon (`;`) cannot be used in a discount condition: saving the discount fails with `Could not find "{part_of_the_name}"`. To use such a group in a discount, rename it.
 
 ## Related Business User documents
 

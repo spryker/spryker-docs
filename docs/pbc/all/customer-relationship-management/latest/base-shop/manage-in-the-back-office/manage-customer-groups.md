@@ -1,7 +1,7 @@
 ---
 title: Manage customer groups
 description: Learn how to create, edit and manage customer groups in the Spryker Back Office.
-last_updated: Oct 19, 2026
+last_updated: Nov 18, 2026
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-groups
 originalArticleId: 3540b410-11bf-4d1f-a9f6-306009db8740
@@ -21,13 +21,29 @@ related:
 
 This article describes how to create customer groups in the Back Office. By default, customer groups are only used when [defining discount conditions](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/create-discounts.html#3-define-on-what-conditions-the-discount-can-be-applied). A developer can configure customer groups to be used in other parts of the Back Office.
 
-With the [B2B Customer Groups feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-b2b-customer-groups-feature.html), a customer group can also hold companies and business units. Discount conditions evaluate only the customers of a group, so company and business unit memberships do not affect discounts. For how these memberships behave, see [Customer Groups overview](/docs/pbc/all/customer-relationship-management/latest/base-shop/customer-account-management-feature-overview/customer-groups-overview.html#company-and-business-unit-memberships).
+With the [B2B Customer Groups feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-b2b-customer-groups-feature.html), a customer group can also hold companies and business units. By default, discount conditions evaluate only the customers of a group. To have the `customer-group` discount condition also evaluate the company users of the assigned companies and business units, enable it as described in [Apply customer-group discounts to companies and business units](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-b2b-customer-groups-feature.html#optional-apply-customer-group-discounts-to-companies-and-business-units). For how these memberships behave, see [Customer Groups overview](/docs/pbc/all/customer-relationship-management/latest/base-shop/customer-account-management-feature-overview/customer-groups-overview.html#company-and-business-unit-memberships).
 
 ## Prerequisites
 
 To start working with customer groups, go to **Customers&nbsp;<span aria-label="and then">></span> Customer Groups**.
 
 Review the [reference information](#reference-information-manage-customer-groups) before you start or look up the necessary information as you go through the process.
+
+## Filter customer groups by assignment
+
+To find the customer groups that a specific customer, company, or business unit is assigned to, filter the list:
+
+1. On the **Customer groups** page, for **Assignment type**, select **Customer**, **Company**, or **Business Unit**.
+2. In **Assigned to**, enter at least three characters and select the customer, company, or business unit from the suggestions.
+    - Customers are suggested by email address, first name, last name, or customer reference.
+    - Companies are suggested by name.
+    - Business units are suggested by name across all companies. Each suggestion shows the company of the business unit.
+3. Click **Apply filters**.
+    The list shows only the customer groups the selected customer, company, or business unit is assigned to directly. For example, filtering by a company does not list the groups of its business units.
+
+To show all customer groups again, click **Reset filters**. Changing **Assignment type** clears **Assigned to**.
+
+The filter is displayed only if the B2B Customer Groups feature is installed with the filter enabled.
 
 ## Create a customer group
 

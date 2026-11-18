@@ -1,7 +1,7 @@
 ---
 title: Create discounts
 description: Learn how to create discounts using the discounts module in the back office of Spryker Cloud Commerce OS.
-last_updated: Sep 08, 2026
+last_updated: Nov 18, 2026
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-a-voucher
 originalArticleId: 5d9e5e07-5260-4f0a-8118-aaa324af6fbc
@@ -206,7 +206,7 @@ This section describes complex decision rule attributes:
 |time| hour:minute | The time of the day. |
 |total-quantity|Number| The total cart quantity. |
 |attribute.&#42;|String, number, list| One field per product attribute key in your database, named `attribute.<attribute_key>`. If no attribute keys exist, no attribute fields are available. |
-|customer-group|String|    Any value, use a customer group name for an exact match. |
+|customer-group|String|    Any value, use a customer group name for an exact match. If a developer has registered `CustomerGroupSuggestDecisionRulePlugin`, the field suggests existing customer group names after you enter three characters, and saving the discount fails if a group named with **Equal**, **Not equal**, **In**, or **Not in** does not exist. For details, see [Select a customer group in a discount condition](/docs/pbc/all/customer-relationship-management/latest/base-shop/customer-account-management-feature-overview/customer-groups-overview.html#select-a-customer-group-in-a-discount-condition). |
 | customer-order-count | Number |   Any value. Checked against the number of placed orders in a customer account. |
 | product-offer-reference | String | Unique identifier of a [product offer](/docs/pbc/all/offer-management/latest/marketplace/marketplace-product-offer-feature-overview.html). Marketplace only. |
 

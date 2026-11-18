@@ -61,7 +61,7 @@ The free-text search and the filters are combined with `AND`, so each one you ad
 
 To filter by several customers, companies, or business units, repeat the parameter with `[]` — for example, `filter[customer-groups.companyUuid][]={uuid_1}&filter[customer-groups.companyUuid][]={uuid_2}`. The collection then contains the groups assigned to any of them, and each group is listed once.
 
-The `companyUuid` and `companyBusinessUnitUuid` filters require the B2B Customer Groups feature. For installation instructions, see [Install the B2B Customer Groups feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-b2b-customer-groups-feature.html#filter-the-customer-group-list-by-assignment).
+The `companyUuid` and `companyBusinessUnitUuid` filters require the query expander plugins of the B2B Customer Groups feature. Without these plugins, the filters are ignored, and the endpoint returns the full collection without an error, so an integration that relies on them receives all customer groups. For installation instructions, see [Install the B2B Customer Groups feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-b2b-customer-groups-feature.html#filter-the-customer-group-list-by-assignment).
 
 Sorting by a field that is not on the list returns `400` with the error code `1203`, and the error message names the supported fields. When you pass several fields, the second one decides the order only where the first one ties.
 

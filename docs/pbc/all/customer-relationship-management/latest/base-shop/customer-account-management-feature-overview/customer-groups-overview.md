@@ -121,11 +121,23 @@ When enabled, a customer is in a customer group for the condition in the followi
 
 The group name in the condition is matched case-insensitively.
 
+The operators of the condition work as follows:
+
+- **Equal**, **In**, and **Contains**: the condition is met if at least one of the customer's groups matches the value.
+- **Not equal**, **Not in**, and **Doesn't contain**: the condition is met if none of the customer's groups matches the value.
+
+A guest and a logged-in customer who belongs to no group never meet a `customer-group` condition, with any operator.
+
 ### Select a customer group in a discount condition
 
-In the query builder of the **Conditions** tab, the value field of the `customer-group` rule suggests the names of existing customer groups after you enter two characters. The suggestions match the name or the description of a group. For the **In** and **Not in** operators, you can select several groups.
+In the query builder of the **Conditions** tab, the value field of the `customer-group` rule suggests the names of existing customer groups after you enter two characters. The suggestions match the name or the description of a group. For the **Equal**, **Not equal**, **In**, and **Not in** operators, you select a suggested group, and for **In** and **Not in**, you can select several groups. Free text is accepted only for the **Contains** and **Doesn't contain** operators.
 
-When you save a discount, every customer group that the condition names with the **Equal**, **Not equal**, **In**, or **Not in** operator must exist. If a group does not exist, for example, because it was renamed or deleted after the discount was created, the save is rejected with the `Could not find "{group_name}" for field "customer-group".` error. This check also applies to existing discounts, so fix the condition before you save other changes of the discount. The check runs only when a discount is saved: an existing discount with such a condition keeps working in the Storefront, but the condition can no longer be met.
+When you save a discount, every customer group that the condition names with the **Equal**, **Not equal**, **In**, or **Not in** operator must exist. If a group does not exist, for example, because it was renamed or deleted after the discount was created, the save is rejected with the `Could not find "{group_name}" for field "customer-group".` error. This check also applies to existing discounts, so fix the condition before you save other changes of the discount. The check runs only when a discount is saved, so an existing discount with such a condition stays active in the Storefront:
+
+- With **Equal** or **In**, the condition can no longer be met through the missing group.
+- With **Not equal** or **Not in**, no customer belongs to the missing group, so the condition is met for every logged-in customer who belongs to at least one group. For example, a discount with `customer-group != "X"` applies to every customer with a group after the group *X* is deleted.
+
+The same check applies when you create or update a discount using the Backend API: an unknown group returns `422` with the error code `5706` and the same message. For details, see [Backend API: Manage discounts](/docs/pbc/all/discount-management/latest/base-shop/manage-using-backend-api/backend-api-manage-discounts.html).
 
 The suggestions and the check on save require `CustomerGroupSuggestDecisionRulePlugin`. For instructions, see [Install the B2B Customer Groups feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-b2b-customer-groups-feature.html#optional-apply-customer-group-discounts-to-companies-and-business-units).
 
@@ -162,7 +174,7 @@ The feature has the following functional constraints:
 - Company and business unit memberships affect only the `customer-group` discount condition, and only if it is enabled. They do not affect prices, product lists, content, or any other rule that targets a customer group.
 - In the Back Office tables, you select companies and business units one at a time. There is no option to select all rows.
 - A Backend API request that replaces the members of a customer group accepts up to 1,000 companies or business units. To change a larger set, add and remove members individually.
-- A customer group whose name contains a single quote (`'`), a double quote (`"`), or a semicolon (`;`) cannot be used in a discount condition: saving the discount fails with `Could not find "{part_of_the_name}"`. To use such a group in a discount, rename it.
+- A customer group whose name contains a single quote (`'`) or a double quote (`"`) cannot be used in a discount condition with any operator. A customer group whose name contains a semicolon (`;`) cannot be used with the **In** and **Not in** operators, because they split the value at semicolons. **Equal** and **Not equal** compare the whole name, so they work with a semicolon. In these cases, saving the discount fails with `Could not find "{part_of_the_name}"`. To use such a group in a discount, rename it.
 
 ## Related Business User documents
 

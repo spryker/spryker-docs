@@ -31,7 +31,7 @@ Install the required features:
 | Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Customer Account Management | {{page.release_tag}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
 | Company Account | {{page.release_tag}} | [Install the Company Account feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html) |
-| API Platform | — | [Enable API Platform](/docs/integrations/spryker-api/api-platform/enablement.html). Required only for the Backend API resources in [Set up the Backend API](#6-set-up-the-backend-api). |
+| API Platform | — | [Enable API Platform](/docs/integrations/spryker-api/api-platform/enablement.html). Required only for the Backend API resources in [Set up the Backend API](#set-up-the-backend-api). |
 
 ## Install feature core
 
@@ -90,6 +90,7 @@ Make sure the following changes have been applied in the database:
 | spy_company-index-key | index | created |
 | spy_company_business_unit.key | column | created if it did not exist |
 | spy_company_business_unit-unique-key | unique index | created if it did not exist |
+| spy_customer_group_to_customer-fk_customer | index | created |
 
 Make sure the following changes have been applied in transfer objects:
 
@@ -214,7 +215,13 @@ The view plugins are independent of the others. Without them, the page that show
 
 #### Filter the customer group list by assignment
 
-In a project with many customer groups, finding the groups of one customer, company, or business unit requires opening every group. To add an **Assignment type** and **Assigned to** filter to the **Customer Groups** page, register the following plugins:
+In a project with many customer groups, finding the groups of one customer, company, or business unit requires opening every group. To add an **Assignment type** and **Assigned to** filter to the **Customer Groups** page, register the following plugins.
+
+The plugins require a version of `spryker-feature/customer-experience-management` that requires `spryker/customer-group` 2.16.0 or later. The suggest actions of the filter require `spryker/customer` 7.91.0 or later and `spryker/company-business-unit-gui` 2.17.0 or later, which this version of the feature package installs. If you installed the feature earlier, update it:
+
+```bash
+composer require spryker-feature/customer-experience-management --update-with-dependencies
+```
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -271,7 +278,7 @@ The two plugin stacks depend on each other as follows:
 - An assignment filter plugin for companies or business units without its query expander plugin does not narrow the list: the page shows every group.
 - A query expander plugin works without the assignment filter plugins. The `companyUuid` and `companyBusinessUnitUuid` filters of the `customer-groups` Backend API resource need only the query expander plugins.
 
-The filter needs the `spryker-zed-customer-group-main.js` Back Office script, which you build in [Build Zed UI frontend](#5-build-zed-ui-frontend).
+The filter needs the `spryker-zed-customer-group-main.js` Back Office script, which you build in [Build Zed UI frontend](#build-zed-ui-frontend).
 
 {% info_block warningBox "Verification" %}
 
@@ -370,7 +377,7 @@ Open the page that creates a customer group. Make sure the tabs follow the order
 
 ### 5) Build Zed UI frontend
 
-The feature relies on the Back Office scripts of the `Gui` and `CustomerGroup` modules: the selectable tables of the new tabs restore their selection after a save fails validation, the edit page reopens on the tab that was open, and the **Assigned to** field of the customer group list filter suggests customers, companies, and business units. Rebuild the Back Office assets:
+The feature relies on the Back Office scripts of the `Gui`, `CustomerGroup`, and `Discount` modules. The `Discount` script provides the customer group suggestions of the `customer-group` discount rule field from [Apply customer-group discounts to companies and business units](#optional-apply-customer-group-discounts-to-companies-and-business-units). In the other scripts, the selectable tables of the new tabs restore their selection after a save fails validation, the edit page reopens on the tab that was open, and the **Assigned to** field of the customer group list filter suggests customers, companies, and business units. Rebuild the Back Office assets:
 
 ```bash
 docker/sdk console frontend:zed:build
@@ -384,7 +391,7 @@ On the page that creates a customer group, enter the name of an existing custome
 
 ### 6) Set up the Backend API
 
-The `customer-group-companies` and `customer-group-company-business-units` resources are generated by API Platform. They write the memberships through the customer group save, so they rely on the post-save plugins from [Set up behavior](#4-set-up-behavior): without those plugins, a write answers `204` and changes nothing.
+The `customer-group-companies` and `customer-group-company-business-units` resources are generated by API Platform. They write the memberships through the customer group save, so they rely on the post-save plugins from [Set up behavior](#set-up-behavior): without those plugins, a write answers `204` and changes nothing.
 
 The resource schemas ship inside the installed package, in `vendor/spryker-feature/customer-experience-management/resources/api/backend/`. In `config/GlueBackend/packages/spryker_api_platform.php`, confirm that `apiTypes()` includes `backend`, and leave `sourceDirectories()` unchanged unless your project overrides it. For details, see [Configuration](/docs/integrations/spryker-api/api-platform/configuration.html).
 
@@ -458,8 +465,8 @@ Hospitality,BoB-Hotel-Mitte
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | CustomerGroupDataImportPlugin | Imports customer groups. Creates a group when no group has the name, and updates the description otherwise. | None | SprykerFeature\Zed\CustomerExperienceManagement\Communication\Plugin\DataImport |
-| CustomerGroupCompanyDataImportPlugin | Imports the company memberships of customer groups. | The customer groups and the company keys exist. The plugins from [Set up behavior](#4-set-up-behavior) are registered to show and edit the memberships in the Back Office. | SprykerFeature\Zed\CustomerExperienceManagement\Communication\Plugin\DataImport |
-| CustomerGroupCompanyBusinessUnitDataImportPlugin | Imports the business unit memberships of customer groups. | The customer groups and the business unit keys exist. The plugins from [Set up behavior](#4-set-up-behavior) are registered to show and edit the memberships in the Back Office. | SprykerFeature\Zed\CustomerExperienceManagement\Communication\Plugin\DataImport |
+| CustomerGroupCompanyDataImportPlugin | Imports the company memberships of customer groups. | The customer groups and the company keys exist. The plugins from [Set up behavior](#set-up-behavior) are registered to show and edit the memberships in the Back Office. | SprykerFeature\Zed\CustomerExperienceManagement\Communication\Plugin\DataImport |
+| CustomerGroupCompanyBusinessUnitDataImportPlugin | Imports the business unit memberships of customer groups. | The customer groups and the business unit keys exist. The plugins from [Set up behavior](#set-up-behavior) are registered to show and edit the memberships in the Back Office. | SprykerFeature\Zed\CustomerExperienceManagement\Communication\Plugin\DataImport |
 | CustomerGroupCustomerDataImportPlugin | Imports the customer memberships of customer groups. | The customer groups and the customer references exist. | SprykerFeature\Zed\CustomerExperienceManagement\Communication\Plugin\DataImport |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
@@ -533,19 +540,40 @@ By default, the `customer-group` discount condition matches only the customer gr
 
 Prerequisites:
 
-- `spryker/customer-group` 2.16.0 or later, `spryker/customer-group-extension` 1.1.0 or later, `spryker/customer-group-discount-connector` 2.3.0 or later, and `spryker/discount` 9.58.0 or later. If needed, update them:
+- A version of `spryker-feature/customer-experience-management` that provides `CompanyUserCustomerGroupProviderPlugin`. This version requires `spryker/customer-group` 2.16.0 or later and `spryker/customer-group-extension` 1.1.0 or later.
+- `spryker/customer-group-discount-connector` 2.3.0 or later and `spryker/discount` 9.58.0 or later. The feature package does not depend on these modules, so update them explicitly.
 
-  ```bash
-  composer require spryker/customer-group:"^2.16.0" spryker/customer-group-extension:"^1.1.0" spryker/customer-group-discount-connector:"^2.3.0" spryker/discount:"^9.58.0" --update-with-dependencies
-  ```
+If needed, update the packages:
 
-1. Generate the transfer objects:
+```bash
+composer require spryker-feature/customer-experience-management spryker/customer-group-discount-connector:"^2.3.0" spryker/discount:"^9.58.0" --update-with-dependencies
+```
+
+{% info_block warningBox "Negative customer-group operators in existing discounts" %}
+
+`spryker/customer-group-discount-connector` 2.3.0 changes how existing discounts evaluate the **Not equal**, **Not in**, and **Doesn't contain** operators of the `customer-group` condition. The change applies as soon as you update the module, with either `CustomerGroupSuggestDecisionRulePlugin` or `CustomerGroupDecisionRulePlugin`:
+
+- Before: the condition was met if at least one group of the customer did not match the value.
+- After: the condition is met only if none of the customer's groups matches the value.
+
+A customer without groups still never meets the condition, with any operator.
+
+Before you update, review the discounts whose `customer-group` condition uses one of these operators.
+
+{% endinfo_block %}
+
+1. Apply the database schema changes and generate the transfer objects:
 
     ```bash
+    docker/sdk console propel:install
     docker/sdk console transfer:generate
     ```
 
+    `spryker/customer-group` 2.16.0 adds the `spy_customer_group_to_customer-fk_customer` index, which speeds up reading the groups of a customer.
+
     {% info_block warningBox "Verification" %}
+
+    Make sure the `spy_customer_group_to_customer-fk_customer` index has been created in the database.
 
     Make sure the following changes have been applied in transfer objects:
 
@@ -591,7 +619,7 @@ Prerequisites:
     }
     ```
 
-    The `customer-group` field loads its suggestions from the `customer-group/suggest/index` Back Office action. A restricted Back Office role that manages discounts needs access to this action. Without it, the field suggests nothing, but users can still enter a group name manually.
+    The `customer-group` field loads its suggestions from the `customer-group/suggest/index` Back Office action. A restricted Back Office role that manages discounts needs access to this action. For the **Equal**, **Not equal**, **In**, and **Not in** operators, the query builder accepts only a suggested group, so without access, a user can set these operators only in the plain query. Free text is accepted only for the **Contains** and **Doesn't contain** operators.
 
     **src/Pyz/Zed/CustomerGroup/CustomerGroupDependencyProvider.php**
 
@@ -619,13 +647,21 @@ Prerequisites:
 
     To provide customer groups from another source, implement `Spryker\Zed\CustomerGroupExtension\Dependency\Plugin\CustomerGroupProviderPluginInterface` and register your plugin in the same stack.
 
+3. The customer group suggestions are part of the query builder script of the `Discount` module. Rebuild the Back Office assets:
+
+    ```bash
+    docker/sdk console frontend:zed:build
+    ```
+
+    Without the rebuild, the value field of the `customer-group` rule stays a text input.
+
 {% info_block warningBox "Verification" %}
 
 1. In the Back Office, assign a business unit to a customer group.
-2. [Create a discount](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/create-discounts.html). On the **Conditions** tab, add a `customer-group` rule with the **Equal** operator, and enter the first three characters of the customer group name in the value field. Make sure the field suggests the customer group, select it, and save the discount.
+2. [Create a discount](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/create-discounts.html). On the **Conditions** tab, add a `customer-group` rule with the **Equal** operator, and enter at least two characters of the customer group name in the value field. Make sure the field suggests the customer group, select it, and save the discount.
 3. On the Storefront, log in as a company user of a child business unit of the assigned business unit, and add a product to the cart. Make sure the discount is applied.
 4. Log in as a company user of the parent business unit of the assigned business unit, and add a product to the cart. Make sure the discount is not applied.
-5. In the Back Office, edit the discount, change the condition to `customer-group = "{NON_EXISTENT_GROUP_NAME}"`, and save it. Make sure the save is rejected with the `Could not find "{non_existent_group_name}" for field "customer-group".` error.
+5. In the Back Office, edit the discount. Because the query builder offers only existing groups, click **Plain query**, change the condition to `customer-group = "{NON_EXISTENT_GROUP_NAME}"`, and save the discount. Make sure the save is rejected with the `Could not find "{non_existent_group_name}" for field "customer-group".` error.
 
 {% endinfo_block %}
 

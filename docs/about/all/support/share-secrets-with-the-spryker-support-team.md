@@ -24,7 +24,7 @@ If we share a one-time secret link with you by email in the ticket, retrieve the
 
 ## Share a secret
 
-1. Using [One-Time Secret](https://eu.onetimesecret.com/), create a secret message by entering the secret and configuring a passphrase. Create a new passphrase for every individual secret.
+1. Create a secret message using [One-Time Secret](https://eu.onetimesecret.com/). Enter the secret in the "Secret content goes here..." field. 
 
 {% info_block warningBox %}
 
@@ -34,6 +34,6 @@ Create a new link for every individual secret you want to share.
 
 {% endinfo_block %}
 
-2. In the **About this Ticket** section, in the **Secret password** field, add the passphrase.
-3. Share the one-time secret link as an email in the ticket.
+2. Retrieve the passphrase from the **Secret password** field in the ticket, then enter it into the one-time secret Passphrase field to protect the one-time secret link.
+3. Share the one-time secret link in the ticket.
 4. The team retrieves the passphrase from the Secret password field, uses it to access the content in the one-time secret link, and provides a confirmation in the ticket.

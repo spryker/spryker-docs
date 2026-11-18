@@ -1,60 +1,33 @@
 ---
 title: Install Search Statistics
 description: Learn how to install and configure the Search Statistics feature in a Spryker project.
-last_updated: Nov 12, 2026
+last_updated: Nov 16, 2026
 template: howto-guide-template
 ---
 
 This document describes how to install the Search Statistics feature.
 
-## Prerequisites
-
-Install the required features:
-
-| NAME | VERSION |
-| --- | --- |
-| Spryker Core | ^3.46.0 |
-| spryker-shop/shop-ui | 1.107.0 |
-| spryker-shop/traceable-event-widget | 1.2.0 |
-
-
 ### 1) Install the required modules using Composer
 
 ```bash
-composer require spryker-eco/google-analytics:"^1.0.0" --update-with-dependencies
+composer require spryker-eco/google-analytics:"^1.0.0" spryker-shop/traceable-event-widget:"^1.2.0" --update-with-dependencies
 ```
 
 ### 2) Enable the `protobuf` PHP extension
 
 Search Statistics requires the `protobuf` PHP extension. The [spryker/php](https://hub.docker.com/r/spryker/php) Docker image includes the extension but does not load it by default, so you must enable it in the deploy file.
 
-The Docker SDK has no separate switch for `protobuf`. Use one of the following options in every deploy file you use, such as local, staging, and production.
-
-**Option 1: Enable the `otel` extension**
-
-The `otel` extension loads `opentelemetry`, `grpc`, and `protobuf` together. To enable it, add `otel` to `image: php: enabled-extensions`:
-
 ```yaml
 image:
-    tag: spryker/php:8.3
+    tag: spryker/php:8.5
     php:
         enabled-extensions:
-            - otel
+            - protobuf
 ```
 
-**Option 2: Load only the `protobuf` extension**
+Note: you will need [DockerSDK v1.82](https://github.com/spryker/docker-sdk/releases/tag/1.82.0) or higher.
 
-If your project uses New Relic or otherwise does not need `opentelemetry` and `grpc`, load only `protobuf` through the `php.ini` configuration of the deploy file:
-
-```yaml
-image:
-    tag: spryker/php:8.3
-    php:
-        ini:
-            extension: protobuf
-```
-
-After you choose an option, rebuild the images and restart the application:
+Rebuild the images and restart the application:
 
 ```bash
 docker/sdk boot your_deploy_file.yml && docker/sdk up
@@ -72,34 +45,11 @@ The command must return the extension information, including its version, instea
 
 {% endinfo_block %}
 
-{% info_block warningBox "Verification" %}
-
-Make sure the following modules have been installed:
-
-| MODULE | EXPECTED DIRECTORY |
-| --- | --- |
-| GoogleAnalytics | vendor/spryker-eco/google-analytics |
-
-{% endinfo_block %}
-
 ### 3) Generate transfer objects
 
 ```bash
 console transfer:generate
 ```
-
-{% info_block warningBox "Verification" %}
-
-Verify that the following transfer objects have been generated:
-
-| TRANSFER | TYPE | EVENT | PATH |
-| --- | --- | --- | --- |
-| GoogleAnalyticsEvent | class | created | src/Generated/Shared/Transfer/GoogleAnalyticsEventTransfer |
-| GoogleAnalyticsEventConditions | class | created | src/Generated/Shared/Transfer/GoogleAnalyticsEventConditionsTransfer |
-| GoogleAnalyticsEventCriteria | class | created | src/Generated/Shared/Transfer/GoogleAnalyticsEventCriteriaTransfer |
-| GoogleAnalyticsEventCollection | class | created | src/Generated/Shared/Transfer/GoogleAnalyticsEventCollectionTransfer |
-
-{% endinfo_block %}
 
 ### 4) Generate translations
 

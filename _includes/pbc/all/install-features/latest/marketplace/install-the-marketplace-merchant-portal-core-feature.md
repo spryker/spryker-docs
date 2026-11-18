@@ -579,6 +579,8 @@ class SecurityMerchantPortalGuiDependencyProvider extends SprykerSecurityMerchan
 }
 ```
 
+To protect the Merchant Portal login against password guessing, see [Install the login brute-force protection](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-login-brute-force-protection.html) and [Install the CAPTCHA feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-captcha-feature.html).
+
 #### Enable Merchant Portal infrastructural plugins
 
 1. Enable the following infrastructural plugins:
@@ -601,6 +603,7 @@ class SecurityMerchantPortalGuiDependencyProvider extends SprykerSecurityMerchan
 | ZedSecurityApplicationPlugin          | Adds security applications to `Application`.                                                                                              |               | Spryker\Zed\Security\Communication\Plugin\Application        |
 | ZedUiApplicationPlugin                | Adds the `SERVICE_ZED_UI_FACTORY` service.                                                                                                      |               | Spryker\Zed\ZedUi\Communication\Plugin\Application           |
 | AclEntityApplicationPlugin            | Enables ACL for the whole `Application`.                                                                                                      |               | Spryker\Zed\AclEntity\Communication\Plugin\Application       |
+| ConfigurationApplicationPlugin        | Provides the settings of the Configuration Management feature, including the secret settings, to the Merchant Portal. For example, the CAPTCHA provider of the Merchant Portal login reads its secret with it. | The Configuration Management feature is installed. | Spryker\Zed\Configuration\Communication\Plugin\Application |
 
 <details><summary markdown='span'>src/Pyz/Zed/MerchantPortalApplication/MerchantPortalApplicationDependencyProvider.php</summary>
 
@@ -610,6 +613,7 @@ class SecurityMerchantPortalGuiDependencyProvider extends SprykerSecurityMerchan
 namespace Pyz\Zed\MerchantPortalApplication;
 
 use Spryker\Zed\AclEntity\Communication\Plugin\Application\AclEntityApplicationPlugin;
+use Spryker\Zed\Configuration\Communication\Plugin\Application\ConfigurationApplicationPlugin;
 use Spryker\Zed\ErrorHandler\Communication\Plugin\Application\ErrorHandlerApplicationPlugin;
 use Spryker\Zed\EventDispatcher\Communication\Plugin\Application\EventDispatcherApplicationPlugin;
 use Spryker\Zed\Form\Communication\Plugin\Application\FormApplicationPlugin;
@@ -651,6 +655,7 @@ class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalA
             new ZedSecurityApplicationPlugin(),
             new ZedUiApplicationPlugin(),
             new AclEntityApplicationPlugin(),
+            new ConfigurationApplicationPlugin(),
         ];
     }
 }

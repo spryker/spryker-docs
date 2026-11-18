@@ -193,6 +193,8 @@ Make sure that the following changes have occurred:
 | SecurityBlockerCustomerControllerAfterActionPlugin | Counts failed customer login attempts. |  | Spryker\Glue\SecurityBlockerRestApi\Plugin\GlueApplication |
 | SecurityBlockerAgentControllerAfterActionPlugin | Counts failed agent login attempts. |  | Spryker\Glue\SecurityBlockerRestApi\Plugin\GlueApplication |
 
+By default, the SecurityBlocker plugins count failed logins per IP address and username. To also count login attempts per account, regardless of the IP address, and to protect the `POST /token` endpoints of the Storefront API and the Backend API, see [Install the login brute-force protection](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-login-brute-force-protection.html).
+
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
 ```php

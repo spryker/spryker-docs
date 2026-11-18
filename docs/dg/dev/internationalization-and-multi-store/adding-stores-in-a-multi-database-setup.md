@@ -70,19 +70,25 @@ Before you add a store, make sure the scheduler has enough executors for the job
 
 ## Configure the new store
 
-1. In the deploy file, define the following entities for the new store. For details, see [Add and remove DBs of stores](/docs/ca/dev/multi-store-setups/add-and-remove-databases-of-stores.html).
+In the deploy file, define the following entities for the new store. For details, see [Add and remove DBs of stores](/docs/ca/dev/multi-store-setups/add-and-remove-databases-of-stores.html).
 
-    | ENTITY | SECTION |
-    |--------|---------|
-    | DB | `regions.<region_name>.services.databases` |
-    | Store | `regions.<region_name>.stores` |
-    | Domains | `groups.<region_name>.applications` |
+<div class="width-100">
 
-2. In `config/Shared/stores.php`, add the configuration of the new store. For details, see [Integrate multi-DB logic](/docs/dg/dev/integrate-and-configure/integrate-multi-database-logic.html).
-3. Add the data import configuration and data files of the new store.
-4. Add the new store to the scheduler jobs configuration, for example, `config/Zed/cronjobs/jenkins.php`.
-5. Adjust other per-store configuration, for example, the frontend routing, code buckets, and Back Office users.
-6. Add the environment variables of the new store. Follow [Keep environment variables within AWS limits](#keep-environment-variables-within-aws-limits).
+| ENTITY | SECTION |
+|--------|---------|
+| DB | `regions.<region_name>.services.databases` |
+| Store | `regions.<region_name>.stores` |
+| Domains | `groups.<region_name>.applications` |
+
+</div>
+
+Then update the project code and configuration:
+
+1. In `config/Shared/stores.php`, add the configuration of the new store. For details, see [Integrate multi-DB logic](/docs/dg/dev/integrate-and-configure/integrate-multi-database-logic.html).
+2. Add the data import configuration and data files of the new store.
+3. Add the new store to the scheduler jobs configuration, for example, `config/Zed/cronjobs/jenkins.php`.
+4. Adjust other per-store configuration, for example, the frontend routing, code buckets, and Back Office users.
+5. Add the environment variables of the new store. Follow [Keep environment variables within AWS limits](#keep-environment-variables-within-aws-limits).
 
 {% info_block warningBox "Name each DB after its store" %}
 

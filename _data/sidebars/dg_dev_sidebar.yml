@@ -94,6 +94,15 @@ entries:
                 url: /docs/dg/dev/ai/ai-commerce/storefront-assistant/install-storefront-assistant.html
               - title: Storefront Assistant agents
                 url: /docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant-agents.html
+              - title: Document semantic search
+                url: /docs/dg/dev/ai/ai-commerce/storefront-assistant/document-semantic-search/storefront-assistant-document-semantic-search.html
+                nested:
+                  - title: Install document semantic search
+                    url: /docs/dg/dev/ai/ai-commerce/storefront-assistant/document-semantic-search/install-storefront-assistant-document-semantic-search.html
+                  - title: Add a knowledge document source
+                    url: /docs/dg/dev/ai/ai-commerce/storefront-assistant/document-semantic-search/add-a-knowledge-document-source.html
+                  - title: Use another knowledge store provider
+                    url: /docs/dg/dev/ai/ai-commerce/storefront-assistant/document-semantic-search/use-another-knowledge-store-provider.html
               - title: Add a custom Storefront Assistant agent
                 url: /docs/dg/dev/ai/ai-commerce/storefront-assistant/add-custom-storefront-assistant-agent.html
           - title: Search by Image

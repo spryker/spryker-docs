@@ -12,6 +12,23 @@ This document describes the security-related issues that have been recently reso
 
 For additional support with this content, [contact our support](https://support.spryker.com/). If you found a new security vulnerability, contact us at [security@spryker.com](mailto:security@spryker.com).
 
+## Brute-force attacks on login
+
+The login protection counted failed logins per IP address. An attacker who switched IP addresses was never blocked, so they could keep guessing the password of an account or try one password against many accounts, an attack known as password spraying. Also, the login forms had no CAPTCHA to slow down automated password guessing. This affected the logins of the Storefront, Back Office, Merchant Portal, Agent Assist, and the APIs.
+
+### Fix the vulnerability
+
+The fix consists of two features:
+
+- The login brute-force protection also counts the login attempts per account, regardless of the IP address, and blocks the account after too many attempts. With the CAPTCHA feature, it also requires a CAPTCHA for every login after many failed logins across all accounts, which protects against password spraying.
+- The CAPTCHA feature adds a CAPTCHA to the login forms of the Storefront, Back Office, and Merchant Portal, and checks the solution before the password. As the CAPTCHA provider, you can use ALTCHA, which works without third-party services, or Google reCAPTCHA.
+
+To install the features, follow these guides:
+
+1. [Install the login brute-force protection](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-login-brute-force-protection.html).
+2. To add a CAPTCHA to the login forms, [install the CAPTCHA feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-captcha-feature.html).
+3. If you installed the CAPTCHA feature, install [ALTCHA](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-altcha.html) or [Google reCAPTCHA](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-google-recaptcha.html) as the CAPTCHA provider.
+
 ## Stripe payment page can be accessed by unauthenticated users
 
 Due to missing access controls, the Stripe payment page could be accessed by unauthenticated users. This could lead to the exposure of sensitive information, including customers' names, phone numbers, and addresses. Also, a visitor who was not logged in could cancel any order through the payment cancel page. Exploiting either issue requires knowledge of the randomly generated order reference.
@@ -380,23 +397,6 @@ composer update spryker/agent-security-merchant-portal-gui:"^2.5.0" spryker/secu
 After the update, the application rejects every login request without a valid CSRF token. If your project overrides a login form template, make sure the template renders the `_token` field of the form. Otherwise, no user can log in.
 
 {% endinfo_block %}
-
-## Brute-force attacks on login
-
-The login protection counted failed logins per IP address. An attacker who switched IP addresses was never blocked, so they could keep guessing the password of an account or try one password against many accounts, an attack known as password spraying. Also, the login forms had no CAPTCHA to slow down automated password guessing. This affected the logins of the Storefront, Back Office, Merchant Portal, Agent Assist, and the APIs.
-
-### Fix the vulnerability
-
-The fix consists of two features:
-
-- The login brute-force protection also counts the login attempts per account, regardless of the IP address, and blocks the account after too many attempts. With the CAPTCHA feature, it also requires a CAPTCHA for every login after many failed logins across all accounts, which protects against password spraying.
-- The CAPTCHA feature adds a CAPTCHA to the login forms of the Storefront, Back Office, and Merchant Portal, and checks the solution before the password. As the CAPTCHA provider, you can use ALTCHA, which works without third-party services, or Google reCAPTCHA.
-
-To install the features, follow these guides:
-
-1. [Install the login brute-force protection](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-login-brute-force-protection.html).
-2. To add a CAPTCHA to the login forms, [install the CAPTCHA feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-captcha-feature.html).
-3. If you installed the CAPTCHA feature, install [ALTCHA](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-altcha.html) or [Google reCAPTCHA](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-google-recaptcha.html) as the CAPTCHA provider.
 
 ## Vulnerabilities in third-party dependencies
 

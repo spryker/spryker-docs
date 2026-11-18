@@ -1,7 +1,7 @@
 ---
 title: "Adding stores in a multi-database setup"
 description: Adding and deploying a new store in multi-db store setup requires additional steps and preparation. This guideline contains all the best practices you need to know.
-last_updated: Nov 17, 2026
+last_updated: Nov 18, 2026
 template: howto-guide-template
 ---
 
@@ -179,7 +179,7 @@ Make sure the new store's DB has been correctly initialized and filled up with d
 
 When adding and deleting stores, for testing purposes, we recommend creating additional deployment install recipes in `config/install`. The following are examples of such recipes, which we tested in action. The examples are based on the default folder structure with the EU folder as a base, but you can introduce your own structure.
 
-A recipe for adding a store:
+A base recipe for adding a store to a project based on the default [B2B Demo Shop](https://github.com/spryker-shop/b2b-demo-shop):
 
 **config/install/EU/setup-store.yml**
 
@@ -296,7 +296,7 @@ In Spryker Cloud Commerce OS, you can add a store with a destructive or a normal
 
 {% info_block warningBox "Default destructive install" %}
 
-If `SPRYKER_HOOK_DESTRUCTIVE_INSTALL` is not set, the destructive pipeline runs `vendor/bin/install -r destructive --no-ansi -vvv`. In the Spryker demo shops, this recipe deletes the DB tables, the key-value store data, and the search indexes of all stores. Before you run a destructive deployment, make sure that the hook runs only the recipe for the new store, and create a DB backup.
+If `SPRYKER_HOOK_DESTRUCTIVE_INSTALL` is not set, the destructive pipeline runs `vendor/bin/install -r destructive --no-ansi -vvv`. In the Spryker demo shops, this recipe deletes the DB tables, the key-value store data, and the search indexes of all stores. Before you run a destructive deployment, make sure that the hook runs only the recipe for the new store. Spryker Cloud Commerce OS creates automatic DB snapshots every hour. To have a restore point directly before the deployment, also create a manual DB snapshot before you run the pipeline. For details, see [Create and restore database backups](/docs/ca/dev/create-and-restore-database-backups.html).
 
 {% endinfo_block %}
 
@@ -384,12 +384,16 @@ Alternatively, you can run the recipe for adding a store as part of the deployme
 
 2. For one deployment, set `SPRYKER_HOOK_INSTALL` to run the script for the new store:
 
+    **deploy.{environment}.yml**
+
     ```yml
-    SPRYKER_HOOK_INSTALL: "bash config/install/add-store.sh PL"
+    image:
+      environment:
+        SPRYKER_HOOK_INSTALL: "bash config/install/add-store.sh PL"
     ```
 
 3. Run a normal deployment.
-4. Revert `SPRYKER_HOOK_INSTALL` to its original value.
+4. Revert `SPRYKER_HOOK_INSTALL` to its original value before the next deployment.
 
 Make sure that the recipe for adding a store can run more than once without side effects. A normal deployment has no manual approval step, and if it fails, you need to run it again.
 
@@ -450,8 +454,12 @@ If runtime setup is disabled in your project, do the following:
     vendor/bin/install "$1" -r EU/setup-store --no-ansi -vvv
     ```
 
+    **deploy.{environment}.yml**
+
     ```yml
-    SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "bash config/install/add-store-destructive.sh PL"
+    image:
+      environment:
+        SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "bash config/install/add-store-destructive.sh PL"
     ```
 
 3. In the recipe for adding a store, run `queue:setup` with `stores: true` after the DB is initialized and migrated, and before any data import or publish command that writes to queues.
@@ -460,7 +468,7 @@ If runtime setup is disabled in your project, do the following:
 
 {% info_block warningBox "Do not delete data of existing stores" %}
 
-Do not add commands that purge or delete data to the recipe for adding a store, such as `queue:queue:purge-all`, `propel:tables:drop`, `storage:delete`, `elasticsearch:index:delete`, or `scheduler:clean` without store scoping. These commands remove data of existing stores.
+Do not add commands that purge or delete data to the recipe for adding a store, such as `queue:queue:purge-all`, `propel:tables:drop`, `storage:delete`, `elasticsearch:index:delete`, or `scheduler:clean` without store scoping. If these commands are not scoped to the new store, they remove data of existing stores.
 
 {% endinfo_block %}
 

@@ -27,6 +27,8 @@ entries:
                 url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
               - title: Profiler Workflow
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-profiler-workflow.html
+          - title: CI validation test page
+            url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/ci-validation-test-page.html
           - title: Code Quality Tools
             nested:
               - title: PHPStan

@@ -179,7 +179,7 @@ Make sure the new store's DB has been correctly initialized and filled up with d
 
 When adding and deleting stores, for testing purposes, we recommend creating additional deployment install recipes in `config/install`. The following are examples of such recipes, which we tested in action. The examples are based on the default folder structure with the EU folder as a base, but you can introduce your own structure.
 
-A base recipe for adding a store to a project based on the default [B2B Demo Shop](https://github.com/spryker-shop/b2b-demo-shop):
+A base recipe for adding a store to a project based on the default [B2B Marketplace Demo Shop](https://github.com/spryker-shop/b2b-demo-marketplace):
 
 **config/install/EU/setup-store.yml**
 

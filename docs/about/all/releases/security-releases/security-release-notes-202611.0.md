@@ -1,7 +1,7 @@
 ---
 title: Security release notes 202611.0
 description: Security updates released for version 202611.0
-last_updated: Nov 17, 2026
+last_updated: Nov 19, 2026
 template: concept-topic-template
 publish_date: "2026-10-13"
 redirect_from:
@@ -11,6 +11,23 @@ redirect_from:
 This document describes the security-related issues that have been recently resolved.
 
 For additional support with this content, [contact our support](https://support.spryker.com/). If you found a new security vulnerability, contact us at [security@spryker.com](mailto:security@spryker.com).
+
+## Brute-force attacks on login
+
+The login protection counted failed logins per IP address. An attacker who switched IP addresses was never blocked, so they could keep guessing the password of an account or try one password against many accounts, an attack known as password spraying. Also, the login forms had no CAPTCHA to slow down automated password guessing. This affected the logins of the Storefront, Back Office, Merchant Portal, Agent Assist, and the APIs.
+
+### Fix the vulnerability
+
+The fix consists of two features:
+
+- The login brute-force protection also counts the login attempts per account, regardless of the IP address, and blocks the account after too many attempts. With the CAPTCHA feature, it also requires a CAPTCHA for every login after many failed logins across all accounts, which protects against password spraying.
+- The CAPTCHA feature adds a CAPTCHA to the login forms of the Storefront, Back Office, and Merchant Portal, and checks the solution before the password. As the CAPTCHA provider, you can use ALTCHA, which works without third-party services, or Google reCAPTCHA.
+
+To install the features, follow these guides:
+
+1. [Install the login brute-force protection](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-login-brute-force-protection.html).
+2. To add a CAPTCHA to the login forms, [install the CAPTCHA feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-captcha-feature.html).
+3. If you installed the CAPTCHA feature, install [ALTCHA](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-altcha.html) or [Google reCAPTCHA](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-google-recaptcha.html) as the CAPTCHA provider.
 
 ## Stripe payment page can be accessed by unauthenticated users
 
@@ -378,6 +395,41 @@ composer update spryker/agent-security-merchant-portal-gui:"^2.5.0" spryker/secu
 {% info_block warningBox "Login templates overridden on the project level" %}
 
 After the update, the application rejects every login request without a valid CSRF token. If your project overrides a login form template, make sure the template renders the `_token` field of the form. Otherwise, no user can log in.
+
+{% endinfo_block %}
+
+## Unencrypted storage of secret configuration settings
+
+A configuration setting with the `secret: true` flag in its YAML schema stores its value encrypted in the database. The application encrypted a value only when it was saved. When a release or a project schema override changed the flag of a setting from `secret: false` to `secret: true`, the values that were already stored stayed in plain text. As a result, a credential could remain unencrypted in the database and in database dumps, and Zed read it as an empty value. Also, the Back Office showed the stored value of a secret setting of the `text` or `json` type.
+
+### Affected modules
+
+- `spryker/configuration`: < 1.10.0
+
+### Fix the vulnerability
+
+After the fix, `configuration:sync` checks every stored value against the `secret` flag of its setting, in all scopes. The command encrypts a plain-text value of a secret setting and decrypts an encrypted value of a non-secret setting. The Back Office no longer shows the stored value of a secret setting of the `text` or `json` type.
+
+1. Update the affected package:
+
+```bash
+composer update spryker/configuration:"^1.10.0"
+```
+
+2. Make sure that your deploy runs `configuration:sync` with access to the database, for example, in `config/install/production.yml`. Without a database, for example, in the image build, the command skips the check of the stored values and prints a warning.
+
+3. Run the command:
+
+```bash
+console configuration:sync
+```
+
+4. Rotate every credential that the command reports with the `Rotate this credential` message. The credential was stored unencrypted, so it can be in database dumps or backups.
+
+{% info_block warningBox "Verification" %}
+
+1. In the Back Office, go to **Configuration** and open a setting that has the `secret: true` flag and the `text` or `json` type. Make sure the field does not show the stored value.
+2. Run `console configuration:sync` again. Make sure the command does not report the `Rotate this credential` message.
 
 {% endinfo_block %}
 

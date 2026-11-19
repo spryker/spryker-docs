@@ -1,7 +1,7 @@
 ---
 title: Configure multiple AI providers for AI Commerce
 description: Learn how to configure OpenAI, AWS Bedrock, and Anthropic providers independently for each AI Commerce feature.
-last_updated: Nov 13, 2026
+last_updated: Nov 18, 2026
 template: howto-guide-template
 ---
 
@@ -73,12 +73,12 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
         ],
     ],
 
-    // Quick Order Image-to-Cart (Visual Add to Cart)
-    AiCommerceConstants::AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_OPENAI => [
+    // Visual Add to Cart (Quick Order)
+    AiCommerceConstants::AI_CONFIGURATION_QUICK_ORDER_VISUAL_ADD_TO_CART_OPENAI => [
         'provider_name' => AiFoundationConstants::PROVIDER_OPENAI_RESPONSES,
         'provider_config' => [
             'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
-            'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_QUICK_ORDER_IMAGE_TO_CART_OPENAI_MODEL,
+            'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_QUICK_ORDER_VISUAL_ADD_TO_CART_OPENAI_MODEL,
             'parameters' => [
                 'reasoning' => [
                     'effort' => 'minimal',
@@ -86,21 +86,21 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
             ],
         ],
     ],
-    AiCommerceConstants::AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_AWS => [
+    AiCommerceConstants::AI_CONFIGURATION_QUICK_ORDER_VISUAL_ADD_TO_CART_AWS => [
         'provider_name' => AiFoundationConstants::PROVIDER_BEDROCK,
         'provider_config' => [
-            'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_QUICK_ORDER_IMAGE_TO_CART_AWS_MODEL,
+            'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_QUICK_ORDER_VISUAL_ADD_TO_CART_AWS_MODEL,
             'bedrockRuntimeClient' => [
                 'region' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_AWS_REGION,
                 'token' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_AWS_API_TOKEN,
             ],
         ],
     ],
-    AiCommerceConstants::AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_ANTHROPIC => [
+    AiCommerceConstants::AI_CONFIGURATION_QUICK_ORDER_VISUAL_ADD_TO_CART_ANTHROPIC => [
         'provider_name' => AiFoundationConstants::PROVIDER_ANTHROPIC,
         'provider_config' => [
             'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_ANTHROPIC_API_TOKEN,
-            'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_QUICK_ORDER_IMAGE_TO_CART_ANTHROPIC_MODEL,
+            'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_QUICK_ORDER_VISUAL_ADD_TO_CART_ANTHROPIC_MODEL,
         ],
     ],
 
@@ -332,7 +332,7 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
 
 The configuration values that use `CONFIGURATION_REFERENCE_PREFIX` are resolved at runtime from the Back Office configuration database. This means model names and API tokens are managed in the Back Office rather than hardcoded in config files.
 
-The OpenAI entries set `parameters.reasoning.effort`, which tells the model how much to think before it answers. The default is `minimal` for Smart PIM, Smart CMS Content Assistant, Quick Order Image-to-Cart, and Search by Image, and `none` for the Back Office Assistant agents. Supported values depend on the model and can include `none`, `minimal`, `low`, `medium`, `high`, `xhigh`, and `max`. If you change the OpenAI model, make sure that it supports the configured value. For details, see [Reasoning models](https://developers.openai.com/api/docs/guides/reasoning) in the OpenAI documentation.
+The OpenAI entries set `parameters.reasoning.effort`, which tells the model how much to think before it answers. The default is `minimal` for Smart PIM, Smart CMS Content Assistant, Visual Add to Cart, and Search by Image, and `none` for the Back Office Assistant agents. Supported values depend on the model and can include `none`, `minimal`, `low`, `medium`, `high`, `xhigh`, and `max`. If you change the OpenAI model, make sure that it supports the configured value. For details, see [Reasoning models](https://developers.openai.com/api/docs/guides/reasoning) in the OpenAI documentation.
 
 ## 2) Sync the AI vendor configuration
 
@@ -391,7 +391,7 @@ Supported models per feature and provider. The first model in each cell is the d
 |---------|--------|-------------|-----------|
 | Smart PIM | `gpt-5-nano`, `gpt-5-mini` | `eu.anthropic.claude-haiku-5-5`, `eu.anthropic.claude-sonnet-5-5` | `claude-haiku-5-5`, `claude-sonnet-5-5` |
 | Smart CMS Content Assistant | `gpt-5-nano`, `gpt-5-mini` | `eu.anthropic.claude-haiku-5-5`, `eu.anthropic.claude-sonnet-5-5` | `claude-haiku-5-5`, `claude-sonnet-5-5` |
-| Quick Order Image-to-Cart | `gpt-5-nano`, `gpt-5-mini` | `eu.anthropic.claude-haiku-5-5`, `eu.anthropic.claude-sonnet-5-5` | `claude-haiku-5-5`, `claude-sonnet-5-5` |
+| Visual Add to Cart | `gpt-5-nano`, `gpt-5-mini` | `eu.anthropic.claude-haiku-5-5`, `eu.anthropic.claude-sonnet-5-5` | `claude-haiku-5-5`, `claude-sonnet-5-5` |
 | Search by Image | `gpt-5-nano`, `gpt-5-mini` | `eu.anthropic.claude-haiku-5-5`, `eu.anthropic.claude-sonnet-5-5` | `claude-haiku-5-5`, `claude-sonnet-5-5` |
 | Back Office Assistant | `gpt-6-luna`, `gpt-6.1-terra` | `eu.anthropic.claude-haiku-5-5`, `eu.anthropic.claude-sonnet-5-5` | `claude-haiku-5-5`, `claude-sonnet-5-5` |
 | Storefront Assistant | `gpt-6-luna`, `gpt-6.1-terra` | `eu.anthropic.claude-haiku-5-5`, `eu.anthropic.claude-sonnet-5-5` | `claude-haiku-5-5`, `claude-sonnet-5-5` |
@@ -437,7 +437,7 @@ The following table maps each feature to its configuration constants and the Bac
 |---------|-----------------------------|------------------------|---------------------|---------------------------|
 | Smart PIM | `ai_commerce:smart_pim:ai_vendor:ai_configuration` | `AI_CONFIGURATION_SMART_PIM_OPENAI` | `AI_CONFIGURATION_SMART_PIM_AWS` | `AI_CONFIGURATION_SMART_PIM_ANTHROPIC` |
 | Smart CMS Content Assistant | `ai_commerce:smart_cms:ai_vendor:ai_configuration` | `AI_CONFIGURATION_SMART_CMS_OPENAI` | `AI_CONFIGURATION_SMART_CMS_AWS` | `AI_CONFIGURATION_SMART_CMS_ANTHROPIC` |
-| Quick Order Image-to-Cart | `ai_commerce:quick_order:ai_vendor:ai_configuration` | `AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_OPENAI` | `AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_AWS` | `AI_CONFIGURATION_QUICK_ORDER_IMAGE_TO_CART_ANTHROPIC` |
+| Visual Add to Cart | `ai_commerce:quick_order:ai_vendor:ai_configuration` | `AI_CONFIGURATION_QUICK_ORDER_VISUAL_ADD_TO_CART_OPENAI` | `AI_CONFIGURATION_QUICK_ORDER_VISUAL_ADD_TO_CART_AWS` | `AI_CONFIGURATION_QUICK_ORDER_VISUAL_ADD_TO_CART_ANTHROPIC` |
 | Search by Image | `ai_commerce:search_by_image:ai_vendor:ai_configuration` | `AI_CONFIGURATION_SEARCH_BY_IMAGE_OPENAI` | `AI_CONFIGURATION_SEARCH_BY_IMAGE_AWS` | `AI_CONFIGURATION_SEARCH_BY_IMAGE_ANTHROPIC` |
 | Back Office Assistant | `ai_commerce:backoffice_assistant:ai_vendor:ai_configuration` | `AI_CONFIGURATION_INTENT_ROUTER_OPENAI` (and `_GENERAL_AGENT_OPENAI`, `_ORDER_MANAGEMENT_OPENAI`, `_DISCOUNT_MANAGEMENT_OPENAI`, `_FORM_FILL_OPENAI`) | `AI_CONFIGURATION_INTENT_ROUTER_AWS` (and `_AWS` variants) | `AI_CONFIGURATION_INTENT_ROUTER_ANTHROPIC` (and `_ANTHROPIC` variants) |
 | Storefront Assistant | `ai_commerce:storefront_assistant:ai_vendor:ai_configuration` | `AI_CONFIGURATION_STOREFRONT_ASSISTANT_OPENAI` | `AI_CONFIGURATION_STOREFRONT_ASSISTANT_AWS` | `AI_CONFIGURATION_STOREFRONT_ASSISTANT_ANTHROPIC` |

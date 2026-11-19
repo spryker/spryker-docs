@@ -1,7 +1,7 @@
 ---
 title: Customer Groups overview
 description: The Customer Groups feature lets you organize customers into groups to help you target users for discounts and promotions.
-last_updated: Nov 18, 2026
+last_updated: Nov 19, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-groups-overview
 originalArticleId: 046cf042-1c53-4c82-8498-21ec52d2e51f
@@ -124,7 +124,9 @@ The group name in the condition is matched case-insensitively.
 The operators of the condition work as follows:
 
 - **Equal**, **In**, and **Contains**: the condition is met if at least one of the customer's groups matches the value.
-- **Not equal**, **Not in**, and **Doesn't contain**: the condition is met if none of the customer's groups matches the value.
+- **Not equal**, **Not in**, and **Doesn't contain**: by default, the condition is met if at least one of the customer's groups does not match the value. A developer can configure these operators to apply to all groups of the customer. Then the condition is met only if none of the customer's groups matches the value. For instructions, see [Install the B2B Customer Groups feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-b2b-customer-groups-feature.html#optional-apply-customer-group-discounts-to-companies-and-business-units).
+
+For example, a customer belongs to the groups *A* and *B*. By default, a discount with `customer-group != "A"` applies to this customer, because the group *B* does not match. If the negated operators apply to all groups, the discount does not apply, because the group *A* matches.
 
 A guest and a logged-in customer who belongs to no group never meet a `customer-group` condition, with any operator.
 

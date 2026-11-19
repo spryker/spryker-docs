@@ -1,7 +1,7 @@
 ---
 title: Install the B2B Customer Groups feature
 description: Learn how to let customer groups hold companies and business units, and how to import customer groups and their memberships in your Spryker project.
-last_updated: Nov 18, 2026
+last_updated: Nov 19, 2026
 template: feature-integration-guide-template
 related:
   - title: Customer Groups overview
@@ -549,19 +549,6 @@ If needed, update the packages:
 composer require spryker-feature/customer-experience-management spryker/customer-group-discount-connector:"^2.3.0" spryker/discount:"^9.58.0" --update-with-dependencies
 ```
 
-{% info_block warningBox "Negative customer-group operators in existing discounts" %}
-
-`spryker/customer-group-discount-connector` 2.3.0 changes how existing discounts evaluate the **Not equal**, **Not in**, and **Doesn't contain** operators of the `customer-group` condition. The change applies as soon as you update the module, with either `CustomerGroupSuggestDecisionRulePlugin` or `CustomerGroupDecisionRulePlugin`:
-
-- Before: the condition was met if at least one group of the customer did not match the value.
-- After: the condition is met only if none of the customer's groups matches the value.
-
-A customer without groups still never meets the condition, with any operator.
-
-Before you update, review the discounts whose `customer-group` condition uses one of these operators.
-
-{% endinfo_block %}
-
 1. Apply the database schema changes and generate the transfer objects:
 
     ```bash
@@ -654,6 +641,34 @@ Before you update, review the discounts whose `customer-group` condition uses on
     ```
 
     Without the rebuild, the value field of the `customer-group` rule stays a text input.
+
+4. Optional: Apply the negated operators to all customer groups of a customer.
+
+    With company and business unit memberships, a customer often belongs to several customer groups. By default, the **Not equal**, **Not in**, and **Doesn't contain** operators of the `customer-group` condition are met if at least one group of the customer does not match the value. For example, `customer-group != "A"` is met for a customer in the groups *A* and *B*, because the group *B* does not match. To meet these operators only if none of the customer's groups matches the value, override `isNegatedOperatorAppliedToAllCustomerGroups()`:
+
+    **src/Pyz/Zed/CustomerGroupDiscountConnector/CustomerGroupDiscountConnectorConfig.php**
+
+    ```php
+    <?php
+
+    namespace Pyz\Zed\CustomerGroupDiscountConnector;
+
+    use Spryker\Zed\CustomerGroupDiscountConnector\CustomerGroupDiscountConnectorConfig as SprykerCustomerGroupDiscountConnectorConfig;
+
+    class CustomerGroupDiscountConnectorConfig extends SprykerCustomerGroupDiscountConnectorConfig
+    {
+        public function isNegatedOperatorAppliedToAllCustomerGroups(): bool
+        {
+            return true;
+        }
+    }
+    ```
+
+    | METHOD | DEFAULT | DESCRIPTION |
+    | --- | --- | --- |
+    | isNegatedOperatorAppliedToAllCustomerGroups() | `false` | `false`: the **Not equal**, **Not in**, and **Doesn't contain** operators are met if at least one group of the customer does not match the value. `true`: they are met only if none of the customer's groups matches the value. |
+
+    The setting applies to all existing discounts at once. Before you enable it, review the discounts whose `customer-group` condition uses one of these operators. In both modes, a customer without groups never meets the condition, with any operator.
 
 {% info_block warningBox "Verification" %}
 

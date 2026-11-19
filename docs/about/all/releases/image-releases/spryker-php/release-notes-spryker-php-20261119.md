@@ -15,11 +15,9 @@ If you found a new security vulnerability, contact us at **security@spryker.com*
 ## Release notes for spryker-php 20261119
 
 **Improvements**:
-
-
 - Updated PHP to 8.2.36, 8.3.37, 8.4.28, and 8.5.13 in the Alpine 3.23, Alpine 3.24, and Debian bookworm images.
 
-### Security fixes \n
+### Security fixes
 This update includes the PHP security releases of November 19, 2026, which fix the following vulnerabilities:
 
 | CVE | Vulnerability | Affected versions|

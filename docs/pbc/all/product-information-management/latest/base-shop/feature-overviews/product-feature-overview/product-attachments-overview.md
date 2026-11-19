@@ -1,7 +1,7 @@
 ---
 title: Product Attachments overview
 description: Use Product Attachments to manage product-related downloadable resources in the Back Office and display them in the Downloads section on the product details page.
-last_updated: Nov 16, 2026
+last_updated: Nov 19, 2026
 template: concept-topic-template
 ---
 

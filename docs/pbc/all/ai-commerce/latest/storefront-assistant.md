@@ -1,7 +1,7 @@
 ---
 title: Storefront Assistant
 description: An AI shopping assistant on the Storefront that answers product questions, shows matching products, compares them, and builds product setups using only your own catalog.
-last_updated: Nov 16, 2026
+last_updated: Nov 19, 2026
 template: concept-topic-template
 related:
   - title: Storefront Assistant technical overview

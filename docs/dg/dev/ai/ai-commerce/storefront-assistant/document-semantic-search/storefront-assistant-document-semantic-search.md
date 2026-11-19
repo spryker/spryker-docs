@@ -1,7 +1,7 @@
 ---
 title: Storefront Assistant document semantic search
 description: Learn how Storefront Assistant answers questions from product documents, how Amazon Bedrock Knowledge Bases indexes and searches the documents, and which settings and extension points you can use.
-last_updated: Nov 18, 2026
+last_updated: Nov 19, 2026
 template: concept-topic-template
 label: early-access
 related:

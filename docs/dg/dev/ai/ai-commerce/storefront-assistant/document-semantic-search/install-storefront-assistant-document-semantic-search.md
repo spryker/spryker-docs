@@ -1,7 +1,7 @@
 ---
 title: Install Storefront Assistant document semantic search
 description: Learn how to install document semantic search, so that Storefront Assistant answers questions from product documents with an Amazon Bedrock knowledge base.
-last_updated: Nov 18, 2026
+last_updated: Nov 19, 2026
 template: feature-integration-guide-template
 label: early-access
 related:
@@ -44,7 +44,7 @@ Install or prepare the following before you start:
 ## 1) Install the required modules
 
 ```bash
-composer require spryker-feature/ai-commerce:^0.14.0 --update-with-dependencies
+composer require spryker-feature/ai-commerce:^0.15.0 --update-with-dependencies
 ```
 
 The package requires the following modules in addition to the modules of Storefront Assistant:

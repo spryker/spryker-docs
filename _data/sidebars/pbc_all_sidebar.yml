@@ -1744,6 +1744,8 @@ entries:
 
       - title: Miscellaneous
         nested:
+          - title: Back Office Glossary CSV Import and Export
+            url: /docs/pbc/all/miscellaneous/back-office-glossary-csv-import-and-export-feature-overview.html
           - title: Spryker Core feature overview
             url: /docs/pbc/all/miscellaneous/spryker-core-feature-overview/spryker-core-feature-overview.html
             nested:
@@ -1766,6 +1768,8 @@ entries:
             nested:
               - title: Install features
                 nested:
+                  - title: Back Office Glossary CSV Import and Export
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-back-office-glossary-csv-import-and-export-feature.html
                   - title: Permissions
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-permissions-feature.html
                   - title: Queue Data Import
@@ -3037,6 +3041,8 @@ entries:
 
                   - title: Alternative Products
                     url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/alternative-products-feature-overview.html
+                  - title: Back Office Category CSV Import and Export
+                    url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/back-office-category-csv-import-and-export-feature-overview.html
                   - title: Catalog feature overview
                     url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/catalog-feature-overview.html
                   - title: Category Management
@@ -3088,6 +3094,8 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-approval-process-shipment-feature.html
                       - title: Category Filters
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-category-filters-feature.html
+                      - title: Back Office Category CSV Import and Export
+                        url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-back-office-category-csv-import-and-export-feature.html
                       - title: Category Image
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-category-image-feature.html
                       - title: Category Management

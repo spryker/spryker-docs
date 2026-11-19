@@ -11,6 +11,12 @@ redirect_from:
 
 ---
 
+{% info_block infoBox "Back Office import" %}
+
+To import and export categories through the Back Office as one CSV file per category tree, use the [Back Office Category CSV Import and Export](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/back-office-category-csv-import-and-export-feature-overview.html) feature. The files described on this page are the ones of the console data import.
+
+{% endinfo_block %}
+
 To learn how data import works and about different ways of importing data, see [Data import](/docs/dg/dev/data-import/latest/data-import.html). This section describes the data import files that are used to import data related to categories:
 
 - [category.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/categories-data-import/import-file-details-category.csv.html): allows you to import all relevant information about the categories such as categories names, key, descriptions and additional settings like activating them or allowing customers to search for them.

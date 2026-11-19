@@ -17,6 +17,12 @@ related:
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
 
+{% info_block infoBox "Back Office import" %}
+
+To import and export glossary keys and translations through the Back Office, use the [Back Office Glossary CSV Import and Export](/docs/pbc/all/miscellaneous/latest/back-office-glossary-csv-import-and-export-feature-overview.html) feature. The file described on this page is the one of the console data import.
+
+{% endinfo_block %}
+
 This document describes the `glossary.csv` file to configure [Customer](/docs/pbc/all/miscellaneous/latest/manage-in-the-back-office/add-translations.html) information in your Spryker Demo Shop.
 
 To import the file, run:

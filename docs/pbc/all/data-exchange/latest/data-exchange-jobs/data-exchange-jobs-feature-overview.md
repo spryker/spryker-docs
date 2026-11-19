@@ -1,7 +1,7 @@
 ---
 title: Data Exchange Jobs feature overview
 description: Import and export data in bulk with schema-driven jobs, asynchronous runs, batch processing, and per-row error reporting, independent of the data type.
-last_updated: Nov 10, 2026
+last_updated: Nov 19, 2026
 template: concept-topic-template
 ---
 

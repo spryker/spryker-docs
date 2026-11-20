@@ -1,0 +1,28 @@
+name: Check media URLs
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  check-media-urls:
+    name: Do media URLs return 200?
+    runs-on: ubuntu-latest
+
+    steps:
+      # Full history so the diff against the pull request base is available.
+      - name: Checkout code
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      # The internal link checker skips images, videos, and external URLs, so a
+      # screenshot that points to a missing S3 object is otherwise not reported.
+      # Only lines added in the pull request are checked: pre-existing URLs on a
+      # touched page do not fail the job.
+      - name: Check media URLs on added lines
+        env:
+          GITHUB_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: ./_scripts/media_url_checker.sh

@@ -1,13 +1,15 @@
 ---
 title: Upgrade Workflow
 description: Upgrade a heavily customized Spryker project to a newer release — driven by the spryker-upgrade skill and its deterministic damage detectors
-last_updated: Oct 23, 2026
+last_updated: Nov 20, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, copilot, spryker-upgrade, upgrade, migration, composer, release, security fixes, performance, release steps
 template: concept-topic-template
 related:
   - title: Workflows, Skills, and Agents
     link: docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html
+  - title: Feature Install Workflow
+    link: docs/dg/dev/ai/ai-dev/ai-dev-feature-install-workflow.html
   - title: Upgrade and migrate
     link: docs/dg/dev/upgrade-and-migrate/upgrade-and-migrate.html
   - title: Installation
@@ -49,7 +51,7 @@ The workflow therefore starts with a different question than "which modules chan
 7. **Detection** — after Composer completes, runs the detectors that find the silent damage.
 8. **Resolution** — merges shadowed files, rewires replaced plugin stacks, fixes broken configuration references, and requires a migration guide for every major module bump.
 9. **Boot and verify** — boots the upgraded project, compares the storage and search tables with the baseline, regenerates the artifacts, and runs the full test suite in the booted environment.
-10. **New features** — lists the new packages and the new capabilities of existing modules. You decide for each one: integrate now, defer, or never.
+10. **New features** — lists the new packages and the new capabilities of existing modules. You decide for each one: integrate now, defer, or never. Nothing new is wired in the upgrade branch: after the upgrade pull request, the [Feature Install Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-feature-install-workflow.html) installs each accepted feature, one feature per run.
 11. **Performance fixes** — checks the project against Spryker's performance guidelines. See [Performance fixes](#performance-fixes).
 12. **Page checks** — checks the pages of the upgraded project in the browser.
 13. **Release steps** — finds the commands that staging and production must run after the normal deployment. See [Release steps](#release-steps).

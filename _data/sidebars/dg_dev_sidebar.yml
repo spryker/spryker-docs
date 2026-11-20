@@ -145,6 +145,8 @@ entries:
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html
               - title: Bugfix Workflow
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html
+              - title: Feature Install Workflow
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-feature-install-workflow.html
               - title: Upgrade Workflow
                 url: /docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html
               - title: Profiler Workflow

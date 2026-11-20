@@ -1,7 +1,7 @@
 ---
 title: Workflows, Skills, and Agents
 description: Reference of the workflows, skills, and agents shipped with the AI Dev SDK
-last_updated: Nov 17, 2026
+last_updated: Nov 20, 2026
 label: early-access
 keywords: ai, ai-dev, claude, claude code, windsurf, copilot, workflows, wizards, skills, agents, subagents, spryker
 template: concept-topic-template
@@ -16,8 +16,8 @@ redirect_from:
 
 ## Overview
 
-The AI Dev SDK ships seven ready-made workflows, more than 30 skills, and six agents that codify common Spryker practice — from turning a demoshop clone into a customer project and preparing a customer demo,
-to building features, fixing bugs, and upgrading releases.
+The AI Dev SDK ships eight ready-made workflows, more than 30 skills, and six agents that codify common Spryker practice — from turning a demoshop clone into a customer project and preparing a customer demo,
+to building features, installing Spryker features, fixing bugs, and upgrading releases.
 Instead of teaching your AI assistant Spryker's conventions prompt by prompt, you install workflows that already know them.
 
 The skills and agents reach your project in two ways:
@@ -37,7 +37,7 @@ You do not need to remember the names — the assistant picks the right skill or
 
 ## Available workflows and wizards
 
-Seven shipped workflows cover the work most projects need on day one, so you get value before you write anything of your own. Each has its own page, listed under this one in the sidebar:
+Eight shipped workflows cover the work most projects need on day one, so you get value before you write anything of your own. Each has its own page, listed under this one in the sidebar:
 
 | Workflow | Skill | What it does |
 |----------|-------|--------------|
@@ -45,6 +45,7 @@ Seven shipped workflows cover the work most projects need on day one, so you get
 | [Demo Preparation Wizard](/docs/dg/dev/ai/ai-dev/ai-dev-demo-prep-wizard.html) | `demo-prep-wizard` | Prepares a customer demo from the briefing to a handover report for the presenter |
 | [Customization Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html) | `spryker-customization` | Builds a feature from a product requirement document to a committed branch |
 | [Bugfix Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html) | `spryker-bugfix` | Drives a bug to a validated, QA-accepted fix |
+| [Feature Install Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-feature-install-workflow.html) | `spryker-feature-install` | Installs a Spryker feature into an existing project, covered by tests and with proven release steps |
 | [Upgrade Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html) | `spryker-upgrade` | Upgrades a customized project to a newer Spryker release |
 | [Profiler Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-profiler-workflow.html) | `spryker-profiler` | Reads the Spryker WebProfiler as hard performance numbers |
 | [Architecture Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-architecture-workflow.html) | `architecture-prep` | Turns project discovery into a filled `architecture/` folder |
@@ -59,7 +60,7 @@ Each skill covers one stage of work and nothing more — research a feature, see
 
 This is how the orchestrator skills themselves are built. `spryker-bugfix` does not reimplement testing or validation — it calls `codecept-functional`, `static-validation`, `code-review`, and `spryker-qa-coverage` in sequence, and delegates isolated work to the agents. Your own workflows compose the same building blocks the same way.
 
-**Adapt the shipped workflows to your process.** The six orchestrators are a baseline, not a prescription. Every team runs a different process — different review gates, different definition of done, different tracker. Because the stages are separate, you can reorder them, skip the ones you do not need, or drop your own stage in between. Ask for the workflow you want in your own words and the assistant assembles it from the installed skills.
+**Adapt the shipped workflows to your process.** The orchestrators are a baseline, not a prescription. Every team runs a different process — different review gates, different definition of done, different tracker. Because the stages are separate, you can reorder them, skip the ones you do not need, or drop your own stage in between. Ask for the workflow you want in your own words and the assistant assembles it from the installed skills.
 
 **Use the shipped skills as a template for your own.** Every skill is plain Markdown with frontmatter, and every one ships a README documenting its flow, design decisions, and limits — linked in the **Reference** column of the tables below. Read the skill closest to what you need, then write your own the same way: your team's release checklist, your onboarding walkthrough, your project-specific conventions. The result is AI-assisted development shaped by how your team works rather than by a fixed set of commands.
 
@@ -90,6 +91,7 @@ These skills own a full workflow and delegate each stage to the specialist skill
 | [`spryker-customization`](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html) | `/spryker-ai-dev-sdk:spryker-customization` | Walk a product requirement document or set of acceptance criteria through to a committed branch | One workflow drives the full build; quality bar (PoC or MVP) chosen up-front; never auto-commits | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-customization/README.md) |
 | [`spryker-bugfix`](/docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html) | `/spryker-ai-dev-sdk:spryker-bugfix` | Drive a bug from an optional tracker ticket or a plain description through to a committed, validated, QA-accepted fix | Orchestrates reproduce, root cause, minimal fix, functional test, static validation, review, QA, and final verification; a shared attempt budget loops back on any failed gate; Autonomous mode adds a pushed draft PR with a remote CI watch loop | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-bugfix/README.md) |
 | [`architecture-prep`](/docs/dg/dev/ai/ai-dev/ai-dev-architecture-workflow.html) | `/spryker-architecture:architecture-prep` | Turn project discovery into a filled `architecture/` folder of arc42 sections and C4 diagrams | Progressive questionnaire that asks only what the project's shape requires; mines documents you already have before asking; writes what the answers support and names the rest as owned gaps | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-architecture/skills/architecture-prep/README.md) |
+| [`spryker-feature-install`](/docs/dg/dev/ai/ai-dev/ai-dev-feature-install-workflow.html) | `/spryker-ai-dev-sdk:spryker-feature-install` | Install a Spryker feature into an existing project, from a capability card or a feature name | Turns the integration guide into a checklist with one row per step, compares every step with the reference demo shop, moves only the modules the feature needs, covers the feature with tests, and proves the release steps; a Definition of Done script decides when the install is done | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-feature-install/README.md) |
 | [`spryker-upgrade`](/docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html) | `/spryker-ai-dev-sdk:spryker-upgrade` | Upgrade the project's modules and features to a newer Spryker release | Checks first whether the customizations are covered by tests at all, resolves the constraint blockers that stop a release-group bump, then detects the silent damage a heavily customized project would otherwise ship; also updates the Docker SDK, the deploy files, and the developer tools, applies security and performance fixes, finds the release steps, and writes a report of the upgrade | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-upgrade/README.md) |
 
 ### Project setup skills
@@ -131,7 +133,9 @@ The `demo-prep-wizard` runs these as its phases, and each also works standalone.
 | `static-validation` | `/spryker-ai-dev-sdk:static-validation` | Run static analysis over only the code that changed against a base branch — PHP and frontend | Validates the diff rather than the whole project; groups PHP by changed file or by whole changed module | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/static-validation/README.md) |
 | `payment-template` | `/spryker-ai-dev-sdk:payment-template` | Scaffold payment method integration | Follows Spryker payment module patterns end-to-end | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/payment-template/README.md) |
 | `yves-atomic-frontend` | `/spryker-ai-dev-sdk:yves-atomic-frontend` | Create and override atomic design components for the Yves storefront — Twig, SCSS, and TypeScript | Components match the project's atomic conventions; catches project-specific pitfalls such as an `index.ts` that replaces the core entry or a same-name component that silently shadows a core one | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/yves-atomic-frontend/README.md) |
+| `yves-twig-integration` | `/spryker-ai-dev-sdk:yves-twig-integration` | Place a feature's Yves widgets and components in the project's own Twig templates after an install or upgrade | Finds widgets that templates the project overrides no longer render; takes what goes where from the vendor templates and how it looks from the project's design; applies only the placements the developer picks | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/yves-twig-integration/README.md) |
 | `backoffice-frontend` | `/spryker-ai-dev-sdk:backoffice-frontend` | Build or override Back Office pages — Zed Twig templates, navigation and ACL, and Back Office JavaScript and SCSS | Overrides extend core blocks instead of copying them; covers the cache warm-ups a new template, menu entry, or action needs before it shows up | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/backoffice-frontend/README.md) |
+| `find-existing-capability` | `/spryker-ai-dev-sdk:find-existing-capability` | Check whether Spryker already ships a capability before anything new is designed | Searches the Spryker capability map, reads the install status from `composer.lock`, and gives one verdict per capability: extend it, install the missing part, install the feature and then extend it, build only the gap, or build new; report-only | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/find-existing-capability/README.md) |
 | `product-requirement-document` | `/spryker-ai-dev-sdk:product-requirement-document` | Turn a feature idea into a research-grounded product requirement document before any code is written | Spec-before-code; assigns a real Spryker actor to every story; cuts ambiguity before implementation | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/product-requirement-document/README.md) |
 | `technical-specification` | `/spryker-ai-dev-sdk:technical-specification` | Design, together with you, how a new feature fits into the Spryker architecture — from a product requirement document or your business requirements — before any code is written. Starts only when you run the command; the assistant does not load it on its own | One Markdown file per ticket with Mermaid diagrams — module dependency graph with release types, ERD, transfer model, and flow diagrams — plus module API signatures, a test coverage outline, and risks; no implementation code. Saved to `resources/plan/tech-spec/<Domain>/<TICKET>-<feature-name>-tech-spec.md` by default; your project can use another location | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/technical-specification/README.md) |
 | `spryker-refresher` | `/spryker-ai-dev-sdk:spryker-refresher` | Run the right post-change console and composer commands after edits | Owns the file-to-command mapping (codegen, caches, frontend builds, class-resolver); no missed cache rebuilds | [README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-refresher/README.md) |

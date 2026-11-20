@@ -78,22 +78,16 @@ The skill turns the guide into a checklist, compares every step with the referen
 
 A feature install is **done** only when all ten items hold. The `check-dod.php` script decides it from evidence — tool output, lock files, the checklist, and the project files — not from what the assistant writes down. While it says **not done**, the assistant does not call the feature installed, working, or ready, and offers nothing for review.
 
-<div class="width-100">
-
-| # | Item |
-|---|------|
-| 1 | The developer confirmed the scope: the feature, the release, the update mode, and the branch. |
-| 2 | Every baseline ran and holds a result. |
-| 3 | Only modules the feature needs moved; every other move has the developer's reason. |
-| 4 | Every checklist row is decided, and done or skipped with a reason. |
-| 5 | The decided plugin wiring is in place. |
-| 6 | Nothing regressed against the baselines, and the frontend builds pass. |
-| 7 | Every verification step of the guide passed. |
-| 8 | Passing tests cover the feature, or the developer waived them with a reason. |
-| 9 | Every data file the install wrote is imported by a manifest that a deploy recipe runs, and every text the assistant wrote is listed for review. |
-| 10 | Every release step is proven, or the developer accepted shipping it unproven. |
-
-</div>
+1. The developer confirmed the scope: the feature, the release, the update mode, and the branch.
+2. Every baseline ran and holds a result.
+3. Only modules the feature needs moved; every other move has the developer's reason.
+4. Every checklist row is decided, and done or skipped with a reason.
+5. The decided plugin wiring is in place.
+6. Nothing regressed against the baselines, and the frontend builds pass.
+7. Every verification step of the guide passed.
+8. Passing tests cover the feature, or the developer waived them with a reason.
+9. Every data file the install wrote is imported by a manifest that a deploy recipe runs, and every text the assistant wrote is listed for review.
+10. Every release step is proven, or the developer accepted shipping it unproven.
 
 **Blockers stop the run when they are found.** A blocker is anything that stops an item from being met and that the install itself cannot fix: a failed login, a baseline that cannot run, missing frontend dependencies, or a decision only the developer can make. The assistant stops in the phase where it finds the blocker and asks: fix it, waive the item with a reason, or stop the run.
 

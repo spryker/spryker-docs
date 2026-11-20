@@ -1,0 +1,32 @@
+%%{init: {"fontFamily": "Arial, Helvetica, sans-serif", "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}, "flowchart": {"htmlLabels": true, "curve": "basis", "padding": 16}} }%%
+flowchart LR
+    CY["<b>Cypress journey</b>"]
+    AG["<b>API golden path</b>"]
+    AC["<b>API contract test</b>"]
+    FA["<b>Facade test</b>"]
+    UN["<b>Class unit test</b>"]
+
+    subgraph STACK["One Spryker request, from the outside in"]
+        direction TB
+        BR["<b>Browser request</b><br/><i>Yves or Back Office, Presentation layer</i><br/>session · forms · CSRF · redirects · rendering"]
+        GL["<b>API request</b><br/><i>Glue, Communication layer</i><br/>routing · validation · serialization · authorization"]
+        BU["<b>Facade, models, plugin stacks</b><br/><i>Business layer</i>"]
+        PE["<b>Propel queries and entities</b><br/><i>Persistence layer</i>"]
+        DB[("Database")]
+        BR --> BU
+        GL --> BU
+        BU --> PE
+        PE --> DB
+    end
+
+    CY ==>|"drives a real browser"| BR
+    AG ==>|"real HTTP request to the running application"| GL
+    AC ==>|"boots the kernel in-process"| GL
+    FA ==>|"calls the facade directly"| BU
+    UN ==>|"one class inside it"| BU
+
+    classDef entry fill:#FFF6ED,stroke:#B5651D,stroke-width:1.5px,color:#2B2B28
+    classDef layer fill:#F6F6F4,stroke:#6B6B68,stroke-width:1.2px,color:#2B2B28
+    class CY,AG,AC,FA,UN entry
+    class BR,GL,BU,PE,DB layer
+    style STACK fill:#FFFFFF,stroke:#9A9A94,stroke-dasharray:4 3,color:#2B2B28

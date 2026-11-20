@@ -1,7 +1,7 @@
 ---
 title: Add a custom data type to Data Exchange Jobs
 description: Learn how to import and export your own data with Data Exchange Jobs by implementing a schema plugin for the DataExchange engine.
-last_updated: Nov 3, 2026
+last_updated: Nov 10, 2026
 template: howto-guide-template
 ---
 
@@ -139,7 +139,7 @@ An import step implements `ImportStepInterface`: `executeBatch()` receives every
 | `ImportStepErrorTransfer` (`csvRowNumber`, `errorMessage`) | Reports that a row failed. The engine stores the error with the row number and counts the row as failed. |
 | `ImportPublishEventTransfer` (`eventName`, `entityId`) | Asks the engine to trigger a publish event for an entity after the whole file has been processed. |
 
-The `$rows` argument is indexed by the row number in the file, and each row is indexed by the system property names of the schema. The `$propertyNamesInFile` argument maps every system property name back to the header in the file, so that error messages can name the column the user sees.
+`executeBatch()` receives an `ImportStepRequestTransfer` per batch. Its `rows` are indexed by the row number in the file, and each row is indexed by the system property names of the schema. `propertyNamesInFile` maps every system property name back to the header in the file, so that error messages can name the column the user sees. `importType` is the type of the job being run, so that one step class can serve several job types.
 
 **src/Pyz/Zed/CustomerDataExchange/Business/ImportStep/CustomerCsvImportStep.php**
 
@@ -151,6 +151,7 @@ namespace Pyz\Zed\CustomerDataExchange\Business\ImportStep;
 use Generated\Shared\Transfer\CustomerTransfer;
 use Generated\Shared\Transfer\ImportPublishEventTransfer;
 use Generated\Shared\Transfer\ImportStepErrorTransfer;
+use Generated\Shared\Transfer\ImportStepRequestTransfer;
 use Generated\Shared\Transfer\ImportStepResponseTransfer;
 use Spryker\Zed\Customer\Business\CustomerFacadeInterface;
 use Spryker\Zed\DataExchangeExtension\Dependency\Plugin\ImportStepInterface;
@@ -163,15 +164,12 @@ class CustomerCsvImportStep implements ImportStepInterface
     {
     }
 
-    /**
-     * @param array<int, array<string, string>> $rows
-     * @param array<string, string> $propertyNamesInFile
-     */
-    public function executeBatch(array $rows, array $propertyNamesInFile = []): ImportStepResponseTransfer
+    public function executeBatch(ImportStepRequestTransfer $importStepRequestTransfer): ImportStepResponseTransfer
     {
         $response = (new ImportStepResponseTransfer())->setIsSuccessful(true);
+        $propertyNamesInFile = $importStepRequestTransfer->getPropertyNamesInFile();
 
-        foreach ($rows as $rowNumber => $row) {
+        foreach ($importStepRequestTransfer->getRows() as $rowNumber => $row) {
             if ($row['email'] === '') {
                 $response->setIsSuccessful(false);
                 $response->addError((new ImportStepErrorTransfer())
@@ -319,7 +317,7 @@ The same dependency provider offers two optional hooks that run once per import 
 
 ## 5. Verify the new type
 
-1. In the Back Office, go to **Import & Export&nbsp;> Import** and click **Create Import Job**. Make sure that **customers-csv-import** is offered in the **Type** field, and create a job with it.
+1. In the Back Office, go to **Import & Export&nbsp;> Import** and click **Create Import Job**. Make sure that **customers-csv-import** is offered in the **Type** field, and create a job with it. If `DataExchangeInstallerPlugin` is registered, `console setup:init-db` creates a job with the reference `customers-csv-import` instead; see [Install the Data Exchange Jobs feature](/docs/pbc/all/data-exchange/latest/data-exchange-jobs/install/install-the-data-exchange-jobs-feature.html#5-register-the-installer-plugin).
 2. In the job row, click **Create Run**. Under *Step 1: Download Template*, click **Download CSV Template**. The file contains one header row with the columns of `getSchema()`.
 3. Fill in a few rows, upload the file under *Step 2: Upload Filled CSV* with **Upload & Queue Import**, and process the run:
 

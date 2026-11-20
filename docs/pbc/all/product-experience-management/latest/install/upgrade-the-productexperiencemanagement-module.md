@@ -1,9 +1,67 @@
 ---
 title: Upgrade the ProductExperienceManagement module
-description: Learn how to upgrade the ProductExperienceManagement module to the version that moves the Back Office CSV import and export engine to the DataExchange module.
-last_updated: Nov 6, 2026
+description: Learn how to upgrade the ProductExperienceManagement module to the version with a separate Approval Status column in the product CSV, and to the version that moves the Back Office CSV import and export engine to the DataExchange module.
+last_updated: Nov 17, 2026
 template: module-migration-guide-template
 ---
+
+## Upgrade from version 5.* to version 6.0.0
+
+*Estimated migration time: 30 minutes*
+
+Up to version 5.*, the product CSV of the *products-csv-import* job type had one status column, *Product Status*, with a meaning that depended on the row type: the approval status (`draft`, `waiting_for_approval`, `approved`, `denied`) in an abstract product row, the active state (`active`, `inactive`) in a concrete product row. From version 6.0.0, the schema has a separate *Approval Status* column after *Concrete SKU*: an abstract product row carries its approval status there, and *Product Status* is the status of the concrete product only. The export writes the approval status of an abstract product into *Approval Status*. The new *simple-product-csv-import* job type, where one row describes both products, uses the same two columns; see [Back Office product CSV import and export feature overview](/docs/pbc/all/product-experience-management/latest/back-office-product-csv-import-and-export-feature-overview.html#product-statuses).
+
+The import steps, the export steps, the plugin registration, and the configuration are unchanged. To upgrade, follow the steps below.
+
+### 1) Update the module
+
+```bash
+composer require spryker-feature/product-experience-management:"^6.0.0" --update-with-dependencies
+```
+
+### 2) Update the import files
+
+Add the *Approval Status* column to the CSV files of the *products-csv-import* type and move the value of every abstract product row from *Product Status* to *Approval Status*; leave *Product Status* empty in abstract product rows and *Approval Status* empty in concrete product rows:
+
+Before 6.0.0:
+
+| ABSTRACT SKU | CONCRETE SKU | PRODUCT STATUS |
+| --- | --- | --- |
+| 001 |  | approved |
+| 001 | 001_25904006 | active |
+
+From 6.0.0:
+
+| ABSTRACT SKU | CONCRETE SKU | APPROVAL STATUS | PRODUCT STATUS |
+| --- | --- | --- | --- |
+| 001 |  | approved |  |
+| 001 | 001_25904006 |  | active |
+
+A file in the old format is rejected row by row: every abstract product row is reported with an empty *Approval Status*, the concrete product rows are imported.
+
+### 3) Re-create the saved import jobs
+
+The import maps the columns of an uploaded file through the schema of the module, so the existing *products-csv-import* jobs import files in the new format without changes. The template download and the export, however, use the column list stored with the job when it was created, so a job created before 6.0.0 offers a template and an export without the *Approval Status* column. Create the jobs of that type again in the Back Office under **Import & Export&nbsp;> Import**, which stores the current schema, or add the following entry to the `definition` of the existing jobs after *Concrete SKU*:
+
+```json
+{"property_name_in_file": "Approval Status", "system_property_name": "approval_status"}
+```
+
+If your project creates its jobs through the import job data import of the Data Exchange Jobs feature, the entry goes into the `definition` column of the affected rows, or the rows keep an empty `definition` and the jobs are removed before the import runs again. Also update the import files of end-to-end tests that import products through the Back Office.
+
+### 4) Update custom import steps
+
+If a project step extends `AbstractProductCsvImportStep` and reads the status of an abstract product, read it from `resolveApprovalStatus()`, which returns the lowercased value of the `approval_status` column. `resolveProductStatus()` keeps returning the value of the `product_status` column, which is the concrete product status.
+
+{% info_block warningBox "Verification" %}
+
+Log in to the Back Office and verify the following:
+
+- The template of a *products-csv-import* job, downloaded from **Import & Export&nbsp;> Import**, contains the *Approval Status* column after *Concrete SKU*.
+- A file with an abstract product row that has `approved` in *Approval Status* and an empty *Product Status* is imported without errors.
+- An export of the job fills *Approval Status* in the abstract product rows and *Product Status* in the concrete product rows.
+
+{% endinfo_block %}
 
 ## Upgrade from version 4.0.* to version 5.0.0
 

@@ -1,7 +1,7 @@
 ---
 title: Storefront Assistant
 description: An AI shopping assistant on the Storefront that answers product questions, shows matching products, compares them, and builds product setups using only your own catalog.
-last_updated: Oct 29, 2026
+last_updated: Nov 13, 2026
 template: concept-topic-template
 related:
   - title: Storefront Assistant technical overview
@@ -45,8 +45,10 @@ Because the assistant knows the page that the customer is on, it can answer ques
 | Guided choices | Asks a clarifying question with clickable answer options when the request is not specific enough. |
 | Setup builder | Puts together a set of products that work together, for example a camera with accessories, within the budget of the customer. |
 | Shop information | Answers questions from your CMS pages, for example about shipping or returns. |
+| Product documents | Answers installation, maintenance, specification, or compliance questions from the documents that are attached to products, such as manuals and data sheets, and names the document that it used. For details, see [Storefront Assistant document semantic search](/docs/dg/dev/ai/ai-commerce/storefront-assistant/document-semantic-search/storefront-assistant-document-semantic-search.html). |
+| Asset support | Answers questions about the Self-Service Portal assets of a company user, finds compatible spare parts and services, and answers questions from the documents of these products. |
 | Page-aware answers | Uses the current product, category, search query, and active filters as context for the answer. |
-| Suggested prompts | Offers starter questions as clickable chips. The chips change with the page type: product page, category page, search results, or any other page. |
+| Suggested prompts | Offers starter questions as clickable chips. The chips change with the page type: product page, category page, search results, asset details page, or any other page. |
 | Attachments | Accepts images and PDF files, for example a photo of a product that the customer wants to find. |
 | Chat history | Keeps the conversations of each customer for 30 days by default. Customers can reopen, delete, or bulk-delete conversations. |
 | Agent selection | Routes each question to the most suitable agent automatically. Customers can also select an agent manually. The feature ships with the **Product Discovery** agent, and developers can add more agents. |
@@ -107,8 +109,8 @@ You can configure the following settings in the Back Office under **AI Commerce&
 | System Prompts | Product Discovery System Prompt | The instructions that the **Product Discovery** agent follows. The default prompt tells the agent to use only catalog data and never to invent products, prices, or links. |
 | AI Vendor | AI Configuration | The AI vendor that the assistant uses: **OpenAI**, **AWS Bedrock**, or **Anthropic**. |
 | AI Vendor | OpenAI Model, AWS Bedrock Model, Anthropic Model | The model of the selected vendor. The Back Office shows only the field of the selected vendor. The model must support streaming and tool calls. |
-| Suggested Prompts | Product Page Prompts, Category Page Prompts, Search Results Prompts, Default Prompts | The starter questions for each page type. |
-| Suggested Prompts | Product Results Prompts | The follow-up questions under the product cards in the chat. |
+| Suggested Prompts | Product Page Prompts, Category Page Prompts, Search Results Prompts, Asset Page Prompts, Default Prompts | The starter questions for each page type and locale. |
+| Suggested Prompts | Product Results Prompts | The follow-up questions under the product cards in the chat, for each locale. |
 
 </div>
 
@@ -116,9 +118,21 @@ To set the API credentials of the AI vendor, go to **AI Vendor** in the Back Off
 
 ### Write suggested prompts
 
-Suggested prompts are the clickable questions that customers see when they open the chat. Separate the prompts with a pipe character (`|`). The chat shows a maximum of four prompts for each page type. To show no prompts on a page type, leave the value empty.
+Suggested prompts are the clickable questions that customers see when they open the chat. Each customer sees the prompts of the current locale, so you can write the prompts in each language of your shop.
 
-To show the prompts in titled sections, separate the sections with a double pipe (`||`), and start each section with its title and a colon. The chat shows a maximum of four sections for each page type, with a maximum of four prompts in each section. The chat shows the titles as you enter them, so the titles are not translated for each locale.
+Enter each value as a JSON object. Use the locale name as the key, and a list of the prompts of that locale as the value. The chat shows a maximum of four prompts for each page type. To show no prompts on a page type in a locale, leave that locale out of the object.
+
+Configuration Management rejects a value in these cases:
+
+- The value is not a JSON object with locale names as keys.
+- A key is a locale that no store uses.
+- The prompts of a locale are not a list of text values.
+
+{% info_block warningBox "Old text format" %}
+
+The chat does not support the pipe-separated text format and the titled prompt sections. A value saved in the old format shows no prompts. Save the value again as JSON.
+
+{% endinfo_block %}
 
 You can use the following placeholders. The assistant replaces them with the data of the current page:
 
@@ -130,19 +144,25 @@ You can use the following placeholders. The assistant replaces them with the dat
 | `{categoryName}` | The name of the current category | Category Page Prompts |
 | `{searchQuery}` | The search query of the customer | Search Results Prompts |
 | `{productCount}` | The number of products in the chat results | Product Results Prompts |
+| `{assetName}` | The name of the current Self-Service Portal asset | Asset Page Prompts |
 
 </div>
 
 Example of **Product Page Prompts**:
 
-```text
-Show me cheaper alternatives to {productName}|Show me similar products|Compare {productName} with similar models
-```
-
-Example of **Default Prompts** with sections:
-
-```text
-Learn more: What is new?|What is on sale? || Get recommendations: What do you recommend?
+```json
+{
+  "en_US": [
+    "Show me cheaper alternatives to {productName}",
+    "Show me similar products",
+    "Compare {productName} with similar models"
+  ],
+  "de_DE": [
+    "Zeige mir günstigere Alternativen zu {productName}",
+    "Zeige mir ähnliche Produkte",
+    "Vergleiche {productName} mit ähnlichen Modellen"
+  ]
+}
 ```
 
 ## Data privacy

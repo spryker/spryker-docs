@@ -30,15 +30,15 @@ Invoke it with *"install the Recurring Orders feature"*, *"add `spryker-feature/
 
 For the full flow, the design decisions, and the scripts, see the [`spryker-feature-install` README](https://github.com/spryker-sdk/ai-dev/blob/master/plugins/spryker-ai-dev-sdk/skills/spryker-feature-install/README.md) in the plugin repository.
 
-## Why an integration guide alone is not enough
+## How the skill adapts the integration guide to your project
 
-An integration guide lists the steps for a fresh demo shop at the latest release. A real project differs from that in several ways, and a step-by-step copy of the guide fails silently:
+The integration guide is the source for every install. It describes the feature for a standard demo shop at the latest release, so that it applies to every project. Your project has its own product type, configuration, and customizations. The skill uses the guide as the basis and adapts each step to your project:
 
-- **The guide lists plugins for every scenario.** A project needs only the plugins for its own product type and options.
-- **A guide snippet sets a value for a fresh project.** A literal copy replaces the value the project already has. For example, a new secured URL pattern can remove the login protection from all other customer pages.
-- **The guide does not name every file.** A feature also changes templates, other modules' dependency providers, OMS processes, data files, and deploy files.
-- **The guide is written for a fresh install.** An existing environment does not run its imports, installers, and republish commands on deploy.
-- **The guide does not say what the project's modules can take.** A `composer require` can move many more modules than the feature needs, and a module update the feature does not need can break a project customization.
+- **It selects the plugins for your project.** The guide covers every scenario. The skill keeps only the plugins for your product type and options.
+- **It merges values into your configuration.** A guide snippet shows the complete value for a standard project. The skill adds the new entries to the value your project already has. For example, it adds a new secured URL pattern and keeps the login protection of your other customer pages.
+- **It finds the related files.** The guide focuses on the feature's own modules. The skill also finds the templates, other modules' dependency providers, OMS processes, data files, and deploy files that the reference demo shop changed for the feature.
+- **It prepares the existing environments.** The guide describes a local install, where you run the imports, installers, and republish commands by hand. The skill finds which of these commands your deploy recipe must run.
+- **It keeps module updates small.** A `composer require` can update more modules than the feature needs. The skill moves back every module the feature does not need, so your customizations keep working.
 
 The skill turns the guide into a checklist, compares every step with the reference demo shop, and measures the result.
 

@@ -142,7 +142,9 @@ If a developer defines that the configuration of such a product needs to be comp
 
 Customers configure a product on the Storefront as follows:
 
-![configurable-product-on-the-storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configurable-product-on-the-storefront.gif)
+<iframe width="960" height="720" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/configurable-product-feature-overview/configurable-product-on-the-storefront.mp4" frameborder="0" allowfullscreen></iframe>
+
+<a href="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/configurable-product-feature-overview/configurable-product-on-the-storefront.mp4" target="_blank" rel="noopener">Watch the video: configurable product on the Storefront</a>
 
 ## Related Developer documents
 

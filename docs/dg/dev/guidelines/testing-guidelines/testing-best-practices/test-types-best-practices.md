@@ -1,41 +1,44 @@
 ---
 title: Test types best practices
-description: Learn when and how it's best to use different test types in your Spryker project.
-last_updated: May 18, 2026
+description: Learn how a Spryker test suite is weighted across its test tiers, from static analysis to end-to-end journeys, and in which tier a new test belongs.
+last_updated: Sep 29, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/test-types-best-practices.html
+related:
+  - title: Best practices for effective testing
+    link: docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/best-practices-for-effective-testing.html
+  - title: Testify
+    link: docs/dg/dev/guidelines/testing-guidelines/testify.html
+  - title: Identifying what to test with Cypress
+    link: docs/dg/dev/guidelines/testing-guidelines/cypress-testing/identifying-what-to-test.html
 ---
 
-Different test types, such as unit, functional, acceptance, and other tests, serve a specific purpose and implications in different aspects. For example, unit tests are usually very fast whereas acceptance tests are very slow. The following image shows the differences from different aspects:
+Spryker does not follow the testing pyramid. The pyramid puts most of its weight on unit tests that mock their collaborators. In a modular monolith like Spryker, most defects live in the interaction between a facade, its Persistence layer, and the plugins a project registers. Mocking those interactions away tests the mock instead of the code.
 
-![testing-pyramid](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/test-types-best-practices/Testing-pyramid.jpg)
+A Spryker test suite has the shape of the *testing trophy* instead. Each part of the trophy is a test tier, and each tier holds one or more test types:
 
-As evident from the image, the unit tests positioned at the bottom of the pyramid are cost-effective, robust, and fast. In contrast, the UI or end-to-end (E2E) tests at the top of the pyramid are expensive, brittle, and slow.
-This implies that it's better to focus on the tests at the bottom first and have more of those than the ones at the top. We recommend writing tests that are higher in the pyramid only when the lower tests aren't enough. For example, it's a bad practice to always use acceptance or UI tests. These tests should only be used when they are really necessary.
+- **Static analysis** is the broad base. [PHPStan](/docs/dg/dev/sdks/sdk/development-tools/phpstan.html), [Code Sniffer](/docs/dg/dev/sdks/sdk/development-tools/code-sniffer.html), and [Architecture Sniffer](/docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html) check types, coding style, and application layer boundaries on every file, without anybody writing a test.
+- **Unit tests** are a narrow stem. A class unit test covers one class, and you write one only where a facade test cannot reach a branch without a heavy arrange section.
+- **Integration tests** carry the volume of the suite. Facade tests run the real code of several modules against the real database in one process, using the [Testify](/docs/dg/dev/guidelines/testing-guidelines/testify.html) helpers instead of mocks. Application programming interface (API) contract tests prove what an API request may send and what its response contains.
+- **End-to-end tests** are a thin top. Each Cypress journey walks one critical customer or Back Office user flow through the browser. Journeys stay few, and they never enumerate cases or assert business rules.
 
-## Unit tests
+## Choose the tier for a new test
 
-Unit tests typically reside in the Business layer. However, some of them may also reside in the Communication layer. To achieve a high coverage (around 80%) of unit tests, it's a good practice for developers to write unit tests for every change they make. Additionally, in many cases, code can be tested with integration tests, which test how several parts of a system work together. For more information on integration tests, see the [Integration tests](#integration-tests).
+Put a test in the cheapest tier that can still see the defect you want it to catch. Each step up the trophy boots more of the system, needs more running services, and names the broken module less precisely when it fails.
 
-These tests are cost-effective, robust, and fast. You can mock any dependencies in these tests. You can also easily manipulate the system during the *Arrange* phase of your tests.
+- If a change alters a business rule, a calculated value, or a state transition, write or extend a facade test.
+- If a change alters what an API request may send or what its response contains, write or extend the API contract test for that operation.
+- If a change touches a flow that a Cypress journey already walks, extend that journey. Add a new journey only when no cheaper test type can see the defect. For what a journey may assert, see [Identifying what to test](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing/identifying-what-to-test.html).
 
-## Integration tests
+If a test in a higher tier catches a defect and no test in a lower tier fails, the lower tier is missing a test. Write it there.
 
-There is a mixture of unit and integration tests in the Business and the Communication layer. Integration tests are typically performed using facade tests in the Business Layer and cover several parts of the system together. Spryker primarily uses integration tests and switches to unit tests when necessary.
+## Earlier recommendations on this page
 
-Integration tests can be slow, but they can also provide good code coverage and reduce the number of tests required.
+Earlier versions of this page recommended the testing pyramid. The tiers on this page replace that advice:
 
-Like unit tests, you can mock any dependencies in the integration tests and easily manipulate the system during the *Arrange* phase of your tests.
-
-## Acceptance tests (UI tests, E2E tests)
-
-Acceptance tests are the slowest tests, and you should avoid using them as much as you can. Acceptance tests in Spryker reside in the Presentation layer. These tests render pages as you open them within your tests, which makes it slow. Besides, there is no simple way to bring the system into a state you would like to test. For example, if you need a specific customer in the database, you have to create the customer by following the standard customer creation process:
-
-1. Go to the registration page.
-2. Fill out the form and submit it.
-3. Confirm the registration, etc.
-
-As you can imagine, having hundreds of tests that require a specific customer would eat up a lot of the runtime of your tests, which will make your test suite extremely slow. In most cases, unit or integration tests should be preferred over the acceptance tests.
-
-With the acceptance tests, you can't do mocking easily; however, there is a way of reducing the runtime in the above-described process. When you have no other choice than using an acceptance test, you can also achieve the state setup by using an API call in your test, ideally, from a helper with a clean-up API call.
+| Earlier recommendation | Current recommendation |
+|---|---|
+| Most tests are unit tests with mocked dependencies. | Most tests are facade tests on the real code and the real database. Class unit tests cover only the branches a facade test cannot reach. |
+| Integration tests are written only where unit tests are not enough. | Integration tests are the default, and a facade test is where a business rule is proven. |
+| Acceptance tests render pages in the Presentation layer and are avoided where possible. | Cypress journeys prove the flows that only a browser can reach, one journey per critical flow. |

@@ -96,7 +96,7 @@ entries:
           url: /docs/integrations/spryker-api/storefront-api/developing-apis/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
         - title: Resolve search engine friendly URLs
           url: /docs/integrations/spryker-api/storefront-api/developing-apis/marketplace-glue-api-resolve-search-engine-friendly-urls.html
-        - title: Test Glue API
+        - title: Test Glue API with HTTP integration tests
           url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-glue-api.html
         - title: B2C API React example
           url: /docs/integrations/spryker-api/storefront-api/developing-apis/b2c-api-react-example/b2c-api-react-example.html

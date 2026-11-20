@@ -6,6 +6,8 @@ entries:
   - title: Developer getting started guide
     url: /docs/dg/dev/development-getting-started-guide.html
     nested:
+      - title: AI-ready quality gates
+        url: /docs/dg/dev/ai-ready-quality-gates.html
       - title: Development tools
         url: /docs/dg/dev/development-tools.html
         nested:
@@ -134,6 +136,8 @@ entries:
         nested:
           - title: Installation
             url: /docs/dg/dev/ai/ai-dev/ai-dev-installation.html
+          - title: AI-ready quality gates
+            url: /docs/dg/dev/ai-ready-quality-gates.html
           - title: Workflows, Skills, and Agents
             url: /docs/dg/dev/ai/ai-dev/ai-dev-workflows-skills-and-agents.html
             nested:

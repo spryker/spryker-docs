@@ -1,0 +1,37 @@
+<svg viewBox="0 0 800 300" width="100%" role="img" aria-labelledby="maturity-levels-title" xmlns="http://www.w3.org/2000/svg" style="max-width:800px;font-family:inherit;">
+<title id="maturity-levels-title">Five quality levels from Unguarded to AI-ready</title>
+<defs>
+<marker id="ml-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0e8a6f"/></marker>
+</defs>
+<text x="20" y="24" font-size="13" font-weight="700" fill="#1d2433">Each level lowers the cost of every future change</text>
+<line x1="20" y1="36" x2="340" y2="36" stroke="#0e8a6f" stroke-width="2" marker-end="url(#ml-arrow)"/>
+<rect x="20" y="200" width="150" height="90" rx="6" fill="#fdecec" stroke="#c4373d"/>
+<text x="32" y="224" font-size="11" fill="#7a2a2e">LEVEL 1</text>
+<text x="32" y="246" font-size="15" font-weight="700" fill="#1d2433">Unguarded</text>
+<text x="32" y="266" font-size="12" fill="#3b4352">No checks in CI.</text>
+<text x="32" y="282" font-size="12" fill="#3b4352">Tests by hand.</text>
+<rect x="176" y="160" width="150" height="130" rx="6" fill="#fff4e0" stroke="#e08a00"/>
+<text x="188" y="184" font-size="11" fill="#9a5f00">LEVEL 2</text>
+<text x="188" y="206" font-size="15" font-weight="700" fill="#1d2433">Partial</text>
+<text x="188" y="226" font-size="12" fill="#3b4352">Some checks run,</text>
+<text x="188" y="242" font-size="12" fill="#3b4352">but are easy to skip.</text>
+<text x="188" y="258" font-size="12" fill="#3b4352">Few own tests.</text>
+<rect x="332" y="120" width="150" height="170" rx="6" fill="#fffbe0" stroke="#c9a400"/>
+<text x="344" y="144" font-size="11" fill="#7a6400">LEVEL 3</text>
+<text x="344" y="166" font-size="15" font-weight="700" fill="#1d2433">Guarded</text>
+<text x="344" y="186" font-size="12" fill="#3b4352">Standard checks run</text>
+<text x="344" y="202" font-size="12" fill="#3b4352">in CI. Some tests,</text>
+<text x="344" y="218" font-size="12" fill="#3b4352">some gaps.</text>
+<rect x="488" y="80" width="150" height="210" rx="6" fill="#e7f7f2" stroke="#11a585"/>
+<text x="500" y="104" font-size="11" fill="#0e6b57">LEVEL 4</text>
+<text x="500" y="126" font-size="15" font-weight="700" fill="#1d2433">Strict</text>
+<text x="500" y="146" font-size="12" fill="#3b4352">Every gate blocks.</text>
+<text x="500" y="162" font-size="12" fill="#3b4352">Critical shop flows</text>
+<text x="500" y="178" font-size="12" fill="#3b4352">have tests.</text>
+<rect x="644" y="40" width="150" height="250" rx="6" fill="#11a585" stroke="#0e8a6f"/>
+<text x="656" y="64" font-size="11" fill="#e7f7f2">LEVEL 5</text>
+<text x="656" y="86" font-size="15" font-weight="700" fill="#ffffff">AI-ready</text>
+<text x="656" y="106" font-size="12" fill="#ffffff">An AI upgrade runs,</text>
+<text x="656" y="122" font-size="12" fill="#ffffff">and the pipeline</text>
+<text x="656" y="138" font-size="12" fill="#ffffff">proves the result.</text>
+</svg>

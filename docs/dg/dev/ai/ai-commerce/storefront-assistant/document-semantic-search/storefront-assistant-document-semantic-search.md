@@ -1,7 +1,7 @@
 ---
 title: Storefront Assistant document semantic search
 description: Learn how Storefront Assistant answers questions from product documents, how Amazon Bedrock Knowledge Bases indexes and searches the documents, and which settings and extension points you can use.
-last_updated: Nov 19, 2026
+last_updated: Nov 23, 2026
 template: concept-topic-template
 label: early-access
 related:
@@ -37,6 +37,10 @@ Document semantic search has two sides. They share only the knowledge store and 
 
 - **Indexing side (Zed).** When a product attachment changes, Zed downloads the file and sends it to the knowledge store in the background.
 - **Search side (Client, used by Yves and Glue).** The `product_knowledge_search` tool of the **Product Discovery** agent searches the knowledge store and returns the best matching passages to the AI model.
+
+The following diagram shows the containers of the two sides. The numbers 1–4 are the steps of the [indexing flow](#indexing-flow). The letters A–D are the main steps of the [search flow](#search-flow). The search side uses retrieval-augmented generation (RAG): the Client retrieves the passages from the knowledge store, and the AI model generates the answer from these passages.
+
+{% include diagrams/ai-commerce/storefront-assistant-document-semantic-search.svg %}
 
 The knowledge store is the system that splits the documents into passages, turns each passage into a vector, and finds the passages that are closest to a question. By default, the knowledge store is an [Amazon Bedrock knowledge base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html). You can replace it with another vector database or managed search service. For details, see [Use another knowledge store provider](/docs/dg/dev/ai/ai-commerce/storefront-assistant/document-semantic-search/use-another-knowledge-store-provider.html).
 

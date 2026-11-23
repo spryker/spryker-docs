@@ -85,6 +85,8 @@ entries:
             url: /docs/about/all/releases/image-releases/jenkins/release-notes-spryker-jenkins-20260113.html
         - title: Spryker-PHP
           nested:
+          - title: Release notes for spryker-php 20261123
+            url: /docs/about/all/releases/image-releases/spryker-php/release-notes-spryker-php-20261123.html
           - title: Release notes for spryker-php 20261119
             url: /docs/about/all/releases/image-releases/spryker-php/release-notes-spryker-php-20261119.html
           - title: Release notes for spryker-php 20261021

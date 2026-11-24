@@ -1,7 +1,7 @@
 ---
 title: Use another knowledge store provider
 description: Learn how to replace the Amazon Bedrock knowledge base of the Storefront Assistant document semantic search with another vector database or managed search service.
-last_updated: Nov 18, 2026
+last_updated: Nov 24, 2026
 template: howto-guide-template
 label: early-access
 related:
@@ -271,7 +271,7 @@ class AiCommerceDependencyProvider extends SprykerFeatureAiCommerceDependencyPro
 }
 ```
 
-The document source plugins, the scope resolver plugins, the `product_knowledge_search` tool, and the search settings do not change. You can remove the `BEDROCK_KNOWLEDGE_BASE_*` configuration.
+The document source plugins, the scope resolver plugins, the `product_knowledge_search` and `display_knowledge_sources` tools, and the search settings do not change. You can remove the `BEDROCK_KNOWLEDGE_BASE_*` configuration.
 
 Clear the caches:
 

@@ -7,6 +7,26 @@ This file contains important instructions for working with the Spryker documenta
 - Documentation pages are in `docs` folder
 - Sidebar of documentation is in `_data/sidebars` folder
 
+## npm Commands
+
+Run these commands from the repository root. Install dependencies once with `npm install`.
+
+| Command | Description |
+|---------|-------------|
+| `npm run lint:md` | Runs markdownlint-cli2 on `docs/**/*.md` and `_includes/pbc/**/*.md`. Uses the same file set as the `mdlint` CI check. |
+| `npm run lint:md:fix` | Same as `lint:md`, but also applies automatic fixes. Rules that need manual fixes (heading levels, code fence languages, alt text, bare links) are still reported. |
+| `npm run docs:serve` | Serves the full site locally in Docker at `http://localhost:4000`. |
+| `npm run docs:serve -- <section> [<section> ...]` | Serves only the listed sections of `docs/`. Available sections: `about`, `ca`, `dg`, `integrations`, `pbc`. |
+
+Notes:
+
+- The `--` before the section names is required. Without it, npm does not pass the names to the script and the full site is built.
+- `docs:serve` runs `_scripts/serve-docs.js`. The script generates `_config_dev.yml` (ignored by Git, never edit or commit it), clears `_site` when the selection changes, and starts Jekyll through `docker compose run`.
+- Links to excluded sections return 404 locally. Changes in `_data/` (sidebars) are not detected while the server runs, so restart the command.
+- Do not run `docker compose up` and `npm run docs:serve` at the same time. Both use ports 4000 and 35729.
+- To lint a single file, run `npx markdownlint-cli2 path/to/file.md`. Arguments passed to `npm run lint:md` are added to the default patterns and do not limit the run.
+- For a docs change that affects rendering, preview only the section you changed, for example `npm run docs:serve -- pbc`.
+
 ## Documentation Standards
 
 Follow documentation Standards to ensure content is high-quality and consistent with Spryker documentation standards.
@@ -220,10 +240,12 @@ vale --minAlertLevel=error path/to/file.md
 
 **Markdownlint (markdown syntax):**
 ```bash
-markdownlint-cli2 path/to/file.md
+npx markdownlint-cli2 path/to/file.md
 ```
 
-**Installation:** If vale or markdownlint-cli2 are not installed, install them according to the OS requirements.
+To lint the whole repository the same way CI does, run `npm run lint:md`. See [npm Commands](#npm-commands).
+
+**Installation:** If vale is not installed, install it according to the OS requirements. markdownlint-cli2 is installed by `npm install`.
 
 3. Validate with Documentation Standards
     - internal links format

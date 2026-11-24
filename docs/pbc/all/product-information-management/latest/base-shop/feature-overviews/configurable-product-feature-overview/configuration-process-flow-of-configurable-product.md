@@ -3,6 +3,9 @@ title: Configuration process flow of configurable products
 last_updated: Jun 16, 2026
 description: This document shows the configuration process of the configurable product.
 template: concept-topic-template
+related:
+  - title: Integrating an external CPQ with Spryker
+    link: docs/integrations/custom-building-integrations/external-cpq/guideline-external-cpq-integration.html
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/configurable-product-feature-walkthrough/configuration-process-flow-of-configurable-product.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/configurable-product-feature-overview/configuration-process-flow-of-configurable-product.html

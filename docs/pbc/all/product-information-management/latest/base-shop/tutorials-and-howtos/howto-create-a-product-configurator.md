@@ -3,6 +3,9 @@ title: Create a product configurator
 description: Learn how to build a custom product configurator and integrate it with a Spryker shop, based on the Water Treatment configurator example.
 last_updated: Jun 16, 2026
 template: howto-guide-template
+related:
+  - title: Integrating an external CPQ with Spryker
+    link: docs/integrations/custom-building-integrations/external-cpq/guideline-external-cpq-integration.html
 ---
 
 This document explains how to build a custom [product configurator](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-product-feature-overview/configurable-product-feature-overview.html) at the code level and integrate it with a Spryker shop.

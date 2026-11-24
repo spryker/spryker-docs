@@ -3,6 +3,9 @@ title: Configurable Product feature overview
 description: Learn about selling complex products with modular designs or services using the Spryker Configurable product feature.
 last_updated: Nov 20, 2026
 template: concept-topic-template
+related:
+  - title: Integrating an external CPQ with Spryker
+    link: docs/integrations/custom-building-integrations/external-cpq/guideline-external-cpq-integration.html
 redirect_from:
   - /docs/scos/user/features/202108.0/configurable-product-feature-overview.html
   - /docs/scos/user/features/201903.0/configurable-product-feature-overview.html
@@ -62,7 +65,7 @@ In the orders, a Back Office user can see which products are configurable. They 
 
 A *product configurator* is a tool that lets customers customize the product parameters provided by the shop owner or product manufacturer.
 
-You can create a product configurator as a part of your shop or integrate a third-party one. The feature is shipped with an example product configurator. The example product configurator allows configuring the parameters of an industrial water treatment system, such as *Flow Rate*, *Filtration Type*, *Tank Material*, *Control System*, *Inlet Connection*, and *Power Supply*.
+You can create a product configurator as a part of your shop or integrate a third-party one. To connect an external configure, price, quote (CPQ) system, see [Integrating an external CPQ with Spryker](/docs/integrations/custom-building-integrations/external-cpq/guideline-external-cpq-integration.html). The feature is shipped with an example product configurator. The example product configurator allows configuring the parameters of an industrial water treatment system, such as *Flow Rate*, *Filtration Type*, *Tank Material*, *Control System*, *Inlet Connection*, and *Power Supply*.
 
 ![examplary-product-configurator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/examplary-product-configurator.png)
 

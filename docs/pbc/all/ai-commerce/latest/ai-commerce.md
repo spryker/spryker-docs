@@ -1,11 +1,11 @@
 ---
 title: AI Commerce
 description: AI Commerce brings AI-powered capabilities to your Spryker storefront, helping buyers find and order products faster with less manual effort.
-last_updated: Oct 29, 2026
+last_updated: Nov 24, 2026
 template: concept-topic-template
 ---
 
-AI Commerce brings AI-powered capabilities to your Spryker storefront and back office, reducing manual effort for buyers and shop operators, accelerating commerce workflows. Features are built on the `AiFoundation` abstraction layer, so the underlying AI model can be swapped or configured per feature without changing application code.
+AI Commerce brings AI-powered capabilities to your Spryker Storefront and Back Office. It reduces manual effort for buyers and shop operators and accelerates commerce workflows. Features are built on the `AiFoundation` abstraction layer, so the underlying AI model can be swapped or configured per feature without changing application code.
 
 ## Features
 

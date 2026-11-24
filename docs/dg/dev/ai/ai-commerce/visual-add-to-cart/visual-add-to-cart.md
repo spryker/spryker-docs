@@ -109,7 +109,7 @@ If an overridden prompt is blank or contains only whitespace, Visual Add to Cart
 
 ## Naming changes from previous versions
 
-Up to version 0.13.x of `spryker-feature/ai-commerce`, the feature was named `QuickOrderImageToCart` in code. Starting with version 0.14.0, all public names use `VisualAddToCart`. Configuration Management keys and the stored AI configuration names are unchanged, so saved settings keep working.
+Up to version 0.15.x of `spryker-feature/ai-commerce`, the feature was named `QuickOrderImageToCart` in code. Starting with version 0.14.0, all public names use `VisualAddToCart`. Configuration Management keys and the stored AI configuration names are unchanged, so saved settings keep working.
 
 | AREA | PREVIOUS NAME | CURRENT NAME |
 |------|---------------|--------------|

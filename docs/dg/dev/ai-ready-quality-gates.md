@@ -1,9 +1,9 @@
 ---
 title: AI-ready quality gates
-description: Bring your Spryker project to the Spryker CI and test standard so that AI can change and upgrade it safely — 3 to 5 times faster and cheaper, with fewer incidents.
-last_updated: Nov 17, 2026
+description: Bring your Spryker project to the Spryker CI and test standard so that AI can change and upgrade it safely, with a feedback loop that improves AI work with every change.
+last_updated: Nov 24, 2026
 template: concept-topic-template
-keywords: AI-ready, quality gates, CI, continuous integration, tests, end-to-end tests, Cypress, Playwright, upgrades, upgradability, AI Dev SDK, cost of change, incidents
+keywords: AI-ready, quality gates, CI, continuous integration, tests, end-to-end tests, Cypress, Playwright, upgrades, upgradability, AI Dev SDK, cost of change, AI harness, feedback loop
 related:
   - title: Continuous Integration
     link: docs/dg/dev/ci.html
@@ -19,27 +19,27 @@ related:
     link: docs/dg/dev/ai/ai-dev/ai-dev-installation.html
 ---
 
-**AI writes the change. Your quality gates prove that it works.**
+**AI writes the change. Your quality gates check that it works.**
 
-AI can upgrade a Spryker project, fix a bug, or build a feature in hours instead of weeks. But AI speed is only useful when something confirms that the shop still works after each change. That something is your quality gates: the automatic code checks and tests that run in CI on every change.
+AI can upgrade a Spryker project, fix a bug, or build a feature in hours instead of weeks. But AI speed is only useful when something confirms that the shop still works after each change. That something is your quality gates: the automatic code checks and tests that run in CI on every change. Together, they form a harness for AI and a feedback loop: each failed check shows where and how to improve.
 
 This page explains what an AI-ready project looks like, why it costs less to run, and how to get there step by step.
 
 {% info_block infoBox "In 30 seconds" %}
 
-- **The problem:** without quality gates, every change — made by a developer or by AI — must be verified by hand. Upgrades are slow, and customers find the bugs.
-- **The fix:** standard Spryker code checks and tests in CI, and every check blocks the change when it fails.
-- **The result:** new features, bugfixes, hotfixes, and upgrades become 3 to 5 times faster and cheaper. You also get fewer production incidents and a project that AI can work on safely.
+- **The problem:** without quality gates, a software engineer must verify every change by hand, whether AI or a colleague made it. There is no feedback loop, so upgrades are slow and your AI-dev does not improve.
+- **The fix:** standard Spryker code checks and tests in CI form a harness for AI. Every check blocks a failed change and shows where it failed.
+- **The result:** each failed check shows where and how to improve, and you can automate the prevention. New features, bugfixes, hotfixes, and upgrades need less manual verification, and AI can work on your project safely.
 
 {% endinfo_block %}
 
-## Same AI, two outcomes
+## The same change, with and without quality gates
 
-The diagram shows the same AI change in two projects. The only difference is the quality gates.
+The diagram shows the same change in two projects. A software engineer or AI can make the change. The only difference is the quality gates.
 
 {% include diagrams/dg/ai-ready-quality-gates/two-outcomes.svg %}
 
-Without gates, a person must review every line, and the real test happens in production. With gates, the pipeline rejects a broken change in minutes, and AI fixes it in the same session. A person reviews a change that is already proven to work.
+Without gates, a software engineer reviews and tests the change by hand, and nothing records the result. With gates, the pipeline checks every change in minutes. A failed check shows where the change failed, and the author fixes it before the review. A software engineer then reviews a change that passed the checks.
 
 ## Why now
 
@@ -50,18 +50,16 @@ Two things changed, and together they make quality gates the best investment in 
 
 Quality gates turn AI speed into safe delivery.
 
-## The AI multiplier: 3 to 5 times faster
+## What AI adds to quality gates
 
-AI alone makes only one part of a task faster: writing the code. In most projects, the larger part of each task is verification by hand and fixes after the release. Quality gates remove these parts. Together, AI and quality gates make a typical development task 3 to 5 times faster and cheaper.
-
-{% include diagrams/dg/ai-ready-quality-gates/multiplier.svg %}
+AI makes one part of a task faster: writing the code. The [DORA 2025 report](https://dora.dev/dora-report-2025/) shows that AI amplifies the strengths and the weaknesses of a team. Teams with fast feedback loops gain from AI, and teams with slow processes gain little. Quality gates are the feedback loop: a failed check shows what to fix, and AI repeats the cycle until the pipeline is green. The table shows the difference for each type of task.
 
 <div class="width-100">
 
 | Task | Without quality gates | With AI and quality gates |
 |------|-----------------------|---------------------------|
-| New feature | The team builds the feature, then tests the whole shop by hand before the release. Side effects show up in production. | AI builds the feature and its tests with the [Customization Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html). The gates prove that the rest of the shop still works. |
-| Bugfix or hotfix | A developer reproduces the bug by hand, fixes it, and hopes that nothing else breaks. A hotfix waits for a manual test. | AI reproduces the bug in a test, fixes it, and the pipeline proves the fix with the [Bugfix Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html). A hotfix goes live in hours. |
+| New feature | The team builds the feature, then tests the whole shop by hand before the release. No automatic check shows the side effects. | AI builds the feature and its tests with the [Customization Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html). The gates prove that the rest of the shop still works. |
+| Bugfix or hotfix | A developer reproduces the bug by hand, and fixes it. No test records the bug, so it can return. A hotfix waits for a manual test. | AI reproduces the bug in a test, fixes it, and the pipeline proves the fix with the [Bugfix Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-bugfix-workflow.html). A hotfix goes live in hours. |
 | Upgrade | Weeks of regression hunting, so the team postpones the upgrade. The gap to the current release grows. | The [Upgrade Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html) updates the code, and the tests catch silent damage before the release. Small, frequent upgrades become routine. |
 
 </div>
@@ -73,9 +71,9 @@ The gain grows with each level: a project at level 1 gets almost nothing from AI
 | Outcome | For the business | For developers |
 |---------|------------------|----------------|
 | Faster, cheaper upgrades | The upgrade budget goes to new features, not to regression hunting. | The [Upgrade Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-upgrade-workflow.html) verifies each step against your tests, not against your memory. |
-| Fewer incidents | Customers do not find the bugs. Fewer hotfixes and lost orders. | A failed gate stops a broken change before the merge. |
+| A feedback loop | Each failed check shows where and how to improve. You automate the prevention, so the same bug does not return. | A failed gate stops a broken change before the merge. |
 | Faster security fixes | You apply a Spryker security release in days, not in a full release cycle. | The pipeline proves that the patch breaks nothing. |
-| Lower cost of every change | Each change costs less to verify and to release. | AI fixes failed checks in the same session, before a person reviews. |
+| Lower cost of every change | Each change costs less to verify and to release. | AI fixes failed checks in the same session, before a software engineer reviews. |
 | Less dependency on individuals | Project knowledge lives in tests, not only in the heads of team members. | New developers and AI agents get fast, exact feedback. |
 
 ## Where is your project today
@@ -132,6 +130,15 @@ A project with years of history has old code that fails the new checks. Do not f
 - **Check the changed code.** Run the `static-validation` skill on the diff, so a developer or AI agent sees only the findings in the code they touched.
 - **Make the baseline smaller.** Fix old findings when you touch a module, or let AI fix them in small batches. Never add new entries to the baseline.
 
+## Build your own or use Spryker tooling
+
+Quality gates check the result of the AI work. The quality of the AI agent work is a second factor. You have two options:
+
+- **Build your own.** Your team writes and maintains its own AI workflows, skills, and checks.
+- **Use the [AI Dev SDK](/docs/dg/dev/ai/ai-dev/ai-dev.html).** Spryker and the community test the workflows and skills. Spryker improves them based on your feedback, so they evolve with your project.
+
+The path in this document uses the AI Dev SDK skills. You can replace them with your own tooling, because the gates stay the same.
+
 ## Who does the work
 
 The path is the same for your own team, for your implementation partner, and for Spryker. The AI Dev SDK and the gates are the same for everyone.
@@ -144,7 +151,7 @@ Quality gates also make good work visible. A green pipeline at handover is objec
 No. Use the [ratchet](#strict-for-new-code-ratchet-for-old-code): strict gates for new code and a baseline for old findings that becomes smaller over time.
 
 **Does this slow down our delivery?**
-At the start, a failed gate stops some changes that went through before. After that, delivery becomes faster, because fewer bugs return from production and AI fixes most failed checks before a person reviews.
+At the start, a failed gate stops some changes that went through before. After that, delivery becomes faster, because each failed check shows what to improve, so the same errors do not return, and AI fixes most failed checks before a software engineer reviews.
 
 **Do we need GitHub?**
 No. `project-ci-generator` also produces pipelines for GitLab and Bitbucket. For platform setup, see [Set up CI in your repository](/docs/dg/dev/ci.html#set-up-ci-in-your-repository).

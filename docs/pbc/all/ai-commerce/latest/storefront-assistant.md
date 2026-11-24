@@ -1,7 +1,7 @@
 ---
 title: Storefront Assistant
 description: An AI shopping assistant on the Storefront that answers product questions, shows matching products, compares them, and builds product setups using only your own catalog.
-last_updated: Nov 19, 2026
+last_updated: Nov 24, 2026
 template: concept-topic-template
 related:
   - title: Storefront Assistant technical overview
@@ -45,7 +45,7 @@ Because the assistant knows the page that the customer is on, it can answer ques
 | Guided choices | Asks a clarifying question with clickable answer options when the request is not specific enough. |
 | Setup builder | Puts together a set of products that work together, for example a camera with accessories, within the budget of the customer. |
 | Shop information | Answers questions from your CMS pages, for example about shipping or returns. |
-| Product documents | Answers installation, maintenance, specification, or compliance questions from the documents that are attached to products, such as manuals and data sheets, and names the document that it used. In the Back Office, you select which product attachments the assistant uses with the **Use for assistant knowledge** checkbox. For details, see [Storefront Assistant document semantic search](/docs/dg/dev/ai/ai-commerce/storefront-assistant/document-semantic-search/storefront-assistant-document-semantic-search.html). |
+| Product documents | Answers installation, maintenance, specification, or compliance questions from the documents that are attached to products, such as manuals and data sheets. At the end of the answer, the assistant lists the documents that it used. A document link opens in a new tab. In the Back Office, you select which product attachments the assistant uses with the **Use for assistant knowledge** checkbox. For details, see [Storefront Assistant document semantic search](/docs/dg/dev/ai/ai-commerce/storefront-assistant/document-semantic-search/storefront-assistant-document-semantic-search.html). |
 | Asset support | Answers questions about the Self-Service Portal assets of a company user, finds compatible spare parts and services, and answers questions from the documents of these products. |
 | Page-aware answers | Uses the current product, category, search query, and active filters as context for the answer. |
 | Suggested prompts | Offers starter questions as clickable chips. The chips change with the page type: product page, category page, search results, asset details page, or any other page. |

@@ -1,7 +1,7 @@
 ---
 title: Install Storefront Assistant document semantic search
 description: Learn how to install document semantic search, so that Storefront Assistant answers questions from product documents with an Amazon Bedrock knowledge base.
-last_updated: Nov 19, 2026
+last_updated: Nov 24, 2026
 template: feature-integration-guide-template
 label: early-access
 related:
@@ -44,7 +44,7 @@ Install or prepare the following before you start:
 ## 1) Install the required modules
 
 ```bash
-composer require spryker-feature/ai-commerce:^0.15.0 --update-with-dependencies
+composer require spryker-feature/ai-commerce:^0.16.0 --update-with-dependencies
 ```
 
 The package requires the following modules in addition to the modules of Storefront Assistant:
@@ -245,7 +245,7 @@ Make sure that `ProductAttachmentTransfer` has the `isAssistantKnowledge` proper
 
     In a cloud environment, do not set AWS credentials. The AWS SDK uses the IAM role of the container.
 
-3. Add the `product_knowledge_search` tool to the tools of the **Product Discovery** agent:
+3. Add the `product_knowledge_search` and `display_knowledge_sources` tools to the tools of the **Product Discovery** agent. The `display_knowledge_sources` tool shows the customer the documents that an answer used, so also add it to the customer-facing tools. Only the results of customer-facing tools are streamed to the browser: without this entry, the Sources widget shows nothing.
 
     **src/Pyz/Client/AiCommerce/AiCommerceConfig.php**
 
@@ -255,6 +255,7 @@ Make sure that `ProductAttachmentTransfer` has the `isAssistantKnowledge` proper
     namespace Pyz\Client\AiCommerce;
 
     use SprykerFeature\Client\AiCommerce\AiCommerceConfig as SprykerFeatureAiCommerceConfig;
+    use SprykerFeature\Client\AiCommerce\Plugin\StorefrontAssistant\Tool\DisplayKnowledgeSourcesToolPlugin;
     use SprykerFeature\Client\AiCommerce\Plugin\StorefrontAssistant\Tool\ProductKnowledgeSearchToolPlugin;
 
     class AiCommerceConfig extends SprykerFeatureAiCommerceConfig
@@ -267,12 +268,51 @@ Make sure that `ProductAttachmentTransfer` has the `isAssistantKnowledge` proper
             return [
                 // ...
                 ProductKnowledgeSearchToolPlugin::TOOL_NAME,
+                DisplayKnowledgeSourcesToolPlugin::TOOL_NAME,
+            ];
+        }
+
+        /**
+         * @return array<string>
+         */
+        public function getStorefrontAssistantCustomerFacingToolNames(): array
+        {
+            return [
+                // ...
+                DisplayKnowledgeSourcesToolPlugin::TOOL_NAME,
             ];
         }
     }
     ```
 
-4. Register the `knowledge_document.index` queue and its error queue. Add the entry to the queue configuration of your message broker. The following example shows RabbitMQ. For Symfony Messenger, add the same entry to `Pyz\Client\SymfonyMessenger\SymfonyMessengerConfig::getQueueConfiguration()`.
+4. Set the hosts of the document files whose URLs the Sources widget shows as links. The URLs come from the shop data, but the widget still accepts a link only from a known origin, so that a changed attachment URL cannot send the customer to an unknown site. Return each host as a host name, such as `media.example.com`, or as an https origin, such as `https://media.example.com`:
+
+    **src/Pyz/Yves/AiCommerce/AiCommerceConfig.php**
+
+    ```php
+    <?php
+
+    namespace Pyz\Yves\AiCommerce;
+
+    use SprykerFeature\Yves\AiCommerce\AiCommerceConfig as SprykerFeatureAiCommerceConfig;
+
+    class AiCommerceConfig extends SprykerFeatureAiCommerceConfig
+    {
+        /**
+         * @return list<string>
+         */
+        public function getKnowledgeSourceLinkOrigins(): array
+        {
+            return [
+                'media.example.com',
+            ];
+        }
+    }
+    ```
+
+    With the default empty list, only document URLs on the origin of the shop are links, and other URLs show the document name as plain text. Do not add an http origin: it makes the Sources widget inactive. For all link rules, see [The Sources widget](/docs/dg/dev/ai/ai-commerce/storefront-assistant/document-semantic-search/storefront-assistant-document-semantic-search.html#the-sources-widget).
+
+5. Register the `knowledge_document.index` queue and its error queue. Add the entry to the queue configuration of your message broker. The following example shows RabbitMQ. For Symfony Messenger, add the same entry to `Pyz\Client\SymfonyMessenger\SymfonyMessengerConfig::getQueueConfiguration()`.
 
     **src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
 
@@ -305,7 +345,7 @@ Make sure that `ProductAttachmentTransfer` has the `isAssistantKnowledge` proper
     }
     ```
 
-5. Add the scheduler job of the status refresh. The knowledge base indexes each document some minutes after it receives it, and this job saves the result:
+6. Add the scheduler job of the status refresh. The knowledge base indexes each document some minutes after it receives it, and this job saves the result:
 
     **src/Pyz/Client/SymfonyScheduler/SymfonySchedulerConfig.php**
 
@@ -347,7 +387,15 @@ Make sure that `ProductAttachmentTransfer` has the `isAssistantKnowledge` proper
     ];
     ```
 
-6. Optional: Update the Product Discovery system prompt. The default prompt of the module tells the agent to answer document questions from the documents and to end the answer with `Source: **documentName**`. If your project sets its own prompt in `data/configuration/ai_commerce.configuration.yml` or in the Back Office, add the same instructions to it. To use the default prompt of the module, leave the **Product Discovery System Prompt** field empty.
+7. Check the Product Discovery system prompt. The default prompt of the module tells the agent to answer document questions only from the document excerpts, to call `display_knowledge_sources` after such an answer, and to write no link to a document. A prompt that your project sets in `data/configuration/ai_commerce.configuration.yml` or that a Back Office user saves in Configuration Management overrides the default prompt. If your project has its own prompt, do one of the following:
+
+    - Remove the instruction to end the answer with `Source: **documentName**`, and add the following instruction:
+
+        ```text
+        After an answer from document excerpts, call display_knowledge_sources once with the sourceIdentifier values of the excerpts you used and the same products as the document search: it shows the customer the source documents, so never write a link to a document in your reply.
+        ```
+
+    - To use the default prompt of the module, clear the **Product Discovery System Prompt** field.
 
 {% info_block warningBox "Verification" %}
 
@@ -491,11 +539,12 @@ The search does not read the `spy_knowledge_document` table, so the answers do n
     }
     ```
 
-3. Register the tool plugin in the Client `AiFoundationDependencyProvider`:
+3. Register the tool plugins in the Client `AiFoundationDependencyProvider`:
 
     | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
     |--------|---------------|---------------|-----------|
     | ProductKnowledgeSearchToolPlugin | Provides the `product_knowledge_search` tool, which searches the documents of products. | The tool name is in `AiCommerceConfig::getProductDiscoveryAgentToolNames()`. | SprykerFeature\Client\AiCommerce\Plugin\StorefrontAssistant\Tool |
+    | DisplayKnowledgeSourcesToolPlugin | Provides the `display_knowledge_sources` tool, which shows the customer the documents that an answer used, with the names and URLs from the shop data. | Register it after `ProductKnowledgeSearchToolPlugin`. The tool name is in `AiCommerceConfig::getProductDiscoveryAgentToolNames()` and `AiCommerceConfig::getStorefrontAssistantCustomerFacingToolNames()`. | SprykerFeature\Client\AiCommerce\Plugin\StorefrontAssistant\Tool |
 
     **src/Pyz/Client/AiFoundation/AiFoundationDependencyProvider.php**
 
@@ -505,6 +554,7 @@ The search does not read the `spy_knowledge_document` table, so the answers do n
     namespace Pyz\Client\AiFoundation;
 
     use Spryker\Client\AiFoundation\AiFoundationDependencyProvider as SprykerAiFoundationDependencyProvider;
+    use SprykerFeature\Client\AiCommerce\Plugin\StorefrontAssistant\Tool\DisplayKnowledgeSourcesToolPlugin;
     use SprykerFeature\Client\AiCommerce\Plugin\StorefrontAssistant\Tool\ProductKnowledgeSearchToolPlugin;
 
     class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvider
@@ -517,6 +567,7 @@ The search does not read the `spy_knowledge_document` table, so the answers do n
             return [
                 // ...
                 new ProductKnowledgeSearchToolPlugin(),
+                new DisplayKnowledgeSourcesToolPlugin(),
             ];
         }
     }
@@ -730,7 +781,40 @@ The search does not read the `spy_knowledge_document` table, so the answers do n
 
     You do not need to change the publisher, queue, or event configuration for the knowledge selection. `ProductAttachmentKnowledgeDocumentSourcePlugin` subscribes `KnowledgeDocumentWritePublisherPlugin` to the events of the knowledge selection.
 
-8. Build the class resolver cache and clear the application caches:
+8. Add the translations of the Sources widget. The widget and the progress label of the `display_knowledge_sources` tool use these glossary keys. Without them, the chat shows the raw glossary keys. Append the glossary according to your configuration:
+
+    **data/import/common/common/glossary.csv**
+
+    ```csv
+    ai_commerce.storefront_assistant.tool.display_knowledge_sources,Preparing sources,en_US
+    ai_commerce.storefront_assistant.tool.display_knowledge_sources,Quellen werden vorbereitet,de_DE
+    ai_commerce.storefront_assistant.knowledge_sources.title,Sources,en_US
+    ai_commerce.storefront_assistant.knowledge_sources.title,Quellen,de_DE
+    ai_commerce.storefront_assistant.knowledge_sources.opens_in_new_tab,(opens in a new tab),en_US
+    ai_commerce.storefront_assistant.knowledge_sources.opens_in_new_tab,(öffnet in einem neuen Tab),de_DE
+    ```
+
+    | GLOSSARY KEY | USAGE |
+    |--------------|-------|
+    | `ai_commerce.storefront_assistant.tool.display_knowledge_sources` | The progress label while the tool runs. |
+    | `ai_commerce.storefront_assistant.knowledge_sources.title` | The accessible name of the source list. The widget shows no visible title. |
+    | `ai_commerce.storefront_assistant.knowledge_sources.opens_in_new_tab` | The screen reader text of each link. |
+
+    Import the data and publish the translations:
+
+    ```bash
+    console data:import glossary
+    console queue:worker:start --stop-when-empty
+    ```
+
+9. Build the Yves frontend. The `chat-knowledge-sources` molecule of the Sources widget is in the theme folder of the module, and the Yves build finds it automatically:
+
+    ```bash
+    console twig:cache:warmer
+    console frontend:yves:build
+    ```
+
+10. Build the class resolver cache and clear the application caches:
 
     ```bash
     console cache:class-resolver:build
@@ -739,6 +823,7 @@ The search does not read the `spy_knowledge_document` table, so the answers do n
 
 {% info_block warningBox "Verification" %}
 
+- Make sure that the `spy_glossary_key` table has the `ai_commerce.storefront_assistant.knowledge_sources.title`, `ai_commerce.storefront_assistant.knowledge_sources.opens_in_new_tab`, and `ai_commerce.storefront_assistant.tool.display_knowledge_sources` keys.
 - Make sure that `console list knowledge-document` shows the commands `knowledge-document:setup`, `knowledge-document:reindex`, and `knowledge-document:status:refresh`.
 - Make sure that `console list data:import` shows the `data:import:product-attachment-knowledge-selection` command.
 - In the Back Office, go to **Catalog&nbsp;<span aria-label="and then">></span> Products** and edit a product. On the **Media** tab, make sure that each attachment row has the **Use for assistant knowledge** checkbox. Select the checkbox, save the product, and edit the product again. Make sure that the checkbox stays selected.
@@ -863,7 +948,7 @@ Do not run a forced re-index often. A forced re-index sends all documents to Bed
 
     Give the query as JSON. The short form `text=...` fails when the text has a comma.
 
-3. Log in to the Storefront as a customer and open a product that has a manual or a data sheet. Open the assistant and ask a question that only the document answers, such as a question about the installation or the standby power. The answer names the document as the source.
+3. Log in to the Storefront as a customer and open a product that has a manual or a data sheet. Open the assistant and ask a question that only the document answers, such as a question about the installation or the standby power. After the answer is complete, the Sources widget at the end of the answer lists the document. When the document URL is on the origin of the shop or on a host of `getKnowledgeSourceLinkOrigins()`, the document name is a link that opens in a new tab.
 
 {% endinfo_block %}
 
@@ -875,6 +960,10 @@ Do not run a forced re-index often. A forced re-index sends all documents to Bed
 |---------|-------|----------|
 | The assistant says that the document search is not available. | `BEDROCK_KNOWLEDGE_BASE_ID` is not set, the credentials are wrong, or the role of Yves or Glue has no `bedrock:Retrieve` permission. | Check steps 3 and 5. |
 | The assistant never answers from documents. | `product_knowledge_search` is not in `getAiToolPlugins()` or in `getProductDiscoveryAgentToolNames()`. | Check steps 5 and 6. |
+| The answer ends with `Source: **documentName**`, and no Sources widget is displayed. | The project or a Back Office user saved an earlier Product Discovery system prompt. The saved prompt overrides the default prompt of the module. | Update or clear the saved prompt. See step 5. |
+| The assistant answers from documents, but no Sources widget is displayed. | `display_knowledge_sources` is not in `getAiToolPlugins()`, `getProductDiscoveryAgentToolNames()`, or `getStorefrontAssistantCustomerFacingToolNames()`. | Check steps 5 and 6. |
+| The Sources widget shows the document names without links. | The host of the document URLs is not in the Yves `AiCommerceConfig::getKnowledgeSourceLinkOrigins()`, or the URL is not an https URL. The widget reports the number of these sources in the browser console. | Add the host of the document files. See step 5. |
+| The Sources widget is not displayed, and the browser console reports an entry that is not an https origin. | `getKnowledgeSourceLinkOrigins()` returns an http origin. | Return a host name or an https origin. See step 5. |
 | The assistant answers that no documents are available for a product that has attachments. | The product attachments are not published to the storage, or the attachment has another locale. | Publish the product attachments, and check the locale of the attachment. |
 | No document is indexed, and `knowledge-document:reindex` fails with `The knowledge store is not configured for the source type "product_attachment"`. | `BEDROCK_KNOWLEDGE_BASE_ID` is not set, or `BEDROCK_KNOWLEDGE_BASE_DATA_SOURCE_IDS` has no data source for `product_attachment`. In the read-only mode of a local environment, this is expected. | Set the knowledge base ID and the data source ID, then run step 8. |
 | The assistant finds no product attachment documents after a re-index. | No product attachment is selected as assistant knowledge. | Import the knowledge selection, or select the attachments in the Back Office. Then run `knowledge-document:reindex` and the queue worker. See steps 7 and 8. |

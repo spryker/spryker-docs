@@ -1,7 +1,7 @@
 ---
 title: Storefront Assistant
 description: Technical overview of the Storefront Assistant feature — architecture, agents, tools, the streaming protocol, endpoints, and configuration options.
-last_updated: Nov 13, 2026
+last_updated: Nov 24, 2026
 template: concept-topic-template
 label: early-access
 related:
@@ -268,6 +268,7 @@ The `output.result` value is a JSON-encoded string, not a JSON object. Decode it
 | `compare_products` | `comparedProducts[]`, `attributeRows[]` with `attribute`, `values[]`, and `isDifferent`, and optionally `comparisonUrl` (sent only when `isStorefrontAssistantProductComparisonPageEnabled()` returns `true`), `ignoredIdProductAbstracts[]`, and `unknownIdProductAbstracts[]`. On failure, `error` or `alreadyShown`. |
 | `offer_choices` | `question`, `choices[]`, and `nextStep`. On failure, `error`. |
 | `display_setup` | `products[]`, `totalFormatted`, and `budgetFormatted`. On failure, `error`, and `items[]` when the setup exceeds the budget. |
+| `display_knowledge_sources` | `sources[]` with `documentName`, `sourceType`, `sourceIdentifier`, and optionally `url`, and `messages[]`. For details, see [Sources of an answer](/docs/dg/dev/ai/ai-commerce/storefront-assistant/document-semantic-search/storefront-assistant-document-semantic-search.html#sources-of-an-answer). |
 
 </div>
 
@@ -350,6 +351,19 @@ You can override the following methods in the Client `AiCommerceConfig`:
 
 The attachment limits come from the Shared `AiCommerceConfig`: `getStorefrontAssistantSupportedAttachmentMimeTypes()`, `getStorefrontAssistantMaxAttachmentSizeBytes()`, and `getStorefrontAssistantMaxAttachmentCount()`.
 
+### Yves configuration
+
+You can override the following methods in the Yves `AiCommerceConfig`:
+
+<div class="width-100">
+
+| METHOD | DEFAULT | DESCRIPTION |
+|--------|---------|-------------|
+| `getStorefrontAssistantCustomPageContextFields()` | `[]` | The field names of each project page type. For details, see [Project page types](#project-page-types). |
+| `getKnowledgeSourceLinkOrigins()` | `[]` | The hosts whose https document URLs the Sources widget shows as links. With an empty list, only URLs on the origin of the shop are links. For details, see [Sources of an answer](/docs/dg/dev/ai/ai-commerce/storefront-assistant/document-semantic-search/storefront-assistant-document-semantic-search.html#sources-of-an-answer). |
+
+</div>
+
 ### AI configuration
 
 Storefront Assistant needs one AI configuration in `config/Shared/config_ai.php` for each AI vendor that you offer in the Back Office. The Client sends the name of the AI configuration to Zed with each turn. Zed accepts only the names that the Zed `AiFoundationConfig::getClientResolvableAiConfigurationNames()` returns. For the configuration examples and rules, see [Set up configuration](/docs/dg/dev/ai/ai-commerce/storefront-assistant/install-storefront-assistant.html#3-set-up-configuration).
@@ -363,7 +377,7 @@ The Storefront loads the shared chat as follows:
 - `SharedThemeTwigLoaderPlugin` makes the shared Twig templates available as `@AiCommerce/Chat/...`.
 - The `@shared/ai-commerce/*` alias of the Yves frontend builder resolves the shared TypeScript and SCSS files.
 - The `storefront-assistant` organism embeds `@AiCommerce/Chat/core/chat.twig` with the Storefront URLs, limits, and texts. It loads the chat lazily into the `storefront-assistant` chunk.
-- The Storefront features are ShopUi molecules in `vendor/spryker-feature/ai-commerce/src/SprykerFeature/Yves/AiCommerce/Theme/default/components/molecules/`: `chat-page-context`, `chat-tool-products`, `chat-tool-compare`, `chat-offer-choices`, `chat-display-setup`, and `chat-storage-cleaner`. The `chat-storage-cleaner` molecule clears the chat session that the browser stores, when a guest opens a page.
+- The Storefront features are ShopUi molecules in `vendor/spryker-feature/ai-commerce/src/SprykerFeature/Yves/AiCommerce/Theme/default/components/molecules/`: `chat-page-context`, `chat-tool-products`, `chat-tool-compare`, `chat-offer-choices`, `chat-display-setup`, `chat-knowledge-sources`, and `chat-storage-cleaner`. The `chat-knowledge-sources` molecule shows the Sources widget of an answer from documents. The `chat-storage-cleaner` molecule clears the chat session that the browser stores, when a guest opens a page.
 - The `storefront-assistant-trigger` molecule renders a header button that opens and closes the chat.
 - The browser binds the stored chat session to a hash of the customer reference. After a logout or a login of another customer, the chat does not restore the session.
 
@@ -380,6 +394,40 @@ Project files replace core files with the same path:
 </div>
 
 The module README describes the blocks, the events, the style tokens, the tool renderer contract, and the other extension points of the shared chat: `vendor/spryker-feature/ai-commerce/src/SprykerFeature/Shared/AiCommerce/Theme/default/Chat/README.md`.
+
+### Answer footer and transcript placement
+
+Some features add content to an exchange of the chat, which is a customer message and everything up to the next customer message. For example, the message actions add a button bar, and the Sources widget adds the documents of an answer. The features place this content through the transcript control of the chat core, so that the content stays in the correct exchange after streaming and after a page reload:
+
+- `ChatTranscriptControl::appendToExchange(element, anchor)` inserts the element at the end of the exchange of the anchor. The `chat-message-actions` feature uses it.
+- `ChatTranscriptControl::appendToAnswer(element, anchor)` appends the element to the `footer` of the last answer of the exchange of the anchor. If the answer block has no `footer`, the element goes after the answer. If the exchange has no answer, the element goes to the end of the exchange. The `chat-knowledge-sources` feature uses it.
+
+The `messageAssistant` block has an optional `footer` reference for this content. If your project overrides the `messageAssistant` block, add an element with `data-ref="footer"` to show the Sources widget inside the answer. Without it, the widget shows as a separate message after the answer.
+
+If your project implements the `ChatTranscriptControl` TypeScript interface, add the `appendToExchange()` and `appendToAnswer()` methods.
+
+If your project overrides the `hostFeatures` block of the `storefront-assistant` organism, include the `chat-knowledge-sources` molecule and pass the link origins to it:
+
+```twig
+{% raw %}
+{% include molecule('chat-knowledge-sources', 'AiCommerce') with {
+    data: {
+        linkOrigins: features.knowledgeSources.linkOrigins ?? [],
+    },
+} only %}
+{% endraw %}
+```
+
+The organism reads the link origins from the `knowledgeSources.linkOrigins` setting of the chat features, which it fills from the Yves `AiCommerceConfig::getKnowledgeSourceLinkOrigins()`.
+
+### Link checks of tool results
+
+Tool results come from an AI turn, so the chat features accept a link only as a same-origin path or as a URL from a listed origin. The shared `core/contracts/links.ts` file of the chat provides the checks for all features:
+
+- `isSafePath()` accepts a same-origin path: it starts with `/`, and it has no `//` at the start, no backslash, and no white space.
+- `readOriginList()` reads a comma-separated list of hosts or origins from an attribute of a feature element and returns the origins. With the `httpsOnly` option, an http origin is an error, and the feature stays inactive.
+
+The `chat-tool-products`, `chat-tool-compare`, and `chat-knowledge-sources` features use these checks. In earlier versions of the module, `chat-tool-products/product-reader.ts` exported `isSafePath()`. If your project code imports it from there, import it from `@shared/ai-commerce/Chat/core/contracts/links` instead.
 
 ### Page context
 

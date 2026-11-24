@@ -1,7 +1,7 @@
 ---
 title: Add a knowledge document source
 description: Learn how to add a new document source, such as product video transcripts, to the Storefront Assistant document semantic search without changes to the core modules.
-last_updated: Nov 13, 2026
+last_updated: Nov 24, 2026
 template: howto-guide-template
 label: early-access
 related:
@@ -41,7 +41,7 @@ One knowledge base holds the documents of all source types. The core handles the
 | Content | The content hash, the retries, the status, the deletion of removed sources | The list of sources and the raw content: the Zed source plugin |
 | Storage | `BedrockKnowledgeBaseKnowledgeStorePlugin` | The data source ID of the source type: the configuration |
 | Search | `KnowledgeDocumentSearcher`, `BedrockKnowledgeBaseKnowledgeSearchPlugin` | The document keys that the customer can see: the Client scope resolver plugin |
-| Assistant | The `product_knowledge_search` tool | Nothing, when the documents belong to products |
+| Assistant | The `product_knowledge_search` and `display_knowledge_sources` tools | Nothing, when the documents belong to products |
 
 </div>
 
@@ -191,7 +191,7 @@ The scope reference types of products are the constants `KNOWLEDGE_DOCUMENT_SCOP
 | METHOD | MUST DO |
 |--------|---------|
 | `isApplicable()` | Return `true` when `scopeReferences` has values of a reference type that the plugin reads. |
-| `resolveDocumentScope()` | Check that the customer can see each entity in the store and locale. Return the document keys of its documents. For each entity that you skip, add a message that is safe to show to the customer. When `sourceIdentifiers` is not empty, keep only these documents. |
+| `resolveDocumentScope()` | Check that the customer can see each entity in the store and locale. Return the document keys of its documents. Add one `KnowledgeDocumentSourceTransfer` for each document key to `knowledgeDocumentSources`, with `sourceType`, `sourceIdentifier`, `documentName`, and `url` from the storage. For each entity that you skip, add a message that is safe to show to the customer. When `sourceIdentifiers` is not empty, keep only these documents and sources. |
 
 </div>
 
@@ -239,6 +239,8 @@ class ProductVideoKnowledgeDocumentScopeResolverPlugin extends AbstractPlugin im
     }
 }
 ```
+
+The Sources widget shows only the documents in `knowledgeDocumentSources`, with the URL of each source as the link. Without this list, the search finds the new documents, but the customer sees no source for them. If the document files are on another host than the shop, add the host to the Yves `AiCommerceConfig::getKnowledgeSourceLinkOrigins()`. For the link rules, see [Sources of an answer](/docs/dg/dev/ai/ai-commerce/storefront-assistant/document-semantic-search/storefront-assistant-document-semantic-search.html#sources-of-an-answer).
 
 Read the entities from the key-value storage, not from Zed: the search runs in Yves and Glue on each tool call. Use `SprykerFeature\Client\AiCommerce\ProductAttachmentKnowledgeDocument\ProductAttachmentDocumentScopeResolver` as the reference for the product checks and the messages.
 
@@ -399,7 +401,7 @@ Do not change the data source of a source type that has indexed documents. The o
 | TEST | WHAT TO CHECK |
 |------|---------------|
 | Functional test of the source plugin | The events give the source identifiers. A deleted entity is missing in `getDocumentSourceCollection()`. The content and the MIME type are correct. |
-| Functional test of the scope resolver plugin | A visible entity gives the document keys `product_video:{id}`. An entity that is not visible in the store or the locale gives no keys and a message. `sourceIdentifiers` keeps only the requested documents. |
+| Functional test of the scope resolver plugin | A visible entity gives the document keys `product_video:{id}` and one knowledge document source with the name and the URL for each key. An entity that is not visible in the store or the locale gives no keys and a message. `sourceIdentifiers` keeps only the requested documents and sources. |
 
 </div>
 

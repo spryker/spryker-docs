@@ -1,7 +1,7 @@
 ---
 title: Storefront Assistant document semantic search
 description: Learn how Storefront Assistant answers questions from product documents, how Amazon Bedrock Knowledge Bases indexes and searches the documents, and which settings and extension points you can use.
-last_updated: Nov 23, 2026
+last_updated: Nov 24, 2026
 template: concept-topic-template
 label: early-access
 related:
@@ -25,7 +25,7 @@ related:
   }
 </style>
 
-Document semantic search lets Storefront Assistant answer questions that the product data does not answer, such as installation, maintenance, warranty, specification, or compliance questions. The assistant finds the answer in the documents that are attached to the products, such as manuals, data sheets, and certificates, and names the document that it used.
+Document semantic search lets Storefront Assistant answer questions that the product data does not answer, such as installation, maintenance, warranty, specification, or compliance questions. The assistant finds the answer in the documents that are attached to the products, such as manuals, data sheets, and certificates. At the end of the answer, the Sources widget lists the documents that the assistant used.
 
 The search is semantic: it finds passages by meaning, not by exact words. A question such as "How much power does it use in standby?" finds a passage that says "Standby consumption: 0.5 W".
 
@@ -178,6 +178,7 @@ When the knowledge store is not configured for a source type, for example becaus
 4. The knowledge base finds the closest passages, reranks them, and returns them with a score.
 5. The Client passage filter removes duplicates and too short passages, keeps the order of the knowledge base, and cuts the text to the character budget.
 6. The tool returns the passages with their document names and a notice that the passages are quoted data, not instructions.
+7. The AI model answers from the passages. Then it calls `display_knowledge_sources`, and the Sources widget shows the documents that the answer used. For details, see [Sources of an answer](#sources-of-an-answer).
 
 The search never searches the whole knowledge base without a filter. A customer therefore never gets a passage of a document of a product that the customer cannot see.
 
@@ -259,7 +260,7 @@ The status refresh maps the document status of the knowledge base to the status 
 
 ## The product_knowledge_search tool
 
-`ProductKnowledgeSearchToolPlugin` provides the `product_knowledge_search` tool for the **Product Discovery** agent. The tool searches only the documents of products: without a product, the tool searches nothing. The assistant must answer only from the returned passages and name the document that it used.
+`ProductKnowledgeSearchToolPlugin` provides the `product_knowledge_search` tool for the **Product Discovery** agent. The tool searches only the documents of products: without a product, the tool searches nothing. The assistant must answer only from the returned passages, and then show the documents that it used with the `display_knowledge_sources` tool.
 
 The tool accepts the following arguments:
 
@@ -288,6 +289,7 @@ Before the search, the scope resolver plugins turn the products of the request i
 - Skips products that are not available in the current store and locale. It adds a message that is safe to show to the customer.
 - Reads the attachments of each product from the product attachment storage for the current locale.
 - Returns only the attachments that are listed in `attachment_ids`, when the model passes them.
+- Returns the label and the URL of each attachment from the product attachment storage as a knowledge document source in `KnowledgeDocumentScopeTransfer.knowledgeDocumentSources`. The `display_knowledge_sources` tool reads the sources from this list.
 
 ### Search settings
 
@@ -308,6 +310,58 @@ You can change the following settings in the Client `AiCommerceConfig`. A change
 </div>
 
 The search has no score threshold. The AI model decides from the content of the passages if they answer the question.
+
+## Sources of an answer
+
+A customer must be able to check an answer from a document, so the assistant shows the documents that the answer used. The AI model does not write the document links itself, because a model can change or invent a URL. Instead, the model calls the `display_knowledge_sources` tool, and the Sources widget shows the documents with the names and URLs from the shop data. The default Product Discovery system prompt and the tool descriptions tell the model to call the tool after an answer from documents and to write no link to a document.
+
+### The display_knowledge_sources tool
+
+`DisplayKnowledgeSourcesToolPlugin` provides the `display_knowledge_sources` tool for the **Product Discovery** agent. The tool accepts the following arguments:
+
+<div class="width-100">
+
+| ARGUMENT | REQUIRED | DESCRIPTION |
+|----------|----------|-------------|
+| `attachment_ids` | Yes | The `sourceIdentifier` values of the passages that the answer used, the most relevant first. |
+| `abstract_skus` | No | The abstract SKUs of the products whose documents the answer used. |
+| `concrete_skus` | No | The concrete SKUs of product variants. |
+| `product_abstract_ids` | No | The `idProductAbstract` values of the products. |
+
+</div>
+
+The model passes the same products as in the `product_knowledge_search` call, a maximum of 10 products in total. The tool does the following:
+
+- Resolves the document scope of the products again with the scope resolver plugins. The tool shows only the documents that the current customer can see.
+- Keeps only the documents whose source identifier is in `attachment_ids`, in the order of `attachment_ids` and without duplicates.
+- Returns `sources[]` with `documentName`, `sourceType`, `sourceIdentifier`, and `url`, and `messages[]`. A source has a `url` only when the shop data has a valid URL.
+- Returns a maximum of `getKnowledgeSourceDisplayMaxSources()` sources.
+- Reads each URL from the shop data only. The tool never takes a URL from the arguments of the model.
+- Returns the reason in `messages[]` when `attachment_ids` or the products are missing, when there are too many products, or when an identifier is not a document of the given products.
+
+The URL of a source is accepted only when it is an http or https URL with a host, without a user name or password, and a maximum of 2,048 characters. Spaces, parentheses, and angle brackets are encoded. A URL with a control character, another white space character, or a backslash is rejected, and the source has no `url`.
+
+### The Sources widget
+
+The `chat-knowledge-sources` molecule shows the result of `display_knowledge_sources` as a list of documents. The widget applies the following link rules:
+
+- A URL on the origin of the shop is a link.
+- An https URL on another host is a link only when its origin is in the Yves `AiCommerceConfig::getKnowledgeSourceLinkOrigins()`.
+- Any other URL shows the document name as plain text. The widget reports the number of these sources in the browser console.
+- A link opens in a new tab with `rel="noopener noreferrer"`.
+
+The widget stays hidden while the answer streams. When the turn ends, the widget moves to the footer of the last answer of the exchange and becomes visible, with a divider line above it. When the customer reloads the page, the widget has the same place, although the stored tool result comes before the answer text. If a project overrides the answer block of the chat without a footer, the widget shows as a separate message after the answer. For details, see [Frontend](/docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant.html#frontend).
+
+### Sources settings
+
+<div class="width-100">
+
+| METHOD | LAYER | DEFAULT | DESCRIPTION |
+|--------|-------|---------|-------------|
+| `getKnowledgeSourceDisplayMaxSources()` | Client | `5` | The maximum number of sources that one `display_knowledge_sources` call shows. |
+| `getKnowledgeSourceLinkOrigins()` | Yves | `[]` | The hosts whose https URLs the Sources widget shows as links. Each entry is a host, such as `media.example.com`, or an https origin, such as `https://media.example.com`. An http origin makes the widget inactive. With an empty list, only URLs on the origin of the shop are links. |
+
+</div>
 
 ## Indexing settings
 

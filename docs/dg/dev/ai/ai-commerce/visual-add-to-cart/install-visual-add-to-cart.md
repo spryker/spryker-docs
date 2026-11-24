@@ -1,7 +1,7 @@
 ---
 title: Install Visual Add to Cart
 description: Learn how to install the Visual Add to Cart feature that lets buyers upload a product image or a PDF order form on the Quick Order page to automatically populate the order form.
-last_updated: Nov 18, 2026
+last_updated: Nov 23, 2026
 template: feature-integration-guide-template
 redirect_from:
   - /docs/en/cart
@@ -98,15 +98,9 @@ class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyPr
 }
 ```
 
-{% info_block warningBox "Verification" %}
-
-On the Storefront Quick Order page, make sure the upload component is displayed and that uploading a product image or a PDF order form populates the order form with recognized products.
-
-{% endinfo_block %}
-
 ### 3) Configure AiFoundation for Visual Add to Cart
 
-For a base AiFoundation setup, see [Configure AiFoundation](/docs/dg/dev/ai/ai-commerce/install-ai-commerce.html#2-configure-aifoundation).
+For a base AiFoundation setup, see [Configure AiFoundation](/docs/dg/dev/ai/ai-commerce/install-ai-commerce.html#configure-aifoundation).
 
 Using a dedicated AI configuration for Visual Add to Cart is recommended because each named configuration is tracked separately in the AiFoundation audit log. This lets you isolate and review all AI calls made by the Visual Add to Cart recognition flow independently from other AI features in your project.
 
@@ -315,7 +309,7 @@ On the Storefront Quick Order page, make sure the upload button is visible.
 
 {% info_block infoBox "Info" %}
 
-Do this step only if you have overridden `quick-order-form.twig`, `quick-order.twig` in `QuickOrderPage` module at the project level. If you have not overridden this template, skip to [2) Apply the frontend changes](#2-apply-the-frontend-changes).
+Do this step only if you have overridden `quick-order-form.twig`, `quick-order.twig` in `QuickOrderPage` module at the project level. If you have not overridden this template, skip to [2) Apply the frontend changes](#apply-the-frontend-changes).
 
 {% endinfo_block %}
 

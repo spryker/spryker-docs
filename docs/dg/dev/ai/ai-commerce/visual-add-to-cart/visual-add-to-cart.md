@@ -1,7 +1,7 @@
 ---
 title: Visual Add to Cart
 description: Technical overview of the Visual Add to Cart feature — architecture, AiFoundation integration, supported files, configuration options, and plugin structure.
-last_updated: Nov 18, 2026
+last_updated: Nov 23, 2026
 template: concept-topic-template
 ---
 
@@ -109,18 +109,21 @@ If an overridden prompt is blank or contains only whitespace, Visual Add to Cart
 
 ## Naming changes from previous versions
 
-In previous versions of the `AiCommerce` module, the feature was named `QuickOrderImageToCart` in code. All public names now use `VisualAddToCart`. Configuration Management keys and the stored AI configuration names are unchanged, so saved settings keep working.
+Up to version 0.13.x of `spryker-feature/ai-commerce`, the feature was named `QuickOrderImageToCart` in code. Starting with version 0.14.0, all public names use `VisualAddToCart`. Configuration Management keys and the stored AI configuration names are unchanged, so saved settings keep working.
 
 | AREA | PREVIOUS NAME | CURRENT NAME |
 |------|---------------|--------------|
 | Plugin | `QuickOrderImageToCart\Plugin\QuickOrderPage\AiCommerceQuickOrderImageToCartFormPlugin` | `QuickOrderVisualAddToCart\Plugin\QuickOrderPage\AiCommerceQuickOrderVisualAddToCartFormPlugin` |
 | Config methods | `isQuickOrderImageToCartEnabled()`, `getQuickOrderImageToCart*()` | `isQuickOrderVisualAddToCartEnabled()`, `getQuickOrderVisualAddToCart*()` |
 | Config methods renamed beyond the prefix | `getQuickOrderImageToCartSupportedMimeTypes()`, `getQuickOrderImageToCartPromptTemplate()` | `getQuickOrderVisualAddToCartSupportedImageMimeTypes()`, `getQuickOrderVisualAddToCartImagePromptTemplate()` |
-| Glossary keys | `ai-commerce.quick-order-image-to-cart.image-order.errors.*`, `ai-commerce.quick-order-image-to-cart.image-upload.*` | `ai-commerce.quick-order-visual-add-to-cart.order-file.errors.*`, `ai-commerce.quick-order-visual-add-to-cart.file-upload.*` |
-| Twig molecule | `quick-order-image-to-cart`, data `supportedImageExtensions` | `quick-order-visual-add-to-cart`, data `supportedFileExtensions` |
+| Glossary keys | `ai-commerce.quick-order-image-to-cart.image-order.errors.*` (`no-image`), `ai-commerce.quick-order-image-to-cart.image-upload.*` | `ai-commerce.quick-order-visual-add-to-cart.order-file.errors.*` (`no-file`), `ai-commerce.quick-order-visual-add-to-cart.file-upload.*` |
+| Twig molecule | `quick-order-image-to-cart`, data `supportedImageExtensions`, block `imageOrderForm` | `quick-order-visual-add-to-cart`, data `supportedFileExtensions`, block `orderFileForm` |
+| SCSS mixin | `ai-commerce-quick-order-image-to-cart` | `ai-commerce-quick-order-visual-add-to-cart` |
 | Form request names | Field `uploadImageOrder`, button `uploadImage` | Field `orderFile`, button `uploadOrderFile` |
 
 After upgrading, update the plugin wiring and any config overrides, rename overridden Twig templates, import the glossary again, and rebuild the Yves assets.
+
+If you customized a recognition prompt and wrote `%%` to get a literal percent sign, change it to a single `%`. The locale placeholder is now replaced as plain text, so `%%` is sent to the AI unchanged.
 
 ## Install
 

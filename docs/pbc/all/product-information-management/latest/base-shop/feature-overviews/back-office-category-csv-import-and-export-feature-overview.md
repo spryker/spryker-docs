@@ -18,7 +18,7 @@ For the import and export workflow, the template download, and the error handlin
 | Store assignments | Yes | Yes | Semicolon-separated store names |
 | Localized names and meta data | Yes | Yes | Name, meta title, meta description, meta keywords per locale |
 | Category images | Yes | Yes | The `default` image set per locale, small and large image URLs per sort order |
-| URLs | Generated | No | Generated from the name per locale; a changed parent moves the URLs of the subtree. No redirects are created; an existing redirect to a changed URL points to the new URL. |
+| URLs | Generated | No | Generated from the name per locale; a changed parent moves the URLs of the subtree. A changed URL leaves a permanent redirect from the old URL, for the category and every descendant whose URL changes, as the Back Office does. |
 
 ## Import file structure
 
@@ -33,7 +33,7 @@ Each CSV row describes one category. A row with a new *Category Key* creates the
 | *Category Key* | Required. Creates the category or updates it. |
 | *Parent Category Key* | The parent must exist in the shop or in an earlier row of the file. Empty means the root category: a shop has one root category, so an empty cell is accepted only when the shop has no root yet, and a root category keeps its place with an empty cell. A changed parent moves the category and its subtree, including their URLs. |
 | *Additional Parent Category Keys* | Optional, category keys separated by `;`. Every additional parent creates a second node of the category under that parent. |
-| *Stores* | Store names separated by `;`. A store must exist and the parent category must be assigned to it. For a new category, an empty cell inherits the stores of the parent. A filled cell sets the stores of this category only: removing a store from a parent does not remove it from the children, each row names the stores of its own category. |
+| *Stores* | Store names separated by `;`. A store must exist and the parent category must be assigned to it. For a new category, an empty cell inherits the stores of the parent. A filled cell sets the stores of this category only, the import does not propagate the change down the tree as the Back Office does: when you remove a store from a parent, or move a category under a parent with fewer stores, remove that store from the child categories in their own rows as well. An empty cell of an existing category keeps its stores. |
 | *Template* | The name of a category template. Empty means *Catalog (default)* for a new category. |
 | *Is Active*, *Is In Menu*, *Is Clickable*, *Is Searchable* | `1` or `0`. Empty means `0` for a new category. |
 | *Sort Order* | A whole number: the order of the category under its parent. |
@@ -72,7 +72,7 @@ Every row of a batch is rejected when the *Category Key* column is missing or a 
 
 ## Import steps
 
-The job type runs two steps per batch of rows. The validation step applies the rules above and keeps the rejected rows from the write step. The write step writes every remaining row in one database transaction, directly and without the category facade, like the category data import of a deployment: the category with its localized attributes, the store assignments, the main node and the nodes under the additional parents with the closure table, the URLs of the node and of its subtree in every locale, and the `default` image sets. The Back Office plugins of the category form do not run: the store assignments of the children are not changed with the parent, and no URL redirects are created. The step collects the Publish and Synchronize events of the written categories, their ancestors and descendants, of a new root category, and of the URLs; the engine triggers them after the batch, so the Storefront receives the categories while the run is still going.
+The job type runs two steps per batch of rows. The validation step applies the rules above and keeps the rejected rows from the write step. The write step writes every remaining row in one database transaction, directly and without the category facade, like the category data import of a deployment: the category with its localized attributes, the store assignments, the main node and the nodes under the additional parents with the closure table, the URLs of the node and of its subtree in every locale, and the `default` image sets. The Back Office plugins of the category form do not run: the store assignments of the children are not changed with the parent. A changed URL leaves a permanent redirect from the old one, as in the Back Office. The step collects the Publish and Synchronize events of the written categories, their ancestors and descendants, of a new root category, and of the URLs; the engine triggers them after the batch, so the Storefront receives the categories while the run is still going.
 
 ## Export
 

@@ -461,7 +461,7 @@ composer update grpc/grpc phpseclib/phpseclib symfony/config symfony/filesystem 
 
 ## Vulnerabilities in third-party npm dependencies
 
-Several third-party npm dependencies were updated to address publicly known vulnerabilities present in earlier versions. These dependencies are used by the Merchant Portal frontend, so the issues affect only projects that use the Merchant Portal. The updated dependencies are listed below.
+Several third-party npm dependencies were updated to address publicly known vulnerabilities present in earlier versions. The updated dependencies are listed below.
 
 ### Affected packages
 

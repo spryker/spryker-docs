@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="100%" style="max-width:1000px;height:auto;" role="img" aria-labelledby="dss-title dss-desc" font-family="Arial, Helvetica, sans-serif">
+  <title id="dss-title">Document semantic search with retrieval-augmented generation (RAG): C4 container diagram</title>
+  <desc id="dss-desc">Indexing: a Back Office user changes a product attachment or its knowledge selection, Zed queues the document, sends the file to the Amazon Bedrock knowledge base, and reads the indexing status every five minutes. Search: a customer asks Storefront Assistant a question, the AI model calls the product_knowledge_search tool, the Client retrieves passages from the knowledge base only in the documents that the customer can see, and the AI model generates the answer from these passages with the document name. This is retrieval-augmented generation (RAG).</desc>
+  <defs>
+    <marker id="dss-arrow-index" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c24631"/></marker>
+    <marker id="dss-arrow-search" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2329d6"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="640" fill="#ffffff"/>
+  <!-- Spryker application boundary -->
+  <rect x="230" y="15" width="440" height="585" rx="6" fill="none" stroke="#95a5a6" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="245" y="580" font-size="14" font-weight="bold" fill="#48494e">Spryker application</text>
+  <text x="245" y="594" font-size="11" fill="#48494e">[Software system]</text>
+  <!-- Persons -->
+  <g fill="#ffffff" text-anchor="middle">
+    <circle cx="90" cy="42" r="20" fill="#363639"/>
+    <rect x="10" y="58" width="160" height="84" rx="28" fill="#363639"/>
+    <text x="90" y="86" font-size="14" font-weight="bold">Back Office user</text>
+    <text x="90" y="101" font-size="11">[Person]</text>
+    <text x="90" y="118" font-size="11">Changes attachments and</text>
+    <text x="90" y="132" font-size="11">their knowledge selection</text>
+    <circle cx="90" cy="442" r="20" fill="#363639"/>
+    <rect x="10" y="458" width="160" height="84" rx="28" fill="#363639"/>
+    <text x="90" y="490" font-size="14" font-weight="bold">Customer</text>
+    <text x="90" y="506" font-size="11">[Person]</text>
+    <text x="90" y="524" font-size="11">Asks about a product</text>
+  </g>
+  <!-- Containers -->
+  <g fill="#ffffff" text-anchor="middle">
+    <rect x="300" y="45" width="240" height="110" rx="6" fill="#2980b9"/>
+    <text x="420" y="78" font-size="14" font-weight="bold">Zed</text>
+    <text x="420" y="94" font-size="11">[Container: PHP]</text>
+    <text x="420" y="116" font-size="11">Publisher, queue worker,</text>
+    <text x="420" y="131" font-size="11">status refresh job</text>
+    <rect x="250" y="250" width="190" height="80" rx="6" fill="#e67e22"/>
+    <text x="345" y="278" font-size="14" font-weight="bold">Queue</text>
+    <text x="345" y="294" font-size="11">[Container: RabbitMQ]</text>
+    <text x="345" y="314" font-size="11">knowledge_document.index</text>
+    <path d="M465,262 a95,12 0 0,1 190,0 v58 a95,12 0 0,1 -190,0 z" fill="#9b59b6"/>
+    <path d="M465,262 a95,12 0 0,0 190,0" fill="none" stroke="#7d3c98" stroke-width="1.5"/>
+    <text x="560" y="290" font-size="14" font-weight="bold">Database</text>
+    <text x="560" y="306" font-size="11">[Container: MySQL]</text>
+    <text x="560" y="324" font-size="11">spy_knowledge_document</text>
+    <rect x="300" y="455" width="240" height="100" rx="6" fill="#2980b9"/>
+    <text x="420" y="486" font-size="14" font-weight="bold">Yves and Client</text>
+    <text x="420" y="502" font-size="11">[Container: PHP]</text>
+    <text x="420" y="522" font-size="11">Storefront Assistant,</text>
+    <text x="420" y="537" font-size="11">product_knowledge_search tool</text>
+  </g>
+  <!-- External systems -->
+  <g fill="#ffffff" text-anchor="middle">
+    <rect x="770" y="215" width="220" height="125" rx="6" fill="#27ae60"/>
+    <text x="880" y="245" font-size="14" font-weight="bold">Amazon Bedrock</text>
+    <text x="880" y="262" font-size="14" font-weight="bold">knowledge base</text>
+    <text x="880" y="279" font-size="11">[External system]</text>
+    <text x="880" y="301" font-size="11">Parses, splits, and embeds the files,</text>
+    <text x="880" y="316" font-size="11">stores and reranks the passages</text>
+    <rect x="770" y="455" width="220" height="100" rx="6" fill="#27ae60"/>
+    <text x="880" y="484" font-size="14" font-weight="bold">AI model</text>
+    <text x="880" y="500" font-size="11">[External system]</text>
+    <text x="880" y="527" font-size="11">Generates the answer from</text>
+    <text x="880" y="542" font-size="11">the retrieved passages</text>
+  </g>
+  <!-- Indexing relationships -->
+  <g fill="none" stroke="#c24631" stroke-width="2" marker-end="url(#dss-arrow-index)">
+    <path d="M170,100 H298"/>
+    <path d="M345,155 V248"/>
+    <path d="M500,155 V248"/>
+    <path d="M540,75 H830 V213"/>
+    <path d="M540,125 H930 V213"/>
+  </g>
+  <g font-size="11" fill="#c24631" stroke="#ffffff" stroke-width="4" paint-order="stroke">
+    <text x="235" y="78" text-anchor="middle" font-weight="bold">1. Changes</text>
+    <text x="235" y="91" text-anchor="middle" font-weight="bold">an attachment</text>
+    <text x="252" y="190" font-weight="bold">2. Queues one</text>
+    <text x="252" y="203" font-weight="bold">message for</text>
+    <text x="252" y="216" font-weight="bold">each document</text>
+    <text x="508" y="200">Saves the status</text>
+    <text x="685" y="55" text-anchor="middle" font-weight="bold">3. Sends the file and metadata</text>
+    <text x="685" y="68" text-anchor="middle">IngestKnowledgeBaseDocuments</text>
+    <text x="680" y="145" text-anchor="middle" font-weight="bold">4. Every 5 minutes: reads the status</text>
+    <text x="680" y="158" text-anchor="middle">GetKnowledgeBaseDocuments</text>
+  </g>
+  <!-- Search relationships -->
+  <g fill="none" stroke="#2329d6" stroke-width="2">
+    <path d="M172,500 H298" marker-start="url(#dss-arrow-search)" marker-end="url(#dss-arrow-search)"/>
+    <path d="M420,455 V395 H880 V342" marker-end="url(#dss-arrow-search)"/>
+    <path d="M540,480 H768" marker-end="url(#dss-arrow-search)"/>
+    <path d="M540,530 H768" marker-end="url(#dss-arrow-search)"/>
+  </g>
+  <g font-size="11" fill="#2329d6" stroke="#ffffff" stroke-width="4" paint-order="stroke">
+    <text x="235" y="478" text-anchor="middle" font-weight="bold">A. Asks a question,</text>
+    <text x="235" y="491" text-anchor="middle" font-weight="bold">gets the answer</text>
+    <text x="650" y="377" text-anchor="middle" font-weight="bold">C. Retrieves the best passages in the documents</text>
+    <text x="650" y="390" text-anchor="middle" font-weight="bold">that the customer can see</text>
+    <text x="650" y="412" text-anchor="middle">Retrieve with a metadata filter</text>
+    <text x="655" y="460" text-anchor="middle" font-weight="bold">B. Sends the question,</text>
+    <text x="655" y="473" text-anchor="middle" font-weight="bold">gets a tool call</text>
+    <text x="655" y="548" text-anchor="middle" font-weight="bold">D. Sends the passages, gets</text>
+    <text x="655" y="561" text-anchor="middle" font-weight="bold">the answer with the source</text>
+  </g>
+  <!-- Legend -->
+  <g font-size="12" fill="#333333">
+    <line x1="690" y1="590" x2="725" y2="590" stroke="#c24631" stroke-width="2"/>
+    <text x="733" y="594">1–4 Indexing: in the background</text>
+    <line x1="690" y1="615" x2="725" y2="615" stroke="#2329d6" stroke-width="2"/>
+    <text x="733" y="619">A–D Search (RAG): for each question</text>
+  </g>
+</svg>

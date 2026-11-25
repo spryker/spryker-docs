@@ -111,6 +111,7 @@ The following settings are defined in `Spryker\Zed\DataExchange\DataExchangeConf
 | `EXPORT_CSV_BATCH_SIZE` | `1000` | Number of rows the export data provider returns at once. |
 | `IMPORT_MAX_FILE_SIZE_MB` | `50` | Maximum size of an uploaded CSV file in megabytes. |
 | `IMPORT_JOB_RUNS_PER_INVOCATION` | `1` | Number of pending import job runs one `import:job:run` invocation processes, oldest first, before the process exits. The invocation stops earlier when no pending run is left. Must be `1` or greater; the command throws an exception otherwise. |
+| `IMPORT_JOB_RUN_ERROR_ROW_LIMIT` | `1000` | Maximum number of error rows stored per import job run. Rejected rows past the limit are counted in the failed line counter and in `number_of_omitted_error_rows` of the run but not stored; errors without a row number are always stored. Must be `1` or greater; a run fails with an exception otherwise. |
 | `IMPORT_ERROR_DISPLAY_THRESHOLD` | `10` | Maximum number of import errors displayed inline on the import job run detail page. When a run produces more errors than this threshold, the errors are offered as a downloadable summary instead. |
 | `getAllowedMimeTypesWithExtensions()` | `text/csv`, `text/plain` | MIME types accepted by the upload form. |
 | `IMPORT_JOB_RUN_LEASE_DURATION_IN_MINUTES` | `5` | How long a worker holds an import job run after claiming it. The lease is renewed after every batch; once it expires, another worker can reclaim the run. Must exceed the longest time between two renewals: the pre-processors plus the first batch, or any later batch. If one batch can take longer, raise the lease or lower `IMPORT_CSV_BATCH_SIZE`. |
@@ -133,6 +134,8 @@ class DataExchangeConfig extends SprykerDataExchangeConfig
     protected const int IMPORT_ERROR_DISPLAY_THRESHOLD = 20;
 
     protected const int IMPORT_JOB_RUNS_PER_INVOCATION = 5;
+
+    protected const int IMPORT_JOB_RUN_ERROR_ROW_LIMIT = 5000;
 }
 ```
 
@@ -158,6 +161,7 @@ Make sure that the following changes have been applied by checking your database
 | spy_import_job_run.lease_expires_at | column | created |
 | spy_import_job_run.attempt_count | column | created |
 | spy_import_job_run.number_of_processed_bytes | column | created |
+| spy_import_job_run.number_of_omitted_error_rows | column | created |
 
 {% endinfo_block %}
 
@@ -174,6 +178,7 @@ Make sure the following changes in transfer objects have been applied:
 | ImportJobRun.claimedBy | property | created | src/Generated/Shared/Transfer/ImportJobRunTransfer |
 | ImportJobRun.leaseExpiresAt | property | created | src/Generated/Shared/Transfer/ImportJobRunTransfer |
 | ImportJobRun.attemptCount | property | created | src/Generated/Shared/Transfer/ImportJobRunTransfer |
+| ImportJobRun.numberOfOmittedErrorRows | property | created | src/Generated/Shared/Transfer/ImportJobRunTransfer |
 | ImportJobRunFileInfo | class | created | src/Generated/Shared/Transfer/ImportJobRunFileInfoTransfer |
 | ImportJobRunError | class | created | src/Generated/Shared/Transfer/ImportJobRunErrorTransfer |
 | ImportJobCollection | class | created | src/Generated/Shared/Transfer/ImportJobCollectionTransfer |

@@ -18,12 +18,6 @@ redirect_from:
 
 Variables, such as parameters and secrets, are used for multiple purposes, like storing mail server details or providing Composer authentication details to the build and deploy process securely.
 
-{% info_block infoBox %}
-
-This feature is part of a gradual rollout and will be available to everyone eventually. We will notify your team once your project is onboarded.
-
-{% endinfo_block %}
-
 For complex or system-critical changes to variables, we recommend consulting with our support to prevent unexpected issues.
 
 ## Customer-owned and Spryker-owned variables

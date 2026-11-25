@@ -11,11 +11,12 @@ This document describes which notifications you receive, what they contain, and 
 
 ## Notifications you receive
 
-By default, you receive an email notification when a deployment fails in the normal or destructive deployment pipeline of your environment. For details about these pipelines, see [Deployment pipelines](/docs/ca/dev/configure-deployment-pipelines/deployment-pipelines.html).
+By default, you receive no email notification when the status of a deployment pipeline changes. For details about these pipelines, see [Deployment pipelines](/docs/ca/dev/configure-deployment-pipelines/deployment-pipelines.html). To receive such notifications you need to set them up, see [Set up or change notifications](#set-up-or-change-notifications).
 
-Notifications are sent to the email addresses registered for deployment notifications of your environment. The sender name is `Spryker deployments - {environment_name}`, where `{environment_name}` is the name of your environment.
 
-If no email addresses are registered for your environment, you do not receive notifications. To register email addresses, see [Set up or change notifications](#set-up-or-change-notifications).
+Once set, notifications are sent to the email addresses registered for deployment notifications of your environment. The sender name is `Spryker deployments - {environment_name}`, where `{environment_name}` is the name of your environment.
+
+If the notifications are not set up or your email addresses is not registered for notifications for your environment, you do not receive notifications. If it is set up and your email address is registered but you do not get notifications, make sure you confirmed your subscription all `AWS Notification - Subscription Confirmation` emails you get.
 
 ## Notification content
 
@@ -62,7 +63,9 @@ To set up notifications, add or remove recipients, or change the deployment stat
 
 - The name of your environment.
 - Optional: The email addresses to add or remove.
-- Optional: The deployment states to receive notifications for. For the list of states, see [Deployment states](#deployment-states).
+- Optional: The deployment states to receive notifications for. For the list of states, see [Deployment states](#deployment-states). 
+
+The notifications setup should have at least one email address and at least one state.
 
 When the change is applied, each new email address receives a subscription confirmation. Notifications are delivered only after the subscription is confirmed.
 
@@ -70,7 +73,7 @@ When the change is applied, each new email address receives a subscription confi
 
 A subscription confirmation makes sure that notifications are sent only to recipients who agreed to receive them.
 
-The recipient receives an email from AWS Notifications with the subject `AWS Notification - Subscription Confirmation`. To confirm, click **Confirm subscription** in the email. If the email does not arrive, check the spam folder.
+The recipient receives an email from AWS Notifications with the subject `AWS Notification - Subscription Confirmation`. To confirm, click **Confirm subscription** in the email. If the email does not arrive, check the spam folder. There may be more than one subscription confirmation email, to get all the requested the notifications subscriptions must be confirmed for all of them.
 
 If a recipient does not confirm the subscription, [create a support case](https://portal.spryker.com) to send a new subscription confirmation.
 

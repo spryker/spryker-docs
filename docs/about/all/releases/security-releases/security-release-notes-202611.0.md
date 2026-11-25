@@ -1,7 +1,7 @@
 ---
 title: Security release notes 202611.0
 description: Security updates released for version 202611.0
-last_updated: Nov 19, 2026
+last_updated: Nov 25, 2026
 template: concept-topic-template
 publish_date: "2026-10-13"
 redirect_from:
@@ -348,6 +348,57 @@ docker/sdk cli "npm audit | grep -A3 '@angular/router'"
 ```
 
 4. Build the Merchant Portal and make sure the build succeeds:
+
+```bash
+docker/sdk cli "npm run mp:build"
+```
+
+{% endinfo_block %}
+
+## Remote code execution in the vite package of the Merchant Portal
+
+The Angular build tools of the Merchant Portal frontend use the `vite` package as a dependency. The Vite development server did not escape the module ID from the request URL when it built some internal modules. An unauthenticated attacker who could reach the development server could read arbitrary files and run code on the machine where the development server runs. The issue affects only projects that use the Merchant Portal and expose the development server to the network, for example, with the `--host` option or the `server.host` setting. For details, see [GHSA-p4f5-76q4-ffq7](https://github.com/vitejs/vite/security/advisories/GHSA-p4f5-76q4-ffq7).
+
+### Affected packages
+
+- `vite`: >= 4.0.0 < 6.4.6, >= 7.0.0 < 7.3.8, >= 8.0.0 < 8.1.7, >= 8.2.0 < 8.2.6, >= 8.3.0 < 8.3.7
+- `spryker/zed-ui`: < 4.8.1
+
+### Check if your project is affected
+
+To check if your project uses a vulnerable version of `vite`, run an npm audit:
+
+```bash
+docker/sdk cli "npm audit"
+```
+
+If the output reports `vite`, apply the fix.
+
+### Fix the vulnerability
+
+To fix the vulnerability, update the Spryker package that defines the npm dependencies of the Merchant Portal, and then update the npm packages.
+
+1. Update the affected package:
+
+```bash
+composer update spryker/zed-ui:"^4.8.1"
+```
+
+2. Update the npm packages:
+
+```bash
+docker/sdk cli "npm update --workspaces"
+```
+
+{% info_block warningBox "Verification" %}
+
+1. Make sure that the audit no longer reports `vite`:
+
+```bash
+docker/sdk cli "npm audit | grep -A3 'vite'"
+```
+
+2. Build the Merchant Portal and make sure the build succeeds:
 
 ```bash
 docker/sdk cli "npm run mp:build"

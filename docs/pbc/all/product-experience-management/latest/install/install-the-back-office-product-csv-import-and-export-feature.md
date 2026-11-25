@@ -109,7 +109,7 @@ Make sure the following changes in transfer objects have been applied:
 
 ### 4) Register the product schema plugins
 
-The engine learns about the *products-csv-import* and *simple-product-csv-import* job types from the schema plugins registered in the `DataExchange` dependency provider. Without this registration, the types are not offered when creating an import job. Register only the types your project needs.
+The engine learns about the *products-csv-import* and *simple-product-csv-import* job types from the schema plugins registered in the `DataExchange` dependency provider. Without this registration, the types are not offered when creating an import job. Register only the types your project needs. The module also ships the category data type; see [Install the Back Office Category CSV Import and Export feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-back-office-category-csv-import-and-export-feature.html).
 
 <div class="width-100">
 

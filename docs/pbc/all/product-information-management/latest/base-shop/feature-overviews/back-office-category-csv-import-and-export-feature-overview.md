@@ -1,11 +1,11 @@
 ---
 title: Back Office category CSV import and export feature overview
 description: Import and export the category tree in bulk through the Back Office using CSV files with one row per category, including stores, localized names, meta data, and images.
-last_updated: Nov 19, 2026
+last_updated: Nov 25, 2026
 template: concept-topic-template
 ---
 
-The *Back Office Category CSV Import and Export* feature lets Back Office users import and export categories in bulk through CSV files. It is the category data type of the [Data Exchange Jobs](/docs/pbc/all/data-exchange/latest/data-exchange-jobs/data-exchange-jobs-feature-overview.html) feature: the engine stores import jobs and runs, processes uploaded files in batches, records per-row errors, and provides the Back Office **Import & Export** pages, while this feature contributes the *category-csv-import* job type through the `Category` module, provided by `CategoryCsvImportSchemaPlugin`. One row describes one category with its parent, additional parents, stores, template, flags, sort order, localized names and meta data, and images, so a single file creates a complete tree after a destructive deployment.
+The *Back Office Category CSV Import and Export* feature lets Back Office users import and export categories in bulk through CSV files. It is the category data type of the [Data Exchange Jobs](/docs/pbc/all/data-exchange/latest/data-exchange-jobs/data-exchange-jobs-feature-overview.html) feature: the engine stores import jobs and runs, processes uploaded files in batches, records per-row errors, and provides the Back Office **Import & Export** pages, while this feature contributes the *category-csv-import* job type through the `ProductExperienceManagement` module, provided by `CategoryCsvImportSchemaPlugin`, next to the product CSV job types of the [Back Office Product CSV Import and Export](/docs/pbc/all/product-experience-management/latest/back-office-product-csv-import-and-export-feature-overview.html) feature. One row describes one category with its parent, additional parents, stores, template, flags, sort order, localized names and meta data, and images, so a single file creates a complete tree after a destructive deployment.
 
 For the import and export workflow, the template download, and the error handling, see [Data Exchange Jobs feature overview](/docs/pbc/all/data-exchange/latest/data-exchange-jobs/data-exchange-jobs-feature-overview.html). To manage single categories in the Back Office, see [Category Management feature overview](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/category-management-feature-overview.html). To load categories during a deployment from `category.csv` and `category_store.csv`, see [Categories data import](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/categories-data-import/categories-data-import.html).
 
@@ -18,7 +18,7 @@ For the import and export workflow, the template download, and the error handlin
 | Store assignments | Yes | Yes | Semicolon-separated store names |
 | Localized names and meta data | Yes | Yes | Name, meta title, meta description, meta keywords per locale |
 | Category images | Yes | Yes | The `default` image set per locale, small and large image URLs per sort order |
-| URLs | Generated | No | Generated from the name per locale; a changed parent moves the URLs of the subtree |
+| URLs | Generated | No | Generated from the name per locale; a changed parent moves the URLs of the subtree. No redirects are created; an existing redirect to a changed URL points to the new URL. |
 
 ## Import file structure
 
@@ -33,7 +33,7 @@ Each CSV row describes one category. A row with a new *Category Key* creates the
 | *Category Key* | Required. Creates the category or updates it. |
 | *Parent Category Key* | The parent must exist in the shop or in an earlier row of the file. Empty means the root category: a shop has one root category, so an empty cell is accepted only when the shop has no root yet, and a root category keeps its place with an empty cell. A changed parent moves the category and its subtree, including their URLs. |
 | *Additional Parent Category Keys* | Optional, category keys separated by `;`. Every additional parent creates a second node of the category under that parent. |
-| *Stores* | Store names separated by `;`. A store must exist and the parent category must be assigned to it. For a new category, an empty cell inherits the stores of the parent. |
+| *Stores* | Store names separated by `;`. A store must exist and the parent category must be assigned to it. For a new category, an empty cell inherits the stores of the parent. A filled cell sets the stores of this category only: removing a store from a parent does not remove it from the children, each row names the stores of its own category. |
 | *Template* | The name of a category template. Empty means *Catalog (default)* for a new category. |
 | *Is Active*, *Is In Menu*, *Is Clickable*, *Is Searchable* | `1` or `0`. Empty means `0` for a new category. |
 | *Sort Order* | A whole number: the order of the category under its parent. |
@@ -72,7 +72,7 @@ Every row of a batch is rejected when the *Category Key* column is missing or a 
 
 ## Import steps
 
-The job type runs two steps per batch of rows. The validation step applies the rules above and keeps the rejected rows from the write step. The write step creates or updates every remaining row through the same services as the Back Office form, so the closure table, the URLs, the store assignments, and the images are maintained the same way, and the category events for Publish and Synchronize are triggered for every written category.
+The job type runs two steps per batch of rows. The validation step applies the rules above and keeps the rejected rows from the write step. The write step writes every remaining row in one database transaction, directly and without the category facade, like the category data import of a deployment: the category with its localized attributes, the store assignments, the main node and the nodes under the additional parents with the closure table, the URLs of the node and of its subtree in every locale, and the `default` image sets. The Back Office plugins of the category form do not run: the store assignments of the children are not changed with the parent, and no URL redirects are created. The step collects the Publish and Synchronize events of the written categories, their ancestors and descendants, of a new root category, and of the URLs; the engine triggers them after the batch, so the Storefront receives the categories while the run is still going.
 
 ## Export
 
@@ -80,7 +80,7 @@ The export writes one row per category of the shop, parents before their childre
 
 ## Placeholders in the category schema
 
-The values come from `CategoryCsvPlaceholderProvider` of the `Category` module and reflect the data of the shop at the time the template or the export is generated.
+The values come from `CategoryCsvPlaceholderProvider` of the `ProductExperienceManagement` module and reflect the data of the shop at the time the template or the export is generated.
 
 <div class="width-100">
 

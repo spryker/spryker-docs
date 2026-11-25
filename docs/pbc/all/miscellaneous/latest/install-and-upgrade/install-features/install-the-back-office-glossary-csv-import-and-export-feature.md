@@ -1,7 +1,7 @@
 ---
 title: Install the Back Office Glossary CSV Import and Export feature
 description: Learn how to install the Back Office Glossary CSV Import and Export feature into your Spryker project.
-last_updated: Nov 19, 2026
+last_updated: Nov 25, 2026
 template: feature-integration-guide-template
 ---
 
@@ -23,8 +23,10 @@ For the Data Exchange Jobs feature, see [Install the Data Exchange Jobs feature]
 ### 1) Install the required modules
 
 ```bash
-composer require spryker/glossary:"{{page.release_tag}}" --update-with-dependencies
+composer require spryker/glossary:"{{page.release_tag}}" spryker/propel:"^3.24.0" --update-with-dependencies
 ```
+
+The import steps of the job type persist keys and translations in batches through the `Propel` module, which is an optional dependency of `Glossary`: version 3.24.0 or later is required for the job type.
 
 {% info_block warningBox "Verification" %}
 
@@ -33,6 +35,7 @@ Make sure the following modules have been installed:
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | Glossary | vendor/spryker/glossary |
+| Propel | vendor/spryker/propel |
 
 {% endinfo_block %}
 

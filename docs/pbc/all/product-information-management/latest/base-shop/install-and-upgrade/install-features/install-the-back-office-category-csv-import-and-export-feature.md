@@ -1,11 +1,11 @@
 ---
 title: Install the Back Office Category CSV Import and Export feature
 description: Learn how to install the Back Office Category CSV Import and Export feature into your Spryker project.
-last_updated: Nov 19, 2026
+last_updated: Nov 25, 2026
 template: feature-integration-guide-template
 ---
 
-The Back Office Category CSV Import and Export feature is the category data type of the [Data Exchange Jobs](/docs/pbc/all/data-exchange/latest/data-exchange-jobs/data-exchange-jobs-feature-overview.html) feature. The engine that stores jobs and runs, processes files, and provides the Back Office **Import & Export** pages is installed separately; this document installs the category plugin on top of it.
+The Back Office Category CSV Import and Export feature is the category data type of the [Data Exchange Jobs](/docs/pbc/all/data-exchange/latest/data-exchange-jobs/data-exchange-jobs-feature-overview.html) feature. The engine that stores jobs and runs, processes files, and provides the Back Office **Import & Export** pages is installed separately; this document installs the category plugin on top of it. The plugin ships with the `ProductExperienceManagement` module together with the product CSV job types; see [Install the Back Office Product CSV Import and Export feature](/docs/pbc/all/product-experience-management/latest/install/install-the-back-office-product-csv-import-and-export-feature.html).
 
 ## Prerequisites
 
@@ -18,14 +18,14 @@ Install the required features:
 | Category Management | {{page.release_tag}} | Required |
 | Category Image | {{page.release_tag}} | Required |
 
-For the Data Exchange Jobs feature, see [Install the Data Exchange Jobs feature](/docs/pbc/all/data-exchange/latest/data-exchange-jobs/install/install-the-data-exchange-jobs-feature.html). The category plugin writes categories through the services of the Category Management feature, so the category store assigner plugin and the category image plugins of [Install the Category Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html) and [Install the Category Image feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-category-image-feature.html) must be registered.
+For the Data Exchange Jobs feature, see [Install the Data Exchange Jobs feature](/docs/pbc/all/data-exchange/latest/data-exchange-jobs/install/install-the-data-exchange-jobs-feature.html). The category plugin writes the category tables directly, so no plugin of the category form is needed for it; the tables, the Back Office pages, and the image export come from [Install the Category Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html) and [Install the Category Image feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-category-image-feature.html).
 
 ## Install feature core
 
 ### 1) Install the required modules
 
 ```bash
-composer require spryker/category:"{{page.release_tag}}" --update-with-dependencies
+composer require spryker-feature/product-experience-management:"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -34,7 +34,7 @@ Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| Category | vendor/spryker/category |
+| ProductExperienceManagement | vendor/spryker-feature/product-experience-management |
 
 {% endinfo_block %}
 
@@ -61,13 +61,13 @@ Make sure the following transfer objects exist:
 
 ### 3) Register the category schema plugin
 
-The engine learns about the *category-csv-import* job type from the schema plugin registered in the `DataExchange` dependency provider. Without this registration, the type is not offered when creating an import job and the export page does not list its jobs.
+The engine learns about the *category-csv-import* job type from the schema plugin registered in the `DataExchange` dependency provider. Without this registration, the type is not offered when creating an import job and the export page does not list its jobs. Add the plugin next to the product schema plugins when the project uses them.
 
 <div class="width-100">
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| CategoryCsvImportSchemaPlugin | Provides the *category-csv-import* job type: its column schema with one column per locale for the names and meta data and one column group per locale and image number for the images, the import steps, the export steps, and the placeholder values. One row per category. | None | Spryker\Zed\Category\Communication\Plugin\DataExchange |
+| CategoryCsvImportSchemaPlugin | Provides the *category-csv-import* job type: its column schema with one column per locale for the names and meta data and one column group per locale and image number for the images, the import steps, the export steps, and the placeholder values. One row per category. | None | SprykerFeature\Zed\ProductExperienceManagement\Communication\Plugin |
 
 </div>
 
@@ -78,8 +78,8 @@ The engine learns about the *category-csv-import* job type from the schema plugi
 
 namespace Pyz\Zed\DataExchange;
 
-use Spryker\Zed\Category\Communication\Plugin\DataExchange\CategoryCsvImportSchemaPlugin;
 use Spryker\Zed\DataExchange\DataExchangeDependencyProvider as SprykerDataExchangeDependencyProvider;
+use SprykerFeature\Zed\ProductExperienceManagement\Communication\Plugin\CategoryCsvImportSchemaPlugin;
 
 class DataExchangeDependencyProvider extends SprykerDataExchangeDependencyProvider
 {

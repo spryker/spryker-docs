@@ -473,7 +473,7 @@ Several third-party npm dependencies were updated to address publicly known vuln
 
 ### Fix the vulnerability
 
-1. Update the Spryker package that defines the npm dependencies of the Merchant Portal:
+1. Update the affected Spryker modules that define the npm dependencies:
 
 ```bash
 composer update spryker/zed-ui:"^4.8.1"
@@ -487,10 +487,17 @@ docker/sdk cli "npm update --workspaces"
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the audit no longer reports the affected packages and that the Merchant Portal build succeeds:
+Make sure that the audit no longer reports the affected packages:
 
 ```bash
 docker/sdk cli "npm audit"
+```
+
+Build the frontend of each application your project uses, for example, the Storefront, Back Office, and Merchant Portal, and make sure the builds succeed:
+
+```bash
+docker/sdk cli "npm run yves"
+docker/sdk cli "npm run zed"
 docker/sdk cli "npm run mp:build"
 ```
 

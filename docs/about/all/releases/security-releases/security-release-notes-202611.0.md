@@ -1,7 +1,7 @@
 ---
 title: Security release notes 202611.0
 description: Security updates released for version 202611.0
-last_updated: Nov 19, 2026
+last_updated: Nov 25, 2026
 template: concept-topic-template
 publish_date: "2026-10-13"
 redirect_from:
@@ -458,3 +458,47 @@ Several third-party dependencies were updated to address publicly known vulnerab
 ```bash
 composer update grpc/grpc phpseclib/phpseclib symfony/config symfony/filesystem symfony/html-sanitizer symfony/http-client symfony/http-foundation symfony/http-kernel symfony/routing symfony/security-http symfony/serializer symfony/validator symfony/yaml
 ```
+
+## Vulnerabilities in third-party npm dependencies
+
+Several third-party npm dependencies were updated to address publicly known vulnerabilities present in earlier versions. The updated dependencies are listed below.
+
+### Affected packages
+
+- `vite`: >= 4.0.0 < 6.4.6, >= 7.0.0 < 7.3.8, >= 8.0.0 < 8.1.7, >= 8.2.0 < 8.2.6, >= 8.3.0 < 8.3.7. For details, see [GHSA-p4f5-76q4-ffq7](https://github.com/vitejs/vite/security/advisories/GHSA-p4f5-76q4-ffq7).
+
+### Affected modules
+
+- `spryker/zed-ui`: < 4.8.1
+
+### Fix the vulnerability
+
+1. Update the affected Spryker modules that define the npm dependencies:
+
+```bash
+composer update spryker/zed-ui:"^4.8.1"
+```
+
+2. Update the npm packages:
+
+```bash
+docker/sdk cli "npm update --workspaces"
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the audit no longer reports the affected packages:
+
+```bash
+docker/sdk cli "npm audit"
+```
+
+Build the frontend of each application your project uses, for example, the Storefront, Back Office, and Merchant Portal, and make sure the builds succeed:
+
+```bash
+docker/sdk cli "npm run yves"
+docker/sdk cli "npm run zed"
+docker/sdk cli "npm run mp:build"
+```
+
+{% endinfo_block %}

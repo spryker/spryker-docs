@@ -2,7 +2,7 @@
 title: Deployment pipelines
 description: Configure and manage deployment pipelines in Spryker Cloud Commerce OS, with support for different deploy types, stages, and custom configuration via AWS
 template: howto-guide-template
-last_updated: Nov 30, 2023
+last_updated: Nov 24, 2026
 originalLink: https://cloud.spryker.com/docs/deployment-pipelines
 originalArticleId: 14d91c9f-6c4e-4481-83ee-005683ce602f
 redirect_from:
@@ -176,3 +176,4 @@ Schematically, deployment in Spryker Cloud Commerce OS looks as follows.
 
 
 - [Deployment in states](/docs/ca/dev/configure-deployment-pipelines/deployment-in-states.html)
+- [Configure deployment pipeline notifications](/docs/ca/dev/configure-deployment-pipelines/configure-deployment-pipeline-notifications.html)

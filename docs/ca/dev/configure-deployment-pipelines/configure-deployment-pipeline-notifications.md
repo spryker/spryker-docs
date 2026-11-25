@@ -16,7 +16,7 @@ By default, you receive no email notification when the status of a deployment pi
 
 Once set, notifications are sent to the email addresses registered for deployment notifications of your environment. The sender name is `Spryker deployments - {environment_name}`, where `{environment_name}` is the name of your environment.
 
-If the notifications are not set up or your email addresses is not registered for notifications for your environment, you do not receive notifications. If it is set up and your email address is registered but you do not get notifications, make sure you confirmed your subscription all `AWS Notification - Subscription Confirmation` emails you get.
+If the notifications are not set up or your email addresses is not registered for notifications for your environment, you do not receive notifications. If it is set up and your email address is registered but you do not get notifications, make sure you confirmed your subscription, see [Confirm a subscription](#confirm-a-subscription).
 
 ## Notification content
 

@@ -127,6 +127,54 @@ Specify only fields that are defined in the transfer definition. Otherwise, you 
 </transfers>
 ```
 
+In the **Configurator Setup** tab of the *Edit Concrete Product* page, Back Office users download and upload the configuration files of products. To define the files that the tab accepts and how it names the downloaded files, add the following configuration:
+
+| CONFIGURATION | SPECIFICATION | NAMESPACE |
+|---|---|---|
+| ProductConfigurationGuiConfig::getConfigurationFileMimeTypesByExtension() | Returns the file extensions of configuration files and the MIME types allowed for each extension. An uploaded file must have one of the extensions and one of its MIME types. By default, any file is accepted. | Pyz\Zed\ProductConfigurationGui |
+| ProductConfigurationGuiConfig::getConfigurationFileExtensionsByConfiguratorKey() | Returns the file extension of the configuration files of each product configurator, indexed by configurator key. A configuration file is downloaded as `{SKU}.{extension}`, and an uploaded file must have the extension of the product configurator it belongs to. | Pyz\Zed\ProductConfigurationGui |
+| ProductConfigurationGuiConfig::getConfigurationFileMaxSize() | Returns the maximum size of an uploaded configuration file. The default value is `1M`. | Pyz\Zed\ProductConfigurationGui |
+| ProductConfigurationGuiConfig::getConfiguratorSetupIntroTranslationKey()<br>ProductConfigurationGuiConfig::getConfiguratorSetupStepTranslationKeys()<br>ProductConfigurationGuiConfig::getConfiguratorSetupNoteTranslationKey() | Return the translation keys of the instructions in the **Configurator Setup** tab. Each text receives the supported file formats as the `%formats%` parameter. By default, the tab shows instructions that fit any file format. | Pyz\Zed\ProductConfigurationGui |
+
+**src/Pyz/Zed/ProductConfigurationGui/ProductConfigurationGuiConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ProductConfigurationGui;
+
+use Spryker\Zed\ProductConfigurationGui\ProductConfigurationGuiConfig as SprykerProductConfigurationGuiConfig;
+
+class ProductConfigurationGuiConfig extends SprykerProductConfigurationGuiConfig
+{
+    protected const string FILE_EXTENSION_JSON = 'json';
+
+    protected const string CONFIGURATOR_KEY = 'YOUR_CONFIGURATOR_KEY';
+
+    /**
+     * @return array<string, list<string>>
+     */
+    public function getConfigurationFileMimeTypesByExtension(): array
+    {
+        return [
+            static::FILE_EXTENSION_JSON => ['application/json', 'text/plain'],
+        ];
+    }
+
+    /**
+     * @return array<string, string>
+     */
+    public function getConfigurationFileExtensionsByConfiguratorKey(): array
+    {
+        return [
+            static::CONFIGURATOR_KEY => static::FILE_EXTENSION_JSON,
+        ];
+    }
+}
+```
+
+The server detects the MIME type of an uploaded file from its content and can detect a JSON file as `text/plain`, so the example allows both MIME types for the `json` extension. Replace `YOUR_CONFIGURATOR_KEY` with the key of your product configurator.
+
 ### 3) Set up database schema and transfer objects
 
 1. For entity changes to trigger events, adjust the schema definition:
@@ -195,7 +243,9 @@ Make sure that the following changes have been triggered in transfer objects:
 | CustomerTransfer                                     | class | created | src/Generated/Shared/Transfer/CustomerTransfer                                     |
 | DataImporterConfigurationTransfer                    | class | created | src/Generated/Shared/Transfer/DataImporterConfigurationTransfer                    |
 | DataImporterReportTransfer                           | class | created | src/Generated/Shared/Transfer/DataImporterReportTransfer                           |
+| ErrorCollectionTransfer                              | class | created | src/Generated/Shared/Transfer/ErrorCollectionTransfer                              |
 | ErrorTransfer                                        | class | created | src/Generated/Shared/Transfer/ErrorTransfer                                        |
+| ErrorTransfer.parameters                             | property | added   | src/Generated/Shared/Transfer/ErrorTransfer                                        |
 | FilterTransfer                                       | class | created | src/Generated/Shared/Transfer/FilterTransfer                                       |
 | ItemTransfer                                         | class | created | src/Generated/Shared/Transfer/ItemTransfer                                         |
 | ItemReplaceTransfer                                  | class | created | src/Generated/Shared/Transfer/ItemReplaceTransfer                                  |
@@ -208,17 +258,28 @@ Make sure that the following changes have been triggered in transfer objects:
 | PriceProductDimensionTransfer                        | class | created | src/Generated/Shared/Transfer/PriceProductDimensionTransfer                        |
 | PriceProductFilterTransfer                           | class | created | src/Generated/Shared/Transfer/PriceProductFilterTransfer                           |
 | ProductConcreteTransfer                              | class | created | src/Generated/Shared/Transfer/ProductConcreteTransfer                              |
+| ProductConcreteTransfer.productConfigurationFile     | property | added   | src/Generated/Shared/Transfer/ProductConcreteTransfer                              |
 | ProductConfigurationTransfer                         | class | created | src/Generated/Shared/Transfer/ProductConfigurationTransfer                         |
+| ProductConfigurationTransfer.updatedAt               | property | added   | src/Generated/Shared/Transfer/ProductConfigurationTransfer                         |
 | ProductConfigurationAggregationTransfer              | class | created | src/Generated/Shared/Transfer/ProductConfigurationAggregationTransfer              |
+| ProductConfigurationCollectionRequestTransfer        | class | created | src/Generated/Shared/Transfer/ProductConfigurationCollectionRequestTransfer        |
+| ProductConfigurationCollectionResponseTransfer       | class | created | src/Generated/Shared/Transfer/ProductConfigurationCollectionResponseTransfer       |
 | ProductConfigurationCollectionTransfer               | class | created | src/Generated/Shared/Transfer/ProductConfigurationCollectionTransfer               |
 | ProductConfigurationConditionsTransfer               | class | created | src/Generated/Shared/Transfer/ProductConfigurationConditionsTransfer               |
 | ProductConfigurationCriteriaTransfer                 | class | created | src/Generated/Shared/Transfer/ProductConfigurationCriteriaTransfer                 |
+| ProductConfigurationFileTransfer                     | class | created | src/Generated/Shared/Transfer/ProductConfigurationFileTransfer                     |
 | ProductConfigurationFilterTransfer                   | class | created | src/Generated/Shared/Transfer/ProductConfigurationFilterTransfer                   |
 | ProductConfigurationInstanceTransfer                 | class | created | src/Generated/Shared/Transfer/ProductConfigurationInstanceTransfer                 |
 | ProductConfigurationInstanceCollectionTransfer       | class | created | src/Generated/Shared/Transfer/ProductConfigurationInstanceCollectionTransfer       |
 | ProductConfigurationInstanceConditionsTransfer       | class | created | src/Generated/Shared/Transfer/ProductConfigurationInstanceConditionsTransfer       |
 | ProductConfigurationInstanceCriteriaTransfer         | class | created | src/Generated/Shared/Transfer/ProductConfigurationInstanceCriteriaTransfer         |
+| ProductConfigurationSetupTransfer                    | class | created | src/Generated/Shared/Transfer/ProductConfigurationSetupTransfer                    |
 | ProductConfigurationStorageTransfer                  | class | created | src/Generated/Shared/Transfer/ProductConfigurationStorageTransfer                  |
+| ProductConfigurationSummaryTemplateTransfer          | class | created | src/Generated/Shared/Transfer/ProductConfigurationSummaryTemplateTransfer          |
+| ProductConfigurationTemplateCollectionTransfer       | class | created | src/Generated/Shared/Transfer/ProductConfigurationTemplateCollectionTransfer       |
+| ProductConfigurationTemplateConditionsTransfer       | class | created | src/Generated/Shared/Transfer/ProductConfigurationTemplateConditionsTransfer       |
+| ProductConfigurationTemplateCriteriaTransfer         | class | created | src/Generated/Shared/Transfer/ProductConfigurationTemplateCriteriaTransfer         |
+| ProductConfigurationTemplateFileTransfer             | class | created | src/Generated/Shared/Transfer/ProductConfigurationTemplateFileTransfer             |
 | ProductConfiguratorPageResponseTransfer              | class | created | src/Generated/Shared/Transfer/ProductConfiguratorPageResponseTransfer              |
 | ProductConfiguratorRedirectTransfer                  | class | created | src/Generated/Shared/Transfer/ProductConfiguratorRedirectTransfer                  |
 | ProductConfiguratorRequestTransfer                   | class | created | src/Generated/Shared/Transfer/ProductConfiguratorRequestTransfer                   |
@@ -685,11 +746,18 @@ Make sure that checkout plugins work correctly:
 
 {% endinfo_block %}
 
-6. Set up product management plugins:
+6. Set up product management plugins.
+
+The **Configurator Setup** tab of the *Edit Concrete Product* page lets Back Office users set up the configuration of a product with a configuration file. To mark configurable products in the product table and add the tab, register the following plugins:
 
 | PLUGIN                                                 | SPECIFICATION                                                                        | PREREQUISITES  | NAMESPACE                                                                  |
 |--------------------------------------------------------|--------------------------------------------------------------------------------------|----------------|----------------------------------------------------------------------------|
 | ProductConfigurationProductTableDataBulkExpanderPlugin | Expands product items with a configurable product type if they have a configuration. | None           | Spryker\Zed\ProductConfigurationGui\Communication\Plugin\ProductManagement |
+| ProductConfigurationProductConcreteFormEditTabsExpanderPlugin | Adds the **Configurator Setup** tab to the *Edit Concrete Product* page. Register the plugin as the last one of the stack, so the tab is the last tab of the page. | None | Spryker\Zed\ProductConfigurationGui\Communication\Plugin\ProductManagement |
+| ProductConfigurationProductConcreteFormEditDataProviderExpanderPlugin | Adds the data of the **Configurator Setup** tab to the form data of the concrete product: the saved product configuration and the keys of the product configurators that provide a template. | None | Spryker\Zed\ProductConfigurationGui\Communication\Plugin\ProductManagement |
+| ProductConfigurationProductConcreteEditFormExpanderPlugin | Adds the configuration file field to the concrete product form. On submit, validates the size and the format of the uploaded file, and then its content with the validator plugin of the product configurator that recognizes the file. | ProductConfigurationProductConcreteFormEditDataProviderExpanderPlugin | Spryker\Zed\ProductConfigurationGui\Communication\Plugin\ProductManagement |
+| ProductConfigurationProductFormTransferMapperExpanderPlugin | Maps the uploaded configuration file to `ProductConcreteTransfer.productConfigurationFile`. | None | Spryker\Zed\ProductConfigurationGui\Communication\Plugin\ProductManagement |
+| ProductConfigurationProductConcretePostUpdatePlugin | Saves the uploaded configuration file as the default configuration of the product configuration of the concrete product, or creates the product configuration. Saves the configuration as incomplete and adds a message with the result. | ProductConfigurationProductFormTransferMapperExpanderPlugin | Spryker\Zed\ProductConfigurationGui\Communication\Plugin\Product |
 
 **src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php**
 
@@ -698,7 +766,11 @@ Make sure that checkout plugins work correctly:
 
 namespace Pyz\Zed\ProductManagement;
 
-use Spryker\Zed\ProductConfigurationGui\Communication\Plugin\ProductManagement\ProductConfigurationProductTableDataBulkExpanderPlugin
+use Spryker\Zed\ProductConfigurationGui\Communication\Plugin\ProductManagement\ProductConfigurationProductConcreteEditFormExpanderPlugin;
+use Spryker\Zed\ProductConfigurationGui\Communication\Plugin\ProductManagement\ProductConfigurationProductConcreteFormEditDataProviderExpanderPlugin;
+use Spryker\Zed\ProductConfigurationGui\Communication\Plugin\ProductManagement\ProductConfigurationProductConcreteFormEditTabsExpanderPlugin;
+use Spryker\Zed\ProductConfigurationGui\Communication\Plugin\ProductManagement\ProductConfigurationProductFormTransferMapperExpanderPlugin;
+use Spryker\Zed\ProductConfigurationGui\Communication\Plugin\ProductManagement\ProductConfigurationProductTableDataBulkExpanderPlugin;
 use Spryker\Zed\ProductManagement\ProductManagementDependencyProvider as SprykerProductManagementDependencyProvider;
 
 class ProductManagementDependencyProvider extends SprykerProductManagementDependencyProvider
@@ -712,6 +784,73 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
             new ProductConfigurationProductTableDataBulkExpanderPlugin(),
         ];
     }
+
+    /**
+     * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductConcreteFormEditTabsExpanderPluginInterface>
+     */
+    protected function getProductConcreteFormEditTabsExpanderPlugins(): array
+    {
+        return [
+            new ProductConfigurationProductConcreteFormEditTabsExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductConcreteFormEditDataProviderExpanderPluginInterface>
+     */
+    protected function getProductConcreteFormEditDataProviderExpanderPlugins(): array
+    {
+        return [
+            new ProductConfigurationProductConcreteFormEditDataProviderExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductConcreteEditFormExpanderPluginInterface>
+     */
+    protected function getProductConcreteEditFormExpanderPlugins(): array
+    {
+        return [
+            new ProductConfigurationProductConcreteEditFormExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductFormTransferMapperExpanderPluginInterface>
+     */
+    protected function getProductFormTransferMapperExpanderPlugins(): array
+    {
+        return [
+            new ProductConfigurationProductFormTransferMapperExpanderPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/Product/ProductDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Product;
+
+use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\Product\ProductDependencyProvider as SprykerProductDependencyProvider;
+use Spryker\Zed\ProductConfigurationGui\Communication\Plugin\Product\ProductConfigurationProductConcretePostUpdatePlugin;
+
+class ProductDependencyProvider extends SprykerProductDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Spryker\Zed\Product\Dependency\Plugin\ProductConcretePluginUpdateInterface>
+     */
+    protected function getProductConcreteAfterUpdatePlugins(Container $container): array
+    {
+        return [
+            new ProductConfigurationProductConcretePostUpdatePlugin(),
+        ];
+    }
 }
 ```
 
@@ -722,6 +861,10 @@ Check that product management plugins work correctly:
 2. In the Back Office, go to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 3. Find a product with a configuration that you created before.
 4. Check that product is marked as configurable.
+5. Next to the product, click **Edit**. On the **Variants** tab, click **Edit** next to a product variant.
+6. Check that the **Configurator Setup** tab is displayed as the last tab of the *Edit Concrete Product* page.
+
+To check that a configuration file is saved, follow the verification steps in [Build Zed UI frontend](#build-zed-ui-frontend).
 
 {% endinfo_block %}
 
@@ -1380,6 +1523,95 @@ Make sure that the shopping list plugins work correctly:
 
 {% endinfo_block %}
 
+15. Set up the plugins of your product configurators.
+
+The **Configurator Setup** tab and the product configuration import work with configurations of any format. Each product configurator provides the plugins that recognize, validate, and summarize its configurations. For each product configurator that Back Office users set up products for, implement the following plugin interfaces and register the plugins:
+
+| PLUGIN INTERFACE | SPECIFICATION | NAMESPACE |
+|---|---|---|
+| ProductConfigurationConfiguratorKeyResolverPluginInterface | Recognizes the configurations of a product configurator, so the configurator key of an uploaded or imported configuration is determined from its content. If no plugin recognizes an uploaded file, the upload fails with the error *The file does not match the format of any configurator*. | Spryker\Zed\ProductConfigurationExtension\Dependency\Plugin |
+| ProductConfigurationValidatorStrategyPluginInterface | Validates a configuration in the format of its product configurator and returns each error with its location in the configuration. An uploaded file is saved only if a validator plugin applies to its configurator key. The import validates the rows that a validator plugin applies to and imports the other rows without validation. | Spryker\Zed\ProductConfigurationExtension\Dependency\Plugin |
+| ProductConfigurationDefaultDisplayDataStrategyPluginInterface | Generates the default display data from a valid configuration. If no plugin applies, the default display data is kept unchanged. | Spryker\Zed\ProductConfigurationExtension\Dependency\Plugin |
+| ProductConfigurationTemplatePluginInterface | Returns the path of a starter configuration file, which Back Office users download as the template of the product configurator. The file is read only when it is downloaded. | Spryker\Zed\ProductConfigurationExtension\Dependency\Plugin |
+| ProductConfigurationSummaryRenderStrategyPluginInterface | Renders the summary of a configuration in the **Current configuration** section of the tab and summarizes the configuration in the message after saving. If no plugin applies, the section shows only the configurator key and the time of the last change. | Spryker\Zed\ProductConfigurationGui\Dependency\Plugin |
+
+**src/Pyz/Zed/ProductConfiguration/ProductConfigurationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ProductConfiguration;
+
+use Spryker\Zed\ProductConfiguration\ProductConfigurationDependencyProvider as SprykerProductConfigurationDependencyProvider;
+
+class ProductConfigurationDependencyProvider extends SprykerProductConfigurationDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\ProductConfigurationExtension\Dependency\Plugin\ProductConfigurationConfiguratorKeyResolverPluginInterface>
+     */
+    protected function getProductConfigurationConfiguratorKeyResolverPlugins(): array
+    {
+        return [
+            new YourConfiguratorKeyResolverPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Zed\ProductConfigurationExtension\Dependency\Plugin\ProductConfigurationValidatorStrategyPluginInterface>
+     */
+    protected function getProductConfigurationValidatorStrategyPlugins(): array
+    {
+        return [
+            new YourConfiguratorValidatorStrategyPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Zed\ProductConfigurationExtension\Dependency\Plugin\ProductConfigurationDefaultDisplayDataStrategyPluginInterface>
+     */
+    protected function getProductConfigurationDefaultDisplayDataStrategyPlugins(): array
+    {
+        return [
+            new YourConfiguratorDefaultDisplayDataStrategyPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Zed\ProductConfigurationExtension\Dependency\Plugin\ProductConfigurationTemplatePluginInterface>
+     */
+    protected function getProductConfigurationTemplatePlugins(): array
+    {
+        return [
+            new YourConfiguratorTemplatePlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/ProductConfigurationGui/ProductConfigurationGuiDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ProductConfigurationGui;
+
+use Spryker\Zed\ProductConfigurationGui\ProductConfigurationGuiDependencyProvider as SprykerProductConfigurationGuiDependencyProvider;
+
+class ProductConfigurationGuiDependencyProvider extends SprykerProductConfigurationGuiDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\ProductConfigurationGui\Dependency\Plugin\ProductConfigurationSummaryRenderStrategyPluginInterface>
+     */
+    protected function getProductConfigurationSummaryRenderStrategyPlugins(): array
+    {
+        return [
+            new YourConfiguratorSummaryRenderStrategyPlugin(),
+        ];
+    }
+}
+```
+
+Replace the `YourConfigurator*Plugin` classes with the plugins of your product configurators. To check the plugins, follow the verification steps in [Build Zed UI frontend](#build-zed-ui-frontend).
 
 ### 5) Import data
 
@@ -1438,9 +1670,39 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 console data:import product-configuration
 ```
 
+The import validates the default configuration of each row that a validator plugin of `ProductConfigurationDependencyProvider::getProductConfigurationValidatorStrategyPlugins()` applies to. An invalid row is not imported, and the import reports the SKU of the product with each error. The rows of other product configurators are imported without validation.
+
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data has been added to the `spy_product_cofiguration` table.
+Make sure that the configured data has been added to the `spy_product_configuration` table.
+
+{% endinfo_block %}
+
+### 6) Generate Zed translations
+
+Generate a new translation cache for Zed:
+
+```bash
+console translator:generate-cache
+```
+
+### 7) Build Zed UI frontend
+
+Enable JavaScript and CSS changes for Zed:
+
+```bash
+console frontend:zed:build
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that Back Office users can set up a configurable product:
+1. In the Back Office, go to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
+2. Next to a product, click **Edit**. On the **Variants** tab, click **Edit** next to a product variant.
+3. On the **Configurator Setup** tab, check that the texts are translated and the upload area lists the supported file formats.
+4. Click **Template** and check that the template of your product configurator is downloaded.
+5. Upload the template and click **Save**. Make sure that the success message is displayed and the `spy_product_configuration` table contains the configuration of the product variant with your configurator key.
+6. Add an error to the file, upload it, and click **Save**. Make sure that the tab lists the error and no changes of the product variant are saved.
 
 {% endinfo_block %}
 

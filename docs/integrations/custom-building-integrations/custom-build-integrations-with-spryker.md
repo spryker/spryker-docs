@@ -1,7 +1,7 @@
 ---
 title: Custom build integrations with Spryker
 description: Learn how to create custom integrations with Spryker to connect third-party systems, services, or tools seamlessly, leveraging modular architecture and API capabilities for tailored business solutions.
-last_updated: Sep 7, 2026
+last_updated: Nov 24, 2026
 template: default
 layout: custom_new
 ---
@@ -62,6 +62,12 @@ Custom integrations enable you to seamlessly connect third-party systems, servic
     <div class="cst_card_title">Integrating an external CMS with Spryker</div>
     <div class="cst_card_desc">Learn how an external CMS and Spryker fit together: which integration strategies are available, how to tell which one applies to your project, and which boundaries never move.</div>
     <a class="cst_card_button" href="/docs/integrations/custom-building-integrations/external-cms/guideline-external-cms-integration.html"> Find out more </a>
+  </div>
+
+  <div class="cst_card">
+    <div class="cst_card_title">Integrating an external CPQ with Spryker</div>
+    <div class="cst_card_desc">Plan how an external CPQ configures, prices and quotes products sold in Spryker: choose the embedded or headless pattern and learn which rules always hold.</div>
+    <a class="cst_card_button" href="/docs/integrations/custom-building-integrations/external-cpq/guideline-external-cpq-integration.html"> Find out more </a>
   </div>
  </div>
 

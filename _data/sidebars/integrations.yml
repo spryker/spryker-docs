@@ -266,5 +266,10 @@ entries:
       nested:
         - title: Scoping an external CMS integration
           url: /docs/integrations/custom-building-integrations/external-cms/guideline-external-cms-integration-scoping.html
+    - title: Integrating an external CPQ with Spryker
+      url: /docs/integrations/custom-building-integrations/external-cpq/guideline-external-cpq-integration.html
+      nested:
+        - title: "Integrating an external CPQ: technical deep dive"
+          url: /docs/integrations/custom-building-integrations/external-cpq/guideline-external-cpq-integration-technical-deep-dive.html
   - title: Community contributions
     url: /docs/integrations/community-contributions.html

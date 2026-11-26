@@ -1,7 +1,7 @@
 ---
 title: Add a custom data type to Data Exchange Jobs
 description: Learn how to import and export your own data with Data Exchange Jobs by implementing a schema plugin for the DataExchange engine.
-last_updated: Nov 3, 2026
+last_updated: Nov 10, 2026
 template: howto-guide-template
 ---
 
@@ -22,7 +22,7 @@ The schema plugin implements `ImportSchemaPluginInterface` from the `DataExchang
 | METHOD | RETURNS |
 | --- | --- |
 | `getType()` | The unique job type. Back Office users pick it in the **Type** field when creating an import job, and the engine uses it to find the plugin for a run. |
-| `getSchema()` | The columns of the file: for every column, the header as it appears in the file (`property_name_in_file`) and the system property name the import steps work with (`system_property_name`). |
+| `getSchema()` | The columns of the file: for every column, the header as it appears in the file (`property_name_in_file`) and the system property name the import steps work with (`system_property_name`). The optional key `'is_required' => true` marks a column every file must have. A file without it is rejected before any row is read. |
 | `getImportSteps()` | The import steps in processing order. |
 | `getPlaceholderProvider()` | The values of the placeholders used in the column headers; see [Placeholders in column headers](#placeholders-in-column-headers). |
 
@@ -56,7 +56,7 @@ class CustomerCsvImportSchemaPlugin extends AbstractPlugin implements ImportSche
     public function getSchema(): array
     {
         return [
-            ['property_name_in_file' => 'Email', 'system_property_name' => 'email'],
+            ['property_name_in_file' => 'Email', 'system_property_name' => 'email', 'is_required' => true],
             ['property_name_in_file' => 'First Name', 'system_property_name' => 'first_name'],
             ['property_name_in_file' => 'Last Name', 'system_property_name' => 'last_name'],
             ['property_name_in_file' => 'Salutation', 'system_property_name' => 'salutation'],
@@ -107,7 +107,7 @@ class LocalePlaceholderProvider implements ColumnPlaceholderProviderInterface
 }
 ```
 
-A placeholder with no values removes every column that uses it. If the schema has no placeholders, as in the customer example, return an empty array:
+The engine also checks the header of an uploaded file against these values: a column whose placeholder value the provider does not list rejects the whole file. A placeholder whose values are all whole numbers, such as an image number, accepts any whole number. A placeholder with no values removes every column that uses it. If the schema has no placeholders, as in the customer example, return an empty array:
 
 **src/Pyz/Zed/CustomerDataExchange/Business/PlaceholderProvider/EmptyPlaceholderProvider.php**
 
@@ -139,7 +139,7 @@ An import step implements `ImportStepInterface`: `executeBatch()` receives every
 | `ImportStepErrorTransfer` (`csvRowNumber`, `errorMessage`) | Reports that a row failed. The engine stores the error with the row number and counts the row as failed. |
 | `ImportPublishEventTransfer` (`eventName`, `entityId`) | Asks the engine to trigger a publish event for an entity after the whole file has been processed. |
 
-The `$rows` argument is indexed by the row number in the file, and each row is indexed by the system property names of the schema. The `$propertyNamesInFile` argument maps every system property name back to the header in the file, so that error messages can name the column the user sees.
+`executeBatch()` receives an `ImportStepRequestTransfer` per batch. Its `rows` are indexed by the row number in the file, and each row is indexed by the system property names of the schema. `propertyNamesInFile` maps every system property name back to the header in the file, so that error messages can name the column the user sees. `importType` is the type of the job being run, so that one step class can serve several job types.
 
 **src/Pyz/Zed/CustomerDataExchange/Business/ImportStep/CustomerCsvImportStep.php**
 
@@ -151,6 +151,7 @@ namespace Pyz\Zed\CustomerDataExchange\Business\ImportStep;
 use Generated\Shared\Transfer\CustomerTransfer;
 use Generated\Shared\Transfer\ImportPublishEventTransfer;
 use Generated\Shared\Transfer\ImportStepErrorTransfer;
+use Generated\Shared\Transfer\ImportStepRequestTransfer;
 use Generated\Shared\Transfer\ImportStepResponseTransfer;
 use Spryker\Zed\Customer\Business\CustomerFacadeInterface;
 use Spryker\Zed\DataExchangeExtension\Dependency\Plugin\ImportStepInterface;
@@ -163,20 +164,17 @@ class CustomerCsvImportStep implements ImportStepInterface
     {
     }
 
-    /**
-     * @param array<int, array<string, string>> $rows
-     * @param array<string, string> $propertyNamesInFile
-     */
-    public function executeBatch(array $rows, array $propertyNamesInFile = []): ImportStepResponseTransfer
+    public function executeBatch(ImportStepRequestTransfer $importStepRequestTransfer): ImportStepResponseTransfer
     {
         $response = (new ImportStepResponseTransfer())->setIsSuccessful(true);
+        $propertyNamesInFile = $importStepRequestTransfer->getPropertyNamesInFile();
 
-        foreach ($rows as $rowNumber => $row) {
+        foreach ($importStepRequestTransfer->getRows() as $rowNumber => $row) {
             if ($row['email'] === '') {
                 $response->setIsSuccessful(false);
                 $response->addError((new ImportStepErrorTransfer())
                     ->setCsvRowNumber($rowNumber)
-                    ->setErrorMessage(sprintf('Column "%s" must not be empty.', $propertyNamesInFile['email'] ?? 'email')));
+                    ->setErrorMessage(sprintf('Column \'%s\' has no value for this row. This column cannot be empty, provide a value and try again.', $propertyNamesInFile['email'] ?? 'email')));
 
                 continue;
             }
@@ -319,7 +317,7 @@ The same dependency provider offers two optional hooks that run once per import 
 
 ## 5. Verify the new type
 
-1. In the Back Office, go to **Import & Export&nbsp;> Import** and click **Create Import Job**. Make sure that **customers-csv-import** is offered in the **Type** field, and create a job with it.
+1. In the Back Office, go to **Import & Export&nbsp;> Import** and click **Create Import Job**. Make sure that **customers-csv-import** is offered in the **Type** field, and create a job with it. If `DataExchangeInstallerPlugin` is registered, `console setup:init-db` creates a job with the reference `customers-csv-import` instead; see [Install the Data Exchange Jobs feature](/docs/pbc/all/data-exchange/latest/data-exchange-jobs/install/install-the-data-exchange-jobs-feature.html#5-register-the-installer-plugin).
 2. In the job row, click **Create Run**. Under *Step 1: Download Template*, click **Download CSV Template**. The file contains one header row with the columns of `getSchema()`.
 3. Fill in a few rows, upload the file under *Step 2: Upload Filled CSV* with **Upload & Queue Import**, and process the run:
 

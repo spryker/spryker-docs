@@ -1,7 +1,7 @@
 ---
 title: "Import file details: glossary.csv"
 description: Learn how you can configure customer information using the Spryker glossary csv file in your Spryker Cloud Commerce OS projects.
-last_updated: Jun 16, 2021
+last_updated: Nov 19, 2026
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-glossarycsv
 originalArticleId: 8933e30e-35fd-4c8b-be0c-78c4b38054f8
@@ -16,6 +16,12 @@ related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
+
+{% info_block infoBox "Back Office import" %}
+
+To import and export glossary keys and translations through the Back Office, use the [Back Office Glossary CSV Import and Export](/docs/pbc/all/miscellaneous/latest/back-office-glossary-csv-import-and-export-feature-overview.html) feature. The file described on this page is the one of the console data import.
+
+{% endinfo_block %}
 
 This document describes the `glossary.csv` file to configure [Customer](/docs/pbc/all/miscellaneous/latest/manage-in-the-back-office/add-translations.html) information in your Spryker Demo Shop.
 

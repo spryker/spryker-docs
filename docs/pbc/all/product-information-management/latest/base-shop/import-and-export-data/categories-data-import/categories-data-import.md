@@ -1,7 +1,7 @@
 ---
 title: Categories data import
 description: Learn how data import works and the files that are used for Product Categories within your Spryker Cloud Commerce OS project.
-last_updated: Jun 16, 2021
+last_updated: Nov 19, 2026
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/categories
 originalArticleId: b75dadf8-b3bb-4411-a24c-2dfbb178f439
@@ -10,6 +10,12 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/categories-data-import/categories-data-import.html
 
 ---
+
+{% info_block infoBox "Back Office import" %}
+
+To import and export categories through the Back Office as one CSV file per category tree, use the [Back Office Category CSV Import and Export](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/back-office-category-csv-import-and-export-feature-overview.html) feature. The files described on this page are the ones of the console data import.
+
+{% endinfo_block %}
 
 To learn how data import works and about different ways of importing data, see [Data import](/docs/dg/dev/data-import/latest/data-import.html). This section describes the data import files that are used to import data related to categories:
 

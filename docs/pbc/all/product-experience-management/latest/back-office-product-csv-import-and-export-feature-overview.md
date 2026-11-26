@@ -96,8 +96,8 @@ The *Abstract SKU* column is required: a file without it is rejected before any 
 | A status or a tax set is empty. | Column 'Tax Set Name' has no value for this row. Provide a value and try again. Supported values are: … |
 | A status, a tax set, or a shipment type is not one of the accepted values. | The 'Approval Status' value 'published' is not valid. Supported values are: draft, approved, waiting_for_approval, denied. |
 | A concrete product row names an abstract product that does not exist. | Abstract product 'X' does not exist in this import file or in the system. Add it to the file as a separate line or create it outside of this import and try again. |
-| A store does not exist, or the stores are separated by another character than the semicolon. | The 'Stores' value 'DE,AT' is not valid. Store names should be separated by semicolon “;”, for example “DE;AT” |
-| An attribute is not a key=value pair. | The 'Attributes (en_US)' value 'color:Black' is not valid. Attributes should be separated by semicolon “;” and have key=value format. For example: touchscreen=Yes;color=Black |
+| A store does not exist, or the stores are separated by another character than the semicolon. | The 'Stores' value 'DE,AT' is not valid. Store names should be separated by semicolon ";", for example "DE;AT" |
+| An attribute is not a key=value pair. | The 'Attributes (en_US)' value 'color:Black' is not valid. Attributes should be separated by semicolon ";" and have key=value format. For example: touchscreen=Yes;color=Black |
 | A merchant is given by name or does not exist. | The 'Merchant' 'Sony Experts' does not exist in the system. Provide a valid merchant reference, merchant names are not supported. |
 | A category is given by name or does not exist. | The 'Categories' 'Cameras' does not exist in the system. Provide a valid category key. Category names are not supported. |
 | Another page of the shop already has the URL. | Value '/en/canon-ixus-160-1' in 'URL (en_US)' already exists. Provide a unique value and retry. |

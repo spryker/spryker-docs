@@ -1,7 +1,7 @@
 ---
 title: Security release notes 202611.0
 description: Security updates released for version 202611.0
-last_updated: Nov 17, 2026
+last_updated: Nov 25, 2026
 template: concept-topic-template
 publish_date: "2026-10-13"
 redirect_from:
@@ -11,6 +11,23 @@ redirect_from:
 This document describes the security-related issues that have been recently resolved.
 
 For additional support with this content, [contact our support](https://support.spryker.com/). If you found a new security vulnerability, contact us at [security@spryker.com](mailto:security@spryker.com).
+
+## Brute-force attacks on login
+
+The login protection counted failed logins per IP address. An attacker who switched IP addresses was never blocked, so they could keep guessing the password of an account or try one password against many accounts, an attack known as password spraying. Also, the login forms had no CAPTCHA to slow down automated password guessing. This affected the logins of the Storefront, Back Office, Merchant Portal, Agent Assist, and the APIs.
+
+### Fix the vulnerability
+
+The fix consists of two features:
+
+- The login brute-force protection also counts the login attempts per account, regardless of the IP address, and blocks the account after too many attempts. With the CAPTCHA feature, it also requires a CAPTCHA for every login after many failed logins across all accounts, which protects against password spraying.
+- The CAPTCHA feature adds a CAPTCHA to the login forms of the Storefront, Back Office, and Merchant Portal, and checks the solution before the password. As the CAPTCHA provider, you can use ALTCHA, which works without third-party services, or Google reCAPTCHA.
+
+To install the features, follow these guides:
+
+1. [Install the login brute-force protection](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-login-brute-force-protection.html).
+2. To add a CAPTCHA to the login forms, [install the CAPTCHA feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-captcha-feature.html).
+3. If you installed the CAPTCHA feature, install [ALTCHA](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-altcha.html) or [Google reCAPTCHA](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-google-recaptcha.html) as the CAPTCHA provider.
 
 ## Stripe payment page can be accessed by unauthenticated users
 
@@ -381,6 +398,41 @@ After the update, the application rejects every login request without a valid CS
 
 {% endinfo_block %}
 
+## Unencrypted storage of secret configuration settings
+
+A configuration setting with the `secret: true` flag in its YAML schema stores its value encrypted in the database. The application encrypted a value only when it was saved. When a release or a project schema override changed the flag of a setting from `secret: false` to `secret: true`, the values that were already stored stayed in plain text. As a result, a credential could remain unencrypted in the database and in database dumps, and Zed read it as an empty value. Also, the Back Office showed the stored value of a secret setting of the `text` or `json` type.
+
+### Affected modules
+
+- `spryker/configuration`: < 1.10.0
+
+### Fix the vulnerability
+
+After the fix, `configuration:sync` checks every stored value against the `secret` flag of its setting, in all scopes. The command encrypts a plain-text value of a secret setting and decrypts an encrypted value of a non-secret setting. The Back Office no longer shows the stored value of a secret setting of the `text` or `json` type.
+
+1. Update the affected package:
+
+```bash
+composer update spryker/configuration:"^1.10.0"
+```
+
+2. Make sure that your deploy runs `configuration:sync` with access to the database, for example, in `config/install/production.yml`. Without a database, for example, in the image build, the command skips the check of the stored values and prints a warning.
+
+3. Run the command:
+
+```bash
+console configuration:sync
+```
+
+4. Rotate every credential that the command reports with the `Rotate this credential` message. The credential was stored unencrypted, so it can be in database dumps or backups.
+
+{% info_block warningBox "Verification" %}
+
+1. In the Back Office, go to **Configuration** and open a setting that has the `secret: true` flag and the `text` or `json` type. Make sure the field does not show the stored value.
+2. Run `console configuration:sync` again. Make sure the command does not report the `Rotate this credential` message.
+
+{% endinfo_block %}
+
 ## Vulnerabilities in third-party dependencies
 
 Several third-party dependencies were updated to address publicly known vulnerabilities present in earlier versions. The updated dependencies are listed below.
@@ -406,3 +458,47 @@ Several third-party dependencies were updated to address publicly known vulnerab
 ```bash
 composer update grpc/grpc phpseclib/phpseclib symfony/config symfony/filesystem symfony/html-sanitizer symfony/http-client symfony/http-foundation symfony/http-kernel symfony/routing symfony/security-http symfony/serializer symfony/validator symfony/yaml
 ```
+
+## Vulnerabilities in third-party npm dependencies
+
+Several third-party npm dependencies were updated to address publicly known vulnerabilities present in earlier versions. The updated dependencies are listed below.
+
+### Affected packages
+
+- `vite`: >= 4.0.0 < 6.4.6, >= 7.0.0 < 7.3.8, >= 8.0.0 < 8.1.7, >= 8.2.0 < 8.2.6, >= 8.3.0 < 8.3.7. For details, see [GHSA-p4f5-76q4-ffq7](https://github.com/vitejs/vite/security/advisories/GHSA-p4f5-76q4-ffq7).
+
+### Affected modules
+
+- `spryker/zed-ui`: < 4.8.1
+
+### Fix the vulnerability
+
+1. Update the affected Spryker modules that define the npm dependencies:
+
+```bash
+composer update spryker/zed-ui:"^4.8.1"
+```
+
+2. Update the npm packages:
+
+```bash
+docker/sdk cli "npm update --workspaces"
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the audit no longer reports the affected packages:
+
+```bash
+docker/sdk cli "npm audit"
+```
+
+Build the frontend of each application your project uses, for example, the Storefront, Back Office, and Merchant Portal, and make sure the builds succeed:
+
+```bash
+docker/sdk cli "npm run yves"
+docker/sdk cli "npm run zed"
+docker/sdk cli "npm run mp:build"
+```
+
+{% endinfo_block %}

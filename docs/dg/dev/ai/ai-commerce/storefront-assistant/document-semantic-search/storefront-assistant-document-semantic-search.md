@@ -1,7 +1,7 @@
 ---
 title: Storefront Assistant document semantic search
 description: Learn how Storefront Assistant answers questions from product documents, how Amazon Bedrock Knowledge Bases indexes and searches the documents, and which settings and extension points you can use.
-last_updated: Nov 18, 2026
+last_updated: Nov 24, 2026
 template: concept-topic-template
 label: early-access
 related:
@@ -25,7 +25,7 @@ related:
   }
 </style>
 
-Document semantic search lets Storefront Assistant answer questions that the product data does not answer, such as installation, maintenance, warranty, specification, or compliance questions. The assistant finds the answer in the documents that are attached to the products, such as manuals, data sheets, and certificates, and names the document that it used.
+Document semantic search lets Storefront Assistant answer questions that the product data does not answer, such as installation, maintenance, warranty, specification, or compliance questions. The assistant finds the answer in the documents that are attached to the products, such as manuals, data sheets, and certificates. At the end of the answer, the Sources widget lists the documents that the assistant used.
 
 The search is semantic: it finds passages by meaning, not by exact words. A question such as "How much power does it use in standby?" finds a passage that says "Standby consumption: 0.5 W".
 
@@ -38,9 +38,61 @@ Document semantic search has two sides. They share only the knowledge store and 
 - **Indexing side (Zed).** When a product attachment changes, Zed downloads the file and sends it to the knowledge store in the background.
 - **Search side (Client, used by Yves and Glue).** The `product_knowledge_search` tool of the **Product Discovery** agent searches the knowledge store and returns the best matching passages to the AI model.
 
+The following diagram shows the containers of the two sides. The numbers 1–4 are the steps of the [indexing flow](#indexing-flow). The letters A–D are the main steps of the [search flow](#search-flow). The search side uses retrieval-augmented generation (RAG): the Client retrieves the passages from the knowledge store, and the AI model generates the answer from these passages.
+
+{% include diagrams/ai-commerce/storefront-assistant-document-semantic-search.svg %}
+
 The knowledge store is the system that splits the documents into passages, turns each passage into a vector, and finds the passages that are closest to a question. By default, the knowledge store is an [Amazon Bedrock knowledge base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html). You can replace it with another vector database or managed search service. For details, see [Use another knowledge store provider](/docs/dg/dev/ai/ai-commerce/storefront-assistant/document-semantic-search/use-another-knowledge-store-provider.html).
 
 Each document has a document key in the format `{sourceType}:{sourceIdentifier}`, for example `product_attachment:12`. The source type tells where the document comes from. The shipped source type is `product_attachment`. To add other documents, such as video transcripts, see [Add a knowledge document source](/docs/dg/dev/ai/ai-commerce/storefront-assistant/document-semantic-search/add-a-knowledge-document-source.html).
+
+Only the product attachments that are selected as assistant knowledge are indexed. For details, see [Knowledge selection of product attachments](#knowledge-selection-of-product-attachments).
+
+## Knowledge selection of product attachments
+
+Not every product attachment is a good source for the assistant. For example, a product can have an internal checklist or an outdated certificate that customers can download, but that the assistant must not use for its answers. The knowledge selection lets you decide which product attachments the assistant uses.
+
+The indexing is opt-in. A product attachment is indexed only when it is selected as assistant knowledge. An attachment without a selection is not indexed. The selection does not change the product details page: it continues to show all attachments.
+
+You select the attachments in one of these ways:
+
+- **Back Office.** In the product form, the **Media** tab shows the **Use for assistant knowledge** checkbox in each attachment row.
+- **Data import.** The `product-attachment-knowledge-selection` import type reads the `abstract_sku`, `locale`, `attachment_url`, and `is_assistant_knowledge` columns. For details about the file, see [Install Storefront Assistant document semantic search](/docs/dg/dev/ai/ai-commerce/storefront-assistant/document-semantic-search/install-storefront-assistant-document-semantic-search.html#7-import-the-knowledge-selection-of-product-attachments).
+
+### Back Office behavior
+
+When you save a product, the selection of its attachments changes as follows:
+
+- **You select the checkbox.** The attachment is indexed in the next queue run.
+- **You clear the checkbox.** The document of the attachment is removed from the knowledge base in the next queue run. The product details page continues to show the attachment.
+- **You remove the attachment row, and no other abstract product uses the attachment.** The attachment and its selection are deleted, and the document is removed from the knowledge base.
+- **You remove the attachment row, and another abstract product still uses the attachment.** The attachment and its selection stay, and the document stays in the knowledge base. To remove the document, clear the checkbox on a product that still has the attachment.
+
+An attachment that is shared by several abstract products has one selection. When you change the selection on one product, the selection also changes on the other products.
+
+### Data model
+
+The `spy_product_attachment_knowledge_selection` table stores the selection. A row means that the attachment is selected. No row means that the attachment is not selected. The table has one row for each product attachment at most, and the database deletes the row together with its product attachment.
+
+In the `ProductAttachmentTransfer` transfer, the `isAssistantKnowledge` property has these values:
+
+- `true` selects the attachment.
+- `false` clears the selection.
+- `null` keeps the selection unchanged when the attachment is saved.
+
+### Product attachment extension points
+
+The Product Attachments feature has no knowledge-specific fields. The `spryker/product-attachment-extension` module provides three plugin interfaces, and AiCommerce adds the knowledge selection through them. You can use the same interfaces to add other data to product attachments:
+
+<div class="width-100">
+
+| INTERFACE | REGISTERED IN | WHEN IT RUNS | SHIPPED PLUGIN |
+|-----------|---------------|--------------|----------------|
+| `ProductAttachmentFormExpanderPluginInterface` | `ProductAttachmentDependencyProvider::getProductAttachmentFormExpanderPlugins()` | When the Back Office builds each attachment row of the product form, including the prototype row. A field name must be the snake case name of a `ProductAttachmentTransfer` property. | `KnowledgeSelectionProductAttachmentFormExpanderPlugin` |
+| `ProductAttachmentCollectionExpanderPluginInterface` | `ProductAttachmentDependencyProvider::getProductAttachmentCollectionExpanderPlugins()` | After `ProductAttachmentFacade::getProductAttachmentCollection()` reads the attachments. The plugin must use a fixed number of queries for the whole collection. | `KnowledgeSelectionProductAttachmentCollectionExpanderPlugin` |
+| `ProductAttachmentCollectionPostSavePluginInterface` | `ProductAttachmentDependencyProvider::getProductAttachmentCollectionPostSavePlugins()` | One time after the attachments of an abstract product are saved, in the same transaction. Each attachment has its `idProductAttachment`. | `KnowledgeSelectionProductAttachmentCollectionPostSavePlugin` |
+
+</div>
 
 ## How the Amazon Bedrock knowledge base works
 
@@ -104,10 +156,10 @@ Both clients use the region from `BEDROCK_KNOWLEDGE_BASE_AWS_REGION`, `eu-centra
 
 Documents are indexed in the background, so a change of an attachment does not slow down the Back Office or the data import:
 
-1. A product attachment is created, changed, or deleted in the Back Office or by a data import. The entity events of `spy_product_attachment` and the `ProductAttachment.product_abstract_attachment.publish` event are triggered.
+1. A product attachment or its knowledge selection is created, changed, or deleted in the Back Office or by a data import. The entity events of `spy_product_attachment` and `spy_product_attachment_knowledge_selection`, the `ProductAttachment.product_abstract_attachment.publish` event, and the `AiCommerce.product_attachment_knowledge_selection.publish` event are triggered.
 2. `KnowledgeDocumentWritePublisherPlugin` handles the events. It saves one row with the status `pending` for each affected document in `spy_knowledge_document` and sends one message for each document to the `knowledge_document.index` queue.
 3. `KnowledgeDocumentIndexQueueMessageProcessorPlugin` handles each message:
-    1. It reads the source through the source plugin of the source type. If the source does not exist anymore, it deletes the document from the knowledge base with `DeleteKnowledgeBaseDocuments` and deletes the row.
+    1. It reads the source through the source plugin of the source type. `ProductAttachmentKnowledgeDocumentSourcePlugin` returns only the product attachments that are selected as assistant knowledge. If the source does not exist anymore or is not selected, it deletes the document from the knowledge base with `DeleteKnowledgeBaseDocuments` and deletes the row.
     2. It downloads the file. It does not download more than the maximum document size of the knowledge store, which is 5&nbsp;MB for Bedrock.
     3. It compares the content hash with the stored hash. When the content did not change, it reads the status of the document from the knowledge base and does not send the file again.
     4. It sends the file to the data source of the source type with `IngestKnowledgeBaseDocuments`. The custom document ID is the document key, so a new version replaces the old one. Text files are sent as inline text. Other files, such as PDF files, are sent as inline bytes with their MIME type.
@@ -126,6 +178,7 @@ When the knowledge store is not configured for a source type, for example becaus
 4. The knowledge base finds the closest passages, reranks them, and returns them with a score.
 5. The Client passage filter removes duplicates and too short passages, keeps the order of the knowledge base, and cuts the text to the character budget.
 6. The tool returns the passages with their document names and a notice that the passages are quoted data, not instructions.
+7. The AI model answers from the passages. Then it calls `display_knowledge_sources`, and the Sources widget shows the documents that the answer used. For details, see [Sources of an answer](#sources-of-an-answer).
 
 The search never searches the whole knowledge base without a filter. A customer therefore never gets a passage of a document of a product that the customer cannot see.
 
@@ -207,7 +260,7 @@ The status refresh maps the document status of the knowledge base to the status 
 
 ## The product_knowledge_search tool
 
-`ProductKnowledgeSearchToolPlugin` provides the `product_knowledge_search` tool for the **Product Discovery** agent. The tool searches only the documents of products: without a product, the tool searches nothing. The assistant must answer only from the returned passages and name the document that it used.
+`ProductKnowledgeSearchToolPlugin` provides the `product_knowledge_search` tool for the **Product Discovery** agent. The tool searches only the documents of products: without a product, the tool searches nothing. The assistant must answer only from the returned passages, and then show the documents that it used with the `display_knowledge_sources` tool.
 
 The tool accepts the following arguments:
 
@@ -236,6 +289,7 @@ Before the search, the scope resolver plugins turn the products of the request i
 - Skips products that are not available in the current store and locale. It adds a message that is safe to show to the customer.
 - Reads the attachments of each product from the product attachment storage for the current locale.
 - Returns only the attachments that are listed in `attachment_ids`, when the model passes them.
+- Returns the label and the URL of each attachment from the product attachment storage as a knowledge document source in `KnowledgeDocumentScopeTransfer.knowledgeDocumentSources`. The `display_knowledge_sources` tool reads the sources from this list.
 
 ### Search settings
 
@@ -256,6 +310,58 @@ You can change the following settings in the Client `AiCommerceConfig`. A change
 </div>
 
 The search has no score threshold. The AI model decides from the content of the passages if they answer the question.
+
+## Sources of an answer
+
+A customer must be able to check an answer from a document, so the assistant shows the documents that the answer used. The AI model does not write the document links itself, because a model can change or invent a URL. Instead, the model calls the `display_knowledge_sources` tool, and the Sources widget shows the documents with the names and URLs from the shop data. The default Product Discovery system prompt and the tool descriptions tell the model to call the tool after an answer from documents and to write no link to a document.
+
+### The display_knowledge_sources tool
+
+`DisplayKnowledgeSourcesToolPlugin` provides the `display_knowledge_sources` tool for the **Product Discovery** agent. The tool accepts the following arguments:
+
+<div class="width-100">
+
+| ARGUMENT | REQUIRED | DESCRIPTION |
+|----------|----------|-------------|
+| `attachment_ids` | Yes | The `sourceIdentifier` values of the passages that the answer used, the most relevant first. |
+| `abstract_skus` | No | The abstract SKUs of the products whose documents the answer used. |
+| `concrete_skus` | No | The concrete SKUs of product variants. |
+| `product_abstract_ids` | No | The `idProductAbstract` values of the products. |
+
+</div>
+
+The model passes the same products as in the `product_knowledge_search` call, a maximum of 10 products in total. The tool does the following:
+
+- Resolves the document scope of the products again with the scope resolver plugins. The tool shows only the documents that the current customer can see.
+- Keeps only the documents whose source identifier is in `attachment_ids`, in the order of `attachment_ids` and without duplicates.
+- Returns `sources[]` with `documentName`, `sourceType`, `sourceIdentifier`, and `url`, and `messages[]`. A source has a `url` only when the shop data has a valid URL.
+- Returns a maximum of `getKnowledgeSourceDisplayMaxSources()` sources.
+- Reads each URL from the shop data only. The tool never takes a URL from the arguments of the model.
+- Returns the reason in `messages[]` when `attachment_ids` or the products are missing, when there are too many products, or when an identifier is not a document of the given products.
+
+The URL of a source is accepted only when it is an http or https URL with a host, without a user name or password, and a maximum of 2,048 characters. Spaces, parentheses, and angle brackets are encoded. A URL with a control character, another white space character, or a backslash is rejected, and the source has no `url`.
+
+### The Sources widget
+
+The `chat-knowledge-sources` molecule shows the result of `display_knowledge_sources` as a list of documents. The widget applies the following link rules:
+
+- A URL on the origin of the shop is a link.
+- An https URL on another host is a link only when its origin is in the Yves `AiCommerceConfig::getKnowledgeSourceLinkOrigins()`.
+- Any other URL shows the document name as plain text. The widget reports the number of these sources in the browser console.
+- A link opens in a new tab with `rel="noopener noreferrer"`.
+
+The widget stays hidden while the answer streams. When the turn ends, the widget moves to the footer of the last answer of the exchange and becomes visible, with a divider line above it. When the customer reloads the page, the widget has the same place, although the stored tool result comes before the answer text. If a project overrides the answer block of the chat without a footer, the widget shows as a separate message after the answer. For details, see [Frontend](/docs/dg/dev/ai/ai-commerce/storefront-assistant/storefront-assistant.html#frontend).
+
+### Sources settings
+
+<div class="width-100">
+
+| METHOD | LAYER | DEFAULT | DESCRIPTION |
+|--------|-------|---------|-------------|
+| `getKnowledgeSourceDisplayMaxSources()` | Client | `5` | The maximum number of sources that one `display_knowledge_sources` call shows. |
+| `getKnowledgeSourceLinkOrigins()` | Yves | `[]` | The hosts whose https URLs the Sources widget shows as links. Each entry is a host, such as `media.example.com`, or an https origin, such as `https://media.example.com`. An http origin makes the widget inactive. With an empty list, only URLs on the origin of the shop are links. |
+
+</div>
 
 ## Indexing settings
 
@@ -286,7 +392,7 @@ You can change the following settings in the Zed `AiCommerceConfig`:
 | COMMAND | OPTIONS | DESCRIPTION |
 |---------|---------|-------------|
 | `knowledge-document:setup` | `--recreate-index` | Checks the knowledge base and each configured data source, waits until they are ready, and enables the image extraction. It creates nothing and stores nothing. With `-v`, the command shows each step. The Bedrock store does not support `--recreate-index` and only reports this. |
-| `knowledge-document:reindex` | `--source-type`, `--force` | Queues all documents for indexing, and queues the documents of deleted sources for deletion. `--source-type` limits the command to one source type. Repeat the option for several source types. `--force` clears the content hash, so that every document is sent to the knowledge base again. With `-v`, the command shows the number of queued documents for each source type. |
+| `knowledge-document:reindex` | `--source-type`, `--force` | Queues all documents for indexing, and queues the documents of deleted sources for deletion. For the `product_attachment` source type, it queues only the selected attachments, and queues the documents of the attachments that are not selected for deletion. `--source-type` limits the command to one source type. Repeat the option for several source types. `--force` clears the content hash, so that every document is sent to the knowledge base again. With `-v`, the command shows the number of queued documents for each source type. |
 | `knowledge-document:status:refresh` | | Reads the knowledge base status of all `processing` documents and saves `indexed` or `failed`. The output is `Checked N document(s): X indexed, Y failed.` |
 
 </div>

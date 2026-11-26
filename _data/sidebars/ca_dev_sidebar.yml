@@ -25,6 +25,8 @@ entries:
             url: /docs/ca/dev/access/connecting-to-aws-cli-with-an-sso-user.html
           - title: AWS permissions
             url: /docs/ca/dev/access/aws-permissions.html
+          - title: Integrate your identity provider with Spryker SSO
+            url: /docs/ca/dev/access/sso-idp-integration-process.html
 
       - title: CloudHub
         url: /docs/ca/dev/cloud-hub/cloud-hub.html

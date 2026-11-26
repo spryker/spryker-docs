@@ -39,7 +39,7 @@ A key that is new to the shop needs at least one filled translation cell; a row 
 
 The job type runs three steps per batch of rows:
 
-1. The validation step rejects the rows with an empty or too long key and the rows of new keys without a translation; when the *Key* column is missing or a translation column names a locale the shop does not have, every row of the batch is rejected.
+1. The validation step rejects the rows with an empty or too long key and the rows of new keys without a translation, and reports every error of a row. A file without the *Key* column or with a translation column of a locale the shop does not have is rejected as a whole before any row is read.
 2. The key step creates the keys the shop does not have and rejects the rows whose key spelling conflicts with a stored key or with an earlier row.
 3. The translation step writes the translations that changed and collects a publish event for every key whose translations changed; the engine triggers the events after the batch, so the storefront receives the changed keys through Publish and Synchronize while the run is still going. A key whose translations did not change is not published.
 

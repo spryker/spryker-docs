@@ -41,7 +41,7 @@ An import job for every registered job type is created when the project is insta
 1. A Back Office user creates an import job that defines the job type, or uses one of the [seeded import jobs](#seeded-import-jobs). The engine copies the schema of the matching schema plugin to the job.
 2. The user uploads a CSV file against the import job. The engine stores the file and creates an import job run with the *pending* status.
 3. The `import:job:run` console command, scheduled to run every minute, claims the oldest claimable run and marks it as *processing*. One invocation processes up to `getImportJobRunsPerInvocation()` runs (default 1) and exits; the next scheduled invocation continues with the runs still claimable. For details, see [Import run processing](#import-run-processing).
-4. The engine reads the file in batches of 1000 rows. The headers are mapped to system property names using the job's schema; columns that are not part of the schema are ignored, and rows whose number of columns differs from the header row are recorded as errors.
+4. The engine checks the header row of the file once, before the first batch, and rejects a file whose header cannot be imported. See [Error handling](#error-handling). Then it reads the file in batches of 1000 rows. The headers are mapped to system property names using the job's schema, and rows whose number of columns differs from the header row are recorded as errors.
 5. Each batch passes through the import steps of the schema plugin in order. A step validates and persists its part of the row and reports an error for every row it rejects. After the batch has passed through all steps, the engine calls `resetCache()` on every step that implements `CacheResettableImportStepInterface`, so lookup caches live for one batch only.
 6. After the last row, the engine triggers the publish events reported by the steps, so that Storefront data is updated once per entity. The rows themselves are committed as each step persists them; there is no transaction around the run.
 7. The run is marked as *done* with the number of processed, successful, and failed rows. The run is marked as *failed* when no row was processed, when every row failed, or when a step threw an exception; the exception message is recorded as a run error. In that case the rows of the batches processed before the failure stay in the database, and the publish events collected so far are not triggered.
@@ -85,7 +85,24 @@ For every import job, users can download a CSV template that contains the header
 
 ## Error handling
 
-When a run rejects a row, the row is skipped and an error is recorded with the row number and a message. The run detail page shows the processed, successful, and failed row counts. Up to 10 errors are displayed inline; larger error sets are offered as a downloadable CSV file. The threshold is defined by `getImportErrorDisplayThreshold()` in `DataExchangeConfig`.
+### File errors
+
+Before the first batch, the engine checks the header row of the file. Blank lines before it are skipped and a UTF-8 byte-order mark is removed. The file is rejected as a whole when the header has any of the following problems:
+
+| PROBLEM | ERROR MESSAGE |
+| --- | --- |
+| The columns are separated by another character than the comma, for example a semicolon. | This CSV file is not using comma as column separation. Update the file to use comma ',' as column separation and try again. |
+| A column has no name. | One or more of the column are empty. All columns should have names defined in the first row of the file. |
+| A column is not part of the job's schema. | 'Colour' is not a valid column name. |
+| A placeholder in a column name has a value the shop does not have, for example a locale. | 'Name (fr_FR)' is not a valid column name: 'fr_FR' is not a known locale. |
+| An image number in a column name is not a whole number. | 'Image small (en_US-first)' is not a valid column name: 'first' is not a whole number. |
+| A required column is missing. | The 'Abstract SKU' column is missing. Add it to the header row. |
+
+A rejected file gets one error per problem, without a row number, and each message starts with *The file was rejected, no rows were imported:*. The run is marked as *failed*, the processed, successful, and failed row counts are 0, and no import step is called.
+
+### Row errors
+
+When a run rejects a row, the row is skipped and an error is recorded with the row number and a message. A row with several problems gets one error per problem, all with its row number, and is counted as failed once. The run detail page shows the processed, successful, and failed row counts. Up to 10 errors are displayed inline; larger error sets are offered as a downloadable CSV file. The threshold is defined by `getImportErrorDisplayThreshold()` in `DataExchangeConfig`.
 
 A run stores at most `getImportJobRunErrorRowLimit()` row errors (default 1000 in `DataExchangeConfig`). Every error a step reports and every column count mismatch counts against the limit, so a row that several steps reject takes several slots. A rejected row past the limit is still counted in the failed line counter and in `number_of_omitted_error_rows` of the run, but no error row is written. Errors without a row number, such as an exception thrown by a step or a post-processor, are always stored. When errors were omitted, the run detail page, the errors page, and the downloaded CSV file state how many errors were stored and how many were counted but not stored. The limit must be `1` or greater; a run fails with an exception otherwise.
 

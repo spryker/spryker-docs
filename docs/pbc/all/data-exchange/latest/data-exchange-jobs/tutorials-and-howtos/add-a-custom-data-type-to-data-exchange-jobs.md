@@ -22,7 +22,7 @@ The schema plugin implements `ImportSchemaPluginInterface` from the `DataExchang
 | METHOD | RETURNS |
 | --- | --- |
 | `getType()` | The unique job type. Back Office users pick it in the **Type** field when creating an import job, and the engine uses it to find the plugin for a run. |
-| `getSchema()` | The columns of the file: for every column, the header as it appears in the file (`property_name_in_file`) and the system property name the import steps work with (`system_property_name`). |
+| `getSchema()` | The columns of the file: for every column, the header as it appears in the file (`property_name_in_file`) and the system property name the import steps work with (`system_property_name`). The optional key `'is_required' => true` marks a column every file must have. A file without it is rejected before any row is read. |
 | `getImportSteps()` | The import steps in processing order. |
 | `getPlaceholderProvider()` | The values of the placeholders used in the column headers; see [Placeholders in column headers](#placeholders-in-column-headers). |
 
@@ -56,7 +56,7 @@ class CustomerCsvImportSchemaPlugin extends AbstractPlugin implements ImportSche
     public function getSchema(): array
     {
         return [
-            ['property_name_in_file' => 'Email', 'system_property_name' => 'email'],
+            ['property_name_in_file' => 'Email', 'system_property_name' => 'email', 'is_required' => true],
             ['property_name_in_file' => 'First Name', 'system_property_name' => 'first_name'],
             ['property_name_in_file' => 'Last Name', 'system_property_name' => 'last_name'],
             ['property_name_in_file' => 'Salutation', 'system_property_name' => 'salutation'],
@@ -107,7 +107,7 @@ class LocalePlaceholderProvider implements ColumnPlaceholderProviderInterface
 }
 ```
 
-A placeholder with no values removes every column that uses it. If the schema has no placeholders, as in the customer example, return an empty array:
+The engine also checks the header of an uploaded file against these values: a column whose placeholder value the provider does not list rejects the whole file. A placeholder whose values are all whole numbers, such as an image number, accepts any whole number. A placeholder with no values removes every column that uses it. If the schema has no placeholders, as in the customer example, return an empty array:
 
 **src/Pyz/Zed/CustomerDataExchange/Business/PlaceholderProvider/EmptyPlaceholderProvider.php**
 
@@ -174,7 +174,7 @@ class CustomerCsvImportStep implements ImportStepInterface
                 $response->setIsSuccessful(false);
                 $response->addError((new ImportStepErrorTransfer())
                     ->setCsvRowNumber($rowNumber)
-                    ->setErrorMessage(sprintf('Column "%s" must not be empty.', $propertyNamesInFile['email'] ?? 'email')));
+                    ->setErrorMessage(sprintf('Column \'%s\' has no value for this row. This column cannot be empty, provide a value and try again.', $propertyNamesInFile['email'] ?? 'email')));
 
                 continue;
             }

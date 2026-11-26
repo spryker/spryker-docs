@@ -56,23 +56,23 @@ The following file creates a small tree under an existing category and assigns `
 
 ## Row and file errors
 
-A rejected row is reported with its row number and the reason, and nothing is written for it; the other rows of the batch are imported. A row is rejected when:
+A rejected row gets one error per problem, all with its row number, and is counted as failed once. Nothing is written for it, the other rows of the batch are imported. When the key of a row is empty or too long, only the problems of the other cells are reported, because the parents, the stores of the parent and the names cannot be checked without the key. When the parent is rejected, the stores of the parent and the names on the same level are not checked. A row is rejected when:
 
 - the category key is empty or longer than 255 characters;
 - the parent or an additional parent does not exist in the shop or above in the file, is the category itself, or is a descendant of the category, which would create a cycle;
 - the parent is empty while the shop already has a root category, or a root category gets a parent;
 - a store does not exist, or the parent category is not assigned to it;
-- the template does not exist;
+- the template does not exist, or a new category has no template while the shop has no default template *Catalog (default)*;
 - a flag is not `1` or `0`, or the sort order is not a whole number;
 - a new category has no name in one of the locales;
 - another category on the same level, in the shop or earlier in the file, already has the name;
 - an image URL is not an absolute `http` or `https` URL.
 
-Every row of a batch is rejected when the *Category Key* column is missing or a column names a locale the shop does not have, for example *Name (EN)*.
+The header of the file is validated once before the first batch, as for every Data Exchange job type: a missing *Category Key* column, a column that names a locale the shop does not have (for example *Name (EN)*) or an image column without an image number rejects the whole file with one error in the run details.
 
 ## Import steps
 
-The job type runs two steps per batch of rows. The validation step applies the rules above and keeps the rejected rows from the write step. The write step writes every remaining row in one database transaction, directly and without the category facade, like the category data import of a deployment: the category with its localized attributes, the store assignments, the main node and the nodes under the additional parents with the closure table, the URLs of the node and of its subtree in every locale, and the `default` image sets. The Back Office plugins of the category form do not run: the store assignments of the children are not changed with the parent. A changed URL leaves a permanent redirect from the old one, as in the Back Office. The step collects the Publish and Synchronize events of the written categories, their ancestors and descendants, of a new root category, and of the URLs; the engine triggers them after the batch, so the Storefront receives the categories while the run is still going.
+The job type runs three steps per batch of rows. The validation step applies the rules above and keeps the rejected rows from the other steps. The write step writes every remaining row in one database transaction, directly and without the category facade, like the category data import of a deployment: the category with its localized attributes, the store assignments, the main node and the nodes under the additional parents with the closure table, and the URLs of the node and of its subtree in every locale. The image step then writes the `default` image sets of the rows that have image columns, for the whole batch, as the product image steps do. The Back Office plugins of the category form do not run: the store assignments of the children are not changed with the parent. A changed URL leaves a permanent redirect from the old one, as in the Back Office. The steps collect the Publish and Synchronize events of the written categories, their ancestors and descendants, of a new root category, and of the URLs; the engine triggers them after the batch, so the Storefront receives the categories while the run is still going.
 
 ## Export
 

@@ -17,16 +17,16 @@ For both schemas, the following data is imported and exported:
 | --- | --- | --- | --- |
 | Abstract and concrete products | Yes | Yes | Core product data, approval status, active state |
 | Localized names and descriptions | Yes | Yes | Per locale |
-| Localized attributes | Yes | Yes | Per locale, key=value format separated by semicolons |
-| Store assignments | Yes | Yes | Semicolon-separated store names |
-| Categories | Yes | Yes | Category keys |
+| Localized attributes | Yes | Yes | Per locale, key=value pairs separated by semicolons. A pair without `=` rejects the row. |
+| Store assignments | Yes | Yes | Semicolon-separated names of existing stores |
+| Categories | Yes | Yes | Category keys. Category names are not accepted. |
 | Tax sets | Yes | Yes | Tax set name |
 | URLs | Yes | Yes | Per locale |
-| Prices | Yes | Yes | Per price mode, store, currency, and dimension (gross/net) |
-| Stock | Yes | Yes | Per warehouse, numeric quantity or NOOS (Never Out Of Stock) |
+| Prices | Yes | Yes | Per price mode, store, currency, and dimension (gross/net). A whole number in the minor currency unit, for example `1299` for 12.99. |
+| Stock | Yes | Yes | Per warehouse: `0`, a whole number above 0, or `NOOS` (Never Out Of Stock) |
 | Shipment types | Yes | Yes | Shipment type keys |
 | Product images | Yes | Yes | Per locale and sort order, for both abstract and concrete products |
-| Merchant assignments | Yes | Yes | Merchant reference |
+| Merchant assignments | Yes | Yes | Merchant reference. Merchant names are not accepted. |
 
 ## Import file structure
 
@@ -86,6 +86,26 @@ Up to version 5.* of the `ProductExperienceManagement` module, the product CSV h
 
 The approval statuses of abstract products come from the [Product Approval Process](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-approval-process-feature.html) feature, which the Product Experience Management feature requires. The statuses accepted for concrete products, and the one that activates a concrete product, are defined by `getProductConcreteStatuses()` and `getProductConcreteStatusActive()` in the module's `ProductExperienceManagementConfig`.
 
+## Row errors
+
+The *Abstract SKU* column is required: a file without it is rejected before any row is read. Every error of a row is reported with its row number, and the row is counted as failed once. The most common errors:
+
+| PROBLEM | ERROR MESSAGE |
+| --- | --- |
+| A required value is empty, for example *Abstract SKU*. | Column 'Abstract SKU' has no value for this row. This column cannot be empty, provide a value and try again. |
+| A status or a tax set is empty. | Column 'Tax Set Name' has no value for this row. Provide a value and try again. Supported values are: … |
+| A status, a tax set, or a shipment type is not one of the accepted values. | The 'Approval Status' value 'published' is not valid. Supported values are: draft, approved, waiting_for_approval, denied. |
+| A concrete product row names an abstract product that does not exist. | Abstract product 'X' does not exist in this import file or in the system. Add it to the file as a separate line or create it outside of this import and try again. |
+| A store does not exist, or the stores are separated by another character than the semicolon. | The 'Stores' value 'DE,AT' is not valid. Store names should be separated by semicolon “;”, for example “DE;AT” |
+| An attribute is not a key=value pair. | The 'Attributes (en_US)' value 'color:Black' is not valid. Attributes should be separated by semicolon “;” and have key=value format. For example: touchscreen=Yes;color=Black |
+| A merchant is given by name or does not exist. | The 'Merchant' 'Sony Experts' does not exist in the system. Provide a valid merchant reference, merchant names are not supported. |
+| A category is given by name or does not exist. | The 'Categories' 'Cameras' does not exist in the system. Provide a valid category key. Category names are not supported. |
+| Another page of the shop already has the URL. | Value '/en/canon-ixus-160-1' in 'URL (en_US)' already exists. Provide a unique value and retry. |
+| A price is not a whole number. | The 'Price (Default-DE-EUR-Gross)' value '12.99' is not valid. Prices should be provided in the minor currency unit as a whole number, for example 1299 for 12.99. |
+| A stock value is not 0, a whole number above 0, or NOOS. | The 'Stock (Warehouse1)' value 'ten' is not valid. Valid values are 0, an integer above 0 or NOOS (Never out of stock) |
+
+A SKU that appears twice in the file is not reported, the later row updates the product again.
+
 ## Simple product CSV
 
 A *simple product* is an abstract product with one concrete product. For catalogs that consist of simple products, the *simple-product-csv-import* job type describes each product in one row instead of an abstract product row followed by a concrete product row. The row is imported as both the abstract product and its concrete product, so a value in a column applies to both: the name, the description, the attributes, the prices, and the images are written to the abstract and the concrete product, while the columns processed in one row type only are written to the product they belong to. A new SKU creates the product, an existing SKU updates it. Because a simple product has exactly one concrete product, the job type imports only such products: a row is rejected when its abstract product already has a concrete product with another SKU, when its concrete product belongs to another abstract product, or when an earlier row of the same batch imports the same abstract product with another concrete product. A rejected row is reported with the row number and nothing is written for it. Products with several concrete products are imported with the *products-csv-import* type.
@@ -106,7 +126,7 @@ The following file creates one simple product and updates the price and the stoc
 | simple-001 | simple-001-1 | approved | active | DE;AT | Standard Taxes | 2490 |
 | simple-002 | simple-002-1 | approved | active | DE | Standard Taxes | 1990 |
 
-A row with an empty *Abstract SKU* or an empty *Concrete SKU* is skipped and reported as an error. Every other value is validated by the same rules as in *products-csv-import*.
+Both *Abstract SKU* and *Concrete SKU* are required columns: a file without one of them is rejected before any row is read. A row with an empty *Abstract SKU* or an empty *Concrete SKU* is skipped and reported as an error. Every other value is validated by the same rules as in *products-csv-import*. Because a row describes the abstract and the concrete product at once, an attribute or a price error is listed twice for the row.
 
 The export of the *simple-product-csv-import* type contains only the abstract products with exactly one concrete product, one row per product, with *Approval Status* taken from the abstract product and *Product Status* from the concrete product. Abstract products with several concrete products are left out; export them with the *products-csv-import* type.
 

@@ -106,6 +106,8 @@ entries:
             url: /docs/ca/dev/configure-deployment-pipelines/deployment-in-states.html
           - title: Customize deployment pipelines
             url: /docs/ca/dev/configure-deployment-pipelines/customize-deployment-pipelines.html
+          - title: Configure deployment pipeline notifications
+            url: /docs/ca/dev/configure-deployment-pipelines/configure-deployment-pipeline-notifications.html
           - title: Configure Azure Pipelines
             url: /docs/ca/dev/configure-deployment-pipelines/configure-azure-pipelines.html
           - title: Configure GitHub Actions

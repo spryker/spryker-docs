@@ -1,6 +1,6 @@
 ---
 title: Configure deployment pipelines
-last_updated: Jan 16, 2023
+last_updated: Nov 24, 2026
 description: Explains how to customize and configure deployment pipelines in Spryker Cloud Commerce OS (SCCOS)
 template: concept-topic-template
 redirect_from:
@@ -12,6 +12,7 @@ This section explains how to customize and configure deployment pipelines in Spr
 - [Deployment pipelines](/docs/ca/dev/configure-deployment-pipelines/deployment-pipelines.html)
 - [Deployment in states](/docs/ca/dev/configure-deployment-pipelines/deployment-in-states.html)
 - [Customizing deployment pipelines](/docs/ca/dev/configure-deployment-pipelines/customize-deployment-pipelines.html)
+- [Configure deployment pipeline notifications](/docs/ca/dev/configure-deployment-pipelines/configure-deployment-pipeline-notifications.html)
 - [Configuring Azure Pipelines](/docs/ca/dev/configure-deployment-pipelines/configure-azure-pipelines.html)
 - [Configuring GitHub Actions](/docs/ca/dev/configure-deployment-pipelines/configure-github-actions.html)
 - [Configuring GitLab pipelines](/docs/ca/dev/configure-deployment-pipelines/configure-gitlab-pipelines.html)

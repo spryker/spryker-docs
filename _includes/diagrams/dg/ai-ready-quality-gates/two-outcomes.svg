@@ -1,0 +1,43 @@
+<svg viewBox="0 0 800 320" width="100%" role="img" aria-labelledby="two-outcomes-title" xmlns="http://www.w3.org/2000/svg" style="max-width:800px;font-family:inherit;">
+<title id="two-outcomes-title">The same change in a project without quality gates and in a project with quality gates</title>
+<defs>
+<marker id="to-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6575"/></marker>
+<marker id="to-arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11a585"/></marker>
+</defs>
+<text x="20" y="38" font-size="15" font-weight="700" fill="#c4373d">Without quality gates</text>
+<rect x="20" y="60" width="130" height="56" rx="8" fill="#ffffff" stroke="#5b6575"/>
+<text x="85" y="93" font-size="13" text-anchor="middle" fill="#1d2433">A change</text>
+<line x1="150" y1="88" x2="176" y2="88" stroke="#5b6575" stroke-width="2" marker-end="url(#to-arrow)"/>
+<rect x="180" y="60" width="150" height="56" rx="8" fill="#f4f5f7" stroke="#8a93a3" stroke-dasharray="5 4"/>
+<text x="255" y="84" font-size="13" text-anchor="middle" fill="#1d2433">Manual review</text>
+<text x="255" y="101" font-size="12" text-anchor="middle" fill="#5b6575">and manual test</text>
+<line x1="330" y1="88" x2="356" y2="88" stroke="#5b6575" stroke-width="2" marker-end="url(#to-arrow)"/>
+<rect x="360" y="60" width="150" height="56" rx="8" fill="#ffffff" stroke="#5b6575"/>
+<text x="435" y="93" font-size="13" text-anchor="middle" fill="#1d2433">Production</text>
+<line x1="510" y1="88" x2="536" y2="88" stroke="#5b6575" stroke-width="2" marker-end="url(#to-arrow)"/>
+<rect x="540" y="60" width="240" height="56" rx="8" fill="#fdecec" stroke="#c4373d"/>
+<text x="660" y="84" font-size="13" font-weight="700" text-anchor="middle" fill="#c4373d">No feedback loop</text>
+<text x="660" y="101" font-size="12" text-anchor="middle" fill="#7a2a2e">manual checks only, no record</text>
+<text x="20" y="140" font-size="12" fill="#5b6575">Nothing records what failed, so the same errors can return.</text>
+<text x="20" y="182" font-size="15" font-weight="700" fill="#0e8a6f">With quality gates</text>
+<rect x="20" y="200" width="130" height="56" rx="8" fill="#ffffff" stroke="#5b6575"/>
+<text x="85" y="233" font-size="13" text-anchor="middle" fill="#1d2433">A change</text>
+<line x1="150" y1="228" x2="176" y2="228" stroke="#11a585" stroke-width="2" marker-end="url(#to-arrow-teal)"/>
+<rect x="180" y="200" width="120" height="56" rx="8" fill="#e7f7f2" stroke="#11a585"/>
+<text x="240" y="224" font-size="13" text-anchor="middle" fill="#1d2433">Code checks</text>
+<text x="240" y="241" font-size="11" text-anchor="middle" fill="#5b6575">static analysis</text>
+<line x1="300" y1="228" x2="326" y2="228" stroke="#11a585" stroke-width="2" marker-end="url(#to-arrow-teal)"/>
+<rect x="330" y="200" width="150" height="56" rx="8" fill="#e7f7f2" stroke="#11a585"/>
+<text x="405" y="224" font-size="13" text-anchor="middle" fill="#1d2433">Functional and</text>
+<text x="405" y="241" font-size="13" text-anchor="middle" fill="#1d2433">API tests</text>
+<line x1="480" y1="228" x2="506" y2="228" stroke="#11a585" stroke-width="2" marker-end="url(#to-arrow-teal)"/>
+<rect x="510" y="200" width="120" height="56" rx="8" fill="#e7f7f2" stroke="#11a585"/>
+<text x="570" y="224" font-size="13" text-anchor="middle" fill="#1d2433">End-to-end</text>
+<text x="570" y="241" font-size="13" text-anchor="middle" fill="#1d2433">tests</text>
+<line x1="630" y1="228" x2="656" y2="228" stroke="#11a585" stroke-width="2" marker-end="url(#to-arrow-teal)"/>
+<rect x="660" y="200" width="120" height="56" rx="8" fill="#11a585" stroke="#0e8a6f"/>
+<text x="720" y="224" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Production</text>
+<text x="720" y="241" font-size="12" text-anchor="middle" fill="#ffffff">passed all checks</text>
+<path d="M405,256 L405,282 L85,282 L85,260" fill="none" stroke="#e08a00" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#to-arrow)"/>
+<text x="20" y="304" font-size="12" fill="#9a5f00">A check fails: the failure shows where, and the author fixes it before the review.</text>
+</svg>

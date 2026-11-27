@@ -1,0 +1,41 @@
+<svg viewBox="0 0 800 245" width="100%" role="img" aria-labelledby="path-title" xmlns="http://www.w3.org/2000/svg" style="max-width:800px;font-family:inherit;">
+<title id="path-title">Five steps to an AI-ready project: assess, plan, restore gates, add tests, prove with an upgrade</title>
+<defs>
+<marker id="p-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5b6575"/></marker>
+<marker id="p-arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#11a585"/></marker>
+</defs>
+<path d="M710,64 C710,28 90,28 90,60" fill="none" stroke="#11a585" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#p-arrow-teal)"/>
+<text x="400" y="16"font-size="12" text-anchor="middle" fill="#0e6b57">Keep the level: every later change goes through the same gates</text>
+<circle cx="90" cy="100" r="34" fill="#ffffff" stroke="#1d2433" stroke-width="2"/>
+<text x="90" y="108" font-size="22" font-weight="700" text-anchor="middle" fill="#1d2433">1</text>
+<line x1="124" y1="100" x2="209" y2="100" stroke="#5b6575" stroke-width="2" marker-end="url(#p-arrow)"/>
+<circle cx="245" cy="100" r="34" fill="#ffffff" stroke="#1d2433" stroke-width="2"/>
+<text x="245" y="108" font-size="22" font-weight="700" text-anchor="middle" fill="#1d2433">2</text>
+<line x1="279" y1="100" x2="364" y2="100" stroke="#5b6575" stroke-width="2" marker-end="url(#p-arrow)"/>
+<circle cx="400" cy="100" r="34" fill="#e7f7f2" stroke="#11a585" stroke-width="2"/>
+<text x="400" y="108" font-size="22" font-weight="700" text-anchor="middle" fill="#0e6b57">3</text>
+<line x1="434" y1="100" x2="519" y2="100" stroke="#5b6575" stroke-width="2" marker-end="url(#p-arrow)"/>
+<circle cx="555" cy="100" r="34" fill="#e7f7f2" stroke="#11a585" stroke-width="2"/>
+<text x="555" y="108" font-size="22" font-weight="700" text-anchor="middle" fill="#0e6b57">4</text>
+<line x1="589" y1="100" x2="674" y2="100" stroke="#5b6575" stroke-width="2" marker-end="url(#p-arrow)"/>
+<circle cx="710" cy="100" r="34" fill="#11a585" stroke="#0e8a6f" stroke-width="2"/>
+<text x="710" y="108" font-size="22" font-weight="700" text-anchor="middle" fill="#ffffff">5</text>
+<text x="90" y="160" font-size="14" font-weight="700" text-anchor="middle" fill="#1d2433">Assess</text>
+<text x="90" y="180" font-size="12" text-anchor="middle" fill="#5b6575">Find your level</text>
+<text x="90" y="196" font-size="12" text-anchor="middle" fill="#5b6575">and the gaps</text>
+<text x="245" y="160" font-size="14" font-weight="700" text-anchor="middle" fill="#1d2433">Plan</text>
+<text x="245" y="180" font-size="12" text-anchor="middle" fill="#5b6575">Pick gates and</text>
+<text x="245" y="196" font-size="12" text-anchor="middle" fill="#5b6575">critical flows</text>
+<text x="400" y="160" font-size="14" font-weight="700" text-anchor="middle" fill="#1d2433">Restore gates</text>
+<text x="400" y="180" font-size="11" text-anchor="middle" fill="#0e6b57" font-family="monospace">project-ci-generator</text>
+<text x="400" y="196" font-size="11" text-anchor="middle" fill="#0e6b57" font-family="monospace">static-validation</text>
+<text x="400" y="212" font-size="11" text-anchor="middle" fill="#0e6b57" font-family="monospace">code-review</text>
+<text x="555" y="160" font-size="14" font-weight="700" text-anchor="middle" fill="#1d2433">Add tests</text>
+<text x="555" y="180" font-size="11" text-anchor="middle" fill="#0e6b57" font-family="monospace">codecept-functional</text>
+<text x="555" y="196" font-size="11" text-anchor="middle" fill="#0e6b57" font-family="monospace">cypress-migration</text>
+<text x="555" y="212" font-size="11" text-anchor="middle" fill="#0e6b57" font-family="monospace">cypress-tests</text>
+<text x="555" y="228" font-size="11" text-anchor="middle" fill="#0e6b57" font-family="monospace">spryker-qa-coverage</text>
+<text x="710" y="160" font-size="14" font-weight="700" text-anchor="middle" fill="#1d2433">Prove it</text>
+<text x="710" y="180" font-size="11" text-anchor="middle" fill="#0e6b57" font-family="monospace">spryker-upgrade</text>
+<text x="710" y="196" font-size="12" text-anchor="middle" fill="#5b6575">pipeline stays green</text>
+</svg>

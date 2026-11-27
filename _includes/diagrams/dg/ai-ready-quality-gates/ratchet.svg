@@ -1,0 +1,22 @@
+<svg viewBox="0 0 800 250" width="100%" role="img" aria-labelledby="ratchet-title" xmlns="http://www.w3.org/2000/svg" style="max-width:800px;font-family:inherit;">
+<title id="ratchet-title">The baseline of old findings becomes smaller each sprint, and new code adds no new findings</title>
+<rect x="20" y="16" width="14" height="14" rx="2" fill="#8a93a3"/>
+<text x="42" y="28" font-size="12" fill="#3b4352">Old findings, frozen in the baseline</text>
+<rect x="290" y="16" width="14" height="14" rx="2" fill="#11a585"/>
+<text x="312" y="28" font-size="12" fill="#3b4352">New findings that the gate lets through: always 0</text>
+<line x1="60" y1="200" x2="780" y2="200" stroke="#5b6575" stroke-width="1"/>
+<rect x="80" y="50" width="70" height="150" rx="3" fill="#8a93a3"/>
+<rect x="200" y="78" width="70" height="122" rx="3" fill="#8a93a3"/>
+<rect x="320" y="106" width="70" height="94" rx="3" fill="#8a93a3"/>
+<rect x="440" y="134" width="70" height="66" rx="3" fill="#8a93a3"/>
+<rect x="560" y="164" width="70" height="36" rx="3" fill="#8a93a3"/>
+<rect x="680" y="190" width="70" height="10" rx="3" fill="#8a93a3"/>
+<line x1="60" y1="199" x2="780" y2="199" stroke="#11a585" stroke-width="3"/>
+<text x="115" y="222" font-size="12" text-anchor="middle" fill="#3b4352">Start</text>
+<text x="235" y="222" font-size="12" text-anchor="middle" fill="#3b4352">Sprint 1</text>
+<text x="355" y="222" font-size="12" text-anchor="middle" fill="#3b4352">Sprint 2</text>
+<text x="475" y="222" font-size="12" text-anchor="middle" fill="#3b4352">Sprint 3</text>
+<text x="595" y="222" font-size="12" text-anchor="middle" fill="#3b4352">Sprint 4</text>
+<text x="715" y="222" font-size="12" text-anchor="middle" fill="#3b4352">Sprint 5</text>
+<text x="420" y="244" font-size="12" text-anchor="middle" fill="#5b6575">The gate is strict from day one. The baseline only becomes smaller.</text>
+</svg>

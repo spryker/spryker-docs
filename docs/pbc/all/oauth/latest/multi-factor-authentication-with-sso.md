@@ -2,7 +2,7 @@
 title: Multi-Factor Authentication with SSO
 description: Decide where Multi-Factor Authentication should live when your users log in through an external Identity Provider — at the IdP, in Spryker, or both — and understand the trade-offs of each option.
 template: concept-topic-template
-last_updated: Sep 4, 2026
+last_updated: Nov 27, 2026
 related:
   - title: Federated Authentication via OAuth2/OIDC
     link: docs/pbc/all/oauth/latest/federated-authentication.html
@@ -100,6 +100,16 @@ Disabling Spryker MFA while password login is still available removes the second
 
 ---
 
+## Sign-in through the Storefront API and Backend API
+
+Headless frontends can sign people in through the Storefront API and Backend API with the same IdPs. For details, see [Federated Authentication (SSO) for the Storefront API and Backend API](/docs/pbc/all/oauth/latest/federated-authentication-for-the-storefront-and-backend-api.html). MFA works differently in the APIs than in the browser applications:
+
+- **IdP MFA runs as in the browser.** The person signs in on the authorization page of the IdP, so the IdP challenges them for its second factor before the API issues an access token.
+- **Spryker MFA is not a step of the API sign-in.** Instead, write requests to protected resources require the `X-MFA-Code` header. An access token from an IdP sign-in is treated the same as a password token of the same person: the same requests require the header. The IdP sign-in adds no Spryker MFA step and removes none.
+- **The password sign-in of the APIs stays available.** You cannot turn it off for the APIs, so disabling password login is not a way to close the gap described in [Mixed form and SSO users](#mixed-form-and-sso-users). If you rely on IdP MFA only, people who request an API token with a password sign in without a second factor.
+
+---
+
 ## Choosing an option
 
 A short way to reason about it:
@@ -109,4 +119,4 @@ A short way to reason about it:
 3. **Do you need independent assurance, application-enforced MFA for compliance, or a second-factor prompt before sensitive actions (not just at login)?** If yes, run **both** (Option 3).
 4. **Otherwise** — you trust the IdP's MFA and everyone is on SSO — **IdP MFA only** (Option 1) gives the best experience.
 
-This applies across all three applications that support Federated Authentication — Storefront customers, Back Office users, and Merchant Portal merchant users. The decision can differ per application: for example, you might rely on IdP MFA for the Storefront while enforcing Spryker MFA in the Merchant Portal.
+This applies to each browser application that supports Federated Authentication — Storefront customers, Back Office users, and Merchant Portal merchant users. For the APIs, see [Sign-in through the Storefront API and Backend API](#sign-in-through-the-storefront-api-and-backend-api). The decision can differ per application: for example, you might rely on IdP MFA for the Storefront while enforcing Spryker MFA in the Merchant Portal.

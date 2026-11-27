@@ -2,7 +2,7 @@
 title: Authentication and authorization
 description: Learn how to authenticate and authorize requests in the Spryker Storefront
   and Backend APIs using OAuth 2.0.
-last_updated: Aug 7, 2026
+last_updated: Nov 27, 2026
 template: default
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/authentication-and-authorization.html
@@ -35,6 +35,8 @@ For security, access tokens have a limited lifespan. The default lifetime is **8
 - Refresh Token: When an access token expires, the refresh token can be exchanged for a new access token and a new refresh token. The default lifetime for a refresh token is **1 month** (2,628,000 seconds).
 
 It is recommended to revoke refresh tokens when they are no longer needed or if they become compromised. A revoked token is immediately marked as expired and cannot be used to obtain a new access token.
+
+Besides the password sign-in, the Storefront API and Backend API of API Platform let a frontend sign people in with an external identity provider. This sign-in issues an access token without a refresh token. For details, see [Glue API: Authenticate with an identity provider](/docs/pbc/all/oauth/latest/manage-using-glue-api/glue-api-authenticate-with-an-identity-provider.html).
 
 
 ## Accessing protected resources

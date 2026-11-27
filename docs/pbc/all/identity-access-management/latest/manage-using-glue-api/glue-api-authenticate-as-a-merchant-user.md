@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Authenticate as a merchant user"
 description: Learn how to authenticate as a merchant user using the Spryker Backend API and which roles the issued token carries.
-last_updated: Sep 22, 2026
+last_updated: Nov 27, 2026
 template: glue-api-storefront-guide-template
 related:
   - title: Authenticate as a Back Office user
@@ -13,6 +13,8 @@ related:
 This endpoint allows authenticating as a merchant user. A merchant user is a Back Office user that is assigned to a merchant; the access token it receives carries the `merchant-user` scope, which the Backend API maps to the `ROLE_MERCHANT_USER` role. Resources built for the Merchant Portal audience, like the merchant profile, check for this role.
 
 The merchant does not have to be approved: a merchant user of a merchant that is still waiting for approval can authenticate and use the endpoints available to merchant users. Individual resources may still require an approved merchant — for example, the `merchant-profile` resource responds with `403` until the merchant is approved, as the Merchant Portal does.
+
+A merchant user can also sign in with an external identity provider instead of a password and gets a token with the same scopes. For details, see [Glue API: Authenticate with an identity provider](/docs/pbc/all/oauth/latest/manage-using-glue-api/glue-api-authenticate-with-an-identity-provider.html).
 
 {% info_block warningBox "API Platform only" %}
 

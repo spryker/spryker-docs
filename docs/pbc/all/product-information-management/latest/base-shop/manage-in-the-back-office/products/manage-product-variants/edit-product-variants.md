@@ -1,7 +1,7 @@
 ---
 title: Editing product variants
 description: The guide describes how to update and edit product variants direct in the Spryker Cloud Commerce OS Back Office.
-last_updated: Nov 26, 2026
+last_updated: Nov 27, 2026
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/editing-a-product-variant
 originalArticleId: b9119173-d733-4ffa-b93d-1f19d88a364c
@@ -129,11 +129,11 @@ To set up the configuration of the product variant:
 
 1. Get a configuration file:
     - To start from a template, click **Template**. A template is a starter configuration of a product configurator. If several product configurators provide a template, each **Template** button shows the key of its product configurator.
-    - To change the saved configuration, click **Current configuration**. The button is available when a configuration is saved for the product variant.
+    - To change the saved configuration, click **Current configuration**. The button is unavailable when no configuration or an empty configuration is saved for the product variant.
 
     The downloaded file is named after the SKU of the product variant.
 2. Change the configuration in the file.
-3. In the upload area, click **Upload file** and select the file, or drag the file to the area. The area shows the supported file formats and the maximum file size. If you drag a file of another format, the area keeps the file you selected before and shows a message.
+3. In the upload area, click **Upload file** and select the file, or drag the file to the area. The area shows the supported file formats and the maximum file size. If you drag a file of another format, the area keeps the file you selected before and shows a message. If you drag several files, the area takes the first file of a supported format and shows a message.
 4. Click **Save**.
 
 The product configurator that the file belongs to validates the configuration before it is saved:

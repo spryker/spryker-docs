@@ -1,7 +1,7 @@
 ---
 title: "Import file details: product_concrete_pre_configuration.csv"
 description: Learn how you can import data for configurable products using the product concrete pre configuration csv file within your Spryker Cloud Commerce OS project.
-last_updated: Jun 25, 2021
+last_updated: Nov 27, 2026
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-concrete-pre-configurationcsv
 originalArticleId: 81e75f7f-b1bd-4707-870a-dbea4a001273
@@ -28,8 +28,10 @@ This document describes the `product_concrete_pre_configuration.csv` file to c
 | concrete_sku | ✓ | String | | Must be an SKU of an existing product. | Unique product identifier. |
 | configurator_key | ✓ | String | | Multiple products can use the same `configurator_key`. | Unique identifier of a product configurator to be used for this product. |
 | is_complete | ✓ | Boolean | 0 | True = `1` <br> False = `0` | Defines if product configuration is complete by default. |
-| default_configuration | | String |  | Accepts JSON. | Defines the configuration customers start configuring the product with. |
+| default_configuration | | String |  | Must be in the format of the product configurator, for example, JSON. If the product configurator provides a validator plugin, the configuration must pass its validation. | Defines the configuration customers start configuring the product with. |
 | default_display_data | | String |  | Accepts JSON. | Defines the configuration to be displayed to customers when they start configuring the product. The parameters are taken from `default_configuration`. |
+
+The import validates the `default_configuration` of each row with the validator plugin of its product configurator. An invalid row isn't imported. The import reports the SKU of the product with each error and its location in the configuration, and the import fails. The rows of a product configurator without a validator plugin are imported without validation. For the validator plugins, see [Install the Product Configuration feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-configuration-feature.html).
 
 ## Import template file and content example
 

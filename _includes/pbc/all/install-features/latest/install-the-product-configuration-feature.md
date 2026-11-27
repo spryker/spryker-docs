@@ -1706,6 +1706,20 @@ Make sure that Back Office users can set up a configurable product:
 
 {% endinfo_block %}
 
+### 8) Grant access to the configuration downloads
+
+The upload of a configuration file is part of the product form. The **Template** and **Current configuration** downloads are actions of the `configurator-setup` controller of the `product-configuration-gui` bundle. If the role of a Back Office user doesn't grant access to all bundles, add the following rule to the role in **Users&nbsp;<span aria-label="and then">></span> User Roles**:
+
+| BUNDLE | CONTROLLER | ACTION | PERMISSION |
+| --- | --- | --- | --- |
+| product-configuration-gui | configurator-setup | * | allow |
+
+{% info_block warningBox "Verification" %}
+
+Log in as a user with this role. On the **Configurator Setup** tab of a product variant, click **Template** and make sure that the template is downloaded.
+
+{% endinfo_block %}
+
 ## Install feature frontend
 
 Follow the steps below to install the feature frontend.

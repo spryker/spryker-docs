@@ -133,7 +133,7 @@ To set up the configuration of the product variant:
 
     The downloaded file is named after the SKU of the product variant.
 2. Change the configuration in the file.
-3. In the upload area, click **Upload file** and select the file, or drag the file to the area. The area shows the supported file formats and the maximum file size.
+3. In the upload area, click **Upload file** and select the file, or drag the file to the area. The area shows the supported file formats and the maximum file size. If you drag a file of another format, the area keeps the file you selected before and shows a message.
 4. Click **Save**.
 
 The product configurator that the file belongs to validates the configuration before it is saved:
@@ -142,7 +142,7 @@ The product configurator that the file belongs to validates the configuration be
 - If the configuration has errors, no changes of the product variant are saved. The tab lists each error with its location in the file, and the **Current configuration** section shows the uploaded file marked as **Not saved**. Fix the errors in the file and upload it again.
 - If the file does not match the format of any product configurator, or its extension differs from the extension of the files of its product configurator, an error message describes the problem.
 
-The **Current configuration** section shows the key of the product configurator, the time of the last change, and a summary of the configuration. The content of the summary depends on the product configurator.
+The **Current configuration** section shows the key of the product configurator, the time of the last change, and a summary of the configuration. For an uploaded file that is not saved, the time of the last change isn't shown. The content of the summary depends on the product configurator.
 
 **What's next?**
 <br>Following the same steps, you will update all variants that you have added to your abstract product.

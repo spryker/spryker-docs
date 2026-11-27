@@ -344,6 +344,8 @@ $config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_BLOCKING_TTL] = 900
 $config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_BLOCKING_NUMBER_OF_ATTEMPTS] = 9;
 ```
 
+These settings count failed logins per IP address. To also count login attempts per account, regardless of the IP address, see [Install the login brute-force protection](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-login-brute-force-protection.html). To protect the login forms with a CAPTCHA, see [Install the CAPTCHA feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-captcha-feature.html).
+
 #### Configure audit logging
 
 1. Add the configuration:

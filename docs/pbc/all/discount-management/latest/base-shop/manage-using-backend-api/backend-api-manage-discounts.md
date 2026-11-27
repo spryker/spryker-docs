@@ -1,7 +1,7 @@
 ---
 title: "Backend API: Manage discounts"
 description: Learn how to retrieve, create, update, activate, and deactivate discounts in your Spryker shop using the Spryker Backend API.
-last_updated: Oct 6, 2026
+last_updated: Nov 18, 2026
 template: glue-api-backend-guide-template
 related:
   - title: "Backend API: Manage discount voucher codes"
@@ -657,7 +657,7 @@ A business validation error names the rejected attribute in `detail`, in the for
 | 5701 | The display name is already used by another discount. |
 | 5703 | `calculatorType` names a calculation method this installation does not offer. |
 | 5705 | The fixed amounts are invalid: none was given for a money calculator, or a currency does not belong to one of the selected stores. |
-| 5706 | A rule of `collector` or `decisionRule` is invalid—for example, it uses an unknown field or operator, or contains a quote. The error message quotes the query string parser. |
+| 5706 | A rule of `collector` or `decisionRule` is invalid — for example, it uses an unknown field or operator, or contains a quote. The error message quotes the query string parser. If `CustomerGroupSuggestDecisionRulePlugin` is registered, a `customer-group` rule that names a group that does not exist with `=`, `!=`, `is in`, or `is not in` also returns this error, with the message `Could not find "{group_name}" for field "customer-group".` |
 | 5710 | `stores` names a store that does not exist. |
 | 5730 | `promotion` is invalid: `abstractSkus` is empty or names a product that does not exist, or `quantity` is below `1`. |
 | 5740 | The `sort` parameter names a field that the collection does not support. |

@@ -1,7 +1,7 @@
 ---
 title: AI Dev MCP Server
 description: Reference of the Model Context Protocol server shipped with the AiDev module — available tools, extension points, and debugging
-last_updated: Sep 7, 2026
+last_updated: Nov 20, 2026
 label: early-access
 keywords: ai, mcp, model context protocol, claude, copilot, ai-dev, tools, extension
 template: concept-topic-template
@@ -9,7 +9,7 @@ redirect_from:
   - /docs/sdk/dev/ai-dev-sdk/ai-dev-sdk-mcp-server.html
 ---
 
-The AiDev module ships an MCP server that gives AI assistants live access to your running Spryker application: transfer objects, module interfaces, order management system (OMS) state machines, CSV data, and read-only database queries. This page describes what the server exposes, how to extend it, and how to debug it.
+The AiDev module ships an MCP server that gives AI assistants live access to your running Spryker application: transfer objects, module interfaces, order management system (OMS) state machines, CSV data, read-only database queries, and the Spryker capability map. This page describes what the server exposes, how to extend it, and how to debug it.
 
 {% info_block infoBox "Install first" %}
 
@@ -49,6 +49,8 @@ The AiDev module provides the following built-in tools that AI assistants can us
 | `getSprykerModules` | Lists all available Spryker modules from project and vendor directories. |
 | `getSprykerModuleMap` | Retrieves detailed module metadata including class paths, method signatures, and extension points. |
 | `searchAlgoliaDocumentation` | Enables keyword-based Spryker documentation search through Algolia integration. |
+| `searchSprykerCapabilities` | Searches the Spryker capability map for what Spryker already ships, including packages the project has not installed. Parameters: `query` (space-separated domain terms and synonyms) and `limit` (default 10). Returns ranked hits with the capability, its status, the matched terms, the install status from the project's `composer.lock` (`installed`, `partially_installed`, `not_installed`, or `unknown`), the missing packages, and a `composer require` line for them. |
+| `getSprykerCapability` | Returns one capability map card by its slug: what the capability does, its entry points, extension points, data model, configuration, data flow, storefront surface, install section (feature package, required features, install guide), and related cards, with the install status of each module. |
 | `analyzeCsvFile` | Analyzes CSV file structure without loading full content. Returns headers, row count, and sample rows. Supports optional column analysis with unique values and null counts. |
 | `transformCsv` | Transforms and modifies CSV files with three operation modes: APPEND (add new rows), REPLACE (overwrite target), and UPDATE (modify existing rows in-place). Supports column mappings, row filters, value transformations, default values, and automatic backup creation. |
 | `deleteCsvRows` | Deletes rows from CSV files based on filter criteria with multiple operators (equals, not_equals, in, not_in, contains, not_contains, starts_with, ends_with, empty, not_empty). Includes safety checks and automatic backup creation. |
@@ -93,6 +95,20 @@ class AiDevDependencyProvider extends SprykerAiDevDependencyProvider
 ## Configuration
 
 You can configure the AiDev module through the `AiDevConfig` class. Refer to the module's configuration class for the available options and their default values.
+
+### Capability map
+
+The capability map is an index of the capabilities that Spryker ships. Each capability has one card that lists its modules, feature package, extension points, and install guide. The capability tools read the index from a public bucket: `https://spryker-capability-map.s3.eu-central-1.amazonaws.com/index.json`. To use a mirror, set its URL in `config/Shared/config_default.php`:
+
+```php
+use SprykerSdk\Shared\AiDev\AiDevConstants;
+
+$config[AiDevConstants::CAPABILITY_MAP_INDEX_URL] = 'https://<your-mirror>/index.json';
+```
+
+The server caches the index in `data/tmp/ai-dev/capability-map/index.json` for 24 hours. When a download fails, it uses an expired cache and marks the result as stale. Cards with the status `planned` are not returned.
+
+The `find-existing-capability` and `spryker-feature-install` skills use these tools. Without the MCP server, both skills use a bundled script that reads the same index. For how the skills use the capability map, see [Feature Install Workflow](/docs/dg/dev/ai/ai-dev/ai-dev-feature-install-workflow.html).
 
 ## Debug the MCP server
 

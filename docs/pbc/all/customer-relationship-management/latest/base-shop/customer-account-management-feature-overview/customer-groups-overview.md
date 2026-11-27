@@ -1,7 +1,7 @@
 ---
 title: Customer Groups overview
-description: The Customer Groups feature lets you organize customers into groups, and record which companies and business units belong to each group.
-last_updated: Oct 19, 2026
+description: The Customer Groups feature lets you organize customers into groups to help you target users for discounts and promotions.
+last_updated: Nov 19, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-groups-overview
 originalArticleId: 046cf042-1c53-4c82-8498-21ec52d2e51f
@@ -24,7 +24,7 @@ redirect_from:
 A customer group can hold the following members:
 
 - **Customers**: discount conditions and other rules that target a customer group evaluate the customers of the group.
-- **Companies** and **business units**: with the B2B Customer Groups feature, a customer group also records which B2B accounts belong to it. You manage these memberships in the Back Office, through the Backend API, and by data import. Discounts and other rules that target a customer group evaluate only its customers, so company and business unit memberships do not affect them.
+- **Companies** and **business units**: with the B2B Customer Groups feature, a customer group also records which B2B accounts belong to it. You manage these memberships in the Back Office, through the Backend API, and by data import. If enabled, the `customer-group` discount condition also evaluates the company users of these companies and business units. Other rules that target a customer group evaluate only its customers. For details, see [Customer groups in discount conditions](#customer-groups-in-discount-conditions).
 
 To install company and business unit memberships, see [Install the B2B Customer Groups feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-b2b-customer-groups-feature.html).
 
@@ -36,6 +36,8 @@ A company membership and a business unit membership are independent of each othe
 - Assigning a business unit does not assign its company, its parent or child business units, or its company users.
 - Removing a company from a group keeps the business units of that company in the group.
 - Removing the last business unit of a company keeps the company in the group.
+
+These rules describe the stored memberships. When the `customer-group` discount condition evaluates them, a business unit membership also applies to the company users of its child business units. For details, see [How business unit assignments are inherited](#how-business-unit-assignments-are-inherited).
 
 A company or business unit can belong to any number of customer groups, and a customer group can hold business units of different companies.
 
@@ -62,6 +64,20 @@ The **Customers** column of the tables counts company users:
 - For a business unit, only the company users directly in that business unit, not the users of its child business units, including inactive ones.
 
 For instructions, see [Manage customer groups](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/manage-customer-groups.html).
+
+## Find the customer groups of a customer, company, or business unit
+
+With the B2B Customer Groups feature, the **Customer Groups** page in the Back Office has a filter that lists only the groups a specific customer, company, or business unit is assigned to. You select the assignment type, search for the customer, company, or business unit by entering at least three characters, and apply the filter.
+
+The filter returns only direct assignments:
+
+| ASSIGNMENT TYPE | SEARCH BY | GROUPS LISTED |
+| --- | --- | --- |
+| Customer | Email address, first name, last name, or customer reference. | The groups the customer is assigned to directly. The groups of the customer's company or business unit are not listed. |
+| Company | Company name. | The groups the company is assigned to. The groups of its business units are not listed. |
+| Business Unit | Business unit name, across all companies. | The groups the business unit is assigned to. The groups of its company or parent business units are not listed. |
+
+The `customer-groups` Backend API resource accepts the same filters by customer reference, company UUID, and business unit UUID. For details, see [Backend API: Manage customer groups](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/backend-api-manage-customer-groups.html#retrieve-customer-groups).
 
 ## Manage memberships using the Backend API
 
@@ -91,13 +107,76 @@ The membership importers address companies and business units by their keys. Com
 
 As with other data importers, the import report lists only the first 50 rejected rows by default. A row whose number of columns differs from the header stops the import of the rest of that file.
 
+## Customer groups in discount conditions
+
+When you create a discount, you can use the `customer-group` field in the **APPLY WHEN** condition to apply the discount only to customers of a specific group. For details, see [Create discounts](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/create-discounts.html#define-on-what-conditions-the-discount-can-be-applied).
+
+By default, the condition checks only the groups a customer is assigned to directly. With the B2B Customer Groups feature, a developer can enable the condition to also check the groups of the customer's company and business units. This lets you offer a discount to all users of a B2B company or business unit without assigning each customer to the group individually. For instructions, see [Install the B2B Customer Groups feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-b2b-customer-groups-feature.html#optional-apply-customer-group-discounts-to-companies-and-business-units).
+
+When enabled, a customer is in a customer group for the condition in the following cases:
+
+- The customer is assigned to the group directly.
+- The company of the company user the customer currently shops as is assigned to the group.
+- The business unit of the company user the customer currently shops as, or any of its parent business units, is assigned to the group.
+
+The group name in the condition is matched case-insensitively.
+
+The operators of the condition work as follows:
+
+- **Equal**, **In**, and **Contains**: the condition is met if at least one of the customer's groups matches the value.
+- **Not equal**, **Not in**, and **Doesn't contain**: by default, the condition is met if at least one of the customer's groups does not match the value. A developer can configure these operators to apply to all groups of the customer. Then the condition is met only if none of the customer's groups matches the value. For instructions, see [Install the B2B Customer Groups feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-b2b-customer-groups-feature.html#optional-apply-customer-group-discounts-to-companies-and-business-units).
+
+For example, a customer belongs to the groups *A* and *B*. By default, a discount with `customer-group != "A"` applies to this customer, because the group *B* does not match. If the negated operators apply to all groups, the discount does not apply, because the group *A* matches.
+
+A guest and a logged-in customer who belongs to no group never meet a `customer-group` condition, with any operator.
+
+### Select a customer group in a discount condition
+
+In the query builder of the **Conditions** tab, the value field of the `customer-group` rule suggests the names of existing customer groups after you enter two characters. The suggestions match the name or the description of a group. For the **Equal**, **Not equal**, **In**, and **Not in** operators, you select a suggested group, and for **In** and **Not in**, you can select several groups. Free text is accepted only for the **Contains** and **Doesn't contain** operators.
+
+When you save a discount, every customer group that the condition names with the **Equal**, **Not equal**, **In**, or **Not in** operator must exist. If a group does not exist, for example, because it was renamed or deleted after the discount was created, the save is rejected with the `Could not find "{group_name}" for field "customer-group".` error. This check also applies to existing discounts, so fix the condition before you save other changes of the discount. The check runs only when a discount is saved, so an existing discount with such a condition stays active in the Storefront:
+
+- With **Equal** or **In**, the condition can no longer be met through the missing group.
+- With **Not equal** or **Not in**, no customer belongs to the missing group, so the condition is met for every logged-in customer who belongs to at least one group. For example, a discount with `customer-group != "X"` applies to every customer with a group after the group *X* is deleted.
+
+The same check applies when you create or update a discount using the Backend API: an unknown group returns `422` with the error code `5706` and the same message. For details, see [Backend API: Manage discounts](/docs/pbc/all/discount-management/latest/base-shop/manage-using-backend-api/backend-api-manage-discounts.html).
+
+The suggestions and the check on save require `CustomerGroupSuggestDecisionRulePlugin`. For instructions, see [Install the B2B Customer Groups feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-b2b-customer-groups-feature.html#optional-apply-customer-group-discounts-to-companies-and-business-units).
+
+### How business unit assignments are inherited
+
+A business unit assignment covers the business unit and all its child business units at any depth. It never covers the parent or sibling business units. Only the company user that the customer currently shops as is considered. The customer's other company users do not add any groups.
+
+For example, a company has the following business unit hierarchy, and the business unit *Zurich* is assigned to the customer group *DACH Region*:
+
+```text
+HQ
+├── Zurich
+│   └── Zurich Sales
+└── Barcelona
+```
+
+| CUSTOMER'S CURRENT BUSINESS UNIT | BUSINESS UNITS CHECKED | MEMBER OF DACH REGION |
+|---|---|---|
+| Zurich | Zurich, HQ | Yes. Zurich is assigned to the group. |
+| Zurich Sales | Zurich Sales, Zurich, HQ | Yes. Zurich Sales inherits the assignment of its parent business unit. |
+| HQ | HQ | No. An assignment of a child business unit does not apply to its parent. |
+| Barcelona | Barcelona, HQ | No. Barcelona is a sibling of Zurich. |
+
+If a customer belongs to the same group in several ways, the group is counted once.
+
+### When changes take effect
+
+When you assign or unassign a company or business unit, or move a business unit to another parent, the change applies from the next request — for example, the next cart update. If a cart update removes a discount, the customer sees a message that the discount is no longer available. Discounts of placed orders are not affected.
+
 ## Current constraints
 
 The feature has the following functional constraints:
 
-- Company and business unit memberships do not affect discounts, prices, or any other rule that targets a customer group.
+- Company and business unit memberships affect only the `customer-group` discount condition, and only if it is enabled. They do not affect prices, product lists, content, or any other rule that targets a customer group.
 - In the Back Office tables, you select companies and business units one at a time. There is no option to select all rows.
 - A Backend API request that replaces the members of a customer group accepts up to 1,000 companies or business units. To change a larger set, add and remove members individually.
+- A customer group whose name contains a single quote (`'`) or a double quote (`"`) cannot be used in a discount condition with any operator. A customer group whose name contains a semicolon (`;`) cannot be used with the **In** and **Not in** operators, because they split the value at semicolons. **Equal** and **Not equal** compare the whole name, so they work with a semicolon. In these cases, saving the discount fails with `Could not find "{part_of_the_name}"`. To use such a group in a discount, rename it.
 
 ## Related Business User documents
 

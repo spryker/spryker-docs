@@ -1,7 +1,7 @@
 ---
 title: "Backend API: Manage customer groups"
 description: Learn how to retrieve, create, update, and delete customer groups, and how to manage their members, in your Spryker shop using the Spryker Backend API.
-last_updated: Oct 14, 2026
+last_updated: Nov 18, 2026
 template: glue-api-backend-guide-template
 ---
 
@@ -52,9 +52,16 @@ To retrieve a paginated collection of customer groups, send the request:
 | page[offset] | Number of items to skip before the page begins. | From `0` to any. Defaults to `0`. |
 | q | Free-text search, matched against the name and the description of the group. A group matches when either of them matches. | Any string. |
 | filter[customer-groups.name] | Filters the collection by an exact name. The comparison ignores case. | Any group name. |
+| filter[customer-groups.customerReference] | Returns only the groups the customer is assigned to directly. The groups of the customer's company or business unit are not returned. | Any customer reference. |
+| filter[customer-groups.companyUuid] | Returns only the groups the company is assigned to. The groups of its business units are not returned. | Any company UUID. |
+| filter[customer-groups.companyBusinessUnitUuid] | Returns only the groups the business unit is assigned to. The groups of its company or parent business units are not returned. | Any business unit UUID. |
 | sort | Sorts the collection by the given field. Prefix a field with `-` to sort in descending order. Separate several fields with a comma. | name, createdAt |
 
-The free-text search and the name filter are combined with `AND`, so each one you add narrows the result further. A name that no group uses returns an empty collection rather than an error.
+The free-text search and the filters are combined with `AND`, so each one you add narrows the result further. A name, customer reference, or UUID that no group is assigned to returns an empty collection rather than an error.
+
+To filter by several customers, companies, or business units, repeat the parameter with `[]` — for example, `filter[customer-groups.companyUuid][]={uuid_1}&filter[customer-groups.companyUuid][]={uuid_2}`. The collection then contains the groups assigned to any of them, and each group is listed once.
+
+The `companyUuid` and `companyBusinessUnitUuid` filters require the query expander plugins of the B2B Customer Groups feature. Without these plugins, the filters are ignored, and the endpoint returns the full collection without an error, so an integration that relies on them receives all customer groups. For installation instructions, see [Install the B2B Customer Groups feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-b2b-customer-groups-feature.html#filter-the-customer-group-list-by-assignment).
 
 Sorting by a field that is not on the list returns `400` with the error code `1203`, and the error message names the supported fields. When you pass several fields, the second one decides the order only where the first one ties.
 
@@ -66,6 +73,8 @@ The members of a group are neither part of this response nor available as an `in
 | `GET https://glue-backend.mysprykershop.com/customer-groups?page[limit]=50&page[offset]=100` | Retrieve 50 customer groups, skipping the first 100. |
 | `GET https://glue-backend.mysprykershop.com/customer-groups?q=wholesale` | Retrieve customer groups whose name or description matches `wholesale`. |
 | `GET https://glue-backend.mysprykershop.com/customer-groups?filter[customer-groups.name]=Wholesale partners` | Retrieve the customer group named `Wholesale partners`. |
+| `GET https://glue-backend.mysprykershop.com/customer-groups?filter[customer-groups.customerReference]=DE--1` | Retrieve the customer groups the customer `DE--1` is assigned to directly. |
+| `GET https://glue-backend.mysprykershop.com/customer-groups?filter[customer-groups.companyBusinessUnitUuid]=0ac8e9cb-2c4c-5d4a-8f3e-3d1a7c2b9e61` | Retrieve the customer groups the business unit is assigned to. |
 | `GET https://glue-backend.mysprykershop.com/customer-groups?sort=-createdAt` | Retrieve customer groups, newest first. |
 
 ### Response

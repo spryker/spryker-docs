@@ -139,6 +139,8 @@ $config[SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_NUMBER_OF_A
 
 ```
 
+The `BACKOFFICE_USER_*` settings count failed logins per IP address. To also count login attempts per user account, regardless of the IP address, see [Install the login brute-force protection](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-login-brute-force-protection.html). To protect the Back Office login with a CAPTCHA, see [Install the CAPTCHA feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-captcha-feature.html).
+
 {% info_block warningBox "Verification" %}
 
 After finishing the installation, make sure the following applies:

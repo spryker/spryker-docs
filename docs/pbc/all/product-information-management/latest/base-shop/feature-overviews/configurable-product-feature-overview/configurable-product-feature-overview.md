@@ -1,7 +1,7 @@
 ---
 title: Configurable Product feature overview
 description: Learn about selling complex products with modular designs or services using the Spryker Configurable product feature.
-last_updated: Jun 16, 2026
+last_updated: Nov 20, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/scos/user/features/202108.0/configurable-product-feature-overview.html
@@ -64,7 +64,7 @@ A *product configurator* is a tool that lets customers customize the product par
 
 You can create a product configurator as a part of your shop or integrate a third-party one. The feature is shipped with an example product configurator. The example product configurator allows configuring the parameters of an industrial water treatment system, such as *Flow Rate*, *Filtration Type*, *Tank Material*, *Control System*, *Inlet Connection*, and *Power Supply*.
 
-![examplary-product-configurator](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/configurable-product-feature-overview/examplary-product-configurator.png)
+![examplary-product-configurator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/examplary-product-configurator.png)
 
 ### How a Spryker shop interacts with a product configurator
 
@@ -84,7 +84,7 @@ There are two parameter types: configuration parameters and display parameters.
 
 Display parameter values are usually converted from configuration parameter values to show data in a user-friendly format. For example, a product configurator passes the configuration parameter to a shop: `"filtration": "reverse_osmosis"`. Since, in the configurator, `reverse_osmosis` stands for the human-readable option `Reverse Osmosis`, the shop displays **Filtration Type: Reverse Osmosis**.
 
-![display-data-in-a-configurator](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/configurable-product-feature-overview/display-data-in-a-configurator.png)
+![display-data-in-a-configurator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/display-data-in-a-configurator.png)
 
 
 ### Availability calculation in a product configurator
@@ -116,7 +116,7 @@ If the configuration is not complete, on the *Product details* page, a customer 
 
 Even if all the parameter values are [preconfigured](#preconfigured-parameter-values), but the configuration is not complete, a customer has to open the configurator and save the configuration. They are not required to change the preconfigured values, though.
 
-![configuration-is-not-complete-message-with-preconfigured-parameters](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/configurable-product-feature-overview/configuration-is-not-complete-message-with-pre-configured-parameters.png)
+![configuration-is-not-complete-message-with-preconfigured-parameters](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configuration-is-not-complete-message-with-pre-configured-parameters.png)
 
 #### Request for Quote with a configurable product
 
@@ -143,6 +143,8 @@ If a developer defines that the configuration of such a product needs to be comp
 Customers configure a product on the Storefront as follows:
 
 <iframe width="960" height="720" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/configurable-product-feature-overview/configurable-product-on-the-storefront.mp4" frameborder="0" allowfullscreen></iframe>
+
+<a href="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/configurable-product-feature-overview/configurable-product-on-the-storefront.mp4" target="_blank" rel="noopener">Watch the video: configurable product on the Storefront</a>
 
 ## Related Developer documents
 

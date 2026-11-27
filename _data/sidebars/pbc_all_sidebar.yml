@@ -1445,6 +1445,8 @@ entries:
             nested:
               - title: Install Federated Authentication
                 url: /docs/pbc/all/oauth/latest/install-and-upgrade/install-federated-authentication.html
+              - title: Install SSO for the Storefront API and Backend API
+                url: /docs/pbc/all/oauth/latest/install-and-upgrade/install-federated-authentication-for-the-storefront-and-backend-api.html
           - title: Storefront account bootstrapping
             url: /docs/pbc/all/oauth/latest/storefront-account-bootstrapping.html
           - title: Multi-Factor Authentication with SSO
@@ -1453,6 +1455,14 @@ entries:
             url: /docs/pbc/all/oauth/latest/install-and-upgrade/add-an-oauth-provider.html
           - title: Set up Keycloak for local development
             url: /docs/pbc/all/oauth/latest/install-and-upgrade/set-up-keycloak-for-local-development.html
+          - title: SSO for the Storefront API and Backend API
+            url: /docs/pbc/all/oauth/latest/federated-authentication-for-the-storefront-and-backend-api.html
+          - title: Extend SSO for the Storefront API and Backend API
+            url: /docs/pbc/all/oauth/latest/extend-federated-authentication-for-the-storefront-and-backend-api.html
+          - title: Manage using Glue API
+            nested:
+              - title: Authenticate with an identity provider
+                url: /docs/pbc/all/oauth/latest/manage-using-glue-api/glue-api-authenticate-with-an-identity-provider.html
 
       - title: Merchant Management
         url: /docs/pbc/all/merchant-management/merchant-management.html

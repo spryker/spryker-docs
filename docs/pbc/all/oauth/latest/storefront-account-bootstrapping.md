@@ -2,7 +2,7 @@
 title: Storefront account bootstrapping
 description: Extension points for controlling how Spryker Storefront customer accounts are resolved, created, and enriched with company context during OAuth SSO login.
 template: concept-topic-template
-last_updated: Apr 21, 2026
+last_updated: Nov 27, 2026
 ---
 
 When a user logs in via SSO for the first time — no existing OAuth identity record links them to a Spryker account — Spryker must resolve or create a `CustomerTransfer` before creating the session. Whatever the strategy returns becomes the session, including any company relations, roles, or custom data on the transfer. This is the JIT (just-in-time) bootstrapping window: the moment to both provision the account and load the context the rest of the application expects to find in the session.
@@ -10,6 +10,8 @@ When a user logs in via SSO for the first time — no existing OAuth identity re
 On every subsequent login, `KnpuOauthCustomerIdentityStrategyPlugin` matches the user by their stored provider and external ID and short-circuits the stack — the bootstrapping strategies described in this document are never called again for that user.
 
 The resolution is handled by a stack of **authentication strategy plugins** registered in `CustomerDependencyProvider`. The stack is evaluated in order; the first plugin that returns a non-null `CustomerTransfer` wins, and the rest are skipped.
+
+The same plugin stacks resolve customers who sign in through the Storefront API, so the extension points in this document apply to both sign-ins. For the API sign-in, see [Federated Authentication (SSO) for the Storefront API and Backend API](/docs/pbc/all/oauth/latest/federated-authentication-for-the-storefront-and-backend-api.html).
 
 ---
 
@@ -58,7 +60,7 @@ interface OauthCustomerAuthenticationStrategyPluginInterface
 }
 ```
 
-`ResourceOwnerTransfer` carries the claims returned by the IdP. The `email` claim is always present when Spryker's default scopes are configured. `getFirstName()`, `getLastName()`, and `getId()` (the IdP-assigned external identifier) are available when the IdP returns them.
+`ResourceOwnerTransfer` carries the following data from the IdP: `getProvider()` (the client name), `getId()` (the IdP-assigned external identifier), `getEmail()`, `getFirstName()`, and `getLastName()`. The email is always present when Spryker's default scopes are configured. The first and last names are available when the IdP returns them. Other claims of the IdP are not carried by default. To use one, see the *IdP claim* approach in [Company resolution strategies](#company-resolution-strategies).
 
 ### Stub implementation
 
@@ -187,22 +189,50 @@ protected function resolveCompany(ResourceOwnerTransfer $resourceOwnerTransfer):
 }
 ```
 
-**IdP claim** — the IdP includes a company identifier as a custom claim on the token. Read it from the resource owner and look up the company in Spryker.
+**IdP claim** — the IdP includes a company identifier as a custom claim on the token. By default, `ResourceOwnerTransfer` does not carry custom claims, so you add the claim to the transfer and set it where Spryker maps the IdP response:
 
-```php
-protected function resolveCompany(ResourceOwnerTransfer $resourceOwnerTransfer): ?CompanyTransfer
-{
-    $companyReference = $resourceOwnerTransfer->getAttributes()['company_reference'] ?? null;
+1. Add a property for the claim to `ResourceOwnerTransfer` at the project level:
 
-    if ($companyReference === null) {
-        return null;
+    **src/Pyz/Shared/Customer/Transfer/customer.transfer.xml**
+
+    ```xml
+    <?xml version="1.0"?>
+    <transfers xmlns="spryker:transfer-01"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
+
+        <transfer name="ResourceOwner">
+            <property name="companyReference" type="string"/>
+        </transfer>
+
+    </transfers>
+    ```
+
+2. Set the property from the claim in the mapping of the sign-in you use, and run `console transfer:generate`:
+
+    | SIGN-IN | CLASS TO EXTEND | FACTORY METHOD TO OVERRIDE |
+    |---|---|---|
+    | Storefront | `Spryker\Yves\SecurityOauthKnpu\Reader\OauthCustomerResourceOwnerReader::mapResourceOwnerToTransfer()` | `Spryker\Yves\SecurityOauthKnpu\SecurityOauthKnpuFactory::createOauthCustomerResourceOwnerReader()` |
+    | Storefront API | `Spryker\Zed\SecurityOauthKnpu\Business\Mapper\ResourceOwnerMapper::mapResourceOwnerToResourceOwnerTransfer()` | `Spryker\Zed\SecurityOauthKnpu\Business\SecurityOauthKnpuBusinessFactory::createResourceOwnerMapper()` |
+
+    In both methods, `$resourceOwner->toArray()` returns all claims of the IdP.
+
+3. Read the property in the strategy and look up the company in Spryker:
+
+    ```php
+    protected function resolveCompany(ResourceOwnerTransfer $resourceOwnerTransfer): ?CompanyTransfer
+    {
+        $companyReference = $resourceOwnerTransfer->getCompanyReference();
+
+        if ($companyReference === null) {
+            return null;
+        }
+
+        return $this->getFactory()
+            ->getCompanyFacade()
+            ->findCompanyByReference($companyReference);
     }
-
-    return $this->getFactory()
-        ->getCompanyFacade()
-        ->findCompanyByReference($companyReference);
-}
-```
+    ```
 
 **External service lookup** — when company assignment is managed in an external system (an IAM platform, a provisioning API, or a directory), call that service from within `resolveCompany()`. The company reference returned is then used to look up or create the Spryker company record.
 

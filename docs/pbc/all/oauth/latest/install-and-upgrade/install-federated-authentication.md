@@ -1,7 +1,7 @@
 ---
 title: Install Federated Authentication via OAuth2/OIDC
 description: Integration guide for adding SSO to Spryker Storefront, Back-office, and Merchant Portal using KnpU OAuth2 Client Bundle.
-last_updated: Apr 21, 2026
+last_updated: Nov 27, 2026
 template: feature-integration-guide-template
 ---
 
@@ -13,7 +13,8 @@ Install the following required features:
 |---|---|---|---|
 | Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) | |
 | Customer Account Management | {{page.release_tag}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) | |
-| Spryker Core Back Office | {{page.release_tag}} | [Install the Spryker Core Back Office feature](https://docs.spryker.com/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-spryker-core-back-office-feature) | Required for Back-office SSO only. Follow the *OAuth 2.0/Open ID Connect Support for Zed login* section. |
+| Spryker Core Back Office | {{page.release_tag}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-spryker-core-back-office-feature.html) | Required for Back-office SSO only. Follow the *OAuth 2.0/Open ID Connect Support for Zed login* section. |
+| Configuration Management | {{page.release_tag}} | [Install the Configuration Management feature](/docs/dg/dev/integrate-and-configure/integrate-configuration-feature.html) | Provides the Back Office page where you configure the SSO providers. |
 
 ## 1) Install the required modules
 
@@ -85,9 +86,9 @@ Install the composer package for your provider. The examples in this guide use K
 composer require stevenmaguire/oauth2-keycloak
 ```
 
-For other providers, see the [KnpU OAuth2 Client Bundle provider list](https://github.com/knpuniversity/oauth2-client-bundle#supported-grant-types--oauth2-providers) for the correct package name.
+For other providers, see the [KnpU OAuth2 Client Bundle provider list](https://github.com/knpuniversity/oauth2-client-bundle#client-downloader-table) for the correct package name.
 
-Register your OAuth providers in the KnpU bundle configuration for each application. The `redirect_route` field must be the full callback URL — KnpU uses Symfony's router, and the OAuth callback routes are registered in the Symfony router rather than Spryker's own router. You can use any provider supported by `knpuniversity/oauth2-client-bundle`. For the full list of provider types and their specific fields, see the [KnpU OAuth2 Client Bundle provider documentation](https://github.com/knpuniversity/oauth2-client-bundle#supported-grant-types--oauth2-providers).
+Register your OAuth providers in the KnpU bundle configuration for each application. The `redirect_route` field must be the full callback URL — KnpU uses Symfony's router, and the OAuth callback routes are registered in the Symfony router rather than Spryker's own router. You can use any provider supported by `knpuniversity/oauth2-client-bundle`. For the full list of provider types and their specific fields, see the [KnpU OAuth2 Client Bundle provider documentation](https://github.com/knpuniversity/oauth2-client-bundle#configuration).
 
 ### Storefront
 
@@ -98,16 +99,16 @@ knpu_oauth2_client:
     clients:
         sso_yves:
             type: keycloak
-            auth_server_url: '%env(SPRYKER_OAUTH_SSO_YVES_BASE_URL)%'
-            realm: '%env(SPRYKER_OAUTH_SSO_YVES_REALM)%'
-            client_id: '%env(SPRYKER_OAUTH_SSO_YVES_CLIENT_ID)%'
-            client_secret: '%env(SPRYKER_OAUTH_SSO_YVES_CLIENT_SECRET)%'
-            redirect_route: '%env(SPRYKER_OAUTH_REDIRECT_URI_YVES)%'
+            auth_server_url: '%env(OAUTH_SSO_YVES_BASE_URL)%'
+            realm: '%env(OAUTH_SSO_YVES_REALM)%'
+            client_id: '%env(OAUTH_SSO_YVES_CLIENT_ID)%'
+            client_secret: '%env(OAUTH_SSO_YVES_CLIENT_SECRET)%'
+            redirect_route: '%env(OAUTH_REDIRECT_URI_YVES)%'
             redirect_params: {}
             version: '25.0.0'
 ```
 
-Set `SPRYKER_OAUTH_REDIRECT_URI_YVES` to the full callback URL: `https://{YVES_HOST}/login/oauth-callback`.
+Set `OAUTH_REDIRECT_URI_YVES` to the full callback URL: `https://{YVES_HOST}/login/oauth-callback`.
 
 ### Back-office
 
@@ -118,16 +119,16 @@ knpu_oauth2_client:
     clients:
         sso_zed:
             type: keycloak
-            auth_server_url: '%env(SPRYKER_OAUTH_SSO_ZED_BASE_URL)%'
-            realm: '%env(SPRYKER_OAUTH_SSO_ZED_REALM)%'
-            client_id: '%env(SPRYKER_OAUTH_SSO_ZED_CLIENT_ID)%'
-            client_secret: '%env(SPRYKER_OAUTH_SSO_ZED_CLIENT_SECRET)%'
-            redirect_route: '%env(SPRYKER_OAUTH_REDIRECT_URI_ZED)%'
+            auth_server_url: '%env(OAUTH_SSO_ZED_BASE_URL)%'
+            realm: '%env(OAUTH_SSO_ZED_REALM)%'
+            client_id: '%env(OAUTH_SSO_ZED_CLIENT_ID)%'
+            client_secret: '%env(OAUTH_SSO_ZED_CLIENT_SECRET)%'
+            redirect_route: '%env(OAUTH_REDIRECT_URI_ZED)%'
             redirect_params: {}
             version: '25.0.0'
 ```
 
-Set `SPRYKER_OAUTH_REDIRECT_URI_ZED` to the full callback URL: `https://{ZED_HOST}/security-oauth-user/login`.
+Set `OAUTH_REDIRECT_URI_ZED` to the full callback URL: `https://{ZED_HOST}/security-oauth-user/login`.
 
 ### Merchant Portal
 
@@ -138,97 +139,48 @@ knpu_oauth2_client:
     clients:
         sso_merchant_portal:
             type: keycloak
-            auth_server_url: '%env(SPRYKER_OAUTH_SSO_MP_BASE_URL)%'
-            realm: '%env(SPRYKER_OAUTH_SSO_MP_REALM)%'
-            client_id: '%env(SPRYKER_OAUTH_SSO_MP_CLIENT_ID)%'
-            client_secret: '%env(SPRYKER_OAUTH_SSO_MP_CLIENT_SECRET)%'
-            redirect_route: '%env(SPRYKER_OAUTH_REDIRECT_URI_MERCHANT_PORTAL)%'
+            auth_server_url: '%env(OAUTH_SSO_MP_BASE_URL)%'
+            realm: '%env(OAUTH_SSO_MP_REALM)%'
+            client_id: '%env(OAUTH_SSO_MP_CLIENT_ID)%'
+            client_secret: '%env(OAUTH_SSO_MP_CLIENT_SECRET)%'
+            redirect_route: '%env(OAUTH_REDIRECT_URI_MERCHANT_PORTAL)%'
             redirect_params: {}
             version: '25.0.0'
 ```
 
-Set `SPRYKER_OAUTH_REDIRECT_URI_MERCHANT_PORTAL` to the full callback URL: `https://{MERCHANT_PORTAL_HOST}/security-merchant-portal-gui/oauth-login`.
+Set `OAUTH_REDIRECT_URI_MERCHANT_PORTAL` to the full callback URL: `https://{MERCHANT_PORTAL_HOST}/security-merchant-portal-gui/oauth-login`.
 
 ## 5) Configure providers
 
-Tell `SecurityOauthKnpu` which KnpU clients to use in each application and how to label the login buttons. Each `clientName` must match a key defined in the corresponding `knpu_oauth2_client.yaml`. Each `statePrefix` must be unique per provider in a given application.
+A KnpU client from the previous step shows an SSO button on a login page only after you enable it as a provider of that application. You manage the providers in the Back Office, so you can add, relabel, or remove a provider without deploying code.
 
-### Storefront
+Sync the configuration schema of the `SecurityOauthKnpu` module:
 
-**src/Pyz/Yves/SecurityOauthKnpu/SecurityOauthKnpuConfig.php**
-
-```php
-<?php
-
-namespace Pyz\Yves\SecurityOauthKnpu;
-
-use Generated\Shared\Transfer\OauthKnpuProviderConfigTransfer;
-use Spryker\Yves\SecurityOauthKnpu\SecurityOauthKnpuConfig as SprykerSecurityOauthKnpuConfig;
-
-class SecurityOauthKnpuConfig extends SprykerSecurityOauthKnpuConfig
-{
-    /**
-     * @api
-     *
-     * @return array<\Generated\Shared\Transfer\OauthKnpuProviderConfigTransfer>
-     */
-    public function getCustomerProviderConfigs(): array
-    {
-        return [
-            (new OauthKnpuProviderConfigTransfer())
-                ->setClientName('sso_yves')
-                ->setStatePrefix('sso_yves')
-                ->setLinkText('Login with SSO'),
-        ];
-    }
-}
+```bash
+console configuration:sync
 ```
 
-### Back-office and Merchant Portal
+In the Back Office, go to **Configuration > Integrations > Federated Authentication (SSO)**, and add a provider in the group of each application:
 
-**src/Pyz/Zed/SecurityOauthKnpu/SecurityOauthKnpuConfig.php**
+| GROUP | SCOPE | NUMBER OF PROVIDERS | CLIENT NAME DEFINED IN |
+|---|---|---|---|
+| Storefront | Global or store | One or more | `config/Yves/packages/knpu_oauth2_client.yaml` |
+| Back Office | Global | One | `config/Zed/packages/knpu_oauth2_client.yaml` |
+| Merchant Portal | Global | One or more | `config/MerchantPortal/packages/knpu_oauth2_client.yaml` |
 
-```php
-<?php
+For each provider, enter the following values, and save the changes:
 
-namespace Pyz\Zed\SecurityOauthKnpu;
+| FIELD | REQUIRED | DESCRIPTION |
+|---|---|---|
+| Client Name | &check; | Key of the KnpU client in the YAML file of the application, for example `sso_yves`. The value must match the key exactly. |
+| Login Button Label | &check; | Text of the SSO button on the login page, for example `Login with SSO`. |
+| OAuth Scopes | | Comma-separated list of scopes to request from the identity provider, for example `openid, email, profile`. |
+| State Prefix | | Prefix of the OAuth `state` value. When the identity provider redirects back, Spryker uses the prefix to identify the provider. The prefix must be unique among the providers of one application. Defaults to the client name. |
+| Additional Options | | Key-value parameters that Spryker adds to the authorization request of the identity provider. |
 
-use Generated\Shared\Transfer\OauthKnpuProviderConfigTransfer;
-use Spryker\Zed\SecurityOauthKnpu\SecurityOauthKnpuConfig as SprykerSecurityOauthKnpuConfig;
+The Storefront group is available per store. To offer different providers in a store, select the store in the scope switcher and add the providers there. A store without its own providers uses the global providers.
 
-class SecurityOauthKnpuConfig extends SprykerSecurityOauthKnpuConfig
-{
-    /**
-     * @api
-     *
-     * @return array<\Generated\Shared\Transfer\OauthKnpuProviderConfigTransfer>
-     */
-    public function getZedUserProviderConfigs(): array
-    {
-        return [
-            (new OauthKnpuProviderConfigTransfer())
-                ->setClientName('sso_zed')
-                ->setStatePrefix('sso_zed')
-                ->setLinkText('Login with SSO'),
-        ];
-    }
-
-    /**
-     * @api
-     *
-     * @return array<\Generated\Shared\Transfer\OauthKnpuProviderConfigTransfer>
-     */
-    public function getMerchantUserProviderConfigs(): array
-    {
-        return [
-            (new OauthKnpuProviderConfigTransfer())
-                ->setClientName('sso_merchant_portal')
-                ->setStatePrefix('sso_merchant_portal')
-                ->setLinkText('Login with SSO'),
-        ];
-    }
-}
-```
+If your project overrides `getCustomerProviderConfigs()` in `Pyz\Yves\SecurityOauthKnpu\SecurityOauthKnpuConfig`, or `getZedUserProviderConfigs()` or `getMerchantUserProviderConfigs()` in `Pyz\Zed\SecurityOauthKnpu\SecurityOauthKnpuConfig`, without calling `getModuleConfig()`, the values from your code apply, and the Back Office shows these settings as read-only. To manage the providers in the Back Office, remove these overrides. For details, see [Override detection](/docs/dg/dev/backend-development/configuration-management.html#override-detection).
 
 ## 6) Set up behavior
 
@@ -650,8 +602,3 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
 4. Make sure the merchant user is logged in and redirected to the Merchant Portal dashboard.
 
 {% endinfo_block %}
-
-## Next steps
-
-- [Add an OAuth provider](/docs/pbc/all/oauth/latest/install-and-upgrade/add-an-oauth-provider.html) — wire additional IdP clients per application.
-- [Set up Keycloak for local development](/docs/pbc/all/oauth/latest/install-and-upgrade/set-up-keycloak-for-local-development.html) — run a local Keycloak instance to test SSO without an external IdP.

@@ -2,7 +2,7 @@
 title: Federated Authentication via OAuth2/OIDC
 description: Learn how Spryker Federated Authentication lets your customers, back-office users, and merchant users log in through an external Identity Provider using OAuth2 and OpenID Connect.
 template: concept-topic-template
-last_updated: Sep 4, 2026
+last_updated: Nov 27, 2026
 ---
 
 If your enterprise customers, back-office operators, or merchant users already authenticate through a corporate Identity Provider — Keycloak, Azure AD, Okta, or any other OAuth2/OIDC-compatible system — this feature lets them bring that identity to Spryker. Instead of maintaining a separate set of credentials for every application, your users log in through the same IdP they already trust, and Spryker handles the rest.
@@ -23,7 +23,7 @@ Federated authentication works across all three Spryker applications out of the 
 
 On the Storefront and Merchant Portal, you can connect as many providers as you need — your users will see a separate login button for each one. The Back-office currently supports a single provider; support for multiple providers there is coming in a later version.
 
-Authentication via the Platform API (Glue) is also coming in a later version.
+Headless frontends, such as single-page applications and mobile apps, can sign in customers through the Storefront API, and Back Office users and merchant users through the Backend API, with the same identity providers. For details, see [Federated Authentication (SSO) for the Storefront API and Backend API](/docs/pbc/all/oauth/latest/federated-authentication-for-the-storefront-and-backend-api.html).
 
 ---
 
@@ -88,7 +88,7 @@ The anchor for each record is the combination of `provider` and `external_id` �
 
 ## How Login Works
 
-The resolution logic is the same across all three applications. Spryker first looks for an existing identity record; if it finds one, the user is logged in immediately. If not — because this is the first time they are logging in via this provider — Spryker falls back to email matching.
+The resolution logic is the same across all applications, including the sign-in through the Storefront API and Backend API. Spryker first looks for an existing identity record; if it finds one, the user is logged in immediately. If not — because this is the first time they are logging in via this provider — Spryker falls back to email matching.
 
 <img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/oauth/how-auth-works.svg" alt="Flowchart of the OAuth login resolution logic" style="display: block; margin: 0 auto; width: 100%; max-width: 400px; height: auto;">
 
@@ -162,7 +162,7 @@ For the decision guide, see [Multi-Factor Authentication with SSO](/docs/pbc/all
 
 ## Supported Providers
 
-You can use any OAuth2/OIDC provider that `knpuniversity/oauth2-client-bundle` supports. The reference configuration in this codebase uses Keycloak, but the architecture is provider-agnostic. For the full list of supported provider types and their specific configuration fields, see the [KnpU OAuth2 Client Bundle provider documentation](https://github.com/knpuniversity/oauth2-client-bundle#supported-grant-types--oauth2-providers).
+You can use any OAuth2/OIDC provider that `knpuniversity/oauth2-client-bundle` supports. The reference configuration in this codebase uses Keycloak, but the architecture is provider-agnostic. For the full list of supported provider types and their specific configuration fields, see the [KnpU OAuth2 Client Bundle provider documentation](https://github.com/knpuniversity/oauth2-client-bundle#configuration).
 
 The following table lists the most common B2B identity providers used with Spryker:
 
@@ -184,7 +184,6 @@ The following table lists the most common B2B identity providers used with Spryk
 
 | Capability | Description |
 |---|---|
-| Platform API (Glue) OAuth | SSO for API consumers via token exchange |
 | Multi-provider Back-office | Multiple IdP options on the Back-office login page |
 | Continuous sessions | Using IdP refresh tokens to extend Spryker sessions |
 | Attribute sync | Keeping Spryker entity data in sync with IdP claims on each login |

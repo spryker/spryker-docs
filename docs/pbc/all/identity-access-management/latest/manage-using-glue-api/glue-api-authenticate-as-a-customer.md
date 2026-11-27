@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Authenticate as a customer"
 description: Retrieve customer authentication tokens to send requests to protected resources.
-last_updated: July 30, 2026
+last_updated: Nov 27, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/authenticating-as-a-customer
 originalArticleId: 4d61554f-dce0-40a2-9091-2db810bcf9a2
@@ -30,9 +30,19 @@ related:
     link: docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/glue-api-retrieve-customer-carts.html
   - title: Retrieving customer orders
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
+  - title: Manage items in carts of registered users
+    link: docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html
+  - title: Manage gift cards of registered users
+    link: docs/pbc/all/gift-cards/latest/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html
+  - title: Manage wishlists
+    link: docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html
+  - title: "Glue API: Authenticate with an identity provider"
+    link: docs/pbc/all/oauth/latest/manage-using-glue-api/glue-api-authenticate-with-an-identity-provider.html
 ---
 
 This endpoint allows authenticating as a customer. As an authenticated customer, you can send requests to [protected resources](/docs/integrations/spryker-api/authenticating-and-authorization/authenticating-and-authorization.html#protected-resources).
+
+With the API Platform integration of the Storefront API, a customer can also sign in with an external identity provider instead of a password and gets the same token without a refresh token. For details, see [Glue API: Authenticate with an identity provider](/docs/pbc/all/oauth/latest/manage-using-glue-api/glue-api-authenticate-with-an-identity-provider.html).
 
 {% info_block warningBox %}
 
@@ -129,15 +139,6 @@ Note that depending on the Login feature configuration for your project, too man
 | 901 | Unprocessable login data (incorrect email format; email or password is empty).|
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
-
-## Next steps
-
-- [Manage carts](/docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html)
-- [Manage cart items](/docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html)
-- [Manage gift cards](/docs/pbc/all/gift-cards/latest/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html)
-- [Manage wishlists](/docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html)
-- [Manage orders](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html)
-- [Managing customer authentication tokens](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html)
 - [Manage customer addresses](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/glue-api-manage-customer-addresses.html)
 - [Manage customer addresses](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/glue-api-manage-customer-addresses.html)
 - [Manage customer passwords](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-manage-customer-passwords.html)

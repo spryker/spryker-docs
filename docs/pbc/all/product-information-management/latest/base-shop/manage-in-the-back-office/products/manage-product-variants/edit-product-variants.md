@@ -1,7 +1,7 @@
 ---
 title: Editing product variants
 description: The guide describes how to update and edit product variants direct in the Spryker Cloud Commerce OS Back Office.
-last_updated: Jul 7, 2021
+last_updated: Nov 27, 2026
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/editing-a-product-variant
 originalArticleId: b9119173-d733-4ffa-b93d-1f19d88a364c
@@ -58,6 +58,7 @@ To edit a product variant:
     5. *Discontinue* tab: This tab is used in case you want to discontinue the product. See [Discontinuing a Product](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-product-variants/discontinue-products.html) to know more.
     6. *Product Alternatives* tab: This tab is used to define the product alternatives for the product. See [Adding Product Alternatives](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html) to know more.
     7. *Scheduled Prices* tab: here you can only review scheduled prices imported via a CSV file if any. The actual import is done in **Prices&nbsp;<span aria-label="and then">></span> Scheduled Prices**.
+    8. *Configurator Setup* tab: set up the configuration of a configurable product with a configuration file. See [Configurator Setup tab](#configurator-setup-tab) for details.
 3. Click **Save**.
 
 ### Reference information: Editing a product variant
@@ -117,6 +118,31 @@ The only field available is **Add Product Alternative by Name or SKU**. Here it'
 On this tab, you see a table with the scheduled prices imported via a CSV file. The following information is available:
 - Currency, store, net, and gross price values.
 - Start from (included) and Finish at (included) values that identify a period of time when a specific price is going to be set for a product automatically.
+
+#### Configurator Setup tab
+
+Available on the Edit page only.
+
+On this tab, you set up the configuration of a [configurable product](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/configurable-product-feature-overview/configurable-product-feature-overview.html) with a configuration file. A configuration file contains the configuration in the format of a product configurator. The status next to the tab title shows whether a configuration is saved for the product variant: **Set up** or **Not set up**.
+
+To set up the configuration of the product variant:
+
+1. Get a configuration file:
+    - To start from a template, click **Template**. A template is a starter configuration of a product configurator. If several product configurators provide a template, each **Template** button shows the key of its product configurator.
+    - To change the saved configuration, click **Current configuration**. The button is unavailable when no configuration or an empty configuration is saved for the product variant.
+
+    The downloaded file is named after the SKU of the product variant.
+2. Change the configuration in the file.
+3. In the upload area, click **Upload file** and select the file, or drag the file to the area. The area shows the supported file formats and the maximum file size. If you drag a file of another format, the area keeps the file you selected before and shows a message. If you drag several files, the area takes the first file of a supported format and shows a message.
+4. Click **Save**.
+
+The product configurator that the file belongs to validates the configuration before it is saved:
+
+- If the configuration is valid, it is saved, and the success message shows the file name and a summary of the configuration. A saved configuration is incomplete: customers open the configurator before they can purchase the product.
+- If the configuration has errors, no changes of the product variant are saved. The tab lists each error with its location in the file, and the **Current configuration** section shows the uploaded file marked as **Not saved**. Fix the errors in the file and upload it again.
+- If the file does not match the format of any product configurator, or its extension differs from the extension of the files of its product configurator, an error message describes the problem.
+
+The **Current configuration** section shows the key of the product configurator, the time of the last change, and a summary of the configuration. For an uploaded file that is not saved, the time of the last change isn't shown. The content of the summary depends on the product configurator.
 
 **What's next?**
 <br>Following the same steps, you will update all variants that you have added to your abstract product.

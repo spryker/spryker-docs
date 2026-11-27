@@ -1,7 +1,7 @@
 ---
 title: Create a product configurator
 description: Learn how to build a custom product configurator and integrate it with a Spryker shop, based on the Water Treatment configurator example.
-last_updated: Jun 16, 2026
+last_updated: Nov 27, 2026
 template: howto-guide-template
 ---
 
@@ -166,6 +166,12 @@ $checkSum = (new CrcOpenSslChecksumGenerator(getenv('SPRYKER_PRODUCT_CONFIGURATO
 The configurator UI is a self-contained frontend application (in the example, an Angular app). The example does not build it at the project level. Instead, it reuses the pre-built, data-driven app shipped in the `spryker-shop/date-time-configurator-page-example` package and feeds it the project's own data, so no project-level frontend build or tooling is required.
 
 The app is generic: at runtime, it loads its options from `./configurator.json`, served from `public/WaterTreatmentConfigurator/`. To turn it into a water treatment configurator, the example provides its own `public/WaterTreatmentConfigurator/configurator.json` and translations under `public/WaterTreatmentConfigurator/i18n/`.
+
+{% info_block infoBox "Basis configurations" %}
+
+The app also reads the *basis configuration* format of the `CONFIGURABLE_PRODUCT` product configurator of the package, which Back Office users upload in the **Configurator Setup** tab. If the product configuration that the app receives is a JSON object with a `schemaVersion` or `documentVersion` property, the app takes the options from that configuration instead of `configurator.json`. So keep these properties out of the default configurations of your product configurator. For the `CONFIGURABLE_PRODUCT` product configurator, see [Install the Product Configuration feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-configuration-feature.html#set-up-the-configurable-product-configurator).
+
+{% endinfo_block %}
 
 The default `GET` request to the configurator host serves a static shell, `Theme/index.html`, which loads the app assets from `./dist/`:
 

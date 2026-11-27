@@ -1,8 +1,8 @@
 ---
-title: Install the Product feature
+title: Install the Product Configuration feature
 description: Learn how to integrate the Product Configuration feature into a Spryker project.
 template: feature-integration-guide-template
-last_updated: Nov 21, 2023
+last_updated: Nov 27, 2026
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202311.0/product-configuration-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/product-configuration-feature-integration.htm

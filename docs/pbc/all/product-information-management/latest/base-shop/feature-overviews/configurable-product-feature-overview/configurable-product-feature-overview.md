@@ -1,7 +1,7 @@
 ---
 title: Configurable Product feature overview
 description: Learn about selling complex products with modular designs or services using the Spryker Configurable product feature.
-last_updated: Nov 20, 2026
+last_updated: Nov 26, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/scos/user/features/202108.0/configurable-product-feature-overview.html
@@ -43,14 +43,28 @@ After adding a configurable product to the cart, a customer can change the produ
 Configurable products are created in two steps:
 
 1. A Back Office user creates regular products, or a developer imports them. See [Creating an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) to learn how they create products in the Back Office or [File details: product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html) to learn about the file they import.
-2. A developer converts regular products into configurable products by importing configuration parameters. See [File details: product_concrete_pre_configuration.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-concrete-pre-configuration.csv.html) to learn about the file they import.
+2. A Back Office user converts a regular product into a configurable product by uploading a [configuration file](#configuration-files) in the **Configurator Setup** tab of the product variant, or a developer imports configuration parameters. See [Edit product variants](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html#configurator-setup-tab) to learn how they upload a configuration file or [File details: product_concrete_pre_configuration.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-concrete-pre-configuration.csv.html) to learn about the file they import.
 
+### Configuration files
+
+A *configuration file* contains the configuration of a configurable product in the format of its product configurator. Each product configurator defines its own format.
+
+In the **Configurator Setup** tab of a product variant, a Back Office user gets a configuration file, changes the configuration in it, and uploads it. To get a file, they download the current configuration of the product or the template of a product configurator. A *template* is a starter configuration that a product configurator provides.
+
+The product configurator that an uploaded file belongs to is determined from the content of the file. Before the configuration is saved, this product configurator validates it:
+
+- If the configuration is valid, it becomes the configuration of the product, and the tab shows its summary.
+- If the configuration has errors, neither the configuration nor the other changes of the product are saved. The tab lists each error with its location in the file, so the Back Office user knows what to fix.
+
+The product configuration import validates the imported configurations in the same way. An invalid row is not imported, and the import reports the SKU of the product with each error. The configurations of a product configurator that provides no validation are imported without it.
+
+The product configurators that Back Office users can set up products for depend on your project. For the plugins a product configurator provides for this, see [Install the Product Configuration feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-configuration-feature.html).
 
 ### Managing configurable products
 
 A Back Office user can add configurable products as regular products to pages, categories, and content items.
 
-They can see which products are configurable in the product catalog and edit them as regular products. However, a Back Office user cannot change configuration parameters.
+They can see which products are configurable in the product catalog and edit them as regular products. To change the configuration of a product, they upload a new configuration file in the **Configurator Setup** tab of the product variant. See [Configuration files](#configuration-files).
 
 ![configurable-product-entry-in-the-back-office](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/configurable-product-feature-overview/configurable-product-entry-in-the-back-office.png)
 
@@ -103,7 +117,7 @@ If the configurator does not provide a price, [a regular product price](/docs/pb
 
 ### Complete and incomplete configuration
 
-When [importing configurable products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-concrete-pre-configuration.csv.html), a developer defines if the configuration is complete for each product.
+When [importing configurable products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-concrete-pre-configuration.csv.html), a developer defines if the configuration is complete for each product. A configuration that a Back Office user uploads in the **Configurator Setup** tab is always incomplete, so customers open the configurator before they purchase the product.
 
 If the configuration is complete, on the *Product details* page, a customer sees a message that the configuration is complete. By default, the message is followed by the first three descriptive attributes set in the configurator. Under the attributes, the **Show** and **Hide** buttons let the customer expand and collapse the remaining attributes to review them. The customer can purchase the product without again opening the configurator and selecting parameters, if they determine the configuration is complete.
 
@@ -132,7 +146,7 @@ The information in the [Complete and incomplete configuration](#complete-and-inc
 
 ### Preconfigured parameter values
 
-When a developer creates configurable products by importing them, they can preconfigure parameter values. If customers choose to configure such a product, they start with the preconfigured parameter values and can change them.
+When a developer creates configurable products by importing them, or a Back Office user uploads a configuration file, they can preconfigure parameter values. If customers choose to configure such a product, they start with the preconfigured parameter values and can change them.
 
 If a developer also defines that the configuration of such a product is complete, a customer sees the preconfigured parameter values on the *Product details* page. They can add the product to the cart without adjusting the configuration.
 
@@ -146,10 +160,17 @@ Customers configure a product on the Storefront as follows:
 
 <a href="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/configurable-product-feature-overview/configurable-product-on-the-storefront.mp4" target="_blank" rel="noopener">Watch the video: configurable product on the Storefront</a>
 
+## Related Business User documents
+
+|BACK OFFICE USER GUIDES|
+|---|
+| [Edit product variants](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html) |
+
 ## Related Developer documents
 
 |INSTALLATION GUIDES | MIGRATION GUIDES | DATA IMPORT | REFERENCES |
 |---------|---------|---------|---------|
+| [Install the Product Configuration feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-configuration-feature.html) | | | |
 | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)| [Upgrade the ProductConfiguration module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productconfiguration-module.html) | [File details product_concrete_pre_configuration.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-concrete-pre-configuration.csv.html)  | [Configuration process flow of Configurable Product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-product-feature-overview/configuration-process-flow-of-configurable-product.html) |
 | [Install the Product Configuration Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-configuration-glue-api.html) |[Upgrade the ProductConfigurationStorage module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productconfigurationstorage-module.html)   |  | [Create a product configurator](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/tutorials-and-howtos/howto-create-a-product-configurator.html) |
 |   | [Upgrade the ProductConfigurationsPriceProductVolumesRestApi module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productconfigurationspriceproductvolumesrestapi-module.html)  |  |  |
